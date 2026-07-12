@@ -35,6 +35,20 @@ const caseStudies = [
       "Expo/React Native ordering flow with Stripe, Postmark, Vercel serverless routes, Android device testing, and Play Store preparation.",
     tags: ["React Native", "Stripe", "Node.js", "EAS"],
     stat: "328 commits",
+    screenshots: [
+      {
+        alt: "Alla Vostra startup screen",
+        src: "/images/startup_screen_small.png",
+      },
+      {
+        alt: "Alla Vostra products screen",
+        src: "/images/products_overlay_small.png",
+      },
+      {
+        alt: "Alla Vostra confirmation screen",
+        src: "/images/confirmed_overlay_small.png",
+      },
+    ],
   },
   {
     title: "CreditKing",
@@ -43,6 +57,7 @@ const caseStudies = [
       "React Native dashboard, animated navigation, Figma asset translation, responsive web/Android parity, and reusable app chrome.",
     tags: ["Expo Router", "SVG", "Animation", "Figma"],
     stat: "94 commits",
+    screenshots: [],
   },
 ];
 
@@ -256,6 +271,23 @@ export default function Home() {
                     <span key={tag}>{tag}</span>
                   ))}
                 </div>
+                {study.screenshots.length > 0 ? (
+                  <div
+                    aria-label={`${study.title} app screenshots`}
+                    className="case-miniatures"
+                  >
+                    {study.screenshots.map((screenshot) => (
+                      <Image
+                        alt={screenshot.alt}
+                        className="case-miniature"
+                        height={192}
+                        key={screenshot.src}
+                        src={screenshot.src}
+                        width={108}
+                      />
+                    ))}
+                  </div>
+                ) : null}
               </article>
             ))}
           </div>

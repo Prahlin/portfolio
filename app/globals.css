@@ -539,6 +539,26 @@ section:not(.hero) {
   margin-top: 24px;
 }
 
+.case-miniatures {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 26px;
+  max-width: 390px;
+}
+
+.case-miniature {
+  aspect-ratio: 9 / 16;
+  background: #020403;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.28);
+  display: block;
+  height: auto;
+  object-fit: cover;
+  width: 100%;
+}
+
 .split-section {
   display: grid;
   gap: 44px;
