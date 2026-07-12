@@ -70,13 +70,15 @@ function PhonePreview({
       <div className="phone-speaker" />
       <div className={`phone-screen${screenImageSrc ? " has-image" : ""}`}>
         {screenImageSrc ? (
-          <Image
-            alt={screenImageAlt ?? `${title} app screen`}
-            className="phone-screen-image"
-            fill
-            sizes="245px"
-            src={screenImageSrc}
-          />
+          <div className="phone-screen-image-frame">
+            <Image
+              alt={screenImageAlt ?? `${title} app screen`}
+              className="phone-screen-image"
+              fill
+              sizes="245px"
+              src={screenImageSrc}
+            />
+          </div>
         ) : (
           <>
             <div className="phone-status">
@@ -181,7 +183,7 @@ export default function Home() {
               <div className="profile-orbit">
                 <Image
                   alt="Martin Prahl profile photo"
-                  src="/images/martin2.jpg"
+                  src="/images/martin3.jpg"
                   width={220}
                   height={220}
                   priority
