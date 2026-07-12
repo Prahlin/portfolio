@@ -324,9 +324,14 @@ h3 {
   padding: 0;
 }
 
+.phone-screen-image-frame {
+  inset: 2% 0 0;
+  position: absolute;
+}
+
 .phone-screen-image {
   object-fit: cover;
-  object-position: center;
+  object-position: top center;
 }
 
 .phone-status {

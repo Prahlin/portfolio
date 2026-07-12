@@ -70,13 +70,15 @@ function PhonePreview({
       <div className="phone-speaker" />
       <div className={`phone-screen${screenImageSrc ? " has-image" : ""}`}>
         {screenImageSrc ? (
-          <Image
-            alt={screenImageAlt ?? `${title} app screen`}
-            className="phone-screen-image"
-            fill
-            sizes="245px"
-            src={screenImageSrc}
-          />
+          <div className="phone-screen-image-frame">
+            <Image
+              alt={screenImageAlt ?? `${title} app screen`}
+              className="phone-screen-image"
+              fill
+              sizes="245px"
+              src={screenImageSrc}
+            />
+          </div>
         ) : (
           <>
             <div className="phone-status">
