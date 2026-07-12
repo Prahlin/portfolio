@@ -164,14 +164,14 @@ export default function Home() {
             <div className="hero-visual" aria-label="Portfolio preview">
               <div className="profile-orbit">
                 <Image
-                  alt="Martin Prahlin profile photo"
+                  alt="Martin Prahl profile photo"
                   src="/images/martin-profile.png"
                   width={220}
                   height={220}
                   priority
                   className="profile-photo"
                 />
-                <span>Martin Prahlin</span>
+                <span>Martin Prahl</span>
               </div>
 
               <div className="phone-stage">
