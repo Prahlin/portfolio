@@ -321,20 +321,11 @@ h3 {
 
 .phone-screen.has-image {
   background: #020403;
-  padding: 5%;
-}
-
-.phone-screen-image-frame {
-  background: #020403;
-  border-radius: 19px;
-  height: 100%;
-  overflow: hidden;
-  position: relative;
-  width: 100%;
+  padding: 0;
 }
 
 .phone-screen-image {
-  object-fit: contain;
+  object-fit: cover;
   object-position: center;
 }
 

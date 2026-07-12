@@ -70,15 +70,13 @@ function PhonePreview({
       <div className="phone-speaker" />
       <div className={`phone-screen${screenImageSrc ? " has-image" : ""}`}>
         {screenImageSrc ? (
-          <div className="phone-screen-image-frame">
-            <Image
-              alt={screenImageAlt ?? `${title} app screen`}
-              className="phone-screen-image"
-              fill
-              sizes="245px"
-              src={screenImageSrc}
-            />
-          </div>
+          <Image
+            alt={screenImageAlt ?? `${title} app screen`}
+            className="phone-screen-image"
+            fill
+            sizes="245px"
+            src={screenImageSrc}
+          />
         ) : (
           <>
             <div className="phone-status">
@@ -197,7 +195,7 @@ export default function Home() {
                   title="Alla Vostra"
                   metric="Checkout ready"
                   variant="commerce"
-                  screenImageSrc="/images/startup_screen.png"
+                  screenImageSrc="/images/startup_screen_large.png"
                   screenImageAlt="Alla Vostra startup screen"
                 />
                 <PhonePreview
