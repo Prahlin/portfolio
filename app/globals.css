@@ -316,6 +316,17 @@ h3 {
   height: calc(100% - 18px);
   overflow: hidden;
   padding: 18px;
+  position: relative;
+}
+
+.phone-screen.has-image {
+  background: #020403;
+  padding: 0;
+}
+
+.phone-screen-image {
+  object-fit: cover;
+  object-position: center;
 }
 
 .phone-status {

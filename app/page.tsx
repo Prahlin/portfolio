@@ -56,34 +56,50 @@ function PhonePreview({
   title,
   metric,
   variant,
+  screenImageSrc,
+  screenImageAlt,
 }: {
   title: string;
   metric: string;
   variant: "commerce" | "finance";
+  screenImageSrc?: string;
+  screenImageAlt?: string;
 }) {
   return (
     <div className={`phone-shell phone-shell-${variant}`}>
       <div className="phone-speaker" />
-      <div className="phone-screen">
-        <div className="phone-status">
-          <span>{title}</span>
-          <span>5G</span>
-        </div>
-        <div className="phone-chart">
-          <div />
-          <div />
-          <div />
-          <div />
-        </div>
-        <div className="phone-cardline wide" />
-        <div className="phone-cardline" />
-        <div className="phone-grid">
-          <span />
-          <span />
-          <span />
-          <span />
-        </div>
-        <div className="phone-cta">{metric}</div>
+      <div className={`phone-screen${screenImageSrc ? " has-image" : ""}`}>
+        {screenImageSrc ? (
+          <Image
+            alt={screenImageAlt ?? `${title} app screen`}
+            className="phone-screen-image"
+            fill
+            sizes="245px"
+            src={screenImageSrc}
+          />
+        ) : (
+          <>
+            <div className="phone-status">
+              <span>{title}</span>
+              <span>5G</span>
+            </div>
+            <div className="phone-chart">
+              <div />
+              <div />
+              <div />
+              <div />
+            </div>
+            <div className="phone-cardline wide" />
+            <div className="phone-cardline" />
+            <div className="phone-grid">
+              <span />
+              <span />
+              <span />
+              <span />
+            </div>
+            <div className="phone-cta">{metric}</div>
+          </>
+        )}
       </div>
     </div>
   );
@@ -179,6 +195,8 @@ export default function Home() {
                   title="Alla Vostra"
                   metric="Checkout ready"
                   variant="commerce"
+                  screenImageSrc="/images/startup_screen.png"
+                  screenImageAlt="Alla Vostra startup screen"
                 />
                 <PhonePreview
                   title="CreditKing"
@@ -300,9 +318,12 @@ export default function Home() {
             <p className="eyebrow">Available for full-stack mobile work</p>
             <h2>Let’s build something crisp, fast, and release-ready.</h2>
           </div>
-          <a className="button button-primary" href="mailto:hello@example.com">
+          <a
+            className="button button-primary"
+            href="mailto:martin@prahlproductions.com"
+          >
             <Mail aria-hidden size={18} />
-            Replace with your email
+            martin@prahlproductions.com
           </a>
         </div>
       </section>
