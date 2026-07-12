@@ -1,0 +1,755 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+2 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+3 0 obj
+<< /Length 4705 >>
+stream
+BT
+/F2 15 Tf
+1 0 0 1 54 738 Tm
+(Prahlin Portfolio Work Log - July 11, 2026) Tj
+/F1 10 Tf
+1 0 0 1 54 716 Tm
+(Compiled summary for Saturday, July 11, 2026 - focus: React Native-first portfolio) Tj
+/F1 10 Tf
+1 0 0 1 54 703 Tm
+(positioning, green/black Next.js start-page implementation, static Hostinger deployment,) Tj
+/F1 10 Tf
+1 0 0 1 54 690 Tm
+(GitHub repository setup, real profile-photo replacement, Alla Vostra app-device screenshot) Tj
+/F1 10 Tf
+1 0 0 1 54 677 Tm
+(treatment, official contact email wiring, and landing-page project miniatures.) Tj
+/F1 10 Tf
+1 0 0 1 54 661 Tm
+(Generated in continuity with the established Alla Vostra daily worklog cadence: compact) Tj
+/F1 10 Tf
+1 0 0 1 54 648 Tm
+(opening summary, source-material section, baseline section, goal list, work-completed) Tj
+/F1 10 Tf
+1 0 0 1 54 635 Tm
+(sections, validation section, files-touched list, follow-up context, and output-artifact) Tj
+/F1 10 Tf
+1 0 0 1 54 622 Tm
+(close.) Tj
+/F1 10 Tf
+1 0 0 1 54 606 Tm
+(This artifact intentionally covers only the Prahlin/portfolio work represented by commits) Tj
+/F1 10 Tf
+1 0 0 1 54 593 Tm
+(f27d24d through bb184fe and the surrounding deployment steps performed during this Codex) Tj
+/F1 10 Tf
+1 0 0 1 54 580 Tm
+(session. Non-portfolio troubleshooting, scratch-disk guidance, and future dynamic-stat) Tj
+/F1 10 Tf
+1 0 0 1 54 567 Tm
+(planning are excluded from this record.) Tj
+/F2 13 Tf
+1 0 0 1 54 539 Tm
+(Source Material Reviewed) Tj
+/F1 10 Tf
+1 0 0 1 54 518 Tm
+(- Reviewed all remote-tracked root-level Alla Vostra worklog PDFs in Prahlin/alla_vostra) Tj
+/F1 10 Tf
+1 0 0 1 64 505 Tm
+(  from May through July after fetching origin/main, including) Tj
+/F1 10 Tf
+1 0 0 1 64 492 Tm
+(  alla_vostra_worklog_may11.pdf through alla_vostra_worklog_july11.pdf.) Tj
+/F1 10 Tf
+1 0 0 1 54 476 Tm
+(- Extracted text from the full Alla Vostra worklog set with pdftotext and checked page) Tj
+/F1 10 Tf
+1 0 0 1 64 463 Tm
+(  metadata with pdfinfo to preserve the established title cadence, root-level PDF) Tj
+/F1 10 Tf
+1 0 0 1 64 450 Tm
+(  convention, section order, compact bullet-heavy voice, validation language, and output-) Tj
+/F1 10 Tf
+1 0 0 1 64 437 Tm
+(  artifact close.) Tj
+/F1 10 Tf
+1 0 0 1 54 421 Tm
+(- Used the mature July 11 Alla Vostra worklog as the closest style reference because it) Tj
+/F1 10 Tf
+1 0 0 1 64 408 Tm
+(  is the latest same-day artifact and already documents a release/deployment-oriented) Tj
+/F1 10 Tf
+1 0 0 1 64 395 Tm
+(  workflow with source material, baseline, goals, work-completed sections, validation,) Tj
+/F1 10 Tf
+1 0 0 1 64 382 Tm
+(  files touched, follow-up context, and output artifact.) Tj
+/F1 10 Tf
+1 0 0 1 54 366 Tm
+(- Reviewed the active Portfolio repository at /Users/prahlin/gh/portfolio and confirmed) Tj
+/F1 10 Tf
+1 0 0 1 64 353 Tm
+(  the Git remote points to https://github.com/Prahlin/portfolio.git.) Tj
+/F1 10 Tf
+1 0 0 1 54 337 Tm
+(- Reviewed the full Portfolio Git history for July 11, covering commits f27d24d, c88da11,) Tj
+/F1 10 Tf
+1 0 0 1 64 324 Tm
+(  2b15d40, 89457a7, f3a45a4, 5de3525, a40c78e, b1c884a, ef06811, f6080f3, 4b8ca33,) Tj
+/F1 10 Tf
+1 0 0 1 64 311 Tm
+(  e63fa26, and bb184fe.) Tj
+/F1 10 Tf
+1 0 0 1 54 295 Tm
+(- Reviewed app/page.tsx, app/globals.css, app/layout.tsx, package.json, package-) Tj
+/F1 10 Tf
+1 0 0 1 64 282 Tm
+(  lock.json, next.config.ts, postcss.config.mjs, tsconfig.json, README.md, DEPLOYMENT.md,) Tj
+/F1 10 Tf
+1 0 0 1 64 269 Tm
+(  .gitignore, .github/workflows/hostinger-static-export.yml, and the tracked image assets) Tj
+/F1 10 Tf
+1 0 0 1 64 256 Tm
+(  in public/images.) Tj
+/F1 10 Tf
+1 0 0 1 54 240 Tm
+(- Reviewed the static-export deployment workflow, Hostinger deployment branch behavior,) Tj
+/F1 10 Tf
+1 0 0 1 64 227 Tm
+(  live temporary Hostinger URL checks, and the current clean main branch state before) Tj
+/F1 10 Tf
+1 0 0 1 64 214 Tm
+(  this PDF was generated.) Tj
+/F2 13 Tf
+1 0 0 1 54 186 Tm
+(Baseline Status Before Portfolio Work) Tj
+/F1 10 Tf
+1 0 0 1 54 165 Tm
+(- The Portfolio project did not yet have a stable public source-control and deployment) Tj
+/F1 10 Tf
+1 0 0 1 64 152 Tm
+(  path at the beginning of this session. Work started from the need to turn prior) Tj
+/F1 10 Tf
+1 0 0 1 64 139 Tm
+(  portfolio planning and a start-page mockup into hostable files, then into a real) Tj
+/F1 10 Tf
+1 0 0 1 64 126 Tm
+(  GitHub-backed deployment.) Tj
+/F1 10 Tf
+1 0 0 1 54 110 Tm
+(- The intended positioning was React Native and React mobile-app work first, Kotlin) Tj
+/F1 10 Tf
+1 0 0 1 64 97 Tm
+(  mobile-app work second, and full-stack delivery where it supports mobile product) Tj
+/F1 10 Tf
+1 0 0 1 64 84 Tm
+(  outcomes.) Tj
+/F1 8 Tf
+1 0 0 1 54 30 Tm
+(Prahlin Portfolio Work Log - July 11, 2026 Page 1) Tj
+ET
+endstream
+endobj
+4 0 obj
+<< /Length 4729 >>
+stream
+BT
+/F1 10 Tf
+1 0 0 1 54 738 Tm
+(- The visual direction had already been narrowed by the user to a stylish green and black) Tj
+/F1 10 Tf
+1 0 0 1 64 725 Tm
+(  portfolio identity with a generated profile-photo placeholder that could later be) Tj
+/F1 10 Tf
+1 0 0 1 64 712 Tm
+(  replaced by a real photograph.) Tj
+/F1 10 Tf
+1 0 0 1 54 696 Tm
+(- The first public site target was Hostinger static hosting, not a running Node.js) Tj
+/F1 10 Tf
+1 0 0 1 64 683 Tm
+(  server. That meant the Next.js project needed a reliable static export path and a) Tj
+/F1 10 Tf
+1 0 0 1 64 670 Tm
+(  deployment shape compatible with Hostinger Git integration.) Tj
+/F1 10 Tf
+1 0 0 1 54 654 Tm
+(- The portfolio needed to connect the landing-page story back to real project proof: Alla) Tj
+/F1 10 Tf
+1 0 0 1 64 641 Tm
+(  Vostra, CreditKing, screenshots, worklog history, GitHub history, and visible mobile-) Tj
+/F1 10 Tf
+1 0 0 1 64 628 Tm
+(  app surfaces rather than a generic developer landing page.) Tj
+/F2 13 Tf
+1 0 0 1 54 600 Tm
+(Goals for July 11) Tj
+/F1 10 Tf
+1 0 0 1 54 579 Tm
+(- Create a usable first Portfolio website rather than only a design recommendation or) Tj
+/F1 10 Tf
+1 0 0 1 64 566 Tm
+(  mockup.) Tj
+/F1 10 Tf
+1 0 0 1 54 550 Tm
+(- Make the first viewport clearly signal Prahlin, React Native, full-stack mobile) Tj
+/F1 10 Tf
+1 0 0 1 64 537 Tm
+(  development, Android release readiness, and the green/black brand language.) Tj
+/F1 10 Tf
+1 0 0 1 54 521 Tm
+(- Use Next.js, React, Tailwind CSS tooling, Node package scripts, lucide icons, static) Tj
+/F1 10 Tf
+1 0 0 1 64 508 Tm
+(  export settings, and a conventional project layout that can live in GitHub.) Tj
+/F1 10 Tf
+1 0 0 1 54 492 Tm
+(- Package the project for Hostinger, first through static files and then through a) Tj
+/F1 10 Tf
+1 0 0 1 64 479 Tm
+(  GitHub-connected automatic deployment branch.) Tj
+/F1 10 Tf
+1 0 0 1 54 463 Tm
+(- Replace temporary/generated profile imagery with real Martin Prahl profile photos while) Tj
+/F1 10 Tf
+1 0 0 1 64 450 Tm
+(  preserving the Prahlin brand label in the top-left navigation.) Tj
+/F1 10 Tf
+1 0 0 1 54 434 Tm
+(- Replace generic mock-device filler with real Alla Vostra app screenshots so the landing) Tj
+/F1 10 Tf
+1 0 0 1 64 421 Tm
+(  page has immediate proof of mobile-app work.) Tj
+/F1 10 Tf
+1 0 0 1 54 405 Tm
+(- Keep Node build output, dependency folders, archives, environment files, and generated) Tj
+/F1 10 Tf
+1 0 0 1 64 392 Tm
+(  bundles out of the GitHub repository through a project-specific .gitignore.) Tj
+/F1 10 Tf
+1 0 0 1 54 376 Tm
+(- Ask for commit messages before committing new Portfolio changes once that preference) Tj
+/F1 10 Tf
+1 0 0 1 64 363 Tm
+(  was established, and keep commit scope limited to requested files.) Tj
+/F2 13 Tf
+1 0 0 1 54 335 Tm
+(Work Completed - Initial Portfolio Site and Visual System) Tj
+/F1 10 Tf
+1 0 0 1 54 314 Tm
+(- Built the initial Portfolio source as a Next.js app with app/page.tsx, app/layout.tsx,) Tj
+/F1 10 Tf
+1 0 0 1 64 301 Tm
+(  app/globals.css, next.config.ts, postcss.config.mjs, package.json, package-lock.json,) Tj
+/F1 10 Tf
+1 0 0 1 64 288 Tm
+(  tsconfig.json, README.md, DEPLOYMENT.md, public/favicon.svg, and initial generated) Tj
+/F1 10 Tf
+1 0 0 1 64 275 Tm
+(  image assets.) Tj
+/F1 10 Tf
+1 0 0 1 54 259 Tm
+(- Created a green/black landing page centered on a React Native Full-Stack Mobile) Tj
+/F1 10 Tf
+1 0 0 1 64 246 Tm
+(  Developer headline, with supporting copy for polished mobile apps, secure checkout) Tj
+/F1 10 Tf
+1 0 0 1 64 233 Tm
+(  flows, and production-ready Android pipelines.) Tj
+/F1 10 Tf
+1 0 0 1 54 217 Tm
+(- Added top navigation for Case Studies, Stack, Worklog, and Contact, plus a Prahlin) Tj
+/F1 10 Tf
+1 0 0 1 64 204 Tm
+(  monogram/brand mark that remains distinct from the later Martin Prahl profile label.) Tj
+/F1 10 Tf
+1 0 0 1 54 188 Tm
+(- Built a hero section with a profile orbit, two mobile-device mockups, proof panel,) Tj
+/F1 10 Tf
+1 0 0 1 64 175 Tm
+(  stack chips, GitHub link, and an Alla Vostra call-to-action that scrolls to the case-) Tj
+/F1 10 Tf
+1 0 0 1 64 162 Tm
+(  study section.) Tj
+/F1 10 Tf
+1 0 0 1 54 146 Tm
+(- Added proof stats for Alla Vostra commits, PDF worklogs, CreditKing commits, and) Tj
+/F1 10 Tf
+1 0 0 1 64 133 Tm
+(  Android release prep to make the landing page read as a documented build history rather) Tj
+/F1 10 Tf
+1 0 0 1 64 120 Tm
+(  than only a visual resume.) Tj
+/F1 10 Tf
+1 0 0 1 54 104 Tm
+(- Added case-study cards for Alla Vostra and CreditKing, a stack section covering) Tj
+/F1 10 Tf
+1 0 0 1 64 91 Tm
+(  React/React Native/Expo/Next.js/Tailwind/Node and Kotlin, a worklog section, and a) Tj
+/F1 10 Tf
+1 0 0 1 64 78 Tm
+(  contact panel.) Tj
+/F1 8 Tf
+1 0 0 1 54 30 Tm
+(Prahlin Portfolio Work Log - July 11, 2026 Page 2) Tj
+ET
+endstream
+endobj
+5 0 obj
+<< /Length 4625 >>
+stream
+BT
+/F1 10 Tf
+1 0 0 1 54 738 Tm
+(- Used lucide-react icons for actions and proof points, and kept the UI dark, compact,) Tj
+/F1 10 Tf
+1 0 0 1 64 725 Tm
+(  and project-centered rather than building a generic marketing hero.) Tj
+/F2 13 Tf
+1 0 0 1 54 697 Tm
+(Work Completed - Repository, Packaging, and Hostinger Deployment Path) Tj
+/F1 10 Tf
+1 0 0 1 54 676 Tm
+(- Moved the Portfolio files through the requested local folder organization and into the) Tj
+/F1 10 Tf
+1 0 0 1 64 663 Tm
+(  active Git checkout at /Users/prahlin/gh/portfolio.) Tj
+/F1 10 Tf
+1 0 0 1 54 647 Tm
+(- Created and used the Prahlin/portfolio GitHub repository as the source of truth for the) Tj
+/F1 10 Tf
+1 0 0 1 64 634 Tm
+(  portfolio website.) Tj
+/F1 10 Tf
+1 0 0 1 54 618 Tm
+(- Added static-export support through npm run build:static and NEXT_OUTPUT=export so) Tj
+/F1 10 Tf
+1 0 0 1 64 605 Tm
+(  Hostinger can serve the generated files without a persistent Node.js runtime.) Tj
+/F1 10 Tf
+1 0 0 1 54 589 Tm
+(- Added .github/workflows/hostinger-static-export.yml so pushes to main build the static) Tj
+/F1 10 Tf
+1 0 0 1 64 576 Tm
+(  export and force-push the out/ directory to a dedicated hostinger-deploy branch.) Tj
+/F1 10 Tf
+1 0 0 1 54 560 Tm
+(- Connected Hostinger to the Portfolio GitHub repository, using branch hostinger-deploy) Tj
+/F1 10 Tf
+1 0 0 1 64 547 Tm
+(  and root directory public_html for the hosted static output.) Tj
+/F1 10 Tf
+1 0 0 1 54 531 Tm
+(- Guided the early manual Hostinger upload and extraction path, then shifted to the) Tj
+/F1 10 Tf
+1 0 0 1 64 518 Tm
+(  cleaner Git-backed workflow once Hostinger was connected to GitHub.) Tj
+/F1 10 Tf
+1 0 0 1 54 502 Tm
+(- Added and expanded .gitignore so node_modules, .next, out, ZIP archives, logs, local) Tj
+/F1 10 Tf
+1 0 0 1 64 489 Tm
+(  env files, package-manager caches, .DS_Store, editor folders, dist, and build outputs) Tj
+/F1 10 Tf
+1 0 0 1 64 476 Tm
+(  stay out of the repository.) Tj
+/F1 10 Tf
+1 0 0 1 54 460 Tm
+(- Added sharp as a dev dependency for possible local image-processing workflows, while) Tj
+/F1 10 Tf
+1 0 0 1 64 447 Tm
+(  later profile-photo updates ultimately used prepared image assets rather than) Tj
+/F1 10 Tf
+1 0 0 1 64 434 Tm
+(  committing generated Node artifacts.) Tj
+/F2 13 Tf
+1 0 0 1 54 406 Tm
+(Work Completed - Profile Photo Replacement and Identity Refinement) Tj
+/F1 10 Tf
+1 0 0 1 54 385 Tm
+(- Replaced the original generated profile placeholder with real Martin profile photos) Tj
+/F1 10 Tf
+1 0 0 1 64 372 Tm
+(  across several user-directed passes: martin1.jpg, martin2.jpg, and finally martin3.jpg.) Tj
+/F1 10 Tf
+1 0 0 1 54 356 Tm
+(- Normalized image filenames to lowercase where needed so paths resolve reliably on case-) Tj
+/F1 10 Tf
+1 0 0 1 64 343 Tm
+(  sensitive Linux hosting environments.) Tj
+/F1 10 Tf
+1 0 0 1 54 327 Tm
+(- Updated the visible profile label and alt text to Martin Prahl while preserving Prahlin) Tj
+/F1 10 Tf
+1 0 0 1 64 314 Tm
+(  in the top-left brand mark as requested.) Tj
+/F1 10 Tf
+1 0 0 1 54 298 Tm
+(- Kept the profile-photo iteration scoped to the public/images assets and app/page.tsx) Tj
+/F1 10 Tf
+1 0 0 1 64 285 Tm
+(  references, avoiding broad redesign of the hero while the source image was refined) Tj
+/F1 10 Tf
+1 0 0 1 64 272 Tm
+(  externally.) Tj
+/F1 10 Tf
+1 0 0 1 54 256 Tm
+(- Moved from the first real photo to a better-fitting green/black background-gradient) Tj
+/F1 10 Tf
+1 0 0 1 64 243 Tm
+(  version that matched the site visual system more closely.) Tj
+/F1 10 Tf
+1 0 0 1 54 227 Tm
+(- Preserved older profile-image assets in the repository where they were already tracked,) Tj
+/F1 10 Tf
+1 0 0 1 64 214 Tm
+(  while making the live page reference martin3.jpg as the active profile image.) Tj
+/F2 13 Tf
+1 0 0 1 54 186 Tm
+(Work Completed - Alla Vostra Device Inlay and Screenshot Treatment) Tj
+/F1 10 Tf
+1 0 0 1 54 165 Tm
+(- Refactored the PhonePreview component so a device mockup can render a real Next.js) Tj
+/F1 10 Tf
+1 0 0 1 64 152 Tm
+(  Image inlay instead of only the generic CSS chart/card placeholder.) Tj
+/F1 10 Tf
+1 0 0 1 54 136 Tm
+(- Replaced the generic Alla Vostra device filler with a real Alla Vostra startup) Tj
+/F1 10 Tf
+1 0 0 1 64 123 Tm
+(  screenshot, giving the hero area an immediate connection to the mobile app project.) Tj
+/F1 10 Tf
+1 0 0 1 54 107 Tm
+(- Iterated on the phone-inlay fit after the first screenshot was clipped by the mock) Tj
+/F1 10 Tf
+1 0 0 1 64 94 Tm
+(  device aspect ratio.) Tj
+/F1 10 Tf
+1 0 0 1 54 78 Tm
+(- Added and then revised safe-area handling around the screenshot: first a broader) Tj
+/F1 8 Tf
+1 0 0 1 54 30 Tm
+(Prahlin Portfolio Work Log - July 11, 2026 Page 3) Tj
+ET
+endstream
+endobj
+6 0 obj
+<< /Length 4489 >>
+stream
+BT
+/F1 10 Tf
+1 0 0 1 64 738 Tm
+(  containment approach, then a larger aspect-ratio-correct image, and finally a slim top-) Tj
+/F1 10 Tf
+1 0 0 1 64 725 Tm
+(  only 2 percent band so the Android toolbar is not obscured by the device frame.) Tj
+/F1 10 Tf
+1 0 0 1 54 709 Tm
+(- Substituted startup_screen_large.png for the smaller startup image in the hero device) Tj
+/F1 10 Tf
+1 0 0 1 64 696 Tm
+(  because the large asset better matched the phone-frame ratio.) Tj
+/F1 10 Tf
+1 0 0 1 54 680 Tm
+(- Kept left, right, and bottom edges visually edge-to-edge after the final top-only) Tj
+/F1 10 Tf
+1 0 0 1 64 667 Tm
+(  adjustment, accepting that any remaining crop pressure should fall lower in the) Tj
+/F1 10 Tf
+1 0 0 1 64 654 Tm
+(  screenshot rather than over the Android toolbar.) Tj
+/F2 13 Tf
+1 0 0 1 54 626 Tm
+(Work Completed - Contact Email and Alla Vostra Landing-Page Miniatures) Tj
+/F1 10 Tf
+1 0 0 1 54 605 Tm
+(- Replaced the temporary contact mailto link and visible text with the official developer) Tj
+/F1 10 Tf
+1 0 0 1 64 592 Tm
+(  email martin@prahlproductions.com.) Tj
+/F1 10 Tf
+1 0 0 1 54 576 Tm
+(- Imported three Alla Vostra project screenshots into public/images:) Tj
+/F1 10 Tf
+1 0 0 1 64 563 Tm
+(  startup_screen_small.png, products_overlay_small.png, and confirmed_overlay_small.png.) Tj
+/F1 10 Tf
+1 0 0 1 54 547 Tm
+(- Added a compact three-image miniature strip under the Alla Vostra case-study card so) Tj
+/F1 10 Tf
+1 0 0 1 64 534 Tm
+(  visitors see real mobile app screens before navigating to any later dedicated case-) Tj
+/F1 10 Tf
+1 0 0 1 64 521 Tm
+(  study page.) Tj
+/F1 10 Tf
+1 0 0 1 54 505 Tm
+(- Kept the miniatures in phone-ratio 9:16 frames with restrained borders and shadow) Tj
+/F1 10 Tf
+1 0 0 1 64 492 Tm
+(  styling so they support the case-study card without overwhelming the landing page.) Tj
+/F1 10 Tf
+1 0 0 1 54 476 Tm
+(- Left the CreditKing card text-only for now, preserving the current landing-page balance) Tj
+/F1 10 Tf
+1 0 0 1 64 463 Tm
+(  until dedicated CreditKing screenshots or a project page are added.) Tj
+/F1 10 Tf
+1 0 0 1 54 447 Tm
+(- Preserved the hero large Alla Vostra inlay and added the smaller screenshots only to) Tj
+/F1 10 Tf
+1 0 0 1 64 434 Tm
+(  the lower case-study section, keeping separate roles for hero proof and case-study) Tj
+/F1 10 Tf
+1 0 0 1 64 421 Tm
+(  preview.) Tj
+/F2 13 Tf
+1 0 0 1 54 393 Tm
+(Validation and Checks Performed) Tj
+/F1 10 Tf
+1 0 0 1 54 372 Tm
+(- Ran npm run check repeatedly after source edits; TypeScript completed successfully) Tj
+/F1 10 Tf
+1 0 0 1 64 359 Tm
+(  before the relevant commits were pushed.) Tj
+/F1 10 Tf
+1 0 0 1 54 343 Tm
+(- Ran npm run build:static repeatedly after source and image edits; Next.js static export) Tj
+/F1 10 Tf
+1 0 0 1 64 330 Tm
+(  completed successfully before deployment commits were pushed.) Tj
+/F1 10 Tf
+1 0 0 1 54 314 Tm
+(- Confirmed GitHub Actions runs for the Hostinger static-export workflow completed) Tj
+/F1 10 Tf
+1 0 0 1 64 301 Tm
+(  successfully after the pushed Portfolio commits.) Tj
+/F1 10 Tf
+1 0 0 1 54 285 Tm
+(- Checked live Hostinger HTML with cache-busted query parameters after deployments to) Tj
+/F1 10 Tf
+1 0 0 1 64 272 Tm
+(  confirm references to martin2.jpg, martin3.jpg, startup_screen.png,) Tj
+/F1 10 Tf
+1 0 0 1 64 259 Tm
+(  startup_screen_large.png, startup_screen_small.png, products_overlay_small.png,) Tj
+/F1 10 Tf
+1 0 0 1 64 246 Tm
+(  confirmed_overlay_small.png, and martin@prahlproductions.com as the project evolved.) Tj
+/F1 10 Tf
+1 0 0 1 54 230 Tm
+(- Confirmed the final Portfolio working tree was clean before generating this worklog) Tj
+/F1 10 Tf
+1 0 0 1 64 217 Tm
+(  PDF.) Tj
+/F1 10 Tf
+1 0 0 1 54 201 Tm
+(- Confirmed the current main branch matches origin/main before this artifact was created.) Tj
+/F1 10 Tf
+1 0 0 1 54 185 Tm
+(- Did not implement the proposed automatic GitHub commit-count refresh workflow during) Tj
+/F1 10 Tf
+1 0 0 1 64 172 Tm
+(  this session; that idea was intentionally deferred at the user request.) Tj
+/F1 10 Tf
+1 0 0 1 54 156 Tm
+(- Did not create dedicated /projects/alla-vostra or /projects/creditking pages during) Tj
+/F1 10 Tf
+1 0 0 1 64 143 Tm
+(  this session; the landing page now only previews the Alla Vostra project with) Tj
+/F1 10 Tf
+1 0 0 1 64 130 Tm
+(  miniatures.) Tj
+/F2 13 Tf
+1 0 0 1 54 102 Tm
+(Files Touched During July 11 Portfolio Work) Tj
+/F1 10 Tf
+1 0 0 1 54 81 Tm
+(- .github/workflows/hostinger-static-export.yml) Tj
+/F1 8 Tf
+1 0 0 1 54 30 Tm
+(Prahlin Portfolio Work Log - July 11, 2026 Page 4) Tj
+ET
+endstream
+endobj
+7 0 obj
+<< /Length 3366 >>
+stream
+BT
+/F1 10 Tf
+1 0 0 1 54 738 Tm
+(- .gitignore) Tj
+/F1 10 Tf
+1 0 0 1 54 722 Tm
+(- DEPLOYMENT.md) Tj
+/F1 10 Tf
+1 0 0 1 54 706 Tm
+(- README.md) Tj
+/F1 10 Tf
+1 0 0 1 54 690 Tm
+(- app/globals.css) Tj
+/F1 10 Tf
+1 0 0 1 54 674 Tm
+(- app/layout.tsx) Tj
+/F1 10 Tf
+1 0 0 1 54 658 Tm
+(- app/page.tsx) Tj
+/F1 10 Tf
+1 0 0 1 54 642 Tm
+(- next.config.ts) Tj
+/F1 10 Tf
+1 0 0 1 54 626 Tm
+(- package-lock.json) Tj
+/F1 10 Tf
+1 0 0 1 54 610 Tm
+(- package.json) Tj
+/F1 10 Tf
+1 0 0 1 54 594 Tm
+(- postcss.config.mjs) Tj
+/F1 10 Tf
+1 0 0 1 54 578 Tm
+(- public/favicon.svg) Tj
+/F1 10 Tf
+1 0 0 1 54 562 Tm
+(- public/images/confirmed_overlay_small.png) Tj
+/F1 10 Tf
+1 0 0 1 54 546 Tm
+(- public/images/martin-profile.png) Tj
+/F1 10 Tf
+1 0 0 1 54 530 Tm
+(- public/images/martin1.jpg) Tj
+/F1 10 Tf
+1 0 0 1 54 514 Tm
+(- public/images/martin2.jpg) Tj
+/F1 10 Tf
+1 0 0 1 54 498 Tm
+(- public/images/martin3.jpg) Tj
+/F1 10 Tf
+1 0 0 1 54 482 Tm
+(- public/images/products_overlay_small.png) Tj
+/F1 10 Tf
+1 0 0 1 54 466 Tm
+(- public/images/start-page-mockup-reference.png) Tj
+/F1 10 Tf
+1 0 0 1 54 450 Tm
+(- public/images/startup_screen_large.png) Tj
+/F1 10 Tf
+1 0 0 1 54 434 Tm
+(- public/images/startup_screen_small.png) Tj
+/F1 10 Tf
+1 0 0 1 54 418 Tm
+(- tsconfig.json) Tj
+/F2 13 Tf
+1 0 0 1 54 390 Tm
+(Follow-Up Context) Tj
+/F1 10 Tf
+1 0 0 1 54 369 Tm
+(- Create a dedicated Alla Vostra case-study page, likely /projects/alla-vostra, so the) Tj
+/F1 10 Tf
+1 0 0 1 64 356 Tm
+(  hero button can eventually move from section scrolling to a full project narrative.) Tj
+/F1 10 Tf
+1 0 0 1 54 340 Tm
+(- Add a dedicated CreditKing case-study page and screenshot set once the landing page) Tj
+/F1 10 Tf
+1 0 0 1 64 327 Tm
+(  needs parity between the two featured projects.) Tj
+/F1 10 Tf
+1 0 0 1 54 311 Tm
+(- Update README.md and DEPLOYMENT.md so their placeholder profile-photo and placeholder) Tj
+/F1 10 Tf
+1 0 0 1 64 298 Tm
+(  email references match the current martin3.jpg and martin@prahlproductions.com) Tj
+/F1 10 Tf
+1 0 0 1 64 285 Tm
+(  implementation.) Tj
+/F1 10 Tf
+1 0 0 1 54 269 Tm
+(- Consider replacing hardcoded proof stats with a build-time GitHub commit-count) Tj
+/F1 10 Tf
+1 0 0 1 64 256 Tm
+(  generator later, using repository_dispatch or a scheduled workflow only when that) Tj
+/F1 10 Tf
+1 0 0 1 64 243 Tm
+(  automation becomes worth the complexity.) Tj
+/F1 10 Tf
+1 0 0 1 54 227 Tm
+(- Audit the landing page at desktop and mobile widths after any future screenshot) Tj
+/F1 10 Tf
+1 0 0 1 64 214 Tm
+(  additions so the case cards do not become visually crowded.) Tj
+/F1 10 Tf
+1 0 0 1 54 198 Tm
+(- Keep asking for Portfolio commit messages before committing/pushing new changes unless) Tj
+/F1 10 Tf
+1 0 0 1 64 185 Tm
+(  the user explicitly instructs otherwise.) Tj
+/F2 13 Tf
+1 0 0 1 54 157 Tm
+(Output Artifact) Tj
+/F1 10 Tf
+1 0 0 1 54 136 Tm
+(- Filename: portfolio_worklog_july11.pdf) Tj
+/F1 10 Tf
+1 0 0 1 54 120 Tm
+(- Created at the repository root in /Users/prahlin/gh/portfolio.) Tj
+/F1 10 Tf
+1 0 0 1 54 104 Tm
+(- Follows the established root-level Alla Vostra daily worklog naming convention, adapted) Tj
+/F1 10 Tf
+1 0 0 1 64 91 Tm
+(  from alla_vostra_worklog_july11.pdf to portfolio_worklog_july11.pdf.) Tj
+/F1 10 Tf
+1 0 0 1 54 75 Tm
+(- This is the first Portfolio project worklog artifact for Prahlin/portfolio.) Tj
+/F1 8 Tf
+1 0 0 1 54 30 Tm
+(Prahlin Portfolio Work Log - July 11, 2026 Page 5) Tj
+ET
+endstream
+endobj
+8 0 obj
+<< /Type /Page /Parent 13 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> /Contents 3 0 R >>
+endobj
+9 0 obj
+<< /Type /Page /Parent 13 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> /Contents 4 0 R >>
+endobj
+10 0 obj
+<< /Type /Page /Parent 13 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> /Contents 5 0 R >>
+endobj
+11 0 obj
+<< /Type /Page /Parent 13 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> /Contents 6 0 R >>
+endobj
+12 0 obj
+<< /Type /Page /Parent 13 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> /Contents 7 0 R >>
+endobj
+13 0 obj
+<< /Type /Pages /Kids [ 8 0 R 9 0 R 10 0 R 11 0 R 12 0 R ] /Count 5 >>
+endobj
+14 0 obj
+<< /Type /Catalog /Pages 13 0 R >>
+endobj
+xref
+0 15
+0000000000 65535 f 
+0000000015 00000 n 
+0000000085 00000 n 
+0000000160 00000 n 
+0000004917 00000 n 
+0000009698 00000 n 
+0000014375 00000 n 
+0000018916 00000 n 
+0000022334 00000 n 
+0000022471 00000 n 
+0000022608 00000 n 
+0000022746 00000 n 
+0000022884 00000 n 
+0000023022 00000 n 
+0000023109 00000 n 
+trailer
+<< /Size 15 /Root 14 0 R >>
+startxref
+23160
+%%EOF
