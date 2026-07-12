@@ -165,7 +165,7 @@ export default function Home() {
               <div className="profile-orbit">
                 <Image
                   alt="Martin Prahl profile photo"
-                  src="/images/martin1.jpg"
+                  src="/images/martin2.jpg"
                   width={220}
                   height={220}
                   priority
