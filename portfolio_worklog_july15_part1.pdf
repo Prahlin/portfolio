@@ -1,0 +1,291 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+2 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+3 0 obj
+<< /Length 5515 >>
+stream
+BT
+/F2 12.2 Tf 1 0 0 1 54.00 738.00 Tm (Prahlin Portfolio Work Log - July 15, 2026 \(Part 1\)) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 719.00 Tm (Compiled summary for Wednesday, July 15, 2026 - Part 1 - focus: refining the Portfolio landing) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 706.00 Tm (page after the July 14 Cinerific and carousel pass, hardening the top navigation for compressed) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 693.00 Tm (portrait mobile widths, tightening hero proof-stat language, adding quoted app-project names to) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 680.00 Tm (the rotating green CTA, pushing the update through the Hostinger static-export pipeline, and) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 667.00 Tm (creating a Portfolio project snapshot script equivalent to the Alla Vostra and Cinerific) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 654.00 Tm (read_project.sh convention.) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 637.00 Tm (Generated in continuity with the established Alla Vostra, Cinerific, and Prahlin Portfolio daily) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 624.00 Tm (worklog cadence: compact opening summary, source-material section, baseline section, goal list,) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 611.00 Tm (work-completed sections, validation section, files-touched list, follow-up context, and) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 598.00 Tm (output-artifact close.) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 581.00 Tm (This artifact intentionally covers only Prahlin/portfolio work performed for July 15 Part 1:) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 568.00 Tm (commit 3fa5aa5, the Hostinger/GitHub deployment check for that commit, the new read_project.sh) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 555.00 Tm (snapshot utility, the generated portfolio_PROJECT_SNAPSHOT.txt artifact, and this) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 542.00 Tm (worklog-generation step. Alla Vostra and Cinerific material was used as naming, style, structure,) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 529.00 Tm (length, and content-type reference only.) Tj
+/F2 13.2 Tf 1 0 0 1 54.00 506.00 Tm (Source Materials Reviewed) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 490.00 Tm (-   Extracted text from all 47 available local worklog PDFs across) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 477.00 Tm (    /Users/prahlin/gh/alla_vostra, /Users/prahlin/gh/cinerific, and /Users/prahlin/gh/portfolio) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 464.00 Tm (    using pdftotext. The reviewed corpus included 43 Alla Vostra worklogs, 2 Cinerific worklogs,) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 451.00 Tm (    and 2 prior Portfolio worklogs.) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 436.00 Tm (-   Reviewed the Alla Vostra worklog series from May through July, including part-numbered files) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 423.00 Tm (    such as alla_vostra_worklog_july7_part1.pdf and mature release/deployment logs such as) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 410.00 Tm (    alla_vostra_worklog_july11.pdf, to preserve the established daily-report cadence.) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 395.00 Tm (-   Reviewed cinerific_worklog_july 12.pdf and cinerific_worklog_july 14.pdf as project-specific) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 382.00 Tm (    examples of adapting the Alla Vostra convention to a Kotlin/Compose Android project while) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 369.00 Tm (    preserving source-material, baseline, validation, and follow-up sections.) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 354.00 Tm (-   Reviewed portfolio_worklog_july11.pdf and portfolio_worklog_july14.pdf as the closest) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 341.00 Tm (    same-project references for title format, root-level naming, five-page body length,) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 328.00 Tm (    Hostinger/static-export validation language, and Portfolio-specific follow-up conventions.) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 313.00 Tm (-   Reviewed /Users/prahlin/gh/alla_vostra/read_project.sh and) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 300.00 Tm (    /Users/prahlin/gh/cinerific/read_project.sh to model the new Portfolio snapshot script:) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 287.00 Tm (    instruction header, pruned tree, line-numbered file dumps, ignored generated files, and) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 274.00 Tm (    binary-asset inventory instead of raw bytes.) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 259.00 Tm (-   Reviewed current Portfolio Git context on main tracking origin/main, recent commits through) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 246.00 Tm (    3fa5aa5, GitHub Actions run history for the Hostinger static-export workflow, and the active) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 233.00 Tm (    files app/page.tsx, app/globals.css, app/ProjectCarouselButton.tsx, package/deployment) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 220.00 Tm (    config, and public assets.) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 205.00 Tm (-   Checked PDF metadata and page counts with pdfinfo, and used pdftotext output to compare) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 192.00 Tm (    section order, bullet density, filename conventions, and the compact technical voice used) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 179.00 Tm (    across previous artifacts.) Tj
+/F2 13.2 Tf 1 0 0 1 54.00 158.00 Tm (Baseline Status Before July 15 Part 1 Work) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 142.00 Tm (-   The July 14 Portfolio site already presented a green/black React Native-first portfolio with) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 129.00 Tm (    Martin Prahl visible in the top-left brand, a real profile photo, Alla Vostra and Credit) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 116.00 Tm (    King phone mockups, a Cinerific tablet mockup, three case-study cards, and a rotating hero) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 103.00 Tm (    CTA.) Tj
+/F1 8.8 Tf 1 0 0 1 54.00 28.00 Tm (Prahlin Portfolio Work Log - July 15, 2026 \(Part 1\) Page 1) Tj
+ET
+endstream
+endobj
+4 0 obj
+<< /Type /Page /Parent 13 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> /Contents 3 0 R >>
+endobj
+5 0 obj
+<< /Length 5550 >>
+stream
+BT
+/F1 9.6 Tf 1 0 0 1 54.00 738.00 Tm (-   The hero proof strip had already shifted from narrow project counters to broader developer) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 725.00 Tm (    proof, but the language still needed the user-requested final wording: 3yrs, 1k+ Quality) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 712.00 Tm (    GitHub Commits, 50+ Project worklogs, and 5 Official Play/App Store Releases.) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 697.00 Tm (-   The top card navigation still had a compressed portrait risk: Case Studies, Stack, Worklog,) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 684.00 Tm (    and Contact could wrap, clip, or visually leave the top card when tested through tight) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 671.00 Tm (    smartphone-width screenshots.) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 656.00 Tm (-   The green hero CTA rotated project names, but the labels read as plain View Alla Vostra,) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 643.00 Tm (    View Credit King, and View Cinerific. The user wanted single apostrophes around each app) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 630.00 Tm (    project name to make the label semantics clearer.) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 615.00 Tm (-   The Portfolio repo did not yet have a read_project.sh snapshot utility equivalent to the) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 602.00 Tm (    existing Alla Vostra and Cinerific scripts, even though those projects already had a) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 589.00 Tm (    pre-session snapshot convention.) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 574.00 Tm (-   The Portfolio project preference remained in force: before committing or pushing Portfolio) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 561.00 Tm (    work, ask the user for the commit message rather than auto-writing one.) Tj
+/F2 13.2 Tf 1 0 0 1 54.00 540.00 Tm (Goals for July 15 Part 1) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 524.00 Tm (-   Keep the top navigation links on one row in compressed portrait mobile aspect ratios without) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 511.00 Tm (    letting Case Studies, Stack, Worklog, or Contact jump to a second line.) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 496.00 Tm (-   Prefer reducing horizontal spacing, padding, and font sizing at narrow widths over allowing) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 483.00 Tm (    nav text to wrap.) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 468.00 Tm (-   Update the proof-stat copy to the user-approved wording: 3yrs, 1k+ Quality GitHub Commits,) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 455.00 Tm (    50+ Project worklogs, and 5 Official Play/App Store Releases.) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 440.00 Tm (-   Add single apostrophes around every app project name in the green carousel button: View) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 427.00 Tm (    'Alla Vostra', View 'Credit King', and View 'Cinerific'.) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 412.00 Tm (-   Build, commit, and push the approved website update to the official GitHub-backed Hostinger) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 399.00 Tm (    path after receiving the user-supplied commit message.) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 384.00 Tm (-   Create a Portfolio read_project.sh script that can regenerate a project snapshot before each) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 371.00 Tm (    future Portfolio work session.) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 356.00 Tm (-   Generate the first July 15 Portfolio worklog as Part 1, following the pre-existing naming,) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 343.00 Tm (    style, structure, length, and content type conventions.) Tj
+/F2 13.2 Tf 1 0 0 1 54.00 322.00 Tm (Work Completed - Mobile Top Navigation Hardening) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 306.00 Tm (-   Updated app/globals.css so the top navigation anchors explicitly use white-space: nowrap,) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 293.00 Tm (    preventing individual labels from splitting into multiple lines.) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 278.00 Tm (-   Changed the mobile navigation behavior from flex wrapping to a compressed grid at narrower) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 265.00 Tm (    breakpoints, with minmax\(0, ...\) tracks so each link can shrink inside its assigned slot) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 252.00 Tm (    rather than forcing the whole row wider than the top card.) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 237.00 Tm (-   Added min-width: 0 and flex: 1 1 0 behavior to the mobile nav links so text and columns obey) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 224.00 Tm (    the available width instead of preserving browser default intrinsic minimums.) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 209.00 Tm (-   Reduced horizontal padding and font size across the 720px, 380px, and 340px breakpoints so) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 196.00 Tm (    the links fit tightly on one line during portrait smartphone compression.) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 181.00 Tm (-   Capped the mobile top card and nav width against the visible viewport, preventing hero or) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 168.00 Tm (    browser screenshot-width quirks from letting the nav row visually bleed outside the card.) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 153.00 Tm (-   Cleared and restarted the Next/Turbopack dev cache when local CSS chunks stayed stale after) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 140.00 Tm (    rapid edits, then confirmed the compiled CSS reflected the new minmax and shrink rules.) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 125.00 Tm (-   Verified with a true 320px Playwright screenshot using the installed Chrome channel that all) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 112.00 Tm (    four navigation links were visible on one row inside the top card.) Tj
+/F2 13.2 Tf 1 0 0 1 54.00 91.00 Tm (Work Completed - Proof Stats and Carousel Labels) Tj
+/F1 8.8 Tf 1 0 0 1 54.00 28.00 Tm (Prahlin Portfolio Work Log - July 15, 2026 \(Part 1\) Page 2) Tj
+ET
+endstream
+endobj
+6 0 obj
+<< /Type /Page /Parent 13 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> /Contents 5 0 R >>
+endobj
+7 0 obj
+<< /Length 5407 >>
+stream
+BT
+/F1 9.6 Tf 1 0 0 1 54.00 738.00 Tm (-   Updated app/page.tsx so the first proof-stat value reads 3yrs and its label reads UI/UX +) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 725.00 Tm (    Front-end + Back-end.) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 710.00 Tm (-   Changed the GitHub proof column from 500+ GitHub commits to 1k+ Quality GitHub Commits,) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 697.00 Tm (    matching the broader output framing requested by the user.) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 682.00 Tm (-   Changed the mobile-release proof column from EAS Android release prep to 5 Official Play/App) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 669.00 Tm (    Store Releases, making the stat read as a concrete release count instead of a tooling/status) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 656.00 Tm (    note.) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 641.00 Tm (-   Kept the Project worklogs column at 50+ Project worklogs, preserving the documentation-proof) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 628.00 Tm (    thread established in the previous Portfolio worklogs.) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 613.00 Tm (-   Updated app/ProjectCarouselButton.tsx so the green carousel labels now include single) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 600.00 Tm (    apostrophes around the app project names: View 'Alla Vostra', View 'Credit King', and View) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 587.00 Tm (    'Cinerific'.) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 572.00 Tm (-   Preserved the five-second carousel timing, section href updates, bumpy swoosh animation,) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 559.00 Tm (    reduced-motion fallback, and existing button styling while changing only the project-name) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 546.00 Tm (    presentation.) Tj
+/F2 13.2 Tf 1 0 0 1 54.00 525.00 Tm (Work Completed - Commit, Push, and Official Website Pipeline) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 509.00 Tm (-   Asked the user for the Portfolio commit message before committing, preserving the standing) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 496.00 Tm (    project preference established earlier in the Portfolio session.) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 481.00 Tm (-   Committed the nav, proof-stat, and carousel-label changes as commit 3fa5aa5 with the exact) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 468.00 Tm (    user-provided commit message.) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 453.00 Tm (-   Pushed/verified main against origin/main. The push reported Everything up-to-date because) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 440.00 Tm (    origin/main already pointed at the new commit after the local commit operation completed.) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 425.00 Tm (-   Confirmed main and origin/main both resolved to 3fa5aa5b8d2cc9a32b9c55a03fd1842cd2431522) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 412.00 Tm (    after the push/verification step.) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 397.00 Tm (-   Checked GitHub Actions with gh run list and confirmed the Build static export for Hostinger) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 384.00 Tm (    workflow completed successfully for the 3fa5aa5 push.) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 369.00 Tm (-   Stopped the local Next dev server after the deployment check so no preview process was left) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 356.00 Tm (    running unnecessarily.) Tj
+/F2 13.2 Tf 1 0 0 1 54.00 335.00 Tm (Work Completed - Portfolio Project Snapshot Script) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 319.00 Tm (-   Studied both reference scripts: Alla Vostra creates separate web and mobile snapshots, while) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 306.00 Tm (    Cinerific creates one Android snapshot with source sections and binary inventories.) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 291.00 Tm (-   Added read_project.sh at the Portfolio repo root, using the same general convention:) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 278.00 Tm (    root-relative PROJECT_DIR, root-level output file, instruction header, ignored generated) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 265.00 Tm (    paths, project tree, file-content sections, and binary inventory sections.) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 250.00 Tm (-   Configured the Portfolio snapshot output as portfolio_PROJECT_SNAPSHOT.txt so future) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 237.00 Tm (    sessions can begin by regenerating and reading the current source context.) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 222.00 Tm (-   Included Portfolio-specific notes in the snapshot header: main branch source, GitHub Actions) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 209.00 Tm (    building main into hostinger-deploy, Hostinger public_html root, public assets under) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 196.00 Tm (    public/, and the standing commit-message requirement.) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 181.00 Tm (-   Dumped line-numbered app source files: app/layout.tsx, app/page.tsx,) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 168.00 Tm (    app/ProjectCarouselButton.tsx, and app/globals.css.) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 153.00 Tm (-   Dumped line-numbered root, tooling, deployment, and config files including .gitignore,) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 140.00 Tm (    README.md, DEPLOYMENT.md, package.json, package-lock.json, Next/Tailwind/TypeScript config,) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 127.00 Tm (    Hostinger workflow YAML, favicon, and read_project.sh itself.) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 112.00 Tm (-   Added git context to the snapshot: current branch, short status, recent commits, and) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 99.00 Tm (    remotes, so a future Codex session can quickly understand repo state before editing.) Tj
+/F1 8.8 Tf 1 0 0 1 54.00 28.00 Tm (Prahlin Portfolio Work Log - July 15, 2026 \(Part 1\) Page 3) Tj
+ET
+endstream
+endobj
+8 0 obj
+<< /Type /Page /Parent 13 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> /Contents 7 0 R >>
+endobj
+9 0 obj
+<< /Length 5102 >>
+stream
+BT
+/F1 9.6 Tf 1 0 0 1 54.00 738.00 Tm (-   Added inventories for public image assets, Portfolio PDF worklogs, and deployment ZIP) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 725.00 Tm (    archives by path, byte size, and modified time, while intentionally avoiding raw) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 712.00 Tm (    PNG/JPG/PDF/ZIP bytes.) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 697.00 Tm (-   Ran ./read_project.sh successfully and generated portfolio_PROJECT_SNAPSHOT.txt at the) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 684.00 Tm (    repository root as the first Portfolio snapshot artifact.) Tj
+/F2 13.2 Tf 1 0 0 1 54.00 663.00 Tm (Validation and Checks Performed) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 647.00 Tm (-   Ran npm run check after the July 15 source changes; TypeScript completed successfully.) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 632.00 Tm (-   Ran npm run build:static after the July 15 source changes; Next.js produced the static) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 619.00 Tm (    Hostinger-compatible build successfully.) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 604.00 Tm (-   Used Playwright with the installed Chrome channel at a true 320px viewport to confirm the) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 591.00 Tm (    top navigation rendered Case Studies, Stack, Worklog, and Contact on one row without line) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 578.00 Tm (    wrapping.) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 563.00 Tm (-   Used curl and generated CSS inspection to confirm the compiled CSS included the mobile nav) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 550.00 Tm (    grid, minmax tracks, width caps, and link shrink rules after clearing stale .next/dev cache) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 537.00 Tm (    output.) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 522.00 Tm (-   Confirmed the Hostinger static-export GitHub Action completed successfully for commit) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 509.00 Tm (    3fa5aa5.) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 494.00 Tm (-   Ran bash -n read_project.sh; shell syntax passed.) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 479.00 Tm (-   Ran ./read_project.sh; it generated portfolio_PROJECT_SNAPSHOT.txt successfully and reported) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 466.00 Tm (    its output path.) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 451.00 Tm (-   Checked the generated snapshot size and structure with wc, section searches, and inventory) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 438.00 Tm (    inspection before this worklog was generated.) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 423.00 Tm (-   Extracted text from all 47 pre-existing worklog PDFs with pdftotext and reviewed the prior) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 410.00 Tm (    Portfolio/Cinerific examples before writing this PDF.) Tj
+/F2 13.2 Tf 1 0 0 1 54.00 389.00 Tm (Files Touched During July 15 Part 1 Portfolio Work) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 373.00 Tm (-   app/globals.css - hardened top-card navigation against compressed portrait widths with) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 360.00 Tm (    nowrap labels, grid/minmax layout, reduced mobile padding/font sizes, viewport width caps,) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 347.00 Tm (    and small-width breakpoints.) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 332.00 Tm (-   app/page.tsx - updated proof-stat values and labels to 3yrs, 1k+ Quality GitHub Commits, 50+) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 319.00 Tm (    Project worklogs, and 5 Official Play/App Store Releases.) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 304.00 Tm (-   app/ProjectCarouselButton.tsx - added single apostrophes around the rotating app project) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 291.00 Tm (    names in the green hero CTA.) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 276.00 Tm (-   read_project.sh - new executable Portfolio snapshot generator based on the Alla Vostra and) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 263.00 Tm (    Cinerific read_project.sh conventions.) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 248.00 Tm (-   portfolio_PROJECT_SNAPSHOT.txt - generated project snapshot artifact produced by) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 235.00 Tm (    read_project.sh for future pre-session context loading.) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 220.00 Tm (-   portfolio_worklog_july15_part1.pdf - this new July 15 Part 1 Portfolio worklog artifact) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 207.00 Tm (    generated at the repository root.) Tj
+/F2 13.2 Tf 1 0 0 1 54.00 186.00 Tm (Follow-Up Context) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 170.00 Tm (-   Commit read_project.sh, portfolio_PROJECT_SNAPSHOT.txt, and this July 15 Part 1 PDF only) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 157.00 Tm (    after the user provides a commit message.) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 142.00 Tm (-   If the snapshot file is intended to be regenerated and tracked like the Alla) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 129.00 Tm (    Vostra/Cinerific snapshot files, keep it at the repo root and update it before each session.) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 116.00 Tm (    If it should remain local-only later, add an explicit ignore rule.) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 101.00 Tm (-   Recheck the 320px and 360px top navigation after any future label, brand, or localization) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 88.00 Tm (    changes, because the current solution is intentionally tuned for the existing four labels.) Tj
+/F1 8.8 Tf 1 0 0 1 54.00 28.00 Tm (Prahlin Portfolio Work Log - July 15, 2026 \(Part 1\) Page 4) Tj
+ET
+endstream
+endobj
+10 0 obj
+<< /Type /Page /Parent 13 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> /Contents 9 0 R >>
+endobj
+11 0 obj
+<< /Length 1599 >>
+stream
+BT
+/F1 9.6 Tf 1 0 0 1 54.00 738.00 Tm (-   If the proof stats become dynamic later, treat GitHub commit counts and release counts as) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 725.00 Tm (    build-time or script-generated data rather than client-side runtime calls.) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 710.00 Tm (-   Dedicated project pages remain a natural next step: the carousel button currently navigates) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 697.00 Tm (    to landing-page case-study anchors rather than full project-detail pages.) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 682.00 Tm (-   Continue keeping generated build output, Node dependencies, environment files, and) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 669.00 Tm (    deployment archives out of source commits unless the user explicitly asks otherwise.) Tj
+/F2 13.2 Tf 1 0 0 1 54.00 648.00 Tm (Output Artifact) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 632.00 Tm (-   Generated file: portfolio_worklog_july15_part1.pdf) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 617.00 Tm (-   Location: /Users/prahlin/gh/portfolio/portfolio_worklog_july15_part1.pdf) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 602.00 Tm (-   Naming follows the existing root-level Portfolio convention and the Alla Vostra part-number) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 589.00 Tm (    convention: portfolio_worklog_july15_part1.pdf.) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 574.00 Tm (-   This PDF is the first Portfolio worklog for July 15 and intentionally uses Part 1 because) Tj
+/F1 9.6 Tf 1 0 0 1 54.00 561.00 Tm (    additional Portfolio work may occur later the same day.) Tj
+/F1 8.8 Tf 1 0 0 1 54.00 28.00 Tm (Prahlin Portfolio Work Log - July 15, 2026 \(Part 1\) Page 5) Tj
+ET
+endstream
+endobj
+12 0 obj
+<< /Type /Page /Parent 13 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> /Contents 11 0 R >>
+endobj
+13 0 obj
+<< /Type /Pages /Kids [4 0 R 6 0 R 8 0 R 10 0 R 12 0 R] /Count 5 >>
+endobj
+14 0 obj
+<< /Type /Catalog /Pages 13 0 R >>
+endobj
+15 0 obj
+<< /Title (Prahlin Portfolio Work Log - July 15, 2026 \(Part 1\)) /Subject (Portfolio website development worklog) /Author (Codex) /Creator (Codex standard-library PDF generator) /Producer (Codex standard-library PDF generator) >>
+endobj
+xref
+0 16
+0000000000 65535 f 
+0000000009 00000 n 
+0000000079 00000 n 
+0000000154 00000 n 
+0000005721 00000 n 
+0000005858 00000 n 
+0000011460 00000 n 
+0000011597 00000 n 
+0000017056 00000 n 
+0000017193 00000 n 
+0000022347 00000 n 
+0000022485 00000 n 
+0000024137 00000 n 
+0000024276 00000 n 
+0000024360 00000 n 
+0000024411 00000 n 
+trailer
+<< /Size 16 /Root 14 0 R /Info 15 0 R >>
+startxref
+24658
+%%EOF

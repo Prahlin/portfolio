@@ -1,0 +1,4551 @@
+Portfolio Next.js PROJECT SNAPSHOT
+Generated: Wed Jul 15 18:05:45 EDT 2026
+Project directory: /Users/prahlin/gh/portfolio
+
+IMPORTANT INSTRUCTIONS FOR CHATGPT & CODEX:
+1. Read this entire snapshot before giving code edits.
+2. Preserve all assets, spacing, alignment, fonts, images, layout, animations, and relative positioning unless specifically asked to change them.
+3. Do not remove unrelated code.
+4. Do not rewrite large sections unless requested.
+5. When giving code changes, include exact line/row numbers whenever possible.
+6. Print full scripts when requested.
+7. Treat this project structure as the source of truth.
+8. If you do not understand something, ask for clarification instead of making assumptions.
+9. Warn me, or at least caution me, if I ask for something that would break the project or cause it to not work as intended.
+10. For this Portfolio repo/website project, always ask me for the commit message before committing or pushing.
+
+
+============================================================
+PORTFOLIO PROJECT NOTES
+============================================================
+
+- Main source branch: main
+- Deployment source: GitHub Actions builds main into the hostinger-deploy branch
+- Hostinger root directory: public_html
+- Main stack represented by the website: React / React Native, Next.js, Tailwind CSS, Node.js, Kotlin
+- Public website assets live under public/
+- Run this script before starting a Portfolio session to refresh the project snapshot.
+
+
+============================================================
+SNAPSHOT IGNORE POLICY
+============================================================
+
+This file is rebuilt from the current Portfolio workspace every time ./read_project.sh runs.
+Ignored paths are omitted from the project tree and file dumps unless they appear inside an included text file such as .gitignore or read_project.sh.
+
+The snapshot intentionally ignores generated/cache/runtime/private files:
+- .git
+- node_modules
+- .next
+- out
+- dist
+- build
+- .cache
+- .turbo
+- .npm
+- .pnpm-store
+- .yarn
+- .DS_Store
+- next-env.d.ts
+- *.tsbuildinfo
+- *_PROJECT_SNAPSHOT.txt
+- *.zip
+- .env and .env*.local
+
+Binary image, PDF, and archive files are inventoried by path, size, and modified time only. Raw binary bytes are not printed.
+
+
+============================================================
+PROJECT FILE TREE
+============================================================
+
+/Users/prahlin/gh/portfolio
+/Users/prahlin/gh/portfolio/.github
+/Users/prahlin/gh/portfolio/.github/workflows
+/Users/prahlin/gh/portfolio/.github/workflows/hostinger-static-export.yml
+/Users/prahlin/gh/portfolio/.gitignore
+/Users/prahlin/gh/portfolio/DEPLOYMENT.md
+/Users/prahlin/gh/portfolio/README.md
+/Users/prahlin/gh/portfolio/app
+/Users/prahlin/gh/portfolio/app/ProjectCarouselButton.tsx
+/Users/prahlin/gh/portfolio/app/globals.css
+/Users/prahlin/gh/portfolio/app/layout.tsx
+/Users/prahlin/gh/portfolio/app/page.tsx
+/Users/prahlin/gh/portfolio/next.config.ts
+/Users/prahlin/gh/portfolio/package-lock.json
+/Users/prahlin/gh/portfolio/package.json
+/Users/prahlin/gh/portfolio/portfolio_worklog_july11.pdf
+/Users/prahlin/gh/portfolio/portfolio_worklog_july14.pdf
+/Users/prahlin/gh/portfolio/postcss.config.mjs
+/Users/prahlin/gh/portfolio/public
+/Users/prahlin/gh/portfolio/public/favicon.svg
+/Users/prahlin/gh/portfolio/public/images
+/Users/prahlin/gh/portfolio/public/images/cinerific-intro.png
+/Users/prahlin/gh/portfolio/public/images/confirmed_overlay_small.png
+/Users/prahlin/gh/portfolio/public/images/martin-profile.png
+/Users/prahlin/gh/portfolio/public/images/martin1.jpg
+/Users/prahlin/gh/portfolio/public/images/martin2.jpg
+/Users/prahlin/gh/portfolio/public/images/martin3.jpg
+/Users/prahlin/gh/portfolio/public/images/products_overlay_small.png
+/Users/prahlin/gh/portfolio/public/images/start-page-mockup-reference.png
+/Users/prahlin/gh/portfolio/public/images/startup_screen_large.png
+/Users/prahlin/gh/portfolio/public/images/startup_screen_small.png
+/Users/prahlin/gh/portfolio/public/meta
+/Users/prahlin/gh/portfolio/read_project.sh
+/Users/prahlin/gh/portfolio/tsconfig.json
+
+
+============================================================
+FILE CONTENTS - APP SOURCE
+============================================================
+
+
+
+============================================================
+FILE: app/layout.tsx
+============================================================
+
+     1	import type { Metadata } from "next";
+     2	import "./globals.css";
+     3	
+     4	export const metadata: Metadata = {
+     5	  metadataBase: new URL(
+     6	    process.env.NEXT_PUBLIC_SITE_URL || "https://prahlin.dev",
+     7	  ),
+     8	  title: "Prahlin | React Native Full-Stack Mobile Developer",
+     9	  description:
+    10	    "Portfolio for Prahlin, a React Native full-stack mobile developer building polished mobile apps, secure checkout flows, and production-ready Android pipelines.",
+    11	  openGraph: {
+    12	    title: "Prahlin | React Native Full-Stack Mobile Developer",
+    13	    description:
+    14	      "React Native, Next.js, Tailwind CSS, Node.js, and Kotlin mobile portfolio.",
+    15	    images: ["/images/start-page-mockup-reference.png"],
+    16	  },
+    17	};
+    18	
+    19	export default function RootLayout({
+    20	  children,
+    21	}: Readonly<{
+    22	  children: React.ReactNode;
+    23	}>) {
+    24	  return (
+    25	    <html lang="en">
+    26	      <body>{children}</body>
+    27	    </html>
+    28	  );
+    29	}
+
+
+============================================================
+FILE: app/page.tsx
+============================================================
+
+     1	import Image from "next/image";
+     2	import {
+     3	  Braces,
+     4	  Mail,
+     5	  MonitorSmartphone,
+     6	  Play,
+     7	  Server,
+     8	  Smartphone,
+     9	  Store,
+    10	} from "lucide-react";
+    11	import { ProjectCarouselButton } from "./ProjectCarouselButton";
+    12	
+    13	const navItems = ["Case Studies", "Stack", "Worklog", "Contact"];
+    14	
+    15	const stackChips = [
+    16	  "React Native",
+    17	  "Next.js",
+    18	  "Tailwind CSS",
+    19	  "Node.js",
+    20	  "Kotlin",
+    21	];
+    22	
+    23	const proofStats = [
+    24	  {
+    25	    label: "UI/UX + Front-end + Back-end",
+    26	    value: "3yrs",
+    27	  },
+    28	  { label: "Quality GitHub Commits", value: "1k+" },
+    29	  { label: "Project worklogs", value: "50+" },
+    30	  { label: "Official Play/App Store Releases", value: "5" },
+    31	];
+    32	
+    33	type CaseScreenshot = {
+    34	  alt: string;
+    35	  orientation?: "landscape" | "portrait";
+    36	  src: string;
+    37	};
+    38	
+    39	type CaseStudy = {
+    40	  description: string;
+    41	  eyebrow: string;
+    42	  id: string;
+    43	  screenshots: CaseScreenshot[];
+    44	  stat: string;
+    45	  tags: string[];
+    46	  title: string;
+    47	};
+    48	
+    49	const caseStudies: CaseStudy[] = [
+    50	  {
+    51	    id: "cinerific",
+    52	    title: "Cinerific",
+    53	    eyebrow: "Native Android entertainment preview",
+    54	    description:
+    55	      "Kotlin and Jetpack Compose Android app scaffold translating Figma intro and sign-in frames into tablet-friendly full-screen screens, drawable assets, and an animated intro flow.",
+    56	    tags: ["Kotlin", "Compose", "Gradle", "TypeScript"],
+    57	    stat: "3 commits",
+    58	    screenshots: [
+    59	      {
+    60	        alt: "Cinerific intro logo frame",
+    61	        orientation: "landscape",
+    62	        src: "/images/cinerific-intro.png",
+    63	      },
+    64	    ],
+    65	  },
+    66	  {
+    67	    id: "alla-vostra",
+    68	    title: "Alla Vostra",
+    69	    eyebrow: "Flagship full-stack mobile commerce",
+    70	    description:
+    71	      "Expo/React Native ordering flow with Stripe, Postmark, Vercel serverless routes, Android device testing, and Play Store preparation.",
+    72	    tags: ["React Native", "Stripe", "Node.js", "EAS"],
+    73	    stat: "328 commits",
+    74	    screenshots: [
+    75	      {
+    76	        alt: "Alla Vostra startup screen",
+    77	        src: "/images/startup_screen_small.png",
+    78	      },
+    79	      {
+    80	        alt: "Alla Vostra products screen",
+    81	        src: "/images/products_overlay_small.png",
+    82	      },
+    83	      {
+    84	        alt: "Alla Vostra confirmation screen",
+    85	        src: "/images/confirmed_overlay_small.png",
+    86	      },
+    87	    ],
+    88	  },
+    89	  {
+    90	    id: "credit-king",
+    91	    title: "Credit King",
+    92	    eyebrow: "Finance app UI system",
+    93	    description:
+    94	      "React Native dashboard, animated navigation, Figma asset translation, responsive web/Android parity, and reusable app chrome.",
+    95	    tags: ["Expo Router", "SVG", "Animation", "Figma"],
+    96	    stat: "94 commits",
+    97	    screenshots: [],
+    98	  },
+    99	];
+   100	
+   101	const worklogItems = [
+   102	  "From responsive website prototype to Expo Router mobile architecture",
+   103	  "Secure Stripe card flow, Google Pay, PayPal, and Postmark confirmations",
+   104	  "Android Small, Standard, and Large emulator QA with release-ready EAS builds",
+   105	];
+   106	
+   107	function PhonePreview({
+   108	  title,
+   109	  metric,
+   110	  variant,
+   111	  screenImageSrc,
+   112	  screenImageAlt,
+   113	}: {
+   114	  title: string;
+   115	  metric: string;
+   116	  variant: "commerce" | "finance";
+   117	  screenImageSrc?: string;
+   118	  screenImageAlt?: string;
+   119	}) {
+   120	  return (
+   121	    <div className={`phone-shell phone-shell-${variant}`}>
+   122	      <div className="phone-speaker" />
+   123	      <div className={`phone-screen${screenImageSrc ? " has-image" : ""}`}>
+   124	        {screenImageSrc ? (
+   125	          <div className="phone-screen-image-frame">
+   126	            <Image
+   127	              alt={screenImageAlt ?? `${title} app screen`}
+   128	              className="phone-screen-image"
+   129	              fill
+   130	              sizes="245px"
+   131	              src={screenImageSrc}
+   132	            />
+   133	          </div>
+   134	        ) : (
+   135	          <>
+   136	            <div className="phone-status">
+   137	              <span>{title}</span>
+   138	              <span>5G</span>
+   139	            </div>
+   140	            <div className="phone-chart">
+   141	              <div />
+   142	              <div />
+   143	              <div />
+   144	              <div />
+   145	            </div>
+   146	            <div className="phone-cardline wide" />
+   147	            <div className="phone-cardline" />
+   148	            <div className="phone-grid">
+   149	              <span />
+   150	              <span />
+   151	              <span />
+   152	              <span />
+   153	            </div>
+   154	            <div className="phone-cta">{metric}</div>
+   155	          </>
+   156	        )}
+   157	      </div>
+   158	    </div>
+   159	  );
+   160	}
+   161	
+   162	function TabletPreview() {
+   163	  return (
+   164	    <div className="tablet-shell" aria-hidden="true">
+   165	      <div className="tablet-camera" />
+   166	      <div className="tablet-screen">
+   167	        <Image
+   168	          alt=""
+   169	          className="tablet-screen-image"
+   170	          fill
+   171	          sizes="456px"
+   172	          src="/images/cinerific-intro.png"
+   173	        />
+   174	        <div className="tablet-empty-grid" />
+   175	      </div>
+   176	    </div>
+   177	  );
+   178	}
+   179	
+   180	function SectionHeading({
+   181	  kicker,
+   182	  title,
+   183	}: {
+   184	  kicker: string;
+   185	  title: string;
+   186	}) {
+   187	  return (
+   188	    <div className="section-heading">
+   189	      <p>{kicker}</p>
+   190	      <h2>{title}</h2>
+   191	    </div>
+   192	  );
+   193	}
+   194	
+   195	export default function Home() {
+   196	  return (
+   197	    <main>
+   198	      <section className="hero" id="top">
+   199	        <div className="site-shell">
+   200	          <header className="nav-bar">
+   201	            <a className="brand" href="#top" aria-label="Martin Prahl home">
+   202	              <span>P</span>
+   203	              <strong>Martin Prahl</strong>
+   204	            </a>
+   205	
+   206	            <nav aria-label="Main navigation">
+   207	              {navItems.map((item) => (
+   208	                <a
+   209	                  key={item}
+   210	                  href={`#${item.toLowerCase().replace(" ", "-")}`}
+   211	                >
+   212	                  {item}
+   213	                </a>
+   214	              ))}
+   215	            </nav>
+   216	          </header>
+   217	
+   218	          <div className="hero-grid">
+   219	            <div className="hero-copy">
+   220	              <p className="eyebrow">
+   221	                React Native first. Kotlin ready. Full-stack where it counts.
+   222	              </p>
+   223	              <h1>React Native Full-Stack Mobile Developer</h1>
+   224	              <p className="hero-lede">
+   225	                Polished mobile apps, secure checkout flows, and
+   226	                production-ready Android pipelines.
+   227	              </p>
+   228	
+   229	              <div className="hero-actions">
+   230	                <ProjectCarouselButton />
+   231	                <a
+   232	                  className="button button-secondary"
+   233	                  href="https://github.com/Prahlin"
+   234	                  rel="noreferrer"
+   235	                  target="_blank"
+   236	                >
+   237	                  <Braces aria-hidden size={18} />
+   238	                  GitHub
+   239	                </a>
+   240	              </div>
+   241	
+   242	              <div className="stack-row" aria-label="Primary stack">
+   243	                {stackChips.map((chip) => (
+   244	                  <span key={chip}>{chip}</span>
+   245	                ))}
+   246	              </div>
+   247	
+   248	              <div className="proof-panel">
+   249	                <div>
+   250	                  <Store aria-hidden size={18} />
+   251	                  <span>Play Store prep</span>
+   252	                </div>
+   253	                <div>
+   254	                  <Server aria-hidden size={18} />
+   255	                  <span>Stripe + Postmark backend</span>
+   256	                </div>
+   257	              </div>
+   258	            </div>
+   259	
+   260	            <div className="hero-visual" aria-label="Portfolio preview">
+   261	              <div className="profile-orbit">
+   262	                <Image
+   263	                  alt="Martin Prahl profile photo"
+   264	                  src="/images/martin3.jpg"
+   265	                  width={220}
+   266	                  height={220}
+   267	                  priority
+   268	                  className="profile-photo"
+   269	                />
+   270	                <span>Martin Prahl</span>
+   271	              </div>
+   272	
+   273	              <div className="phone-stage">
+   274	                <TabletPreview />
+   275	                <PhonePreview
+   276	                  title="Alla Vostra"
+   277	                  metric="Checkout ready"
+   278	                  variant="commerce"
+   279	                  screenImageSrc="/images/startup_screen_large.png"
+   280	                  screenImageAlt="Alla Vostra startup screen"
+   281	                />
+   282	                <PhonePreview
+   283	                  title="CreditKing"
+   284	                  metric="Finance UI"
+   285	                  variant="finance"
+   286	                />
+   287	              </div>
+   288	            </div>
+   289	          </div>
+   290	
+   291	          <div className="stats-strip" aria-label="Project proof points">
+   292	            {proofStats.map((stat) => (
+   293	              <div key={stat.label}>
+   294	                <strong>{stat.value}</strong>
+   295	                <span>{stat.label}</span>
+   296	              </div>
+   297	            ))}
+   298	          </div>
+   299	        </div>
+   300	      </section>
+   301	
+   302	      <section className="case-section" id="case-studies">
+   303	        <div className="site-shell">
+   304	          <SectionHeading
+   305	            kicker="Featured case studies"
+   306	            title="Mobile products with real implementation depth"
+   307	          />
+   308	
+   309	          <div className="case-grid">
+   310	            {caseStudies.map((study) => (
+   311	              <article
+   312	                className="case-card"
+   313	                id={study.id}
+   314	                key={study.title}
+   315	              >
+   316	                <div className="case-topline">
+   317	                  <span>{study.eyebrow}</span>
+   318	                  <strong>{study.stat}</strong>
+   319	                </div>
+   320	                <h3>{study.title}</h3>
+   321	                <p>{study.description}</p>
+   322	                <div className="case-tags">
+   323	                  {study.tags.map((tag) => (
+   324	                    <span key={tag}>{tag}</span>
+   325	                  ))}
+   326	                </div>
+   327	                {study.screenshots.length > 0 ? (
+   328	                  <div
+   329	                    aria-label={`${study.title} app screenshots`}
+   330	                    className={`case-miniatures${
+   331	                      study.screenshots.some(
+   332	                        (screenshot) => screenshot.orientation === "landscape",
+   333	                      )
+   334	                        ? " case-miniatures-landscape"
+   335	                        : ""
+   336	                    }`}
+   337	                  >
+   338	                    {study.screenshots.map((screenshot) => (
+   339	                      <Image
+   340	                        alt={screenshot.alt}
+   341	                        className={`case-miniature${
+   342	                          screenshot.orientation === "landscape"
+   343	                            ? " case-miniature-landscape"
+   344	                            : ""
+   345	                        }`}
+   346	                        height={
+   347	                          screenshot.orientation === "landscape" ? 166 : 192
+   348	                        }
+   349	                        key={screenshot.src}
+   350	                        src={screenshot.src}
+   351	                        width={
+   352	                          screenshot.orientation === "landscape" ? 238 : 108
+   353	                        }
+   354	                      />
+   355	                    ))}
+   356	                  </div>
+   357	                ) : null}
+   358	              </article>
+   359	            ))}
+   360	          </div>
+   361	        </div>
+   362	      </section>
+   363	
+   364	      <section className="stack-section" id="stack">
+   365	        <div className="site-shell split-section">
+   366	          <SectionHeading
+   367	            kicker="Stack"
+   368	            title="Built around React Native, shaped for full-stack delivery"
+   369	          />
+   370	          <div className="capability-grid">
+   371	            <div>
+   372	              <MonitorSmartphone aria-hidden />
+   373	              <h3>Main stack</h3>
+   374	              <p>
+   375	                React, React Native, Expo Router, Next.js, Tailwind CSS, and
+   376	                mobile-first responsive UI systems.
+   377	              </p>
+   378	            </div>
+   379	            <div>
+   380	              <Braces aria-hidden />
+   381	              <h3>Backend layer</h3>
+   382	              <p>
+   383	                Node.js serverless routes, Stripe payment setup, Postmark email
+   384	                delivery, environment configuration, and deployment workflows.
+   385	              </p>
+   386	            </div>
+   387	            <div>
+   388	              <Smartphone aria-hidden />
+   389	              <h3>Secondary mobile</h3>
+   390	              <p>
+   391	                Kotlin and Android Studio as the native Android path, aligned
+   392	                with the same release and device-testing discipline.
+   393	              </p>
+   394	            </div>
+   395	          </div>
+   396	        </div>
+   397	      </section>
+   398	
+   399	      <section className="worklog-section" id="worklog">
+   400	        <div className="site-shell worklog-layout">
+   401	          <SectionHeading
+   402	            kicker="Worklog"
+   403	            title="A documented build history, not just final screenshots"
+   404	          />
+   405	          <div className="timeline">
+   406	            {worklogItems.map((item, index) => (
+   407	              <div key={item} className="timeline-item">
+   408	                <span>{String(index + 1).padStart(2, "0")}</span>
+   409	                <p>{item}</p>
+   410	              </div>
+   411	            ))}
+   412	          </div>
+   413	        </div>
+   414	      </section>
+   415	
+   416	      <section className="contact-section" id="contact">
+   417	        <div className="site-shell contact-panel">
+   418	          <div>
+   419	            <p className="eyebrow">Available for full-stack mobile work</p>
+   420	            <h2>Let’s build something crisp, fast, and release-ready.</h2>
+   421	          </div>
+   422	          <a
+   423	            className="button button-primary"
+   424	            href="mailto:martin@prahlproductions.com"
+   425	          >
+   426	            <Mail aria-hidden size={18} />
+   427	            martin@prahlproductions.com
+   428	          </a>
+   429	        </div>
+   430	      </section>
+   431	    </main>
+   432	  );
+   433	}
+
+
+============================================================
+FILE: app/ProjectCarouselButton.tsx
+============================================================
+
+     1	"use client";
+     2	
+     3	import { useEffect, useState } from "react";
+     4	import { ArrowRight } from "lucide-react";
+     5	
+     6	const projectLinks = [
+     7	  { href: "#cinerific", label: "View 'Cinerific'" },
+     8	  { href: "#alla-vostra", label: "View 'Alla Vostra'" },
+     9	  { href: "#credit-king", label: "View 'Credit King'" },
+    10	];
+    11	
+    12	export function ProjectCarouselButton() {
+    13	  const [activeIndex, setActiveIndex] = useState(1);
+    14	  const activeProject = projectLinks[activeIndex];
+    15	
+    16	  useEffect(() => {
+    17	    const interval = window.setInterval(() => {
+    18	      setActiveIndex((currentIndex) => (currentIndex + 1) % projectLinks.length);
+    19	    }, 5000);
+    20	
+    21	    return () => window.clearInterval(interval);
+    22	  }, []);
+    23	
+    24	  return (
+    25	    <a
+    26	      className="button button-primary carousel-button"
+    27	      href={activeProject.href}
+    28	    >
+    29	      <span className="carousel-button-window" aria-live="polite">
+    30	        <span className="carousel-button-label" key={activeProject.href}>
+    31	          {activeProject.label}
+    32	        </span>
+    33	      </span>
+    34	      <ArrowRight aria-hidden size={18} />
+    35	    </a>
+    36	  );
+    37	}
+
+
+============================================================
+FILE: app/globals.css
+============================================================
+
+     1	@import "tailwindcss";
+     2	
+     3	:root {
+     4	  color-scheme: dark;
+     5	  --bg: #030705;
+     6	  --panel: #08110d;
+     7	  --panel-2: #0c1913;
+     8	  --line: rgba(164, 255, 195, 0.16);
+     9	  --line-strong: rgba(164, 255, 195, 0.28);
+    10	  --text: #f3fff7;
+    11	  --muted: #9ab0a4;
+    12	  --green: #43ff92;
+    13	  --green-2: #00bf63;
+    14	  --mint: #c6ffd9;
+    15	}
+    16	
+    17	* {
+    18	  box-sizing: border-box;
+    19	}
+    20	
+    21	html {
+    22	  scroll-behavior: smooth;
+    23	}
+    24	
+    25	body {
+    26	  min-height: 100vh;
+    27	  margin: 0;
+    28	  background:
+    29	    linear-gradient(rgba(67, 255, 146, 0.035) 1px, transparent 1px),
+    30	    linear-gradient(90deg, rgba(67, 255, 146, 0.035) 1px, transparent 1px),
+    31	    radial-gradient(circle at 78% 18%, rgba(0, 191, 99, 0.18), transparent 34%),
+    32	    linear-gradient(135deg, #020403 0%, #050b08 38%, #010302 100%);
+    33	  background-size: 48px 48px, 48px 48px, auto, auto;
+    34	  color: var(--text);
+    35	  font-family:
+    36	    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    37	    sans-serif;
+    38	}
+    39	
+    40	a {
+    41	  color: inherit;
+    42	  text-decoration: none;
+    43	}
+    44	
+    45	button,
+    46	a {
+    47	  -webkit-tap-highlight-color: transparent;
+    48	}
+    49	
+    50	.site-shell {
+    51	  width: min(1180px, calc(100% - 36px));
+    52	  margin: 0 auto;
+    53	}
+    54	
+    55	.hero {
+    56	  min-height: 100vh;
+    57	  overflow: hidden;
+    58	  padding: 24px 0 48px;
+    59	  position: relative;
+    60	}
+    61	
+    62	.hero::after {
+    63	  content: "";
+    64	  position: absolute;
+    65	  inset: auto 0 0;
+    66	  height: 36%;
+    67	  pointer-events: none;
+    68	  background: linear-gradient(transparent, var(--bg));
+    69	}
+    70	
+    71	.nav-bar {
+    72	  align-items: center;
+    73	  border: 1px solid var(--line);
+    74	  border-radius: 8px;
+    75	  display: flex;
+    76	  justify-content: space-between;
+    77	  min-height: 64px;
+    78	  padding: 0 18px;
+    79	  position: relative;
+    80	  z-index: 3;
+    81	}
+    82	
+    83	.brand {
+    84	  align-items: center;
+    85	  display: inline-flex;
+    86	  gap: 10px;
+    87	  font-size: 15px;
+    88	}
+    89	
+    90	.brand span {
+    91	  align-items: center;
+    92	  background: linear-gradient(135deg, var(--green), #0a8c4d);
+    93	  border-radius: 6px;
+    94	  color: #001d0f;
+    95	  display: inline-flex;
+    96	  font-weight: 900;
+    97	  height: 34px;
+    98	  justify-content: center;
+    99	  width: 34px;
+   100	}
+   101	
+   102	.nav-bar nav {
+   103	  align-items: center;
+   104	  display: flex;
+   105	  gap: 8px;
+   106	  min-width: 0;
+   107	}
+   108	
+   109	.nav-bar nav a {
+   110	  border-radius: 6px;
+   111	  color: var(--muted);
+   112	  font-size: 14px;
+   113	  padding: 10px 12px;
+   114	  transition: background 160ms ease, color 160ms ease;
+   115	  white-space: nowrap;
+   116	}
+   117	
+   118	.nav-bar nav a:hover {
+   119	  background: rgba(67, 255, 146, 0.08);
+   120	  color: var(--text);
+   121	}
+   122	
+   123	.hero-grid {
+   124	  align-items: center;
+   125	  display: grid;
+   126	  gap: 56px;
+   127	  grid-template-columns: minmax(0, 0.95fr) minmax(420px, 1.05fr);
+   128	  min-height: calc(100vh - 140px);
+   129	  padding: 54px 0 28px;
+   130	  position: relative;
+   131	  z-index: 2;
+   132	}
+   133	
+   134	.hero-copy {
+   135	  max-width: 670px;
+   136	}
+   137	
+   138	.eyebrow,
+   139	.section-heading p {
+   140	  color: var(--green);
+   141	  font-size: 13px;
+   142	  font-weight: 800;
+   143	  letter-spacing: 0.12em;
+   144	  margin: 0 0 16px;
+   145	  text-transform: uppercase;
+   146	}
+   147	
+   148	h1,
+   149	h2,
+   150	h3,
+   151	p {
+   152	  margin-top: 0;
+   153	}
+   154	
+   155	h1 {
+   156	  font-size: clamp(48px, 7vw, 92px);
+   157	  font-weight: 900;
+   158	  letter-spacing: 0;
+   159	  line-height: 0.92;
+   160	  margin-bottom: 24px;
+   161	}
+   162	
+   163	h2 {
+   164	  font-size: clamp(32px, 4vw, 56px);
+   165	  font-weight: 850;
+   166	  letter-spacing: 0;
+   167	  line-height: 1;
+   168	}
+   169	
+   170	h3 {
+   171	  font-size: 24px;
+   172	  font-weight: 800;
+   173	  letter-spacing: 0;
+   174	}
+   175	
+   176	.hero-lede {
+   177	  color: #c4d6cc;
+   178	  font-size: clamp(18px, 2vw, 24px);
+   179	  line-height: 1.45;
+   180	  max-width: 560px;
+   181	}
+   182	
+   183	.hero-actions {
+   184	  display: flex;
+   185	  flex-wrap: wrap;
+   186	  gap: 12px;
+   187	  margin-top: 32px;
+   188	}
+   189	
+   190	.button {
+   191	  align-items: center;
+   192	  border-radius: 8px;
+   193	  display: inline-flex;
+   194	  font-size: 15px;
+   195	  font-weight: 800;
+   196	  gap: 10px;
+   197	  justify-content: center;
+   198	  min-height: 48px;
+   199	  padding: 0 18px;
+   200	  transition: transform 160ms ease, border-color 160ms ease, background 160ms ease;
+   201	}
+   202	
+   203	.button:hover {
+   204	  transform: translateY(-2px);
+   205	}
+   206	
+   207	.button-primary {
+   208	  background: linear-gradient(135deg, var(--green), var(--green-2));
+   209	  color: #001b0d;
+   210	}
+   211	
+   212	.carousel-button {
+   213	  min-width: 190px;
+   214	  overflow: hidden;
+   215	}
+   216	
+   217	.carousel-button-window {
+   218	  display: inline-grid;
+   219	  min-width: 134px;
+   220	  overflow: hidden;
+   221	}
+   222	
+   223	.carousel-button-label {
+   224	  animation: project-swoosh 720ms cubic-bezier(0.18, 0.9, 0.28, 1.18);
+   225	  display: inline-block;
+   226	  will-change: transform, opacity;
+   227	}
+   228	
+   229	@keyframes project-swoosh {
+   230	  0% {
+   231	    opacity: 0;
+   232	    transform: translateX(46px) rotate(1.5deg) scale(0.96);
+   233	  }
+   234	
+   235	  48% {
+   236	    opacity: 1;
+   237	    transform: translateX(-7px) rotate(-0.6deg) scale(1.035);
+   238	  }
+   239	
+   240	  68% {
+   241	    transform: translateX(4px) rotate(0.35deg) scale(0.985);
+   242	  }
+   243	
+   244	  84% {
+   245	    transform: translateX(-2px) rotate(-0.2deg) scale(1.012);
+   246	  }
+   247	
+   248	  100% {
+   249	    opacity: 1;
+   250	    transform: translateX(0) rotate(0) scale(1);
+   251	  }
+   252	}
+   253	
+   254	@media (prefers-reduced-motion: reduce) {
+   255	  .carousel-button-label {
+   256	    animation: none;
+   257	  }
+   258	}
+   259	
+   260	.button-secondary {
+   261	  background: rgba(255, 255, 255, 0.04);
+   262	  border: 1px solid var(--line-strong);
+   263	  color: var(--text);
+   264	}
+   265	
+   266	.stack-row {
+   267	  display: flex;
+   268	  flex-wrap: wrap;
+   269	  gap: 10px;
+   270	  margin-top: 26px;
+   271	}
+   272	
+   273	.stack-row span,
+   274	.case-tags span {
+   275	  background: rgba(67, 255, 146, 0.08);
+   276	  border: 1px solid var(--line);
+   277	  border-radius: 999px;
+   278	  color: #d8ffe4;
+   279	  font-size: 13px;
+   280	  font-weight: 700;
+   281	  padding: 8px 11px;
+   282	}
+   283	
+   284	.hero-visual {
+   285	  position: relative;
+   286	}
+   287	
+   288	.profile-orbit {
+   289	  align-items: center;
+   290	  display: flex;
+   291	  flex-direction: column;
+   292	  gap: 12px;
+   293	  position: absolute;
+   294	  right: 18px;
+   295	  top: 0;
+   296	  z-index: 3;
+   297	}
+   298	
+   299	.profile-photo {
+   300	  border: 2px solid rgba(198, 255, 217, 0.34);
+   301	  border-radius: 999px;
+   302	  box-shadow: 0 0 0 10px rgba(67, 255, 146, 0.05), 0 34px 95px rgba(0, 191, 99, 0.22);
+   303	  height: 188px;
+   304	  object-fit: cover;
+   305	  width: 188px;
+   306	}
+   307	
+   308	.profile-orbit span {
+   309	  background: rgba(5, 16, 10, 0.8);
+   310	  border: 1px solid var(--line);
+   311	  border-radius: 8px;
+   312	  color: var(--mint);
+   313	  font-size: 12px;
+   314	  font-weight: 750;
+   315	  line-height: 1.25;
+   316	  max-width: 138px;
+   317	  padding: 7px 11px;
+   318	  text-align: center;
+   319	}
+   320	
+   321	.phone-stage {
+   322	  height: 690px;
+   323	  margin-top: 48px;
+   324	  position: relative;
+   325	}
+   326	
+   327	.tablet-shell {
+   328	  background: linear-gradient(145deg, #0c120f, #000);
+   329	  border: 1px solid rgba(198, 255, 217, 0.24);
+   330	  border-radius: 30px;
+   331	  box-shadow: 0 34px 96px rgba(0, 0, 0, 0.66), 0 0 56px rgba(0, 191, 99, 0.12);
+   332	  height: 190px;
+   333	  left: 38px;
+   334	  padding: 13px;
+   335	  position: absolute;
+   336	  top: 352px;
+   337	  transform: rotate(-5deg) scale(1.5);
+   338	  transform-origin: top left;
+   339	  width: 304px;
+   340	  z-index: 4;
+   341	}
+   342	
+   343	.tablet-camera {
+   344	  background: rgba(198, 255, 217, 0.28);
+   345	  border-radius: 999px;
+   346	  height: 5px;
+   347	  left: 50%;
+   348	  position: absolute;
+   349	  top: 6px;
+   350	  transform: translateX(-50%);
+   351	  width: 5px;
+   352	}
+   353	
+   354	.tablet-screen {
+   355	  background:
+   356	    linear-gradient(rgba(67, 255, 146, 0.045) 1px, transparent 1px),
+   357	    linear-gradient(90deg, rgba(67, 255, 146, 0.045) 1px, transparent 1px),
+   358	    radial-gradient(circle at 28% 34%, rgba(67, 255, 146, 0.18), transparent 34%),
+   359	    linear-gradient(180deg, #07140d, #020403 70%);
+   360	  background-size: 22px 22px, 22px 22px, auto, auto;
+   361	  border: 1px solid rgba(198, 255, 217, 0.08);
+   362	  border-radius: 20px;
+   363	  height: 100%;
+   364	  overflow: hidden;
+   365	  position: relative;
+   366	}
+   367	
+   368	.tablet-screen-image {
+   369	  object-fit: cover;
+   370	  object-position: center center;
+   371	}
+   372	
+   373	.tablet-empty-grid {
+   374	  background:
+   375	    linear-gradient(90deg, rgba(198, 255, 217, 0.06) 1px, transparent 1px),
+   376	    linear-gradient(rgba(198, 255, 217, 0.06) 1px, transparent 1px);
+   377	  background-size: 48px 48px;
+   378	  inset: 0;
+   379	  opacity: 0.45;
+   380	  position: absolute;
+   381	}
+   382	
+   383	.phone-shell {
+   384	  background: linear-gradient(145deg, #0c120f, #000);
+   385	  border: 1px solid rgba(198, 255, 217, 0.22);
+   386	  border-radius: 34px;
+   387	  box-shadow: 0 34px 100px rgba(0, 0, 0, 0.62);
+   388	  height: 500px;
+   389	  padding: 16px;
+   390	  position: absolute;
+   391	  width: 245px;
+   392	}
+   393	
+   394	.phone-shell-commerce {
+   395	  left: 68px;
+   396	  top: 40px;
+   397	  transform: rotate(-9deg);
+   398	  z-index: 2;
+   399	}
+   400	
+   401	.phone-shell-finance {
+   402	  left: 278px;
+   403	  top: 110px;
+   404	  transform: rotate(8deg);
+   405	  z-index: 1;
+   406	}
+   407	
+   408	.phone-speaker {
+   409	  background: #171f1a;
+   410	  border-radius: 99px;
+   411	  height: 6px;
+   412	  margin: 0 auto 12px;
+   413	  width: 62px;
+   414	}
+   415	
+   416	.phone-screen {
+   417	  background:
+   418	    linear-gradient(rgba(67, 255, 146, 0.055) 1px, transparent 1px),
+   419	    linear-gradient(90deg, rgba(67, 255, 146, 0.055) 1px, transparent 1px),
+   420	    linear-gradient(180deg, #0b1710, #030705 64%);
+   421	  background-size: 24px 24px, 24px 24px, auto;
+   422	  border-radius: 24px;
+   423	  height: calc(100% - 18px);
+   424	  overflow: hidden;
+   425	  padding: 18px;
+   426	  position: relative;
+   427	}
+   428	
+   429	.phone-screen.has-image {
+   430	  background: #020403;
+   431	  padding: 0;
+   432	}
+   433	
+   434	.phone-screen-image-frame {
+   435	  inset: 2% 0 0;
+   436	  position: absolute;
+   437	}
+   438	
+   439	.phone-screen-image {
+   440	  object-fit: cover;
+   441	  object-position: top center;
+   442	}
+   443	
+   444	.phone-status {
+   445	  align-items: center;
+   446	  color: var(--mint);
+   447	  display: flex;
+   448	  font-size: 11px;
+   449	  font-weight: 800;
+   450	  justify-content: space-between;
+   451	  margin-bottom: 28px;
+   452	}
+   453	
+   454	.phone-chart {
+   455	  align-items: end;
+   456	  display: grid;
+   457	  gap: 8px;
+   458	  grid-template-columns: repeat(4, 1fr);
+   459	  height: 118px;
+   460	  margin-bottom: 26px;
+   461	}
+   462	
+   463	.phone-chart div {
+   464	  background: linear-gradient(180deg, var(--green), #086c3b);
+   465	  border-radius: 6px 6px 2px 2px;
+   466	}
+   467	
+   468	.phone-chart div:nth-child(1) {
+   469	  height: 54%;
+   470	}
+   471	
+   472	.phone-chart div:nth-child(2) {
+   473	  height: 88%;
+   474	}
+   475	
+   476	.phone-chart div:nth-child(3) {
+   477	  height: 66%;
+   478	}
+   479	
+   480	.phone-chart div:nth-child(4) {
+   481	  height: 100%;
+   482	}
+   483	
+   484	.phone-cardline {
+   485	  background: rgba(198, 255, 217, 0.14);
+   486	  border-radius: 999px;
+   487	  height: 12px;
+   488	  margin-bottom: 10px;
+   489	  width: 62%;
+   490	}
+   491	
+   492	.phone-cardline.wide {
+   493	  width: 88%;
+   494	}
+   495	
+   496	.phone-grid {
+   497	  display: grid;
+   498	  gap: 9px;
+   499	  grid-template-columns: 1fr 1fr;
+   500	  margin-top: 24px;
+   501	}
+   502	
+   503	.phone-grid span {
+   504	  background: rgba(255, 255, 255, 0.05);
+   505	  border: 1px solid var(--line);
+   506	  border-radius: 8px;
+   507	  height: 54px;
+   508	}
+   509	
+   510	.phone-cta {
+   511	  align-items: center;
+   512	  background: var(--green);
+   513	  border-radius: 8px;
+   514	  color: #001d0f;
+   515	  display: flex;
+   516	  font-size: 13px;
+   517	  font-weight: 900;
+   518	  height: 42px;
+   519	  justify-content: center;
+   520	  margin-top: 24px;
+   521	}
+   522	
+   523	.proof-panel {
+   524	  backdrop-filter: blur(16px);
+   525	  background: rgba(5, 16, 10, 0.76);
+   526	  border: 1px solid var(--line-strong);
+   527	  border-radius: 8px;
+   528	  display: grid;
+   529	  gap: 10px;
+   530	  margin: 26px 0 0;
+   531	  padding: 14px;
+   532	  position: relative;
+   533	  width: min(330px, 100%);
+   534	  z-index: 2;
+   535	}
+   536	
+   537	.proof-panel div {
+   538	  align-items: center;
+   539	  color: #dfffea;
+   540	  display: flex;
+   541	  font-size: 13px;
+   542	  font-weight: 750;
+   543	  gap: 10px;
+   544	}
+   545	
+   546	.stats-strip {
+   547	  border-top: 1px solid var(--line);
+   548	  display: grid;
+   549	  gap: 1px;
+   550	  grid-template-columns: repeat(4, minmax(0, 1fr));
+   551	  margin-top: 10px;
+   552	  position: relative;
+   553	  z-index: 2;
+   554	}
+   555	
+   556	.stats-strip div {
+   557	  background: rgba(255, 255, 255, 0.025);
+   558	  min-width: 0;
+   559	  min-height: 104px;
+   560	  padding: 22px;
+   561	}
+   562	
+   563	.stats-strip strong {
+   564	  color: var(--green);
+   565	  display: block;
+   566	  font-size: 34px;
+   567	  font-weight: 900;
+   568	  line-height: 1;
+   569	}
+   570	
+   571	.stats-strip span {
+   572	  color: var(--muted);
+   573	  display: block;
+   574	  font-size: 13px;
+   575	  font-weight: 700;
+   576	  margin-top: 8px;
+   577	}
+   578	
+   579	section:not(.hero) {
+   580	  padding: 88px 0;
+   581	}
+   582	
+   583	.section-heading {
+   584	  max-width: 720px;
+   585	}
+   586	
+   587	.case-grid {
+   588	  display: grid;
+   589	  gap: 18px;
+   590	  grid-template-columns: repeat(3, minmax(0, 1fr));
+   591	  margin-top: 34px;
+   592	}
+   593	
+   594	.case-card,
+   595	.capability-grid div,
+   596	.contact-panel {
+   597	  background: linear-gradient(180deg, rgba(13, 31, 22, 0.88), rgba(5, 13, 9, 0.88));
+   598	  border: 1px solid var(--line);
+   599	  border-radius: 8px;
+   600	}
+   601	
+   602	.case-card {
+   603	  min-height: 330px;
+   604	  padding: 28px;
+   605	}
+   606	
+   607	.case-topline {
+   608	  align-items: center;
+   609	  display: flex;
+   610	  gap: 18px;
+   611	  justify-content: space-between;
+   612	}
+   613	
+   614	.case-topline span {
+   615	  color: var(--green);
+   616	  font-size: 12px;
+   617	  font-weight: 850;
+   618	  letter-spacing: 0.1em;
+   619	  text-transform: uppercase;
+   620	}
+   621	
+   622	.case-topline strong {
+   623	  border: 1px solid var(--line);
+   624	  border-radius: 999px;
+   625	  color: var(--mint);
+   626	  font-size: 12px;
+   627	  padding: 7px 10px;
+   628	  white-space: nowrap;
+   629	}
+   630	
+   631	.case-card h3 {
+   632	  margin: 54px 0 14px;
+   633	}
+   634	
+   635	.case-card p,
+   636	.capability-grid p,
+   637	.timeline-item p {
+   638	  color: #b8c9bf;
+   639	  line-height: 1.6;
+   640	}
+   641	
+   642	.case-tags {
+   643	  display: flex;
+   644	  flex-wrap: wrap;
+   645	  gap: 8px;
+   646	  margin-top: 24px;
+   647	}
+   648	
+   649	.case-miniatures {
+   650	  display: grid;
+   651	  gap: 10px;
+   652	  grid-template-columns: repeat(3, minmax(0, 1fr));
+   653	  margin-top: 26px;
+   654	  max-width: 390px;
+   655	}
+   656	
+   657	.case-miniatures-landscape {
+   658	  grid-template-columns: 1fr;
+   659	  max-width: 420px;
+   660	}
+   661	
+   662	.case-miniature {
+   663	  aspect-ratio: 9 / 16;
+   664	  background: #020403;
+   665	  border: 1px solid var(--line);
+   666	  border-radius: 8px;
+   667	  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.28);
+   668	  display: block;
+   669	  height: auto;
+   670	  object-fit: cover;
+   671	  width: 100%;
+   672	}
+   673	
+   674	.case-miniature-landscape {
+   675	  aspect-ratio: 2388 / 1668;
+   676	}
+   677	
+   678	.split-section {
+   679	  display: grid;
+   680	  gap: 44px;
+   681	}
+   682	
+   683	.capability-grid {
+   684	  display: grid;
+   685	  gap: 18px;
+   686	  grid-template-columns: repeat(3, 1fr);
+   687	}
+   688	
+   689	.capability-grid div {
+   690	  padding: 24px;
+   691	}
+   692	
+   693	.capability-grid svg {
+   694	  color: var(--green);
+   695	  margin-bottom: 30px;
+   696	}
+   697	
+   698	.worklog-layout {
+   699	  display: grid;
+   700	  gap: 42px;
+   701	  grid-template-columns: minmax(0, 0.9fr) minmax(320px, 1.1fr);
+   702	}
+   703	
+   704	.timeline {
+   705	  border-left: 1px solid var(--line-strong);
+   706	}
+   707	
+   708	.timeline-item {
+   709	  display: grid;
+   710	  gap: 18px;
+   711	  grid-template-columns: 56px 1fr;
+   712	  padding: 8px 0 28px 24px;
+   713	}
+   714	
+   715	.timeline-item span {
+   716	  color: var(--green);
+   717	  font-weight: 900;
+   718	}
+   719	
+   720	.contact-panel {
+   721	  align-items: center;
+   722	  display: flex;
+   723	  gap: 28px;
+   724	  justify-content: space-between;
+   725	  padding: 30px;
+   726	}
+   727	
+   728	.contact-panel h2 {
+   729	  font-size: clamp(28px, 4vw, 46px);
+   730	  margin-bottom: 0;
+   731	  max-width: 760px;
+   732	}
+   733	
+   734	@media (max-width: 980px) {
+   735	  .nav-bar {
+   736	    align-items: flex-start;
+   737	    flex-direction: column;
+   738	    gap: 14px;
+   739	    padding: 16px;
+   740	  }
+   741	
+   742	  .nav-bar nav {
+   743	    display: grid;
+   744	    flex-wrap: nowrap;
+   745	    gap: 6px;
+   746	    grid-template-columns:
+   747	      minmax(0, 1.25fr) minmax(0, 0.78fr) minmax(0, 0.98fr)
+   748	      minmax(0, 0.98fr);
+   749	    justify-content: normal;
+   750	    width: 100%;
+   751	  }
+   752	
+   753	  .nav-bar nav a {
+   754	    flex: 1 1 0;
+   755	    min-width: 0;
+   756	    padding-left: 10px;
+   757	    padding-right: 10px;
+   758	    text-align: center;
+   759	  }
+   760	
+   761	  .hero-grid,
+   762	  .worklog-layout {
+   763	    grid-template-columns: 1fr;
+   764	  }
+   765	
+   766	  .hero-visual {
+   767	    min-height: auto;
+   768	  }
+   769	
+   770	  .phone-stage {
+   771	    height: 710px;
+   772	    margin-top: 30px;
+   773	  }
+   774	
+   775	  .phone-shell-commerce {
+   776	    left: 4%;
+   777	  }
+   778	
+   779	  .phone-shell-finance {
+   780	    left: 42%;
+   781	  }
+   782	
+   783	  .tablet-shell {
+   784	    left: 9%;
+   785	    top: 374px;
+   786	    width: min(74%, 332px);
+   787	  }
+   788	
+   789	  .case-grid,
+   790	  .capability-grid {
+   791	    grid-template-columns: repeat(2, 1fr);
+   792	  }
+   793	}
+   794	
+   795	@media (max-width: 720px) {
+   796	  .site-shell {
+   797	    width: min(100% - 24px, 1180px);
+   798	  }
+   799	
+   800	  .nav-bar {
+   801	    max-width: calc(100vw - 24px);
+   802	    overflow: hidden;
+   803	    padding: 14px;
+   804	  }
+   805	
+   806	  .nav-bar nav {
+   807	    gap: 4px;
+   808	    max-width: 100%;
+   809	    width: min(100%, calc(100vw - 54px));
+   810	  }
+   811	
+   812	  .nav-bar nav a {
+   813	    font-size: 12px;
+   814	    padding-left: 2px;
+   815	    padding-right: 2px;
+   816	  }
+   817	
+   818	  .hero {
+   819	    padding-top: 12px;
+   820	  }
+   821	
+   822	  .hero-grid {
+   823	    gap: 30px;
+   824	    padding-top: 42px;
+   825	  }
+   826	
+   827	  h1 {
+   828	    font-size: clamp(42px, 15vw, 64px);
+   829	  }
+   830	
+   831	  .hero-visual {
+   832	    min-height: auto;
+   833	  }
+   834	
+   835	  .phone-stage {
+   836	    height: 626px;
+   837	    margin-top: 18px;
+   838	  }
+   839	
+   840	  .profile-orbit {
+   841	    right: 0;
+   842	  }
+   843	
+   844	  .profile-photo {
+   845	    height: 132px;
+   846	    width: 132px;
+   847	  }
+   848	
+   849	  .phone-shell {
+   850	    height: 420px;
+   851	    width: 206px;
+   852	  }
+   853	
+   854	  .phone-shell-commerce {
+   855	    left: -2px;
+   856	    top: 72px;
+   857	  }
+   858	
+   859	  .phone-shell-finance {
+   860	    left: auto;
+   861	    right: -8px;
+   862	    top: 124px;
+   863	  }
+   864	
+   865	  .tablet-shell {
+   866	    height: 150px;
+   867	    left: 14px;
+   868	    top: 342px;
+   869	    width: min(84vw, 268px);
+   870	  }
+   871	
+   872	  .case-grid,
+   873	  .capability-grid {
+   874	    grid-template-columns: 1fr;
+   875	  }
+   876	
+   877	  .case-card {
+   878	    min-height: auto;
+   879	  }
+   880	
+   881	  .contact-panel {
+   882	    align-items: flex-start;
+   883	    flex-direction: column;
+   884	  }
+   885	}
+   886	
+   887	@media (max-width: 380px) {
+   888	  .nav-bar {
+   889	    padding-left: 12px;
+   890	    padding-right: 12px;
+   891	  }
+   892	
+   893	  .nav-bar nav {
+   894	    gap: 1px;
+   895	    width: min(100%, calc(100vw - 50px));
+   896	  }
+   897	
+   898	  .nav-bar nav a {
+   899	    font-size: 10.5px;
+   900	    padding-left: 0;
+   901	    padding-right: 0;
+   902	  }
+   903	}
+   904	
+   905	@media (max-width: 340px) {
+   906	  .nav-bar nav a {
+   907	    font-size: 10px;
+   908	  }
+   909	}
+
+
+============================================================
+FILE CONTENTS - ROOT / TOOLING / DEPLOYMENT
+============================================================
+
+
+
+============================================================
+FILE: .gitignore
+============================================================
+
+     1	# Dependencies
+     2	node_modules/
+     3	
+     4	# Next.js build output
+     5	.next/
+     6	out/
+     7	
+     8	# TypeScript
+     9	*.tsbuildinfo
+    10	next-env.d.ts
+    11	
+    12	# Logs
+    13	*.log
+    14	npm-debug.log*
+    15	yarn-debug.log*
+    16	yarn-error.log*
+    17	pnpm-debug.log*
+    18	
+    19	# Local environment files
+    20	.env
+    21	.env*.local
+    22	
+    23	# Package manager caches
+    24	.npm/
+    25	.pnpm-store/
+    26	.yarn/
+    27	
+    28	# Deployment archives and generated bundles
+    29	*.zip
+    30	dist/
+    31	build/
+    32	
+    33	# OS/editor files
+    34	.DS_Store
+    35	.idea/
+    36	.vscode/
+
+
+============================================================
+FILE: README.md
+============================================================
+
+     1	# Prahlin Portfolio Site
+     2	
+     3	Next.js + Tailwind CSS portfolio start page for Prahlin.
+     4	
+     5	## What is included
+     6	
+     7	- `app/page.tsx` - the homepage/start page.
+     8	- `app/globals.css` - the green/black visual system and responsive layout.
+     9	- `public/images/profile-placeholder.png` - generated AI profile placeholder; replace this with your own square photo later using the same filename.
+    10	- `public/images/start-page-mockup-reference.png` - the original generated mockup reference.
+    11	- `public/favicon.svg` - simple green/black monogram favicon.
+    12	
+    13	## Local development
+    14	
+    15	```sh
+    16	npm install
+    17	npm run dev
+    18	```
+    19	
+    20	Open `http://localhost:3000`.
+    21	
+    22	## Production build
+    23	
+    24	For Vercel, Netlify, or another Next.js host:
+    25	
+    26	```sh
+    27	npm run build
+    28	```
+    29	
+    30	For a simple static host:
+    31	
+    32	```sh
+    33	npm run build:static
+    34	```
+    35	
+    36	Then upload the generated `out/` folder.
+    37	
+    38	## Replace the profile photo
+    39	
+    40	Put your real square profile photo at:
+    41	
+    42	```txt
+    43	public/images/profile-placeholder.png
+    44	```
+    45	
+    46	Keep the filename the same and rebuild.
+
+
+============================================================
+FILE: DEPLOYMENT.md
+============================================================
+
+     1	# Deployment Notes
+     2	
+     3	## Best Option: Vercel
+     4	
+     5	1. Upload this `portfolio-site` folder to a GitHub repo.
+     6	2. Import the repo in Vercel.
+     7	3. Use the default Next.js settings.
+     8	4. Build command: `npm run build`.
+     9	
+    10	## Netlify
+    11	
+    12	1. Upload this folder to a GitHub repo.
+    13	2. Connect the repo in Netlify.
+    14	3. Build command: `npm run build`.
+    15	4. Publish directory: `.next`.
+    16	5. Enable Netlify's Next.js runtime if prompted.
+    17	
+    18	## Simple Static Hosting
+    19	
+    20	Use this when the host only accepts HTML/CSS/JS files:
+    21	
+    22	```sh
+    23	npm install
+    24	npm run build:static
+    25	```
+    26	
+    27	Upload the contents of:
+    28	
+    29	```txt
+    30	out/
+    31	```
+    32	
+    33	This mode does not need a running Node.js server after upload.
+    34	
+    35	## Contact Button
+    36	
+    37	The contact button currently uses:
+    38	
+    39	```txt
+    40	mailto:hello@example.com
+    41	```
+    42	
+    43	Replace `hello@example.com` in `app/page.tsx` with your real email address.
+
+
+============================================================
+FILE: package.json
+============================================================
+
+     1	{
+     2	  "name": "prahlin-portfolio-site",
+     3	  "version": "1.0.0",
+     4	  "private": true,
+     5	  "scripts": {
+     6	    "dev": "next dev",
+     7	    "build": "next build",
+     8	    "build:static": "NEXT_OUTPUT=export next build",
+     9	    "start": "next start",
+    10	    "check": "tsc --noEmit"
+    11	  },
+    12	  "dependencies": {
+    13	    "lucide-react": "1.24.0",
+    14	    "motion": "12.42.2",
+    15	    "next": "16.2.10",
+    16	    "react": "19.2.7",
+    17	    "react-dom": "19.2.7"
+    18	  },
+    19	  "devDependencies": {
+    20	    "@tailwindcss/postcss": "4.3.2",
+    21	    "@types/node": "^24.10.1",
+    22	    "@types/react": "^19.2.7",
+    23	    "@types/react-dom": "^19.2.3",
+    24	    "sharp": "^0.35.3",
+    25	    "tailwindcss": "4.3.2",
+    26	    "typescript": "^5.9.3"
+    27	  }
+    28	}
+
+
+============================================================
+FILE: package-lock.json
+============================================================
+
+     1	{
+     2	  "name": "prahlin-portfolio-site",
+     3	  "version": "1.0.0",
+     4	  "lockfileVersion": 3,
+     5	  "requires": true,
+     6	  "packages": {
+     7	    "": {
+     8	      "name": "prahlin-portfolio-site",
+     9	      "version": "1.0.0",
+    10	      "dependencies": {
+    11	        "lucide-react": "1.24.0",
+    12	        "motion": "12.42.2",
+    13	        "next": "16.2.10",
+    14	        "react": "19.2.7",
+    15	        "react-dom": "19.2.7"
+    16	      },
+    17	      "devDependencies": {
+    18	        "@tailwindcss/postcss": "4.3.2",
+    19	        "@types/node": "^24.10.1",
+    20	        "@types/react": "^19.2.7",
+    21	        "@types/react-dom": "^19.2.3",
+    22	        "sharp": "^0.35.3",
+    23	        "tailwindcss": "4.3.2",
+    24	        "typescript": "^5.9.3"
+    25	      }
+    26	    },
+    27	    "node_modules/@alloc/quick-lru": {
+    28	      "version": "5.2.0",
+    29	      "resolved": "https://registry.npmjs.org/@alloc/quick-lru/-/quick-lru-5.2.0.tgz",
+    30	      "integrity": "sha512-UrcABB+4bUrFABwbluTIBErXwvbsU/V7TZWfmbgJfbkwiBuziS9gxdODUyuiecfdGQ85jglMW6juS3+z5TsKLw==",
+    31	      "dev": true,
+    32	      "license": "MIT",
+    33	      "engines": {
+    34	        "node": ">=10"
+    35	      },
+    36	      "funding": {
+    37	        "url": "https://github.com/sponsors/sindresorhus"
+    38	      }
+    39	    },
+    40	    "node_modules/@emnapi/runtime": {
+    41	      "version": "1.11.2",
+    42	      "resolved": "https://registry.npmjs.org/@emnapi/runtime/-/runtime-1.11.2.tgz",
+    43	      "integrity": "sha512-kyOl3X0DuTiT1h2ft8r2fYO8JYtU9a9Xis/zBSiGArNaagCOWx90N1k2wxp18czFDH+OgcWGb5ZP/XMt3dcyPA==",
+    44	      "license": "MIT",
+    45	      "optional": true,
+    46	      "dependencies": {
+    47	        "tslib": "^2.4.0"
+    48	      }
+    49	    },
+    50	    "node_modules/@img/colour": {
+    51	      "version": "1.1.0",
+    52	      "resolved": "https://registry.npmjs.org/@img/colour/-/colour-1.1.0.tgz",
+    53	      "integrity": "sha512-Td76q7j57o/tLVdgS746cYARfSyxk8iEfRxewL9h4OMzYhbW4TAcppl0mT4eyqXddh6L/jwoM75mo7ixa/pCeQ==",
+    54	      "devOptional": true,
+    55	      "license": "MIT",
+    56	      "engines": {
+    57	        "node": ">=18"
+    58	      }
+    59	    },
+    60	    "node_modules/@img/sharp-darwin-arm64": {
+    61	      "version": "0.35.3",
+    62	      "resolved": "https://registry.npmjs.org/@img/sharp-darwin-arm64/-/sharp-darwin-arm64-0.35.3.tgz",
+    63	      "integrity": "sha512-RMnFX7YQsMoh7lWfcM4NEHHymBX/rLuKNPVM84XE9ONPcaSCDgE7CHIHpSgPcO2xcRthgBy1HfNO319mwhIAkg==",
+    64	      "cpu": [
+    65	        "arm64"
+    66	      ],
+    67	      "dev": true,
+    68	      "license": "Apache-2.0",
+    69	      "optional": true,
+    70	      "os": [
+    71	        "darwin"
+    72	      ],
+    73	      "engines": {
+    74	        "node": ">=20.9.0"
+    75	      },
+    76	      "funding": {
+    77	        "url": "https://opencollective.com/libvips"
+    78	      },
+    79	      "optionalDependencies": {
+    80	        "@img/sharp-libvips-darwin-arm64": "1.3.2"
+    81	      }
+    82	    },
+    83	    "node_modules/@img/sharp-darwin-x64": {
+    84	      "version": "0.35.3",
+    85	      "resolved": "https://registry.npmjs.org/@img/sharp-darwin-x64/-/sharp-darwin-x64-0.35.3.tgz",
+    86	      "integrity": "sha512-Xo+5uFBtLN0BKqieTxiFzFPQAUlBbbH5iBKyRX/z1JrbnYsHTfKJnUfL8+p2TPXr1pXqao4eeL4Rl144uDpK9w==",
+    87	      "cpu": [
+    88	        "x64"
+    89	      ],
+    90	      "dev": true,
+    91	      "license": "Apache-2.0",
+    92	      "optional": true,
+    93	      "os": [
+    94	        "darwin"
+    95	      ],
+    96	      "engines": {
+    97	        "node": ">=20.9.0"
+    98	      },
+    99	      "funding": {
+   100	        "url": "https://opencollective.com/libvips"
+   101	      },
+   102	      "optionalDependencies": {
+   103	        "@img/sharp-libvips-darwin-x64": "1.3.2"
+   104	      }
+   105	    },
+   106	    "node_modules/@img/sharp-freebsd-wasm32": {
+   107	      "version": "0.35.3",
+   108	      "resolved": "https://registry.npmjs.org/@img/sharp-freebsd-wasm32/-/sharp-freebsd-wasm32-0.35.3.tgz",
+   109	      "integrity": "sha512-lUxcqWIj2wMQ9BrwNjngcr1gWUr5xgaGThBRqPPalIC2n67Cqj1uPh8NnA/ZhAg8hUbKl+kVHKwgUIwe6ZYPrg==",
+   110	      "dev": true,
+   111	      "license": "Apache-2.0",
+   112	      "optional": true,
+   113	      "os": [
+   114	        "freebsd"
+   115	      ],
+   116	      "dependencies": {
+   117	        "@img/sharp-wasm32": "0.35.3"
+   118	      },
+   119	      "engines": {
+   120	        "node": ">=20.9.0"
+   121	      },
+   122	      "funding": {
+   123	        "url": "https://opencollective.com/libvips"
+   124	      }
+   125	    },
+   126	    "node_modules/@img/sharp-libvips-darwin-arm64": {
+   127	      "version": "1.3.2",
+   128	      "resolved": "https://registry.npmjs.org/@img/sharp-libvips-darwin-arm64/-/sharp-libvips-darwin-arm64-1.3.2.tgz",
+   129	      "integrity": "sha512-9J6ypZFpQBj4YnePGoq/S38w6nz+vqg5WZLrLGY4YuSemdMq47GMLBPO42MzwdGwpg/agZ7xzZcFHa48xlywfg==",
+   130	      "cpu": [
+   131	        "arm64"
+   132	      ],
+   133	      "dev": true,
+   134	      "license": "LGPL-3.0-or-later",
+   135	      "optional": true,
+   136	      "os": [
+   137	        "darwin"
+   138	      ],
+   139	      "funding": {
+   140	        "url": "https://opencollective.com/libvips"
+   141	      }
+   142	    },
+   143	    "node_modules/@img/sharp-libvips-darwin-x64": {
+   144	      "version": "1.3.2",
+   145	      "resolved": "https://registry.npmjs.org/@img/sharp-libvips-darwin-x64/-/sharp-libvips-darwin-x64-1.3.2.tgz",
+   146	      "integrity": "sha512-m2pW1n6cns9VaubNwsZ+c3CRYjxNQWgJ5gPlnL1nbBcpkBvFm6SCFN5o0psFHI8w9n11NKhFkeEDns98tiqbEw==",
+   147	      "cpu": [
+   148	        "x64"
+   149	      ],
+   150	      "dev": true,
+   151	      "license": "LGPL-3.0-or-later",
+   152	      "optional": true,
+   153	      "os": [
+   154	        "darwin"
+   155	      ],
+   156	      "funding": {
+   157	        "url": "https://opencollective.com/libvips"
+   158	      }
+   159	    },
+   160	    "node_modules/@img/sharp-libvips-linux-arm": {
+   161	      "version": "1.3.2",
+   162	      "resolved": "https://registry.npmjs.org/@img/sharp-libvips-linux-arm/-/sharp-libvips-linux-arm-1.3.2.tgz",
+   163	      "integrity": "sha512-1eMLzy92I4J6rmi4mAT8yC3HxOtniyGELlzGbNMLLeqe052ahFQ0h6LFq+lh5DsDIdYViIDst08abvSbcEdLXQ==",
+   164	      "cpu": [
+   165	        "arm"
+   166	      ],
+   167	      "dev": true,
+   168	      "license": "LGPL-3.0-or-later",
+   169	      "optional": true,
+   170	      "os": [
+   171	        "linux"
+   172	      ],
+   173	      "funding": {
+   174	        "url": "https://opencollective.com/libvips"
+   175	      }
+   176	    },
+   177	    "node_modules/@img/sharp-libvips-linux-arm64": {
+   178	      "version": "1.3.2",
+   179	      "resolved": "https://registry.npmjs.org/@img/sharp-libvips-linux-arm64/-/sharp-libvips-linux-arm64-1.3.2.tgz",
+   180	      "integrity": "sha512-dqVSFynCox4C/J8kT16V7SIFAns0IjgLwkvYT7p8LQVmJ5OS5b6tI9IGflxTeuBS//zXeFIUbwt5dwxyZ17cnA==",
+   181	      "cpu": [
+   182	        "arm64"
+   183	      ],
+   184	      "dev": true,
+   185	      "license": "LGPL-3.0-or-later",
+   186	      "optional": true,
+   187	      "os": [
+   188	        "linux"
+   189	      ],
+   190	      "funding": {
+   191	        "url": "https://opencollective.com/libvips"
+   192	      }
+   193	    },
+   194	    "node_modules/@img/sharp-libvips-linux-ppc64": {
+   195	      "version": "1.3.2",
+   196	      "resolved": "https://registry.npmjs.org/@img/sharp-libvips-linux-ppc64/-/sharp-libvips-linux-ppc64-1.3.2.tgz",
+   197	      "integrity": "sha512-3z0NHDxD6n5I9gc05U1eW1AyRm+Gznzq3naMrthPNqE6oYykcogW0l/jfpJdjYnuNl8R7yI9pNbE1XiUeyq0Aw==",
+   198	      "cpu": [
+   199	        "ppc64"
+   200	      ],
+   201	      "dev": true,
+   202	      "license": "LGPL-3.0-or-later",
+   203	      "optional": true,
+   204	      "os": [
+   205	        "linux"
+   206	      ],
+   207	      "funding": {
+   208	        "url": "https://opencollective.com/libvips"
+   209	      }
+   210	    },
+   211	    "node_modules/@img/sharp-libvips-linux-riscv64": {
+   212	      "version": "1.3.2",
+   213	      "resolved": "https://registry.npmjs.org/@img/sharp-libvips-linux-riscv64/-/sharp-libvips-linux-riscv64-1.3.2.tgz",
+   214	      "integrity": "sha512-bsb4rI+NldGOsXuej2r8OdSS8+zXDVaCWxyWrcv6kneTOlgAHtZABRzBBCwdsPiD90J4myNJuHpg6kA20ImW/w==",
+   215	      "cpu": [
+   216	        "riscv64"
+   217	      ],
+   218	      "dev": true,
+   219	      "license": "LGPL-3.0-or-later",
+   220	      "optional": true,
+   221	      "os": [
+   222	        "linux"
+   223	      ],
+   224	      "funding": {
+   225	        "url": "https://opencollective.com/libvips"
+   226	      }
+   227	    },
+   228	    "node_modules/@img/sharp-libvips-linux-s390x": {
+   229	      "version": "1.3.2",
+   230	      "resolved": "https://registry.npmjs.org/@img/sharp-libvips-linux-s390x/-/sharp-libvips-linux-s390x-1.3.2.tgz",
+   231	      "integrity": "sha512-/ABshyj8gCpyIrNXnHn4LorDJ0HHm1VhXPBlxZ8zAtfVPAaSafXPGn+sUSIRiwaSBy0mmFjSjiXI5mkcwdChKQ==",
+   232	      "cpu": [
+   233	        "s390x"
+   234	      ],
+   235	      "dev": true,
+   236	      "license": "LGPL-3.0-or-later",
+   237	      "optional": true,
+   238	      "os": [
+   239	        "linux"
+   240	      ],
+   241	      "funding": {
+   242	        "url": "https://opencollective.com/libvips"
+   243	      }
+   244	    },
+   245	    "node_modules/@img/sharp-libvips-linux-x64": {
+   246	      "version": "1.3.2",
+   247	      "resolved": "https://registry.npmjs.org/@img/sharp-libvips-linux-x64/-/sharp-libvips-linux-x64-1.3.2.tgz",
+   248	      "integrity": "sha512-ITPEtgffGJ0S6G9dRyw/366tJQqFRcHWPHhC+Stpg3Z8AEMrDrTr2lhdz4f/Y/HMbRh//7Z5mBzEpVdi62Oc3w==",
+   249	      "cpu": [
+   250	        "x64"
+   251	      ],
+   252	      "dev": true,
+   253	      "license": "LGPL-3.0-or-later",
+   254	      "optional": true,
+   255	      "os": [
+   256	        "linux"
+   257	      ],
+   258	      "funding": {
+   259	        "url": "https://opencollective.com/libvips"
+   260	      }
+   261	    },
+   262	    "node_modules/@img/sharp-libvips-linuxmusl-arm64": {
+   263	      "version": "1.3.2",
+   264	      "resolved": "https://registry.npmjs.org/@img/sharp-libvips-linuxmusl-arm64/-/sharp-libvips-linuxmusl-arm64-1.3.2.tgz",
+   265	      "integrity": "sha512-zE9EdiUzUmg5mDT5a1rk5fYJ6GWPloTwWBYDS14naqHsL+EaMpDj1AWnpLgh3u0YCORv2Tt50wrcrpYqkP97Kw==",
+   266	      "cpu": [
+   267	        "arm64"
+   268	      ],
+   269	      "dev": true,
+   270	      "license": "LGPL-3.0-or-later",
+   271	      "optional": true,
+   272	      "os": [
+   273	        "linux"
+   274	      ],
+   275	      "funding": {
+   276	        "url": "https://opencollective.com/libvips"
+   277	      }
+   278	    },
+   279	    "node_modules/@img/sharp-libvips-linuxmusl-x64": {
+   280	      "version": "1.3.2",
+   281	      "resolved": "https://registry.npmjs.org/@img/sharp-libvips-linuxmusl-x64/-/sharp-libvips-linuxmusl-x64-1.3.2.tgz",
+   282	      "integrity": "sha512-m0lrLiUt+lBYnCFr8qV/65yMR4E/c7/wf78I5eKTdkEakFAlZ9QlzEM3QIhhAwVeUhLAHLcCq7a7Vszq/oFNZQ==",
+   283	      "cpu": [
+   284	        "x64"
+   285	      ],
+   286	      "dev": true,
+   287	      "license": "LGPL-3.0-or-later",
+   288	      "optional": true,
+   289	      "os": [
+   290	        "linux"
+   291	      ],
+   292	      "funding": {
+   293	        "url": "https://opencollective.com/libvips"
+   294	      }
+   295	    },
+   296	    "node_modules/@img/sharp-linux-arm": {
+   297	      "version": "0.35.3",
+   298	      "resolved": "https://registry.npmjs.org/@img/sharp-linux-arm/-/sharp-linux-arm-0.35.3.tgz",
+   299	      "integrity": "sha512-affVWCTLooy8TSxbDx2qkzuDeaWLNVBA+P//FNBirHsXpP2fuBhk5AuboYUnrDnzoXes8GFjpTx0SBFOCRg+FA==",
+   300	      "cpu": [
+   301	        "arm"
+   302	      ],
+   303	      "dev": true,
+   304	      "license": "Apache-2.0",
+   305	      "optional": true,
+   306	      "os": [
+   307	        "linux"
+   308	      ],
+   309	      "engines": {
+   310	        "node": ">=20.9.0"
+   311	      },
+   312	      "funding": {
+   313	        "url": "https://opencollective.com/libvips"
+   314	      },
+   315	      "optionalDependencies": {
+   316	        "@img/sharp-libvips-linux-arm": "1.3.2"
+   317	      }
+   318	    },
+   319	    "node_modules/@img/sharp-linux-arm64": {
+   320	      "version": "0.35.3",
+   321	      "resolved": "https://registry.npmjs.org/@img/sharp-linux-arm64/-/sharp-linux-arm64-0.35.3.tgz",
+   322	      "integrity": "sha512-QgKDspHPnrU+GQ55XPhGwyhC8acLVOOSyAvo1oVfFmrIXLkDNmGWzAfDZ4xK8oSA1qBQrALcHX0G5UZni/SuFQ==",
+   323	      "cpu": [
+   324	        "arm64"
+   325	      ],
+   326	      "dev": true,
+   327	      "license": "Apache-2.0",
+   328	      "optional": true,
+   329	      "os": [
+   330	        "linux"
+   331	      ],
+   332	      "engines": {
+   333	        "node": ">=20.9.0"
+   334	      },
+   335	      "funding": {
+   336	        "url": "https://opencollective.com/libvips"
+   337	      },
+   338	      "optionalDependencies": {
+   339	        "@img/sharp-libvips-linux-arm64": "1.3.2"
+   340	      }
+   341	    },
+   342	    "node_modules/@img/sharp-linux-ppc64": {
+   343	      "version": "0.35.3",
+   344	      "resolved": "https://registry.npmjs.org/@img/sharp-linux-ppc64/-/sharp-linux-ppc64-0.35.3.tgz",
+   345	      "integrity": "sha512-sMd8rDxmpLOwv/7N44klFjOD5DUO7FLdjiXDI0hoxYaf7Ar262dQIEkosE98bps+5HPLtp/EvNqeqQtOycP/IA==",
+   346	      "cpu": [
+   347	        "ppc64"
+   348	      ],
+   349	      "dev": true,
+   350	      "license": "Apache-2.0",
+   351	      "optional": true,
+   352	      "os": [
+   353	        "linux"
+   354	      ],
+   355	      "engines": {
+   356	        "node": ">=20.9.0"
+   357	      },
+   358	      "funding": {
+   359	        "url": "https://opencollective.com/libvips"
+   360	      },
+   361	      "optionalDependencies": {
+   362	        "@img/sharp-libvips-linux-ppc64": "1.3.2"
+   363	      }
+   364	    },
+   365	    "node_modules/@img/sharp-linux-riscv64": {
+   366	      "version": "0.35.3",
+   367	      "resolved": "https://registry.npmjs.org/@img/sharp-linux-riscv64/-/sharp-linux-riscv64-0.35.3.tgz",
+   368	      "integrity": "sha512-0Eob78yjlYPfL5vMNWAW55l3R9Y6BQS/gOfe0ZcP9mEz9ohhKSt4im1hayiknXgf8AWrFqMvJcKIdmLmEe7yeQ==",
+   369	      "cpu": [
+   370	        "riscv64"
+   371	      ],
+   372	      "dev": true,
+   373	      "license": "Apache-2.0",
+   374	      "optional": true,
+   375	      "os": [
+   376	        "linux"
+   377	      ],
+   378	      "engines": {
+   379	        "node": ">=20.9.0"
+   380	      },
+   381	      "funding": {
+   382	        "url": "https://opencollective.com/libvips"
+   383	      },
+   384	      "optionalDependencies": {
+   385	        "@img/sharp-libvips-linux-riscv64": "1.3.2"
+   386	      }
+   387	    },
+   388	    "node_modules/@img/sharp-linux-s390x": {
+   389	      "version": "0.35.3",
+   390	      "resolved": "https://registry.npmjs.org/@img/sharp-linux-s390x/-/sharp-linux-s390x-0.35.3.tgz",
+   391	      "integrity": "sha512-KgAxQ0DxpNOq1rG2t5cgTgShJFGSuU7XO45cqC+1NVOuZnP6tlgZRuSYOfNupGkHID0o3cJOsw4DVeJpMovcGw==",
+   392	      "cpu": [
+   393	        "s390x"
+   394	      ],
+   395	      "dev": true,
+   396	      "license": "Apache-2.0",
+   397	      "optional": true,
+   398	      "os": [
+   399	        "linux"
+   400	      ],
+   401	      "engines": {
+   402	        "node": ">=20.9.0"
+   403	      },
+   404	      "funding": {
+   405	        "url": "https://opencollective.com/libvips"
+   406	      },
+   407	      "optionalDependencies": {
+   408	        "@img/sharp-libvips-linux-s390x": "1.3.2"
+   409	      }
+   410	    },
+   411	    "node_modules/@img/sharp-linux-x64": {
+   412	      "version": "0.35.3",
+   413	      "resolved": "https://registry.npmjs.org/@img/sharp-linux-x64/-/sharp-linux-x64-0.35.3.tgz",
+   414	      "integrity": "sha512-8pqvxubL2PGdhlPy6GLqzDYMUjyRmKAwKHYKixpdJYBUK7PJ0C029XdsnpFIdgRZG68fZiGdHVWcKPvtiPB4cA==",
+   415	      "cpu": [
+   416	        "x64"
+   417	      ],
+   418	      "dev": true,
+   419	      "license": "Apache-2.0",
+   420	      "optional": true,
+   421	      "os": [
+   422	        "linux"
+   423	      ],
+   424	      "engines": {
+   425	        "node": ">=20.9.0"
+   426	      },
+   427	      "funding": {
+   428	        "url": "https://opencollective.com/libvips"
+   429	      },
+   430	      "optionalDependencies": {
+   431	        "@img/sharp-libvips-linux-x64": "1.3.2"
+   432	      }
+   433	    },
+   434	    "node_modules/@img/sharp-linuxmusl-arm64": {
+   435	      "version": "0.35.3",
+   436	      "resolved": "https://registry.npmjs.org/@img/sharp-linuxmusl-arm64/-/sharp-linuxmusl-arm64-0.35.3.tgz",
+   437	      "integrity": "sha512-Vz0iQjzzcSX3HCbfwFfCSG/9SCIqyO0mH2sXyiHaAYfBk0cRsCWXRyQYX0ovCK/PAQBbTzQ0dsPQHh5MAFL59w==",
+   438	      "cpu": [
+   439	        "arm64"
+   440	      ],
+   441	      "dev": true,
+   442	      "license": "Apache-2.0",
+   443	      "optional": true,
+   444	      "os": [
+   445	        "linux"
+   446	      ],
+   447	      "engines": {
+   448	        "node": ">=20.9.0"
+   449	      },
+   450	      "funding": {
+   451	        "url": "https://opencollective.com/libvips"
+   452	      },
+   453	      "optionalDependencies": {
+   454	        "@img/sharp-libvips-linuxmusl-arm64": "1.3.2"
+   455	      }
+   456	    },
+   457	    "node_modules/@img/sharp-linuxmusl-x64": {
+   458	      "version": "0.35.3",
+   459	      "resolved": "https://registry.npmjs.org/@img/sharp-linuxmusl-x64/-/sharp-linuxmusl-x64-0.35.3.tgz",
+   460	      "integrity": "sha512-6O1NPKcDVj9QEdg7Hx549EX8U0rp6yXQERqru6yRN7fGBn32UvIRJUlWnk+8xDCiG76hXVBbX82NZ/ZKr0euIg==",
+   461	      "cpu": [
+   462	        "x64"
+   463	      ],
+   464	      "dev": true,
+   465	      "license": "Apache-2.0",
+   466	      "optional": true,
+   467	      "os": [
+   468	        "linux"
+   469	      ],
+   470	      "engines": {
+   471	        "node": ">=20.9.0"
+   472	      },
+   473	      "funding": {
+   474	        "url": "https://opencollective.com/libvips"
+   475	      },
+   476	      "optionalDependencies": {
+   477	        "@img/sharp-libvips-linuxmusl-x64": "1.3.2"
+   478	      }
+   479	    },
+   480	    "node_modules/@img/sharp-wasm32": {
+   481	      "version": "0.35.3",
+   482	      "resolved": "https://registry.npmjs.org/@img/sharp-wasm32/-/sharp-wasm32-0.35.3.tgz",
+   483	      "integrity": "sha512-cZ0XkcYGpHZkqW6iCkqTcmUC0CD9DhD5d/qeZlZkfRBn6GnHniZXLUo5+9xw8Iv76YE6LQFN9YNBlKREcCG76w==",
+   484	      "dev": true,
+   485	      "license": "Apache-2.0 AND LGPL-3.0-or-later AND MIT",
+   486	      "optional": true,
+   487	      "dependencies": {
+   488	        "@emnapi/runtime": "^1.11.1"
+   489	      },
+   490	      "engines": {
+   491	        "node": ">=20.9.0"
+   492	      },
+   493	      "funding": {
+   494	        "url": "https://opencollective.com/libvips"
+   495	      }
+   496	    },
+   497	    "node_modules/@img/sharp-webcontainers-wasm32": {
+   498	      "version": "0.35.3",
+   499	      "resolved": "https://registry.npmjs.org/@img/sharp-webcontainers-wasm32/-/sharp-webcontainers-wasm32-0.35.3.tgz",
+   500	      "integrity": "sha512-2rnq7bX3NzeR2T4YWgz8qiG4h3TSdMe+vN1iQXpJleSJ3SM5zQ8Fy2SyyXAWlbxpEZ2Y+Z4u1BePgJEYbSy80Q==",
+   501	      "cpu": [
+   502	        "wasm32"
+   503	      ],
+   504	      "dev": true,
+   505	      "license": "Apache-2.0",
+   506	      "optional": true,
+   507	      "dependencies": {
+   508	        "@img/sharp-wasm32": "0.35.3"
+   509	      },
+   510	      "engines": {
+   511	        "node": ">=20.9.0"
+   512	      },
+   513	      "funding": {
+   514	        "url": "https://opencollective.com/libvips"
+   515	      }
+   516	    },
+   517	    "node_modules/@img/sharp-win32-arm64": {
+   518	      "version": "0.35.3",
+   519	      "resolved": "https://registry.npmjs.org/@img/sharp-win32-arm64/-/sharp-win32-arm64-0.35.3.tgz",
+   520	      "integrity": "sha512-4bPwFdMbeC4JQ8L8LOyWp6nsHcboP5fxkp6iPOXz2Vg49R42TuMs2whkJ5OAP4/Ul035qOzy0AecOF9VOscn4w==",
+   521	      "cpu": [
+   522	        "arm64"
+   523	      ],
+   524	      "dev": true,
+   525	      "license": "Apache-2.0 AND LGPL-3.0-or-later",
+   526	      "optional": true,
+   527	      "os": [
+   528	        "win32"
+   529	      ],
+   530	      "engines": {
+   531	        "node": ">=20.9.0"
+   532	      },
+   533	      "funding": {
+   534	        "url": "https://opencollective.com/libvips"
+   535	      }
+   536	    },
+   537	    "node_modules/@img/sharp-win32-ia32": {
+   538	      "version": "0.35.3",
+   539	      "resolved": "https://registry.npmjs.org/@img/sharp-win32-ia32/-/sharp-win32-ia32-0.35.3.tgz",
+   540	      "integrity": "sha512-r53mXsBN6lFUDiST764SvgwUdHAqM4rPAiDzAmf4fLoB6X/rkfyTrLCg6+g17wJJiCmB3JYgHuUldCWUIRFSXw==",
+   541	      "cpu": [
+   542	        "ia32"
+   543	      ],
+   544	      "dev": true,
+   545	      "license": "Apache-2.0 AND LGPL-3.0-or-later",
+   546	      "optional": true,
+   547	      "os": [
+   548	        "win32"
+   549	      ],
+   550	      "engines": {
+   551	        "node": "^20.9.0"
+   552	      },
+   553	      "funding": {
+   554	        "url": "https://opencollective.com/libvips"
+   555	      }
+   556	    },
+   557	    "node_modules/@img/sharp-win32-x64": {
+   558	      "version": "0.35.3",
+   559	      "resolved": "https://registry.npmjs.org/@img/sharp-win32-x64/-/sharp-win32-x64-0.35.3.tgz",
+   560	      "integrity": "sha512-D4y1vNeZrIIJCN+uHaWVtH86B+aCrdMYYjicy9pXHvbGZeGYLLSd3wdVuC37FxVXlU1ARsk84eKWfWMXGYEqvA==",
+   561	      "cpu": [
+   562	        "x64"
+   563	      ],
+   564	      "dev": true,
+   565	      "license": "Apache-2.0 AND LGPL-3.0-or-later",
+   566	      "optional": true,
+   567	      "os": [
+   568	        "win32"
+   569	      ],
+   570	      "engines": {
+   571	        "node": ">=20.9.0"
+   572	      },
+   573	      "funding": {
+   574	        "url": "https://opencollective.com/libvips"
+   575	      }
+   576	    },
+   577	    "node_modules/@jridgewell/gen-mapping": {
+   578	      "version": "0.3.13",
+   579	      "resolved": "https://registry.npmjs.org/@jridgewell/gen-mapping/-/gen-mapping-0.3.13.tgz",
+   580	      "integrity": "sha512-2kkt/7niJ6MgEPxF0bYdQ6etZaA+fQvDcLKckhy1yIQOzaoKjBBjSj63/aLVjYE3qhRt5dvM+uUyfCg6UKCBbA==",
+   581	      "dev": true,
+   582	      "license": "MIT",
+   583	      "dependencies": {
+   584	        "@jridgewell/sourcemap-codec": "^1.5.0",
+   585	        "@jridgewell/trace-mapping": "^0.3.24"
+   586	      }
+   587	    },
+   588	    "node_modules/@jridgewell/remapping": {
+   589	      "version": "2.3.5",
+   590	      "resolved": "https://registry.npmjs.org/@jridgewell/remapping/-/remapping-2.3.5.tgz",
+   591	      "integrity": "sha512-LI9u/+laYG4Ds1TDKSJW2YPrIlcVYOwi2fUC6xB43lueCjgxV4lffOCZCtYFiH6TNOX+tQKXx97T4IKHbhyHEQ==",
+   592	      "dev": true,
+   593	      "license": "MIT",
+   594	      "dependencies": {
+   595	        "@jridgewell/gen-mapping": "^0.3.5",
+   596	        "@jridgewell/trace-mapping": "^0.3.24"
+   597	      }
+   598	    },
+   599	    "node_modules/@jridgewell/resolve-uri": {
+   600	      "version": "3.1.2",
+   601	      "resolved": "https://registry.npmjs.org/@jridgewell/resolve-uri/-/resolve-uri-3.1.2.tgz",
+   602	      "integrity": "sha512-bRISgCIjP20/tbWSPWMEi54QVPRZExkuD9lJL+UIxUKtwVJA8wW1Trb1jMs1RFXo1CBTNZ/5hpC9QvmKWdopKw==",
+   603	      "dev": true,
+   604	      "license": "MIT",
+   605	      "engines": {
+   606	        "node": ">=6.0.0"
+   607	      }
+   608	    },
+   609	    "node_modules/@jridgewell/sourcemap-codec": {
+   610	      "version": "1.5.5",
+   611	      "resolved": "https://registry.npmjs.org/@jridgewell/sourcemap-codec/-/sourcemap-codec-1.5.5.tgz",
+   612	      "integrity": "sha512-cYQ9310grqxueWbl+WuIUIaiUaDcj7WOq5fVhEljNVgRfOUhY9fy2zTvfoqWsnebh8Sl70VScFbICvJnLKB0Og==",
+   613	      "dev": true,
+   614	      "license": "MIT"
+   615	    },
+   616	    "node_modules/@jridgewell/trace-mapping": {
+   617	      "version": "0.3.31",
+   618	      "resolved": "https://registry.npmjs.org/@jridgewell/trace-mapping/-/trace-mapping-0.3.31.tgz",
+   619	      "integrity": "sha512-zzNR+SdQSDJzc8joaeP8QQoCQr8NuYx2dIIytl1QeBEZHJ9uW6hebsrYgbz8hJwUQao3TWCMtmfV8Nu1twOLAw==",
+   620	      "dev": true,
+   621	      "license": "MIT",
+   622	      "dependencies": {
+   623	        "@jridgewell/resolve-uri": "^3.1.0",
+   624	        "@jridgewell/sourcemap-codec": "^1.4.14"
+   625	      }
+   626	    },
+   627	    "node_modules/@next/env": {
+   628	      "version": "16.2.10",
+   629	      "resolved": "https://registry.npmjs.org/@next/env/-/env-16.2.10.tgz",
+   630	      "integrity": "sha512-zLPxg9M0MEHmygpj5OuxjQ+vHMiy/K7cSp74G8ecYolmgUWw0RwN02tF56npup/+qaI8JB97hQgS/r2Hb6QwVA==",
+   631	      "license": "MIT"
+   632	    },
+   633	    "node_modules/@next/swc-darwin-arm64": {
+   634	      "version": "16.2.10",
+   635	      "resolved": "https://registry.npmjs.org/@next/swc-darwin-arm64/-/swc-darwin-arm64-16.2.10.tgz",
+   636	      "integrity": "sha512-v9IdJCa0H0mbo+8z5zwUpOk1Vj7RjkcI5uNYf5Ws1y6szf/p3Mzl9hLaST8SCt6L9h8NGnruZcd2+o0NTNwDhA==",
+   637	      "cpu": [
+   638	        "arm64"
+   639	      ],
+   640	      "license": "MIT",
+   641	      "optional": true,
+   642	      "os": [
+   643	        "darwin"
+   644	      ],
+   645	      "engines": {
+   646	        "node": ">= 10"
+   647	      }
+   648	    },
+   649	    "node_modules/@next/swc-darwin-x64": {
+   650	      "version": "16.2.10",
+   651	      "resolved": "https://registry.npmjs.org/@next/swc-darwin-x64/-/swc-darwin-x64-16.2.10.tgz",
+   652	      "integrity": "sha512-17IS0jJRViROGmA9uGdNR8VPJpfbnaVG7E9qhso5jDLkmyd0lSDORWxbcKINzcFqzZqGwGtMSnrFRxBpuUYjLQ==",
+   653	      "cpu": [
+   654	        "x64"
+   655	      ],
+   656	      "license": "MIT",
+   657	      "optional": true,
+   658	      "os": [
+   659	        "darwin"
+   660	      ],
+   661	      "engines": {
+   662	        "node": ">= 10"
+   663	      }
+   664	    },
+   665	    "node_modules/@next/swc-linux-arm64-gnu": {
+   666	      "version": "16.2.10",
+   667	      "resolved": "https://registry.npmjs.org/@next/swc-linux-arm64-gnu/-/swc-linux-arm64-gnu-16.2.10.tgz",
+   668	      "integrity": "sha512-GRQRsRtuciNJvB54AvvuQTiq0oZtFwa1owQqtZD8wwnGpM2L39MV22kpI72YSXLKIyY40LC66EiLFv4PiicXxg==",
+   669	      "cpu": [
+   670	        "arm64"
+   671	      ],
+   672	      "license": "MIT",
+   673	      "optional": true,
+   674	      "os": [
+   675	        "linux"
+   676	      ],
+   677	      "engines": {
+   678	        "node": ">= 10"
+   679	      }
+   680	    },
+   681	    "node_modules/@next/swc-linux-arm64-musl": {
+   682	      "version": "16.2.10",
+   683	      "resolved": "https://registry.npmjs.org/@next/swc-linux-arm64-musl/-/swc-linux-arm64-musl-16.2.10.tgz",
+   684	      "integrity": "sha512-zkN9MQYS7UQBro+FnISUq1itaQjXI9xqISzuQ+2bc921NcJ1x4yPCqrn77tVN6/dOOXaaWVX3k6/bR07pPwK+A==",
+   685	      "cpu": [
+   686	        "arm64"
+   687	      ],
+   688	      "license": "MIT",
+   689	      "optional": true,
+   690	      "os": [
+   691	        "linux"
+   692	      ],
+   693	      "engines": {
+   694	        "node": ">= 10"
+   695	      }
+   696	    },
+   697	    "node_modules/@next/swc-linux-x64-gnu": {
+   698	      "version": "16.2.10",
+   699	      "resolved": "https://registry.npmjs.org/@next/swc-linux-x64-gnu/-/swc-linux-x64-gnu-16.2.10.tgz",
+   700	      "integrity": "sha512-iCVJnwvrPYECvA6WM/7+oo+OiTvedIKLxtCLAZP4xZR3nXa1zmzZyLPbYCmWvpd4CvMYF1EMTafd0ii3DygLvA==",
+   701	      "cpu": [
+   702	        "x64"
+   703	      ],
+   704	      "license": "MIT",
+   705	      "optional": true,
+   706	      "os": [
+   707	        "linux"
+   708	      ],
+   709	      "engines": {
+   710	        "node": ">= 10"
+   711	      }
+   712	    },
+   713	    "node_modules/@next/swc-linux-x64-musl": {
+   714	      "version": "16.2.10",
+   715	      "resolved": "https://registry.npmjs.org/@next/swc-linux-x64-musl/-/swc-linux-x64-musl-16.2.10.tgz",
+   716	      "integrity": "sha512-ov2g4H0dHY9bPoOU83m91hWT7Iq5qy13bUnyyshLU3HGR1Ownn0X9QpmDPc5iIUaahTp7f7LeGAhV4DSFtackw==",
+   717	      "cpu": [
+   718	        "x64"
+   719	      ],
+   720	      "license": "MIT",
+   721	      "optional": true,
+   722	      "os": [
+   723	        "linux"
+   724	      ],
+   725	      "engines": {
+   726	        "node": ">= 10"
+   727	      }
+   728	    },
+   729	    "node_modules/@next/swc-win32-arm64-msvc": {
+   730	      "version": "16.2.10",
+   731	      "resolved": "https://registry.npmjs.org/@next/swc-win32-arm64-msvc/-/swc-win32-arm64-msvc-16.2.10.tgz",
+   732	      "integrity": "sha512-DwAnhLX76HQiFFQNgWlcK+JzlnD1rZ+UK/WY0ZMI/deXpvgnesjNYrqcfo1JzBuz4Kf7o3brIBL0glI1junatA==",
+   733	      "cpu": [
+   734	        "arm64"
+   735	      ],
+   736	      "license": "MIT",
+   737	      "optional": true,
+   738	      "os": [
+   739	        "win32"
+   740	      ],
+   741	      "engines": {
+   742	        "node": ">= 10"
+   743	      }
+   744	    },
+   745	    "node_modules/@next/swc-win32-x64-msvc": {
+   746	      "version": "16.2.10",
+   747	      "resolved": "https://registry.npmjs.org/@next/swc-win32-x64-msvc/-/swc-win32-x64-msvc-16.2.10.tgz",
+   748	      "integrity": "sha512-0JXq3b85Jk9Jg4ntLUbXSPvoDw3gpZou7twuKdoFG2jOw635v7+IiXfTaa0TxVMyx78pUjnrVYwLgjKfX4e6/A==",
+   749	      "cpu": [
+   750	        "x64"
+   751	      ],
+   752	      "license": "MIT",
+   753	      "optional": true,
+   754	      "os": [
+   755	        "win32"
+   756	      ],
+   757	      "engines": {
+   758	        "node": ">= 10"
+   759	      }
+   760	    },
+   761	    "node_modules/@swc/helpers": {
+   762	      "version": "0.5.15",
+   763	      "resolved": "https://registry.npmjs.org/@swc/helpers/-/helpers-0.5.15.tgz",
+   764	      "integrity": "sha512-JQ5TuMi45Owi4/BIMAJBoSQoOJu12oOk/gADqlcUL9JEdHB8vyjUSsxqeNXnmXHjYKMi2WcYtezGEEhqUI/E2g==",
+   765	      "license": "Apache-2.0",
+   766	      "dependencies": {
+   767	        "tslib": "^2.8.0"
+   768	      }
+   769	    },
+   770	    "node_modules/@tailwindcss/node": {
+   771	      "version": "4.3.2",
+   772	      "resolved": "https://registry.npmjs.org/@tailwindcss/node/-/node-4.3.2.tgz",
+   773	      "integrity": "sha512-yWP/sqEcBLaD8JuA6zNwxoYKr75qxTioYwlRwekj5Jr/I5GXnoJfjetH/psLUIv74cYTH2lBUEzBkinthoYcBg==",
+   774	      "dev": true,
+   775	      "license": "MIT",
+   776	      "dependencies": {
+   777	        "@jridgewell/remapping": "^2.3.5",
+   778	        "enhanced-resolve": "5.21.6",
+   779	        "jiti": "^2.7.0",
+   780	        "lightningcss": "1.32.0",
+   781	        "magic-string": "^0.30.21",
+   782	        "source-map-js": "^1.2.1",
+   783	        "tailwindcss": "4.3.2"
+   784	      }
+   785	    },
+   786	    "node_modules/@tailwindcss/oxide": {
+   787	      "version": "4.3.2",
+   788	      "resolved": "https://registry.npmjs.org/@tailwindcss/oxide/-/oxide-4.3.2.tgz",
+   789	      "integrity": "sha512-z8ZgnzX8gdNoWLBLqBPoh/sjnxkwvf9ZuWjnO0l0yIzbLa5/9S+eC5QxGZKRobVHIC3/1BoMWjHblqWjcgFgag==",
+   790	      "dev": true,
+   791	      "license": "MIT",
+   792	      "engines": {
+   793	        "node": ">= 20"
+   794	      },
+   795	      "optionalDependencies": {
+   796	        "@tailwindcss/oxide-android-arm64": "4.3.2",
+   797	        "@tailwindcss/oxide-darwin-arm64": "4.3.2",
+   798	        "@tailwindcss/oxide-darwin-x64": "4.3.2",
+   799	        "@tailwindcss/oxide-freebsd-x64": "4.3.2",
+   800	        "@tailwindcss/oxide-linux-arm-gnueabihf": "4.3.2",
+   801	        "@tailwindcss/oxide-linux-arm64-gnu": "4.3.2",
+   802	        "@tailwindcss/oxide-linux-arm64-musl": "4.3.2",
+   803	        "@tailwindcss/oxide-linux-x64-gnu": "4.3.2",
+   804	        "@tailwindcss/oxide-linux-x64-musl": "4.3.2",
+   805	        "@tailwindcss/oxide-wasm32-wasi": "4.3.2",
+   806	        "@tailwindcss/oxide-win32-arm64-msvc": "4.3.2",
+   807	        "@tailwindcss/oxide-win32-x64-msvc": "4.3.2"
+   808	      }
+   809	    },
+   810	    "node_modules/@tailwindcss/oxide-android-arm64": {
+   811	      "version": "4.3.2",
+   812	      "resolved": "https://registry.npmjs.org/@tailwindcss/oxide-android-arm64/-/oxide-android-arm64-4.3.2.tgz",
+   813	      "integrity": "sha512-WHxqIuHpvZ5VtdX6GTl1Ik/Vp2YuN42Et+0CdeaVd/frQ9jAvGmvR8vLT+jk3e8/Q3x8kECB9+R17pgpp2BulA==",
+   814	      "cpu": [
+   815	        "arm64"
+   816	      ],
+   817	      "dev": true,
+   818	      "license": "MIT",
+   819	      "optional": true,
+   820	      "os": [
+   821	        "android"
+   822	      ],
+   823	      "engines": {
+   824	        "node": ">= 20"
+   825	      }
+   826	    },
+   827	    "node_modules/@tailwindcss/oxide-darwin-arm64": {
+   828	      "version": "4.3.2",
+   829	      "resolved": "https://registry.npmjs.org/@tailwindcss/oxide-darwin-arm64/-/oxide-darwin-arm64-4.3.2.tgz",
+   830	      "integrity": "sha512-GZypeUY/IDJW3877KeM+O67vbXr3MBnbtEL4aYhNErv/JWZhye2vGSWWG9tB6iiqR2MqRNkY8IOUy4NdSZV26w==",
+   831	      "cpu": [
+   832	        "arm64"
+   833	      ],
+   834	      "dev": true,
+   835	      "license": "MIT",
+   836	      "optional": true,
+   837	      "os": [
+   838	        "darwin"
+   839	      ],
+   840	      "engines": {
+   841	        "node": ">= 20"
+   842	      }
+   843	    },
+   844	    "node_modules/@tailwindcss/oxide-darwin-x64": {
+   845	      "version": "4.3.2",
+   846	      "resolved": "https://registry.npmjs.org/@tailwindcss/oxide-darwin-x64/-/oxide-darwin-x64-4.3.2.tgz",
+   847	      "integrity": "sha512-UIIzmefR6KO1sDU7MzRqAxC8iBpft/VhkGjTjnhoS6k7Z3rQ9wEgA1ODSiyH/tcSYssulNm4Ci3hOeK1jH7ccQ==",
+   848	      "cpu": [
+   849	        "x64"
+   850	      ],
+   851	      "dev": true,
+   852	      "license": "MIT",
+   853	      "optional": true,
+   854	      "os": [
+   855	        "darwin"
+   856	      ],
+   857	      "engines": {
+   858	        "node": ">= 20"
+   859	      }
+   860	    },
+   861	    "node_modules/@tailwindcss/oxide-freebsd-x64": {
+   862	      "version": "4.3.2",
+   863	      "resolved": "https://registry.npmjs.org/@tailwindcss/oxide-freebsd-x64/-/oxide-freebsd-x64-4.3.2.tgz",
+   864	      "integrity": "sha512-GN+uAmcI6DNspnCDwtOAZrTz6oukJnp337qZvxqCGLd3BHBzJpO0ZbTLRvJNdztOeAmTzewewGIMPb0tk2R4WA==",
+   865	      "cpu": [
+   866	        "x64"
+   867	      ],
+   868	      "dev": true,
+   869	      "license": "MIT",
+   870	      "optional": true,
+   871	      "os": [
+   872	        "freebsd"
+   873	      ],
+   874	      "engines": {
+   875	        "node": ">= 20"
+   876	      }
+   877	    },
+   878	    "node_modules/@tailwindcss/oxide-linux-arm-gnueabihf": {
+   879	      "version": "4.3.2",
+   880	      "resolved": "https://registry.npmjs.org/@tailwindcss/oxide-linux-arm-gnueabihf/-/oxide-linux-arm-gnueabihf-4.3.2.tgz",
+   881	      "integrity": "sha512-4ABn7qSbdHRwTiDiuWNegCyb5+2FJ4vKIKc3DmKrvAFw7MU1Lm11dIkTPwUaFdTzc7IsOpDbqBrlh0x6y36U/w==",
+   882	      "cpu": [
+   883	        "arm"
+   884	      ],
+   885	      "dev": true,
+   886	      "license": "MIT",
+   887	      "optional": true,
+   888	      "os": [
+   889	        "linux"
+   890	      ],
+   891	      "engines": {
+   892	        "node": ">= 20"
+   893	      }
+   894	    },
+   895	    "node_modules/@tailwindcss/oxide-linux-arm64-gnu": {
+   896	      "version": "4.3.2",
+   897	      "resolved": "https://registry.npmjs.org/@tailwindcss/oxide-linux-arm64-gnu/-/oxide-linux-arm64-gnu-4.3.2.tgz",
+   898	      "integrity": "sha512-wDgEIGwoM8w8pufh9LVt1PahDgNdKXrLC2qfAnV3vAmococ9RWbxeAw4pxPttd/TsJfwjyLf90Dg1y9y8I6Emw==",
+   899	      "cpu": [
+   900	        "arm64"
+   901	      ],
+   902	      "dev": true,
+   903	      "license": "MIT",
+   904	      "optional": true,
+   905	      "os": [
+   906	        "linux"
+   907	      ],
+   908	      "engines": {
+   909	        "node": ">= 20"
+   910	      }
+   911	    },
+   912	    "node_modules/@tailwindcss/oxide-linux-arm64-musl": {
+   913	      "version": "4.3.2",
+   914	      "resolved": "https://registry.npmjs.org/@tailwindcss/oxide-linux-arm64-musl/-/oxide-linux-arm64-musl-4.3.2.tgz",
+   915	      "integrity": "sha512-J5Nuk0uZQIiMTJj3LEx4sAA9tMFUoXQZFv1J6An+QGYe53HKRJuFDi0rpq/tuouCZeAbOBY3kQ6g8qeD4TUjtA==",
+   916	      "cpu": [
+   917	        "arm64"
+   918	      ],
+   919	      "dev": true,
+   920	      "license": "MIT",
+   921	      "optional": true,
+   922	      "os": [
+   923	        "linux"
+   924	      ],
+   925	      "engines": {
+   926	        "node": ">= 20"
+   927	      }
+   928	    },
+   929	    "node_modules/@tailwindcss/oxide-linux-x64-gnu": {
+   930	      "version": "4.3.2",
+   931	      "resolved": "https://registry.npmjs.org/@tailwindcss/oxide-linux-x64-gnu/-/oxide-linux-x64-gnu-4.3.2.tgz",
+   932	      "integrity": "sha512-kqCZpSKOBEJO4mz7OqWoofBZeXTAwaVGPj0ErAj7CojmhKpWVWVOnrt9dE8odoIraZq4oj3ausM37kXi+Tow8w==",
+   933	      "cpu": [
+   934	        "x64"
+   935	      ],
+   936	      "dev": true,
+   937	      "license": "MIT",
+   938	      "optional": true,
+   939	      "os": [
+   940	        "linux"
+   941	      ],
+   942	      "engines": {
+   943	        "node": ">= 20"
+   944	      }
+   945	    },
+   946	    "node_modules/@tailwindcss/oxide-linux-x64-musl": {
+   947	      "version": "4.3.2",
+   948	      "resolved": "https://registry.npmjs.org/@tailwindcss/oxide-linux-x64-musl/-/oxide-linux-x64-musl-4.3.2.tgz",
+   949	      "integrity": "sha512-cixpqbh2toJDmkuCRI68nXA8ZxNmdK9Y+9v5h3MC3ZQKy/0BO8AWzlkWyRM7JAFSGBlfig4YVTPsK6MVgqz1uw==",
+   950	      "cpu": [
+   951	        "x64"
+   952	      ],
+   953	      "dev": true,
+   954	      "license": "MIT",
+   955	      "optional": true,
+   956	      "os": [
+   957	        "linux"
+   958	      ],
+   959	      "engines": {
+   960	        "node": ">= 20"
+   961	      }
+   962	    },
+   963	    "node_modules/@tailwindcss/oxide-wasm32-wasi": {
+   964	      "version": "4.3.2",
+   965	      "resolved": "https://registry.npmjs.org/@tailwindcss/oxide-wasm32-wasi/-/oxide-wasm32-wasi-4.3.2.tgz",
+   966	      "integrity": "sha512-4ec2Z/LOmRsAgU23CS4xeJfcJlmRg94A/XrbGRCF1gyU/zdDfRLYDVsS+ynSZCmGNxQ1jQriQOKMQeQxBA3Isw==",
+   967	      "bundleDependencies": [
+   968	        "@napi-rs/wasm-runtime",
+   969	        "@emnapi/core",
+   970	        "@emnapi/runtime",
+   971	        "@tybys/wasm-util",
+   972	        "@emnapi/wasi-threads",
+   973	        "tslib"
+   974	      ],
+   975	      "cpu": [
+   976	        "wasm32"
+   977	      ],
+   978	      "dev": true,
+   979	      "license": "MIT",
+   980	      "optional": true,
+   981	      "dependencies": {
+   982	        "@emnapi/core": "^1.11.1",
+   983	        "@emnapi/runtime": "^1.11.1",
+   984	        "@emnapi/wasi-threads": "^1.2.2",
+   985	        "@napi-rs/wasm-runtime": "^1.1.4",
+   986	        "@tybys/wasm-util": "^0.10.2",
+   987	        "tslib": "^2.8.1"
+   988	      },
+   989	      "engines": {
+   990	        "node": ">=14.0.0"
+   991	      }
+   992	    },
+   993	    "node_modules/@tailwindcss/oxide-win32-arm64-msvc": {
+   994	      "version": "4.3.2",
+   995	      "resolved": "https://registry.npmjs.org/@tailwindcss/oxide-win32-arm64-msvc/-/oxide-win32-arm64-msvc-4.3.2.tgz",
+   996	      "integrity": "sha512-Zyr/M0+XcYZu3bZrUytc7TXvrk0ftWfl8gN2MwekNDzhqhKRUucMPSeOzM0o0wH5AWOU49BsKRrfKxI2atCPMQ==",
+   997	      "cpu": [
+   998	        "arm64"
+   999	      ],
+  1000	      "dev": true,
+  1001	      "license": "MIT",
+  1002	      "optional": true,
+  1003	      "os": [
+  1004	        "win32"
+  1005	      ],
+  1006	      "engines": {
+  1007	        "node": ">= 20"
+  1008	      }
+  1009	    },
+  1010	    "node_modules/@tailwindcss/oxide-win32-x64-msvc": {
+  1011	      "version": "4.3.2",
+  1012	      "resolved": "https://registry.npmjs.org/@tailwindcss/oxide-win32-x64-msvc/-/oxide-win32-x64-msvc-4.3.2.tgz",
+  1013	      "integrity": "sha512-QI9BO7KlNZsp2GuO0jwAAj5jCDABOKXRkCk2XuKTSaNEFSdfzqswYVTtCHBNKHLsqyjFyFkqlDiwkNbTYSssMQ==",
+  1014	      "cpu": [
+  1015	        "x64"
+  1016	      ],
+  1017	      "dev": true,
+  1018	      "license": "MIT",
+  1019	      "optional": true,
+  1020	      "os": [
+  1021	        "win32"
+  1022	      ],
+  1023	      "engines": {
+  1024	        "node": ">= 20"
+  1025	      }
+  1026	    },
+  1027	    "node_modules/@tailwindcss/postcss": {
+  1028	      "version": "4.3.2",
+  1029	      "resolved": "https://registry.npmjs.org/@tailwindcss/postcss/-/postcss-4.3.2.tgz",
+  1030	      "integrity": "sha512-rjVWYCa7Ngbi5AarT6k8TkxUG3Wl1QKzHdIZVsjZSzf36Jmo2IKZt/NHRAwly8oDkbBOH0YTu+CHuf9jPxMc+g==",
+  1031	      "dev": true,
+  1032	      "license": "MIT",
+  1033	      "dependencies": {
+  1034	        "@alloc/quick-lru": "^5.2.0",
+  1035	        "@tailwindcss/node": "4.3.2",
+  1036	        "@tailwindcss/oxide": "4.3.2",
+  1037	        "postcss": "^8.5.15",
+  1038	        "tailwindcss": "4.3.2"
+  1039	      }
+  1040	    },
+  1041	    "node_modules/@types/node": {
+  1042	      "version": "24.13.3",
+  1043	      "resolved": "https://registry.npmjs.org/@types/node/-/node-24.13.3.tgz",
+  1044	      "integrity": "sha512-Dh8vAsV36ig5wa9OX4pXvMc9D3Veibfw2wix0CUwYODLD8nkj9UsLjASr49nPg+2eKzxhBV+v7L8pXvT4e639Q==",
+  1045	      "dev": true,
+  1046	      "license": "MIT",
+  1047	      "dependencies": {
+  1048	        "undici-types": "~7.18.0"
+  1049	      }
+  1050	    },
+  1051	    "node_modules/@types/react": {
+  1052	      "version": "19.2.17",
+  1053	      "resolved": "https://registry.npmjs.org/@types/react/-/react-19.2.17.tgz",
+  1054	      "integrity": "sha512-MXfmqaVPEVgkBT/aY0aGCkRWWtByiYQXo3xdQ8r5RzuFrPiRn8Gar2tQdXSUQ2GKV3bkXckek89V8wQBY2Q/Aw==",
+  1055	      "dev": true,
+  1056	      "license": "MIT",
+  1057	      "dependencies": {
+  1058	        "csstype": "^3.2.2"
+  1059	      }
+  1060	    },
+  1061	    "node_modules/@types/react-dom": {
+  1062	      "version": "19.2.3",
+  1063	      "resolved": "https://registry.npmjs.org/@types/react-dom/-/react-dom-19.2.3.tgz",
+  1064	      "integrity": "sha512-jp2L/eY6fn+KgVVQAOqYItbF0VY/YApe5Mz2F0aykSO8gx31bYCZyvSeYxCHKvzHG5eZjc+zyaS5BrBWya2+kQ==",
+  1065	      "dev": true,
+  1066	      "license": "MIT",
+  1067	      "peerDependencies": {
+  1068	        "@types/react": "^19.2.0"
+  1069	      }
+  1070	    },
+  1071	    "node_modules/baseline-browser-mapping": {
+  1072	      "version": "2.10.43",
+  1073	      "resolved": "https://registry.npmjs.org/baseline-browser-mapping/-/baseline-browser-mapping-2.10.43.tgz",
+  1074	      "integrity": "sha512-AjYpR78kDWAY3Efj+cDTFH9t9SCoL7OoTp1BOb0mQV7S+6CiLwnWM3FyxhJtdPufDFKzmCSFoUncKjWgJEZTCQ==",
+  1075	      "license": "Apache-2.0",
+  1076	      "bin": {
+  1077	        "baseline-browser-mapping": "dist/cli.cjs"
+  1078	      },
+  1079	      "engines": {
+  1080	        "node": ">=6.0.0"
+  1081	      }
+  1082	    },
+  1083	    "node_modules/caniuse-lite": {
+  1084	      "version": "1.0.30001803",
+  1085	      "resolved": "https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30001803.tgz",
+  1086	      "integrity": "sha512-g/uHREV2ZpK9qMalCsWaxmA6ol+DX8GYhuf3T40RKoP+oL7vhRJh8LNt73PCjpnR6l14FzfPrB5Yux4PKm2meg==",
+  1087	      "funding": [
+  1088	        {
+  1089	          "type": "opencollective",
+  1090	          "url": "https://opencollective.com/browserslist"
+  1091	        },
+  1092	        {
+  1093	          "type": "tidelift",
+  1094	          "url": "https://tidelift.com/funding/github/npm/caniuse-lite"
+  1095	        },
+  1096	        {
+  1097	          "type": "github",
+  1098	          "url": "https://github.com/sponsors/ai"
+  1099	        }
+  1100	      ],
+  1101	      "license": "CC-BY-4.0"
+  1102	    },
+  1103	    "node_modules/client-only": {
+  1104	      "version": "0.0.1",
+  1105	      "resolved": "https://registry.npmjs.org/client-only/-/client-only-0.0.1.tgz",
+  1106	      "integrity": "sha512-IV3Ou0jSMzZrd3pZ48nLkT9DA7Ag1pnPzaiQhpW7c3RbcqqzvzzVu+L8gfqMp/8IM2MQtSiqaCxrrcfu8I8rMA==",
+  1107	      "license": "MIT"
+  1108	    },
+  1109	    "node_modules/csstype": {
+  1110	      "version": "3.2.3",
+  1111	      "resolved": "https://registry.npmjs.org/csstype/-/csstype-3.2.3.tgz",
+  1112	      "integrity": "sha512-z1HGKcYy2xA8AGQfwrn0PAy+PB7X/GSj3UVJW9qKyn43xWa+gl5nXmU4qqLMRzWVLFC8KusUX8T/0kCiOYpAIQ==",
+  1113	      "dev": true,
+  1114	      "license": "MIT"
+  1115	    },
+  1116	    "node_modules/detect-libc": {
+  1117	      "version": "2.1.2",
+  1118	      "resolved": "https://registry.npmjs.org/detect-libc/-/detect-libc-2.1.2.tgz",
+  1119	      "integrity": "sha512-Btj2BOOO83o3WyH59e8MgXsxEQVcarkUOpEYrubB0urwnN10yQ364rsiByU11nZlqWYZm05i/of7io4mzihBtQ==",
+  1120	      "devOptional": true,
+  1121	      "license": "Apache-2.0",
+  1122	      "engines": {
+  1123	        "node": ">=8"
+  1124	      }
+  1125	    },
+  1126	    "node_modules/enhanced-resolve": {
+  1127	      "version": "5.21.6",
+  1128	      "resolved": "https://registry.npmjs.org/enhanced-resolve/-/enhanced-resolve-5.21.6.tgz",
+  1129	      "integrity": "sha512-aNnGCvbJ/RIyWo1IuhNdVjnNF+EjH9wpzpNHt+ci/m9He9LJvUN8wrCcXjp9cWsGNAuvSpVFTx/vraAFQ8qGjQ==",
+  1130	      "dev": true,
+  1131	      "license": "MIT",
+  1132	      "dependencies": {
+  1133	        "graceful-fs": "^4.2.4",
+  1134	        "tapable": "^2.3.3"
+  1135	      },
+  1136	      "engines": {
+  1137	        "node": ">=10.13.0"
+  1138	      }
+  1139	    },
+  1140	    "node_modules/framer-motion": {
+  1141	      "version": "12.42.2",
+  1142	      "resolved": "https://registry.npmjs.org/framer-motion/-/framer-motion-12.42.2.tgz",
+  1143	      "integrity": "sha512-5XY9luDiu0oHfHBjpDthFMh0ES+122w6p/papSJBweMkO8Sn+PW2QaEgRblQBpWFnuvZS5qvarpt/hO2pjGmnw==",
+  1144	      "license": "MIT",
+  1145	      "dependencies": {
+  1146	        "motion-dom": "^12.42.2",
+  1147	        "motion-utils": "^12.39.0",
+  1148	        "tslib": "^2.4.0"
+  1149	      },
+  1150	      "peerDependencies": {
+  1151	        "@emotion/is-prop-valid": "*",
+  1152	        "react": "^18.0.0 || ^19.0.0",
+  1153	        "react-dom": "^18.0.0 || ^19.0.0"
+  1154	      },
+  1155	      "peerDependenciesMeta": {
+  1156	        "@emotion/is-prop-valid": {
+  1157	          "optional": true
+  1158	        },
+  1159	        "react": {
+  1160	          "optional": true
+  1161	        },
+  1162	        "react-dom": {
+  1163	          "optional": true
+  1164	        }
+  1165	      }
+  1166	    },
+  1167	    "node_modules/graceful-fs": {
+  1168	      "version": "4.2.11",
+  1169	      "resolved": "https://registry.npmjs.org/graceful-fs/-/graceful-fs-4.2.11.tgz",
+  1170	      "integrity": "sha512-RbJ5/jmFcNNCcDV5o9eTnBLJ/HszWV0P73bc+Ff4nS/rJj+YaS6IGyiOL0VoBYX+l1Wrl3k63h/KrH+nhJ0XvQ==",
+  1171	      "dev": true,
+  1172	      "license": "ISC"
+  1173	    },
+  1174	    "node_modules/jiti": {
+  1175	      "version": "2.7.0",
+  1176	      "resolved": "https://registry.npmjs.org/jiti/-/jiti-2.7.0.tgz",
+  1177	      "integrity": "sha512-AC/7JofJvZGrrneWNaEnJeOLUx+JlGt7tNa0wZiRPT4MY1wmfKjt2+6O2p2uz2+skll8OZZmJMNqeke7kKbNgQ==",
+  1178	      "dev": true,
+  1179	      "license": "MIT",
+  1180	      "bin": {
+  1181	        "jiti": "lib/jiti-cli.mjs"
+  1182	      }
+  1183	    },
+  1184	    "node_modules/lightningcss": {
+  1185	      "version": "1.32.0",
+  1186	      "resolved": "https://registry.npmjs.org/lightningcss/-/lightningcss-1.32.0.tgz",
+  1187	      "integrity": "sha512-NXYBzinNrblfraPGyrbPoD19C1h9lfI/1mzgWYvXUTe414Gz/X1FD2XBZSZM7rRTrMA8JL3OtAaGifrIKhQ5yQ==",
+  1188	      "dev": true,
+  1189	      "license": "MPL-2.0",
+  1190	      "dependencies": {
+  1191	        "detect-libc": "^2.0.3"
+  1192	      },
+  1193	      "engines": {
+  1194	        "node": ">= 12.0.0"
+  1195	      },
+  1196	      "funding": {
+  1197	        "type": "opencollective",
+  1198	        "url": "https://opencollective.com/parcel"
+  1199	      },
+  1200	      "optionalDependencies": {
+  1201	        "lightningcss-android-arm64": "1.32.0",
+  1202	        "lightningcss-darwin-arm64": "1.32.0",
+  1203	        "lightningcss-darwin-x64": "1.32.0",
+  1204	        "lightningcss-freebsd-x64": "1.32.0",
+  1205	        "lightningcss-linux-arm-gnueabihf": "1.32.0",
+  1206	        "lightningcss-linux-arm64-gnu": "1.32.0",
+  1207	        "lightningcss-linux-arm64-musl": "1.32.0",
+  1208	        "lightningcss-linux-x64-gnu": "1.32.0",
+  1209	        "lightningcss-linux-x64-musl": "1.32.0",
+  1210	        "lightningcss-win32-arm64-msvc": "1.32.0",
+  1211	        "lightningcss-win32-x64-msvc": "1.32.0"
+  1212	      }
+  1213	    },
+  1214	    "node_modules/lightningcss-android-arm64": {
+  1215	      "version": "1.32.0",
+  1216	      "resolved": "https://registry.npmjs.org/lightningcss-android-arm64/-/lightningcss-android-arm64-1.32.0.tgz",
+  1217	      "integrity": "sha512-YK7/ClTt4kAK0vo6w3X+Pnm0D2cf2vPHbhOXdoNti1Ga0al1P4TBZhwjATvjNwLEBCnKvjJc2jQgHXH0NEwlAg==",
+  1218	      "cpu": [
+  1219	        "arm64"
+  1220	      ],
+  1221	      "dev": true,
+  1222	      "license": "MPL-2.0",
+  1223	      "optional": true,
+  1224	      "os": [
+  1225	        "android"
+  1226	      ],
+  1227	      "engines": {
+  1228	        "node": ">= 12.0.0"
+  1229	      },
+  1230	      "funding": {
+  1231	        "type": "opencollective",
+  1232	        "url": "https://opencollective.com/parcel"
+  1233	      }
+  1234	    },
+  1235	    "node_modules/lightningcss-darwin-arm64": {
+  1236	      "version": "1.32.0",
+  1237	      "resolved": "https://registry.npmjs.org/lightningcss-darwin-arm64/-/lightningcss-darwin-arm64-1.32.0.tgz",
+  1238	      "integrity": "sha512-RzeG9Ju5bag2Bv1/lwlVJvBE3q6TtXskdZLLCyfg5pt+HLz9BqlICO7LZM7VHNTTn/5PRhHFBSjk5lc4cmscPQ==",
+  1239	      "cpu": [
+  1240	        "arm64"
+  1241	      ],
+  1242	      "dev": true,
+  1243	      "license": "MPL-2.0",
+  1244	      "optional": true,
+  1245	      "os": [
+  1246	        "darwin"
+  1247	      ],
+  1248	      "engines": {
+  1249	        "node": ">= 12.0.0"
+  1250	      },
+  1251	      "funding": {
+  1252	        "type": "opencollective",
+  1253	        "url": "https://opencollective.com/parcel"
+  1254	      }
+  1255	    },
+  1256	    "node_modules/lightningcss-darwin-x64": {
+  1257	      "version": "1.32.0",
+  1258	      "resolved": "https://registry.npmjs.org/lightningcss-darwin-x64/-/lightningcss-darwin-x64-1.32.0.tgz",
+  1259	      "integrity": "sha512-U+QsBp2m/s2wqpUYT/6wnlagdZbtZdndSmut/NJqlCcMLTWp5muCrID+K5UJ6jqD2BFshejCYXniPDbNh73V8w==",
+  1260	      "cpu": [
+  1261	        "x64"
+  1262	      ],
+  1263	      "dev": true,
+  1264	      "license": "MPL-2.0",
+  1265	      "optional": true,
+  1266	      "os": [
+  1267	        "darwin"
+  1268	      ],
+  1269	      "engines": {
+  1270	        "node": ">= 12.0.0"
+  1271	      },
+  1272	      "funding": {
+  1273	        "type": "opencollective",
+  1274	        "url": "https://opencollective.com/parcel"
+  1275	      }
+  1276	    },
+  1277	    "node_modules/lightningcss-freebsd-x64": {
+  1278	      "version": "1.32.0",
+  1279	      "resolved": "https://registry.npmjs.org/lightningcss-freebsd-x64/-/lightningcss-freebsd-x64-1.32.0.tgz",
+  1280	      "integrity": "sha512-JCTigedEksZk3tHTTthnMdVfGf61Fky8Ji2E4YjUTEQX14xiy/lTzXnu1vwiZe3bYe0q+SpsSH/CTeDXK6WHig==",
+  1281	      "cpu": [
+  1282	        "x64"
+  1283	      ],
+  1284	      "dev": true,
+  1285	      "license": "MPL-2.0",
+  1286	      "optional": true,
+  1287	      "os": [
+  1288	        "freebsd"
+  1289	      ],
+  1290	      "engines": {
+  1291	        "node": ">= 12.0.0"
+  1292	      },
+  1293	      "funding": {
+  1294	        "type": "opencollective",
+  1295	        "url": "https://opencollective.com/parcel"
+  1296	      }
+  1297	    },
+  1298	    "node_modules/lightningcss-linux-arm-gnueabihf": {
+  1299	      "version": "1.32.0",
+  1300	      "resolved": "https://registry.npmjs.org/lightningcss-linux-arm-gnueabihf/-/lightningcss-linux-arm-gnueabihf-1.32.0.tgz",
+  1301	      "integrity": "sha512-x6rnnpRa2GL0zQOkt6rts3YDPzduLpWvwAF6EMhXFVZXD4tPrBkEFqzGowzCsIWsPjqSK+tyNEODUBXeeVHSkw==",
+  1302	      "cpu": [
+  1303	        "arm"
+  1304	      ],
+  1305	      "dev": true,
+  1306	      "license": "MPL-2.0",
+  1307	      "optional": true,
+  1308	      "os": [
+  1309	        "linux"
+  1310	      ],
+  1311	      "engines": {
+  1312	        "node": ">= 12.0.0"
+  1313	      },
+  1314	      "funding": {
+  1315	        "type": "opencollective",
+  1316	        "url": "https://opencollective.com/parcel"
+  1317	      }
+  1318	    },
+  1319	    "node_modules/lightningcss-linux-arm64-gnu": {
+  1320	      "version": "1.32.0",
+  1321	      "resolved": "https://registry.npmjs.org/lightningcss-linux-arm64-gnu/-/lightningcss-linux-arm64-gnu-1.32.0.tgz",
+  1322	      "integrity": "sha512-0nnMyoyOLRJXfbMOilaSRcLH3Jw5z9HDNGfT/gwCPgaDjnx0i8w7vBzFLFR1f6CMLKF8gVbebmkUN3fa/kQJpQ==",
+  1323	      "cpu": [
+  1324	        "arm64"
+  1325	      ],
+  1326	      "dev": true,
+  1327	      "license": "MPL-2.0",
+  1328	      "optional": true,
+  1329	      "os": [
+  1330	        "linux"
+  1331	      ],
+  1332	      "engines": {
+  1333	        "node": ">= 12.0.0"
+  1334	      },
+  1335	      "funding": {
+  1336	        "type": "opencollective",
+  1337	        "url": "https://opencollective.com/parcel"
+  1338	      }
+  1339	    },
+  1340	    "node_modules/lightningcss-linux-arm64-musl": {
+  1341	      "version": "1.32.0",
+  1342	      "resolved": "https://registry.npmjs.org/lightningcss-linux-arm64-musl/-/lightningcss-linux-arm64-musl-1.32.0.tgz",
+  1343	      "integrity": "sha512-UpQkoenr4UJEzgVIYpI80lDFvRmPVg6oqboNHfoH4CQIfNA+HOrZ7Mo7KZP02dC6LjghPQJeBsvXhJod/wnIBg==",
+  1344	      "cpu": [
+  1345	        "arm64"
+  1346	      ],
+  1347	      "dev": true,
+  1348	      "license": "MPL-2.0",
+  1349	      "optional": true,
+  1350	      "os": [
+  1351	        "linux"
+  1352	      ],
+  1353	      "engines": {
+  1354	        "node": ">= 12.0.0"
+  1355	      },
+  1356	      "funding": {
+  1357	        "type": "opencollective",
+  1358	        "url": "https://opencollective.com/parcel"
+  1359	      }
+  1360	    },
+  1361	    "node_modules/lightningcss-linux-x64-gnu": {
+  1362	      "version": "1.32.0",
+  1363	      "resolved": "https://registry.npmjs.org/lightningcss-linux-x64-gnu/-/lightningcss-linux-x64-gnu-1.32.0.tgz",
+  1364	      "integrity": "sha512-V7Qr52IhZmdKPVr+Vtw8o+WLsQJYCTd8loIfpDaMRWGUZfBOYEJeyJIkqGIDMZPwPx24pUMfwSxxI8phr/MbOA==",
+  1365	      "cpu": [
+  1366	        "x64"
+  1367	      ],
+  1368	      "dev": true,
+  1369	      "license": "MPL-2.0",
+  1370	      "optional": true,
+  1371	      "os": [
+  1372	        "linux"
+  1373	      ],
+  1374	      "engines": {
+  1375	        "node": ">= 12.0.0"
+  1376	      },
+  1377	      "funding": {
+  1378	        "type": "opencollective",
+  1379	        "url": "https://opencollective.com/parcel"
+  1380	      }
+  1381	    },
+  1382	    "node_modules/lightningcss-linux-x64-musl": {
+  1383	      "version": "1.32.0",
+  1384	      "resolved": "https://registry.npmjs.org/lightningcss-linux-x64-musl/-/lightningcss-linux-x64-musl-1.32.0.tgz",
+  1385	      "integrity": "sha512-bYcLp+Vb0awsiXg/80uCRezCYHNg1/l3mt0gzHnWV9XP1W5sKa5/TCdGWaR/zBM2PeF/HbsQv/j2URNOiVuxWg==",
+  1386	      "cpu": [
+  1387	        "x64"
+  1388	      ],
+  1389	      "dev": true,
+  1390	      "license": "MPL-2.0",
+  1391	      "optional": true,
+  1392	      "os": [
+  1393	        "linux"
+  1394	      ],
+  1395	      "engines": {
+  1396	        "node": ">= 12.0.0"
+  1397	      },
+  1398	      "funding": {
+  1399	        "type": "opencollective",
+  1400	        "url": "https://opencollective.com/parcel"
+  1401	      }
+  1402	    },
+  1403	    "node_modules/lightningcss-win32-arm64-msvc": {
+  1404	      "version": "1.32.0",
+  1405	      "resolved": "https://registry.npmjs.org/lightningcss-win32-arm64-msvc/-/lightningcss-win32-arm64-msvc-1.32.0.tgz",
+  1406	      "integrity": "sha512-8SbC8BR40pS6baCM8sbtYDSwEVQd4JlFTOlaD3gWGHfThTcABnNDBda6eTZeqbofalIJhFx0qKzgHJmcPTnGdw==",
+  1407	      "cpu": [
+  1408	        "arm64"
+  1409	      ],
+  1410	      "dev": true,
+  1411	      "license": "MPL-2.0",
+  1412	      "optional": true,
+  1413	      "os": [
+  1414	        "win32"
+  1415	      ],
+  1416	      "engines": {
+  1417	        "node": ">= 12.0.0"
+  1418	      },
+  1419	      "funding": {
+  1420	        "type": "opencollective",
+  1421	        "url": "https://opencollective.com/parcel"
+  1422	      }
+  1423	    },
+  1424	    "node_modules/lightningcss-win32-x64-msvc": {
+  1425	      "version": "1.32.0",
+  1426	      "resolved": "https://registry.npmjs.org/lightningcss-win32-x64-msvc/-/lightningcss-win32-x64-msvc-1.32.0.tgz",
+  1427	      "integrity": "sha512-Amq9B/SoZYdDi1kFrojnoqPLxYhQ4Wo5XiL8EVJrVsB8ARoC1PWW6VGtT0WKCemjy8aC+louJnjS7U18x3b06Q==",
+  1428	      "cpu": [
+  1429	        "x64"
+  1430	      ],
+  1431	      "dev": true,
+  1432	      "license": "MPL-2.0",
+  1433	      "optional": true,
+  1434	      "os": [
+  1435	        "win32"
+  1436	      ],
+  1437	      "engines": {
+  1438	        "node": ">= 12.0.0"
+  1439	      },
+  1440	      "funding": {
+  1441	        "type": "opencollective",
+  1442	        "url": "https://opencollective.com/parcel"
+  1443	      }
+  1444	    },
+  1445	    "node_modules/lucide-react": {
+  1446	      "version": "1.24.0",
+  1447	      "resolved": "https://registry.npmjs.org/lucide-react/-/lucide-react-1.24.0.tgz",
+  1448	      "integrity": "sha512-YT6mBD8lGKkg4nM39enlm94/sfJIiW0YKUT60fBy4YK8tai31ylg1VhGNWxkpSKHo9UagfnZqwIff3HTDQwXeA==",
+  1449	      "license": "ISC",
+  1450	      "peerDependencies": {
+  1451	        "react": "^16.5.1 || ^17.0.0 || ^18.0.0 || ^19.0.0"
+  1452	      }
+  1453	    },
+  1454	    "node_modules/magic-string": {
+  1455	      "version": "0.30.21",
+  1456	      "resolved": "https://registry.npmjs.org/magic-string/-/magic-string-0.30.21.tgz",
+  1457	      "integrity": "sha512-vd2F4YUyEXKGcLHoq+TEyCjxueSeHnFxyyjNp80yg0XV4vUhnDer/lvvlqM/arB5bXQN5K2/3oinyCRyx8T2CQ==",
+  1458	      "dev": true,
+  1459	      "license": "MIT",
+  1460	      "dependencies": {
+  1461	        "@jridgewell/sourcemap-codec": "^1.5.5"
+  1462	      }
+  1463	    },
+  1464	    "node_modules/motion": {
+  1465	      "version": "12.42.2",
+  1466	      "resolved": "https://registry.npmjs.org/motion/-/motion-12.42.2.tgz",
+  1467	      "integrity": "sha512-Atvv11yUKIid41cVrRBDVX5m8tF8kNpExRSlbpt6APClhDjtwQssgFHhQzejxw7/7YYbjHSPKBVbHo05BuJT5Q==",
+  1468	      "license": "MIT",
+  1469	      "dependencies": {
+  1470	        "framer-motion": "^12.42.2",
+  1471	        "tslib": "^2.4.0"
+  1472	      },
+  1473	      "peerDependencies": {
+  1474	        "@emotion/is-prop-valid": "*",
+  1475	        "react": "^18.0.0 || ^19.0.0",
+  1476	        "react-dom": "^18.0.0 || ^19.0.0"
+  1477	      },
+  1478	      "peerDependenciesMeta": {
+  1479	        "@emotion/is-prop-valid": {
+  1480	          "optional": true
+  1481	        },
+  1482	        "react": {
+  1483	          "optional": true
+  1484	        },
+  1485	        "react-dom": {
+  1486	          "optional": true
+  1487	        }
+  1488	      }
+  1489	    },
+  1490	    "node_modules/motion-dom": {
+  1491	      "version": "12.42.2",
+  1492	      "resolved": "https://registry.npmjs.org/motion-dom/-/motion-dom-12.42.2.tgz",
+  1493	      "integrity": "sha512-5gIMWLp/PycBtJRJWRgjxke5n8dlvkSn2DrYW+tr3XcqAZY1xZh6BJyooJXCM8wdfM7wfMjkBJNLge1CKPUIRA==",
+  1494	      "license": "MIT",
+  1495	      "dependencies": {
+  1496	        "motion-utils": "^12.39.0"
+  1497	      }
+  1498	    },
+  1499	    "node_modules/motion-utils": {
+  1500	      "version": "12.39.0",
+  1501	      "resolved": "https://registry.npmjs.org/motion-utils/-/motion-utils-12.39.0.tgz",
+  1502	      "integrity": "sha512-8nadJAJjTtqRkmRF36FoJTrywK9nnFmnPwnSMyxaOCU7GDjN9RTMJIxx9De8ErM+vpPhMccr/6fo5WciyQLnMQ==",
+  1503	      "license": "MIT"
+  1504	    },
+  1505	    "node_modules/nanoid": {
+  1506	      "version": "3.3.15",
+  1507	      "resolved": "https://registry.npmjs.org/nanoid/-/nanoid-3.3.15.tgz",
+  1508	      "integrity": "sha512-y7Wygv/7mEOvxTuEQDB8StXdMRBWf1kR/tlhAzBRUFkB2jfcLOAxO/SHmOO2zgz1pVgK29/kyupn059/bCHdjA==",
+  1509	      "funding": [
+  1510	        {
+  1511	          "type": "github",
+  1512	          "url": "https://github.com/sponsors/ai"
+  1513	        }
+  1514	      ],
+  1515	      "license": "MIT",
+  1516	      "bin": {
+  1517	        "nanoid": "bin/nanoid.cjs"
+  1518	      },
+  1519	      "engines": {
+  1520	        "node": "^10 || ^12 || ^13.7 || ^14 || >=15.0.1"
+  1521	      }
+  1522	    },
+  1523	    "node_modules/next": {
+  1524	      "version": "16.2.10",
+  1525	      "resolved": "https://registry.npmjs.org/next/-/next-16.2.10.tgz",
+  1526	      "integrity": "sha512-2som5AVXb3kE6Yjine3/mNbBayYF58eguBWIVVUdr1y/L426xyVEgYxgBG+1QC34P2x5E+tcDup6XkuOAX3dCA==",
+  1527	      "license": "MIT",
+  1528	      "dependencies": {
+  1529	        "@next/env": "16.2.10",
+  1530	        "@swc/helpers": "0.5.15",
+  1531	        "baseline-browser-mapping": "^2.9.19",
+  1532	        "caniuse-lite": "^1.0.30001579",
+  1533	        "postcss": "8.4.31",
+  1534	        "styled-jsx": "5.1.6"
+  1535	      },
+  1536	      "bin": {
+  1537	        "next": "dist/bin/next"
+  1538	      },
+  1539	      "engines": {
+  1540	        "node": ">=20.9.0"
+  1541	      },
+  1542	      "optionalDependencies": {
+  1543	        "@next/swc-darwin-arm64": "16.2.10",
+  1544	        "@next/swc-darwin-x64": "16.2.10",
+  1545	        "@next/swc-linux-arm64-gnu": "16.2.10",
+  1546	        "@next/swc-linux-arm64-musl": "16.2.10",
+  1547	        "@next/swc-linux-x64-gnu": "16.2.10",
+  1548	        "@next/swc-linux-x64-musl": "16.2.10",
+  1549	        "@next/swc-win32-arm64-msvc": "16.2.10",
+  1550	        "@next/swc-win32-x64-msvc": "16.2.10",
+  1551	        "sharp": "^0.34.5"
+  1552	      },
+  1553	      "peerDependencies": {
+  1554	        "@opentelemetry/api": "^1.1.0",
+  1555	        "@playwright/test": "^1.51.1",
+  1556	        "babel-plugin-react-compiler": "*",
+  1557	        "react": "^18.2.0 || 19.0.0-rc-de68d2f4-20241204 || ^19.0.0",
+  1558	        "react-dom": "^18.2.0 || 19.0.0-rc-de68d2f4-20241204 || ^19.0.0",
+  1559	        "sass": "^1.3.0"
+  1560	      },
+  1561	      "peerDependenciesMeta": {
+  1562	        "@opentelemetry/api": {
+  1563	          "optional": true
+  1564	        },
+  1565	        "@playwright/test": {
+  1566	          "optional": true
+  1567	        },
+  1568	        "babel-plugin-react-compiler": {
+  1569	          "optional": true
+  1570	        },
+  1571	        "sass": {
+  1572	          "optional": true
+  1573	        }
+  1574	      }
+  1575	    },
+  1576	    "node_modules/next/node_modules/@img/sharp-darwin-arm64": {
+  1577	      "version": "0.34.5",
+  1578	      "resolved": "https://registry.npmjs.org/@img/sharp-darwin-arm64/-/sharp-darwin-arm64-0.34.5.tgz",
+  1579	      "integrity": "sha512-imtQ3WMJXbMY4fxb/Ndp6HBTNVtWCUI0WdobyheGf5+ad6xX8VIDO8u2xE4qc/fr08CKG/7dDseFtn6M6g/r3w==",
+  1580	      "cpu": [
+  1581	        "arm64"
+  1582	      ],
+  1583	      "license": "Apache-2.0",
+  1584	      "optional": true,
+  1585	      "os": [
+  1586	        "darwin"
+  1587	      ],
+  1588	      "engines": {
+  1589	        "node": "^18.17.0 || ^20.3.0 || >=21.0.0"
+  1590	      },
+  1591	      "funding": {
+  1592	        "url": "https://opencollective.com/libvips"
+  1593	      },
+  1594	      "optionalDependencies": {
+  1595	        "@img/sharp-libvips-darwin-arm64": "1.2.4"
+  1596	      }
+  1597	    },
+  1598	    "node_modules/next/node_modules/@img/sharp-darwin-x64": {
+  1599	      "version": "0.34.5",
+  1600	      "resolved": "https://registry.npmjs.org/@img/sharp-darwin-x64/-/sharp-darwin-x64-0.34.5.tgz",
+  1601	      "integrity": "sha512-YNEFAF/4KQ/PeW0N+r+aVVsoIY0/qxxikF2SWdp+NRkmMB7y9LBZAVqQ4yhGCm/H3H270OSykqmQMKLBhBJDEw==",
+  1602	      "cpu": [
+  1603	        "x64"
+  1604	      ],
+  1605	      "license": "Apache-2.0",
+  1606	      "optional": true,
+  1607	      "os": [
+  1608	        "darwin"
+  1609	      ],
+  1610	      "engines": {
+  1611	        "node": "^18.17.0 || ^20.3.0 || >=21.0.0"
+  1612	      },
+  1613	      "funding": {
+  1614	        "url": "https://opencollective.com/libvips"
+  1615	      },
+  1616	      "optionalDependencies": {
+  1617	        "@img/sharp-libvips-darwin-x64": "1.2.4"
+  1618	      }
+  1619	    },
+  1620	    "node_modules/next/node_modules/@img/sharp-libvips-darwin-arm64": {
+  1621	      "version": "1.2.4",
+  1622	      "resolved": "https://registry.npmjs.org/@img/sharp-libvips-darwin-arm64/-/sharp-libvips-darwin-arm64-1.2.4.tgz",
+  1623	      "integrity": "sha512-zqjjo7RatFfFoP0MkQ51jfuFZBnVE2pRiaydKJ1G/rHZvnsrHAOcQALIi9sA5co5xenQdTugCvtb1cuf78Vf4g==",
+  1624	      "cpu": [
+  1625	        "arm64"
+  1626	      ],
+  1627	      "license": "LGPL-3.0-or-later",
+  1628	      "optional": true,
+  1629	      "os": [
+  1630	        "darwin"
+  1631	      ],
+  1632	      "funding": {
+  1633	        "url": "https://opencollective.com/libvips"
+  1634	      }
+  1635	    },
+  1636	    "node_modules/next/node_modules/@img/sharp-libvips-darwin-x64": {
+  1637	      "version": "1.2.4",
+  1638	      "resolved": "https://registry.npmjs.org/@img/sharp-libvips-darwin-x64/-/sharp-libvips-darwin-x64-1.2.4.tgz",
+  1639	      "integrity": "sha512-1IOd5xfVhlGwX+zXv2N93k0yMONvUlANylbJw1eTah8K/Jtpi15KC+WSiaX/nBmbm2HxRM1gZ0nSdjSsrZbGKg==",
+  1640	      "cpu": [
+  1641	        "x64"
+  1642	      ],
+  1643	      "license": "LGPL-3.0-or-later",
+  1644	      "optional": true,
+  1645	      "os": [
+  1646	        "darwin"
+  1647	      ],
+  1648	      "funding": {
+  1649	        "url": "https://opencollective.com/libvips"
+  1650	      }
+  1651	    },
+  1652	    "node_modules/next/node_modules/@img/sharp-libvips-linux-arm": {
+  1653	      "version": "1.2.4",
+  1654	      "resolved": "https://registry.npmjs.org/@img/sharp-libvips-linux-arm/-/sharp-libvips-linux-arm-1.2.4.tgz",
+  1655	      "integrity": "sha512-bFI7xcKFELdiNCVov8e44Ia4u2byA+l3XtsAj+Q8tfCwO6BQ8iDojYdvoPMqsKDkuoOo+X6HZA0s0q11ANMQ8A==",
+  1656	      "cpu": [
+  1657	        "arm"
+  1658	      ],
+  1659	      "license": "LGPL-3.0-or-later",
+  1660	      "optional": true,
+  1661	      "os": [
+  1662	        "linux"
+  1663	      ],
+  1664	      "funding": {
+  1665	        "url": "https://opencollective.com/libvips"
+  1666	      }
+  1667	    },
+  1668	    "node_modules/next/node_modules/@img/sharp-libvips-linux-arm64": {
+  1669	      "version": "1.2.4",
+  1670	      "resolved": "https://registry.npmjs.org/@img/sharp-libvips-linux-arm64/-/sharp-libvips-linux-arm64-1.2.4.tgz",
+  1671	      "integrity": "sha512-excjX8DfsIcJ10x1Kzr4RcWe1edC9PquDRRPx3YVCvQv+U5p7Yin2s32ftzikXojb1PIFc/9Mt28/y+iRklkrw==",
+  1672	      "cpu": [
+  1673	        "arm64"
+  1674	      ],
+  1675	      "license": "LGPL-3.0-or-later",
+  1676	      "optional": true,
+  1677	      "os": [
+  1678	        "linux"
+  1679	      ],
+  1680	      "funding": {
+  1681	        "url": "https://opencollective.com/libvips"
+  1682	      }
+  1683	    },
+  1684	    "node_modules/next/node_modules/@img/sharp-libvips-linux-ppc64": {
+  1685	      "version": "1.2.4",
+  1686	      "resolved": "https://registry.npmjs.org/@img/sharp-libvips-linux-ppc64/-/sharp-libvips-linux-ppc64-1.2.4.tgz",
+  1687	      "integrity": "sha512-FMuvGijLDYG6lW+b/UvyilUWu5Ayu+3r2d1S8notiGCIyYU/76eig1UfMmkZ7vwgOrzKzlQbFSuQfgm7GYUPpA==",
+  1688	      "cpu": [
+  1689	        "ppc64"
+  1690	      ],
+  1691	      "license": "LGPL-3.0-or-later",
+  1692	      "optional": true,
+  1693	      "os": [
+  1694	        "linux"
+  1695	      ],
+  1696	      "funding": {
+  1697	        "url": "https://opencollective.com/libvips"
+  1698	      }
+  1699	    },
+  1700	    "node_modules/next/node_modules/@img/sharp-libvips-linux-riscv64": {
+  1701	      "version": "1.2.4",
+  1702	      "resolved": "https://registry.npmjs.org/@img/sharp-libvips-linux-riscv64/-/sharp-libvips-linux-riscv64-1.2.4.tgz",
+  1703	      "integrity": "sha512-oVDbcR4zUC0ce82teubSm+x6ETixtKZBh/qbREIOcI3cULzDyb18Sr/Wcyx7NRQeQzOiHTNbZFF1UwPS2scyGA==",
+  1704	      "cpu": [
+  1705	        "riscv64"
+  1706	      ],
+  1707	      "license": "LGPL-3.0-or-later",
+  1708	      "optional": true,
+  1709	      "os": [
+  1710	        "linux"
+  1711	      ],
+  1712	      "funding": {
+  1713	        "url": "https://opencollective.com/libvips"
+  1714	      }
+  1715	    },
+  1716	    "node_modules/next/node_modules/@img/sharp-libvips-linux-s390x": {
+  1717	      "version": "1.2.4",
+  1718	      "resolved": "https://registry.npmjs.org/@img/sharp-libvips-linux-s390x/-/sharp-libvips-linux-s390x-1.2.4.tgz",
+  1719	      "integrity": "sha512-qmp9VrzgPgMoGZyPvrQHqk02uyjA0/QrTO26Tqk6l4ZV0MPWIW6LTkqOIov+J1yEu7MbFQaDpwdwJKhbJvuRxQ==",
+  1720	      "cpu": [
+  1721	        "s390x"
+  1722	      ],
+  1723	      "license": "LGPL-3.0-or-later",
+  1724	      "optional": true,
+  1725	      "os": [
+  1726	        "linux"
+  1727	      ],
+  1728	      "funding": {
+  1729	        "url": "https://opencollective.com/libvips"
+  1730	      }
+  1731	    },
+  1732	    "node_modules/next/node_modules/@img/sharp-libvips-linux-x64": {
+  1733	      "version": "1.2.4",
+  1734	      "resolved": "https://registry.npmjs.org/@img/sharp-libvips-linux-x64/-/sharp-libvips-linux-x64-1.2.4.tgz",
+  1735	      "integrity": "sha512-tJxiiLsmHc9Ax1bz3oaOYBURTXGIRDODBqhveVHonrHJ9/+k89qbLl0bcJns+e4t4rvaNBxaEZsFtSfAdquPrw==",
+  1736	      "cpu": [
+  1737	        "x64"
+  1738	      ],
+  1739	      "license": "LGPL-3.0-or-later",
+  1740	      "optional": true,
+  1741	      "os": [
+  1742	        "linux"
+  1743	      ],
+  1744	      "funding": {
+  1745	        "url": "https://opencollective.com/libvips"
+  1746	      }
+  1747	    },
+  1748	    "node_modules/next/node_modules/@img/sharp-libvips-linuxmusl-arm64": {
+  1749	      "version": "1.2.4",
+  1750	      "resolved": "https://registry.npmjs.org/@img/sharp-libvips-linuxmusl-arm64/-/sharp-libvips-linuxmusl-arm64-1.2.4.tgz",
+  1751	      "integrity": "sha512-FVQHuwx1IIuNow9QAbYUzJ+En8KcVm9Lk5+uGUQJHaZmMECZmOlix9HnH7n1TRkXMS0pGxIJokIVB9SuqZGGXw==",
+  1752	      "cpu": [
+  1753	        "arm64"
+  1754	      ],
+  1755	      "license": "LGPL-3.0-or-later",
+  1756	      "optional": true,
+  1757	      "os": [
+  1758	        "linux"
+  1759	      ],
+  1760	      "funding": {
+  1761	        "url": "https://opencollective.com/libvips"
+  1762	      }
+  1763	    },
+  1764	    "node_modules/next/node_modules/@img/sharp-libvips-linuxmusl-x64": {
+  1765	      "version": "1.2.4",
+  1766	      "resolved": "https://registry.npmjs.org/@img/sharp-libvips-linuxmusl-x64/-/sharp-libvips-linuxmusl-x64-1.2.4.tgz",
+  1767	      "integrity": "sha512-+LpyBk7L44ZIXwz/VYfglaX/okxezESc6UxDSoyo2Ks6Jxc4Y7sGjpgU9s4PMgqgjj1gZCylTieNamqA1MF7Dg==",
+  1768	      "cpu": [
+  1769	        "x64"
+  1770	      ],
+  1771	      "license": "LGPL-3.0-or-later",
+  1772	      "optional": true,
+  1773	      "os": [
+  1774	        "linux"
+  1775	      ],
+  1776	      "funding": {
+  1777	        "url": "https://opencollective.com/libvips"
+  1778	      }
+  1779	    },
+  1780	    "node_modules/next/node_modules/@img/sharp-linux-arm": {
+  1781	      "version": "0.34.5",
+  1782	      "resolved": "https://registry.npmjs.org/@img/sharp-linux-arm/-/sharp-linux-arm-0.34.5.tgz",
+  1783	      "integrity": "sha512-9dLqsvwtg1uuXBGZKsxem9595+ujv0sJ6Vi8wcTANSFpwV/GONat5eCkzQo/1O6zRIkh0m/8+5BjrRr7jDUSZw==",
+  1784	      "cpu": [
+  1785	        "arm"
+  1786	      ],
+  1787	      "license": "Apache-2.0",
+  1788	      "optional": true,
+  1789	      "os": [
+  1790	        "linux"
+  1791	      ],
+  1792	      "engines": {
+  1793	        "node": "^18.17.0 || ^20.3.0 || >=21.0.0"
+  1794	      },
+  1795	      "funding": {
+  1796	        "url": "https://opencollective.com/libvips"
+  1797	      },
+  1798	      "optionalDependencies": {
+  1799	        "@img/sharp-libvips-linux-arm": "1.2.4"
+  1800	      }
+  1801	    },
+  1802	    "node_modules/next/node_modules/@img/sharp-linux-arm64": {
+  1803	      "version": "0.34.5",
+  1804	      "resolved": "https://registry.npmjs.org/@img/sharp-linux-arm64/-/sharp-linux-arm64-0.34.5.tgz",
+  1805	      "integrity": "sha512-bKQzaJRY/bkPOXyKx5EVup7qkaojECG6NLYswgktOZjaXecSAeCWiZwwiFf3/Y+O1HrauiE3FVsGxFg8c24rZg==",
+  1806	      "cpu": [
+  1807	        "arm64"
+  1808	      ],
+  1809	      "license": "Apache-2.0",
+  1810	      "optional": true,
+  1811	      "os": [
+  1812	        "linux"
+  1813	      ],
+  1814	      "engines": {
+  1815	        "node": "^18.17.0 || ^20.3.0 || >=21.0.0"
+  1816	      },
+  1817	      "funding": {
+  1818	        "url": "https://opencollective.com/libvips"
+  1819	      },
+  1820	      "optionalDependencies": {
+  1821	        "@img/sharp-libvips-linux-arm64": "1.2.4"
+  1822	      }
+  1823	    },
+  1824	    "node_modules/next/node_modules/@img/sharp-linux-ppc64": {
+  1825	      "version": "0.34.5",
+  1826	      "resolved": "https://registry.npmjs.org/@img/sharp-linux-ppc64/-/sharp-linux-ppc64-0.34.5.tgz",
+  1827	      "integrity": "sha512-7zznwNaqW6YtsfrGGDA6BRkISKAAE1Jo0QdpNYXNMHu2+0dTrPflTLNkpc8l7MUP5M16ZJcUvysVWWrMefZquA==",
+  1828	      "cpu": [
+  1829	        "ppc64"
+  1830	      ],
+  1831	      "license": "Apache-2.0",
+  1832	      "optional": true,
+  1833	      "os": [
+  1834	        "linux"
+  1835	      ],
+  1836	      "engines": {
+  1837	        "node": "^18.17.0 || ^20.3.0 || >=21.0.0"
+  1838	      },
+  1839	      "funding": {
+  1840	        "url": "https://opencollective.com/libvips"
+  1841	      },
+  1842	      "optionalDependencies": {
+  1843	        "@img/sharp-libvips-linux-ppc64": "1.2.4"
+  1844	      }
+  1845	    },
+  1846	    "node_modules/next/node_modules/@img/sharp-linux-riscv64": {
+  1847	      "version": "0.34.5",
+  1848	      "resolved": "https://registry.npmjs.org/@img/sharp-linux-riscv64/-/sharp-linux-riscv64-0.34.5.tgz",
+  1849	      "integrity": "sha512-51gJuLPTKa7piYPaVs8GmByo7/U7/7TZOq+cnXJIHZKavIRHAP77e3N2HEl3dgiqdD/w0yUfiJnII77PuDDFdw==",
+  1850	      "cpu": [
+  1851	        "riscv64"
+  1852	      ],
+  1853	      "license": "Apache-2.0",
+  1854	      "optional": true,
+  1855	      "os": [
+  1856	        "linux"
+  1857	      ],
+  1858	      "engines": {
+  1859	        "node": "^18.17.0 || ^20.3.0 || >=21.0.0"
+  1860	      },
+  1861	      "funding": {
+  1862	        "url": "https://opencollective.com/libvips"
+  1863	      },
+  1864	      "optionalDependencies": {
+  1865	        "@img/sharp-libvips-linux-riscv64": "1.2.4"
+  1866	      }
+  1867	    },
+  1868	    "node_modules/next/node_modules/@img/sharp-linux-s390x": {
+  1869	      "version": "0.34.5",
+  1870	      "resolved": "https://registry.npmjs.org/@img/sharp-linux-s390x/-/sharp-linux-s390x-0.34.5.tgz",
+  1871	      "integrity": "sha512-nQtCk0PdKfho3eC5MrbQoigJ2gd1CgddUMkabUj+rBevs8tZ2cULOx46E7oyX+04WGfABgIwmMC0VqieTiR4jg==",
+  1872	      "cpu": [
+  1873	        "s390x"
+  1874	      ],
+  1875	      "license": "Apache-2.0",
+  1876	      "optional": true,
+  1877	      "os": [
+  1878	        "linux"
+  1879	      ],
+  1880	      "engines": {
+  1881	        "node": "^18.17.0 || ^20.3.0 || >=21.0.0"
+  1882	      },
+  1883	      "funding": {
+  1884	        "url": "https://opencollective.com/libvips"
+  1885	      },
+  1886	      "optionalDependencies": {
+  1887	        "@img/sharp-libvips-linux-s390x": "1.2.4"
+  1888	      }
+  1889	    },
+  1890	    "node_modules/next/node_modules/@img/sharp-linux-x64": {
+  1891	      "version": "0.34.5",
+  1892	      "resolved": "https://registry.npmjs.org/@img/sharp-linux-x64/-/sharp-linux-x64-0.34.5.tgz",
+  1893	      "integrity": "sha512-MEzd8HPKxVxVenwAa+JRPwEC7QFjoPWuS5NZnBt6B3pu7EG2Ge0id1oLHZpPJdn3OQK+BQDiw9zStiHBTJQQQQ==",
+  1894	      "cpu": [
+  1895	        "x64"
+  1896	      ],
+  1897	      "license": "Apache-2.0",
+  1898	      "optional": true,
+  1899	      "os": [
+  1900	        "linux"
+  1901	      ],
+  1902	      "engines": {
+  1903	        "node": "^18.17.0 || ^20.3.0 || >=21.0.0"
+  1904	      },
+  1905	      "funding": {
+  1906	        "url": "https://opencollective.com/libvips"
+  1907	      },
+  1908	      "optionalDependencies": {
+  1909	        "@img/sharp-libvips-linux-x64": "1.2.4"
+  1910	      }
+  1911	    },
+  1912	    "node_modules/next/node_modules/@img/sharp-linuxmusl-arm64": {
+  1913	      "version": "0.34.5",
+  1914	      "resolved": "https://registry.npmjs.org/@img/sharp-linuxmusl-arm64/-/sharp-linuxmusl-arm64-0.34.5.tgz",
+  1915	      "integrity": "sha512-fprJR6GtRsMt6Kyfq44IsChVZeGN97gTD331weR1ex1c1rypDEABN6Tm2xa1wE6lYb5DdEnk03NZPqA7Id21yg==",
+  1916	      "cpu": [
+  1917	        "arm64"
+  1918	      ],
+  1919	      "license": "Apache-2.0",
+  1920	      "optional": true,
+  1921	      "os": [
+  1922	        "linux"
+  1923	      ],
+  1924	      "engines": {
+  1925	        "node": "^18.17.0 || ^20.3.0 || >=21.0.0"
+  1926	      },
+  1927	      "funding": {
+  1928	        "url": "https://opencollective.com/libvips"
+  1929	      },
+  1930	      "optionalDependencies": {
+  1931	        "@img/sharp-libvips-linuxmusl-arm64": "1.2.4"
+  1932	      }
+  1933	    },
+  1934	    "node_modules/next/node_modules/@img/sharp-linuxmusl-x64": {
+  1935	      "version": "0.34.5",
+  1936	      "resolved": "https://registry.npmjs.org/@img/sharp-linuxmusl-x64/-/sharp-linuxmusl-x64-0.34.5.tgz",
+  1937	      "integrity": "sha512-Jg8wNT1MUzIvhBFxViqrEhWDGzqymo3sV7z7ZsaWbZNDLXRJZoRGrjulp60YYtV4wfY8VIKcWidjojlLcWrd8Q==",
+  1938	      "cpu": [
+  1939	        "x64"
+  1940	      ],
+  1941	      "license": "Apache-2.0",
+  1942	      "optional": true,
+  1943	      "os": [
+  1944	        "linux"
+  1945	      ],
+  1946	      "engines": {
+  1947	        "node": "^18.17.0 || ^20.3.0 || >=21.0.0"
+  1948	      },
+  1949	      "funding": {
+  1950	        "url": "https://opencollective.com/libvips"
+  1951	      },
+  1952	      "optionalDependencies": {
+  1953	        "@img/sharp-libvips-linuxmusl-x64": "1.2.4"
+  1954	      }
+  1955	    },
+  1956	    "node_modules/next/node_modules/@img/sharp-wasm32": {
+  1957	      "version": "0.34.5",
+  1958	      "resolved": "https://registry.npmjs.org/@img/sharp-wasm32/-/sharp-wasm32-0.34.5.tgz",
+  1959	      "integrity": "sha512-OdWTEiVkY2PHwqkbBI8frFxQQFekHaSSkUIJkwzclWZe64O1X4UlUjqqqLaPbUpMOQk6FBu/HtlGXNblIs0huw==",
+  1960	      "cpu": [
+  1961	        "wasm32"
+  1962	      ],
+  1963	      "license": "Apache-2.0 AND LGPL-3.0-or-later AND MIT",
+  1964	      "optional": true,
+  1965	      "dependencies": {
+  1966	        "@emnapi/runtime": "^1.7.0"
+  1967	      },
+  1968	      "engines": {
+  1969	        "node": "^18.17.0 || ^20.3.0 || >=21.0.0"
+  1970	      },
+  1971	      "funding": {
+  1972	        "url": "https://opencollective.com/libvips"
+  1973	      }
+  1974	    },
+  1975	    "node_modules/next/node_modules/@img/sharp-win32-arm64": {
+  1976	      "version": "0.34.5",
+  1977	      "resolved": "https://registry.npmjs.org/@img/sharp-win32-arm64/-/sharp-win32-arm64-0.34.5.tgz",
+  1978	      "integrity": "sha512-WQ3AgWCWYSb2yt+IG8mnC6Jdk9Whs7O0gxphblsLvdhSpSTtmu69ZG1Gkb6NuvxsNACwiPV6cNSZNzt0KPsw7g==",
+  1979	      "cpu": [
+  1980	        "arm64"
+  1981	      ],
+  1982	      "license": "Apache-2.0 AND LGPL-3.0-or-later",
+  1983	      "optional": true,
+  1984	      "os": [
+  1985	        "win32"
+  1986	      ],
+  1987	      "engines": {
+  1988	        "node": "^18.17.0 || ^20.3.0 || >=21.0.0"
+  1989	      },
+  1990	      "funding": {
+  1991	        "url": "https://opencollective.com/libvips"
+  1992	      }
+  1993	    },
+  1994	    "node_modules/next/node_modules/@img/sharp-win32-ia32": {
+  1995	      "version": "0.34.5",
+  1996	      "resolved": "https://registry.npmjs.org/@img/sharp-win32-ia32/-/sharp-win32-ia32-0.34.5.tgz",
+  1997	      "integrity": "sha512-FV9m/7NmeCmSHDD5j4+4pNI8Cp3aW+JvLoXcTUo0IqyjSfAZJ8dIUmijx1qaJsIiU+Hosw6xM5KijAWRJCSgNg==",
+  1998	      "cpu": [
+  1999	        "ia32"
+  2000	      ],
+  2001	      "license": "Apache-2.0 AND LGPL-3.0-or-later",
+  2002	      "optional": true,
+  2003	      "os": [
+  2004	        "win32"
+  2005	      ],
+  2006	      "engines": {
+  2007	        "node": "^18.17.0 || ^20.3.0 || >=21.0.0"
+  2008	      },
+  2009	      "funding": {
+  2010	        "url": "https://opencollective.com/libvips"
+  2011	      }
+  2012	    },
+  2013	    "node_modules/next/node_modules/@img/sharp-win32-x64": {
+  2014	      "version": "0.34.5",
+  2015	      "resolved": "https://registry.npmjs.org/@img/sharp-win32-x64/-/sharp-win32-x64-0.34.5.tgz",
+  2016	      "integrity": "sha512-+29YMsqY2/9eFEiW93eqWnuLcWcufowXewwSNIT6UwZdUUCrM3oFjMWH/Z6/TMmb4hlFenmfAVbpWeup2jryCw==",
+  2017	      "cpu": [
+  2018	        "x64"
+  2019	      ],
+  2020	      "license": "Apache-2.0 AND LGPL-3.0-or-later",
+  2021	      "optional": true,
+  2022	      "os": [
+  2023	        "win32"
+  2024	      ],
+  2025	      "engines": {
+  2026	        "node": "^18.17.0 || ^20.3.0 || >=21.0.0"
+  2027	      },
+  2028	      "funding": {
+  2029	        "url": "https://opencollective.com/libvips"
+  2030	      }
+  2031	    },
+  2032	    "node_modules/next/node_modules/postcss": {
+  2033	      "version": "8.4.31",
+  2034	      "resolved": "https://registry.npmjs.org/postcss/-/postcss-8.4.31.tgz",
+  2035	      "integrity": "sha512-PS08Iboia9mts/2ygV3eLpY5ghnUcfLV/EXTOW1E2qYxJKGGBUtNjN76FYHnMs36RmARn41bC0AZmn+rR0OVpQ==",
+  2036	      "funding": [
+  2037	        {
+  2038	          "type": "opencollective",
+  2039	          "url": "https://opencollective.com/postcss/"
+  2040	        },
+  2041	        {
+  2042	          "type": "tidelift",
+  2043	          "url": "https://tidelift.com/funding/github/npm/postcss"
+  2044	        },
+  2045	        {
+  2046	          "type": "github",
+  2047	          "url": "https://github.com/sponsors/ai"
+  2048	        }
+  2049	      ],
+  2050	      "license": "MIT",
+  2051	      "dependencies": {
+  2052	        "nanoid": "^3.3.6",
+  2053	        "picocolors": "^1.0.0",
+  2054	        "source-map-js": "^1.0.2"
+  2055	      },
+  2056	      "engines": {
+  2057	        "node": "^10 || ^12 || >=14"
+  2058	      }
+  2059	    },
+  2060	    "node_modules/next/node_modules/sharp": {
+  2061	      "version": "0.34.5",
+  2062	      "resolved": "https://registry.npmjs.org/sharp/-/sharp-0.34.5.tgz",
+  2063	      "integrity": "sha512-Ou9I5Ft9WNcCbXrU9cMgPBcCK8LiwLqcbywW3t4oDV37n1pzpuNLsYiAV8eODnjbtQlSDwZ2cUEeQz4E54Hltg==",
+  2064	      "hasInstallScript": true,
+  2065	      "license": "Apache-2.0",
+  2066	      "optional": true,
+  2067	      "dependencies": {
+  2068	        "@img/colour": "^1.0.0",
+  2069	        "detect-libc": "^2.1.2",
+  2070	        "semver": "^7.7.3"
+  2071	      },
+  2072	      "engines": {
+  2073	        "node": "^18.17.0 || ^20.3.0 || >=21.0.0"
+  2074	      },
+  2075	      "funding": {
+  2076	        "url": "https://opencollective.com/libvips"
+  2077	      },
+  2078	      "optionalDependencies": {
+  2079	        "@img/sharp-darwin-arm64": "0.34.5",
+  2080	        "@img/sharp-darwin-x64": "0.34.5",
+  2081	        "@img/sharp-libvips-darwin-arm64": "1.2.4",
+  2082	        "@img/sharp-libvips-darwin-x64": "1.2.4",
+  2083	        "@img/sharp-libvips-linux-arm": "1.2.4",
+  2084	        "@img/sharp-libvips-linux-arm64": "1.2.4",
+  2085	        "@img/sharp-libvips-linux-ppc64": "1.2.4",
+  2086	        "@img/sharp-libvips-linux-riscv64": "1.2.4",
+  2087	        "@img/sharp-libvips-linux-s390x": "1.2.4",
+  2088	        "@img/sharp-libvips-linux-x64": "1.2.4",
+  2089	        "@img/sharp-libvips-linuxmusl-arm64": "1.2.4",
+  2090	        "@img/sharp-libvips-linuxmusl-x64": "1.2.4",
+  2091	        "@img/sharp-linux-arm": "0.34.5",
+  2092	        "@img/sharp-linux-arm64": "0.34.5",
+  2093	        "@img/sharp-linux-ppc64": "0.34.5",
+  2094	        "@img/sharp-linux-riscv64": "0.34.5",
+  2095	        "@img/sharp-linux-s390x": "0.34.5",
+  2096	        "@img/sharp-linux-x64": "0.34.5",
+  2097	        "@img/sharp-linuxmusl-arm64": "0.34.5",
+  2098	        "@img/sharp-linuxmusl-x64": "0.34.5",
+  2099	        "@img/sharp-wasm32": "0.34.5",
+  2100	        "@img/sharp-win32-arm64": "0.34.5",
+  2101	        "@img/sharp-win32-ia32": "0.34.5",
+  2102	        "@img/sharp-win32-x64": "0.34.5"
+  2103	      }
+  2104	    },
+  2105	    "node_modules/picocolors": {
+  2106	      "version": "1.1.1",
+  2107	      "resolved": "https://registry.npmjs.org/picocolors/-/picocolors-1.1.1.tgz",
+  2108	      "integrity": "sha512-xceH2snhtb5M9liqDsmEw56le376mTZkEX/jEb/RxNFyegNul7eNslCXP9FDj/Lcu0X8KEyMceP2ntpaHrDEVA==",
+  2109	      "license": "ISC"
+  2110	    },
+  2111	    "node_modules/postcss": {
+  2112	      "version": "8.5.16",
+  2113	      "resolved": "https://registry.npmjs.org/postcss/-/postcss-8.5.16.tgz",
+  2114	      "integrity": "sha512-vuwillviilfKZsg0VGj5R/YwwcHx4SLsIOI/7K6mQkWx+l5cUHTjj5g0AasTBcyXsbfTgrwsUNmVUb5xVwyPwg==",
+  2115	      "dev": true,
+  2116	      "funding": [
+  2117	        {
+  2118	          "type": "opencollective",
+  2119	          "url": "https://opencollective.com/postcss/"
+  2120	        },
+  2121	        {
+  2122	          "type": "tidelift",
+  2123	          "url": "https://tidelift.com/funding/github/npm/postcss"
+  2124	        },
+  2125	        {
+  2126	          "type": "github",
+  2127	          "url": "https://github.com/sponsors/ai"
+  2128	        }
+  2129	      ],
+  2130	      "license": "MIT",
+  2131	      "dependencies": {
+  2132	        "nanoid": "^3.3.12",
+  2133	        "picocolors": "^1.1.1",
+  2134	        "source-map-js": "^1.2.1"
+  2135	      },
+  2136	      "engines": {
+  2137	        "node": "^10 || ^12 || >=14"
+  2138	      }
+  2139	    },
+  2140	    "node_modules/react": {
+  2141	      "version": "19.2.7",
+  2142	      "resolved": "https://registry.npmjs.org/react/-/react-19.2.7.tgz",
+  2143	      "integrity": "sha512-HNe9WslTbXmFK8o8cmwgAeJFSBvt1bPdHCVKtaaV+WlAN36mpT4hcRpwbf3fY56ar2oIXzsBpOAiIRHAdY0OlQ==",
+  2144	      "license": "MIT",
+  2145	      "engines": {
+  2146	        "node": ">=0.10.0"
+  2147	      }
+  2148	    },
+  2149	    "node_modules/react-dom": {
+  2150	      "version": "19.2.7",
+  2151	      "resolved": "https://registry.npmjs.org/react-dom/-/react-dom-19.2.7.tgz",
+  2152	      "integrity": "sha512-t0BRVXvbiE/o20Hfw669rLbMCDWtYZLvmJigy2f0MxsXF+71pxhR3xOkspmsO8h3ZlNzyibAmtCa3l4lYKk6gQ==",
+  2153	      "license": "MIT",
+  2154	      "dependencies": {
+  2155	        "scheduler": "^0.27.0"
+  2156	      },
+  2157	      "peerDependencies": {
+  2158	        "react": "^19.2.7"
+  2159	      }
+  2160	    },
+  2161	    "node_modules/scheduler": {
+  2162	      "version": "0.27.0",
+  2163	      "resolved": "https://registry.npmjs.org/scheduler/-/scheduler-0.27.0.tgz",
+  2164	      "integrity": "sha512-eNv+WrVbKu1f3vbYJT/xtiF5syA5HPIMtf9IgY/nKg0sWqzAUEvqY/xm7OcZc/qafLx/iO9FgOmeSAp4v5ti/Q==",
+  2165	      "license": "MIT"
+  2166	    },
+  2167	    "node_modules/semver": {
+  2168	      "version": "7.8.5",
+  2169	      "resolved": "https://registry.npmjs.org/semver/-/semver-7.8.5.tgz",
+  2170	      "integrity": "sha512-Y7/KDsb8LjooZpwaqGyulO6DQlksgCncchHGk+sZIY4SBvUocMBEFH5Ur1fI4dV+Jvl0w6cjvucaIi40puRioA==",
+  2171	      "devOptional": true,
+  2172	      "license": "ISC",
+  2173	      "bin": {
+  2174	        "semver": "bin/semver.js"
+  2175	      },
+  2176	      "engines": {
+  2177	        "node": ">=10"
+  2178	      }
+  2179	    },
+  2180	    "node_modules/sharp": {
+  2181	      "version": "0.35.3",
+  2182	      "resolved": "https://registry.npmjs.org/sharp/-/sharp-0.35.3.tgz",
+  2183	      "integrity": "sha512-ej0zVHuZGHCiABXcNxeYhpRnPNPAcvbG8RMdBAhDAxLKkCRVSpK3Iyu7qbqw3JMzoj0REeM6f3tJLtVwl0023Q==",
+  2184	      "dev": true,
+  2185	      "license": "Apache-2.0",
+  2186	      "dependencies": {
+  2187	        "@img/colour": "^1.1.0",
+  2188	        "detect-libc": "^2.1.2",
+  2189	        "semver": "^7.8.5"
+  2190	      },
+  2191	      "engines": {
+  2192	        "node": ">=20.9.0"
+  2193	      },
+  2194	      "funding": {
+  2195	        "url": "https://opencollective.com/libvips"
+  2196	      },
+  2197	      "optionalDependencies": {
+  2198	        "@img/sharp-darwin-arm64": "0.35.3",
+  2199	        "@img/sharp-darwin-x64": "0.35.3",
+  2200	        "@img/sharp-freebsd-wasm32": "0.35.3",
+  2201	        "@img/sharp-libvips-darwin-arm64": "1.3.2",
+  2202	        "@img/sharp-libvips-darwin-x64": "1.3.2",
+  2203	        "@img/sharp-libvips-linux-arm": "1.3.2",
+  2204	        "@img/sharp-libvips-linux-arm64": "1.3.2",
+  2205	        "@img/sharp-libvips-linux-ppc64": "1.3.2",
+  2206	        "@img/sharp-libvips-linux-riscv64": "1.3.2",
+  2207	        "@img/sharp-libvips-linux-s390x": "1.3.2",
+  2208	        "@img/sharp-libvips-linux-x64": "1.3.2",
+  2209	        "@img/sharp-libvips-linuxmusl-arm64": "1.3.2",
+  2210	        "@img/sharp-libvips-linuxmusl-x64": "1.3.2",
+  2211	        "@img/sharp-linux-arm": "0.35.3",
+  2212	        "@img/sharp-linux-arm64": "0.35.3",
+  2213	        "@img/sharp-linux-ppc64": "0.35.3",
+  2214	        "@img/sharp-linux-riscv64": "0.35.3",
+  2215	        "@img/sharp-linux-s390x": "0.35.3",
+  2216	        "@img/sharp-linux-x64": "0.35.3",
+  2217	        "@img/sharp-linuxmusl-arm64": "0.35.3",
+  2218	        "@img/sharp-linuxmusl-x64": "0.35.3",
+  2219	        "@img/sharp-webcontainers-wasm32": "0.35.3",
+  2220	        "@img/sharp-win32-arm64": "0.35.3",
+  2221	        "@img/sharp-win32-ia32": "0.35.3",
+  2222	        "@img/sharp-win32-x64": "0.35.3"
+  2223	      },
+  2224	      "peerDependenciesMeta": {
+  2225	        "@types/node": {
+  2226	          "optional": true
+  2227	        }
+  2228	      }
+  2229	    },
+  2230	    "node_modules/source-map-js": {
+  2231	      "version": "1.2.1",
+  2232	      "resolved": "https://registry.npmjs.org/source-map-js/-/source-map-js-1.2.1.tgz",
+  2233	      "integrity": "sha512-UXWMKhLOwVKb728IUtQPXxfYU+usdybtUrK/8uGE8CQMvrhOpwvzDBwj0QhSL7MQc7vIsISBG8VQ8+IDQxpfQA==",
+  2234	      "license": "BSD-3-Clause",
+  2235	      "engines": {
+  2236	        "node": ">=0.10.0"
+  2237	      }
+  2238	    },
+  2239	    "node_modules/styled-jsx": {
+  2240	      "version": "5.1.6",
+  2241	      "resolved": "https://registry.npmjs.org/styled-jsx/-/styled-jsx-5.1.6.tgz",
+  2242	      "integrity": "sha512-qSVyDTeMotdvQYoHWLNGwRFJHC+i+ZvdBRYosOFgC+Wg1vx4frN2/RG/NA7SYqqvKNLf39P2LSRA2pu6n0XYZA==",
+  2243	      "license": "MIT",
+  2244	      "dependencies": {
+  2245	        "client-only": "0.0.1"
+  2246	      },
+  2247	      "engines": {
+  2248	        "node": ">= 12.0.0"
+  2249	      },
+  2250	      "peerDependencies": {
+  2251	        "react": ">= 16.8.0 || 17.x.x || ^18.0.0-0 || ^19.0.0-0"
+  2252	      },
+  2253	      "peerDependenciesMeta": {
+  2254	        "@babel/core": {
+  2255	          "optional": true
+  2256	        },
+  2257	        "babel-plugin-macros": {
+  2258	          "optional": true
+  2259	        }
+  2260	      }
+  2261	    },
+  2262	    "node_modules/tailwindcss": {
+  2263	      "version": "4.3.2",
+  2264	      "resolved": "https://registry.npmjs.org/tailwindcss/-/tailwindcss-4.3.2.tgz",
+  2265	      "integrity": "sha512-WtctNNSH8A9jlMIqxzuYumOHU5uGZyRv0Q5svQl+oEPy5w84YpBxdb7MdqyiSPQge5jTJ6zFQLq0PFygdccSBA==",
+  2266	      "dev": true,
+  2267	      "license": "MIT"
+  2268	    },
+  2269	    "node_modules/tapable": {
+  2270	      "version": "2.3.3",
+  2271	      "resolved": "https://registry.npmjs.org/tapable/-/tapable-2.3.3.tgz",
+  2272	      "integrity": "sha512-uxc/zpqFg6x7C8vOE7lh6Lbda8eEL9zmVm/PLeTPBRhh1xCgdWaQ+J1CUieGpIfm2HdtsUpRv+HshiasBMcc6A==",
+  2273	      "dev": true,
+  2274	      "license": "MIT",
+  2275	      "engines": {
+  2276	        "node": ">=6"
+  2277	      },
+  2278	      "funding": {
+  2279	        "type": "opencollective",
+  2280	        "url": "https://opencollective.com/webpack"
+  2281	      }
+  2282	    },
+  2283	    "node_modules/tslib": {
+  2284	      "version": "2.8.1",
+  2285	      "resolved": "https://registry.npmjs.org/tslib/-/tslib-2.8.1.tgz",
+  2286	      "integrity": "sha512-oJFu94HQb+KVduSUQL7wnpmqnfmLsOA/nAh6b6EH0wCEoK0/mPeXU6c3wKDV83MkOuHPRHtSXKKU99IBazS/2w==",
+  2287	      "license": "0BSD"
+  2288	    },
+  2289	    "node_modules/typescript": {
+  2290	      "version": "5.9.3",
+  2291	      "resolved": "https://registry.npmjs.org/typescript/-/typescript-5.9.3.tgz",
+  2292	      "integrity": "sha512-jl1vZzPDinLr9eUt3J/t7V6FgNEw9QjvBPdysz9KfQDD41fQrC2Y4vKQdiaUpFT4bXlb1RHhLpp8wtm6M5TgSw==",
+  2293	      "dev": true,
+  2294	      "license": "Apache-2.0",
+  2295	      "bin": {
+  2296	        "tsc": "bin/tsc",
+  2297	        "tsserver": "bin/tsserver"
+  2298	      },
+  2299	      "engines": {
+  2300	        "node": ">=14.17"
+  2301	      }
+  2302	    },
+  2303	    "node_modules/undici-types": {
+  2304	      "version": "7.18.2",
+  2305	      "resolved": "https://registry.npmjs.org/undici-types/-/undici-types-7.18.2.tgz",
+  2306	      "integrity": "sha512-AsuCzffGHJybSaRrmr5eHr81mwJU3kjw6M+uprWvCXiNeN9SOGwQ3Jn8jb8m3Z6izVgknn1R0FTCEAP2QrLY/w==",
+  2307	      "dev": true,
+  2308	      "license": "MIT"
+  2309	    }
+  2310	  }
+  2311	}
+
+
+============================================================
+FILE: next.config.ts
+============================================================
+
+     1	import type { NextConfig } from "next";
+     2	
+     3	const isStaticExport = process.env.NEXT_OUTPUT === "export";
+     4	
+     5	const nextConfig: NextConfig = {
+     6	  output: isStaticExport ? "export" : undefined,
+     7	  images: {
+     8	    unoptimized: isStaticExport,
+     9	  },
+    10	  trailingSlash: isStaticExport,
+    11	  turbopack: {
+    12	    root: process.cwd(),
+    13	  },
+    14	};
+    15	
+    16	export default nextConfig;
+
+
+============================================================
+FILE: postcss.config.mjs
+============================================================
+
+     1	const config = {
+     2	  plugins: {
+     3	    "@tailwindcss/postcss": {},
+     4	  },
+     5	};
+     6	
+     7	export default config;
+
+
+============================================================
+FILE: tsconfig.json
+============================================================
+
+     1	{
+     2	  "compilerOptions": {
+     3	    "target": "ES2017",
+     4	    "lib": ["dom", "dom.iterable", "esnext"],
+     5	    "allowJs": false,
+     6	    "skipLibCheck": true,
+     7	    "strict": true,
+     8	    "noEmit": true,
+     9	    "esModuleInterop": true,
+    10	    "module": "esnext",
+    11	    "moduleResolution": "bundler",
+    12	    "resolveJsonModule": true,
+    13	    "isolatedModules": true,
+    14	    "jsx": "react-jsx",
+    15	    "incremental": true,
+    16	    "plugins": [
+    17	      {
+    18	        "name": "next"
+    19	      }
+    20	    ],
+    21	    "paths": {
+    22	      "@/*": ["./*"]
+    23	    }
+    24	  },
+    25	  "include": [
+    26	    "next-env.d.ts",
+    27	    "**/*.ts",
+    28	    "**/*.tsx",
+    29	    ".next/types/**/*.ts",
+    30	    ".next/dev/types/**/*.ts"
+    31	  ],
+    32	  "exclude": ["node_modules"]
+    33	}
+
+
+============================================================
+FILE: .github/workflows/hostinger-static-export.yml
+============================================================
+
+     1	name: Build static export for Hostinger
+     2	
+     3	on:
+     4	  push:
+     5	    branches: [main]
+     6	  workflow_dispatch:
+     7	
+     8	permissions:
+     9	  contents: write
+    10	
+    11	concurrency:
+    12	  group: hostinger-static-export
+    13	  cancel-in-progress: true
+    14	
+    15	jobs:
+    16	  build-and-publish:
+    17	    runs-on: ubuntu-latest
+    18	    steps:
+    19	      - name: Check out source
+    20	        uses: actions/checkout@v4
+    21	
+    22	      - name: Set up Node
+    23	        uses: actions/setup-node@v4
+    24	        with:
+    25	          node-version: 22
+    26	          cache: npm
+    27	
+    28	      - name: Install dependencies
+    29	        run: npm ci
+    30	
+    31	      - name: Build static export
+    32	        run: npm run build:static
+    33	
+    34	      - name: Publish static export branch
+    35	        env:
+    36	          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    37	        run: |
+    38	          cd out
+    39	          git init -b hostinger-deploy
+    40	          git config user.name "github-actions[bot]"
+    41	          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+    42	          git add -A
+    43	          git commit -m "Deploy static export from ${GITHUB_SHA}"
+    44	          git remote add origin "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+    45	          git push --force origin hostinger-deploy
+
+
+============================================================
+FILE: public/favicon.svg
+============================================================
+
+     1	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+     2	  <rect width="64" height="64" rx="12" fill="#030705"/>
+     3	  <path d="M18 48V14h17.5c7.2 0 12.5 5.1 12.5 12.2S42.7 38.4 35.5 38.4H26V48h-8Zm8-17.2h8.5c3.4 0 5.5-1.8 5.5-4.6s-2.1-4.6-5.5-4.6H26v9.2Z" fill="#43ff92"/>
+     4	</svg>
+
+
+============================================================
+FILE: read_project.sh
+============================================================
+
+     1	#!/bin/bash
+     2	
+     3	PROJECT_DIR="$(cd "$(dirname "$0")" && pwd)"
+     4	OUTPUT_FILE="$PROJECT_DIR/portfolio_PROJECT_SNAPSHOT.txt"
+     5	
+     6	echo "Generating Portfolio project snapshot..."
+     7	echo "Project directory: $PROJECT_DIR"
+     8	echo "Snapshot: $OUTPUT_FILE"
+     9	echo ""
+    10	
+    11	write_header() {
+    12	  cat > "$OUTPUT_FILE" <<EOF
+    13	Portfolio Next.js PROJECT SNAPSHOT
+    14	Generated: $(date)
+    15	Project directory: $PROJECT_DIR
+    16	
+    17	IMPORTANT INSTRUCTIONS FOR CHATGPT & CODEX:
+    18	1. Read this entire snapshot before giving code edits.
+    19	2. Preserve all assets, spacing, alignment, fonts, images, layout, animations, and relative positioning unless specifically asked to change them.
+    20	3. Do not remove unrelated code.
+    21	4. Do not rewrite large sections unless requested.
+    22	5. When giving code changes, include exact line/row numbers whenever possible.
+    23	6. Print full scripts when requested.
+    24	7. Treat this project structure as the source of truth.
+    25	8. If you do not understand something, ask for clarification instead of making assumptions.
+    26	9. Warn me, or at least caution me, if I ask for something that would break the project or cause it to not work as intended.
+    27	10. For this Portfolio repo/website project, always ask me for the commit message before committing or pushing.
+    28	
+    29	
+    30	============================================================
+    31	PORTFOLIO PROJECT NOTES
+    32	============================================================
+    33	
+    34	- Main source branch: main
+    35	- Deployment source: GitHub Actions builds main into the hostinger-deploy branch
+    36	- Hostinger root directory: public_html
+    37	- Main stack represented by the website: React / React Native, Next.js, Tailwind CSS, Node.js, Kotlin
+    38	- Public website assets live under public/
+    39	- Run this script before starting a Portfolio session to refresh the project snapshot.
+    40	
+    41	
+    42	============================================================
+    43	SNAPSHOT IGNORE POLICY
+    44	============================================================
+    45	
+    46	This file is rebuilt from the current Portfolio workspace every time ./read_project.sh runs.
+    47	Ignored paths are omitted from the project tree and file dumps unless they appear inside an included text file such as .gitignore or read_project.sh.
+    48	
+    49	The snapshot intentionally ignores generated/cache/runtime/private files:
+    50	- .git
+    51	- node_modules
+    52	- .next
+    53	- out
+    54	- dist
+    55	- build
+    56	- .cache
+    57	- .turbo
+    58	- .npm
+    59	- .pnpm-store
+    60	- .yarn
+    61	- .DS_Store
+    62	- next-env.d.ts
+    63	- *.tsbuildinfo
+    64	- *_PROJECT_SNAPSHOT.txt
+    65	- *.zip
+    66	- .env and .env*.local
+    67	
+    68	Binary image, PDF, and archive files are inventoried by path, size, and modified time only. Raw binary bytes are not printed.
+    69	
+    70	
+    71	============================================================
+    72	PROJECT FILE TREE
+    73	============================================================
+    74	
+    75	EOF
+    76	}
+    77	
+    78	print_file() {
+    79	  local file="$1"
+    80	
+    81	  if [ -f "$file" ]; then
+    82	    {
+    83	      echo ""
+    84	      echo ""
+    85	      echo "============================================================"
+    86	      echo "FILE: ${file#$PROJECT_DIR/}"
+    87	      echo "============================================================"
+    88	      echo ""
+    89	      nl -ba "$file"
+    90	    } >> "$OUTPUT_FILE"
+    91	  fi
+    92	}
+    93	
+    94	print_inventory_header() {
+    95	  local title="$1"
+    96	
+    97	  {
+    98	    echo ""
+    99	    echo ""
+   100	    echo "============================================================"
+   101	    echo "$title"
+   102	    echo "============================================================"
+   103	    echo ""
+   104	  } >> "$OUTPUT_FILE"
+   105	}
+   106	
+   107	print_file_inventory_line() {
+   108	  local file="$1"
+   109	  local size
+   110	  local modified
+   111	
+   112	  size="$(stat -f "%z" "$file" 2>/dev/null || stat -c "%s" "$file" 2>/dev/null || echo "unknown")"
+   113	  modified="$(stat -f "%Sm" -t "%Y-%m-%d %H:%M:%S" "$file" 2>/dev/null || stat -c "%y" "$file" 2>/dev/null || echo "unknown")"
+   114	  printf '%s | %s bytes | modified %s\n' "${file#$PROJECT_DIR/}" "$size" "$modified" >> "$OUTPUT_FILE"
+   115	}
+   116	
+   117	print_dir_inventory() {
+   118	  local title="$1"
+   119	  local dir="$2"
+   120	
+   121	  print_inventory_header "$title"
+   122	
+   123	  if [ ! -d "$dir" ]; then
+   124	    echo "Directory not present: ${dir#$PROJECT_DIR/}" >> "$OUTPUT_FILE"
+   125	    return
+   126	  fi
+   127	
+   128	  find "$dir" -type f \
+   129	    ! -name ".DS_Store" \
+   130	    ! -name "*_PROJECT_SNAPSHOT.txt" \
+   131	    | sort | while IFS= read -r file; do
+   132	    print_file_inventory_line "$file"
+   133	  done
+   134	}
+   135	
+   136	print_matching_inventory() {
+   137	  local title="$1"
+   138	  shift
+   139	
+   140	  print_inventory_header "$title"
+   141	
+   142	  find "$PROJECT_DIR" "$@" -type f \
+   143	    ! -path "$PROJECT_DIR/.git/*" \
+   144	    ! -path "$PROJECT_DIR/node_modules/*" \
+   145	    ! -path "$PROJECT_DIR/.next/*" \
+   146	    ! -path "$PROJECT_DIR/out/*" \
+   147	    ! -name ".DS_Store" \
+   148	    ! -name "*_PROJECT_SNAPSHOT.txt" \
+   149	    | sort | while IFS= read -r file; do
+   150	    print_file_inventory_line "$file"
+   151	  done
+   152	}
+   153	
+   154	append_git_context() {
+   155	  {
+   156	    echo ""
+   157	    echo ""
+   158	    echo "============================================================"
+   159	    echo "GIT CONTEXT"
+   160	    echo "============================================================"
+   161	    echo ""
+   162	    echo "Current branch:"
+   163	    git -C "$PROJECT_DIR" branch --show-current 2>/dev/null || true
+   164	    echo ""
+   165	    echo "Status:"
+   166	    git -C "$PROJECT_DIR" status --short --branch 2>/dev/null || true
+   167	    echo ""
+   168	    echo "Recent commits:"
+   169	    git -C "$PROJECT_DIR" log --oneline --decorate -10 2>/dev/null || true
+   170	    echo ""
+   171	    echo "Remotes:"
+   172	    git -C "$PROJECT_DIR" remote -v 2>/dev/null || true
+   173	  } >> "$OUTPUT_FILE"
+   174	}
+   175	
+   176	write_snapshot() {
+   177	  write_header
+   178	
+   179	  find "$PROJECT_DIR" \
+   180	    -path "$PROJECT_DIR/.git" -prune -o \
+   181	    -path "$PROJECT_DIR/node_modules" -prune -o \
+   182	    -path "$PROJECT_DIR/.next" -prune -o \
+   183	    -path "$PROJECT_DIR/out" -prune -o \
+   184	    -path "$PROJECT_DIR/dist" -prune -o \
+   185	    -path "$PROJECT_DIR/build" -prune -o \
+   186	    -path "$PROJECT_DIR/.cache" -prune -o \
+   187	    -path "$PROJECT_DIR/.turbo" -prune -o \
+   188	    -path "$PROJECT_DIR/.npm" -prune -o \
+   189	    -path "$PROJECT_DIR/.pnpm-store" -prune -o \
+   190	    -path "$PROJECT_DIR/.yarn" -prune -o \
+   191	    -name ".DS_Store" -prune -o \
+   192	    -name "next-env.d.ts" -prune -o \
+   193	    -name "*.tsbuildinfo" -prune -o \
+   194	    -name "*_PROJECT_SNAPSHOT.txt" -prune -o \
+   195	    -name "*.zip" -prune -o \
+   196	    -name ".env" -prune -o \
+   197	    -name ".env*.local" -prune -o \
+   198	    -print | sort >> "$OUTPUT_FILE"
+   199	
+   200	  cat >> "$OUTPUT_FILE" <<EOF
+   201	
+   202	
+   203	============================================================
+   204	FILE CONTENTS - APP SOURCE
+   205	============================================================
+   206	
+   207	EOF
+   208	
+   209	  for file in \
+   210	    "$PROJECT_DIR/app/layout.tsx" \
+   211	    "$PROJECT_DIR/app/page.tsx" \
+   212	    "$PROJECT_DIR/app/ProjectCarouselButton.tsx" \
+   213	    "$PROJECT_DIR/app/globals.css"
+   214	  do
+   215	    print_file "$file"
+   216	  done
+   217	
+   218	  cat >> "$OUTPUT_FILE" <<EOF
+   219	
+   220	
+   221	============================================================
+   222	FILE CONTENTS - ROOT / TOOLING / DEPLOYMENT
+   223	============================================================
+   224	
+   225	EOF
+   226	
+   227	  for file in \
+   228	    "$PROJECT_DIR/.gitignore" \
+   229	    "$PROJECT_DIR/README.md" \
+   230	    "$PROJECT_DIR/DEPLOYMENT.md" \
+   231	    "$PROJECT_DIR/package.json" \
+   232	    "$PROJECT_DIR/package-lock.json" \
+   233	    "$PROJECT_DIR/next.config.ts" \
+   234	    "$PROJECT_DIR/postcss.config.mjs" \
+   235	    "$PROJECT_DIR/tsconfig.json" \
+   236	    "$PROJECT_DIR/.github/workflows/hostinger-static-export.yml" \
+   237	    "$PROJECT_DIR/public/favicon.svg" \
+   238	    "$PROJECT_DIR/read_project.sh"
+   239	  do
+   240	    print_file "$file"
+   241	  done
+   242	
+   243	  append_git_context
+   244	
+   245	  print_dir_inventory "BINARY / IMAGE ASSET INVENTORY - PUBLIC IMAGES" "$PROJECT_DIR/public/images"
+   246	  print_matching_inventory "PDF WORKLOG INVENTORY" \( -name "portfolio_worklog_*.pdf" \)
+   247	  print_matching_inventory "DEPLOYMENT ARCHIVE INVENTORY" \( -name "*.zip" \)
+   248	
+   249	  cat >> "$OUTPUT_FILE" <<EOF
+   250	
+   251	
+   252	============================================================
+   253	NOT INCLUDED IN SNAPSHOT
+   254	============================================================
+   255	
+   256	The Portfolio snapshot intentionally excludes generated/cache/runtime/private paths:
+   257	- .git
+   258	- node_modules
+   259	- .next
+   260	- out
+   261	- dist
+   262	- build
+   263	- .cache
+   264	- .turbo
+   265	- .npm
+   266	- .pnpm-store
+   267	- .yarn
+   268	- .DS_Store
+   269	- next-env.d.ts
+   270	- *.tsbuildinfo
+   271	- *_PROJECT_SNAPSHOT.txt
+   272	- *.zip
+   273	- .env and .env*.local
+   274	
+   275	The snapshot lists public images, PDF worklogs, and deployment archives by path, size, and modified time, but does not print raw PNG/JPG/PDF/ZIP bytes.
+   276	
+   277	EOF
+   278	}
+   279	
+   280	write_snapshot
+   281	
+   282	echo "Done."
+   283	echo ""
+   284	echo "Snapshot created here:"
+   285	echo "$OUTPUT_FILE"
+   286	echo ""
+   287	echo "Open it with:"
+   288	echo "open \"$OUTPUT_FILE\""
+
+
+============================================================
+GIT CONTEXT
+============================================================
+
+Current branch:
+main
+
+Status:
+## main...origin/main
+?? portfolio_PROJECT_SNAPSHOT.txt
+?? read_project.sh
+
+Recent commits:
+3fa5aa5 (HEAD -> main, origin/main) removed line wrapping of top nav links that was pushing links to a secondary row during compressed, portrait mobile aspect ratios. all links now appear without jumping to a new row. abbreviated text assets below the main hero, ensuring that headers do not clip into each other once compressed. added apostrophes around each project name in the green main button of the hero, ensuring that the user knows the names listed concern app mobile app dev projects and that clicking it navigates to the corresponding page.
+9387838 generated pdf worklog for the 'Portfolio' project, dated July 14, 2026.
+cf141aa performed a number of small text, button and animation-related changed to the landing page. Prahlin (the GitHub username) now displays Martin Prahl (full dev name). the banner underneath the hero has been updated to include more relevant information regarding developmental experience and achievements. the static 'View Alla Vostra' button has been exchanged for a full-on carousel, alternating between various project names and appearing with a slide/bump animation for enhanced visual appeal.
+1b1e1b2 incorporated a landscape-orient device frame in the portfolio header, displaying a a preliminary screenshot of the self-made video streaming 'Cinerific' tablet app. a case study card was added below, describing the project and mentioning some of the languages/tools/libraries/dependencies used in its development.
+4cb6a98 generated the very first pdf worklog for the 'portfolio' project, showcasing personal case studies, stacks, worklogs, contact info, and more. the worklog covers established baselines, work completed throughout the first session, files touched, lessons learned throughout the session, and more. for consistency, the worklog follows pre-established naming conventions, style, content type and structure from other development projects.
+bb184fe imported 3 'alla vostra' project screenshots into the portfolio project, placing them as miniatures under the 'alla vostra' section. the images offer a snapshot of the mobile app project before the user navigates to its dedicated page.
+e63fa26 added slim edge border atop the 'alla vostra' device frame's screen inlay for the purposes of unobscuring the screenshot's top portion
+4b8ca33 substituted the 'alla vostra' project's device small inlay for a large one, more in keeping with the correct aspect ratio of the frame.
+f6080f3 replaced profile photo with a more fitting background color gradient. adjusted the 'alla vostra' device frame's screenshot inlay with a less-clipped version of the image along its edges.
+ef06811 replaced placeholder email address with the official developer email. replaced the generic placeholder inlay of the 'alla vostra' device mockup with an actual screenshot from that mobile app development project.
+
+Remotes:
+origin	https://github.com/Prahlin/portfolio.git (fetch)
+origin	https://github.com/Prahlin/portfolio.git (push)
+
+
+============================================================
+BINARY / IMAGE ASSET INVENTORY - PUBLIC IMAGES
+============================================================
+
+public/images/cinerific-intro.png | 349162 bytes | modified 2026-07-14 21:00:29
+public/images/confirmed_overlay_small.png | 118510 bytes | modified 2026-07-11 12:10:14
+public/images/martin-profile.png | 480081 bytes | modified 2026-07-11 18:45:54
+public/images/martin1.jpg | 178343 bytes | modified 2026-07-11 20:43:41
+public/images/martin2.jpg | 146510 bytes | modified 2026-07-11 21:29:17
+public/images/martin3.jpg | 141871 bytes | modified 2026-07-11 21:15:24
+public/images/products_overlay_small.png | 296612 bytes | modified 2026-07-11 11:56:41
+public/images/start-page-mockup-reference.png | 1113950 bytes | modified 2026-07-11 12:39:08
+public/images/startup_screen_large.png | 2049492 bytes | modified 2026-07-11 12:30:30
+public/images/startup_screen_small.png | 694404 bytes | modified 2026-07-11 11:54:03
+
+
+============================================================
+PDF WORKLOG INVENTORY
+============================================================
+
+portfolio_worklog_july11.pdf | 23528 bytes | modified 2026-07-12 00:10:01
+portfolio_worklog_july14.pdf | 29767 bytes | modified 2026-07-14 22:44:02
+
+
+============================================================
+DEPLOYMENT ARCHIVE INVENTORY
+============================================================
+
+prahlin-portfolio-source.zip | 3922222 bytes | modified 2026-07-11 16:24:40
+prahlin-portfolio-static-out.zip | 1948766 bytes | modified 2026-07-11 16:24:40
+
+
+============================================================
+NOT INCLUDED IN SNAPSHOT
+============================================================
+
+The Portfolio snapshot intentionally excludes generated/cache/runtime/private paths:
+- .git
+- node_modules
+- .next
+- out
+- dist
+- build
+- .cache
+- .turbo
+- .npm
+- .pnpm-store
+- .yarn
+- .DS_Store
+- next-env.d.ts
+- *.tsbuildinfo
+- *_PROJECT_SNAPSHOT.txt
+- *.zip
+- .env and .env*.local
+
+The snapshot lists public images, PDF worklogs, and deployment archives by path, size, and modified time, but does not print raw PNG/JPG/PDF/ZIP bytes.
+
