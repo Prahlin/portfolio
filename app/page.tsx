@@ -1,6 +1,5 @@
 import Image from "next/image";
 import {
-  ArrowRight,
   Braces,
   Mail,
   MonitorSmartphone,
@@ -9,6 +8,7 @@ import {
   Smartphone,
   Store,
 } from "lucide-react";
+import { ProjectCarouselButton } from "./ProjectCarouselButton";
 
 const navItems = ["Case Studies", "Stack", "Worklog", "Contact"];
 
@@ -21,9 +21,12 @@ const stackChips = [
 ];
 
 const proofStats = [
-  { label: "Alla Vostra commits", value: "328" },
-  { label: "PDF worklogs", value: "42" },
-  { label: "CreditKing commits", value: "94" },
+  {
+    label: "of UI/UX, Front-end & Back-end experience",
+    value: "3+ Years",
+  },
+  { label: "GitHub commits", value: "500+" },
+  { label: "Project worklogs", value: "50+" },
   { label: "Android release prep", value: "EAS" },
 ];
 
@@ -36,6 +39,7 @@ type CaseScreenshot = {
 type CaseStudy = {
   description: string;
   eyebrow: string;
+  id: string;
   screenshots: CaseScreenshot[];
   stat: string;
   tags: string[];
@@ -44,6 +48,7 @@ type CaseStudy = {
 
 const caseStudies: CaseStudy[] = [
   {
+    id: "cinerific",
     title: "Cinerific",
     eyebrow: "Native Android entertainment preview",
     description:
@@ -59,6 +64,7 @@ const caseStudies: CaseStudy[] = [
     ],
   },
   {
+    id: "alla-vostra",
     title: "Alla Vostra",
     eyebrow: "Flagship full-stack mobile commerce",
     description:
@@ -81,6 +87,7 @@ const caseStudies: CaseStudy[] = [
     ],
   },
   {
+    id: "credit-king",
     title: "Credit King",
     eyebrow: "Finance app UI system",
     description:
@@ -191,9 +198,9 @@ export default function Home() {
       <section className="hero" id="top">
         <div className="site-shell">
           <header className="nav-bar">
-            <a className="brand" href="#top" aria-label="Prahlin home">
+            <a className="brand" href="#top" aria-label="Martin Prahl home">
               <span>P</span>
-              <strong>Prahlin</strong>
+              <strong>Martin Prahl</strong>
             </a>
 
             <nav aria-label="Main navigation">
@@ -220,10 +227,7 @@ export default function Home() {
               </p>
 
               <div className="hero-actions">
-                <a className="button button-primary" href="#alla-vostra">
-                  View Alla Vostra
-                  <ArrowRight aria-hidden size={18} />
-                </a>
+                <ProjectCarouselButton />
                 <a
                   className="button button-secondary"
                   href="https://github.com/Prahlin"
@@ -306,7 +310,7 @@ export default function Home() {
             {caseStudies.map((study) => (
               <article
                 className="case-card"
-                id={study.title === "Alla Vostra" ? "alla-vostra" : undefined}
+                id={study.id}
                 key={study.title}
               >
                 <div className="case-topline">

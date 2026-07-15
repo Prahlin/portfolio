@@ -207,6 +207,54 @@ h3 {
   color: #001b0d;
 }
 
+.carousel-button {
+  min-width: 190px;
+  overflow: hidden;
+}
+
+.carousel-button-window {
+  display: inline-grid;
+  min-width: 134px;
+  overflow: hidden;
+}
+
+.carousel-button-label {
+  animation: project-swoosh 720ms cubic-bezier(0.18, 0.9, 0.28, 1.18);
+  display: inline-block;
+  will-change: transform, opacity;
+}
+
+@keyframes project-swoosh {
+  0% {
+    opacity: 0;
+    transform: translateX(46px) rotate(1.5deg) scale(0.96);
+  }
+
+  48% {
+    opacity: 1;
+    transform: translateX(-7px) rotate(-0.6deg) scale(1.035);
+  }
+
+  68% {
+    transform: translateX(4px) rotate(0.35deg) scale(0.985);
+  }
+
+  84% {
+    transform: translateX(-2px) rotate(-0.2deg) scale(1.012);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0) rotate(0) scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .carousel-button-label {
+    animation: none;
+  }
+}
+
 .button-secondary {
   background: rgba(255, 255, 255, 0.04);
   border: 1px solid var(--line-strong);
@@ -497,7 +545,7 @@ h3 {
   border-top: 1px solid var(--line);
   display: grid;
   gap: 1px;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   margin-top: 10px;
   position: relative;
   z-index: 2;
@@ -505,6 +553,7 @@ h3 {
 
 .stats-strip div {
   background: rgba(255, 255, 255, 0.025);
+  min-width: 0;
   min-height: 104px;
   padding: 22px;
 }
@@ -720,7 +769,6 @@ section:not(.hero) {
     width: min(74%, 332px);
   }
 
-  .stats-strip,
   .case-grid,
   .capability-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -786,7 +834,6 @@ section:not(.hero) {
     width: min(84vw, 268px);
   }
 
-  .stats-strip,
   .case-grid,
   .capability-grid {
     grid-template-columns: 1fr;
