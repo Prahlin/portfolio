@@ -1,0 +1,364 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Count 5 /Kids [6 0 R 8 0 R 10 0 R 12 0 R 14 0 R] >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+5 0 obj
+<< /Length 5938 >>
+stream
+BT /F2 15.5 Tf 1 0 0 1 56.00 742.00 Tm (Prahlin Portfolio Work Log - July 14, 2026) Tj ET
+BT /F1 10.2 Tf 1 0 0 1 56.00 716.00 Tm (Compiled summary for Tuesday, July 14, 2026 - focus: extending the Portfolio landing page from) Tj ET
+BT /F1 10.2 Tf 1 0 0 1 56.00 702.60 Tm (a two-project mobile showcase into a stronger three-project proof surface, adding a Cinerific) Tj ET
+BT /F1 10.2 Tf 1 0 0 1 56.00 689.20 Tm (tablet device preview, improving hero proof-card placement, adding a Cinerific case-study) Tj ET
+BT /F1 10.2 Tf 1 0 0 1 56.00 675.80 Tm (entry, updating portfolio proof metrics, changing the visible brand identity to Martin Prahl,) Tj ET
+BT /F1 10.2 Tf 1 0 0 1 56.00 662.40 Tm (and replacing the static hero call-to-action with a rotating project carousel button.) Tj ET
+BT /F1 10.2 Tf 1 0 0 1 56.00 642.00 Tm (Generated in continuity with the established Alla Vostra daily worklog cadence and the first) Tj ET
+BT /F1 10.2 Tf 1 0 0 1 56.00 628.60 Tm (Portfolio worklog artifact: compact opening summary, source-material section, baseline) Tj ET
+BT /F1 10.2 Tf 1 0 0 1 56.00 615.20 Tm (section, goal list, work-completed sections, validation section, files-touched list, follow-up) Tj ET
+BT /F1 10.2 Tf 1 0 0 1 56.00 601.80 Tm (context, and output-artifact close.) Tj ET
+BT /F1 10.2 Tf 1 0 0 1 56.00 581.40 Tm (This artifact intentionally covers only the Prahlin/portfolio work represented by commits) Tj ET
+BT /F1 10.2 Tf 1 0 0 1 56.00 568.00 Tm (1b1e1b2 and cf141aa, plus this worklog-generation step. It uses Alla Vostra and Cinerific) Tj ET
+BT /F1 10.2 Tf 1 0 0 1 56.00 554.60 Tm (worklogs as style and structure references, but the body content records only Portfolio) Tj ET
+BT /F1 10.2 Tf 1 0 0 1 56.00 541.20 Tm (project work.) Tj ET
+BT /F2 13 Tf 1 0 0 1 56.00 513.80 Tm (Source Materials Reviewed) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 56.00 491.30 Tm (-) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 491.30 Tm (Extracted text from all 45 available local worklog PDFs across /Users/prahlin/gh/alla_vostra,) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 478.70 Tm (/Users/prahlin/gh/cinerific, and /Users/prahlin/gh/portfolio using pdftotext.) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 56.00 463.10 Tm (-) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 463.10 Tm (Reviewed 43 Alla Vostra root-level worklog PDFs spanning May through July, including the mature) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 450.50 Tm (July 11 worklog, to preserve the established daily-report cadence, section order, validation) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 437.90 Tm (language, files-touched list, follow-up context, and output-artifact close.) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 56.00 422.30 Tm (-) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 422.30 Tm (Reviewed cinerific_worklog_july 12.pdf, especially its first-project adaptation of the Alla) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 409.70 Tm (Vostra convention, its source-material section, native Android/Compose focus, and its explicit) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 397.10 Tm (output-artifact naming note.) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 56.00 381.50 Tm (-) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 381.50 Tm (Reviewed portfolio_worklog_july11.pdf as the closest same-project reference for title format,) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 368.90 Tm (five-page length, root-level naming, Portfolio-specific baseline, Hostinger/static-export) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 356.30 Tm (validation language, and follow-up conventions.) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 56.00 340.70 Tm (-) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 340.70 Tm (Checked PDF metadata and page counts with pdfinfo. Current mature worklogs generally use) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 328.10 Tm (letter-size pages and compact four-to-five page bodies for daily project summaries.) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 56.00 312.50 Tm (-) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 312.50 Tm (Reviewed the Portfolio Git history and confirmed the July 14 source scope: 1b1e1b2 for the) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 299.90 Tm (Cinerific tablet/case-study pass and cf141aa for the brand, stats, and carousel-button pass.) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 56.00 284.30 Tm (-) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 284.30 Tm (Reviewed the Cinerific repository history to ground the Portfolio Cinerific case-study text in) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 271.70 Tm (actual project work: Kotlin/Jetpack Compose scaffold, Gradle setup, Figma intro/sign-in assets,) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 259.10 Tm (drawable resources, and intro animation work.) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 56.00 243.50 Tm (-) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 243.50 Tm (Reviewed the active Portfolio source files app/page.tsx, app/globals.css,) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 230.90 Tm (app/ProjectCarouselButton.tsx, and the tracked Cinerific intro image asset at) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 218.30 Tm (public/images/cinerific-intro.png.) Tj ET
+BT /F2 13 Tf 1 0 0 1 56.00 192.70 Tm (Baseline Status Before July 14 Work) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 56.00 170.20 Tm (-) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 170.20 Tm (The July 11 Portfolio site already had a green/black React Native-first landing page, a Martin) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 157.60 Tm (Prahl profile photo, Alla Vostra and CreditKing hero device mockups, case-study cards, a stack) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 145.00 Tm (section, worklog section, contact panel, Hostinger static-export workflow, and the first) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 132.40 Tm (Portfolio PDF worklog.) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 56.00 116.80 Tm (-) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 116.80 Tm (The hero still framed the project proof mostly around Alla Vostra and CreditKing. Cinerific) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 104.20 Tm (existed as a separate native Android project but did not yet appear as a visible Portfolio) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 91.60 Tm (case-study surface.) Tj ET
+BT /F1 8.8 Tf 1 0 0 1 331.78 28.00 Tm (Prahlin Portfolio Work Log - July 14, 2026 Page 1) Tj ET
+endstream
+endobj
+6 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 5 0 R >>
+endobj
+7 0 obj
+<< /Length 6243 >>
+stream
+BT /F1 9.6 Tf 1 0 0 1 56.00 742.00 Tm (-) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 742.00 Tm (The static hero CTA still functioned as a single View Alla Vostra link rather than a rotating) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 729.40 Tm (project entry point.) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 56.00 713.80 Tm (-) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 713.80 Tm (The proof card was originally part of the hero visual cluster, which made it prone to visual) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 701.20 Tm (collisions once additional device artwork was added.) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 56.00 685.60 Tm (-) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 685.60 Tm (The stats strip still used project-specific counters such as Alla Vostra commits, PDF worklogs,) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 673.00 Tm (and CreditKing commits rather than broader portfolio-level proof points.) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 56.00 657.40 Tm (-) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 657.40 Tm (The top-left brand still displayed Prahlin, which is the GitHub username, even though the user) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 644.80 Tm (requested the visible developer identity to read Martin Prahl while preserving the underlying) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 632.20 Tm (Prahlin project identity elsewhere.) Tj ET
+BT /F2 13 Tf 1 0 0 1 56.00 606.60 Tm (Goals for July 14) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 56.00 584.10 Tm (-) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 584.10 Tm (Add Cinerific to the first-viewport device composition without replacing the existing Alla Vostra) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 571.50 Tm (and CreditKing mobile-app proof.) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 56.00 555.90 Tm (-) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 555.90 Tm (Use the real Cinerific intro screenshot from the local Cinerific project rather than a generic) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 543.30 Tm (placeholder or newly invented image.) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 56.00 527.70 Tm (-) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 527.70 Tm (Add a Cinerific case-study card below the hero, ordered left-to-right before Alla Vostra and) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 515.10 Tm (Credit King, with Kotlin, Compose, Gradle, and TypeScript as the key rounded tags.) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 56.00 499.50 Tm (-) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 499.50 Tm (Reposition the Play Store prep / Stripe + Postmark proof panel so it aligns with the left hero) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 486.90 Tm (action rhythm and does not overlap text, device imagery, buttons, or screenshots across aspect) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 474.30 Tm (ratios.) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 56.00 458.70 Tm (-) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 458.70 Tm (Replace narrow project counters with broader portfolio proof: years of UI/UX, front-end and) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 446.10 Tm (back-end experience, GitHub commits, project worklogs, and Android release prep.) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 56.00 430.50 Tm (-) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 430.50 Tm (Keep the four proof-stat columns in a single row rather than allowing responsive media rules to) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 417.90 Tm (collapse the strip into multiple rows.) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 56.00 402.30 Tm (-) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 402.30 Tm (Replace the visible top-left Prahlin brand text with Martin Prahl while keeping the monogram and) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 389.70 Tm (existing GitHub/Portfolio identity intact.) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 56.00 374.10 Tm (-) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 374.10 Tm (Turn the static View Alla Vostra CTA into a rotating project carousel that cycles through the) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 361.50 Tm (three project destinations every five seconds with a bumpy swoosh animation.) Tj ET
+BT /F2 13 Tf 1 0 0 1 56.00 335.90 Tm (Work Completed - Cinerific Tablet Device Frame) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 56.00 313.40 Tm (-) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 313.40 Tm (Copied the local Cinerific intro image from /Users/prahlin/gh/cinerific/screenshots into the) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 300.80 Tm (Portfolio public image set as public/images/cinerific-intro.png.) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 56.00 285.20 Tm (-) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 285.20 Tm (Added a new TabletPreview component to app/page.tsx so the hero can render a landscape) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 272.60 Tm (Android-tablet-style frame alongside the two existing smartphone frames.) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 56.00 257.00 Tm (-) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 257.00 Tm (Styled the new tablet frame in app/globals.css with a green/black shell, inner camera dot,) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 244.40 Tm (rounded screen, subtle grid treatment, and a horizontal tilt compatible with the existing hero) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 231.80 Tm (device composition.) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 56.00 216.20 Tm (-) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 216.20 Tm (Sized the tablet as a landscape 16:10 preview and applied a 1.5x transform after testing a) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 203.60 Tm (too-large 2x pass. The tablet now feels substantial without overtaking the entire hero.) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 56.00 188.00 Tm (-) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 188.00 Tm (Placed the tablet low enough to obscure the lower portions of the Alla Vostra and CreditKing) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 175.40 Tm (phone mockups while keeping the phone identities visible.) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 56.00 159.80 Tm (-) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 159.80 Tm (Inserted the Cinerific intro screenshot into the tablet screen using a centered cover crop so the) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 147.20 Tm (outer edges trim evenly and the central Cinerific logo remains visible.) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 56.00 131.60 Tm (-) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 131.60 Tm (Adjusted responsive tablet dimensions and placement for narrower breakpoints so the tablet) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 119.00 Tm (remains part of the device stack instead of colliding with hero copy.) Tj ET
+BT /F2 13 Tf 1 0 0 1 56.00 93.40 Tm (Work Completed - Proof Card and Hero Layout Refinement) Tj ET
+BT /F1 8.8 Tf 1 0 0 1 331.78 28.00 Tm (Prahlin Portfolio Work Log - July 14, 2026 Page 2) Tj ET
+endstream
+endobj
+8 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 7 0 R >>
+endobj
+9 0 obj
+<< /Length 6309 >>
+stream
+BT /F1 9.6 Tf 1 0 0 1 56.00 742.00 Tm (-) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 742.00 Tm (Moved the proof panel out of the hero visual overlay after the Cinerific tablet made the previous) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 729.40 Tm (placement feel crowded and visually unpleasing.) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 56.00 713.80 Tm (-) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 713.80 Tm (Repositioned the proof panel into the left hero column beneath the stack chips, aligned with the) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 701.20 Tm (left edge of the View button and the React Native chip.) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 56.00 685.60 Tm (-) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 685.60 Tm (Matched the proof-panel vertical rhythm to the spacing between the action buttons and stack-chip) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 673.00 Tm (row, creating a cleaner column of related proof elements.) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 56.00 657.40 Tm (-) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 657.40 Tm (Kept the proof panel content unchanged for this pass: Play Store prep and Stripe + Postmark) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 644.80 Tm (backend remain visible as compact implementation proof.) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 56.00 629.20 Tm (-) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 629.20 Tm (Changed the hero visual area from an absolutely managed proof-panel collision zone to a cleaner) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 616.60 Tm (split where project imagery sits on the right and proof/card rhythm sits with the copy on the) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 604.00 Tm (left.) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 56.00 588.40 Tm (-) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 588.40 Tm (Verified the result visually at desktop and mobile widths before continuing with the lower-page) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 575.80 Tm (case-study work.) Tj ET
+BT /F2 13 Tf 1 0 0 1 56.00 550.20 Tm (Work Completed - Cinerific Case Study Entry) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 56.00 527.70 Tm (-) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 527.70 Tm (Added Cinerific as the first case-study entry in the caseStudies data array so the lower section) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 515.10 Tm (reads left-to-right as Cinerific, Alla Vostra, and Credit King on desktop.) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 56.00 499.50 Tm (-) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 499.50 Tm (Grounded the Cinerific description in the local Cinerific Git history and README: Kotlin and) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 486.90 Tm (Jetpack Compose Android app scaffold, Figma intro/sign-in frame translation, drawable assets,) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 474.30 Tm (tablet-friendly full-screen screens, and animated intro flow.) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 56.00 458.70 Tm (-) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 458.70 Tm (Added requested key component tags for Cinerific: Kotlin, Compose, Gradle, and TypeScript.) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 56.00 443.10 Tm (-) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 443.10 Tm (Added cinerific-intro.png as the first preliminary screenshot in the Cinerific case-study card.) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 56.00 427.50 Tm (-) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 427.50 Tm (Introduced landscape screenshot handling so Cinerific keeps a tablet/landscape aspect instead of) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 414.90 Tm (being squeezed into the existing 9:16 phone-miniature styling.) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 56.00 399.30 Tm (-) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 399.30 Tm (Changed the case-study grid to three desktop columns and retained responsive fallback behavior) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 386.70 Tm (for medium and mobile breakpoints.) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 56.00 371.10 Tm (-) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 371.10 Tm (Renamed the displayed CreditKing case-study title to Credit King while leaving the hero phone) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 358.50 Tm (mockup label unchanged for the existing finance-device visual.) Tj ET
+BT /F2 13 Tf 1 0 0 1 56.00 332.90 Tm (Work Completed - Portfolio Proof Stats and Identity) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 56.00 310.40 Tm (-) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 310.40 Tm (Replaced the old 328 Alla Vostra commits stat with 500+ GitHub commits so the proof strip now) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 297.80 Tm (summarizes broader developer output rather than one project only.) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 56.00 282.20 Tm (-) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 282.20 Tm (Replaced the old 42 PDF worklogs stat with 50+ Project worklogs, matching the fuller) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 269.60 Tm (documentation corpus across Alla Vostra, Cinerific, and Portfolio.) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 56.00 254.00 Tm (-) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 254.00 Tm (Removed the 94 Credit King commits stat from the proof strip at the user request.) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 56.00 238.40 Tm (-) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 238.40 Tm (Added a new first stat column reading 3+ Years with the label of UI/UX, Front-end & Back-end) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 225.80 Tm (experience.) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 56.00 210.20 Tm (-) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 210.20 Tm (Kept Android release prep as the fourth stat column, preserving the mobile-release thread) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 197.60 Tm (established in the first Portfolio worklog.) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 56.00 182.00 Tm (-) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 182.00 Tm (Updated the stats-strip grid so all four columns stay in a single row and removed responsive) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 169.40 Tm (overrides that were collapsing the strip at narrower widths.) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 56.00 153.80 Tm (-) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 153.80 Tm (Changed the top-left visible brand text from Prahlin to Martin Prahl and updated its accessible) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 141.20 Tm (label to Martin Prahl home.) Tj ET
+BT /F2 13 Tf 1 0 0 1 56.00 115.60 Tm (Work Completed - Project Carousel CTA) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 56.00 93.10 Tm (-) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 93.10 Tm (Added app/ProjectCarouselButton.tsx as a focused client component so the rest of the page can) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 80.50 Tm (remain primarily static while the hero CTA rotates project targets in the browser.) Tj ET
+BT /F1 8.8 Tf 1 0 0 1 331.78 28.00 Tm (Prahlin Portfolio Work Log - July 14, 2026 Page 3) Tj ET
+endstream
+endobj
+10 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 9 0 R >>
+endobj
+11 0 obj
+<< /Length 6065 >>
+stream
+BT /F1 9.6 Tf 1 0 0 1 56.00 742.00 Tm (-) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 742.00 Tm (Replaced the static View Alla Vostra hero button with ProjectCarouselButton while preserving the) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 729.40 Tm (same button styling and arrow-icon treatment.) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 56.00 713.80 Tm (-) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 713.80 Tm (Started the carousel on View Alla Vostra, then cycles every five seconds through View Credit) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 701.20 Tm (King, View Cinerific, and back to View Alla Vostra.) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 56.00 685.60 Tm (-) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 685.60 Tm (Updated the button href together with the visible label so each carousel state links to the) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 673.00 Tm (matching case-study section anchor.) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 56.00 657.40 Tm (-) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 657.40 Tm (Added stable case-study IDs for cinerific, alla-vostra, and credit-king so the carousel has) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 644.80 Tm (reliable section targets.) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 56.00 629.20 Tm (-) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 629.20 Tm (Added a bumpy project-swoosh keyframe animation: the label slides in from the right, overshoots,) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 616.60 Tm (compresses slightly, and settles without resizing the surrounding hero layout.) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 56.00 601.00 Tm (-) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 601.00 Tm (Added a prefers-reduced-motion fallback so users who reduce motion do not receive the animated) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 588.40 Tm (swoosh effect.) Tj ET
+BT /F2 13 Tf 1 0 0 1 56.00 562.80 Tm (Validation and Checks Performed) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 56.00 540.30 Tm (-) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 540.30 Tm (Ran npm run check after the July 14 source changes. TypeScript completed successfully.) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 56.00 524.70 Tm (-) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 524.70 Tm (Ran npm run build:static after the July 14 source changes. Next.js static export completed) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 512.10 Tm (successfully for Hostinger-compatible output.) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 56.00 496.50 Tm (-) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 496.50 Tm (Confirmed the local dev preview at http://127.0.0.1:3000 served the updated Martin Prahl brand,) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 483.90 Tm (the 3+ Years / 500+ / 50+ / EAS proof-stat row, and the Cinerific case-study content.) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 56.00 468.30 Tm (-) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 468.30 Tm (Restarted the Next dev server and cleared the generated .next cache when local preview CSS stayed) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 455.70 Tm (stale after build checks, then verified the served CSS reflected the current four-column stats) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 443.10 Tm (rule.) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 56.00 427.50 Tm (-) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 427.50 Tm (Used headless Chrome to verify the carousel behavior in a real browser environment. After a) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 414.90 Tm (virtual-time budget longer than five seconds, the DOM advanced from the initial View Alla Vostra) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 402.30 Tm (state to View Credit King.) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 56.00 386.70 Tm (-) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 386.70 Tm (Checked the served CSS for project-swoosh, carousel-button classes, and the repeat\(4, minmax\(0,) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 374.10 Tm (1fr\)\) stats-strip rule.) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 56.00 358.50 Tm (-) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 358.50 Tm (Used git show --stat for commits 1b1e1b2 and cf141aa to confirm the tracked July 14 code scope) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 345.90 Tm (before generating this PDF.) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 56.00 330.30 Tm (-) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 330.30 Tm (Confirmed the branch is main tracking origin/main before worklog generation. This PDF generation) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 317.70 Tm (step creates a new local artifact and does not commit it automatically.) Tj ET
+BT /F2 13 Tf 1 0 0 1 56.00 292.10 Tm (Files Touched During July 14 Portfolio Work) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 56.00 269.60 Tm (-) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 269.60 Tm (app/ProjectCarouselButton.tsx - new client-side rotating hero CTA component with five-second) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 257.00 Tm (interval, project anchors, bumpy label animation support, and arrow icon.) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 56.00 241.40 Tm (-) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 241.40 Tm (app/page.tsx - added TabletPreview, Cinerific case-study data, stable case-study IDs,) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 228.80 Tm (ProjectCarouselButton usage, proof-stat copy, Martin Prahl brand text, landscape image handling,) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 216.20 Tm (and reordered case studies.) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 56.00 200.60 Tm (-) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 200.60 Tm (app/globals.css - added tablet frame styling, Cinerific image inlay styling, proof-panel) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 188.00 Tm (relocation, three-column case-study grid, landscape miniature styling, four-column proof-stat) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 175.40 Tm (hardening, carousel button styles, keyframes, and reduced-motion fallback.) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 56.00 159.80 Tm (-) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 159.80 Tm (public/images/cinerific-intro.png - imported Cinerific intro screenshot used in both the hero) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 147.20 Tm (tablet frame and the Cinerific case-study miniature.) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 56.00 131.60 Tm (-) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 131.60 Tm (portfolio_worklog_july14.pdf - new July 14 Portfolio worklog artifact generated at the repository) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 119.00 Tm (root.) Tj ET
+BT /F2 13 Tf 1 0 0 1 56.00 93.40 Tm (Follow-Up Context) Tj ET
+BT /F1 8.8 Tf 1 0 0 1 331.78 28.00 Tm (Prahlin Portfolio Work Log - July 14, 2026 Page 4) Tj ET
+endstream
+endobj
+12 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 11 0 R >>
+endobj
+13 0 obj
+<< /Length 3342 >>
+stream
+BT /F1 9.6 Tf 1 0 0 1 56.00 742.00 Tm (-) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 742.00 Tm (Consider creating dedicated project pages for Cinerific, Alla Vostra, and Credit King so the) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 729.40 Tm (carousel button can eventually link to full case-study narratives rather than section anchors) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 716.80 Tm (only.) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 56.00 701.20 Tm (-) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 701.20 Tm (Add additional Cinerific screenshots as the Android app develops beyond the first intro/sign-in) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 688.60 Tm (flow, especially once more Compose screens or playback/library surfaces exist.) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 56.00 673.00 Tm (-) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 673.00 Tm (Update the page metadata later if the public search/social title should move from Prahlin to) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 660.40 Tm (Martin Prahl while still preserving the Prahlin GitHub username and repository identity.) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 56.00 644.80 Tm (-) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 644.80 Tm (Replace the hardcoded 500+ GitHub commits and 50+ Project worklogs with build-time generated) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 632.20 Tm (stats only if the automation becomes worth the complexity.) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 56.00 616.60 Tm (-) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 616.60 Tm (Review the hero at real mobile widths after future device-image additions, because the current) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 604.00 Tm (composition deliberately balances three project surfaces in one first viewport.) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 56.00 588.40 Tm (-) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 588.40 Tm (Continue asking for Portfolio commit messages before committing or pushing new Portfolio changes) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 575.80 Tm (unless the user explicitly instructs otherwise.) Tj ET
+BT /F2 13 Tf 1 0 0 1 56.00 550.20 Tm (Output Artifact) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 56.00 527.70 Tm (-) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 527.70 Tm (Filename: portfolio_worklog_july14.pdf.) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 56.00 512.10 Tm (-) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 512.10 Tm (Created at the Portfolio repository root in /Users/prahlin/gh/portfolio.) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 56.00 496.50 Tm (-) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 496.50 Tm (Follows the Portfolio naming convention established by portfolio_worklog_july11.pdf and the) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 483.90 Tm (root-level daily worklog convention inherited from Alla Vostra.) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 56.00 468.30 Tm (-) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 468.30 Tm (Uses the Alla Vostra and Cinerific PDF worklogs as structure/style references while documenting) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 455.70 Tm (only July 14 Portfolio work.) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 56.00 440.10 Tm (-) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 440.10 Tm (Generated with a small standard-library PDF writer; no external PDF dependency was installed for) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 427.50 Tm (this worklog artifact.) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 56.00 411.90 Tm (-) Tj ET
+BT /F1 9.6 Tf 1 0 0 1 70.00 411.90 Tm (Created this daily worklog PDF: portfolio_worklog_july14.pdf.) Tj ET
+BT /F1 8.8 Tf 1 0 0 1 331.78 28.00 Tm (Prahlin Portfolio Work Log - July 14, 2026 Page 5) Tj ET
+endstream
+endobj
+14 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 13 0 R >>
+endobj
+15 0 obj
+<< /Title (Prahlin Portfolio Work Log - July 14, 2026) /Subject (Portfolio website development worklog) /Author (Codex) /Creator (Codex standard-library PDF generator) /Producer (Codex standard-library PDF generator) >>
+endobj
+xref
+0 16
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000142 00000 n 
+0000000212 00000 n 
+0000000287 00000 n 
+0000006277 00000 n 
+0000006413 00000 n 
+0000012708 00000 n 
+0000012844 00000 n 
+0000019205 00000 n 
+0000019342 00000 n 
+0000025460 00000 n 
+0000025598 00000 n 
+0000028993 00000 n 
+0000029131 00000 n 
+trailer
+<< /Size 16 /Root 1 0 R /Info 15 0 R >>
+startxref
+29367
+%%EOF
