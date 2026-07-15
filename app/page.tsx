@@ -27,7 +27,37 @@ const proofStats = [
   { label: "Android release prep", value: "EAS" },
 ];
 
-const caseStudies = [
+type CaseScreenshot = {
+  alt: string;
+  orientation?: "landscape" | "portrait";
+  src: string;
+};
+
+type CaseStudy = {
+  description: string;
+  eyebrow: string;
+  screenshots: CaseScreenshot[];
+  stat: string;
+  tags: string[];
+  title: string;
+};
+
+const caseStudies: CaseStudy[] = [
+  {
+    title: "Cinerific",
+    eyebrow: "Native Android entertainment preview",
+    description:
+      "Kotlin and Jetpack Compose Android app scaffold translating Figma intro and sign-in frames into tablet-friendly full-screen screens, drawable assets, and an animated intro flow.",
+    tags: ["Kotlin", "Compose", "Gradle", "TypeScript"],
+    stat: "3 commits",
+    screenshots: [
+      {
+        alt: "Cinerific intro logo frame",
+        orientation: "landscape",
+        src: "/images/cinerific-intro.png",
+      },
+    ],
+  },
   {
     title: "Alla Vostra",
     eyebrow: "Flagship full-stack mobile commerce",
@@ -51,7 +81,7 @@ const caseStudies = [
     ],
   },
   {
-    title: "CreditKing",
+    title: "Credit King",
     eyebrow: "Finance app UI system",
     description:
       "React Native dashboard, animated navigation, Figma asset translation, responsive web/Android parity, and reusable app chrome.",
@@ -117,6 +147,24 @@ function PhonePreview({
             <div className="phone-cta">{metric}</div>
           </>
         )}
+      </div>
+    </div>
+  );
+}
+
+function TabletPreview() {
+  return (
+    <div className="tablet-shell" aria-hidden="true">
+      <div className="tablet-camera" />
+      <div className="tablet-screen">
+        <Image
+          alt=""
+          className="tablet-screen-image"
+          fill
+          sizes="456px"
+          src="/images/cinerific-intro.png"
+        />
+        <div className="tablet-empty-grid" />
       </div>
     </div>
   );
@@ -192,6 +240,17 @@ export default function Home() {
                   <span key={chip}>{chip}</span>
                 ))}
               </div>
+
+              <div className="proof-panel">
+                <div>
+                  <Store aria-hidden size={18} />
+                  <span>Play Store prep</span>
+                </div>
+                <div>
+                  <Server aria-hidden size={18} />
+                  <span>Stripe + Postmark backend</span>
+                </div>
+              </div>
             </div>
 
             <div className="hero-visual" aria-label="Portfolio preview">
@@ -208,6 +267,7 @@ export default function Home() {
               </div>
 
               <div className="phone-stage">
+                <TabletPreview />
                 <PhonePreview
                   title="Alla Vostra"
                   metric="Checkout ready"
@@ -220,17 +280,6 @@ export default function Home() {
                   metric="Finance UI"
                   variant="finance"
                 />
-              </div>
-
-              <div className="proof-panel">
-                <div>
-                  <Store aria-hidden size={18} />
-                  <span>Play Store prep</span>
-                </div>
-                <div>
-                  <Server aria-hidden size={18} />
-                  <span>Stripe + Postmark backend</span>
-                </div>
               </div>
             </div>
           </div>
@@ -274,16 +323,30 @@ export default function Home() {
                 {study.screenshots.length > 0 ? (
                   <div
                     aria-label={`${study.title} app screenshots`}
-                    className="case-miniatures"
+                    className={`case-miniatures${
+                      study.screenshots.some(
+                        (screenshot) => screenshot.orientation === "landscape",
+                      )
+                        ? " case-miniatures-landscape"
+                        : ""
+                    }`}
                   >
                     {study.screenshots.map((screenshot) => (
                       <Image
                         alt={screenshot.alt}
-                        className="case-miniature"
-                        height={192}
+                        className={`case-miniature${
+                          screenshot.orientation === "landscape"
+                            ? " case-miniature-landscape"
+                            : ""
+                        }`}
+                        height={
+                          screenshot.orientation === "landscape" ? 166 : 192
+                        }
                         key={screenshot.src}
                         src={screenshot.src}
-                        width={108}
+                        width={
+                          screenshot.orientation === "landscape" ? 238 : 108
+                        }
                       />
                     ))}
                   </div>
