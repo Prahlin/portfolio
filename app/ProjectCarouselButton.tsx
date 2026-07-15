@@ -4,9 +4,9 @@ import { useEffect, useState } from "react";
 import { ArrowRight } from "lucide-react";
 
 const projectLinks = [
-  { href: "#cinerific", label: "View Cinerific" },
-  { href: "#alla-vostra", label: "View Alla Vostra" },
-  { href: "#credit-king", label: "View Credit King" },
+  { href: "#cinerific", label: "View 'Cinerific'" },
+  { href: "#alla-vostra", label: "View 'Alla Vostra'" },
+  { href: "#credit-king", label: "View 'Credit King'" },
 ];
 
 export function ProjectCarouselButton() {

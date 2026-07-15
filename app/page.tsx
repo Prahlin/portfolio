@@ -22,12 +22,12 @@ const stackChips = [
 
 const proofStats = [
   {
-    label: "of UI/UX, Front-end & Back-end experience",
-    value: "3+ Years",
+    label: "UI/UX + Front-end + Back-end",
+    value: "3yrs",
   },
-  { label: "GitHub commits", value: "500+" },
+  { label: "Quality GitHub Commits", value: "1k+" },
   { label: "Project worklogs", value: "50+" },
-  { label: "Android release prep", value: "EAS" },
+  { label: "Official Play/App Store Releases", value: "5" },
 ];
 
 type CaseScreenshot = {

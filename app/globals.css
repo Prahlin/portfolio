@@ -103,6 +103,7 @@ a {
   align-items: center;
   display: flex;
   gap: 8px;
+  min-width: 0;
 }
 
 .nav-bar nav a {
@@ -111,6 +112,7 @@ a {
   font-size: 14px;
   padding: 10px 12px;
   transition: background 160ms ease, color 160ms ease;
+  white-space: nowrap;
 }
 
 .nav-bar nav a:hover {
@@ -738,7 +740,22 @@ section:not(.hero) {
   }
 
   .nav-bar nav {
-    flex-wrap: wrap;
+    display: grid;
+    flex-wrap: nowrap;
+    gap: 6px;
+    grid-template-columns:
+      minmax(0, 1.25fr) minmax(0, 0.78fr) minmax(0, 0.98fr)
+      minmax(0, 0.98fr);
+    justify-content: normal;
+    width: 100%;
+  }
+
+  .nav-bar nav a {
+    flex: 1 1 0;
+    min-width: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
   }
 
   .hero-grid,
@@ -778,6 +795,24 @@ section:not(.hero) {
 @media (max-width: 720px) {
   .site-shell {
     width: min(100% - 24px, 1180px);
+  }
+
+  .nav-bar {
+    max-width: calc(100vw - 24px);
+    overflow: hidden;
+    padding: 14px;
+  }
+
+  .nav-bar nav {
+    gap: 4px;
+    max-width: 100%;
+    width: min(100%, calc(100vw - 54px));
+  }
+
+  .nav-bar nav a {
+    font-size: 12px;
+    padding-left: 2px;
+    padding-right: 2px;
   }
 
   .hero {
@@ -846,5 +881,29 @@ section:not(.hero) {
   .contact-panel {
     align-items: flex-start;
     flex-direction: column;
+  }
+}
+
+@media (max-width: 380px) {
+  .nav-bar {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .nav-bar nav {
+    gap: 1px;
+    width: min(100%, calc(100vw - 50px));
+  }
+
+  .nav-bar nav a {
+    font-size: 10.5px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 340px) {
+  .nav-bar nav a {
+    font-size: 10px;
   }
 }
