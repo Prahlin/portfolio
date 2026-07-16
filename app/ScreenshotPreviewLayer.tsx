@@ -147,7 +147,6 @@ export function ScreenshotPreviewLayer() {
         return;
       }
 
-      event.preventDefault();
       activePointerIdRef.current = event.pointerId;
       showPreview(target);
     }
@@ -161,6 +160,28 @@ export function ScreenshotPreviewLayer() {
       }
     }
 
+    function handlePointerCancel(event: PointerEvent) {
+      if (event.pointerType === "touch") {
+        return;
+      }
+
+      handlePointerRelease(event);
+    }
+
+    function handleTouchEnd(event: TouchEvent) {
+      if (activePointerIdRef.current !== null && event.touches.length === 0) {
+        hidePreview();
+      }
+    }
+
+    function handleScroll() {
+      if (activePointerIdRef.current !== null) {
+        return;
+      }
+
+      hidePreview();
+    }
+
     function handleContextMenu(event: MouseEvent) {
       if (getPreviewTarget(event.target)) {
         event.preventDefault();
@@ -171,22 +192,24 @@ export function ScreenshotPreviewLayer() {
     document.addEventListener("pointerout", handlePointerOut, true);
     document.addEventListener("pointerdown", handlePointerDown, true);
     document.addEventListener("pointerup", handlePointerRelease, true);
-    document.addEventListener("pointercancel", handlePointerRelease, true);
+    document.addEventListener("pointercancel", handlePointerCancel, true);
+    document.addEventListener("touchend", handleTouchEnd, true);
     document.addEventListener("contextmenu", handleContextMenu, true);
     window.addEventListener("blur", hidePreview);
     window.addEventListener("resize", hidePreview);
-    window.addEventListener("scroll", hidePreview, true);
+    window.addEventListener("scroll", handleScroll, true);
 
     return () => {
       document.removeEventListener("pointerover", handlePointerOver, true);
       document.removeEventListener("pointerout", handlePointerOut, true);
       document.removeEventListener("pointerdown", handlePointerDown, true);
       document.removeEventListener("pointerup", handlePointerRelease, true);
-      document.removeEventListener("pointercancel", handlePointerRelease, true);
+      document.removeEventListener("pointercancel", handlePointerCancel, true);
+      document.removeEventListener("touchend", handleTouchEnd, true);
       document.removeEventListener("contextmenu", handleContextMenu, true);
       window.removeEventListener("blur", hidePreview);
       window.removeEventListener("resize", hidePreview);
-      window.removeEventListener("scroll", hidePreview, true);
+      window.removeEventListener("scroll", handleScroll, true);
     };
   }, []);
 

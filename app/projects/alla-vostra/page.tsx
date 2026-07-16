@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { ArrowLeft, ArrowRight, Braces, Mail } from "lucide-react";
 
+import ExpandableFlowStacks from "./ExpandableFlowStacks";
+
 export const metadata: Metadata = {
   title: "Alla Vostra | Full-Stack Mobile Commerce Case Study",
   description:
@@ -104,43 +106,100 @@ const screenshotGroups: {
 }[] = [
   {
     title: "Browse",
-    copy: "The browsing surfaces keep the shop identity visible while moving users toward product selection and cart building.",
+    copy: "The browsing surfaces keep the brand, product catalog, company story, inquiry path, and shop entry consistent across Android Small and Large.",
     stacks: [
       {
-        title: "Shop Preview",
+        title: "Home Screen",
         screens: [
           {
             aspect: "standard",
             label: "Small",
-            title: "Shop Preview Small",
-            src: "/images/shop_preview_small.png",
-            caption: "Android Small shop preview before selection.",
+            title: "Home Screen Small",
+            src: "/images/home_screen_small.png",
+            caption: "Android Small home screen entry point.",
           },
           {
             aspect: "tall",
             label: "Large",
-            title: "Shop Preview Large",
-            src: "/images/shop_preview_large.png",
-            caption: "Android Large shop preview for spacing checks.",
+            title: "Home Screen Large",
+            src: "/images/home_screen_large.png",
+            caption: "Android Large home screen layout.",
           },
         ],
       },
       {
-        title: "Products",
+        title: "Products Screen",
         screens: [
           {
             aspect: "standard",
             label: "Small",
-            title: "Products Small",
-            src: "/images/products_overlay_small.png",
-            caption: "Android Small product browsing and selection.",
+            title: "Products Screen Small",
+            src: "/images/products_screen_small.png",
+            caption: "Android Small product catalog screen.",
           },
           {
             aspect: "tall",
             label: "Large",
-            title: "Products Large",
-            src: "/images/products_overlay_large.png",
-            caption: "Android Large product browsing and selection.",
+            title: "Products Screen Large",
+            src: "/images/products_screen_large.png",
+            caption: "Android Large product catalog screen.",
+          },
+        ],
+      },
+      {
+        title: "About Us Screen",
+        screens: [
+          {
+            aspect: "standard",
+            label: "Small",
+            title: "About Us Screen Small",
+            src: "/images/about_us_screen_small.png",
+            caption: "Android Small brand story screen.",
+          },
+          {
+            aspect: "tall",
+            label: "Large",
+            title: "About Us Screen Large",
+            src: "/images/about_us_screen_large.png",
+            caption: "Android Large brand story screen.",
+          },
+        ],
+      },
+      {
+        title: "Contact Screen",
+        screens: [
+          {
+            aspect: "standard",
+            label: "Small",
+            title: "Contact Screen Small",
+            src: "/images/contact_screen_small.png",
+            caption: "Android Small inquiry and contact screen.",
+          },
+          {
+            aspect: "tall",
+            label: "Large",
+            title: "Contact Screen Large",
+            src: "/images/contact_screen_large.png",
+            caption: "Android Large inquiry and contact screen.",
+          },
+        ],
+      },
+      {
+        title: "Shop Screen",
+        screens: [
+          {
+            aspect: "standard",
+            label: "Small",
+            title: "Shop Screen Small",
+            src: "/images/shop_preview_screen_small.png",
+            caption: "Android Small shop screen before product selection.",
+          },
+          {
+            aspect: "tall",
+            label: "Large",
+            title: "Shop Screen Large",
+            src: "/images/shop_preview_screen_large.png",
+            caption: "Android Large shop screen for spacing checks.",
           },
         ],
       },
@@ -151,7 +210,7 @@ const screenshotGroups: {
     copy: "Cart states were treated as part of the purchase path, with empty and filled moments both needing clear feedback.",
     stacks: [
       {
-        title: "Empty Cart",
+        title: "Empty Cart Overlay",
         screens: [
           {
             aspect: "standard",
@@ -170,7 +229,7 @@ const screenshotGroups: {
         ],
       },
       {
-        title: "Filled Cart",
+        title: "Filled Cart Overlay",
         screens: [
           {
             aspect: "standard",
@@ -191,11 +250,11 @@ const screenshotGroups: {
     ],
   },
   {
-    title: "Details",
+    title: "Customer Details",
     copy: "Checkout details break the purchase path into focused, readable steps instead of one overloaded form.",
     stacks: [
       {
-        title: "Address",
+        title: "Address Input Overlay",
         screens: [
           {
             aspect: "standard",
@@ -214,7 +273,7 @@ const screenshotGroups: {
         ],
       },
       {
-        title: "Time and Date",
+        title: "Time and Date Overlay",
         screens: [
           {
             aspect: "standard",
@@ -233,7 +292,7 @@ const screenshotGroups: {
         ],
       },
       {
-        title: "Contact",
+        title: "Contact Input Overlay",
         screens: [
           {
             aspect: "standard",
@@ -258,7 +317,7 @@ const screenshotGroups: {
     copy: "Payment screens keep the final handoff explicit so users can review the moment and complete checkout with confidence.",
     stacks: [
       {
-        title: "Payment",
+        title: "Payment Method Overlay",
         screens: [
           {
             aspect: "standard",
@@ -277,7 +336,7 @@ const screenshotGroups: {
         ],
       },
       {
-        title: "Payment Input",
+        title: "Payment Input Prompt",
         screens: [
           {
             aspect: "standard",
@@ -302,7 +361,7 @@ const screenshotGroups: {
     copy: "The final state closes the loop with a clear success moment tied to the real checkout outcome.",
     stacks: [
       {
-        title: "Order Confirmation",
+        title: "Order Confirmation Overlay",
         screens: [
           {
             aspect: "standard",
@@ -321,7 +380,7 @@ const screenshotGroups: {
         ],
       },
       {
-        title: "Order Placed",
+        title: "Order Placed Prompt",
         screens: [
           {
             aspect: "standard",
@@ -538,7 +597,7 @@ export default function AllaVostraCaseStudy() {
                 alt="Alla Vostra products screen"
                 aspect="standard"
                 className="av-device-browse"
-                src="/images/products_overlay_small.png"
+                src="/images/products_screen_small.png"
               />
               <CasePhone
                 alt="Alla Vostra confirmation screen"
@@ -619,7 +678,6 @@ export default function AllaVostraCaseStudy() {
               <div className="flow-image-frame">
                 <Image
                   alt={launchScreen.title}
-                  data-screenshot-preview
                   fill
                   priority
                   sizes="(max-width: 720px) 72vw, 330px"
@@ -654,35 +712,18 @@ export default function AllaVostraCaseStudy() {
                   <p>{group.copy}</p>
                 </div>
 
-                <div className="flow-capture-grid">
-                  {group.stacks.map((stack) => (
-                    <div className="flow-screen-stack" key={stack.title}>
-                      <h4>{stack.title}</h4>
-                      <div className="flow-screen-stack-captures">
-                        {stack.screens.map((screen) => (
-                          <figure
-                            className={`flow-screen flow-screen-compact flow-screen-${screen.aspect}`}
-                            key={screen.src}
-                          >
-                            <span className="flow-screen-label">
-                              {screen.label}
-                            </span>
-                            <div className="flow-image-frame">
-                              <Image
-                                alt={screen.title}
-                                data-screenshot-preview
-                                fill
-                                sizes="(max-width: 720px) 38vw, 152px"
-                                src={screen.src}
-                              />
-                            </div>
-                            <figcaption>{screen.caption}</figcaption>
-                          </figure>
-                        ))}
-                      </div>
-                    </div>
-                  ))}
-                </div>
+                <ExpandableFlowStacks
+                  collapsedLabel={`More ${group.title} Screens`}
+                  expandedLabel={`Hide ${group.title} Screens`}
+                  initialStackCount={
+                    group.title === "Browse" ||
+                    group.title === "Customer Details"
+                      ? 2
+                      : group.stacks.length
+                  }
+                  mobilePortraitInitialStackCount={1}
+                  stacks={group.stacks}
+                />
               </div>
             ))}
           </div>

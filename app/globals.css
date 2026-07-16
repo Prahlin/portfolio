@@ -281,6 +281,10 @@ h3 {
   .carousel-button-label {
     animation: none;
   }
+
+  .flow-browse-extra {
+    transition: none;
+  }
 }
 
 .button-secondary {
@@ -1282,6 +1286,39 @@ section.project-hero {
   display: flex;
   gap: 14px;
   justify-content: center;
+}
+
+.flow-browse-toggle-row {
+  display: flex;
+  justify-content: center;
+  margin-top: 26px;
+}
+
+.flow-browse-toggle {
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.flow-browse-toggle svg {
+  flex: 0 0 auto;
+}
+
+.flow-browse-extra {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  pointer-events: none;
+  transform: translateY(-8px);
+  transition: max-height 320ms ease, opacity 220ms ease, transform 220ms ease,
+    margin-top 220ms ease;
+}
+
+.flow-browse-extra.is-open {
+  margin-top: 34px;
+  max-height: 5200px;
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
 }
 
 .architecture-map {

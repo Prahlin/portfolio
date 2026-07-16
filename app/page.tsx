@@ -80,7 +80,7 @@ const caseStudies: CaseStudy[] = [
       },
       {
         alt: "Alla Vostra products screen",
-        src: "/images/products_overlay_small.png",
+        src: "/images/products_screen_small.png",
       },
       {
         alt: "Alla Vostra confirmation screen",
