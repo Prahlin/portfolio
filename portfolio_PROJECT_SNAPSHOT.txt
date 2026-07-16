@@ -1,5 +1,5 @@
 Portfolio Next.js PROJECT SNAPSHOT
-Generated: Wed Jul 15 18:05:45 EDT 2026
+Generated: Thu Jul 16 17:41:09 EDT 2026
 Project directory: /Users/prahlin/gh/portfolio
 
 IMPORTANT INSTRUCTIONS FOR CHATGPT & CODEX:
@@ -69,28 +69,54 @@ PROJECT FILE TREE
 /Users/prahlin/gh/portfolio/README.md
 /Users/prahlin/gh/portfolio/app
 /Users/prahlin/gh/portfolio/app/ProjectCarouselButton.tsx
+/Users/prahlin/gh/portfolio/app/ScreenshotPreviewLayer.tsx
 /Users/prahlin/gh/portfolio/app/globals.css
 /Users/prahlin/gh/portfolio/app/layout.tsx
 /Users/prahlin/gh/portfolio/app/page.tsx
+/Users/prahlin/gh/portfolio/app/projects
+/Users/prahlin/gh/portfolio/app/projects/alla-vostra
+/Users/prahlin/gh/portfolio/app/projects/alla-vostra/page.tsx
 /Users/prahlin/gh/portfolio/next.config.ts
 /Users/prahlin/gh/portfolio/package-lock.json
 /Users/prahlin/gh/portfolio/package.json
 /Users/prahlin/gh/portfolio/portfolio_worklog_july11.pdf
 /Users/prahlin/gh/portfolio/portfolio_worklog_july14.pdf
+/Users/prahlin/gh/portfolio/portfolio_worklog_july15_part1.pdf
+/Users/prahlin/gh/portfolio/portfolio_worklog_july15_part2.pdf
 /Users/prahlin/gh/portfolio/postcss.config.mjs
 /Users/prahlin/gh/portfolio/public
 /Users/prahlin/gh/portfolio/public/favicon.svg
 /Users/prahlin/gh/portfolio/public/images
+/Users/prahlin/gh/portfolio/public/images/address_overlay_large.png
+/Users/prahlin/gh/portfolio/public/images/address_overlay_small.png
 /Users/prahlin/gh/portfolio/public/images/cinerific-intro.png
+/Users/prahlin/gh/portfolio/public/images/confirmed_overlay_large.png
 /Users/prahlin/gh/portfolio/public/images/confirmed_overlay_small.png
+/Users/prahlin/gh/portfolio/public/images/contact_overlay_large.png
+/Users/prahlin/gh/portfolio/public/images/contact_overlay_small.png
+/Users/prahlin/gh/portfolio/public/images/empty_cart_overlay_large.png
+/Users/prahlin/gh/portfolio/public/images/empty_cart_overlay_small.png
+/Users/prahlin/gh/portfolio/public/images/filled_cart_overlay_large.png
+/Users/prahlin/gh/portfolio/public/images/filled_cart_overlay_small.png
 /Users/prahlin/gh/portfolio/public/images/martin-profile.png
 /Users/prahlin/gh/portfolio/public/images/martin1.jpg
 /Users/prahlin/gh/portfolio/public/images/martin2.jpg
 /Users/prahlin/gh/portfolio/public/images/martin3.jpg
+/Users/prahlin/gh/portfolio/public/images/payment_confirmation_overlay_large.png
+/Users/prahlin/gh/portfolio/public/images/payment_confirmation_overlay_small.png
+/Users/prahlin/gh/portfolio/public/images/payment_input_large.png
+/Users/prahlin/gh/portfolio/public/images/payment_input_small.png
+/Users/prahlin/gh/portfolio/public/images/payment_overlay_large.png
+/Users/prahlin/gh/portfolio/public/images/payment_overlay_small.png
+/Users/prahlin/gh/portfolio/public/images/products_overlay_large.png
 /Users/prahlin/gh/portfolio/public/images/products_overlay_small.png
+/Users/prahlin/gh/portfolio/public/images/shop_preview_large.png
+/Users/prahlin/gh/portfolio/public/images/shop_preview_small.png
 /Users/prahlin/gh/portfolio/public/images/start-page-mockup-reference.png
 /Users/prahlin/gh/portfolio/public/images/startup_screen_large.png
 /Users/prahlin/gh/portfolio/public/images/startup_screen_small.png
+/Users/prahlin/gh/portfolio/public/images/time_date_overlay_large.png
+/Users/prahlin/gh/portfolio/public/images/time_date_overlay_small.png
 /Users/prahlin/gh/portfolio/public/meta
 /Users/prahlin/gh/portfolio/read_project.sh
 /Users/prahlin/gh/portfolio/tsconfig.json
@@ -106,35 +132,44 @@ FILE CONTENTS - APP SOURCE
 FILE: app/layout.tsx
 ============================================================
 
-     1	import type { Metadata } from "next";
-     2	import "./globals.css";
-     3	
-     4	export const metadata: Metadata = {
-     5	  metadataBase: new URL(
-     6	    process.env.NEXT_PUBLIC_SITE_URL || "https://prahlin.dev",
-     7	  ),
-     8	  title: "Prahlin | React Native Full-Stack Mobile Developer",
-     9	  description:
-    10	    "Portfolio for Prahlin, a React Native full-stack mobile developer building polished mobile apps, secure checkout flows, and production-ready Android pipelines.",
-    11	  openGraph: {
-    12	    title: "Prahlin | React Native Full-Stack Mobile Developer",
-    13	    description:
-    14	      "React Native, Next.js, Tailwind CSS, Node.js, and Kotlin mobile portfolio.",
-    15	    images: ["/images/start-page-mockup-reference.png"],
-    16	  },
-    17	};
-    18	
-    19	export default function RootLayout({
-    20	  children,
-    21	}: Readonly<{
-    22	  children: React.ReactNode;
-    23	}>) {
-    24	  return (
-    25	    <html lang="en">
-    26	      <body>{children}</body>
-    27	    </html>
-    28	  );
-    29	}
+     1	import type { Metadata, Viewport } from "next";
+     2	import { ScreenshotPreviewLayer } from "./ScreenshotPreviewLayer";
+     3	import "./globals.css";
+     4	
+     5	export const metadata: Metadata = {
+     6	  metadataBase: new URL(
+     7	    process.env.NEXT_PUBLIC_SITE_URL || "https://prahlin.dev",
+     8	  ),
+     9	  title: "Prahlin | React Native Full-Stack Mobile Developer",
+    10	  description:
+    11	    "Portfolio for Prahlin, a React Native full-stack mobile developer building polished mobile apps, secure checkout flows, and production-ready Android pipelines.",
+    12	  openGraph: {
+    13	    title: "Prahlin | React Native Full-Stack Mobile Developer",
+    14	    description:
+    15	      "React Native, Next.js, Tailwind CSS, Node.js, and Kotlin mobile portfolio.",
+    16	    images: ["/images/start-page-mockup-reference.png"],
+    17	  },
+    18	};
+    19	
+    20	export const viewport: Viewport = {
+    21	  width: "device-width",
+    22	  initialScale: 1,
+    23	};
+    24	
+    25	export default function RootLayout({
+    26	  children,
+    27	}: Readonly<{
+    28	  children: React.ReactNode;
+    29	}>) {
+    30	  return (
+    31	    <html lang="en">
+    32	      <body>
+    33	        {children}
+    34	        <ScreenshotPreviewLayer />
+    35	      </body>
+    36	    </html>
+    37	  );
+    38	}
 
 
 ============================================================
@@ -182,398 +217,437 @@ FILE: app/page.tsx
     39	type CaseStudy = {
     40	  description: string;
     41	  eyebrow: string;
-    42	  id: string;
-    43	  screenshots: CaseScreenshot[];
-    44	  stat: string;
-    45	  tags: string[];
-    46	  title: string;
-    47	};
-    48	
-    49	const caseStudies: CaseStudy[] = [
-    50	  {
-    51	    id: "cinerific",
-    52	    title: "Cinerific",
-    53	    eyebrow: "Native Android entertainment preview",
-    54	    description:
-    55	      "Kotlin and Jetpack Compose Android app scaffold translating Figma intro and sign-in frames into tablet-friendly full-screen screens, drawable assets, and an animated intro flow.",
-    56	    tags: ["Kotlin", "Compose", "Gradle", "TypeScript"],
-    57	    stat: "3 commits",
-    58	    screenshots: [
-    59	      {
-    60	        alt: "Cinerific intro logo frame",
-    61	        orientation: "landscape",
-    62	        src: "/images/cinerific-intro.png",
-    63	      },
-    64	    ],
-    65	  },
-    66	  {
-    67	    id: "alla-vostra",
-    68	    title: "Alla Vostra",
-    69	    eyebrow: "Flagship full-stack mobile commerce",
-    70	    description:
-    71	      "Expo/React Native ordering flow with Stripe, Postmark, Vercel serverless routes, Android device testing, and Play Store preparation.",
-    72	    tags: ["React Native", "Stripe", "Node.js", "EAS"],
-    73	    stat: "328 commits",
-    74	    screenshots: [
-    75	      {
-    76	        alt: "Alla Vostra startup screen",
-    77	        src: "/images/startup_screen_small.png",
-    78	      },
-    79	      {
-    80	        alt: "Alla Vostra products screen",
-    81	        src: "/images/products_overlay_small.png",
-    82	      },
-    83	      {
-    84	        alt: "Alla Vostra confirmation screen",
-    85	        src: "/images/confirmed_overlay_small.png",
-    86	      },
-    87	    ],
-    88	  },
-    89	  {
-    90	    id: "credit-king",
-    91	    title: "Credit King",
-    92	    eyebrow: "Finance app UI system",
-    93	    description:
-    94	      "React Native dashboard, animated navigation, Figma asset translation, responsive web/Android parity, and reusable app chrome.",
-    95	    tags: ["Expo Router", "SVG", "Animation", "Figma"],
-    96	    stat: "94 commits",
-    97	    screenshots: [],
-    98	  },
-    99	];
-   100	
-   101	const worklogItems = [
-   102	  "From responsive website prototype to Expo Router mobile architecture",
-   103	  "Secure Stripe card flow, Google Pay, PayPal, and Postmark confirmations",
-   104	  "Android Small, Standard, and Large emulator QA with release-ready EAS builds",
-   105	];
-   106	
-   107	function PhonePreview({
-   108	  title,
-   109	  metric,
-   110	  variant,
-   111	  screenImageSrc,
-   112	  screenImageAlt,
-   113	}: {
-   114	  title: string;
-   115	  metric: string;
-   116	  variant: "commerce" | "finance";
-   117	  screenImageSrc?: string;
-   118	  screenImageAlt?: string;
-   119	}) {
-   120	  return (
-   121	    <div className={`phone-shell phone-shell-${variant}`}>
-   122	      <div className="phone-speaker" />
-   123	      <div className={`phone-screen${screenImageSrc ? " has-image" : ""}`}>
-   124	        {screenImageSrc ? (
-   125	          <div className="phone-screen-image-frame">
-   126	            <Image
-   127	              alt={screenImageAlt ?? `${title} app screen`}
-   128	              className="phone-screen-image"
-   129	              fill
-   130	              sizes="245px"
-   131	              src={screenImageSrc}
-   132	            />
-   133	          </div>
-   134	        ) : (
-   135	          <>
-   136	            <div className="phone-status">
-   137	              <span>{title}</span>
-   138	              <span>5G</span>
-   139	            </div>
-   140	            <div className="phone-chart">
-   141	              <div />
-   142	              <div />
-   143	              <div />
-   144	              <div />
-   145	            </div>
-   146	            <div className="phone-cardline wide" />
-   147	            <div className="phone-cardline" />
-   148	            <div className="phone-grid">
-   149	              <span />
-   150	              <span />
-   151	              <span />
-   152	              <span />
-   153	            </div>
-   154	            <div className="phone-cta">{metric}</div>
-   155	          </>
-   156	        )}
-   157	      </div>
-   158	    </div>
-   159	  );
-   160	}
-   161	
-   162	function TabletPreview() {
-   163	  return (
-   164	    <div className="tablet-shell" aria-hidden="true">
-   165	      <div className="tablet-camera" />
-   166	      <div className="tablet-screen">
-   167	        <Image
-   168	          alt=""
-   169	          className="tablet-screen-image"
-   170	          fill
-   171	          sizes="456px"
-   172	          src="/images/cinerific-intro.png"
-   173	        />
-   174	        <div className="tablet-empty-grid" />
-   175	      </div>
-   176	    </div>
-   177	  );
-   178	}
+    42	  href?: string;
+    43	  id: string;
+    44	  screenshots: CaseScreenshot[];
+    45	  stat: string;
+    46	  tags: string[];
+    47	  title: string;
+    48	};
+    49	
+    50	const caseStudies: CaseStudy[] = [
+    51	  {
+    52	    id: "cinerific",
+    53	    title: "Cinerific",
+    54	    eyebrow: "Native Android entertainment preview",
+    55	    description:
+    56	      "Kotlin and Jetpack Compose Android app scaffold translating Figma intro and sign-in frames into tablet-friendly full-screen screens, drawable assets, and an animated intro flow.",
+    57	    tags: ["Kotlin", "Compose", "Gradle", "TypeScript"],
+    58	    stat: "3 commits",
+    59	    screenshots: [
+    60	      {
+    61	        alt: "Cinerific intro logo frame",
+    62	        orientation: "landscape",
+    63	        src: "/images/cinerific-intro.png",
+    64	      },
+    65	    ],
+    66	  },
+    67	  {
+    68	    id: "alla-vostra",
+    69	    title: "Alla Vostra",
+    70	    eyebrow: "Flagship full-stack mobile commerce",
+    71	    href: "/projects/alla-vostra",
+    72	    description:
+    73	      "Expo/React Native ordering flow with Stripe, Postmark, Vercel serverless routes, Android device testing, and Play Store preparation.",
+    74	    tags: ["React Native", "Stripe", "Node.js", "EAS"],
+    75	    stat: "328 commits",
+    76	    screenshots: [
+    77	      {
+    78	        alt: "Alla Vostra startup screen",
+    79	        src: "/images/startup_screen_small.png",
+    80	      },
+    81	      {
+    82	        alt: "Alla Vostra products screen",
+    83	        src: "/images/products_overlay_small.png",
+    84	      },
+    85	      {
+    86	        alt: "Alla Vostra confirmation screen",
+    87	        src: "/images/confirmed_overlay_small.png",
+    88	      },
+    89	    ],
+    90	  },
+    91	  {
+    92	    id: "credit-king",
+    93	    title: "Credit King",
+    94	    eyebrow: "Finance app UI system",
+    95	    description:
+    96	      "React Native dashboard, animated navigation, Figma asset translation, responsive web/Android parity, and reusable app chrome.",
+    97	    tags: ["Expo Router", "SVG", "Animation", "Figma"],
+    98	    stat: "94 commits",
+    99	    screenshots: [],
+   100	  },
+   101	];
+   102	
+   103	const worklogItems = [
+   104	  "From responsive website prototype to Expo Router mobile architecture",
+   105	  "Secure Stripe card flow, Google Pay, PayPal, and Postmark confirmations",
+   106	  "Android Small, Standard, and Large emulator QA with release-ready EAS builds",
+   107	];
+   108	
+   109	function PhonePreview({
+   110	  title,
+   111	  metric,
+   112	  variant,
+   113	  href,
+   114	  screenImageSrc,
+   115	  screenImageAlt,
+   116	}: {
+   117	  href?: string;
+   118	  title: string;
+   119	  metric: string;
+   120	  variant: "commerce" | "finance";
+   121	  screenImageSrc?: string;
+   122	  screenImageAlt?: string;
+   123	}) {
+   124	  const className = `phone-shell phone-shell-${variant}${
+   125	    screenImageSrc ? " phone-shell-capture" : ""
+   126	  }${href ? " phone-shell-link" : ""}`;
+   127	  const content = (
+   128	    <>
+   129	      <div className="phone-speaker" />
+   130	      <div className={`phone-screen${screenImageSrc ? " has-image" : ""}`}>
+   131	        {screenImageSrc ? (
+   132	          <div className="phone-screen-image-frame">
+   133	            <Image
+   134	              alt={screenImageAlt ?? `${title} app screen`}
+   135	              className="phone-screen-image"
+   136	              fill
+   137	              sizes="245px"
+   138	              src={screenImageSrc}
+   139	            />
+   140	          </div>
+   141	        ) : (
+   142	          <>
+   143	            <div className="phone-status">
+   144	              <span>{title}</span>
+   145	              <span>5G</span>
+   146	            </div>
+   147	            <div className="phone-chart">
+   148	              <div />
+   149	              <div />
+   150	              <div />
+   151	              <div />
+   152	            </div>
+   153	            <div className="phone-cardline wide" />
+   154	            <div className="phone-cardline" />
+   155	            <div className="phone-grid">
+   156	              <span />
+   157	              <span />
+   158	              <span />
+   159	              <span />
+   160	            </div>
+   161	            <div className="phone-cta">{metric}</div>
+   162	          </>
+   163	        )}
+   164	      </div>
+   165	    </>
+   166	  );
+   167	
+   168	  if (href) {
+   169	    return (
+   170	      <a
+   171	        aria-label={`Open ${title} case study`}
+   172	        className={className}
+   173	        href={href}
+   174	      >
+   175	        {content}
+   176	      </a>
+   177	    );
+   178	  }
    179	
-   180	function SectionHeading({
-   181	  kicker,
-   182	  title,
-   183	}: {
-   184	  kicker: string;
-   185	  title: string;
-   186	}) {
-   187	  return (
-   188	    <div className="section-heading">
-   189	      <p>{kicker}</p>
-   190	      <h2>{title}</h2>
-   191	    </div>
-   192	  );
-   193	}
-   194	
-   195	export default function Home() {
-   196	  return (
-   197	    <main>
-   198	      <section className="hero" id="top">
-   199	        <div className="site-shell">
-   200	          <header className="nav-bar">
-   201	            <a className="brand" href="#top" aria-label="Martin Prahl home">
-   202	              <span>P</span>
-   203	              <strong>Martin Prahl</strong>
-   204	            </a>
-   205	
-   206	            <nav aria-label="Main navigation">
-   207	              {navItems.map((item) => (
-   208	                <a
-   209	                  key={item}
-   210	                  href={`#${item.toLowerCase().replace(" ", "-")}`}
-   211	                >
-   212	                  {item}
-   213	                </a>
-   214	              ))}
-   215	            </nav>
-   216	          </header>
-   217	
-   218	          <div className="hero-grid">
-   219	            <div className="hero-copy">
-   220	              <p className="eyebrow">
-   221	                React Native first. Kotlin ready. Full-stack where it counts.
-   222	              </p>
-   223	              <h1>React Native Full-Stack Mobile Developer</h1>
-   224	              <p className="hero-lede">
-   225	                Polished mobile apps, secure checkout flows, and
-   226	                production-ready Android pipelines.
-   227	              </p>
-   228	
-   229	              <div className="hero-actions">
-   230	                <ProjectCarouselButton />
-   231	                <a
-   232	                  className="button button-secondary"
-   233	                  href="https://github.com/Prahlin"
-   234	                  rel="noreferrer"
-   235	                  target="_blank"
-   236	                >
-   237	                  <Braces aria-hidden size={18} />
-   238	                  GitHub
-   239	                </a>
-   240	              </div>
-   241	
-   242	              <div className="stack-row" aria-label="Primary stack">
-   243	                {stackChips.map((chip) => (
-   244	                  <span key={chip}>{chip}</span>
-   245	                ))}
-   246	              </div>
-   247	
-   248	              <div className="proof-panel">
-   249	                <div>
-   250	                  <Store aria-hidden size={18} />
-   251	                  <span>Play Store prep</span>
-   252	                </div>
-   253	                <div>
-   254	                  <Server aria-hidden size={18} />
-   255	                  <span>Stripe + Postmark backend</span>
-   256	                </div>
-   257	              </div>
-   258	            </div>
+   180	  return <div className={className}>{content}</div>;
+   181	}
+   182	
+   183	function TabletPreview() {
+   184	  return (
+   185	    <div className="tablet-shell" aria-hidden="true">
+   186	      <div className="tablet-camera" />
+   187	      <div className="tablet-screen">
+   188	        <Image
+   189	          alt=""
+   190	          className="tablet-screen-image"
+   191	          fill
+   192	          sizes="456px"
+   193	          src="/images/cinerific-intro.png"
+   194	        />
+   195	        <div className="tablet-empty-grid" />
+   196	      </div>
+   197	    </div>
+   198	  );
+   199	}
+   200	
+   201	function SectionHeading({
+   202	  kicker,
+   203	  title,
+   204	}: {
+   205	  kicker: string;
+   206	  title: string;
+   207	}) {
+   208	  return (
+   209	    <div className="section-heading">
+   210	      <p>{kicker}</p>
+   211	      <h2>{title}</h2>
+   212	    </div>
+   213	  );
+   214	}
+   215	
+   216	function CaseStudyCard({ study }: { study: CaseStudy }) {
+   217	  const content = (
+   218	    <>
+   219	      <div className="case-topline">
+   220	        <span>{study.eyebrow}</span>
+   221	        <strong>{study.stat}</strong>
+   222	      </div>
+   223	      <h3>{study.title}</h3>
+   224	      <p>{study.description}</p>
+   225	      <div className="case-tags">
+   226	        {study.tags.map((tag) => (
+   227	          <span key={tag}>{tag}</span>
+   228	        ))}
+   229	      </div>
+   230	      {study.screenshots.length > 0 ? (
+   231	        <div
+   232	          aria-label={`${study.title} app screenshots`}
+   233	          className={`case-miniatures${
+   234	            study.screenshots.some(
+   235	              (screenshot) => screenshot.orientation === "landscape",
+   236	            )
+   237	              ? " case-miniatures-landscape"
+   238	              : ""
+   239	          }`}
+   240	        >
+   241	          {study.screenshots.map((screenshot) => (
+   242	            <Image
+   243	              alt={screenshot.alt}
+   244	              className={`case-miniature${
+   245	                screenshot.orientation === "landscape"
+   246	                  ? " case-miniature-landscape"
+   247	                  : ""
+   248	              }`}
+   249	              height={screenshot.orientation === "landscape" ? 166 : 192}
+   250	              key={screenshot.src}
+   251	              src={screenshot.src}
+   252	              width={screenshot.orientation === "landscape" ? 238 : 108}
+   253	            />
+   254	          ))}
+   255	        </div>
+   256	      ) : null}
+   257	    </>
+   258	  );
    259	
-   260	            <div className="hero-visual" aria-label="Portfolio preview">
-   261	              <div className="profile-orbit">
-   262	                <Image
-   263	                  alt="Martin Prahl profile photo"
-   264	                  src="/images/martin3.jpg"
-   265	                  width={220}
-   266	                  height={220}
-   267	                  priority
-   268	                  className="profile-photo"
-   269	                />
-   270	                <span>Martin Prahl</span>
-   271	              </div>
+   260	  if (study.href) {
+   261	    return (
+   262	      <a
+   263	        aria-label={`Open ${study.title} case study`}
+   264	        className="case-card case-card-link"
+   265	        href={study.href}
+   266	        id={study.id}
+   267	      >
+   268	        {content}
+   269	      </a>
+   270	    );
+   271	  }
    272	
-   273	              <div className="phone-stage">
-   274	                <TabletPreview />
-   275	                <PhonePreview
-   276	                  title="Alla Vostra"
-   277	                  metric="Checkout ready"
-   278	                  variant="commerce"
-   279	                  screenImageSrc="/images/startup_screen_large.png"
-   280	                  screenImageAlt="Alla Vostra startup screen"
-   281	                />
-   282	                <PhonePreview
-   283	                  title="CreditKing"
-   284	                  metric="Finance UI"
-   285	                  variant="finance"
-   286	                />
-   287	              </div>
-   288	            </div>
-   289	          </div>
+   273	  return (
+   274	    <article className="case-card" id={study.id}>
+   275	      {content}
+   276	    </article>
+   277	  );
+   278	}
+   279	
+   280	export default function Home() {
+   281	  return (
+   282	    <main>
+   283	      <section className="hero" id="top">
+   284	        <div className="site-shell">
+   285	          <header className="nav-bar">
+   286	            <a className="brand" href="#top" aria-label="Martin Prahl home">
+   287	              <span>P</span>
+   288	              <strong>Martin Prahl</strong>
+   289	            </a>
    290	
-   291	          <div className="stats-strip" aria-label="Project proof points">
-   292	            {proofStats.map((stat) => (
-   293	              <div key={stat.label}>
-   294	                <strong>{stat.value}</strong>
-   295	                <span>{stat.label}</span>
-   296	              </div>
-   297	            ))}
-   298	          </div>
-   299	        </div>
-   300	      </section>
-   301	
-   302	      <section className="case-section" id="case-studies">
-   303	        <div className="site-shell">
-   304	          <SectionHeading
-   305	            kicker="Featured case studies"
-   306	            title="Mobile products with real implementation depth"
-   307	          />
-   308	
-   309	          <div className="case-grid">
-   310	            {caseStudies.map((study) => (
-   311	              <article
-   312	                className="case-card"
-   313	                id={study.id}
-   314	                key={study.title}
-   315	              >
-   316	                <div className="case-topline">
-   317	                  <span>{study.eyebrow}</span>
-   318	                  <strong>{study.stat}</strong>
-   319	                </div>
-   320	                <h3>{study.title}</h3>
-   321	                <p>{study.description}</p>
-   322	                <div className="case-tags">
-   323	                  {study.tags.map((tag) => (
-   324	                    <span key={tag}>{tag}</span>
-   325	                  ))}
-   326	                </div>
-   327	                {study.screenshots.length > 0 ? (
-   328	                  <div
-   329	                    aria-label={`${study.title} app screenshots`}
-   330	                    className={`case-miniatures${
-   331	                      study.screenshots.some(
-   332	                        (screenshot) => screenshot.orientation === "landscape",
-   333	                      )
-   334	                        ? " case-miniatures-landscape"
-   335	                        : ""
-   336	                    }`}
-   337	                  >
-   338	                    {study.screenshots.map((screenshot) => (
-   339	                      <Image
-   340	                        alt={screenshot.alt}
-   341	                        className={`case-miniature${
-   342	                          screenshot.orientation === "landscape"
-   343	                            ? " case-miniature-landscape"
-   344	                            : ""
-   345	                        }`}
-   346	                        height={
-   347	                          screenshot.orientation === "landscape" ? 166 : 192
-   348	                        }
-   349	                        key={screenshot.src}
-   350	                        src={screenshot.src}
-   351	                        width={
-   352	                          screenshot.orientation === "landscape" ? 238 : 108
-   353	                        }
-   354	                      />
-   355	                    ))}
-   356	                  </div>
-   357	                ) : null}
-   358	              </article>
-   359	            ))}
-   360	          </div>
-   361	        </div>
-   362	      </section>
-   363	
-   364	      <section className="stack-section" id="stack">
-   365	        <div className="site-shell split-section">
-   366	          <SectionHeading
-   367	            kicker="Stack"
-   368	            title="Built around React Native, shaped for full-stack delivery"
-   369	          />
-   370	          <div className="capability-grid">
-   371	            <div>
-   372	              <MonitorSmartphone aria-hidden />
-   373	              <h3>Main stack</h3>
-   374	              <p>
-   375	                React, React Native, Expo Router, Next.js, Tailwind CSS, and
-   376	                mobile-first responsive UI systems.
-   377	              </p>
-   378	            </div>
-   379	            <div>
-   380	              <Braces aria-hidden />
-   381	              <h3>Backend layer</h3>
-   382	              <p>
-   383	                Node.js serverless routes, Stripe payment setup, Postmark email
-   384	                delivery, environment configuration, and deployment workflows.
-   385	              </p>
-   386	            </div>
-   387	            <div>
-   388	              <Smartphone aria-hidden />
-   389	              <h3>Secondary mobile</h3>
-   390	              <p>
-   391	                Kotlin and Android Studio as the native Android path, aligned
-   392	                with the same release and device-testing discipline.
-   393	              </p>
-   394	            </div>
-   395	          </div>
-   396	        </div>
-   397	      </section>
-   398	
-   399	      <section className="worklog-section" id="worklog">
-   400	        <div className="site-shell worklog-layout">
-   401	          <SectionHeading
-   402	            kicker="Worklog"
-   403	            title="A documented build history, not just final screenshots"
-   404	          />
-   405	          <div className="timeline">
-   406	            {worklogItems.map((item, index) => (
-   407	              <div key={item} className="timeline-item">
-   408	                <span>{String(index + 1).padStart(2, "0")}</span>
-   409	                <p>{item}</p>
-   410	              </div>
-   411	            ))}
-   412	          </div>
-   413	        </div>
-   414	      </section>
-   415	
-   416	      <section className="contact-section" id="contact">
-   417	        <div className="site-shell contact-panel">
-   418	          <div>
-   419	            <p className="eyebrow">Available for full-stack mobile work</p>
-   420	            <h2>Let’s build something crisp, fast, and release-ready.</h2>
-   421	          </div>
-   422	          <a
-   423	            className="button button-primary"
-   424	            href="mailto:martin@prahlproductions.com"
-   425	          >
-   426	            <Mail aria-hidden size={18} />
-   427	            martin@prahlproductions.com
-   428	          </a>
-   429	        </div>
-   430	      </section>
-   431	    </main>
-   432	  );
-   433	}
+   291	            <nav aria-label="Main navigation">
+   292	              {navItems.map((item) => (
+   293	                <a
+   294	                  key={item}
+   295	                  href={`#${item.toLowerCase().replace(" ", "-")}`}
+   296	                >
+   297	                  {item}
+   298	                </a>
+   299	              ))}
+   300	            </nav>
+   301	          </header>
+   302	
+   303	          <div className="hero-grid">
+   304	            <div className="hero-copy">
+   305	              <p className="eyebrow">
+   306	                React Native first. Kotlin ready. Full-stack where it counts.
+   307	              </p>
+   308	              <h1>React Native Full-Stack Mobile Developer</h1>
+   309	              <p className="hero-lede">
+   310	                Polished mobile apps, secure checkout flows, and
+   311	                production-ready Android pipelines.
+   312	              </p>
+   313	
+   314	              <div className="hero-actions">
+   315	                <ProjectCarouselButton />
+   316	                <a
+   317	                  className="button button-secondary"
+   318	                  href="https://github.com/Prahlin"
+   319	                  rel="noreferrer"
+   320	                  target="_blank"
+   321	                >
+   322	                  <Braces aria-hidden size={18} />
+   323	                  GitHub
+   324	                </a>
+   325	              </div>
+   326	
+   327	              <div className="stack-row" aria-label="Primary stack">
+   328	                {stackChips.map((chip) => (
+   329	                  <span key={chip}>{chip}</span>
+   330	                ))}
+   331	              </div>
+   332	
+   333	              <div className="proof-panel">
+   334	                <div>
+   335	                  <Store aria-hidden size={18} />
+   336	                  <span>Play Store prep</span>
+   337	                </div>
+   338	                <div>
+   339	                  <Server aria-hidden size={18} />
+   340	                  <span>Stripe + Postmark backend</span>
+   341	                </div>
+   342	              </div>
+   343	            </div>
+   344	
+   345	            <div className="hero-visual" aria-label="Portfolio preview">
+   346	              <div className="profile-orbit">
+   347	                <Image
+   348	                  alt="Martin Prahl profile photo"
+   349	                  src="/images/martin3.jpg"
+   350	                  width={220}
+   351	                  height={220}
+   352	                  priority
+   353	                  className="profile-photo"
+   354	                />
+   355	                <span>Martin Prahl</span>
+   356	              </div>
+   357	
+   358	              <div className="phone-stage">
+   359	                <TabletPreview />
+   360	                <PhonePreview
+   361	                  title="Alla Vostra"
+   362	                  metric="Checkout ready"
+   363	                  variant="commerce"
+   364	                  href="/projects/alla-vostra"
+   365	                  screenImageSrc="/images/startup_screen_large.png"
+   366	                  screenImageAlt="Alla Vostra startup screen"
+   367	                />
+   368	                <PhonePreview
+   369	                  title="CreditKing"
+   370	                  metric="Finance UI"
+   371	                  variant="finance"
+   372	                />
+   373	              </div>
+   374	            </div>
+   375	          </div>
+   376	
+   377	          <div className="stats-strip" aria-label="Project proof points">
+   378	            {proofStats.map((stat) => (
+   379	              <div key={stat.label}>
+   380	                <strong>{stat.value}</strong>
+   381	                <span>{stat.label}</span>
+   382	              </div>
+   383	            ))}
+   384	          </div>
+   385	        </div>
+   386	      </section>
+   387	
+   388	      <section className="case-section" id="case-studies">
+   389	        <div className="site-shell">
+   390	          <SectionHeading
+   391	            kicker="Featured case studies"
+   392	            title="Mobile products with real implementation depth"
+   393	          />
+   394	
+   395	          <div className="case-grid">
+   396	            {caseStudies.map((study) => (
+   397	              <CaseStudyCard key={study.title} study={study} />
+   398	            ))}
+   399	          </div>
+   400	        </div>
+   401	      </section>
+   402	
+   403	      <section className="stack-section" id="stack">
+   404	        <div className="site-shell split-section">
+   405	          <SectionHeading
+   406	            kicker="Stack"
+   407	            title="Built around React Native, shaped for full-stack delivery"
+   408	          />
+   409	          <div className="capability-grid">
+   410	            <div>
+   411	              <MonitorSmartphone aria-hidden />
+   412	              <h3>Main stack</h3>
+   413	              <p>
+   414	                React, React Native, Expo Router, Next.js, Tailwind CSS, and
+   415	                mobile-first responsive UI systems.
+   416	              </p>
+   417	            </div>
+   418	            <div>
+   419	              <Braces aria-hidden />
+   420	              <h3>Backend layer</h3>
+   421	              <p>
+   422	                Node.js serverless routes, Stripe payment setup, Postmark email
+   423	                delivery, environment configuration, and deployment workflows.
+   424	              </p>
+   425	            </div>
+   426	            <div>
+   427	              <Smartphone aria-hidden />
+   428	              <h3>Secondary mobile</h3>
+   429	              <p>
+   430	                Kotlin and Android Studio as the native Android path, aligned
+   431	                with the same release and device-testing discipline.
+   432	              </p>
+   433	            </div>
+   434	          </div>
+   435	        </div>
+   436	      </section>
+   437	
+   438	      <section className="worklog-section" id="worklog">
+   439	        <div className="site-shell worklog-layout">
+   440	          <SectionHeading
+   441	            kicker="Worklog"
+   442	            title="A documented build history, not just final screenshots"
+   443	          />
+   444	          <div className="timeline">
+   445	            {worklogItems.map((item, index) => (
+   446	              <div key={item} className="timeline-item">
+   447	                <span>{String(index + 1).padStart(2, "0")}</span>
+   448	                <p>{item}</p>
+   449	              </div>
+   450	            ))}
+   451	          </div>
+   452	        </div>
+   453	      </section>
+   454	
+   455	      <section className="contact-section" id="contact">
+   456	        <div className="site-shell contact-panel">
+   457	          <div>
+   458	            <p className="eyebrow">Available for full-stack mobile work</p>
+   459	            <h2>Let’s build something crisp, fast, and release-ready.</h2>
+   460	          </div>
+   461	          <a
+   462	            className="button button-primary"
+   463	            href="mailto:martin@prahlproductions.com"
+   464	          >
+   465	            <Mail aria-hidden size={18} />
+   466	            martin@prahlproductions.com
+   467	          </a>
+   468	        </div>
+   469	      </section>
+   470	    </main>
+   471	  );
+   472	}
 
 
 ============================================================
@@ -587,7 +661,7 @@ FILE: app/ProjectCarouselButton.tsx
      5	
      6	const projectLinks = [
      7	  { href: "#cinerific", label: "View 'Cinerific'" },
-     8	  { href: "#alla-vostra", label: "View 'Alla Vostra'" },
+     8	  { href: "/projects/alla-vostra", label: "View 'Alla Vostra'" },
      9	  { href: "#credit-king", label: "View 'Credit King'" },
     10	];
     11	
@@ -637,901 +711,1784 @@ FILE: app/globals.css
     12	  --green: #43ff92;
     13	  --green-2: #00bf63;
     14	  --mint: #c6ffd9;
-    15	}
-    16	
-    17	* {
-    18	  box-sizing: border-box;
+    15	  --capture-frame-radius-tall: 17px;
+    16	  --capture-frame-radius-standard: 7.5px;
+    17	  --capture-screen-radius-tall: 12px;
+    18	  --capture-screen-radius-standard: 6px;
     19	}
     20	
-    21	html {
-    22	  scroll-behavior: smooth;
+    21	* {
+    22	  box-sizing: border-box;
     23	}
     24	
-    25	body {
-    26	  min-height: 100vh;
-    27	  margin: 0;
-    28	  background:
-    29	    linear-gradient(rgba(67, 255, 146, 0.035) 1px, transparent 1px),
-    30	    linear-gradient(90deg, rgba(67, 255, 146, 0.035) 1px, transparent 1px),
-    31	    radial-gradient(circle at 78% 18%, rgba(0, 191, 99, 0.18), transparent 34%),
-    32	    linear-gradient(135deg, #020403 0%, #050b08 38%, #010302 100%);
-    33	  background-size: 48px 48px, 48px 48px, auto, auto;
-    34	  color: var(--text);
-    35	  font-family:
-    36	    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-    37	    sans-serif;
-    38	}
-    39	
-    40	a {
-    41	  color: inherit;
-    42	  text-decoration: none;
-    43	}
-    44	
-    45	button,
-    46	a {
-    47	  -webkit-tap-highlight-color: transparent;
-    48	}
-    49	
-    50	.site-shell {
-    51	  width: min(1180px, calc(100% - 36px));
-    52	  margin: 0 auto;
-    53	}
-    54	
-    55	.hero {
-    56	  min-height: 100vh;
-    57	  overflow: hidden;
-    58	  padding: 24px 0 48px;
-    59	  position: relative;
-    60	}
-    61	
-    62	.hero::after {
-    63	  content: "";
-    64	  position: absolute;
-    65	  inset: auto 0 0;
-    66	  height: 36%;
-    67	  pointer-events: none;
-    68	  background: linear-gradient(transparent, var(--bg));
-    69	}
-    70	
-    71	.nav-bar {
-    72	  align-items: center;
-    73	  border: 1px solid var(--line);
-    74	  border-radius: 8px;
-    75	  display: flex;
-    76	  justify-content: space-between;
-    77	  min-height: 64px;
-    78	  padding: 0 18px;
-    79	  position: relative;
-    80	  z-index: 3;
-    81	}
-    82	
-    83	.brand {
-    84	  align-items: center;
-    85	  display: inline-flex;
-    86	  gap: 10px;
-    87	  font-size: 15px;
-    88	}
-    89	
-    90	.brand span {
-    91	  align-items: center;
-    92	  background: linear-gradient(135deg, var(--green), #0a8c4d);
-    93	  border-radius: 6px;
-    94	  color: #001d0f;
-    95	  display: inline-flex;
-    96	  font-weight: 900;
-    97	  height: 34px;
-    98	  justify-content: center;
-    99	  width: 34px;
-   100	}
-   101	
-   102	.nav-bar nav {
-   103	  align-items: center;
-   104	  display: flex;
-   105	  gap: 8px;
-   106	  min-width: 0;
+    25	html {
+    26	  scroll-behavior: smooth;
+    27	}
+    28	
+    29	body {
+    30	  min-height: 100vh;
+    31	  margin: 0;
+    32	  background:
+    33	    linear-gradient(rgba(67, 255, 146, 0.035) 1px, transparent 1px),
+    34	    linear-gradient(90deg, rgba(67, 255, 146, 0.035) 1px, transparent 1px),
+    35	    radial-gradient(circle at 78% 18%, rgba(0, 191, 99, 0.18), transparent 34%),
+    36	    linear-gradient(135deg, #020403 0%, #050b08 38%, #010302 100%);
+    37	  background-size: 48px 48px, 48px 48px, auto, auto;
+    38	  color: var(--text);
+    39	  font-family:
+    40	    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    41	    sans-serif;
+    42	}
+    43	
+    44	a {
+    45	  color: inherit;
+    46	  text-decoration: none;
+    47	}
+    48	
+    49	button,
+    50	a {
+    51	  -webkit-tap-highlight-color: transparent;
+    52	}
+    53	
+    54	img[data-screenshot-preview] {
+    55	  -webkit-touch-callout: none;
+    56	  cursor: zoom-in;
+    57	  user-select: none;
+    58	}
+    59	
+    60	.screenshot-preview-layer {
+    61	  inset: 0;
+    62	  pointer-events: none;
+    63	  position: fixed;
+    64	  z-index: 10000;
+    65	}
+    66	
+    67	.screenshot-preview-popover {
+    68	  background: #020403;
+    69	  border: 1px solid var(--line-strong);
+    70	  box-shadow: 0 42px 120px rgba(0, 0, 0, 0.72), 0 0 80px rgba(0, 191, 99, 0.16);
+    71	  display: block;
+    72	  pointer-events: none;
+    73	  position: fixed;
+    74	}
+    75	
+    76	.site-shell {
+    77	  width: min(1180px, calc(100% - 36px));
+    78	  margin: 0 auto;
+    79	}
+    80	
+    81	.hero {
+    82	  min-height: 100vh;
+    83	  overflow: hidden;
+    84	  padding: 24px 0 48px;
+    85	  position: relative;
+    86	}
+    87	
+    88	.hero::after {
+    89	  content: "";
+    90	  position: absolute;
+    91	  inset: auto 0 0;
+    92	  height: 36%;
+    93	  pointer-events: none;
+    94	  background: linear-gradient(transparent, var(--bg));
+    95	}
+    96	
+    97	.nav-bar {
+    98	  align-items: center;
+    99	  border: 1px solid var(--line);
+   100	  border-radius: 8px;
+   101	  display: flex;
+   102	  justify-content: space-between;
+   103	  min-height: 64px;
+   104	  padding: 0 18px;
+   105	  position: relative;
+   106	  z-index: 3;
    107	}
    108	
-   109	.nav-bar nav a {
-   110	  border-radius: 6px;
-   111	  color: var(--muted);
-   112	  font-size: 14px;
-   113	  padding: 10px 12px;
-   114	  transition: background 160ms ease, color 160ms ease;
-   115	  white-space: nowrap;
-   116	}
-   117	
-   118	.nav-bar nav a:hover {
-   119	  background: rgba(67, 255, 146, 0.08);
-   120	  color: var(--text);
-   121	}
-   122	
-   123	.hero-grid {
-   124	  align-items: center;
-   125	  display: grid;
-   126	  gap: 56px;
-   127	  grid-template-columns: minmax(0, 0.95fr) minmax(420px, 1.05fr);
-   128	  min-height: calc(100vh - 140px);
-   129	  padding: 54px 0 28px;
-   130	  position: relative;
-   131	  z-index: 2;
-   132	}
-   133	
-   134	.hero-copy {
-   135	  max-width: 670px;
-   136	}
-   137	
-   138	.eyebrow,
-   139	.section-heading p {
-   140	  color: var(--green);
-   141	  font-size: 13px;
-   142	  font-weight: 800;
-   143	  letter-spacing: 0.12em;
-   144	  margin: 0 0 16px;
-   145	  text-transform: uppercase;
-   146	}
-   147	
-   148	h1,
-   149	h2,
-   150	h3,
-   151	p {
-   152	  margin-top: 0;
-   153	}
-   154	
-   155	h1 {
-   156	  font-size: clamp(48px, 7vw, 92px);
-   157	  font-weight: 900;
-   158	  letter-spacing: 0;
-   159	  line-height: 0.92;
-   160	  margin-bottom: 24px;
-   161	}
-   162	
-   163	h2 {
-   164	  font-size: clamp(32px, 4vw, 56px);
-   165	  font-weight: 850;
-   166	  letter-spacing: 0;
-   167	  line-height: 1;
-   168	}
-   169	
-   170	h3 {
-   171	  font-size: 24px;
-   172	  font-weight: 800;
-   173	  letter-spacing: 0;
-   174	}
-   175	
-   176	.hero-lede {
-   177	  color: #c4d6cc;
-   178	  font-size: clamp(18px, 2vw, 24px);
-   179	  line-height: 1.45;
-   180	  max-width: 560px;
-   181	}
-   182	
-   183	.hero-actions {
-   184	  display: flex;
-   185	  flex-wrap: wrap;
-   186	  gap: 12px;
-   187	  margin-top: 32px;
-   188	}
-   189	
-   190	.button {
-   191	  align-items: center;
-   192	  border-radius: 8px;
-   193	  display: inline-flex;
-   194	  font-size: 15px;
-   195	  font-weight: 800;
-   196	  gap: 10px;
-   197	  justify-content: center;
-   198	  min-height: 48px;
-   199	  padding: 0 18px;
-   200	  transition: transform 160ms ease, border-color 160ms ease, background 160ms ease;
-   201	}
-   202	
-   203	.button:hover {
-   204	  transform: translateY(-2px);
-   205	}
-   206	
-   207	.button-primary {
-   208	  background: linear-gradient(135deg, var(--green), var(--green-2));
-   209	  color: #001b0d;
-   210	}
-   211	
-   212	.carousel-button {
-   213	  min-width: 190px;
-   214	  overflow: hidden;
-   215	}
-   216	
-   217	.carousel-button-window {
-   218	  display: inline-grid;
-   219	  min-width: 134px;
-   220	  overflow: hidden;
-   221	}
-   222	
-   223	.carousel-button-label {
-   224	  animation: project-swoosh 720ms cubic-bezier(0.18, 0.9, 0.28, 1.18);
-   225	  display: inline-block;
-   226	  will-change: transform, opacity;
+   109	.brand {
+   110	  align-items: center;
+   111	  display: inline-flex;
+   112	  gap: 10px;
+   113	  font-size: 15px;
+   114	}
+   115	
+   116	.brand span {
+   117	  align-items: center;
+   118	  background: linear-gradient(135deg, var(--green), #0a8c4d);
+   119	  border-radius: 6px;
+   120	  color: #001d0f;
+   121	  display: inline-flex;
+   122	  font-weight: 900;
+   123	  height: 34px;
+   124	  justify-content: center;
+   125	  width: 34px;
+   126	}
+   127	
+   128	.nav-bar nav {
+   129	  align-items: center;
+   130	  display: flex;
+   131	  gap: 8px;
+   132	  min-width: 0;
+   133	}
+   134	
+   135	.nav-bar nav a {
+   136	  border-radius: 6px;
+   137	  color: var(--muted);
+   138	  font-size: 14px;
+   139	  padding: 10px 12px;
+   140	  transition: background 160ms ease, color 160ms ease;
+   141	  white-space: nowrap;
+   142	}
+   143	
+   144	.nav-bar nav a:hover {
+   145	  background: rgba(67, 255, 146, 0.08);
+   146	  color: var(--text);
+   147	}
+   148	
+   149	.hero-grid {
+   150	  align-items: center;
+   151	  display: grid;
+   152	  gap: 56px;
+   153	  grid-template-columns: minmax(0, 0.95fr) minmax(420px, 1.05fr);
+   154	  min-height: calc(100vh - 140px);
+   155	  padding: 54px 0 28px;
+   156	  position: relative;
+   157	  z-index: 2;
+   158	}
+   159	
+   160	.hero-copy {
+   161	  max-width: 670px;
+   162	}
+   163	
+   164	.eyebrow,
+   165	.section-heading p {
+   166	  color: var(--green);
+   167	  font-size: 13px;
+   168	  font-weight: 800;
+   169	  letter-spacing: 0.12em;
+   170	  margin: 0 0 16px;
+   171	  text-transform: uppercase;
+   172	}
+   173	
+   174	h1,
+   175	h2,
+   176	h3,
+   177	p {
+   178	  margin-top: 0;
+   179	}
+   180	
+   181	h1 {
+   182	  font-size: clamp(48px, 7vw, 92px);
+   183	  font-weight: 900;
+   184	  letter-spacing: 0;
+   185	  line-height: 0.92;
+   186	  margin-bottom: 24px;
+   187	}
+   188	
+   189	h2 {
+   190	  font-size: clamp(32px, 4vw, 56px);
+   191	  font-weight: 850;
+   192	  letter-spacing: 0;
+   193	  line-height: 1;
+   194	}
+   195	
+   196	h3 {
+   197	  font-size: 24px;
+   198	  font-weight: 800;
+   199	  letter-spacing: 0;
+   200	}
+   201	
+   202	.hero-lede {
+   203	  color: #c4d6cc;
+   204	  font-size: clamp(18px, 2vw, 24px);
+   205	  line-height: 1.45;
+   206	  max-width: 560px;
+   207	}
+   208	
+   209	.hero-actions {
+   210	  display: flex;
+   211	  flex-wrap: wrap;
+   212	  gap: 12px;
+   213	  margin-top: 32px;
+   214	}
+   215	
+   216	.button {
+   217	  align-items: center;
+   218	  border-radius: 8px;
+   219	  display: inline-flex;
+   220	  font-size: 15px;
+   221	  font-weight: 800;
+   222	  gap: 10px;
+   223	  justify-content: center;
+   224	  min-height: 48px;
+   225	  padding: 0 18px;
+   226	  transition: transform 160ms ease, border-color 160ms ease, background 160ms ease;
    227	}
    228	
-   229	@keyframes project-swoosh {
-   230	  0% {
-   231	    opacity: 0;
-   232	    transform: translateX(46px) rotate(1.5deg) scale(0.96);
-   233	  }
-   234	
-   235	  48% {
-   236	    opacity: 1;
-   237	    transform: translateX(-7px) rotate(-0.6deg) scale(1.035);
-   238	  }
-   239	
-   240	  68% {
-   241	    transform: translateX(4px) rotate(0.35deg) scale(0.985);
-   242	  }
-   243	
-   244	  84% {
-   245	    transform: translateX(-2px) rotate(-0.2deg) scale(1.012);
-   246	  }
-   247	
-   248	  100% {
-   249	    opacity: 1;
-   250	    transform: translateX(0) rotate(0) scale(1);
-   251	  }
-   252	}
-   253	
-   254	@media (prefers-reduced-motion: reduce) {
-   255	  .carousel-button-label {
-   256	    animation: none;
-   257	  }
-   258	}
-   259	
-   260	.button-secondary {
-   261	  background: rgba(255, 255, 255, 0.04);
-   262	  border: 1px solid var(--line-strong);
-   263	  color: var(--text);
-   264	}
+   229	.button:hover {
+   230	  transform: translateY(-2px);
+   231	}
+   232	
+   233	.button-primary {
+   234	  background: linear-gradient(135deg, var(--green), var(--green-2));
+   235	  color: #001b0d;
+   236	}
+   237	
+   238	.carousel-button {
+   239	  min-width: 190px;
+   240	  overflow: hidden;
+   241	}
+   242	
+   243	.carousel-button-window {
+   244	  display: inline-grid;
+   245	  min-width: 134px;
+   246	  overflow: hidden;
+   247	}
+   248	
+   249	.carousel-button-label {
+   250	  animation: project-swoosh 720ms cubic-bezier(0.18, 0.9, 0.28, 1.18);
+   251	  display: inline-block;
+   252	  will-change: transform, opacity;
+   253	}
+   254	
+   255	@keyframes project-swoosh {
+   256	  0% {
+   257	    opacity: 0;
+   258	    transform: translateX(46px) rotate(1.5deg) scale(0.96);
+   259	  }
+   260	
+   261	  48% {
+   262	    opacity: 1;
+   263	    transform: translateX(-7px) rotate(-0.6deg) scale(1.035);
+   264	  }
    265	
-   266	.stack-row {
-   267	  display: flex;
-   268	  flex-wrap: wrap;
-   269	  gap: 10px;
-   270	  margin-top: 26px;
-   271	}
-   272	
-   273	.stack-row span,
-   274	.case-tags span {
-   275	  background: rgba(67, 255, 146, 0.08);
-   276	  border: 1px solid var(--line);
-   277	  border-radius: 999px;
-   278	  color: #d8ffe4;
-   279	  font-size: 13px;
-   280	  font-weight: 700;
-   281	  padding: 8px 11px;
-   282	}
-   283	
-   284	.hero-visual {
-   285	  position: relative;
-   286	}
-   287	
-   288	.profile-orbit {
-   289	  align-items: center;
-   290	  display: flex;
-   291	  flex-direction: column;
-   292	  gap: 12px;
-   293	  position: absolute;
-   294	  right: 18px;
-   295	  top: 0;
-   296	  z-index: 3;
+   266	  68% {
+   267	    transform: translateX(4px) rotate(0.35deg) scale(0.985);
+   268	  }
+   269	
+   270	  84% {
+   271	    transform: translateX(-2px) rotate(-0.2deg) scale(1.012);
+   272	  }
+   273	
+   274	  100% {
+   275	    opacity: 1;
+   276	    transform: translateX(0) rotate(0) scale(1);
+   277	  }
+   278	}
+   279	
+   280	@media (prefers-reduced-motion: reduce) {
+   281	  .carousel-button-label {
+   282	    animation: none;
+   283	  }
+   284	}
+   285	
+   286	.button-secondary {
+   287	  background: rgba(255, 255, 255, 0.04);
+   288	  border: 1px solid var(--line-strong);
+   289	  color: var(--text);
+   290	}
+   291	
+   292	.stack-row {
+   293	  display: flex;
+   294	  flex-wrap: wrap;
+   295	  gap: 10px;
+   296	  margin-top: 26px;
    297	}
    298	
-   299	.profile-photo {
-   300	  border: 2px solid rgba(198, 255, 217, 0.34);
-   301	  border-radius: 999px;
-   302	  box-shadow: 0 0 0 10px rgba(67, 255, 146, 0.05), 0 34px 95px rgba(0, 191, 99, 0.22);
-   303	  height: 188px;
-   304	  object-fit: cover;
-   305	  width: 188px;
-   306	}
-   307	
-   308	.profile-orbit span {
-   309	  background: rgba(5, 16, 10, 0.8);
-   310	  border: 1px solid var(--line);
-   311	  border-radius: 8px;
-   312	  color: var(--mint);
-   313	  font-size: 12px;
-   314	  font-weight: 750;
-   315	  line-height: 1.25;
-   316	  max-width: 138px;
-   317	  padding: 7px 11px;
-   318	  text-align: center;
-   319	}
-   320	
-   321	.phone-stage {
-   322	  height: 690px;
-   323	  margin-top: 48px;
-   324	  position: relative;
-   325	}
-   326	
-   327	.tablet-shell {
-   328	  background: linear-gradient(145deg, #0c120f, #000);
-   329	  border: 1px solid rgba(198, 255, 217, 0.24);
-   330	  border-radius: 30px;
-   331	  box-shadow: 0 34px 96px rgba(0, 0, 0, 0.66), 0 0 56px rgba(0, 191, 99, 0.12);
-   332	  height: 190px;
-   333	  left: 38px;
-   334	  padding: 13px;
-   335	  position: absolute;
-   336	  top: 352px;
-   337	  transform: rotate(-5deg) scale(1.5);
-   338	  transform-origin: top left;
-   339	  width: 304px;
-   340	  z-index: 4;
-   341	}
-   342	
-   343	.tablet-camera {
-   344	  background: rgba(198, 255, 217, 0.28);
-   345	  border-radius: 999px;
-   346	  height: 5px;
-   347	  left: 50%;
-   348	  position: absolute;
-   349	  top: 6px;
-   350	  transform: translateX(-50%);
-   351	  width: 5px;
-   352	}
-   353	
-   354	.tablet-screen {
-   355	  background:
-   356	    linear-gradient(rgba(67, 255, 146, 0.045) 1px, transparent 1px),
-   357	    linear-gradient(90deg, rgba(67, 255, 146, 0.045) 1px, transparent 1px),
-   358	    radial-gradient(circle at 28% 34%, rgba(67, 255, 146, 0.18), transparent 34%),
-   359	    linear-gradient(180deg, #07140d, #020403 70%);
-   360	  background-size: 22px 22px, 22px 22px, auto, auto;
-   361	  border: 1px solid rgba(198, 255, 217, 0.08);
-   362	  border-radius: 20px;
-   363	  height: 100%;
-   364	  overflow: hidden;
-   365	  position: relative;
-   366	}
-   367	
-   368	.tablet-screen-image {
-   369	  object-fit: cover;
-   370	  object-position: center center;
-   371	}
-   372	
-   373	.tablet-empty-grid {
-   374	  background:
-   375	    linear-gradient(90deg, rgba(198, 255, 217, 0.06) 1px, transparent 1px),
-   376	    linear-gradient(rgba(198, 255, 217, 0.06) 1px, transparent 1px);
-   377	  background-size: 48px 48px;
-   378	  inset: 0;
-   379	  opacity: 0.45;
-   380	  position: absolute;
-   381	}
-   382	
-   383	.phone-shell {
-   384	  background: linear-gradient(145deg, #0c120f, #000);
-   385	  border: 1px solid rgba(198, 255, 217, 0.22);
-   386	  border-radius: 34px;
-   387	  box-shadow: 0 34px 100px rgba(0, 0, 0, 0.62);
-   388	  height: 500px;
-   389	  padding: 16px;
-   390	  position: absolute;
-   391	  width: 245px;
+   299	.stack-row span,
+   300	.case-tags span {
+   301	  background: rgba(67, 255, 146, 0.08);
+   302	  border: 1px solid var(--line);
+   303	  border-radius: 999px;
+   304	  color: #d8ffe4;
+   305	  font-size: 13px;
+   306	  font-weight: 700;
+   307	  padding: 8px 11px;
+   308	}
+   309	
+   310	.hero-visual {
+   311	  position: relative;
+   312	}
+   313	
+   314	.profile-orbit {
+   315	  align-items: center;
+   316	  display: flex;
+   317	  flex-direction: column;
+   318	  gap: 12px;
+   319	  position: absolute;
+   320	  right: 18px;
+   321	  top: 0;
+   322	  z-index: 3;
+   323	}
+   324	
+   325	.profile-photo {
+   326	  border: 2px solid rgba(198, 255, 217, 0.34);
+   327	  border-radius: 999px;
+   328	  box-shadow: 0 0 0 10px rgba(67, 255, 146, 0.05), 0 34px 95px rgba(0, 191, 99, 0.22);
+   329	  height: 188px;
+   330	  object-fit: cover;
+   331	  width: 188px;
+   332	}
+   333	
+   334	.profile-orbit span {
+   335	  background: rgba(5, 16, 10, 0.8);
+   336	  border: 1px solid var(--line);
+   337	  border-radius: 8px;
+   338	  color: var(--mint);
+   339	  font-size: 12px;
+   340	  font-weight: 750;
+   341	  line-height: 1.25;
+   342	  max-width: 138px;
+   343	  padding: 7px 11px;
+   344	  text-align: center;
+   345	}
+   346	
+   347	.phone-stage {
+   348	  height: 690px;
+   349	  margin-top: 48px;
+   350	  position: relative;
+   351	}
+   352	
+   353	.tablet-shell {
+   354	  background: linear-gradient(145deg, #0c120f, #000);
+   355	  border: 1px solid rgba(198, 255, 217, 0.24);
+   356	  border-radius: var(--capture-frame-radius-standard);
+   357	  box-shadow: 0 34px 96px rgba(0, 0, 0, 0.66), 0 0 56px rgba(0, 191, 99, 0.12);
+   358	  height: 190px;
+   359	  left: 38px;
+   360	  padding: 13px;
+   361	  position: absolute;
+   362	  top: 352px;
+   363	  transform: rotate(-5deg) scale(1.5);
+   364	  transform-origin: top left;
+   365	  width: 304px;
+   366	  z-index: 4;
+   367	}
+   368	
+   369	.tablet-camera {
+   370	  background: rgba(198, 255, 217, 0.28);
+   371	  border-radius: 999px;
+   372	  height: 5px;
+   373	  left: 50%;
+   374	  position: absolute;
+   375	  top: 6px;
+   376	  transform: translateX(-50%);
+   377	  width: 5px;
+   378	}
+   379	
+   380	.tablet-screen {
+   381	  background:
+   382	    linear-gradient(rgba(67, 255, 146, 0.045) 1px, transparent 1px),
+   383	    linear-gradient(90deg, rgba(67, 255, 146, 0.045) 1px, transparent 1px),
+   384	    radial-gradient(circle at 28% 34%, rgba(67, 255, 146, 0.18), transparent 34%),
+   385	    linear-gradient(180deg, #07140d, #020403 70%);
+   386	  background-size: 22px 22px, 22px 22px, auto, auto;
+   387	  border: 1px solid rgba(198, 255, 217, 0.08);
+   388	  border-radius: var(--capture-screen-radius-standard);
+   389	  height: 100%;
+   390	  overflow: hidden;
+   391	  position: relative;
    392	}
    393	
-   394	.phone-shell-commerce {
-   395	  left: 68px;
-   396	  top: 40px;
-   397	  transform: rotate(-9deg);
-   398	  z-index: 2;
-   399	}
-   400	
-   401	.phone-shell-finance {
-   402	  left: 278px;
-   403	  top: 110px;
-   404	  transform: rotate(8deg);
-   405	  z-index: 1;
-   406	}
-   407	
-   408	.phone-speaker {
-   409	  background: #171f1a;
-   410	  border-radius: 99px;
-   411	  height: 6px;
-   412	  margin: 0 auto 12px;
-   413	  width: 62px;
-   414	}
-   415	
-   416	.phone-screen {
-   417	  background:
-   418	    linear-gradient(rgba(67, 255, 146, 0.055) 1px, transparent 1px),
-   419	    linear-gradient(90deg, rgba(67, 255, 146, 0.055) 1px, transparent 1px),
-   420	    linear-gradient(180deg, #0b1710, #030705 64%);
-   421	  background-size: 24px 24px, 24px 24px, auto;
-   422	  border-radius: 24px;
-   423	  height: calc(100% - 18px);
-   424	  overflow: hidden;
-   425	  padding: 18px;
-   426	  position: relative;
-   427	}
-   428	
-   429	.phone-screen.has-image {
-   430	  background: #020403;
-   431	  padding: 0;
-   432	}
-   433	
-   434	.phone-screen-image-frame {
-   435	  inset: 2% 0 0;
-   436	  position: absolute;
+   394	.tablet-screen-image {
+   395	  object-fit: contain;
+   396	  object-position: center center;
+   397	}
+   398	
+   399	.tablet-empty-grid {
+   400	  background:
+   401	    linear-gradient(90deg, rgba(198, 255, 217, 0.06) 1px, transparent 1px),
+   402	    linear-gradient(rgba(198, 255, 217, 0.06) 1px, transparent 1px);
+   403	  background-size: 48px 48px;
+   404	  inset: 0;
+   405	  opacity: 0.45;
+   406	  position: absolute;
+   407	}
+   408	
+   409	.phone-shell {
+   410	  background: linear-gradient(145deg, #0c120f, #000);
+   411	  border: 1px solid rgba(198, 255, 217, 0.22);
+   412	  border-radius: 34px;
+   413	  box-shadow: 0 34px 100px rgba(0, 0, 0, 0.62);
+   414	  height: 500px;
+   415	  padding: 16px;
+   416	  position: absolute;
+   417	  width: 245px;
+   418	}
+   419	
+   420	.phone-shell-link {
+   421	  color: inherit;
+   422	  cursor: pointer;
+   423	  display: block;
+   424	  text-decoration: none;
+   425	}
+   426	
+   427	.phone-shell-link:focus-visible {
+   428	  outline: 2px solid var(--mint);
+   429	  outline-offset: 8px;
+   430	}
+   431	
+   432	.phone-shell-commerce {
+   433	  left: 68px;
+   434	  top: 40px;
+   435	  transform: rotate(-9deg);
+   436	  z-index: 2;
    437	}
    438	
-   439	.phone-screen-image {
-   440	  object-fit: cover;
-   441	  object-position: top center;
-   442	}
-   443	
-   444	.phone-status {
-   445	  align-items: center;
-   446	  color: var(--mint);
-   447	  display: flex;
-   448	  font-size: 11px;
-   449	  font-weight: 800;
-   450	  justify-content: space-between;
-   451	  margin-bottom: 28px;
+   439	.phone-shell-finance {
+   440	  left: 278px;
+   441	  top: 110px;
+   442	  transform: rotate(8deg);
+   443	  z-index: 1;
+   444	}
+   445	
+   446	.phone-speaker {
+   447	  background: #171f1a;
+   448	  border-radius: 99px;
+   449	  height: 6px;
+   450	  margin: 0 auto 12px;
+   451	  width: 62px;
    452	}
    453	
-   454	.phone-chart {
-   455	  align-items: end;
-   456	  display: grid;
-   457	  gap: 8px;
-   458	  grid-template-columns: repeat(4, 1fr);
-   459	  height: 118px;
-   460	  margin-bottom: 26px;
-   461	}
-   462	
-   463	.phone-chart div {
-   464	  background: linear-gradient(180deg, var(--green), #086c3b);
-   465	  border-radius: 6px 6px 2px 2px;
-   466	}
-   467	
-   468	.phone-chart div:nth-child(1) {
-   469	  height: 54%;
-   470	}
-   471	
-   472	.phone-chart div:nth-child(2) {
-   473	  height: 88%;
-   474	}
-   475	
-   476	.phone-chart div:nth-child(3) {
-   477	  height: 66%;
-   478	}
-   479	
-   480	.phone-chart div:nth-child(4) {
-   481	  height: 100%;
-   482	}
-   483	
-   484	.phone-cardline {
-   485	  background: rgba(198, 255, 217, 0.14);
-   486	  border-radius: 999px;
-   487	  height: 12px;
-   488	  margin-bottom: 10px;
-   489	  width: 62%;
-   490	}
-   491	
-   492	.phone-cardline.wide {
-   493	  width: 88%;
-   494	}
-   495	
-   496	.phone-grid {
-   497	  display: grid;
-   498	  gap: 9px;
-   499	  grid-template-columns: 1fr 1fr;
-   500	  margin-top: 24px;
-   501	}
-   502	
-   503	.phone-grid span {
-   504	  background: rgba(255, 255, 255, 0.05);
-   505	  border: 1px solid var(--line);
-   506	  border-radius: 8px;
-   507	  height: 54px;
-   508	}
-   509	
-   510	.phone-cta {
-   511	  align-items: center;
-   512	  background: var(--green);
-   513	  border-radius: 8px;
-   514	  color: #001d0f;
-   515	  display: flex;
-   516	  font-size: 13px;
-   517	  font-weight: 900;
-   518	  height: 42px;
-   519	  justify-content: center;
-   520	  margin-top: 24px;
+   454	.phone-screen {
+   455	  background:
+   456	    linear-gradient(rgba(67, 255, 146, 0.055) 1px, transparent 1px),
+   457	    linear-gradient(90deg, rgba(67, 255, 146, 0.055) 1px, transparent 1px),
+   458	    linear-gradient(180deg, #0b1710, #030705 64%);
+   459	  background-size: 24px 24px, 24px 24px, auto;
+   460	  border-radius: 24px;
+   461	  height: calc(100% - 18px);
+   462	  overflow: hidden;
+   463	  padding: 18px;
+   464	  position: relative;
+   465	}
+   466	
+   467	.phone-screen.has-image {
+   468	  background: #020403;
+   469	  border-radius: var(--capture-screen-radius-tall);
+   470	  padding: 0;
+   471	}
+   472	
+   473	.phone-screen-image-frame {
+   474	  inset: 2% 0 0;
+   475	  position: absolute;
+   476	}
+   477	
+   478	.phone-screen-image {
+   479	  object-fit: contain;
+   480	  object-position: top center;
+   481	}
+   482	
+   483	.phone-shell-capture {
+   484	  border-radius: var(--capture-frame-radius-tall);
+   485	}
+   486	
+   487	.phone-status {
+   488	  align-items: center;
+   489	  color: var(--mint);
+   490	  display: flex;
+   491	  font-size: 11px;
+   492	  font-weight: 800;
+   493	  justify-content: space-between;
+   494	  margin-bottom: 28px;
+   495	}
+   496	
+   497	.phone-chart {
+   498	  align-items: end;
+   499	  display: grid;
+   500	  gap: 8px;
+   501	  grid-template-columns: repeat(4, 1fr);
+   502	  height: 118px;
+   503	  margin-bottom: 26px;
+   504	}
+   505	
+   506	.phone-chart div {
+   507	  background: linear-gradient(180deg, var(--green), #086c3b);
+   508	  border-radius: 6px 6px 2px 2px;
+   509	}
+   510	
+   511	.phone-chart div:nth-child(1) {
+   512	  height: 54%;
+   513	}
+   514	
+   515	.phone-chart div:nth-child(2) {
+   516	  height: 88%;
+   517	}
+   518	
+   519	.phone-chart div:nth-child(3) {
+   520	  height: 66%;
    521	}
    522	
-   523	.proof-panel {
-   524	  backdrop-filter: blur(16px);
-   525	  background: rgba(5, 16, 10, 0.76);
-   526	  border: 1px solid var(--line-strong);
-   527	  border-radius: 8px;
-   528	  display: grid;
-   529	  gap: 10px;
-   530	  margin: 26px 0 0;
-   531	  padding: 14px;
-   532	  position: relative;
-   533	  width: min(330px, 100%);
-   534	  z-index: 2;
-   535	}
-   536	
-   537	.proof-panel div {
-   538	  align-items: center;
-   539	  color: #dfffea;
-   540	  display: flex;
-   541	  font-size: 13px;
-   542	  font-weight: 750;
-   543	  gap: 10px;
+   523	.phone-chart div:nth-child(4) {
+   524	  height: 100%;
+   525	}
+   526	
+   527	.phone-cardline {
+   528	  background: rgba(198, 255, 217, 0.14);
+   529	  border-radius: 999px;
+   530	  height: 12px;
+   531	  margin-bottom: 10px;
+   532	  width: 62%;
+   533	}
+   534	
+   535	.phone-cardline.wide {
+   536	  width: 88%;
+   537	}
+   538	
+   539	.phone-grid {
+   540	  display: grid;
+   541	  gap: 9px;
+   542	  grid-template-columns: 1fr 1fr;
+   543	  margin-top: 24px;
    544	}
    545	
-   546	.stats-strip {
-   547	  border-top: 1px solid var(--line);
-   548	  display: grid;
-   549	  gap: 1px;
-   550	  grid-template-columns: repeat(4, minmax(0, 1fr));
-   551	  margin-top: 10px;
-   552	  position: relative;
-   553	  z-index: 2;
-   554	}
-   555	
-   556	.stats-strip div {
-   557	  background: rgba(255, 255, 255, 0.025);
-   558	  min-width: 0;
-   559	  min-height: 104px;
-   560	  padding: 22px;
-   561	}
-   562	
-   563	.stats-strip strong {
-   564	  color: var(--green);
-   565	  display: block;
-   566	  font-size: 34px;
-   567	  font-weight: 900;
-   568	  line-height: 1;
-   569	}
-   570	
-   571	.stats-strip span {
-   572	  color: var(--muted);
-   573	  display: block;
-   574	  font-size: 13px;
-   575	  font-weight: 700;
-   576	  margin-top: 8px;
-   577	}
-   578	
-   579	section:not(.hero) {
-   580	  padding: 88px 0;
-   581	}
-   582	
-   583	.section-heading {
-   584	  max-width: 720px;
-   585	}
-   586	
-   587	.case-grid {
-   588	  display: grid;
-   589	  gap: 18px;
-   590	  grid-template-columns: repeat(3, minmax(0, 1fr));
-   591	  margin-top: 34px;
-   592	}
-   593	
-   594	.case-card,
-   595	.capability-grid div,
-   596	.contact-panel {
-   597	  background: linear-gradient(180deg, rgba(13, 31, 22, 0.88), rgba(5, 13, 9, 0.88));
-   598	  border: 1px solid var(--line);
-   599	  border-radius: 8px;
-   600	}
-   601	
-   602	.case-card {
-   603	  min-height: 330px;
-   604	  padding: 28px;
-   605	}
-   606	
-   607	.case-topline {
-   608	  align-items: center;
-   609	  display: flex;
-   610	  gap: 18px;
-   611	  justify-content: space-between;
+   546	.phone-grid span {
+   547	  background: rgba(255, 255, 255, 0.05);
+   548	  border: 1px solid var(--line);
+   549	  border-radius: 8px;
+   550	  height: 54px;
+   551	}
+   552	
+   553	.phone-cta {
+   554	  align-items: center;
+   555	  background: var(--green);
+   556	  border-radius: 8px;
+   557	  color: #001d0f;
+   558	  display: flex;
+   559	  font-size: 13px;
+   560	  font-weight: 900;
+   561	  height: 42px;
+   562	  justify-content: center;
+   563	  margin-top: 24px;
+   564	}
+   565	
+   566	.proof-panel {
+   567	  backdrop-filter: blur(16px);
+   568	  background: rgba(5, 16, 10, 0.76);
+   569	  border: 1px solid var(--line-strong);
+   570	  border-radius: 8px;
+   571	  display: grid;
+   572	  gap: 10px;
+   573	  margin: 26px 0 0;
+   574	  padding: 14px;
+   575	  position: relative;
+   576	  width: min(330px, 100%);
+   577	  z-index: 2;
+   578	}
+   579	
+   580	.proof-panel div {
+   581	  align-items: center;
+   582	  color: #dfffea;
+   583	  display: flex;
+   584	  font-size: 13px;
+   585	  font-weight: 750;
+   586	  gap: 10px;
+   587	}
+   588	
+   589	.stats-strip {
+   590	  border-top: 1px solid var(--line);
+   591	  display: grid;
+   592	  gap: 1px;
+   593	  grid-template-columns: repeat(4, minmax(0, 1fr));
+   594	  margin-top: 10px;
+   595	  position: relative;
+   596	  z-index: 2;
+   597	}
+   598	
+   599	.stats-strip div {
+   600	  background: rgba(255, 255, 255, 0.025);
+   601	  min-width: 0;
+   602	  min-height: 104px;
+   603	  padding: 22px;
+   604	}
+   605	
+   606	.stats-strip strong {
+   607	  color: var(--green);
+   608	  display: block;
+   609	  font-size: 34px;
+   610	  font-weight: 900;
+   611	  line-height: 1;
    612	}
    613	
-   614	.case-topline span {
-   615	  color: var(--green);
-   616	  font-size: 12px;
-   617	  font-weight: 850;
-   618	  letter-spacing: 0.1em;
-   619	  text-transform: uppercase;
+   614	.stats-strip span {
+   615	  color: var(--muted);
+   616	  display: block;
+   617	  font-size: 13px;
+   618	  font-weight: 700;
+   619	  margin-top: 8px;
    620	}
    621	
-   622	.case-topline strong {
-   623	  border: 1px solid var(--line);
-   624	  border-radius: 999px;
-   625	  color: var(--mint);
-   626	  font-size: 12px;
-   627	  padding: 7px 10px;
-   628	  white-space: nowrap;
-   629	}
-   630	
-   631	.case-card h3 {
-   632	  margin: 54px 0 14px;
-   633	}
-   634	
-   635	.case-card p,
-   636	.capability-grid p,
-   637	.timeline-item p {
-   638	  color: #b8c9bf;
-   639	  line-height: 1.6;
-   640	}
-   641	
-   642	.case-tags {
-   643	  display: flex;
-   644	  flex-wrap: wrap;
-   645	  gap: 8px;
-   646	  margin-top: 24px;
-   647	}
-   648	
-   649	.case-miniatures {
-   650	  display: grid;
-   651	  gap: 10px;
-   652	  grid-template-columns: repeat(3, minmax(0, 1fr));
-   653	  margin-top: 26px;
-   654	  max-width: 390px;
-   655	}
-   656	
-   657	.case-miniatures-landscape {
-   658	  grid-template-columns: 1fr;
-   659	  max-width: 420px;
-   660	}
-   661	
-   662	.case-miniature {
-   663	  aspect-ratio: 9 / 16;
-   664	  background: #020403;
-   665	  border: 1px solid var(--line);
-   666	  border-radius: 8px;
-   667	  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.28);
-   668	  display: block;
-   669	  height: auto;
-   670	  object-fit: cover;
-   671	  width: 100%;
-   672	}
-   673	
-   674	.case-miniature-landscape {
-   675	  aspect-ratio: 2388 / 1668;
-   676	}
-   677	
-   678	.split-section {
-   679	  display: grid;
-   680	  gap: 44px;
-   681	}
-   682	
-   683	.capability-grid {
-   684	  display: grid;
-   685	  gap: 18px;
-   686	  grid-template-columns: repeat(3, 1fr);
-   687	}
-   688	
-   689	.capability-grid div {
-   690	  padding: 24px;
-   691	}
-   692	
-   693	.capability-grid svg {
-   694	  color: var(--green);
-   695	  margin-bottom: 30px;
-   696	}
-   697	
-   698	.worklog-layout {
-   699	  display: grid;
-   700	  gap: 42px;
-   701	  grid-template-columns: minmax(0, 0.9fr) minmax(320px, 1.1fr);
-   702	}
-   703	
-   704	.timeline {
-   705	  border-left: 1px solid var(--line-strong);
-   706	}
-   707	
-   708	.timeline-item {
-   709	  display: grid;
-   710	  gap: 18px;
-   711	  grid-template-columns: 56px 1fr;
-   712	  padding: 8px 0 28px 24px;
-   713	}
-   714	
-   715	.timeline-item span {
-   716	  color: var(--green);
-   717	  font-weight: 900;
-   718	}
-   719	
-   720	.contact-panel {
-   721	  align-items: center;
-   722	  display: flex;
-   723	  gap: 28px;
-   724	  justify-content: space-between;
-   725	  padding: 30px;
-   726	}
-   727	
-   728	.contact-panel h2 {
-   729	  font-size: clamp(28px, 4vw, 46px);
-   730	  margin-bottom: 0;
-   731	  max-width: 760px;
-   732	}
-   733	
-   734	@media (max-width: 980px) {
-   735	  .nav-bar {
-   736	    align-items: flex-start;
-   737	    flex-direction: column;
-   738	    gap: 14px;
-   739	    padding: 16px;
-   740	  }
-   741	
-   742	  .nav-bar nav {
-   743	    display: grid;
-   744	    flex-wrap: nowrap;
-   745	    gap: 6px;
-   746	    grid-template-columns:
-   747	      minmax(0, 1.25fr) minmax(0, 0.78fr) minmax(0, 0.98fr)
-   748	      minmax(0, 0.98fr);
-   749	    justify-content: normal;
-   750	    width: 100%;
-   751	  }
-   752	
-   753	  .nav-bar nav a {
-   754	    flex: 1 1 0;
-   755	    min-width: 0;
-   756	    padding-left: 10px;
-   757	    padding-right: 10px;
-   758	    text-align: center;
-   759	  }
-   760	
-   761	  .hero-grid,
-   762	  .worklog-layout {
-   763	    grid-template-columns: 1fr;
-   764	  }
-   765	
-   766	  .hero-visual {
-   767	    min-height: auto;
-   768	  }
+   622	section:not(.hero) {
+   623	  padding: 88px 0;
+   624	}
+   625	
+   626	.section-heading {
+   627	  max-width: 720px;
+   628	}
+   629	
+   630	.case-grid {
+   631	  display: grid;
+   632	  gap: 18px;
+   633	  grid-template-columns: repeat(3, minmax(0, 1fr));
+   634	  margin-top: 34px;
+   635	}
+   636	
+   637	.case-card,
+   638	.capability-grid div,
+   639	.contact-panel {
+   640	  background: linear-gradient(180deg, rgba(13, 31, 22, 0.88), rgba(5, 13, 9, 0.88));
+   641	  border: 1px solid var(--line);
+   642	  border-radius: 8px;
+   643	}
+   644	
+   645	.case-card {
+   646	  min-height: 330px;
+   647	  padding: 28px;
+   648	}
+   649	
+   650	.case-card-link {
+   651	  color: inherit;
+   652	  cursor: pointer;
+   653	  display: block;
+   654	  text-decoration: none;
+   655	  transition:
+   656	    border-color 160ms ease,
+   657	    box-shadow 160ms ease,
+   658	    transform 160ms ease;
+   659	}
+   660	
+   661	.case-card-link:hover {
+   662	  border-color: rgba(198, 255, 217, 0.36);
+   663	  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.28);
+   664	  transform: translateY(-2px);
+   665	}
+   666	
+   667	.case-card-link:focus-visible {
+   668	  outline: 2px solid var(--mint);
+   669	  outline-offset: 6px;
+   670	}
+   671	
+   672	.case-topline {
+   673	  align-items: center;
+   674	  display: flex;
+   675	  gap: 18px;
+   676	  justify-content: space-between;
+   677	}
+   678	
+   679	.case-topline span {
+   680	  color: var(--green);
+   681	  font-size: 12px;
+   682	  font-weight: 850;
+   683	  letter-spacing: 0.1em;
+   684	  text-transform: uppercase;
+   685	}
+   686	
+   687	.case-topline strong {
+   688	  border: 1px solid var(--line);
+   689	  border-radius: 999px;
+   690	  color: var(--mint);
+   691	  font-size: 12px;
+   692	  padding: 7px 10px;
+   693	  white-space: nowrap;
+   694	}
+   695	
+   696	.case-card h3 {
+   697	  margin: 54px 0 14px;
+   698	}
+   699	
+   700	.case-card p,
+   701	.capability-grid p,
+   702	.timeline-item p {
+   703	  color: #b8c9bf;
+   704	  line-height: 1.6;
+   705	}
+   706	
+   707	.case-tags {
+   708	  display: flex;
+   709	  flex-wrap: wrap;
+   710	  gap: 8px;
+   711	  margin-top: 24px;
+   712	}
+   713	
+   714	.case-miniatures {
+   715	  display: grid;
+   716	  gap: 10px;
+   717	  grid-template-columns: repeat(3, minmax(0, 1fr));
+   718	  margin-top: 26px;
+   719	  max-width: 390px;
+   720	}
+   721	
+   722	.case-miniatures-landscape {
+   723	  grid-template-columns: 1fr;
+   724	  max-width: 420px;
+   725	}
+   726	
+   727	.case-miniature {
+   728	  aspect-ratio: 9 / 16;
+   729	  background: #020403;
+   730	  border: 1px solid var(--line);
+   731	  border-radius: var(--capture-frame-radius-standard);
+   732	  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.28);
+   733	  display: block;
+   734	  height: auto;
+   735	  object-fit: contain;
+   736	  width: 100%;
+   737	}
+   738	
+   739	.case-miniature-landscape {
+   740	  aspect-ratio: 2388 / 1668;
+   741	  border-radius: var(--capture-frame-radius-standard);
+   742	}
+   743	
+   744	.split-section {
+   745	  display: grid;
+   746	  gap: 44px;
+   747	}
+   748	
+   749	.capability-grid {
+   750	  display: grid;
+   751	  gap: 18px;
+   752	  grid-template-columns: repeat(3, 1fr);
+   753	}
+   754	
+   755	.capability-grid div {
+   756	  padding: 24px;
+   757	}
+   758	
+   759	.capability-grid svg {
+   760	  color: var(--green);
+   761	  margin-bottom: 30px;
+   762	}
+   763	
+   764	.worklog-layout {
+   765	  display: grid;
+   766	  gap: 42px;
+   767	  grid-template-columns: minmax(0, 0.9fr) minmax(320px, 1.1fr);
+   768	}
    769	
-   770	  .phone-stage {
-   771	    height: 710px;
-   772	    margin-top: 30px;
-   773	  }
-   774	
-   775	  .phone-shell-commerce {
-   776	    left: 4%;
-   777	  }
-   778	
-   779	  .phone-shell-finance {
-   780	    left: 42%;
-   781	  }
-   782	
-   783	  .tablet-shell {
-   784	    left: 9%;
-   785	    top: 374px;
-   786	    width: min(74%, 332px);
-   787	  }
-   788	
-   789	  .case-grid,
-   790	  .capability-grid {
-   791	    grid-template-columns: repeat(2, 1fr);
-   792	  }
-   793	}
-   794	
-   795	@media (max-width: 720px) {
-   796	  .site-shell {
-   797	    width: min(100% - 24px, 1180px);
-   798	  }
+   770	.timeline {
+   771	  border-left: 1px solid var(--line-strong);
+   772	}
+   773	
+   774	.timeline-item {
+   775	  display: grid;
+   776	  gap: 18px;
+   777	  grid-template-columns: 56px 1fr;
+   778	  padding: 8px 0 28px 24px;
+   779	}
+   780	
+   781	.timeline-item span {
+   782	  color: var(--green);
+   783	  font-weight: 900;
+   784	}
+   785	
+   786	.contact-panel {
+   787	  align-items: center;
+   788	  display: flex;
+   789	  gap: 28px;
+   790	  justify-content: space-between;
+   791	  padding: 30px;
+   792	}
+   793	
+   794	.contact-panel h2 {
+   795	  font-size: clamp(28px, 4vw, 46px);
+   796	  margin-bottom: 0;
+   797	  max-width: 760px;
+   798	}
    799	
-   800	  .nav-bar {
-   801	    max-width: calc(100vw - 24px);
-   802	    overflow: hidden;
-   803	    padding: 14px;
-   804	  }
-   805	
-   806	  .nav-bar nav {
-   807	    gap: 4px;
-   808	    max-width: 100%;
-   809	    width: min(100%, calc(100vw - 54px));
-   810	  }
-   811	
-   812	  .nav-bar nav a {
-   813	    font-size: 12px;
-   814	    padding-left: 2px;
-   815	    padding-right: 2px;
-   816	  }
-   817	
-   818	  .hero {
-   819	    padding-top: 12px;
-   820	  }
-   821	
-   822	  .hero-grid {
-   823	    gap: 30px;
-   824	    padding-top: 42px;
-   825	  }
-   826	
-   827	  h1 {
-   828	    font-size: clamp(42px, 15vw, 64px);
-   829	  }
+   800	.project-page {
+   801	  overflow-x: hidden;
+   802	}
+   803	
+   804	.project-hero-copy,
+   805	.project-hero-grid > * {
+   806	  min-width: 0;
+   807	}
+   808	
+   809	.project-page section:not(.project-hero) {
+   810	  padding: 78px 0;
+   811	  position: relative;
+   812	}
+   813	
+   814	section.project-hero {
+   815	  overflow: hidden;
+   816	  padding: 24px 0 88px;
+   817	  position: relative;
+   818	}
+   819	
+   820	.project-hero::after {
+   821	  background: linear-gradient(transparent, var(--bg));
+   822	  bottom: 0;
+   823	  content: "";
+   824	  height: 30%;
+   825	  left: 0;
+   826	  pointer-events: none;
+   827	  position: absolute;
+   828	  right: 0;
+   829	}
    830	
-   831	  .hero-visual {
-   832	    min-height: auto;
-   833	  }
+   831	.project-nav {
+   832	  margin-bottom: 68px;
+   833	}
    834	
-   835	  .phone-stage {
-   836	    height: 626px;
-   837	    margin-top: 18px;
-   838	  }
-   839	
-   840	  .profile-orbit {
-   841	    right: 0;
-   842	  }
+   835	.project-hero-grid {
+   836	  align-items: center;
+   837	  display: grid;
+   838	  gap: 56px;
+   839	  grid-template-columns: minmax(0, 0.92fr) minmax(420px, 1.08fr);
+   840	  position: relative;
+   841	  z-index: 2;
+   842	}
    843	
-   844	  .profile-photo {
-   845	    height: 132px;
-   846	    width: 132px;
-   847	  }
-   848	
-   849	  .phone-shell {
-   850	    height: 420px;
-   851	    width: 206px;
-   852	  }
-   853	
-   854	  .phone-shell-commerce {
-   855	    left: -2px;
-   856	    top: 72px;
-   857	  }
+   844	.project-hero-copy h1 {
+   845	  margin-bottom: 18px;
+   846	}
+   847	
+   848	.project-back-link {
+   849	  align-items: center;
+   850	  color: var(--muted);
+   851	  display: inline-flex;
+   852	  font-size: 13px;
+   853	  font-weight: 800;
+   854	  gap: 8px;
+   855	  margin-bottom: 30px;
+   856	  transition: color 160ms ease;
+   857	}
    858	
-   859	  .phone-shell-finance {
-   860	    left: auto;
-   861	    right: -8px;
-   862	    top: 124px;
-   863	  }
-   864	
-   865	  .tablet-shell {
-   866	    height: 150px;
-   867	    left: 14px;
-   868	    top: 342px;
-   869	    width: min(84vw, 268px);
-   870	  }
-   871	
-   872	  .case-grid,
-   873	  .capability-grid {
-   874	    grid-template-columns: 1fr;
-   875	  }
-   876	
-   877	  .case-card {
-   878	    min-height: auto;
-   879	  }
+   859	.project-back-link:hover {
+   860	  color: var(--mint);
+   861	}
+   862	
+   863	.project-subtitle {
+   864	  color: var(--green);
+   865	  font-size: clamp(20px, 2vw, 28px);
+   866	  font-weight: 850;
+   867	  line-height: 1.2;
+   868	  margin-bottom: 22px;
+   869	}
+   870	
+   871	.project-hero-text,
+   872	.project-copy-panel p,
+   873	.architecture-copy,
+   874	.readiness-copy,
+   875	.closing-panel p {
+   876	  color: #c4d6cc;
+   877	  font-size: 17px;
+   878	  line-height: 1.65;
+   879	}
    880	
-   881	  .contact-panel {
-   882	    align-items: flex-start;
-   883	    flex-direction: column;
-   884	  }
-   885	}
-   886	
-   887	@media (max-width: 380px) {
-   888	  .nav-bar {
-   889	    padding-left: 12px;
-   890	    padding-right: 12px;
-   891	  }
+   881	.project-hero-text {
+   882	  max-width: 620px;
+   883	}
+   884	
+   885	.project-meta-row {
+   886	  display: flex;
+   887	  flex-wrap: wrap;
+   888	  gap: 9px;
+   889	  margin-top: 28px;
+   890	  max-width: 620px;
+   891	}
    892	
-   893	  .nav-bar nav {
-   894	    gap: 1px;
-   895	    width: min(100%, calc(100vw - 50px));
-   896	  }
-   897	
-   898	  .nav-bar nav a {
-   899	    font-size: 10.5px;
-   900	    padding-left: 0;
-   901	    padding-right: 0;
-   902	  }
-   903	}
-   904	
-   905	@media (max-width: 340px) {
-   906	  .nav-bar nav a {
-   907	    font-size: 10px;
-   908	  }
-   909	}
+   893	.project-meta-row span,
+   894	.proof-points span,
+   895	.readiness-list span {
+   896	  background: rgba(67, 255, 146, 0.08);
+   897	  border: 1px solid var(--line);
+   898	  border-radius: 999px;
+   899	  color: #d8ffe4;
+   900	  font-size: 13px;
+   901	  font-weight: 750;
+   902	  padding: 8px 11px;
+   903	  white-space: nowrap;
+   904	}
+   905	
+   906	.project-actions {
+   907	  margin-top: 30px;
+   908	}
+   909	
+   910	.av-showcase {
+   911	  min-height: 610px;
+   912	  position: relative;
+   913	}
+   914	
+   915	.av-showcase::before {
+   916	  background:
+   917	    linear-gradient(rgba(67, 255, 146, 0.045) 1px, transparent 1px),
+   918	    linear-gradient(90deg, rgba(67, 255, 146, 0.045) 1px, transparent 1px);
+   919	  background-size: 36px 36px;
+   920	  content: "";
+   921	  inset: 34px 12px 52px;
+   922	  opacity: 0.58;
+   923	  position: absolute;
+   924	}
+   925	
+   926	.av-device {
+   927	  background: linear-gradient(145deg, #0c120f, #000);
+   928	  border: 1px solid rgba(198, 255, 217, 0.24);
+   929	  border-radius: var(--capture-frame-radius-tall);
+   930	  box-shadow: 0 34px 100px rgba(0, 0, 0, 0.62), 0 0 64px rgba(0, 191, 99, 0.12);
+   931	  padding: 16px;
+   932	  position: absolute;
+   933	}
+   934	
+   935	.av-device-tall {
+   936	  --av-screen-ratio: 1440 / 3120;
+   937	}
+   938	
+   939	.av-device-standard {
+   940	  --av-screen-ratio: 720 / 1280;
+   941	}
+   942	
+   943	.av-device-speaker {
+   944	  background: #171f1a;
+   945	  border-radius: 99px;
+   946	  height: 6px;
+   947	  margin: 0 auto 12px;
+   948	  width: 62px;
+   949	}
+   950	
+   951	.av-device-screen {
+   952	  aspect-ratio: var(--av-screen-ratio);
+   953	  background: #020403;
+   954	  border-radius: var(--capture-screen-radius-tall);
+   955	  overflow: hidden;
+   956	  position: relative;
+   957	  width: 100%;
+   958	}
+   959	
+   960	.av-device-image {
+   961	  object-fit: contain;
+   962	  object-position: top center;
+   963	}
+   964	
+   965	.flow-image-frame img {
+   966	  object-fit: contain;
+   967	  object-position: top center;
+   968	}
+   969	
+   970	.av-device-main {
+   971	  height: auto;
+   972	  right: 176px;
+   973	  top: 0;
+   974	  transform: rotate(-5deg);
+   975	  width: 260px;
+   976	  z-index: 3;
+   977	}
+   978	
+   979	.av-device-browse,
+   980	.av-device-confirm {
+   981	  border-radius: 15px;
+   982	  height: auto;
+   983	  width: 184px;
+   984	}
+   985	
+   986	.av-device-standard.av-device-browse,
+   987	.av-device-standard.av-device-confirm {
+   988	  border-radius: var(--capture-frame-radius-standard);
+   989	}
+   990	
+   991	.av-device-standard .av-device-screen {
+   992	  border-radius: var(--capture-screen-radius-standard);
+   993	}
+   994	
+   995	.av-device-browse {
+   996	  right: 22px;
+   997	  top: 126px;
+   998	  transform: rotate(7deg);
+   999	  z-index: 2;
+  1000	}
+  1001	
+  1002	.av-device-confirm {
+  1003	  left: 6px;
+  1004	  top: 214px;
+  1005	  transform: rotate(-10deg);
+  1006	  z-index: 1;
+  1007	}
+  1008	
+  1009	.av-showcase-proof {
+  1010	  background: rgba(5, 16, 10, 0.82);
+  1011	  border: 1px solid var(--line-strong);
+  1012	  border-radius: 8px;
+  1013	  bottom: 20px;
+  1014	  max-width: 260px;
+  1015	  padding: 15px;
+  1016	  position: absolute;
+  1017	  right: 16px;
+  1018	  z-index: 4;
+  1019	}
+  1020	
+  1021	.av-showcase-proof strong {
+  1022	  color: var(--green);
+  1023	  display: block;
+  1024	  font-size: 28px;
+  1025	  font-weight: 900;
+  1026	  line-height: 1;
+  1027	}
+  1028	
+  1029	.av-showcase-proof span {
+  1030	  color: var(--muted);
+  1031	  display: block;
+  1032	  font-size: 13px;
+  1033	  font-weight: 700;
+  1034	  line-height: 1.45;
+  1035	  margin-top: 8px;
+  1036	}
+  1037	
+  1038	.project-section-grid,
+  1039	.readiness-layout {
+  1040	  display: grid;
+  1041	  gap: 44px;
+  1042	  grid-template-columns: minmax(0, 0.82fr) minmax(360px, 1.18fr);
+  1043	}
+  1044	
+  1045	.project-copy-panel {
+  1046	  border-left: 1px solid var(--line-strong);
+  1047	  padding-left: 28px;
+  1048	}
+  1049	
+  1050	.project-copy-panel p:last-child,
+  1051	.closing-panel p:last-child {
+  1052	  margin-bottom: 0;
+  1053	}
+  1054	
+  1055	.project-card-grid {
+  1056	  display: grid;
+  1057	  gap: 16px;
+  1058	  margin-top: 34px;
+  1059	}
+  1060	
+  1061	.ownership-grid {
+  1062	  grid-template-columns: repeat(5, minmax(0, 1fr));
+  1063	}
+  1064	
+  1065	.feature-grid {
+  1066	  grid-template-columns: repeat(3, minmax(0, 1fr));
+  1067	}
+  1068	
+  1069	.decision-grid {
+  1070	  grid-template-columns: repeat(3, minmax(0, 1fr));
+  1071	}
+  1072	
+  1073	.project-card,
+  1074	.flow-checkout-note,
+  1075	.architecture-node,
+  1076	.stack-group,
+  1077	.project-timeline-item {
+  1078	  background: linear-gradient(180deg, rgba(13, 31, 22, 0.88), rgba(5, 13, 9, 0.88));
+  1079	  border: 1px solid var(--line);
+  1080	  border-radius: 8px;
+  1081	}
+  1082	
+  1083	.project-card {
+  1084	  min-height: 184px;
+  1085	  padding: 22px;
+  1086	}
+  1087	
+  1088	.project-card span,
+  1089	.flow-checkout-note span,
+  1090	.stack-group h3 {
+  1091	  color: var(--green);
+  1092	  display: block;
+  1093	  font-size: 12px;
+  1094	  font-weight: 850;
+  1095	  letter-spacing: 0.1em;
+  1096	  margin-bottom: 20px;
+  1097	  text-transform: uppercase;
+  1098	}
+  1099	
+  1100	.project-card p,
+  1101	.flow-checkout-note p,
+  1102	.architecture-node p,
+  1103	.project-timeline-item p {
+  1104	  color: #b8c9bf;
+  1105	  line-height: 1.6;
+  1106	  margin-bottom: 0;
+  1107	}
+  1108	
+  1109	.flow-segments {
+  1110	  border: 1px solid var(--line);
+  1111	  border-radius: 8px;
+  1112	  display: grid;
+  1113	  gap: 1px;
+  1114	  grid-template-columns: repeat(6, minmax(0, 1fr));
+  1115	  margin-top: 34px;
+  1116	  overflow: hidden;
+  1117	}
+  1118	
+  1119	.flow-segments span {
+  1120	  background: rgba(255, 255, 255, 0.03);
+  1121	  color: var(--mint);
+  1122	  font-size: 13px;
+  1123	  font-weight: 850;
+  1124	  padding: 14px 10px;
+  1125	  text-align: center;
+  1126	}
+  1127	
+  1128	.flow-layout {
+  1129	  align-items: center;
+  1130	  display: grid;
+  1131	  gap: 42px;
+  1132	  grid-template-columns: minmax(260px, 0.82fr) minmax(0, 1.18fr);
+  1133	  margin-top: 34px;
+  1134	}
+  1135	
+  1136	.flow-screen {
+  1137	  margin: 0;
+  1138	}
+  1139	
+  1140	.flow-image-frame {
+  1141	  aspect-ratio: 9 / 16;
+  1142	  background: #020403;
+  1143	  border: 1px solid var(--line);
+  1144	  border-radius: var(--capture-frame-radius-standard);
+  1145	  box-shadow: 0 30px 72px rgba(0, 0, 0, 0.45);
+  1146	  overflow: hidden;
+  1147	  position: relative;
+  1148	}
+  1149	
+  1150	.flow-screen-tall .flow-image-frame {
+  1151	  aspect-ratio: 1440 / 3120;
+  1152	  border-radius: var(--capture-frame-radius-tall);
+  1153	}
+  1154	
+  1155	.flow-screen-standard .flow-image-frame {
+  1156	  aspect-ratio: 720 / 1280;
+  1157	  border-radius: var(--capture-frame-radius-standard);
+  1158	}
+  1159	
+  1160	.flow-screen-main .flow-image-frame {
+  1161	  margin: 0 auto;
+  1162	  max-width: 330px;
+  1163	}
+  1164	
+  1165	.flow-screen-compact {
+  1166	  width: min(100%, 152px);
+  1167	}
+  1168	
+  1169	.flow-screen-compact .flow-image-frame {
+  1170	  width: 100%;
+  1171	}
+  1172	
+  1173	.flow-screen figcaption {
+  1174	  color: var(--muted);
+  1175	  font-size: 13px;
+  1176	  font-weight: 700;
+  1177	  line-height: 1.45;
+  1178	  margin: 14px auto 0;
+  1179	  max-width: 330px;
+  1180	}
+  1181	
+  1182	.flow-screen-label {
+  1183	  color: var(--green);
+  1184	  display: block;
+  1185	  font-size: 10px;
+  1186	  font-weight: 850;
+  1187	  letter-spacing: 0.12em;
+  1188	  margin: 0 0 8px;
+  1189	  text-align: center;
+  1190	  text-transform: uppercase;
+  1191	}
+  1192	
+  1193	.flow-support {
+  1194	  display: grid;
+  1195	  gap: 18px;
+  1196	  grid-template-columns: repeat(3, minmax(0, 1fr));
+  1197	}
+  1198	
+  1199	.flow-section-intro {
+  1200	  display: grid;
+  1201	  gap: 18px;
+  1202	}
+  1203	
+  1204	.flow-section-intro > p {
+  1205	  border-left: 1px solid var(--line-strong);
+  1206	  color: #b8c9bf;
+  1207	  line-height: 1.65;
+  1208	  margin: 0;
+  1209	  max-width: 560px;
+  1210	  padding-left: 22px;
+  1211	}
+  1212	
+  1213	.flow-checkout-note {
+  1214	  align-content: center;
+  1215	  min-height: 260px;
+  1216	  padding: 22px;
+  1217	}
+  1218	
+  1219	.flow-capture-groups {
+  1220	  display: grid;
+  1221	  gap: 48px;
+  1222	  margin-top: 54px;
+  1223	}
+  1224	
+  1225	.flow-capture-group {
+  1226	  border-top: 1px solid var(--line);
+  1227	  display: grid;
+  1228	  gap: 24px;
+  1229	  grid-template-columns: minmax(220px, 0.34fr) minmax(0, 1fr);
+  1230	  padding-top: 30px;
+  1231	}
+  1232	
+  1233	.flow-group-header {
+  1234	  max-width: 360px;
+  1235	}
+  1236	
+  1237	.flow-group-header span {
+  1238	  color: var(--green);
+  1239	  display: block;
+  1240	  font-size: 12px;
+  1241	  font-weight: 850;
+  1242	  letter-spacing: 0.1em;
+  1243	  margin-bottom: 14px;
+  1244	  text-transform: uppercase;
+  1245	}
+  1246	
+  1247	.flow-group-header h3 {
+  1248	  font-size: clamp(24px, 3vw, 34px);
+  1249	  line-height: 1;
+  1250	  margin-bottom: 14px;
+  1251	}
+  1252	
+  1253	.flow-group-header p {
+  1254	  color: #b8c9bf;
+  1255	  line-height: 1.6;
+  1256	  margin-bottom: 0;
+  1257	}
+  1258	
+  1259	.flow-capture-grid {
+  1260	  align-items: start;
+  1261	  display: grid;
+  1262	  gap: 34px;
+  1263	  grid-template-columns: repeat(auto-fit, minmax(285px, 1fr));
+  1264	}
+  1265	
+  1266	.flow-screen-stack {
+  1267	  min-width: 0;
+  1268	}
+  1269	
+  1270	.flow-screen-stack h4 {
+  1271	  color: var(--text);
+  1272	  font-size: 15px;
+  1273	  font-weight: 850;
+  1274	  letter-spacing: 0;
+  1275	  line-height: 1.2;
+  1276	  margin: 0 0 14px;
+  1277	  text-align: center;
+  1278	}
+  1279	
+  1280	.flow-screen-stack-captures {
+  1281	  align-items: start;
+  1282	  display: flex;
+  1283	  gap: 14px;
+  1284	  justify-content: center;
+  1285	}
+  1286	
+  1287	.architecture-map {
+  1288	  display: grid;
+  1289	  gap: 12px;
+  1290	  grid-template-columns: repeat(5, minmax(0, 1fr));
+  1291	}
+  1292	
+  1293	.architecture-node {
+  1294	  min-height: 178px;
+  1295	  padding: 18px;
+  1296	}
+  1297	
+  1298	.architecture-node span {
+  1299	  color: var(--green);
+  1300	  display: block;
+  1301	  font-size: 13px;
+  1302	  font-weight: 900;
+  1303	  margin-bottom: 18px;
+  1304	}
+  1305	
+  1306	.architecture-node strong {
+  1307	  color: var(--text);
+  1308	  display: block;
+  1309	  font-size: 16px;
+  1310	  line-height: 1.25;
+  1311	  margin-bottom: 12px;
+  1312	}
+  1313	
+  1314	.architecture-node p {
+  1315	  font-size: 13px;
+  1316	}
+  1317	
+  1318	.architecture-copy {
+  1319	  margin: 26px 0 0;
+  1320	}
+  1321	
+  1322	.readiness-copy {
+  1323	  margin-bottom: 24px;
+  1324	}
+  1325	
+  1326	.readiness-list,
+  1327	.proof-points {
+  1328	  display: flex;
+  1329	  flex-wrap: wrap;
+  1330	  gap: 10px;
+  1331	}
+  1332	
+  1333	.project-timeline {
+  1334	  display: grid;
+  1335	  gap: 14px;
+  1336	}
+  1337	
+  1338	.project-timeline-item {
+  1339	  display: grid;
+  1340	  gap: 22px;
+  1341	  grid-template-columns: 56px 1fr;
+  1342	  padding: 22px;
+  1343	}
+  1344	
+  1345	.project-timeline-item > span {
+  1346	  color: var(--green);
+  1347	  font-size: 18px;
+  1348	  font-weight: 900;
+  1349	}
+  1350	
+  1351	.project-timeline-item h3 {
+  1352	  font-size: 20px;
+  1353	  line-height: 1.2;
+  1354	  margin-bottom: 10px;
+  1355	}
+  1356	
+  1357	.stack-matrix {
+  1358	  display: grid;
+  1359	  gap: 14px;
+  1360	  grid-template-columns: repeat(5, minmax(0, 1fr));
+  1361	  margin-top: 34px;
+  1362	}
+  1363	
+  1364	.stack-group {
+  1365	  padding: 20px;
+  1366	}
+  1367	
+  1368	.stack-group h3 {
+  1369	  font-size: 11px;
+  1370	}
+  1371	
+  1372	.stack-group div {
+  1373	  display: grid;
+  1374	  gap: 8px;
+  1375	}
+  1376	
+  1377	.stack-group span {
+  1378	  color: #d8ffe4;
+  1379	  font-size: 14px;
+  1380	  font-weight: 750;
+  1381	  line-height: 1.35;
+  1382	}
+  1383	
+  1384	.proof-points {
+  1385	  margin-top: 34px;
+  1386	}
+  1387	
+  1388	.closing-panel {
+  1389	  align-items: center;
+  1390	  background: linear-gradient(180deg, rgba(13, 31, 22, 0.88), rgba(5, 13, 9, 0.88));
+  1391	  border: 1px solid var(--line);
+  1392	  border-radius: 8px;
+  1393	  display: grid;
+  1394	  gap: 34px;
+  1395	  grid-template-columns: minmax(0, 1fr) auto;
+  1396	  padding: 34px;
+  1397	}
+  1398	
+  1399	.closing-panel h2 {
+  1400	  font-size: clamp(30px, 4vw, 50px);
+  1401	  margin-bottom: 18px;
+  1402	  max-width: 720px;
+  1403	}
+  1404	
+  1405	.closing-panel p {
+  1406	  max-width: 760px;
+  1407	}
+  1408	
+  1409	.closing-actions {
+  1410	  display: flex;
+  1411	  flex-direction: column;
+  1412	  gap: 12px;
+  1413	  min-width: 190px;
+  1414	}
+  1415	
+  1416	@media (max-width: 980px) {
+  1417	  .nav-bar {
+  1418	    align-items: flex-start;
+  1419	    flex-direction: column;
+  1420	    gap: 14px;
+  1421	    padding: 16px;
+  1422	  }
+  1423	
+  1424	  .nav-bar nav {
+  1425	    display: grid;
+  1426	    flex-wrap: nowrap;
+  1427	    gap: 6px;
+  1428	    grid-template-columns:
+  1429	      minmax(0, 1.25fr) minmax(0, 0.78fr) minmax(0, 0.98fr)
+  1430	      minmax(0, 0.98fr);
+  1431	    justify-content: normal;
+  1432	    width: 100%;
+  1433	  }
+  1434	
+  1435	  .nav-bar nav a {
+  1436	    flex: 1 1 0;
+  1437	    min-width: 0;
+  1438	    padding-left: 10px;
+  1439	    padding-right: 10px;
+  1440	    text-align: center;
+  1441	  }
+  1442	
+  1443	  .project-nav nav {
+  1444	    grid-template-columns: repeat(3, minmax(0, 1fr));
+  1445	  }
+  1446	
+  1447	  .hero-grid,
+  1448	  .worklog-layout,
+  1449	  .project-hero-grid,
+  1450	  .project-section-grid,
+  1451	  .readiness-layout {
+  1452	    grid-template-columns: 1fr;
+  1453	  }
+  1454	
+  1455	  .av-showcase {
+  1456	    min-height: 610px;
+  1457	  }
+  1458	
+  1459	  .av-device-main {
+  1460	    left: 32%;
+  1461	    right: auto;
+  1462	  }
+  1463	
+  1464	  .av-device-browse {
+  1465	    right: 6%;
+  1466	  }
+  1467	
+  1468	  .av-device-confirm {
+  1469	    left: 4%;
+  1470	  }
+  1471	
+  1472	  .hero-visual {
+  1473	    min-height: auto;
+  1474	  }
+  1475	
+  1476	  .phone-stage {
+  1477	    height: 710px;
+  1478	    margin-top: 30px;
+  1479	  }
+  1480	
+  1481	  .phone-shell-commerce {
+  1482	    left: 4%;
+  1483	  }
+  1484	
+  1485	  .phone-shell-finance {
+  1486	    left: 42%;
+  1487	  }
+  1488	
+  1489	  .tablet-shell {
+  1490	    left: 9%;
+  1491	    top: 374px;
+  1492	    width: min(74%, 332px);
+  1493	  }
+  1494	
+  1495	  .case-grid,
+  1496	  .capability-grid,
+  1497	  .feature-grid,
+  1498	  .decision-grid,
+  1499	  .architecture-map {
+  1500	    grid-template-columns: repeat(2, 1fr);
+  1501	  }
+  1502	
+  1503	  .ownership-grid,
+  1504	  .stack-matrix {
+  1505	    grid-template-columns: repeat(3, minmax(0, 1fr));
+  1506	  }
+  1507	
+  1508	  .flow-layout {
+  1509	    grid-template-columns: 1fr;
+  1510	  }
+  1511	
+  1512	  .flow-capture-group {
+  1513	    grid-template-columns: 1fr;
+  1514	  }
+  1515	}
+  1516	
+  1517	@media (max-width: 720px) {
+  1518	  .site-shell {
+  1519	    width: min(100% - 24px, 1180px);
+  1520	  }
+  1521	
+  1522	  .nav-bar {
+  1523	    max-width: calc(100vw - 24px);
+  1524	    overflow: hidden;
+  1525	    padding: 14px;
+  1526	  }
+  1527	
+  1528	  .nav-bar nav {
+  1529	    gap: 4px;
+  1530	    max-width: 100%;
+  1531	    width: min(100%, calc(100vw - 54px));
+  1532	  }
+  1533	
+  1534	  .project-nav nav {
+  1535	    width: 100%;
+  1536	  }
+  1537	
+  1538	  .project-page .site-shell {
+  1539	    max-width: calc(100vw - 24px);
+  1540	    width: calc(100vw - 24px);
+  1541	  }
+  1542	
+  1543	  .project-nav {
+  1544	    max-width: calc(100vw - 24px);
+  1545	    width: calc(100vw - 24px);
+  1546	  }
+  1547	
+  1548	  .project-nav nav a {
+  1549	    font-size: 11px;
+  1550	  }
+  1551	
+  1552	  .nav-bar nav a {
+  1553	    font-size: 12px;
+  1554	    padding-left: 2px;
+  1555	    padding-right: 2px;
+  1556	  }
+  1557	
+  1558	  .hero {
+  1559	    padding-top: 12px;
+  1560	  }
+  1561	
+  1562	  section.project-hero {
+  1563	    padding-top: 12px;
+  1564	  }
+  1565	
+  1566	  .project-nav {
+  1567	    margin-bottom: 48px;
+  1568	  }
+  1569	
+  1570	  .hero-grid {
+  1571	    gap: 30px;
+  1572	    padding-top: 42px;
+  1573	  }
+  1574	
+  1575	  h1 {
+  1576	    font-size: clamp(42px, 15vw, 64px);
+  1577	  }
+  1578	
+  1579	  .hero-visual {
+  1580	    min-height: auto;
+  1581	  }
+  1582	
+  1583	  .phone-stage {
+  1584	    height: 626px;
+  1585	    margin-top: 18px;
+  1586	  }
+  1587	
+  1588	  .profile-orbit {
+  1589	    right: 0;
+  1590	  }
+  1591	
+  1592	  .profile-photo {
+  1593	    height: 132px;
+  1594	    width: 132px;
+  1595	  }
+  1596	
+  1597	  .phone-shell {
+  1598	    height: 420px;
+  1599	    width: 206px;
+  1600	  }
+  1601	
+  1602	  .phone-shell-commerce {
+  1603	    left: -2px;
+  1604	    top: 72px;
+  1605	  }
+  1606	
+  1607	  .phone-shell-finance {
+  1608	    left: auto;
+  1609	    right: -8px;
+  1610	    top: 124px;
+  1611	  }
+  1612	
+  1613	  .tablet-shell {
+  1614	    height: 150px;
+  1615	    left: 14px;
+  1616	    top: 342px;
+  1617	    width: min(84vw, 268px);
+  1618	  }
+  1619	
+  1620	  .case-grid,
+  1621	  .capability-grid {
+  1622	    grid-template-columns: 1fr;
+  1623	  }
+  1624	
+  1625	  .case-card {
+  1626	    min-height: auto;
+  1627	  }
+  1628	
+  1629	  .contact-panel {
+  1630	    align-items: flex-start;
+  1631	    flex-direction: column;
+  1632	  }
+  1633	
+  1634	  .project-page section:not(.project-hero) {
+  1635	    padding: 58px 0;
+  1636	  }
+  1637	
+  1638	  .project-hero-grid {
+  1639	    gap: 34px;
+  1640	  }
+  1641	
+  1642	  .project-back-link {
+  1643	    margin-bottom: 24px;
+  1644	  }
+  1645	
+  1646	  .project-copy-panel {
+  1647	    border-left: 0;
+  1648	    padding-left: 0;
+  1649	  }
+  1650	
+  1651	  .project-hero-text,
+  1652	  .project-copy-panel p,
+  1653	  .architecture-copy,
+  1654	  .readiness-copy,
+  1655	  .closing-panel p {
+  1656	    font-size: 16px;
+  1657	  }
+  1658	
+  1659	  .project-subtitle,
+  1660	  .project-hero-text,
+  1661	  .project-meta-row {
+  1662	    max-width: 100%;
+  1663	    overflow-wrap: anywhere;
+  1664	  }
+  1665	
+  1666	  .project-meta-row span {
+  1667	    flex: 0 1 auto;
+  1668	    white-space: normal;
+  1669	  }
+  1670	
+  1671	  .av-showcase {
+  1672	    min-height: auto;
+  1673	    padding: 0 0 18px;
+  1674	  }
+  1675	
+  1676	  .av-showcase::before {
+  1677	    inset: 20px 0 84px;
+  1678	  }
+  1679	
+  1680	  .av-device {
+  1681	    position: relative;
+  1682	  }
+  1683	
+  1684	  .av-device-main {
+  1685	    height: auto;
+  1686	    left: auto;
+  1687	    margin: 0 auto;
+  1688	    max-width: 292px;
+  1689	    right: auto;
+  1690	    top: auto;
+  1691	    transform: rotate(-4deg);
+  1692	    width: 72vw;
+  1693	  }
+  1694	
+  1695	  .av-device-browse,
+  1696	  .av-device-confirm {
+  1697	    display: none;
+  1698	  }
+  1699	
+  1700	  .av-showcase-proof {
+  1701	    margin: -18px auto 0;
+  1702	    max-width: min(292px, calc(100vw - 48px));
+  1703	    position: relative;
+  1704	    right: auto;
+  1705	  }
+  1706	
+  1707	  .project-card-grid,
+  1708	  .ownership-grid,
+  1709	  .feature-grid,
+  1710	  .decision-grid,
+  1711	  .architecture-map,
+  1712	  .stack-matrix {
+  1713	    grid-template-columns: 1fr;
+  1714	  }
+  1715	
+  1716	  .flow-segments {
+  1717	    grid-template-columns: repeat(2, minmax(0, 1fr));
+  1718	  }
+  1719	
+  1720	  .flow-support {
+  1721	    grid-template-columns: 1fr;
+  1722	  }
+  1723	
+  1724	  .flow-checkout-note {
+  1725	    min-height: auto;
+  1726	  }
+  1727	
+  1728	  .flow-section-intro > p {
+  1729	    border-left: 0;
+  1730	    padding-left: 0;
+  1731	  }
+  1732	
+  1733	  .flow-capture-groups {
+  1734	    gap: 40px;
+  1735	    margin-top: 44px;
+  1736	  }
+  1737	
+  1738	  .flow-capture-group {
+  1739	    padding-top: 24px;
+  1740	  }
+  1741	
+  1742	  .flow-capture-grid {
+  1743	    gap: 28px;
+  1744	    grid-template-columns: 1fr;
+  1745	  }
+  1746	
+  1747	  .flow-screen-compact {
+  1748	    width: min(42vw, 146px);
+  1749	  }
+  1750	
+  1751	  .flow-screen-stack-captures {
+  1752	    gap: 12px;
+  1753	  }
+  1754	
+  1755	  .flow-screen:not(.flow-screen-main) .flow-image-frame {
+  1756	    margin: 0 auto;
+  1757	    max-width: 230px;
+  1758	  }
+  1759	
+  1760	  .closing-panel {
+  1761	    grid-template-columns: 1fr;
+  1762	    padding: 28px;
+  1763	  }
+  1764	
+  1765	  .closing-actions {
+  1766	    width: 100%;
+  1767	  }
+  1768	}
+  1769	
+  1770	@media (max-width: 380px) {
+  1771	  .nav-bar {
+  1772	    padding-left: 12px;
+  1773	    padding-right: 12px;
+  1774	  }
+  1775	
+  1776	  .nav-bar nav {
+  1777	    gap: 1px;
+  1778	    width: min(100%, calc(100vw - 50px));
+  1779	  }
+  1780	
+  1781	  .nav-bar nav a {
+  1782	    font-size: 10.5px;
+  1783	    padding-left: 0;
+  1784	    padding-right: 0;
+  1785	  }
+  1786	}
+  1787	
+  1788	@media (max-width: 340px) {
+  1789	  .nav-bar nav a {
+  1790	    font-size: 10px;
+  1791	  }
+  1792	}
 
 
 ============================================================
@@ -4472,20 +5429,19 @@ main
 
 Status:
 ## main...origin/main
-?? portfolio_PROJECT_SNAPSHOT.txt
-?? read_project.sh
+ M portfolio_PROJECT_SNAPSHOT.txt
 
 Recent commits:
-3fa5aa5 (HEAD -> main, origin/main) removed line wrapping of top nav links that was pushing links to a secondary row during compressed, portrait mobile aspect ratios. all links now appear without jumping to a new row. abbreviated text assets below the main hero, ensuring that headers do not clip into each other once compressed. added apostrophes around each project name in the green main button of the hero, ensuring that the user knows the names listed concern app mobile app dev projects and that clicking it navigates to the corresponding page.
+ccd78cb (HEAD -> main, origin/main) generated the latest pdf 'Portfolio' worklog for July 15 Part 2, 2026.
+fd69e1e created a dedicated project page 'Alla Vostra', accessible by various means: clicking the green action button in the hero that mentions its name, the device frame that displays its device-framed screenshot, or anywhere on the project card further down the page. the project page includes information such as overciew, scope and ownership, core features, product flow (steps 1-6), technical architecture, engineering decisions, testing and release readiness, build timeline, etc. a multitude of small/large Android device screenshots are viewable to represent the graphical and functional UI responsively, each screenshot enlarging with a pop-up overlay during mouse hover (desktop/laptop) and tap&hold (mobile).
+6a61438 generated pdf worklog for July 15, part 1. created a read project bash file to study and understand the full scope of the project files & folders before commencing a new session.
+3fa5aa5 removed line wrapping of top nav links that was pushing links to a secondary row during compressed, portrait mobile aspect ratios. all links now appear without jumping to a new row. abbreviated text assets below the main hero, ensuring that headers do not clip into each other once compressed. added apostrophes around each project name in the green main button of the hero, ensuring that the user knows the names listed concern app mobile app dev projects and that clicking it navigates to the corresponding page.
 9387838 generated pdf worklog for the 'Portfolio' project, dated July 14, 2026.
 cf141aa performed a number of small text, button and animation-related changed to the landing page. Prahlin (the GitHub username) now displays Martin Prahl (full dev name). the banner underneath the hero has been updated to include more relevant information regarding developmental experience and achievements. the static 'View Alla Vostra' button has been exchanged for a full-on carousel, alternating between various project names and appearing with a slide/bump animation for enhanced visual appeal.
 1b1e1b2 incorporated a landscape-orient device frame in the portfolio header, displaying a a preliminary screenshot of the self-made video streaming 'Cinerific' tablet app. a case study card was added below, describing the project and mentioning some of the languages/tools/libraries/dependencies used in its development.
 4cb6a98 generated the very first pdf worklog for the 'portfolio' project, showcasing personal case studies, stacks, worklogs, contact info, and more. the worklog covers established baselines, work completed throughout the first session, files touched, lessons learned throughout the session, and more. for consistency, the worklog follows pre-established naming conventions, style, content type and structure from other development projects.
 bb184fe imported 3 'alla vostra' project screenshots into the portfolio project, placing them as miniatures under the 'alla vostra' section. the images offer a snapshot of the mobile app project before the user navigates to its dedicated page.
 e63fa26 added slim edge border atop the 'alla vostra' device frame's screen inlay for the purposes of unobscuring the screenshot's top portion
-4b8ca33 substituted the 'alla vostra' project's device small inlay for a large one, more in keeping with the correct aspect ratio of the frame.
-f6080f3 replaced profile photo with a more fitting background color gradient. adjusted the 'alla vostra' device frame's screenshot inlay with a less-clipped version of the image along its edges.
-ef06811 replaced placeholder email address with the official developer email. replaced the generic placeholder inlay of the 'alla vostra' device mockup with an actual screenshot from that mobile app development project.
 
 Remotes:
 origin	https://github.com/Prahlin/portfolio.git (fetch)
@@ -4496,16 +5452,36 @@ origin	https://github.com/Prahlin/portfolio.git (push)
 BINARY / IMAGE ASSET INVENTORY - PUBLIC IMAGES
 ============================================================
 
+public/images/address_overlay_large.png | 209339 bytes | modified 2026-07-15 19:25:04
+public/images/address_overlay_small.png | 102975 bytes | modified 2026-07-15 19:25:04
 public/images/cinerific-intro.png | 349162 bytes | modified 2026-07-14 21:00:29
+public/images/confirmed_overlay_large.png | 265613 bytes | modified 2026-07-15 19:34:08
 public/images/confirmed_overlay_small.png | 118510 bytes | modified 2026-07-11 12:10:14
+public/images/contact_overlay_large.png | 207066 bytes | modified 2026-07-15 19:25:04
+public/images/contact_overlay_small.png | 100905 bytes | modified 2026-07-15 19:25:04
+public/images/empty_cart_overlay_large.png | 241136 bytes | modified 2026-07-15 19:25:04
+public/images/empty_cart_overlay_small.png | 118554 bytes | modified 2026-07-15 19:25:04
+public/images/filled_cart_overlay_large.png | 464259 bytes | modified 2026-07-15 19:25:04
+public/images/filled_cart_overlay_small.png | 181313 bytes | modified 2026-07-15 19:25:04
 public/images/martin-profile.png | 480081 bytes | modified 2026-07-11 18:45:54
 public/images/martin1.jpg | 178343 bytes | modified 2026-07-11 20:43:41
 public/images/martin2.jpg | 146510 bytes | modified 2026-07-11 21:29:17
 public/images/martin3.jpg | 141871 bytes | modified 2026-07-11 21:15:24
+public/images/payment_confirmation_overlay_large.png | 293007 bytes | modified 2026-07-15 19:34:08
+public/images/payment_confirmation_overlay_small.png | 144885 bytes | modified 2026-07-15 19:34:08
+public/images/payment_input_large.png | 222140 bytes | modified 2026-07-15 20:44:58
+public/images/payment_input_small.png | 106132 bytes | modified 2026-07-15 20:15:11
+public/images/payment_overlay_large.png | 228482 bytes | modified 2026-07-15 19:25:04
+public/images/payment_overlay_small.png | 106712 bytes | modified 2026-07-15 19:25:04
+public/images/products_overlay_large.png | 883015 bytes | modified 2026-07-15 19:34:08
 public/images/products_overlay_small.png | 296612 bytes | modified 2026-07-11 11:56:41
+public/images/shop_preview_large.png | 1053497 bytes | modified 2026-07-15 19:25:04
+public/images/shop_preview_small.png | 388230 bytes | modified 2026-07-15 19:25:04
 public/images/start-page-mockup-reference.png | 1113950 bytes | modified 2026-07-11 12:39:08
 public/images/startup_screen_large.png | 2049492 bytes | modified 2026-07-11 12:30:30
 public/images/startup_screen_small.png | 694404 bytes | modified 2026-07-11 11:54:03
+public/images/time_date_overlay_large.png | 211465 bytes | modified 2026-07-15 19:25:04
+public/images/time_date_overlay_small.png | 104568 bytes | modified 2026-07-15 19:25:04
 
 
 ============================================================
@@ -4514,6 +5490,8 @@ PDF WORKLOG INVENTORY
 
 portfolio_worklog_july11.pdf | 23528 bytes | modified 2026-07-12 00:10:01
 portfolio_worklog_july14.pdf | 29767 bytes | modified 2026-07-14 22:44:02
+portfolio_worklog_july15_part1.pdf | 25059 bytes | modified 2026-07-15 18:07:04
+portfolio_worklog_july15_part2.pdf | 33101 bytes | modified 2026-07-15 21:31:55
 
 
 ============================================================

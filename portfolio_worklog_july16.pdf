@@ -1,0 +1,326 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+2 0 obj
+<< /Length 5652 >>
+stream
+BT
+/F1 15.20 Tf 1 0 0 1 54.00 744.00 Tm (Prahlin Portfolio Work Log - July 16, 2026) Tj
+/F1 9.45 Tf 1 0 0 1 54.00 726.55 Tm (Compiled summary for Thursday, July 16, 2026 - focus: continuing the dedicated Alla Vostra) Tj
+/F1 9.45 Tf 1 0 0 1 54.00 714.30 Tm (case-study page, refreshing Portfolio project context, capturing new Android Small and) Tj
+/F1 9.45 Tf 1 0 0 1 54.00 702.05 Tm (Android Large app screenshots, correcting small-device capture chrome, expanding Browse) Tj
+/F1 9.45 Tf 1 0 0 1 54.00 689.80 Tm (screenshots, renaming overlay/prompt stacks, adding collapsible screenshot sections, tuning) Tj
+/F1 9.45 Tf 1 0 0 1 54.00 677.55 Tm (mobile portrait defaults, improving tap-hold screenshot preview behavior during scroll, and) Tj
+/F1 9.45 Tf 1 0 0 1 54.00 665.30 Tm (pushing the committed work through the official public website pipeline.) Tj
+/F1 9.45 Tf 1 0 0 1 54.00 649.85 Tm (Generated in continuity with the established Prahlin Portfolio daily worklog cadence: compact) Tj
+/F1 9.45 Tf 1 0 0 1 54.00 637.60 Tm (opening summary, source-material section, baseline section, goal list, work-completed) Tj
+/F1 9.45 Tf 1 0 0 1 54.00 625.35 Tm (sections, validation section, files-touched list, follow-up context, and output-artifact) Tj
+/F1 9.45 Tf 1 0 0 1 54.00 613.10 Tm (close.) Tj
+/F1 9.45 Tf 1 0 0 1 54.00 597.65 Tm (This artifact intentionally covers only Prahlin/portfolio work performed for July 16, 2026:) Tj
+/F1 9.45 Tf 1 0 0 1 54.00 585.40 Tm (the session-start project snapshot review, screenshot and AVD capture workflow, commit) Tj
+/F1 9.45 Tf 1 0 0 1 54.00 573.15 Tm (babed15a74b5083bbb9870d18d44ac1b30bcf48b, successful push to origin/main, successful) Tj
+/F1 9.45 Tf 1 0 0 1 54.00 560.90 Tm (Hostinger static-export workflow run, and this worklog-generation step. The Alla Vostra app) Tj
+/F1 9.45 Tf 1 0 0 1 54.00 548.65 Tm (repo is referenced only where it supported screenshot capture.) Tj
+/F1 12.00 Tf 1 0 0 1 54.00 524.70 Tm (Source Materials Reviewed) Tj
+/F1 9.45 Tf 1 0 0 1 54.00 511.45 Tm (- Ran ./read_project.sh at the beginning of the session and reviewed) Tj
+/F1 9.45 Tf 1 0 0 1 68.00 499.20 Tm (  portfolio_PROJECT_SNAPSHOT.txt, including project notes, source tree, code dumps, asset) Tj
+/F1 9.45 Tf 1 0 0 1 68.00 486.95 Tm (  inventory, PDF inventory, deployment notes, recent commits, and the standing) Tj
+/F1 9.45 Tf 1 0 0 1 68.00 474.70 Tm (  commit-message convention.) Tj
+/F1 9.45 Tf 1 0 0 1 54.00 459.25 Tm (- Reviewed all pre-existing Portfolio root-level worklogs: portfolio_worklog_july11.pdf,) Tj
+/F1 9.45 Tf 1 0 0 1 68.00 447.00 Tm (  portfolio_worklog_july14.pdf, portfolio_worklog_july15_part1.pdf, and) Tj
+/F1 9.45 Tf 1 0 0 1 68.00 434.75 Tm (  portfolio_worklog_july15_part2.pdf.) Tj
+/F1 9.45 Tf 1 0 0 1 54.00 419.30 Tm (- Extracted text from all four Portfolio worklog PDFs with pdftotext to preserve the) Tj
+/F1 9.45 Tf 1 0 0 1 68.00 407.05 Tm (  established title cadence, section order, validation language, files-touched list,) Tj
+/F1 9.45 Tf 1 0 0 1 68.00 394.80 Tm (  follow-up context, and output-artifact close.) Tj
+/F1 9.45 Tf 1 0 0 1 54.00 379.35 Tm (- Checked PDF metadata and page counts with pdfinfo. The prior Portfolio artifacts use) Tj
+/F1 9.45 Tf 1 0 0 1 68.00 367.10 Tm (  letter-size pages, root-level filenames, compact five-to-six page bodies, and the) Tj
+/F1 9.45 Tf 1 0 0 1 68.00 354.85 Tm (  standard-library PDF-generator metadata used by the July 14 and July 15 logs.) Tj
+/F1 9.45 Tf 1 0 0 1 54.00 339.40 Tm (- Reviewed the July 16 Git scope through git log, git show --stat, git show --name-status,) Tj
+/F1 9.45 Tf 1 0 0 1 68.00 327.15 Tm (  and targeted diffs for app/ScreenshotPreviewLayer.tsx, app/globals.css, app/page.tsx,) Tj
+/F1 9.45 Tf 1 0 0 1 68.00 314.90 Tm (  app/projects/alla-vostra/page.tsx, and app/projects/alla-vostra/ExpandableFlowStacks.tsx.) Tj
+/F1 9.45 Tf 1 0 0 1 54.00 299.45 Tm (- Reviewed the new public/images assets and confirmed their Android capture dimensions with) Tj
+/F1 9.45 Tf 1 0 0 1 68.00 287.20 Tm (  sips: 720x1280 for Android Small and 1440x3120 for Android Large.) Tj
+/F1 9.45 Tf 1 0 0 1 54.00 271.75 Tm (- Reviewed the supporting Alla Vostra AppHeader.js diff that corrected small-device capture) Tj
+/F1 9.45 Tf 1 0 0 1 68.00 259.50 Tm (  chrome, while keeping that external repo change separate from the Portfolio commit.) Tj
+/F1 9.45 Tf 1 0 0 1 54.00 244.05 Tm (- Checked local/remote state after push: main and origin/main both resolved to babed15, and) Tj
+/F1 9.45 Tf 1 0 0 1 68.00 231.80 Tm (  gh run list reported the Build static export for Hostinger workflow completed successfully) Tj
+/F1 9.45 Tf 1 0 0 1 68.00 219.55 Tm (  for that push.) Tj
+/F1 12.00 Tf 1 0 0 1 54.00 195.60 Tm (Baseline Status Before July 16 Work) Tj
+/F1 9.45 Tf 1 0 0 1 54.00 182.35 Tm (- The July 15 Part 2 Portfolio site already had a dedicated /projects/alla-vostra route with) Tj
+/F1 9.45 Tf 1 0 0 1 68.00 170.10 Tm (  a serious full-stack mobile commerce case-study structure and paired Product Flow) Tj
+/F1 9.45 Tf 1 0 0 1 68.00 157.85 Tm (  screenshots.) Tj
+/F1 9.45 Tf 1 0 0 1 54.00 142.40 Tm (- The Browse stage still leaned on the earlier Shop Preview and Products naming and did not) Tj
+/F1 9.45 Tf 1 0 0 1 68.00 130.15 Tm (  yet show a fuller Home, Products, About Us, Contact, and Shop browsing sequence.) Tj
+/F1 9.45 Tf 1 0 0 1 54.00 114.70 Tm (- Product-specific overlay captures for Buon Natale, Sei Perfetto, and Piccola were not yet) Tj
+/F1 9.45 Tf 1 0 0 1 68.00 102.45 Tm (  parked in public/images with product-specific filenames.) Tj
+/F1 8.2 Tf 1 0 0 1 54.00 38.00 Tm (Prahlin Portfolio Work Log - July 16, 2026 Page 1) Tj
+ET
+endstream
+endobj
+3 0 obj
+<< /Type /Page /Parent 12 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R >> >> /Contents 2 0 R >>
+endobj
+4 0 obj
+<< /Length 5418 >>
+stream
+BT
+/F1 9.45 Tf 1 0 0 1 54.00 744.00 Tm (- Android Small captures initially had incorrect whitish native top/bottom bars, and the) Tj
+/F1 9.45 Tf 1 0 0 1 68.00 731.75 Tm (  app's orange header could clip into the white top navigation area during capture.) Tj
+/F1 9.45 Tf 1 0 0 1 54.00 716.30 Tm (- The growing screenshot library made Browse and Customer Details feel dense, especially on) Tj
+/F1 9.45 Tf 1 0 0 1 68.00 704.05 Tm (  mobile web portrait where two default stacks per category consumed too much vertical) Tj
+/F1 9.45 Tf 1 0 0 1 68.00 691.80 Tm (  space.) Tj
+/F1 9.45 Tf 1 0 0 1 54.00 676.35 Tm (- The screenshot preview layer hid tap-hold previews during scroll, and the standalone) Tj
+/F1 9.45 Tf 1 0 0 1 68.00 664.10 Tm (  Product Flow launch image still magnified even though the user wanted that standalone) Tj
+/F1 9.45 Tf 1 0 0 1 68.00 651.85 Tm (  image excluded.) Tj
+/F1 9.45 Tf 1 0 0 1 54.00 636.40 Tm (- The public deployment path remained the GitHub-backed Portfolio main branch, with GitHub) Tj
+/F1 9.45 Tf 1 0 0 1 68.00 624.15 Tm (  Actions building main into hostinger-deploy for Hostinger public_html.) Tj
+/F1 12.00 Tf 1 0 0 1 54.00 600.20 Tm (Goals for July 16) Tj
+/F1 9.45 Tf 1 0 0 1 54.00 586.95 Tm (- Refresh project context by reading the Portfolio snapshot and all Portfolio worklogs) Tj
+/F1 9.45 Tf 1 0 0 1 68.00 574.70 Tm (  before making additional changes.) Tj
+/F1 9.45 Tf 1 0 0 1 54.00 559.25 Tm (- Load Android Small and Android Large AVDs with Alla Vostra and capture product overlay) Tj
+/F1 9.45 Tf 1 0 0 1 68.00 547.00 Tm (  screenshots for Buon Natale, Sei Perfetto, and Piccola.) Tj
+/F1 9.45 Tf 1 0 0 1 54.00 531.55 Tm (- Correct Android Small screenshot chrome so the native bars match the pre-existing) Tj
+/F1 9.45 Tf 1 0 0 1 68.00 519.30 Tm (  orange/brown treatment, not the incorrect whitish bars.) Tj
+/F1 9.45 Tf 1 0 0 1 54.00 503.85 Tm (- Capture Android Small and Android Large versions of Home, Products, About Us, and Contact) Tj
+/F1 9.45 Tf 1 0 0 1 68.00 491.60 Tm (  when prompted, save them under public/images, and follow the requested screen_screen_size) Tj
+/F1 9.45 Tf 1 0 0 1 68.00 479.35 Tm (  naming pattern.) Tj
+/F1 9.45 Tf 1 0 0 1 54.00 463.90 Tm (- Incorporate the new Small/Large Browse screen stacks into the Alla Vostra project page,) Tj
+/F1 9.45 Tf 1 0 0 1 68.00 451.65 Tm (  preserving the Shop stack and placing it last.) Tj
+/F1 9.45 Tf 1 0 0 1 54.00 436.20 Tm (- Rename lower Product Flow stacks so labels clearly distinguish overlays and prompts:) Tj
+/F1 9.45 Tf 1 0 0 1 68.00 423.95 Tm (  Address Input, Contact Input, Payment Method, Payment Input Prompt, and Order Placed) Tj
+/F1 9.45 Tf 1 0 0 1 68.00 411.70 Tm (  Prompt.) Tj
+/F1 9.45 Tf 1 0 0 1 54.00 396.25 Tm (- Reduce screenshot overload with expandable sections, then tune mobile portrait so) Tj
+/F1 9.45 Tf 1 0 0 1 68.00 384.00 Tm (  categories 2 through 6 show one stack by default before the More button.) Tj
+/F1 9.45 Tf 1 0 0 1 54.00 368.55 Tm (- Keep tap-hold screenshot magnification large during mobile web portrait scrolling until) Tj
+/F1 9.45 Tf 1 0 0 1 68.00 356.30 Tm (  release, while excluding the standalone Product Flow launch screenshot from magnification.) Tj
+/F1 9.45 Tf 1 0 0 1 54.00 340.85 Tm (- Commit with the user-approved past-tense message and push to the official public website) Tj
+/F1 9.45 Tf 1 0 0 1 68.00 328.60 Tm (  path after confirming main is the existing deployment source.) Tj
+/F1 12.00 Tf 1 0 0 1 54.00 304.65 Tm (Work Completed - Project Context and AVD Capture) Tj
+/F1 9.45 Tf 1 0 0 1 54.00 291.40 Tm (- Ran and read the Portfolio project snapshot, then read the full Portfolio worklog series) Tj
+/F1 9.45 Tf 1 0 0 1 68.00 279.15 Tm (  in order before starting the July 16 implementation pass.) Tj
+/F1 9.45 Tf 1 0 0 1 54.00 263.70 Tm (- Loaded Android Small and Android Large AVDs with Alla Vostra for capture work tied to the) Tj
+/F1 9.45 Tf 1 0 0 1 68.00 251.45 Tm (  Portfolio case-study page.) Tj
+/F1 9.45 Tf 1 0 0 1 54.00 236.00 Tm (- Captured product overlay states for Buon Natale and Sei Perfetto on both Android Small and) Tj
+/F1 9.45 Tf 1 0 0 1 68.00 223.75 Tm (  Android Large, then saved product-specific files into public/images.) Tj
+/F1 9.45 Tf 1 0 0 1 54.00 208.30 Tm (- Retook the Android Small Buon Natale and Sei Perfetto captures after identifying that the) Tj
+/F1 9.45 Tf 1 0 0 1 68.00 196.05 Tm (  first Small versions had incorrect whitish native system bars.) Tj
+/F1 9.45 Tf 1 0 0 1 54.00 180.60 Tm (- Captured and added the Piccola Small product overlay while preserving the Large Piccola) Tj
+/F1 9.45 Tf 1 0 0 1 68.00 168.35 Tm (  asset through the rename from products_overlay_large.png to) Tj
+/F1 9.45 Tf 1 0 0 1 68.00 156.10 Tm (  products_overlay_piccola_large.png.) Tj
+/F1 9.45 Tf 1 0 0 1 54.00 140.65 Tm (- Adjusted Alla Vostra AppHeader.js outside the Portfolio repo so the small-device orange) Tj
+/F1 9.45 Tf 1 0 0 1 68.00 128.40 Tm (  header no longer clipped into the white top navigation during capture.) Tj
+/F1 9.45 Tf 1 0 0 1 54.00 112.95 Tm (- Captured synchronized Small and Large screenshots for Home, Products, About Us, and) Tj
+/F1 9.45 Tf 1 0 0 1 68.00 100.70 Tm (  Contact when the user called NOW, then copied them into public/images with the requested) Tj
+/F1 9.45 Tf 1 0 0 1 68.00 88.45 Tm (  filenames.) Tj
+/F1 8.2 Tf 1 0 0 1 54.00 38.00 Tm (Prahlin Portfolio Work Log - July 16, 2026 Page 2) Tj
+ET
+endstream
+endobj
+5 0 obj
+<< /Type /Page /Parent 12 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R >> >> /Contents 4 0 R >>
+endobj
+6 0 obj
+<< /Length 5181 >>
+stream
+BT
+/F1 9.45 Tf 1 0 0 1 54.00 744.00 Tm (- Confirmed the new screen and overlay captures use the established Android Small and) Tj
+/F1 9.45 Tf 1 0 0 1 68.00 731.75 Tm (  Android Large dimensions used by the rest of the Portfolio screenshot set.) Tj
+/F1 12.00 Tf 1 0 0 1 54.00 707.80 Tm (Work Completed - Browse and Product Flow Restructuring) Tj
+/F1 9.45 Tf 1 0 0 1 54.00 694.55 Tm (- Updated the Alla Vostra Browse stage to present five paired Small/Large stacks: Home) Tj
+/F1 9.45 Tf 1 0 0 1 68.00 682.30 Tm (  Screen, Products Screen, About Us Screen, Contact Screen, and Shop Screen.) Tj
+/F1 9.45 Tf 1 0 0 1 54.00 666.85 Tm (- Restored the Shop stack after the user noticed it had been removed, and placed it last in) Tj
+/F1 9.45 Tf 1 0 0 1 68.00 654.60 Tm (  the Browse category.) Tj
+/F1 9.45 Tf 1 0 0 1 54.00 639.15 Tm (- Changed Browse copy so it describes the broader browsing surfaces: brand, product catalog,) Tj
+/F1 9.45 Tf 1 0 0 1 68.00 626.90 Tm (  company story, inquiry path, and shop entry.) Tj
+/F1 9.45 Tf 1 0 0 1 54.00 611.45 Tm (- Updated the Alla Vostra project-page hero showcase and the landing-page Alla Vostra card) Tj
+/F1 9.45 Tf 1 0 0 1 68.00 599.20 Tm (  miniature to use products_screen_small.png rather than the older) Tj
+/F1 9.45 Tf 1 0 0 1 68.00 586.95 Tm (  products_overlay_small.png path.) Tj
+/F1 9.45 Tf 1 0 0 1 54.00 571.50 Tm (- Kept the Buon Natale, Sei Perfetto, and Piccola product overlay screenshots in) Tj
+/F1 9.45 Tf 1 0 0 1 68.00 559.25 Tm (  public/images as prepared standalone assets, while the visible Browse stacks use broader) Tj
+/F1 9.45 Tf 1 0 0 1 68.00 547.00 Tm (  screen-level captures.) Tj
+/F1 9.45 Tf 1 0 0 1 54.00 531.55 Tm (- Renamed Details to Customer Details and carried that wording into the matching) Tj
+/F1 9.45 Tf 1 0 0 1 68.00 519.30 Tm (  expand/collapse button label.) Tj
+/F1 9.45 Tf 1 0 0 1 54.00 503.85 Tm (- Renamed lower stacks to the user-approved labels: Address Input Overlay, Contact Input) Tj
+/F1 9.45 Tf 1 0 0 1 68.00 491.60 Tm (  Overlay, Payment Method Overlay, Payment Input Prompt, and Order Placed Prompt.) Tj
+/F1 9.45 Tf 1 0 0 1 54.00 476.15 Tm (- Kept Empty Cart Overlay, Filled Cart Overlay, Order Confirmation Overlay, and the overall) Tj
+/F1 9.45 Tf 1 0 0 1 68.00 463.90 Tm (  Launch/Browse/Cart/Details/Payment/Confirmation stage sequence intact.) Tj
+/F1 12.00 Tf 1 0 0 1 54.00 439.95 Tm (Work Completed - Expandable Sections and Mobile Defaults) Tj
+/F1 9.45 Tf 1 0 0 1 54.00 426.70 Tm (- Added app/projects/alla-vostra/ExpandableFlowStacks.tsx as a reusable client component for) Tj
+/F1 9.45 Tf 1 0 0 1 68.00 414.45 Tm (  paired screenshot stacks with grow/collapse controls.) Tj
+/F1 9.45 Tf 1 0 0 1 54.00 399.00 Tm (- Used lucide ChevronDown and ChevronUp icons, aria-expanded, aria-controls, and useId so) Tj
+/F1 9.45 Tf 1 0 0 1 68.00 386.75 Tm (  the expandable controls remain accessible.) Tj
+/F1 9.45 Tf 1 0 0 1 54.00 371.30 Tm (- Added global CSS for the toggle row, toggle button, hidden extra-stack wrapper, open) Tj
+/F1 9.45 Tf 1 0 0 1 68.00 359.05 Tm (  state, max-height/opacity/transform transitions, pointer-events control, and) Tj
+/F1 9.45 Tf 1 0 0 1 68.00 346.80 Tm (  reduced-motion fallback.) Tj
+/F1 9.45 Tf 1 0 0 1 54.00 331.35 Tm (- Implemented Browse defaults so Home Screen and Products Screen show first, with About Us,) Tj
+/F1 9.45 Tf 1 0 0 1 68.00 319.10 Tm (  Contact, and Shop behind More Browse Screens.) Tj
+/F1 9.45 Tf 1 0 0 1 54.00 303.65 Tm (- Implemented Customer Details defaults so Address Input Overlay and Time and Date Overlay) Tj
+/F1 9.45 Tf 1 0 0 1 68.00 291.40 Tm (  show first, with Contact Input Overlay behind More Customer Details Screens.) Tj
+/F1 9.45 Tf 1 0 0 1 54.00 275.95 Tm (- Removed the word Show from the Browse button label, leaving More Browse Screens and Hide) Tj
+/F1 9.45 Tf 1 0 0 1 68.00 263.70 Tm (  Browse Screens.) Tj
+/F1 9.45 Tf 1 0 0 1 54.00 248.25 Tm (- Extended the component to all Product Flow groups while preserving desktop behavior:) Tj
+/F1 9.45 Tf 1 0 0 1 68.00 236.00 Tm (  Browse and Customer Details show two stacks, while Cart, Payment, and Confirmation show) Tj
+/F1 9.45 Tf 1 0 0 1 68.00 223.75 Tm (  all stacks on wider screens.) Tj
+/F1 9.45 Tf 1 0 0 1 54.00 208.30 Tm (- Added the mobile portrait matchMedia override so Browse, Cart, Customer Details, Payment,) Tj
+/F1 9.45 Tf 1 0 0 1 68.00 196.05 Tm (  and Confirmation each show one stack by default before a More button on mobile web) Tj
+/F1 9.45 Tf 1 0 0 1 68.00 183.80 Tm (  portrait.) Tj
+/F1 12.00 Tf 1 0 0 1 54.00 159.85 Tm (Work Completed - Screenshot Preview Behavior) Tj
+/F1 9.45 Tf 1 0 0 1 54.00 146.60 Tm (- Updated app/ScreenshotPreviewLayer.tsx so touch pointerdown no longer calls) Tj
+/F1 9.45 Tf 1 0 0 1 68.00 134.35 Tm (  preventDefault, allowing the page to scroll while a tap-hold preview is active.) Tj
+/F1 9.45 Tf 1 0 0 1 54.00 118.90 Tm (- Added touch-aware pointercancel handling so touch cancellations do not immediately hide an) Tj
+/F1 9.45 Tf 1 0 0 1 68.00 106.65 Tm (  active preview, while non-touch pointer cancellation still releases it.) Tj
+/F1 8.2 Tf 1 0 0 1 54.00 38.00 Tm (Prahlin Portfolio Work Log - July 16, 2026 Page 3) Tj
+ET
+endstream
+endobj
+7 0 obj
+<< /Type /Page /Parent 12 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R >> >> /Contents 6 0 R >>
+endobj
+8 0 obj
+<< /Length 5299 >>
+stream
+BT
+/F1 9.45 Tf 1 0 0 1 54.00 744.00 Tm (- Added touchend handling so the preview hides when the active touch ends and there are no) Tj
+/F1 9.45 Tf 1 0 0 1 68.00 731.75 Tm (  remaining touches.) Tj
+/F1 9.45 Tf 1 0 0 1 54.00 716.30 Tm (- Changed scroll handling so active touch previews stay visible during scroll, while mouse) Tj
+/F1 9.45 Tf 1 0 0 1 68.00 704.05 Tm (  hover previews still hide on scroll when no touch pointer is held.) Tj
+/F1 9.45 Tf 1 0 0 1 54.00 688.60 Tm (- Removed data-screenshot-preview from the standalone Product Flow launch screenshot so it) Tj
+/F1 9.45 Tf 1 0 0 1 68.00 676.35 Tm (  no longer magnifies on desktop hover or mobile tap-hold.) Tj
+/F1 9.45 Tf 1 0 0 1 54.00 660.90 Tm (- Preserved screenshot-preview behavior for the paired Product Flow stack images, where) Tj
+/F1 9.45 Tf 1 0 0 1 68.00 648.65 Tm (  explicit data-screenshot-preview remains intentional.) Tj
+/F1 9.45 Tf 1 0 0 1 54.00 633.20 Tm (- Answered the screenshot-density question by recommending curated asset/App Store sections) Tj
+/F1 9.45 Tf 1 0 0 1 68.00 620.95 Tm (  rather than adding every possible screenshot, then used collapsible groups to keep the) Tj
+/F1 9.45 Tf 1 0 0 1 68.00 608.70 Tm (  current proof set manageable.) Tj
+/F1 12.00 Tf 1 0 0 1 54.00 584.75 Tm (Work Completed - Commit, Push, and Public Website Path) Tj
+/F1 9.45 Tf 1 0 0 1 54.00 571.50 Tm (- Asked for and received the user-approved long commit message, then revised it to past) Tj
+/F1 9.45 Tf 1 0 0 1 68.00 559.25 Tm (  tense at the user's request before committing.) Tj
+/F1 9.45 Tf 1 0 0 1 54.00 543.80 Tm (- Staged the Portfolio website changes and screenshot assets while deliberately leaving) Tj
+/F1 9.45 Tf 1 0 0 1 68.00 531.55 Tm (  portfolio_PROJECT_SNAPSHOT.txt and the unrelated public/images/martin-profile.png deletion) Tj
+/F1 9.45 Tf 1 0 0 1 68.00 519.30 Tm (  out of the commit.) Tj
+/F1 9.45 Tf 1 0 0 1 54.00 503.85 Tm (- Committed the final July 16 Portfolio website work as babed15 with the subject Updated) Tj
+/F1 9.45 Tf 1 0 0 1 68.00 491.60 Tm (  Alla Vostra case study screenshots and mobile flow presentation.) Tj
+/F1 9.45 Tf 1 0 0 1 54.00 476.15 Tm (- Confirmed with the user that origin/main was the correct path for the official public) Tj
+/F1 9.45 Tf 1 0 0 1 68.00 463.90 Tm (  website deployment, matching the existing Portfolio convention.) Tj
+/F1 9.45 Tf 1 0 0 1 54.00 448.45 Tm (- Pushed main to origin/main. The push advanced the public source branch from ccd78cb to) Tj
+/F1 9.45 Tf 1 0 0 1 68.00 436.20 Tm (  babed15, and the Hostinger static-export workflow completed successfully.) Tj
+/F1 12.00 Tf 1 0 0 1 54.00 412.25 Tm (Validation and Checks Performed) Tj
+/F1 9.45 Tf 1 0 0 1 54.00 399.00 Tm (- Ran npm run check after the implementation work; TypeScript completed successfully.) Tj
+/F1 9.45 Tf 1 0 0 1 54.00 383.55 Tm (- Confirmed local HTTP 200 responses from http://127.0.0.1:3000/projects/alla-vostra while) Tj
+/F1 9.45 Tf 1 0 0 1 68.00 371.30 Tm (  the local Next server was available.) Tj
+/F1 9.45 Tf 1 0 0 1 54.00 355.85 Tm (- Used headless Chrome through the DevTools protocol to validate the 390x844 mobile portrait) Tj
+/F1 9.45 Tf 1 0 0 1 68.00 343.60 Tm (  default state: Browse, Cart, Customer Details, Payment, and Confirmation each showed) Tj
+/F1 9.45 Tf 1 0 0 1 68.00 331.35 Tm (  exactly one visible stack plus a More button.) Tj
+/F1 9.45 Tf 1 0 0 1 54.00 315.90 Tm (- Used the same browser-level check at 1280x900 desktop width to confirm the prior desktop) Tj
+/F1 9.45 Tf 1 0 0 1 68.00 303.65 Tm (  behavior remained intact: Browse and Customer Details showed two stacks, while Cart,) Tj
+/F1 9.45 Tf 1 0 0 1 68.00 291.40 Tm (  Payment, and Confirmation showed all stacks without extra buttons.) Tj
+/F1 9.45 Tf 1 0 0 1 54.00 275.95 Tm (- Used a touch-drag smoke test in a mobile portrait browser context to confirm tap-hold) Tj
+/F1 9.45 Tf 1 0 0 1 68.00 263.70 Tm (  preview stayed visible while the page scrolled and disappeared after release.) Tj
+/F1 9.45 Tf 1 0 0 1 54.00 248.25 Tm (- Confirmed the new public/images captures had expected AVD dimensions with sips.) Tj
+/F1 9.45 Tf 1 0 0 1 54.00 232.80 Tm (- Checked git status before committing and after pushing; babed15 excluded the modified) Tj
+/F1 9.45 Tf 1 0 0 1 68.00 220.55 Tm (  snapshot and unrelated martin-profile deletion.) Tj
+/F1 9.45 Tf 1 0 0 1 54.00 205.10 Tm (- Checked gh run list and confirmed the Hostinger static-export workflow for babed15) Tj
+/F1 9.45 Tf 1 0 0 1 68.00 192.85 Tm (  completed successfully.) Tj
+/F1 12.00 Tf 1 0 0 1 54.00 168.90 Tm (Files Touched During July 16 Portfolio Work) Tj
+/F1 9.45 Tf 1 0 0 1 54.00 155.65 Tm (- app/ScreenshotPreviewLayer.tsx - improved mobile tap-hold preview behavior so) Tj
+/F1 9.45 Tf 1 0 0 1 68.00 143.40 Tm (  magnification survives scroll until release.) Tj
+/F1 9.45 Tf 1 0 0 1 54.00 127.95 Tm (- app/globals.css - added expandable screenshot-section styling, transitions, toggle-button) Tj
+/F1 9.45 Tf 1 0 0 1 68.00 115.70 Tm (  layout, and reduced-motion handling.) Tj
+/F1 9.45 Tf 1 0 0 1 54.00 100.25 Tm (- app/page.tsx - updated the Alla Vostra landing-page product miniature to) Tj
+/F1 9.45 Tf 1 0 0 1 68.00 88.00 Tm (  products_screen_small.png.) Tj
+/F1 8.2 Tf 1 0 0 1 54.00 38.00 Tm (Prahlin Portfolio Work Log - July 16, 2026 Page 4) Tj
+ET
+endstream
+endobj
+9 0 obj
+<< /Type /Page /Parent 12 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R >> >> /Contents 8 0 R >>
+endobj
+10 0 obj
+<< /Length 5348 >>
+stream
+BT
+/F1 9.45 Tf 1 0 0 1 54.00 744.00 Tm (- app/projects/alla-vostra/ExpandableFlowStacks.tsx - new client component for reusable) Tj
+/F1 9.45 Tf 1 0 0 1 68.00 731.75 Tm (  Small/Large screenshot stacks with grow/collapse controls and a mobile portrait) Tj
+/F1 9.45 Tf 1 0 0 1 68.00 719.50 Tm (  stack-count override.) Tj
+/F1 9.45 Tf 1 0 0 1 54.00 704.05 Tm (- app/projects/alla-vostra/page.tsx - expanded Browse stacks, renamed lower Product Flow) Tj
+/F1 9.45 Tf 1 0 0 1 68.00 691.80 Tm (  stacks, routed all screenshot groups through ExpandableFlowStacks, updated products) Tj
+/F1 9.45 Tf 1 0 0 1 68.00 679.55 Tm (  screenshot paths, and removed standalone launch screenshot magnification.) Tj
+/F1 9.45 Tf 1 0 0 1 54.00 664.10 Tm (- public/images/home_screen_small.png, home_screen_large.png, products_screen_small.png,) Tj
+/F1 9.45 Tf 1 0 0 1 68.00 651.85 Tm (  products_screen_large.png, about_us_screen_small.png, about_us_screen_large.png,) Tj
+/F1 9.45 Tf 1 0 0 1 68.00 639.60 Tm (  contact_screen_small.png, and contact_screen_large.png - new Browse screen captures.) Tj
+/F1 9.45 Tf 1 0 0 1 54.00 624.15 Tm (- public/images/shop_preview_screen_small.png and shop_preview_screen_large.png - renamed) Tj
+/F1 9.45 Tf 1 0 0 1 68.00 611.90 Tm (  Shop screen captures from the previous generic shop_preview_small/large filenames.) Tj
+/F1 9.45 Tf 1 0 0 1 54.00 596.45 Tm (- public/images/products_overlay_buon_natale_small.png,) Tj
+/F1 9.45 Tf 1 0 0 1 68.00 584.20 Tm (  products_overlay_buon_natale_large.png, products_overlay_sei_perfetto_small.png,) Tj
+/F1 9.45 Tf 1 0 0 1 68.00 571.95 Tm (  products_overlay_sei_perfetto_large.png, products_overlay_piccola_small.png, and) Tj
+/F1 9.45 Tf 1 0 0 1 68.00 559.70 Tm (  products_overlay_piccola_large.png - product-specific overlay captures.) Tj
+/F1 9.45 Tf 1 0 0 1 54.00 544.25 Tm (- public/images/products_overlay_small.png - removed from the committed tree after visible) Tj
+/F1 9.45 Tf 1 0 0 1 68.00 532.00 Tm (  page references moved to products_screen_small.png and product-specific overlay names.) Tj
+/F1 9.45 Tf 1 0 0 1 54.00 516.55 Tm (- portfolio_PROJECT_SNAPSHOT.txt - regenerated at the beginning of the session and left) Tj
+/F1 9.45 Tf 1 0 0 1 68.00 504.30 Tm (  modified locally, but not included in babed15.) Tj
+/F1 9.45 Tf 1 0 0 1 54.00 488.85 Tm (- portfolio_worklog_july16.pdf - this new July 16 Portfolio worklog artifact generated at) Tj
+/F1 9.45 Tf 1 0 0 1 68.00 476.60 Tm (  the repository root.) Tj
+/F1 12.00 Tf 1 0 0 1 54.00 452.65 Tm (Follow-Up Context) Tj
+/F1 9.45 Tf 1 0 0 1 54.00 439.40 Tm (- Commit this July 16 PDF only after the user provides or confirms the desired commit) Tj
+/F1 9.45 Tf 1 0 0 1 68.00 427.15 Tm (  message, preserving the Portfolio project's commit-message convention.) Tj
+/F1 9.45 Tf 1 0 0 1 54.00 411.70 Tm (- Regenerate portfolio_PROJECT_SNAPSHOT.txt after this PDF if the snapshot should include) Tj
+/F1 9.45 Tf 1 0 0 1 68.00 399.45 Tm (  babed15, the new screenshot inventory, and portfolio_worklog_july16.pdf.) Tj
+/F1 9.45 Tf 1 0 0 1 54.00 384.00 Tm (- Decide whether the parked Buon Natale, Sei Perfetto, and Piccola overlay assets should) Tj
+/F1 9.45 Tf 1 0 0 1 68.00 371.75 Tm (  remain standalone public assets only or gain a curated product-overlay section later.) Tj
+/F1 9.45 Tf 1 0 0 1 54.00 356.30 Tm (- If a Play Store / App Store section is added, keep it curated so the case study does not) Tj
+/F1 9.45 Tf 1 0 0 1 68.00 344.05 Tm (  become a raw screenshot dump.) Tj
+/F1 9.45 Tf 1 0 0 1 54.00 328.60 Tm (- Resolve the unrelated local deletion of public/images/martin-profile.png before any future) Tj
+/F1 9.45 Tf 1 0 0 1 68.00 316.35 Tm (  broad git add, because it remained outside babed15 and may or may not be intentional.) Tj
+/F1 9.45 Tf 1 0 0 1 54.00 300.90 Tm (- Resolve the supporting Alla Vostra AppHeader.js change separately in the Alla Vostra repo) Tj
+/F1 9.45 Tf 1 0 0 1 68.00 288.65 Tm (  if the small-device header correction should become permanent app code rather than capture) Tj
+/F1 9.45 Tf 1 0 0 1 68.00 276.40 Tm (  support.) Tj
+/F1 9.45 Tf 1 0 0 1 54.00 260.95 Tm (- Continue testing mobile portrait after any new screenshot stacks are added, because the) Tj
+/F1 9.45 Tf 1 0 0 1 68.00 248.70 Tm (  one-stack default now keeps categories 2 through 6 scannable on mobile web.) Tj
+/F1 12.00 Tf 1 0 0 1 54.00 224.75 Tm (Output Artifact) Tj
+/F1 9.45 Tf 1 0 0 1 54.00 211.50 Tm (- Generated file: portfolio_worklog_july16.pdf.) Tj
+/F1 9.45 Tf 1 0 0 1 54.00 196.05 Tm (- Location: /Users/prahlin/gh/portfolio/portfolio_worklog_july16.pdf.) Tj
+/F1 9.45 Tf 1 0 0 1 54.00 180.60 Tm (- Naming follows the existing root-level Portfolio convention: portfolio_worklog_july16.pdf.) Tj
+/F1 9.45 Tf 1 0 0 1 68.00 168.35 Tm (  No part suffix was used because this is the first July 16 Portfolio worklog artifact.) Tj
+/F1 9.45 Tf 1 0 0 1 54.00 152.90 Tm (- Uses the same daily worklog structure and compact technical voice established by the July) Tj
+/F1 9.45 Tf 1 0 0 1 68.00 140.65 Tm (  11, July 14, and July 15 Portfolio PDF worklogs.) Tj
+/F1 9.45 Tf 1 0 0 1 54.00 125.20 Tm (- Generated with a small standard-library PDF writer; no external PDF dependency was) Tj
+/F1 9.45 Tf 1 0 0 1 68.00 112.95 Tm (  installed for this artifact.) Tj
+/F1 8.2 Tf 1 0 0 1 54.00 38.00 Tm (Prahlin Portfolio Work Log - July 16, 2026 Page 5) Tj
+ET
+endstream
+endobj
+11 0 obj
+<< /Type /Page /Parent 12 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R >> >> /Contents 10 0 R >>
+endobj
+12 0 obj
+<< /Type /Pages /Kids [3 0 R 5 0 R 7 0 R 9 0 R 11 0 R] /Count 5 >>
+endobj
+13 0 obj
+<< /Type /Catalog /Pages 12 0 R >>
+endobj
+14 0 obj
+<< /Title (Prahlin Portfolio Work Log - July 16, 2026) /Subject (Portfolio website development worklog) /Author (Codex) /Creator (Codex standard-library PDF generator) /Producer (Codex standard-library PDF generator) >>
+endobj
+xref
+0 15
+0000000000 65535 f 
+0000000015 00000 n 
+0000000085 00000 n 
+0000005789 00000 n 
+0000005916 00000 n 
+0000011386 00000 n 
+0000011513 00000 n 
+0000016746 00000 n 
+0000016873 00000 n 
+0000022224 00000 n 
+0000022351 00000 n 
+0000027752 00000 n 
+0000027881 00000 n 
+0000027964 00000 n 
+0000028015 00000 n 
+trailer
+<< /Size 15 /Root 13 0 R /Info 14 0 R >>
+startxref
+28251
+%%EOF
