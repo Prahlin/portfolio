@@ -1,0 +1,978 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+2 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+3 0 obj
+<< /Length 6013 >>
+stream
+BT
+/F2 13.50 Tf
+1 0 0 1 54.00 738.00 Tm
+(Prahlin Portfolio Work Log - July 15, 2026 \(Part 2\)) Tj
+/F1 9.40 Tf
+1 0 0 1 54.00 719.20 Tm
+(Compiled summary for Wednesday, July 15, 2026 - Part 2 - focus: creating the dedicated Alla) Tj
+/F1 9.40 Tf
+1 0 0 1 54.00 707.40 Tm
+(Vostra case-study page, expanding the Portfolio screenshot system with Android Small and) Tj
+/F1 9.40 Tf
+1 0 0 1 54.00 695.60 Tm
+(Android Large capture sets, refining screenshot aspect-ratio and corner-radius rules,) Tj
+/F1 9.40 Tf
+1 0 0 1 54.00 683.80 Tm
+(adding interactive standalone screenshot previews, capturing native payment-input screens) Tj
+/F1 9.40 Tf
+1 0 0 1 54.00 672.00 Tm
+(from Alla Vostra AVDs, removing unwanted preview behavior from landing-page and) Tj
+/F1 9.40 Tf
+1 0 0 1 54.00 660.20 Tm
+(device-frame screenshots, and linking the landing-page Alla Vostra surfaces directly to the) Tj
+/F1 9.40 Tf
+1 0 0 1 54.00 648.40 Tm
+(new project page.) Tj
+/F1 9.40 Tf
+1 0 0 1 54.00 631.60 Tm
+(Generated in continuity with the established Prahlin Portfolio daily worklog cadence:) Tj
+/F1 9.40 Tf
+1 0 0 1 54.00 619.80 Tm
+(compact opening summary, source-material section, baseline section, goal list,) Tj
+/F1 9.40 Tf
+1 0 0 1 54.00 608.00 Tm
+(work-completed sections, validation section, files-touched list, follow-up context, and) Tj
+/F1 9.40 Tf
+1 0 0 1 54.00 596.20 Tm
+(output-artifact close.) Tj
+/F1 9.40 Tf
+1 0 0 1 54.00 579.40 Tm
+(This artifact intentionally covers only Prahlin/portfolio work performed for July 15 Part) Tj
+/F1 9.40 Tf
+1 0 0 1 54.00 567.60 Tm
+(2: commit fd69e1e8df3409763b5c11dd1bb5ddf96bce9a3c, the associated local AVD) Tj
+/F1 9.40 Tf
+1 0 0 1 54.00 555.80 Tm
+(screenshot-capture workflow used to produce the payment-input assets, the local validation) Tj
+/F1 9.40 Tf
+1 0 0 1 54.00 544.00 Tm
+(checks, and this worklog-generation step. Alla Vostra application code was only temporarily) Tj
+/F1 9.40 Tf
+1 0 0 1 54.00 532.20 Tm
+(instrumented for screenshot capture and was restored to a clean state before this record.) Tj
+/F2 11.20 Tf
+1 0 0 1 54.00 510.40 Tm
+(Source Materials Reviewed) Tj
+/F1 9.40 Tf
+1 0 0 1 54.00 493.60 Tm
+(- Reviewed all pre-existing Portfolio project worklogs at the repository root:) Tj
+/F1 9.40 Tf
+1 0 0 1 66.00 481.80 Tm
+(portfolio_worklog_july11.pdf, portfolio_worklog_july14.pdf, and) Tj
+/F1 9.40 Tf
+1 0 0 1 66.00 470.00 Tm
+(portfolio_worklog_july15_part1.pdf.) Tj
+/F1 9.40 Tf
+1 0 0 1 54.00 455.20 Tm
+(- Extracted text from the three Portfolio worklog PDFs with pdftotext to preserve the) Tj
+/F1 9.40 Tf
+1 0 0 1 66.00 443.40 Tm
+(established title cadence, compact opening summary, source-material section, baseline) Tj
+/F1 9.40 Tf
+1 0 0 1 66.00 431.60 Tm
+(section, goal list, work-completed sections, validation language, files-touched list,) Tj
+/F1 9.40 Tf
+1 0 0 1 66.00 419.80 Tm
+(follow-up context, and output-artifact close.) Tj
+/F1 9.40 Tf
+1 0 0 1 54.00 405.00 Tm
+(- Reviewed portfolio_PROJECT_SNAPSHOT.txt as the active same-project source snapshot) Tj
+/F1 9.40 Tf
+1 0 0 1 66.00 393.20 Tm
+(created during July 15 Part 1, including its instruction header, file tree, Portfolio) Tj
+/F1 9.40 Tf
+1 0 0 1 66.00 381.40 Tm
+(notes, and source-file dumps.) Tj
+/F1 9.40 Tf
+1 0 0 1 54.00 366.60 Tm
+(- Reviewed the current Portfolio Git history and confirmed the Part 2 implementation) Tj
+/F1 9.40 Tf
+1 0 0 1 66.00 354.80 Tm
+(scope in commit fd69e1e, authored and committed on Wednesday, July 15, 2026 at 21:11:17) Tj
+/F1 9.40 Tf
+1 0 0 1 66.00 343.00 Tm
+(-0400.) Tj
+/F1 9.40 Tf
+1 0 0 1 54.00 328.20 Tm
+(- Reviewed git show --stat and git show --name-only for fd69e1e to confirm the committed) Tj
+/F1 9.40 Tf
+1 0 0 1 66.00 316.40 Tm
+(source scope: app/ProjectCarouselButton.tsx, app/ScreenshotPreviewLayer.tsx,) Tj
+/F1 9.40 Tf
+1 0 0 1 66.00 304.60 Tm
+(app/globals.css, app/layout.tsx, app/page.tsx, app/projects/alla-vostra/page.tsx, and) Tj
+/F1 9.40 Tf
+1 0 0 1 66.00 292.80 Tm
+(twenty newly tracked screenshot assets in public/images.) Tj
+/F1 9.40 Tf
+1 0 0 1 54.00 278.00 Tm
+(- Reviewed the active Portfolio source after the commit to confirm the final section) Tj
+/F1 9.40 Tf
+1 0 0 1 66.00 266.20 Tm
+(labels and page behavior: Payment includes Payment and Payment Input; Confirmation) Tj
+/F1 9.40 Tf
+1 0 0 1 66.00 254.40 Tm
+(includes Order Confirmation and Order Placed; landing-page device and card links route) Tj
+/F1 9.40 Tf
+1 0 0 1 66.00 242.60 Tm
+(to /projects/alla-vostra.) Tj
+/F1 9.40 Tf
+1 0 0 1 54.00 227.80 Tm
+(- Reviewed the current branch and remote state, confirming main and origin/main both) Tj
+/F1 9.40 Tf
+1 0 0 1 66.00 216.00 Tm
+(resolve to fd69e1e8df3409763b5c11dd1bb5ddf96bce9a3c before this PDF artifact was) Tj
+/F1 9.40 Tf
+1 0 0 1 66.00 204.20 Tm
+(generated.) Tj
+/F2 11.20 Tf
+1 0 0 1 54.00 184.40 Tm
+(Baseline Status Before July 15 Part 2 Work) Tj
+/F1 9.40 Tf
+1 0 0 1 54.00 167.60 Tm
+(- The July 15 Part 1 Portfolio site already had a green/black Martin Prahl landing page,) Tj
+/F1 9.40 Tf
+1 0 0 1 66.00 155.80 Tm
+(Cinerific tablet preview, Alla Vostra phone preview, Credit King phone mockup, rotating) Tj
+/F1 9.40 Tf
+1 0 0 1 66.00 144.00 Tm
+(green project CTA, hardened mobile top navigation, proof stats, case-study cards,) Tj
+/F1 9.40 Tf
+1 0 0 1 66.00 132.20 Tm
+(worklog section, contact section, and Hostinger static-export workflow.) Tj
+/F1 9.40 Tf
+1 0 0 1 54.00 117.40 Tm
+(- Alla Vostra still existed only as a high-value landing-page proof point and lower) Tj
+/F1 9.40 Tf
+1 0 0 1 66.00 105.60 Tm
+(case-study card. It did not yet have a dedicated case-study page with implementation) Tj
+/F1 9.40 Tf
+1 0 0 1 66.00 93.80 Tm
+(depth, structured scope, architecture, testing, release, and product-flow narrative.) Tj
+/F1 9.40 Tf
+1 0 0 1 54.00 79.00 Tm
+(- The landing-page CTA and case-study card could identify Alla Vostra, but the Portfolio) Tj
+/F1 9.40 Tf
+1 0 0 1 66.00 67.20 Tm
+(did not yet give visitors a full project detail surface after they clicked through.) Tj
+/F1 8.50 Tf
+1 0 0 1 54.00 28.00 Tm
+(Prahlin Portfolio Work Log - July 15, 2026 \(Part 2\) Page 1) Tj
+ET
+endstream
+endobj
+4 0 obj
+<< /Type /Page /Parent 15 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> /Contents 3 0 R >>
+endobj
+5 0 obj
+<< /Length 5596 >>
+stream
+BT
+/F1 9.40 Tf
+1 0 0 1 54.00 738.00 Tm
+(- The available Alla Vostra screenshots were not yet comprehensively represented in) Tj
+/F1 9.40 Tf
+1 0 0 1 66.00 726.20 Tm
+(Portfolio. Only the earlier startup, products, and confirmed small captures were) Tj
+/F1 9.40 Tf
+1 0 0 1 66.00 714.40 Tm
+(already present from July 11 work.) Tj
+/F1 9.40 Tf
+1 0 0 1 54.00 699.60 Tm
+(- Screenshot treatment still needed a global convention. Device frames and standalone) Tj
+/F1 9.40 Tf
+1 0 0 1 66.00 687.80 Tm
+(captures required aspect-ratio-sensitive sizing, reduced corner rounding, and a) Tj
+/F1 9.40 Tf
+1 0 0 1 66.00 676.00 Tm
+(consistent distinction between device-framed screenshots and standalone screenshot) Tj
+/F1 9.40 Tf
+1 0 0 1 66.00 664.20 Tm
+(previews.) Tj
+/F1 9.40 Tf
+1 0 0 1 54.00 649.40 Tm
+(- The user preference remained active: keep work local until commit/push is explicitly) Tj
+/F1 9.40 Tf
+1 0 0 1 66.00 637.60 Tm
+(requested, preserve the existing visual language, and avoid unrelated redesign or code) Tj
+/F1 9.40 Tf
+1 0 0 1 66.00 625.80 Tm
+(removal.) Tj
+/F2 11.20 Tf
+1 0 0 1 54.00 606.00 Tm
+(Goals for July 15 Part 2) Tj
+/F1 9.40 Tf
+1 0 0 1 54.00 589.20 Tm
+(- Create a dedicated Alla Vostra case-study route at /projects/alla-vostra.) Tj
+/F1 9.40 Tf
+1 0 0 1 54.00 574.40 Tm
+(- Make the page feel like a serious full-stack mobile commerce case study rather than a) Tj
+/F1 9.40 Tf
+1 0 0 1 66.00 562.60 Tm
+(generic screenshot gallery.) Tj
+/F1 9.40 Tf
+1 0 0 1 54.00 547.80 Tm
+(- Use the exact known project facts: Alla Vostra, flagship full-stack mobile commerce) Tj
+/F1 9.40 Tf
+1 0 0 1 66.00 536.00 Tm
+(app, React Native, Expo, Expo Router, Node.js, Next.js, Tailwind CSS, Stripe, Postmark,) Tj
+/F1 9.40 Tf
+1 0 0 1 66.00 524.20 Tm
+(Vercel serverless routes, Android device testing, EAS builds, Play Store preparation,) Tj
+/F1 9.40 Tf
+1 0 0 1 66.00 512.40 Tm
+(and 328 commits.) Tj
+/F1 9.40 Tf
+1 0 0 1 54.00 497.60 Tm
+(- Preserve the existing dark green/black Portfolio visual language, sharp layout, premium) Tj
+/F1 9.40 Tf
+1 0 0 1 66.00 485.80 Tm
+(mobile-product feel, and landing-page consistency.) Tj
+/F1 9.40 Tf
+1 0 0 1 54.00 471.00 Tm
+(- Build the requested content structure: Hero, Overview, Scope and Ownership, Core) Tj
+/F1 9.40 Tf
+1 0 0 1 66.00 459.20 Tm
+(Features, Product Flow, Technical Architecture, Engineering Decisions, Testing and) Tj
+/F1 9.40 Tf
+1 0 0 1 66.00 447.40 Tm
+(Release Readiness, Build Timeline, Stack, Build Proof, and Closing CTA.) Tj
+/F1 9.40 Tf
+1 0 0 1 54.00 432.60 Tm
+(- Import the remaining Alla Vostra screenshots from the local Android Small and Android) Tj
+/F1 9.40 Tf
+1 0 0 1 66.00 420.80 Tm
+(Large screenshot folders into public/images using _small and _large suffixes for) Tj
+/F1 9.40 Tf
+1 0 0 1 66.00 409.00 Tm
+(Portfolio assets.) Tj
+/F1 9.40 Tf
+1 0 0 1 54.00 394.20 Tm
+(- Capture missing payment-input card-entry screenshots from the Alla Vostra Android Small) Tj
+/F1 9.40 Tf
+1 0 0 1 66.00 382.40 Tm
+(and Android Large AVDs and save them both to the original screenshot folders and the) Tj
+/F1 9.40 Tf
+1 0 0 1 66.00 370.60 Tm
+(Portfolio public image folder.) Tj
+/F1 9.40 Tf
+1 0 0 1 54.00 355.80 Tm
+(- Ensure device frames reflect screenshot aspect ratios without clipping, except for) Tj
+/F1 9.40 Tf
+1 0 0 1 66.00 344.00 Tm
+(rounded corners.) Tj
+/F1 9.40 Tf
+1 0 0 1 54.00 329.20 Tm
+(- Globalize screenshot and device-frame corner radius conventions across the Portfolio.) Tj
+/F1 9.40 Tf
+1 0 0 1 54.00 314.40 Tm
+(- Allow standalone screenshot previews to enlarge at 1.5x on hover or tap-hold, but) Tj
+/F1 9.40 Tf
+1 0 0 1 66.00 302.60 Tm
+(prevent overlay previews from screenshots inside device frames and from landing-page) Tj
+/F1 9.40 Tf
+1 0 0 1 66.00 290.80 Tm
+(screenshots.) Tj
+/F1 9.40 Tf
+1 0 0 1 54.00 276.00 Tm
+(- Make the landing-page Alla Vostra device frame and the lower Alla Vostra case-study) Tj
+/F1 9.40 Tf
+1 0 0 1 66.00 264.20 Tm
+(card navigate directly to /projects/alla-vostra.) Tj
+/F2 11.20 Tf
+1 0 0 1 54.00 244.40 Tm
+(Work Completed - Dedicated Alla Vostra Case Study Page) Tj
+/F1 9.40 Tf
+1 0 0 1 54.00 227.60 Tm
+(- Added app/projects/alla-vostra/page.tsx as a new static Next.js route for the Alla) Tj
+/F1 9.40 Tf
+1 0 0 1 66.00 215.80 Tm
+(Vostra case study.) Tj
+/F1 9.40 Tf
+1 0 0 1 54.00 201.00 Tm
+(- Created project metadata for the page with the title Alla Vostra | Full-Stack Mobile) Tj
+/F1 9.40 Tf
+1 0 0 1 66.00 189.20 Tm
+(Commerce Case Study and a description covering React Native, Expo, Stripe, Postmark,) Tj
+/F1 9.40 Tf
+1 0 0 1 66.00 177.40 Tm
+(Node.js serverless routes, Android QA, EAS builds, and Play Store preparation.) Tj
+/F1 9.40 Tf
+1 0 0 1 54.00 162.60 Tm
+(- Built the hero section with Alla Vostra, the subtitle Flagship full-stack mobile) Tj
+/F1 9.40 Tf
+1 0 0 1 66.00 150.80 Tm
+(commerce app, the requested concise paragraph, compact metadata pills, GitHub and) Tj
+/F1 9.40 Tf
+1 0 0 1 66.00 139.00 Tm
+(Contact CTAs, and a multi-device screenshot showcase.) Tj
+/F1 9.40 Tf
+1 0 0 1 54.00 124.20 Tm
+(- Added Overview copy explaining the full-stack mobile ordering experience and the user) Tj
+/F1 9.40 Tf
+1 0 0 1 66.00 112.40 Tm
+(role across mobile UI, architecture, backend-connected purchase flows, transactional) Tj
+/F1 9.40 Tf
+1 0 0 1 66.00 100.60 Tm
+(messaging, emulator/device QA, and release-focused iteration.) Tj
+/F1 9.40 Tf
+1 0 0 1 54.00 85.80 Tm
+(- Added Scope and Ownership cards for Mobile Frontend, Backend / Server Logic, Payments,) Tj
+/F1 9.40 Tf
+1 0 0 1 66.00 74.00 Tm
+(Messaging, and QA and Release.) Tj
+/F1 8.50 Tf
+1 0 0 1 54.00 28.00 Tm
+(Prahlin Portfolio Work Log - July 15, 2026 \(Part 2\) Page 2) Tj
+ET
+endstream
+endobj
+6 0 obj
+<< /Type /Page /Parent 15 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> /Contents 5 0 R >>
+endobj
+7 0 obj
+<< /Length 5538 >>
+stream
+BT
+/F1 9.40 Tf
+1 0 0 1 54.00 738.00 Tm
+(- Added Core Features cards for product browsing, checkout experience, payment) Tj
+/F1 9.40 Tf
+1 0 0 1 66.00 726.20 Tm
+(confirmation state, transactional email support, mobile-first responsiveness, and) Tj
+/F1 9.40 Tf
+1 0 0 1 66.00 714.40 Tm
+(release pipeline awareness.) Tj
+/F1 9.40 Tf
+1 0 0 1 54.00 699.60 Tm
+(- Added Technical Architecture content showing the React Native / Expo app, serverless) Tj
+/F1 9.40 Tf
+1 0 0 1 66.00 687.80 Tm
+(backend routes, Stripe, Postmark, and Android QA / EAS builds.) Tj
+/F1 9.40 Tf
+1 0 0 1 54.00 673.00 Tm
+(- Added Engineering Decisions cards for payment flow coordination, cross-device Android) Tj
+/F1 9.40 Tf
+1 0 0 1 66.00 661.20 Tm
+(QA, and end-to-end purchase clarity.) Tj
+/F1 9.40 Tf
+1 0 0 1 54.00 646.40 Tm
+(- Added Testing and Release Readiness with the requested copy and checklist covering) Tj
+/F1 9.40 Tf
+1 0 0 1 66.00 634.60 Tm
+(Android Small/Standard/Large emulator QA, EAS build preparation, payment flow) Tj
+/F1 9.40 Tf
+1 0 0 1 66.00 622.80 Tm
+(verification, post-purchase confirmation coverage, and Play Store preparation.) Tj
+/F1 9.40 Tf
+1 0 0 1 54.00 608.00 Tm
+(- Added Build Timeline, Stack, Build Proof, and Closing CTA sections while avoiding fake) Tj
+/F1 9.40 Tf
+1 0 0 1 66.00 596.20 Tm
+(revenue, user, download, or conversion metrics.) Tj
+/F2 11.20 Tf
+1 0 0 1 54.00 576.40 Tm
+(Work Completed - Product Flow and Screenshot Asset Expansion) Tj
+/F1 9.40 Tf
+1 0 0 1 54.00 559.60 Tm
+(- Copied Android Small and Android Large Alla Vostra screenshots into public/images with) Tj
+/F1 9.40 Tf
+1 0 0 1 66.00 547.80 Tm
+(Portfolio suffixes for shop preview, address, time/date, contact, payment, empty cart,) Tj
+/F1 9.40 Tf
+1 0 0 1 66.00 536.00 Tm
+(filled cart, and related checkout states.) Tj
+/F1 9.40 Tf
+1 0 0 1 54.00 521.20 Tm
+(- Added missing large counterparts for products_overlay_large.png and) Tj
+/F1 9.40 Tf
+1 0 0 1 66.00 509.40 Tm
+(confirmed_overlay_large.png so Product Flow could pair Small and Large captures where) Tj
+/F1 9.40 Tf
+1 0 0 1 66.00 497.60 Tm
+(available.) Tj
+/F1 9.40 Tf
+1 0 0 1 54.00 482.80 Tm
+(- Added payment_confirmation_overlay_small.png and payment_confirmation_overlay_large.png) Tj
+/F1 9.40 Tf
+1 0 0 1 66.00 471.00 Tm
+(for the order-review moment before final placement.) Tj
+/F1 9.40 Tf
+1 0 0 1 54.00 456.20 Tm
+(- Booted Alla Vostra Android Small and Android Large AVDs on explicit Alla Vostra) Tj
+/F1 9.40 Tf
+1 0 0 1 66.00 444.40 Tm
+(emulator serials and captured native Stripe card-entry/payment-input screens.) Tj
+/F1 9.40 Tf
+1 0 0 1 54.00 429.60 Tm
+(- Saved payment_input.png into /Users/prahlin/screenshots/alla_vostra/Android_Small and) Tj
+/F1 9.40 Tf
+1 0 0 1 66.00 417.80 Tm
+(/Users/prahlin/screenshots/alla_vostra/Android_Large.) Tj
+/F1 9.40 Tf
+1 0 0 1 54.00 403.00 Tm
+(- Saved payment_input_small.png and payment_input_large.png into the Portfolio public) Tj
+/F1 9.40 Tf
+1 0 0 1 66.00 391.20 Tm
+(image folder alongside the other project screenshots.) Tj
+/F1 9.40 Tf
+1 0 0 1 54.00 376.40 Tm
+(- Structured Product Flow around Launch, Browse, Cart, Details, Payment, and) Tj
+/F1 9.40 Tf
+1 0 0 1 66.00 364.60 Tm
+(Confirmation.) Tj
+/F1 9.40 Tf
+1 0 0 1 54.00 349.80 Tm
+(- Added paired Small/Large screenshot stacks for Shop Preview, Products, Empty Cart,) Tj
+/F1 9.40 Tf
+1 0 0 1 66.00 338.00 Tm
+(Filled Cart, Address, Time and Date, Contact, Payment, Payment Input, Order) Tj
+/F1 9.40 Tf
+1 0 0 1 66.00 326.20 Tm
+(Confirmation, and Order Placed.) Tj
+/F1 9.40 Tf
+1 0 0 1 54.00 311.40 Tm
+(- Moved the former Payment Confirmation screenshot stack into the Confirmation stage and) Tj
+/F1 9.40 Tf
+1 0 0 1 66.00 299.60 Tm
+(renamed it Order Confirmation.) Tj
+/F1 9.40 Tf
+1 0 0 1 54.00 284.80 Tm
+(- Renamed the post-purchase success stack to Order Placed and placed it after Order) Tj
+/F1 9.40 Tf
+1 0 0 1 66.00 273.00 Tm
+(Confirmation so the final sequence reads as review first, placed second.) Tj
+/F1 9.40 Tf
+1 0 0 1 54.00 258.20 Tm
+(- Added concise captions for each screenshot state so the section reads as a product-flow) Tj
+/F1 9.40 Tf
+1 0 0 1 66.00 246.40 Tm
+(narrative rather than a raw image dump.) Tj
+/F2 11.20 Tf
+1 0 0 1 54.00 226.60 Tm
+(Work Completed - Device Frames, Aspect Ratios, and Corner Radii) Tj
+/F1 9.40 Tf
+1 0 0 1 54.00 209.80 Tm
+(- Refined the Alla Vostra hero device frames so each device frame follows the) Tj
+/F1 9.40 Tf
+1 0 0 1 66.00 198.00 Tm
+(screencapture aspect ratio instead of clipping the screenshot content.) Tj
+/F1 9.40 Tf
+1 0 0 1 54.00 183.20 Tm
+(- Reduced device-frame corner rounding across multiple user-directed passes, including an) Tj
+/F1 9.40 Tf
+1 0 0 1 66.00 171.40 Tm
+(additional reduction for Android Small short/standard screenshots.) Tj
+/F1 9.40 Tf
+1 0 0 1 54.00 156.60 Tm
+(- Centralized screenshot and device-frame radius values in global CSS variables: capture) Tj
+/F1 9.40 Tf
+1 0 0 1 66.00 144.80 Tm
+(frame and screen radii for tall and standard screenshots.) Tj
+/F1 9.40 Tf
+1 0 0 1 54.00 130.00 Tm
+(- Applied those radius variables to hero device frames, homepage phone/tablet) Tj
+/F1 9.40 Tf
+1 0 0 1 66.00 118.20 Tm
+(screenshots, case-card miniatures, Alla Vostra Product Flow frames, and regular) Tj
+/F1 9.40 Tf
+1 0 0 1 66.00 106.40 Tm
+(standalone screenshots.) Tj
+/F1 9.40 Tf
+1 0 0 1 54.00 91.60 Tm
+(- Preserved the Android screenshot content while allowing only the intended) Tj
+/F1 9.40 Tf
+1 0 0 1 66.00 79.80 Tm
+(rounded-corner masking at the frame edges.) Tj
+/F1 8.50 Tf
+1 0 0 1 54.00 28.00 Tm
+(Prahlin Portfolio Work Log - July 15, 2026 \(Part 2\) Page 3) Tj
+ET
+endstream
+endobj
+8 0 obj
+<< /Type /Page /Parent 15 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> /Contents 7 0 R >>
+endobj
+9 0 obj
+<< /Length 5229 >>
+stream
+BT
+/F1 9.40 Tf
+1 0 0 1 54.00 738.00 Tm
+(- Kept the treatment consistent with the existing dark green/black Portfolio visual) Tj
+/F1 9.40 Tf
+1 0 0 1 66.00 726.20 Tm
+(system and avoided broader landing-page redesign.) Tj
+/F2 11.20 Tf
+1 0 0 1 54.00 706.40 Tm
+(Work Completed - Screenshot Preview Behavior) Tj
+/F1 9.40 Tf
+1 0 0 1 54.00 689.60 Tm
+(- Added app/ScreenshotPreviewLayer.tsx as a client-side overlay layer mounted from) Tj
+/F1 9.40 Tf
+1 0 0 1 66.00 677.80 Tm
+(app/layout.tsx.) Tj
+/F1 9.40 Tf
+1 0 0 1 54.00 663.00 Tm
+(- Implemented 1.5x screenshot previews for images marked with data-screenshot-preview.) Tj
+/F1 9.40 Tf
+1 0 0 1 54.00 648.20 Tm
+(- Supported hover previews for mouse users and tap-hold previews for touch users, hiding) Tj
+/F1 9.40 Tf
+1 0 0 1 66.00 636.40 Tm
+(the preview immediately on pointer exit, release, cancellation, scroll, resize, or) Tj
+/F1 9.40 Tf
+1 0 0 1 66.00 624.60 Tm
+(blur.) Tj
+/F1 9.40 Tf
+1 0 0 1 54.00 609.80 Tm
+(- Matched the preview popover corner radii to the frame or screenshot container being) Tj
+/F1 9.40 Tf
+1 0 0 1 66.00 598.00 Tm
+(previewed so the enlarged image respects the same corner system as its source.) Tj
+/F1 9.40 Tf
+1 0 0 1 54.00 583.20 Tm
+(- Kept the preview mechanism scoped to explicit data-screenshot-preview images instead of) Tj
+/F1 9.40 Tf
+1 0 0 1 66.00 571.40 Tm
+(every image in the Portfolio.) Tj
+/F1 9.40 Tf
+1 0 0 1 54.00 556.60 Tm
+(- Removed data-screenshot-preview from screenshots inside device frames, including the) Tj
+/F1 9.40 Tf
+1 0 0 1 66.00 544.80 Tm
+(Alla Vostra hero device stack and homepage device frames.) Tj
+/F1 9.40 Tf
+1 0 0 1 54.00 530.00 Tm
+(- Removed landing-page screenshot preview triggers entirely, including the lower) Tj
+/F1 9.40 Tf
+1 0 0 1 66.00 518.20 Tm
+(case-card miniature images, after the user requested no overlay/popups from screenshots) Tj
+/F1 9.40 Tf
+1 0 0 1 66.00 506.40 Tm
+(on the main landing page.) Tj
+/F1 9.40 Tf
+1 0 0 1 54.00 491.60 Tm
+(- Preserved preview behavior for standalone Alla Vostra Product Flow screenshots on the) Tj
+/F1 9.40 Tf
+1 0 0 1 66.00 479.80 Tm
+(dedicated project page.) Tj
+/F2 11.20 Tf
+1 0 0 1 54.00 460.00 Tm
+(Work Completed - Landing Page Navigation and CTA Routing) Tj
+/F1 9.40 Tf
+1 0 0 1 54.00 443.20 Tm
+(- Updated app/ProjectCarouselButton.tsx so the Alla Vostra carousel state links to) Tj
+/F1 9.40 Tf
+1 0 0 1 66.00 431.40 Tm
+(/projects/alla-vostra instead of the old landing-page anchor.) Tj
+/F1 9.40 Tf
+1 0 0 1 54.00 416.60 Tm
+(- Extended the homepage PhonePreview component so the Alla Vostra hero device frame can) Tj
+/F1 9.40 Tf
+1 0 0 1 66.00 404.80 Tm
+(render as an accessible anchor when a project href is provided.) Tj
+/F1 9.40 Tf
+1 0 0 1 54.00 390.00 Tm
+(- Made the top hero Alla Vostra device frame navigate instantly to /projects/alla-vostra) Tj
+/F1 9.40 Tf
+1 0 0 1 66.00 378.20 Tm
+(when tapped or clicked anywhere inside the dedicated device frame.) Tj
+/F1 9.40 Tf
+1 0 0 1 54.00 363.40 Tm
+(- Added an href field to the case-study data model and assigned /projects/alla-vostra to) Tj
+/F1 9.40 Tf
+1 0 0 1 66.00 351.60 Tm
+(the Alla Vostra card only.) Tj
+/F1 9.40 Tf
+1 0 0 1 54.00 336.80 Tm
+(- Factored the lower case-study card rendering into CaseStudyCard so linked and) Tj
+/F1 9.40 Tf
+1 0 0 1 66.00 325.00 Tm
+(non-linked cards can share the same content structure.) Tj
+/F1 9.40 Tf
+1 0 0 1 54.00 310.20 Tm
+(- Rendered the lower Alla Vostra card as a full-card anchor with aria-label, while) Tj
+/F1 9.40 Tf
+1 0 0 1 66.00 298.40 Tm
+(leaving Cinerific and Credit King as non-linked articles for now.) Tj
+/F1 9.40 Tf
+1 0 0 1 54.00 283.60 Tm
+(- Added .phone-shell-link and .case-card-link styles for pointer behavior, inherited) Tj
+/F1 9.40 Tf
+1 0 0 1 66.00 271.80 Tm
+(color, no underline, hover lift on the card, and focus-visible outlines for keyboard) Tj
+/F1 9.40 Tf
+1 0 0 1 66.00 260.00 Tm
+(users.) Tj
+/F2 11.20 Tf
+1 0 0 1 54.00 240.20 Tm
+(Work Completed - Local AVD and Screenshot Capture Handling) Tj
+/F1 9.40 Tf
+1 0 0 1 54.00 223.40 Tm
+(- Started the local Portfolio dev server at http://127.0.0.1:3000 for preview and) Tj
+/F1 9.40 Tf
+1 0 0 1 66.00 211.60 Tm
+(validation.) Tj
+/F1 9.40 Tf
+1 0 0 1 54.00 196.80 Tm
+(- Started Alla Vostra Metro only as needed for capture work and stopped that temporary) Tj
+/F1 9.40 Tf
+1 0 0 1 66.00 185.00 Tm
+(session afterward.) Tj
+/F1 9.40 Tf
+1 0 0 1 54.00 170.20 Tm
+(- Avoided touching the concurrently running Cinerific AVD after the user explicitly) Tj
+/F1 9.40 Tf
+1 0 0 1 66.00 158.40 Tm
+(warned not to target it.) Tj
+/F1 9.40 Tf
+1 0 0 1 54.00 143.60 Tm
+(- Pinned ADB commands to Alla Vostra emulator serials rather than running broad commands) Tj
+/F1 9.40 Tf
+1 0 0 1 66.00 131.80 Tm
+(against all attached devices.) Tj
+/F1 9.40 Tf
+1 0 0 1 54.00 117.00 Tm
+(- Used a temporary query-gated Alla Vostra route/state hook only to render the) Tj
+/F1 9.40 Tf
+1 0 0 1 66.00 105.20 Tm
+(payment-input screen for screenshot capture.) Tj
+/F1 9.40 Tf
+1 0 0 1 54.00 90.40 Tm
+(- Removed the temporary Alla Vostra app-source hook after captures and confirmed the Alla) Tj
+/F1 9.40 Tf
+1 0 0 1 66.00 78.60 Tm
+(Vostra repository returned to a clean state.) Tj
+/F1 8.50 Tf
+1 0 0 1 54.00 28.00 Tm
+(Prahlin Portfolio Work Log - July 15, 2026 \(Part 2\) Page 4) Tj
+ET
+endstream
+endobj
+10 0 obj
+<< /Type /Page /Parent 15 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> /Contents 9 0 R >>
+endobj
+11 0 obj
+<< /Length 4957 >>
+stream
+BT
+/F1 9.40 Tf
+1 0 0 1 54.00 738.00 Tm
+(- Captured the Android Small payment input image at 720x1280 and the Android Large) Tj
+/F1 9.40 Tf
+1 0 0 1 66.00 726.20 Tm
+(payment input image at 1440x3120.) Tj
+/F1 9.40 Tf
+1 0 0 1 54.00 711.40 Tm
+(- Shut down the Alla Vostra Large AVD after the capture workflow completed so no) Tj
+/F1 9.40 Tf
+1 0 0 1 66.00 699.60 Tm
+(unnecessary emulator session remained running.) Tj
+/F2 11.20 Tf
+1 0 0 1 54.00 679.80 Tm
+(Validation and Checks Performed) Tj
+/F1 9.40 Tf
+1 0 0 1 54.00 663.00 Tm
+(- Ran npm run check after the page, screenshot, preview, radius, and navigation changes;) Tj
+/F1 9.40 Tf
+1 0 0 1 66.00 651.20 Tm
+(TypeScript completed successfully.) Tj
+/F1 9.40 Tf
+1 0 0 1 54.00 636.40 Tm
+(- Ran npm run build:static after the major implementation pass; Next.js static generation) Tj
+/F1 9.40 Tf
+1 0 0 1 66.00 624.60 Tm
+(completed successfully for / and /projects/alla-vostra.) Tj
+/F1 9.40 Tf
+1 0 0 1 54.00 609.80 Tm
+(- Verified local HTTP 200 responses from http://127.0.0.1:3000/ and) Tj
+/F1 9.40 Tf
+1 0 0 1 66.00 598.00 Tm
+(http://127.0.0.1:3000/projects/alla-vostra.) Tj
+/F1 9.40 Tf
+1 0 0 1 54.00 583.20 Tm
+(- Verified local HTTP 200 responses for /images/payment_input_small.png and) Tj
+/F1 9.40 Tf
+1 0 0 1 66.00 571.40 Tm
+(/images/payment_input_large.png.) Tj
+/F1 9.40 Tf
+1 0 0 1 54.00 556.60 Tm
+(- Checked rendered homepage HTML to confirm the Alla Vostra hero phone and lower) Tj
+/F1 9.40 Tf
+1 0 0 1 66.00 544.80 Tm
+(case-study card both link to /projects/alla-vostra.) Tj
+/F1 9.40 Tf
+1 0 0 1 54.00 530.00 Tm
+(- Searched app/page.tsx to confirm no landing-page images retain data-screenshot-preview) Tj
+/F1 9.40 Tf
+1 0 0 1 66.00 518.20 Tm
+(after the user requested no landing-page popup behavior.) Tj
+/F1 9.40 Tf
+1 0 0 1 54.00 503.40 Tm
+(- Searched the project page to confirm Product Flow standalone screenshots still retain) Tj
+/F1 9.40 Tf
+1 0 0 1 66.00 491.60 Tm
+(data-screenshot-preview where preview behavior is intended.) Tj
+/F1 9.40 Tf
+1 0 0 1 54.00 476.80 Tm
+(- Confirmed the Alla Vostra repository had no remaining source diff after the temporary) Tj
+/F1 9.40 Tf
+1 0 0 1 66.00 465.00 Tm
+(screenshot-capture hook was removed.) Tj
+/F1 9.40 Tf
+1 0 0 1 54.00 450.20 Tm
+(- Confirmed Portfolio main and origin/main both resolve to fd69e1e after the Part 2) Tj
+/F1 9.40 Tf
+1 0 0 1 66.00 438.40 Tm
+(commit.) Tj
+/F1 9.40 Tf
+1 0 0 1 54.00 423.60 Tm
+(- Confirmed the Portfolio working tree was clean before generating this PDF artifact.) Tj
+/F2 11.20 Tf
+1 0 0 1 54.00 403.80 Tm
+(Files Touched During July 15 Part 2 Portfolio Work) Tj
+/F1 9.40 Tf
+1 0 0 1 54.00 387.00 Tm
+(- app/ProjectCarouselButton.tsx - changed Alla Vostra carousel destination to the) Tj
+/F1 9.40 Tf
+1 0 0 1 66.00 375.20 Tm
+(dedicated case-study route.) Tj
+/F1 9.40 Tf
+1 0 0 1 54.00 360.40 Tm
+(- app/ScreenshotPreviewLayer.tsx - new client-side screenshot preview layer for explicit) Tj
+/F1 9.40 Tf
+1 0 0 1 66.00 348.60 Tm
+(standalone screenshot previews.) Tj
+/F1 9.40 Tf
+1 0 0 1 54.00 333.80 Tm
+(- app/globals.css - added and revised case-study page styling, device-frame styles,) Tj
+/F1 9.40 Tf
+1 0 0 1 66.00 322.00 Tm
+(screenshot radius variables, Product Flow layouts, preview overlay styles, clickable) Tj
+/F1 9.40 Tf
+1 0 0 1 66.00 310.20 Tm
+(card/device styles, and responsive behavior.) Tj
+/F1 9.40 Tf
+1 0 0 1 54.00 295.40 Tm
+(- app/layout.tsx - mounted the screenshot preview layer globally.) Tj
+/F1 9.40 Tf
+1 0 0 1 54.00 280.60 Tm
+(- app/page.tsx - added project href data, full-card Alla Vostra link behavior, clickable) Tj
+/F1 9.40 Tf
+1 0 0 1 66.00 268.80 Tm
+(Alla Vostra hero device behavior, and removed landing-page screenshot preview triggers.) Tj
+/F1 9.40 Tf
+1 0 0 1 54.00 254.00 Tm
+(- app/projects/alla-vostra/page.tsx - new dedicated Alla Vostra case-study page with) Tj
+/F1 9.40 Tf
+1 0 0 1 66.00 242.20 Tm
+(full-stack narrative and Product Flow screenshot system.) Tj
+/F1 9.40 Tf
+1 0 0 1 54.00 227.40 Tm
+(- public/images/address_overlay_large.png) Tj
+/F1 9.40 Tf
+1 0 0 1 54.00 212.60 Tm
+(- public/images/address_overlay_small.png) Tj
+/F1 9.40 Tf
+1 0 0 1 54.00 197.80 Tm
+(- public/images/confirmed_overlay_large.png) Tj
+/F1 9.40 Tf
+1 0 0 1 54.00 183.00 Tm
+(- public/images/contact_overlay_large.png) Tj
+/F1 9.40 Tf
+1 0 0 1 54.00 168.20 Tm
+(- public/images/contact_overlay_small.png) Tj
+/F1 9.40 Tf
+1 0 0 1 54.00 153.40 Tm
+(- public/images/empty_cart_overlay_large.png) Tj
+/F1 9.40 Tf
+1 0 0 1 54.00 138.60 Tm
+(- public/images/empty_cart_overlay_small.png) Tj
+/F1 9.40 Tf
+1 0 0 1 54.00 123.80 Tm
+(- public/images/filled_cart_overlay_large.png) Tj
+/F1 9.40 Tf
+1 0 0 1 54.00 109.00 Tm
+(- public/images/filled_cart_overlay_small.png) Tj
+/F1 9.40 Tf
+1 0 0 1 54.00 94.20 Tm
+(- public/images/payment_confirmation_overlay_large.png) Tj
+/F1 9.40 Tf
+1 0 0 1 54.00 79.40 Tm
+(- public/images/payment_confirmation_overlay_small.png) Tj
+/F1 8.50 Tf
+1 0 0 1 54.00 28.00 Tm
+(Prahlin Portfolio Work Log - July 15, 2026 \(Part 2\) Page 5) Tj
+ET
+endstream
+endobj
+12 0 obj
+<< /Type /Page /Parent 15 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> /Contents 11 0 R >>
+endobj
+13 0 obj
+<< /Length 3637 >>
+stream
+BT
+/F1 9.40 Tf
+1 0 0 1 54.00 738.00 Tm
+(- public/images/payment_input_large.png) Tj
+/F1 9.40 Tf
+1 0 0 1 54.00 723.20 Tm
+(- public/images/payment_input_small.png) Tj
+/F1 9.40 Tf
+1 0 0 1 54.00 708.40 Tm
+(- public/images/payment_overlay_large.png) Tj
+/F1 9.40 Tf
+1 0 0 1 54.00 693.60 Tm
+(- public/images/payment_overlay_small.png) Tj
+/F1 9.40 Tf
+1 0 0 1 54.00 678.80 Tm
+(- public/images/products_overlay_large.png) Tj
+/F1 9.40 Tf
+1 0 0 1 54.00 664.00 Tm
+(- public/images/shop_preview_large.png) Tj
+/F1 9.40 Tf
+1 0 0 1 54.00 649.20 Tm
+(- public/images/shop_preview_small.png) Tj
+/F1 9.40 Tf
+1 0 0 1 54.00 634.40 Tm
+(- public/images/time_date_overlay_large.png) Tj
+/F1 9.40 Tf
+1 0 0 1 54.00 619.60 Tm
+(- public/images/time_date_overlay_small.png) Tj
+/F1 9.40 Tf
+1 0 0 1 54.00 604.80 Tm
+(- portfolio_worklog_july15_part2.pdf - new July 15 Part 2 Portfolio worklog artifact) Tj
+/F1 9.40 Tf
+1 0 0 1 66.00 593.00 Tm
+(generated at the repository root.) Tj
+/F2 11.20 Tf
+1 0 0 1 54.00 573.20 Tm
+(Follow-Up Context) Tj
+/F1 9.40 Tf
+1 0 0 1 54.00 556.40 Tm
+(- Dedicated project pages for Cinerific and Credit King remain natural next steps so all) Tj
+/F1 9.40 Tf
+1 0 0 1 66.00 544.60 Tm
+(three featured landing-page projects can eventually have equivalent case-study depth.) Tj
+/F1 9.40 Tf
+1 0 0 1 54.00 529.80 Tm
+(- If the screenshot library grows again, keep using the established _small and _large) Tj
+/F1 9.40 Tf
+1 0 0 1 66.00 518.00 Tm
+(Portfolio filename convention for imported Android screenshots.) Tj
+/F1 9.40 Tf
+1 0 0 1 54.00 503.20 Tm
+(- If new screenshots are added to Product Flow, classify them as standard or tall so) Tj
+/F1 9.40 Tf
+1 0 0 1 66.00 491.40 Tm
+(frame aspect ratios and radius variables stay consistent.) Tj
+/F1 9.40 Tf
+1 0 0 1 54.00 476.60 Tm
+(- Keep landing-page screenshot previews disabled unless the user explicitly asks to) Tj
+/F1 9.40 Tf
+1 0 0 1 66.00 464.80 Tm
+(restore them.) Tj
+/F1 9.40 Tf
+1 0 0 1 54.00 450.00 Tm
+(- Continue preserving the distinction between device-framed screenshots, which do not) Tj
+/F1 9.40 Tf
+1 0 0 1 66.00 438.20 Tm
+(open preview overlays, and standalone Product Flow screenshots, which may open) Tj
+/F1 9.40 Tf
+1 0 0 1 66.00 426.40 Tm
+(previews.) Tj
+/F1 9.40 Tf
+1 0 0 1 54.00 411.60 Tm
+(- Regenerate portfolio_PROJECT_SNAPSHOT.txt with ./read_project.sh when the project) Tj
+/F1 9.40 Tf
+1 0 0 1 66.00 399.80 Tm
+(snapshot should reflect the new Alla Vostra route and assets.) Tj
+/F1 9.40 Tf
+1 0 0 1 54.00 385.00 Tm
+(- Continue asking for Portfolio commit messages before committing or pushing unless the) Tj
+/F1 9.40 Tf
+1 0 0 1 66.00 373.20 Tm
+(user explicitly instructs otherwise.) Tj
+/F2 11.20 Tf
+1 0 0 1 54.00 353.40 Tm
+(Output Artifact) Tj
+/F1 9.40 Tf
+1 0 0 1 54.00 336.60 Tm
+(- Generated file: portfolio_worklog_july15_part2.pdf.) Tj
+/F1 9.40 Tf
+1 0 0 1 54.00 321.80 Tm
+(- Location: /Users/prahlin/gh/portfolio/portfolio_worklog_july15_part2.pdf.) Tj
+/F1 9.40 Tf
+1 0 0 1 54.00 307.00 Tm
+(- Naming follows the existing root-level Portfolio convention and the part-number) Tj
+/F1 9.40 Tf
+1 0 0 1 66.00 295.20 Tm
+(convention established by portfolio_worklog_july15_part1.pdf.) Tj
+/F1 9.40 Tf
+1 0 0 1 54.00 280.40 Tm
+(- This PDF is the second Portfolio worklog for July 15 and documents the dedicated Alla) Tj
+/F1 9.40 Tf
+1 0 0 1 66.00 268.60 Tm
+(Vostra case-study implementation pass.) Tj
+/F1 9.40 Tf
+1 0 0 1 54.00 253.80 Tm
+(- Generated with a small standard-library PDF writer; no external PDF dependency was) Tj
+/F1 9.40 Tf
+1 0 0 1 66.00 242.00 Tm
+(installed for this artifact.) Tj
+/F1 8.50 Tf
+1 0 0 1 54.00 28.00 Tm
+(Prahlin Portfolio Work Log - July 15, 2026 \(Part 2\) Page 6) Tj
+ET
+endstream
+endobj
+14 0 obj
+<< /Type /Page /Parent 15 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> /Contents 13 0 R >>
+endobj
+15 0 obj
+<< /Type /Pages /Kids [4 0 R 6 0 R 8 0 R 10 0 R 12 0 R 14 0 R] /Count 6 >>
+endobj
+16 0 obj
+<< /Type /Catalog /Pages 15 0 R >>
+endobj
+17 0 obj
+<< /Title (Prahlin Portfolio Work Log - July 15, 2026 \(Part 2\)) /Subject (Portfolio website development worklog) /Author (Codex) /Creator (Codex standard-library PDF generator) /Producer (Codex standard-library PDF generator) >>
+endobj
+xref
+0 18
+0000000000 65535 f 
+0000000015 00000 n 
+0000000085 00000 n 
+0000000160 00000 n 
+0000006225 00000 n 
+0000006362 00000 n 
+0000012010 00000 n 
+0000012147 00000 n 
+0000017737 00000 n 
+0000017874 00000 n 
+0000023155 00000 n 
+0000023293 00000 n 
+0000028303 00000 n 
+0000028442 00000 n 
+0000032132 00000 n 
+0000032271 00000 n 
+0000032362 00000 n 
+0000032413 00000 n 
+trailer
+<< /Size 18 /Root 16 0 R /Info 17 0 R >>
+startxref
+32660
+%%EOF
