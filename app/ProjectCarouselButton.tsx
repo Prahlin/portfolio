@@ -5,7 +5,7 @@ import { ArrowRight } from "lucide-react";
 
 const projectLinks = [
   { href: "#cinerific", label: "View 'Cinerific'" },
-  { href: "#alla-vostra", label: "View 'Alla Vostra'" },
+  { href: "/projects/alla-vostra", label: "View 'Alla Vostra'" },
   { href: "#credit-king", label: "View 'Credit King'" },
 ];
 

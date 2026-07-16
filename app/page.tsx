@@ -39,6 +39,7 @@ type CaseScreenshot = {
 type CaseStudy = {
   description: string;
   eyebrow: string;
+  href?: string;
   id: string;
   screenshots: CaseScreenshot[];
   stat: string;
@@ -67,6 +68,7 @@ const caseStudies: CaseStudy[] = [
     id: "alla-vostra",
     title: "Alla Vostra",
     eyebrow: "Flagship full-stack mobile commerce",
+    href: "/projects/alla-vostra",
     description:
       "Expo/React Native ordering flow with Stripe, Postmark, Vercel serverless routes, Android device testing, and Play Store preparation.",
     tags: ["React Native", "Stripe", "Node.js", "EAS"],
@@ -108,17 +110,22 @@ function PhonePreview({
   title,
   metric,
   variant,
+  href,
   screenImageSrc,
   screenImageAlt,
 }: {
+  href?: string;
   title: string;
   metric: string;
   variant: "commerce" | "finance";
   screenImageSrc?: string;
   screenImageAlt?: string;
 }) {
-  return (
-    <div className={`phone-shell phone-shell-${variant}`}>
+  const className = `phone-shell phone-shell-${variant}${
+    screenImageSrc ? " phone-shell-capture" : ""
+  }${href ? " phone-shell-link" : ""}`;
+  const content = (
+    <>
       <div className="phone-speaker" />
       <div className={`phone-screen${screenImageSrc ? " has-image" : ""}`}>
         {screenImageSrc ? (
@@ -155,8 +162,22 @@ function PhonePreview({
           </>
         )}
       </div>
-    </div>
+    </>
   );
+
+  if (href) {
+    return (
+      <a
+        aria-label={`Open ${title} case study`}
+        className={className}
+        href={href}
+      >
+        {content}
+      </a>
+    );
+  }
+
+  return <div className={className}>{content}</div>;
 }
 
 function TabletPreview() {
@@ -189,6 +210,70 @@ function SectionHeading({
       <p>{kicker}</p>
       <h2>{title}</h2>
     </div>
+  );
+}
+
+function CaseStudyCard({ study }: { study: CaseStudy }) {
+  const content = (
+    <>
+      <div className="case-topline">
+        <span>{study.eyebrow}</span>
+        <strong>{study.stat}</strong>
+      </div>
+      <h3>{study.title}</h3>
+      <p>{study.description}</p>
+      <div className="case-tags">
+        {study.tags.map((tag) => (
+          <span key={tag}>{tag}</span>
+        ))}
+      </div>
+      {study.screenshots.length > 0 ? (
+        <div
+          aria-label={`${study.title} app screenshots`}
+          className={`case-miniatures${
+            study.screenshots.some(
+              (screenshot) => screenshot.orientation === "landscape",
+            )
+              ? " case-miniatures-landscape"
+              : ""
+          }`}
+        >
+          {study.screenshots.map((screenshot) => (
+            <Image
+              alt={screenshot.alt}
+              className={`case-miniature${
+                screenshot.orientation === "landscape"
+                  ? " case-miniature-landscape"
+                  : ""
+              }`}
+              height={screenshot.orientation === "landscape" ? 166 : 192}
+              key={screenshot.src}
+              src={screenshot.src}
+              width={screenshot.orientation === "landscape" ? 238 : 108}
+            />
+          ))}
+        </div>
+      ) : null}
+    </>
+  );
+
+  if (study.href) {
+    return (
+      <a
+        aria-label={`Open ${study.title} case study`}
+        className="case-card case-card-link"
+        href={study.href}
+        id={study.id}
+      >
+        {content}
+      </a>
+    );
+  }
+
+  return (
+    <article className="case-card" id={study.id}>
+      {content}
+    </article>
   );
 }
 
@@ -276,6 +361,7 @@ export default function Home() {
                   title="Alla Vostra"
                   metric="Checkout ready"
                   variant="commerce"
+                  href="/projects/alla-vostra"
                   screenImageSrc="/images/startup_screen_large.png"
                   screenImageAlt="Alla Vostra startup screen"
                 />
@@ -308,54 +394,7 @@ export default function Home() {
 
           <div className="case-grid">
             {caseStudies.map((study) => (
-              <article
-                className="case-card"
-                id={study.id}
-                key={study.title}
-              >
-                <div className="case-topline">
-                  <span>{study.eyebrow}</span>
-                  <strong>{study.stat}</strong>
-                </div>
-                <h3>{study.title}</h3>
-                <p>{study.description}</p>
-                <div className="case-tags">
-                  {study.tags.map((tag) => (
-                    <span key={tag}>{tag}</span>
-                  ))}
-                </div>
-                {study.screenshots.length > 0 ? (
-                  <div
-                    aria-label={`${study.title} app screenshots`}
-                    className={`case-miniatures${
-                      study.screenshots.some(
-                        (screenshot) => screenshot.orientation === "landscape",
-                      )
-                        ? " case-miniatures-landscape"
-                        : ""
-                    }`}
-                  >
-                    {study.screenshots.map((screenshot) => (
-                      <Image
-                        alt={screenshot.alt}
-                        className={`case-miniature${
-                          screenshot.orientation === "landscape"
-                            ? " case-miniature-landscape"
-                            : ""
-                        }`}
-                        height={
-                          screenshot.orientation === "landscape" ? 166 : 192
-                        }
-                        key={screenshot.src}
-                        src={screenshot.src}
-                        width={
-                          screenshot.orientation === "landscape" ? 238 : 108
-                        }
-                      />
-                    ))}
-                  </div>
-                ) : null}
-              </article>
+              <CaseStudyCard key={study.title} study={study} />
             ))}
           </div>
         </div>
