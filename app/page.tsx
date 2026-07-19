@@ -1,12 +1,16 @@
 import Image from "next/image";
 import {
+  Apple,
   Braces,
+  CreditCard,
+  Database,
   Mail,
+  MailCheck,
   MonitorSmartphone,
   Play,
-  Server,
   Smartphone,
   Store,
+  Triangle,
 } from "lucide-react";
 import { ProjectCarouselButton } from "./ProjectCarouselButton";
 
@@ -14,20 +18,23 @@ const navItems = ["Case Studies", "Stack", "Worklog", "Contact"];
 
 const stackChips = [
   "React Native",
-  "Next.js",
-  "Tailwind CSS",
-  "Node.js",
+  "JavaScript",
+  "TypeScript",
+  "Expo",
+  "Node",
   "Kotlin",
+  "Next",
+  "Compose",
 ];
 
 const proofStats = [
   {
-    label: "UI/UX + Front-end + Back-end",
-    value: "3yrs",
+    label: "Full-Stack Expertise",
+    value: "3y+",
   },
   { label: "Quality GitHub Commits", value: "1k+" },
-  { label: "Project worklogs", value: "50+" },
-  { label: "Official Play/App Store Releases", value: "5" },
+  { label: "Shipped Mob/Web Products", value: "6+" },
+  { label: "Play/App Store Releases", value: "5+" },
 ];
 
 type CaseScreenshot = {
@@ -283,9 +290,9 @@ export default function Home() {
       <section className="hero" id="top">
         <div className="site-shell">
           <header className="nav-bar">
-            <a className="brand" href="#top" aria-label="Martin Prahl home">
+            <a className="brand" href="#top" aria-label="Prahlin home">
               <span>P</span>
-              <strong>Martin Prahl</strong>
+              <strong>Prahlin</strong>
             </a>
 
             <nav aria-label="Main navigation">
@@ -302,25 +309,37 @@ export default function Home() {
 
           <div className="hero-grid">
             <div className="hero-copy">
-              <p className="eyebrow">
-                React Native first. Kotlin ready. Full-stack where it counts.
+              <p className="eyebrow hero-eyebrow">
+                <span className="hero-eyebrow-underline">Appealing</span>{" "}
+                <span className="hero-eyebrow-box">UI/UX</span>
+                <span className="hero-eyebrow-period">,</span>
+                <br />
+                <span className="hero-eyebrow-underline">User-Friendly</span>{" "}
+                <span className="hero-eyebrow-box">Front-End</span>
+                <span className="hero-eyebrow-period">,</span>
+                <br />
+                <span className="hero-eyebrow-underline">
+                  Deep, Dependable
+                </span>{" "}
+                <span className="hero-eyebrow-box">Back-end</span>
+                <span className="hero-eyebrow-period">.</span>
               </p>
               <h1>React Native Full-Stack Mobile Developer</h1>
               <p className="hero-lede">
-                Polished mobile apps, secure checkout flows, and
-                production-ready Android pipelines.
+                From Cross-Platform Concept → Real-World Production & Release —
+                100% Stress-Free
               </p>
 
               <div className="hero-actions">
                 <ProjectCarouselButton />
                 <a
-                  className="button button-secondary"
+                  className="button button-secondary github-button"
                   href="https://github.com/Prahlin"
                   rel="noreferrer"
                   target="_blank"
                 >
-                  <Braces aria-hidden size={18} />
                   GitHub
+                  <Braces aria-hidden size={18} />
                 </a>
               </div>
 
@@ -331,13 +350,35 @@ export default function Home() {
               </div>
 
               <div className="proof-panel">
-                <div>
-                  <Store aria-hidden size={18} />
-                  <span>Play Store prep</span>
+                <div className="proof-column">
+                  <div className="proof-item">
+                    <Store aria-hidden size={18} />
+                    <span>Play Store</span>
+                  </div>
+                  <div className="proof-item">
+                    <Apple aria-hidden size={18} />
+                    <span>App Store</span>
+                  </div>
                 </div>
-                <div>
-                  <Server aria-hidden size={18} />
-                  <span>Stripe + Postmark backend</span>
+                <div className="proof-column">
+                  <div className="proof-item">
+                    <Triangle aria-hidden size={18} />
+                    <span>Vercel</span>
+                  </div>
+                  <div className="proof-item">
+                    <Database aria-hidden size={18} />
+                    <span>Supabase</span>
+                  </div>
+                </div>
+                <div className="proof-column">
+                  <div className="proof-item">
+                    <CreditCard aria-hidden size={18} />
+                    <span>Stripe</span>
+                  </div>
+                  <div className="proof-item">
+                    <MailCheck aria-hidden size={18} />
+                    <span>Postmark</span>
+                  </div>
                 </div>
               </div>
             </div>

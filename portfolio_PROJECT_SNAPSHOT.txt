@@ -1,5 +1,5 @@
 Portfolio Next.js PROJECT SNAPSHOT
-Generated: Thu Jul 16 17:41:09 EDT 2026
+Generated: Sun Jul 19 06:46:59 EDT 2026
 Project directory: /Users/prahlin/gh/portfolio
 
 IMPORTANT INSTRUCTIONS FOR CHATGPT & CODEX:
@@ -65,6 +65,8 @@ PROJECT FILE TREE
 /Users/prahlin/gh/portfolio/.github/workflows
 /Users/prahlin/gh/portfolio/.github/workflows/hostinger-static-export.yml
 /Users/prahlin/gh/portfolio/.gitignore
+/Users/prahlin/gh/portfolio/.vscode
+/Users/prahlin/gh/portfolio/.vscode/settings.json
 /Users/prahlin/gh/portfolio/DEPLOYMENT.md
 /Users/prahlin/gh/portfolio/README.md
 /Users/prahlin/gh/portfolio/app
@@ -75,6 +77,7 @@ PROJECT FILE TREE
 /Users/prahlin/gh/portfolio/app/page.tsx
 /Users/prahlin/gh/portfolio/app/projects
 /Users/prahlin/gh/portfolio/app/projects/alla-vostra
+/Users/prahlin/gh/portfolio/app/projects/alla-vostra/ExpandableFlowStacks.tsx
 /Users/prahlin/gh/portfolio/app/projects/alla-vostra/page.tsx
 /Users/prahlin/gh/portfolio/next.config.ts
 /Users/prahlin/gh/portfolio/package-lock.json
@@ -83,10 +86,13 @@ PROJECT FILE TREE
 /Users/prahlin/gh/portfolio/portfolio_worklog_july14.pdf
 /Users/prahlin/gh/portfolio/portfolio_worklog_july15_part1.pdf
 /Users/prahlin/gh/portfolio/portfolio_worklog_july15_part2.pdf
+/Users/prahlin/gh/portfolio/portfolio_worklog_july16.pdf
 /Users/prahlin/gh/portfolio/postcss.config.mjs
 /Users/prahlin/gh/portfolio/public
 /Users/prahlin/gh/portfolio/public/favicon.svg
 /Users/prahlin/gh/portfolio/public/images
+/Users/prahlin/gh/portfolio/public/images/about_us_screen_large.png
+/Users/prahlin/gh/portfolio/public/images/about_us_screen_small.png
 /Users/prahlin/gh/portfolio/public/images/address_overlay_large.png
 /Users/prahlin/gh/portfolio/public/images/address_overlay_small.png
 /Users/prahlin/gh/portfolio/public/images/cinerific-intro.png
@@ -94,11 +100,14 @@ PROJECT FILE TREE
 /Users/prahlin/gh/portfolio/public/images/confirmed_overlay_small.png
 /Users/prahlin/gh/portfolio/public/images/contact_overlay_large.png
 /Users/prahlin/gh/portfolio/public/images/contact_overlay_small.png
+/Users/prahlin/gh/portfolio/public/images/contact_screen_large.png
+/Users/prahlin/gh/portfolio/public/images/contact_screen_small.png
 /Users/prahlin/gh/portfolio/public/images/empty_cart_overlay_large.png
 /Users/prahlin/gh/portfolio/public/images/empty_cart_overlay_small.png
 /Users/prahlin/gh/portfolio/public/images/filled_cart_overlay_large.png
 /Users/prahlin/gh/portfolio/public/images/filled_cart_overlay_small.png
-/Users/prahlin/gh/portfolio/public/images/martin-profile.png
+/Users/prahlin/gh/portfolio/public/images/home_screen_large.png
+/Users/prahlin/gh/portfolio/public/images/home_screen_small.png
 /Users/prahlin/gh/portfolio/public/images/martin1.jpg
 /Users/prahlin/gh/portfolio/public/images/martin2.jpg
 /Users/prahlin/gh/portfolio/public/images/martin3.jpg
@@ -108,10 +117,16 @@ PROJECT FILE TREE
 /Users/prahlin/gh/portfolio/public/images/payment_input_small.png
 /Users/prahlin/gh/portfolio/public/images/payment_overlay_large.png
 /Users/prahlin/gh/portfolio/public/images/payment_overlay_small.png
-/Users/prahlin/gh/portfolio/public/images/products_overlay_large.png
-/Users/prahlin/gh/portfolio/public/images/products_overlay_small.png
-/Users/prahlin/gh/portfolio/public/images/shop_preview_large.png
-/Users/prahlin/gh/portfolio/public/images/shop_preview_small.png
+/Users/prahlin/gh/portfolio/public/images/products_overlay_buon_natale_large.png
+/Users/prahlin/gh/portfolio/public/images/products_overlay_buon_natale_small.png
+/Users/prahlin/gh/portfolio/public/images/products_overlay_piccola_large.png
+/Users/prahlin/gh/portfolio/public/images/products_overlay_piccola_small.png
+/Users/prahlin/gh/portfolio/public/images/products_overlay_sei_perfetto_large.png
+/Users/prahlin/gh/portfolio/public/images/products_overlay_sei_perfetto_small.png
+/Users/prahlin/gh/portfolio/public/images/products_screen_large.png
+/Users/prahlin/gh/portfolio/public/images/products_screen_small.png
+/Users/prahlin/gh/portfolio/public/images/shop_preview_screen_large.png
+/Users/prahlin/gh/portfolio/public/images/shop_preview_screen_small.png
 /Users/prahlin/gh/portfolio/public/images/start-page-mockup-reference.png
 /Users/prahlin/gh/portfolio/public/images/startup_screen_large.png
 /Users/prahlin/gh/portfolio/public/images/startup_screen_small.png
@@ -258,7 +273,7 @@ FILE: app/page.tsx
     80	      },
     81	      {
     82	        alt: "Alla Vostra products screen",
-    83	        src: "/images/products_overlay_small.png",
+    83	        src: "/images/products_screen_small.png",
     84	      },
     85	      {
     86	        alt: "Alla Vostra confirmation screen",
@@ -980,1515 +995,1552 @@ FILE: app/globals.css
    281	  .carousel-button-label {
    282	    animation: none;
    283	  }
-   284	}
-   285	
-   286	.button-secondary {
-   287	  background: rgba(255, 255, 255, 0.04);
-   288	  border: 1px solid var(--line-strong);
-   289	  color: var(--text);
-   290	}
-   291	
-   292	.stack-row {
-   293	  display: flex;
-   294	  flex-wrap: wrap;
-   295	  gap: 10px;
-   296	  margin-top: 26px;
-   297	}
-   298	
-   299	.stack-row span,
-   300	.case-tags span {
-   301	  background: rgba(67, 255, 146, 0.08);
-   302	  border: 1px solid var(--line);
-   303	  border-radius: 999px;
-   304	  color: #d8ffe4;
-   305	  font-size: 13px;
-   306	  font-weight: 700;
-   307	  padding: 8px 11px;
-   308	}
-   309	
-   310	.hero-visual {
-   311	  position: relative;
+   284	
+   285	  .flow-browse-extra {
+   286	    transition: none;
+   287	  }
+   288	}
+   289	
+   290	.button-secondary {
+   291	  background: rgba(255, 255, 255, 0.04);
+   292	  border: 1px solid var(--line-strong);
+   293	  color: var(--text);
+   294	}
+   295	
+   296	.stack-row {
+   297	  display: flex;
+   298	  flex-wrap: wrap;
+   299	  gap: 10px;
+   300	  margin-top: 26px;
+   301	}
+   302	
+   303	.stack-row span,
+   304	.case-tags span {
+   305	  background: rgba(67, 255, 146, 0.08);
+   306	  border: 1px solid var(--line);
+   307	  border-radius: 999px;
+   308	  color: #d8ffe4;
+   309	  font-size: 13px;
+   310	  font-weight: 700;
+   311	  padding: 8px 11px;
    312	}
    313	
-   314	.profile-orbit {
-   315	  align-items: center;
-   316	  display: flex;
-   317	  flex-direction: column;
-   318	  gap: 12px;
-   319	  position: absolute;
-   320	  right: 18px;
-   321	  top: 0;
-   322	  z-index: 3;
-   323	}
-   324	
-   325	.profile-photo {
-   326	  border: 2px solid rgba(198, 255, 217, 0.34);
-   327	  border-radius: 999px;
-   328	  box-shadow: 0 0 0 10px rgba(67, 255, 146, 0.05), 0 34px 95px rgba(0, 191, 99, 0.22);
-   329	  height: 188px;
-   330	  object-fit: cover;
-   331	  width: 188px;
-   332	}
-   333	
-   334	.profile-orbit span {
-   335	  background: rgba(5, 16, 10, 0.8);
-   336	  border: 1px solid var(--line);
-   337	  border-radius: 8px;
-   338	  color: var(--mint);
-   339	  font-size: 12px;
-   340	  font-weight: 750;
-   341	  line-height: 1.25;
-   342	  max-width: 138px;
-   343	  padding: 7px 11px;
-   344	  text-align: center;
-   345	}
-   346	
-   347	.phone-stage {
-   348	  height: 690px;
-   349	  margin-top: 48px;
-   350	  position: relative;
-   351	}
-   352	
-   353	.tablet-shell {
-   354	  background: linear-gradient(145deg, #0c120f, #000);
-   355	  border: 1px solid rgba(198, 255, 217, 0.24);
-   356	  border-radius: var(--capture-frame-radius-standard);
-   357	  box-shadow: 0 34px 96px rgba(0, 0, 0, 0.66), 0 0 56px rgba(0, 191, 99, 0.12);
-   358	  height: 190px;
-   359	  left: 38px;
-   360	  padding: 13px;
-   361	  position: absolute;
-   362	  top: 352px;
-   363	  transform: rotate(-5deg) scale(1.5);
-   364	  transform-origin: top left;
-   365	  width: 304px;
-   366	  z-index: 4;
-   367	}
-   368	
-   369	.tablet-camera {
-   370	  background: rgba(198, 255, 217, 0.28);
-   371	  border-radius: 999px;
-   372	  height: 5px;
-   373	  left: 50%;
-   374	  position: absolute;
-   375	  top: 6px;
-   376	  transform: translateX(-50%);
-   377	  width: 5px;
-   378	}
-   379	
-   380	.tablet-screen {
-   381	  background:
-   382	    linear-gradient(rgba(67, 255, 146, 0.045) 1px, transparent 1px),
-   383	    linear-gradient(90deg, rgba(67, 255, 146, 0.045) 1px, transparent 1px),
-   384	    radial-gradient(circle at 28% 34%, rgba(67, 255, 146, 0.18), transparent 34%),
-   385	    linear-gradient(180deg, #07140d, #020403 70%);
-   386	  background-size: 22px 22px, 22px 22px, auto, auto;
-   387	  border: 1px solid rgba(198, 255, 217, 0.08);
-   388	  border-radius: var(--capture-screen-radius-standard);
-   389	  height: 100%;
-   390	  overflow: hidden;
-   391	  position: relative;
-   392	}
-   393	
-   394	.tablet-screen-image {
-   395	  object-fit: contain;
-   396	  object-position: center center;
-   397	}
-   398	
-   399	.tablet-empty-grid {
-   400	  background:
-   401	    linear-gradient(90deg, rgba(198, 255, 217, 0.06) 1px, transparent 1px),
-   402	    linear-gradient(rgba(198, 255, 217, 0.06) 1px, transparent 1px);
-   403	  background-size: 48px 48px;
-   404	  inset: 0;
-   405	  opacity: 0.45;
-   406	  position: absolute;
-   407	}
-   408	
-   409	.phone-shell {
-   410	  background: linear-gradient(145deg, #0c120f, #000);
-   411	  border: 1px solid rgba(198, 255, 217, 0.22);
-   412	  border-radius: 34px;
-   413	  box-shadow: 0 34px 100px rgba(0, 0, 0, 0.62);
-   414	  height: 500px;
-   415	  padding: 16px;
-   416	  position: absolute;
-   417	  width: 245px;
-   418	}
-   419	
-   420	.phone-shell-link {
-   421	  color: inherit;
-   422	  cursor: pointer;
-   423	  display: block;
-   424	  text-decoration: none;
-   425	}
-   426	
-   427	.phone-shell-link:focus-visible {
-   428	  outline: 2px solid var(--mint);
-   429	  outline-offset: 8px;
-   430	}
-   431	
-   432	.phone-shell-commerce {
-   433	  left: 68px;
-   434	  top: 40px;
-   435	  transform: rotate(-9deg);
-   436	  z-index: 2;
-   437	}
-   438	
-   439	.phone-shell-finance {
-   440	  left: 278px;
-   441	  top: 110px;
-   442	  transform: rotate(8deg);
-   443	  z-index: 1;
-   444	}
-   445	
-   446	.phone-speaker {
-   447	  background: #171f1a;
-   448	  border-radius: 99px;
-   449	  height: 6px;
-   450	  margin: 0 auto 12px;
-   451	  width: 62px;
-   452	}
-   453	
-   454	.phone-screen {
-   455	  background:
-   456	    linear-gradient(rgba(67, 255, 146, 0.055) 1px, transparent 1px),
-   457	    linear-gradient(90deg, rgba(67, 255, 146, 0.055) 1px, transparent 1px),
-   458	    linear-gradient(180deg, #0b1710, #030705 64%);
-   459	  background-size: 24px 24px, 24px 24px, auto;
-   460	  border-radius: 24px;
-   461	  height: calc(100% - 18px);
-   462	  overflow: hidden;
-   463	  padding: 18px;
-   464	  position: relative;
-   465	}
-   466	
-   467	.phone-screen.has-image {
-   468	  background: #020403;
-   469	  border-radius: var(--capture-screen-radius-tall);
-   470	  padding: 0;
-   471	}
-   472	
-   473	.phone-screen-image-frame {
-   474	  inset: 2% 0 0;
-   475	  position: absolute;
-   476	}
-   477	
-   478	.phone-screen-image {
-   479	  object-fit: contain;
-   480	  object-position: top center;
-   481	}
-   482	
-   483	.phone-shell-capture {
-   484	  border-radius: var(--capture-frame-radius-tall);
+   314	.hero-visual {
+   315	  position: relative;
+   316	}
+   317	
+   318	.profile-orbit {
+   319	  align-items: center;
+   320	  display: flex;
+   321	  flex-direction: column;
+   322	  gap: 12px;
+   323	  position: absolute;
+   324	  right: 18px;
+   325	  top: 0;
+   326	  z-index: 3;
+   327	}
+   328	
+   329	.profile-photo {
+   330	  border: 2px solid rgba(198, 255, 217, 0.34);
+   331	  border-radius: 999px;
+   332	  box-shadow: 0 0 0 10px rgba(67, 255, 146, 0.05), 0 34px 95px rgba(0, 191, 99, 0.22);
+   333	  height: 188px;
+   334	  object-fit: cover;
+   335	  width: 188px;
+   336	}
+   337	
+   338	.profile-orbit span {
+   339	  background: rgba(5, 16, 10, 0.8);
+   340	  border: 1px solid var(--line);
+   341	  border-radius: 8px;
+   342	  color: var(--mint);
+   343	  font-size: 12px;
+   344	  font-weight: 750;
+   345	  line-height: 1.25;
+   346	  max-width: 138px;
+   347	  padding: 7px 11px;
+   348	  text-align: center;
+   349	}
+   350	
+   351	.phone-stage {
+   352	  height: 690px;
+   353	  margin-top: 48px;
+   354	  position: relative;
+   355	}
+   356	
+   357	.tablet-shell {
+   358	  background: linear-gradient(145deg, #0c120f, #000);
+   359	  border: 1px solid rgba(198, 255, 217, 0.24);
+   360	  border-radius: var(--capture-frame-radius-standard);
+   361	  box-shadow: 0 34px 96px rgba(0, 0, 0, 0.66), 0 0 56px rgba(0, 191, 99, 0.12);
+   362	  height: 190px;
+   363	  left: 38px;
+   364	  padding: 13px;
+   365	  position: absolute;
+   366	  top: 352px;
+   367	  transform: rotate(-5deg) scale(1.5);
+   368	  transform-origin: top left;
+   369	  width: 304px;
+   370	  z-index: 4;
+   371	}
+   372	
+   373	.tablet-camera {
+   374	  background: rgba(198, 255, 217, 0.28);
+   375	  border-radius: 999px;
+   376	  height: 5px;
+   377	  left: 50%;
+   378	  position: absolute;
+   379	  top: 6px;
+   380	  transform: translateX(-50%);
+   381	  width: 5px;
+   382	}
+   383	
+   384	.tablet-screen {
+   385	  background:
+   386	    linear-gradient(rgba(67, 255, 146, 0.045) 1px, transparent 1px),
+   387	    linear-gradient(90deg, rgba(67, 255, 146, 0.045) 1px, transparent 1px),
+   388	    radial-gradient(circle at 28% 34%, rgba(67, 255, 146, 0.18), transparent 34%),
+   389	    linear-gradient(180deg, #07140d, #020403 70%);
+   390	  background-size: 22px 22px, 22px 22px, auto, auto;
+   391	  border: 1px solid rgba(198, 255, 217, 0.08);
+   392	  border-radius: var(--capture-screen-radius-standard);
+   393	  height: 100%;
+   394	  overflow: hidden;
+   395	  position: relative;
+   396	}
+   397	
+   398	.tablet-screen-image {
+   399	  object-fit: contain;
+   400	  object-position: center center;
+   401	}
+   402	
+   403	.tablet-empty-grid {
+   404	  background:
+   405	    linear-gradient(90deg, rgba(198, 255, 217, 0.06) 1px, transparent 1px),
+   406	    linear-gradient(rgba(198, 255, 217, 0.06) 1px, transparent 1px);
+   407	  background-size: 48px 48px;
+   408	  inset: 0;
+   409	  opacity: 0.45;
+   410	  position: absolute;
+   411	}
+   412	
+   413	.phone-shell {
+   414	  background: linear-gradient(145deg, #0c120f, #000);
+   415	  border: 1px solid rgba(198, 255, 217, 0.22);
+   416	  border-radius: 34px;
+   417	  box-shadow: 0 34px 100px rgba(0, 0, 0, 0.62);
+   418	  height: 500px;
+   419	  padding: 16px;
+   420	  position: absolute;
+   421	  width: 245px;
+   422	}
+   423	
+   424	.phone-shell-link {
+   425	  color: inherit;
+   426	  cursor: pointer;
+   427	  display: block;
+   428	  text-decoration: none;
+   429	}
+   430	
+   431	.phone-shell-link:focus-visible {
+   432	  outline: 2px solid var(--mint);
+   433	  outline-offset: 8px;
+   434	}
+   435	
+   436	.phone-shell-commerce {
+   437	  left: 68px;
+   438	  top: 40px;
+   439	  transform: rotate(-9deg);
+   440	  z-index: 2;
+   441	}
+   442	
+   443	.phone-shell-finance {
+   444	  left: 278px;
+   445	  top: 110px;
+   446	  transform: rotate(8deg);
+   447	  z-index: 1;
+   448	}
+   449	
+   450	.phone-speaker {
+   451	  background: #171f1a;
+   452	  border-radius: 99px;
+   453	  height: 6px;
+   454	  margin: 0 auto 12px;
+   455	  width: 62px;
+   456	}
+   457	
+   458	.phone-screen {
+   459	  background:
+   460	    linear-gradient(rgba(67, 255, 146, 0.055) 1px, transparent 1px),
+   461	    linear-gradient(90deg, rgba(67, 255, 146, 0.055) 1px, transparent 1px),
+   462	    linear-gradient(180deg, #0b1710, #030705 64%);
+   463	  background-size: 24px 24px, 24px 24px, auto;
+   464	  border-radius: 24px;
+   465	  height: calc(100% - 18px);
+   466	  overflow: hidden;
+   467	  padding: 18px;
+   468	  position: relative;
+   469	}
+   470	
+   471	.phone-screen.has-image {
+   472	  background: #020403;
+   473	  border-radius: var(--capture-screen-radius-tall);
+   474	  padding: 0;
+   475	}
+   476	
+   477	.phone-screen-image-frame {
+   478	  inset: 2% 0 0;
+   479	  position: absolute;
+   480	}
+   481	
+   482	.phone-screen-image {
+   483	  object-fit: contain;
+   484	  object-position: top center;
    485	}
    486	
-   487	.phone-status {
-   488	  align-items: center;
-   489	  color: var(--mint);
-   490	  display: flex;
-   491	  font-size: 11px;
-   492	  font-weight: 800;
-   493	  justify-content: space-between;
-   494	  margin-bottom: 28px;
-   495	}
-   496	
-   497	.phone-chart {
-   498	  align-items: end;
-   499	  display: grid;
-   500	  gap: 8px;
-   501	  grid-template-columns: repeat(4, 1fr);
-   502	  height: 118px;
-   503	  margin-bottom: 26px;
-   504	}
-   505	
-   506	.phone-chart div {
-   507	  background: linear-gradient(180deg, var(--green), #086c3b);
-   508	  border-radius: 6px 6px 2px 2px;
-   509	}
-   510	
-   511	.phone-chart div:nth-child(1) {
-   512	  height: 54%;
+   487	.phone-shell-capture {
+   488	  border-radius: var(--capture-frame-radius-tall);
+   489	}
+   490	
+   491	.phone-status {
+   492	  align-items: center;
+   493	  color: var(--mint);
+   494	  display: flex;
+   495	  font-size: 11px;
+   496	  font-weight: 800;
+   497	  justify-content: space-between;
+   498	  margin-bottom: 28px;
+   499	}
+   500	
+   501	.phone-chart {
+   502	  align-items: end;
+   503	  display: grid;
+   504	  gap: 8px;
+   505	  grid-template-columns: repeat(4, 1fr);
+   506	  height: 118px;
+   507	  margin-bottom: 26px;
+   508	}
+   509	
+   510	.phone-chart div {
+   511	  background: linear-gradient(180deg, var(--green), #086c3b);
+   512	  border-radius: 6px 6px 2px 2px;
    513	}
    514	
-   515	.phone-chart div:nth-child(2) {
-   516	  height: 88%;
+   515	.phone-chart div:nth-child(1) {
+   516	  height: 54%;
    517	}
    518	
-   519	.phone-chart div:nth-child(3) {
-   520	  height: 66%;
+   519	.phone-chart div:nth-child(2) {
+   520	  height: 88%;
    521	}
    522	
-   523	.phone-chart div:nth-child(4) {
-   524	  height: 100%;
+   523	.phone-chart div:nth-child(3) {
+   524	  height: 66%;
    525	}
    526	
-   527	.phone-cardline {
-   528	  background: rgba(198, 255, 217, 0.14);
-   529	  border-radius: 999px;
-   530	  height: 12px;
-   531	  margin-bottom: 10px;
-   532	  width: 62%;
-   533	}
-   534	
-   535	.phone-cardline.wide {
-   536	  width: 88%;
+   527	.phone-chart div:nth-child(4) {
+   528	  height: 100%;
+   529	}
+   530	
+   531	.phone-cardline {
+   532	  background: rgba(198, 255, 217, 0.14);
+   533	  border-radius: 999px;
+   534	  height: 12px;
+   535	  margin-bottom: 10px;
+   536	  width: 62%;
    537	}
    538	
-   539	.phone-grid {
-   540	  display: grid;
-   541	  gap: 9px;
-   542	  grid-template-columns: 1fr 1fr;
-   543	  margin-top: 24px;
-   544	}
-   545	
-   546	.phone-grid span {
-   547	  background: rgba(255, 255, 255, 0.05);
-   548	  border: 1px solid var(--line);
-   549	  border-radius: 8px;
-   550	  height: 54px;
-   551	}
-   552	
-   553	.phone-cta {
-   554	  align-items: center;
-   555	  background: var(--green);
-   556	  border-radius: 8px;
-   557	  color: #001d0f;
-   558	  display: flex;
-   559	  font-size: 13px;
-   560	  font-weight: 900;
-   561	  height: 42px;
-   562	  justify-content: center;
-   563	  margin-top: 24px;
-   564	}
-   565	
-   566	.proof-panel {
-   567	  backdrop-filter: blur(16px);
-   568	  background: rgba(5, 16, 10, 0.76);
-   569	  border: 1px solid var(--line-strong);
-   570	  border-radius: 8px;
-   571	  display: grid;
-   572	  gap: 10px;
-   573	  margin: 26px 0 0;
-   574	  padding: 14px;
-   575	  position: relative;
-   576	  width: min(330px, 100%);
-   577	  z-index: 2;
-   578	}
-   579	
-   580	.proof-panel div {
-   581	  align-items: center;
-   582	  color: #dfffea;
-   583	  display: flex;
-   584	  font-size: 13px;
-   585	  font-weight: 750;
-   586	  gap: 10px;
-   587	}
-   588	
-   589	.stats-strip {
-   590	  border-top: 1px solid var(--line);
-   591	  display: grid;
-   592	  gap: 1px;
-   593	  grid-template-columns: repeat(4, minmax(0, 1fr));
-   594	  margin-top: 10px;
-   595	  position: relative;
-   596	  z-index: 2;
-   597	}
-   598	
-   599	.stats-strip div {
-   600	  background: rgba(255, 255, 255, 0.025);
-   601	  min-width: 0;
-   602	  min-height: 104px;
-   603	  padding: 22px;
-   604	}
-   605	
-   606	.stats-strip strong {
-   607	  color: var(--green);
-   608	  display: block;
-   609	  font-size: 34px;
-   610	  font-weight: 900;
-   611	  line-height: 1;
-   612	}
-   613	
-   614	.stats-strip span {
-   615	  color: var(--muted);
-   616	  display: block;
-   617	  font-size: 13px;
-   618	  font-weight: 700;
-   619	  margin-top: 8px;
-   620	}
-   621	
-   622	section:not(.hero) {
-   623	  padding: 88px 0;
+   539	.phone-cardline.wide {
+   540	  width: 88%;
+   541	}
+   542	
+   543	.phone-grid {
+   544	  display: grid;
+   545	  gap: 9px;
+   546	  grid-template-columns: 1fr 1fr;
+   547	  margin-top: 24px;
+   548	}
+   549	
+   550	.phone-grid span {
+   551	  background: rgba(255, 255, 255, 0.05);
+   552	  border: 1px solid var(--line);
+   553	  border-radius: 8px;
+   554	  height: 54px;
+   555	}
+   556	
+   557	.phone-cta {
+   558	  align-items: center;
+   559	  background: var(--green);
+   560	  border-radius: 8px;
+   561	  color: #001d0f;
+   562	  display: flex;
+   563	  font-size: 13px;
+   564	  font-weight: 900;
+   565	  height: 42px;
+   566	  justify-content: center;
+   567	  margin-top: 24px;
+   568	}
+   569	
+   570	.proof-panel {
+   571	  backdrop-filter: blur(16px);
+   572	  background: rgba(5, 16, 10, 0.76);
+   573	  border: 1px solid var(--line-strong);
+   574	  border-radius: 8px;
+   575	  display: grid;
+   576	  gap: 10px;
+   577	  margin: 26px 0 0;
+   578	  padding: 14px;
+   579	  position: relative;
+   580	  width: min(330px, 100%);
+   581	  z-index: 2;
+   582	}
+   583	
+   584	.proof-panel div {
+   585	  align-items: center;
+   586	  color: #dfffea;
+   587	  display: flex;
+   588	  font-size: 13px;
+   589	  font-weight: 750;
+   590	  gap: 10px;
+   591	}
+   592	
+   593	.stats-strip {
+   594	  border-top: 1px solid var(--line);
+   595	  display: grid;
+   596	  gap: 1px;
+   597	  grid-template-columns: repeat(4, minmax(0, 1fr));
+   598	  margin-top: 10px;
+   599	  position: relative;
+   600	  z-index: 2;
+   601	}
+   602	
+   603	.stats-strip div {
+   604	  background: rgba(255, 255, 255, 0.025);
+   605	  min-width: 0;
+   606	  min-height: 104px;
+   607	  padding: 22px;
+   608	}
+   609	
+   610	.stats-strip strong {
+   611	  color: var(--green);
+   612	  display: block;
+   613	  font-size: 34px;
+   614	  font-weight: 900;
+   615	  line-height: 1;
+   616	}
+   617	
+   618	.stats-strip span {
+   619	  color: var(--muted);
+   620	  display: block;
+   621	  font-size: 13px;
+   622	  font-weight: 700;
+   623	  margin-top: 8px;
    624	}
    625	
-   626	.section-heading {
-   627	  max-width: 720px;
+   626	section:not(.hero) {
+   627	  padding: 88px 0;
    628	}
    629	
-   630	.case-grid {
-   631	  display: grid;
-   632	  gap: 18px;
-   633	  grid-template-columns: repeat(3, minmax(0, 1fr));
-   634	  margin-top: 34px;
-   635	}
-   636	
-   637	.case-card,
-   638	.capability-grid div,
-   639	.contact-panel {
-   640	  background: linear-gradient(180deg, rgba(13, 31, 22, 0.88), rgba(5, 13, 9, 0.88));
-   641	  border: 1px solid var(--line);
-   642	  border-radius: 8px;
-   643	}
-   644	
-   645	.case-card {
-   646	  min-height: 330px;
-   647	  padding: 28px;
-   648	}
-   649	
-   650	.case-card-link {
-   651	  color: inherit;
-   652	  cursor: pointer;
-   653	  display: block;
-   654	  text-decoration: none;
-   655	  transition:
-   656	    border-color 160ms ease,
-   657	    box-shadow 160ms ease,
-   658	    transform 160ms ease;
-   659	}
-   660	
-   661	.case-card-link:hover {
-   662	  border-color: rgba(198, 255, 217, 0.36);
-   663	  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.28);
-   664	  transform: translateY(-2px);
-   665	}
-   666	
-   667	.case-card-link:focus-visible {
-   668	  outline: 2px solid var(--mint);
-   669	  outline-offset: 6px;
-   670	}
-   671	
-   672	.case-topline {
-   673	  align-items: center;
-   674	  display: flex;
-   675	  gap: 18px;
-   676	  justify-content: space-between;
-   677	}
-   678	
-   679	.case-topline span {
-   680	  color: var(--green);
-   681	  font-size: 12px;
-   682	  font-weight: 850;
-   683	  letter-spacing: 0.1em;
-   684	  text-transform: uppercase;
-   685	}
-   686	
-   687	.case-topline strong {
-   688	  border: 1px solid var(--line);
-   689	  border-radius: 999px;
-   690	  color: var(--mint);
-   691	  font-size: 12px;
-   692	  padding: 7px 10px;
-   693	  white-space: nowrap;
-   694	}
-   695	
-   696	.case-card h3 {
-   697	  margin: 54px 0 14px;
+   630	.section-heading {
+   631	  max-width: 720px;
+   632	}
+   633	
+   634	.case-grid {
+   635	  display: grid;
+   636	  gap: 18px;
+   637	  grid-template-columns: repeat(3, minmax(0, 1fr));
+   638	  margin-top: 34px;
+   639	}
+   640	
+   641	.case-card,
+   642	.capability-grid div,
+   643	.contact-panel {
+   644	  background: linear-gradient(180deg, rgba(13, 31, 22, 0.88), rgba(5, 13, 9, 0.88));
+   645	  border: 1px solid var(--line);
+   646	  border-radius: 8px;
+   647	}
+   648	
+   649	.case-card {
+   650	  min-height: 330px;
+   651	  padding: 28px;
+   652	}
+   653	
+   654	.case-card-link {
+   655	  color: inherit;
+   656	  cursor: pointer;
+   657	  display: block;
+   658	  text-decoration: none;
+   659	  transition:
+   660	    border-color 160ms ease,
+   661	    box-shadow 160ms ease,
+   662	    transform 160ms ease;
+   663	}
+   664	
+   665	.case-card-link:hover {
+   666	  border-color: rgba(198, 255, 217, 0.36);
+   667	  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.28);
+   668	  transform: translateY(-2px);
+   669	}
+   670	
+   671	.case-card-link:focus-visible {
+   672	  outline: 2px solid var(--mint);
+   673	  outline-offset: 6px;
+   674	}
+   675	
+   676	.case-topline {
+   677	  align-items: center;
+   678	  display: flex;
+   679	  gap: 18px;
+   680	  justify-content: space-between;
+   681	}
+   682	
+   683	.case-topline span {
+   684	  color: var(--green);
+   685	  font-size: 12px;
+   686	  font-weight: 850;
+   687	  letter-spacing: 0.1em;
+   688	  text-transform: uppercase;
+   689	}
+   690	
+   691	.case-topline strong {
+   692	  border: 1px solid var(--line);
+   693	  border-radius: 999px;
+   694	  color: var(--mint);
+   695	  font-size: 12px;
+   696	  padding: 7px 10px;
+   697	  white-space: nowrap;
    698	}
    699	
-   700	.case-card p,
-   701	.capability-grid p,
-   702	.timeline-item p {
-   703	  color: #b8c9bf;
-   704	  line-height: 1.6;
-   705	}
-   706	
-   707	.case-tags {
-   708	  display: flex;
-   709	  flex-wrap: wrap;
-   710	  gap: 8px;
-   711	  margin-top: 24px;
-   712	}
-   713	
-   714	.case-miniatures {
-   715	  display: grid;
-   716	  gap: 10px;
-   717	  grid-template-columns: repeat(3, minmax(0, 1fr));
-   718	  margin-top: 26px;
-   719	  max-width: 390px;
-   720	}
-   721	
-   722	.case-miniatures-landscape {
-   723	  grid-template-columns: 1fr;
-   724	  max-width: 420px;
-   725	}
-   726	
-   727	.case-miniature {
-   728	  aspect-ratio: 9 / 16;
-   729	  background: #020403;
-   730	  border: 1px solid var(--line);
-   731	  border-radius: var(--capture-frame-radius-standard);
-   732	  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.28);
-   733	  display: block;
-   734	  height: auto;
-   735	  object-fit: contain;
-   736	  width: 100%;
-   737	}
-   738	
-   739	.case-miniature-landscape {
-   740	  aspect-ratio: 2388 / 1668;
-   741	  border-radius: var(--capture-frame-radius-standard);
-   742	}
-   743	
-   744	.split-section {
-   745	  display: grid;
-   746	  gap: 44px;
-   747	}
-   748	
-   749	.capability-grid {
-   750	  display: grid;
-   751	  gap: 18px;
-   752	  grid-template-columns: repeat(3, 1fr);
-   753	}
-   754	
-   755	.capability-grid div {
-   756	  padding: 24px;
+   700	.case-card h3 {
+   701	  margin: 54px 0 14px;
+   702	}
+   703	
+   704	.case-card p,
+   705	.capability-grid p,
+   706	.timeline-item p {
+   707	  color: #b8c9bf;
+   708	  line-height: 1.6;
+   709	}
+   710	
+   711	.case-tags {
+   712	  display: flex;
+   713	  flex-wrap: wrap;
+   714	  gap: 8px;
+   715	  margin-top: 24px;
+   716	}
+   717	
+   718	.case-miniatures {
+   719	  display: grid;
+   720	  gap: 10px;
+   721	  grid-template-columns: repeat(3, minmax(0, 1fr));
+   722	  margin-top: 26px;
+   723	  max-width: 390px;
+   724	}
+   725	
+   726	.case-miniatures-landscape {
+   727	  grid-template-columns: 1fr;
+   728	  max-width: 420px;
+   729	}
+   730	
+   731	.case-miniature {
+   732	  aspect-ratio: 9 / 16;
+   733	  background: #020403;
+   734	  border: 1px solid var(--line);
+   735	  border-radius: var(--capture-frame-radius-standard);
+   736	  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.28);
+   737	  display: block;
+   738	  height: auto;
+   739	  object-fit: contain;
+   740	  width: 100%;
+   741	}
+   742	
+   743	.case-miniature-landscape {
+   744	  aspect-ratio: 2388 / 1668;
+   745	  border-radius: var(--capture-frame-radius-standard);
+   746	}
+   747	
+   748	.split-section {
+   749	  display: grid;
+   750	  gap: 44px;
+   751	}
+   752	
+   753	.capability-grid {
+   754	  display: grid;
+   755	  gap: 18px;
+   756	  grid-template-columns: repeat(3, 1fr);
    757	}
    758	
-   759	.capability-grid svg {
-   760	  color: var(--green);
-   761	  margin-bottom: 30px;
-   762	}
-   763	
-   764	.worklog-layout {
-   765	  display: grid;
-   766	  gap: 42px;
-   767	  grid-template-columns: minmax(0, 0.9fr) minmax(320px, 1.1fr);
-   768	}
-   769	
-   770	.timeline {
-   771	  border-left: 1px solid var(--line-strong);
+   759	.capability-grid div {
+   760	  padding: 24px;
+   761	}
+   762	
+   763	.capability-grid svg {
+   764	  color: var(--green);
+   765	  margin-bottom: 30px;
+   766	}
+   767	
+   768	.worklog-layout {
+   769	  display: grid;
+   770	  gap: 42px;
+   771	  grid-template-columns: minmax(0, 0.9fr) minmax(320px, 1.1fr);
    772	}
    773	
-   774	.timeline-item {
-   775	  display: grid;
-   776	  gap: 18px;
-   777	  grid-template-columns: 56px 1fr;
-   778	  padding: 8px 0 28px 24px;
-   779	}
-   780	
-   781	.timeline-item span {
-   782	  color: var(--green);
-   783	  font-weight: 900;
-   784	}
-   785	
-   786	.contact-panel {
-   787	  align-items: center;
-   788	  display: flex;
-   789	  gap: 28px;
-   790	  justify-content: space-between;
-   791	  padding: 30px;
-   792	}
-   793	
-   794	.contact-panel h2 {
-   795	  font-size: clamp(28px, 4vw, 46px);
-   796	  margin-bottom: 0;
-   797	  max-width: 760px;
-   798	}
-   799	
-   800	.project-page {
-   801	  overflow-x: hidden;
+   774	.timeline {
+   775	  border-left: 1px solid var(--line-strong);
+   776	}
+   777	
+   778	.timeline-item {
+   779	  display: grid;
+   780	  gap: 18px;
+   781	  grid-template-columns: 56px 1fr;
+   782	  padding: 8px 0 28px 24px;
+   783	}
+   784	
+   785	.timeline-item span {
+   786	  color: var(--green);
+   787	  font-weight: 900;
+   788	}
+   789	
+   790	.contact-panel {
+   791	  align-items: center;
+   792	  display: flex;
+   793	  gap: 28px;
+   794	  justify-content: space-between;
+   795	  padding: 30px;
+   796	}
+   797	
+   798	.contact-panel h2 {
+   799	  font-size: clamp(28px, 4vw, 46px);
+   800	  margin-bottom: 0;
+   801	  max-width: 760px;
    802	}
    803	
-   804	.project-hero-copy,
-   805	.project-hero-grid > * {
-   806	  min-width: 0;
-   807	}
-   808	
-   809	.project-page section:not(.project-hero) {
-   810	  padding: 78px 0;
-   811	  position: relative;
-   812	}
-   813	
-   814	section.project-hero {
-   815	  overflow: hidden;
-   816	  padding: 24px 0 88px;
-   817	  position: relative;
-   818	}
-   819	
-   820	.project-hero::after {
-   821	  background: linear-gradient(transparent, var(--bg));
-   822	  bottom: 0;
-   823	  content: "";
-   824	  height: 30%;
-   825	  left: 0;
-   826	  pointer-events: none;
-   827	  position: absolute;
-   828	  right: 0;
-   829	}
-   830	
-   831	.project-nav {
-   832	  margin-bottom: 68px;
+   804	.project-page {
+   805	  overflow-x: hidden;
+   806	}
+   807	
+   808	.project-hero-copy,
+   809	.project-hero-grid > * {
+   810	  min-width: 0;
+   811	}
+   812	
+   813	.project-page section:not(.project-hero) {
+   814	  padding: 78px 0;
+   815	  position: relative;
+   816	}
+   817	
+   818	section.project-hero {
+   819	  overflow: hidden;
+   820	  padding: 24px 0 88px;
+   821	  position: relative;
+   822	}
+   823	
+   824	.project-hero::after {
+   825	  background: linear-gradient(transparent, var(--bg));
+   826	  bottom: 0;
+   827	  content: "";
+   828	  height: 30%;
+   829	  left: 0;
+   830	  pointer-events: none;
+   831	  position: absolute;
+   832	  right: 0;
    833	}
    834	
-   835	.project-hero-grid {
-   836	  align-items: center;
-   837	  display: grid;
-   838	  gap: 56px;
-   839	  grid-template-columns: minmax(0, 0.92fr) minmax(420px, 1.08fr);
-   840	  position: relative;
-   841	  z-index: 2;
-   842	}
-   843	
-   844	.project-hero-copy h1 {
-   845	  margin-bottom: 18px;
+   835	.project-nav {
+   836	  margin-bottom: 68px;
+   837	}
+   838	
+   839	.project-hero-grid {
+   840	  align-items: center;
+   841	  display: grid;
+   842	  gap: 56px;
+   843	  grid-template-columns: minmax(0, 0.92fr) minmax(420px, 1.08fr);
+   844	  position: relative;
+   845	  z-index: 2;
    846	}
    847	
-   848	.project-back-link {
-   849	  align-items: center;
-   850	  color: var(--muted);
-   851	  display: inline-flex;
-   852	  font-size: 13px;
-   853	  font-weight: 800;
-   854	  gap: 8px;
-   855	  margin-bottom: 30px;
-   856	  transition: color 160ms ease;
-   857	}
-   858	
-   859	.project-back-link:hover {
-   860	  color: var(--mint);
+   848	.project-hero-copy h1 {
+   849	  margin-bottom: 18px;
+   850	}
+   851	
+   852	.project-back-link {
+   853	  align-items: center;
+   854	  color: var(--muted);
+   855	  display: inline-flex;
+   856	  font-size: 13px;
+   857	  font-weight: 800;
+   858	  gap: 8px;
+   859	  margin-bottom: 30px;
+   860	  transition: color 160ms ease;
    861	}
    862	
-   863	.project-subtitle {
-   864	  color: var(--green);
-   865	  font-size: clamp(20px, 2vw, 28px);
-   866	  font-weight: 850;
-   867	  line-height: 1.2;
-   868	  margin-bottom: 22px;
-   869	}
-   870	
-   871	.project-hero-text,
-   872	.project-copy-panel p,
-   873	.architecture-copy,
-   874	.readiness-copy,
-   875	.closing-panel p {
-   876	  color: #c4d6cc;
-   877	  font-size: 17px;
-   878	  line-height: 1.65;
-   879	}
-   880	
-   881	.project-hero-text {
-   882	  max-width: 620px;
+   863	.project-back-link:hover {
+   864	  color: var(--mint);
+   865	}
+   866	
+   867	.project-subtitle {
+   868	  color: var(--green);
+   869	  font-size: clamp(20px, 2vw, 28px);
+   870	  font-weight: 850;
+   871	  line-height: 1.2;
+   872	  margin-bottom: 22px;
+   873	}
+   874	
+   875	.project-hero-text,
+   876	.project-copy-panel p,
+   877	.architecture-copy,
+   878	.readiness-copy,
+   879	.closing-panel p {
+   880	  color: #c4d6cc;
+   881	  font-size: 17px;
+   882	  line-height: 1.65;
    883	}
    884	
-   885	.project-meta-row {
-   886	  display: flex;
-   887	  flex-wrap: wrap;
-   888	  gap: 9px;
-   889	  margin-top: 28px;
-   890	  max-width: 620px;
-   891	}
-   892	
-   893	.project-meta-row span,
-   894	.proof-points span,
-   895	.readiness-list span {
-   896	  background: rgba(67, 255, 146, 0.08);
-   897	  border: 1px solid var(--line);
-   898	  border-radius: 999px;
-   899	  color: #d8ffe4;
-   900	  font-size: 13px;
-   901	  font-weight: 750;
-   902	  padding: 8px 11px;
-   903	  white-space: nowrap;
-   904	}
-   905	
-   906	.project-actions {
-   907	  margin-top: 30px;
+   885	.project-hero-text {
+   886	  max-width: 620px;
+   887	}
+   888	
+   889	.project-meta-row {
+   890	  display: flex;
+   891	  flex-wrap: wrap;
+   892	  gap: 9px;
+   893	  margin-top: 28px;
+   894	  max-width: 620px;
+   895	}
+   896	
+   897	.project-meta-row span,
+   898	.proof-points span,
+   899	.readiness-list span {
+   900	  background: rgba(67, 255, 146, 0.08);
+   901	  border: 1px solid var(--line);
+   902	  border-radius: 999px;
+   903	  color: #d8ffe4;
+   904	  font-size: 13px;
+   905	  font-weight: 750;
+   906	  padding: 8px 11px;
+   907	  white-space: nowrap;
    908	}
    909	
-   910	.av-showcase {
-   911	  min-height: 610px;
-   912	  position: relative;
-   913	}
-   914	
-   915	.av-showcase::before {
-   916	  background:
-   917	    linear-gradient(rgba(67, 255, 146, 0.045) 1px, transparent 1px),
-   918	    linear-gradient(90deg, rgba(67, 255, 146, 0.045) 1px, transparent 1px);
-   919	  background-size: 36px 36px;
-   920	  content: "";
-   921	  inset: 34px 12px 52px;
-   922	  opacity: 0.58;
-   923	  position: absolute;
-   924	}
-   925	
-   926	.av-device {
-   927	  background: linear-gradient(145deg, #0c120f, #000);
-   928	  border: 1px solid rgba(198, 255, 217, 0.24);
-   929	  border-radius: var(--capture-frame-radius-tall);
-   930	  box-shadow: 0 34px 100px rgba(0, 0, 0, 0.62), 0 0 64px rgba(0, 191, 99, 0.12);
-   931	  padding: 16px;
-   932	  position: absolute;
-   933	}
-   934	
-   935	.av-device-tall {
-   936	  --av-screen-ratio: 1440 / 3120;
+   910	.project-actions {
+   911	  margin-top: 30px;
+   912	}
+   913	
+   914	.av-showcase {
+   915	  min-height: 610px;
+   916	  position: relative;
+   917	}
+   918	
+   919	.av-showcase::before {
+   920	  background:
+   921	    linear-gradient(rgba(67, 255, 146, 0.045) 1px, transparent 1px),
+   922	    linear-gradient(90deg, rgba(67, 255, 146, 0.045) 1px, transparent 1px);
+   923	  background-size: 36px 36px;
+   924	  content: "";
+   925	  inset: 34px 12px 52px;
+   926	  opacity: 0.58;
+   927	  position: absolute;
+   928	}
+   929	
+   930	.av-device {
+   931	  background: linear-gradient(145deg, #0c120f, #000);
+   932	  border: 1px solid rgba(198, 255, 217, 0.24);
+   933	  border-radius: var(--capture-frame-radius-tall);
+   934	  box-shadow: 0 34px 100px rgba(0, 0, 0, 0.62), 0 0 64px rgba(0, 191, 99, 0.12);
+   935	  padding: 16px;
+   936	  position: absolute;
    937	}
    938	
-   939	.av-device-standard {
-   940	  --av-screen-ratio: 720 / 1280;
+   939	.av-device-tall {
+   940	  --av-screen-ratio: 1440 / 3120;
    941	}
    942	
-   943	.av-device-speaker {
-   944	  background: #171f1a;
-   945	  border-radius: 99px;
-   946	  height: 6px;
-   947	  margin: 0 auto 12px;
-   948	  width: 62px;
-   949	}
-   950	
-   951	.av-device-screen {
-   952	  aspect-ratio: var(--av-screen-ratio);
-   953	  background: #020403;
-   954	  border-radius: var(--capture-screen-radius-tall);
-   955	  overflow: hidden;
-   956	  position: relative;
-   957	  width: 100%;
-   958	}
-   959	
-   960	.av-device-image {
-   961	  object-fit: contain;
-   962	  object-position: top center;
-   963	}
-   964	
-   965	.flow-image-frame img {
-   966	  object-fit: contain;
-   967	  object-position: top center;
-   968	}
-   969	
-   970	.av-device-main {
-   971	  height: auto;
-   972	  right: 176px;
-   973	  top: 0;
-   974	  transform: rotate(-5deg);
-   975	  width: 260px;
-   976	  z-index: 3;
-   977	}
-   978	
-   979	.av-device-browse,
-   980	.av-device-confirm {
-   981	  border-radius: 15px;
-   982	  height: auto;
-   983	  width: 184px;
-   984	}
-   985	
-   986	.av-device-standard.av-device-browse,
-   987	.av-device-standard.av-device-confirm {
-   988	  border-radius: var(--capture-frame-radius-standard);
-   989	}
-   990	
-   991	.av-device-standard .av-device-screen {
-   992	  border-radius: var(--capture-screen-radius-standard);
+   943	.av-device-standard {
+   944	  --av-screen-ratio: 720 / 1280;
+   945	}
+   946	
+   947	.av-device-speaker {
+   948	  background: #171f1a;
+   949	  border-radius: 99px;
+   950	  height: 6px;
+   951	  margin: 0 auto 12px;
+   952	  width: 62px;
+   953	}
+   954	
+   955	.av-device-screen {
+   956	  aspect-ratio: var(--av-screen-ratio);
+   957	  background: #020403;
+   958	  border-radius: var(--capture-screen-radius-tall);
+   959	  overflow: hidden;
+   960	  position: relative;
+   961	  width: 100%;
+   962	}
+   963	
+   964	.av-device-image {
+   965	  object-fit: contain;
+   966	  object-position: top center;
+   967	}
+   968	
+   969	.flow-image-frame img {
+   970	  object-fit: contain;
+   971	  object-position: top center;
+   972	}
+   973	
+   974	.av-device-main {
+   975	  height: auto;
+   976	  right: 176px;
+   977	  top: 0;
+   978	  transform: rotate(-5deg);
+   979	  width: 260px;
+   980	  z-index: 3;
+   981	}
+   982	
+   983	.av-device-browse,
+   984	.av-device-confirm {
+   985	  border-radius: 15px;
+   986	  height: auto;
+   987	  width: 184px;
+   988	}
+   989	
+   990	.av-device-standard.av-device-browse,
+   991	.av-device-standard.av-device-confirm {
+   992	  border-radius: var(--capture-frame-radius-standard);
    993	}
    994	
-   995	.av-device-browse {
-   996	  right: 22px;
-   997	  top: 126px;
-   998	  transform: rotate(7deg);
-   999	  z-index: 2;
-  1000	}
-  1001	
-  1002	.av-device-confirm {
-  1003	  left: 6px;
-  1004	  top: 214px;
-  1005	  transform: rotate(-10deg);
-  1006	  z-index: 1;
-  1007	}
-  1008	
-  1009	.av-showcase-proof {
-  1010	  background: rgba(5, 16, 10, 0.82);
-  1011	  border: 1px solid var(--line-strong);
-  1012	  border-radius: 8px;
-  1013	  bottom: 20px;
-  1014	  max-width: 260px;
-  1015	  padding: 15px;
-  1016	  position: absolute;
-  1017	  right: 16px;
-  1018	  z-index: 4;
-  1019	}
-  1020	
-  1021	.av-showcase-proof strong {
-  1022	  color: var(--green);
-  1023	  display: block;
-  1024	  font-size: 28px;
-  1025	  font-weight: 900;
-  1026	  line-height: 1;
-  1027	}
-  1028	
-  1029	.av-showcase-proof span {
-  1030	  color: var(--muted);
-  1031	  display: block;
-  1032	  font-size: 13px;
-  1033	  font-weight: 700;
-  1034	  line-height: 1.45;
-  1035	  margin-top: 8px;
-  1036	}
-  1037	
-  1038	.project-section-grid,
-  1039	.readiness-layout {
-  1040	  display: grid;
-  1041	  gap: 44px;
-  1042	  grid-template-columns: minmax(0, 0.82fr) minmax(360px, 1.18fr);
-  1043	}
-  1044	
-  1045	.project-copy-panel {
-  1046	  border-left: 1px solid var(--line-strong);
-  1047	  padding-left: 28px;
-  1048	}
-  1049	
-  1050	.project-copy-panel p:last-child,
-  1051	.closing-panel p:last-child {
-  1052	  margin-bottom: 0;
-  1053	}
-  1054	
-  1055	.project-card-grid {
-  1056	  display: grid;
-  1057	  gap: 16px;
-  1058	  margin-top: 34px;
-  1059	}
-  1060	
-  1061	.ownership-grid {
-  1062	  grid-template-columns: repeat(5, minmax(0, 1fr));
+   995	.av-device-standard .av-device-screen {
+   996	  border-radius: var(--capture-screen-radius-standard);
+   997	}
+   998	
+   999	.av-device-browse {
+  1000	  right: 22px;
+  1001	  top: 126px;
+  1002	  transform: rotate(7deg);
+  1003	  z-index: 2;
+  1004	}
+  1005	
+  1006	.av-device-confirm {
+  1007	  left: 6px;
+  1008	  top: 214px;
+  1009	  transform: rotate(-10deg);
+  1010	  z-index: 1;
+  1011	}
+  1012	
+  1013	.av-showcase-proof {
+  1014	  background: rgba(5, 16, 10, 0.82);
+  1015	  border: 1px solid var(--line-strong);
+  1016	  border-radius: 8px;
+  1017	  bottom: 20px;
+  1018	  max-width: 260px;
+  1019	  padding: 15px;
+  1020	  position: absolute;
+  1021	  right: 16px;
+  1022	  z-index: 4;
+  1023	}
+  1024	
+  1025	.av-showcase-proof strong {
+  1026	  color: var(--green);
+  1027	  display: block;
+  1028	  font-size: 28px;
+  1029	  font-weight: 900;
+  1030	  line-height: 1;
+  1031	}
+  1032	
+  1033	.av-showcase-proof span {
+  1034	  color: var(--muted);
+  1035	  display: block;
+  1036	  font-size: 13px;
+  1037	  font-weight: 700;
+  1038	  line-height: 1.45;
+  1039	  margin-top: 8px;
+  1040	}
+  1041	
+  1042	.project-section-grid,
+  1043	.readiness-layout {
+  1044	  display: grid;
+  1045	  gap: 44px;
+  1046	  grid-template-columns: minmax(0, 0.82fr) minmax(360px, 1.18fr);
+  1047	}
+  1048	
+  1049	.project-copy-panel {
+  1050	  border-left: 1px solid var(--line-strong);
+  1051	  padding-left: 28px;
+  1052	}
+  1053	
+  1054	.project-copy-panel p:last-child,
+  1055	.closing-panel p:last-child {
+  1056	  margin-bottom: 0;
+  1057	}
+  1058	
+  1059	.project-card-grid {
+  1060	  display: grid;
+  1061	  gap: 16px;
+  1062	  margin-top: 34px;
   1063	}
   1064	
-  1065	.feature-grid {
-  1066	  grid-template-columns: repeat(3, minmax(0, 1fr));
+  1065	.ownership-grid {
+  1066	  grid-template-columns: repeat(5, minmax(0, 1fr));
   1067	}
   1068	
-  1069	.decision-grid {
+  1069	.feature-grid {
   1070	  grid-template-columns: repeat(3, minmax(0, 1fr));
   1071	}
   1072	
-  1073	.project-card,
-  1074	.flow-checkout-note,
-  1075	.architecture-node,
-  1076	.stack-group,
-  1077	.project-timeline-item {
-  1078	  background: linear-gradient(180deg, rgba(13, 31, 22, 0.88), rgba(5, 13, 9, 0.88));
-  1079	  border: 1px solid var(--line);
-  1080	  border-radius: 8px;
-  1081	}
-  1082	
-  1083	.project-card {
-  1084	  min-height: 184px;
-  1085	  padding: 22px;
-  1086	}
-  1087	
-  1088	.project-card span,
-  1089	.flow-checkout-note span,
-  1090	.stack-group h3 {
-  1091	  color: var(--green);
-  1092	  display: block;
-  1093	  font-size: 12px;
-  1094	  font-weight: 850;
-  1095	  letter-spacing: 0.1em;
-  1096	  margin-bottom: 20px;
-  1097	  text-transform: uppercase;
-  1098	}
-  1099	
-  1100	.project-card p,
-  1101	.flow-checkout-note p,
-  1102	.architecture-node p,
-  1103	.project-timeline-item p {
-  1104	  color: #b8c9bf;
-  1105	  line-height: 1.6;
-  1106	  margin-bottom: 0;
-  1107	}
-  1108	
-  1109	.flow-segments {
-  1110	  border: 1px solid var(--line);
-  1111	  border-radius: 8px;
-  1112	  display: grid;
-  1113	  gap: 1px;
-  1114	  grid-template-columns: repeat(6, minmax(0, 1fr));
-  1115	  margin-top: 34px;
-  1116	  overflow: hidden;
-  1117	}
-  1118	
-  1119	.flow-segments span {
-  1120	  background: rgba(255, 255, 255, 0.03);
-  1121	  color: var(--mint);
-  1122	  font-size: 13px;
-  1123	  font-weight: 850;
-  1124	  padding: 14px 10px;
-  1125	  text-align: center;
-  1126	}
-  1127	
-  1128	.flow-layout {
-  1129	  align-items: center;
-  1130	  display: grid;
-  1131	  gap: 42px;
-  1132	  grid-template-columns: minmax(260px, 0.82fr) minmax(0, 1.18fr);
-  1133	  margin-top: 34px;
-  1134	}
-  1135	
-  1136	.flow-screen {
-  1137	  margin: 0;
+  1073	.decision-grid {
+  1074	  grid-template-columns: repeat(3, minmax(0, 1fr));
+  1075	}
+  1076	
+  1077	.project-card,
+  1078	.flow-checkout-note,
+  1079	.architecture-node,
+  1080	.stack-group,
+  1081	.project-timeline-item {
+  1082	  background: linear-gradient(180deg, rgba(13, 31, 22, 0.88), rgba(5, 13, 9, 0.88));
+  1083	  border: 1px solid var(--line);
+  1084	  border-radius: 8px;
+  1085	}
+  1086	
+  1087	.project-card {
+  1088	  min-height: 184px;
+  1089	  padding: 22px;
+  1090	}
+  1091	
+  1092	.project-card span,
+  1093	.flow-checkout-note span,
+  1094	.stack-group h3 {
+  1095	  color: var(--green);
+  1096	  display: block;
+  1097	  font-size: 12px;
+  1098	  font-weight: 850;
+  1099	  letter-spacing: 0.1em;
+  1100	  margin-bottom: 20px;
+  1101	  text-transform: uppercase;
+  1102	}
+  1103	
+  1104	.project-card p,
+  1105	.flow-checkout-note p,
+  1106	.architecture-node p,
+  1107	.project-timeline-item p {
+  1108	  color: #b8c9bf;
+  1109	  line-height: 1.6;
+  1110	  margin-bottom: 0;
+  1111	}
+  1112	
+  1113	.flow-segments {
+  1114	  border: 1px solid var(--line);
+  1115	  border-radius: 8px;
+  1116	  display: grid;
+  1117	  gap: 1px;
+  1118	  grid-template-columns: repeat(6, minmax(0, 1fr));
+  1119	  margin-top: 34px;
+  1120	  overflow: hidden;
+  1121	}
+  1122	
+  1123	.flow-segments span {
+  1124	  background: rgba(255, 255, 255, 0.03);
+  1125	  color: var(--mint);
+  1126	  font-size: 13px;
+  1127	  font-weight: 850;
+  1128	  padding: 14px 10px;
+  1129	  text-align: center;
+  1130	}
+  1131	
+  1132	.flow-layout {
+  1133	  align-items: center;
+  1134	  display: grid;
+  1135	  gap: 42px;
+  1136	  grid-template-columns: minmax(260px, 0.82fr) minmax(0, 1.18fr);
+  1137	  margin-top: 34px;
   1138	}
   1139	
-  1140	.flow-image-frame {
-  1141	  aspect-ratio: 9 / 16;
-  1142	  background: #020403;
-  1143	  border: 1px solid var(--line);
-  1144	  border-radius: var(--capture-frame-radius-standard);
-  1145	  box-shadow: 0 30px 72px rgba(0, 0, 0, 0.45);
-  1146	  overflow: hidden;
-  1147	  position: relative;
-  1148	}
-  1149	
-  1150	.flow-screen-tall .flow-image-frame {
-  1151	  aspect-ratio: 1440 / 3120;
-  1152	  border-radius: var(--capture-frame-radius-tall);
-  1153	}
-  1154	
-  1155	.flow-screen-standard .flow-image-frame {
-  1156	  aspect-ratio: 720 / 1280;
-  1157	  border-radius: var(--capture-frame-radius-standard);
-  1158	}
-  1159	
-  1160	.flow-screen-main .flow-image-frame {
-  1161	  margin: 0 auto;
-  1162	  max-width: 330px;
-  1163	}
-  1164	
-  1165	.flow-screen-compact {
-  1166	  width: min(100%, 152px);
+  1140	.flow-screen {
+  1141	  margin: 0;
+  1142	}
+  1143	
+  1144	.flow-image-frame {
+  1145	  aspect-ratio: 9 / 16;
+  1146	  background: #020403;
+  1147	  border: 1px solid var(--line);
+  1148	  border-radius: var(--capture-frame-radius-standard);
+  1149	  box-shadow: 0 30px 72px rgba(0, 0, 0, 0.45);
+  1150	  overflow: hidden;
+  1151	  position: relative;
+  1152	}
+  1153	
+  1154	.flow-screen-tall .flow-image-frame {
+  1155	  aspect-ratio: 1440 / 3120;
+  1156	  border-radius: var(--capture-frame-radius-tall);
+  1157	}
+  1158	
+  1159	.flow-screen-standard .flow-image-frame {
+  1160	  aspect-ratio: 720 / 1280;
+  1161	  border-radius: var(--capture-frame-radius-standard);
+  1162	}
+  1163	
+  1164	.flow-screen-main .flow-image-frame {
+  1165	  margin: 0 auto;
+  1166	  max-width: 330px;
   1167	}
   1168	
-  1169	.flow-screen-compact .flow-image-frame {
-  1170	  width: 100%;
+  1169	.flow-screen-compact {
+  1170	  width: min(100%, 152px);
   1171	}
   1172	
-  1173	.flow-screen figcaption {
-  1174	  color: var(--muted);
-  1175	  font-size: 13px;
-  1176	  font-weight: 700;
-  1177	  line-height: 1.45;
-  1178	  margin: 14px auto 0;
-  1179	  max-width: 330px;
-  1180	}
-  1181	
-  1182	.flow-screen-label {
-  1183	  color: var(--green);
-  1184	  display: block;
-  1185	  font-size: 10px;
-  1186	  font-weight: 850;
-  1187	  letter-spacing: 0.12em;
-  1188	  margin: 0 0 8px;
-  1189	  text-align: center;
-  1190	  text-transform: uppercase;
-  1191	}
-  1192	
-  1193	.flow-support {
-  1194	  display: grid;
-  1195	  gap: 18px;
-  1196	  grid-template-columns: repeat(3, minmax(0, 1fr));
-  1197	}
-  1198	
-  1199	.flow-section-intro {
-  1200	  display: grid;
-  1201	  gap: 18px;
-  1202	}
-  1203	
-  1204	.flow-section-intro > p {
-  1205	  border-left: 1px solid var(--line-strong);
-  1206	  color: #b8c9bf;
-  1207	  line-height: 1.65;
-  1208	  margin: 0;
-  1209	  max-width: 560px;
-  1210	  padding-left: 22px;
-  1211	}
-  1212	
-  1213	.flow-checkout-note {
-  1214	  align-content: center;
-  1215	  min-height: 260px;
-  1216	  padding: 22px;
-  1217	}
-  1218	
-  1219	.flow-capture-groups {
-  1220	  display: grid;
-  1221	  gap: 48px;
-  1222	  margin-top: 54px;
-  1223	}
-  1224	
-  1225	.flow-capture-group {
-  1226	  border-top: 1px solid var(--line);
-  1227	  display: grid;
-  1228	  gap: 24px;
-  1229	  grid-template-columns: minmax(220px, 0.34fr) minmax(0, 1fr);
-  1230	  padding-top: 30px;
-  1231	}
-  1232	
-  1233	.flow-group-header {
-  1234	  max-width: 360px;
+  1173	.flow-screen-compact .flow-image-frame {
+  1174	  width: 100%;
+  1175	}
+  1176	
+  1177	.flow-screen figcaption {
+  1178	  color: var(--muted);
+  1179	  font-size: 13px;
+  1180	  font-weight: 700;
+  1181	  line-height: 1.45;
+  1182	  margin: 14px auto 0;
+  1183	  max-width: 330px;
+  1184	}
+  1185	
+  1186	.flow-screen-label {
+  1187	  color: var(--green);
+  1188	  display: block;
+  1189	  font-size: 10px;
+  1190	  font-weight: 850;
+  1191	  letter-spacing: 0.12em;
+  1192	  margin: 0 0 8px;
+  1193	  text-align: center;
+  1194	  text-transform: uppercase;
+  1195	}
+  1196	
+  1197	.flow-support {
+  1198	  display: grid;
+  1199	  gap: 18px;
+  1200	  grid-template-columns: repeat(3, minmax(0, 1fr));
+  1201	}
+  1202	
+  1203	.flow-section-intro {
+  1204	  display: grid;
+  1205	  gap: 18px;
+  1206	}
+  1207	
+  1208	.flow-section-intro > p {
+  1209	  border-left: 1px solid var(--line-strong);
+  1210	  color: #b8c9bf;
+  1211	  line-height: 1.65;
+  1212	  margin: 0;
+  1213	  max-width: 560px;
+  1214	  padding-left: 22px;
+  1215	}
+  1216	
+  1217	.flow-checkout-note {
+  1218	  align-content: center;
+  1219	  min-height: 260px;
+  1220	  padding: 22px;
+  1221	}
+  1222	
+  1223	.flow-capture-groups {
+  1224	  display: grid;
+  1225	  gap: 48px;
+  1226	  margin-top: 54px;
+  1227	}
+  1228	
+  1229	.flow-capture-group {
+  1230	  border-top: 1px solid var(--line);
+  1231	  display: grid;
+  1232	  gap: 24px;
+  1233	  grid-template-columns: minmax(220px, 0.34fr) minmax(0, 1fr);
+  1234	  padding-top: 30px;
   1235	}
   1236	
-  1237	.flow-group-header span {
-  1238	  color: var(--green);
-  1239	  display: block;
-  1240	  font-size: 12px;
-  1241	  font-weight: 850;
-  1242	  letter-spacing: 0.1em;
-  1243	  margin-bottom: 14px;
-  1244	  text-transform: uppercase;
-  1245	}
-  1246	
-  1247	.flow-group-header h3 {
-  1248	  font-size: clamp(24px, 3vw, 34px);
-  1249	  line-height: 1;
-  1250	  margin-bottom: 14px;
-  1251	}
-  1252	
-  1253	.flow-group-header p {
-  1254	  color: #b8c9bf;
-  1255	  line-height: 1.6;
-  1256	  margin-bottom: 0;
-  1257	}
-  1258	
-  1259	.flow-capture-grid {
-  1260	  align-items: start;
-  1261	  display: grid;
-  1262	  gap: 34px;
-  1263	  grid-template-columns: repeat(auto-fit, minmax(285px, 1fr));
-  1264	}
-  1265	
-  1266	.flow-screen-stack {
-  1267	  min-width: 0;
+  1237	.flow-group-header {
+  1238	  max-width: 360px;
+  1239	}
+  1240	
+  1241	.flow-group-header span {
+  1242	  color: var(--green);
+  1243	  display: block;
+  1244	  font-size: 12px;
+  1245	  font-weight: 850;
+  1246	  letter-spacing: 0.1em;
+  1247	  margin-bottom: 14px;
+  1248	  text-transform: uppercase;
+  1249	}
+  1250	
+  1251	.flow-group-header h3 {
+  1252	  font-size: clamp(24px, 3vw, 34px);
+  1253	  line-height: 1;
+  1254	  margin-bottom: 14px;
+  1255	}
+  1256	
+  1257	.flow-group-header p {
+  1258	  color: #b8c9bf;
+  1259	  line-height: 1.6;
+  1260	  margin-bottom: 0;
+  1261	}
+  1262	
+  1263	.flow-capture-grid {
+  1264	  align-items: start;
+  1265	  display: grid;
+  1266	  gap: 34px;
+  1267	  grid-template-columns: repeat(auto-fit, minmax(285px, 1fr));
   1268	}
   1269	
-  1270	.flow-screen-stack h4 {
-  1271	  color: var(--text);
-  1272	  font-size: 15px;
-  1273	  font-weight: 850;
-  1274	  letter-spacing: 0;
-  1275	  line-height: 1.2;
-  1276	  margin: 0 0 14px;
-  1277	  text-align: center;
-  1278	}
-  1279	
-  1280	.flow-screen-stack-captures {
-  1281	  align-items: start;
-  1282	  display: flex;
-  1283	  gap: 14px;
-  1284	  justify-content: center;
-  1285	}
-  1286	
-  1287	.architecture-map {
-  1288	  display: grid;
-  1289	  gap: 12px;
-  1290	  grid-template-columns: repeat(5, minmax(0, 1fr));
-  1291	}
-  1292	
-  1293	.architecture-node {
-  1294	  min-height: 178px;
-  1295	  padding: 18px;
-  1296	}
-  1297	
-  1298	.architecture-node span {
-  1299	  color: var(--green);
-  1300	  display: block;
-  1301	  font-size: 13px;
-  1302	  font-weight: 900;
-  1303	  margin-bottom: 18px;
+  1270	.flow-screen-stack {
+  1271	  min-width: 0;
+  1272	}
+  1273	
+  1274	.flow-screen-stack h4 {
+  1275	  color: var(--text);
+  1276	  font-size: 15px;
+  1277	  font-weight: 850;
+  1278	  letter-spacing: 0;
+  1279	  line-height: 1.2;
+  1280	  margin: 0 0 14px;
+  1281	  text-align: center;
+  1282	}
+  1283	
+  1284	.flow-screen-stack-captures {
+  1285	  align-items: start;
+  1286	  display: flex;
+  1287	  gap: 14px;
+  1288	  justify-content: center;
+  1289	}
+  1290	
+  1291	.flow-browse-toggle-row {
+  1292	  display: flex;
+  1293	  justify-content: center;
+  1294	  margin-top: 26px;
+  1295	}
+  1296	
+  1297	.flow-browse-toggle {
+  1298	  cursor: pointer;
+  1299	  font-family: inherit;
+  1300	}
+  1301	
+  1302	.flow-browse-toggle svg {
+  1303	  flex: 0 0 auto;
   1304	}
   1305	
-  1306	.architecture-node strong {
-  1307	  color: var(--text);
-  1308	  display: block;
-  1309	  font-size: 16px;
-  1310	  line-height: 1.25;
-  1311	  margin-bottom: 12px;
-  1312	}
-  1313	
-  1314	.architecture-node p {
-  1315	  font-size: 13px;
-  1316	}
-  1317	
-  1318	.architecture-copy {
-  1319	  margin: 26px 0 0;
-  1320	}
-  1321	
-  1322	.readiness-copy {
-  1323	  margin-bottom: 24px;
-  1324	}
-  1325	
-  1326	.readiness-list,
-  1327	.proof-points {
-  1328	  display: flex;
-  1329	  flex-wrap: wrap;
-  1330	  gap: 10px;
-  1331	}
-  1332	
-  1333	.project-timeline {
-  1334	  display: grid;
-  1335	  gap: 14px;
-  1336	}
-  1337	
-  1338	.project-timeline-item {
-  1339	  display: grid;
-  1340	  gap: 22px;
-  1341	  grid-template-columns: 56px 1fr;
-  1342	  padding: 22px;
-  1343	}
-  1344	
-  1345	.project-timeline-item > span {
-  1346	  color: var(--green);
-  1347	  font-size: 18px;
-  1348	  font-weight: 900;
+  1306	.flow-browse-extra {
+  1307	  max-height: 0;
+  1308	  opacity: 0;
+  1309	  overflow: hidden;
+  1310	  pointer-events: none;
+  1311	  transform: translateY(-8px);
+  1312	  transition: max-height 320ms ease, opacity 220ms ease, transform 220ms ease,
+  1313	    margin-top 220ms ease;
+  1314	}
+  1315	
+  1316	.flow-browse-extra.is-open {
+  1317	  margin-top: 34px;
+  1318	  max-height: 5200px;
+  1319	  opacity: 1;
+  1320	  pointer-events: auto;
+  1321	  transform: translateY(0);
+  1322	}
+  1323	
+  1324	.architecture-map {
+  1325	  display: grid;
+  1326	  gap: 12px;
+  1327	  grid-template-columns: repeat(5, minmax(0, 1fr));
+  1328	}
+  1329	
+  1330	.architecture-node {
+  1331	  min-height: 178px;
+  1332	  padding: 18px;
+  1333	}
+  1334	
+  1335	.architecture-node span {
+  1336	  color: var(--green);
+  1337	  display: block;
+  1338	  font-size: 13px;
+  1339	  font-weight: 900;
+  1340	  margin-bottom: 18px;
+  1341	}
+  1342	
+  1343	.architecture-node strong {
+  1344	  color: var(--text);
+  1345	  display: block;
+  1346	  font-size: 16px;
+  1347	  line-height: 1.25;
+  1348	  margin-bottom: 12px;
   1349	}
   1350	
-  1351	.project-timeline-item h3 {
-  1352	  font-size: 20px;
-  1353	  line-height: 1.2;
-  1354	  margin-bottom: 10px;
-  1355	}
-  1356	
-  1357	.stack-matrix {
-  1358	  display: grid;
-  1359	  gap: 14px;
-  1360	  grid-template-columns: repeat(5, minmax(0, 1fr));
-  1361	  margin-top: 34px;
-  1362	}
-  1363	
-  1364	.stack-group {
-  1365	  padding: 20px;
-  1366	}
-  1367	
-  1368	.stack-group h3 {
-  1369	  font-size: 11px;
-  1370	}
-  1371	
-  1372	.stack-group div {
-  1373	  display: grid;
-  1374	  gap: 8px;
-  1375	}
-  1376	
-  1377	.stack-group span {
-  1378	  color: #d8ffe4;
-  1379	  font-size: 14px;
-  1380	  font-weight: 750;
-  1381	  line-height: 1.35;
-  1382	}
-  1383	
-  1384	.proof-points {
-  1385	  margin-top: 34px;
+  1351	.architecture-node p {
+  1352	  font-size: 13px;
+  1353	}
+  1354	
+  1355	.architecture-copy {
+  1356	  margin: 26px 0 0;
+  1357	}
+  1358	
+  1359	.readiness-copy {
+  1360	  margin-bottom: 24px;
+  1361	}
+  1362	
+  1363	.readiness-list,
+  1364	.proof-points {
+  1365	  display: flex;
+  1366	  flex-wrap: wrap;
+  1367	  gap: 10px;
+  1368	}
+  1369	
+  1370	.project-timeline {
+  1371	  display: grid;
+  1372	  gap: 14px;
+  1373	}
+  1374	
+  1375	.project-timeline-item {
+  1376	  display: grid;
+  1377	  gap: 22px;
+  1378	  grid-template-columns: 56px 1fr;
+  1379	  padding: 22px;
+  1380	}
+  1381	
+  1382	.project-timeline-item > span {
+  1383	  color: var(--green);
+  1384	  font-size: 18px;
+  1385	  font-weight: 900;
   1386	}
   1387	
-  1388	.closing-panel {
-  1389	  align-items: center;
-  1390	  background: linear-gradient(180deg, rgba(13, 31, 22, 0.88), rgba(5, 13, 9, 0.88));
-  1391	  border: 1px solid var(--line);
-  1392	  border-radius: 8px;
-  1393	  display: grid;
-  1394	  gap: 34px;
-  1395	  grid-template-columns: minmax(0, 1fr) auto;
-  1396	  padding: 34px;
-  1397	}
-  1398	
-  1399	.closing-panel h2 {
-  1400	  font-size: clamp(30px, 4vw, 50px);
-  1401	  margin-bottom: 18px;
-  1402	  max-width: 720px;
+  1388	.project-timeline-item h3 {
+  1389	  font-size: 20px;
+  1390	  line-height: 1.2;
+  1391	  margin-bottom: 10px;
+  1392	}
+  1393	
+  1394	.stack-matrix {
+  1395	  display: grid;
+  1396	  gap: 14px;
+  1397	  grid-template-columns: repeat(5, minmax(0, 1fr));
+  1398	  margin-top: 34px;
+  1399	}
+  1400	
+  1401	.stack-group {
+  1402	  padding: 20px;
   1403	}
   1404	
-  1405	.closing-panel p {
-  1406	  max-width: 760px;
+  1405	.stack-group h3 {
+  1406	  font-size: 11px;
   1407	}
   1408	
-  1409	.closing-actions {
-  1410	  display: flex;
-  1411	  flex-direction: column;
-  1412	  gap: 12px;
-  1413	  min-width: 190px;
-  1414	}
-  1415	
-  1416	@media (max-width: 980px) {
-  1417	  .nav-bar {
-  1418	    align-items: flex-start;
-  1419	    flex-direction: column;
-  1420	    gap: 14px;
-  1421	    padding: 16px;
-  1422	  }
-  1423	
-  1424	  .nav-bar nav {
-  1425	    display: grid;
-  1426	    flex-wrap: nowrap;
-  1427	    gap: 6px;
-  1428	    grid-template-columns:
-  1429	      minmax(0, 1.25fr) minmax(0, 0.78fr) minmax(0, 0.98fr)
-  1430	      minmax(0, 0.98fr);
-  1431	    justify-content: normal;
-  1432	    width: 100%;
-  1433	  }
-  1434	
-  1435	  .nav-bar nav a {
-  1436	    flex: 1 1 0;
-  1437	    min-width: 0;
-  1438	    padding-left: 10px;
-  1439	    padding-right: 10px;
-  1440	    text-align: center;
-  1441	  }
-  1442	
-  1443	  .project-nav nav {
-  1444	    grid-template-columns: repeat(3, minmax(0, 1fr));
-  1445	  }
-  1446	
-  1447	  .hero-grid,
-  1448	  .worklog-layout,
-  1449	  .project-hero-grid,
-  1450	  .project-section-grid,
-  1451	  .readiness-layout {
-  1452	    grid-template-columns: 1fr;
-  1453	  }
-  1454	
-  1455	  .av-showcase {
-  1456	    min-height: 610px;
-  1457	  }
-  1458	
-  1459	  .av-device-main {
-  1460	    left: 32%;
-  1461	    right: auto;
-  1462	  }
-  1463	
-  1464	  .av-device-browse {
-  1465	    right: 6%;
-  1466	  }
-  1467	
-  1468	  .av-device-confirm {
-  1469	    left: 4%;
+  1409	.stack-group div {
+  1410	  display: grid;
+  1411	  gap: 8px;
+  1412	}
+  1413	
+  1414	.stack-group span {
+  1415	  color: #d8ffe4;
+  1416	  font-size: 14px;
+  1417	  font-weight: 750;
+  1418	  line-height: 1.35;
+  1419	}
+  1420	
+  1421	.proof-points {
+  1422	  margin-top: 34px;
+  1423	}
+  1424	
+  1425	.closing-panel {
+  1426	  align-items: center;
+  1427	  background: linear-gradient(180deg, rgba(13, 31, 22, 0.88), rgba(5, 13, 9, 0.88));
+  1428	  border: 1px solid var(--line);
+  1429	  border-radius: 8px;
+  1430	  display: grid;
+  1431	  gap: 34px;
+  1432	  grid-template-columns: minmax(0, 1fr) auto;
+  1433	  padding: 34px;
+  1434	}
+  1435	
+  1436	.closing-panel h2 {
+  1437	  font-size: clamp(30px, 4vw, 50px);
+  1438	  margin-bottom: 18px;
+  1439	  max-width: 720px;
+  1440	}
+  1441	
+  1442	.closing-panel p {
+  1443	  max-width: 760px;
+  1444	}
+  1445	
+  1446	.closing-actions {
+  1447	  display: flex;
+  1448	  flex-direction: column;
+  1449	  gap: 12px;
+  1450	  min-width: 190px;
+  1451	}
+  1452	
+  1453	@media (max-width: 980px) {
+  1454	  .nav-bar {
+  1455	    align-items: flex-start;
+  1456	    flex-direction: column;
+  1457	    gap: 14px;
+  1458	    padding: 16px;
+  1459	  }
+  1460	
+  1461	  .nav-bar nav {
+  1462	    display: grid;
+  1463	    flex-wrap: nowrap;
+  1464	    gap: 6px;
+  1465	    grid-template-columns:
+  1466	      minmax(0, 1.25fr) minmax(0, 0.78fr) minmax(0, 0.98fr)
+  1467	      minmax(0, 0.98fr);
+  1468	    justify-content: normal;
+  1469	    width: 100%;
   1470	  }
   1471	
-  1472	  .hero-visual {
-  1473	    min-height: auto;
-  1474	  }
-  1475	
-  1476	  .phone-stage {
-  1477	    height: 710px;
-  1478	    margin-top: 30px;
-  1479	  }
-  1480	
-  1481	  .phone-shell-commerce {
-  1482	    left: 4%;
-  1483	  }
-  1484	
-  1485	  .phone-shell-finance {
-  1486	    left: 42%;
-  1487	  }
-  1488	
-  1489	  .tablet-shell {
-  1490	    left: 9%;
-  1491	    top: 374px;
-  1492	    width: min(74%, 332px);
-  1493	  }
-  1494	
-  1495	  .case-grid,
-  1496	  .capability-grid,
-  1497	  .feature-grid,
-  1498	  .decision-grid,
-  1499	  .architecture-map {
-  1500	    grid-template-columns: repeat(2, 1fr);
-  1501	  }
-  1502	
-  1503	  .ownership-grid,
-  1504	  .stack-matrix {
-  1505	    grid-template-columns: repeat(3, minmax(0, 1fr));
-  1506	  }
-  1507	
-  1508	  .flow-layout {
-  1509	    grid-template-columns: 1fr;
-  1510	  }
-  1511	
-  1512	  .flow-capture-group {
-  1513	    grid-template-columns: 1fr;
-  1514	  }
-  1515	}
-  1516	
-  1517	@media (max-width: 720px) {
-  1518	  .site-shell {
-  1519	    width: min(100% - 24px, 1180px);
+  1472	  .nav-bar nav a {
+  1473	    flex: 1 1 0;
+  1474	    min-width: 0;
+  1475	    padding-left: 10px;
+  1476	    padding-right: 10px;
+  1477	    text-align: center;
+  1478	  }
+  1479	
+  1480	  .project-nav nav {
+  1481	    grid-template-columns: repeat(3, minmax(0, 1fr));
+  1482	  }
+  1483	
+  1484	  .hero-grid,
+  1485	  .worklog-layout,
+  1486	  .project-hero-grid,
+  1487	  .project-section-grid,
+  1488	  .readiness-layout {
+  1489	    grid-template-columns: 1fr;
+  1490	  }
+  1491	
+  1492	  .av-showcase {
+  1493	    min-height: 610px;
+  1494	  }
+  1495	
+  1496	  .av-device-main {
+  1497	    left: 32%;
+  1498	    right: auto;
+  1499	  }
+  1500	
+  1501	  .av-device-browse {
+  1502	    right: 6%;
+  1503	  }
+  1504	
+  1505	  .av-device-confirm {
+  1506	    left: 4%;
+  1507	  }
+  1508	
+  1509	  .hero-visual {
+  1510	    min-height: auto;
+  1511	  }
+  1512	
+  1513	  .phone-stage {
+  1514	    height: 710px;
+  1515	    margin-top: 30px;
+  1516	  }
+  1517	
+  1518	  .phone-shell-commerce {
+  1519	    left: 4%;
   1520	  }
   1521	
-  1522	  .nav-bar {
-  1523	    max-width: calc(100vw - 24px);
-  1524	    overflow: hidden;
-  1525	    padding: 14px;
-  1526	  }
-  1527	
-  1528	  .nav-bar nav {
-  1529	    gap: 4px;
-  1530	    max-width: 100%;
-  1531	    width: min(100%, calc(100vw - 54px));
-  1532	  }
-  1533	
-  1534	  .project-nav nav {
-  1535	    width: 100%;
-  1536	  }
-  1537	
-  1538	  .project-page .site-shell {
-  1539	    max-width: calc(100vw - 24px);
-  1540	    width: calc(100vw - 24px);
-  1541	  }
-  1542	
-  1543	  .project-nav {
-  1544	    max-width: calc(100vw - 24px);
-  1545	    width: calc(100vw - 24px);
-  1546	  }
-  1547	
-  1548	  .project-nav nav a {
-  1549	    font-size: 11px;
-  1550	  }
-  1551	
-  1552	  .nav-bar nav a {
-  1553	    font-size: 12px;
-  1554	    padding-left: 2px;
-  1555	    padding-right: 2px;
-  1556	  }
-  1557	
-  1558	  .hero {
-  1559	    padding-top: 12px;
-  1560	  }
-  1561	
-  1562	  section.project-hero {
-  1563	    padding-top: 12px;
-  1564	  }
-  1565	
-  1566	  .project-nav {
-  1567	    margin-bottom: 48px;
-  1568	  }
-  1569	
-  1570	  .hero-grid {
-  1571	    gap: 30px;
-  1572	    padding-top: 42px;
+  1522	  .phone-shell-finance {
+  1523	    left: 42%;
+  1524	  }
+  1525	
+  1526	  .tablet-shell {
+  1527	    left: 9%;
+  1528	    top: 374px;
+  1529	    width: min(74%, 332px);
+  1530	  }
+  1531	
+  1532	  .case-grid,
+  1533	  .capability-grid,
+  1534	  .feature-grid,
+  1535	  .decision-grid,
+  1536	  .architecture-map {
+  1537	    grid-template-columns: repeat(2, 1fr);
+  1538	  }
+  1539	
+  1540	  .ownership-grid,
+  1541	  .stack-matrix {
+  1542	    grid-template-columns: repeat(3, minmax(0, 1fr));
+  1543	  }
+  1544	
+  1545	  .flow-layout {
+  1546	    grid-template-columns: 1fr;
+  1547	  }
+  1548	
+  1549	  .flow-capture-group {
+  1550	    grid-template-columns: 1fr;
+  1551	  }
+  1552	}
+  1553	
+  1554	@media (max-width: 720px) {
+  1555	  .site-shell {
+  1556	    width: min(100% - 24px, 1180px);
+  1557	  }
+  1558	
+  1559	  .nav-bar {
+  1560	    max-width: calc(100vw - 24px);
+  1561	    overflow: hidden;
+  1562	    padding: 14px;
+  1563	  }
+  1564	
+  1565	  .nav-bar nav {
+  1566	    gap: 4px;
+  1567	    max-width: 100%;
+  1568	    width: min(100%, calc(100vw - 54px));
+  1569	  }
+  1570	
+  1571	  .project-nav nav {
+  1572	    width: 100%;
   1573	  }
   1574	
-  1575	  h1 {
-  1576	    font-size: clamp(42px, 15vw, 64px);
-  1577	  }
-  1578	
-  1579	  .hero-visual {
-  1580	    min-height: auto;
-  1581	  }
-  1582	
-  1583	  .phone-stage {
-  1584	    height: 626px;
-  1585	    margin-top: 18px;
-  1586	  }
-  1587	
-  1588	  .profile-orbit {
-  1589	    right: 0;
-  1590	  }
-  1591	
-  1592	  .profile-photo {
-  1593	    height: 132px;
-  1594	    width: 132px;
-  1595	  }
-  1596	
-  1597	  .phone-shell {
-  1598	    height: 420px;
-  1599	    width: 206px;
-  1600	  }
-  1601	
-  1602	  .phone-shell-commerce {
-  1603	    left: -2px;
-  1604	    top: 72px;
+  1575	  .project-page .site-shell {
+  1576	    max-width: calc(100vw - 24px);
+  1577	    width: calc(100vw - 24px);
+  1578	  }
+  1579	
+  1580	  .project-nav {
+  1581	    max-width: calc(100vw - 24px);
+  1582	    width: calc(100vw - 24px);
+  1583	  }
+  1584	
+  1585	  .project-nav nav a {
+  1586	    font-size: 11px;
+  1587	  }
+  1588	
+  1589	  .nav-bar nav a {
+  1590	    font-size: 12px;
+  1591	    padding-left: 2px;
+  1592	    padding-right: 2px;
+  1593	  }
+  1594	
+  1595	  .hero {
+  1596	    padding-top: 12px;
+  1597	  }
+  1598	
+  1599	  section.project-hero {
+  1600	    padding-top: 12px;
+  1601	  }
+  1602	
+  1603	  .project-nav {
+  1604	    margin-bottom: 48px;
   1605	  }
   1606	
-  1607	  .phone-shell-finance {
-  1608	    left: auto;
-  1609	    right: -8px;
-  1610	    top: 124px;
-  1611	  }
-  1612	
-  1613	  .tablet-shell {
-  1614	    height: 150px;
-  1615	    left: 14px;
-  1616	    top: 342px;
-  1617	    width: min(84vw, 268px);
+  1607	  .hero-grid {
+  1608	    gap: 30px;
+  1609	    padding-top: 42px;
+  1610	  }
+  1611	
+  1612	  h1 {
+  1613	    font-size: clamp(42px, 15vw, 64px);
+  1614	  }
+  1615	
+  1616	  .hero-visual {
+  1617	    min-height: auto;
   1618	  }
   1619	
-  1620	  .case-grid,
-  1621	  .capability-grid {
-  1622	    grid-template-columns: 1fr;
+  1620	  .phone-stage {
+  1621	    height: 626px;
+  1622	    margin-top: 18px;
   1623	  }
   1624	
-  1625	  .case-card {
-  1626	    min-height: auto;
+  1625	  .profile-orbit {
+  1626	    right: 0;
   1627	  }
   1628	
-  1629	  .contact-panel {
-  1630	    align-items: flex-start;
-  1631	    flex-direction: column;
+  1629	  .profile-photo {
+  1630	    height: 132px;
+  1631	    width: 132px;
   1632	  }
   1633	
-  1634	  .project-page section:not(.project-hero) {
-  1635	    padding: 58px 0;
-  1636	  }
-  1637	
-  1638	  .project-hero-grid {
-  1639	    gap: 34px;
-  1640	  }
-  1641	
-  1642	  .project-back-link {
-  1643	    margin-bottom: 24px;
-  1644	  }
-  1645	
-  1646	  .project-copy-panel {
-  1647	    border-left: 0;
-  1648	    padding-left: 0;
-  1649	  }
-  1650	
-  1651	  .project-hero-text,
-  1652	  .project-copy-panel p,
-  1653	  .architecture-copy,
-  1654	  .readiness-copy,
-  1655	  .closing-panel p {
-  1656	    font-size: 16px;
-  1657	  }
-  1658	
-  1659	  .project-subtitle,
-  1660	  .project-hero-text,
-  1661	  .project-meta-row {
-  1662	    max-width: 100%;
-  1663	    overflow-wrap: anywhere;
+  1634	  .phone-shell {
+  1635	    height: 420px;
+  1636	    width: 206px;
+  1637	  }
+  1638	
+  1639	  .phone-shell-commerce {
+  1640	    left: -2px;
+  1641	    top: 72px;
+  1642	  }
+  1643	
+  1644	  .phone-shell-finance {
+  1645	    left: auto;
+  1646	    right: -8px;
+  1647	    top: 124px;
+  1648	  }
+  1649	
+  1650	  .tablet-shell {
+  1651	    height: 150px;
+  1652	    left: 14px;
+  1653	    top: 342px;
+  1654	    width: min(84vw, 268px);
+  1655	  }
+  1656	
+  1657	  .case-grid,
+  1658	  .capability-grid {
+  1659	    grid-template-columns: 1fr;
+  1660	  }
+  1661	
+  1662	  .case-card {
+  1663	    min-height: auto;
   1664	  }
   1665	
-  1666	  .project-meta-row span {
-  1667	    flex: 0 1 auto;
-  1668	    white-space: normal;
+  1666	  .contact-panel {
+  1667	    align-items: flex-start;
+  1668	    flex-direction: column;
   1669	  }
   1670	
-  1671	  .av-showcase {
-  1672	    min-height: auto;
-  1673	    padding: 0 0 18px;
-  1674	  }
-  1675	
-  1676	  .av-showcase::before {
-  1677	    inset: 20px 0 84px;
-  1678	  }
-  1679	
-  1680	  .av-device {
-  1681	    position: relative;
-  1682	  }
-  1683	
-  1684	  .av-device-main {
-  1685	    height: auto;
-  1686	    left: auto;
-  1687	    margin: 0 auto;
-  1688	    max-width: 292px;
-  1689	    right: auto;
-  1690	    top: auto;
-  1691	    transform: rotate(-4deg);
-  1692	    width: 72vw;
-  1693	  }
-  1694	
-  1695	  .av-device-browse,
-  1696	  .av-device-confirm {
-  1697	    display: none;
-  1698	  }
-  1699	
-  1700	  .av-showcase-proof {
-  1701	    margin: -18px auto 0;
-  1702	    max-width: min(292px, calc(100vw - 48px));
-  1703	    position: relative;
-  1704	    right: auto;
-  1705	  }
-  1706	
-  1707	  .project-card-grid,
-  1708	  .ownership-grid,
-  1709	  .feature-grid,
-  1710	  .decision-grid,
-  1711	  .architecture-map,
-  1712	  .stack-matrix {
-  1713	    grid-template-columns: 1fr;
-  1714	  }
-  1715	
-  1716	  .flow-segments {
-  1717	    grid-template-columns: repeat(2, minmax(0, 1fr));
-  1718	  }
-  1719	
-  1720	  .flow-support {
-  1721	    grid-template-columns: 1fr;
-  1722	  }
-  1723	
-  1724	  .flow-checkout-note {
-  1725	    min-height: auto;
-  1726	  }
-  1727	
-  1728	  .flow-section-intro > p {
-  1729	    border-left: 0;
-  1730	    padding-left: 0;
-  1731	  }
-  1732	
-  1733	  .flow-capture-groups {
-  1734	    gap: 40px;
-  1735	    margin-top: 44px;
-  1736	  }
-  1737	
-  1738	  .flow-capture-group {
-  1739	    padding-top: 24px;
-  1740	  }
-  1741	
-  1742	  .flow-capture-grid {
-  1743	    gap: 28px;
-  1744	    grid-template-columns: 1fr;
-  1745	  }
-  1746	
-  1747	  .flow-screen-compact {
-  1748	    width: min(42vw, 146px);
-  1749	  }
-  1750	
-  1751	  .flow-screen-stack-captures {
-  1752	    gap: 12px;
-  1753	  }
-  1754	
-  1755	  .flow-screen:not(.flow-screen-main) .flow-image-frame {
-  1756	    margin: 0 auto;
-  1757	    max-width: 230px;
-  1758	  }
-  1759	
-  1760	  .closing-panel {
-  1761	    grid-template-columns: 1fr;
-  1762	    padding: 28px;
+  1671	  .project-page section:not(.project-hero) {
+  1672	    padding: 58px 0;
+  1673	  }
+  1674	
+  1675	  .project-hero-grid {
+  1676	    gap: 34px;
+  1677	  }
+  1678	
+  1679	  .project-back-link {
+  1680	    margin-bottom: 24px;
+  1681	  }
+  1682	
+  1683	  .project-copy-panel {
+  1684	    border-left: 0;
+  1685	    padding-left: 0;
+  1686	  }
+  1687	
+  1688	  .project-hero-text,
+  1689	  .project-copy-panel p,
+  1690	  .architecture-copy,
+  1691	  .readiness-copy,
+  1692	  .closing-panel p {
+  1693	    font-size: 16px;
+  1694	  }
+  1695	
+  1696	  .project-subtitle,
+  1697	  .project-hero-text,
+  1698	  .project-meta-row {
+  1699	    max-width: 100%;
+  1700	    overflow-wrap: anywhere;
+  1701	  }
+  1702	
+  1703	  .project-meta-row span {
+  1704	    flex: 0 1 auto;
+  1705	    white-space: normal;
+  1706	  }
+  1707	
+  1708	  .av-showcase {
+  1709	    min-height: auto;
+  1710	    padding: 0 0 18px;
+  1711	  }
+  1712	
+  1713	  .av-showcase::before {
+  1714	    inset: 20px 0 84px;
+  1715	  }
+  1716	
+  1717	  .av-device {
+  1718	    position: relative;
+  1719	  }
+  1720	
+  1721	  .av-device-main {
+  1722	    height: auto;
+  1723	    left: auto;
+  1724	    margin: 0 auto;
+  1725	    max-width: 292px;
+  1726	    right: auto;
+  1727	    top: auto;
+  1728	    transform: rotate(-4deg);
+  1729	    width: 72vw;
+  1730	  }
+  1731	
+  1732	  .av-device-browse,
+  1733	  .av-device-confirm {
+  1734	    display: none;
+  1735	  }
+  1736	
+  1737	  .av-showcase-proof {
+  1738	    margin: -18px auto 0;
+  1739	    max-width: min(292px, calc(100vw - 48px));
+  1740	    position: relative;
+  1741	    right: auto;
+  1742	  }
+  1743	
+  1744	  .project-card-grid,
+  1745	  .ownership-grid,
+  1746	  .feature-grid,
+  1747	  .decision-grid,
+  1748	  .architecture-map,
+  1749	  .stack-matrix {
+  1750	    grid-template-columns: 1fr;
+  1751	  }
+  1752	
+  1753	  .flow-segments {
+  1754	    grid-template-columns: repeat(2, minmax(0, 1fr));
+  1755	  }
+  1756	
+  1757	  .flow-support {
+  1758	    grid-template-columns: 1fr;
+  1759	  }
+  1760	
+  1761	  .flow-checkout-note {
+  1762	    min-height: auto;
   1763	  }
   1764	
-  1765	  .closing-actions {
-  1766	    width: 100%;
-  1767	  }
-  1768	}
+  1765	  .flow-section-intro > p {
+  1766	    border-left: 0;
+  1767	    padding-left: 0;
+  1768	  }
   1769	
-  1770	@media (max-width: 380px) {
-  1771	  .nav-bar {
-  1772	    padding-left: 12px;
-  1773	    padding-right: 12px;
-  1774	  }
-  1775	
-  1776	  .nav-bar nav {
-  1777	    gap: 1px;
-  1778	    width: min(100%, calc(100vw - 50px));
-  1779	  }
-  1780	
-  1781	  .nav-bar nav a {
-  1782	    font-size: 10.5px;
-  1783	    padding-left: 0;
-  1784	    padding-right: 0;
-  1785	  }
-  1786	}
+  1770	  .flow-capture-groups {
+  1771	    gap: 40px;
+  1772	    margin-top: 44px;
+  1773	  }
+  1774	
+  1775	  .flow-capture-group {
+  1776	    padding-top: 24px;
+  1777	  }
+  1778	
+  1779	  .flow-capture-grid {
+  1780	    gap: 28px;
+  1781	    grid-template-columns: 1fr;
+  1782	  }
+  1783	
+  1784	  .flow-screen-compact {
+  1785	    width: min(42vw, 146px);
+  1786	  }
   1787	
-  1788	@media (max-width: 340px) {
-  1789	  .nav-bar nav a {
-  1790	    font-size: 10px;
-  1791	  }
-  1792	}
+  1788	  .flow-screen-stack-captures {
+  1789	    gap: 12px;
+  1790	  }
+  1791	
+  1792	  .flow-screen:not(.flow-screen-main) .flow-image-frame {
+  1793	    margin: 0 auto;
+  1794	    max-width: 230px;
+  1795	  }
+  1796	
+  1797	  .closing-panel {
+  1798	    grid-template-columns: 1fr;
+  1799	    padding: 28px;
+  1800	  }
+  1801	
+  1802	  .closing-actions {
+  1803	    width: 100%;
+  1804	  }
+  1805	}
+  1806	
+  1807	@media (max-width: 380px) {
+  1808	  .nav-bar {
+  1809	    padding-left: 12px;
+  1810	    padding-right: 12px;
+  1811	  }
+  1812	
+  1813	  .nav-bar nav {
+  1814	    gap: 1px;
+  1815	    width: min(100%, calc(100vw - 50px));
+  1816	  }
+  1817	
+  1818	  .nav-bar nav a {
+  1819	    font-size: 10.5px;
+  1820	    padding-left: 0;
+  1821	    padding-right: 0;
+  1822	  }
+  1823	}
+  1824	
+  1825	@media (max-width: 340px) {
+  1826	  .nav-bar nav a {
+  1827	    font-size: 10px;
+  1828	  }
+  1829	}
 
 
 ============================================================
@@ -5432,7 +5484,9 @@ Status:
  M portfolio_PROJECT_SNAPSHOT.txt
 
 Recent commits:
-ccd78cb (HEAD -> main, origin/main) generated the latest pdf 'Portfolio' worklog for July 15 Part 2, 2026.
+80995d9 (HEAD -> main, origin/main) generated pdf worklog for the daily session on the 'Portfolio' project on July 16, 2026.
+babed15 Updated Alla Vostra case study screenshots and mobile flow presentation
+ccd78cb generated the latest pdf 'Portfolio' worklog for July 15 Part 2, 2026.
 fd69e1e created a dedicated project page 'Alla Vostra', accessible by various means: clicking the green action button in the hero that mentions its name, the device frame that displays its device-framed screenshot, or anywhere on the project card further down the page. the project page includes information such as overciew, scope and ownership, core features, product flow (steps 1-6), technical architecture, engineering decisions, testing and release readiness, build timeline, etc. a multitude of small/large Android device screenshots are viewable to represent the graphical and functional UI responsively, each screenshot enlarging with a pop-up overlay during mouse hover (desktop/laptop) and tap&hold (mobile).
 6a61438 generated pdf worklog for July 15, part 1. created a read project bash file to study and understand the full scope of the project files & folders before commencing a new session.
 3fa5aa5 removed line wrapping of top nav links that was pushing links to a secondary row during compressed, portrait mobile aspect ratios. all links now appear without jumping to a new row. abbreviated text assets below the main hero, ensuring that headers do not clip into each other once compressed. added apostrophes around each project name in the green main button of the hero, ensuring that the user knows the names listed concern app mobile app dev projects and that clicking it navigates to the corresponding page.
@@ -5440,8 +5494,6 @@ fd69e1e created a dedicated project page 'Alla Vostra', accessible by various me
 cf141aa performed a number of small text, button and animation-related changed to the landing page. Prahlin (the GitHub username) now displays Martin Prahl (full dev name). the banner underneath the hero has been updated to include more relevant information regarding developmental experience and achievements. the static 'View Alla Vostra' button has been exchanged for a full-on carousel, alternating between various project names and appearing with a slide/bump animation for enhanced visual appeal.
 1b1e1b2 incorporated a landscape-orient device frame in the portfolio header, displaying a a preliminary screenshot of the self-made video streaming 'Cinerific' tablet app. a case study card was added below, describing the project and mentioning some of the languages/tools/libraries/dependencies used in its development.
 4cb6a98 generated the very first pdf worklog for the 'portfolio' project, showcasing personal case studies, stacks, worklogs, contact info, and more. the worklog covers established baselines, work completed throughout the first session, files touched, lessons learned throughout the session, and more. for consistency, the worklog follows pre-established naming conventions, style, content type and structure from other development projects.
-bb184fe imported 3 'alla vostra' project screenshots into the portfolio project, placing them as miniatures under the 'alla vostra' section. the images offer a snapshot of the mobile app project before the user navigates to its dedicated page.
-e63fa26 added slim edge border atop the 'alla vostra' device frame's screen inlay for the purposes of unobscuring the screenshot's top portion
 
 Remotes:
 origin	https://github.com/Prahlin/portfolio.git (fetch)
@@ -5452,6 +5504,8 @@ origin	https://github.com/Prahlin/portfolio.git (push)
 BINARY / IMAGE ASSET INVENTORY - PUBLIC IMAGES
 ============================================================
 
+public/images/about_us_screen_large.png | 2122423 bytes | modified 2026-07-16 18:32:33
+public/images/about_us_screen_small.png | 1192853 bytes | modified 2026-07-16 18:32:33
 public/images/address_overlay_large.png | 209339 bytes | modified 2026-07-15 19:25:04
 public/images/address_overlay_small.png | 102975 bytes | modified 2026-07-15 19:25:04
 public/images/cinerific-intro.png | 349162 bytes | modified 2026-07-14 21:00:29
@@ -5459,11 +5513,14 @@ public/images/confirmed_overlay_large.png | 265613 bytes | modified 2026-07-15 1
 public/images/confirmed_overlay_small.png | 118510 bytes | modified 2026-07-11 12:10:14
 public/images/contact_overlay_large.png | 207066 bytes | modified 2026-07-15 19:25:04
 public/images/contact_overlay_small.png | 100905 bytes | modified 2026-07-15 19:25:04
+public/images/contact_screen_large.png | 899120 bytes | modified 2026-07-16 18:32:33
+public/images/contact_screen_small.png | 326957 bytes | modified 2026-07-16 18:32:33
 public/images/empty_cart_overlay_large.png | 241136 bytes | modified 2026-07-15 19:25:04
 public/images/empty_cart_overlay_small.png | 118554 bytes | modified 2026-07-15 19:25:04
 public/images/filled_cart_overlay_large.png | 464259 bytes | modified 2026-07-15 19:25:04
 public/images/filled_cart_overlay_small.png | 181313 bytes | modified 2026-07-15 19:25:04
-public/images/martin-profile.png | 480081 bytes | modified 2026-07-11 18:45:54
+public/images/home_screen_large.png | 3370882 bytes | modified 2026-07-16 18:32:33
+public/images/home_screen_small.png | 529728 bytes | modified 2026-07-16 18:32:33
 public/images/martin1.jpg | 178343 bytes | modified 2026-07-11 20:43:41
 public/images/martin2.jpg | 146510 bytes | modified 2026-07-11 21:29:17
 public/images/martin3.jpg | 141871 bytes | modified 2026-07-11 21:15:24
@@ -5473,10 +5530,16 @@ public/images/payment_input_large.png | 222140 bytes | modified 2026-07-15 20:44
 public/images/payment_input_small.png | 106132 bytes | modified 2026-07-15 20:15:11
 public/images/payment_overlay_large.png | 228482 bytes | modified 2026-07-15 19:25:04
 public/images/payment_overlay_small.png | 106712 bytes | modified 2026-07-15 19:25:04
-public/images/products_overlay_large.png | 883015 bytes | modified 2026-07-15 19:34:08
-public/images/products_overlay_small.png | 296612 bytes | modified 2026-07-11 11:56:41
-public/images/shop_preview_large.png | 1053497 bytes | modified 2026-07-15 19:25:04
-public/images/shop_preview_small.png | 388230 bytes | modified 2026-07-15 19:25:04
+public/images/products_overlay_buon_natale_large.png | 888504 bytes | modified 2026-07-16 18:04:05
+public/images/products_overlay_buon_natale_small.png | 300132 bytes | modified 2026-07-16 18:12:11
+public/images/products_overlay_piccola_large.png | 883015 bytes | modified 2026-07-15 19:34:08
+public/images/products_overlay_piccola_small.png | 294819 bytes | modified 2026-07-16 18:14:18
+public/images/products_overlay_sei_perfetto_large.png | 827085 bytes | modified 2026-07-16 18:03:32
+public/images/products_overlay_sei_perfetto_small.png | 281229 bytes | modified 2026-07-16 18:11:53
+public/images/products_screen_large.png | 2698295 bytes | modified 2026-07-16 18:32:33
+public/images/products_screen_small.png | 541716 bytes | modified 2026-07-16 18:32:33
+public/images/shop_preview_screen_large.png | 1053497 bytes | modified 2026-07-15 19:25:04
+public/images/shop_preview_screen_small.png | 388230 bytes | modified 2026-07-15 19:25:04
 public/images/start-page-mockup-reference.png | 1113950 bytes | modified 2026-07-11 12:39:08
 public/images/startup_screen_large.png | 2049492 bytes | modified 2026-07-11 12:30:30
 public/images/startup_screen_small.png | 694404 bytes | modified 2026-07-11 11:54:03
@@ -5492,6 +5555,7 @@ portfolio_worklog_july11.pdf | 23528 bytes | modified 2026-07-12 00:10:01
 portfolio_worklog_july14.pdf | 29767 bytes | modified 2026-07-14 22:44:02
 portfolio_worklog_july15_part1.pdf | 25059 bytes | modified 2026-07-15 18:07:04
 portfolio_worklog_july15_part2.pdf | 33101 bytes | modified 2026-07-15 21:31:55
+portfolio_worklog_july16.pdf | 28632 bytes | modified 2026-07-16 19:52:08
 
 
 ============================================================

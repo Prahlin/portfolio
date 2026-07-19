@@ -530,9 +530,9 @@ export default function AllaVostraCaseStudy() {
       <section className="project-hero" id="top">
         <div className="site-shell">
           <header className="nav-bar project-nav">
-            <a className="brand" href="/" aria-label="Martin Prahl home">
+            <a className="brand" href="/" aria-label="Prahlin home">
               <span>P</span>
-              <strong>Martin Prahl</strong>
+              <strong>Prahlin</strong>
             </a>
 
             <nav aria-label="Alla Vostra case study navigation">

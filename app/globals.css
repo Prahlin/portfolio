@@ -171,6 +171,32 @@ img[data-screenshot-preview] {
   text-transform: uppercase;
 }
 
+.hero-eyebrow {
+  font-size: 15px;
+  font-weight: 850;
+  letter-spacing: 0.02em;
+  line-height: 1.5;
+  text-transform: none;
+}
+
+.hero-eyebrow-box {
+  border: 1px solid rgba(67, 255, 146, 0.5);
+  border-radius: 2px;
+  display: inline-block;
+  line-height: 1.12;
+  padding: 0.03em 0.24em 0.06em;
+}
+
+.hero-eyebrow-underline {
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 1px;
+  text-decoration: none;
+}
+
+.hero-eyebrow-period {
+  margin-left: 0.12em;
+}
+
 h1,
 h2,
 h3,
@@ -236,39 +262,111 @@ h3 {
 }
 
 .carousel-button {
-  min-width: 190px;
+  gap: 5px;
+  justify-content: space-between;
+  min-width: 326px;
   overflow: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
 }
 
 .carousel-button-window {
   display: inline-grid;
-  min-width: 134px;
+  min-width: 268px;
   overflow: hidden;
 }
 
 .carousel-button-label {
+  align-items: center;
   animation: project-swoosh 720ms cubic-bezier(0.18, 0.9, 0.28, 1.18);
-  display: inline-block;
+  display: inline-flex;
+  gap: 0.5em;
+  white-space: nowrap;
   will-change: transform, opacity;
+}
+
+.carousel-button-action {
+  -webkit-text-stroke: 0;
+  color: #000;
+}
+
+.carousel-button-project {
+  -webkit-text-stroke: 4.2px #000;
+  align-items: center;
+  color: #f3fff7;
+  display: inline-flex;
+  gap: 0.34em;
+  paint-order: stroke fill;
+  text-shadow: 0 0 0 #000;
+}
+
+.carousel-button-android,
+.carousel-button-apple,
+.carousel-button-web {
+  align-self: center;
+  display: block;
+  flex: 0 0 auto;
+  height: 1.6em;
+  stroke: #000;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 3px;
+  width: 1.6em;
+}
+
+.android-head {
+  fill: #f3fff7;
+}
+
+.android-antenna {
+  fill: none;
+}
+
+.android-eye {
+  fill: #000;
+  stroke: none;
+}
+
+.carousel-button-apple {
+  fill: #f3fff7;
+  stroke-width: 4px;
+}
+
+.carousel-button-web {
+  margin-left: -0.15em;
+  stroke-width: 2px;
+  transform: translateY(0.06em);
+}
+
+.web-globe-shell {
+  fill: #f3fff7;
+  stroke: #000;
+  stroke-width: 4px;
+}
+
+.web-globe-line {
+  fill: none;
+  stroke: #000;
+  stroke-width: 2px;
 }
 
 @keyframes project-swoosh {
   0% {
     opacity: 0;
-    transform: translateX(46px) rotate(1.5deg) scale(0.96);
+    transform: translateX(-46px) rotate(1.5deg) scale(0.96);
   }
 
   48% {
     opacity: 1;
-    transform: translateX(-7px) rotate(-0.6deg) scale(1.035);
+    transform: translateX(7px) rotate(-0.6deg) scale(1.035);
   }
 
   68% {
-    transform: translateX(4px) rotate(0.35deg) scale(0.985);
+    transform: translateX(-4px) rotate(0.35deg) scale(0.985);
   }
 
   84% {
-    transform: translateX(-2px) rotate(-0.2deg) scale(1.012);
+    transform: translateX(2px) rotate(-0.2deg) scale(1.012);
   }
 
   100% {
@@ -291,6 +389,13 @@ h3 {
   background: rgba(255, 255, 255, 0.04);
   border: 1px solid var(--line-strong);
   color: var(--text);
+}
+
+.github-button {
+  gap: 0.5em;
+  justify-content: center;
+  padding-left: 16px;
+  padding-right: 16px;
 }
 
 .stack-row {
@@ -573,21 +678,38 @@ h3 {
   border: 1px solid var(--line-strong);
   border-radius: 8px;
   display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 10px;
   margin: 26px 0 0;
   padding: 14px;
   position: relative;
-  width: min(330px, 100%);
+  width: min(460px, 100%);
   z-index: 2;
 }
 
-.proof-panel div {
-  align-items: center;
+.proof-column {
   color: #dfffea;
-  display: flex;
+  display: grid;
   font-size: 13px;
   font-weight: 750;
   gap: 10px;
+  line-height: 1.25;
+}
+
+.proof-item {
+  align-items: center;
+  display: flex;
+  gap: 10px;
+  min-width: 0;
+}
+
+.proof-item svg {
+  flex: 0 0 auto;
+}
+
+.proof-item span {
+  min-width: 0;
+  white-space: nowrap;
 }
 
 .stats-strip {
