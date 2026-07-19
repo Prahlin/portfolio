@@ -1,0 +1,987 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [6 0 R 8 0 R 10 0 R 12 0 R 14 0 R 16 0 R] /Count 6 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+5 0 obj
+<< /Length 5474 >>
+stream
+BT
+/F2 13.00 Tf
+1 0 0 1 54.00 742.00 Tm
+(Prahlin Portfolio Work Log - July 19, 2026) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 713.30 Tm
+(Compiled summary for Sunday, July 19, 2026 - focus: polishing the Portfolio landing page) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 700.10 Tm
+(identity, restoring Prahlin as the visible brand, rewriting the hero eyebrow and release) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 686.90 Tm
+(promise, reordering the stack chips, revising proof stats, rebuilding the) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 673.70 Tm
+(Play/App/service proof panel, tightening the hero and GitHub buttons, adding project-) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 660.50 Tm
+(specific platform icons to the green carousel CTA, validating the live local preview,) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 647.30 Tm
+(confirming the Hostinger static-export pipeline, and generating the daily Portfolio PDF) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 634.10 Tm
+(worklog.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 620.90 Tm
+(Generated in continuity with the established Prahlin Portfolio daily worklog cadence:) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 607.70 Tm
+(compact opening summary, source-material section, baseline section, goal list, work-) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 594.50 Tm
+(completed sections, validation section, files-touched list, follow-up context, and) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 581.30 Tm
+(output-artifact close.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 568.10 Tm
+(This artifact intentionally covers only Prahlin/portfolio work performed for July 19,) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 554.90 Tm
+(2026: the refreshed project snapshot, review of every pre-existing Portfolio worklog) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 541.70 Tm
+(PDF, the landing-page polish represented by commit) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 528.50 Tm
+(bb80b0d094867c7bb628e2c23a72183d5f956d03, the successful Hostinger static-export) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 515.30 Tm
+(workflow for that commit, local validation checks, and this worklog-generation step.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 502.10 Tm
+(Alla Vostra, Cinerific, and Credit King application code was not changed for this) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 488.90 Tm
+(record.) Tj
+/F2 10.80 Tf
+1 0 0 1 54.00 462.50 Tm
+(Source Materials Reviewed) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 447.00 Tm
+(- Ran ./read_project.sh from /Users/prahlin/gh/portfolio and regenerated) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 433.80 Tm
+(  portfolio_PROJECT_SNAPSHOT.txt before writing this worklog, preserving the project) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 420.60 Tm
+(  convention that Codex reads the current source snapshot before continuing Portfolio) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 407.40 Tm
+(  work.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 394.20 Tm
+(- Reviewed the refreshed portfolio_PROJECT_SNAPSHOT.txt, including project notes,) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 381.00 Tm
+(  source tree, line-numbered app source dumps, root/tooling/deployment config, public) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 367.80 Tm
+(  asset inventory, PDF worklog inventory, git context, and the standing instruction to) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 354.60 Tm
+(  ask for a commit message before committing or pushing.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 341.40 Tm
+(- Reviewed every pre-existing Portfolio root-level worklog PDF:) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 328.20 Tm
+(  portfolio_worklog_july11.pdf, portfolio_worklog_july14.pdf,) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 315.00 Tm
+(  portfolio_worklog_july15_part1.pdf, portfolio_worklog_july15_part2.pdf, and) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 301.80 Tm
+(  portfolio_worklog_july16.pdf.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 288.60 Tm
+(- Extracted text from all five prior Portfolio PDFs with pdftotext to preserve the) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 275.40 Tm
+(  same title cadence, opening summary density, section order, bullet-heavy technical) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 262.20 Tm
+(  voice, validation language, files-touched list, follow-up context, and output-) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 249.00 Tm
+(  artifact close.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 235.80 Tm
+(- Checked PDF metadata and page counts with pdfinfo. The mature Portfolio worklogs use) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 222.60 Tm
+(  letter-size pages, root-level filenames, compact five-to-six page bodies, and the) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 209.40 Tm
+(  Codex standard-library PDF-generator metadata used by the July 14, July 15, and July) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 196.20 Tm
+(  16 artifacts.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 183.00 Tm
+(- Reviewed current Git history and confirmed the July 19 implementation scope through) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 169.80 Tm
+(  git log, git show --stat, git show --name-status, and targeted diffs for) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 156.60 Tm
+(  app/page.tsx, app/globals.css, app/ProjectCarouselButton.tsx, app/projects/alla-) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 143.40 Tm
+(  vostra/page.tsx, next-env.d.ts, and portfolio_PROJECT_SNAPSHOT.txt.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 130.20 Tm
+(- Reviewed the committed July 19 source state at bb80b0d, whose subject/body captured) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 117.00 Tm
+(  the user-approved past-tense bullet list: updated branding, refined hero copy,) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 103.80 Tm
+(  reordered categories, updated stats, reworked card columns, tuned CTA) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 90.60 Tm
+(  spacing/animation, added platform icons, matched icons to projects, adjusted stroke) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 77.40 Tm
+(  weights, and polished typography/contrast.) Tj
+/F1 8.80 Tf
+1 0 0 1 54.00 34.00 Tm
+(Prahlin Portfolio Work Log - July 19, 2026 Page 1) Tj
+ET
+endstream
+endobj
+6 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 5 0 R >>
+endobj
+7 0 obj
+<< /Length 5560 >>
+stream
+BT
+/F1 9.60 Tf
+1 0 0 1 54.00 742.00 Tm
+(- Checked local preview responses from http://127.0.0.1:3000/ and) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 728.80 Tm
+(  http://127.0.0.1:3000/projects/alla-vostra, including the current Prahlin brand,) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 715.60 Tm
+(  updated hero copy, Restaurant App carousel state, and platform-icon class output.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 702.40 Tm
+(- Checked GitHub Actions run history with gh run list and confirmed the Build static) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 689.20 Tm
+(  export for Hostinger workflow completed successfully for the July 19 bb80b0d push.) Tj
+/F2 10.80 Tf
+1 0 0 1 54.00 662.80 Tm
+(Baseline Status Before July 19 Work) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 647.30 Tm
+(- The July 16 Portfolio site already had a green/black landing page, a dedicated) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 634.10 Tm
+(  /projects/alla-vostra case-study route, an expandable Alla Vostra Product Flow) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 620.90 Tm
+(  screenshot system, mobile-friendly screenshot previews, a Cinerific tablet proof) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 607.70 Tm
+(  surface, and the GitHub-backed Hostinger static-export deployment path.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 594.50 Tm
+(- The visible top-left brand still read Martin Prahl in the landing-page header and on) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 581.30 Tm
+(  the Alla Vostra case-study page, even though the user wanted the portfolio brand) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 568.10 Tm
+(  globally restored to Prahlin.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 554.90 Tm
+(- The hero eyebrow still used the earlier positioning line rather than the requested) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 541.70 Tm
+(  multi-line proof phrase with separate underlined and boxed terms.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 528.50 Tm
+(- The hero stack chips still reflected the earlier React Native / Next.js / Tailwind) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 515.30 Tm
+(  CSS / Node.js / Kotlin presentation instead of the requested RN, JavaScript,) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 502.10 Tm
+(  TypeScript, Expo, Node, Kotlin, Next, and Compose order.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 488.90 Tm
+(- The proof-stat strip still used the July 15 wording around 3yrs, project worklogs,) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 475.70 Tm
+(  and official store releases rather than the final July 19 wording of 3y+ Full-Stack) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 462.50 Tm
+(  Expertise, 6+ shipped products, and 5+ Play/App Store releases.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 449.30 Tm
+(- The proof panel still behaved like a compact two-row implementation card and did not) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 436.10 Tm
+(  yet have the requested three-column Play/App, Vercel/Supabase, Stripe/Postmark) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 422.90 Tm
+(  layout with equivalent icon treatment.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 409.70 Tm
+(- The green hero carousel CTA still centered on quoted app/project names and did not) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 396.50 Tm
+(  yet display project-category labels with platform icons.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 383.30 Tm
+(- The CTA spacing, GitHub button width, animation direction, text stroke, project-name) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 370.10 Tm
+(  styling, icon sizing, and platform-specific icon sets all needed direct live-preview) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 356.90 Tm
+(  tuning because the user was iterating visually against http://127.0.0.1:3000/.) Tj
+/F2 10.80 Tf
+1 0 0 1 54.00 330.50 Tm
+(Goals for July 19) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 315.00 Tm
+(- Globalize the top-left visible brand from Martin Prahl back to Prahlin on every) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 301.80 Tm
+(  current Portfolio page, including the landing page and the Alla Vostra case-study) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 288.60 Tm
+(  page.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 275.40 Tm
+(- Replace the hero eyebrow with the final three-line message: Appealing UI/UX, User-) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 262.20 Tm
+(  Friendly Front-End, and Deep, Dependable Back-end, using underlines on the left) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 249.00 Tm
+(  terms and hairline boxes on the right terms.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 235.80 Tm
+(- Preserve the large React Native Full-Stack Mobile Developer hero header while) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 222.60 Tm
+(  replacing the supporting paragraph with the final cross-platform concept to real-) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 209.40 Tm
+(  world production and release message.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 196.20 Tm
+(- Reorder and revise the hero stack chips to React Native, JavaScript, TypeScript,) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 183.00 Tm
+(  Expo, Node, Kotlin, Next, and Compose.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 169.80 Tm
+(- Update the proof-stat strip to broader portfolio proof: 3y+ Full-Stack Expertise,) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 156.60 Tm
+(  1k+ Quality GitHub Commits, 6+ Shipped Mob/Web Products, and 5+ Play/App Store) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 143.40 Tm
+(  Releases.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 130.20 Tm
+(- Rebuild the proof panel as three columns without changing its overall card role:) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 117.00 Tm
+(  Play Store / App Store, Vercel / Supabase, and Stripe / Postmark.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 103.80 Tm
+(- Tighten the green carousel button and the GitHub button so their text/icon spacing) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 90.60 Tm
+(  reads intentionally at the same visual rhythm.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 77.40 Tm
+(- Replace Cinerific / Alla Vostra / Credit King CTA labels with Streaming App,) Tj
+/F1 8.80 Tf
+1 0 0 1 54.00 34.00 Tm
+(Prahlin Portfolio Work Log - July 19, 2026 Page 2) Tj
+ET
+endstream
+endobj
+8 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 7 0 R >>
+endobj
+9 0 obj
+<< /Length 5477 >>
+stream
+BT
+/F1 9.60 Tf
+1 0 0 1 54.00 742.00 Tm
+(  Restaurant App, and Finance App while keeping the underlying links pointed at the) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 728.80 Tm
+(  matching project surfaces.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 715.60 Tm
+(- Add custom inline platform icons to the green carousel CTA and render only the icons) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 702.40 Tm
+(  that belong with each project: Restaurant App with Android, Apple, and Web;) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 689.20 Tm
+(  Streaming App with Android; Finance App with Android and Apple.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 676.00 Tm
+(- Keep missing platform icons collapsed left with no reserved blank placeholders.) Tj
+/F2 10.80 Tf
+1 0 0 1 54.00 649.60 Tm
+(Work Completed - Brand, Hero Copy, and Stack Presentation) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 634.10 Tm
+(- Updated the landing-page nav brand link in app/page.tsx so the visible text reads) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 620.90 Tm
+(  Prahlin and the accessible label reads Prahlin home.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 607.70 Tm
+(- Updated the Alla Vostra case-study page header in app/projects/alla-vostra/page.tsx) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 594.50 Tm
+(  with the same Prahlin visible brand and Prahlin home accessible label, making the) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 581.30 Tm
+(  current page set consistent.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 568.10 Tm
+(- Replaced the hero eyebrow copy with the final stylized three-line phrase using) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 554.90 Tm
+(  explicit spans for underlined left-hand terms, boxed right-hand terms, punctuation) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 541.70 Tm
+(  spacing, and manual line breaks.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 528.50 Tm
+(- Added dedicated .hero-eyebrow, .hero-eyebrow-box, .hero-eyebrow-underline, and) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 515.30 Tm
+(  .hero-eyebrow-period rules in app/globals.css so the eyebrow keeps its compact) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 502.10 Tm
+(  visual hierarchy without shrinking the main hero type.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 488.90 Tm
+(- Tuned the underline and box treatment down to hairline weight so the decorative) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 475.70 Tm
+(  emphasis reads as a fine typographic system rather than a heavy callout.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 462.50 Tm
+(- Updated the hero supporting line to frame the offer as Cross-Platform Concept to) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 449.30 Tm
+(  Real-World Production & Release, 100% Stress-Free, matching the final user-directed) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 436.10 Tm
+(  language from the live editing session.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 422.90 Tm
+(- Replaced the older stack chips with the final ordered set: React Native, JavaScript,) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 409.70 Tm
+(  TypeScript, Expo, Node, Kotlin, Next, and Compose.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 396.50 Tm
+(- Preserved the existing hero headline, dark green/black identity, profile/device) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 383.30 Tm
+(  composition, and landing-page section structure while concentrating this pass on) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 370.10 Tm
+(  copy, hierarchy, and proof-surface polish.) Tj
+/F2 10.80 Tf
+1 0 0 1 54.00 343.70 Tm
+(Work Completed - Proof Stats and Services Card) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 328.20 Tm
+(- Rewrote the first proof stat from the July 15 3yrs language to 3y+ Full-Stack) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 315.00 Tm
+(  Expertise.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 301.80 Tm
+(- Kept the GitHub proof column at 1k+ Quality GitHub Commits, preserving the broader) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 288.60 Tm
+(  output signal established in earlier worklogs.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 275.40 Tm
+(- Changed the third proof stat to 6+ Shipped Mob/Web Products after the user narrowed) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 262.20 Tm
+(  the wording from longer mobile/web product phrasing.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 249.00 Tm
+(- Changed the fourth proof stat to 5+ Play/App Store Releases, keeping the store-) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 235.80 Tm
+(  release proof but removing the older Official wording.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 222.60 Tm
+(- Reworked the proof panel from a two-row implementation note into a three-column card) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 209.40 Tm
+(  using .proof-column and .proof-item structure.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 196.20 Tm
+(- Placed Play Store and App Store in the first column with Store and Apple icons.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 183.00 Tm
+(- Placed Vercel and Supabase in the middle column with Triangle and Database icons) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 169.80 Tm
+(  after the user exchanged the second Vercel item for Supabase and requested a better-) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 156.60 Tm
+(  matching icon.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 143.40 Tm
+(- Placed Stripe and Postmark in the right column with CreditCard and MailCheck icons) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 130.20 Tm
+(  after the user asked for a more email-related Postmark symbol.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 117.00 Tm
+(- Matched the right and center columns to the left column horizontally so the proof) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 103.80 Tm
+(  card reads as three equivalent service/tool columns within the pre-existing card.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 90.60 Tm
+(- Increased the proof card width to support the three-column treatment while leaving) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 77.40 Tm
+(  the card in the same hero-copy proof position.) Tj
+/F1 8.80 Tf
+1 0 0 1 54.00 34.00 Tm
+(Prahlin Portfolio Work Log - July 19, 2026 Page 3) Tj
+ET
+endstream
+endobj
+10 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 9 0 R >>
+endobj
+11 0 obj
+<< /Length 5522 >>
+stream
+BT
+/F2 10.80 Tf
+1 0 0 1 54.00 728.80 Tm
+(Work Completed - Hero CTA, GitHub Button, and Motion) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 713.30 Tm
+(- Refactored app/ProjectCarouselButton.tsx so the green CTA label now separates the) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 700.10 Tm
+(  fixed View action from the rotating project/category segment.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 686.90 Tm
+(- Replaced the earlier quoted project names with category labels: Restaurant App,) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 673.70 Tm
+(  Streaming App, and Finance App.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 660.50 Tm
+(- Kept the Restaurant App state linked to /projects/alla-vostra, the Streaming App) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 647.30 Tm
+(  state linked to the Cinerific landing-page anchor, and the Finance App state linked) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 634.10 Tm
+(  to the Credit King landing-page anchor.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 620.90 Tm
+(- Removed the single apostrophes from the green button after the user reversed the) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 607.70 Tm
+(  earlier quoted-name treatment.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 594.50 Tm
+(- Styled View as plain black text without stroke, then styled the rotating project) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 581.30 Tm
+(  segment with #f3fff7 text and a black stroke for high-contrast impact inside the) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 568.10 Tm
+(  green button.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 554.90 Tm
+(- Iterated the project-name stroke thickness through several live-preview passes until) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 541.70 Tm
+(  the final 4.2px text stroke gave the label enough visual weight without swallowing) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 528.50 Tm
+(  the letterforms.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 515.30 Tm
+(- Adjusted the carousel button min-width, inner window width, padding, gap, and space-) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 502.10 Tm
+(  between behavior so View nudges left, the right arrow nudges right, and project text) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 488.90 Tm
+(  has stable room during rotation.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 475.70 Tm
+(- Reversed the horizontal direction of the bumpy slide-in animation by flipping) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 462.50 Tm
+(  project-swoosh translateX values while preserving the existing) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 449.30 Tm
+(  overshoot/compress/settle motion character.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 436.10 Tm
+(- Added .github-button styling so the GitHub button mirrors the green CTA rhythm more) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 422.90 Tm
+(  closely, with the GitHub text and Braces icon spaced as a compact right-hand button.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 409.70 Tm
+(- Reduced button padding and width pressure across the hero actions while keeping the) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 396.50 Tm
+(  existing button components and visual language intact.) Tj
+/F2 10.80 Tf
+1 0 0 1 54.00 370.10 Tm
+(Work Completed - Platform Icons in the Project Carousel) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 354.60 Tm
+(- Added a typed Platform union and per-project platform arrays in) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 341.40 Tm
+(  app/ProjectCarouselButton.tsx so icons are data-driven by each carousel item rather) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 328.20 Tm
+(  than hardcoded for every state.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 315.00 Tm
+(- Added a custom AndroidMark SVG that renders only the Android-style robot head,) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 301.80 Tm
+(  antennas, and eyes, sized in em units so it scales with the button text line.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 288.60 Tm
+(- Added a custom AppleMark SVG shaped as an apple/leaf-style platform glyph, using the) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 275.40 Tm
+(  same color system as the Android mark while keeping it inline and code-native.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 262.20 Tm
+(- Added a custom WebMark SVG globe with an outer shell and inner longitude/latitude) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 249.00 Tm
+(  lines, visually matching the simple web icon reference provided during the session.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 235.80 Tm
+(- Tuned platform icon size to 1.6em after several live-preview passes that doubled,) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 222.60 Tm
+(  reduced, and vertically centered the marks against the text and arrow.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 209.40 Tm
+(- Matched the Android-to-Apple and Apple-to-Web horizontal gaps, including a small) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 196.20 Tm
+(  negative left margin on the Web icon after the user asked for equal icon spacing.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 183.00 Tm
+(- Nudged the Web icon slightly down so the globe visually centers against the stroked) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 169.80 Tm
+(  project text and adjacent marks.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 156.60 Tm
+(- Tuned icon stroke weights separately: shared platform strokes at 3px, Apple at 4px,) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 143.40 Tm
+(  Web inner lines at 2px, and Web outer shell at 4px after the user asked to thicken) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 130.20 Tm
+(  only the globe's outer shape.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 117.00 Tm
+(- Rendered Restaurant App with Android, Apple, and Web icons; Streaming App with only) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 103.80 Tm
+(  Android; and Finance App with Android and Apple.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 90.60 Tm
+(- Confirmed that missing icons collapse left automatically because the JSX maps only) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 77.40 Tm
+(  the active platform list and does not reserve hidden placeholder slots.) Tj
+/F1 8.80 Tf
+1 0 0 1 54.00 34.00 Tm
+(Prahlin Portfolio Work Log - July 19, 2026 Page 4) Tj
+ET
+endstream
+endobj
+12 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 11 0 R >>
+endobj
+13 0 obj
+<< /Length 5337 >>
+stream
+BT
+/F2 10.80 Tf
+1 0 0 1 54.00 728.80 Tm
+(Work Completed - Live Preview, Commit, and Deployment Path) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 713.30 Tm
+(- Kept the local development target at http://127.0.0.1:3000 so the user could inspect) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 700.10 Tm
+(  landing-page changes in real time.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 686.90 Tm
+(- Moved stale generated .next cache aside and restarted the local Next dev server when) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 673.70 Tm
+(  Turbopack served old CSS despite source edits, then rechecked the served CSS chunk) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 660.50 Tm
+(  for the carousel and icon rules.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 647.30 Tm
+(- Used curl against the live local page to confirm the updated Prahlin brand, hero) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 634.10 Tm
+(  release phrase, Restaurant App carousel state, and platform icon class output were) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 620.90 Tm
+(  present in served HTML.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 607.70 Tm
+(- Used curl against /projects/alla-vostra to confirm the project page also served the) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 594.50 Tm
+(  Prahlin brand after the globalized header change.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 581.30 Tm
+(- Committed and pushed the July 19 landing-page polish as bb80b0d on main, with main) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 568.10 Tm
+(  and origin/main resolving to the same commit afterward.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 554.90 Tm
+(- Confirmed the GitHub Actions Build static export for Hostinger workflow completed) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 541.70 Tm
+(  successfully for the bb80b0d push.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 528.50 Tm
+(- Refreshed portfolio_PROJECT_SNAPSHOT.txt again at the start of this worklog request) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 515.30 Tm
+(  so the current source and git context were represented before the PDF was generated.) Tj
+/F2 10.80 Tf
+1 0 0 1 54.00 488.90 Tm
+(Validation and Checks Performed) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 473.40 Tm
+(- Ran npm run check after the final project-specific icon mapping change; TypeScript) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 460.20 Tm
+(  completed successfully.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 447.00 Tm
+(- Ran npm run check again during worklog preparation; TypeScript completed) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 433.80 Tm
+(  successfully with the current workspace state.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 420.60 Tm
+(- Ran npm run build:static during worklog preparation; Next.js 16.2.10 compiled) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 407.40 Tm
+(  successfully, ran TypeScript, collected page data, and prerendered / and) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 394.20 Tm
+(  /projects/alla-vostra as static output.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 381.00 Tm
+(- Checked http://127.0.0.1:3000/ with curl and confirmed the live page output includes) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 367.80 Tm
+(  Prahlin, From Cross-Platform Concept, 100% Stress-Free, Restaurant App, carousel-) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 354.60 Tm
+(  button-android, carousel-button-apple, and carousel-button-web.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 341.40 Tm
+(- Checked http://127.0.0.1:3000/projects/alla-vostra with curl and confirmed the page) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 328.20 Tm
+(  output includes Prahlin and Alla Vostra content.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 315.00 Tm
+(- Checked the served CSS chunk after the latest icon-stroke pass and confirmed the) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 301.80 Tm
+(  shared platform icon stroke, Apple stroke, Web shell stroke, and Web line stroke) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 288.60 Tm
+(  values were being served from the live dev server.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 275.40 Tm
+(- Confirmed git rev-parse HEAD and git rev-parse origin/main both return) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 262.20 Tm
+(  bb80b0d094867c7bb628e2c23a72183d5f956d03.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 249.00 Tm
+(- Confirmed gh run list reports the July 19 Build static export for Hostinger workflow) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 235.80 Tm
+(  as completed successfully for the Updated portfolio branding to Prahlin push.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 222.60 Tm
+(- Confirmed the only local tracked modification before this PDF was generated was the) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 209.40 Tm
+(  refreshed portfolio_PROJECT_SNAPSHOT.txt produced by ./read_project.sh.) Tj
+/F2 10.80 Tf
+1 0 0 1 54.00 183.00 Tm
+(Files Touched During July 19 Portfolio Work) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 167.50 Tm
+(- app/page.tsx - restored Prahlin brand text, revised hero eyebrow markup, updated) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 154.30 Tm
+(  hero lede, reordered stack chips, revised proof stats, added new lucide imports,) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 141.10 Tm
+(  rebuilt the proof panel into three columns, updated) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 127.90 Tm
+(  Play/App/Vercel/Supabase/Stripe/Postmark labels and icons, and added the GitHub) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 114.70 Tm
+(  button class.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 101.50 Tm
+(- app/globals.css - added hero eyebrow styling, expanded carousel-button and project-) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 88.30 Tm
+(  text styling, reversed project-swoosh animation direction, added platform icon) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 75.10 Tm
+(  styling, tuned GitHub button spacing, and rebuilt proof-panel column/item layout.) Tj
+/F1 8.80 Tf
+1 0 0 1 54.00 34.00 Tm
+(Prahlin Portfolio Work Log - July 19, 2026 Page 5) Tj
+ET
+endstream
+endobj
+14 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 13 0 R >>
+endobj
+15 0 obj
+<< /Length 4768 >>
+stream
+BT
+/F1 9.60 Tf
+1 0 0 1 54.00 742.00 Tm
+(- app/ProjectCarouselButton.tsx - replaced quoted project-name carousel labels with) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 728.80 Tm
+(  Restaurant App, Streaming App, and Finance App; added typed platform data; added) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 715.60 Tm
+(  custom Android, Apple, and Web SVG marks; rendered only the active project's icons;) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 702.40 Tm
+(  and started the carousel on Restaurant App.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 689.20 Tm
+(- app/projects/alla-vostra/page.tsx - changed the project-page header brand from) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 676.00 Tm
+(  Martin Prahl to Prahlin and updated its accessible label.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 662.80 Tm
+(- next-env.d.ts - refreshed/generated by the current Next.js tooling state during the) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 649.60 Tm
+(  July 19 work.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 636.40 Tm
+(- portfolio_PROJECT_SNAPSHOT.txt - regenerated by ./read_project.sh and updated with) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 623.20 Tm
+(  current source, inventory, and git context.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 610.00 Tm
+(- portfolio_worklog_july19.pdf - this new July 19 Portfolio worklog artifact generated) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 596.80 Tm
+(  at the repository root.) Tj
+/F2 10.80 Tf
+1 0 0 1 54.00 570.40 Tm
+(Follow-Up Context) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 554.90 Tm
+(- Commit portfolio_worklog_july19.pdf and the refreshed portfolio_PROJECT_SNAPSHOT.txt) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 541.70 Tm
+(  only after the user provides or confirms the desired commit message, preserving the) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 528.50 Tm
+(  Portfolio project's commit-message convention.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 515.30 Tm
+(- If Cinerific and Credit King receive dedicated project pages later, update the) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 502.10 Tm
+(  Streaming App and Finance App carousel hrefs from landing-page anchors to their) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 488.90 Tm
+(  dedicated routes.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 475.70 Tm
+(- Recheck the green carousel CTA after any future project-label wording changes,) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 462.50 Tm
+(  because its width and spacing are intentionally tuned around Restaurant App,) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 449.30 Tm
+(  Streaming App, and Finance App.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 436.10 Tm
+(- If official platform-brand assets are ever required, replace the current code-native) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 422.90 Tm
+(  glyphs with appropriately licensed assets; the current marks are lightweight inline) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 409.70 Tm
+(  SVG indicators built for the Portfolio UI.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 396.50 Tm
+(- Keep the missing-icon collapse behavior in the carousel if more platform) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 383.30 Tm
+(  combinations are added later, so Android-only or Android/iOS-only projects do not) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 370.10 Tm
+(  leave awkward visual gaps.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 356.90 Tm
+(- Re-run ./read_project.sh after committing this PDF if the snapshot should include) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 343.70 Tm
+(  the new PDF file in its inventory.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 330.50 Tm
+(- Continue avoiding broad refactors of the landing page while the user is visually) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 317.30 Tm
+(  tuning the hero; the July 19 work stayed intentionally focused on copy, spacing,) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 304.10 Tm
+(  iconography, and current page branding.) Tj
+/F2 10.80 Tf
+1 0 0 1 54.00 277.70 Tm
+(Output Artifact) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 262.20 Tm
+(- Generated file: portfolio_worklog_july19.pdf.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 249.00 Tm
+(- Location: /Users/prahlin/gh/portfolio/portfolio_worklog_july19.pdf.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 235.80 Tm
+(- Naming follows the existing root-level Portfolio convention:) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 222.60 Tm
+(  portfolio_worklog_july19.pdf. No part suffix was used because this is the first July) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 209.40 Tm
+(  19 Portfolio worklog artifact.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 196.20 Tm
+(- Uses the same daily worklog structure and compact technical voice established by) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 183.00 Tm
+(  portfolio_worklog_july11.pdf, portfolio_worklog_july14.pdf,) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 169.80 Tm
+(  portfolio_worklog_july15_part1.pdf, portfolio_worklog_july15_part2.pdf, and) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 156.60 Tm
+(  portfolio_worklog_july16.pdf.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 143.40 Tm
+(- Generated with a small standard-library PDF writer; no external PDF dependency was) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 130.20 Tm
+(  installed for this artifact.) Tj
+/F1 8.80 Tf
+1 0 0 1 54.00 34.00 Tm
+(Prahlin Portfolio Work Log - July 19, 2026 Page 6) Tj
+ET
+endstream
+endobj
+16 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 15 0 R >>
+endobj
+17 0 obj
+<< /Title (Prahlin Portfolio Work Log - July 19, 2026) /Subject (Portfolio website development worklog) /Author (Codex) /Creator (Codex standard-library PDF generator) /Producer (Codex standard-library PDF generator) >>
+endobj
+xref
+0 18
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000155 00000 n 
+0000000225 00000 n 
+0000000300 00000 n 
+0000005826 00000 n 
+0000005962 00000 n 
+0000011574 00000 n 
+0000011710 00000 n 
+0000017239 00000 n 
+0000017376 00000 n 
+0000022951 00000 n 
+0000023089 00000 n 
+0000028479 00000 n 
+0000028617 00000 n 
+0000033438 00000 n 
+0000033576 00000 n 
+trailer
+<< /Size 18 /Root 1 0 R /Info 17 0 R >>
+startxref
+33812
+%%EOF
