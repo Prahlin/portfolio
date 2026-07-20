@@ -121,7 +121,7 @@ img[data-screenshot-preview] {
   display: inline-flex;
   font-weight: 900;
   height: 34px;
-  justify-content: center;
+  justify-content: flex-start;
   width: 34px;
 }
 
@@ -172,7 +172,7 @@ img[data-screenshot-preview] {
 }
 
 .hero-eyebrow {
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 850;
   letter-spacing: 0.02em;
   line-height: 1.5;
@@ -239,6 +239,11 @@ h3 {
   margin-top: 32px;
 }
 
+.hero-action-break {
+  flex-basis: 100%;
+  height: 0;
+}
+
 .button {
   align-items: center;
   border-radius: 8px;
@@ -262,32 +267,78 @@ h3 {
 }
 
 .carousel-button {
-  gap: 5px;
-  justify-content: space-between;
-  min-width: 326px;
+  flex: 0 1 420px;
+  gap: clamp(3px, 1vw, 5px);
+  justify-content: flex-start;
+  max-width: 100%;
+  min-width: 0;
   overflow: hidden;
-  padding-left: 16px;
-  padding-right: 16px;
+  padding-left: clamp(10px, 3vw, 16px);
+  padding-right: clamp(10px, 3vw, 16px);
+  width: min(420px, 100%);
 }
 
 .carousel-button-window {
-  display: inline-grid;
-  min-width: 268px;
-  overflow: hidden;
+  align-items: center;
+  display: inline-flex;
+  flex: 0 1 auto;
+  gap: clamp(0.55em, 2.4vw, 1em);
+  min-width: 0;
+  overflow: visible;
+  white-space: nowrap;
 }
 
 .carousel-button-label {
   align-items: center;
   animation: project-swoosh 720ms cubic-bezier(0.18, 0.9, 0.28, 1.18);
   display: inline-flex;
-  gap: 0.5em;
+  gap: clamp(0.55em, 2.4vw, 1em);
+  min-width: 0;
+  padding-left: 0;
   white-space: nowrap;
   will-change: transform, opacity;
 }
 
 .carousel-button-action {
+  -webkit-text-stroke: 4.2px #000;
+  align-items: center;
+  color: #f3fff7;
+  display: inline-flex;
+  flex-direction: column;
+  font-size: 14px;
+  gap: 2px;
+  justify-content: center;
+  line-height: 0.95;
+  paint-order: stroke fill;
+  text-shadow: 0 0 0 #000;
+}
+
+.carousel-button-action-name {
+  display: block;
+}
+
+.carousel-button-action-category {
   -webkit-text-stroke: 0;
   color: #000;
+  display: block;
+  font-size: 7px;
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  line-height: 1;
+  text-align: center;
+  text-shadow: none;
+}
+
+.carousel-button-action-commerce {
+  color: #ffad4d;
+}
+
+.carousel-button-action-entertainment {
+  color: #9b5cff;
+}
+
+.carousel-button-action-finance {
+  color: #2f6bff;
 }
 
 .carousel-button-project {
@@ -295,47 +346,102 @@ h3 {
   align-items: center;
   color: #f3fff7;
   display: inline-flex;
-  gap: 0.34em;
+  gap: clamp(0.18em, 1.1vw, 0.34em);
   paint-order: stroke fill;
   text-shadow: 0 0 0 #000;
 }
 
-.carousel-button-android,
-.carousel-button-apple,
+.carousel-button-project-word {
+  -webkit-text-stroke: 4.2px #000;
+  color: #f3fff7;
+  paint-order: stroke fill;
+  text-shadow: 0 0 0 #000;
+}
+
+.carousel-button-arrow {
+  -webkit-text-stroke: 4.2px #000;
+  color: #f3fff7;
+  flex: 0 0 auto;
+  font-size: 22px;
+  font-weight: 900;
+  line-height: 1;
+  margin-left: auto;
+  paint-order: stroke fill;
+  text-shadow: 0 0 0 #000;
+}
+
+.carousel-button-phone,
 .carousel-button-web {
   align-self: center;
   display: block;
   flex: 0 0 auto;
-  height: 1.6em;
+  height: 0.8em;
   stroke: #000;
   stroke-linecap: round;
   stroke-linejoin: round;
   stroke-width: 3px;
-  width: 1.6em;
+  width: 0.8em;
 }
 
-.android-head {
-  fill: #f3fff7;
+.carousel-button-phone {
+  height: 1.936em;
+  width: 1.36125em;
 }
 
-.android-antenna {
+.phone-mini-frame {
   fill: none;
+  stroke: #000;
+  stroke-width: 2.4px;
 }
 
-.android-eye {
+.phone-mini-screen {
+  fill: transparent;
+  stroke: none;
+}
+
+.phone-mini-speaker {
+  fill: none;
+  stroke: #000;
+  stroke-width: 1.6px;
+}
+
+.phone-mini-home {
   fill: #000;
   stroke: none;
 }
 
-.carousel-button-apple {
-  fill: #f3fff7;
-  stroke-width: 4px;
+.carousel-button-tablet {
+  align-self: center;
+  display: block;
+  flex: 0 0 auto;
+  height: 1.44em;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  width: 2.16em;
+}
+
+.tablet-mini-frame {
+  fill: none;
+  stroke: #000;
+  stroke-width: 2.2px;
+}
+
+.tablet-mini-screen {
+  fill: transparent;
+  stroke: none;
+}
+
+.tablet-mini-camera {
+  fill: #000;
+  stroke: none;
 }
 
 .carousel-button-web {
+  height: 0.9702em;
   margin-left: -0.15em;
   stroke-width: 2px;
   transform: translateY(0.06em);
+  width: 0.9702em;
 }
 
 .web-globe-shell {
@@ -353,25 +459,25 @@ h3 {
 @keyframes project-swoosh {
   0% {
     opacity: 0;
-    transform: translateX(-46px) rotate(1.5deg) scale(0.96);
+    transform: translateY(28px) rotate(1.5deg) scale(0.96);
   }
 
   48% {
     opacity: 1;
-    transform: translateX(7px) rotate(-0.6deg) scale(1.035);
+    transform: translateY(-5px) rotate(-0.6deg) scale(1.035);
   }
 
   68% {
-    transform: translateX(-4px) rotate(0.35deg) scale(0.985);
+    transform: translateY(3px) rotate(0.35deg) scale(0.985);
   }
 
   84% {
-    transform: translateX(2px) rotate(-0.2deg) scale(1.012);
+    transform: translateY(-2px) rotate(-0.2deg) scale(1.012);
   }
 
   100% {
     opacity: 1;
-    transform: translateX(0) rotate(0) scale(1);
+    transform: translateY(0) rotate(0) scale(1);
   }
 }
 
@@ -392,10 +498,18 @@ h3 {
 }
 
 .github-button {
+  background: #f3fff7;
+  border-color: #f3fff7;
+  color: #000;
   gap: 0.5em;
   justify-content: center;
   padding-left: 16px;
   padding-right: 16px;
+}
+
+.linkedin-button {
+  background: #60a5fa;
+  border-color: #60a5fa;
 }
 
 .stack-row {
@@ -699,7 +813,7 @@ h3 {
 .proof-item {
   align-items: center;
   display: flex;
-  gap: 10px;
+  gap: 4px;
   min-width: 0;
 }
 

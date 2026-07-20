@@ -18,13 +18,13 @@ const navItems = ["Case Studies", "Stack", "Worklog", "Contact"];
 
 const stackChips = [
   "React Native",
-  "JavaScript",
+  "Tailwind CSS",
   "TypeScript",
   "Expo",
-  "Node",
+  "Node.js",
   "Kotlin",
-  "Next",
-  "Compose",
+  "Next.js",
+  "Jetpack Compose",
 ];
 
 const proofStats = [
@@ -53,6 +53,94 @@ type CaseStudy = {
   tags: string[];
   title: string;
 };
+
+function LinkedInMark() {
+  return (
+    <svg
+      aria-hidden
+      height="32.4"
+      viewBox="0 0 24 24"
+      width="32.4"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <rect
+        fill="#f3fff7"
+        height="18"
+        rx="3"
+        stroke="#000"
+        strokeWidth="1.35"
+        width="18"
+        x="3"
+        y="3"
+      />
+      <circle
+        cx="8.1"
+        cy="8.15"
+        fill="#60a5fa"
+        r="1.45"
+        stroke="#000"
+        strokeWidth="0.35"
+      />
+      <rect
+        fill="#60a5fa"
+        height="7.2"
+        rx="0.45"
+        stroke="#000"
+        strokeLinejoin="round"
+        strokeWidth="0.35"
+        width="2.45"
+        x="6.88"
+        y="10.75"
+      />
+      <path
+        d="M11.1 10.75h2.35v.92c.45-.66 1.18-1.08 2.18-1.08 1.88 0 3 1.24 3 3.4v3.96h-2.46v-3.62c0-1.04-.47-1.58-1.29-1.58-.86 0-1.33.58-1.33 1.58v3.62H11.1z"
+        fill="#60a5fa"
+        stroke="#000"
+        strokeLinejoin="round"
+        strokeWidth="0.35"
+      />
+    </svg>
+  );
+}
+
+function GitHubBracesMark() {
+  return (
+    <svg
+      aria-hidden
+      height="32.4"
+      viewBox="0 0 24 24"
+      width="32.4"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <rect
+        fill="#f3fff7"
+        height="18"
+        rx="3"
+        stroke="#000"
+        strokeWidth="1.35"
+        width="18"
+        x="3"
+        y="3"
+      />
+      <path
+        d="M10.15 7.45h-.52c-.86 0-1.32.46-1.32 1.32v2.05c0 .72-.5 1.18-1.28 1.18.78 0 1.28.46 1.28 1.18v2.05c0 .86.46 1.32 1.32 1.32h.52"
+        fill="none"
+        stroke="#000"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+      />
+      <path
+        d="M13.85 16.55h.52c.86 0 1.32-.46 1.32-1.32v-2.05c0-.72.5-1.18 1.28-1.18-.78 0-1.28-.46-1.28-1.18V8.77c0-.86-.46-1.32-1.32-1.32h-.52"
+        fill="none"
+        stroke="#000"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+      />
+    </svg>
+  );
+}
 
 const caseStudies: CaseStudy[] = [
   {
@@ -326,20 +414,44 @@ export default function Home() {
               </p>
               <h1>React Native Full-Stack Mobile Developer</h1>
               <p className="hero-lede">
-                From Cross-Platform Concept → Real-World Production & Release —
-                100% Stress-Free
+                Original Vision + UI/UX Design + Front-End Logic + Back-End
+                Support → 100% Stress-free
               </p>
 
               <div className="hero-actions">
                 <ProjectCarouselButton />
+                <span
+                  className="hero-action-break"
+                  aria-hidden
+                  style={{ flexBasis: "100%", height: 0 }}
+                />
                 <a
                   className="button button-secondary github-button"
                   href="https://github.com/Prahlin"
                   rel="noreferrer"
+                  style={{
+                    background: "#f3fff7",
+                    borderColor: "#f3fff7",
+                    color: "#000",
+                  }}
                   target="_blank"
                 >
                   GitHub
-                  <Braces aria-hidden size={18} />
+                  <GitHubBracesMark />
+                </a>
+                <a
+                  className="button button-secondary github-button linkedin-button"
+                  href="https://www.linkedin.com/"
+                  rel="noreferrer"
+                  style={{
+                    background: "#60a5fa",
+                    borderColor: "#60a5fa",
+                    color: "#000",
+                  }}
+                  target="_blank"
+                >
+                  LinkedIn
+                  <LinkedInMark />
                 </a>
               </div>
 
@@ -352,22 +464,12 @@ export default function Home() {
               <div className="proof-panel">
                 <div className="proof-column">
                   <div className="proof-item">
-                    <Store aria-hidden size={18} />
-                    <span>Play Store</span>
-                  </div>
-                  <div className="proof-item">
-                    <Apple aria-hidden size={18} />
-                    <span>App Store</span>
-                  </div>
-                </div>
-                <div className="proof-column">
-                  <div className="proof-item">
                     <Triangle aria-hidden size={18} />
                     <span>Vercel</span>
                   </div>
                   <div className="proof-item">
                     <Database aria-hidden size={18} />
-                    <span>Supabase</span>
+                    <span>EAS</span>
                   </div>
                 </div>
                 <div className="proof-column">
@@ -378,6 +480,16 @@ export default function Home() {
                   <div className="proof-item">
                     <MailCheck aria-hidden size={18} />
                     <span>Postmark</span>
+                  </div>
+                </div>
+                <div className="proof-column">
+                  <div className="proof-item">
+                    <Store aria-hidden size={18} />
+                    <span>GGL Play</span>
+                  </div>
+                  <div className="proof-item">
+                    <Apple aria-hidden size={18} />
+                    <span>App Store</span>
                   </div>
                 </div>
               </div>
