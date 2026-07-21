@@ -602,7 +602,7 @@ h3 {
 }
 
 .hero-social-button {
-  gap: clamp(3px, 1.4vw, 5px);
+  gap: clamp(1px, 0.6vw, 2px);
   justify-content: center;
   font-size: clamp(11px, 3.2vw, 12px);
   min-width: 0;
@@ -635,9 +635,10 @@ h3 {
 }
 
 .stack-row {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(4, max-content);
   gap: 10px;
+  justify-content: start;
   margin-top: 26px;
 }
 
@@ -650,6 +651,18 @@ h3 {
   font-size: 13px;
   font-weight: 700;
   padding: 8px 11px;
+}
+
+@media (max-width: 720px), (orientation: landscape) and (max-height: 500px) {
+  .stack-row {
+    grid-template-columns: repeat(3, max-content);
+  }
+}
+
+@media (max-width: 380px) and (orientation: portrait) {
+  .stack-row {
+    grid-template-columns: repeat(2, max-content);
+  }
 }
 
 .hero-visual {
