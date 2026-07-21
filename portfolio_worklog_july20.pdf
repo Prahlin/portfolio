@@ -1,0 +1,745 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [6 0 R 8 0 R 10 0 R 12 0 R 14 0 R 16 0 R] /Count 6 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+5 0 obj
+<< /Length 5818 >>
+stream
+BT
+/F2 15.6 Tf
+1 0 0 1 54.0 742.0 Tm (Prahlin Portfolio Work Log - July 20, 2026) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 714.9 Tm (Compiled summary for Monday, July 20, 2026 - focus: continuing the Prahlin Portfolio landing-) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 703.4 Tm (page polish after the July 19 identity pass, rebuilding the green hero carousel CTA with) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 692.0 Tm (project-specific name stacks, device frames, platform-logo image assets, social-button) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 680.5 Tm (treatments, revised hero and proof copy, static-export validation, a new Cinerific case-study) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 669.1 Tm (route that mirrors the Alla Vostra page structure, empty Android tablet device frames for) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 657.6 Tm (later Cinerific content, refreshed project snapshot context, successful GitHub Actions) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 646.2 Tm (deployment checks, and generation of the daily Portfolio PDF worklog.) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 626.5 Tm (Generated in continuity with the established Prahlin Portfolio daily worklog cadence: compact) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 615.0 Tm (opening summary, source-material section, baseline section, goal list, work-completed) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 603.6 Tm (sections, validation section, files-touched list, follow-up context, and output-artifact) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 592.1 Tm (close.) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 572.4 Tm (This artifact intentionally covers only Prahlin/portfolio work performed for July 20, 2026:) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 561.0 Tm (the source snapshot refresh, review of every pre-existing Portfolio worklog PDF, the landing-) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 549.5 Tm (page and carousel work represented by commit eee650f84b6ab8988055258ea33869d8ce7e98f5, the) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 538.1 Tm (dedicated Cinerific page work represented by commit 0128d3a6607d7044c19c41c923c9f4c2ed16bf85,) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 526.6 Tm (local validation checks, Hostinger static-export workflow confirmation, and this worklog-) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 515.2 Tm (generation step. Alla Vostra, Credit King, and Cinerific application repositories were not) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 503.7 Tm (changed for this record.) Tj
+/F2 11.4 Tf
+1 0 0 1 54.0 475.8 Tm (Source Materials Reviewed) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 461.5 Tm (- Ran ./read_project.sh from /Users/prahlin/gh/portfolio and regenerated) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 450.0 Tm (  portfolio_PROJECT_SNAPSHOT.txt before writing this worklog, preserving the project) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 438.6 Tm (  convention that Codex reads the current source snapshot before continuing Portfolio work.) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 427.1 Tm (- Reviewed the refreshed portfolio_PROJECT_SNAPSHOT.txt, including project notes, current) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 415.7 Tm (  source tree, app source dumps, root/tooling/deployment configuration, public asset) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 404.2 Tm (  inventory, PDF worklog inventory, git context, and the standing instruction to ask for a) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 392.8 Tm (  commit message before committing or pushing.) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 381.3 Tm (- Reviewed every pre-existing Portfolio root-level worklog PDF:) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 369.9 Tm (  portfolio_worklog_july11.pdf, portfolio_worklog_july14.pdf,) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 358.4 Tm (  portfolio_worklog_july15_part1.pdf, portfolio_worklog_july15_part2.pdf,) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 347.0 Tm (  portfolio_worklog_july16.pdf, and portfolio_worklog_july19.pdf.) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 335.5 Tm (- Extracted text from the existing Portfolio PDFs with pdftotext to preserve the same title) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 324.1 Tm (  cadence, opening summary density, section order, bullet-heavy technical voice, validation) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 312.6 Tm (  language, files-touched list, follow-up context, and output-artifact close.) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 301.2 Tm (- Checked PDF metadata and page counts with pdfinfo. The mature Portfolio worklogs use) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 289.7 Tm (  letter-size pages, root-level filenames, compact five-to-six page bodies, and Codex) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 278.3 Tm (  standard-library PDF-generator metadata.) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 266.8 Tm (- Reviewed current Git history and confirmed the July 20 implementation scope through git) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 255.4 Tm (  log, git show --stat, git show --name-status, targeted diffs, and the final) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 243.9 Tm (  HEAD/origin/main match at 0128d3a6607d7044c19c41c923c9f4c2ed16bf85.) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 232.5 Tm (- Reviewed the committed landing-page source state from eee650f, whose subject summarized) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 221.0 Tm (  the user-approved hero CTA, icon-frame, social-button, proof-panel, and copy refinements.) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 209.6 Tm (- Reviewed the committed Cinerific source state from 0128d3a, whose subject recorded the new) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 198.1 Tm (  Cinerific case-study route and the empty tablet-frame treatment copied from the Alla) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 186.7 Tm (  Vostra layout pattern.) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 175.2 Tm (- Checked local preview responses from http://127.0.0.1:3000/ and) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 163.8 Tm (  http://127.0.0.1:3000/projects/cinerific, including 200 responses from both routes after) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 152.3 Tm (  the static-build validation pass.) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 140.9 Tm (- Checked GitHub Actions run history with gh run list and confirmed the Build static export) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 129.4 Tm (  for Hostinger workflow completed successfully for both July 20 commits.) Tj
+/F1 8.0 Tf
+1 0 0 1 54.0 34.0 Tm (Prahlin Portfolio Work Log - July 20, 2026 Page 1) Tj
+ET
+endstream
+endobj
+6 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 5 0 R >>
+endobj
+7 0 obj
+<< /Length 6225 >>
+stream
+BT
+/F2 11.4 Tf
+1 0 0 1 54.0 742.0 Tm (Baseline Status Before July 20 Work) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 727.7 Tm (- The July 19 Portfolio landing page already had the Prahlin brand restored, a green/black) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 716.2 Tm (  visual system, an Alla Vostra case-study route, updated proof stats, a proof-panel card,) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 704.8 Tm (  and project-carousel labels with basic platform icons.) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 693.3 Tm (- The green hero carousel still needed close visual tuning: the project label text, category) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 681.9 Tm (  text, platform icon placement, icon sizes, arrow treatment, animation direction, and) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 670.4 Tm (  mobile-width behavior were still being judged live against the local preview.) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 659.0 Tm (- The project CTA still used generic App wording and later View-prefixed wording before) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 647.5 Tm (  settling into a left-aligned composition with View, Project, colored project name, black) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 636.1 Tm (  category text, platform frames, and a stroked arrow.) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 624.6 Tm (- The Android, iOS, and web icons were still inline CSS/SVG treatments that needed repeated) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 613.2 Tm (  sizing, stroke, fill, spacing, and device-frame tuning to match the desired miniature-) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 601.7 Tm (  device look.) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 590.3 Tm (- The GitHub button remained the only secondary social button and did not yet have the) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 578.8 Tm (  paired LinkedIn treatment, icon box parity, white GitHub background, or enforced row break) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 567.4 Tm (  below the green project CTA.) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 555.9 Tm (- The hero lede, stack chips, and proof panel still carried July 19 wording that needed to) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 544.5 Tm (  be changed to the newer Original Vision, UI/UX Design, Front-End Logic, Back-End Support,) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 533.0 Tm (  EAS, GGL Play, and App Store language.) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 521.6 Tm (- Cinerific was still only represented on the landing page as a project card and carousel) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 510.1 Tm (  state; there was no dedicated /projects/cinerific case-study route to receive clicks from) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 498.7 Tm (  the card or green button.) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 487.2 Tm (- The intended Cinerific case-study page needed to preserve every existing Alla Vostra) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 475.8 Tm (  layout section and content rhythm while replacing phone screenshot frames with empty) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 464.3 Tm (  landscape Android tablet frames for later screenshots and corrected project copy.) Tj
+/F2 11.4 Tf
+1 0 0 1 54.0 444.6 Tm (Goals for July 20) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 430.3 Tm (- Finish the green hero carousel CTA as a reliable, mobile-friendly project button whose) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 418.9 Tm (  width stays consistent across projects while preserving left-aligned internal content.) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 407.4 Tm (- Replace generic CTA wording with project-specific project-name stacks and categories while) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 396.0 Tm (  keeping text style, stroke, color contrast, and spacing consistent with the rest of the) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 384.5 Tm (  hero UI.) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 373.1 Tm (- Create reusable device-frame treatments for phones and tablets, keep their interiors) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 361.6 Tm (  transparent or empty as requested, and place Android/iOS image logos inside matching) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 350.2 Tm (  frames whenever those platform logos appear.) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 338.7 Tm (- Keep the Android and iOS logo artwork visually consistent by converting the phone-frame) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 327.3 Tm (  versions into reusable SVG image assets rather than continuing to manually redraw slightly) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 315.8 Tm (  different icon shapes.) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 304.4 Tm (- Add a paired LinkedIn social button beside GitHub, match button dimensions, tune icon) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 292.9 Tm (  boxing, and force both secondary buttons onto the line below the green project CTA across) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 281.5 Tm (  desktop and mobile layouts.) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 270.0 Tm (- Update stack-chip and proof-panel terminology to better match the user actual experience) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 258.6 Tm (  and requested wording, including Node.js, Next.js, Tailwind CSS, Jetpack Compose, EAS, and) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 247.1 Tm (  GGL Play.) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 235.7 Tm (- Create a Cinerific project page that exactly follows the Alla Vostra page layout, section) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 224.2 Tm (  order, text density, and component structure while swapping screenshot-filled Android) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 212.8 Tm (  phone frames for empty landscape Android tablet frames.) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 201.3 Tm (- Wire both Cinerific entry points - the landing-page case-study card and the green) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 189.9 Tm (  Cinerific carousel button - to the new /projects/cinerific route.) Tj
+/F2 11.4 Tf
+1 0 0 1 54.0 170.2 Tm (Work Completed - Hero CTA, Project Labels, and Motion) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 155.9 Tm (- Changed all green carousel project buttons from App wording to Project wording during the) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 144.4 Tm (  tuning pass, then settled the visible CTA structure into View, Project, colored project) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 133.0 Tm (  name, black category label, platform frames/icons, and a large stroked arrow.) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 121.5 Tm (- Replaced the generic View label after user iteration so the project state shows the actual) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 110.1 Tm (  project name: Alla Vostra, Cinerific, or Credit King.) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 98.6 Tm (- Set Alla Vostra project-name fill to a lighter orange, Credit King to a lighter dark blue,) Tj
+/F1 8.0 Tf
+1 0 0 1 54.0 34.0 Tm (Prahlin Portfolio Work Log - July 20, 2026 Page 2) Tj
+ET
+endstream
+endobj
+8 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 7 0 R >>
+endobj
+9 0 obj
+<< /Length 6261 >>
+stream
+BT
+/F1 9.4 Tf
+1 0 0 1 54.0 742.0 Tm (  and Cinerific to purple while preserving the white text stroke and black outline language) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 730.5 Tm (  already used elsewhere in the CTA.) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 719.1 Tm (- Added category labels under the project names, using tiny solid black centered text:) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 707.6 Tm (  Restaurant for Alla Vostra, Streaming for Cinerific, and Finance for Credit King.) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 696.2 Tm (- Moved category labels below the colored project names instead of letting them sit to the) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 684.7 Tm (  right of the names, then tuned the font down by 1px and added a slightly larger vertical) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 673.3 Tm (  gap between name and category.) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 661.8 Tm (- Added and later removed the extra View-prefixed stack during live iteration, then restored) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 650.4 Tm (  the final View label without the colon and disabled animation for that static label.) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 638.9 Tm (- Swapped the horizontal placement of Project and the app-name stack, then renamed the) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 627.5 Tm (  visible label to View while retaining the project-name stack as the primary project-) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 616.0 Tm (  specific identity inside the button.) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 604.6 Tm (- Doubled the left/right gap around the app-name stack so the View label, name/category) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 593.1 Tm (  stack, and device icons read as separate pieces without making the button feel loose.) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 581.7 Tm (- Changed green button animation behavior so button assets slide in from the bottom rather) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 570.2 Tm (  than from the left, then preserved the user correction to disregard the later reverse-) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 558.8 Tm (  direction request.) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 547.3 Tm (- Adjusted the button inner alignment to prevent the left side of View from clipping, then) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 535.9 Tm (  horizontally aligned the CTA content with GitHub, React Native, and neighboring hero) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 524.4 Tm (  elements while maintaining equal button width.) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 513.0 Tm (- Eliminated trailing horizontal waste after the final device frame/icon and matched arrow) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 501.5 Tm (  right padding to View left padding so narrow portrait smartphones can fit the row without) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 490.1 Tm (  horizontal scrolling.) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 478.6 Tm (- Matched the black arrow visual weight to the View label by increasing size, giving it) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 467.2 Tm (  white fill, and applying the same black-stroked text treatment as the other CTA words.) Tj
+/F2 11.4 Tf
+1 0 0 1 54.0 447.5 Tm (Work Completed - Device Frames and Platform Assets) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 433.2 Tm (- Created a new miniature smartphone device-frame icon separate from the Android logo, based) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 421.7 Tm (  on a simplified Android Small aspect-ratio device frame.) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 410.3 Tm (- Scaled the smartphone frame through repeated user-directed passes: doubled its initial) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 398.8 Tm (  size, made the hollow interior transparent, widened the frame by 25%, then increased the) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 387.4 Tm (  overall scale twice by 10%.) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 375.9 Tm (- Placed the tiny Android and Apple icons vertically inside the phone frame, restored their) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 364.5 Tm (  white fill with black strokes after a color regression, and spread the two icons evenly) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 353.0 Tm (  within the transparent interior.) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 341.6 Tm (- Reduced the Android eyes by roughly 20%, then increased the Android, Apple, and web icon) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 330.1 Tm (  sizes through multiple 5% passes and a later 10% web-only pass.) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 318.7 Tm (- Built a separate horizontal tablet frame for Cinerific, slightly larger than the) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 307.2 Tm (  smartphone frame, without changing the existing phone-frame assets.) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 295.8 Tm (- Placed the Android icon inside the tablet frame for the Cinerific carousel state and) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 284.3 Tm (  matched the tablet-frame Android artwork to the phone-frame logo by replacing manual) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 272.9 Tm (  drawing with a copied reusable image asset.) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 261.4 Tm (- Added public/images/android-device-logo.svg as the canonical reusable Android device logo) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 250.0 Tm (  image, preserving the phone-frame look while allowing the same artwork to be placed inside) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 238.5 Tm (  the tablet frame.) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 227.1 Tm (- Added public/images/ios-device-logo.svg so the iOS logo also renders as a reusable image) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 215.6 Tm (  asset with the same white fill and black stroke behavior as the established phone-frame) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 204.2 Tm (  artwork.) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 192.7 Tm (- Changed every iOS platform appearance so the iOS logo receives its own device frame) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 181.3 Tm (  instead of sharing or floating outside a platform frame.) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 169.8 Tm (- Increased Android and iOS logo sizes by 10% after converting them into image assets,) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 158.4 Tm (  preserving the frame sizes and project-button layout constraints.) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 146.9 Tm (- Kept the web platform as a standalone globe icon for projects that also have a web) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 135.5 Tm (  surface, with sizing tuned separately from the framed mobile-platform logos.) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 124.0 Tm (- Ensured the icon/frame group remains compact near the arrow while still left-aligning the) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 112.6 Tm (  full internal asset cluster with the rest of the hero control row.) Tj
+/F1 8.0 Tf
+1 0 0 1 54.0 34.0 Tm (Prahlin Portfolio Work Log - July 20, 2026 Page 3) Tj
+ET
+endstream
+endobj
+10 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 9 0 R >>
+endobj
+11 0 obj
+<< /Length 6229 >>
+stream
+BT
+/F2 11.4 Tf
+1 0 0 1 54.0 742.0 Tm (Work Completed - Social Buttons, Hero Copy, and Proof Panel) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 727.7 Tm (- Changed the GitHub button to a white background with black text while keeping it aligned) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 716.2 Tm (  below the green carousel CTA.) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 704.8 Tm (- Copied the GitHub button exactly and placed an identically sized replica to its right,) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 693.3 Tm (  then changed the second button text to LinkedIn.) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 681.9 Tm (- Replaced the GitHub-style braces on the LinkedIn button with a custom royalty-free) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 670.4 Tm (  LinkedIn-style in mark, enlarged it by 50% and later by another 20%, and tuned the icon) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 659.0 Tm (  color relationship through user-directed blue/light-blue swaps.) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 647.5 Tm (- Matched the LinkedIn icon stroke to the black-stroked green-button typography only around) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 636.1 Tm (  the image borders, then added hairline black strokes to the i, n, and i-dot shapes) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 624.6 Tm (  themselves.) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 613.2 Tm (- Turned the entire LinkedIn button light blue and preserved enough contrast between the) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 601.7 Tm (  blue button, the icon box, and the icon letters for the button to remain legible beside) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 590.3 Tm (  the white GitHub button.) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 578.8 Tm (- Added an identically sized bordered icon box around the GitHub braces, nudged the braces) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 567.4 Tm (  closer to the middle, and made the braces bold so the GitHub mark visually balances with) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 555.9 Tm (  the LinkedIn mark.) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 544.5 Tm (- Forced a line wrap after the green carousel CTA so the GitHub and LinkedIn buttons always) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 533.0 Tm (  appear on the line below it on desktop, mobile, portrait, and landscape viewports.) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 521.6 Tm (- Changed the hero lede from the July 19 cross-platform release sentence to Original Vision) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 510.1 Tm (  + UI/UX Design + Front-End Logic + Back-End Support with a real right-arrow glyph before) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 498.7 Tm (  100% Stress-free.) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 487.2 Tm (- Increased the hero eyebrow font by 1px to improve the proof line hierarchy above the main) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 475.8 Tm (  hero heading.) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 464.3 Tm (- Changed stack-chip text from Node to Node.js and Next to Next.js, then replaced JavaScript) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 452.9 Tm (  with Tailwind CSS and Compose with Jetpack Compose after reviewing which terms fit the) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 441.4 Tm (  stack-chip section best.) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 430.0 Tm (- Reordered the dark green proof card assets left to right as Vercel/EAS, Stripe/Postmark,) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 418.5 Tm (  and GGL Play/App Store, with GGL replacing Google and Supabase replaced by EAS.) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 407.1 Tm (- Narrowed the horizontal spacing between each proof icon and its related text through three) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 395.6 Tm (  small passes, landing at a denser proof-panel rhythm that still keeps each pair readable.) Tj
+/F2 11.4 Tf
+1 0 0 1 54.0 375.9 Tm (Work Completed - Dedicated Cinerific Case Study Route) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 361.6 Tm (- Added app/projects/cinerific/page.tsx as a dedicated Cinerific case-study page while) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 350.2 Tm (  preserving the same section order, layout structure, header rhythm, CTA placement, and) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 338.7 Tm (  content density used by the Alla Vostra project page.) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 327.3 Tm (- Added app/projects/cinerific/ExpandableFlowStacks.tsx by mirroring the Alla Vostra) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 315.8 Tm (  expandable-flow component pattern and adapting the visual surface to Cinerific tablet) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 304.4 Tm (  placeholders.) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 292.9 Tm (- Kept the copied page content, headers, boxes, buttons, sections, and section order) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 281.5 Tm (  intentionally aligned with Alla Vostra so the user can later provide the correct Cinerific) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 270.0 Tm (  screenshots and project-specific copy without needing a layout rebuild.) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 258.6 Tm (- Replaced the Alla Vostra screenshot-filled Android phone frames with empty landscape) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 247.1 Tm (  Android tablet frames on the Cinerific page, including hero tablet devices and product-) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 235.7 Tm (  flow tablet placeholders.) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 224.2 Tm (- Scoped the Cinerific tablet-frame CSS under cinerific-specific selectors so the new blank) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 212.8 Tm (  tablet treatment does not affect the existing Alla Vostra phone screenshots or other) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 201.3 Tm (  landing-page assets.) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 189.9 Tm (- Kept the empty tablet frame interiors ready for later screenshot insertion, with visible) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 178.4 Tm (  device shell, transparent/empty screen area, camera/notch details, and responsive) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 167.0 Tm (  landscape sizing.) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 155.5 Tm (- Linked the Cinerific case-study card on the landing page to /projects/cinerific, matching) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 144.1 Tm (  the existing clickable behavior already used by Alla Vostra.) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 132.6 Tm (- Linked the green Cinerific carousel button to /projects/cinerific so both the card and) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 121.2 Tm (  hero CTA route to the newly created page.) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 109.7 Tm (- Preserved existing Alla Vostra routing, page layout, screenshots, and behavior while) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 98.3 Tm (  adding Cinerific in parallel rather than refactoring the shared case-study system.) Tj
+/F1 8.0 Tf
+1 0 0 1 54.0 34.0 Tm (Prahlin Portfolio Work Log - July 20, 2026 Page 4) Tj
+ET
+endstream
+endobj
+12 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 11 0 R >>
+endobj
+13 0 obj
+<< /Length 6072 >>
+stream
+BT
+/F1 9.4 Tf
+1 0 0 1 54.0 742.0 Tm (- Confirmed the static build sees /projects/cinerific as a prerendered route alongside /,) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 730.5 Tm (  /projects/alla-vostra, and /_not-found.) Tj
+/F2 11.4 Tf
+1 0 0 1 54.0 710.9 Tm (Work Completed - Preview, Cache, and Workflow Handling) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 696.5 Tm (- Kept the local Next.js preview available at http://127.0.0.1:3000/ during the visual) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 685.1 Tm (  tuning loop so the user could hard refresh and inspect each small CTA/icon adjustment.) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 673.6 Tm (- Cleared stale Turbopack and .next cache artifacts when local browser refreshes did not) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 662.2 Tm (  reflect CSS and component edits, moving stale cache directories out of the project path) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 650.7 Tm (  before restarting preview as needed.) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 639.3 Tm (- Used curl and targeted source/CSS checks to distinguish actual code changes from stale) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 627.8 Tm (  local browser or Turbopack output when the tablet Android logo appeared unchanged.) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 616.4 Tm (- Preserved the user newest instruction when a later animation-direction request was) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 604.9 Tm (  explicitly disregarded, leaving the View label static and keeping the accepted slide-in) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 593.5 Tm (  direction behavior.) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 582.0 Tm (- Maintained the standing workflow of recommending commit messages when asked, using the) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 570.6 Tm (  user preferred past-tense style and short bullet count before the implementation commits) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 559.1 Tm (  were made.) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 547.7 Tm (- Regenerated portfolio_PROJECT_SNAPSHOT.txt for this worklog pass so the project snapshot) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 536.2 Tm (  now lists the new Cinerific route and new Android/iOS SVG logo assets.) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 524.8 Tm (- Left all application-specific changes inside the Portfolio repository. No external Alla) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 513.3 Tm (  Vostra, Cinerific Android, or Credit King app repository files were edited.) Tj
+/F2 11.4 Tf
+1 0 0 1 54.0 493.6 Tm (Validation and Checks Performed) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 479.3 Tm (- Ran npm run check after the July 20 page and component work; TypeScript completed) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 467.9 Tm (  successfully with tsc --noEmit.) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 456.4 Tm (- Ran npm run build:static; Next.js 16.2.10 compiled successfully, completed TypeScript,) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 445.0 Tm (  collected page data, generated 5 static pages, and listed /, /projects/alla-vostra, and) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 433.5 Tm (  /projects/cinerific as static routes.) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 422.1 Tm (- Checked http://127.0.0.1:3000/ with curl -I and received HTTP/1.1 200 OK from the local) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 410.6 Tm (  Next.js preview server.) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 399.2 Tm (- Checked http://127.0.0.1:3000/projects/cinerific with curl -I and received HTTP/1.1 200 OK) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 387.7 Tm (  from the local Next.js preview server.) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 376.3 Tm (- Confirmed git rev-parse HEAD and git rev-parse origin/main both resolve to) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 364.8 Tm (  0128d3a6607d7044c19c41c923c9f4c2ed16bf85, meaning the latest committed Portfolio) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 353.4 Tm (  implementation state is pushed to origin/main.) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 341.9 Tm (- Checked gh run list --limit 5 and confirmed Build static export for Hostinger completed) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 330.5 Tm (  successfully for Added Cinerific case study page at 2026-07-21T00:28:15Z.) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 319.0 Tm (- Checked the same GitHub Actions list and confirmed Build static export for Hostinger) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 307.6 Tm (  completed successfully for Refined hero CTAs and project carousel visuals at) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 296.1 Tm (  2026-07-20T23:59:25Z.) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 284.7 Tm (- Verified the new Cinerific route during implementation by checking that) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 273.2 Tm (  /projects/cinerific returned 200, that Cinerific page output contained the expected) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 261.8 Tm (  tablet-frame markers, and that scoped Cinerific CSS existed in app/globals.css.) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 250.3 Tm (- Verified the project-button routing change during implementation by confirming the) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 238.9 Tm (  Cinerific card and green carousel state both point at /projects/cinerific.) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 227.4 Tm (- Checked the PDF generation convention again with pdfinfo and pdftotext before writing this) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 216.0 Tm (  artifact, then generated this root-level PDF with matching metadata.) Tj
+/F2 11.4 Tf
+1 0 0 1 54.0 196.3 Tm (Files Touched During July 20 Portfolio Work) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 182.0 Tm (- app/ProjectCarouselButton.tsx - rebuilt the green project carousel CTA, project-) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 170.5 Tm (  name/category stacks, platform icon/frame rendering, framed Android/iOS image usage, arrow) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 159.1 Tm (  treatment, equal-width responsive behavior, and Cinerific link target.) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 147.6 Tm (- app/globals.css - tuned hero CTA sizing, strokes, animation, clipping, device frames,) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 136.2 Tm (  tablet frames, platform icons, social buttons, proof-panel spacing, Cinerific page tablet) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 124.7 Tm (  placeholders, and responsive behavior.) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 113.3 Tm (- app/page.tsx - updated hero lede, stack chips, proof-panel labels/order, social buttons,) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 101.8 Tm (  Cinerific case-study href, and landing-page data used by the carousel and project cards.) Tj
+/F1 8.0 Tf
+1 0 0 1 54.0 34.0 Tm (Prahlin Portfolio Work Log - July 20, 2026 Page 5) Tj
+ET
+endstream
+endobj
+14 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 13 0 R >>
+endobj
+15 0 obj
+<< /Length 5077 >>
+stream
+BT
+/F1 9.4 Tf
+1 0 0 1 54.0 742.0 Tm (- app/projects/cinerific/page.tsx - added the new Cinerific case-study route by mirroring) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 730.5 Tm (  the Alla Vostra page layout and swapping screenshot-filled phone devices for empty) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 719.1 Tm (  landscape tablet frames.) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 707.6 Tm (- app/projects/cinerific/ExpandableFlowStacks.tsx - added the Cinerific expandable-flow) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 696.2 Tm (  component variant with empty tablet placeholders that can receive screenshots later.) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 684.7 Tm (- public/images/android-device-logo.svg - added the canonical reusable Android logo asset) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 673.3 Tm (  copied from the accepted phone-frame artwork so phone and tablet appearances match) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 661.8 Tm (  exactly.) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 650.4 Tm (- public/images/ios-device-logo.svg - added the canonical reusable iOS logo asset so iOS) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 638.9 Tm (  appearances can render consistently inside their own phone device frames.) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 627.5 Tm (- portfolio_PROJECT_SNAPSHOT.txt - regenerated by ./read_project.sh for this worklog pass,) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 616.0 Tm (  adding the Cinerific route files and new public SVG logo assets to the project snapshot.) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 604.6 Tm (- next-env.d.ts - Next.js generated route-type import path changed during static-build) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 593.1 Tm (  validation; no manual product behavior change was intended in this file.) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 581.7 Tm (- portfolio_worklog_july20.pdf - generated as this daily worklog artifact in the root-level) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 570.2 Tm (  Portfolio worklog convention.) Tj
+/F2 11.4 Tf
+1 0 0 1 54.0 550.6 Tm (Follow-Up Context) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 536.2 Tm (- The Cinerific case-study page is intentionally a layout-faithful replica of Alla Vostra) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 524.8 Tm (  for now. Its copied textual content and empty tablet frames should be replaced later with) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 513.3 Tm (  correct Cinerific screenshots, accurate Cinerific project details, and final production) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 501.9 Tm (  language when the user provides them.) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 490.4 Tm (- The new Cinerific tablet placeholders are scoped so screenshot insertion can happen) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 479.0 Tm (  without disturbing the existing Alla Vostra phone-frame experience.) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 467.5 Tm (- The Android and iOS logo image assets are now the safest source of truth for framed) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 456.1 Tm (  mobile-platform icon appearances inside the hero carousel.) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 444.6 Tm (- The LinkedIn social button currently has the designed visual treatment but should receive) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 433.2 Tm (  the user actual LinkedIn URL when provided.) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 421.7 Tm (- The GitHub and LinkedIn buttons are now forced onto the line below the green CTA. Future) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 410.3 Tm (  CTA work should preserve that line break unless the user asks to redesign the hero control) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 398.8 Tm (  grouping.) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 387.4 Tm (- The proof panel now uses Vercel/EAS, Stripe/Postmark, and GGL Play/App Store. Supabase was) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 375.9 Tm (  intentionally removed and EAS was chosen because it is closest to the user) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 364.5 Tm (  deployment/release work adjacent to Vercel in this portfolio context.) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 353.0 Tm (- Because npm run build:static can regenerate next-env.d.ts route-type imports, check that) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 341.6 Tm (  file before committing if the next commit is meant to contain only the PDF and refreshed) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 330.1 Tm (  project snapshot.) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 318.7 Tm (- Continue honoring the project workflow: after code or artifact generation, ask for or use) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 307.2 Tm (  the user-approved commit message before committing or pushing.) Tj
+/F2 11.4 Tf
+1 0 0 1 54.0 287.5 Tm (Output Artifact) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 273.2 Tm (- Generated portfolio_worklog_july20.pdf at) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 261.8 Tm (  /Users/prahlin/gh/portfolio/portfolio_worklog_july20.pdf.) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 250.3 Tm (- The artifact follows the existing Portfolio worklog naming, metadata, section order,) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 238.9 Tm (  technical voice, validation summary, files-touched list, follow-up context, and root-level) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 227.4 Tm (  placement conventions.) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 216.0 Tm (- The local project date used for this filename and title is Monday, July 20, 2026 EDT,) Tj
+/F1 9.4 Tf
+1 0 0 1 54.0 204.5 Tm (  matching the machine and repository work session clock.) Tj
+/F1 8.0 Tf
+1 0 0 1 54.0 34.0 Tm (Prahlin Portfolio Work Log - July 20, 2026 Page 6) Tj
+ET
+endstream
+endobj
+16 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 15 0 R >>
+endobj
+17 0 obj
+<< /Title (Prahlin Portfolio Work Log - July 20, 2026) /Subject (Portfolio website development worklog) /Author (Codex) /Creator (Codex standard-library PDF generator) /Producer (Codex standard-library PDF generator) >>
+endobj
+xref
+0 18
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000149 00000 n 
+0000000219 00000 n 
+0000000294 00000 n 
+0000006164 00000 n 
+0000006300 00000 n 
+0000012577 00000 n 
+0000012713 00000 n 
+0000019026 00000 n 
+0000019163 00000 n 
+0000025445 00000 n 
+0000025583 00000 n 
+0000031708 00000 n 
+0000031846 00000 n 
+0000036976 00000 n 
+0000037114 00000 n 
+trailer
+<< /Size 18 /Root 1 0 R /Info 17 0 R >>
+startxref
+37350
+%%EOF
