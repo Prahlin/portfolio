@@ -58,6 +58,7 @@ function LinkedInMark() {
   return (
     <svg
       aria-hidden
+      className="linkedin-icon-mark"
       height="32.4"
       viewBox="0 0 24 24"
       width="32.4"
@@ -107,6 +108,7 @@ function GitHubBracesMark() {
   return (
     <svg
       aria-hidden
+      className="github-icon-mark"
       height="32.4"
       viewBox="0 0 24 24"
       width="32.4"
@@ -137,6 +139,59 @@ function GitHubBracesMark() {
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth="2"
+      />
+    </svg>
+  );
+}
+
+function DribbbleMark() {
+  return (
+    <svg
+      aria-hidden
+      className="dribbble-icon-mark"
+      height="32.4"
+      viewBox="0 0 24 24"
+      width="32.4"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <rect
+        fill="#f3fff7"
+        height="18"
+        rx="3"
+        stroke="#000"
+        strokeWidth="1.35"
+        width="18"
+        x="3"
+        y="3"
+      />
+      <circle
+        cx="12"
+        cy="12"
+        fill="#ea4c89"
+        r="6.2"
+        stroke="#000"
+        strokeWidth="1.3"
+      />
+      <path
+        d="M7 9.4c2.8.6 6.1.1 9.8-1.6"
+        fill="none"
+        stroke="#000"
+        strokeLinecap="round"
+        strokeWidth="1.05"
+      />
+      <path
+        d="M9.2 6.7c2.2 2.4 3.8 6 4.8 10.5"
+        fill="none"
+        stroke="#000"
+        strokeLinecap="round"
+        strokeWidth="1.05"
+      />
+      <path
+        d="M6.3 13.5c3.8-1.2 7.7-1 11.4.8"
+        fill="none"
+        stroke="#000"
+        strokeLinecap="round"
+        strokeWidth="1.05"
       />
     </svg>
   );
@@ -415,45 +470,104 @@ export default function Home() {
               </p>
               <h1>React Native Full-Stack Mobile Developer</h1>
               <p className="hero-lede">
-                Original Vision + UI/UX Design + Front-End Logic + Back-End
-                Support → 100% Stress-free
+                UI/UX Design + Front-End Logic + Back-End Support → 100%
+                Stress-free
               </p>
 
               <div className="hero-actions">
-                <ProjectCarouselButton />
-                <span
-                  className="hero-action-break"
-                  aria-hidden
-                  style={{ flexBasis: "100%", height: 0 }}
-                />
-                <a
-                  className="button button-secondary github-button"
-                  href="https://github.com/Prahlin"
-                  rel="noreferrer"
-                  style={{
-                    background: "#f3fff7",
-                    borderColor: "#f3fff7",
-                    color: "#000",
-                  }}
-                  target="_blank"
-                >
-                  GitHub
-                  <GitHubBracesMark />
-                </a>
-                <a
-                  className="button button-secondary github-button linkedin-button"
-                  href="https://www.linkedin.com/"
-                  rel="noreferrer"
-                  style={{
-                    background: "#60a5fa",
-                    borderColor: "#60a5fa",
-                    color: "#000",
-                  }}
-                  target="_blank"
-                >
-                  LinkedIn
-                  <LinkedInMark />
-                </a>
+                <div className="hero-project-action">
+                  <span
+                    className="hero-view-label carousel-button-project-word"
+                    aria-hidden
+                  >
+                    <span
+                      className="hero-view-label-stack"
+                      style={{
+                        display: "grid",
+                        gap: "0.32em",
+                        justifySelf: "start",
+                        marginLeft: "var(--hero-view-stack-left, 0px)",
+                        textAlign: "left",
+                        width: "var(--hero-view-stack-width, max-content)",
+                      }}
+                    >
+                      <span
+                        className="hero-view-word"
+                        aria-label="Check Out"
+                      >
+                        <span>C</span>
+                        <span>h</span>
+                        <span>e</span>
+                        <span>c</span>
+                        <span>k</span>
+                        <span className="hero-word-space" aria-hidden>
+                          {" "}
+                        </span>
+                        <span>O</span>
+                        <span>u</span>
+                        <span>t</span>
+                      </span>
+                      <span
+                        className="hero-project-word"
+                        aria-label="Projects"
+                      >
+                        <span>P</span>
+                        <span>r</span>
+                        <span>o</span>
+                        <span>j</span>
+                        <span>e</span>
+                        <span>c</span>
+                        <span>t</span>
+                        <span>s</span>
+                      </span>
+                    </span>
+                  </span>
+                  <ProjectCarouselButton />
+                </div>
+                <div className="hero-social-buttons">
+                  <a
+                    className="button button-secondary hero-social-button github-button"
+                    href="https://github.com/Prahlin"
+                    rel="noreferrer"
+                    style={{
+                      background: "#f3fff7",
+                      borderColor: "#f3fff7",
+                      color: "#000",
+                    }}
+                    target="_blank"
+                  >
+                    <span className="github-label-text">GitHub</span>
+                    <GitHubBracesMark />
+                  </a>
+                  <a
+                    className="button button-secondary hero-social-button linkedin-button"
+                    href="https://www.linkedin.com/"
+                    rel="noreferrer"
+                    style={{
+                      background: "#60a5fa",
+                      borderColor: "#60a5fa",
+                      color: "#000",
+                    }}
+                    target="_blank"
+                  >
+                    LinkedIn
+                    <LinkedInMark />
+                  </a>
+                  <a
+                    className="button button-secondary hero-social-button dribbble-button"
+                    href="https://dribbble.com/"
+                    rel="noreferrer"
+                    style={{
+                      background: "#ea4c89",
+                      borderColor: "#ea4c89",
+                      color: "#000",
+                    }}
+                    target="_blank"
+                  >
+                    Dribbble
+                    <DribbbleMark />
+                  </a>
+                </div>
               </div>
 
               <div className="stack-row" aria-label="Primary stack">

@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
 
 type MobilePlatform = "android" | "apple";
 type ProjectTone = "commerce" | "entertainment" | "finance";
@@ -222,6 +222,8 @@ function WebMark() {
 
 export function ProjectCarouselButton() {
   const [activeIndex, setActiveIndex] = useState(0);
+  const arrowRef = useRef<HTMLSpanElement>(null);
+  const buttonRef = useRef<HTMLAnchorElement>(null);
   const activeProject = projectLinks[activeIndex];
 
   useEffect(() => {
@@ -232,20 +234,141 @@ export function ProjectCarouselButton() {
     return () => window.clearInterval(interval);
   }, []);
 
+  useLayoutEffect(() => {
+    let frame = 0;
+
+    const syncHeroActionGeometry = () => {
+      if (frame) {
+        window.cancelAnimationFrame(frame);
+      }
+
+      frame = window.requestAnimationFrame(() => {
+        const arrow = arrowRef.current;
+        const button = buttonRef.current;
+        const targetIcon =
+          document.querySelector<SVGSVGElement>(".dribbble-icon-mark") ??
+          document.querySelector<SVGSVGElement>(".linkedin-icon-mark");
+
+        if (arrow && button && targetIcon) {
+          const arrowRect = arrow.getBoundingClientRect();
+          const buttonRect = button.getBoundingClientRect();
+          const targetIconRect = targetIcon.getBoundingClientRect();
+          const targetIconCenter =
+            targetIconRect.left + targetIconRect.width / 2;
+          const arrowLeft =
+            targetIconCenter - buttonRect.left - arrowRect.width / 2;
+          const clampedArrowLeft = Math.max(
+            0,
+            Math.min(arrowLeft, buttonRect.width - arrowRect.width),
+          );
+
+          button.style.setProperty(
+            "--carousel-arrow-left",
+            `${clampedArrowLeft}px`,
+          );
+        }
+
+        const viewLabel =
+          document.querySelector<HTMLElement>(".hero-view-label");
+        const githubText =
+          document.querySelector<HTMLElement>(".github-label-text");
+        const githubIcon =
+          document.querySelector<SVGSVGElement>(".github-icon-mark");
+
+        if (viewLabel && githubText && githubIcon) {
+          const viewLabelRect = viewLabel.getBoundingClientRect();
+          const githubTextRect = githubText.getBoundingClientRect();
+          const githubIconRect = githubIcon.getBoundingClientRect();
+          const stackLeft = githubTextRect.left - viewLabelRect.left;
+          const stackWidth = githubIconRect.right - githubTextRect.left;
+
+          viewLabel.style.setProperty(
+            "--hero-view-stack-left",
+            `${stackLeft}px`,
+          );
+          viewLabel.style.setProperty(
+            "--hero-view-stack-width",
+            `${stackWidth}px`,
+          );
+        }
+      });
+    };
+
+    syncHeroActionGeometry();
+    window.addEventListener("resize", syncHeroActionGeometry);
+
+    const targetIcon =
+      document.querySelector<SVGSVGElement>(".dribbble-icon-mark") ??
+      document.querySelector<SVGSVGElement>(".linkedin-icon-mark");
+    const targetButton = targetIcon?.closest(".hero-social-button");
+    const viewLabel = document.querySelector<HTMLElement>(".hero-view-label");
+    const githubText = document.querySelector<HTMLElement>(".github-label-text");
+    const githubIcon =
+      document.querySelector<SVGSVGElement>(".github-icon-mark");
+    const githubButton = githubText?.closest(".github-button");
+    const resizeObserver =
+      typeof ResizeObserver === "undefined"
+        ? null
+        : new ResizeObserver(syncHeroActionGeometry);
+
+    if (resizeObserver) {
+      if (buttonRef.current) {
+        resizeObserver.observe(buttonRef.current);
+      }
+
+      if (targetIcon) {
+        resizeObserver.observe(targetIcon);
+      }
+
+      if (targetButton) {
+        resizeObserver.observe(targetButton);
+      }
+
+      if (viewLabel) {
+        resizeObserver.observe(viewLabel);
+      }
+
+      if (githubText) {
+        resizeObserver.observe(githubText);
+      }
+
+      if (githubIcon) {
+        resizeObserver.observe(githubIcon);
+      }
+
+      if (githubButton) {
+        resizeObserver.observe(githubButton);
+      }
+    }
+
+    if ("fonts" in document) {
+      document.fonts.ready.then(syncHeroActionGeometry).catch(() => {});
+    }
+
+    return () => {
+      if (frame) {
+        window.cancelAnimationFrame(frame);
+      }
+
+      window.removeEventListener("resize", syncHeroActionGeometry);
+      resizeObserver?.disconnect();
+    };
+  }, []);
+
   return (
     <a
       className="button button-primary carousel-button"
       href={activeProject.href}
+      ref={buttonRef}
       style={{
         boxSizing: "border-box",
-        flex: "0 1 420px",
-        gap: "clamp(3px, 1vw, 5px)",
-        justifyContent: "flex-start",
+        display: "block",
         maxWidth: "100%",
         minWidth: 0,
-        paddingLeft: "clamp(10px, 3vw, 16px)",
-        paddingRight: "clamp(10px, 3vw, 16px)",
-        width: "min(420px, 100%)",
+        paddingLeft: 0,
+        paddingRight: 0,
+        position: "relative",
+        width: "100%",
       }}
     >
       <span
@@ -253,29 +376,26 @@ export function ProjectCarouselButton() {
         aria-live="polite"
         style={{
           alignItems: "center",
-          display: "inline-flex",
-          flex: "0 1 auto",
-          gap: "clamp(0.55em, 2.4vw, 1em)",
+          display: "grid",
+          justifyContent: "stretch",
+          left: 0,
           minWidth: 0,
           overflow: "visible",
+          position: "absolute",
+          top: "50%",
+          transform: "translateY(-50%)",
+          width:
+            "var(--carousel-arrow-left, calc(100% - clamp(10px, 3vw, 16px) - 21px))",
           whiteSpace: "nowrap",
         }}
       >
-        <span className="carousel-button-project">
-          <span
-            className="carousel-button-project-word"
-            style={strokedWhiteTextStyle}
-          >
-            View
-          </span>
-        </span>
         <span
           className="carousel-button-label"
           key={activeProject.href}
           style={{
-            gap: "clamp(0.55em, 2.4vw, 1em)",
             minWidth: 0,
             paddingLeft: 0,
+            width: "100%",
           }}
         >
           <span
@@ -326,13 +446,20 @@ export function ProjectCarouselButton() {
       <span
         aria-hidden
         className="carousel-button-arrow"
+        ref={arrowRef}
         style={{
           ...strokedWhiteTextStyle,
           flex: "0 0 auto",
           fontSize: "22px",
           fontWeight: 900,
+          left:
+            "var(--carousel-arrow-left, calc(100% - clamp(10px, 3vw, 16px) - 21px))",
           lineHeight: 1,
-          marginLeft: "auto",
+          marginLeft: 0,
+          position: "absolute",
+          right: "auto",
+          top: "50%",
+          transform: "translateY(-50%)",
         }}
       >
         →

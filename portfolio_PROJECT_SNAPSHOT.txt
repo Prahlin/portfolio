@@ -1,5 +1,5 @@
 Portfolio Next.js PROJECT SNAPSHOT
-Generated: Mon Jul 20 20:28:59 EDT 2026
+Generated: Tue Jul 21 17:28:50 EDT 2026
 Project directory: /Users/prahlin/gh/portfolio
 
 IMPORTANT INSTRUCTIONS FOR CHATGPT & CODEX:
@@ -91,6 +91,7 @@ PROJECT FILE TREE
 /Users/prahlin/gh/portfolio/portfolio_worklog_july15_part2.pdf
 /Users/prahlin/gh/portfolio/portfolio_worklog_july16.pdf
 /Users/prahlin/gh/portfolio/portfolio_worklog_july19.pdf
+/Users/prahlin/gh/portfolio/portfolio_worklog_july20.pdf
 /Users/prahlin/gh/portfolio/postcss.config.mjs
 /Users/prahlin/gh/portfolio/public
 /Users/prahlin/gh/portfolio/public/favicon.svg
@@ -6247,7 +6248,8 @@ Status:
  M portfolio_PROJECT_SNAPSHOT.txt
 
 Recent commits:
-0128d3a (HEAD -> main, origin/main) Added Cinerific case study page
+310e45f (HEAD -> main, origin/main) generated the latest session pdf worklog for the Portfolio project, dated July 20, 2026.
+0128d3a Added Cinerific case study page
 eee650f Refined hero CTAs and project carousel visuals
 d82ad39 generated the session-specific project pdf worklog for July 19, 2026.
 bb80b0d - Updated portfolio branding to Prahlin - Refined hero headline and eyebrow copy - Reordered hero skill categories - Updated proof stats and release messaging - Reworked store/services card columns - Tuned carousel button spacing and animation - Added platform icons to project carousel labels - Matched project carousel icons to each project - Adjusted icon stroke weights and alignment - Polished hero CTA typography and contrast
@@ -6256,7 +6258,6 @@ babed15 Updated Alla Vostra case study screenshots and mobile flow presentation
 ccd78cb generated the latest pdf 'Portfolio' worklog for July 15 Part 2, 2026.
 fd69e1e created a dedicated project page 'Alla Vostra', accessible by various means: clicking the green action button in the hero that mentions its name, the device frame that displays its device-framed screenshot, or anywhere on the project card further down the page. the project page includes information such as overciew, scope and ownership, core features, product flow (steps 1-6), technical architecture, engineering decisions, testing and release readiness, build timeline, etc. a multitude of small/large Android device screenshots are viewable to represent the graphical and functional UI responsively, each screenshot enlarging with a pop-up overlay during mouse hover (desktop/laptop) and tap&hold (mobile).
 6a61438 generated pdf worklog for July 15, part 1. created a read project bash file to study and understand the full scope of the project files & folders before commencing a new session.
-3fa5aa5 removed line wrapping of top nav links that was pushing links to a secondary row during compressed, portrait mobile aspect ratios. all links now appear without jumping to a new row. abbreviated text assets below the main hero, ensuring that headers do not clip into each other once compressed. added apostrophes around each project name in the green main button of the hero, ensuring that the user knows the names listed concern app mobile app dev projects and that clicking it navigates to the corresponding page.
 
 Remotes:
 origin	https://github.com/Prahlin/portfolio.git (fetch)
@@ -6322,6 +6323,7 @@ portfolio_worklog_july15_part1.pdf | 25059 bytes | modified 2026-07-15 18:07:04
 portfolio_worklog_july15_part2.pdf | 33101 bytes | modified 2026-07-15 21:31:55
 portfolio_worklog_july16.pdf | 28632 bytes | modified 2026-07-16 19:52:08
 portfolio_worklog_july19.pdf | 34252 bytes | modified 2026-07-19 10:16:23
+portfolio_worklog_july20.pdf | 37790 bytes | modified 2026-07-20 20:35:05
 
 
 ============================================================
