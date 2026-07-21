@@ -1246,6 +1246,34 @@ section.project-hero {
   z-index: 1;
 }
 
+.cinerific-case .av-device {
+  border-radius: var(--capture-frame-radius-standard);
+  padding: 12px 18px;
+}
+
+.cinerific-case .av-device-screen {
+  aspect-ratio: 16 / 9;
+  background:
+    linear-gradient(rgba(67, 255, 146, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(67, 255, 146, 0.04) 1px, transparent 1px),
+    #020403;
+  background-size: 18px 18px;
+  border: 1px solid rgba(198, 255, 217, 0.16);
+  border-radius: var(--capture-screen-radius-standard);
+}
+
+.cinerific-tablet-camera {
+  background: #1d2923;
+  border: 1px solid rgba(198, 255, 217, 0.24);
+  border-radius: 999px;
+  height: 5px;
+  left: 7px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 5px;
+}
+
 .av-showcase-proof {
   background: rgba(5, 16, 10, 0.82);
   border: 1px solid var(--line-strong);
@@ -1522,6 +1550,40 @@ section.project-hero {
   display: flex;
   gap: 14px;
   justify-content: center;
+}
+
+.cinerific-case .flow-image-frame,
+.cinerific-case .flow-screen-standard .flow-image-frame,
+.cinerific-case .flow-screen-tall .flow-image-frame {
+  aspect-ratio: 16 / 9;
+  background: linear-gradient(145deg, #0c120f, #000);
+  border-radius: var(--capture-frame-radius-standard);
+}
+
+.cinerific-case .flow-image-frame::before {
+  background:
+    linear-gradient(rgba(67, 255, 146, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(67, 255, 146, 0.04) 1px, transparent 1px),
+    #020403;
+  background-size: 14px 14px;
+  border: 1px solid rgba(198, 255, 217, 0.16);
+  border-radius: 5px;
+  content: "";
+  inset: 10px 14px;
+  position: absolute;
+}
+
+.cinerific-case .flow-image-frame::after {
+  background: #1d2923;
+  border: 1px solid rgba(198, 255, 217, 0.24);
+  border-radius: 999px;
+  content: "";
+  height: 4px;
+  left: 5px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
 }
 
 .flow-browse-toggle-row {

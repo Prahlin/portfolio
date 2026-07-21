@@ -38,7 +38,7 @@ const projectLinks: Array<{
   {
     category: "STREAMING",
     hasTablet: true,
-    href: "#cinerific",
+    href: "/projects/cinerific",
     mobilePlatforms: ["android"],
     name: "Cinerific",
     tone: "entertainment",

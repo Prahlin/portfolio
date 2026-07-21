@@ -147,6 +147,7 @@ const caseStudies: CaseStudy[] = [
     id: "cinerific",
     title: "Cinerific",
     eyebrow: "Native Android entertainment preview",
+    href: "/projects/cinerific",
     description:
       "Kotlin and Jetpack Compose Android app scaffold translating Figma intro and sign-in frames into tablet-friendly full-screen screens, drawable assets, and an animated intro flow.",
     tags: ["Kotlin", "Compose", "Gradle", "TypeScript"],
