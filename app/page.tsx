@@ -456,11 +456,11 @@ export default function Home() {
           <div className="hero-grid">
             <div className="hero-copy">
               <p className="eyebrow hero-eyebrow">
-                <span className="hero-eyebrow-underline">Appealing</span>{" "}
+                <span className="hero-eyebrow-underline">User-friendly</span>{" "}
                 <span className="hero-eyebrow-box">UI/UX</span>
                 <span className="hero-eyebrow-period">,</span>
                 <br />
-                <span className="hero-eyebrow-underline">User-Friendly</span>{" "}
+                <span className="hero-eyebrow-underline">Buttery-Smooth</span>{" "}
                 <span className="hero-eyebrow-box">Front-End</span>
                 <span className="hero-eyebrow-period">,</span>
                 <br />

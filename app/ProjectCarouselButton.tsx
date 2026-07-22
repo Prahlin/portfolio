@@ -222,6 +222,24 @@ function WebMark() {
   );
 }
 
+function CarouselArrowMark() {
+  return (
+    <img
+      alt=""
+      aria-hidden
+      className="carousel-button-arrow-mark"
+      draggable={false}
+      style={{
+        display: "block",
+        height: "100%",
+        verticalAlign: "top",
+        width: "100%",
+      }}
+      src="/images/carousel-arrow.svg"
+    />
+  );
+}
+
 export function ProjectCarouselButton() {
   const [activeIndex, setActiveIndex] = useState(0);
   const arrowRef = useRef<HTMLSpanElement>(null);
@@ -275,14 +293,17 @@ export function ProjectCarouselButton() {
               "--hero-eyebrow-font-size",
               `${socialButtonHeight * 0.367}px`,
             );
-            setPx("--hero-carousel-base-font-size", socialButtonHeight * 0.3125);
+            setPx(
+              "--hero-carousel-base-font-size",
+              socialButtonHeight * 0.34375,
+            );
             setPx(
               "--hero-carousel-name-font-size",
-              socialButtonHeight * 0.320834,
+              socialButtonHeight * 0.352917,
             );
             setPx(
               "--hero-carousel-category-font-size",
-              socialButtonHeight * 0.160416,
+              socialButtonHeight * 0.176458,
             );
             setPx(
               "--hero-carousel-arrow-font-size",
@@ -493,21 +514,24 @@ export function ProjectCarouselButton() {
         className="carousel-button-arrow"
         ref={arrowRef}
         style={{
-          ...strokedWhiteTextStyle,
+          alignItems: "center",
+          display: "grid",
           flex: "0 0 auto",
           fontSize: "var(--hero-carousel-arrow-font-size)",
-          fontWeight: 900,
+          height: "1.1em",
+          justifyItems: "center",
           left:
             "var(--carousel-arrow-left, calc(100% - clamp(10px, 3vw, 16px) - 21px))",
-          lineHeight: 1,
+          lineHeight: 0,
           marginLeft: 0,
           position: "absolute",
           right: "auto",
           top: "50%",
           transform: "translateY(-50%)",
+          width: "1.485em",
         }}
       >
-        →
+        <CarouselArrowMark />
       </span>
     </a>
   );

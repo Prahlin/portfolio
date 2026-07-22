@@ -270,9 +270,9 @@ h3 {
 
 .hero-actions {
   --hero-carousel-arrow-font-size: 22px;
-  --hero-carousel-base-font-size: 15px;
-  --hero-carousel-category-font-size: 7.7px;
-  --hero-carousel-name-font-size: 15.4px;
+  --hero-carousel-base-font-size: 16.5px;
+  --hero-carousel-category-font-size: 8.47px;
+  --hero-carousel-name-font-size: 16.94px;
   --hero-social-button-height: 48px;
   --hero-social-font-size: clamp(12.1px, 3.52vw, 13.2px);
   --hero-social-gap: clamp(1.1px, 0.66vw, 2.2px);
@@ -510,20 +510,29 @@ h3 {
 }
 
 .carousel-button-arrow {
-  -webkit-text-stroke: 4.2px #000;
-  color: #f3fff7;
+  align-items: center;
+  display: grid;
   flex: 0 0 auto;
   font-size: var(--hero-carousel-arrow-font-size);
-  font-weight: 900;
+  height: 1.1em;
+  justify-items: center;
   left: var(--carousel-arrow-left);
-  line-height: 1;
+  line-height: 0;
   margin-left: 0;
-  paint-order: stroke fill;
   position: absolute;
   right: auto;
-  text-shadow: 0 0 0 #000;
   top: 50%;
   transform: translateY(-50%);
+  width: 1.485em;
+}
+
+.carousel-button-arrow-mark {
+  display: block;
+  height: 100%;
+  object-fit: contain;
+  pointer-events: none;
+  user-select: none;
+  width: 100%;
 }
 
 .carousel-button-phone,
