@@ -12,6 +12,7 @@ import {
   Store,
   Triangle,
 } from "lucide-react";
+import { HeroLede } from "./HeroLede";
 import { ProjectCarouselButton } from "./ProjectCarouselButton";
 
 const navItems = ["Case Studies", "Stack", "Worklog", "Contact"];
@@ -468,11 +469,8 @@ export default function Home() {
                 <span className="hero-eyebrow-box">Back-end</span>
                 <span className="hero-eyebrow-period">.</span>
               </p>
-              <h1>React Native Full-Stack Mobile Developer</h1>
-              <p className="hero-lede">
-                UI/UX Design + Front-End Logic + Back-End Support → 100%
-                Stress-free
-              </p>
+              <h1>RN / Kotlin Full-Stack Mobile Developer</h1>
+              <HeroLede />
 
               <div className="hero-actions">
                 <div className="hero-project-action">
@@ -484,7 +482,7 @@ export default function Home() {
                       className="hero-view-label-stack"
                       style={{
                         display: "grid",
-                        gap: "0.32em",
+                        gap: "0.28em",
                         justifySelf: "start",
                         marginLeft: "var(--hero-view-stack-left, 0px)",
                         minWidth: "var(--hero-view-stack-width, 0px)",

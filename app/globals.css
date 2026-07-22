@@ -161,8 +161,10 @@ img[data-screenshot-preview] {
   --hero-action-gap: 12px;
   --hero-proof-stack-width: min(460px, 100%);
   --hero-action-stack-width: var(--hero-proof-stack-width);
+  --hero-eyebrow-font-size: 16px;
 
   max-width: 670px;
+  min-width: 0;
 }
 
 .eyebrow,
@@ -176,7 +178,7 @@ img[data-screenshot-preview] {
 }
 
 .hero-eyebrow {
-  font-size: 16px;
+  font-size: var(--hero-eyebrow-font-size);
   font-weight: 850;
   letter-spacing: 0.02em;
   line-height: 1.5;
@@ -231,12 +233,53 @@ h3 {
 
 .hero-lede {
   color: #c4d6cc;
+  display: grid;
   font-size: clamp(18px, 2vw, 24px);
   line-height: 1.45;
-  max-width: 560px;
+  max-width: none;
+  min-width: 0;
+  width: var(--hero-action-stack-width);
+}
+
+.hero-lede-line {
+  display: block;
+  min-width: 0;
+  overflow: visible;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.hero-lede-line > strong {
+  display: block;
+}
+
+.hero-lede-line-visual {
+  align-items: baseline;
+  display: inline-flex;
+  white-space: pre;
+}
+
+.hero-lede-char {
+  flex: 0 0 auto;
+  white-space: pre;
+}
+
+.hero-lede-char:not(:last-child) {
+  margin-right: var(--hero-lede-letter-gap, 0px);
 }
 
 .hero-actions {
+  --hero-carousel-arrow-font-size: 22px;
+  --hero-carousel-base-font-size: 15px;
+  --hero-carousel-category-font-size: 7.7px;
+  --hero-carousel-name-font-size: 15.4px;
+  --hero-social-button-height: 48px;
+  --hero-social-font-size: clamp(12.1px, 3.52vw, 13.2px);
+  --hero-social-gap: clamp(1.1px, 0.66vw, 2.2px);
+  --hero-social-icon-size: clamp(26.62px, 7.26vw, 29.04px);
+  --hero-social-pad-x: clamp(4px, 1.6vw, 6px);
+  --hero-view-label-font-size: 13.2px;
+
   align-items: stretch;
   display: grid;
   gap: var(--hero-action-gap);
@@ -248,10 +291,8 @@ h3 {
   align-items: stretch;
   display: grid;
   gap: var(--hero-action-gap);
-  grid-template-columns:
-    minmax(0, 33fr)
-    minmax(0, 34fr)
-    minmax(0, 33fr);
+  grid-auto-rows: var(--hero-social-button-height);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   width: 100%;
 }
 
@@ -260,9 +301,11 @@ h3 {
   --hero-project-squish: 2px;
 
   align-self: center;
+  align-items: center;
   display: grid;
-  font-size: 13.2px;
+  font-size: var(--hero-view-label-font-size);
   font-weight: 900;
+  height: var(--hero-social-button-height);
   justify-items: center;
   justify-self: stretch;
   line-height: 0.95;
@@ -273,12 +316,16 @@ h3 {
 }
 
 .hero-view-label .hero-view-label-stack {
+  align-content: center;
+  align-self: center;
   display: grid;
-  gap: 0.32em;
+  gap: 0.28em;
+  height: max-content;
   justify-self: start;
   margin-left: var(--hero-view-stack-left, 0px);
   min-width: var(--hero-view-stack-width, 0px);
   text-align: left;
+  transform: translateY(1px);
   width: max-content;
 }
 
@@ -288,7 +335,7 @@ h3 {
 
 .hero-view-label-stack > span:first-child {
   font-size: inherit;
-  transform: translateY(-0.75px);
+  transform: translateY(0.25px);
 }
 
 .hero-view-label-stack > .hero-view-word,
@@ -314,7 +361,7 @@ h3 {
 
 .hero-view-label-stack > span:last-child {
   font-size: inherit;
-  transform: translateY(0.75px);
+  transform: translateY(-0.25px);
 }
 
 .hero-project-action .carousel-button {
@@ -324,10 +371,7 @@ h3 {
 .hero-social-buttons {
   display: grid;
   gap: var(--hero-action-gap);
-  grid-template-columns:
-    minmax(0, 33fr)
-    minmax(0, 34fr)
-    minmax(0, 33fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   width: 100%;
 }
 
@@ -357,7 +401,10 @@ h3 {
   --carousel-arrow-left: calc(100% - clamp(10px, 3vw, 16px) - 21px);
 
   display: block;
+  font-size: var(--hero-carousel-base-font-size);
+  height: var(--hero-social-button-height);
   max-width: 100%;
+  min-height: 0;
   min-width: 0;
   overflow: hidden;
   padding-left: 0;
@@ -407,7 +454,7 @@ h3 {
   display: inline-flex;
   flex-direction: column;
   font-size: 14px;
-  gap: 2px;
+  gap: 2.2px;
   grid-column: 2;
   justify-content: center;
   line-height: 0.95;
@@ -465,7 +512,7 @@ h3 {
   -webkit-text-stroke: 4.2px #000;
   color: #f3fff7;
   flex: 0 0 auto;
-  font-size: 22px;
+  font-size: var(--hero-carousel-arrow-font-size);
   font-weight: 900;
   left: var(--carousel-arrow-left);
   line-height: 1;
@@ -606,19 +653,22 @@ h3 {
 }
 
 .hero-social-button {
-  gap: clamp(1px, 0.6vw, 2px);
+  aspect-ratio: 5 / 2;
+  gap: var(--hero-social-gap);
   justify-content: center;
-  font-size: clamp(11px, 3.2vw, 12px);
+  font-size: var(--hero-social-font-size);
+  height: auto;
+  min-height: 0;
   min-width: 0;
-  padding-left: clamp(4px, 1.6vw, 6px);
-  padding-right: clamp(4px, 1.6vw, 6px);
+  padding-left: var(--hero-social-pad-x);
+  padding-right: var(--hero-social-pad-x);
   width: 100%;
 }
 
 .hero-social-button svg {
   flex: 0 0 auto;
-  height: clamp(24.2px, 6.6vw, 26.4px);
-  width: clamp(24.2px, 6.6vw, 26.4px);
+  height: var(--hero-social-icon-size);
+  width: var(--hero-social-icon-size);
 }
 
 .github-button {

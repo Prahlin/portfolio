@@ -34,7 +34,7 @@ const projectLinks: Array<{
     href: "/projects/alla-vostra",
     mobilePlatforms: ["android", "apple"],
     name: "Alla Vostra",
-    nameFontSize: "13px",
+    nameFontSize: "calc(var(--hero-carousel-name-font-size) - 1px)",
     tone: "commerce",
   },
   {
@@ -247,9 +247,49 @@ export function ProjectCarouselButton() {
       frame = window.requestAnimationFrame(() => {
         const arrow = arrowRef.current;
         const button = buttonRef.current;
+        const heroCopy = document.querySelector<HTMLElement>(".hero-copy");
+        const heroActions =
+          document.querySelector<HTMLElement>(".hero-actions");
+        const socialButton =
+          document.querySelector<HTMLElement>(".hero-social-button");
         const targetIcon =
           document.querySelector<SVGSVGElement>(".dribbble-icon-mark") ??
           document.querySelector<SVGSVGElement>(".linkedin-icon-mark");
+
+        if (heroActions && socialButton) {
+          const socialButtonHeight =
+            socialButton.getBoundingClientRect().height;
+
+          if (socialButtonHeight > 0) {
+            const setPx = (name: string, value: number) => {
+              heroActions.style.setProperty(name, `${value}px`);
+            };
+
+            setPx("--hero-social-button-height", socialButtonHeight);
+            setPx("--hero-social-font-size", socialButtonHeight * 0.275);
+            setPx("--hero-social-icon-size", socialButtonHeight * 0.605);
+            setPx("--hero-social-gap", socialButtonHeight * 0.045833);
+            setPx("--hero-social-pad-x", socialButtonHeight / 8);
+            setPx("--hero-view-label-font-size", socialButtonHeight * 0.275);
+            heroCopy?.style.setProperty(
+              "--hero-eyebrow-font-size",
+              `${socialButtonHeight * 0.367}px`,
+            );
+            setPx("--hero-carousel-base-font-size", socialButtonHeight * 0.3125);
+            setPx(
+              "--hero-carousel-name-font-size",
+              socialButtonHeight * 0.320834,
+            );
+            setPx(
+              "--hero-carousel-category-font-size",
+              socialButtonHeight * 0.160416,
+            );
+            setPx(
+              "--hero-carousel-arrow-font-size",
+              socialButtonHeight * 0.458333,
+            );
+          }
+        }
 
         if (arrow && button && targetIcon) {
           const arrowRect = arrow.getBoundingClientRect();
@@ -408,8 +448,8 @@ export function ProjectCarouselButton() {
               color: projectNameColors[activeProject.tone],
               display: "inline-flex",
               flexDirection: "column",
-              fontSize: "14px",
-              gap: "2px",
+              fontSize: "var(--hero-carousel-name-font-size)",
+              gap: "2.2px",
               justifyContent: "center",
               lineHeight: 0.95,
             }}
@@ -425,7 +465,7 @@ export function ProjectCarouselButton() {
               style={{
                 WebkitTextStroke: 0,
                 color: "#000",
-                fontSize: "7px",
+                fontSize: "var(--hero-carousel-category-font-size)",
                 fontWeight: 900,
                 letterSpacing: "0.06em",
                 lineHeight: 1,
@@ -455,7 +495,7 @@ export function ProjectCarouselButton() {
         style={{
           ...strokedWhiteTextStyle,
           flex: "0 0 auto",
-          fontSize: "22px",
+          fontSize: "var(--hero-carousel-arrow-font-size)",
           fontWeight: 900,
           left:
             "var(--carousel-arrow-left, calc(100% - clamp(10px, 3vw, 16px) - 21px))",
