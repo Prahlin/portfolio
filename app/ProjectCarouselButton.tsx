@@ -25,6 +25,7 @@ const projectLinks: Array<{
   href: string;
   mobilePlatforms: MobilePlatform[];
   name: string;
+  nameFontSize?: string;
   tone: ProjectTone;
 }> = [
   {
@@ -33,6 +34,7 @@ const projectLinks: Array<{
     href: "/projects/alla-vostra",
     mobilePlatforms: ["android", "apple"],
     name: "Alla Vostra",
+    nameFontSize: "13px",
     tone: "commerce",
   },
   {
@@ -412,7 +414,10 @@ export function ProjectCarouselButton() {
               lineHeight: 0.95,
             }}
           >
-            <span className="carousel-button-action-name">
+            <span
+              className="carousel-button-action-name"
+              style={{ fontSize: activeProject.nameFontSize }}
+            >
               {activeProject.name}
             </span>
             <span

@@ -158,6 +158,10 @@ img[data-screenshot-preview] {
 }
 
 .hero-copy {
+  --hero-action-gap: 12px;
+  --hero-proof-stack-width: min(460px, 100%);
+  --hero-action-stack-width: var(--hero-proof-stack-width);
+
   max-width: 670px;
 }
 
@@ -233,9 +237,6 @@ h3 {
 }
 
 .hero-actions {
-  --hero-action-gap: 12px;
-  --hero-action-stack-width: min(100%, 300px);
-
   align-items: stretch;
   display: grid;
   gap: var(--hero-action-gap);
@@ -260,13 +261,15 @@ h3 {
 
   align-self: center;
   display: grid;
-  font-size: 11px;
+  font-size: 13.2px;
   font-weight: 900;
   justify-items: center;
   justify-self: stretch;
   line-height: 0.95;
+  pointer-events: none;
   position: relative;
   width: 100%;
+  z-index: 1;
 }
 
 .hero-view-label .hero-view-label-stack {
@@ -274,8 +277,9 @@ h3 {
   gap: 0.32em;
   justify-self: start;
   margin-left: var(--hero-view-stack-left, 0px);
+  min-width: var(--hero-view-stack-width, 0px);
   text-align: left;
-  width: var(--hero-view-stack-width, max-content);
+  width: max-content;
 }
 
 .hero-view-label-stack > span {
@@ -283,7 +287,7 @@ h3 {
 }
 
 .hero-view-label-stack > span:first-child {
-  font-size: 12px;
+  font-size: inherit;
   transform: translateY(-0.75px);
 }
 
@@ -309,7 +313,7 @@ h3 {
 }
 
 .hero-view-label-stack > span:last-child {
-  font-size: 12px;
+  font-size: inherit;
   transform: translateY(0.75px);
 }
 
@@ -613,8 +617,8 @@ h3 {
 
 .hero-social-button svg {
   flex: 0 0 auto;
-  height: clamp(22px, 6vw, 24px);
-  width: clamp(22px, 6vw, 24px);
+  height: clamp(24.2px, 6.6vw, 26.4px);
+  width: clamp(24.2px, 6.6vw, 26.4px);
 }
 
 .github-button {
@@ -636,10 +640,13 @@ h3 {
 
 .stack-row {
   display: grid;
-  grid-template-columns: repeat(4, max-content);
-  gap: 10px;
-  justify-content: start;
+  gap: 6px;
+  grid-template-columns:
+    minmax(0, 33fr)
+    minmax(0, 34fr)
+    minmax(0, 33fr);
   margin-top: 26px;
+  width: var(--hero-action-stack-width);
 }
 
 .stack-row span,
@@ -653,16 +660,18 @@ h3 {
   padding: 8px 11px;
 }
 
-@media (max-width: 720px), (orientation: landscape) and (max-height: 500px) {
-  .stack-row {
-    grid-template-columns: repeat(3, max-content);
-  }
-}
-
-@media (max-width: 380px) and (orientation: portrait) {
-  .stack-row {
-    grid-template-columns: repeat(2, max-content);
-  }
+.stack-row span {
+  align-items: center;
+  box-sizing: border-box;
+  display: flex;
+  font-size: 11px;
+  justify-content: center;
+  min-width: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+  text-align: center;
+  white-space: nowrap;
+  width: 100%;
 }
 
 .hero-visual {
@@ -932,7 +941,7 @@ h3 {
   margin: 26px 0 0;
   padding: 14px;
   position: relative;
-  width: min(460px, 100%);
+  width: var(--hero-proof-stack-width);
   z-index: 2;
 }
 

@@ -487,8 +487,9 @@ export default function Home() {
                         gap: "0.32em",
                         justifySelf: "start",
                         marginLeft: "var(--hero-view-stack-left, 0px)",
+                        minWidth: "var(--hero-view-stack-width, 0px)",
                         textAlign: "left",
-                        width: "var(--hero-view-stack-width, max-content)",
+                        width: "max-content",
                       }}
                     >
                       <span
