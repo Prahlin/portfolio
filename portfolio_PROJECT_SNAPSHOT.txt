@@ -1,5 +1,5 @@
 Portfolio Next.js PROJECT SNAPSHOT
-Generated: Tue Jul 21 17:28:50 EDT 2026
+Generated: Tue Jul 21 23:19:18 EDT 2026
 Project directory: /Users/prahlin/gh/portfolio
 
 IMPORTANT INSTRUCTIONS FOR CHATGPT & CODEX:
@@ -70,6 +70,7 @@ PROJECT FILE TREE
 /Users/prahlin/gh/portfolio/DEPLOYMENT.md
 /Users/prahlin/gh/portfolio/README.md
 /Users/prahlin/gh/portfolio/app
+/Users/prahlin/gh/portfolio/app/HeroLede.tsx
 /Users/prahlin/gh/portfolio/app/ProjectCarouselButton.tsx
 /Users/prahlin/gh/portfolio/app/ScreenshotPreviewLayer.tsx
 /Users/prahlin/gh/portfolio/app/globals.css
@@ -101,6 +102,7 @@ PROJECT FILE TREE
 /Users/prahlin/gh/portfolio/public/images/address_overlay_large.png
 /Users/prahlin/gh/portfolio/public/images/address_overlay_small.png
 /Users/prahlin/gh/portfolio/public/images/android-device-logo.svg
+/Users/prahlin/gh/portfolio/public/images/carousel-arrow.svg
 /Users/prahlin/gh/portfolio/public/images/cinerific-intro.png
 /Users/prahlin/gh/portfolio/public/images/confirmed_overlay_large.png
 /Users/prahlin/gh/portfolio/public/images/confirmed_overlay_small.png
@@ -212,618 +214,732 @@ FILE: app/page.tsx
     12	  Store,
     13	  Triangle,
     14	} from "lucide-react";
-    15	import { ProjectCarouselButton } from "./ProjectCarouselButton";
-    16	
-    17	const navItems = ["Case Studies", "Stack", "Worklog", "Contact"];
-    18	
-    19	const stackChips = [
-    20	  "React Native",
-    21	  "Tailwind CSS",
-    22	  "TypeScript",
-    23	  "Expo",
-    24	  "Node.js",
-    25	  "Kotlin",
-    26	  "Next.js",
-    27	  "Jetpack Compose",
-    28	];
-    29	
-    30	const proofStats = [
-    31	  {
-    32	    label: "Full-Stack Expertise",
-    33	    value: "3y+",
-    34	  },
-    35	  { label: "Quality GitHub Commits", value: "1k+" },
-    36	  { label: "Shipped Mob/Web Products", value: "6+" },
-    37	  { label: "Play/App Store Releases", value: "5+" },
-    38	];
-    39	
-    40	type CaseScreenshot = {
-    41	  alt: string;
-    42	  orientation?: "landscape" | "portrait";
-    43	  src: string;
-    44	};
-    45	
-    46	type CaseStudy = {
-    47	  description: string;
-    48	  eyebrow: string;
-    49	  href?: string;
-    50	  id: string;
-    51	  screenshots: CaseScreenshot[];
-    52	  stat: string;
-    53	  tags: string[];
-    54	  title: string;
-    55	};
-    56	
-    57	function LinkedInMark() {
-    58	  return (
-    59	    <svg
-    60	      aria-hidden
-    61	      height="32.4"
-    62	      viewBox="0 0 24 24"
-    63	      width="32.4"
-    64	      xmlns="http://www.w3.org/2000/svg"
-    65	    >
-    66	      <rect
-    67	        fill="#f3fff7"
-    68	        height="18"
-    69	        rx="3"
-    70	        stroke="#000"
-    71	        strokeWidth="1.35"
-    72	        width="18"
-    73	        x="3"
-    74	        y="3"
-    75	      />
-    76	      <circle
-    77	        cx="8.1"
-    78	        cy="8.15"
-    79	        fill="#60a5fa"
-    80	        r="1.45"
-    81	        stroke="#000"
-    82	        strokeWidth="0.35"
-    83	      />
-    84	      <rect
-    85	        fill="#60a5fa"
-    86	        height="7.2"
-    87	        rx="0.45"
-    88	        stroke="#000"
-    89	        strokeLinejoin="round"
-    90	        strokeWidth="0.35"
-    91	        width="2.45"
-    92	        x="6.88"
-    93	        y="10.75"
-    94	      />
-    95	      <path
-    96	        d="M11.1 10.75h2.35v.92c.45-.66 1.18-1.08 2.18-1.08 1.88 0 3 1.24 3 3.4v3.96h-2.46v-3.62c0-1.04-.47-1.58-1.29-1.58-.86 0-1.33.58-1.33 1.58v3.62H11.1z"
-    97	        fill="#60a5fa"
-    98	        stroke="#000"
-    99	        strokeLinejoin="round"
-   100	        strokeWidth="0.35"
-   101	      />
-   102	    </svg>
-   103	  );
-   104	}
-   105	
-   106	function GitHubBracesMark() {
-   107	  return (
-   108	    <svg
-   109	      aria-hidden
-   110	      height="32.4"
-   111	      viewBox="0 0 24 24"
-   112	      width="32.4"
-   113	      xmlns="http://www.w3.org/2000/svg"
-   114	    >
-   115	      <rect
-   116	        fill="#f3fff7"
-   117	        height="18"
-   118	        rx="3"
-   119	        stroke="#000"
-   120	        strokeWidth="1.35"
-   121	        width="18"
-   122	        x="3"
-   123	        y="3"
-   124	      />
-   125	      <path
-   126	        d="M10.15 7.45h-.52c-.86 0-1.32.46-1.32 1.32v2.05c0 .72-.5 1.18-1.28 1.18.78 0 1.28.46 1.28 1.18v2.05c0 .86.46 1.32 1.32 1.32h.52"
-   127	        fill="none"
-   128	        stroke="#000"
-   129	        strokeLinecap="round"
-   130	        strokeLinejoin="round"
-   131	        strokeWidth="2"
-   132	      />
-   133	      <path
-   134	        d="M13.85 16.55h.52c.86 0 1.32-.46 1.32-1.32v-2.05c0-.72.5-1.18 1.28-1.18-.78 0-1.28-.46-1.28-1.18V8.77c0-.86-.46-1.32-1.32-1.32h-.52"
-   135	        fill="none"
-   136	        stroke="#000"
-   137	        strokeLinecap="round"
-   138	        strokeLinejoin="round"
-   139	        strokeWidth="2"
-   140	      />
-   141	    </svg>
-   142	  );
-   143	}
-   144	
-   145	const caseStudies: CaseStudy[] = [
-   146	  {
-   147	    id: "cinerific",
-   148	    title: "Cinerific",
-   149	    eyebrow: "Native Android entertainment preview",
-   150	    href: "/projects/cinerific",
-   151	    description:
-   152	      "Kotlin and Jetpack Compose Android app scaffold translating Figma intro and sign-in frames into tablet-friendly full-screen screens, drawable assets, and an animated intro flow.",
-   153	    tags: ["Kotlin", "Compose", "Gradle", "TypeScript"],
-   154	    stat: "3 commits",
-   155	    screenshots: [
-   156	      {
-   157	        alt: "Cinerific intro logo frame",
-   158	        orientation: "landscape",
-   159	        src: "/images/cinerific-intro.png",
-   160	      },
-   161	    ],
-   162	  },
-   163	  {
-   164	    id: "alla-vostra",
-   165	    title: "Alla Vostra",
-   166	    eyebrow: "Flagship full-stack mobile commerce",
-   167	    href: "/projects/alla-vostra",
-   168	    description:
-   169	      "Expo/React Native ordering flow with Stripe, Postmark, Vercel serverless routes, Android device testing, and Play Store preparation.",
-   170	    tags: ["React Native", "Stripe", "Node.js", "EAS"],
-   171	    stat: "328 commits",
-   172	    screenshots: [
-   173	      {
-   174	        alt: "Alla Vostra startup screen",
-   175	        src: "/images/startup_screen_small.png",
-   176	      },
-   177	      {
-   178	        alt: "Alla Vostra products screen",
-   179	        src: "/images/products_screen_small.png",
-   180	      },
-   181	      {
-   182	        alt: "Alla Vostra confirmation screen",
-   183	        src: "/images/confirmed_overlay_small.png",
-   184	      },
-   185	    ],
-   186	  },
-   187	  {
-   188	    id: "credit-king",
-   189	    title: "Credit King",
-   190	    eyebrow: "Finance app UI system",
-   191	    description:
-   192	      "React Native dashboard, animated navigation, Figma asset translation, responsive web/Android parity, and reusable app chrome.",
-   193	    tags: ["Expo Router", "SVG", "Animation", "Figma"],
-   194	    stat: "94 commits",
-   195	    screenshots: [],
-   196	  },
-   197	];
-   198	
-   199	const worklogItems = [
-   200	  "From responsive website prototype to Expo Router mobile architecture",
-   201	  "Secure Stripe card flow, Google Pay, PayPal, and Postmark confirmations",
-   202	  "Android Small, Standard, and Large emulator QA with release-ready EAS builds",
-   203	];
-   204	
-   205	function PhonePreview({
-   206	  title,
-   207	  metric,
-   208	  variant,
-   209	  href,
-   210	  screenImageSrc,
-   211	  screenImageAlt,
-   212	}: {
-   213	  href?: string;
-   214	  title: string;
-   215	  metric: string;
-   216	  variant: "commerce" | "finance";
-   217	  screenImageSrc?: string;
-   218	  screenImageAlt?: string;
-   219	}) {
-   220	  const className = `phone-shell phone-shell-${variant}${
-   221	    screenImageSrc ? " phone-shell-capture" : ""
-   222	  }${href ? " phone-shell-link" : ""}`;
-   223	  const content = (
-   224	    <>
-   225	      <div className="phone-speaker" />
-   226	      <div className={`phone-screen${screenImageSrc ? " has-image" : ""}`}>
-   227	        {screenImageSrc ? (
-   228	          <div className="phone-screen-image-frame">
-   229	            <Image
-   230	              alt={screenImageAlt ?? `${title} app screen`}
-   231	              className="phone-screen-image"
-   232	              fill
-   233	              sizes="245px"
-   234	              src={screenImageSrc}
-   235	            />
-   236	          </div>
-   237	        ) : (
-   238	          <>
-   239	            <div className="phone-status">
-   240	              <span>{title}</span>
-   241	              <span>5G</span>
-   242	            </div>
-   243	            <div className="phone-chart">
-   244	              <div />
-   245	              <div />
-   246	              <div />
-   247	              <div />
-   248	            </div>
-   249	            <div className="phone-cardline wide" />
-   250	            <div className="phone-cardline" />
-   251	            <div className="phone-grid">
-   252	              <span />
-   253	              <span />
-   254	              <span />
-   255	              <span />
-   256	            </div>
-   257	            <div className="phone-cta">{metric}</div>
-   258	          </>
-   259	        )}
-   260	      </div>
-   261	    </>
-   262	  );
-   263	
-   264	  if (href) {
-   265	    return (
-   266	      <a
-   267	        aria-label={`Open ${title} case study`}
-   268	        className={className}
-   269	        href={href}
-   270	      >
-   271	        {content}
-   272	      </a>
-   273	    );
-   274	  }
-   275	
-   276	  return <div className={className}>{content}</div>;
-   277	}
-   278	
-   279	function TabletPreview() {
-   280	  return (
-   281	    <div className="tablet-shell" aria-hidden="true">
-   282	      <div className="tablet-camera" />
-   283	      <div className="tablet-screen">
-   284	        <Image
-   285	          alt=""
-   286	          className="tablet-screen-image"
-   287	          fill
-   288	          sizes="456px"
-   289	          src="/images/cinerific-intro.png"
-   290	        />
-   291	        <div className="tablet-empty-grid" />
-   292	      </div>
-   293	    </div>
-   294	  );
-   295	}
-   296	
-   297	function SectionHeading({
-   298	  kicker,
-   299	  title,
-   300	}: {
-   301	  kicker: string;
-   302	  title: string;
-   303	}) {
-   304	  return (
-   305	    <div className="section-heading">
-   306	      <p>{kicker}</p>
-   307	      <h2>{title}</h2>
-   308	    </div>
-   309	  );
-   310	}
-   311	
-   312	function CaseStudyCard({ study }: { study: CaseStudy }) {
-   313	  const content = (
-   314	    <>
-   315	      <div className="case-topline">
-   316	        <span>{study.eyebrow}</span>
-   317	        <strong>{study.stat}</strong>
-   318	      </div>
-   319	      <h3>{study.title}</h3>
-   320	      <p>{study.description}</p>
-   321	      <div className="case-tags">
-   322	        {study.tags.map((tag) => (
-   323	          <span key={tag}>{tag}</span>
-   324	        ))}
-   325	      </div>
-   326	      {study.screenshots.length > 0 ? (
-   327	        <div
-   328	          aria-label={`${study.title} app screenshots`}
-   329	          className={`case-miniatures${
-   330	            study.screenshots.some(
-   331	              (screenshot) => screenshot.orientation === "landscape",
-   332	            )
-   333	              ? " case-miniatures-landscape"
-   334	              : ""
-   335	          }`}
-   336	        >
-   337	          {study.screenshots.map((screenshot) => (
-   338	            <Image
-   339	              alt={screenshot.alt}
-   340	              className={`case-miniature${
-   341	                screenshot.orientation === "landscape"
-   342	                  ? " case-miniature-landscape"
-   343	                  : ""
-   344	              }`}
-   345	              height={screenshot.orientation === "landscape" ? 166 : 192}
-   346	              key={screenshot.src}
-   347	              src={screenshot.src}
-   348	              width={screenshot.orientation === "landscape" ? 238 : 108}
-   349	            />
-   350	          ))}
-   351	        </div>
-   352	      ) : null}
-   353	    </>
-   354	  );
-   355	
-   356	  if (study.href) {
-   357	    return (
-   358	      <a
-   359	        aria-label={`Open ${study.title} case study`}
-   360	        className="case-card case-card-link"
-   361	        href={study.href}
-   362	        id={study.id}
-   363	      >
-   364	        {content}
-   365	      </a>
-   366	    );
-   367	  }
+    15	import { HeroLede } from "./HeroLede";
+    16	import { ProjectCarouselButton } from "./ProjectCarouselButton";
+    17	
+    18	const navItems = ["Case Studies", "Stack", "Worklog", "Contact"];
+    19	
+    20	const stackChips = [
+    21	  "React Native",
+    22	  "Tailwind CSS",
+    23	  "TypeScript",
+    24	  "Expo",
+    25	  "Node.js",
+    26	  "Kotlin",
+    27	  "Next.js",
+    28	  "Compose",
+    29	  "REST APIs",
+    30	];
+    31	
+    32	const proofStats = [
+    33	  {
+    34	    label: "Full-Stack Expertise",
+    35	    value: "3y",
+    36	  },
+    37	  { label: "Quality GitHub Commits", value: "1k+" },
+    38	  { label: "Production Ready Releases", value: "6" },
+    39	  { label: "Store Front Publications", value: "6" },
+    40	];
+    41	
+    42	type CaseScreenshot = {
+    43	  alt: string;
+    44	  orientation?: "landscape" | "portrait";
+    45	  src: string;
+    46	};
+    47	
+    48	type CaseStudy = {
+    49	  description: string;
+    50	  eyebrow: string;
+    51	  href?: string;
+    52	  id: string;
+    53	  screenshots: CaseScreenshot[];
+    54	  stat: string;
+    55	  tags: string[];
+    56	  title: string;
+    57	};
+    58	
+    59	function LinkedInMark() {
+    60	  return (
+    61	    <svg
+    62	      aria-hidden
+    63	      className="linkedin-icon-mark"
+    64	      height="32.4"
+    65	      viewBox="0 0 24 24"
+    66	      width="32.4"
+    67	      xmlns="http://www.w3.org/2000/svg"
+    68	    >
+    69	      <rect
+    70	        fill="#f3fff7"
+    71	        height="18"
+    72	        rx="3"
+    73	        stroke="#000"
+    74	        strokeWidth="1.35"
+    75	        width="18"
+    76	        x="3"
+    77	        y="3"
+    78	      />
+    79	      <circle
+    80	        cx="8.1"
+    81	        cy="8.15"
+    82	        fill="#60a5fa"
+    83	        r="1.45"
+    84	        stroke="#000"
+    85	        strokeWidth="0.35"
+    86	      />
+    87	      <rect
+    88	        fill="#60a5fa"
+    89	        height="7.2"
+    90	        rx="0.45"
+    91	        stroke="#000"
+    92	        strokeLinejoin="round"
+    93	        strokeWidth="0.35"
+    94	        width="2.45"
+    95	        x="6.88"
+    96	        y="10.75"
+    97	      />
+    98	      <path
+    99	        d="M11.1 10.75h2.35v.92c.45-.66 1.18-1.08 2.18-1.08 1.88 0 3 1.24 3 3.4v3.96h-2.46v-3.62c0-1.04-.47-1.58-1.29-1.58-.86 0-1.33.58-1.33 1.58v3.62H11.1z"
+   100	        fill="#60a5fa"
+   101	        stroke="#000"
+   102	        strokeLinejoin="round"
+   103	        strokeWidth="0.35"
+   104	      />
+   105	    </svg>
+   106	  );
+   107	}
+   108	
+   109	function GitHubBracesMark() {
+   110	  return (
+   111	    <svg
+   112	      aria-hidden
+   113	      className="github-icon-mark"
+   114	      height="32.4"
+   115	      viewBox="0 0 24 24"
+   116	      width="32.4"
+   117	      xmlns="http://www.w3.org/2000/svg"
+   118	    >
+   119	      <rect
+   120	        fill="#f3fff7"
+   121	        height="18"
+   122	        rx="3"
+   123	        stroke="#000"
+   124	        strokeWidth="1.35"
+   125	        width="18"
+   126	        x="3"
+   127	        y="3"
+   128	      />
+   129	      <path
+   130	        d="M10.15 7.45h-.52c-.86 0-1.32.46-1.32 1.32v2.05c0 .72-.5 1.18-1.28 1.18.78 0 1.28.46 1.28 1.18v2.05c0 .86.46 1.32 1.32 1.32h.52"
+   131	        fill="none"
+   132	        stroke="#000"
+   133	        strokeLinecap="round"
+   134	        strokeLinejoin="round"
+   135	        strokeWidth="2"
+   136	      />
+   137	      <path
+   138	        d="M13.85 16.55h.52c.86 0 1.32-.46 1.32-1.32v-2.05c0-.72.5-1.18 1.28-1.18-.78 0-1.28-.46-1.28-1.18V8.77c0-.86-.46-1.32-1.32-1.32h-.52"
+   139	        fill="none"
+   140	        stroke="#000"
+   141	        strokeLinecap="round"
+   142	        strokeLinejoin="round"
+   143	        strokeWidth="2"
+   144	      />
+   145	    </svg>
+   146	  );
+   147	}
+   148	
+   149	function DribbbleMark() {
+   150	  return (
+   151	    <svg
+   152	      aria-hidden
+   153	      className="dribbble-icon-mark"
+   154	      height="32.4"
+   155	      viewBox="0 0 24 24"
+   156	      width="32.4"
+   157	      xmlns="http://www.w3.org/2000/svg"
+   158	    >
+   159	      <rect
+   160	        fill="#f3fff7"
+   161	        height="18"
+   162	        rx="3"
+   163	        stroke="#000"
+   164	        strokeWidth="1.35"
+   165	        width="18"
+   166	        x="3"
+   167	        y="3"
+   168	      />
+   169	      <circle
+   170	        cx="12"
+   171	        cy="12"
+   172	        fill="#ea4c89"
+   173	        r="6.2"
+   174	        stroke="#000"
+   175	        strokeWidth="1.3"
+   176	      />
+   177	      <path
+   178	        d="M7 9.4c2.8.6 6.1.1 9.8-1.6"
+   179	        fill="none"
+   180	        stroke="#000"
+   181	        strokeLinecap="round"
+   182	        strokeWidth="1.05"
+   183	      />
+   184	      <path
+   185	        d="M9.2 6.7c2.2 2.4 3.8 6 4.8 10.5"
+   186	        fill="none"
+   187	        stroke="#000"
+   188	        strokeLinecap="round"
+   189	        strokeWidth="1.05"
+   190	      />
+   191	      <path
+   192	        d="M6.3 13.5c3.8-1.2 7.7-1 11.4.8"
+   193	        fill="none"
+   194	        stroke="#000"
+   195	        strokeLinecap="round"
+   196	        strokeWidth="1.05"
+   197	      />
+   198	    </svg>
+   199	  );
+   200	}
+   201	
+   202	const caseStudies: CaseStudy[] = [
+   203	  {
+   204	    id: "cinerific",
+   205	    title: "Cinerific",
+   206	    eyebrow: "Native Android entertainment preview",
+   207	    href: "/projects/cinerific",
+   208	    description:
+   209	      "Kotlin and Jetpack Compose Android app scaffold translating Figma intro and sign-in frames into tablet-friendly full-screen screens, drawable assets, and an animated intro flow.",
+   210	    tags: ["Kotlin", "Compose", "Gradle", "TypeScript"],
+   211	    stat: "3 commits",
+   212	    screenshots: [
+   213	      {
+   214	        alt: "Cinerific intro logo frame",
+   215	        orientation: "landscape",
+   216	        src: "/images/cinerific-intro.png",
+   217	      },
+   218	    ],
+   219	  },
+   220	  {
+   221	    id: "alla-vostra",
+   222	    title: "Alla Vostra",
+   223	    eyebrow: "Flagship full-stack mobile commerce",
+   224	    href: "/projects/alla-vostra",
+   225	    description:
+   226	      "Expo/React Native ordering flow with Stripe, Postmark, Vercel serverless routes, Android device testing, and Play Store preparation.",
+   227	    tags: ["React Native", "Stripe", "Node.js", "EAS"],
+   228	    stat: "328 commits",
+   229	    screenshots: [
+   230	      {
+   231	        alt: "Alla Vostra startup screen",
+   232	        src: "/images/startup_screen_small.png",
+   233	      },
+   234	      {
+   235	        alt: "Alla Vostra products screen",
+   236	        src: "/images/products_screen_small.png",
+   237	      },
+   238	      {
+   239	        alt: "Alla Vostra confirmation screen",
+   240	        src: "/images/confirmed_overlay_small.png",
+   241	      },
+   242	    ],
+   243	  },
+   244	  {
+   245	    id: "credit-king",
+   246	    title: "Credit King",
+   247	    eyebrow: "Finance app UI system",
+   248	    description:
+   249	      "React Native dashboard, animated navigation, Figma asset translation, responsive web/Android parity, and reusable app chrome.",
+   250	    tags: ["Expo Router", "SVG", "Animation", "Figma"],
+   251	    stat: "94 commits",
+   252	    screenshots: [],
+   253	  },
+   254	];
+   255	
+   256	const worklogItems = [
+   257	  "From responsive website prototype to Expo Router mobile architecture",
+   258	  "Secure Stripe card flow, Google Pay, PayPal, and Postmark confirmations",
+   259	  "Android Small, Standard, and Large emulator QA with release-ready EAS builds",
+   260	];
+   261	
+   262	function PhonePreview({
+   263	  title,
+   264	  metric,
+   265	  variant,
+   266	  href,
+   267	  screenImageSrc,
+   268	  screenImageAlt,
+   269	}: {
+   270	  href?: string;
+   271	  title: string;
+   272	  metric: string;
+   273	  variant: "commerce" | "finance";
+   274	  screenImageSrc?: string;
+   275	  screenImageAlt?: string;
+   276	}) {
+   277	  const className = `phone-shell phone-shell-${variant}${
+   278	    screenImageSrc ? " phone-shell-capture" : ""
+   279	  }${href ? " phone-shell-link" : ""}`;
+   280	  const content = (
+   281	    <>
+   282	      <div className="phone-speaker" />
+   283	      <div className={`phone-screen${screenImageSrc ? " has-image" : ""}`}>
+   284	        {screenImageSrc ? (
+   285	          <div className="phone-screen-image-frame">
+   286	            <Image
+   287	              alt={screenImageAlt ?? `${title} app screen`}
+   288	              className="phone-screen-image"
+   289	              fill
+   290	              sizes="245px"
+   291	              src={screenImageSrc}
+   292	            />
+   293	          </div>
+   294	        ) : (
+   295	          <>
+   296	            <div className="phone-status">
+   297	              <span>{title}</span>
+   298	              <span>5G</span>
+   299	            </div>
+   300	            <div className="phone-chart">
+   301	              <div />
+   302	              <div />
+   303	              <div />
+   304	              <div />
+   305	            </div>
+   306	            <div className="phone-cardline wide" />
+   307	            <div className="phone-cardline" />
+   308	            <div className="phone-grid">
+   309	              <span />
+   310	              <span />
+   311	              <span />
+   312	              <span />
+   313	            </div>
+   314	            <div className="phone-cta">{metric}</div>
+   315	          </>
+   316	        )}
+   317	      </div>
+   318	    </>
+   319	  );
+   320	
+   321	  if (href) {
+   322	    return (
+   323	      <a
+   324	        aria-label={`Open ${title} case study`}
+   325	        className={className}
+   326	        href={href}
+   327	      >
+   328	        {content}
+   329	      </a>
+   330	    );
+   331	  }
+   332	
+   333	  return <div className={className}>{content}</div>;
+   334	}
+   335	
+   336	function TabletPreview() {
+   337	  return (
+   338	    <div className="tablet-shell" aria-hidden="true">
+   339	      <div className="tablet-camera" />
+   340	      <div className="tablet-screen">
+   341	        <Image
+   342	          alt=""
+   343	          className="tablet-screen-image"
+   344	          fill
+   345	          sizes="456px"
+   346	          src="/images/cinerific-intro.png"
+   347	        />
+   348	        <div className="tablet-empty-grid" />
+   349	      </div>
+   350	    </div>
+   351	  );
+   352	}
+   353	
+   354	function SectionHeading({
+   355	  kicker,
+   356	  title,
+   357	}: {
+   358	  kicker: string;
+   359	  title: string;
+   360	}) {
+   361	  return (
+   362	    <div className="section-heading">
+   363	      <p>{kicker}</p>
+   364	      <h2>{title}</h2>
+   365	    </div>
+   366	  );
+   367	}
    368	
-   369	  return (
-   370	    <article className="case-card" id={study.id}>
-   371	      {content}
-   372	    </article>
-   373	  );
-   374	}
-   375	
-   376	export default function Home() {
-   377	  return (
-   378	    <main>
-   379	      <section className="hero" id="top">
-   380	        <div className="site-shell">
-   381	          <header className="nav-bar">
-   382	            <a className="brand" href="#top" aria-label="Prahlin home">
-   383	              <span>P</span>
-   384	              <strong>Prahlin</strong>
-   385	            </a>
-   386	
-   387	            <nav aria-label="Main navigation">
-   388	              {navItems.map((item) => (
-   389	                <a
-   390	                  key={item}
-   391	                  href={`#${item.toLowerCase().replace(" ", "-")}`}
-   392	                >
-   393	                  {item}
-   394	                </a>
-   395	              ))}
-   396	            </nav>
-   397	          </header>
-   398	
-   399	          <div className="hero-grid">
-   400	            <div className="hero-copy">
-   401	              <p className="eyebrow hero-eyebrow">
-   402	                <span className="hero-eyebrow-underline">Appealing</span>{" "}
-   403	                <span className="hero-eyebrow-box">UI/UX</span>
-   404	                <span className="hero-eyebrow-period">,</span>
-   405	                <br />
-   406	                <span className="hero-eyebrow-underline">User-Friendly</span>{" "}
-   407	                <span className="hero-eyebrow-box">Front-End</span>
-   408	                <span className="hero-eyebrow-period">,</span>
-   409	                <br />
-   410	                <span className="hero-eyebrow-underline">
-   411	                  Deep, Dependable
-   412	                </span>{" "}
-   413	                <span className="hero-eyebrow-box">Back-end</span>
-   414	                <span className="hero-eyebrow-period">.</span>
-   415	              </p>
-   416	              <h1>React Native Full-Stack Mobile Developer</h1>
-   417	              <p className="hero-lede">
-   418	                Original Vision + UI/UX Design + Front-End Logic + Back-End
-   419	                Support → 100% Stress-free
-   420	              </p>
-   421	
-   422	              <div className="hero-actions">
-   423	                <ProjectCarouselButton />
-   424	                <span
-   425	                  className="hero-action-break"
-   426	                  aria-hidden
-   427	                  style={{ flexBasis: "100%", height: 0 }}
-   428	                />
-   429	                <a
-   430	                  className="button button-secondary github-button"
-   431	                  href="https://github.com/Prahlin"
-   432	                  rel="noreferrer"
-   433	                  style={{
-   434	                    background: "#f3fff7",
-   435	                    borderColor: "#f3fff7",
-   436	                    color: "#000",
-   437	                  }}
-   438	                  target="_blank"
-   439	                >
-   440	                  GitHub
-   441	                  <GitHubBracesMark />
-   442	                </a>
-   443	                <a
-   444	                  className="button button-secondary github-button linkedin-button"
-   445	                  href="https://www.linkedin.com/"
-   446	                  rel="noreferrer"
-   447	                  style={{
-   448	                    background: "#60a5fa",
-   449	                    borderColor: "#60a5fa",
-   450	                    color: "#000",
-   451	                  }}
-   452	                  target="_blank"
-   453	                >
-   454	                  LinkedIn
-   455	                  <LinkedInMark />
-   456	                </a>
-   457	              </div>
-   458	
-   459	              <div className="stack-row" aria-label="Primary stack">
-   460	                {stackChips.map((chip) => (
-   461	                  <span key={chip}>{chip}</span>
-   462	                ))}
-   463	              </div>
-   464	
-   465	              <div className="proof-panel">
-   466	                <div className="proof-column">
-   467	                  <div className="proof-item">
-   468	                    <Triangle aria-hidden size={18} />
-   469	                    <span>Vercel</span>
-   470	                  </div>
-   471	                  <div className="proof-item">
-   472	                    <Database aria-hidden size={18} />
-   473	                    <span>EAS</span>
-   474	                  </div>
-   475	                </div>
-   476	                <div className="proof-column">
-   477	                  <div className="proof-item">
-   478	                    <CreditCard aria-hidden size={18} />
-   479	                    <span>Stripe</span>
-   480	                  </div>
-   481	                  <div className="proof-item">
-   482	                    <MailCheck aria-hidden size={18} />
-   483	                    <span>Postmark</span>
-   484	                  </div>
-   485	                </div>
-   486	                <div className="proof-column">
-   487	                  <div className="proof-item">
-   488	                    <Store aria-hidden size={18} />
-   489	                    <span>GGL Play</span>
-   490	                  </div>
-   491	                  <div className="proof-item">
-   492	                    <Apple aria-hidden size={18} />
-   493	                    <span>App Store</span>
-   494	                  </div>
-   495	                </div>
-   496	              </div>
-   497	            </div>
-   498	
-   499	            <div className="hero-visual" aria-label="Portfolio preview">
-   500	              <div className="profile-orbit">
-   501	                <Image
-   502	                  alt="Martin Prahl profile photo"
-   503	                  src="/images/martin3.jpg"
-   504	                  width={220}
-   505	                  height={220}
-   506	                  priority
-   507	                  className="profile-photo"
-   508	                />
-   509	                <span>Martin Prahl</span>
-   510	              </div>
-   511	
-   512	              <div className="phone-stage">
-   513	                <TabletPreview />
-   514	                <PhonePreview
-   515	                  title="Alla Vostra"
-   516	                  metric="Checkout ready"
-   517	                  variant="commerce"
-   518	                  href="/projects/alla-vostra"
-   519	                  screenImageSrc="/images/startup_screen_large.png"
-   520	                  screenImageAlt="Alla Vostra startup screen"
-   521	                />
-   522	                <PhonePreview
-   523	                  title="CreditKing"
-   524	                  metric="Finance UI"
-   525	                  variant="finance"
-   526	                />
-   527	              </div>
-   528	            </div>
-   529	          </div>
-   530	
-   531	          <div className="stats-strip" aria-label="Project proof points">
-   532	            {proofStats.map((stat) => (
-   533	              <div key={stat.label}>
-   534	                <strong>{stat.value}</strong>
-   535	                <span>{stat.label}</span>
-   536	              </div>
-   537	            ))}
-   538	          </div>
-   539	        </div>
-   540	      </section>
-   541	
-   542	      <section className="case-section" id="case-studies">
-   543	        <div className="site-shell">
-   544	          <SectionHeading
-   545	            kicker="Featured case studies"
-   546	            title="Mobile products with real implementation depth"
-   547	          />
-   548	
-   549	          <div className="case-grid">
-   550	            {caseStudies.map((study) => (
-   551	              <CaseStudyCard key={study.title} study={study} />
-   552	            ))}
-   553	          </div>
-   554	        </div>
-   555	      </section>
-   556	
-   557	      <section className="stack-section" id="stack">
-   558	        <div className="site-shell split-section">
-   559	          <SectionHeading
-   560	            kicker="Stack"
-   561	            title="Built around React Native, shaped for full-stack delivery"
-   562	          />
-   563	          <div className="capability-grid">
-   564	            <div>
-   565	              <MonitorSmartphone aria-hidden />
-   566	              <h3>Main stack</h3>
-   567	              <p>
-   568	                React, React Native, Expo Router, Next.js, Tailwind CSS, and
-   569	                mobile-first responsive UI systems.
-   570	              </p>
-   571	            </div>
-   572	            <div>
-   573	              <Braces aria-hidden />
-   574	              <h3>Backend layer</h3>
-   575	              <p>
-   576	                Node.js serverless routes, Stripe payment setup, Postmark email
-   577	                delivery, environment configuration, and deployment workflows.
-   578	              </p>
-   579	            </div>
-   580	            <div>
-   581	              <Smartphone aria-hidden />
-   582	              <h3>Secondary mobile</h3>
-   583	              <p>
-   584	                Kotlin and Android Studio as the native Android path, aligned
-   585	                with the same release and device-testing discipline.
-   586	              </p>
-   587	            </div>
-   588	          </div>
-   589	        </div>
-   590	      </section>
-   591	
-   592	      <section className="worklog-section" id="worklog">
-   593	        <div className="site-shell worklog-layout">
-   594	          <SectionHeading
-   595	            kicker="Worklog"
-   596	            title="A documented build history, not just final screenshots"
-   597	          />
-   598	          <div className="timeline">
-   599	            {worklogItems.map((item, index) => (
-   600	              <div key={item} className="timeline-item">
-   601	                <span>{String(index + 1).padStart(2, "0")}</span>
-   602	                <p>{item}</p>
-   603	              </div>
-   604	            ))}
-   605	          </div>
-   606	        </div>
-   607	      </section>
-   608	
-   609	      <section className="contact-section" id="contact">
-   610	        <div className="site-shell contact-panel">
-   611	          <div>
-   612	            <p className="eyebrow">Available for full-stack mobile work</p>
-   613	            <h2>Let’s build something crisp, fast, and release-ready.</h2>
-   614	          </div>
-   615	          <a
-   616	            className="button button-primary"
-   617	            href="mailto:martin@prahlproductions.com"
-   618	          >
-   619	            <Mail aria-hidden size={18} />
-   620	            martin@prahlproductions.com
-   621	          </a>
-   622	        </div>
-   623	      </section>
-   624	    </main>
-   625	  );
-   626	}
+   369	function CaseStudyCard({ study }: { study: CaseStudy }) {
+   370	  const content = (
+   371	    <>
+   372	      <div className="case-topline">
+   373	        <span>{study.eyebrow}</span>
+   374	        <strong>{study.stat}</strong>
+   375	      </div>
+   376	      <h3>{study.title}</h3>
+   377	      <p>{study.description}</p>
+   378	      <div className="case-tags">
+   379	        {study.tags.map((tag) => (
+   380	          <span key={tag}>{tag}</span>
+   381	        ))}
+   382	      </div>
+   383	      {study.screenshots.length > 0 ? (
+   384	        <div
+   385	          aria-label={`${study.title} app screenshots`}
+   386	          className={`case-miniatures${
+   387	            study.screenshots.some(
+   388	              (screenshot) => screenshot.orientation === "landscape",
+   389	            )
+   390	              ? " case-miniatures-landscape"
+   391	              : ""
+   392	          }`}
+   393	        >
+   394	          {study.screenshots.map((screenshot) => (
+   395	            <Image
+   396	              alt={screenshot.alt}
+   397	              className={`case-miniature${
+   398	                screenshot.orientation === "landscape"
+   399	                  ? " case-miniature-landscape"
+   400	                  : ""
+   401	              }`}
+   402	              height={screenshot.orientation === "landscape" ? 166 : 192}
+   403	              key={screenshot.src}
+   404	              src={screenshot.src}
+   405	              width={screenshot.orientation === "landscape" ? 238 : 108}
+   406	            />
+   407	          ))}
+   408	        </div>
+   409	      ) : null}
+   410	    </>
+   411	  );
+   412	
+   413	  if (study.href) {
+   414	    return (
+   415	      <a
+   416	        aria-label={`Open ${study.title} case study`}
+   417	        className="case-card case-card-link"
+   418	        href={study.href}
+   419	        id={study.id}
+   420	      >
+   421	        {content}
+   422	      </a>
+   423	    );
+   424	  }
+   425	
+   426	  return (
+   427	    <article className="case-card" id={study.id}>
+   428	      {content}
+   429	    </article>
+   430	  );
+   431	}
+   432	
+   433	export default function Home() {
+   434	  return (
+   435	    <main>
+   436	      <section className="hero" id="top">
+   437	        <div className="site-shell">
+   438	          <header className="nav-bar">
+   439	            <a className="brand" href="#top" aria-label="Prahlin home">
+   440	              <span>P</span>
+   441	              <strong>Prahlin</strong>
+   442	            </a>
+   443	
+   444	            <nav aria-label="Main navigation">
+   445	              {navItems.map((item) => (
+   446	                <a
+   447	                  key={item}
+   448	                  href={`#${item.toLowerCase().replace(" ", "-")}`}
+   449	                >
+   450	                  {item}
+   451	                </a>
+   452	              ))}
+   453	            </nav>
+   454	          </header>
+   455	
+   456	          <div className="hero-grid">
+   457	            <div className="hero-copy">
+   458	              <p className="eyebrow hero-eyebrow">
+   459	                <span className="hero-eyebrow-underline">User-friendly</span>{" "}
+   460	                <span className="hero-eyebrow-box">UI/UX</span>
+   461	                <span className="hero-eyebrow-period">,</span>
+   462	                <br />
+   463	                <span className="hero-eyebrow-underline">Butter-Smooth</span>{" "}
+   464	                <span className="hero-eyebrow-box">Front-End</span>
+   465	                <span className="hero-eyebrow-period">,</span>
+   466	                <br />
+   467	                <span className="hero-eyebrow-underline">
+   468	                  Deep, Dependable
+   469	                </span>{" "}
+   470	                <span className="hero-eyebrow-box">Back-end</span>
+   471	                <span className="hero-eyebrow-period">.</span>
+   472	              </p>
+   473	              <h1>RN / Kotlin Full-Stack Mobile Developer</h1>
+   474	              <HeroLede />
+   475	
+   476	              <div className="hero-actions">
+   477	                <div className="hero-project-action">
+   478	                  <span
+   479	                    className="hero-view-label carousel-button-project-word"
+   480	                    aria-hidden
+   481	                  >
+   482	                    <span
+   483	                      className="hero-view-label-stack"
+   484	                      style={{
+   485	                        display: "grid",
+   486	                        gap: "0.28em",
+   487	                        justifySelf: "start",
+   488	                        marginLeft: "var(--hero-view-stack-left, 0px)",
+   489	                        minWidth: "var(--hero-view-stack-width, 0px)",
+   490	                        textAlign: "left",
+   491	                        width: "max-content",
+   492	                      }}
+   493	                    >
+   494	                      <span
+   495	                        className="hero-view-word"
+   496	                        aria-label="Check Out"
+   497	                      >
+   498	                        <span>C</span>
+   499	                        <span>h</span>
+   500	                        <span>e</span>
+   501	                        <span>c</span>
+   502	                        <span>k</span>
+   503	                        <span className="hero-word-space" aria-hidden>
+   504	                          {" "}
+   505	                        </span>
+   506	                        <span>O</span>
+   507	                        <span>u</span>
+   508	                        <span>t</span>
+   509	                      </span>
+   510	                      <span
+   511	                        className="hero-project-word"
+   512	                        aria-label="Projects"
+   513	                      >
+   514	                        <span>P</span>
+   515	                        <span>r</span>
+   516	                        <span>o</span>
+   517	                        <span>j</span>
+   518	                        <span>e</span>
+   519	                        <span>c</span>
+   520	                        <span>t</span>
+   521	                        <span>s</span>
+   522	                      </span>
+   523	                    </span>
+   524	                  </span>
+   525	                  <ProjectCarouselButton />
+   526	                </div>
+   527	                <div className="hero-social-buttons">
+   528	                  <a
+   529	                    className="button button-secondary hero-social-button github-button"
+   530	                    href="https://github.com/Prahlin"
+   531	                    rel="noreferrer"
+   532	                    style={{
+   533	                      background: "#f3fff7",
+   534	                      borderColor: "#f3fff7",
+   535	                      color: "#000",
+   536	                    }}
+   537	                    target="_blank"
+   538	                  >
+   539	                    <span className="github-label-text">GitHub</span>
+   540	                    <GitHubBracesMark />
+   541	                  </a>
+   542	                  <a
+   543	                    className="button button-secondary hero-social-button linkedin-button"
+   544	                    href="https://www.linkedin.com/"
+   545	                    rel="noreferrer"
+   546	                    style={{
+   547	                      background: "#60a5fa",
+   548	                      borderColor: "#60a5fa",
+   549	                      color: "#000",
+   550	                    }}
+   551	                    target="_blank"
+   552	                  >
+   553	                    LinkedIn
+   554	                    <LinkedInMark />
+   555	                  </a>
+   556	                  <a
+   557	                    className="button button-secondary hero-social-button dribbble-button"
+   558	                    href="https://dribbble.com/"
+   559	                    rel="noreferrer"
+   560	                    style={{
+   561	                      background: "#ea4c89",
+   562	                      borderColor: "#ea4c89",
+   563	                      color: "#000",
+   564	                    }}
+   565	                    target="_blank"
+   566	                  >
+   567	                    Dribbble
+   568	                    <DribbbleMark />
+   569	                  </a>
+   570	                </div>
+   571	              </div>
+   572	
+   573	              <div className="stack-row" aria-label="Primary stack">
+   574	                {stackChips.map((chip) => (
+   575	                  <span key={chip}>{chip}</span>
+   576	                ))}
+   577	              </div>
+   578	
+   579	              <div className="proof-panel">
+   580	                <div className="proof-column">
+   581	                  <div className="proof-item">
+   582	                    <Triangle aria-hidden size={18} />
+   583	                    <span>Vercel</span>
+   584	                  </div>
+   585	                  <div className="proof-item">
+   586	                    <Database aria-hidden size={18} />
+   587	                    <span>EAS</span>
+   588	                  </div>
+   589	                </div>
+   590	                <div className="proof-column">
+   591	                  <div className="proof-item">
+   592	                    <CreditCard aria-hidden size={18} />
+   593	                    <span>Stripe</span>
+   594	                  </div>
+   595	                  <div className="proof-item">
+   596	                    <MailCheck aria-hidden size={18} />
+   597	                    <span>Postmark</span>
+   598	                  </div>
+   599	                </div>
+   600	                <div className="proof-column">
+   601	                  <div className="proof-item">
+   602	                    <Store aria-hidden size={18} />
+   603	                    <span>GGL Play</span>
+   604	                  </div>
+   605	                  <div className="proof-item">
+   606	                    <Apple aria-hidden size={18} />
+   607	                    <span>App Store</span>
+   608	                  </div>
+   609	                </div>
+   610	              </div>
+   611	            </div>
+   612	
+   613	            <div className="hero-visual" aria-label="Portfolio preview">
+   614	              <div className="profile-orbit">
+   615	                <Image
+   616	                  alt="Martin Prahl profile photo"
+   617	                  src="/images/martin3.jpg"
+   618	                  width={220}
+   619	                  height={220}
+   620	                  priority
+   621	                  className="profile-photo"
+   622	                />
+   623	                <span>Martin Prahl</span>
+   624	              </div>
+   625	
+   626	              <div className="phone-stage">
+   627	                <TabletPreview />
+   628	                <PhonePreview
+   629	                  title="Alla Vostra"
+   630	                  metric="Checkout ready"
+   631	                  variant="commerce"
+   632	                  href="/projects/alla-vostra"
+   633	                  screenImageSrc="/images/startup_screen_large.png"
+   634	                  screenImageAlt="Alla Vostra startup screen"
+   635	                />
+   636	                <PhonePreview
+   637	                  title="CreditKing"
+   638	                  metric="Finance UI"
+   639	                  variant="finance"
+   640	                />
+   641	              </div>
+   642	            </div>
+   643	          </div>
+   644	
+   645	          <div className="stats-strip" aria-label="Project proof points">
+   646	            {proofStats.map((stat) => (
+   647	              <div key={stat.label}>
+   648	                <strong>{stat.value}</strong>
+   649	                <span>{stat.label}</span>
+   650	              </div>
+   651	            ))}
+   652	          </div>
+   653	        </div>
+   654	      </section>
+   655	
+   656	      <section className="case-section" id="case-studies">
+   657	        <div className="site-shell">
+   658	          <SectionHeading
+   659	            kicker="Featured case studies"
+   660	            title="Mobile products with real implementation depth"
+   661	          />
+   662	
+   663	          <div className="case-grid">
+   664	            {caseStudies.map((study) => (
+   665	              <CaseStudyCard key={study.title} study={study} />
+   666	            ))}
+   667	          </div>
+   668	        </div>
+   669	      </section>
+   670	
+   671	      <section className="stack-section" id="stack">
+   672	        <div className="site-shell split-section">
+   673	          <SectionHeading
+   674	            kicker="Stack"
+   675	            title="Built around React Native, shaped for full-stack delivery"
+   676	          />
+   677	          <div className="capability-grid">
+   678	            <div>
+   679	              <MonitorSmartphone aria-hidden />
+   680	              <h3>Main stack</h3>
+   681	              <p>
+   682	                React, React Native, Expo Router, Next.js, Tailwind CSS, and
+   683	                mobile-first responsive UI systems.
+   684	              </p>
+   685	            </div>
+   686	            <div>
+   687	              <Braces aria-hidden />
+   688	              <h3>Backend layer</h3>
+   689	              <p>
+   690	                Node.js serverless routes, Stripe payment setup, Postmark email
+   691	                delivery, environment configuration, and deployment workflows.
+   692	              </p>
+   693	            </div>
+   694	            <div>
+   695	              <Smartphone aria-hidden />
+   696	              <h3>Secondary mobile</h3>
+   697	              <p>
+   698	                Kotlin and Android Studio as the native Android path, aligned
+   699	                with the same release and device-testing discipline.
+   700	              </p>
+   701	            </div>
+   702	          </div>
+   703	        </div>
+   704	      </section>
+   705	
+   706	      <section className="worklog-section" id="worklog">
+   707	        <div className="site-shell worklog-layout">
+   708	          <SectionHeading
+   709	            kicker="Worklog"
+   710	            title="A documented build history, not just final screenshots"
+   711	          />
+   712	          <div className="timeline">
+   713	            {worklogItems.map((item, index) => (
+   714	              <div key={item} className="timeline-item">
+   715	                <span>{String(index + 1).padStart(2, "0")}</span>
+   716	                <p>{item}</p>
+   717	              </div>
+   718	            ))}
+   719	          </div>
+   720	        </div>
+   721	      </section>
+   722	
+   723	      <section className="contact-section" id="contact">
+   724	        <div className="site-shell contact-panel">
+   725	          <div>
+   726	            <p className="eyebrow">Available for full-stack mobile work</p>
+   727	            <h2>Let’s build something crisp, fast, and release-ready.</h2>
+   728	          </div>
+   729	          <a
+   730	            className="button button-primary"
+   731	            href="mailto:martin@prahlproductions.com"
+   732	          >
+   733	            <Mail aria-hidden size={18} />
+   734	            martin@prahlproductions.com
+   735	          </a>
+   736	        </div>
+   737	      </section>
+   738	    </main>
+   739	  );
+   740	}
 
 
 ============================================================
@@ -832,7 +948,7 @@ FILE: app/ProjectCarouselButton.tsx
 
      1	"use client";
      2	
-     3	import { useEffect, useState } from "react";
+     3	import { useEffect, useLayoutEffect, useRef, useState } from "react";
      4	
      5	type MobilePlatform = "android" | "apple";
      6	type ProjectTone = "commerce" | "entertainment" | "finance";
@@ -857,321 +973,517 @@ FILE: app/ProjectCarouselButton.tsx
     25	  href: string;
     26	  mobilePlatforms: MobilePlatform[];
     27	  name: string;
-    28	  tone: ProjectTone;
-    29	}> = [
-    30	  {
-    31	    category: "RESTAURANT",
-    32	    hasWeb: true,
-    33	    href: "/projects/alla-vostra",
-    34	    mobilePlatforms: ["android", "apple"],
-    35	    name: "Alla Vostra",
-    36	    tone: "commerce",
-    37	  },
-    38	  {
-    39	    category: "STREAMING",
-    40	    hasTablet: true,
-    41	    href: "/projects/cinerific",
-    42	    mobilePlatforms: ["android"],
-    43	    name: "Cinerific",
-    44	    tone: "entertainment",
-    45	  },
-    46	  {
-    47	    category: "FINANCE",
-    48	    href: "#credit-king",
-    49	    mobilePlatforms: ["android", "apple"],
-    50	    name: "Credit King",
-    51	    tone: "finance",
-    52	  },
-    53	];
-    54	
-    55	const androidLogoSize = {
-    56	  height: 8.69299,
-    57	  width: 10.86624,
-    58	};
-    59	
-    60	const iosLogoSize = {
-    61	  height: 10.47816,
-    62	  width: 10.47816,
-    63	};
-    64	
-    65	function AndroidLogoImage({ x, y }: { x: number; y: number }) {
-    66	  return (
-    67	    <image
-    68	      height={androidLogoSize.height}
-    69	      href="/images/android-device-logo.svg"
-    70	      preserveAspectRatio="xMidYMid meet"
-    71	      width={androidLogoSize.width}
-    72	      x={x}
-    73	      y={y}
-    74	    />
-    75	  );
-    76	}
-    77	
-    78	function PhoneAndroidIcon({ slot }: { slot: "single" | "top" }) {
-    79	  const y = slot === "single" ? 11.43286 : 6.93286;
-    80	
-    81	  return <AndroidLogoImage x={6.23608} y={y} />;
-    82	}
-    83	
-    84	function IosLogoImage({ x, y }: { x: number; y: number }) {
-    85	  return (
-    86	    <image
-    87	      height={iosLogoSize.height}
-    88	      href="/images/ios-device-logo.svg"
-    89	      preserveAspectRatio="xMidYMid meet"
-    90	      width={iosLogoSize.width}
-    91	      x={x}
-    92	      y={y}
-    93	    />
-    94	  );
-    95	}
-    96	
-    97	function PhoneAppleIcon({ slot }: { slot: "bottom" | "single" }) {
-    98	  const y = slot === "single" ? 11.27372 : 17.47372;
-    99	
-   100	  return <IosLogoImage x={5.92372} y={y} />;
-   101	}
-   102	
-   103	function PhoneMark({
-   104	  mobilePlatforms,
-   105	}: {
-   106	  mobilePlatforms: MobilePlatform[];
-   107	}) {
-   108	  return (
-   109	    <svg
-   110	      aria-hidden
-   111	      className="carousel-button-phone"
-   112	      height="1.936em"
-   113	      style={{ height: "1.936em", width: "1.36125em" }}
-   114	      viewBox="0 0 22.5 32"
-   115	      width="1.36125em"
-   116	    >
-   117	      <rect
-   118	        className="phone-mini-frame"
-   119	        height="29.2"
-   120	        rx="2.7"
-   121	        width="19"
-   122	        x="1.75"
-   123	        y="1.4"
-   124	      />
-   125	      <rect
-   126	        className="phone-mini-screen"
-   127	        height="22.8"
-   128	        rx="1.4"
-   129	        width="14.5"
-   130	        x="4"
-   131	        y="4.6"
-   132	      />
-   133	      <path className="phone-mini-speaker" d="M8.875 3.2h4.75" />
-   134	      <circle className="phone-mini-home" cx="11.25" cy="29" r="0.7" />
-   135	      {mobilePlatforms.map((platform, index) => {
-   136	        const slot =
-   137	          mobilePlatforms.length === 1
-   138	            ? "single"
-   139	            : index === 0
-   140	              ? "top"
-   141	              : "bottom";
-   142	
-   143	        return platform === "android" ? (
-   144	          <PhoneAndroidIcon
-   145	            key={platform}
-   146	            slot={slot === "bottom" ? "top" : slot}
-   147	          />
-   148	        ) : (
-   149	          <PhoneAppleIcon
-   150	            key={platform}
-   151	            slot={slot === "top" ? "bottom" : slot}
-   152	          />
-   153	        );
-   154	      })}
-   155	    </svg>
-   156	  );
-   157	}
-   158	
-   159	function TabletMark() {
-   160	  return (
-   161	    <svg
-   162	      aria-hidden
-   163	      className="carousel-button-tablet"
-   164	      height="1.44em"
-   165	      style={{ height: "1.44em", width: "2.16em" }}
-   166	      viewBox="0 0 36 24"
-   167	      width="2.16em"
-   168	    >
-   169	      <rect
-   170	        className="tablet-mini-frame"
-   171	        fill="none"
-   172	        height="21.2"
-   173	        rx="3"
-   174	        stroke="#000"
-   175	        strokeWidth="2.2"
-   176	        width="33.2"
-   177	        x="1.4"
-   178	        y="1.4"
-   179	      />
-   180	      <rect
-   181	        className="tablet-mini-screen"
-   182	        fill="transparent"
-   183	        height="16.8"
-   184	        rx="1.4"
-   185	        stroke="none"
-   186	        width="27.8"
-   187	        x="4.8"
-   188	        y="3.6"
-   189	      />
-   190	      <circle
-   191	        className="tablet-mini-camera"
-   192	        cx="3.2"
-   193	        cy="12"
-   194	        fill="#000"
-   195	        r="0.65"
-   196	        stroke="none"
-   197	      />
-   198	      <AndroidLogoImage x={13.26608} y={7.65486} />
-   199	    </svg>
-   200	  );
-   201	}
-   202	
-   203	function WebMark() {
-   204	  return (
-   205	    <svg
-   206	      aria-hidden
-   207	      className="carousel-button-web"
-   208	      height="0.9702em"
-   209	      style={{ height: "0.9702em", width: "0.9702em" }}
-   210	      viewBox="0 0 24 24"
-   211	      width="0.9702em"
-   212	    >
-   213	      <circle className="web-globe-shell" cx="12" cy="12" r="8.2" />
-   214	      <path className="web-globe-line" d="M3.8 12h16.4" />
-   215	      <path className="web-globe-line" d="M5.6 8.1h12.8" />
-   216	      <path className="web-globe-line" d="M5.6 15.9h12.8" />
-   217	      <path className="web-globe-line" d="M12 3.8c2.2 2.3 3.3 5 3.3 8.2s-1.1 5.9-3.3 8.2" />
-   218	      <path className="web-globe-line" d="M12 3.8c-2.2 2.3-3.3 5-3.3 8.2s1.1 5.9 3.3 8.2" />
-   219	    </svg>
-   220	  );
-   221	}
-   222	
-   223	export function ProjectCarouselButton() {
-   224	  const [activeIndex, setActiveIndex] = useState(0);
-   225	  const activeProject = projectLinks[activeIndex];
-   226	
-   227	  useEffect(() => {
-   228	    const interval = window.setInterval(() => {
-   229	      setActiveIndex((currentIndex) => (currentIndex + 1) % projectLinks.length);
-   230	    }, 5000);
-   231	
-   232	    return () => window.clearInterval(interval);
-   233	  }, []);
-   234	
-   235	  return (
-   236	    <a
-   237	      className="button button-primary carousel-button"
-   238	      href={activeProject.href}
-   239	      style={{
-   240	        boxSizing: "border-box",
-   241	        flex: "0 1 420px",
-   242	        gap: "clamp(3px, 1vw, 5px)",
-   243	        justifyContent: "flex-start",
-   244	        maxWidth: "100%",
-   245	        minWidth: 0,
-   246	        paddingLeft: "clamp(10px, 3vw, 16px)",
-   247	        paddingRight: "clamp(10px, 3vw, 16px)",
-   248	        width: "min(420px, 100%)",
-   249	      }}
-   250	    >
-   251	      <span
-   252	        className="carousel-button-window"
-   253	        aria-live="polite"
-   254	        style={{
-   255	          alignItems: "center",
-   256	          display: "inline-flex",
-   257	          flex: "0 1 auto",
-   258	          gap: "clamp(0.55em, 2.4vw, 1em)",
-   259	          minWidth: 0,
-   260	          overflow: "visible",
-   261	          whiteSpace: "nowrap",
-   262	        }}
-   263	      >
-   264	        <span className="carousel-button-project">
-   265	          <span
-   266	            className="carousel-button-project-word"
-   267	            style={strokedWhiteTextStyle}
-   268	          >
-   269	            View
-   270	          </span>
-   271	        </span>
-   272	        <span
-   273	          className="carousel-button-label"
-   274	          key={activeProject.href}
-   275	          style={{
-   276	            gap: "clamp(0.55em, 2.4vw, 1em)",
-   277	            minWidth: 0,
-   278	            paddingLeft: 0,
-   279	          }}
-   280	        >
-   281	          <span
-   282	            className={`carousel-button-action carousel-button-action-${activeProject.tone}`}
-   283	            style={{
-   284	              ...strokedWhiteTextStyle,
-   285	              alignItems: "center",
-   286	              color: projectNameColors[activeProject.tone],
-   287	              display: "inline-flex",
-   288	              flexDirection: "column",
-   289	              fontSize: "14px",
-   290	              gap: "2px",
-   291	              justifyContent: "center",
-   292	              lineHeight: 0.95,
-   293	            }}
-   294	          >
-   295	            <span className="carousel-button-action-name">
-   296	              {activeProject.name}
-   297	            </span>
-   298	            <span
-   299	              className="carousel-button-action-category"
-   300	              style={{
-   301	                WebkitTextStroke: 0,
-   302	                color: "#000",
-   303	                fontSize: "7px",
-   304	                fontWeight: 900,
-   305	                letterSpacing: "0.06em",
-   306	                lineHeight: 1,
-   307	                textAlign: "center",
-   308	                textShadow: "none",
-   309	              }}
-   310	            >
-   311	              {activeProject.category}
-   312	            </span>
-   313	          </span>
-   314	          <span
-   315	            className="carousel-button-project"
-   316	            style={{ gap: "clamp(0.18em, 1.1vw, 0.34em)" }}
-   317	          >
-   318	            {activeProject.mobilePlatforms.map((platform) => (
-   319	              <PhoneMark key={platform} mobilePlatforms={[platform]} />
-   320	            ))}
-   321	            {activeProject.hasTablet ? <TabletMark /> : null}
-   322	            {activeProject.hasWeb ? <WebMark /> : null}
-   323	          </span>
-   324	        </span>
-   325	      </span>
-   326	      <span
-   327	        aria-hidden
-   328	        className="carousel-button-arrow"
-   329	        style={{
-   330	          ...strokedWhiteTextStyle,
-   331	          flex: "0 0 auto",
-   332	          fontSize: "22px",
-   333	          fontWeight: 900,
-   334	          lineHeight: 1,
-   335	          marginLeft: "auto",
-   336	        }}
-   337	      >
-   338	        →
-   339	      </span>
-   340	    </a>
-   341	  );
-   342	}
+    28	  nameFontSize?: string;
+    29	  tone: ProjectTone;
+    30	}> = [
+    31	  {
+    32	    category: "RESTAURANT",
+    33	    hasWeb: true,
+    34	    href: "/projects/alla-vostra",
+    35	    mobilePlatforms: ["android", "apple"],
+    36	    name: "Alla Vostra",
+    37	    nameFontSize: "calc(var(--hero-carousel-name-font-size) - 1px)",
+    38	    tone: "commerce",
+    39	  },
+    40	  {
+    41	    category: "STREAMING",
+    42	    hasTablet: true,
+    43	    href: "/projects/cinerific",
+    44	    mobilePlatforms: ["android"],
+    45	    name: "Cinerific",
+    46	    tone: "entertainment",
+    47	  },
+    48	  {
+    49	    category: "FINANCE",
+    50	    href: "#credit-king",
+    51	    mobilePlatforms: ["android", "apple"],
+    52	    name: "Credit King",
+    53	    tone: "finance",
+    54	  },
+    55	];
+    56	
+    57	const androidLogoSize = {
+    58	  height: 8.69299,
+    59	  width: 10.86624,
+    60	};
+    61	
+    62	const iosLogoSize = {
+    63	  height: 10.47816,
+    64	  width: 10.47816,
+    65	};
+    66	
+    67	function AndroidLogoImage({ x, y }: { x: number; y: number }) {
+    68	  return (
+    69	    <image
+    70	      height={androidLogoSize.height}
+    71	      href="/images/android-device-logo.svg"
+    72	      preserveAspectRatio="xMidYMid meet"
+    73	      width={androidLogoSize.width}
+    74	      x={x}
+    75	      y={y}
+    76	    />
+    77	  );
+    78	}
+    79	
+    80	function PhoneAndroidIcon({ slot }: { slot: "single" | "top" }) {
+    81	  const y = slot === "single" ? 11.43286 : 6.93286;
+    82	
+    83	  return <AndroidLogoImage x={6.23608} y={y} />;
+    84	}
+    85	
+    86	function IosLogoImage({ x, y }: { x: number; y: number }) {
+    87	  return (
+    88	    <image
+    89	      height={iosLogoSize.height}
+    90	      href="/images/ios-device-logo.svg"
+    91	      preserveAspectRatio="xMidYMid meet"
+    92	      width={iosLogoSize.width}
+    93	      x={x}
+    94	      y={y}
+    95	    />
+    96	  );
+    97	}
+    98	
+    99	function PhoneAppleIcon({ slot }: { slot: "bottom" | "single" }) {
+   100	  const y = slot === "single" ? 11.27372 : 17.47372;
+   101	
+   102	  return <IosLogoImage x={5.92372} y={y} />;
+   103	}
+   104	
+   105	function PhoneMark({
+   106	  mobilePlatforms,
+   107	}: {
+   108	  mobilePlatforms: MobilePlatform[];
+   109	}) {
+   110	  return (
+   111	    <svg
+   112	      aria-hidden
+   113	      className="carousel-button-phone"
+   114	      height="1.936em"
+   115	      style={{ height: "1.936em", width: "1.36125em" }}
+   116	      viewBox="0 0 22.5 32"
+   117	      width="1.36125em"
+   118	    >
+   119	      <rect
+   120	        className="phone-mini-frame"
+   121	        height="29.2"
+   122	        rx="2.7"
+   123	        width="19"
+   124	        x="1.75"
+   125	        y="1.4"
+   126	      />
+   127	      <rect
+   128	        className="phone-mini-screen"
+   129	        height="22.8"
+   130	        rx="1.4"
+   131	        width="14.5"
+   132	        x="4"
+   133	        y="4.6"
+   134	      />
+   135	      <path className="phone-mini-speaker" d="M8.875 3.2h4.75" />
+   136	      <circle className="phone-mini-home" cx="11.25" cy="29" r="0.7" />
+   137	      {mobilePlatforms.map((platform, index) => {
+   138	        const slot =
+   139	          mobilePlatforms.length === 1
+   140	            ? "single"
+   141	            : index === 0
+   142	              ? "top"
+   143	              : "bottom";
+   144	
+   145	        return platform === "android" ? (
+   146	          <PhoneAndroidIcon
+   147	            key={platform}
+   148	            slot={slot === "bottom" ? "top" : slot}
+   149	          />
+   150	        ) : (
+   151	          <PhoneAppleIcon
+   152	            key={platform}
+   153	            slot={slot === "top" ? "bottom" : slot}
+   154	          />
+   155	        );
+   156	      })}
+   157	    </svg>
+   158	  );
+   159	}
+   160	
+   161	function TabletMark() {
+   162	  return (
+   163	    <svg
+   164	      aria-hidden
+   165	      className="carousel-button-tablet"
+   166	      height="1.44em"
+   167	      style={{ height: "1.44em", width: "2.16em" }}
+   168	      viewBox="0 0 36 24"
+   169	      width="2.16em"
+   170	    >
+   171	      <rect
+   172	        className="tablet-mini-frame"
+   173	        fill="none"
+   174	        height="21.2"
+   175	        rx="3"
+   176	        stroke="#000"
+   177	        strokeWidth="2.2"
+   178	        width="33.2"
+   179	        x="1.4"
+   180	        y="1.4"
+   181	      />
+   182	      <rect
+   183	        className="tablet-mini-screen"
+   184	        fill="transparent"
+   185	        height="16.8"
+   186	        rx="1.4"
+   187	        stroke="none"
+   188	        width="27.8"
+   189	        x="4.8"
+   190	        y="3.6"
+   191	      />
+   192	      <circle
+   193	        className="tablet-mini-camera"
+   194	        cx="3.2"
+   195	        cy="12"
+   196	        fill="#000"
+   197	        r="0.65"
+   198	        stroke="none"
+   199	      />
+   200	      <AndroidLogoImage x={13.26608} y={7.65486} />
+   201	    </svg>
+   202	  );
+   203	}
+   204	
+   205	function WebMark() {
+   206	  return (
+   207	    <svg
+   208	      aria-hidden
+   209	      className="carousel-button-web"
+   210	      height="0.9702em"
+   211	      style={{ height: "0.9702em", width: "0.9702em" }}
+   212	      viewBox="0 0 24 24"
+   213	      width="0.9702em"
+   214	    >
+   215	      <circle className="web-globe-shell" cx="12" cy="12" r="8.2" />
+   216	      <path className="web-globe-line" d="M3.8 12h16.4" />
+   217	      <path className="web-globe-line" d="M5.6 8.1h12.8" />
+   218	      <path className="web-globe-line" d="M5.6 15.9h12.8" />
+   219	      <path className="web-globe-line" d="M12 3.8c2.2 2.3 3.3 5 3.3 8.2s-1.1 5.9-3.3 8.2" />
+   220	      <path className="web-globe-line" d="M12 3.8c-2.2 2.3-3.3 5-3.3 8.2s1.1 5.9 3.3 8.2" />
+   221	    </svg>
+   222	  );
+   223	}
+   224	
+   225	function CarouselArrowMark() {
+   226	  return (
+   227	    <img
+   228	      alt=""
+   229	      aria-hidden
+   230	      className="carousel-button-arrow-mark"
+   231	      draggable={false}
+   232	      style={{
+   233	        display: "block",
+   234	        height: "100%",
+   235	        verticalAlign: "top",
+   236	        width: "100%",
+   237	      }}
+   238	      src="/images/carousel-arrow.svg"
+   239	    />
+   240	  );
+   241	}
+   242	
+   243	export function ProjectCarouselButton() {
+   244	  const [activeIndex, setActiveIndex] = useState(0);
+   245	  const arrowRef = useRef<HTMLSpanElement>(null);
+   246	  const buttonRef = useRef<HTMLAnchorElement>(null);
+   247	  const activeProject = projectLinks[activeIndex];
+   248	
+   249	  useEffect(() => {
+   250	    const interval = window.setInterval(() => {
+   251	      setActiveIndex((currentIndex) => (currentIndex + 1) % projectLinks.length);
+   252	    }, 5000);
+   253	
+   254	    return () => window.clearInterval(interval);
+   255	  }, []);
+   256	
+   257	  useLayoutEffect(() => {
+   258	    let frame = 0;
+   259	
+   260	    const syncHeroActionGeometry = () => {
+   261	      if (frame) {
+   262	        window.cancelAnimationFrame(frame);
+   263	      }
+   264	
+   265	      frame = window.requestAnimationFrame(() => {
+   266	        const arrow = arrowRef.current;
+   267	        const button = buttonRef.current;
+   268	        const heroCopy = document.querySelector<HTMLElement>(".hero-copy");
+   269	        const heroActions =
+   270	          document.querySelector<HTMLElement>(".hero-actions");
+   271	        const socialButton =
+   272	          document.querySelector<HTMLElement>(".hero-social-button");
+   273	        const targetIcon =
+   274	          document.querySelector<SVGSVGElement>(".dribbble-icon-mark") ??
+   275	          document.querySelector<SVGSVGElement>(".linkedin-icon-mark");
+   276	
+   277	        if (heroActions && socialButton) {
+   278	          const socialButtonHeight =
+   279	            socialButton.getBoundingClientRect().height;
+   280	
+   281	          if (socialButtonHeight > 0) {
+   282	            const setPx = (name: string, value: number) => {
+   283	              heroActions.style.setProperty(name, `${value}px`);
+   284	            };
+   285	
+   286	            setPx("--hero-social-button-height", socialButtonHeight);
+   287	            setPx("--hero-social-font-size", socialButtonHeight * 0.275);
+   288	            setPx("--hero-social-icon-size", socialButtonHeight * 0.605);
+   289	            setPx("--hero-social-gap", socialButtonHeight * 0.045833);
+   290	            setPx("--hero-social-pad-x", socialButtonHeight / 8);
+   291	            setPx("--hero-view-label-font-size", socialButtonHeight * 0.275);
+   292	            heroCopy?.style.setProperty(
+   293	              "--hero-eyebrow-font-size",
+   294	              `${socialButtonHeight * 0.367}px`,
+   295	            );
+   296	            setPx(
+   297	              "--hero-carousel-base-font-size",
+   298	              socialButtonHeight * 0.34375,
+   299	            );
+   300	            setPx(
+   301	              "--hero-carousel-name-font-size",
+   302	              socialButtonHeight * 0.352917,
+   303	            );
+   304	            setPx(
+   305	              "--hero-carousel-category-font-size",
+   306	              socialButtonHeight * 0.176458,
+   307	            );
+   308	            setPx(
+   309	              "--hero-carousel-arrow-font-size",
+   310	              socialButtonHeight * 0.458333,
+   311	            );
+   312	          }
+   313	        }
+   314	
+   315	        if (arrow && button && targetIcon) {
+   316	          const arrowRect = arrow.getBoundingClientRect();
+   317	          const buttonRect = button.getBoundingClientRect();
+   318	          const targetIconRect = targetIcon.getBoundingClientRect();
+   319	          const targetIconCenter =
+   320	            targetIconRect.left + targetIconRect.width / 2;
+   321	          const arrowLeft =
+   322	            targetIconCenter - buttonRect.left - arrowRect.width / 2;
+   323	          const clampedArrowLeft = Math.max(
+   324	            0,
+   325	            Math.min(arrowLeft, buttonRect.width - arrowRect.width),
+   326	          );
+   327	
+   328	          button.style.setProperty(
+   329	            "--carousel-arrow-left",
+   330	            `${clampedArrowLeft}px`,
+   331	          );
+   332	        }
+   333	
+   334	        const viewLabel =
+   335	          document.querySelector<HTMLElement>(".hero-view-label");
+   336	        const githubText =
+   337	          document.querySelector<HTMLElement>(".github-label-text");
+   338	        const githubIcon =
+   339	          document.querySelector<SVGSVGElement>(".github-icon-mark");
+   340	
+   341	        if (viewLabel && githubText && githubIcon) {
+   342	          const viewLabelRect = viewLabel.getBoundingClientRect();
+   343	          const githubTextRect = githubText.getBoundingClientRect();
+   344	          const githubIconRect = githubIcon.getBoundingClientRect();
+   345	          const stackLeft = githubTextRect.left - viewLabelRect.left;
+   346	          const stackWidth = githubIconRect.right - githubTextRect.left;
+   347	
+   348	          viewLabel.style.setProperty(
+   349	            "--hero-view-stack-left",
+   350	            `${stackLeft}px`,
+   351	          );
+   352	          viewLabel.style.setProperty(
+   353	            "--hero-view-stack-width",
+   354	            `${stackWidth}px`,
+   355	          );
+   356	        }
+   357	      });
+   358	    };
+   359	
+   360	    syncHeroActionGeometry();
+   361	    window.addEventListener("resize", syncHeroActionGeometry);
+   362	
+   363	    const targetIcon =
+   364	      document.querySelector<SVGSVGElement>(".dribbble-icon-mark") ??
+   365	      document.querySelector<SVGSVGElement>(".linkedin-icon-mark");
+   366	    const targetButton = targetIcon?.closest(".hero-social-button");
+   367	    const viewLabel = document.querySelector<HTMLElement>(".hero-view-label");
+   368	    const githubText = document.querySelector<HTMLElement>(".github-label-text");
+   369	    const githubIcon =
+   370	      document.querySelector<SVGSVGElement>(".github-icon-mark");
+   371	    const githubButton = githubText?.closest(".github-button");
+   372	    const resizeObserver =
+   373	      typeof ResizeObserver === "undefined"
+   374	        ? null
+   375	        : new ResizeObserver(syncHeroActionGeometry);
+   376	
+   377	    if (resizeObserver) {
+   378	      if (buttonRef.current) {
+   379	        resizeObserver.observe(buttonRef.current);
+   380	      }
+   381	
+   382	      if (targetIcon) {
+   383	        resizeObserver.observe(targetIcon);
+   384	      }
+   385	
+   386	      if (targetButton) {
+   387	        resizeObserver.observe(targetButton);
+   388	      }
+   389	
+   390	      if (viewLabel) {
+   391	        resizeObserver.observe(viewLabel);
+   392	      }
+   393	
+   394	      if (githubText) {
+   395	        resizeObserver.observe(githubText);
+   396	      }
+   397	
+   398	      if (githubIcon) {
+   399	        resizeObserver.observe(githubIcon);
+   400	      }
+   401	
+   402	      if (githubButton) {
+   403	        resizeObserver.observe(githubButton);
+   404	      }
+   405	    }
+   406	
+   407	    if ("fonts" in document) {
+   408	      document.fonts.ready.then(syncHeroActionGeometry).catch(() => {});
+   409	    }
+   410	
+   411	    return () => {
+   412	      if (frame) {
+   413	        window.cancelAnimationFrame(frame);
+   414	      }
+   415	
+   416	      window.removeEventListener("resize", syncHeroActionGeometry);
+   417	      resizeObserver?.disconnect();
+   418	    };
+   419	  }, []);
+   420	
+   421	  return (
+   422	    <a
+   423	      className="button button-primary carousel-button"
+   424	      href={activeProject.href}
+   425	      ref={buttonRef}
+   426	      style={{
+   427	        boxSizing: "border-box",
+   428	        display: "block",
+   429	        maxWidth: "100%",
+   430	        minWidth: 0,
+   431	        paddingLeft: 0,
+   432	        paddingRight: 0,
+   433	        position: "relative",
+   434	        width: "100%",
+   435	      }}
+   436	    >
+   437	      <span
+   438	        className="carousel-button-window"
+   439	        aria-live="polite"
+   440	        style={{
+   441	          alignItems: "center",
+   442	          display: "grid",
+   443	          justifyContent: "stretch",
+   444	          left: 0,
+   445	          minWidth: 0,
+   446	          overflow: "visible",
+   447	          position: "absolute",
+   448	          top: "50%",
+   449	          transform: "translateY(-50%)",
+   450	          width:
+   451	            "var(--carousel-arrow-left, calc(100% - clamp(10px, 3vw, 16px) - 21px))",
+   452	          whiteSpace: "nowrap",
+   453	        }}
+   454	      >
+   455	        <span
+   456	          className="carousel-button-label"
+   457	          key={activeProject.href}
+   458	          style={{
+   459	            minWidth: 0,
+   460	            paddingLeft: 0,
+   461	            width: "100%",
+   462	          }}
+   463	        >
+   464	          <span
+   465	            className={`carousel-button-action carousel-button-action-${activeProject.tone}`}
+   466	            style={{
+   467	              ...strokedWhiteTextStyle,
+   468	              alignItems: "center",
+   469	              color: projectNameColors[activeProject.tone],
+   470	              display: "inline-flex",
+   471	              flexDirection: "column",
+   472	              fontSize: "var(--hero-carousel-name-font-size)",
+   473	              gap: "2.2px",
+   474	              justifyContent: "center",
+   475	              lineHeight: 0.95,
+   476	            }}
+   477	          >
+   478	            <span
+   479	              className="carousel-button-action-name"
+   480	              style={{ fontSize: activeProject.nameFontSize }}
+   481	            >
+   482	              {activeProject.name}
+   483	            </span>
+   484	            <span
+   485	              className="carousel-button-action-category"
+   486	              style={{
+   487	                WebkitTextStroke: 0,
+   488	                color: "#000",
+   489	                fontSize: "var(--hero-carousel-category-font-size)",
+   490	                fontWeight: 900,
+   491	                letterSpacing: "0.06em",
+   492	                lineHeight: 1,
+   493	                textAlign: "center",
+   494	                textShadow: "none",
+   495	              }}
+   496	            >
+   497	              {activeProject.category}
+   498	            </span>
+   499	          </span>
+   500	          <span
+   501	            className="carousel-button-project"
+   502	            style={{ gap: "clamp(0.18em, 1.1vw, 0.34em)" }}
+   503	          >
+   504	            {activeProject.mobilePlatforms.map((platform) => (
+   505	              <PhoneMark key={platform} mobilePlatforms={[platform]} />
+   506	            ))}
+   507	            {activeProject.hasTablet ? <TabletMark /> : null}
+   508	            {activeProject.hasWeb ? <WebMark /> : null}
+   509	          </span>
+   510	        </span>
+   511	      </span>
+   512	      <span
+   513	        aria-hidden
+   514	        className="carousel-button-arrow"
+   515	        ref={arrowRef}
+   516	        style={{
+   517	          alignItems: "center",
+   518	          display: "grid",
+   519	          flex: "0 0 auto",
+   520	          fontSize: "var(--hero-carousel-arrow-font-size)",
+   521	          height: "1.1em",
+   522	          justifyItems: "center",
+   523	          left:
+   524	            "var(--carousel-arrow-left, calc(100% - clamp(10px, 3vw, 16px) - 21px))",
+   525	          lineHeight: 0,
+   526	          marginLeft: 0,
+   527	          position: "absolute",
+   528	          right: "auto",
+   529	          top: "50%",
+   530	          transform: "translateY(-50%)",
+   531	          width: "1.485em",
+   532	        }}
+   533	      >
+   534	        <CarouselArrowMark />
+   535	      </span>
+   536	    </a>
+   537	  );
+   538	}
 
 
 ============================================================
@@ -1290,7 +1602,7 @@ FILE: app/globals.css
    110	  align-items: center;
    111	  display: inline-flex;
    112	  gap: 10px;
-   113	  font-size: 15px;
+   113	  font-size: 11px;
    114	}
    115	
    116	.brand span {
@@ -1299,2012 +1611,2219 @@ FILE: app/globals.css
    119	  border-radius: 6px;
    120	  color: #001d0f;
    121	  display: inline-flex;
-   122	  font-weight: 900;
-   123	  height: 34px;
-   124	  justify-content: flex-start;
-   125	  width: 34px;
-   126	}
-   127	
-   128	.nav-bar nav {
-   129	  align-items: center;
-   130	  display: flex;
-   131	  gap: 8px;
-   132	  min-width: 0;
-   133	}
-   134	
-   135	.nav-bar nav a {
-   136	  border-radius: 6px;
-   137	  color: var(--muted);
-   138	  font-size: 14px;
-   139	  padding: 10px 12px;
-   140	  transition: background 160ms ease, color 160ms ease;
-   141	  white-space: nowrap;
-   142	}
-   143	
-   144	.nav-bar nav a:hover {
-   145	  background: rgba(67, 255, 146, 0.08);
-   146	  color: var(--text);
-   147	}
-   148	
-   149	.hero-grid {
-   150	  align-items: center;
-   151	  display: grid;
-   152	  gap: 56px;
-   153	  grid-template-columns: minmax(0, 0.95fr) minmax(420px, 1.05fr);
-   154	  min-height: calc(100vh - 140px);
-   155	  padding: 54px 0 28px;
-   156	  position: relative;
-   157	  z-index: 2;
-   158	}
-   159	
-   160	.hero-copy {
-   161	  max-width: 670px;
-   162	}
-   163	
-   164	.eyebrow,
-   165	.section-heading p {
-   166	  color: var(--green);
-   167	  font-size: 13px;
-   168	  font-weight: 800;
-   169	  letter-spacing: 0.12em;
-   170	  margin: 0 0 16px;
-   171	  text-transform: uppercase;
-   172	}
-   173	
-   174	.hero-eyebrow {
-   175	  font-size: 16px;
-   176	  font-weight: 850;
-   177	  letter-spacing: 0.02em;
-   178	  line-height: 1.5;
-   179	  text-transform: none;
+   122	  font-size: 16.5px;
+   123	  font-weight: 900;
+   124	  height: 34px;
+   125	  justify-content: center;
+   126	  line-height: 1;
+   127	  width: 34px;
+   128	}
+   129	
+   130	.nav-bar nav {
+   131	  align-items: center;
+   132	  display: flex;
+   133	  gap: 8px;
+   134	  min-width: 0;
+   135	}
+   136	
+   137	.nav-bar nav a {
+   138	  border-radius: 6px;
+   139	  color: var(--muted);
+   140	  font-size: 14px;
+   141	  padding: 10px 12px;
+   142	  transition: background 160ms ease, color 160ms ease;
+   143	  white-space: nowrap;
+   144	}
+   145	
+   146	.nav-bar nav a:hover {
+   147	  background: rgba(67, 255, 146, 0.08);
+   148	  color: var(--text);
+   149	}
+   150	
+   151	.hero-grid {
+   152	  align-items: center;
+   153	  display: grid;
+   154	  gap: 56px;
+   155	  grid-template-columns: minmax(0, 0.95fr) minmax(420px, 1.05fr);
+   156	  min-height: calc(100vh - 140px);
+   157	  padding: 16px 0 28px;
+   158	  position: relative;
+   159	  z-index: 2;
+   160	}
+   161	
+   162	.hero-copy {
+   163	  --hero-action-gap: 12px;
+   164	  --hero-proof-stack-width: min(460px, 100%);
+   165	  --hero-action-stack-width: var(--hero-proof-stack-width);
+   166	  --hero-eyebrow-font-size: 16px;
+   167	
+   168	  max-width: 670px;
+   169	  min-width: 0;
+   170	}
+   171	
+   172	.eyebrow,
+   173	.section-heading p {
+   174	  color: var(--green);
+   175	  font-size: 13px;
+   176	  font-weight: 800;
+   177	  letter-spacing: 0.12em;
+   178	  margin: 0 0 16px;
+   179	  text-transform: uppercase;
    180	}
    181	
-   182	.hero-eyebrow-box {
-   183	  border: 1px solid rgba(67, 255, 146, 0.5);
-   184	  border-radius: 2px;
-   185	  display: inline-block;
-   186	  line-height: 1.12;
-   187	  padding: 0.03em 0.24em 0.06em;
+   182	.hero-eyebrow {
+   183	  font-size: var(--hero-eyebrow-font-size);
+   184	  font-weight: 850;
+   185	  letter-spacing: 0.02em;
+   186	  line-height: 1.5;
+   187	  text-transform: none;
    188	}
    189	
-   190	.hero-eyebrow-underline {
-   191	  border-bottom: 1px solid currentColor;
-   192	  padding-bottom: 1px;
-   193	  text-decoration: none;
-   194	}
-   195	
-   196	.hero-eyebrow-period {
-   197	  margin-left: 0.12em;
-   198	}
-   199	
-   200	h1,
-   201	h2,
-   202	h3,
-   203	p {
-   204	  margin-top: 0;
-   205	}
-   206	
-   207	h1 {
-   208	  font-size: clamp(48px, 7vw, 92px);
-   209	  font-weight: 900;
-   210	  letter-spacing: 0;
-   211	  line-height: 0.92;
-   212	  margin-bottom: 24px;
-   213	}
-   214	
-   215	h2 {
-   216	  font-size: clamp(32px, 4vw, 56px);
-   217	  font-weight: 850;
-   218	  letter-spacing: 0;
-   219	  line-height: 1;
-   220	}
-   221	
-   222	h3 {
-   223	  font-size: 24px;
-   224	  font-weight: 800;
-   225	  letter-spacing: 0;
-   226	}
-   227	
-   228	.hero-lede {
-   229	  color: #c4d6cc;
-   230	  font-size: clamp(18px, 2vw, 24px);
-   231	  line-height: 1.45;
-   232	  max-width: 560px;
-   233	}
-   234	
-   235	.hero-actions {
-   236	  display: flex;
-   237	  flex-wrap: wrap;
-   238	  gap: 12px;
-   239	  margin-top: 32px;
-   240	}
-   241	
-   242	.hero-action-break {
-   243	  flex-basis: 100%;
-   244	  height: 0;
+   190	.hero-eyebrow-box {
+   191	  border: 1px solid rgba(67, 255, 146, 0.5);
+   192	  border-radius: 2px;
+   193	  display: inline-block;
+   194	  line-height: 1.12;
+   195	  margin-left: 0.28em;
+   196	  padding: 0.03em 0.24em 0.06em;
+   197	}
+   198	
+   199	.hero-eyebrow-underline {
+   200	  border-bottom: 1px solid currentColor;
+   201	  padding-bottom: 1px;
+   202	  text-decoration: none;
+   203	}
+   204	
+   205	.hero-eyebrow-period {
+   206	  margin-left: 0.28em;
+   207	}
+   208	
+   209	h1,
+   210	h2,
+   211	h3,
+   212	p {
+   213	  margin-top: 0;
+   214	}
+   215	
+   216	h1 {
+   217	  font-size: clamp(47px, 7vw, 91px);
+   218	  font-weight: 900;
+   219	  letter-spacing: 0;
+   220	  line-height: 0.92;
+   221	  margin-bottom: 16px;
+   222	}
+   223	
+   224	h2 {
+   225	  font-size: clamp(32px, 4vw, 56px);
+   226	  font-weight: 850;
+   227	  letter-spacing: 0;
+   228	  line-height: 1;
+   229	}
+   230	
+   231	h3 {
+   232	  font-size: 24px;
+   233	  font-weight: 800;
+   234	  letter-spacing: 0;
+   235	}
+   236	
+   237	.hero-lede {
+   238	  color: #c4d6cc;
+   239	  display: grid;
+   240	  font-size: clamp(18px, 2vw, 24px);
+   241	  line-height: 1.45;
+   242	  max-width: none;
+   243	  min-width: 0;
+   244	  width: var(--hero-action-stack-width);
    245	}
    246	
-   247	.button {
-   248	  align-items: center;
-   249	  border-radius: 8px;
-   250	  display: inline-flex;
-   251	  font-size: 15px;
-   252	  font-weight: 800;
-   253	  gap: 10px;
-   254	  justify-content: center;
-   255	  min-height: 48px;
-   256	  padding: 0 18px;
-   257	  transition: transform 160ms ease, border-color 160ms ease, background 160ms ease;
-   258	}
-   259	
-   260	.button:hover {
-   261	  transform: translateY(-2px);
-   262	}
-   263	
-   264	.button-primary {
-   265	  background: linear-gradient(135deg, var(--green), var(--green-2));
-   266	  color: #001b0d;
-   267	}
-   268	
-   269	.carousel-button {
-   270	  flex: 0 1 420px;
-   271	  gap: clamp(3px, 1vw, 5px);
-   272	  justify-content: flex-start;
-   273	  max-width: 100%;
-   274	  min-width: 0;
-   275	  overflow: hidden;
-   276	  padding-left: clamp(10px, 3vw, 16px);
-   277	  padding-right: clamp(10px, 3vw, 16px);
-   278	  width: min(420px, 100%);
-   279	}
-   280	
-   281	.carousel-button-window {
-   282	  align-items: center;
-   283	  display: inline-flex;
-   284	  flex: 0 1 auto;
-   285	  gap: clamp(0.55em, 2.4vw, 1em);
-   286	  min-width: 0;
-   287	  overflow: visible;
-   288	  white-space: nowrap;
-   289	}
-   290	
-   291	.carousel-button-label {
-   292	  align-items: center;
-   293	  animation: project-swoosh 720ms cubic-bezier(0.18, 0.9, 0.28, 1.18);
-   294	  display: inline-flex;
-   295	  gap: clamp(0.55em, 2.4vw, 1em);
-   296	  min-width: 0;
-   297	  padding-left: 0;
-   298	  white-space: nowrap;
-   299	  will-change: transform, opacity;
+   247	.hero-lede-line {
+   248	  display: block;
+   249	  min-width: 0;
+   250	  overflow: visible;
+   251	  white-space: nowrap;
+   252	  width: 100%;
+   253	}
+   254	
+   255	.hero-lede-line > strong {
+   256	  display: block;
+   257	}
+   258	
+   259	.hero-lede-line-visual {
+   260	  align-items: baseline;
+   261	  display: inline-flex;
+   262	  white-space: pre;
+   263	}
+   264	
+   265	.hero-lede-char {
+   266	  flex: 0 0 auto;
+   267	  white-space: pre;
+   268	}
+   269	
+   270	.hero-lede-char:not(:last-child) {
+   271	  margin-right: var(--hero-lede-letter-gap, 0px);
+   272	}
+   273	
+   274	.hero-actions {
+   275	  --hero-carousel-arrow-font-size: 22px;
+   276	  --hero-carousel-base-font-size: 16.5px;
+   277	  --hero-carousel-category-font-size: 8.47px;
+   278	  --hero-carousel-name-font-size: 16.94px;
+   279	  --hero-social-button-height: 48px;
+   280	  --hero-social-font-size: clamp(12.1px, 3.52vw, 13.2px);
+   281	  --hero-social-gap: clamp(1.1px, 0.66vw, 2.2px);
+   282	  --hero-social-icon-size: clamp(26.62px, 7.26vw, 29.04px);
+   283	  --hero-social-pad-x: clamp(4px, 1.6vw, 6px);
+   284	  --hero-view-label-font-size: 13.2px;
+   285	
+   286	  align-items: stretch;
+   287	  display: grid;
+   288	  gap: var(--hero-action-gap);
+   289	  margin-top: 16px;
+   290	  width: var(--hero-action-stack-width);
+   291	}
+   292	
+   293	.hero-project-action {
+   294	  align-items: stretch;
+   295	  display: grid;
+   296	  gap: var(--hero-action-gap);
+   297	  grid-auto-rows: var(--hero-social-button-height);
+   298	  grid-template-columns: repeat(3, minmax(0, 1fr));
+   299	  width: 100%;
    300	}
    301	
-   302	.carousel-button-action {
-   303	  -webkit-text-stroke: 4.2px #000;
-   304	  align-items: center;
-   305	  color: #f3fff7;
-   306	  display: inline-flex;
-   307	  flex-direction: column;
-   308	  font-size: 14px;
-   309	  gap: 2px;
-   310	  justify-content: center;
-   311	  line-height: 0.95;
-   312	  paint-order: stroke fill;
-   313	  text-shadow: 0 0 0 #000;
-   314	}
-   315	
-   316	.carousel-button-action-name {
-   317	  display: block;
-   318	}
-   319	
-   320	.carousel-button-action-category {
-   321	  -webkit-text-stroke: 0;
-   322	  color: #000;
-   323	  display: block;
-   324	  font-size: 7px;
-   325	  font-weight: 900;
-   326	  letter-spacing: 0.06em;
-   327	  line-height: 1;
-   328	  text-align: center;
-   329	  text-shadow: none;
-   330	}
-   331	
-   332	.carousel-button-action-commerce {
-   333	  color: #ffad4d;
+   302	.hero-view-label {
+   303	  --hero-checkout-bleed: 3px;
+   304	  --hero-project-squish: 2px;
+   305	
+   306	  align-self: center;
+   307	  align-items: center;
+   308	  display: grid;
+   309	  font-size: var(--hero-view-label-font-size);
+   310	  font-weight: 900;
+   311	  height: var(--hero-social-button-height);
+   312	  justify-items: center;
+   313	  justify-self: stretch;
+   314	  line-height: 0.95;
+   315	  pointer-events: none;
+   316	  position: relative;
+   317	  width: 100%;
+   318	  z-index: 1;
+   319	}
+   320	
+   321	.hero-view-label .hero-view-label-stack {
+   322	  align-content: center;
+   323	  align-self: center;
+   324	  display: grid;
+   325	  gap: 0.28em;
+   326	  height: max-content;
+   327	  justify-self: start;
+   328	  margin-left: var(--hero-view-stack-left, 0px);
+   329	  min-width: var(--hero-view-stack-width, 0px);
+   330	  text-align: left;
+   331	  transform: translateY(1px) scale(1.1);
+   332	  transform-origin: center center;
+   333	  width: max-content;
    334	}
    335	
-   336	.carousel-button-action-entertainment {
-   337	  color: #9b5cff;
+   336	.hero-view-label-stack > span {
+   337	  display: block;
    338	}
    339	
-   340	.carousel-button-action-finance {
-   341	  color: #2f6bff;
-   342	}
-   343	
-   344	.carousel-button-project {
-   345	  -webkit-text-stroke: 4.2px #000;
-   346	  align-items: center;
-   347	  color: #f3fff7;
-   348	  display: inline-flex;
-   349	  gap: clamp(0.18em, 1.1vw, 0.34em);
-   350	  paint-order: stroke fill;
-   351	  text-shadow: 0 0 0 #000;
-   352	}
-   353	
-   354	.carousel-button-project-word {
-   355	  -webkit-text-stroke: 4.2px #000;
-   356	  color: #f3fff7;
-   357	  paint-order: stroke fill;
-   358	  text-shadow: 0 0 0 #000;
-   359	}
-   360	
-   361	.carousel-button-arrow {
-   362	  -webkit-text-stroke: 4.2px #000;
-   363	  color: #f3fff7;
-   364	  flex: 0 0 auto;
-   365	  font-size: 22px;
-   366	  font-weight: 900;
-   367	  line-height: 1;
-   368	  margin-left: auto;
-   369	  paint-order: stroke fill;
-   370	  text-shadow: 0 0 0 #000;
-   371	}
-   372	
-   373	.carousel-button-phone,
-   374	.carousel-button-web {
-   375	  align-self: center;
-   376	  display: block;
-   377	  flex: 0 0 auto;
-   378	  height: 0.8em;
-   379	  stroke: #000;
-   380	  stroke-linecap: round;
-   381	  stroke-linejoin: round;
-   382	  stroke-width: 3px;
-   383	  width: 0.8em;
-   384	}
-   385	
-   386	.carousel-button-phone {
-   387	  height: 1.936em;
-   388	  width: 1.36125em;
-   389	}
-   390	
-   391	.phone-mini-frame {
-   392	  fill: none;
-   393	  stroke: #000;
-   394	  stroke-width: 2.4px;
-   395	}
-   396	
-   397	.phone-mini-screen {
-   398	  fill: transparent;
-   399	  stroke: none;
-   400	}
-   401	
-   402	.phone-mini-speaker {
-   403	  fill: none;
-   404	  stroke: #000;
-   405	  stroke-width: 1.6px;
-   406	}
-   407	
-   408	.phone-mini-home {
-   409	  fill: #000;
-   410	  stroke: none;
-   411	}
-   412	
-   413	.carousel-button-tablet {
-   414	  align-self: center;
-   415	  display: block;
-   416	  flex: 0 0 auto;
-   417	  height: 1.44em;
-   418	  stroke-linecap: round;
-   419	  stroke-linejoin: round;
-   420	  width: 2.16em;
-   421	}
-   422	
-   423	.tablet-mini-frame {
-   424	  fill: none;
-   425	  stroke: #000;
-   426	  stroke-width: 2.2px;
-   427	}
-   428	
-   429	.tablet-mini-screen {
-   430	  fill: transparent;
-   431	  stroke: none;
-   432	}
-   433	
-   434	.tablet-mini-camera {
-   435	  fill: #000;
-   436	  stroke: none;
-   437	}
-   438	
-   439	.carousel-button-web {
-   440	  height: 0.9702em;
-   441	  margin-left: -0.15em;
-   442	  stroke-width: 2px;
-   443	  transform: translateY(0.06em);
-   444	  width: 0.9702em;
-   445	}
-   446	
-   447	.web-globe-shell {
-   448	  fill: #f3fff7;
-   449	  stroke: #000;
-   450	  stroke-width: 4px;
-   451	}
-   452	
-   453	.web-globe-line {
-   454	  fill: none;
-   455	  stroke: #000;
-   456	  stroke-width: 2px;
-   457	}
-   458	
-   459	@keyframes project-swoosh {
-   460	  0% {
-   461	    opacity: 0;
-   462	    transform: translateY(28px) rotate(1.5deg) scale(0.96);
-   463	  }
-   464	
-   465	  48% {
-   466	    opacity: 1;
-   467	    transform: translateY(-5px) rotate(-0.6deg) scale(1.035);
-   468	  }
-   469	
-   470	  68% {
-   471	    transform: translateY(3px) rotate(0.35deg) scale(0.985);
-   472	  }
-   473	
-   474	  84% {
-   475	    transform: translateY(-2px) rotate(-0.2deg) scale(1.012);
-   476	  }
-   477	
-   478	  100% {
-   479	    opacity: 1;
-   480	    transform: translateY(0) rotate(0) scale(1);
-   481	  }
-   482	}
-   483	
-   484	@media (prefers-reduced-motion: reduce) {
-   485	  .carousel-button-label {
-   486	    animation: none;
-   487	  }
+   340	.hero-view-label-stack > span:first-child {
+   341	  font-size: inherit;
+   342	  transform: translateY(0.25px);
+   343	}
+   344	
+   345	.hero-view-label-stack > .hero-view-word,
+   346	.hero-view-label-stack > .hero-project-word {
+   347	  display: flex;
+   348	  justify-content: space-between;
+   349	  width: 100%;
+   350	}
+   351	
+   352	.hero-view-label-stack > .hero-view-word {
+   353	  margin-left: calc(var(--hero-checkout-bleed) * -1);
+   354	  width: calc(100% + (var(--hero-checkout-bleed) * 2));
+   355	}
+   356	
+   357	.hero-view-label-stack > .hero-project-word {
+   358	  margin-left: var(--hero-project-squish);
+   359	  width: calc(100% - (var(--hero-project-squish) * 2));
+   360	}
+   361	
+   362	.hero-view-label-stack .hero-word-space {
+   363	  flex: 0 0 0.2em;
+   364	}
+   365	
+   366	.hero-view-label-stack > span:last-child {
+   367	  font-size: inherit;
+   368	  transform: translateY(-0.25px);
+   369	}
+   370	
+   371	.hero-project-action .carousel-button {
+   372	  grid-column: 2 / 4;
+   373	}
+   374	
+   375	.hero-social-buttons {
+   376	  display: grid;
+   377	  gap: var(--hero-action-gap);
+   378	  grid-template-columns: repeat(3, minmax(0, 1fr));
+   379	  width: 100%;
+   380	}
+   381	
+   382	.button {
+   383	  align-items: center;
+   384	  border-radius: 8px;
+   385	  display: inline-flex;
+   386	  font-size: 15px;
+   387	  font-weight: 800;
+   388	  gap: 10px;
+   389	  justify-content: center;
+   390	  min-height: 48px;
+   391	  padding: 0 18px;
+   392	  transition: transform 160ms ease, border-color 160ms ease, background 160ms ease;
+   393	}
+   394	
+   395	.button:hover {
+   396	  transform: translateY(-2px);
+   397	}
+   398	
+   399	.button-primary {
+   400	  background: linear-gradient(135deg, var(--green), var(--green-2));
+   401	  color: #001b0d;
+   402	}
+   403	
+   404	.carousel-button {
+   405	  --carousel-arrow-left: calc(100% - clamp(10px, 3vw, 16px) - 21px);
+   406	
+   407	  display: block;
+   408	  font-size: var(--hero-carousel-base-font-size);
+   409	  height: var(--hero-social-button-height);
+   410	  max-width: 100%;
+   411	  min-height: 0;
+   412	  min-width: 0;
+   413	  overflow: hidden;
+   414	  padding-left: 0;
+   415	  padding-right: 0;
+   416	  position: relative;
+   417	  width: 100%;
+   418	}
+   419	
+   420	.carousel-button-window {
+   421	  align-items: center;
+   422	  display: grid;
+   423	  flex: 0 1 auto;
+   424	  justify-content: stretch;
+   425	  left: 0;
+   426	  min-width: 0;
+   427	  overflow: visible;
+   428	  position: absolute;
+   429	  top: 50%;
+   430	  transform: translateY(-50%);
+   431	  width: var(--carousel-arrow-left);
+   432	  white-space: nowrap;
+   433	}
+   434	
+   435	.carousel-button-label {
+   436	  align-items: center;
+   437	  animation: project-swoosh 720ms cubic-bezier(0.18, 0.9, 0.28, 1.18);
+   438	  display: grid;
+   439	  gap: 0;
+   440	  grid-template-columns:
+   441	    minmax(0, 1fr)
+   442	    max-content
+   443	    minmax(0, 1fr)
+   444	    max-content
+   445	    minmax(0, 1fr);
+   446	  justify-items: center;
+   447	  min-width: 0;
+   448	  padding-left: 0;
+   449	  width: 100%;
+   450	  white-space: nowrap;
+   451	  will-change: transform, opacity;
+   452	}
+   453	
+   454	.carousel-button-action {
+   455	  -webkit-text-stroke: 4.2px #000;
+   456	  align-items: center;
+   457	  color: #f3fff7;
+   458	  display: inline-flex;
+   459	  flex-direction: column;
+   460	  font-size: 14px;
+   461	  gap: 2.2px;
+   462	  grid-column: 2;
+   463	  justify-content: center;
+   464	  line-height: 0.95;
+   465	  paint-order: stroke fill;
+   466	  text-shadow: 0 0 0 #000;
+   467	}
+   468	
+   469	.carousel-button-action-name {
+   470	  display: block;
+   471	}
+   472	
+   473	.carousel-button-action-category {
+   474	  -webkit-text-stroke: 0;
+   475	  color: #000;
+   476	  display: block;
+   477	  font-size: 7px;
+   478	  font-weight: 900;
+   479	  letter-spacing: 0.06em;
+   480	  line-height: 1;
+   481	  text-align: center;
+   482	  text-shadow: none;
+   483	}
+   484	
+   485	.carousel-button-action-commerce {
+   486	  color: #ffad4d;
+   487	}
    488	
-   489	  .flow-browse-extra {
-   490	    transition: none;
-   491	  }
-   492	}
-   493	
-   494	.button-secondary {
-   495	  background: rgba(255, 255, 255, 0.04);
-   496	  border: 1px solid var(--line-strong);
-   497	  color: var(--text);
-   498	}
-   499	
-   500	.github-button {
-   501	  background: #f3fff7;
-   502	  border-color: #f3fff7;
-   503	  color: #000;
-   504	  gap: 0.5em;
-   505	  justify-content: center;
-   506	  padding-left: 16px;
-   507	  padding-right: 16px;
-   508	}
-   509	
-   510	.linkedin-button {
-   511	  background: #60a5fa;
-   512	  border-color: #60a5fa;
+   489	.carousel-button-action-entertainment {
+   490	  color: #9b5cff;
+   491	}
+   492	
+   493	.carousel-button-action-finance {
+   494	  color: #2f6bff;
+   495	}
+   496	
+   497	.carousel-button-project {
+   498	  -webkit-text-stroke: 4.2px #000;
+   499	  align-items: center;
+   500	  color: #f3fff7;
+   501	  display: inline-flex;
+   502	  gap: clamp(0.18em, 1.1vw, 0.34em);
+   503	  grid-column: 4;
+   504	  paint-order: stroke fill;
+   505	  text-shadow: 0 0 0 #000;
+   506	}
+   507	
+   508	.carousel-button-project-word {
+   509	  -webkit-text-stroke: 4.2px #000;
+   510	  color: #f3fff7;
+   511	  paint-order: stroke fill;
+   512	  text-shadow: 0 0 0 #000;
    513	}
    514	
-   515	.stack-row {
-   516	  display: flex;
-   517	  flex-wrap: wrap;
-   518	  gap: 10px;
-   519	  margin-top: 26px;
-   520	}
-   521	
-   522	.stack-row span,
-   523	.case-tags span {
-   524	  background: rgba(67, 255, 146, 0.08);
-   525	  border: 1px solid var(--line);
-   526	  border-radius: 999px;
-   527	  color: #d8ffe4;
-   528	  font-size: 13px;
-   529	  font-weight: 700;
-   530	  padding: 8px 11px;
-   531	}
-   532	
-   533	.hero-visual {
-   534	  position: relative;
-   535	}
-   536	
-   537	.profile-orbit {
-   538	  align-items: center;
-   539	  display: flex;
-   540	  flex-direction: column;
-   541	  gap: 12px;
-   542	  position: absolute;
-   543	  right: 18px;
-   544	  top: 0;
-   545	  z-index: 3;
-   546	}
-   547	
-   548	.profile-photo {
-   549	  border: 2px solid rgba(198, 255, 217, 0.34);
-   550	  border-radius: 999px;
-   551	  box-shadow: 0 0 0 10px rgba(67, 255, 146, 0.05), 0 34px 95px rgba(0, 191, 99, 0.22);
-   552	  height: 188px;
-   553	  object-fit: cover;
-   554	  width: 188px;
-   555	}
-   556	
-   557	.profile-orbit span {
-   558	  background: rgba(5, 16, 10, 0.8);
-   559	  border: 1px solid var(--line);
-   560	  border-radius: 8px;
-   561	  color: var(--mint);
-   562	  font-size: 12px;
-   563	  font-weight: 750;
-   564	  line-height: 1.25;
-   565	  max-width: 138px;
-   566	  padding: 7px 11px;
-   567	  text-align: center;
+   515	.carousel-button-arrow {
+   516	  align-items: center;
+   517	  display: grid;
+   518	  flex: 0 0 auto;
+   519	  font-size: var(--hero-carousel-arrow-font-size);
+   520	  height: 1.1em;
+   521	  justify-items: center;
+   522	  left: var(--carousel-arrow-left);
+   523	  line-height: 0;
+   524	  margin-left: 0;
+   525	  position: absolute;
+   526	  right: auto;
+   527	  top: 50%;
+   528	  transform: translateY(-50%);
+   529	  width: 1.485em;
+   530	}
+   531	
+   532	.carousel-button-arrow-mark {
+   533	  display: block;
+   534	  height: 100%;
+   535	  object-fit: contain;
+   536	  pointer-events: none;
+   537	  user-select: none;
+   538	  width: 100%;
+   539	}
+   540	
+   541	.carousel-button-phone,
+   542	.carousel-button-web {
+   543	  align-self: center;
+   544	  display: block;
+   545	  flex: 0 0 auto;
+   546	  height: 0.8em;
+   547	  stroke: #000;
+   548	  stroke-linecap: round;
+   549	  stroke-linejoin: round;
+   550	  stroke-width: 3px;
+   551	  width: 0.8em;
+   552	}
+   553	
+   554	.carousel-button-phone {
+   555	  height: 1.936em;
+   556	  width: 1.36125em;
+   557	}
+   558	
+   559	.phone-mini-frame {
+   560	  fill: none;
+   561	  stroke: #000;
+   562	  stroke-width: 2.4px;
+   563	}
+   564	
+   565	.phone-mini-screen {
+   566	  fill: transparent;
+   567	  stroke: none;
    568	}
    569	
-   570	.phone-stage {
-   571	  height: 690px;
-   572	  margin-top: 48px;
-   573	  position: relative;
+   570	.phone-mini-speaker {
+   571	  fill: none;
+   572	  stroke: #000;
+   573	  stroke-width: 1.6px;
    574	}
    575	
-   576	.tablet-shell {
-   577	  background: linear-gradient(145deg, #0c120f, #000);
-   578	  border: 1px solid rgba(198, 255, 217, 0.24);
-   579	  border-radius: var(--capture-frame-radius-standard);
-   580	  box-shadow: 0 34px 96px rgba(0, 0, 0, 0.66), 0 0 56px rgba(0, 191, 99, 0.12);
-   581	  height: 190px;
-   582	  left: 38px;
-   583	  padding: 13px;
-   584	  position: absolute;
-   585	  top: 352px;
-   586	  transform: rotate(-5deg) scale(1.5);
-   587	  transform-origin: top left;
-   588	  width: 304px;
-   589	  z-index: 4;
-   590	}
-   591	
-   592	.tablet-camera {
-   593	  background: rgba(198, 255, 217, 0.28);
-   594	  border-radius: 999px;
-   595	  height: 5px;
-   596	  left: 50%;
-   597	  position: absolute;
-   598	  top: 6px;
-   599	  transform: translateX(-50%);
-   600	  width: 5px;
-   601	}
-   602	
-   603	.tablet-screen {
-   604	  background:
-   605	    linear-gradient(rgba(67, 255, 146, 0.045) 1px, transparent 1px),
-   606	    linear-gradient(90deg, rgba(67, 255, 146, 0.045) 1px, transparent 1px),
-   607	    radial-gradient(circle at 28% 34%, rgba(67, 255, 146, 0.18), transparent 34%),
-   608	    linear-gradient(180deg, #07140d, #020403 70%);
-   609	  background-size: 22px 22px, 22px 22px, auto, auto;
-   610	  border: 1px solid rgba(198, 255, 217, 0.08);
-   611	  border-radius: var(--capture-screen-radius-standard);
-   612	  height: 100%;
-   613	  overflow: hidden;
-   614	  position: relative;
-   615	}
-   616	
-   617	.tablet-screen-image {
-   618	  object-fit: contain;
-   619	  object-position: center center;
-   620	}
-   621	
-   622	.tablet-empty-grid {
-   623	  background:
-   624	    linear-gradient(90deg, rgba(198, 255, 217, 0.06) 1px, transparent 1px),
-   625	    linear-gradient(rgba(198, 255, 217, 0.06) 1px, transparent 1px);
-   626	  background-size: 48px 48px;
-   627	  inset: 0;
-   628	  opacity: 0.45;
-   629	  position: absolute;
-   630	}
-   631	
-   632	.phone-shell {
-   633	  background: linear-gradient(145deg, #0c120f, #000);
-   634	  border: 1px solid rgba(198, 255, 217, 0.22);
-   635	  border-radius: 34px;
-   636	  box-shadow: 0 34px 100px rgba(0, 0, 0, 0.62);
-   637	  height: 500px;
-   638	  padding: 16px;
-   639	  position: absolute;
-   640	  width: 245px;
-   641	}
-   642	
-   643	.phone-shell-link {
-   644	  color: inherit;
-   645	  cursor: pointer;
-   646	  display: block;
-   647	  text-decoration: none;
-   648	}
-   649	
-   650	.phone-shell-link:focus-visible {
-   651	  outline: 2px solid var(--mint);
-   652	  outline-offset: 8px;
-   653	}
-   654	
-   655	.phone-shell-commerce {
-   656	  left: 68px;
-   657	  top: 40px;
-   658	  transform: rotate(-9deg);
-   659	  z-index: 2;
+   576	.phone-mini-home {
+   577	  fill: #000;
+   578	  stroke: none;
+   579	}
+   580	
+   581	.carousel-button-tablet {
+   582	  align-self: center;
+   583	  display: block;
+   584	  flex: 0 0 auto;
+   585	  height: 1.44em;
+   586	  stroke-linecap: round;
+   587	  stroke-linejoin: round;
+   588	  width: 2.16em;
+   589	}
+   590	
+   591	.tablet-mini-frame {
+   592	  fill: none;
+   593	  stroke: #000;
+   594	  stroke-width: 2.2px;
+   595	}
+   596	
+   597	.tablet-mini-screen {
+   598	  fill: transparent;
+   599	  stroke: none;
+   600	}
+   601	
+   602	.tablet-mini-camera {
+   603	  fill: #000;
+   604	  stroke: none;
+   605	}
+   606	
+   607	.carousel-button-web {
+   608	  height: 0.9702em;
+   609	  margin-left: -0.15em;
+   610	  stroke-width: 2px;
+   611	  transform: translateY(0.06em);
+   612	  width: 0.9702em;
+   613	}
+   614	
+   615	.web-globe-shell {
+   616	  fill: #f3fff7;
+   617	  stroke: #000;
+   618	  stroke-width: 4px;
+   619	}
+   620	
+   621	.web-globe-line {
+   622	  fill: none;
+   623	  stroke: #000;
+   624	  stroke-width: 2px;
+   625	}
+   626	
+   627	@keyframes project-swoosh {
+   628	  0% {
+   629	    opacity: 0;
+   630	    transform: translateY(28px);
+   631	  }
+   632	
+   633	  48% {
+   634	    opacity: 1;
+   635	    transform: translateY(-5px);
+   636	  }
+   637	
+   638	  68% {
+   639	    transform: translateY(3px);
+   640	  }
+   641	
+   642	  84% {
+   643	    transform: translateY(-2px);
+   644	  }
+   645	
+   646	  100% {
+   647	    opacity: 1;
+   648	    transform: translateY(0);
+   649	  }
+   650	}
+   651	
+   652	@media (prefers-reduced-motion: reduce) {
+   653	  .carousel-button-label {
+   654	    animation: none;
+   655	  }
+   656	
+   657	  .flow-browse-extra {
+   658	    transition: none;
+   659	  }
    660	}
    661	
-   662	.phone-shell-finance {
-   663	  left: 278px;
-   664	  top: 110px;
-   665	  transform: rotate(8deg);
-   666	  z-index: 1;
-   667	}
-   668	
-   669	.phone-speaker {
-   670	  background: #171f1a;
-   671	  border-radius: 99px;
-   672	  height: 6px;
-   673	  margin: 0 auto 12px;
-   674	  width: 62px;
-   675	}
-   676	
-   677	.phone-screen {
-   678	  background:
-   679	    linear-gradient(rgba(67, 255, 146, 0.055) 1px, transparent 1px),
-   680	    linear-gradient(90deg, rgba(67, 255, 146, 0.055) 1px, transparent 1px),
-   681	    linear-gradient(180deg, #0b1710, #030705 64%);
-   682	  background-size: 24px 24px, 24px 24px, auto;
-   683	  border-radius: 24px;
-   684	  height: calc(100% - 18px);
-   685	  overflow: hidden;
-   686	  padding: 18px;
-   687	  position: relative;
-   688	}
-   689	
-   690	.phone-screen.has-image {
-   691	  background: #020403;
-   692	  border-radius: var(--capture-screen-radius-tall);
-   693	  padding: 0;
-   694	}
-   695	
-   696	.phone-screen-image-frame {
-   697	  inset: 2% 0 0;
-   698	  position: absolute;
-   699	}
-   700	
-   701	.phone-screen-image {
-   702	  object-fit: contain;
-   703	  object-position: top center;
-   704	}
-   705	
-   706	.phone-shell-capture {
-   707	  border-radius: var(--capture-frame-radius-tall);
-   708	}
-   709	
-   710	.phone-status {
-   711	  align-items: center;
-   712	  color: var(--mint);
-   713	  display: flex;
-   714	  font-size: 11px;
-   715	  font-weight: 800;
-   716	  justify-content: space-between;
-   717	  margin-bottom: 28px;
-   718	}
-   719	
-   720	.phone-chart {
-   721	  align-items: end;
-   722	  display: grid;
-   723	  gap: 8px;
-   724	  grid-template-columns: repeat(4, 1fr);
-   725	  height: 118px;
-   726	  margin-bottom: 26px;
-   727	}
-   728	
-   729	.phone-chart div {
-   730	  background: linear-gradient(180deg, var(--green), #086c3b);
-   731	  border-radius: 6px 6px 2px 2px;
-   732	}
-   733	
-   734	.phone-chart div:nth-child(1) {
-   735	  height: 54%;
-   736	}
-   737	
-   738	.phone-chart div:nth-child(2) {
-   739	  height: 88%;
-   740	}
-   741	
-   742	.phone-chart div:nth-child(3) {
-   743	  height: 66%;
-   744	}
-   745	
-   746	.phone-chart div:nth-child(4) {
-   747	  height: 100%;
-   748	}
-   749	
-   750	.phone-cardline {
-   751	  background: rgba(198, 255, 217, 0.14);
-   752	  border-radius: 999px;
-   753	  height: 12px;
-   754	  margin-bottom: 10px;
-   755	  width: 62%;
-   756	}
-   757	
-   758	.phone-cardline.wide {
-   759	  width: 88%;
-   760	}
-   761	
-   762	.phone-grid {
-   763	  display: grid;
-   764	  gap: 9px;
-   765	  grid-template-columns: 1fr 1fr;
-   766	  margin-top: 24px;
-   767	}
-   768	
-   769	.phone-grid span {
-   770	  background: rgba(255, 255, 255, 0.05);
-   771	  border: 1px solid var(--line);
-   772	  border-radius: 8px;
-   773	  height: 54px;
-   774	}
-   775	
-   776	.phone-cta {
-   777	  align-items: center;
-   778	  background: var(--green);
-   779	  border-radius: 8px;
-   780	  color: #001d0f;
-   781	  display: flex;
-   782	  font-size: 13px;
-   783	  font-weight: 900;
-   784	  height: 42px;
-   785	  justify-content: center;
-   786	  margin-top: 24px;
-   787	}
-   788	
-   789	.proof-panel {
-   790	  backdrop-filter: blur(16px);
-   791	  background: rgba(5, 16, 10, 0.76);
-   792	  border: 1px solid var(--line-strong);
-   793	  border-radius: 8px;
-   794	  display: grid;
-   795	  grid-template-columns: repeat(3, minmax(0, 1fr));
-   796	  gap: 10px;
-   797	  margin: 26px 0 0;
-   798	  padding: 14px;
-   799	  position: relative;
-   800	  width: min(460px, 100%);
-   801	  z-index: 2;
-   802	}
-   803	
-   804	.proof-column {
-   805	  color: #dfffea;
-   806	  display: grid;
-   807	  font-size: 13px;
-   808	  font-weight: 750;
-   809	  gap: 10px;
-   810	  line-height: 1.25;
-   811	}
-   812	
-   813	.proof-item {
-   814	  align-items: center;
-   815	  display: flex;
-   816	  gap: 4px;
-   817	  min-width: 0;
-   818	}
-   819	
-   820	.proof-item svg {
-   821	  flex: 0 0 auto;
+   662	.button-secondary {
+   663	  background: rgba(255, 255, 255, 0.04);
+   664	  border: 1px solid var(--line-strong);
+   665	  color: var(--text);
+   666	}
+   667	
+   668	.hero-social-button {
+   669	  aspect-ratio: 4.5 / 2;
+   670	  gap: var(--hero-social-gap);
+   671	  justify-content: center;
+   672	  font-size: var(--hero-social-font-size);
+   673	  height: auto;
+   674	  min-height: 0;
+   675	  min-width: 0;
+   676	  padding-left: var(--hero-social-pad-x);
+   677	  padding-right: var(--hero-social-pad-x);
+   678	  width: 100%;
+   679	}
+   680	
+   681	.hero-social-button svg {
+   682	  flex: 0 0 auto;
+   683	  height: var(--hero-social-icon-size);
+   684	  width: var(--hero-social-icon-size);
+   685	}
+   686	
+   687	.github-button {
+   688	  background: #f3fff7;
+   689	  border-color: #f3fff7;
+   690	  color: #000;
+   691	}
+   692	
+   693	.linkedin-button {
+   694	  background: #60a5fa;
+   695	  border-color: #60a5fa;
+   696	}
+   697	
+   698	.dribbble-button {
+   699	  background: #ea4c89;
+   700	  border-color: #ea4c89;
+   701	  color: #000;
+   702	}
+   703	
+   704	.stack-row {
+   705	  display: grid;
+   706	  gap: 6px;
+   707	  grid-template-columns:
+   708	    minmax(0, 33fr)
+   709	    minmax(0, 34fr)
+   710	    minmax(0, 33fr);
+   711	  margin-top: 26px;
+   712	  width: var(--hero-action-stack-width);
+   713	}
+   714	
+   715	.stack-row span,
+   716	.case-tags span {
+   717	  background: rgba(67, 255, 146, 0.08);
+   718	  border: 1px solid var(--line);
+   719	  border-radius: 999px;
+   720	  color: #d8ffe4;
+   721	  font-size: 13px;
+   722	  font-weight: 700;
+   723	  padding: 8px 11px;
+   724	}
+   725	
+   726	.stack-row span {
+   727	  align-items: center;
+   728	  box-sizing: border-box;
+   729	  display: flex;
+   730	  font-size: 11px;
+   731	  justify-content: center;
+   732	  min-width: 0;
+   733	  padding-left: 4px;
+   734	  padding-right: 4px;
+   735	  text-align: center;
+   736	  white-space: nowrap;
+   737	  width: 100%;
+   738	}
+   739	
+   740	.hero-visual {
+   741	  position: relative;
+   742	}
+   743	
+   744	.profile-orbit {
+   745	  align-items: center;
+   746	  display: flex;
+   747	  flex-direction: column;
+   748	  gap: 12px;
+   749	  position: absolute;
+   750	  right: 18px;
+   751	  top: 0;
+   752	  z-index: 3;
+   753	}
+   754	
+   755	.profile-photo {
+   756	  border: 2px solid rgba(198, 255, 217, 0.34);
+   757	  border-radius: 999px;
+   758	  box-shadow: 0 0 0 10px rgba(67, 255, 146, 0.05), 0 34px 95px rgba(0, 191, 99, 0.22);
+   759	  height: 188px;
+   760	  object-fit: cover;
+   761	  width: 188px;
+   762	}
+   763	
+   764	.profile-orbit span {
+   765	  background: rgba(5, 16, 10, 0.8);
+   766	  border: 1px solid var(--line);
+   767	  border-radius: 8px;
+   768	  color: var(--mint);
+   769	  font-size: 12px;
+   770	  font-weight: 750;
+   771	  line-height: 1.25;
+   772	  max-width: 138px;
+   773	  padding: 7px 11px;
+   774	  text-align: center;
+   775	}
+   776	
+   777	.phone-stage {
+   778	  height: 690px;
+   779	  margin-top: 48px;
+   780	  position: relative;
+   781	}
+   782	
+   783	.tablet-shell {
+   784	  background: linear-gradient(145deg, #0c120f, #000);
+   785	  border: 1px solid rgba(198, 255, 217, 0.24);
+   786	  border-radius: var(--capture-frame-radius-standard);
+   787	  box-shadow: 0 34px 96px rgba(0, 0, 0, 0.66), 0 0 56px rgba(0, 191, 99, 0.12);
+   788	  height: 190px;
+   789	  left: 38px;
+   790	  padding: 13px;
+   791	  position: absolute;
+   792	  top: 352px;
+   793	  transform: rotate(-5deg) scale(1.5);
+   794	  transform-origin: top left;
+   795	  width: 304px;
+   796	  z-index: 4;
+   797	}
+   798	
+   799	.tablet-camera {
+   800	  background: rgba(198, 255, 217, 0.28);
+   801	  border-radius: 999px;
+   802	  height: 5px;
+   803	  left: 50%;
+   804	  position: absolute;
+   805	  top: 6px;
+   806	  transform: translateX(-50%);
+   807	  width: 5px;
+   808	}
+   809	
+   810	.tablet-screen {
+   811	  background:
+   812	    linear-gradient(rgba(67, 255, 146, 0.045) 1px, transparent 1px),
+   813	    linear-gradient(90deg, rgba(67, 255, 146, 0.045) 1px, transparent 1px),
+   814	    radial-gradient(circle at 28% 34%, rgba(67, 255, 146, 0.18), transparent 34%),
+   815	    linear-gradient(180deg, #07140d, #020403 70%);
+   816	  background-size: 22px 22px, 22px 22px, auto, auto;
+   817	  border: 1px solid rgba(198, 255, 217, 0.08);
+   818	  border-radius: var(--capture-screen-radius-standard);
+   819	  height: 100%;
+   820	  overflow: hidden;
+   821	  position: relative;
    822	}
    823	
-   824	.proof-item span {
-   825	  min-width: 0;
-   826	  white-space: nowrap;
+   824	.tablet-screen-image {
+   825	  object-fit: contain;
+   826	  object-position: center center;
    827	}
    828	
-   829	.stats-strip {
-   830	  border-top: 1px solid var(--line);
-   831	  display: grid;
-   832	  gap: 1px;
-   833	  grid-template-columns: repeat(4, minmax(0, 1fr));
-   834	  margin-top: 10px;
-   835	  position: relative;
-   836	  z-index: 2;
+   829	.tablet-empty-grid {
+   830	  background:
+   831	    linear-gradient(90deg, rgba(198, 255, 217, 0.06) 1px, transparent 1px),
+   832	    linear-gradient(rgba(198, 255, 217, 0.06) 1px, transparent 1px);
+   833	  background-size: 48px 48px;
+   834	  inset: 0;
+   835	  opacity: 0.45;
+   836	  position: absolute;
    837	}
    838	
-   839	.stats-strip div {
-   840	  background: rgba(255, 255, 255, 0.025);
-   841	  min-width: 0;
-   842	  min-height: 104px;
-   843	  padding: 22px;
-   844	}
-   845	
-   846	.stats-strip strong {
-   847	  color: var(--green);
-   848	  display: block;
-   849	  font-size: 34px;
-   850	  font-weight: 900;
-   851	  line-height: 1;
-   852	}
-   853	
-   854	.stats-strip span {
-   855	  color: var(--muted);
-   856	  display: block;
-   857	  font-size: 13px;
-   858	  font-weight: 700;
-   859	  margin-top: 8px;
+   839	.phone-shell {
+   840	  background: linear-gradient(145deg, #0c120f, #000);
+   841	  border: 1px solid rgba(198, 255, 217, 0.22);
+   842	  border-radius: 34px;
+   843	  box-shadow: 0 34px 100px rgba(0, 0, 0, 0.62);
+   844	  height: 500px;
+   845	  padding: 16px;
+   846	  position: absolute;
+   847	  width: 245px;
+   848	}
+   849	
+   850	.phone-shell-link {
+   851	  color: inherit;
+   852	  cursor: pointer;
+   853	  display: block;
+   854	  text-decoration: none;
+   855	}
+   856	
+   857	.phone-shell-link:focus-visible {
+   858	  outline: 2px solid var(--mint);
+   859	  outline-offset: 8px;
    860	}
    861	
-   862	section:not(.hero) {
-   863	  padding: 88px 0;
-   864	}
-   865	
-   866	.section-heading {
-   867	  max-width: 720px;
-   868	}
-   869	
-   870	.case-grid {
-   871	  display: grid;
-   872	  gap: 18px;
-   873	  grid-template-columns: repeat(3, minmax(0, 1fr));
-   874	  margin-top: 34px;
-   875	}
-   876	
-   877	.case-card,
-   878	.capability-grid div,
-   879	.contact-panel {
-   880	  background: linear-gradient(180deg, rgba(13, 31, 22, 0.88), rgba(5, 13, 9, 0.88));
-   881	  border: 1px solid var(--line);
-   882	  border-radius: 8px;
-   883	}
-   884	
-   885	.case-card {
-   886	  min-height: 330px;
-   887	  padding: 28px;
-   888	}
-   889	
-   890	.case-card-link {
-   891	  color: inherit;
-   892	  cursor: pointer;
-   893	  display: block;
-   894	  text-decoration: none;
-   895	  transition:
-   896	    border-color 160ms ease,
-   897	    box-shadow 160ms ease,
-   898	    transform 160ms ease;
-   899	}
-   900	
-   901	.case-card-link:hover {
-   902	  border-color: rgba(198, 255, 217, 0.36);
-   903	  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.28);
-   904	  transform: translateY(-2px);
-   905	}
-   906	
-   907	.case-card-link:focus-visible {
-   908	  outline: 2px solid var(--mint);
-   909	  outline-offset: 6px;
-   910	}
-   911	
-   912	.case-topline {
-   913	  align-items: center;
-   914	  display: flex;
-   915	  gap: 18px;
-   916	  justify-content: space-between;
-   917	}
-   918	
-   919	.case-topline span {
-   920	  color: var(--green);
-   921	  font-size: 12px;
-   922	  font-weight: 850;
-   923	  letter-spacing: 0.1em;
-   924	  text-transform: uppercase;
+   862	.phone-shell-commerce {
+   863	  left: 68px;
+   864	  top: 40px;
+   865	  transform: rotate(-9deg);
+   866	  z-index: 2;
+   867	}
+   868	
+   869	.phone-shell-finance {
+   870	  left: 278px;
+   871	  top: 110px;
+   872	  transform: rotate(8deg);
+   873	  z-index: 1;
+   874	}
+   875	
+   876	.phone-speaker {
+   877	  background: #171f1a;
+   878	  border-radius: 99px;
+   879	  height: 6px;
+   880	  margin: 0 auto 12px;
+   881	  width: 62px;
+   882	}
+   883	
+   884	.phone-screen {
+   885	  background:
+   886	    linear-gradient(rgba(67, 255, 146, 0.055) 1px, transparent 1px),
+   887	    linear-gradient(90deg, rgba(67, 255, 146, 0.055) 1px, transparent 1px),
+   888	    linear-gradient(180deg, #0b1710, #030705 64%);
+   889	  background-size: 24px 24px, 24px 24px, auto;
+   890	  border-radius: 24px;
+   891	  height: calc(100% - 18px);
+   892	  overflow: hidden;
+   893	  padding: 18px;
+   894	  position: relative;
+   895	}
+   896	
+   897	.phone-screen.has-image {
+   898	  background: #020403;
+   899	  border-radius: var(--capture-screen-radius-tall);
+   900	  padding: 0;
+   901	}
+   902	
+   903	.phone-screen-image-frame {
+   904	  inset: 2% 0 0;
+   905	  position: absolute;
+   906	}
+   907	
+   908	.phone-screen-image {
+   909	  object-fit: contain;
+   910	  object-position: top center;
+   911	}
+   912	
+   913	.phone-shell-capture {
+   914	  border-radius: var(--capture-frame-radius-tall);
+   915	}
+   916	
+   917	.phone-status {
+   918	  align-items: center;
+   919	  color: var(--mint);
+   920	  display: flex;
+   921	  font-size: 11px;
+   922	  font-weight: 800;
+   923	  justify-content: space-between;
+   924	  margin-bottom: 28px;
    925	}
    926	
-   927	.case-topline strong {
-   928	  border: 1px solid var(--line);
-   929	  border-radius: 999px;
-   930	  color: var(--mint);
-   931	  font-size: 12px;
-   932	  padding: 7px 10px;
-   933	  white-space: nowrap;
+   927	.phone-chart {
+   928	  align-items: end;
+   929	  display: grid;
+   930	  gap: 8px;
+   931	  grid-template-columns: repeat(4, 1fr);
+   932	  height: 118px;
+   933	  margin-bottom: 26px;
    934	}
    935	
-   936	.case-card h3 {
-   937	  margin: 54px 0 14px;
-   938	}
-   939	
-   940	.case-card p,
-   941	.capability-grid p,
-   942	.timeline-item p {
-   943	  color: #b8c9bf;
-   944	  line-height: 1.6;
-   945	}
-   946	
-   947	.case-tags {
-   948	  display: flex;
-   949	  flex-wrap: wrap;
-   950	  gap: 8px;
-   951	  margin-top: 24px;
-   952	}
-   953	
-   954	.case-miniatures {
-   955	  display: grid;
-   956	  gap: 10px;
-   957	  grid-template-columns: repeat(3, minmax(0, 1fr));
-   958	  margin-top: 26px;
-   959	  max-width: 390px;
-   960	}
-   961	
-   962	.case-miniatures-landscape {
-   963	  grid-template-columns: 1fr;
-   964	  max-width: 420px;
-   965	}
-   966	
-   967	.case-miniature {
-   968	  aspect-ratio: 9 / 16;
-   969	  background: #020403;
-   970	  border: 1px solid var(--line);
-   971	  border-radius: var(--capture-frame-radius-standard);
-   972	  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.28);
-   973	  display: block;
-   974	  height: auto;
-   975	  object-fit: contain;
-   976	  width: 100%;
-   977	}
-   978	
-   979	.case-miniature-landscape {
-   980	  aspect-ratio: 2388 / 1668;
-   981	  border-radius: var(--capture-frame-radius-standard);
-   982	}
-   983	
-   984	.split-section {
-   985	  display: grid;
-   986	  gap: 44px;
-   987	}
-   988	
-   989	.capability-grid {
-   990	  display: grid;
-   991	  gap: 18px;
-   992	  grid-template-columns: repeat(3, 1fr);
-   993	}
-   994	
-   995	.capability-grid div {
-   996	  padding: 24px;
-   997	}
-   998	
-   999	.capability-grid svg {
-  1000	  color: var(--green);
-  1001	  margin-bottom: 30px;
-  1002	}
-  1003	
-  1004	.worklog-layout {
-  1005	  display: grid;
-  1006	  gap: 42px;
-  1007	  grid-template-columns: minmax(0, 0.9fr) minmax(320px, 1.1fr);
-  1008	}
-  1009	
-  1010	.timeline {
-  1011	  border-left: 1px solid var(--line-strong);
-  1012	}
-  1013	
-  1014	.timeline-item {
-  1015	  display: grid;
-  1016	  gap: 18px;
-  1017	  grid-template-columns: 56px 1fr;
-  1018	  padding: 8px 0 28px 24px;
-  1019	}
-  1020	
-  1021	.timeline-item span {
-  1022	  color: var(--green);
-  1023	  font-weight: 900;
-  1024	}
-  1025	
-  1026	.contact-panel {
-  1027	  align-items: center;
-  1028	  display: flex;
-  1029	  gap: 28px;
-  1030	  justify-content: space-between;
-  1031	  padding: 30px;
-  1032	}
-  1033	
-  1034	.contact-panel h2 {
-  1035	  font-size: clamp(28px, 4vw, 46px);
-  1036	  margin-bottom: 0;
-  1037	  max-width: 760px;
-  1038	}
-  1039	
-  1040	.project-page {
-  1041	  overflow-x: hidden;
-  1042	}
-  1043	
-  1044	.project-hero-copy,
-  1045	.project-hero-grid > * {
-  1046	  min-width: 0;
-  1047	}
-  1048	
-  1049	.project-page section:not(.project-hero) {
-  1050	  padding: 78px 0;
-  1051	  position: relative;
-  1052	}
-  1053	
-  1054	section.project-hero {
-  1055	  overflow: hidden;
-  1056	  padding: 24px 0 88px;
-  1057	  position: relative;
-  1058	}
-  1059	
-  1060	.project-hero::after {
-  1061	  background: linear-gradient(transparent, var(--bg));
-  1062	  bottom: 0;
-  1063	  content: "";
-  1064	  height: 30%;
-  1065	  left: 0;
-  1066	  pointer-events: none;
-  1067	  position: absolute;
-  1068	  right: 0;
-  1069	}
-  1070	
-  1071	.project-nav {
-  1072	  margin-bottom: 68px;
-  1073	}
-  1074	
-  1075	.project-hero-grid {
-  1076	  align-items: center;
-  1077	  display: grid;
-  1078	  gap: 56px;
-  1079	  grid-template-columns: minmax(0, 0.92fr) minmax(420px, 1.08fr);
-  1080	  position: relative;
-  1081	  z-index: 2;
+   936	.phone-chart div {
+   937	  background: linear-gradient(180deg, var(--green), #086c3b);
+   938	  border-radius: 6px 6px 2px 2px;
+   939	}
+   940	
+   941	.phone-chart div:nth-child(1) {
+   942	  height: 54%;
+   943	}
+   944	
+   945	.phone-chart div:nth-child(2) {
+   946	  height: 88%;
+   947	}
+   948	
+   949	.phone-chart div:nth-child(3) {
+   950	  height: 66%;
+   951	}
+   952	
+   953	.phone-chart div:nth-child(4) {
+   954	  height: 100%;
+   955	}
+   956	
+   957	.phone-cardline {
+   958	  background: rgba(198, 255, 217, 0.14);
+   959	  border-radius: 999px;
+   960	  height: 12px;
+   961	  margin-bottom: 10px;
+   962	  width: 62%;
+   963	}
+   964	
+   965	.phone-cardline.wide {
+   966	  width: 88%;
+   967	}
+   968	
+   969	.phone-grid {
+   970	  display: grid;
+   971	  gap: 9px;
+   972	  grid-template-columns: 1fr 1fr;
+   973	  margin-top: 24px;
+   974	}
+   975	
+   976	.phone-grid span {
+   977	  background: rgba(255, 255, 255, 0.05);
+   978	  border: 1px solid var(--line);
+   979	  border-radius: 8px;
+   980	  height: 54px;
+   981	}
+   982	
+   983	.phone-cta {
+   984	  align-items: center;
+   985	  background: var(--green);
+   986	  border-radius: 8px;
+   987	  color: #001d0f;
+   988	  display: flex;
+   989	  font-size: 13px;
+   990	  font-weight: 900;
+   991	  height: 42px;
+   992	  justify-content: center;
+   993	  margin-top: 24px;
+   994	}
+   995	
+   996	.proof-panel {
+   997	  backdrop-filter: blur(16px);
+   998	  background: rgba(5, 16, 10, 0.76);
+   999	  border: 1px solid var(--line-strong);
+  1000	  border-radius: 8px;
+  1001	  display: grid;
+  1002	  grid-template-columns: repeat(3, minmax(0, 1fr));
+  1003	  gap: 10px;
+  1004	  margin: 26px 0 0;
+  1005	  padding: 14px;
+  1006	  position: relative;
+  1007	  width: var(--hero-proof-stack-width);
+  1008	  z-index: 2;
+  1009	}
+  1010	
+  1011	.proof-column {
+  1012	  color: #dfffea;
+  1013	  display: grid;
+  1014	  font-size: 13px;
+  1015	  font-weight: 750;
+  1016	  gap: 10px;
+  1017	  line-height: 1.25;
+  1018	}
+  1019	
+  1020	.proof-item {
+  1021	  align-items: center;
+  1022	  display: flex;
+  1023	  gap: 4px;
+  1024	  min-width: 0;
+  1025	}
+  1026	
+  1027	.proof-item svg {
+  1028	  flex: 0 0 auto;
+  1029	}
+  1030	
+  1031	.proof-item span {
+  1032	  min-width: 0;
+  1033	  white-space: nowrap;
+  1034	}
+  1035	
+  1036	.stats-strip {
+  1037	  border-top: 1px solid var(--line);
+  1038	  display: grid;
+  1039	  gap: 1px;
+  1040	  grid-template-columns: repeat(4, minmax(0, 1fr));
+  1041	  margin-top: 10px;
+  1042	  position: relative;
+  1043	  z-index: 2;
+  1044	}
+  1045	
+  1046	.stats-strip div {
+  1047	  background: rgba(255, 255, 255, 0.025);
+  1048	  min-width: 0;
+  1049	  min-height: 104px;
+  1050	  padding: 22px;
+  1051	}
+  1052	
+  1053	.stats-strip strong {
+  1054	  color: var(--green);
+  1055	  display: block;
+  1056	  font-size: 34px;
+  1057	  font-weight: 900;
+  1058	  line-height: 1;
+  1059	}
+  1060	
+  1061	.stats-strip span {
+  1062	  color: var(--muted);
+  1063	  display: block;
+  1064	  font-size: 13px;
+  1065	  font-weight: 700;
+  1066	  margin-top: 8px;
+  1067	}
+  1068	
+  1069	section:not(.hero) {
+  1070	  padding: 88px 0;
+  1071	}
+  1072	
+  1073	.section-heading {
+  1074	  max-width: 720px;
+  1075	}
+  1076	
+  1077	.case-grid {
+  1078	  display: grid;
+  1079	  gap: 18px;
+  1080	  grid-template-columns: repeat(3, minmax(0, 1fr));
+  1081	  margin-top: 34px;
   1082	}
   1083	
-  1084	.project-hero-copy h1 {
-  1085	  margin-bottom: 18px;
-  1086	}
-  1087	
-  1088	.project-back-link {
-  1089	  align-items: center;
-  1090	  color: var(--muted);
-  1091	  display: inline-flex;
-  1092	  font-size: 13px;
-  1093	  font-weight: 800;
-  1094	  gap: 8px;
-  1095	  margin-bottom: 30px;
-  1096	  transition: color 160ms ease;
-  1097	}
-  1098	
-  1099	.project-back-link:hover {
-  1100	  color: var(--mint);
-  1101	}
-  1102	
-  1103	.project-subtitle {
-  1104	  color: var(--green);
-  1105	  font-size: clamp(20px, 2vw, 28px);
-  1106	  font-weight: 850;
-  1107	  line-height: 1.2;
-  1108	  margin-bottom: 22px;
-  1109	}
-  1110	
-  1111	.project-hero-text,
-  1112	.project-copy-panel p,
-  1113	.architecture-copy,
-  1114	.readiness-copy,
-  1115	.closing-panel p {
-  1116	  color: #c4d6cc;
-  1117	  font-size: 17px;
-  1118	  line-height: 1.65;
-  1119	}
-  1120	
-  1121	.project-hero-text {
-  1122	  max-width: 620px;
-  1123	}
-  1124	
-  1125	.project-meta-row {
-  1126	  display: flex;
-  1127	  flex-wrap: wrap;
-  1128	  gap: 9px;
-  1129	  margin-top: 28px;
-  1130	  max-width: 620px;
-  1131	}
-  1132	
-  1133	.project-meta-row span,
-  1134	.proof-points span,
-  1135	.readiness-list span {
-  1136	  background: rgba(67, 255, 146, 0.08);
-  1137	  border: 1px solid var(--line);
-  1138	  border-radius: 999px;
-  1139	  color: #d8ffe4;
-  1140	  font-size: 13px;
-  1141	  font-weight: 750;
-  1142	  padding: 8px 11px;
-  1143	  white-space: nowrap;
-  1144	}
-  1145	
-  1146	.project-actions {
-  1147	  margin-top: 30px;
-  1148	}
-  1149	
-  1150	.av-showcase {
-  1151	  min-height: 610px;
-  1152	  position: relative;
-  1153	}
-  1154	
-  1155	.av-showcase::before {
-  1156	  background:
-  1157	    linear-gradient(rgba(67, 255, 146, 0.045) 1px, transparent 1px),
-  1158	    linear-gradient(90deg, rgba(67, 255, 146, 0.045) 1px, transparent 1px);
-  1159	  background-size: 36px 36px;
-  1160	  content: "";
-  1161	  inset: 34px 12px 52px;
-  1162	  opacity: 0.58;
-  1163	  position: absolute;
-  1164	}
-  1165	
-  1166	.av-device {
-  1167	  background: linear-gradient(145deg, #0c120f, #000);
-  1168	  border: 1px solid rgba(198, 255, 217, 0.24);
-  1169	  border-radius: var(--capture-frame-radius-tall);
-  1170	  box-shadow: 0 34px 100px rgba(0, 0, 0, 0.62), 0 0 64px rgba(0, 191, 99, 0.12);
-  1171	  padding: 16px;
-  1172	  position: absolute;
-  1173	}
-  1174	
-  1175	.av-device-tall {
-  1176	  --av-screen-ratio: 1440 / 3120;
-  1177	}
-  1178	
-  1179	.av-device-standard {
-  1180	  --av-screen-ratio: 720 / 1280;
-  1181	}
-  1182	
-  1183	.av-device-speaker {
-  1184	  background: #171f1a;
-  1185	  border-radius: 99px;
-  1186	  height: 6px;
-  1187	  margin: 0 auto 12px;
-  1188	  width: 62px;
+  1084	.case-card,
+  1085	.capability-grid div,
+  1086	.contact-panel {
+  1087	  background: linear-gradient(180deg, rgba(13, 31, 22, 0.88), rgba(5, 13, 9, 0.88));
+  1088	  border: 1px solid var(--line);
+  1089	  border-radius: 8px;
+  1090	}
+  1091	
+  1092	.case-card {
+  1093	  min-height: 330px;
+  1094	  padding: 28px;
+  1095	}
+  1096	
+  1097	.case-card-link {
+  1098	  color: inherit;
+  1099	  cursor: pointer;
+  1100	  display: block;
+  1101	  text-decoration: none;
+  1102	  transition:
+  1103	    border-color 160ms ease,
+  1104	    box-shadow 160ms ease,
+  1105	    transform 160ms ease;
+  1106	}
+  1107	
+  1108	.case-card-link:hover {
+  1109	  border-color: rgba(198, 255, 217, 0.36);
+  1110	  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.28);
+  1111	  transform: translateY(-2px);
+  1112	}
+  1113	
+  1114	.case-card-link:focus-visible {
+  1115	  outline: 2px solid var(--mint);
+  1116	  outline-offset: 6px;
+  1117	}
+  1118	
+  1119	.case-topline {
+  1120	  align-items: center;
+  1121	  display: flex;
+  1122	  gap: 18px;
+  1123	  justify-content: space-between;
+  1124	}
+  1125	
+  1126	.case-topline span {
+  1127	  color: var(--green);
+  1128	  font-size: 12px;
+  1129	  font-weight: 850;
+  1130	  letter-spacing: 0.1em;
+  1131	  text-transform: uppercase;
+  1132	}
+  1133	
+  1134	.case-topline strong {
+  1135	  border: 1px solid var(--line);
+  1136	  border-radius: 999px;
+  1137	  color: var(--mint);
+  1138	  font-size: 12px;
+  1139	  padding: 7px 10px;
+  1140	  white-space: nowrap;
+  1141	}
+  1142	
+  1143	.case-card h3 {
+  1144	  margin: 54px 0 14px;
+  1145	}
+  1146	
+  1147	.case-card p,
+  1148	.capability-grid p,
+  1149	.timeline-item p {
+  1150	  color: #b8c9bf;
+  1151	  line-height: 1.6;
+  1152	}
+  1153	
+  1154	.case-tags {
+  1155	  display: flex;
+  1156	  flex-wrap: wrap;
+  1157	  gap: 8px;
+  1158	  margin-top: 24px;
+  1159	}
+  1160	
+  1161	.case-miniatures {
+  1162	  display: grid;
+  1163	  gap: 10px;
+  1164	  grid-template-columns: repeat(3, minmax(0, 1fr));
+  1165	  margin-top: 26px;
+  1166	  max-width: 390px;
+  1167	}
+  1168	
+  1169	.case-miniatures-landscape {
+  1170	  grid-template-columns: 1fr;
+  1171	  max-width: 420px;
+  1172	}
+  1173	
+  1174	.case-miniature {
+  1175	  aspect-ratio: 9 / 16;
+  1176	  background: #020403;
+  1177	  border: 1px solid var(--line);
+  1178	  border-radius: var(--capture-frame-radius-standard);
+  1179	  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.28);
+  1180	  display: block;
+  1181	  height: auto;
+  1182	  object-fit: contain;
+  1183	  width: 100%;
+  1184	}
+  1185	
+  1186	.case-miniature-landscape {
+  1187	  aspect-ratio: 2388 / 1668;
+  1188	  border-radius: var(--capture-frame-radius-standard);
   1189	}
   1190	
-  1191	.av-device-screen {
-  1192	  aspect-ratio: var(--av-screen-ratio);
-  1193	  background: #020403;
-  1194	  border-radius: var(--capture-screen-radius-tall);
-  1195	  overflow: hidden;
-  1196	  position: relative;
-  1197	  width: 100%;
-  1198	}
-  1199	
-  1200	.av-device-image {
-  1201	  object-fit: contain;
-  1202	  object-position: top center;
-  1203	}
-  1204	
-  1205	.flow-image-frame img {
-  1206	  object-fit: contain;
-  1207	  object-position: top center;
-  1208	}
-  1209	
-  1210	.av-device-main {
-  1211	  height: auto;
-  1212	  right: 176px;
-  1213	  top: 0;
-  1214	  transform: rotate(-5deg);
-  1215	  width: 260px;
-  1216	  z-index: 3;
-  1217	}
-  1218	
-  1219	.av-device-browse,
-  1220	.av-device-confirm {
-  1221	  border-radius: 15px;
-  1222	  height: auto;
-  1223	  width: 184px;
-  1224	}
-  1225	
-  1226	.av-device-standard.av-device-browse,
-  1227	.av-device-standard.av-device-confirm {
-  1228	  border-radius: var(--capture-frame-radius-standard);
-  1229	}
-  1230	
-  1231	.av-device-standard .av-device-screen {
-  1232	  border-radius: var(--capture-screen-radius-standard);
-  1233	}
-  1234	
-  1235	.av-device-browse {
-  1236	  right: 22px;
-  1237	  top: 126px;
-  1238	  transform: rotate(7deg);
-  1239	  z-index: 2;
-  1240	}
-  1241	
-  1242	.av-device-confirm {
-  1243	  left: 6px;
-  1244	  top: 214px;
-  1245	  transform: rotate(-10deg);
-  1246	  z-index: 1;
-  1247	}
-  1248	
-  1249	.cinerific-case .av-device {
-  1250	  border-radius: var(--capture-frame-radius-standard);
-  1251	  padding: 12px 18px;
-  1252	}
-  1253	
-  1254	.cinerific-case .av-device-screen {
-  1255	  aspect-ratio: 16 / 9;
-  1256	  background:
-  1257	    linear-gradient(rgba(67, 255, 146, 0.04) 1px, transparent 1px),
-  1258	    linear-gradient(90deg, rgba(67, 255, 146, 0.04) 1px, transparent 1px),
-  1259	    #020403;
-  1260	  background-size: 18px 18px;
-  1261	  border: 1px solid rgba(198, 255, 217, 0.16);
-  1262	  border-radius: var(--capture-screen-radius-standard);
-  1263	}
-  1264	
-  1265	.cinerific-tablet-camera {
-  1266	  background: #1d2923;
-  1267	  border: 1px solid rgba(198, 255, 217, 0.24);
-  1268	  border-radius: 999px;
-  1269	  height: 5px;
-  1270	  left: 7px;
-  1271	  position: absolute;
-  1272	  top: 50%;
-  1273	  transform: translateY(-50%);
-  1274	  width: 5px;
-  1275	}
-  1276	
-  1277	.av-showcase-proof {
-  1278	  background: rgba(5, 16, 10, 0.82);
-  1279	  border: 1px solid var(--line-strong);
-  1280	  border-radius: 8px;
-  1281	  bottom: 20px;
-  1282	  max-width: 260px;
-  1283	  padding: 15px;
-  1284	  position: absolute;
-  1285	  right: 16px;
-  1286	  z-index: 4;
-  1287	}
-  1288	
-  1289	.av-showcase-proof strong {
-  1290	  color: var(--green);
-  1291	  display: block;
-  1292	  font-size: 28px;
-  1293	  font-weight: 900;
-  1294	  line-height: 1;
-  1295	}
-  1296	
-  1297	.av-showcase-proof span {
-  1298	  color: var(--muted);
-  1299	  display: block;
-  1300	  font-size: 13px;
-  1301	  font-weight: 700;
-  1302	  line-height: 1.45;
-  1303	  margin-top: 8px;
+  1191	.split-section {
+  1192	  display: grid;
+  1193	  gap: 44px;
+  1194	}
+  1195	
+  1196	.capability-grid {
+  1197	  display: grid;
+  1198	  gap: 18px;
+  1199	  grid-template-columns: repeat(3, 1fr);
+  1200	}
+  1201	
+  1202	.capability-grid div {
+  1203	  padding: 24px;
+  1204	}
+  1205	
+  1206	.capability-grid svg {
+  1207	  color: var(--green);
+  1208	  margin-bottom: 30px;
+  1209	}
+  1210	
+  1211	.worklog-layout {
+  1212	  display: grid;
+  1213	  gap: 42px;
+  1214	  grid-template-columns: minmax(0, 0.9fr) minmax(320px, 1.1fr);
+  1215	}
+  1216	
+  1217	.timeline {
+  1218	  border-left: 1px solid var(--line-strong);
+  1219	}
+  1220	
+  1221	.timeline-item {
+  1222	  display: grid;
+  1223	  gap: 18px;
+  1224	  grid-template-columns: 56px 1fr;
+  1225	  padding: 8px 0 28px 24px;
+  1226	}
+  1227	
+  1228	.timeline-item span {
+  1229	  color: var(--green);
+  1230	  font-weight: 900;
+  1231	}
+  1232	
+  1233	.contact-panel {
+  1234	  align-items: center;
+  1235	  display: flex;
+  1236	  gap: 28px;
+  1237	  justify-content: space-between;
+  1238	  padding: 30px;
+  1239	}
+  1240	
+  1241	.contact-panel h2 {
+  1242	  font-size: clamp(28px, 4vw, 46px);
+  1243	  margin-bottom: 0;
+  1244	  max-width: 760px;
+  1245	}
+  1246	
+  1247	.project-page {
+  1248	  overflow-x: hidden;
+  1249	}
+  1250	
+  1251	.project-hero-copy,
+  1252	.project-hero-grid > * {
+  1253	  min-width: 0;
+  1254	}
+  1255	
+  1256	.project-page section:not(.project-hero) {
+  1257	  padding: 78px 0;
+  1258	  position: relative;
+  1259	}
+  1260	
+  1261	section.project-hero {
+  1262	  overflow: hidden;
+  1263	  padding: 24px 0 88px;
+  1264	  position: relative;
+  1265	}
+  1266	
+  1267	.project-hero::after {
+  1268	  background: linear-gradient(transparent, var(--bg));
+  1269	  bottom: 0;
+  1270	  content: "";
+  1271	  height: 30%;
+  1272	  left: 0;
+  1273	  pointer-events: none;
+  1274	  position: absolute;
+  1275	  right: 0;
+  1276	}
+  1277	
+  1278	.project-nav {
+  1279	  margin-bottom: 68px;
+  1280	}
+  1281	
+  1282	.project-hero-grid {
+  1283	  align-items: center;
+  1284	  display: grid;
+  1285	  gap: 56px;
+  1286	  grid-template-columns: minmax(0, 0.92fr) minmax(420px, 1.08fr);
+  1287	  position: relative;
+  1288	  z-index: 2;
+  1289	}
+  1290	
+  1291	.project-hero-copy h1 {
+  1292	  margin-bottom: 18px;
+  1293	}
+  1294	
+  1295	.project-back-link {
+  1296	  align-items: center;
+  1297	  color: var(--muted);
+  1298	  display: inline-flex;
+  1299	  font-size: 13px;
+  1300	  font-weight: 800;
+  1301	  gap: 8px;
+  1302	  margin-bottom: 30px;
+  1303	  transition: color 160ms ease;
   1304	}
   1305	
-  1306	.project-section-grid,
-  1307	.readiness-layout {
-  1308	  display: grid;
-  1309	  gap: 44px;
-  1310	  grid-template-columns: minmax(0, 0.82fr) minmax(360px, 1.18fr);
-  1311	}
-  1312	
-  1313	.project-copy-panel {
-  1314	  border-left: 1px solid var(--line-strong);
-  1315	  padding-left: 28px;
+  1306	.project-back-link:hover {
+  1307	  color: var(--mint);
+  1308	}
+  1309	
+  1310	.project-subtitle {
+  1311	  color: var(--green);
+  1312	  font-size: clamp(20px, 2vw, 28px);
+  1313	  font-weight: 850;
+  1314	  line-height: 1.2;
+  1315	  margin-bottom: 22px;
   1316	}
   1317	
-  1318	.project-copy-panel p:last-child,
-  1319	.closing-panel p:last-child {
-  1320	  margin-bottom: 0;
-  1321	}
-  1322	
-  1323	.project-card-grid {
-  1324	  display: grid;
-  1325	  gap: 16px;
-  1326	  margin-top: 34px;
-  1327	}
-  1328	
-  1329	.ownership-grid {
-  1330	  grid-template-columns: repeat(5, minmax(0, 1fr));
-  1331	}
-  1332	
-  1333	.feature-grid {
-  1334	  grid-template-columns: repeat(3, minmax(0, 1fr));
-  1335	}
-  1336	
-  1337	.decision-grid {
-  1338	  grid-template-columns: repeat(3, minmax(0, 1fr));
-  1339	}
-  1340	
-  1341	.project-card,
-  1342	.flow-checkout-note,
-  1343	.architecture-node,
-  1344	.stack-group,
-  1345	.project-timeline-item {
-  1346	  background: linear-gradient(180deg, rgba(13, 31, 22, 0.88), rgba(5, 13, 9, 0.88));
-  1347	  border: 1px solid var(--line);
-  1348	  border-radius: 8px;
-  1349	}
-  1350	
-  1351	.project-card {
-  1352	  min-height: 184px;
-  1353	  padding: 22px;
-  1354	}
-  1355	
-  1356	.project-card span,
-  1357	.flow-checkout-note span,
-  1358	.stack-group h3 {
-  1359	  color: var(--green);
-  1360	  display: block;
-  1361	  font-size: 12px;
-  1362	  font-weight: 850;
-  1363	  letter-spacing: 0.1em;
-  1364	  margin-bottom: 20px;
-  1365	  text-transform: uppercase;
-  1366	}
-  1367	
-  1368	.project-card p,
-  1369	.flow-checkout-note p,
-  1370	.architecture-node p,
-  1371	.project-timeline-item p {
-  1372	  color: #b8c9bf;
-  1373	  line-height: 1.6;
-  1374	  margin-bottom: 0;
-  1375	}
-  1376	
-  1377	.flow-segments {
-  1378	  border: 1px solid var(--line);
-  1379	  border-radius: 8px;
-  1380	  display: grid;
-  1381	  gap: 1px;
-  1382	  grid-template-columns: repeat(6, minmax(0, 1fr));
-  1383	  margin-top: 34px;
-  1384	  overflow: hidden;
-  1385	}
-  1386	
-  1387	.flow-segments span {
-  1388	  background: rgba(255, 255, 255, 0.03);
-  1389	  color: var(--mint);
-  1390	  font-size: 13px;
-  1391	  font-weight: 850;
-  1392	  padding: 14px 10px;
-  1393	  text-align: center;
-  1394	}
-  1395	
-  1396	.flow-layout {
-  1397	  align-items: center;
-  1398	  display: grid;
-  1399	  gap: 42px;
-  1400	  grid-template-columns: minmax(260px, 0.82fr) minmax(0, 1.18fr);
-  1401	  margin-top: 34px;
-  1402	}
-  1403	
-  1404	.flow-screen {
-  1405	  margin: 0;
-  1406	}
-  1407	
-  1408	.flow-image-frame {
-  1409	  aspect-ratio: 9 / 16;
-  1410	  background: #020403;
-  1411	  border: 1px solid var(--line);
-  1412	  border-radius: var(--capture-frame-radius-standard);
-  1413	  box-shadow: 0 30px 72px rgba(0, 0, 0, 0.45);
-  1414	  overflow: hidden;
-  1415	  position: relative;
-  1416	}
-  1417	
-  1418	.flow-screen-tall .flow-image-frame {
-  1419	  aspect-ratio: 1440 / 3120;
-  1420	  border-radius: var(--capture-frame-radius-tall);
-  1421	}
-  1422	
-  1423	.flow-screen-standard .flow-image-frame {
-  1424	  aspect-ratio: 720 / 1280;
-  1425	  border-radius: var(--capture-frame-radius-standard);
-  1426	}
-  1427	
-  1428	.flow-screen-main .flow-image-frame {
-  1429	  margin: 0 auto;
-  1430	  max-width: 330px;
+  1318	.project-hero-text,
+  1319	.project-copy-panel p,
+  1320	.architecture-copy,
+  1321	.readiness-copy,
+  1322	.closing-panel p {
+  1323	  color: #c4d6cc;
+  1324	  font-size: 17px;
+  1325	  line-height: 1.65;
+  1326	}
+  1327	
+  1328	.project-hero-text {
+  1329	  max-width: 620px;
+  1330	}
+  1331	
+  1332	.project-meta-row {
+  1333	  display: flex;
+  1334	  flex-wrap: wrap;
+  1335	  gap: 9px;
+  1336	  margin-top: 28px;
+  1337	  max-width: 620px;
+  1338	}
+  1339	
+  1340	.project-meta-row span,
+  1341	.proof-points span,
+  1342	.readiness-list span {
+  1343	  background: rgba(67, 255, 146, 0.08);
+  1344	  border: 1px solid var(--line);
+  1345	  border-radius: 999px;
+  1346	  color: #d8ffe4;
+  1347	  font-size: 13px;
+  1348	  font-weight: 750;
+  1349	  padding: 8px 11px;
+  1350	  white-space: nowrap;
+  1351	}
+  1352	
+  1353	.project-actions {
+  1354	  margin-top: 30px;
+  1355	}
+  1356	
+  1357	.av-showcase {
+  1358	  min-height: 610px;
+  1359	  position: relative;
+  1360	}
+  1361	
+  1362	.av-showcase::before {
+  1363	  background:
+  1364	    linear-gradient(rgba(67, 255, 146, 0.045) 1px, transparent 1px),
+  1365	    linear-gradient(90deg, rgba(67, 255, 146, 0.045) 1px, transparent 1px);
+  1366	  background-size: 36px 36px;
+  1367	  content: "";
+  1368	  inset: 34px 12px 52px;
+  1369	  opacity: 0.58;
+  1370	  position: absolute;
+  1371	}
+  1372	
+  1373	.av-device {
+  1374	  background: linear-gradient(145deg, #0c120f, #000);
+  1375	  border: 1px solid rgba(198, 255, 217, 0.24);
+  1376	  border-radius: var(--capture-frame-radius-tall);
+  1377	  box-shadow: 0 34px 100px rgba(0, 0, 0, 0.62), 0 0 64px rgba(0, 191, 99, 0.12);
+  1378	  padding: 16px;
+  1379	  position: absolute;
+  1380	}
+  1381	
+  1382	.av-device-tall {
+  1383	  --av-screen-ratio: 1440 / 3120;
+  1384	}
+  1385	
+  1386	.av-device-standard {
+  1387	  --av-screen-ratio: 720 / 1280;
+  1388	}
+  1389	
+  1390	.av-device-speaker {
+  1391	  background: #171f1a;
+  1392	  border-radius: 99px;
+  1393	  height: 6px;
+  1394	  margin: 0 auto 12px;
+  1395	  width: 62px;
+  1396	}
+  1397	
+  1398	.av-device-screen {
+  1399	  aspect-ratio: var(--av-screen-ratio);
+  1400	  background: #020403;
+  1401	  border-radius: var(--capture-screen-radius-tall);
+  1402	  overflow: hidden;
+  1403	  position: relative;
+  1404	  width: 100%;
+  1405	}
+  1406	
+  1407	.av-device-image {
+  1408	  object-fit: contain;
+  1409	  object-position: top center;
+  1410	}
+  1411	
+  1412	.flow-image-frame img {
+  1413	  object-fit: contain;
+  1414	  object-position: top center;
+  1415	}
+  1416	
+  1417	.av-device-main {
+  1418	  height: auto;
+  1419	  right: 176px;
+  1420	  top: 0;
+  1421	  transform: rotate(-5deg);
+  1422	  width: 260px;
+  1423	  z-index: 3;
+  1424	}
+  1425	
+  1426	.av-device-browse,
+  1427	.av-device-confirm {
+  1428	  border-radius: 15px;
+  1429	  height: auto;
+  1430	  width: 184px;
   1431	}
   1432	
-  1433	.flow-screen-compact {
-  1434	  width: min(100%, 152px);
-  1435	}
-  1436	
-  1437	.flow-screen-compact .flow-image-frame {
-  1438	  width: 100%;
-  1439	}
-  1440	
-  1441	.flow-screen figcaption {
-  1442	  color: var(--muted);
-  1443	  font-size: 13px;
-  1444	  font-weight: 700;
-  1445	  line-height: 1.45;
-  1446	  margin: 14px auto 0;
-  1447	  max-width: 330px;
-  1448	}
-  1449	
-  1450	.flow-screen-label {
-  1451	  color: var(--green);
-  1452	  display: block;
-  1453	  font-size: 10px;
-  1454	  font-weight: 850;
-  1455	  letter-spacing: 0.12em;
-  1456	  margin: 0 0 8px;
-  1457	  text-align: center;
-  1458	  text-transform: uppercase;
+  1433	.av-device-standard.av-device-browse,
+  1434	.av-device-standard.av-device-confirm {
+  1435	  border-radius: var(--capture-frame-radius-standard);
+  1436	}
+  1437	
+  1438	.av-device-standard .av-device-screen {
+  1439	  border-radius: var(--capture-screen-radius-standard);
+  1440	}
+  1441	
+  1442	.av-device-browse {
+  1443	  right: 22px;
+  1444	  top: 126px;
+  1445	  transform: rotate(7deg);
+  1446	  z-index: 2;
+  1447	}
+  1448	
+  1449	.av-device-confirm {
+  1450	  left: 6px;
+  1451	  top: 214px;
+  1452	  transform: rotate(-10deg);
+  1453	  z-index: 1;
+  1454	}
+  1455	
+  1456	.cinerific-case .av-device {
+  1457	  border-radius: var(--capture-frame-radius-standard);
+  1458	  padding: 12px 18px;
   1459	}
   1460	
-  1461	.flow-support {
-  1462	  display: grid;
-  1463	  gap: 18px;
-  1464	  grid-template-columns: repeat(3, minmax(0, 1fr));
-  1465	}
-  1466	
-  1467	.flow-section-intro {
-  1468	  display: grid;
-  1469	  gap: 18px;
+  1461	.cinerific-case .av-device-screen {
+  1462	  aspect-ratio: 16 / 9;
+  1463	  background:
+  1464	    linear-gradient(rgba(67, 255, 146, 0.04) 1px, transparent 1px),
+  1465	    linear-gradient(90deg, rgba(67, 255, 146, 0.04) 1px, transparent 1px),
+  1466	    #020403;
+  1467	  background-size: 18px 18px;
+  1468	  border: 1px solid rgba(198, 255, 217, 0.16);
+  1469	  border-radius: var(--capture-screen-radius-standard);
   1470	}
   1471	
-  1472	.flow-section-intro > p {
-  1473	  border-left: 1px solid var(--line-strong);
-  1474	  color: #b8c9bf;
-  1475	  line-height: 1.65;
-  1476	  margin: 0;
-  1477	  max-width: 560px;
-  1478	  padding-left: 22px;
-  1479	}
-  1480	
-  1481	.flow-checkout-note {
-  1482	  align-content: center;
-  1483	  min-height: 260px;
-  1484	  padding: 22px;
-  1485	}
-  1486	
-  1487	.flow-capture-groups {
-  1488	  display: grid;
-  1489	  gap: 48px;
-  1490	  margin-top: 54px;
-  1491	}
-  1492	
-  1493	.flow-capture-group {
-  1494	  border-top: 1px solid var(--line);
-  1495	  display: grid;
-  1496	  gap: 24px;
-  1497	  grid-template-columns: minmax(220px, 0.34fr) minmax(0, 1fr);
-  1498	  padding-top: 30px;
-  1499	}
-  1500	
-  1501	.flow-group-header {
-  1502	  max-width: 360px;
-  1503	}
-  1504	
-  1505	.flow-group-header span {
-  1506	  color: var(--green);
-  1507	  display: block;
-  1508	  font-size: 12px;
-  1509	  font-weight: 850;
-  1510	  letter-spacing: 0.1em;
-  1511	  margin-bottom: 14px;
-  1512	  text-transform: uppercase;
-  1513	}
-  1514	
-  1515	.flow-group-header h3 {
-  1516	  font-size: clamp(24px, 3vw, 34px);
-  1517	  line-height: 1;
-  1518	  margin-bottom: 14px;
-  1519	}
-  1520	
-  1521	.flow-group-header p {
-  1522	  color: #b8c9bf;
-  1523	  line-height: 1.6;
-  1524	  margin-bottom: 0;
-  1525	}
-  1526	
-  1527	.flow-capture-grid {
-  1528	  align-items: start;
-  1529	  display: grid;
-  1530	  gap: 34px;
-  1531	  grid-template-columns: repeat(auto-fit, minmax(285px, 1fr));
-  1532	}
-  1533	
-  1534	.flow-screen-stack {
-  1535	  min-width: 0;
-  1536	}
-  1537	
-  1538	.flow-screen-stack h4 {
-  1539	  color: var(--text);
-  1540	  font-size: 15px;
-  1541	  font-weight: 850;
-  1542	  letter-spacing: 0;
-  1543	  line-height: 1.2;
-  1544	  margin: 0 0 14px;
-  1545	  text-align: center;
+  1472	.cinerific-tablet-camera {
+  1473	  background: #1d2923;
+  1474	  border: 1px solid rgba(198, 255, 217, 0.24);
+  1475	  border-radius: 999px;
+  1476	  height: 5px;
+  1477	  left: 7px;
+  1478	  position: absolute;
+  1479	  top: 50%;
+  1480	  transform: translateY(-50%);
+  1481	  width: 5px;
+  1482	}
+  1483	
+  1484	.av-showcase-proof {
+  1485	  background: rgba(5, 16, 10, 0.82);
+  1486	  border: 1px solid var(--line-strong);
+  1487	  border-radius: 8px;
+  1488	  bottom: 20px;
+  1489	  max-width: 260px;
+  1490	  padding: 15px;
+  1491	  position: absolute;
+  1492	  right: 16px;
+  1493	  z-index: 4;
+  1494	}
+  1495	
+  1496	.av-showcase-proof strong {
+  1497	  color: var(--green);
+  1498	  display: block;
+  1499	  font-size: 28px;
+  1500	  font-weight: 900;
+  1501	  line-height: 1;
+  1502	}
+  1503	
+  1504	.av-showcase-proof span {
+  1505	  color: var(--muted);
+  1506	  display: block;
+  1507	  font-size: 13px;
+  1508	  font-weight: 700;
+  1509	  line-height: 1.45;
+  1510	  margin-top: 8px;
+  1511	}
+  1512	
+  1513	.project-section-grid,
+  1514	.readiness-layout {
+  1515	  display: grid;
+  1516	  gap: 44px;
+  1517	  grid-template-columns: minmax(0, 0.82fr) minmax(360px, 1.18fr);
+  1518	}
+  1519	
+  1520	.project-copy-panel {
+  1521	  border-left: 1px solid var(--line-strong);
+  1522	  padding-left: 28px;
+  1523	}
+  1524	
+  1525	.project-copy-panel p:last-child,
+  1526	.closing-panel p:last-child {
+  1527	  margin-bottom: 0;
+  1528	}
+  1529	
+  1530	.project-card-grid {
+  1531	  display: grid;
+  1532	  gap: 16px;
+  1533	  margin-top: 34px;
+  1534	}
+  1535	
+  1536	.ownership-grid {
+  1537	  grid-template-columns: repeat(5, minmax(0, 1fr));
+  1538	}
+  1539	
+  1540	.feature-grid {
+  1541	  grid-template-columns: repeat(3, minmax(0, 1fr));
+  1542	}
+  1543	
+  1544	.decision-grid {
+  1545	  grid-template-columns: repeat(3, minmax(0, 1fr));
   1546	}
   1547	
-  1548	.flow-screen-stack-captures {
-  1549	  align-items: start;
-  1550	  display: flex;
-  1551	  gap: 14px;
-  1552	  justify-content: center;
-  1553	}
-  1554	
-  1555	.cinerific-case .flow-image-frame,
-  1556	.cinerific-case .flow-screen-standard .flow-image-frame,
-  1557	.cinerific-case .flow-screen-tall .flow-image-frame {
-  1558	  aspect-ratio: 16 / 9;
-  1559	  background: linear-gradient(145deg, #0c120f, #000);
-  1560	  border-radius: var(--capture-frame-radius-standard);
+  1548	.project-card,
+  1549	.flow-checkout-note,
+  1550	.architecture-node,
+  1551	.stack-group,
+  1552	.project-timeline-item {
+  1553	  background: linear-gradient(180deg, rgba(13, 31, 22, 0.88), rgba(5, 13, 9, 0.88));
+  1554	  border: 1px solid var(--line);
+  1555	  border-radius: 8px;
+  1556	}
+  1557	
+  1558	.project-card {
+  1559	  min-height: 184px;
+  1560	  padding: 22px;
   1561	}
   1562	
-  1563	.cinerific-case .flow-image-frame::before {
-  1564	  background:
-  1565	    linear-gradient(rgba(67, 255, 146, 0.04) 1px, transparent 1px),
-  1566	    linear-gradient(90deg, rgba(67, 255, 146, 0.04) 1px, transparent 1px),
-  1567	    #020403;
-  1568	  background-size: 14px 14px;
-  1569	  border: 1px solid rgba(198, 255, 217, 0.16);
-  1570	  border-radius: 5px;
-  1571	  content: "";
-  1572	  inset: 10px 14px;
-  1573	  position: absolute;
-  1574	}
-  1575	
-  1576	.cinerific-case .flow-image-frame::after {
-  1577	  background: #1d2923;
-  1578	  border: 1px solid rgba(198, 255, 217, 0.24);
-  1579	  border-radius: 999px;
-  1580	  content: "";
-  1581	  height: 4px;
-  1582	  left: 5px;
-  1583	  position: absolute;
-  1584	  top: 50%;
-  1585	  transform: translateY(-50%);
-  1586	  width: 4px;
-  1587	}
-  1588	
-  1589	.flow-browse-toggle-row {
-  1590	  display: flex;
-  1591	  justify-content: center;
-  1592	  margin-top: 26px;
-  1593	}
-  1594	
-  1595	.flow-browse-toggle {
-  1596	  cursor: pointer;
-  1597	  font-family: inherit;
-  1598	}
-  1599	
-  1600	.flow-browse-toggle svg {
-  1601	  flex: 0 0 auto;
-  1602	}
-  1603	
-  1604	.flow-browse-extra {
-  1605	  max-height: 0;
-  1606	  opacity: 0;
-  1607	  overflow: hidden;
-  1608	  pointer-events: none;
-  1609	  transform: translateY(-8px);
-  1610	  transition: max-height 320ms ease, opacity 220ms ease, transform 220ms ease,
-  1611	    margin-top 220ms ease;
-  1612	}
-  1613	
-  1614	.flow-browse-extra.is-open {
-  1615	  margin-top: 34px;
-  1616	  max-height: 5200px;
-  1617	  opacity: 1;
-  1618	  pointer-events: auto;
-  1619	  transform: translateY(0);
-  1620	}
-  1621	
-  1622	.architecture-map {
-  1623	  display: grid;
-  1624	  gap: 12px;
-  1625	  grid-template-columns: repeat(5, minmax(0, 1fr));
-  1626	}
-  1627	
-  1628	.architecture-node {
-  1629	  min-height: 178px;
-  1630	  padding: 18px;
-  1631	}
-  1632	
-  1633	.architecture-node span {
-  1634	  color: var(--green);
-  1635	  display: block;
-  1636	  font-size: 13px;
-  1637	  font-weight: 900;
-  1638	  margin-bottom: 18px;
-  1639	}
-  1640	
-  1641	.architecture-node strong {
-  1642	  color: var(--text);
-  1643	  display: block;
-  1644	  font-size: 16px;
-  1645	  line-height: 1.25;
-  1646	  margin-bottom: 12px;
-  1647	}
-  1648	
-  1649	.architecture-node p {
+  1563	.project-card span,
+  1564	.flow-checkout-note span,
+  1565	.stack-group h3 {
+  1566	  color: var(--green);
+  1567	  display: block;
+  1568	  font-size: 12px;
+  1569	  font-weight: 850;
+  1570	  letter-spacing: 0.1em;
+  1571	  margin-bottom: 20px;
+  1572	  text-transform: uppercase;
+  1573	}
+  1574	
+  1575	.project-card p,
+  1576	.flow-checkout-note p,
+  1577	.architecture-node p,
+  1578	.project-timeline-item p {
+  1579	  color: #b8c9bf;
+  1580	  line-height: 1.6;
+  1581	  margin-bottom: 0;
+  1582	}
+  1583	
+  1584	.flow-segments {
+  1585	  border: 1px solid var(--line);
+  1586	  border-radius: 8px;
+  1587	  display: grid;
+  1588	  gap: 1px;
+  1589	  grid-template-columns: repeat(6, minmax(0, 1fr));
+  1590	  margin-top: 34px;
+  1591	  overflow: hidden;
+  1592	}
+  1593	
+  1594	.flow-segments span {
+  1595	  background: rgba(255, 255, 255, 0.03);
+  1596	  color: var(--mint);
+  1597	  font-size: 13px;
+  1598	  font-weight: 850;
+  1599	  padding: 14px 10px;
+  1600	  text-align: center;
+  1601	}
+  1602	
+  1603	.flow-layout {
+  1604	  align-items: center;
+  1605	  display: grid;
+  1606	  gap: 42px;
+  1607	  grid-template-columns: minmax(260px, 0.82fr) minmax(0, 1.18fr);
+  1608	  margin-top: 34px;
+  1609	}
+  1610	
+  1611	.flow-screen {
+  1612	  margin: 0;
+  1613	}
+  1614	
+  1615	.flow-image-frame {
+  1616	  aspect-ratio: 9 / 16;
+  1617	  background: #020403;
+  1618	  border: 1px solid var(--line);
+  1619	  border-radius: var(--capture-frame-radius-standard);
+  1620	  box-shadow: 0 30px 72px rgba(0, 0, 0, 0.45);
+  1621	  overflow: hidden;
+  1622	  position: relative;
+  1623	}
+  1624	
+  1625	.flow-screen-tall .flow-image-frame {
+  1626	  aspect-ratio: 1440 / 3120;
+  1627	  border-radius: var(--capture-frame-radius-tall);
+  1628	}
+  1629	
+  1630	.flow-screen-standard .flow-image-frame {
+  1631	  aspect-ratio: 720 / 1280;
+  1632	  border-radius: var(--capture-frame-radius-standard);
+  1633	}
+  1634	
+  1635	.flow-screen-main .flow-image-frame {
+  1636	  margin: 0 auto;
+  1637	  max-width: 330px;
+  1638	}
+  1639	
+  1640	.flow-screen-compact {
+  1641	  width: min(100%, 152px);
+  1642	}
+  1643	
+  1644	.flow-screen-compact .flow-image-frame {
+  1645	  width: 100%;
+  1646	}
+  1647	
+  1648	.flow-screen figcaption {
+  1649	  color: var(--muted);
   1650	  font-size: 13px;
-  1651	}
-  1652	
-  1653	.architecture-copy {
-  1654	  margin: 26px 0 0;
+  1651	  font-weight: 700;
+  1652	  line-height: 1.45;
+  1653	  margin: 14px auto 0;
+  1654	  max-width: 330px;
   1655	}
   1656	
-  1657	.readiness-copy {
-  1658	  margin-bottom: 24px;
-  1659	}
-  1660	
-  1661	.readiness-list,
-  1662	.proof-points {
-  1663	  display: flex;
-  1664	  flex-wrap: wrap;
-  1665	  gap: 10px;
+  1657	.flow-screen-label {
+  1658	  color: var(--green);
+  1659	  display: block;
+  1660	  font-size: 10px;
+  1661	  font-weight: 850;
+  1662	  letter-spacing: 0.12em;
+  1663	  margin: 0 0 8px;
+  1664	  text-align: center;
+  1665	  text-transform: uppercase;
   1666	}
   1667	
-  1668	.project-timeline {
+  1668	.flow-support {
   1669	  display: grid;
-  1670	  gap: 14px;
-  1671	}
-  1672	
-  1673	.project-timeline-item {
-  1674	  display: grid;
-  1675	  gap: 22px;
-  1676	  grid-template-columns: 56px 1fr;
-  1677	  padding: 22px;
-  1678	}
-  1679	
-  1680	.project-timeline-item > span {
-  1681	  color: var(--green);
-  1682	  font-size: 18px;
-  1683	  font-weight: 900;
-  1684	}
-  1685	
-  1686	.project-timeline-item h3 {
-  1687	  font-size: 20px;
-  1688	  line-height: 1.2;
-  1689	  margin-bottom: 10px;
-  1690	}
-  1691	
-  1692	.stack-matrix {
-  1693	  display: grid;
-  1694	  gap: 14px;
-  1695	  grid-template-columns: repeat(5, minmax(0, 1fr));
-  1696	  margin-top: 34px;
-  1697	}
-  1698	
-  1699	.stack-group {
-  1700	  padding: 20px;
-  1701	}
-  1702	
-  1703	.stack-group h3 {
-  1704	  font-size: 11px;
-  1705	}
-  1706	
-  1707	.stack-group div {
-  1708	  display: grid;
-  1709	  gap: 8px;
+  1670	  gap: 18px;
+  1671	  grid-template-columns: repeat(3, minmax(0, 1fr));
+  1672	}
+  1673	
+  1674	.flow-section-intro {
+  1675	  display: grid;
+  1676	  gap: 18px;
+  1677	}
+  1678	
+  1679	.flow-section-intro > p {
+  1680	  border-left: 1px solid var(--line-strong);
+  1681	  color: #b8c9bf;
+  1682	  line-height: 1.65;
+  1683	  margin: 0;
+  1684	  max-width: 560px;
+  1685	  padding-left: 22px;
+  1686	}
+  1687	
+  1688	.flow-checkout-note {
+  1689	  align-content: center;
+  1690	  min-height: 260px;
+  1691	  padding: 22px;
+  1692	}
+  1693	
+  1694	.flow-capture-groups {
+  1695	  display: grid;
+  1696	  gap: 48px;
+  1697	  margin-top: 54px;
+  1698	}
+  1699	
+  1700	.flow-capture-group {
+  1701	  border-top: 1px solid var(--line);
+  1702	  display: grid;
+  1703	  gap: 24px;
+  1704	  grid-template-columns: minmax(220px, 0.34fr) minmax(0, 1fr);
+  1705	  padding-top: 30px;
+  1706	}
+  1707	
+  1708	.flow-group-header {
+  1709	  max-width: 360px;
   1710	}
   1711	
-  1712	.stack-group span {
-  1713	  color: #d8ffe4;
-  1714	  font-size: 14px;
-  1715	  font-weight: 750;
-  1716	  line-height: 1.35;
-  1717	}
-  1718	
-  1719	.proof-points {
-  1720	  margin-top: 34px;
-  1721	}
-  1722	
-  1723	.closing-panel {
-  1724	  align-items: center;
-  1725	  background: linear-gradient(180deg, rgba(13, 31, 22, 0.88), rgba(5, 13, 9, 0.88));
-  1726	  border: 1px solid var(--line);
-  1727	  border-radius: 8px;
-  1728	  display: grid;
-  1729	  gap: 34px;
-  1730	  grid-template-columns: minmax(0, 1fr) auto;
-  1731	  padding: 34px;
+  1712	.flow-group-header span {
+  1713	  color: var(--green);
+  1714	  display: block;
+  1715	  font-size: 12px;
+  1716	  font-weight: 850;
+  1717	  letter-spacing: 0.1em;
+  1718	  margin-bottom: 14px;
+  1719	  text-transform: uppercase;
+  1720	}
+  1721	
+  1722	.flow-group-header h3 {
+  1723	  font-size: clamp(24px, 3vw, 34px);
+  1724	  line-height: 1;
+  1725	  margin-bottom: 14px;
+  1726	}
+  1727	
+  1728	.flow-group-header p {
+  1729	  color: #b8c9bf;
+  1730	  line-height: 1.6;
+  1731	  margin-bottom: 0;
   1732	}
   1733	
-  1734	.closing-panel h2 {
-  1735	  font-size: clamp(30px, 4vw, 50px);
-  1736	  margin-bottom: 18px;
-  1737	  max-width: 720px;
-  1738	}
-  1739	
-  1740	.closing-panel p {
-  1741	  max-width: 760px;
-  1742	}
-  1743	
-  1744	.closing-actions {
-  1745	  display: flex;
-  1746	  flex-direction: column;
-  1747	  gap: 12px;
-  1748	  min-width: 190px;
-  1749	}
-  1750	
-  1751	@media (max-width: 980px) {
-  1752	  .nav-bar {
-  1753	    align-items: flex-start;
-  1754	    flex-direction: column;
-  1755	    gap: 14px;
-  1756	    padding: 16px;
-  1757	  }
-  1758	
-  1759	  .nav-bar nav {
-  1760	    display: grid;
-  1761	    flex-wrap: nowrap;
-  1762	    gap: 6px;
-  1763	    grid-template-columns:
-  1764	      minmax(0, 1.25fr) minmax(0, 0.78fr) minmax(0, 0.98fr)
-  1765	      minmax(0, 0.98fr);
-  1766	    justify-content: normal;
-  1767	    width: 100%;
-  1768	  }
+  1734	.flow-capture-grid {
+  1735	  align-items: start;
+  1736	  display: grid;
+  1737	  gap: 34px;
+  1738	  grid-template-columns: repeat(auto-fit, minmax(285px, 1fr));
+  1739	}
+  1740	
+  1741	.flow-screen-stack {
+  1742	  min-width: 0;
+  1743	}
+  1744	
+  1745	.flow-screen-stack h4 {
+  1746	  color: var(--text);
+  1747	  font-size: 15px;
+  1748	  font-weight: 850;
+  1749	  letter-spacing: 0;
+  1750	  line-height: 1.2;
+  1751	  margin: 0 0 14px;
+  1752	  text-align: center;
+  1753	}
+  1754	
+  1755	.flow-screen-stack-captures {
+  1756	  align-items: start;
+  1757	  display: flex;
+  1758	  gap: 14px;
+  1759	  justify-content: center;
+  1760	}
+  1761	
+  1762	.cinerific-case .flow-image-frame,
+  1763	.cinerific-case .flow-screen-standard .flow-image-frame,
+  1764	.cinerific-case .flow-screen-tall .flow-image-frame {
+  1765	  aspect-ratio: 16 / 9;
+  1766	  background: linear-gradient(145deg, #0c120f, #000);
+  1767	  border-radius: var(--capture-frame-radius-standard);
+  1768	}
   1769	
-  1770	  .nav-bar nav a {
-  1771	    flex: 1 1 0;
-  1772	    min-width: 0;
-  1773	    padding-left: 10px;
-  1774	    padding-right: 10px;
-  1775	    text-align: center;
-  1776	  }
-  1777	
-  1778	  .project-nav nav {
-  1779	    grid-template-columns: repeat(3, minmax(0, 1fr));
-  1780	  }
-  1781	
-  1782	  .hero-grid,
-  1783	  .worklog-layout,
-  1784	  .project-hero-grid,
-  1785	  .project-section-grid,
-  1786	  .readiness-layout {
-  1787	    grid-template-columns: 1fr;
-  1788	  }
-  1789	
-  1790	  .av-showcase {
-  1791	    min-height: 610px;
-  1792	  }
-  1793	
-  1794	  .av-device-main {
-  1795	    left: 32%;
-  1796	    right: auto;
-  1797	  }
-  1798	
-  1799	  .av-device-browse {
-  1800	    right: 6%;
-  1801	  }
-  1802	
-  1803	  .av-device-confirm {
-  1804	    left: 4%;
-  1805	  }
+  1770	.cinerific-case .flow-image-frame::before {
+  1771	  background:
+  1772	    linear-gradient(rgba(67, 255, 146, 0.04) 1px, transparent 1px),
+  1773	    linear-gradient(90deg, rgba(67, 255, 146, 0.04) 1px, transparent 1px),
+  1774	    #020403;
+  1775	  background-size: 14px 14px;
+  1776	  border: 1px solid rgba(198, 255, 217, 0.16);
+  1777	  border-radius: 5px;
+  1778	  content: "";
+  1779	  inset: 10px 14px;
+  1780	  position: absolute;
+  1781	}
+  1782	
+  1783	.cinerific-case .flow-image-frame::after {
+  1784	  background: #1d2923;
+  1785	  border: 1px solid rgba(198, 255, 217, 0.24);
+  1786	  border-radius: 999px;
+  1787	  content: "";
+  1788	  height: 4px;
+  1789	  left: 5px;
+  1790	  position: absolute;
+  1791	  top: 50%;
+  1792	  transform: translateY(-50%);
+  1793	  width: 4px;
+  1794	}
+  1795	
+  1796	.flow-browse-toggle-row {
+  1797	  display: flex;
+  1798	  justify-content: center;
+  1799	  margin-top: 26px;
+  1800	}
+  1801	
+  1802	.flow-browse-toggle {
+  1803	  cursor: pointer;
+  1804	  font-family: inherit;
+  1805	}
   1806	
-  1807	  .hero-visual {
-  1808	    min-height: auto;
-  1809	  }
+  1807	.flow-browse-toggle svg {
+  1808	  flex: 0 0 auto;
+  1809	}
   1810	
-  1811	  .phone-stage {
-  1812	    height: 710px;
-  1813	    margin-top: 30px;
-  1814	  }
-  1815	
-  1816	  .phone-shell-commerce {
-  1817	    left: 4%;
-  1818	  }
-  1819	
-  1820	  .phone-shell-finance {
-  1821	    left: 42%;
-  1822	  }
-  1823	
-  1824	  .tablet-shell {
-  1825	    left: 9%;
-  1826	    top: 374px;
-  1827	    width: min(74%, 332px);
-  1828	  }
-  1829	
-  1830	  .case-grid,
-  1831	  .capability-grid,
-  1832	  .feature-grid,
-  1833	  .decision-grid,
-  1834	  .architecture-map {
-  1835	    grid-template-columns: repeat(2, 1fr);
-  1836	  }
-  1837	
-  1838	  .ownership-grid,
-  1839	  .stack-matrix {
-  1840	    grid-template-columns: repeat(3, minmax(0, 1fr));
-  1841	  }
-  1842	
-  1843	  .flow-layout {
-  1844	    grid-template-columns: 1fr;
-  1845	  }
-  1846	
-  1847	  .flow-capture-group {
-  1848	    grid-template-columns: 1fr;
-  1849	  }
-  1850	}
-  1851	
-  1852	@media (max-width: 720px) {
-  1853	  .site-shell {
-  1854	    width: min(100% - 24px, 1180px);
-  1855	  }
-  1856	
-  1857	  .nav-bar {
-  1858	    max-width: calc(100vw - 24px);
-  1859	    overflow: hidden;
-  1860	    padding: 14px;
-  1861	  }
-  1862	
-  1863	  .nav-bar nav {
-  1864	    gap: 4px;
-  1865	    max-width: 100%;
-  1866	    width: min(100%, calc(100vw - 54px));
-  1867	  }
-  1868	
-  1869	  .project-nav nav {
-  1870	    width: 100%;
-  1871	  }
-  1872	
-  1873	  .project-page .site-shell {
-  1874	    max-width: calc(100vw - 24px);
-  1875	    width: calc(100vw - 24px);
-  1876	  }
-  1877	
-  1878	  .project-nav {
-  1879	    max-width: calc(100vw - 24px);
-  1880	    width: calc(100vw - 24px);
-  1881	  }
-  1882	
-  1883	  .project-nav nav a {
-  1884	    font-size: 11px;
-  1885	  }
+  1811	.flow-browse-extra {
+  1812	  max-height: 0;
+  1813	  opacity: 0;
+  1814	  overflow: hidden;
+  1815	  pointer-events: none;
+  1816	  transform: translateY(-8px);
+  1817	  transition: max-height 320ms ease, opacity 220ms ease, transform 220ms ease,
+  1818	    margin-top 220ms ease;
+  1819	}
+  1820	
+  1821	.flow-browse-extra.is-open {
+  1822	  margin-top: 34px;
+  1823	  max-height: 5200px;
+  1824	  opacity: 1;
+  1825	  pointer-events: auto;
+  1826	  transform: translateY(0);
+  1827	}
+  1828	
+  1829	.architecture-map {
+  1830	  display: grid;
+  1831	  gap: 12px;
+  1832	  grid-template-columns: repeat(5, minmax(0, 1fr));
+  1833	}
+  1834	
+  1835	.architecture-node {
+  1836	  min-height: 178px;
+  1837	  padding: 18px;
+  1838	}
+  1839	
+  1840	.architecture-node span {
+  1841	  color: var(--green);
+  1842	  display: block;
+  1843	  font-size: 13px;
+  1844	  font-weight: 900;
+  1845	  margin-bottom: 18px;
+  1846	}
+  1847	
+  1848	.architecture-node strong {
+  1849	  color: var(--text);
+  1850	  display: block;
+  1851	  font-size: 16px;
+  1852	  line-height: 1.25;
+  1853	  margin-bottom: 12px;
+  1854	}
+  1855	
+  1856	.architecture-node p {
+  1857	  font-size: 13px;
+  1858	}
+  1859	
+  1860	.architecture-copy {
+  1861	  margin: 26px 0 0;
+  1862	}
+  1863	
+  1864	.readiness-copy {
+  1865	  margin-bottom: 24px;
+  1866	}
+  1867	
+  1868	.readiness-list,
+  1869	.proof-points {
+  1870	  display: flex;
+  1871	  flex-wrap: wrap;
+  1872	  gap: 10px;
+  1873	}
+  1874	
+  1875	.project-timeline {
+  1876	  display: grid;
+  1877	  gap: 14px;
+  1878	}
+  1879	
+  1880	.project-timeline-item {
+  1881	  display: grid;
+  1882	  gap: 22px;
+  1883	  grid-template-columns: 56px 1fr;
+  1884	  padding: 22px;
+  1885	}
   1886	
-  1887	  .nav-bar nav a {
-  1888	    font-size: 12px;
-  1889	    padding-left: 2px;
-  1890	    padding-right: 2px;
-  1891	  }
+  1887	.project-timeline-item > span {
+  1888	  color: var(--green);
+  1889	  font-size: 18px;
+  1890	  font-weight: 900;
+  1891	}
   1892	
-  1893	  .hero {
-  1894	    padding-top: 12px;
-  1895	  }
-  1896	
-  1897	  section.project-hero {
-  1898	    padding-top: 12px;
-  1899	  }
-  1900	
-  1901	  .project-nav {
-  1902	    margin-bottom: 48px;
-  1903	  }
-  1904	
-  1905	  .hero-grid {
-  1906	    gap: 30px;
-  1907	    padding-top: 42px;
-  1908	  }
+  1893	.project-timeline-item h3 {
+  1894	  font-size: 20px;
+  1895	  line-height: 1.2;
+  1896	  margin-bottom: 10px;
+  1897	}
+  1898	
+  1899	.stack-matrix {
+  1900	  display: grid;
+  1901	  gap: 14px;
+  1902	  grid-template-columns: repeat(5, minmax(0, 1fr));
+  1903	  margin-top: 34px;
+  1904	}
+  1905	
+  1906	.stack-group {
+  1907	  padding: 20px;
+  1908	}
   1909	
-  1910	  h1 {
-  1911	    font-size: clamp(42px, 15vw, 64px);
-  1912	  }
+  1910	.stack-group h3 {
+  1911	  font-size: 11px;
+  1912	}
   1913	
-  1914	  .hero-visual {
-  1915	    min-height: auto;
-  1916	  }
-  1917	
-  1918	  .phone-stage {
-  1919	    height: 626px;
-  1920	    margin-top: 18px;
-  1921	  }
-  1922	
-  1923	  .profile-orbit {
-  1924	    right: 0;
-  1925	  }
-  1926	
-  1927	  .profile-photo {
-  1928	    height: 132px;
-  1929	    width: 132px;
-  1930	  }
-  1931	
-  1932	  .phone-shell {
-  1933	    height: 420px;
-  1934	    width: 206px;
-  1935	  }
-  1936	
-  1937	  .phone-shell-commerce {
-  1938	    left: -2px;
-  1939	    top: 72px;
-  1940	  }
-  1941	
-  1942	  .phone-shell-finance {
-  1943	    left: auto;
-  1944	    right: -8px;
-  1945	    top: 124px;
-  1946	  }
-  1947	
-  1948	  .tablet-shell {
-  1949	    height: 150px;
-  1950	    left: 14px;
-  1951	    top: 342px;
-  1952	    width: min(84vw, 268px);
-  1953	  }
-  1954	
-  1955	  .case-grid,
-  1956	  .capability-grid {
-  1957	    grid-template-columns: 1fr;
-  1958	  }
-  1959	
-  1960	  .case-card {
-  1961	    min-height: auto;
-  1962	  }
-  1963	
-  1964	  .contact-panel {
-  1965	    align-items: flex-start;
-  1966	    flex-direction: column;
-  1967	  }
-  1968	
-  1969	  .project-page section:not(.project-hero) {
-  1970	    padding: 58px 0;
-  1971	  }
-  1972	
-  1973	  .project-hero-grid {
-  1974	    gap: 34px;
+  1914	.stack-group div {
+  1915	  display: grid;
+  1916	  gap: 8px;
+  1917	}
+  1918	
+  1919	.stack-group span {
+  1920	  color: #d8ffe4;
+  1921	  font-size: 14px;
+  1922	  font-weight: 750;
+  1923	  line-height: 1.35;
+  1924	}
+  1925	
+  1926	.proof-points {
+  1927	  margin-top: 34px;
+  1928	}
+  1929	
+  1930	.closing-panel {
+  1931	  align-items: center;
+  1932	  background: linear-gradient(180deg, rgba(13, 31, 22, 0.88), rgba(5, 13, 9, 0.88));
+  1933	  border: 1px solid var(--line);
+  1934	  border-radius: 8px;
+  1935	  display: grid;
+  1936	  gap: 34px;
+  1937	  grid-template-columns: minmax(0, 1fr) auto;
+  1938	  padding: 34px;
+  1939	}
+  1940	
+  1941	.closing-panel h2 {
+  1942	  font-size: clamp(30px, 4vw, 50px);
+  1943	  margin-bottom: 18px;
+  1944	  max-width: 720px;
+  1945	}
+  1946	
+  1947	.closing-panel p {
+  1948	  max-width: 760px;
+  1949	}
+  1950	
+  1951	.closing-actions {
+  1952	  display: flex;
+  1953	  flex-direction: column;
+  1954	  gap: 12px;
+  1955	  min-width: 190px;
+  1956	}
+  1957	
+  1958	@media (max-width: 980px) {
+  1959	  .nav-bar {
+  1960	    align-items: flex-start;
+  1961	    flex-direction: column;
+  1962	    gap: 14px;
+  1963	    padding: 16px;
+  1964	  }
+  1965	
+  1966	  .nav-bar nav {
+  1967	    display: grid;
+  1968	    flex-wrap: nowrap;
+  1969	    gap: 6px;
+  1970	    grid-template-columns:
+  1971	      minmax(0, 1.25fr) minmax(0, 0.78fr) minmax(0, 0.98fr)
+  1972	      minmax(0, 0.98fr);
+  1973	    justify-content: normal;
+  1974	    width: 100%;
   1975	  }
   1976	
-  1977	  .project-back-link {
-  1978	    margin-bottom: 24px;
-  1979	  }
-  1980	
-  1981	  .project-copy-panel {
-  1982	    border-left: 0;
-  1983	    padding-left: 0;
-  1984	  }
-  1985	
-  1986	  .project-hero-text,
-  1987	  .project-copy-panel p,
-  1988	  .architecture-copy,
-  1989	  .readiness-copy,
-  1990	  .closing-panel p {
-  1991	    font-size: 16px;
-  1992	  }
-  1993	
-  1994	  .project-subtitle,
-  1995	  .project-hero-text,
-  1996	  .project-meta-row {
-  1997	    max-width: 100%;
-  1998	    overflow-wrap: anywhere;
+  1977	  .nav-bar nav a {
+  1978	    flex: 1 1 0;
+  1979	    min-width: 0;
+  1980	    padding-left: 10px;
+  1981	    padding-right: 10px;
+  1982	    text-align: center;
+  1983	  }
+  1984	
+  1985	  .project-nav nav {
+  1986	    grid-template-columns: repeat(3, minmax(0, 1fr));
+  1987	  }
+  1988	
+  1989	  .hero-grid,
+  1990	  .worklog-layout,
+  1991	  .project-hero-grid,
+  1992	  .project-section-grid,
+  1993	  .readiness-layout {
+  1994	    grid-template-columns: 1fr;
+  1995	  }
+  1996	
+  1997	  .av-showcase {
+  1998	    min-height: 610px;
   1999	  }
   2000	
-  2001	  .project-meta-row span {
-  2002	    flex: 0 1 auto;
-  2003	    white-space: normal;
+  2001	  .av-device-main {
+  2002	    left: 32%;
+  2003	    right: auto;
   2004	  }
   2005	
-  2006	  .av-showcase {
-  2007	    min-height: auto;
-  2008	    padding: 0 0 18px;
-  2009	  }
-  2010	
-  2011	  .av-showcase::before {
-  2012	    inset: 20px 0 84px;
-  2013	  }
-  2014	
-  2015	  .av-device {
-  2016	    position: relative;
-  2017	  }
-  2018	
-  2019	  .av-device-main {
-  2020	    height: auto;
-  2021	    left: auto;
-  2022	    margin: 0 auto;
-  2023	    max-width: 292px;
-  2024	    right: auto;
-  2025	    top: auto;
-  2026	    transform: rotate(-4deg);
-  2027	    width: 72vw;
-  2028	  }
-  2029	
-  2030	  .av-device-browse,
-  2031	  .av-device-confirm {
-  2032	    display: none;
-  2033	  }
-  2034	
-  2035	  .av-showcase-proof {
-  2036	    margin: -18px auto 0;
-  2037	    max-width: min(292px, calc(100vw - 48px));
-  2038	    position: relative;
-  2039	    right: auto;
-  2040	  }
-  2041	
-  2042	  .project-card-grid,
-  2043	  .ownership-grid,
-  2044	  .feature-grid,
-  2045	  .decision-grid,
-  2046	  .architecture-map,
-  2047	  .stack-matrix {
-  2048	    grid-template-columns: 1fr;
-  2049	  }
-  2050	
-  2051	  .flow-segments {
-  2052	    grid-template-columns: repeat(2, minmax(0, 1fr));
-  2053	  }
-  2054	
-  2055	  .flow-support {
-  2056	    grid-template-columns: 1fr;
-  2057	  }
+  2006	  .av-device-browse {
+  2007	    right: 6%;
+  2008	  }
+  2009	
+  2010	  .av-device-confirm {
+  2011	    left: 4%;
+  2012	  }
+  2013	
+  2014	  .hero-visual {
+  2015	    min-height: auto;
+  2016	  }
+  2017	
+  2018	  .phone-stage {
+  2019	    height: 710px;
+  2020	    margin-top: 30px;
+  2021	  }
+  2022	
+  2023	  .phone-shell-commerce {
+  2024	    left: 4%;
+  2025	  }
+  2026	
+  2027	  .phone-shell-finance {
+  2028	    left: 42%;
+  2029	  }
+  2030	
+  2031	  .tablet-shell {
+  2032	    left: 9%;
+  2033	    top: 374px;
+  2034	    width: min(74%, 332px);
+  2035	  }
+  2036	
+  2037	  .case-grid,
+  2038	  .capability-grid,
+  2039	  .feature-grid,
+  2040	  .decision-grid,
+  2041	  .architecture-map {
+  2042	    grid-template-columns: repeat(2, 1fr);
+  2043	  }
+  2044	
+  2045	  .ownership-grid,
+  2046	  .stack-matrix {
+  2047	    grid-template-columns: repeat(3, minmax(0, 1fr));
+  2048	  }
+  2049	
+  2050	  .flow-layout {
+  2051	    grid-template-columns: 1fr;
+  2052	  }
+  2053	
+  2054	  .flow-capture-group {
+  2055	    grid-template-columns: 1fr;
+  2056	  }
+  2057	}
   2058	
-  2059	  .flow-checkout-note {
-  2060	    min-height: auto;
-  2061	  }
-  2062	
-  2063	  .flow-section-intro > p {
-  2064	    border-left: 0;
-  2065	    padding-left: 0;
-  2066	  }
-  2067	
-  2068	  .flow-capture-groups {
-  2069	    gap: 40px;
-  2070	    margin-top: 44px;
-  2071	  }
-  2072	
-  2073	  .flow-capture-group {
-  2074	    padding-top: 24px;
-  2075	  }
-  2076	
-  2077	  .flow-capture-grid {
-  2078	    gap: 28px;
-  2079	    grid-template-columns: 1fr;
-  2080	  }
-  2081	
-  2082	  .flow-screen-compact {
-  2083	    width: min(42vw, 146px);
-  2084	  }
-  2085	
-  2086	  .flow-screen-stack-captures {
-  2087	    gap: 12px;
+  2059	@media (max-width: 720px) {
+  2060	  .site-shell {
+  2061	    width: min(100% - 24px, 1180px);
+  2062	  }
+  2063	
+  2064	  .nav-bar {
+  2065	    max-width: calc(100vw - 24px);
+  2066	    overflow: hidden;
+  2067	    padding: 14px;
+  2068	  }
+  2069	
+  2070	  .nav-bar nav {
+  2071	    gap: 4px;
+  2072	    max-width: 100%;
+  2073	    width: min(100%, calc(100vw - 54px));
+  2074	  }
+  2075	
+  2076	  .project-nav nav {
+  2077	    width: 100%;
+  2078	  }
+  2079	
+  2080	  .project-page .site-shell {
+  2081	    max-width: calc(100vw - 24px);
+  2082	    width: calc(100vw - 24px);
+  2083	  }
+  2084	
+  2085	  .project-nav {
+  2086	    max-width: calc(100vw - 24px);
+  2087	    width: calc(100vw - 24px);
   2088	  }
   2089	
-  2090	  .flow-screen:not(.flow-screen-main) .flow-image-frame {
-  2091	    margin: 0 auto;
-  2092	    max-width: 230px;
-  2093	  }
-  2094	
-  2095	  .closing-panel {
-  2096	    grid-template-columns: 1fr;
-  2097	    padding: 28px;
+  2090	  .project-nav nav a {
+  2091	    font-size: 11px;
+  2092	  }
+  2093	
+  2094	  .nav-bar nav a {
+  2095	    font-size: 12px;
+  2096	    padding-left: 2px;
+  2097	    padding-right: 2px;
   2098	  }
   2099	
-  2100	  .closing-actions {
-  2101	    width: 100%;
+  2100	  .hero {
+  2101	    padding-top: 12px;
   2102	  }
-  2103	}
-  2104	
-  2105	@media (max-width: 380px) {
-  2106	  .nav-bar {
-  2107	    padding-left: 12px;
-  2108	    padding-right: 12px;
-  2109	  }
-  2110	
-  2111	  .nav-bar nav {
-  2112	    gap: 1px;
-  2113	    width: min(100%, calc(100vw - 50px));
-  2114	  }
-  2115	
-  2116	  .nav-bar nav a {
-  2117	    font-size: 10.5px;
-  2118	    padding-left: 0;
-  2119	    padding-right: 0;
-  2120	  }
-  2121	}
-  2122	
-  2123	@media (max-width: 340px) {
-  2124	  .nav-bar nav a {
-  2125	    font-size: 10px;
-  2126	  }
-  2127	}
+  2103	
+  2104	  section.project-hero {
+  2105	    padding-top: 12px;
+  2106	  }
+  2107	
+  2108	  .project-nav {
+  2109	    margin-bottom: 48px;
+  2110	  }
+  2111	
+  2112	  .hero-grid {
+  2113	    gap: 30px;
+  2114	    padding-top: 16px;
+  2115	  }
+  2116	
+  2117	  h1 {
+  2118	    font-size: clamp(42px, 15vw, 64px);
+  2119	  }
+  2120	
+  2121	  .hero-visual {
+  2122	    min-height: auto;
+  2123	  }
+  2124	
+  2125	  .phone-stage {
+  2126	    height: 626px;
+  2127	    margin-top: 18px;
+  2128	  }
+  2129	
+  2130	  .profile-orbit {
+  2131	    right: 0;
+  2132	  }
+  2133	
+  2134	  .profile-photo {
+  2135	    height: 132px;
+  2136	    width: 132px;
+  2137	  }
+  2138	
+  2139	  .phone-shell {
+  2140	    height: 420px;
+  2141	    width: 206px;
+  2142	  }
+  2143	
+  2144	  .phone-shell-commerce {
+  2145	    left: -2px;
+  2146	    top: 72px;
+  2147	  }
+  2148	
+  2149	  .phone-shell-finance {
+  2150	    left: auto;
+  2151	    right: -8px;
+  2152	    top: 124px;
+  2153	  }
+  2154	
+  2155	  .tablet-shell {
+  2156	    height: 150px;
+  2157	    left: 14px;
+  2158	    top: 342px;
+  2159	    width: min(84vw, 268px);
+  2160	  }
+  2161	
+  2162	  .case-grid,
+  2163	  .capability-grid {
+  2164	    grid-template-columns: 1fr;
+  2165	  }
+  2166	
+  2167	  .case-card {
+  2168	    min-height: auto;
+  2169	  }
+  2170	
+  2171	  .contact-panel {
+  2172	    align-items: flex-start;
+  2173	    flex-direction: column;
+  2174	  }
+  2175	
+  2176	  .project-page section:not(.project-hero) {
+  2177	    padding: 58px 0;
+  2178	  }
+  2179	
+  2180	  .project-hero-grid {
+  2181	    gap: 34px;
+  2182	  }
+  2183	
+  2184	  .project-back-link {
+  2185	    margin-bottom: 24px;
+  2186	  }
+  2187	
+  2188	  .project-copy-panel {
+  2189	    border-left: 0;
+  2190	    padding-left: 0;
+  2191	  }
+  2192	
+  2193	  .project-hero-text,
+  2194	  .project-copy-panel p,
+  2195	  .architecture-copy,
+  2196	  .readiness-copy,
+  2197	  .closing-panel p {
+  2198	    font-size: 16px;
+  2199	  }
+  2200	
+  2201	  .project-subtitle,
+  2202	  .project-hero-text,
+  2203	  .project-meta-row {
+  2204	    max-width: 100%;
+  2205	    overflow-wrap: anywhere;
+  2206	  }
+  2207	
+  2208	  .project-meta-row span {
+  2209	    flex: 0 1 auto;
+  2210	    white-space: normal;
+  2211	  }
+  2212	
+  2213	  .av-showcase {
+  2214	    min-height: auto;
+  2215	    padding: 0 0 18px;
+  2216	  }
+  2217	
+  2218	  .av-showcase::before {
+  2219	    inset: 20px 0 84px;
+  2220	  }
+  2221	
+  2222	  .av-device {
+  2223	    position: relative;
+  2224	  }
+  2225	
+  2226	  .av-device-main {
+  2227	    height: auto;
+  2228	    left: auto;
+  2229	    margin: 0 auto;
+  2230	    max-width: 292px;
+  2231	    right: auto;
+  2232	    top: auto;
+  2233	    transform: rotate(-4deg);
+  2234	    width: 72vw;
+  2235	  }
+  2236	
+  2237	  .av-device-browse,
+  2238	  .av-device-confirm {
+  2239	    display: none;
+  2240	  }
+  2241	
+  2242	  .av-showcase-proof {
+  2243	    margin: -18px auto 0;
+  2244	    max-width: min(292px, calc(100vw - 48px));
+  2245	    position: relative;
+  2246	    right: auto;
+  2247	  }
+  2248	
+  2249	  .project-card-grid,
+  2250	  .ownership-grid,
+  2251	  .feature-grid,
+  2252	  .decision-grid,
+  2253	  .architecture-map,
+  2254	  .stack-matrix {
+  2255	    grid-template-columns: 1fr;
+  2256	  }
+  2257	
+  2258	  .flow-segments {
+  2259	    grid-template-columns: repeat(2, minmax(0, 1fr));
+  2260	  }
+  2261	
+  2262	  .flow-support {
+  2263	    grid-template-columns: 1fr;
+  2264	  }
+  2265	
+  2266	  .flow-checkout-note {
+  2267	    min-height: auto;
+  2268	  }
+  2269	
+  2270	  .flow-section-intro > p {
+  2271	    border-left: 0;
+  2272	    padding-left: 0;
+  2273	  }
+  2274	
+  2275	  .flow-capture-groups {
+  2276	    gap: 40px;
+  2277	    margin-top: 44px;
+  2278	  }
+  2279	
+  2280	  .flow-capture-group {
+  2281	    padding-top: 24px;
+  2282	  }
+  2283	
+  2284	  .flow-capture-grid {
+  2285	    gap: 28px;
+  2286	    grid-template-columns: 1fr;
+  2287	  }
+  2288	
+  2289	  .flow-screen-compact {
+  2290	    width: min(42vw, 146px);
+  2291	  }
+  2292	
+  2293	  .flow-screen-stack-captures {
+  2294	    gap: 12px;
+  2295	  }
+  2296	
+  2297	  .flow-screen:not(.flow-screen-main) .flow-image-frame {
+  2298	    margin: 0 auto;
+  2299	    max-width: 230px;
+  2300	  }
+  2301	
+  2302	  .closing-panel {
+  2303	    grid-template-columns: 1fr;
+  2304	    padding: 28px;
+  2305	  }
+  2306	
+  2307	  .closing-actions {
+  2308	    width: 100%;
+  2309	  }
+  2310	}
+  2311	
+  2312	@media (max-width: 380px) {
+  2313	  .nav-bar {
+  2314	    padding-left: 12px;
+  2315	    padding-right: 12px;
+  2316	  }
+  2317	
+  2318	  .nav-bar nav {
+  2319	    gap: 1px;
+  2320	    width: min(100%, calc(100vw - 50px));
+  2321	  }
+  2322	
+  2323	  .nav-bar nav a {
+  2324	    font-size: 10.5px;
+  2325	    padding-left: 0;
+  2326	    padding-right: 0;
+  2327	  }
+  2328	}
+  2329	
+  2330	@media (max-width: 340px) {
+  2331	  .nav-bar nav a {
+  2332	    font-size: 10px;
+  2333	  }
+  2334	}
 
 
 ============================================================
@@ -6248,16 +6767,16 @@ Status:
  M portfolio_PROJECT_SNAPSHOT.txt
 
 Recent commits:
-310e45f (HEAD -> main, origin/main) generated the latest session pdf worklog for the Portfolio project, dated July 20, 2026.
+cfc68b8 (HEAD -> main, origin/main) Refined hero copy spacing
+e148f42 Stabilized hero CTA arrow
+7a9f51c Tuned hero action proportions
+71e154d Refined hero stack responsiveness
+d2ccb44 Refined hero stack responsiveness - Matched CTA, social, chip, and proof stack widths responsively - Adjusted chip grid sizing and typography for cleaner mobile fit - Tuned green CTA and social icon proportions
+ad1a0bb Polish hero CTA and stack chips
+7575323 Hero CTA alignment polish - Added Dribbble to the social button row - Rebuilt the hero CTA grid to match the social button stack width - Tuned the “Check Out / Projects” typography and spacing - Aligned the carousel arrow with the social icon column - Evenly distributed carousel text, icons, and arrow spacing
+310e45f generated the latest session pdf worklog for the Portfolio project, dated July 20, 2026.
 0128d3a Added Cinerific case study page
 eee650f Refined hero CTAs and project carousel visuals
-d82ad39 generated the session-specific project pdf worklog for July 19, 2026.
-bb80b0d - Updated portfolio branding to Prahlin - Refined hero headline and eyebrow copy - Reordered hero skill categories - Updated proof stats and release messaging - Reworked store/services card columns - Tuned carousel button spacing and animation - Added platform icons to project carousel labels - Matched project carousel icons to each project - Adjusted icon stroke weights and alignment - Polished hero CTA typography and contrast
-80995d9 generated pdf worklog for the daily session on the 'Portfolio' project on July 16, 2026.
-babed15 Updated Alla Vostra case study screenshots and mobile flow presentation
-ccd78cb generated the latest pdf 'Portfolio' worklog for July 15 Part 2, 2026.
-fd69e1e created a dedicated project page 'Alla Vostra', accessible by various means: clicking the green action button in the hero that mentions its name, the device frame that displays its device-framed screenshot, or anywhere on the project card further down the page. the project page includes information such as overciew, scope and ownership, core features, product flow (steps 1-6), technical architecture, engineering decisions, testing and release readiness, build timeline, etc. a multitude of small/large Android device screenshots are viewable to represent the graphical and functional UI responsively, each screenshot enlarging with a pop-up overlay during mouse hover (desktop/laptop) and tap&hold (mobile).
-6a61438 generated pdf worklog for July 15, part 1. created a read project bash file to study and understand the full scope of the project files & folders before commencing a new session.
 
 Remotes:
 origin	https://github.com/Prahlin/portfolio.git (fetch)
@@ -6273,6 +6792,7 @@ public/images/about_us_screen_small.png | 1192853 bytes | modified 2026-07-16 18
 public/images/address_overlay_large.png | 209339 bytes | modified 2026-07-15 19:25:04
 public/images/address_overlay_small.png | 102975 bytes | modified 2026-07-15 19:25:04
 public/images/android-device-logo.svg | 594 bytes | modified 2026-07-20 18:45:20
+public/images/carousel-arrow.svg | 402 bytes | modified 2026-07-21 22:38:06
 public/images/cinerific-intro.png | 349162 bytes | modified 2026-07-14 21:00:29
 public/images/confirmed_overlay_large.png | 265613 bytes | modified 2026-07-15 19:34:08
 public/images/confirmed_overlay_small.png | 118510 bytes | modified 2026-07-11 12:10:14

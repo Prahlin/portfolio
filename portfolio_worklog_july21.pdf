@@ -1,0 +1,1389 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [6 0 R 8 0 R 10 0 R 12 0 R 14 0 R 16 0 R] /Count 6 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+5 0 obj
+<< /Length 5126 >>
+stream
+BT
+/F2 14.20 Tf
+54.00 742.00 Td
+(Prahlin Portfolio Work Log - July 21, 2026) Tj
+ET
+BT
+/F1 10.20 Tf
+54.00 716.00 Td
+(Compiled summary for Tuesday, July 21, 2026 - focus: extended landing-page hero control) Tj
+ET
+BT
+/F1 10.20 Tf
+54.00 702.40 Td
+(tuning after the July 20 carousel rebuild, including View/green/social/chip-stack) Tj
+ET
+BT
+/F1 10.20 Tf
+54.00 688.80 Td
+(responsiveness, Dribbble integration, locked social-button aspect ratios, scalable green) Tj
+ET
+BT
+/F1 10.20 Tf
+54.00 675.20 Td
+(CTA internals, justified hero lede rows, stable SVG arrow rendering for Android, hero) Tj
+ET
+BT
+/F1 10.20 Tf
+54.00 661.60 Td
+(proof-stat copy, spacing refinements, official Hostinger deployment checks, and generation) Tj
+ET
+BT
+/F1 10.20 Tf
+54.00 648.00 Td
+(of the daily Portfolio PDF worklog.) Tj
+ET
+BT
+/F1 10.20 Tf
+54.00 627.40 Td
+(Generated in continuity with the established Prahlin Portfolio daily worklog cadence:) Tj
+ET
+BT
+/F1 10.20 Tf
+54.00 613.80 Td
+(compact opening summary, source-material section, baseline section, goal list,) Tj
+ET
+BT
+/F1 10.20 Tf
+54.00 600.20 Td
+(work-completed sections, validation section, files-touched list, follow-up context, and) Tj
+ET
+BT
+/F1 10.20 Tf
+54.00 586.60 Td
+(output-artifact close.) Tj
+ET
+BT
+/F1 10.20 Tf
+54.00 566.00 Td
+(This artifact intentionally covers only Prahlin/portfolio work performed for the July 21) Tj
+ET
+BT
+/F1 10.20 Tf
+54.00 552.40 Td
+(local project session: the refreshed project snapshot, review of every pre-existing) Tj
+ET
+BT
+/F1 10.20 Tf
+54.00 538.80 Td
+(Portfolio worklog PDF, the hero CTA and landing-page polish represented by commits 7575323,) Tj
+ET
+BT
+/F1 10.20 Tf
+54.00 525.20 Td
+(ad1a0bb, d2ccb44, 71e154d, 7a9f51c, e148f42, and cfc68b8, successful pushes to origin/main,) Tj
+ET
+BT
+/F1 10.20 Tf
+54.00 511.60 Td
+(successful Hostinger static-export workflow runs, local validation checks, and this) Tj
+ET
+BT
+/F1 10.20 Tf
+54.00 498.00 Td
+(worklog-generation step. Alla Vostra, Cinerific, and Credit King application repositories) Tj
+ET
+BT
+/F1 10.20 Tf
+54.00 484.40 Td
+(were not changed for this record.) Tj
+ET
+BT
+/F2 12.20 Tf
+54.00 456.80 Td
+(Source Materials Reviewed) Tj
+ET
+BT
+/F1 10.20 Tf
+54.00 437.30 Td
+(- Ran ./read_project.sh from /Users/prahlin/gh/portfolio and regenerated) Tj
+ET
+BT
+/F1 10.20 Tf
+66.00 423.70 Td
+(  portfolio_PROJECT_SNAPSHOT.txt before writing this worklog, preserving the project) Tj
+ET
+BT
+/F1 10.20 Tf
+66.00 410.10 Td
+(  convention that Codex refreshes the current source snapshot before continuing Portfolio) Tj
+ET
+BT
+/F1 10.20 Tf
+66.00 396.50 Td
+(  work.) Tj
+ET
+BT
+/F1 10.20 Tf
+54.00 378.90 Td
+(- Reviewed the refreshed portfolio_PROJECT_SNAPSHOT.txt, including project notes, current) Tj
+ET
+BT
+/F1 10.20 Tf
+66.00 365.30 Td
+(  source tree, app source dumps, root/tooling/deployment configuration, public image and) Tj
+ET
+BT
+/F1 10.20 Tf
+66.00 351.70 Td
+(  PDF inventories, git context, and the standing instruction to ask for a commit message) Tj
+ET
+BT
+/F1 10.20 Tf
+66.00 338.10 Td
+(  before committing or pushing.) Tj
+ET
+BT
+/F1 10.20 Tf
+54.00 320.50 Td
+(- Reviewed every pre-existing Portfolio root-level worklog PDF:) Tj
+ET
+BT
+/F1 10.20 Tf
+66.00 306.90 Td
+(  portfolio_worklog_july11.pdf, portfolio_worklog_july14.pdf,) Tj
+ET
+BT
+/F1 10.20 Tf
+66.00 293.30 Td
+(  portfolio_worklog_july15_part1.pdf, portfolio_worklog_july15_part2.pdf,) Tj
+ET
+BT
+/F1 10.20 Tf
+66.00 279.70 Td
+(  portfolio_worklog_july16.pdf, portfolio_worklog_july19.pdf, and) Tj
+ET
+BT
+/F1 10.20 Tf
+66.00 266.10 Td
+(  portfolio_worklog_july20.pdf.) Tj
+ET
+BT
+/F1 10.20 Tf
+54.00 248.50 Td
+(- Extracted text from all seven existing Portfolio PDFs with pdftotext to preserve the) Tj
+ET
+BT
+/F1 10.20 Tf
+66.00 234.90 Td
+(  same title cadence, opening summary density, section order, compact bullet-heavy) Tj
+ET
+BT
+/F1 10.20 Tf
+66.00 221.30 Td
+(  technical voice, validation language, files-touched list, follow-up context, and) Tj
+ET
+BT
+/F1 10.20 Tf
+66.00 207.70 Td
+(  output-artifact close.) Tj
+ET
+BT
+/F1 10.20 Tf
+54.00 190.10 Td
+(- Checked PDF metadata and page counts with pdfinfo. The mature Portfolio artifacts use) Tj
+ET
+BT
+/F1 10.20 Tf
+66.00 176.50 Td
+(  letter-size pages, root-level filenames, compact five-to-six page bodies, and Codex) Tj
+ET
+BT
+/F1 10.20 Tf
+66.00 162.90 Td
+(  standard-library PDF-generator metadata.) Tj
+ET
+BT
+/F1 10.20 Tf
+54.00 145.30 Td
+(- Reviewed current Git history and confirmed the July 21 implementation scope through git) Tj
+ET
+BT
+/F1 10.20 Tf
+66.00 131.70 Td
+(  log, git show --stat, git show --name-status, targeted file searches, and the final) Tj
+ET
+BT
+/F1 10.20 Tf
+66.00 118.10 Td
+(  HEAD/origin/main match at cfc68b811ffd6f046578a3645e527e5b26936f0c.) Tj
+ET
+BT
+/F1 10.20 Tf
+54.00 100.50 Td
+(- Reviewed the committed source states from 7575323 through cfc68b8, covering hero CTA) Tj
+ET
+BT
+/F1 10.20 Tf
+66.00 86.90 Td
+(  alignment, chip/social polish, stack responsiveness, social-button ratio changes, SVG) Tj
+ET
+BT
+/F1 10.20 Tf
+66.00 73.30 Td
+(  arrow stabilization, green CTA scaling, eyebrow/headline/lede spacing, and proof-stat) Tj
+ET
+BT
+/F1 8.80 Tf
+308.00 30.00 Td
+(Prahlin Portfolio Work Log - July 21, 2026 Page 1) Tj
+ET
+endstream
+endobj
+6 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 5 0 R >>
+endobj
+7 0 obj
+<< /Length 4665 >>
+stream
+BT
+/F1 10.20 Tf
+66.00 742.00 Td
+(  copy.) Tj
+ET
+BT
+/F1 10.20 Tf
+54.00 724.40 Td
+(- Checked local preview behavior at http://127.0.0.1:3000 with Chrome DevTools Protocol) Tj
+ET
+BT
+/F1 10.20 Tf
+66.00 710.80 Td
+(  measurements for mobile and desktop widths, including social button ratios, green CTA) Tj
+ET
+BT
+/F1 10.20 Tf
+66.00 697.20 Td
+(  height parity, arrow centering, lede/eyebrow gaps, and stale .next cache refresh) Tj
+ET
+BT
+/F1 10.20 Tf
+66.00 683.60 Td
+(  handling.) Tj
+ET
+BT
+/F1 10.20 Tf
+54.00 666.00 Td
+(- Checked GitHub Actions run history with gh run list and confirmed the Build static) Tj
+ET
+BT
+/F1 10.20 Tf
+66.00 652.40 Td
+(  export for Hostinger workflow completed successfully for the July 21 pushes, including) Tj
+ET
+BT
+/F1 10.20 Tf
+66.00 638.80 Td
+(  Refined hero copy spacing at cfc68b8.) Tj
+ET
+BT
+/F2 12.20 Tf
+54.00 612.20 Td
+(Baseline Status Before July 21 Work) Tj
+ET
+BT
+/F1 10.20 Tf
+54.00 592.70 Td
+(- The July 20 Portfolio site already had the Prahlin brand, green/black visual language,) Tj
+ET
+BT
+/F1 10.20 Tf
+66.00 579.10 Td
+(  Alla Vostra and Cinerific project routes, project-carousel labels, Android and iOS logo) Tj
+ET
+BT
+/F1 10.20 Tf
+66.00 565.50 Td
+(  assets, LinkedIn and GitHub social treatment, proof panel, and Hostinger static-export) Tj
+ET
+BT
+/F1 10.20 Tf
+66.00 551.90 Td
+(  deployment path.) Tj
+ET
+BT
+/F1 10.20 Tf
+54.00 534.30 Td
+(- The green hero CTA was functional but still visually unstable under close inspection.) Tj
+ET
+BT
+/F1 10.20 Tf
+66.00 520.70 Td
+(  View text, the green project button, platform icons, arrow position, social buttons,) Tj
+ET
+BT
+/F1 10.20 Tf
+66.00 507.10 Td
+(  chip stack, and proof-panel width still needed repeated responsive tuning against) Tj
+ET
+BT
+/F1 10.20 Tf
+66.00 493.50 Td
+(  actual browser measurements.) Tj
+ET
+BT
+/F1 10.20 Tf
+54.00 475.90 Td
+(- The social-button row originally had two buttons and then needed Dribbble added without) Tj
+ET
+BT
+/F1 10.20 Tf
+66.00 462.30 Td
+(  breaking the green CTA width relationship or the forced line break below the green) Tj
+ET
+BT
+/F1 10.20 Tf
+66.00 448.70 Td
+(  button.) Tj
+ET
+BT
+/F1 10.20 Tf
+54.00 431.10 Td
+(- The hero lede and eyebrow copy still used regular text wrapping and fixed font sizes) Tj
+ET
+BT
+/F1 10.20 Tf
+66.00 417.50 Td
+(  before the July 21 work. They did not yet stretch letter spacing in tandem with the) Tj
+ET
+BT
+/F1 10.20 Tf
+66.00 403.90 Td
+(  action/proof stack width.) Tj
+ET
+BT
+/F1 10.20 Tf
+54.00 386.30 Td
+(- The green CTA arrow was still font-glyph based at the start of the later tuning pass,) Tj
+ET
+BT
+/F1 10.20 Tf
+66.00 372.70 Td
+(  which made it vulnerable to malformed or vertically shifted rendering on physical) Tj
+ET
+BT
+/F1 10.20 Tf
+66.00 359.10 Td
+(  Android Chrome.) Tj
+ET
+BT
+/F1 10.20 Tf
+54.00 341.50 Td
+(- The proof-stat wording and top-left brand monogram still needed final copy and spacing) Tj
+ET
+BT
+/F1 10.20 Tf
+66.00 327.90 Td
+(  polish after the larger July 20 carousel and project-page work.) Tj
+ET
+BT
+/F1 10.20 Tf
+54.00 310.30 Td
+(- The project workflow remained direct and iterative: make small visual changes locally,) Tj
+ET
+BT
+/F1 10.20 Tf
+66.00 296.70 Td
+(  validate with TypeScript and browser geometry checks, recommend commit messages when) Tj
+ET
+BT
+/F1 10.20 Tf
+66.00 283.10 Td
+(  asked, and push only when the user explicitly requested official deployment.) Tj
+ET
+BT
+/F2 12.20 Tf
+54.00 256.50 Td
+(Goals for July 21) Tj
+ET
+BT
+/F1 10.20 Tf
+54.00 237.00 Td
+(- Keep the green hero project CTA, View label, social buttons, chip stack, and) Tj
+ET
+BT
+/F1 10.20 Tf
+66.00 223.40 Td
+(  proof-panel/card widths aligned responsively across desktop, mobile landscape, and) Tj
+ET
+BT
+/F1 10.20 Tf
+66.00 209.80 Td
+(  smartphone portrait widths.) Tj
+ET
+BT
+/F1 10.20 Tf
+54.00 192.20 Td
+(- Force social buttons onto a row below the green CTA and prevent other buttons or assets) Tj
+ET
+BT
+/F1 10.20 Tf
+66.00 178.60 Td
+(  from sitting beside the green button.) Tj
+ET
+BT
+/F1 10.20 Tf
+54.00 161.00 Td
+(- Add Dribbble as the third social button and distribute GitHub, LinkedIn, and Dribbble) Tj
+ET
+BT
+/F1 10.20 Tf
+66.00 147.40 Td
+(  evenly across the stack width.) Tj
+ET
+BT
+/F1 10.20 Tf
+54.00 129.80 Td
+(- Lock social-button aspect ratios so buttons scale proportionally instead of stretching) Tj
+ET
+BT
+/F1 10.20 Tf
+66.00 116.20 Td
+(  unpredictably as the hero stack width changes.) Tj
+ET
+BT
+/F1 10.20 Tf
+54.00 98.60 Td
+(- Scale the green CTA internals, Check Out Projects label, project/industry text,) Tj
+ET
+BT
+/F1 10.20 Tf
+66.00 85.00 Td
+(  platform icons, eyebrow, lede, and related hero stacks in tandem where requested.) Tj
+ET
+BT
+/F1 8.80 Tf
+308.00 30.00 Td
+(Prahlin Portfolio Work Log - July 21, 2026 Page 2) Tj
+ET
+endstream
+endobj
+8 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 7 0 R >>
+endobj
+9 0 obj
+<< /Length 4849 >>
+stream
+BT
+/F1 10.20 Tf
+54.00 741.00 Td
+(- Stabilize the green CTA arrow so physical Android devices do not change its shape or) Tj
+ET
+BT
+/F1 10.20 Tf
+66.00 727.40 Td
+(  vertical alignment.) Tj
+ET
+BT
+/F1 10.20 Tf
+54.00 709.80 Td
+(- Refine hero copy, proof stats, chip stack content, and spacing while preserving the) Tj
+ET
+BT
+/F1 10.20 Tf
+66.00 696.20 Td
+(  established green/black Portfolio identity and avoiding unrelated page refactors.) Tj
+ET
+BT
+/F1 10.20 Tf
+54.00 678.60 Td
+(- Push approved batches through origin/main and confirm Hostinger static-export workflow) Tj
+ET
+BT
+/F1 10.20 Tf
+66.00 665.00 Td
+(  success after each official deployment request.) Tj
+ET
+BT
+/F2 12.20 Tf
+54.00 638.40 Td
+(Work Completed - Hero CTA Layout and Social Buttons) Tj
+ET
+BT
+/F1 10.20 Tf
+54.00 618.90 Td
+(- Rebuilt the action cluster so the View/Check Out Projects label occupies its own) Tj
+ET
+BT
+/F1 10.20 Tf
+66.00 605.30 Td
+(  invisible left-side column while the green project button begins at the responsive) Tj
+ET
+BT
+/F1 10.20 Tf
+66.00 591.70 Td
+(  midpoint relationship requested by the user.) Tj
+ET
+BT
+/F1 10.20 Tf
+54.00 574.10 Td
+(- Moved View out of the green button, then transformed it into the two-line Check Out /) Tj
+ET
+BT
+/F1 10.20 Tf
+66.00 560.50 Td
+(  Projects label with justified letter spacing tuned to the GitHub text/icon span below.) Tj
+ET
+BT
+/F1 10.20 Tf
+54.00 542.90 Td
+(- Removed the temporary fake colon-dot treatment after visual review and kept the cleaner) Tj
+ET
+BT
+/F1 10.20 Tf
+66.00 529.30 Td
+(  text-only Check Out Projects label.) Tj
+ET
+BT
+/F1 10.20 Tf
+54.00 511.70 Td
+(- Added Dribbble to the GitHub/LinkedIn social row and converted the row to three equal) Tj
+ET
+BT
+/F1 10.20 Tf
+66.00 498.10 Td
+(  tracks beneath the green CTA.) Tj
+ET
+BT
+/F1 10.20 Tf
+54.00 480.50 Td
+(- Set the green CTA plus Check Out Projects cluster to span the same overall width as the) Tj
+ET
+BT
+/F1 10.20 Tf
+66.00 466.90 Td
+(  combined social-button row, then kept chip and proof stacks aligned to the same) Tj
+ET
+BT
+/F1 10.20 Tf
+66.00 453.30 Td
+(  left/right edge convention.) Tj
+ET
+BT
+/F1 10.20 Tf
+54.00 435.70 Td
+(- Nudged social-button text and icon boxes closer together, enlarged social icon boxes,) Tj
+ET
+BT
+/F1 10.20 Tf
+66.00 422.10 Td
+(  and verified social content still fit after proportional scaling.) Tj
+ET
+BT
+/F1 10.20 Tf
+54.00 404.50 Td
+(- Locked the social buttons first to 5:2 and later to 4.5:2, using CSS aspect-ratio and) Tj
+ET
+BT
+/F1 10.20 Tf
+66.00 390.90 Td
+(  measured rendered heights so adjacent green CTA and label boxes scale in tandem.) Tj
+ET
+BT
+/F1 10.20 Tf
+54.00 373.30 Td
+(- Kept the green button height, Check Out Projects label height, and social-button height) Tj
+ET
+BT
+/F1 10.20 Tf
+66.00 359.70 Td
+(  equal through responsive browser measurements at narrow mobile and desktop widths.) Tj
+ET
+BT
+/F2 12.20 Tf
+54.00 333.10 Td
+(Work Completed - Responsive Hero Text and Chip Systems) Tj
+ET
+BT
+/F1 10.20 Tf
+54.00 313.60 Td
+(- Added app/HeroLede.tsx as a client component that splits the hero lede into character) Tj
+ET
+BT
+/F1 10.20 Tf
+66.00 300.00 Td
+(  spans and dynamically distributes letter spacing so each line aligns with the hero) Tj
+ET
+BT
+/F1 10.20 Tf
+66.00 286.40 Td
+(  action/proof stack width.) Tj
+ET
+BT
+/F1 10.20 Tf
+54.00 268.80 Td
+(- Updated the hero lede to From Original Idea to Production Release, followed by) Tj
+ET
+BT
+/F1 10.20 Tf
+66.00 255.20 Td
+(  All-In-One, 100% Stress-Free with bold treatment, then bound the line widths to the) Tj
+ET
+BT
+/F1 10.20 Tf
+66.00 241.60 Td
+(  same responsive stack width used by the CTA and proof panel.) Tj
+ET
+BT
+/F1 10.20 Tf
+54.00 224.00 Td
+(- Connected the hero eyebrow font size to the same measured social-button scaling path so) Tj
+ET
+BT
+/F1 10.20 Tf
+66.00 210.40 Td
+(  the eyebrow text grows and shrinks with the surrounding hero control stack.) Tj
+ET
+BT
+/F1 10.20 Tf
+54.00 192.80 Td
+(- Changed the main headline to RN / Kotlin Full-Stack Mobile Developer and later reduced) Tj
+ET
+BT
+/F1 10.20 Tf
+66.00 179.20 Td
+(  the headline clamp by one pixel for a cleaner vertical fit.) Tj
+ET
+BT
+/F1 10.20 Tf
+54.00 161.60 Td
+(- Revised the stack chips from row-count-based behavior to a three-column responsive grid) Tj
+ET
+BT
+/F1 10.20 Tf
+66.00 148.00 Td
+(  that grows and shrinks each chip box while preserving centered chip text.) Tj
+ET
+BT
+/F1 10.20 Tf
+54.00 130.40 Td
+(- Added REST APIs as the ninth chip, completing the 3x3 chip grid beneath React Native,) Tj
+ET
+BT
+/F1 10.20 Tf
+66.00 116.80 Td
+(  Tailwind CSS, TypeScript, Expo, Node.js, Kotlin, Next.js, and Compose.) Tj
+ET
+BT
+/F1 10.20 Tf
+54.00 99.20 Td
+(- Matched stack widths to the proof-panel/card width to avoid snapping and keep equal) Tj
+ET
+BT
+/F1 10.20 Tf
+66.00 85.60 Td
+(  left/right margins on smartphone portrait views.) Tj
+ET
+BT
+/F1 8.80 Tf
+308.00 30.00 Td
+(Prahlin Portfolio Work Log - July 21, 2026 Page 3) Tj
+ET
+endstream
+endobj
+10 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 9 0 R >>
+endobj
+11 0 obj
+<< /Length 4755 >>
+stream
+BT
+/F2 12.20 Tf
+54.00 732.00 Td
+(Work Completed - Green CTA Internals and Stable Arrow) Tj
+ET
+BT
+/F1 10.20 Tf
+54.00 712.50 Td
+(- Scaled the green CTA project-name/industry stack and platform icon stack by 10 percent) Tj
+ET
+BT
+/F1 10.20 Tf
+66.00 698.90 Td
+(  while keeping the button shell, surrounding stacks, and responsive width relationships) Tj
+ET
+BT
+/F1 10.20 Tf
+66.00 685.30 Td
+(  intact.) Tj
+ET
+BT
+/F1 10.20 Tf
+54.00 667.70 Td
+(- Preserved the Alla Vostra name-size exception by tying it to the responsive carousel) Tj
+ET
+BT
+/F1 10.20 Tf
+66.00 654.10 Td
+(  name-size variable minus one pixel, so Restaurant category text stayed untouched.) Tj
+ET
+BT
+/F1 10.20 Tf
+54.00 636.50 Td
+(- Changed the green CTA arrow from a text glyph to a dedicated SVG asset at) Tj
+ET
+BT
+/F1 10.20 Tf
+66.00 622.90 Td
+(  public/images/carousel-arrow.svg to avoid Android font-metric and malformed-glyph) Tj
+ET
+BT
+/F1 10.20 Tf
+66.00 609.30 Td
+(  rendering issues.) Tj
+ET
+BT
+/F1 10.20 Tf
+54.00 591.70 Td
+(- Tuned the SVG arrow treatment through user-directed iterations: white arrow, thicker) Tj
+ET
+BT
+/F1 10.20 Tf
+66.00 578.10 Td
+(  stroke, reduced thickness, black outline restoration, shorter horizontal shaft, and) Tj
+ET
+BT
+/F1 10.20 Tf
+66.00 564.50 Td
+(  final 10 percent rendered-size increase.) Tj
+ET
+BT
+/F1 10.20 Tf
+54.00 546.90 Td
+(- Verified the SVG arrow asset loads from /images/carousel-arrow.svg, has nonzero) Tj
+ET
+BT
+/F1 10.20 Tf
+66.00 533.30 Td
+(  rendered dimensions, remains vertically centered against the green button, and no) Tj
+ET
+BT
+/F1 10.20 Tf
+66.00 519.70 Td
+(  longer depends on text content inside the arrow wrapper.) Tj
+ET
+BT
+/F1 10.20 Tf
+54.00 502.10 Td
+(- Kept arrow horizontal alignment tied to the social icon column while replacing the) Tj
+ET
+BT
+/F1 10.20 Tf
+66.00 488.50 Td
+(  visual mark underneath, so existing placement logic did not need to be rewritten.) Tj
+ET
+BT
+/F2 12.20 Tf
+54.00 461.90 Td
+(Work Completed - Hero Copy, Stats, and Spacing Polish) Tj
+ET
+BT
+/F1 10.20 Tf
+54.00 442.40 Td
+(- Updated eyebrow copy to User-friendly UI/UX, Butter-Smooth Front-End, and Deep,) Tj
+ET
+BT
+/F1 10.20 Tf
+66.00 428.80 Td
+(  Dependable Back-end while preserving the underlined phrase plus bordered term) Tj
+ET
+BT
+/F1 10.20 Tf
+66.00 415.20 Td
+(  construction.) Tj
+ET
+BT
+/F1 10.20 Tf
+54.00 397.60 Td
+(- Doubled the horizontal space between each underlined eyebrow phrase and its bordered) Tj
+ET
+BT
+/F1 10.20 Tf
+66.00 384.00 Td
+(  term, then added matching one-space punctuation gaps before each comma or period.) Tj
+ET
+BT
+/F1 10.20 Tf
+54.00 366.40 Td
+(- Centered and enlarged the top-left P monogram inside the green brand box, increasing) Tj
+ET
+BT
+/F1 10.20 Tf
+66.00 352.80 Td
+(  the monogram from the inherited 11px brand size to 16.5px.) Tj
+ET
+BT
+/F1 10.20 Tf
+54.00 335.20 Td
+(- Updated proof stats to 3y Full-Stack Expertise, 1k+ Quality GitHub Commits, 6) Tj
+ET
+BT
+/F1 10.20 Tf
+66.00 321.60 Td
+(  Production Ready Releases, and 6 Store Front Publications.) Tj
+ET
+BT
+/F1 10.20 Tf
+54.00 304.00 Td
+(- Matched the vertical gap above the eyebrow to the gap below it, then matched the) Tj
+ET
+BT
+/F1 10.20 Tf
+66.00 290.40 Td
+(  headline-to-lede and lede-to-green-button gaps to the same 16px rhythm.) Tj
+ET
+BT
+/F1 10.20 Tf
+54.00 272.80 Td
+(- Cleared stale .next/Turbopack output and restarted the local dev server when the) Tj
+ET
+BT
+/F1 10.20 Tf
+66.00 259.20 Td
+(  browser continued serving old 32px hero-action spacing after the source file had) Tj
+ET
+BT
+/F1 10.20 Tf
+66.00 245.60 Td
+(  already changed.) Tj
+ET
+BT
+/F2 12.20 Tf
+54.00 219.00 Td
+(Work Completed - Official Deployment Path) Tj
+ET
+BT
+/F1 10.20 Tf
+54.00 199.50 Td
+(- Recommended user-facing commit messages at the requested points, using short headers) Tj
+ET
+BT
+/F1 10.20 Tf
+66.00 185.90 Td
+(  and past-tense bullet points in the same practical style used throughout this project.) Tj
+ET
+BT
+/F1 10.20 Tf
+54.00 168.30 Td
+(- Committed and pushed the approved batches to origin/main: Hero CTA alignment polish,) Tj
+ET
+BT
+/F1 10.20 Tf
+66.00 154.70 Td
+(  Polish hero CTA and stack chips, Refined hero stack responsiveness, Tuned hero action) Tj
+ET
+BT
+/F1 10.20 Tf
+66.00 141.10 Td
+(  proportions, Stabilized hero CTA arrow, and Refined hero copy spacing.) Tj
+ET
+BT
+/F1 10.20 Tf
+54.00 123.50 Td
+(- Confirmed main and origin/main matched after official pushes, and checked Hostinger) Tj
+ET
+BT
+/F1 10.20 Tf
+66.00 109.90 Td
+(  static-export workflow runs for the relevant commits.) Tj
+ET
+BT
+/F1 10.20 Tf
+54.00 92.30 Td
+(- Confirmed the final official deployment run for cfc68b8 Refined hero copy spacing) Tj
+ET
+BT
+/F1 10.20 Tf
+66.00 78.70 Td
+(  completed successfully at GitHub Actions run 29888083082.) Tj
+ET
+BT
+/F1 8.80 Tf
+308.00 30.00 Td
+(Prahlin Portfolio Work Log - July 21, 2026 Page 4) Tj
+ET
+endstream
+endobj
+12 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 11 0 R >>
+endobj
+13 0 obj
+<< /Length 4746 >>
+stream
+BT
+/F1 10.20 Tf
+54.00 741.00 Td
+(- Left the current repository clean after the official push and before the) Tj
+ET
+BT
+/F1 10.20 Tf
+66.00 727.40 Td
+(  worklog-generation task began.) Tj
+ET
+BT
+/F2 12.20 Tf
+54.00 700.80 Td
+(Validation and Checks Performed) Tj
+ET
+BT
+/F1 10.20 Tf
+54.00 681.30 Td
+(- Ran npm run check repeatedly after source edits; TypeScript completed successfully for) Tj
+ET
+BT
+/F1 10.20 Tf
+66.00 667.70 Td
+(  the local changes and again after the final official push.) Tj
+ET
+BT
+/F1 10.20 Tf
+54.00 650.10 Td
+(- Ran git diff --check after each local edit batch to confirm no whitespace errors were) Tj
+ET
+BT
+/F1 10.20 Tf
+66.00 636.50 Td
+(  introduced.) Tj
+ET
+BT
+/F1 10.20 Tf
+54.00 618.90 Td
+(- Used browser-level Chrome DevTools Protocol measurements at 320, 360, 390, 1440, and) Tj
+ET
+BT
+/F1 10.20 Tf
+66.00 605.30 Td
+(  similar viewports to confirm social button aspect ratios, green CTA height parity,) Tj
+ET
+BT
+/F1 10.20 Tf
+66.00 591.70 Td
+(  label height parity, stack widths, lede/eyebrow spacing, and arrow centering.) Tj
+ET
+BT
+/F1 10.20 Tf
+54.00 574.10 Td
+(- Verified the social buttons rendered at approximately 2.500:1 during the 5:2 phase and) Tj
+ET
+BT
+/F1 10.20 Tf
+66.00 560.50 Td
+(  approximately 2.250:1 after the 4.5:2 change.) Tj
+ET
+BT
+/F1 10.20 Tf
+54.00 542.90 Td
+(- Verified the green CTA height and Check Out Projects label height matched the) Tj
+ET
+BT
+/F1 10.20 Tf
+66.00 529.30 Td
+(  social-button height with zero measured delta after the proportional scaling changes.) Tj
+ET
+BT
+/F1 10.20 Tf
+54.00 511.70 Td
+(- Verified the SVG arrow wrapper and mark stayed centered against the green button on) Tj
+ET
+BT
+/F1 10.20 Tf
+66.00 498.10 Td
+(  mobile portrait measurements after replacing the text glyph.) Tj
+ET
+BT
+/F1 10.20 Tf
+54.00 480.50 Td
+(- Used curl to confirm the local site responded at http://127.0.0.1:3000 and that) Tj
+ET
+BT
+/F1 10.20 Tf
+66.00 466.90 Td
+(  /images/carousel-arrow.svg served with image/svg+xml content type.) Tj
+ET
+BT
+/F1 10.20 Tf
+54.00 449.30 Td
+(- Stopped the old port 3000 listener, moved stale .next directories into) Tj
+ET
+BT
+/F1 10.20 Tf
+66.00 435.70 Td
+(  /tmp/portfolio-next-stale-* paths, and restarted npm run dev when local CSS cache) Tj
+ET
+BT
+/F1 10.20 Tf
+66.00 422.10 Td
+(  output did not reflect source changes.) Tj
+ET
+BT
+/F1 10.20 Tf
+54.00 404.50 Td
+(- Checked gh run list and gh run view to confirm Hostinger static-export workflow success) Tj
+ET
+BT
+/F1 10.20 Tf
+66.00 390.90 Td
+(  after the official pushes.) Tj
+ET
+BT
+/F1 10.20 Tf
+54.00 373.30 Td
+(- Confirmed git status --short --branch --ahead-behind showed main synchronized with) Tj
+ET
+BT
+/F1 10.20 Tf
+66.00 359.70 Td
+(  origin/main before generating this PDF artifact.) Tj
+ET
+BT
+/F2 12.20 Tf
+54.00 333.10 Td
+(Files Touched During July 21 Portfolio Work) Tj
+ET
+BT
+/F1 10.20 Tf
+54.00 313.60 Td
+(- app/HeroLede.tsx - new client-side hero lede component that measures rendered text and) Tj
+ET
+BT
+/F1 10.20 Tf
+66.00 300.00 Td
+(  distributes per-character gaps so the lede rows align with the responsive hero stack) Tj
+ET
+BT
+/F1 10.20 Tf
+66.00 286.40 Td
+(  width.) Tj
+ET
+BT
+/F1 10.20 Tf
+54.00 268.80 Td
+(- app/ProjectCarouselButton.tsx - expanded hero CTA geometry syncing, proportional) Tj
+ET
+BT
+/F1 10.20 Tf
+66.00 255.20 Td
+(  scaling variables, project name/category sizing, platform icon scaling, SVG arrow image) Tj
+ET
+BT
+/F1 10.20 Tf
+66.00 241.60 Td
+(  rendering, and responsive arrow alignment.) Tj
+ET
+BT
+/F1 10.20 Tf
+54.00 224.00 Td
+(- app/globals.css - revised hero stack widths, social-button ratios, action-grid rows,) Tj
+ET
+BT
+/F1 10.20 Tf
+66.00 210.40 Td
+(  Check Out Projects placement, lede/eyebrow styling, chip grid behavior, green CTA) Tj
+ET
+BT
+/F1 10.20 Tf
+66.00 196.80 Td
+(  sizing, brand monogram styling, proof/stat spacing, and responsive hero gaps.) Tj
+ET
+BT
+/F1 10.20 Tf
+54.00 179.20 Td
+(- app/page.tsx - updated hero headline, eyebrow wording, lede usage, social button row,) Tj
+ET
+BT
+/F1 10.20 Tf
+66.00 165.60 Td
+(  Dribbble button, stack chips, proof stats, and Check Out Projects inline placement) Tj
+ET
+BT
+/F1 10.20 Tf
+66.00 152.00 Td
+(  values.) Tj
+ET
+BT
+/F1 10.20 Tf
+54.00 134.40 Td
+(- public/images/carousel-arrow.svg - new fixed SVG asset for the green CTA arrow, with) Tj
+ET
+BT
+/F1 10.20 Tf
+66.00 120.80 Td
+(  black outer stroke and white inner stroke baked into the asset path.) Tj
+ET
+BT
+/F1 10.20 Tf
+54.00 103.20 Td
+(- next-env.d.ts - refreshed by current Next.js tooling during the broader July 21) Tj
+ET
+BT
+/F1 10.20 Tf
+66.00 89.60 Td
+(  static/build/dev workflow.) Tj
+ET
+BT
+/F1 10.20 Tf
+54.00 72.00 Td
+(- portfolio_PROJECT_SNAPSHOT.txt - regenerated by ./read_project.sh for current project) Tj
+ET
+BT
+/F1 8.80 Tf
+308.00 30.00 Td
+(Prahlin Portfolio Work Log - July 21, 2026 Page 5) Tj
+ET
+endstream
+endobj
+14 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 13 0 R >>
+endobj
+15 0 obj
+<< /Length 4089 >>
+stream
+BT
+/F1 10.20 Tf
+66.00 742.00 Td
+(  context before this worklog pass.) Tj
+ET
+BT
+/F1 10.20 Tf
+54.00 724.40 Td
+(- portfolio_worklog_july21.pdf - this new July 21 Portfolio worklog artifact generated at) Tj
+ET
+BT
+/F1 10.20 Tf
+66.00 710.80 Td
+(  the repository root.) Tj
+ET
+BT
+/F2 12.20 Tf
+54.00 684.20 Td
+(Follow-Up Context) Tj
+ET
+BT
+/F1 10.20 Tf
+54.00 664.70 Td
+(- If more hero tuning occurs, preserve the current invariant that the green CTA, Check) Tj
+ET
+BT
+/F1 10.20 Tf
+66.00 651.10 Td
+(  Out Projects label, social row, chip stack, and proof panel remain visually tied to the) Tj
+ET
+BT
+/F1 10.20 Tf
+66.00 637.50 Td
+(  same responsive width system.) Tj
+ET
+BT
+/F1 10.20 Tf
+54.00 619.90 Td
+(- Keep the social buttons at the requested 4.5:2 aspect ratio unless the user explicitly) Tj
+ET
+BT
+/F1 10.20 Tf
+66.00 606.30 Td
+(  changes the ratio again.) Tj
+ET
+BT
+/F1 10.20 Tf
+54.00 588.70 Td
+(- Keep the green CTA arrow as the dedicated SVG asset rather than reverting to a text) Tj
+ET
+BT
+/F1 10.20 Tf
+66.00 575.10 Td
+(  glyph, because the SVG was introduced specifically to fix physical Android rendering) Tj
+ET
+BT
+/F1 10.20 Tf
+66.00 561.50 Td
+(  instability.) Tj
+ET
+BT
+/F1 10.20 Tf
+54.00 543.90 Td
+(- If the project/industry text, platform icons, or social buttons are scaled again,) Tj
+ET
+BT
+/F1 10.20 Tf
+66.00 530.30 Td
+(  update the shared measurement-driven variables rather than hardcoding one viewport) Tj
+ET
+BT
+/F1 10.20 Tf
+66.00 516.70 Td
+(  only.) Tj
+ET
+BT
+/F1 10.20 Tf
+54.00 499.10 Td
+(- The LinkedIn and Dribbble buttons still use placeholder public URLs and should receive) Tj
+ET
+BT
+/F1 10.20 Tf
+66.00 485.50 Td
+(  the user actual profiles when provided.) Tj
+ET
+BT
+/F1 10.20 Tf
+54.00 467.90 Td
+(- The Cinerific case-study page still intentionally contains layout-faithful) Tj
+ET
+BT
+/F1 10.20 Tf
+66.00 454.30 Td
+(  placeholder/copy-parity work from the July 20 route creation and should be replaced) Tj
+ET
+BT
+/F1 10.20 Tf
+66.00 440.70 Td
+(  later with accurate Cinerific screenshots and project-specific content.) Tj
+ET
+BT
+/F1 10.20 Tf
+54.00 423.10 Td
+(- After this PDF is committed, regenerate portfolio_PROJECT_SNAPSHOT.txt if the snapshot) Tj
+ET
+BT
+/F1 10.20 Tf
+66.00 409.50 Td
+(  should include portfolio_worklog_july21.pdf in the PDF inventory.) Tj
+ET
+BT
+/F1 10.20 Tf
+54.00 391.90 Td
+(- Continue asking for or using the user-approved commit message before committing and) Tj
+ET
+BT
+/F1 10.20 Tf
+66.00 378.30 Td
+(  pushing Portfolio work unless the user explicitly asks for a direct push.) Tj
+ET
+BT
+/F2 12.20 Tf
+54.00 351.70 Td
+(Output Artifact) Tj
+ET
+BT
+/F1 10.20 Tf
+54.00 332.20 Td
+(- Generated file: portfolio_worklog_july21.pdf.) Tj
+ET
+BT
+/F1 10.20 Tf
+54.00 314.60 Td
+(- Location: /Users/prahlin/gh/portfolio/portfolio_worklog_july21.pdf.) Tj
+ET
+BT
+/F1 10.20 Tf
+54.00 297.00 Td
+(- Naming follows the existing root-level Portfolio convention:) Tj
+ET
+BT
+/F1 10.20 Tf
+66.00 283.40 Td
+(  portfolio_worklog_july21.pdf. No part suffix was used because this is the first July 21) Tj
+ET
+BT
+/F1 10.20 Tf
+66.00 269.80 Td
+(  Portfolio worklog artifact.) Tj
+ET
+BT
+/F1 10.20 Tf
+54.00 252.20 Td
+(- Uses the same daily worklog structure and compact technical voice established by) Tj
+ET
+BT
+/F1 10.20 Tf
+66.00 238.60 Td
+(  portfolio_worklog_july11.pdf, portfolio_worklog_july14.pdf,) Tj
+ET
+BT
+/F1 10.20 Tf
+66.00 225.00 Td
+(  portfolio_worklog_july15_part1.pdf, portfolio_worklog_july15_part2.pdf,) Tj
+ET
+BT
+/F1 10.20 Tf
+66.00 211.40 Td
+(  portfolio_worklog_july16.pdf, portfolio_worklog_july19.pdf, and) Tj
+ET
+BT
+/F1 10.20 Tf
+66.00 197.80 Td
+(  portfolio_worklog_july20.pdf.) Tj
+ET
+BT
+/F1 10.20 Tf
+54.00 180.20 Td
+(- Generated with a small standard-library PDF writer; no external PDF dependency was) Tj
+ET
+BT
+/F1 10.20 Tf
+66.00 166.60 Td
+(  installed for this artifact.) Tj
+ET
+BT
+/F1 10.20 Tf
+54.00 149.00 Td
+(- The local project date used for this filename and title is Tuesday, July 21, 2026 EDT,) Tj
+ET
+BT
+/F1 10.20 Tf
+66.00 135.40 Td
+(  matching the machine and repository work session clock.) Tj
+ET
+BT
+/F1 8.80 Tf
+308.00 30.00 Td
+(Prahlin Portfolio Work Log - July 21, 2026 Page 6) Tj
+ET
+endstream
+endobj
+16 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 15 0 R >>
+endobj
+17 0 obj
+<< /Title (Prahlin Portfolio Work Log - July 21, 2026) /Subject (Portfolio website development worklog) /Author (Codex) /Creator (Codex standard-library PDF generator) /Producer (Codex standard-library PDF generator) >>
+endobj
+xref
+0 18
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000149 00000 n 
+0000000219 00000 n 
+0000000294 00000 n 
+0000005472 00000 n 
+0000005608 00000 n 
+0000010325 00000 n 
+0000010461 00000 n 
+0000015362 00000 n 
+0000015499 00000 n 
+0000020307 00000 n 
+0000020445 00000 n 
+0000025244 00000 n 
+0000025382 00000 n 
+0000029524 00000 n 
+0000029662 00000 n 
+trailer
+<< /Size 18 /Root 1 0 R /Info 17 0 R >>
+startxref
+29898
+%%EOF
