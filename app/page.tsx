@@ -26,6 +26,7 @@ const stackChips = [
   "Kotlin",
   "Next.js",
   "Compose",
+  "REST APIs",
 ];
 
 const proofStats = [

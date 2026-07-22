@@ -325,7 +325,8 @@ h3 {
   margin-left: var(--hero-view-stack-left, 0px);
   min-width: var(--hero-view-stack-width, 0px);
   text-align: left;
-  transform: translateY(1px);
+  transform: translateY(1px) scale(1.1);
+  transform-origin: center center;
   width: max-content;
 }
 
@@ -653,7 +654,7 @@ h3 {
 }
 
 .hero-social-button {
-  aspect-ratio: 5 / 2;
+  aspect-ratio: 4.5 / 2;
   gap: var(--hero-social-gap);
   justify-content: center;
   font-size: var(--hero-social-font-size);
