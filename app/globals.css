@@ -119,9 +119,11 @@ img[data-screenshot-preview] {
   border-radius: 6px;
   color: #001d0f;
   display: inline-flex;
+  font-size: 16.5px;
   font-weight: 900;
   height: 34px;
-  justify-content: flex-start;
+  justify-content: center;
+  line-height: 1;
   width: 34px;
 }
 
@@ -152,7 +154,7 @@ img[data-screenshot-preview] {
   gap: 56px;
   grid-template-columns: minmax(0, 0.95fr) minmax(420px, 1.05fr);
   min-height: calc(100vh - 140px);
-  padding: 54px 0 28px;
+  padding: 16px 0 28px;
   position: relative;
   z-index: 2;
 }
@@ -190,6 +192,7 @@ img[data-screenshot-preview] {
   border-radius: 2px;
   display: inline-block;
   line-height: 1.12;
+  margin-left: 0.28em;
   padding: 0.03em 0.24em 0.06em;
 }
 
@@ -200,7 +203,7 @@ img[data-screenshot-preview] {
 }
 
 .hero-eyebrow-period {
-  margin-left: 0.12em;
+  margin-left: 0.28em;
 }
 
 h1,
@@ -211,11 +214,11 @@ p {
 }
 
 h1 {
-  font-size: clamp(48px, 7vw, 92px);
+  font-size: clamp(47px, 7vw, 91px);
   font-weight: 900;
   letter-spacing: 0;
   line-height: 0.92;
-  margin-bottom: 24px;
+  margin-bottom: 16px;
 }
 
 h2 {
@@ -283,7 +286,7 @@ h3 {
   align-items: stretch;
   display: grid;
   gap: var(--hero-action-gap);
-  margin-top: 32px;
+  margin-top: 16px;
   width: var(--hero-action-stack-width);
 }
 
@@ -2108,7 +2111,7 @@ section.project-hero {
 
   .hero-grid {
     gap: 30px;
-    padding-top: 42px;
+    padding-top: 16px;
   }
 
   h1 {

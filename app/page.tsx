@@ -32,11 +32,11 @@ const stackChips = [
 const proofStats = [
   {
     label: "Full-Stack Expertise",
-    value: "3y+",
+    value: "3y",
   },
   { label: "Quality GitHub Commits", value: "1k+" },
-  { label: "Shipped Mob/Web Products", value: "6+" },
-  { label: "Play/App Store Releases", value: "5+" },
+  { label: "Production Ready Releases", value: "6" },
+  { label: "Store Front Publications", value: "6" },
 ];
 
 type CaseScreenshot = {
@@ -460,7 +460,7 @@ export default function Home() {
                 <span className="hero-eyebrow-box">UI/UX</span>
                 <span className="hero-eyebrow-period">,</span>
                 <br />
-                <span className="hero-eyebrow-underline">Buttery-Smooth</span>{" "}
+                <span className="hero-eyebrow-underline">Butter-Smooth</span>{" "}
                 <span className="hero-eyebrow-box">Front-End</span>
                 <span className="hero-eyebrow-period">,</span>
                 <br />
