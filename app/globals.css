@@ -281,9 +281,9 @@ h3 {
   --hero-carousel-category-font-size: 8.47px;
   --hero-carousel-name-font-size: 16.94px;
   --hero-social-button-height: 48px;
-  --hero-social-font-size: clamp(12.1px, 3.52vw, 13.2px);
+  --hero-social-font-size: clamp(13.1px, 3.79vw, 14.2px);
   --hero-social-gap: clamp(1.1px, 0.66vw, 2.2px);
-  --hero-social-icon-size: clamp(26.62px, 7.26vw, 29.04px);
+  --hero-social-icon-size: clamp(29.55px, 8.06vw, 32.23px);
   --hero-social-pad-x: clamp(4px, 1.6vw, 6px);
   --hero-view-label-font-size: 13.2px;
 

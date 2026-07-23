@@ -251,6 +251,22 @@ const caseStudies: CaseStudy[] = [
     stat: "94 commits",
     screenshots: [],
   },
+  {
+    id: "this-portfolio-website",
+    title: "This Portfolio Website",
+    eyebrow: "Personal full-stack dev portfolio",
+    description:
+      "The prahl.dev portfolio is a responsive Next.js and React site built with TypeScript, Tailwind CSS, custom SVG/PNG assets, Motion-ready UI patterns, lucide-react icons, Sharp image tooling, and local Turbopack dev workflows.",
+    tags: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Motion", "Lucide", "Sharp"],
+    stat: "Live portfolio",
+    screenshots: [
+      {
+        alt: "Prahlin portfolio website landing page screenshot",
+        orientation: "portrait",
+        src: "/images/editor-window-screenshot.png",
+      },
+    ],
+  },
 ];
 
 const worklogItems = [

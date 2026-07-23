@@ -286,8 +286,8 @@ export function ProjectCarouselButton() {
             };
 
             setPx("--hero-social-button-height", socialButtonHeight);
-            setPx("--hero-social-font-size", socialButtonHeight * 0.275);
-            setPx("--hero-social-icon-size", socialButtonHeight * 0.605);
+            setPx("--hero-social-font-size", socialButtonHeight * 0.295833);
+            setPx("--hero-social-icon-size", socialButtonHeight * 0.672);
             setPx("--hero-social-gap", socialButtonHeight * 0.045833);
             setPx("--hero-social-pad-x", socialButtonHeight / 8);
             setPx("--hero-view-label-font-size", socialButtonHeight * 0.275);
