@@ -589,13 +589,13 @@ h3 {
 }
 
 .phone-mini-frame {
-  fill: none;
+  fill: #20261f;
   stroke: #000;
   stroke-width: 2.4px;
 }
 
 .phone-mini-screen {
-  fill: transparent;
+  fill: currentColor;
   stroke: none;
 }
 
@@ -621,13 +621,13 @@ h3 {
 }
 
 .tablet-mini-frame {
-  fill: none;
+  fill: #20261f;
   stroke: #000;
   stroke-width: 2.2px;
 }
 
 .tablet-mini-screen {
-  fill: transparent;
+  fill: currentColor;
   stroke: none;
 }
 
@@ -637,15 +637,15 @@ h3 {
 }
 
 .carousel-button-web {
-  height: 0.9702em;
+  height: 1.2em;
   margin-left: -0.15em;
   stroke-width: 2px;
   transform: translateY(0.06em);
-  width: 0.9702em;
+  width: 1.2em;
 }
 
 .web-globe-shell {
-  fill: #f3fff7;
+  fill: currentColor;
   stroke: #000;
   stroke-width: 4px;
 }

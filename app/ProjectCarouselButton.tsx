@@ -6,9 +6,9 @@ type MobilePlatform = "android" | "apple";
 type ProjectTone = "commerce" | "entertainment" | "finance";
 
 const projectNameColors: Record<ProjectTone, string> = {
-  commerce: "#ffad4d",
-  entertainment: "#9b5cff",
-  finance: "#2f6bff",
+  commerce: "#ffb866",
+  entertainment: "#b88cff",
+  finance: "#6fa4ff",
 };
 
 const strokedWhiteTextStyle = {
@@ -207,10 +207,10 @@ function WebMark() {
     <svg
       aria-hidden
       className="carousel-button-web"
-      height="0.9702em"
-      style={{ height: "0.9702em", width: "0.9702em" }}
+      height="1.2em"
+      style={{ height: "1.2em", width: "1.2em" }}
       viewBox="0 0 24 24"
-      width="0.9702em"
+      width="1.2em"
     >
       <circle className="web-globe-shell" cx="12" cy="12" r="8.2" />
       <path className="web-globe-line" d="M3.8 12h16.4" />
@@ -470,7 +470,10 @@ export function ProjectCarouselButton() {
             </span>
             <span
               className="carousel-button-project"
-              style={{ gap: "clamp(0.18em, 1.1vw, 0.34em)" }}
+              style={{
+                color: projectNameColors[activeProject.tone],
+                gap: "clamp(0.18em, 1.1vw, 0.34em)",
+              }}
             >
               {activeProject.mobilePlatforms.map((platform) => (
                 <PhoneMark key={platform} mobilePlatforms={[platform]} />
