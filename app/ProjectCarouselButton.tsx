@@ -1,6 +1,12 @@
 "use client";
 
-import { useEffect, useLayoutEffect, useRef, useState } from "react";
+import {
+  type MouseEvent,
+  useEffect,
+  useLayoutEffect,
+  useRef,
+  useState,
+} from "react";
 
 type MobilePlatform = "android" | "apple";
 type ProjectTone = "commerce" | "entertainment" | "finance";
@@ -19,6 +25,7 @@ const strokedWhiteTextStyle = {
 };
 
 const projectLinks: Array<{
+  caseStudyId: string;
   category: string;
   hasWeb?: boolean;
   hasTablet?: boolean;
@@ -29,6 +36,7 @@ const projectLinks: Array<{
   tone: ProjectTone;
 }> = [
   {
+    caseStudyId: "alla-vostra",
     category: "RESTAURANT",
     hasWeb: true,
     href: "/projects/alla-vostra",
@@ -38,6 +46,7 @@ const projectLinks: Array<{
     tone: "commerce",
   },
   {
+    caseStudyId: "cinerific",
     category: "STREAMING",
     hasTablet: true,
     href: "/projects/cinerific",
@@ -46,6 +55,7 @@ const projectLinks: Array<{
     tone: "entertainment",
   },
   {
+    caseStudyId: "credit-king",
     category: "FINANCE",
     href: "#credit-king",
     mobilePlatforms: ["android", "apple"],
@@ -53,6 +63,55 @@ const projectLinks: Array<{
     tone: "finance",
   },
 ];
+
+function getCaseStudyRowScrollOffset() {
+  const isWideLandscape = window.matchMedia(
+    "(min-width: 1024px) and (orientation: landscape)",
+  ).matches;
+  const isPortrait = window.matchMedia("(orientation: portrait)").matches;
+
+  if (isWideLandscape) {
+    return Math.max(18, Math.min(44, window.innerHeight * 0.035));
+  }
+
+  if (isPortrait) {
+    return Math.max(14, Math.min(36, window.innerHeight * 0.03));
+  }
+
+  return Math.max(16, Math.min(40, window.innerHeight * 0.0325));
+}
+
+function scrollCaseStudyRowIntoView(caseStudyId: string) {
+  const targetCard = document.getElementById(caseStudyId);
+
+  if (!targetCard) {
+    return;
+  }
+
+  const caseGrid = targetCard.closest<HTMLElement>(".case-grid");
+  const targetTop = targetCard.getBoundingClientRect().top;
+  const rowCards = caseGrid
+    ? Array.from(caseGrid.children).filter((child): child is HTMLElement => {
+        if (!(child instanceof HTMLElement)) {
+          return false;
+        }
+
+        const cardTop = child.getBoundingClientRect().top;
+
+        return Math.abs(cardTop - targetTop) <= 8;
+      })
+    : [targetCard];
+  const rowTop = Math.min(
+    ...rowCards.map((card) => card.getBoundingClientRect().top),
+  );
+
+  window.scrollTo({
+    behavior: "smooth",
+    top: window.scrollY + rowTop - getCaseStudyRowScrollOffset(),
+  });
+
+  window.history.replaceState(null, "", `#${caseStudyId}`);
+}
 
 const androidLogoSize = {
   height: 8.69299,
@@ -245,6 +304,11 @@ export function ProjectCarouselButton() {
   const projectButtonRef = useRef<HTMLAnchorElement>(null);
   const activeProject = projectLinks[activeIndex];
 
+  const handleArrowClick = (event: MouseEvent<HTMLAnchorElement>) => {
+    event.preventDefault();
+    scrollCaseStudyRowIntoView(activeProject.caseStudyId);
+  };
+
   useEffect(() => {
     const interval = window.setInterval(() => {
       setActiveIndex((currentIndex) => (currentIndex + 1) % projectLinks.length);
@@ -265,8 +329,24 @@ export function ProjectCarouselButton() {
         const heroCopy = document.querySelector<HTMLElement>(".hero-copy");
         const heroActions =
           document.querySelector<HTMLElement>(".hero-actions");
+        const proofPanel = document.querySelector<HTMLElement>(".proof-panel");
+        const profilePhoto =
+          document.querySelector<HTMLElement>(".profile-photo");
         const socialButton =
           document.querySelector<HTMLElement>(".hero-social-button");
+
+        if (proofPanel && profilePhoto) {
+          const proofRect = proofPanel.getBoundingClientRect();
+          const profileRect = profilePhoto.getBoundingClientRect();
+          const proofWidth = profileRect.right - proofRect.left;
+
+          if (proofWidth > 0) {
+            proofPanel.style.setProperty(
+              "--hero-proof-landscape-width",
+              `${proofWidth}px`,
+            );
+          }
+        }
 
         if (heroActions && socialButton) {
           const heroActionsWidth = heroActions.getBoundingClientRect().width;
@@ -355,6 +435,7 @@ export function ProjectCarouselButton() {
     const heroActions = document.querySelector<HTMLElement>(".hero-actions");
     const stackRow = document.querySelector<HTMLElement>(".stack-row");
     const proofPanel = document.querySelector<HTMLElement>(".proof-panel");
+    const profilePhoto = document.querySelector<HTMLElement>(".profile-photo");
     const targetButton = targetIcon?.closest(".hero-social-button");
     const viewLabel = document.querySelector<HTMLElement>(".hero-view-label");
     const githubText = document.querySelector<HTMLElement>(".github-label-text");
@@ -381,6 +462,10 @@ export function ProjectCarouselButton() {
 
       if (proofPanel) {
         resizeObserver.observe(proofPanel);
+      }
+
+      if (profilePhoto) {
+        resizeObserver.observe(profilePhoto);
       }
 
       if (targetIcon) {
@@ -485,9 +570,10 @@ export function ProjectCarouselButton() {
         </span>
       </a>
       <a
-        aria-label={`Open ${activeProject.name} project`}
+        aria-label={`Scroll to ${activeProject.name} case study`}
         className="button button-primary carousel-arrow-button"
-        href={activeProject.href}
+        href={`#${activeProject.caseStudyId}`}
+        onClick={handleArrowClick}
       >
         <span aria-hidden className="carousel-button-arrow">
           <CarouselArrowMark />

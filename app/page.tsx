@@ -261,6 +261,11 @@ const caseStudies: CaseStudy[] = [
     stat: "Live portfolio",
     screenshots: [
       {
+        alt: "Prahlin portfolio website landscape hero screenshot",
+        orientation: "landscape",
+        src: "/images/portfolio-website-landscape-screenshot.png",
+      },
+      {
         alt: "Prahlin portfolio website landing page screenshot",
         orientation: "portrait",
         src: "/images/editor-window-screenshot.png",
@@ -383,6 +388,10 @@ function SectionHeading({
 }
 
 function CaseStudyCard({ study }: { study: CaseStudy }) {
+  const usesLandscapeLayout =
+    study.screenshots.length === 1 &&
+    study.screenshots[0]?.orientation === "landscape";
+  const usesPairLayout = study.screenshots.length === 2;
   const content = (
     <>
       <div className="case-topline">
@@ -400,12 +409,8 @@ function CaseStudyCard({ study }: { study: CaseStudy }) {
         <div
           aria-label={`${study.title} app screenshots`}
           className={`case-miniatures${
-            study.screenshots.some(
-              (screenshot) => screenshot.orientation === "landscape",
-            )
-              ? " case-miniatures-landscape"
-              : ""
-          }`}
+            usesLandscapeLayout ? " case-miniatures-landscape" : ""
+          }${usesPairLayout ? " case-miniatures-pair" : ""}`}
         >
           {study.screenshots.map((screenshot) => (
             <Image

@@ -3,7 +3,7 @@
 import { useLayoutEffect, useRef } from "react";
 
 const ledeLines = [
-  { text: "Concept > Prototype > Product > Deployment > Release" },
+  { text: "Concept > Prototype > Build > Shipment" },
   { text: "All-In-One, 100% Hassle-Free", strong: true },
 ];
 
