@@ -110,7 +110,7 @@ img[data-screenshot-preview] {
   align-items: center;
   display: inline-flex;
   gap: 10px;
-  font-size: 11px;
+  font-size: 12px;
 }
 
 .brand span {
@@ -119,7 +119,7 @@ img[data-screenshot-preview] {
   border-radius: 6px;
   color: #001d0f;
   display: inline-flex;
-  font-size: 16.5px;
+  font-size: 17.5px;
   font-weight: 900;
   height: 34px;
   justify-content: center;
@@ -137,7 +137,7 @@ img[data-screenshot-preview] {
 .nav-bar nav a {
   border-radius: 6px;
   color: var(--muted);
-  font-size: 14px;
+  font-size: 15px;
   padding: 10px 12px;
   transition: background 160ms ease, color 160ms ease;
   white-space: nowrap;
@@ -164,6 +164,8 @@ img[data-screenshot-preview] {
   --hero-proof-stack-width: min(460px, 100%);
   --hero-action-stack-width: var(--hero-proof-stack-width);
   --hero-eyebrow-font-size: 16px;
+  --hero-lede-font-size: clamp(18px, 2vw, 24px);
+  --hero-text-stack-width: var(--hero-action-stack-width);
 
   max-width: 670px;
   min-width: 0;
@@ -184,7 +186,9 @@ img[data-screenshot-preview] {
   font-weight: 850;
   letter-spacing: 0.02em;
   line-height: 1.5;
+  max-width: 100%;
   text-transform: none;
+  width: var(--hero-text-stack-width);
 }
 
 .hero-eyebrow-box {
@@ -237,11 +241,11 @@ h3 {
 .hero-lede {
   color: #c4d6cc;
   display: grid;
-  font-size: clamp(18px, 2vw, 24px);
+  font-size: var(--hero-lede-font-size);
   line-height: 1.45;
   max-width: none;
   min-width: 0;
-  width: var(--hero-action-stack-width);
+  width: var(--hero-text-stack-width);
 }
 
 .hero-lede-line {
@@ -254,21 +258,21 @@ h3 {
 
 .hero-lede-line > strong {
   display: block;
+  width: 100%;
 }
 
 .hero-lede-line-visual {
   align-items: baseline;
-  display: inline-flex;
+  display: flex;
+  font-size: var(--hero-lede-line-font-size, 1em);
+  justify-content: space-between;
   white-space: pre;
+  width: 100%;
 }
 
 .hero-lede-char {
   flex: 0 0 auto;
   white-space: pre;
-}
-
-.hero-lede-char:not(:last-child) {
-  margin-right: var(--hero-lede-letter-gap, 0px);
 }
 
 .hero-actions {
@@ -368,7 +372,7 @@ h3 {
   transform: translateY(-0.25px);
 }
 
-.hero-project-action .carousel-button {
+.hero-project-action .carousel-button-group {
   grid-column: 2 / 4;
 }
 
@@ -401,9 +405,27 @@ h3 {
   color: #001b0d;
 }
 
-.carousel-button {
-  --carousel-arrow-left: calc(100% - clamp(10px, 3vw, 16px) - 21px);
+.carousel-button-group {
+  --carousel-arrow-bleed: calc(var(--hero-social-button-height) * 0.2);
+  --carousel-arrow-button-width: calc(
+    var(--hero-social-button-height) - var(--carousel-arrow-bleed)
+  );
+  --carousel-button-gap: clamp(8px, 2vw, var(--hero-action-gap));
 
+  align-items: stretch;
+  display: grid;
+  gap: var(--carousel-button-gap);
+  grid-template-columns: minmax(0, 1fr) var(--carousel-arrow-button-width);
+  height: var(--hero-social-button-height);
+  max-width: 100%;
+  min-width: 0;
+  position: relative;
+  width: 100%;
+}
+
+.carousel-button {
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
   display: block;
   font-size: var(--hero-carousel-base-font-size);
   height: var(--hero-social-button-height);
@@ -428,7 +450,7 @@ h3 {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  width: var(--carousel-arrow-left);
+  width: 100%;
   white-space: nowrap;
 }
 
@@ -519,14 +541,24 @@ h3 {
   font-size: var(--hero-carousel-arrow-font-size);
   height: 1.1em;
   justify-items: center;
-  left: var(--carousel-arrow-left);
   line-height: 0;
   margin-left: 0;
-  position: absolute;
-  right: auto;
-  top: 50%;
-  transform: translateY(-50%);
+  transform: translateX(calc(var(--hero-social-button-height) * -0.04));
   width: 1.485em;
+}
+
+.carousel-arrow-button {
+  align-items: center;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  display: grid;
+  height: var(--hero-social-button-height);
+  justify-items: center;
+  min-height: 0;
+  min-width: 0;
+  padding: 0;
+  position: relative;
+  width: var(--carousel-arrow-button-width);
 }
 
 .carousel-button-arrow-mark {
@@ -2092,7 +2124,7 @@ section.project-hero {
   }
 
   .nav-bar nav a {
-    font-size: 12px;
+    font-size: 13px;
     padding-left: 2px;
     padding-right: 2px;
   }
@@ -2321,7 +2353,7 @@ section.project-hero {
   }
 
   .nav-bar nav a {
-    font-size: 10.5px;
+    font-size: 11.5px;
     padding-left: 0;
     padding-right: 0;
   }
@@ -2329,6 +2361,6 @@ section.project-hero {
 
 @media (max-width: 340px) {
   .nav-bar nav a {
-    font-size: 10px;
+    font-size: 11px;
   }
 }

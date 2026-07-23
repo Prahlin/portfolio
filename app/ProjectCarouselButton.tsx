@@ -242,8 +242,7 @@ function CarouselArrowMark() {
 
 export function ProjectCarouselButton() {
   const [activeIndex, setActiveIndex] = useState(0);
-  const arrowRef = useRef<HTMLSpanElement>(null);
-  const buttonRef = useRef<HTMLAnchorElement>(null);
+  const projectButtonRef = useRef<HTMLAnchorElement>(null);
   const activeProject = projectLinks[activeIndex];
 
   useEffect(() => {
@@ -263,20 +262,23 @@ export function ProjectCarouselButton() {
       }
 
       frame = window.requestAnimationFrame(() => {
-        const arrow = arrowRef.current;
-        const button = buttonRef.current;
         const heroCopy = document.querySelector<HTMLElement>(".hero-copy");
         const heroActions =
           document.querySelector<HTMLElement>(".hero-actions");
         const socialButton =
           document.querySelector<HTMLElement>(".hero-social-button");
-        const targetIcon =
-          document.querySelector<SVGSVGElement>(".dribbble-icon-mark") ??
-          document.querySelector<SVGSVGElement>(".linkedin-icon-mark");
 
         if (heroActions && socialButton) {
+          const heroActionsWidth = heroActions.getBoundingClientRect().width;
           const socialButtonHeight =
             socialButton.getBoundingClientRect().height;
+
+          if (heroCopy && heroActionsWidth > 0) {
+            heroCopy.style.setProperty(
+              "--hero-text-stack-width",
+              `${heroActionsWidth}px`,
+            );
+          }
 
           if (socialButtonHeight > 0) {
             const setPx = (name: string, value: number) => {
@@ -292,6 +294,10 @@ export function ProjectCarouselButton() {
             heroCopy?.style.setProperty(
               "--hero-eyebrow-font-size",
               `${socialButtonHeight * 0.367}px`,
+            );
+            heroCopy?.style.setProperty(
+              "--hero-lede-font-size",
+              `${socialButtonHeight * 0.5}px`,
             );
             setPx(
               "--hero-carousel-base-font-size",
@@ -312,24 +318,7 @@ export function ProjectCarouselButton() {
           }
         }
 
-        if (arrow && button && targetIcon) {
-          const arrowRect = arrow.getBoundingClientRect();
-          const buttonRect = button.getBoundingClientRect();
-          const targetIconRect = targetIcon.getBoundingClientRect();
-          const targetIconCenter =
-            targetIconRect.left + targetIconRect.width / 2;
-          const arrowLeft =
-            targetIconCenter - buttonRect.left - arrowRect.width / 2;
-          const clampedArrowLeft = Math.max(
-            0,
-            Math.min(arrowLeft, buttonRect.width - arrowRect.width),
-          );
-
-          button.style.setProperty(
-            "--carousel-arrow-left",
-            `${clampedArrowLeft}px`,
-          );
-        }
+        window.dispatchEvent(new CustomEvent("hero-stack-sync"));
 
         const viewLabel =
           document.querySelector<HTMLElement>(".hero-view-label");
@@ -363,6 +352,9 @@ export function ProjectCarouselButton() {
     const targetIcon =
       document.querySelector<SVGSVGElement>(".dribbble-icon-mark") ??
       document.querySelector<SVGSVGElement>(".linkedin-icon-mark");
+    const heroActions = document.querySelector<HTMLElement>(".hero-actions");
+    const stackRow = document.querySelector<HTMLElement>(".stack-row");
+    const proofPanel = document.querySelector<HTMLElement>(".proof-panel");
     const targetButton = targetIcon?.closest(".hero-social-button");
     const viewLabel = document.querySelector<HTMLElement>(".hero-view-label");
     const githubText = document.querySelector<HTMLElement>(".github-label-text");
@@ -375,8 +367,20 @@ export function ProjectCarouselButton() {
         : new ResizeObserver(syncHeroActionGeometry);
 
     if (resizeObserver) {
-      if (buttonRef.current) {
-        resizeObserver.observe(buttonRef.current);
+      if (projectButtonRef.current) {
+        resizeObserver.observe(projectButtonRef.current);
+      }
+
+      if (heroActions) {
+        resizeObserver.observe(heroActions);
+      }
+
+      if (stackRow) {
+        resizeObserver.observe(stackRow);
+      }
+
+      if (proofPanel) {
+        resizeObserver.observe(proofPanel);
       }
 
       if (targetIcon) {
@@ -419,120 +423,73 @@ export function ProjectCarouselButton() {
   }, []);
 
   return (
-    <a
-      className="button button-primary carousel-button"
-      href={activeProject.href}
-      ref={buttonRef}
-      style={{
-        boxSizing: "border-box",
-        display: "block",
-        maxWidth: "100%",
-        minWidth: 0,
-        paddingLeft: 0,
-        paddingRight: 0,
-        position: "relative",
-        width: "100%",
-      }}
-    >
-      <span
-        className="carousel-button-window"
-        aria-live="polite"
-        style={{
-          alignItems: "center",
-          display: "grid",
-          justifyContent: "stretch",
-          left: 0,
-          minWidth: 0,
-          overflow: "visible",
-          position: "absolute",
-          top: "50%",
-          transform: "translateY(-50%)",
-          width:
-            "var(--carousel-arrow-left, calc(100% - clamp(10px, 3vw, 16px) - 21px))",
-          whiteSpace: "nowrap",
-        }}
+    <span className="carousel-button-group">
+      <a
+        aria-label={`Open ${activeProject.name} project`}
+        className="button button-primary carousel-button"
+        href={activeProject.href}
+        ref={projectButtonRef}
       >
-        <span
-          className="carousel-button-label"
-          key={activeProject.href}
-          style={{
-            minWidth: 0,
-            paddingLeft: 0,
-            width: "100%",
-          }}
-        >
-          <span
-            className={`carousel-button-action carousel-button-action-${activeProject.tone}`}
-            style={{
-              ...strokedWhiteTextStyle,
-              alignItems: "center",
-              color: projectNameColors[activeProject.tone],
-              display: "inline-flex",
-              flexDirection: "column",
-              fontSize: "var(--hero-carousel-name-font-size)",
-              gap: "2.2px",
-              justifyContent: "center",
-              lineHeight: 0.95,
-            }}
-          >
+        <span className="carousel-button-window" aria-live="polite">
+          <span className="carousel-button-label" key={activeProject.href}>
             <span
-              className="carousel-button-action-name"
-              style={{ fontSize: activeProject.nameFontSize }}
-            >
-              {activeProject.name}
-            </span>
-            <span
-              className="carousel-button-action-category"
+              className={`carousel-button-action carousel-button-action-${activeProject.tone}`}
               style={{
-                WebkitTextStroke: 0,
-                color: "#000",
-                fontSize: "var(--hero-carousel-category-font-size)",
-                fontWeight: 900,
-                letterSpacing: "0.06em",
-                lineHeight: 1,
-                textAlign: "center",
-                textShadow: "none",
+                ...strokedWhiteTextStyle,
+                alignItems: "center",
+                color: projectNameColors[activeProject.tone],
+                display: "inline-flex",
+                flexDirection: "column",
+                fontSize: "var(--hero-carousel-name-font-size)",
+                gap: "2.2px",
+                justifyContent: "center",
+                lineHeight: 0.95,
               }}
             >
-              {activeProject.category}
+              <span
+                className="carousel-button-action-name"
+                style={{ fontSize: activeProject.nameFontSize }}
+              >
+                {activeProject.name}
+              </span>
+              <span
+                className="carousel-button-action-category"
+                style={{
+                  WebkitTextStroke: 0,
+                  color: "#000",
+                  fontSize: "var(--hero-carousel-category-font-size)",
+                  fontWeight: 900,
+                  letterSpacing: "0.06em",
+                  lineHeight: 1,
+                  textAlign: "center",
+                  textShadow: "none",
+                }}
+              >
+                {activeProject.category}
+              </span>
+            </span>
+            <span
+              className="carousel-button-project"
+              style={{ gap: "clamp(0.18em, 1.1vw, 0.34em)" }}
+            >
+              {activeProject.mobilePlatforms.map((platform) => (
+                <PhoneMark key={platform} mobilePlatforms={[platform]} />
+              ))}
+              {activeProject.hasTablet ? <TabletMark /> : null}
+              {activeProject.hasWeb ? <WebMark /> : null}
             </span>
           </span>
-          <span
-            className="carousel-button-project"
-            style={{ gap: "clamp(0.18em, 1.1vw, 0.34em)" }}
-          >
-            {activeProject.mobilePlatforms.map((platform) => (
-              <PhoneMark key={platform} mobilePlatforms={[platform]} />
-            ))}
-            {activeProject.hasTablet ? <TabletMark /> : null}
-            {activeProject.hasWeb ? <WebMark /> : null}
-          </span>
         </span>
-      </span>
-      <span
-        aria-hidden
-        className="carousel-button-arrow"
-        ref={arrowRef}
-        style={{
-          alignItems: "center",
-          display: "grid",
-          flex: "0 0 auto",
-          fontSize: "var(--hero-carousel-arrow-font-size)",
-          height: "1.1em",
-          justifyItems: "center",
-          left:
-            "var(--carousel-arrow-left, calc(100% - clamp(10px, 3vw, 16px) - 21px))",
-          lineHeight: 0,
-          marginLeft: 0,
-          position: "absolute",
-          right: "auto",
-          top: "50%",
-          transform: "translateY(-50%)",
-          width: "1.485em",
-        }}
+      </a>
+      <a
+        aria-label={`Open ${activeProject.name} project`}
+        className="button button-primary carousel-arrow-button"
+        href={activeProject.href}
       >
-        <CarouselArrowMark />
-      </span>
-    </a>
+        <span aria-hidden className="carousel-button-arrow">
+          <CarouselArrowMark />
+        </span>
+      </a>
+    </span>
   );
 }

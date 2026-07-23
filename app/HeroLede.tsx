@@ -3,8 +3,8 @@
 import { useLayoutEffect, useRef } from "react";
 
 const ledeLines = [
-  { text: "From Original Idea to Production Release," },
-  { text: "All-In-One, 100% Stress-Free", strong: true },
+  { text: "Concept > Prototype > Product > Deployment > Release" },
+  { text: "All-In-One, 100% Hassle-Free", strong: true },
 ];
 
 function HeroLedeLine({ strong, text }: { strong?: boolean; text: string }) {
@@ -44,7 +44,22 @@ export function HeroLede() {
           return;
         }
 
-        const targetWidth = lede.getBoundingClientRect().width;
+        const heroCopy = lede.closest<HTMLElement>(".hero-copy");
+        const stack =
+          document.querySelector<HTMLElement>(".hero-actions") ??
+          document.querySelector<HTMLElement>(".stack-row") ??
+          document.querySelector<HTMLElement>(".proof-panel");
+        const targetWidth =
+          stack?.getBoundingClientRect().width ??
+          lede.getBoundingClientRect().width;
+
+        if (heroCopy && targetWidth > 0) {
+          heroCopy.style.setProperty(
+            "--hero-text-stack-width",
+            `${targetWidth}px`,
+          );
+        }
+
         const lines = lede.querySelectorAll<HTMLElement>(
           ".hero-lede-line-visual",
         );
@@ -54,9 +69,9 @@ export function HeroLede() {
             line.querySelectorAll<HTMLElement>(".hero-lede-char"),
           );
 
-          line.style.setProperty("--hero-lede-letter-gap", "0px");
+          line.style.setProperty("--hero-lede-line-font-size", "1em");
 
-          if (characters.length < 2) {
+          if (characters.length < 2 || targetWidth <= 0) {
             return;
           }
 
@@ -64,14 +79,13 @@ export function HeroLede() {
             (width, character) => width + character.getBoundingClientRect().width,
             0,
           );
-          let gap = (targetWidth - naturalWidth) / (characters.length - 1);
+          const justifiedContentWidth = targetWidth * 0.9;
+          const scale =
+            naturalWidth > justifiedContentWidth
+              ? justifiedContentWidth / naturalWidth
+              : 1;
 
-          line.style.setProperty("--hero-lede-letter-gap", `${gap}px`);
-
-          const renderedWidth = line.getBoundingClientRect().width;
-          gap += (targetWidth - renderedWidth) / (characters.length - 1);
-
-          line.style.setProperty("--hero-lede-letter-gap", `${gap}px`);
+          line.style.setProperty("--hero-lede-line-font-size", `${scale}em`);
         });
       });
     };
@@ -86,7 +100,23 @@ export function HeroLede() {
 
     if (resizeObserver && ledeRef.current) {
       resizeObserver.observe(ledeRef.current);
+
+      const observedElements = [
+        ledeRef.current.closest<HTMLElement>(".hero-copy"),
+        document.querySelector<HTMLElement>(".hero-actions"),
+        document.querySelector<HTMLElement>(".hero-social-buttons"),
+        document.querySelector<HTMLElement>(".stack-row"),
+        document.querySelector<HTMLElement>(".proof-panel"),
+      ];
+
+      observedElements.forEach((element) => {
+        if (element) {
+          resizeObserver.observe(element);
+        }
+      });
     }
+
+    window.addEventListener("hero-stack-sync", syncLineSpacing);
 
     if ("fonts" in document) {
       document.fonts.ready.then(syncLineSpacing).catch(() => {});
@@ -98,6 +128,7 @@ export function HeroLede() {
       }
 
       window.removeEventListener("resize", syncLineSpacing);
+      window.removeEventListener("hero-stack-sync", syncLineSpacing);
       resizeObserver?.disconnect();
     };
   }, []);
