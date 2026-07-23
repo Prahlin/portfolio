@@ -1,0 +1,1018 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [5 0 R 7 0 R 9 0 R 11 0 R 13 0 R 15 0 R] /Count 6 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+5 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 6 0 R >>
+endobj
+6 0 obj
+<< /Length 6185 >>
+stream
+BT
+/F2 15.60 Tf
+54.00 734.00 Td
+(Prahlin Portfolio Work Log - July 22, 2026) Tj
+-54.00 -734.00 Td
+/F1 10.20 Tf
+54.00 714.80 Td
+(Compiled summary for Wednesday, July 22, 2026 - focus: public synchronization of the Portfolio main) Tj
+-54.00 -714.80 Td
+/F1 10.20 Tf
+54.00 701.60 Td
+(branch, extended landing-page hero CTA refinements, responsive arrow-to-case-study scrolling,) Tj
+-54.00 -701.60 Td
+/F1 10.20 Tf
+54.00 688.40 Td
+(proof-stack landscape behavior, social/icon sizing polish, portfolio-website case-study screenshot imports,) Tj
+-54.00 -688.40 Td
+/F1 10.20 Tf
+54.00 675.20 Td
+(refreshed source snapshot context, successful validation checks, review of all prior Portfolio PDF) Tj
+-54.00 -675.20 Td
+/F1 10.20 Tf
+54.00 662.00 Td
+(worklogs, and generation of the daily Portfolio PDF worklog.) Tj
+-54.00 -662.00 Td
+/F1 10.20 Tf
+54.00 641.60 Td
+(Generated in continuity with the established Prahlin Portfolio daily worklog cadence: compact opening) Tj
+-54.00 -641.60 Td
+/F1 10.20 Tf
+54.00 628.40 Td
+(summary, source-material section, baseline section, goal list, work-completed sections, validation section,) Tj
+-54.00 -628.40 Td
+/F1 10.20 Tf
+54.00 615.20 Td
+(files-touched list, follow-up context, and output-artifact close.) Tj
+-54.00 -615.20 Td
+/F1 10.20 Tf
+54.00 594.80 Td
+(This artifact intentionally covers only Prahlin/portfolio work performed for the July 22 local project) Tj
+-54.00 -594.80 Td
+/F1 10.20 Tf
+54.00 581.60 Td
+(session: the refreshed project snapshot, review of every pre-existing Portfolio worklog PDF, the) Tj
+-54.00 -581.60 Td
+/F1 10.20 Tf
+54.00 568.40 Td
+(landing-page and case-study work represented by commits 39deb19, c10561e, 9316bc7, and 504cf37, the) Tj
+-54.00 -568.40 Td
+/F1 10.20 Tf
+54.00 555.20 Td
+(confirmed origin/main public sync, Hostinger static-export workflow confirmation, local validation checks,) Tj
+-54.00 -555.20 Td
+/F1 10.20 Tf
+54.00 542.00 Td
+(and this worklog-generation step. Alla Vostra, Cinerific, and Credit King application repositories were not) Tj
+-54.00 -542.00 Td
+/F1 10.20 Tf
+54.00 528.80 Td
+(changed for this record.) Tj
+-54.00 -528.80 Td
+/F2 12.00 Tf
+54.00 506.40 Td
+(Source Materials Reviewed) Tj
+-54.00 -506.40 Td
+/F1 10.20 Tf
+54.00 490.20 Td
+(- Ran ./read_project.sh from /Users/prahlin/gh/portfolio and regenerated) Tj
+-54.00 -490.20 Td
+/F1 10.20 Tf
+72.00 477.00 Td
+(  portfolio_PROJECT_SNAPSHOT.txt before writing this worklog, preserving the project convention) Tj
+-72.00 -477.00 Td
+/F1 10.20 Tf
+72.00 463.80 Td
+(  that Codex refreshes the current source snapshot before continuing Portfolio work.) Tj
+-72.00 -463.80 Td
+/F1 10.20 Tf
+54.00 447.10 Td
+(- Reviewed the refreshed portfolio_PROJECT_SNAPSHOT.txt, including project notes, current source) Tj
+-54.00 -447.10 Td
+/F1 10.20 Tf
+72.00 433.90 Td
+(  tree, app source dumps, root/tooling/deployment configuration, public image and PDF inventories, git) Tj
+-72.00 -433.90 Td
+/F1 10.20 Tf
+72.00 420.70 Td
+(  context, and the standing instruction to ask for a commit message before committing or pushing.) Tj
+-72.00 -420.70 Td
+/F1 10.20 Tf
+54.00 404.00 Td
+(- Reviewed every pre-existing Portfolio root-level worklog PDF: portfolio_worklog_july11.pdf,) Tj
+-54.00 -404.00 Td
+/F1 10.20 Tf
+72.00 390.80 Td
+(  portfolio_worklog_july14.pdf, portfolio_worklog_july15_part1.pdf,) Tj
+-72.00 -390.80 Td
+/F1 10.20 Tf
+72.00 377.60 Td
+(  portfolio_worklog_july15_part2.pdf, portfolio_worklog_july16.pdf, portfolio_worklog_july19.pdf,) Tj
+-72.00 -377.60 Td
+/F1 10.20 Tf
+72.00 364.40 Td
+(  portfolio_worklog_july20.pdf, and portfolio_worklog_july21.pdf.) Tj
+-72.00 -364.40 Td
+/F1 10.20 Tf
+54.00 347.70 Td
+(- Extracted text from the existing Portfolio PDFs with pdftotext to preserve the same title cadence,) Tj
+-54.00 -347.70 Td
+/F1 10.20 Tf
+72.00 334.50 Td
+(  opening summary density, section order, bullet-heavy technical voice, validation language,) Tj
+-72.00 -334.50 Td
+/F1 10.20 Tf
+72.00 321.30 Td
+(  files-touched list, follow-up context, and output-artifact close.) Tj
+-72.00 -321.30 Td
+/F1 10.20 Tf
+54.00 304.60 Td
+(- Checked mature PDF metadata with pdfinfo. The July 20 and July 21 artifacts use root-level filenames,) Tj
+-54.00 -304.60 Td
+/F1 10.20 Tf
+72.00 291.40 Td
+(  letter-size pages, compact five-to-six page bodies, and Codex standard-library PDF-generator) Tj
+-72.00 -291.40 Td
+/F1 10.20 Tf
+72.00 278.20 Td
+(  metadata.) Tj
+-72.00 -278.20 Td
+/F1 10.20 Tf
+54.00 261.50 Td
+(- Reviewed current Git history and confirmed the July 22 implementation scope through git log, git show) Tj
+-54.00 -261.50 Td
+/F1 10.20 Tf
+72.00 248.30 Td
+(  --stat, git show --name-status, targeted source inspection, and the final HEAD/origin/main match) Tj
+-72.00 -248.30 Td
+/F1 10.20 Tf
+72.00 235.10 Td
+(  at 504cf37.) Tj
+-72.00 -235.10 Td
+/F1 10.20 Tf
+54.00 218.40 Td
+(- Reviewed the committed source states from 39deb19 through 504cf37, covering the separated green) Tj
+-54.00 -218.40 Td
+/F1 10.20 Tf
+72.00 205.20 Td
+(  CTA controls, hero lede wording, responsive typography/stretch behavior, CTA device-frame polishing,) Tj
+-72.00 -205.20 Td
+/F1 10.20 Tf
+72.00 192.00 Td
+(  social-button sizing, portfolio case-study additions, proof-card landscape behavior, screenshot pairing,) Tj
+-72.00 -192.00 Td
+/F1 10.20 Tf
+72.00 178.80 Td
+(  and case-study row scroll targeting.) Tj
+-72.00 -178.80 Td
+/F1 10.20 Tf
+54.00 162.10 Td
+(- Checked GitHub Actions run history with gh run list and confirmed the Build static export for Hostinger) Tj
+-54.00 -162.10 Td
+/F1 10.20 Tf
+72.00 148.90 Td
+(  workflow completed successfully for the latest pushed Portfolio commit.) Tj
+-72.00 -148.90 Td
+/F2 12.00 Tf
+54.00 130.20 Td
+(Baseline Status Before July 22 Work) Tj
+-54.00 -130.20 Td
+/F1 10.20 Tf
+54.00 114.00 Td
+(- The July 21 Portfolio landing page already had the restored Prahlin brand, RN / Kotlin headline, justified) Tj
+-54.00 -114.00 Td
+/F1 10.20 Tf
+72.00 100.80 Td
+(  hero lede, green project carousel CTA, three social buttons, responsive chip grid, proof stack,) Tj
+-72.00 -100.80 Td
+/F1 10.20 Tf
+72.00 87.60 Td
+(  project-card stack, and Hostinger deployment workflow.) Tj
+-72.00 -87.60 Td
+/F1 8.00 Tf
+54.00 31.00 Td
+(Prahlin Portfolio Work Log - July 22, 2026 Page 1) Tj
+-54.00 -31.00 Td
+ET
+endstream
+endobj
+7 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 8 0 R >>
+endobj
+8 0 obj
+<< /Length 6140 >>
+stream
+BT
+/F1 10.20 Tf
+54.00 734.00 Td
+(- The green CTA was visually close but still used one combined clickable treatment before the July 22) Tj
+-54.00 -734.00 Td
+/F1 10.20 Tf
+72.00 720.80 Td
+(  split-button pass. The user wanted the project-name/platform-icon area and the arrow action) Tj
+-72.00 -720.80 Td
+/F1 10.20 Tf
+72.00 707.60 Td
+(  separated while preserving the established overlap relationship.) Tj
+-72.00 -707.60 Td
+/F1 10.20 Tf
+54.00 690.90 Td
+(- The hero lede copy and eyebrow stack had already been taught to scale with the control stacks, but the) Tj
+-54.00 -690.90 Td
+/F1 10.20 Tf
+72.00 677.70 Td
+(  July 22 session required wording changes and confirmation that Concept and All-In-One lines) Tj
+-72.00 -677.70 Td
+/F1 10.20 Tf
+72.00 664.50 Td
+(  continued stretching horizontally with chip, social, and green-button stack widths.) Tj
+-72.00 -664.50 Td
+/F1 10.20 Tf
+54.00 647.80 Td
+(- The platform-device frames inside the CTA still needed careful visual treatment around their inner edges) Tj
+-54.00 -647.80 Td
+/F1 10.20 Tf
+72.00 634.60 Td
+(  without touching the approved Android and iOS SVG icon shapes, sizes, or fills.) Tj
+-72.00 -634.60 Td
+/F1 10.20 Tf
+54.00 617.90 Td
+(- The Portfolio project itself did not yet have its own case-study card in the landing stack, and the user) Tj
+-54.00 -617.90 Td
+/F1 10.20 Tf
+72.00 604.70 Td
+(  wanted editor screenshots imported into the same public image system used by the other case-study) Tj
+-72.00 -604.70 Td
+/F1 10.20 Tf
+72.00 591.50 Td
+(  cards.) Tj
+-72.00 -591.50 Td
+/F1 10.20 Tf
+54.00 574.80 Td
+(- The proof stack still needed a dedicated wide landscape behavior: six icon/name pairs in one row, evenly) Tj
+-54.00 -574.80 Td
+/F1 10.20 Tf
+72.00 561.60 Td
+(  spaced, with the containing card stretching toward the right edge of the profile image rather than) Tj
+-72.00 -561.60 Td
+/F1 10.20 Tf
+72.00 548.40 Td
+(  conforming to the narrower CTA/social/chip stacks.) Tj
+-72.00 -548.40 Td
+/F1 10.20 Tf
+54.00 531.70 Td
+(- The arrow button still needed a final interaction pass so it would scroll to the active project case-study) Tj
+-54.00 -531.70 Td
+/F1 10.20 Tf
+72.00 518.50 Td
+(  row instead of behaving like the generic Case Studies navigation link.) Tj
+-72.00 -518.50 Td
+/F2 12.00 Tf
+54.00 499.80 Td
+(Goals for July 22) Tj
+-54.00 -499.80 Td
+/F1 10.20 Tf
+54.00 483.60 Td
+(- Separate the green carousel CTA into a project-name/platform-icons button and a dedicated arrow) Tj
+-54.00 -483.60 Td
+/F1 10.20 Tf
+72.00 470.40 Td
+(  button, while preserving the requested overlap, gap, and joined-corner geometry.) Tj
+-72.00 -470.40 Td
+/F1 10.20 Tf
+54.00 453.70 Td
+(- Keep the project-name button narrow enough to create appropriate horizontal space, make the arrow) Tj
+-54.00 -453.70 Td
+/F1 10.20 Tf
+72.00 440.50 Td
+(  button portrait-shaped instead of square, and remove rounding from the adjoining corners between) Tj
+-72.00 -440.50 Td
+/F1 10.20 Tf
+72.00 427.30 Td
+(  the two green controls.) Tj
+-72.00 -427.30 Td
+/F1 10.20 Tf
+54.00 410.60 Td
+(- Increase top-card text assets and selected CTA/social text or icon internals by the requested one-pixel) Tj
+-54.00 -410.60 Td
+/F1 10.20 Tf
+72.00 397.40 Td
+(  or ten-percent increments without disrupting the established responsive stack proportions.) Tj
+-72.00 -397.40 Td
+/F1 10.20 Tf
+54.00 380.70 Td
+(- Update the hero lede copy to the current Concept > Prototype > Build > Shipment and All-In-One, 100%) Tj
+-54.00 -380.70 Td
+/F1 10.20 Tf
+72.00 367.50 Td
+(  Hassle-Free wording while keeping the stretch/justification behavior tied to the surrounding stacks.) Tj
+-72.00 -367.50 Td
+/F1 10.20 Tf
+54.00 350.80 Td
+(- Preserve the approved Android and iOS artwork while improving only the visual edge underlay around) Tj
+-54.00 -350.80 Td
+/F1 10.20 Tf
+72.00 337.60 Td
+(  device-frame interiors.) Tj
+-72.00 -337.60 Td
+/F1 10.20 Tf
+54.00 320.90 Td
+(- Import user-provided editor screenshots into public/images and create a final Portfolio case-study card) Tj
+-54.00 -320.90 Td
+/F1 10.20 Tf
+72.00 307.70 Td
+(  that documents the website itself with relevant technologies.) Tj
+-72.00 -307.70 Td
+/F1 10.20 Tf
+54.00 291.00 Td
+(- Make the proof stack snap to a six-column row early enough for landscape desktop/laptop layouts, then) Tj
+-54.00 -291.00 Td
+/F1 10.20 Tf
+72.00 277.80 Td
+(  stretch the proof card to meet the right edge of the profile photo with even internal spacing.) Tj
+-72.00 -277.80 Td
+/F1 10.20 Tf
+54.00 261.10 Td
+(- Change the CTA arrow action so it scrolls to the exact active project card row, accounting for) Tj
+-54.00 -261.10 Td
+/F1 10.20 Tf
+72.00 247.90 Td
+(  responsive card reordering across portrait, landscape, and intermediate view modes.) Tj
+-72.00 -247.90 Td
+/F2 12.00 Tf
+54.00 229.20 Td
+(Work Completed - Split CTA Controls and Hero Copy) Tj
+-54.00 -229.20 Td
+/F1 10.20 Tf
+54.00 213.00 Td
+(- Separated the original green CTA into two visible controls: a left project-name/platform-icons button) Tj
+-54.00 -213.00 Td
+/F1 10.20 Tf
+72.00 199.80 Td
+(  and a right arrow button. The project-name/icon stack remained in the left control while the arrow) Tj
+-72.00 -199.80 Td
+/F1 10.20 Tf
+72.00 186.60 Td
+(  moved into its own action surface.) Tj
+-72.00 -186.60 Td
+/F1 10.20 Tf
+54.00 169.90 Td
+(- Tuned the overlap and spacing through several user-directed passes: first splitting the button, then) Tj
+-54.00 -169.90 Td
+/F1 10.20 Tf
+72.00 156.70 Td
+(  letting the project-name control bleed horizontally into the arrow control, then reducing the overlap) Tj
+-72.00 -156.70 Td
+/F1 10.20 Tf
+72.00 143.50 Td
+(  to roughly twenty percent and narrowing the arrow surface into portrait dimensions.) Tj
+-72.00 -143.50 Td
+/F1 10.20 Tf
+54.00 126.80 Td
+(- Narrowed the project-name button enough to restore appropriate horizontal breathing room between) Tj
+-54.00 -126.80 Td
+/F1 10.20 Tf
+72.00 113.60 Td
+(  controls, then removed corner rounding from the project-name button right side and the arrow) Tj
+-72.00 -113.60 Td
+/F1 10.20 Tf
+72.00 100.40 Td
+(  button left side so the two pieces read as a joined system.) Tj
+-72.00 -100.40 Td
+/F1 8.00 Tf
+54.00 31.00 Td
+(Prahlin Portfolio Work Log - July 22, 2026 Page 2) Tj
+-54.00 -31.00 Td
+ET
+endstream
+endobj
+9 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 10 0 R >>
+endobj
+10 0 obj
+<< /Length 5995 >>
+stream
+BT
+/F1 10.20 Tf
+54.00 734.00 Td
+(- Increased top-card text assets by one pixel where requested, including Prahlin, Case Studies, Stack,) Tj
+-54.00 -734.00 Td
+/F1 10.20 Tf
+72.00 720.80 Td
+(  Worklog, Contact, and the P inside the green CTA treatment.) Tj
+-72.00 -720.80 Td
+/F1 10.20 Tf
+54.00 704.10 Td
+(- Updated the lede from the vertically pasted Original Idea phrase into the requested concise progression:) Tj
+-54.00 -704.10 Td
+/F1 10.20 Tf
+72.00 690.90 Td
+(  Concept > Prototype > Build > Shipment, removing the final chevron and Release word.) Tj
+-72.00 -690.90 Td
+/F1 10.20 Tf
+54.00 674.20 Td
+(- Changed the second lede line from Stress-Free to Hassle-Free, preserving the All-In-One, 100% phrasing) Tj
+-54.00 -674.20 Td
+/F1 10.20 Tf
+72.00 661.00 Td
+(  and the bold/stack relationship already established in prior sessions.) Tj
+-72.00 -661.00 Td
+/F1 10.20 Tf
+54.00 644.30 Td
+(- Kept the eyebrow and lede behavior separate: the eyebrow scales with the surrounding horizontal control) Tj
+-54.00 -644.30 Td
+/F1 10.20 Tf
+72.00 631.10 Td
+(  values, while the lede lines continue to stretch/justify with the chip, social, and green-button stacks.) Tj
+-72.00 -631.10 Td
+/F2 12.00 Tf
+54.00 612.40 Td
+(Work Completed - CTA Icons, Arrow, and Device Frames) Tj
+-54.00 -612.40 Td
+/F1 10.20 Tf
+54.00 596.20 Td
+(- Retuned the dedicated arrow button repeatedly after live visual review, including a centered placement) Tj
+-54.00 -596.20 Td
+/F1 10.20 Tf
+72.00 583.00 Td
+(  pass, a rightward nudge, a midpoint correction, and a final microscopic left adjustment.) Tj
+-72.00 -583.00 Td
+/F1 10.20 Tf
+54.00 566.30 Td
+(- Rotated the CTA arrow 90 degrees clockwise without changing the surrounding button spacing or the) Tj
+-54.00 -566.30 Td
+/F1 10.20 Tf
+72.00 553.10 Td
+(  accepted vertical alignment, then cleared the development cache when the browser initially showed) Tj
+-72.00 -553.10 Td
+/F1 10.20 Tf
+72.00 539.90 Td
+(  stale output.) Tj
+-72.00 -539.90 Td
+/F1 10.20 Tf
+54.00 523.20 Td
+(- Preserved the approved Android and iOS icon SVG artwork after the user rejected direct icon-shape) Tj
+-54.00 -523.20 Td
+/F1 10.20 Tf
+72.00 510.00 Td
+(  edits, and shifted the fix to the visual underlay behind each device frame.) Tj
+-72.00 -510.00 Td
+/F1 10.20 Tf
+54.00 493.30 Td
+(- Added darker gray underlays behind the complete Android and iOS device-frame image areas, creating the) Tj
+-54.00 -493.30 Td
+/F1 10.20 Tf
+72.00 480.10 Td
+(  requested outside-to-inside read: black device frame, dark gray interior support, project-color) Tj
+-72.00 -480.10 Td
+/F1 10.20 Tf
+72.00 466.90 Td
+(  screen fill, then platform icon.) Tj
+-72.00 -466.90 Td
+/F1 10.20 Tf
+54.00 450.20 Td
+(- Lightened project-specific CTA fills for Alla Vostra, Cinerific, and Credit King, then increased the web) Tj
+-54.00 -450.20 Td
+/F1 10.20 Tf
+72.00 437.00 Td
+(  icon size in two ten-percent-plus passes while keeping the CTA composition intact.) Tj
+-72.00 -437.00 Td
+/F1 10.20 Tf
+54.00 420.30 Td
+(- Increased all icon-related boxes inside the three social buttons by ten percent-plus and then increased the) Tj
+-54.00 -420.30 Td
+/F1 10.20 Tf
+72.00 407.10 Td
+(  social button text names by one pixel, preserving their locked ratios and row alignment.) Tj
+-72.00 -407.10 Td
+/F2 12.00 Tf
+54.00 388.40 Td
+(Work Completed - Portfolio Case Study Card and Screenshots) Tj
+-54.00 -388.40 Td
+/F1 10.20 Tf
+54.00 372.20 Td
+(- Imported the user-provided local screenshot from the macOS screenshots folder and saved it into) Tj
+-54.00 -372.20 Td
+/F1 10.20 Tf
+72.00 359.00 Td
+(  public/images using the established public image directory used by the landing case-study cards.) Tj
+-72.00 -359.00 Td
+/F1 10.20 Tf
+54.00 342.30 Td
+(- Created a dedicated final case-study card titled This Portfolio Website, appearing last in the landing-page) Tj
+-54.00 -342.30 Td
+/F1 10.20 Tf
+72.00 329.10 Td
+(  card stack and using the imported editor screenshot as its image.) Tj
+-72.00 -329.10 Td
+/F1 10.20 Tf
+54.00 312.40 Td
+(- Added a Portfolio-specific description covering the personal full-stack developer portfolio built so far,) Tj
+-54.00 -312.40 Td
+/F1 10.20 Tf
+72.00 299.20 Td
+(  including the landing hero system, case-study stack, responsive browser tuning, static export, and) Tj
+-72.00 -299.20 Td
+/F1 10.20 Tf
+72.00 286.00 Td
+(  iterative visual polish.) Tj
+-72.00 -286.00 Td
+/F1 10.20 Tf
+54.00 269.30 Td
+(- Added relevant technology tags for the Portfolio card: Next.js, React, TypeScript, Tailwind CSS, Motion,) Tj
+-54.00 -269.30 Td
+/F1 10.20 Tf
+72.00 256.10 Td
+(  Lucide, and Sharp, matching the codebase tools and dependencies involved in the work.) Tj
+-72.00 -256.10 Td
+/F1 10.20 Tf
+54.00 239.40 Td
+(- Imported a second user-provided screenshot from July 22 at 10:32:01 PM, converted it into) Tj
+-54.00 -239.40 Td
+/F1 10.20 Tf
+72.00 226.20 Td
+(  public/images/portfolio-website-landscape-screenshot.png, and paired it with the existing portrait) Tj
+-72.00 -226.20 Td
+/F1 10.20 Tf
+72.00 213.00 Td
+(  screenshot in the Portfolio case-study card.) Tj
+-72.00 -213.00 Td
+/F1 10.20 Tf
+54.00 196.30 Td
+(- Adjusted the paired screenshot presentation through user-directed passes: first matching heights by) Tj
+-54.00 -196.30 Td
+/F1 10.20 Tf
+72.00 183.10 Td
+(  scaling the landscape image without cropping, then scaling the portrait screenshot down to the) Tj
+-72.00 -183.10 Td
+/F1 10.20 Tf
+72.00 169.90 Td
+(  landscape screenshot height, and finally swapping their positions so the landscape image appears) Tj
+-72.00 -169.90 Td
+/F1 10.20 Tf
+72.00 156.70 Td
+(  first.) Tj
+-72.00 -156.70 Td
+/F1 10.20 Tf
+54.00 140.00 Td
+(- Confirmed the new screenshot asset appears under public/images and kept the final thumbnail treatment) Tj
+-54.00 -140.00 Td
+/F1 10.20 Tf
+72.00 126.80 Td
+(  free of vertical cropping or distorted dimensions.) Tj
+-72.00 -126.80 Td
+/F2 12.00 Tf
+54.00 108.10 Td
+(Work Completed - Proof Stack and Responsive Scroll Targeting) Tj
+-54.00 -108.10 Td
+/F1 8.00 Tf
+54.00 31.00 Td
+(Prahlin Portfolio Work Log - July 22, 2026 Page 3) Tj
+-54.00 -31.00 Td
+ET
+endstream
+endobj
+11 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 12 0 R >>
+endobj
+12 0 obj
+<< /Length 5883 >>
+stream
+BT
+/F1 10.20 Tf
+54.00 734.00 Td
+(- Changed the proof/Vercel stack so landscape desktop and laptop layouts reorder from a 3-column by) Tj
+-54.00 -734.00 Td
+/F1 10.20 Tf
+72.00 720.80 Td
+(  2-row grid into a 6-column by 1-row grid, then moved the breakpoint earlier after the first pass did) Tj
+-72.00 -720.80 Td
+/F1 10.20 Tf
+72.00 707.60 Td
+(  not appear soon enough during window widening.) Tj
+-72.00 -707.60 Td
+/F1 10.20 Tf
+54.00 690.90 Td
+(- Separated proof-card width behavior from the CTA, social, and chip stack widths after user) Tj
+-54.00 -690.90 Td
+/F1 10.20 Tf
+72.00 677.70 Td
+(  clarification. The proof card now stretches independently in landscape instead of conforming to the) Tj
+-72.00 -677.70 Td
+/F1 10.20 Tf
+72.00 664.50 Td
+(  narrower hero control stacks.) Tj
+-72.00 -664.50 Td
+/F1 10.20 Tf
+54.00 647.80 Td
+(- Added runtime measurement that sets the landscape proof-card width from its own left edge to the) Tj
+-54.00 -647.80 Td
+/F1 10.20 Tf
+72.00 634.60 Td
+(  right edge of the profile photo, allowing the card border to reach the requested visual boundary while) Tj
+-72.00 -634.60 Td
+/F1 10.20 Tf
+72.00 621.40 Td
+(  keeping responsive left and right padding equal.) Tj
+-72.00 -621.40 Td
+/F1 10.20 Tf
+54.00 604.70 Td
+(- Evenly distributed the six proof icon/name pairs inside the stretched proof card so the inner content) Tj
+-54.00 -604.70 Td
+/F1 10.20 Tf
+72.00 591.50 Td
+(  responds to the wider container instead of clustering at one side.) Tj
+-72.00 -591.50 Td
+/F1 10.20 Tf
+54.00 574.80 Td
+(- Changed CTA arrow actionability so the arrow button scrolls to the applicable case-study card row for) Tj
+-54.00 -574.80 Td
+/F1 10.20 Tf
+72.00 561.60 Td
+(  the currently displayed project, while the left project-name button continues to serve as the) Tj
+-72.00 -561.60 Td
+/F1 10.20 Tf
+72.00 548.40 Td
+(  project link.) Tj
+-72.00 -548.40 Td
+/F1 10.20 Tf
+54.00 531.70 Td
+(- Implemented row-aware scroll targeting by reading rendered case-study card positions, grouping cards) Tj
+-54.00 -531.70 Td
+/F1 10.20 Tf
+72.00 518.50 Td
+(  by their actual vertical row, and scrolling to the row that contains the active project card. This) Tj
+-72.00 -518.50 Td
+/F1 10.20 Tf
+72.00 505.30 Td
+(  keeps the behavior correct when cards reorder across portrait, landscape, and intermediate aspect) Tj
+-72.00 -505.30 Td
+/F1 10.20 Tf
+72.00 492.10 Td
+(  ratios.) Tj
+-72.00 -492.10 Td
+/F1 10.20 Tf
+54.00 475.40 Td
+(- Kept the top nav Case Studies button behavior separate: it still scrolls to the generic case-study section,) Tj
+-54.00 -475.40 Td
+/F1 10.20 Tf
+72.00 462.20 Td
+(  while the carousel arrow targets the precise project row.) Tj
+-72.00 -462.20 Td
+/F2 12.00 Tf
+54.00 443.50 Td
+(Deployment and Public Push) Tj
+-54.00 -443.50 Td
+/F1 10.20 Tf
+54.00 427.30 Td
+(- Confirmed the latest Portfolio implementation was already committed on main and synchronized with) Tj
+-54.00 -427.30 Td
+/F1 10.20 Tf
+72.00 414.10 Td
+(  origin/main at 504cf37 after the approved push sequence.) Tj
+-72.00 -414.10 Td
+/F1 10.20 Tf
+54.00 397.40 Td
+(- Ran git push origin main for the public website request. Git reported Everything up-to-date against) Tj
+-54.00 -397.40 Td
+/F1 10.20 Tf
+72.00 384.20 Td
+(  https://github.com/Prahlin/portfolio.git, confirming the public branch already had the latest) Tj
+-72.00 -384.20 Td
+/F1 10.20 Tf
+72.00 371.00 Td
+(  landing-page and case-study implementation.) Tj
+-72.00 -371.00 Td
+/F1 10.20 Tf
+54.00 354.30 Td
+(- Checked GitHub Actions with gh run list after the public sync. The Build static export for Hostinger) Tj
+-54.00 -354.30 Td
+/F1 10.20 Tf
+72.00 341.10 Td
+(  workflow completed successfully for Refined landing responsiveness and portfolio case study.) Tj
+-72.00 -341.10 Td
+/F1 10.20 Tf
+54.00 324.40 Td
+(- Kept the newly generated worklog artifact local after creation because the established Portfolio) Tj
+-54.00 -324.40 Td
+/F1 10.20 Tf
+72.00 311.20 Td
+(  convention requires a user-approved commit message before committing or pushing documentation) Tj
+-72.00 -311.20 Td
+/F1 10.20 Tf
+72.00 298.00 Td
+(  artifacts.) Tj
+-72.00 -298.00 Td
+/F2 12.00 Tf
+54.00 279.30 Td
+(Validation and Checks Performed) Tj
+-54.00 -279.30 Td
+/F1 10.20 Tf
+54.00 263.10 Td
+(- Ran npm run check after the July 22 source changes and confirmed TypeScript validation passed with tsc) Tj
+-54.00 -263.10 Td
+/F1 10.20 Tf
+72.00 249.90 Td
+(  --noEmit.) Tj
+-72.00 -249.90 Td
+/F1 10.20 Tf
+54.00 233.20 Td
+(- Cleared the Next.js development cache during the session when stale browser output prevented updated) Tj
+-54.00 -233.20 Td
+/F1 10.20 Tf
+72.00 220.00 Td
+(  arrow and lede behavior from appearing immediately at http://127.0.0.1:3000/.) Tj
+-72.00 -220.00 Td
+/F1 10.20 Tf
+54.00 203.30 Td
+(- Used local browser preview feedback throughout the visual tuning sequence to validate CTA overlap,) Tj
+-54.00 -203.30 Td
+/F1 10.20 Tf
+72.00 190.10 Td
+(  squared shared corners, arrow centering, responsive lede stretching, proof-card width, and) Tj
+-72.00 -190.10 Td
+/F1 10.20 Tf
+72.00 176.90 Td
+(  case-study screenshot composition.) Tj
+-72.00 -176.90 Td
+/F1 10.20 Tf
+54.00 160.20 Td
+(- Verified the public screenshot assets through local filesystem checks, including the addition of) Tj
+-54.00 -160.20 Td
+/F1 10.20 Tf
+72.00 147.00 Td
+(  public/images/portfolio-website-landscape-screenshot.png alongside the existing portfolio/editor) Tj
+-72.00 -147.00 Td
+/F1 10.20 Tf
+72.00 133.80 Td
+(  screenshot.) Tj
+-72.00 -133.80 Td
+/F1 10.20 Tf
+54.00 117.10 Td
+(- Reviewed git status before and after the public push confirmation. main matched origin/main; the only) Tj
+-54.00 -117.10 Td
+/F1 10.20 Tf
+72.00 103.90 Td
+(  later local change before PDF creation was the regenerated portfolio_PROJECT_SNAPSHOT.txt from) Tj
+-72.00 -103.90 Td
+/F1 10.20 Tf
+72.00 90.70 Td
+(  ./read_project.sh.) Tj
+-72.00 -90.70 Td
+/F1 8.00 Tf
+54.00 31.00 Td
+(Prahlin Portfolio Work Log - July 22, 2026 Page 4) Tj
+-54.00 -31.00 Td
+ET
+endstream
+endobj
+13 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 14 0 R >>
+endobj
+14 0 obj
+<< /Length 5585 >>
+stream
+BT
+/F1 10.20 Tf
+54.00 734.00 Td
+(- Confirmed the Hostinger deployment path indirectly through the successful GitHub Actions static-export) Tj
+-54.00 -734.00 Td
+/F1 10.20 Tf
+72.00 720.80 Td
+(  workflow for commit 504cf37.) Tj
+-72.00 -720.80 Td
+/F1 10.20 Tf
+54.00 704.10 Td
+(- Generated this PDF with the same standard-library PDF writer style used by the mature Portfolio) Tj
+-54.00 -704.10 Td
+/F1 10.20 Tf
+72.00 690.90 Td
+(  worklogs and checked metadata/text extraction after writing.) Tj
+-72.00 -690.90 Td
+/F2 12.00 Tf
+54.00 672.20 Td
+(Files Touched During July 22 Portfolio Work) Tj
+-54.00 -672.20 Td
+/F1 10.20 Tf
+54.00 656.00 Td
+(- app/HeroLede.tsx - preserved the client-side stretch/justification behavior while supporting the updated) Tj
+-54.00 -656.00 Td
+/F1 10.20 Tf
+72.00 642.80 Td
+(  Concept > Prototype > Build > Shipment and All-In-One, 100% Hassle-Free copy.) Tj
+-72.00 -642.80 Td
+/F1 10.20 Tf
+54.00 626.10 Td
+(- app/ProjectCarouselButton.tsx - separated project-name and arrow controls, preserved platform icon) Tj
+-54.00 -626.10 Td
+/F1 10.20 Tf
+72.00 612.90 Td
+(  artwork, added scroll-to-card-row behavior, and kept the left control responsible for project) Tj
+-72.00 -612.90 Td
+/F1 10.20 Tf
+72.00 599.70 Td
+(  navigation.) Tj
+-72.00 -599.70 Td
+/F1 10.20 Tf
+54.00 583.00 Td
+(- app/globals.css - tuned CTA overlap, button geometry, arrow rotation/nudging, text scaling,) Tj
+-54.00 -583.00 Td
+/F1 10.20 Tf
+72.00 569.80 Td
+(  device-frame underlays, social icon/text sizing, proof-card landscape layout, and paired Portfolio) Tj
+-72.00 -569.80 Td
+/F1 10.20 Tf
+72.00 556.60 Td
+(  screenshot presentation.) Tj
+-72.00 -556.60 Td
+/F1 10.20 Tf
+54.00 539.90 Td
+(- app/page.tsx - added the This Portfolio Website case-study card, Portfolio description, technology tags,) Tj
+-54.00 -539.90 Td
+/F1 10.20 Tf
+72.00 526.70 Td
+(  proof-card measurement wiring, and screenshot pairing.) Tj
+-72.00 -526.70 Td
+/F1 10.20 Tf
+54.00 510.00 Td
+(- next.config.ts - retained the local development origin configuration used during preview work.) Tj
+-54.00 -510.00 Td
+/F1 10.20 Tf
+54.00 493.30 Td
+(- public/images/editor-window-screenshot.png - user-provided editor-view screenshot used as the first) Tj
+-54.00 -493.30 Td
+/F1 10.20 Tf
+72.00 480.10 Td
+(  Portfolio card image during the initial case-study addition.) Tj
+-72.00 -480.10 Td
+/F1 10.20 Tf
+54.00 463.40 Td
+(- public/images/portfolio-website-landscape-screenshot.png - user-provided landscape screenshot) Tj
+-54.00 -463.40 Td
+/F1 10.20 Tf
+72.00 450.20 Td
+(  imported and paired with the Portfolio case-study image set.) Tj
+-72.00 -450.20 Td
+/F1 10.20 Tf
+54.00 433.50 Td
+(- portfolio_PROJECT_SNAPSHOT.txt - regenerated by ./read_project.sh before this worklog in keeping) Tj
+-54.00 -433.50 Td
+/F1 10.20 Tf
+72.00 420.30 Td
+(  with the project snapshot convention.) Tj
+-72.00 -420.30 Td
+/F1 10.20 Tf
+54.00 403.60 Td
+(- portfolio_worklog_july22.pdf - newly generated daily PDF worklog artifact for the July 22 Portfolio) Tj
+-54.00 -403.60 Td
+/F1 10.20 Tf
+72.00 390.40 Td
+(  session.) Tj
+-72.00 -390.40 Td
+/F2 12.00 Tf
+54.00 371.70 Td
+(Follow-Up Context) Tj
+-54.00 -371.70 Td
+/F1 10.20 Tf
+54.00 355.50 Td
+(- The public website source is already represented by origin/main at 504cf37 and the Hostinger) Tj
+-54.00 -355.50 Td
+/F1 10.20 Tf
+72.00 342.30 Td
+(  static-export workflow has succeeded for that commit.) Tj
+-72.00 -342.30 Td
+/F1 10.20 Tf
+54.00 325.60 Td
+(- The July 22 worklog PDF and refreshed project snapshot remain local until the user provides or approves) Tj
+-54.00 -325.60 Td
+/F1 10.20 Tf
+72.00 312.40 Td
+(  a commit message for documentation artifact changes.) Tj
+-72.00 -312.40 Td
+/F1 10.20 Tf
+54.00 295.70 Td
+(- Future Portfolio visual work should preserve the distinction between the top nav Case Studies scroll and) Tj
+-54.00 -295.70 Td
+/F1 10.20 Tf
+72.00 282.50 Td
+(  the carousel arrow row-targeted scroll behavior.) Tj
+-72.00 -282.50 Td
+/F1 10.20 Tf
+54.00 265.80 Td
+(- The Android and iOS CTA icon SVG shapes, sizes, and fills should remain untouched unless the user) Tj
+-54.00 -265.80 Td
+/F1 10.20 Tf
+72.00 252.60 Td
+(  explicitly reopens that artwork. Edge treatments should be handled through surrounding) Tj
+-72.00 -252.60 Td
+/F1 10.20 Tf
+72.00 239.40 Td
+(  frame/underlay layers.) Tj
+-72.00 -239.40 Td
+/F1 10.20 Tf
+54.00 222.70 Td
+(- The proof-card landscape width is intentionally independent from CTA/social/chip stack width and is tied) Tj
+-54.00 -222.70 Td
+/F1 10.20 Tf
+72.00 209.50 Td
+(  to the profile-photo right edge; later spacing changes should keep that relationship in mind.) Tj
+-72.00 -209.50 Td
+/F1 10.20 Tf
+54.00 192.80 Td
+(- LinkedIn and Dribbble URLs remain placeholders until final public profile destinations are supplied, and the) Tj
+-54.00 -192.80 Td
+/F1 10.20 Tf
+72.00 179.60 Td
+(  Cinerific case-study route still carries layout-parity placeholder screenshot treatment for future) Tj
+-72.00 -179.60 Td
+/F1 10.20 Tf
+72.00 166.40 Td
+(  project-specific media.) Tj
+-72.00 -166.40 Td
+/F1 10.20 Tf
+54.00 149.70 Td
+(- All future Portfolio work remains local-only unless the user explicitly asks to commit, push, deploy, or) Tj
+-54.00 -149.70 Td
+/F1 10.20 Tf
+72.00 136.50 Td
+(  publish.) Tj
+-72.00 -136.50 Td
+/F2 12.00 Tf
+54.00 117.80 Td
+(Output Artifact) Tj
+-54.00 -117.80 Td
+/F1 10.20 Tf
+54.00 101.60 Td
+(- Created portfolio_worklog_july22.pdf in the repository root using the established Portfolio PDF naming) Tj
+-54.00 -101.60 Td
+/F1 10.20 Tf
+72.00 88.40 Td
+(  convention.) Tj
+-72.00 -88.40 Td
+/F1 8.00 Tf
+54.00 31.00 Td
+(Prahlin Portfolio Work Log - July 22, 2026 Page 5) Tj
+-54.00 -31.00 Td
+ET
+endstream
+endobj
+15 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 16 0 R >>
+endobj
+16 0 obj
+<< /Length 404 >>
+stream
+BT
+/F1 10.20 Tf
+54.00 734.00 Td
+(- The PDF records the July 22 Portfolio session, reviewed sources, public sync status, validation checks,) Tj
+-54.00 -734.00 Td
+/F1 10.20 Tf
+72.00 720.80 Td
+(  source/image files touched, and carry-forward notes needed for the next Codex session.) Tj
+-72.00 -720.80 Td
+/F1 8.00 Tf
+54.00 31.00 Td
+(Prahlin Portfolio Work Log - July 22, 2026 Page 6) Tj
+-54.00 -31.00 Td
+ET
+endstream
+endobj
+17 0 obj
+<< /Title (Prahlin Portfolio Work Log - July 22, 2026) /Subject (Portfolio website development worklog) /Author (Codex) /Creator (Codex standard-library PDF generator) /Producer (Codex standard-library PDF generator) /CreationDate (D:20260722224500-04'00') /ModDate (D:20260722224500-04'00') >>
+endobj
+xref
+0 18
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000154 00000 n 
+0000000224 00000 n 
+0000000299 00000 n 
+0000000435 00000 n 
+0000006671 00000 n 
+0000006807 00000 n 
+0000012998 00000 n 
+0000013135 00000 n 
+0000019182 00000 n 
+0000019320 00000 n 
+0000025255 00000 n 
+0000025393 00000 n 
+0000031030 00000 n 
+0000031168 00000 n 
+0000031623 00000 n 
+trailer
+<< /Size 18 /Root 1 0 R /Info 17 0 R >>
+startxref
+31934
+%%EOF
