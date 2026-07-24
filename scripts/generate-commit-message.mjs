@@ -5,7 +5,7 @@ import { existsSync, readFileSync, writeFileSync } from "node:fs";
 
 const messageFile = process.argv[2];
 const source = process.argv[3] ?? "";
-const skippedSources = new Set(["commit", "merge", "message", "squash"]);
+const skippedSources = new Set(["commit", "merge", "squash"]);
 
 if (!messageFile || skippedSources.has(source)) {
   process.exit(0);
