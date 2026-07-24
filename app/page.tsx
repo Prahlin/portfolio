@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Fragment } from "react";
 import {
   Apple,
   Braces,
@@ -21,13 +22,26 @@ import {
 } from "./ProjectCarouselButton";
 import { ProofStats } from "./ProofStats";
 
-const navItems = [
+type NavItem = {
+  href?: string;
+  isBrand?: boolean;
+  label: string;
+};
+
+const navItems: NavItem[] = [
+  { href: "#top", isBrand: true, label: "Prahl.dev" },
   { href: "#case-studies", label: "Case Studies" },
   { href: "#stack", label: "Stack" },
   { href: "#worklog", label: "Worklog" },
-  { label: "About" },
+  { label: "Articles" },
+  { label: "About Dev" },
   { href: "#contact", label: "Contact" },
 ];
+
+const navRowSplitIndex = 3;
+const navTopRowItems = navItems.slice(0, navRowSplitIndex);
+const navBottomRowItems = navItems.slice(navRowSplitIndex);
+const navEmphasisLabels = new Set(["Case Studies", "Stack", "About Dev"]);
 
 const stackChips = [
   "React Native",
@@ -159,11 +173,11 @@ function GitHubBracesMark() {
   );
 }
 
-function DribbbleMark() {
+function InstagramMark() {
   return (
     <svg
       aria-hidden
-      className="dribbble-icon-mark"
+      className="instagram-icon-mark"
       height="32.4"
       viewBox="0 0 24 24"
       width="32.4"
@@ -179,35 +193,25 @@ function DribbbleMark() {
         x="3"
         y="3"
       />
+      <rect
+        fill="#E1306C"
+        height="9.8"
+        rx="2.5"
+        stroke="#000"
+        strokeWidth="1.2"
+        width="9.8"
+        x="7.1"
+        y="7.1"
+      />
       <circle
         cx="12"
         cy="12"
-        fill="#ea4c89"
-        r="6.2"
+        fill="#f3fff7"
+        r="2.05"
         stroke="#000"
-        strokeWidth="1.3"
+        strokeWidth="1"
       />
-      <path
-        d="M7 9.4c2.8.6 6.1.1 9.8-1.6"
-        fill="none"
-        stroke="#000"
-        strokeLinecap="round"
-        strokeWidth="1.05"
-      />
-      <path
-        d="M9.2 6.7c2.2 2.4 3.8 6 4.8 10.5"
-        fill="none"
-        stroke="#000"
-        strokeLinecap="round"
-        strokeWidth="1.05"
-      />
-      <path
-        d="M6.3 13.5c3.8-1.2 7.7-1 11.4.8"
-        fill="none"
-        stroke="#000"
-        strokeLinecap="round"
-        strokeWidth="1.05"
-      />
+      <circle cx="15.05" cy="8.95" fill="#000" r="0.7" />
     </svg>
   );
 }
@@ -460,6 +464,77 @@ function SectionHeading({
   );
 }
 
+function NavLinkItem({ item }: { item: NavItem }) {
+  const linkClassName = navEmphasisLabels.has(item.label)
+    ? "nav-link-emphasis"
+    : undefined;
+
+  if (item.isBrand) {
+    return (
+      <a className="nav-brand-link" href={item.href} aria-label="Prahl.dev home">
+        <span className="nav-brand-mark">P</span>
+        <strong className="nav-brand-name">{item.label}</strong>
+      </a>
+    );
+  }
+
+  if (item.href) {
+    return (
+      <a className={linkClassName} href={item.href}>
+        {item.label}
+      </a>
+    );
+  }
+
+  return (
+    <span className={linkClassName ? `nav-text ${linkClassName}` : "nav-text"}>
+      {item.label}
+    </span>
+  );
+}
+
+function NavLinkRow({
+  className,
+  firstSeparatorClassName,
+  items,
+  leadingSeparatorClassName,
+}: {
+  className: string;
+  firstSeparatorClassName?: string;
+  items: NavItem[];
+  leadingSeparatorClassName?: string;
+}) {
+  return (
+    <span className={`nav-link-row ${className}`}>
+      {leadingSeparatorClassName ? (
+        <span
+          className={`nav-separator ${leadingSeparatorClassName}`}
+          aria-hidden="true"
+        >
+          |
+        </span>
+      ) : null}
+      {items.map((item, index) => (
+        <Fragment key={item.label}>
+          {index > 0 ? (
+            <span
+              className={
+                index === 1 && firstSeparatorClassName
+                  ? `nav-separator ${firstSeparatorClassName}`
+                  : "nav-separator"
+              }
+              aria-hidden="true"
+            >
+              |
+            </span>
+          ) : null}
+          <NavLinkItem item={item} />
+        </Fragment>
+      ))}
+    </span>
+  );
+}
+
 function CaseStudyTitle({ study }: { study: CaseStudy }) {
   const variant = caseTitleVariants[study.id];
 
@@ -608,23 +683,17 @@ export default function Home() {
       <section className="hero" id="top">
         <div className="site-shell">
           <header className="nav-bar">
-            <a className="brand" href="#top" aria-label="Prahl.dev home">
-              <span>P</span>
-              <strong>Prahl.dev</strong>
-            </a>
-
             <nav aria-label="Main navigation">
-              {navItems.map((item) => (
-                item.href ? (
-                  <a key={item.label} href={item.href}>
-                    {item.label}
-                  </a>
-                ) : (
-                  <span className="nav-text" key={item.label}>
-                    {item.label}
-                  </span>
-                )
-              ))}
+              <NavLinkRow
+                firstSeparatorClassName="nav-separator-brand"
+                className="nav-link-row-top"
+                items={navTopRowItems}
+              />
+              <NavLinkRow
+                className="nav-link-row-bottom"
+                items={navBottomRowItems}
+                leadingSeparatorClassName="nav-separator-row-leading"
+              />
             </nav>
           </header>
 
@@ -735,18 +804,18 @@ export default function Home() {
                     <LinkedInMark />
                   </a>
                   <a
-                    className="button button-secondary hero-social-button dribbble-button"
-                    href="https://dribbble.com/"
+                    className="button button-secondary hero-social-button instagram-button"
+                    href="https://www.instagram.com/"
                     rel="noreferrer"
                     style={{
-                      background: "#ea4c89",
-                      borderColor: "#ea4c89",
+                      background: "#E1306C",
+                      borderColor: "#E1306C",
                       color: "#000",
                     }}
                     target="_blank"
                   >
-                    Dribbble
-                    <DribbbleMark />
+                    Instagram
+                    <InstagramMark />
                   </a>
                 </div>
               </div>
