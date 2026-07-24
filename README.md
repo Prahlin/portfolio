@@ -1,6 +1,6 @@
-# Prahlin Portfolio Site
+# Prahl.dev Portfolio Site
 
-Next.js + Tailwind CSS portfolio start page for Prahlin.
+Next.js + Tailwind CSS portfolio start page for Prahl.dev.
 
 ## What is included
 

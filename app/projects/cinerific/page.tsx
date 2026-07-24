@@ -516,9 +516,9 @@ export default function CinerificCaseStudy() {
       <section className="project-hero" id="top">
         <div className="site-shell">
           <header className="nav-bar project-nav">
-            <a className="brand" href="/" aria-label="Prahlin home">
+            <a className="brand" href="/" aria-label="Prahl.dev home">
               <span>P</span>
-              <strong>Prahlin</strong>
+              <strong>Prahl.dev</strong>
             </a>
 
             <nav aria-label="Cinerific case study navigation">

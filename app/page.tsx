@@ -12,8 +12,13 @@ import {
   Store,
   Triangle,
 } from "lucide-react";
+import { CaseDescription, CaseEyebrow } from "./CaseDescription";
 import { HeroLede } from "./HeroLede";
-import { ProjectCarouselButton } from "./ProjectCarouselButton";
+import {
+  type MobilePlatform,
+  ProjectCarouselButton,
+  ProjectDeviceStack,
+} from "./ProjectCarouselButton";
 
 const navItems = ["Case Studies", "Stack", "Worklog", "Contact"];
 
@@ -46,8 +51,8 @@ type CaseScreenshot = {
 };
 
 type CaseStudy = {
-  description: string;
-  eyebrow: string;
+  descriptionLines: [string, string, string, string];
+  eyebrowLines: [string, string] | [string, string, string];
   href?: string;
   id: string;
   screenshots: CaseScreenshot[];
@@ -203,11 +208,15 @@ const caseStudies: CaseStudy[] = [
   {
     id: "cinerific",
     title: "Cinerific",
-    eyebrow: "Native Android entertainment preview",
+    eyebrowLines: ["Native Android UI", "Entertainment flow"],
     href: "/projects/cinerific",
-    description:
-      "Kotlin and Jetpack Compose Android app scaffold translating Figma intro and sign-in frames into tablet-friendly full-screen screens, drawable assets, and an animated intro flow.",
-    tags: ["Kotlin", "Compose", "Gradle", "TypeScript"],
+    descriptionLines: [
+      "Cinerific is a Kotlin and Jetpack Compose",
+      "entertainment prototype, turning Figma concepts into",
+      "tablet-ready onboarding, sign-in flows, drawable assets,",
+      "and motion foundations for streaming identity.",
+    ],
+    tags: ["Kotlin", "Compose", "Gradle", "Android", "Figma", "Animation"],
     stat: "3 commits",
     screenshots: [
       {
@@ -220,11 +229,15 @@ const caseStudies: CaseStudy[] = [
   {
     id: "alla-vostra",
     title: "Alla Vostra",
-    eyebrow: "Flagship full-stack mobile commerce",
+    eyebrowLines: ["Full-stack mobile", "Stripe checkout UX"],
     href: "/projects/alla-vostra",
-    description:
-      "Expo/React Native ordering flow with Stripe, Postmark, Vercel serverless routes, Android device testing, and Play Store preparation.",
-    tags: ["React Native", "Stripe", "Node.js", "EAS"],
+    descriptionLines: [
+      "Alla Vostra is a React Native and",
+      "Expo commerce product connecting Stripe checkout,",
+      "Postmark emails, order states, Android UAT,",
+      "EAS builds, and release-ready mobile polish.",
+    ],
+    tags: ["React Native", "Expo", "Stripe", "Postmark", "Node.js", "EAS"],
     stat: "328 commits",
     screenshots: [
       {
@@ -244,29 +257,37 @@ const caseStudies: CaseStudy[] = [
   {
     id: "credit-king",
     title: "Credit King",
-    eyebrow: "Finance app UI system",
-    description:
-      "React Native dashboard, animated navigation, Figma asset translation, responsive web/Android parity, and reusable app chrome.",
-    tags: ["Expo Router", "SVG", "Animation", "Figma"],
+    eyebrowLines: ["Native finance UI", "Credit flow system"],
+    descriptionLines: [
+      "Credit King is a React Native finance",
+      "UI system shaped around dashboard clarity,",
+      "Expo Router navigation, TypeScript structure, SVG",
+      "assets, animation, and Figma translation workflows.",
+    ],
+    tags: ["React Native", "Expo Router", "TypeScript", "SVG", "Animation", "Figma"],
     stat: "94 commits",
     screenshots: [],
   },
   {
     id: "this-portfolio-website",
     title: "This Portfolio Website",
-    eyebrow: "Personal full-stack dev portfolio",
-    description:
-      "The prahl.dev portfolio is a responsive Next.js and React site built with TypeScript, Tailwind CSS, custom SVG/PNG assets, Motion-ready UI patterns, lucide-react icons, Sharp image tooling, and local Turbopack dev workflows.",
-    tags: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Motion", "Lucide", "Sharp"],
+    eyebrowLines: ["Next.js portfolio", "Prahl.dev web site"],
+    descriptionLines: [
+      "This Portfolio Website is a responsive Prahl.dev",
+      "showcase built using Next.js, React, TypeScript,",
+      "Tailwind CSS, motion-ready patterns, Lucide icons,",
+      "custom assets, and static export deployment.",
+    ],
+    tags: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Motion", "Lucide"],
     stat: "Live portfolio",
     screenshots: [
       {
-        alt: "Prahlin portfolio website landscape hero screenshot",
+        alt: "Prahl.dev portfolio website landscape hero screenshot",
         orientation: "landscape",
         src: "/images/portfolio-website-landscape-screenshot.png",
       },
       {
-        alt: "Prahlin portfolio website landing page screenshot",
+        alt: "Prahl.dev portfolio website landing page screenshot",
         orientation: "portrait",
         src: "/images/editor-window-screenshot.png",
       },
@@ -279,6 +300,42 @@ const worklogItems = [
   "Secure Stripe card flow, Google Pay, PayPal, and Postmark confirmations",
   "Android Small, Standard, and Large emulator QA with release-ready EAS builds",
 ];
+
+const caseTitleVariants: Record<
+  string,
+  {
+    color: string;
+    fontSize: string;
+    hasTablet?: boolean;
+    hasWeb?: boolean;
+    mobilePlatforms: MobilePlatform[];
+  }
+> = {
+  "alla-vostra": {
+    color: "#ffb866",
+    fontSize: "29.89px",
+    hasWeb: true,
+    mobilePlatforms: ["android", "apple"],
+  },
+  cinerific: {
+    color: "#b88cff",
+    fontSize: "31.76px",
+    hasTablet: true,
+    mobilePlatforms: ["android"],
+  },
+  "credit-king": {
+    color: "#6fa4ff",
+    fontSize: "31.76px",
+    mobilePlatforms: ["android", "apple"],
+  },
+};
+
+const caseTitleDeviceGap = {
+  maxPx: 13,
+  minPx: 1.25,
+  tightLanePx: 125,
+  wideLanePx: 300,
+};
 
 function PhonePreview({
   title,
@@ -387,19 +444,72 @@ function SectionHeading({
   );
 }
 
+function CaseStudyTitle({ study }: { study: CaseStudy }) {
+  const variant = caseTitleVariants[study.id];
+
+  if (!variant) {
+    return <h3>{study.title}</h3>;
+  }
+
+  return (
+    <h3 className="case-card-title-stack" aria-label={study.title}>
+      <span
+        className="case-card-project-title-name-stack"
+        aria-hidden="true"
+        style={{
+          WebkitTextStroke: "7.88px #000",
+          alignItems: "center",
+          color: variant.color,
+          display: "inline-flex",
+          flexDirection: "column",
+          fontSize: variant.fontSize,
+          gap: "4.13px",
+          justifyContent: "center",
+          lineHeight: 0.95,
+          paintOrder: "stroke fill",
+          textShadow: "0 0 0 #000",
+        }}
+      >
+        <span
+          className="case-card-project-title-name"
+          style={{
+            WebkitTextStroke: "7.88px #000",
+            paintOrder: "stroke fill",
+            textShadow: "0 0 0 #000",
+          }}
+        >
+          {study.title}
+        </span>
+      </span>
+      <span className="case-card-title-device-stack" aria-hidden="true">
+        <ProjectDeviceStack
+          assetGap="0.42em"
+          color={variant.color}
+          hasTablet={variant.hasTablet}
+          hasWeb={variant.hasWeb}
+          mobilePlatforms={variant.mobilePlatforms}
+          responsiveAssetGap={caseTitleDeviceGap}
+        />
+      </span>
+    </h3>
+  );
+}
+
 function CaseStudyCard({ study }: { study: CaseStudy }) {
   const usesLandscapeLayout =
     study.screenshots.length === 1 &&
     study.screenshots[0]?.orientation === "landscape";
   const usesPairLayout = study.screenshots.length === 2;
+  const description = study.descriptionLines.join(" ");
+  const eyebrow = study.eyebrowLines.join(" ");
   const content = (
     <>
       <div className="case-topline">
-        <span>{study.eyebrow}</span>
+        <CaseEyebrow label={eyebrow} lines={study.eyebrowLines} />
         <strong>{study.stat}</strong>
       </div>
-      <h3>{study.title}</h3>
-      <p>{study.description}</p>
+      <CaseStudyTitle study={study} />
+      <CaseDescription label={description} lines={study.descriptionLines} />
       <div className="case-tags">
         {study.tags.map((tag) => (
           <span key={tag}>{tag}</span>
@@ -457,9 +567,9 @@ export default function Home() {
       <section className="hero" id="top">
         <div className="site-shell">
           <header className="nav-bar">
-            <a className="brand" href="#top" aria-label="Prahlin home">
+            <a className="brand" href="#top" aria-label="Prahl.dev home">
               <span>P</span>
-              <strong>Prahlin</strong>
+              <strong>Prahl.dev</strong>
             </a>
 
             <nav aria-label="Main navigation">

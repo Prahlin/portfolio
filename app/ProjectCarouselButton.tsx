@@ -1,6 +1,7 @@
 "use client";
 
 import {
+  type CSSProperties,
   type MouseEvent,
   useEffect,
   useLayoutEffect,
@@ -8,8 +9,14 @@ import {
   useState,
 } from "react";
 
-type MobilePlatform = "android" | "apple";
+export type MobilePlatform = "android" | "apple";
 type ProjectTone = "commerce" | "entertainment" | "finance";
+type ResponsiveAssetGap = {
+  maxPx: number;
+  minPx: number;
+  tightLanePx: number;
+  wideLanePx: number;
+};
 
 const projectNameColors: Record<ProjectTone, string> = {
   commerce: "#ffb866",
@@ -278,6 +285,113 @@ function WebMark() {
       <path className="web-globe-line" d="M12 3.8c2.2 2.3 3.3 5 3.3 8.2s-1.1 5.9-3.3 8.2" />
       <path className="web-globe-line" d="M12 3.8c-2.2 2.3-3.3 5-3.3 8.2s1.1 5.9 3.3 8.2" />
     </svg>
+  );
+}
+
+export function ProjectDeviceStack({
+  assetGap,
+  color,
+  hasTablet,
+  hasWeb,
+  mobilePlatforms,
+  responsiveAssetGap,
+}: {
+  assetGap?: string;
+  color: string;
+  hasTablet?: boolean;
+  hasWeb?: boolean;
+  mobilePlatforms: MobilePlatform[];
+  responsiveAssetGap?: ResponsiveAssetGap;
+}) {
+  const stackRef = useRef<HTMLSpanElement>(null);
+  const [measuredAssetGap, setMeasuredAssetGap] = useState<string | null>(null);
+  const stackStyle: CSSProperties & {
+    "--project-device-stack-gap"?: string;
+  } = {
+    color,
+  };
+  const stackGap = measuredAssetGap ?? assetGap;
+
+  useLayoutEffect(() => {
+    if (!responsiveAssetGap) {
+      setMeasuredAssetGap(null);
+      return;
+    }
+
+    const stack = stackRef.current;
+    const measurementTarget = stack?.parentElement ?? stack;
+
+    if (!measurementTarget) {
+      return;
+    }
+
+    let frame = 0;
+    const updateGap = () => {
+      if (frame) {
+        window.cancelAnimationFrame(frame);
+      }
+
+      frame = window.requestAnimationFrame(() => {
+        const laneWidth = measurementTarget.getBoundingClientRect().width;
+        const activeRange = Math.max(
+          1,
+          responsiveAssetGap.wideLanePx - responsiveAssetGap.tightLanePx,
+        );
+        const progress = Math.min(
+          1,
+          Math.max(
+            0,
+            (laneWidth - responsiveAssetGap.tightLanePx) / activeRange,
+          ),
+        );
+        const nextGap =
+          responsiveAssetGap.minPx +
+          (responsiveAssetGap.maxPx - responsiveAssetGap.minPx) * progress;
+        const nextGapValue = `${nextGap.toFixed(2)}px`;
+
+        setMeasuredAssetGap((currentGap) =>
+          currentGap === nextGapValue ? currentGap : nextGapValue,
+        );
+      });
+    };
+
+    updateGap();
+
+    const resizeObserver =
+      typeof ResizeObserver === "undefined"
+        ? null
+        : new ResizeObserver(updateGap);
+
+    resizeObserver?.observe(measurementTarget);
+    window.addEventListener("resize", updateGap);
+
+    return () => {
+      if (frame) {
+        window.cancelAnimationFrame(frame);
+      }
+
+      resizeObserver?.disconnect();
+      window.removeEventListener("resize", updateGap);
+    };
+  }, [
+    responsiveAssetGap?.maxPx,
+    responsiveAssetGap?.minPx,
+    responsiveAssetGap?.tightLanePx,
+    responsiveAssetGap?.wideLanePx,
+  ]);
+
+  if (stackGap) {
+    stackStyle["--project-device-stack-gap"] = stackGap;
+  }
+
+  return (
+    <span className="carousel-button-project" ref={stackRef} style={stackStyle}>
+      {mobilePlatforms.map((platform) => (
+        <PhoneMark key={platform} mobilePlatforms={[platform]} />
+      ))}
+      {hasTablet ? <TabletMark /> : null}
+      {hasWeb ? <WebMark /> : null}
+    </span>
   );
 }
 
@@ -553,19 +667,12 @@ export function ProjectCarouselButton() {
                 {activeProject.category}
               </span>
             </span>
-            <span
-              className="carousel-button-project"
-              style={{
-                color: projectNameColors[activeProject.tone],
-                gap: "clamp(0.18em, 1.1vw, 0.34em)",
-              }}
-            >
-              {activeProject.mobilePlatforms.map((platform) => (
-                <PhoneMark key={platform} mobilePlatforms={[platform]} />
-              ))}
-              {activeProject.hasTablet ? <TabletMark /> : null}
-              {activeProject.hasWeb ? <WebMark /> : null}
-            </span>
+            <ProjectDeviceStack
+              color={projectNameColors[activeProject.tone]}
+              hasTablet={activeProject.hasTablet}
+              hasWeb={activeProject.hasWeb}
+              mobilePlatforms={activeProject.mobilePlatforms}
+            />
           </span>
         </span>
       </a>
