@@ -59,6 +59,7 @@ type CaseStudy = {
   stat: string;
   tags: string[];
   title: string;
+  worklogStat: string;
 };
 
 function LinkedInMark() {
@@ -217,7 +218,8 @@ const caseStudies: CaseStudy[] = [
       "and motion foundations for streaming identity.",
     ],
     tags: ["Kotlin", "Compose", "Gradle", "Android", "Figma", "Animation"],
-    stat: "3 commits",
+    stat: "35 commits",
+    worklogStat: "9 worklogs",
     screenshots: [
       {
         alt: "Cinerific intro logo frame",
@@ -238,7 +240,8 @@ const caseStudies: CaseStudy[] = [
       "EAS builds, and release-ready mobile polish.",
     ],
     tags: ["React Native", "Expo", "Stripe", "Postmark", "Node.js", "EAS"],
-    stat: "328 commits",
+    stat: "333 commits",
+    worklogStat: "44 worklogs",
     screenshots: [
       {
         alt: "Alla Vostra startup screen",
@@ -265,12 +268,13 @@ const caseStudies: CaseStudy[] = [
       "assets, animation, and Figma translation workflows.",
     ],
     tags: ["React Native", "Expo Router", "TypeScript", "SVG", "Animation", "Figma"],
-    stat: "94 commits",
+    stat: "82 commits",
+    worklogStat: "0 worklogs",
     screenshots: [],
   },
   {
     id: "this-portfolio-website",
-    title: "This Portfolio Website",
+    title: "Prahl.dev (This Website)",
     eyebrowLines: ["Next.js portfolio", "Prahl.dev web site"],
     descriptionLines: [
       "This Portfolio Website is a responsive Prahl.dev",
@@ -279,7 +283,8 @@ const caseStudies: CaseStudy[] = [
       "custom assets, and static export deployment.",
     ],
     tags: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Motion", "Lucide"],
-    stat: "Live portfolio",
+    stat: "42 commits",
+    worklogStat: "9 worklogs",
     screenshots: [
       {
         alt: "Prahl.dev portfolio website landscape hero screenshot",
@@ -447,6 +452,17 @@ function SectionHeading({
 function CaseStudyTitle({ study }: { study: CaseStudy }) {
   const variant = caseTitleVariants[study.id];
 
+  if (study.id === "this-portfolio-website") {
+    return (
+      <h3 aria-label={study.title}>
+        <span className="case-card-title-underline">Prahl.dev</span>{"  "}
+        <span className="case-card-title-parenthetical">
+          (<span className="case-card-title-parenthetical-text">This Website</span>)
+        </span>
+      </h3>
+    );
+  }
+
   if (!variant) {
     return <h3>{study.title}</h3>;
   }
@@ -506,7 +522,10 @@ function CaseStudyCard({ study }: { study: CaseStudy }) {
     <>
       <div className="case-topline">
         <CaseEyebrow label={eyebrow} lines={study.eyebrowLines} />
-        <strong>{study.stat}</strong>
+        <div className="case-stat-stack">
+          <strong>{study.stat}</strong>
+          <span className="case-worklog-stat">{study.worklogStat}</span>
+        </div>
       </div>
       <CaseStudyTitle study={study} />
       <CaseDescription label={description} lines={study.descriptionLines} />
@@ -601,7 +620,13 @@ export default function Home() {
                 <span className="hero-eyebrow-box">Back-end</span>
                 <span className="hero-eyebrow-period">.</span>
               </p>
-              <h1>RN / Kotlin Full-Stack Mobile Developer</h1>
+              <h1>
+                Full-Stack
+                <br />
+                RN / Kotlin
+                <br />
+                Mobile Developer
+              </h1>
               <HeroLede />
 
               <div className="hero-actions">

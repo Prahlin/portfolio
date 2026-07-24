@@ -472,7 +472,7 @@ const stackGroups = [
 ];
 
 const proofItems = [
-  "328 commits",
+  "333 commits",
   "Full-stack mobile implementation",
   "Payment integration",
   "Android QA and release prep",
@@ -606,7 +606,7 @@ export default function AllaVostraCaseStudy() {
                 src="/images/confirmed_overlay_small.png"
               />
               <div className="av-showcase-proof">
-                <strong>328 commits</strong>
+                <strong>333 commits</strong>
                 <span>Full-stack ordering, payment, QA, and release work.</span>
               </div>
             </div>

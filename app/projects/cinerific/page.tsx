@@ -471,7 +471,7 @@ const stackGroups = [
 ];
 
 const proofItems = [
-  "328 commits",
+  "35 commits",
   "Full-stack mobile implementation",
   "Payment integration",
   "Android QA and release prep",
@@ -585,7 +585,7 @@ export default function CinerificCaseStudy() {
                 className="av-device-confirm"
               />
               <div className="av-showcase-proof">
-                <strong>328 commits</strong>
+                <strong>35 commits</strong>
                 <span>Full-stack ordering, payment, QA, and release work.</span>
               </div>
             </div>

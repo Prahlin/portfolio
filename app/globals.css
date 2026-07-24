@@ -752,7 +752,7 @@ h3 {
   border-radius: 999px;
   color: #d8ffe4;
   font-size: 13px;
-  font-weight: 700;
+  font-weight: 400;
   padding: 8px 11px;
 }
 
@@ -1203,6 +1203,13 @@ section:not(.hero) {
   min-width: 0;
 }
 
+.case-stat-stack {
+  display: grid;
+  gap: 7px;
+  justify-items: center;
+  width: 112px;
+}
+
 .case-eyebrow {
   color: var(--green);
   display: grid;
@@ -1248,8 +1255,33 @@ section:not(.hero) {
   width: 112px;
 }
 
+.case-worklog-stat {
+  color: var(--mint);
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 1;
+  opacity: 0.5;
+  text-align: center;
+  white-space: nowrap;
+}
+
 .case-card h3 {
   margin: 54px 0 14px;
+}
+
+.case-card-title-underline {
+  text-decoration: underline;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.12em;
+}
+
+.case-card-title-parenthetical {
+  font-weight: 200;
+  opacity: 0.25;
+}
+
+.case-card-title-parenthetical-text {
+  font-style: italic;
 }
 
 .case-card-title-stack {
@@ -1405,16 +1437,25 @@ section:not(.hero) {
 .capability-grid {
   display: grid;
   gap: 18px;
-  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: auto;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .capability-grid div {
+  min-width: 0;
   padding: 24px;
+}
+
+.capability-grid h3 {
+  min-width: 0;
+  overflow-wrap: anywhere;
 }
 
 .capability-grid svg {
   color: var(--green);
+  display: block;
   margin-bottom: 30px;
+  max-width: 100%;
 }
 
 .worklog-layout {
@@ -2248,7 +2289,7 @@ section.project-hero {
   .feature-grid,
   .decision-grid,
   .architecture-map {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .ownership-grid,
@@ -2368,9 +2409,12 @@ section.project-hero {
     width: min(84vw, 268px);
   }
 
-  .case-grid,
-  .capability-grid {
+  .case-grid {
     grid-template-columns: 1fr;
+  }
+
+  .stack-section .capability-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .case-card {
