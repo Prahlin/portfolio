@@ -30,9 +30,9 @@ type NavItem = {
 
 const navItems: NavItem[] = [
   { href: "#top", isBrand: true, label: "Prahl.dev" },
-  { href: "#case-studies", label: "Case Studies" },
-  { href: "#stack", label: "Stack" },
   { href: "#worklog", label: "Worklog" },
+  { href: "#stack", label: "Stack" },
+  { href: "#case-studies", label: "Case Studies" },
   { label: "Articles" },
   { label: "About Dev" },
   { href: "#contact", label: "Contact" },
@@ -40,8 +40,17 @@ const navItems: NavItem[] = [
 
 const navRowSplitIndex = 3;
 const navTopRowItems = navItems.slice(0, navRowSplitIndex);
+const navTopBrandItem = navTopRowItems[0];
+const navTopLinkItems = navTopRowItems.slice(1);
 const navBottomRowItems = navItems.slice(navRowSplitIndex);
-const navEmphasisLabels = new Set(["Case Studies", "Stack", "About Dev"]);
+const navEmphasisLabels = new Set([
+  "Case Studies",
+  "Stack",
+  "Worklog",
+  "Articles",
+  "About Dev",
+  "Contact",
+]);
 
 const stackChips = [
   "React Native",
@@ -535,6 +544,24 @@ function NavLinkRow({
   );
 }
 
+function NavTopLinkRow() {
+  return (
+    <span className="nav-link-row nav-link-row-top">
+      <NavLinkItem item={navTopBrandItem} />
+      <span className="nav-top-distribution">
+        <NavLinkItem item={navTopLinkItems[0]} />
+        <span
+          className="nav-separator nav-separator-top-center"
+          aria-hidden="true"
+        >
+          |
+        </span>
+        <NavLinkItem item={navTopLinkItems[1]} />
+      </span>
+    </span>
+  );
+}
+
 function CaseStudyTitle({ study }: { study: CaseStudy }) {
   const variant = caseTitleVariants[study.id];
 
@@ -684,11 +711,7 @@ export default function Home() {
         <div className="site-shell">
           <header className="nav-bar">
             <nav aria-label="Main navigation">
-              <NavLinkRow
-                firstSeparatorClassName="nav-separator-brand"
-                className="nav-link-row-top"
-                items={navTopRowItems}
-              />
+              <NavTopLinkRow />
               <NavLinkRow
                 className="nav-link-row-bottom"
                 items={navBottomRowItems}
