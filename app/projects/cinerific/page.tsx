@@ -4,7 +4,7 @@ import { ArrowLeft, ArrowRight, Braces, Mail } from "lucide-react";
 import ExpandableFlowStacks from "./ExpandableFlowStacks";
 
 export const metadata: Metadata = {
-  title: "Cinerific | Full-Stack Mobile Commerce Case Study",
+  title: "Cinerific | Full Stack Mobile Commerce Case Study",
   description:
     "Cinerific case study covering React Native, Expo, Stripe, Postmark, Node.js serverless routes, Android QA, EAS builds, and Play Store preparation.",
 };
@@ -472,7 +472,7 @@ const stackGroups = [
 
 const proofItems = [
   "35 commits",
-  "Full-stack mobile implementation",
+  "Full stack mobile implementation",
   "Payment integration",
   "Android QA and release prep",
   "Transactional messaging support",
@@ -537,7 +537,7 @@ export default function CinerificCaseStudy() {
               <p className="eyebrow">Mobile Commerce Case Study</p>
               <h1>Cinerific</h1>
               <p className="project-subtitle">
-                Flagship full-stack mobile commerce app
+                Flagship full stack mobile commerce app
               </p>
               <p className="project-hero-text">
                 Cinerific is a mobile commerce project focused on polished
@@ -586,7 +586,7 @@ export default function CinerificCaseStudy() {
               />
               <div className="av-showcase-proof">
                 <strong>35 commits</strong>
-                <span>Full-stack ordering, payment, QA, and release work.</span>
+                <span>Full stack ordering, payment, QA, and release work.</span>
               </div>
             </div>
           </div>
@@ -598,7 +598,7 @@ export default function CinerificCaseStudy() {
           <SectionHeading kicker="Overview" title="Overview" />
           <div className="project-copy-panel">
             <p>
-              Cinerific was built as a full-stack mobile ordering experience
+              Cinerific was built as a full stack mobile ordering experience
               where the product quality had to hold up across interface design,
               payment handling, confirmation flows, and Android release
               preparation.
@@ -822,7 +822,7 @@ export default function CinerificCaseStudy() {
       <section id="contact">
         <div className="site-shell closing-panel">
           <div>
-            <p className="eyebrow">Full-stack mobile work</p>
+            <p className="eyebrow">Full stack mobile work</p>
             <h2>Interested in this kind of build?</h2>
             <p>
               This project reflects the kind of work I want to keep doing:

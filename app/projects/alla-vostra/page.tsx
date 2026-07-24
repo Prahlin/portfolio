@@ -5,7 +5,7 @@ import { ArrowLeft, ArrowRight, Braces, Mail } from "lucide-react";
 import ExpandableFlowStacks from "./ExpandableFlowStacks";
 
 export const metadata: Metadata = {
-  title: "Alla Vostra | Full-Stack Mobile Commerce Case Study",
+  title: "Alla Vostra | Full Stack Mobile Commerce Case Study",
   description:
     "Alla Vostra case study covering React Native, Expo, Stripe, Postmark, Node.js serverless routes, Android QA, EAS builds, and Play Store preparation.",
 };
@@ -473,7 +473,7 @@ const stackGroups = [
 
 const proofItems = [
   "333 commits",
-  "Full-stack mobile implementation",
+  "Full stack mobile implementation",
   "Payment integration",
   "Android QA and release prep",
   "Transactional messaging support",
@@ -551,7 +551,7 @@ export default function AllaVostraCaseStudy() {
               <p className="eyebrow">Mobile Commerce Case Study</p>
               <h1>Alla Vostra</h1>
               <p className="project-subtitle">
-                Flagship full-stack mobile commerce app
+                Flagship full stack mobile commerce app
               </p>
               <p className="project-hero-text">
                 Alla Vostra is a mobile commerce project focused on polished
@@ -607,7 +607,7 @@ export default function AllaVostraCaseStudy() {
               />
               <div className="av-showcase-proof">
                 <strong>333 commits</strong>
-                <span>Full-stack ordering, payment, QA, and release work.</span>
+                <span>Full stack ordering, payment, QA, and release work.</span>
               </div>
             </div>
           </div>
@@ -619,7 +619,7 @@ export default function AllaVostraCaseStudy() {
           <SectionHeading kicker="Overview" title="Overview" />
           <div className="project-copy-panel">
             <p>
-              Alla Vostra was built as a full-stack mobile ordering experience
+              Alla Vostra was built as a full stack mobile ordering experience
               where the product quality had to hold up across interface design,
               payment handling, confirmation flows, and Android release
               preparation.
@@ -847,7 +847,7 @@ export default function AllaVostraCaseStudy() {
       <section id="contact">
         <div className="site-shell closing-panel">
           <div>
-            <p className="eyebrow">Full-stack mobile work</p>
+            <p className="eyebrow">Full stack mobile work</p>
             <h2>Interested in this kind of build?</h2>
             <p>
               This project reflects the kind of work I want to keep doing:

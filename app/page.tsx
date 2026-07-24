@@ -19,8 +19,15 @@ import {
   ProjectCarouselButton,
   ProjectDeviceStack,
 } from "./ProjectCarouselButton";
+import { ProofStats } from "./ProofStats";
 
-const navItems = ["Case Studies", "Stack", "Worklog", "Contact"];
+const navItems = [
+  { href: "#case-studies", label: "Case Studies" },
+  { href: "#stack", label: "Stack" },
+  { href: "#worklog", label: "Worklog" },
+  { label: "About" },
+  { href: "#contact", label: "Contact" },
+];
 
 const stackChips = [
   "React Native",
@@ -36,12 +43,12 @@ const stackChips = [
 
 const proofStats = [
   {
-    label: "Full-Stack Expertise",
-    value: "3y",
+    label: "Full Stack Expertise",
+    value: "3yrs",
   },
-  { label: "Quality GitHub Commits", value: "1k+" },
-  { label: "Production Ready Releases", value: "6" },
-  { label: "Store Front Publications", value: "6" },
+  { label: "Quality GitHub Commits", value: "1.0k+" },
+  { label: "Real-Time Project Worklogs", value: "0.1k+" },
+  { label: "Shipped Mob/Web Products", value: "8" },
 ];
 
 type CaseScreenshot = {
@@ -231,7 +238,7 @@ const caseStudies: CaseStudy[] = [
   {
     id: "alla-vostra",
     title: "Alla Vostra",
-    eyebrowLines: ["Full-stack mobile", "Stripe checkout UX"],
+    eyebrowLines: ["Full stack mobile", "Stripe checkout UX"],
     href: "/projects/alla-vostra",
     descriptionLines: [
       "Alla Vostra is a React Native and",
@@ -306,6 +313,8 @@ const worklogItems = [
   "Android Small, Standard, and Large emulator QA with release-ready EAS builds",
 ];
 
+const caseTitleMatchedWebIconScale = 1.6133333333333333;
+
 const caseTitleVariants: Record<
   string,
   {
@@ -314,6 +323,7 @@ const caseTitleVariants: Record<
     hasTablet?: boolean;
     hasWeb?: boolean;
     mobilePlatforms: MobilePlatform[];
+    webIconScale?: number;
   }
 > = {
   "alla-vostra": {
@@ -321,6 +331,7 @@ const caseTitleVariants: Record<
     fontSize: "29.89px",
     hasWeb: true,
     mobilePlatforms: ["android", "apple"],
+    webIconScale: caseTitleMatchedWebIconScale,
   },
   cinerific: {
     color: "#b88cff",
@@ -454,10 +465,20 @@ function CaseStudyTitle({ study }: { study: CaseStudy }) {
 
   if (study.id === "this-portfolio-website") {
     return (
-      <h3 aria-label={study.title}>
-        <span className="case-card-title-underline">Prahl.dev</span>{"  "}
-        <span className="case-card-title-parenthetical">
-          (<span className="case-card-title-parenthetical-text">This Website</span>)
+      <h3 className="case-card-title-stack" aria-label={study.title}>
+        <span className="case-card-project-title-name-stack case-card-portfolio-title-stack">
+          <span className="case-card-title-underline">Prahl.dev</span>
+          <span className="case-card-title-website-label">(THIS WEBSITE)</span>
+        </span>
+        <span className="case-card-title-device-stack" aria-hidden="true">
+          <ProjectDeviceStack
+            assetGap="0.42em"
+            color="#ffb866"
+            hasWeb
+            mobilePlatforms={[]}
+            responsiveAssetGap={caseTitleDeviceGap}
+            webIconScale={caseTitleMatchedWebIconScale}
+          />
         </span>
       </h3>
     );
@@ -505,6 +526,7 @@ function CaseStudyTitle({ study }: { study: CaseStudy }) {
           hasWeb={variant.hasWeb}
           mobilePlatforms={variant.mobilePlatforms}
           responsiveAssetGap={caseTitleDeviceGap}
+          webIconScale={variant.webIconScale}
         />
       </span>
     </h3>
@@ -521,7 +543,7 @@ function CaseStudyCard({ study }: { study: CaseStudy }) {
   const content = (
     <>
       <div className="case-topline">
-        <CaseEyebrow label={eyebrow} lines={study.eyebrowLines} />
+        <CaseEyebrow label={eyebrow} />
         <div className="case-stat-stack">
           <strong>{study.stat}</strong>
           <span className="case-worklog-stat">{study.worklogStat}</span>
@@ -593,12 +615,15 @@ export default function Home() {
 
             <nav aria-label="Main navigation">
               {navItems.map((item) => (
-                <a
-                  key={item}
-                  href={`#${item.toLowerCase().replace(" ", "-")}`}
-                >
-                  {item}
-                </a>
+                item.href ? (
+                  <a key={item.label} href={item.href}>
+                    {item.label}
+                  </a>
+                ) : (
+                  <span className="nav-text" key={item.label}>
+                    {item.label}
+                  </span>
+                )
               ))}
             </nav>
           </header>
@@ -621,7 +646,7 @@ export default function Home() {
                 <span className="hero-eyebrow-period">.</span>
               </p>
               <h1>
-                Full-Stack
+                Full Stack
                 <br />
                 RN / Kotlin
                 <br />
@@ -793,19 +818,14 @@ export default function Home() {
                   title="CreditKing"
                   metric="Finance UI"
                   variant="finance"
+                  screenImageSrc="/images/editor-window-screenshot.png"
+                  screenImageAlt="Prahl.dev portfolio portrait screenshot"
                 />
               </div>
             </div>
           </div>
 
-          <div className="stats-strip" aria-label="Project proof points">
-            {proofStats.map((stat) => (
-              <div key={stat.label}>
-                <strong>{stat.value}</strong>
-                <span>{stat.label}</span>
-              </div>
-            ))}
-          </div>
+          <ProofStats stats={proofStats} />
         </div>
       </section>
 
@@ -828,7 +848,7 @@ export default function Home() {
         <div className="site-shell split-section">
           <SectionHeading
             kicker="Stack"
-            title="Built around React Native, shaped for full-stack delivery"
+            title="Built around React Native, shaped for full stack delivery"
           />
           <div className="capability-grid">
             <div>
@@ -879,7 +899,7 @@ export default function Home() {
       <section className="contact-section" id="contact">
         <div className="site-shell contact-panel">
           <div>
-            <p className="eyebrow">Available for full-stack mobile work</p>
+            <p className="eyebrow">Available for full stack mobile work</p>
             <h2>Let’s build something crisp, fast, and release-ready.</h2>
           </div>
           <a

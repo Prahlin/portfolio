@@ -6,11 +6,11 @@ export const metadata: Metadata = {
   metadataBase: new URL(
     process.env.NEXT_PUBLIC_SITE_URL || "https://prahl.dev",
   ),
-  title: "Prahl.dev | React Native Full-Stack Mobile Developer",
+  title: "Prahl.dev | React Native Full Stack Mobile Developer",
   description:
-    "Portfolio for Prahl.dev, a React Native full-stack mobile developer building polished mobile apps, secure checkout flows, and production-ready Android pipelines.",
+    "Portfolio for Prahl.dev, a React Native full stack mobile developer building polished mobile apps, secure checkout flows, and production-ready Android pipelines.",
   openGraph: {
-    title: "Prahl.dev | React Native Full-Stack Mobile Developer",
+    title: "Prahl.dev | React Native Full Stack Mobile Developer",
     description:
       "React Native, Next.js, Tailwind CSS, Node.js, and Kotlin mobile portfolio.",
     images: ["/images/start-page-mockup-reference.png"],

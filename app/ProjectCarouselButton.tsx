@@ -268,15 +268,17 @@ function TabletMark() {
   );
 }
 
-function WebMark() {
+function WebMark({ scale = 1 }: { scale?: number }) {
+  const size = `${(1.2 * scale).toFixed(3)}em`;
+
   return (
     <svg
       aria-hidden
       className="carousel-button-web"
-      height="1.2em"
-      style={{ height: "1.2em", width: "1.2em" }}
+      height={size}
+      style={{ height: size, width: size }}
       viewBox="0 0 24 24"
-      width="1.2em"
+      width={size}
     >
       <circle className="web-globe-shell" cx="12" cy="12" r="8.2" />
       <path className="web-globe-line" d="M3.8 12h16.4" />
@@ -295,6 +297,7 @@ export function ProjectDeviceStack({
   hasWeb,
   mobilePlatforms,
   responsiveAssetGap,
+  webIconScale,
 }: {
   assetGap?: string;
   color: string;
@@ -302,6 +305,7 @@ export function ProjectDeviceStack({
   hasWeb?: boolean;
   mobilePlatforms: MobilePlatform[];
   responsiveAssetGap?: ResponsiveAssetGap;
+  webIconScale?: number;
 }) {
   const stackRef = useRef<HTMLSpanElement>(null);
   const [measuredAssetGap, setMeasuredAssetGap] = useState<string | null>(null);
@@ -390,7 +394,7 @@ export function ProjectDeviceStack({
         <PhoneMark key={platform} mobilePlatforms={[platform]} />
       ))}
       {hasTablet ? <TabletMark /> : null}
-      {hasWeb ? <WebMark /> : null}
+      {hasWeb ? <WebMark scale={webIconScale} /> : null}
     </span>
   );
 }
