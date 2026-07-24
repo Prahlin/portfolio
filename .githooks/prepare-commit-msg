@@ -1,0 +1,7 @@
+#!/bin/sh
+
+command -v node >/dev/null 2>&1 || exit 0
+
+repo_root=$(git rev-parse --show-toplevel 2>/dev/null) || exit 0
+
+node "$repo_root/scripts/generate-commit-message.mjs" "$@"

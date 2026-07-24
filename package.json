@@ -7,7 +7,8 @@
     "build": "next build",
     "build:static": "NEXT_OUTPUT=export next build",
     "start": "next start",
-    "check": "tsc --noEmit"
+    "check": "tsc --noEmit",
+    "setup:commit-hook": "git config core.hooksPath .githooks"
   },
   "dependencies": {
     "lucide-react": "1.24.0",
