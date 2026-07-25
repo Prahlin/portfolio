@@ -1,0 +1,396 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [6 0 R 8 0 R 10 0 R 12 0 R 14 0 R 16 0 R] /Count 6 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+5 0 obj
+<< /Length 6551 >>
+stream
+BT /F2 12.20 Tf 54.00 738.00 Td (Prahlin Portfolio Work Log - July 25, 2026) Tj ET
+BT /F1 9.20 Tf 54.00 724.00 Td (Compiled summary for Saturday, July 25, 2026 - focus: continued Prahl.dev Portfolio landing-page) Tj ET
+BT /F1 9.20 Tf 54.00 712.75 Td (refinement after the July 24 navigation, Articles, and Cinerific hero-tablet pass, including) Tj ET
+BT /F1 9.20 Tf 54.00 701.50 Td (Full-Stack React Native / Kotlin positioning, Instagram-to-Resume CTA replacement, official) Tj ET
+BT /F1 9.20 Tf 54.00 690.25 Td (LinkedIn URL and blue-color correction, social-button icon/text order changes, layered text and) Tj ET
+BT /F1 9.20 Tf 54.00 679.00 Td (icon stroke treatments, responsive hero stack scaling through the one-card case-study) Tj ET
+BT /F1 9.20 Tf 54.00 667.75 Td (breakpoint, proof-stat one-row behavior, Full-Stack Expertise label wrapping, local) Tj ET
+BT /F1 9.20 Tf 54.00 656.50 Td (development-cache resets, public pushes, refreshed project snapshot context, review of all prior) Tj ET
+BT /F1 9.20 Tf 54.00 645.25 Td (Portfolio PDF worklogs, and generation of the daily Portfolio PDF worklog.) Tj ET
+BT /F1 9.20 Tf 54.00 622.75 Td (Generated in continuity with the established Prahlin Portfolio daily worklog cadence: compact) Tj ET
+BT /F1 9.20 Tf 54.00 611.50 Td (opening summary, source-material section, baseline section, goal list, work-completed sections,) Tj ET
+BT /F1 9.20 Tf 54.00 600.25 Td (validation section, files-touched list, follow-up context, and output-artifact close.) Tj ET
+BT /F1 9.20 Tf 54.00 577.75 Td (This artifact intentionally covers only Prahlin/portfolio work performed during the July 25) Tj ET
+BT /F1 9.20 Tf 54.00 566.50 Td (local project session: the refreshed project snapshot, review of every pre-existing Portfolio) Tj ET
+BT /F1 9.20 Tf 54.00 555.25 Td (worklog PDF, the landing-page/social/proof-stat work represented by commits bbc789d, 98ab7b5,) Tj ET
+BT /F1 9.20 Tf 54.00 544.00 Td (and dbf93a8, the local VS Code preview and development-cache handling, validation checks, public) Tj ET
+BT /F1 9.20 Tf 54.00 532.75 Td (synchronization to origin/main, and this worklog-generation step. Alla Vostra, Cinerific, and) Tj ET
+BT /F1 9.20 Tf 54.00 521.50 Td (Credit King application repositories were not changed for this record.) Tj ET
+BT /F2 10.20 Tf 54.00 499.00 Td (Source Materials Reviewed) Tj ET
+BT /F1 9.20 Tf 54.00 487.75 Td (- Ran ./read_project.sh from /Users/prahlin/gh/portfolio and regenerated) Tj ET
+BT /F1 9.20 Tf 54.00 476.50 Td (  portfolio_PROJECT_SNAPSHOT.txt before writing this worklog, preserving the project) Tj ET
+BT /F1 9.20 Tf 54.00 465.25 Td (  convention that Codex refreshes the current source snapshot before continuing Portfolio) Tj ET
+BT /F1 9.20 Tf 54.00 454.00 Td (  work.) Tj ET
+BT /F1 9.20 Tf 54.00 442.75 Td (- Reviewed the refreshed portfolio_PROJECT_SNAPSHOT.txt, including the current source tree,) Tj ET
+BT /F1 9.20 Tf 54.00 431.50 Td (  app source dumps, root/tooling/deployment configuration, public image inventory, PDF) Tj ET
+BT /F1 9.20 Tf 54.00 420.25 Td (  inventory, git context, and the standing instruction to ask for a commit message before) Tj ET
+BT /F1 9.20 Tf 54.00 409.00 Td (  committing or pushing.) Tj ET
+BT /F1 9.20 Tf 54.00 397.75 Td (- Reviewed every pre-existing Portfolio root-level worklog PDF: portfolio_worklog_july11.pdf,) Tj ET
+BT /F1 9.20 Tf 54.00 386.50 Td (  portfolio_worklog_july14.pdf, portfolio_worklog_july15_part1.pdf,) Tj ET
+BT /F1 9.20 Tf 54.00 375.25 Td (  portfolio_worklog_july15_part2.pdf, portfolio_worklog_july16.pdf,) Tj ET
+BT /F1 9.20 Tf 54.00 364.00 Td (  portfolio_worklog_july19.pdf, portfolio_worklog_july20.pdf, portfolio_worklog_july21.pdf,) Tj ET
+BT /F1 9.20 Tf 54.00 352.75 Td (  portfolio_worklog_july22.pdf, portfolio_worklog_july23.pdf, and) Tj ET
+BT /F1 9.20 Tf 54.00 341.50 Td (  portfolio_worklog_july24.pdf.) Tj ET
+BT /F1 9.20 Tf 54.00 330.25 Td (- Extracted text from all eleven existing Portfolio PDFs with pdftotext to preserve the same) Tj ET
+BT /F1 9.20 Tf 54.00 319.00 Td (  title cadence, opening summary density, section order, compact bullet-heavy technical voice,) Tj ET
+BT /F1 9.20 Tf 54.00 307.75 Td (  validation language, files-touched list, follow-up context, and output-artifact close.) Tj ET
+BT /F1 9.20 Tf 54.00 296.50 Td (- Used portfolio_worklog_july24.pdf as the closest same-project reference because it) Tj ET
+BT /F1 9.20 Tf 54.00 285.25 Td (  documented the latest landing-page/nav/social responsive work, source-material review) Tj ET
+BT /F1 9.20 Tf 54.00 274.00 Td (  approach, development-cache reset language, PDF metadata expectations, and current) Tj ET
+BT /F1 9.20 Tf 54.00 262.75 Td (  root-level naming convention.) Tj ET
+BT /F1 9.20 Tf 54.00 251.50 Td (- Checked portfolio_worklog_july24.pdf metadata with pdfinfo and confirmed mature Portfolio) Tj ET
+BT /F1 9.20 Tf 54.00 240.25 Td (  artifacts use letter-size pages, Helvetica/Helvetica-Bold base fonts, six-page compact) Tj ET
+BT /F1 9.20 Tf 54.00 229.00 Td (  bodies, root-level filenames, and Codex standard-library PDF-generator metadata.) Tj ET
+BT /F1 9.20 Tf 54.00 217.75 Td (- Reviewed July 25 Git history through git log, git show --stat, git diff --stat, git diff) Tj ET
+BT /F1 9.20 Tf 54.00 206.50 Td (  --name-status, targeted source inspection, and the final HEAD/origin/main match at dbf93a8.) Tj ET
+BT /F1 9.20 Tf 54.00 195.25 Td (- Reviewed the committed source scopes for bbc789d, 98ab7b5, and dbf93a8, covering landing) Tj ET
+BT /F1 9.20 Tf 54.00 184.00 Td (  hero text, top-nav spacing, Resume CTA conversion, social-button ordering, official LinkedIn) Tj ET
+BT /F1 9.20 Tf 54.00 172.75 Td (  wiring, proof-stat behavior, icon-box scaling, responsive social gaps, and public push) Tj ET
+BT /F1 9.20 Tf 54.00 161.50 Td (  state.) Tj ET
+BT /F1 9.20 Tf 54.00 150.25 Td (- Reviewed app/page.tsx, app/globals.css, app/ProjectCarouselButton.tsx, app/ProofStats.tsx,) Tj ET
+BT /F1 9.20 Tf 54.00 139.00 Td (  package.json, read_project.sh, the refreshed project snapshot, and the root-level Portfolio) Tj ET
+BT /F1 9.20 Tf 54.00 127.75 Td (  PDF inventory before generating this artifact.) Tj ET
+BT /F1 9.20 Tf 54.00 116.50 Td (- Checked the local development route at http://127.0.0.1:3000/ after the July 25 work and) Tj ET
+BT /F1 9.20 Tf 54.00 105.25 Td (  confirmed the route returned 200 OK from the running Next.js dev server.) Tj ET
+BT /F2 10.20 Tf 54.00 82.75 Td (Baseline Status Before July 25 Work) Tj ET
+BT /F1 9.00 Tf 202.37 34.00 Td (Prahlin Portfolio Work Log - July 25, 2026 Page 1) Tj ET
+endstream
+endobj
+6 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 5 0 R >>
+endobj
+7 0 obj
+<< /Length 6612 >>
+stream
+BT /F1 9.20 Tf 54.00 738.00 Td (- The July 24 Portfolio site already had the Prahl.dev brand card, responsive two-row) Tj ET
+BT /F1 9.20 Tf 54.00 726.75 Td (  navigation, invisible-but-spaced Articles link, dedicated Articles route, UI/UX Philosophy) Tj ET
+BT /F1 9.20 Tf 54.00 715.50 Td (  card grid, long-copy collapse behavior, article scroll fixes, and Cinerific promo artwork) Tj ET
+BT /F1 9.20 Tf 54.00 704.25 Td (  inside the landing hero tablet.) Tj ET
+BT /F1 9.20 Tf 54.00 693.00 Td (- The landing hero still needed final positioning copy. The visible headline and surrounding) Tj ET
+BT /F1 9.20 Tf 54.00 681.75 Td (  role language had moved through Full Stack, RN / Kotlin, and Mobile Developer variants, but) Tj ET
+BT /F1 9.20 Tf 54.00 670.50 Td (  the user wanted the page to present Full-Stack React Native / Kotlin Developer as the core) Tj ET
+BT /F1 9.20 Tf 54.00 659.25 Td (  first-viewport signal.) Tj ET
+BT /F1 9.20 Tf 54.00 648.00 Td (- The social CTA row still carried the previous Instagram replacement work from July 24 and) Tj ET
+BT /F1 9.20 Tf 54.00 636.75 Td (  needed to become a Resume control with the user-requested spelling, icon, color treatment,) Tj ET
+BT /F1 9.20 Tf 54.00 625.50 Td (  and social-button-box parity.) Tj ET
+BT /F1 9.20 Tf 54.00 614.25 Td (- The LinkedIn social button still needed the final public destination URL at) Tj ET
+BT /F1 9.20 Tf 54.00 603.00 Td (  https://linkedin.com/in/mprahl and needed its fill color verified against official LinkedIn) Tj ET
+BT /F1 9.20 Tf 54.00 591.75 Td (  blue rather than a nearby custom shade.) Tj ET
+BT /F1 9.20 Tf 54.00 580.50 Td (- The Resume, LinkedIn, and GitHub buttons had similar layout roles but different visual) Tj ET
+BT /F1 9.20 Tf 54.00 569.25 Td (  weights. Their icon boxes, label fills, strokes, gaps, and color contrast needed repeated) Tj ET
+BT /F1 9.20 Tf 54.00 558.00 Td (  user-directed tuning so they looked intentionally related rather than separately styled.) Tj ET
+BT /F1 9.20 Tf 54.00 546.75 Td (- The hero action/text/asset stack stopped growing too early during window widening. The user) Tj ET
+BT /F1 9.20 Tf 54.00 535.50 Td (  screenshot showed featured case studies still at one card per row while the hero) Tj ET
+BT /F1 9.20 Tf 54.00 524.25 Td (  button/text/assets had already stopped stretching or scaling.) Tj ET
+BT /F1 9.20 Tf 54.00 513.00 Td (- The proof-stat card already contained 3yrs, 1.0k+, 0.1k+, and 8, but the first label and) Tj ET
+BT /F1 9.20 Tf 54.00 501.75 Td (  narrow-window line behavior needed additional control so all four columns retained equal row) Tj ET
+BT /F1 9.20 Tf 54.00 490.50 Td (  quantity.) Tj ET
+BT /F1 9.20 Tf 54.00 479.25 Td (- The local development workflow still required occasional cache clearing because browser and) Tj ET
+BT /F1 9.20 Tf 54.00 468.00 Td (  VS Code preview surfaces could show stale Next.js output after rapid CSS and JSX iteration.) Tj ET
+BT /F2 10.20 Tf 54.00 445.50 Td (Goals for July 25) Tj ET
+BT /F1 9.20 Tf 54.00 434.25 Td (- Reposition the first viewport around Full-Stack React Native / Kotlin Developer while) Tj ET
+BT /F1 9.20 Tf 54.00 423.00 Td (  preserving the existing green/black hero visual system, role lede, CTA stack, chips, proof) Tj ET
+BT /F1 9.20 Tf 54.00 411.75 Td (  panel, and device artwork.) Tj ET
+BT /F1 9.20 Tf 54.00 400.50 Td (- Reduce the top navigation vertical spacing by the requested 25 percent without disturbing) Tj ET
+BT /F1 9.20 Tf 54.00 389.25 Td (  the two-row responsive nav behavior accepted on July 24.) Tj ET
+BT /F1 9.20 Tf 54.00 378.00 Td (- Replace the Instagram social CTA with a Resume button using a download icon, matched outer) Tj ET
+BT /F1 9.20 Tf 54.00 366.75 Td (  button box proportions, and final user-approved spelling without an accent mark.) Tj ET
+BT /F1 9.20 Tf 54.00 355.50 Td (- Point the LinkedIn button to https://linkedin.com/in/mprahl and change its blue to the) Tj ET
+BT /F1 9.20 Tf 54.00 344.25 Td (  official LinkedIn company/web color requested by the user.) Tj ET
+BT /F1 9.20 Tf 54.00 333.00 Td (- Swap the internal social-button asset order so each social button uses icon-left/text-right) Tj ET
+BT /F1 9.20 Tf 54.00 321.75 Td (  placement, while preserving the alignment relationship between the green project CTA and the) Tj ET
+BT /F1 9.20 Tf 54.00 310.50 Td (  hero Check Out Projects label.) Tj ET
+BT /F1 9.20 Tf 54.00 299.25 Td (- Bring the three social icon boxes into visual parity by matching icon-box dimensions, then) Tj ET
+BT /F1 9.20 Tf 54.00 288.00 Td (  nudging GitHub upward where its black border visually blended into the black button fill.) Tj ET
+BT /F1 9.20 Tf 54.00 276.75 Td (- Tune the social-button label colors and stroke layers so GitHub, LinkedIn, and Resume each) Tj ET
+BT /F1 9.20 Tf 54.00 265.50 Td (  read clearly against their fills, with button-specific middle colors and black outer) Tj ET
+BT /F1 9.20 Tf 54.00 254.25 Td (  separation where requested.) Tj ET
+BT /F1 9.20 Tf 54.00 243.00 Td (- Extend hero stack scaling through the same one-card case-study responsive window range and) Tj ET
+BT /F1 9.20 Tf 54.00 231.75 Td (  stop that growth only once featured case-study cards transition from one card per row to) Tj ET
+BT /F1 9.20 Tf 54.00 220.50 Td (  multiple cards per row.) Tj ET
+BT /F1 9.20 Tf 54.00 209.25 Td (- Force the four proof stats to remain in a single row and make Full-Stack Expertise wrap as) Tj ET
+BT /F1 9.20 Tf 54.00 198.00 Td (  Full-, Stack, Expertise when the narrow-window label line count needs to match the other) Tj ET
+BT /F1 9.20 Tf 54.00 186.75 Td (  columns.) Tj ET
+BT /F1 9.20 Tf 54.00 175.50 Td (- Keep changes local until the user asked to push, then commit and push the approved source) Tj ET
+BT /F1 9.20 Tf 54.00 164.25 Td (  changes to the public main branch.) Tj ET
+BT /F2 10.20 Tf 54.00 141.75 Td (Work Completed - Hero Positioning, Nav, and Preview Workflow) Tj ET
+BT /F1 9.20 Tf 54.00 130.50 Td (- Ran the project read script and reviewed project snapshots and worklogs at the start of the) Tj ET
+BT /F1 9.20 Tf 54.00 119.25 Td (  working sequence so subsequent changes stayed grounded in the Portfolio repo conventions.) Tj ET
+BT /F1 9.20 Tf 54.00 108.00 Td (- Updated the hero headline through the requested copy sequence and landed the final two-line) Tj ET
+BT /F1 9.20 Tf 54.00 96.75 Td (  treatment as Full-Stack followed by React Native / Kotlin Developer.) Tj ET
+BT /F1 9.20 Tf 54.00 85.50 Td (- Changed the visible Full Stack wording to the hyphenated Full-Stack form where requested,) Tj ET
+BT /F1 9.00 Tf 202.37 34.00 Td (Prahlin Portfolio Work Log - July 25, 2026 Page 2) Tj ET
+endstream
+endobj
+8 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 7 0 R >>
+endobj
+9 0 obj
+<< /Length 6603 >>
+stream
+BT /F1 9.20 Tf 54.00 738.00 Td (  including the hero headline and proof-stat label path.) Tj ET
+BT /F1 9.20 Tf 54.00 726.75 Td (- Preserved the existing hero eyebrow, HeroLede component, green project CTA, stack-chip row,) Tj ET
+BT /F1 9.20 Tf 54.00 715.50 Td (  proof panel, and device-stage artwork while altering only the requested role and CTA areas.) Tj ET
+BT /F1 9.20 Tf 54.00 704.25 Td (- Reduced top-navigation vertical spacing in app/globals.css by tightening the responsive nav) Tj ET
+BT /F1 9.20 Tf 54.00 693.00 Td (  row/gap relationship from the prior July 24 state, keeping the established brand-card and) Tj ET
+BT /F1 9.20 Tf 54.00 681.75 Td (  two-row structure intact.) Tj ET
+BT /F1 9.20 Tf 54.00 670.50 Td (- Opened http://127.0.0.1:3000/ through the VS Code editor-preview flow for the user and) Tj ET
+BT /F1 9.20 Tf 54.00 659.25 Td (  clarified that the editor view uses VS Code built-in webview/browser behavior rather than) Tj ET
+BT /F1 9.20 Tf 54.00 648.00 Td (  the normal external Chrome window.) Tj ET
+BT /F1 9.20 Tf 54.00 636.75 Td (- Handled the blank editor-view moment by continuing with the local dev server and) Tj ET
+BT /F1 9.20 Tf 54.00 625.50 Td (  editor/browser preview setup until the user confirmed they had the preview open.) Tj ET
+BT /F1 9.20 Tf 54.00 614.25 Td (- Cleared the local Next.js development cache on request by moving the stale .next/dev) Tj ET
+BT /F1 9.20 Tf 54.00 603.00 Td (  directory aside and restarting the local dev server, keeping those cache resets local-only) Tj ET
+BT /F1 9.20 Tf 54.00 591.75 Td (  when requested.) Tj ET
+BT /F1 9.20 Tf 54.00 580.50 Td (- Repeated cache-clearing passes after rapid social-button and stroke-style updates so the) Tj ET
+BT /F1 9.20 Tf 54.00 569.25 Td (  visible page could catch up to the current source during the design iteration.) Tj ET
+BT /F2 10.20 Tf 54.00 546.75 Td (Work Completed - Resume, LinkedIn, and GitHub Social Buttons) Tj ET
+BT /F1 9.20 Tf 54.00 535.50 Td (- Converted the previous Instagram social CTA into a Resume CTA and replaced the) Tj ET
+BT /F1 9.20 Tf 54.00 524.25 Td (  Instagram-style visual with a custom boxed download icon.) Tj ET
+BT /F1 9.20 Tf 54.00 513.00 Td (- Iterated the Resume spelling from the accented ResumÈ treatment to the final Resume label) Tj ET
+BT /F1 9.20 Tf 54.00 501.75 Td (  after the user clarified that no accent mark should remain on the first or final e.) Tj ET
+BT /F1 9.20 Tf 54.00 490.50 Td (- Matched the Resume button outer box to the other social buttons instead of leaving it as a) Tj ET
+BT /F1 9.20 Tf 54.00 479.25 Td (  visually unrelated CTA, then adjusted its fill through several user-reviewed color options.) Tj ET
+BT /F1 9.20 Tf 54.00 468.00 Td (- Tested and discussed multiple Resume fill directions, including yellow/orange families, mint) Tj ET
+BT /F1 9.20 Tf 54.00 456.75 Td (  #A7F3D0, green options such as #15803D, neutral #CBD5E1, and the final white button fill) Tj ET
+BT /F1 9.20 Tf 54.00 445.50 Td (  with green icon-box treatment.) Tj ET
+BT /F1 9.20 Tf 54.00 434.25 Td (- Changed the Resume icon arrow/tray fill and stroke behavior repeatedly until the final) Tj ET
+BT /F1 9.20 Tf 54.00 423.00 Td (  treatment used a green icon box, white arrow/tray fill, and black icon strokes inside the) Tj ET
+BT /F1 9.20 Tf 54.00 411.75 Td (  white Resume button.) Tj ET
+BT /F1 9.20 Tf 54.00 400.50 Td (- Set the Resume label to white with a layered stroke stack, then moved the visible middle) Tj ET
+BT /F1 9.20 Tf 54.00 389.25 Td (  stroke to green so the word visually connects to the green download icon box.) Tj ET
+BT /F1 9.20 Tf 54.00 378.00 Td (- Adjusted the Resume text stroke stack through the requested values and balance passes,) Tj ET
+BT /F1 9.20 Tf 54.00 366.75 Td (  including inner black stroke behavior, green middle stroke visibility, and black outer) Tj ET
+BT /F1 9.20 Tf 54.00 355.50 Td (  hairline visibility.) Tj ET
+BT /F1 9.20 Tf 54.00 344.25 Td (- Copied the same multi-layer label-stroke model to LinkedIn and GitHub with button-specific) Tj ET
+BT /F1 9.20 Tf 54.00 333.00 Td (  middle colors: LinkedIn uses its blue middle layer, GitHub uses a charcoal/gray middle) Tj ET
+BT /F1 9.20 Tf 54.00 321.75 Td (  layer, and Resume uses green.) Tj ET
+BT /F1 9.20 Tf 54.00 310.50 Td (- Changed LinkedIn to the official requested blue #2867B2 and updated its href to) Tj ET
+BT /F1 9.20 Tf 54.00 299.25 Td (  https://linkedin.com/in/mprahl.) Tj ET
+BT /F1 9.20 Tf 54.00 288.00 Td (- Preserved the accepted LinkedIn icon-box artwork after later changes, including the white) Tj ET
+BT /F1 9.20 Tf 54.00 276.75 Td (  boxed in mark, black outline, and blue letter/shape fills.) Tj ET
+BT /F1 9.20 Tf 54.00 265.50 Td (- Inverted the GitHub button color system so the button fill became black and the GitHub) Tj ET
+BT /F1 9.20 Tf 54.00 254.25 Td (  label/icon fill shifted light, without touching LinkedIn or Resume assets during the) Tj ET
+BT /F1 9.20 Tf 54.00 243.00 Td (  GitHub-only instruction.) Tj ET
+BT /F1 9.20 Tf 54.00 231.75 Td (- Inverted the GitHub icon-box colors separately from the label so the brace mark remained) Tj ET
+BT /F1 9.20 Tf 54.00 220.50 Td (  legible inside the black social button.) Tj ET
+BT /F1 9.20 Tf 54.00 209.25 Td (- Scaled the Resume icon box up in two 10 percent passes, then matched the GitHub and LinkedIn) Tj ET
+BT /F1 9.20 Tf 54.00 198.00 Td (  icon boxes to the Resume icon-box dimensions.) Tj ET
+BT /F1 9.20 Tf 54.00 186.75 Td (- Nudged the GitHub icon box slightly larger than strict border measurement parity because its) Tj ET
+BT /F1 9.20 Tf 54.00 175.50 Td (  black border visually blended into the black button fill and made the filled icon box read) Tj ET
+BT /F1 9.20 Tf 54.00 164.25 Td (  smaller.) Tj ET
+BT /F1 9.20 Tf 54.00 153.00 Td (- Swapped the horizontal placement of text/icons inside each social button so all three) Tj ET
+BT /F1 9.20 Tf 54.00 141.75 Td (  buttons now use icon-left/text-right ordering.) Tj ET
+BT /F1 9.20 Tf 54.00 130.50 Td (- Restored the social-button horizontal gap to match across buttons after a wider Resume gap) Tj ET
+BT /F1 9.20 Tf 54.00 119.25 Td (  was rejected, then added 1px to the narrowest gap while allowing the gap to keep growing) Tj ET
+BT /F1 9.20 Tf 54.00 108.00 Td (  responsively as the window widens.) Tj ET
+BT /F1 9.20 Tf 54.00 96.75 Td (- Doubled the maximum responsive gap range during very wide hero stretching so icon and label) Tj ET
+BT /F1 9.20 Tf 54.00 85.50 Td (  assets do not remain cramped after the button stack scales up.) Tj ET
+BT /F1 9.00 Tf 202.37 34.00 Td (Prahlin Portfolio Work Log - July 25, 2026 Page 3) Tj ET
+endstream
+endobj
+10 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 9 0 R >>
+endobj
+11 0 obj
+<< /Length 6420 >>
+stream
+BT /F2 10.20 Tf 54.00 738.00 Td (Work Completed - Responsive Hero Stack and Proof Stats) Tj ET
+BT /F1 9.20 Tf 54.00 726.75 Td (- Extended hero stack scaling in the max-width: 980px responsive range by tying) Tj ET
+BT /F1 9.20 Tf 54.00 715.50 Td (  --hero-proof-stack-width, --hero-action-stack-width, and --hero-text-stack-width to) Tj ET
+BT /F1 9.20 Tf 54.00 704.25 Td (  min\(606px, 100%\).) Tj ET
+BT /F1 9.20 Tf 54.00 693.00 Td (- Aligned that 606px growth stop with the one-card featured-case-study breakpoint near 630px,) Tj ET
+BT /F1 9.20 Tf 54.00 681.75 Td (  so the hero action/text/assets continue widening while case studies are still one card per) Tj ET
+BT /F1 9.20 Tf 54.00 670.50 Td (  row.) Tj ET
+BT /F1 9.20 Tf 54.00 659.25 Td (- Responded to the user screenshot showing one case-study card per row and unchanged hero) Tj ET
+BT /F1 9.20 Tf 54.00 648.00 Td (  scaling by increasing the responsive hero stack target from the earlier value to the current) Tj ET
+BT /F1 9.20 Tf 54.00 636.75 Td (  606px value.) Tj ET
+BT /F1 9.20 Tf 54.00 625.50 Td (- Kept the green project CTA and Check Out Projects label order unchanged after discussing) Tj ET
+BT /F1 9.20 Tf 54.00 614.25 Td (  that text-left/device-assets-right within the green CTA was not itself a usability problem) Tj ET
+BT /F1 9.20 Tf 54.00 603.00 Td (  when the button still read clearly.) Tj ET
+BT /F1 9.20 Tf 54.00 591.75 Td (- Updated ProjectCarouselButton measurement logic so the Check Out Projects label aligns to) Tj ET
+BT /F1 9.20 Tf 54.00 580.50 Td (  the full GitHub icon/text cluster regardless of whether the social button uses text-first or) Tj ET
+BT /F1 9.20 Tf 54.00 569.25 Td (  icon-first internal ordering.) Tj ET
+BT /F1 9.20 Tf 54.00 558.00 Td (- Changed the social-button scaling logic so social label font size, icon size, internal) Tj ET
+BT /F1 9.20 Tf 54.00 546.75 Td (  padding, project CTA font sizes, arrow size, and view-label size are derived from the) Tj ET
+BT /F1 9.20 Tf 54.00 535.50 Td (  measured social-button height.) Tj ET
+BT /F1 9.20 Tf 54.00 524.25 Td (- Kept all three social buttons locked to the same 4.5 / 2 aspect ratio and shared hero-action) Tj ET
+BT /F1 9.20 Tf 54.00 513.00 Td (  grid so button stretching remains synchronized with the carousel CTA.) Tj ET
+BT /F1 9.20 Tf 54.00 501.75 Td (- Forced the proof-stat card to render all four items in one row instead of returning to a) Tj ET
+BT /F1 9.20 Tf 54.00 490.50 Td (  two-by-two arrangement during compressed hero widths.) Tj ET
+BT /F1 9.20 Tf 54.00 479.25 Td (- Renamed the first proof stat from Full Stack Expertise to Full-Stack Expertise and then) Tj ET
+BT /F1 9.20 Tf 54.00 468.00 Td (  restored the full phrase after an intermediate shortened Full-Stack request.) Tj ET
+BT /F1 9.20 Tf 54.00 456.75 Td (- Updated ProofStats.tsx so Full-Stack Expertise is treated as Full-, Stack, Expertise in the) Tj ET
+BT /F1 9.20 Tf 54.00 445.50 Td (  tightest label mode, allowing Stack to count as its own visual word and keeping row quantity) Tj ET
+BT /F1 9.20 Tf 54.00 434.25 Td (  equal across all four proof-stat columns.) Tj ET
+BT /F1 9.20 Tf 54.00 423.00 Td (- Preserved the other proof stat labels as Quality GitHub Commits, Real-Time Project Worklogs,) Tj ET
+BT /F1 9.20 Tf 54.00 411.75 Td (  and Shipped Mob/Web Products while letting the shared measurement controller pick one-line,) Tj ET
+BT /F1 9.20 Tf 54.00 400.50 Td (  two-line, or three-line modes.) Tj ET
+BT /F2 10.20 Tf 54.00 378.00 Td (Work Completed - Public Synchronization and Commit Handling) Tj ET
+BT /F1 9.20 Tf 54.00 366.75 Td (- Recommended commit messages in the user-requested styles during the July 25 sequence,) Tj ET
+BT /F1 9.20 Tf 54.00 355.50 Td (  including one-header plus three-to-five hyphen bullets and later one-line past-tense) Tj ET
+BT /F1 9.20 Tf 54.00 344.25 Td (  summaries when requested.) Tj ET
+BT /F1 9.20 Tf 54.00 333.00 Td (- Committed and pushed the first July 25 source pass as bbc789d, Refined landing hero, nav,) Tj ET
+BT /F1 9.20 Tf 54.00 321.75 Td (  and resume CTA, after the Resume conversion, LinkedIn URL update, top-nav spacing reduction,) Tj ET
+BT /F1 9.20 Tf 54.00 310.50 Td (  and hero scaling changes.) Tj ET
+BT /F1 9.20 Tf 54.00 299.25 Td (- Committed and pushed the second July 25 source pass as 98ab7b5, Refined hero social buttons) Tj ET
+BT /F1 9.20 Tf 54.00 288.00 Td (  and proof stats, after the social stroke layers, official LinkedIn blue, icon-first) Tj ET
+BT /F1 9.20 Tf 54.00 276.75 Td (  ordering, proof-stat one-row behavior, and Full-Stack wrapping changes.) Tj ET
+BT /F1 9.20 Tf 54.00 265.50 Td (- Committed and pushed the third July 25 source pass as dbf93a8, Refined hero social button) Tj ET
+BT /F1 9.20 Tf 54.00 254.25 Td (  spacing, labels, and icon scaling to compensate for any potential optical illusions inferred) Tj ET
+BT /F1 9.20 Tf 54.00 243.00 Td (  by the user due to color contrast between text fonts & icon box fillings/borders.) Tj ET
+BT /F1 9.20 Tf 54.00 231.75 Td (- Confirmed the final source branch state had HEAD and origin/main both at) Tj ET
+BT /F1 9.20 Tf 54.00 220.50 Td (  dbf93a85c80f54092e238381d056097e19fc1b37 before this PDF was generated.) Tj ET
+BT /F1 9.20 Tf 54.00 209.25 Td (- Kept the documentation artifact changes local during this worklog pass because the user) Tj ET
+BT /F1 9.20 Tf 54.00 198.00 Td (  requested a PDF worklog, not an additional commit or public push for the refreshed snapshot) Tj ET
+BT /F1 9.20 Tf 54.00 186.75 Td (  and new PDF.) Tj ET
+BT /F2 10.20 Tf 54.00 164.25 Td (Validation and Checks Performed) Tj ET
+BT /F1 9.20 Tf 54.00 153.00 Td (- Ran npm run check after the current July 25 source state and confirmed TypeScript validation) Tj ET
+BT /F1 9.20 Tf 54.00 141.75 Td (  passed with tsc --noEmit.) Tj ET
+BT /F1 9.20 Tf 54.00 130.50 Td (- Confirmed http://127.0.0.1:3000/ returned 200 OK from the local Next.js development server) Tj ET
+BT /F1 9.20 Tf 54.00 119.25 Td (  after the source work and cache-clearing sequence.) Tj ET
+BT /F1 9.20 Tf 54.00 108.00 Td (- Verified git rev-parse HEAD and git rev-parse origin/main both returned) Tj ET
+BT /F1 9.20 Tf 54.00 96.75 Td (  dbf93a85c80f54092e238381d056097e19fc1b37 before generating this worklog.) Tj ET
+BT /F1 9.20 Tf 54.00 85.50 Td (- Confirmed git status showed main tracking origin/main with only the refreshed) Tj ET
+BT /F1 9.00 Tf 202.37 34.00 Td (Prahlin Portfolio Work Log - July 25, 2026 Page 4) Tj ET
+endstream
+endobj
+12 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 11 0 R >>
+endobj
+13 0 obj
+<< /Length 6628 >>
+stream
+BT /F1 9.20 Tf 54.00 738.00 Td (  portfolio_PROJECT_SNAPSHOT.txt modified before this PDF was created.) Tj ET
+BT /F1 9.20 Tf 54.00 726.75 Td (- Reviewed git diff --stat from the July 24 worklog commit through current HEAD and confirmed) Tj ET
+BT /F1 9.20 Tf 54.00 715.50 Td (  the July 25 source scope was app/page.tsx, app/globals.css, app/ProjectCarouselButton.tsx,) Tj ET
+BT /F1 9.20 Tf 54.00 704.25 Td (  app/ProofStats.tsx, and the regenerated snapshot context.) Tj ET
+BT /F1 9.20 Tf 54.00 693.00 Td (- Reviewed git show --stat for bbc789d, confirming the first pass touched app/globals.css,) Tj ET
+BT /F1 9.20 Tf 54.00 681.75 Td (  app/page.tsx, and portfolio_PROJECT_SNAPSHOT.txt for the hero/nav/Resume CTA changes.) Tj ET
+BT /F1 9.20 Tf 54.00 670.50 Td (- Reviewed git show --stat for 98ab7b5, confirming the second pass touched) Tj ET
+BT /F1 9.20 Tf 54.00 659.25 Td (  app/ProjectCarouselButton.tsx, app/ProofStats.tsx, app/globals.css, and app/page.tsx for) Tj ET
+BT /F1 9.20 Tf 54.00 648.00 Td (  social-button/proof-stat work.) Tj ET
+BT /F1 9.20 Tf 54.00 636.75 Td (- Reviewed git show --stat for dbf93a8, confirming the final source pass touched) Tj ET
+BT /F1 9.20 Tf 54.00 625.50 Td (  app/ProjectCarouselButton.tsx, app/globals.css, and app/page.tsx for social spacing, label,) Tj ET
+BT /F1 9.20 Tf 54.00 614.25 Td (  and icon-box refinements.) Tj ET
+BT /F1 9.20 Tf 54.00 603.00 Td (- Regenerated portfolio_PROJECT_SNAPSHOT.txt before this PDF so the current source tree,) Tj ET
+BT /F1 9.20 Tf 54.00 591.75 Td (  recent commits, image inventory, PDF inventory, and public sync context were represented) Tj ET
+BT /F1 9.20 Tf 54.00 580.50 Td (  locally.) Tj ET
+BT /F1 9.20 Tf 54.00 569.25 Td (- Generated this PDF with the same standard-library PDF writer style used by the mature) Tj ET
+BT /F1 9.20 Tf 54.00 558.00 Td (  Portfolio worklogs and checked metadata/text extraction after writing.) Tj ET
+BT /F2 10.20 Tf 54.00 535.50 Td (Files Touched During July 25 Portfolio Work) Tj ET
+BT /F1 9.20 Tf 54.00 524.25 Td (- app/page.tsx - updated hero headline copy, proof-stat label data, Resume/LinkedIn/GitHub) Tj ET
+BT /F1 9.20 Tf 54.00 513.00 Td (  social button markup, Resume download mark, LinkedIn destination URL, official LinkedIn blue) Tj ET
+BT /F1 9.20 Tf 54.00 501.75 Td (  constant, GitHub and Resume icon-box treatments, social label data-text attributes, and) Tj ET
+BT /F1 9.20 Tf 54.00 490.50 Td (  final social-button asset order.) Tj ET
+BT /F1 9.20 Tf 54.00 479.25 Td (- app/globals.css - tuned top-nav spacing, hero stack responsive widths, social-button aspect) Tj ET
+BT /F1 9.20 Tf 54.00 468.00 Td (  ratio, social font/icon/gap variables, GitHub/LinkedIn/Resume fills, label stroke layers,) Tj ET
+BT /F1 9.20 Tf 54.00 456.75 Td (  icon sizing, proof-stat one-row behavior, and narrow/wide responsive social spacing.) Tj ET
+BT /F1 9.20 Tf 54.00 445.50 Td (- app/ProjectCarouselButton.tsx - updated hero action geometry measurement so social-button) Tj ET
+BT /F1 9.20 Tf 54.00 434.25 Td (  height drives related font/icon variables and the Check Out Projects label aligns to the) Tj ET
+BT /F1 9.20 Tf 54.00 423.00 Td (  measured GitHub icon/text cluster after icon-first ordering.) Tj ET
+BT /F1 9.20 Tf 54.00 411.75 Td (- app/ProofStats.tsx - added the special Full-Stack Expertise line-splitting behavior that) Tj ET
+BT /F1 9.20 Tf 54.00 400.50 Td (  treats Full-, Stack, and Expertise as separate tight-mode lines while preserving shared) Tj ET
+BT /F1 9.20 Tf 54.00 389.25 Td (  label-mode measurement for all four stats.) Tj ET
+BT /F1 9.20 Tf 54.00 378.00 Td (- portfolio_PROJECT_SNAPSHOT.txt - regenerated by ./read_project.sh for this worklog pass and) Tj ET
+BT /F1 9.20 Tf 54.00 366.75 Td (  left modified locally as a project-context artifact.) Tj ET
+BT /F1 9.20 Tf 54.00 355.50 Td (- portfolio_worklog_july25.pdf - generated as this daily Portfolio worklog artifact in the) Tj ET
+BT /F1 9.20 Tf 54.00 344.25 Td (  root-level Portfolio worklog convention.) Tj ET
+BT /F2 10.20 Tf 54.00 321.75 Td (Follow-Up Context) Tj ET
+BT /F1 9.20 Tf 54.00 310.50 Td (- The public website source is already represented by origin/main at dbf93a8, and the July 25) Tj ET
+BT /F1 9.20 Tf 54.00 299.25 Td (  source commits have been pushed to the main branch.) Tj ET
+BT /F1 9.20 Tf 54.00 288.00 Td (- The refreshed portfolio_PROJECT_SNAPSHOT.txt and this July 25 PDF remain local until the) Tj ET
+BT /F1 9.20 Tf 54.00 276.75 Td (  user provides or approves a commit message for documentation artifact changes.) Tj ET
+BT /F1 9.20 Tf 54.00 265.50 Td (- Because this PDF increases the Portfolio worklog count from 11 to 12, visible public copy) Tj ET
+BT /F1 9.20 Tf 54.00 254.25 Td (  can be updated later only if the user wants the portfolio surface to reflect exact artifact) Tj ET
+BT /F1 9.20 Tf 54.00 243.00 Td (  count rather than the current rounded 0.1k+ proof stat.) Tj ET
+BT /F1 9.20 Tf 54.00 231.75 Td (- The Resume button is visually converted to Resume with a download icon, but the current href) Tj ET
+BT /F1 9.20 Tf 54.00 220.50 Td (  still preserves the previous external placeholder destination. A real resume PDF/link should) Tj ET
+BT /F1 9.20 Tf 54.00 209.25 Td (  replace that URL when the resume asset or final destination is supplied.) Tj ET
+BT /F1 9.20 Tf 54.00 198.00 Td (- The LinkedIn button now points to https://linkedin.com/in/mprahl and uses #2867B2, so future) Tj ET
+BT /F1 9.20 Tf 54.00 186.75 Td (  LinkedIn styling should preserve that user-approved destination/color unless intentionally) Tj ET
+BT /F1 9.20 Tf 54.00 175.50 Td (  revised.) Tj ET
+BT /F1 9.20 Tf 54.00 164.25 Td (- The social label stroke stack currently depends on layered text and pseudo-elements. Future) Tj ET
+BT /F1 9.20 Tf 54.00 153.00 Td (  edits should test GitHub, LinkedIn, and Resume together because changing one layer width can) Tj ET
+BT /F1 9.20 Tf 54.00 141.75 Td (  make middle colors disappear or dominate.) Tj ET
+BT /F1 9.20 Tf 54.00 130.50 Td (- The GitHub icon box was intentionally nudged by optical fill size rather than border-box) Tj ET
+BT /F1 9.20 Tf 54.00 119.25 Td (  size because black border-on-black-button contrast made strict dimensions appear smaller.) Tj ET
+BT /F1 9.20 Tf 54.00 108.00 Td (- The hero stack growth is intentionally tied to the one-card case-study responsive window.) Tj ET
+BT /F1 9.20 Tf 54.00 96.75 Td (  Future breakpoint changes to .case-grid should be checked against --hero-proof-stack-width) Tj ET
+BT /F1 9.20 Tf 54.00 85.50 Td (  and the 606px hero stack target.) Tj ET
+BT /F1 9.00 Tf 202.37 34.00 Td (Prahlin Portfolio Work Log - July 25, 2026 Page 5) Tj ET
+endstream
+endobj
+14 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 13 0 R >>
+endobj
+15 0 obj
+<< /Length 1806 >>
+stream
+BT /F1 9.20 Tf 54.00 738.00 Td (- The proof-stat one-row behavior and Full-/Stack/Expertise split are deliberate. Later label) Tj ET
+BT /F1 9.20 Tf 54.00 726.75 Td (  edits should verify that all four proof columns still use the same visible line count in) Tj ET
+BT /F1 9.20 Tf 54.00 715.50 Td (  narrow windows.) Tj ET
+BT /F1 9.20 Tf 54.00 704.25 Td (- Continue treating all future Portfolio work as local-only unless the user explicitly asks to) Tj ET
+BT /F1 9.20 Tf 54.00 693.00 Td (  commit, push, deploy, publish, or update the public website.) Tj ET
+BT /F2 10.20 Tf 54.00 670.50 Td (Output Artifact) Tj ET
+BT /F1 9.20 Tf 54.00 659.25 Td (- Generated file: portfolio_worklog_july25.pdf.) Tj ET
+BT /F1 9.20 Tf 54.00 648.00 Td (- Location: /Users/prahlin/gh/portfolio/portfolio_worklog_july25.pdf.) Tj ET
+BT /F1 9.20 Tf 54.00 636.75 Td (- Naming follows the existing root-level Portfolio convention: portfolio_worklog_july25.pdf.) Tj ET
+BT /F1 9.20 Tf 54.00 625.50 Td (  No part suffix was used because this is the first July 25 Portfolio worklog artifact.) Tj ET
+BT /F1 9.20 Tf 54.00 614.25 Td (- Uses the same daily worklog structure and compact technical voice established by) Tj ET
+BT /F1 9.20 Tf 54.00 603.00 Td (  portfolio_worklog_july11.pdf through portfolio_worklog_july24.pdf.) Tj ET
+BT /F1 9.20 Tf 54.00 591.75 Td (- Generated with a small standard-library PDF writer; no external PDF dependency was installed) Tj ET
+BT /F1 9.20 Tf 54.00 580.50 Td (  for this artifact.) Tj ET
+BT /F1 9.20 Tf 54.00 569.25 Td (- The local project date used for this filename and title is Saturday, July 25, 2026 EDT,) Tj ET
+BT /F1 9.20 Tf 54.00 558.00 Td (  matching the machine and repository work session clock.) Tj ET
+BT /F1 9.00 Tf 202.37 34.00 Td (Prahlin Portfolio Work Log - July 25, 2026 Page 6) Tj ET
+endstream
+endobj
+16 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 15 0 R >>
+endobj
+17 0 obj
+<< /Title (Prahlin Portfolio Work Log - July 25, 2026) /Subject (Portfolio website development worklog) /Author (Codex) /Creator (Codex standard-library PDF generator) /Producer (Codex standard-library PDF generator) /CreationDate (D:20260725153452-04'00') /ModDate (D:20260725153452-04'00') >>
+endobj
+xref
+0 18
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000155 00000 n 
+0000000252 00000 n 
+0000000354 00000 n 
+0000006956 00000 n 
+0000007092 00000 n 
+0000013755 00000 n 
+0000013891 00000 n 
+0000020545 00000 n 
+0000020682 00000 n 
+0000027154 00000 n 
+0000027292 00000 n 
+0000033972 00000 n 
+0000034110 00000 n 
+0000035968 00000 n 
+0000036106 00000 n 
+trailer
+<< /Size 18 /Root 1 0 R /Info 17 0 R >>
+startxref
+36417
+%%EOF

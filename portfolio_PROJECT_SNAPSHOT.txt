@@ -1,5 +1,5 @@
 Portfolio Next.js PROJECT SNAPSHOT
-Generated: Sat Jul 25 09:20:02 EDT 2026
+Generated: Sat Jul 25 15:32:05 EDT 2026
 Project directory: /Users/prahlin/gh/portfolio
 
 IMPORTANT INSTRUCTIONS FOR CHATGPT & CODEX:
@@ -254,7 +254,7 @@ FILE: app/page.tsx
     35	
     36	const proofStats = [
     37	  {
-    38	    label: "Full Stack Expertise",
+    38	    label: "Full-Stack Expertise",
     39	    value: "3yrs",
     40	  },
     41	  { label: "Quality GitHub Commits", value: "1.0k+" },
@@ -262,517 +262,531 @@ FILE: app/page.tsx
     43	  { label: "Shipped Mob/Web Products", value: "8" },
     44	];
     45	
-    46	function LinkedInMark() {
-    47	  return (
-    48	    <svg
-    49	      aria-hidden
-    50	      className="linkedin-icon-mark"
-    51	      height="32.4"
-    52	      viewBox="0 0 24 24"
-    53	      width="32.4"
-    54	      xmlns="http://www.w3.org/2000/svg"
-    55	    >
-    56	      <rect
-    57	        fill="#f3fff7"
-    58	        height="18"
-    59	        rx="3"
-    60	        stroke="#000"
-    61	        strokeWidth="1.35"
-    62	        width="18"
-    63	        x="3"
-    64	        y="3"
-    65	      />
-    66	      <circle
-    67	        cx="8.1"
-    68	        cy="8.15"
-    69	        fill="#60a5fa"
-    70	        r="1.45"
-    71	        stroke="#000"
-    72	        strokeWidth="0.35"
-    73	      />
-    74	      <rect
-    75	        fill="#60a5fa"
-    76	        height="7.2"
-    77	        rx="0.45"
-    78	        stroke="#000"
-    79	        strokeLinejoin="round"
-    80	        strokeWidth="0.35"
-    81	        width="2.45"
-    82	        x="6.88"
-    83	        y="10.75"
-    84	      />
-    85	      <path
-    86	        d="M11.1 10.75h2.35v.92c.45-.66 1.18-1.08 2.18-1.08 1.88 0 3 1.24 3 3.4v3.96h-2.46v-3.62c0-1.04-.47-1.58-1.29-1.58-.86 0-1.33.58-1.33 1.58v3.62H11.1z"
-    87	        fill="#60a5fa"
-    88	        stroke="#000"
-    89	        strokeLinejoin="round"
-    90	        strokeWidth="0.35"
-    91	      />
-    92	    </svg>
-    93	  );
-    94	}
-    95	
-    96	function GitHubBracesMark() {
-    97	  return (
-    98	    <svg
-    99	      aria-hidden
-   100	      className="github-icon-mark"
-   101	      height="32.4"
-   102	      viewBox="0 0 24 24"
-   103	      width="32.4"
-   104	      xmlns="http://www.w3.org/2000/svg"
-   105	    >
-   106	      <rect
-   107	        fill="#f3fff7"
-   108	        height="18"
-   109	        rx="3"
-   110	        stroke="#000"
-   111	        strokeWidth="1.35"
-   112	        width="18"
-   113	        x="3"
-   114	        y="3"
-   115	      />
-   116	      <path
-   117	        d="M10.15 7.45h-.52c-.86 0-1.32.46-1.32 1.32v2.05c0 .72-.5 1.18-1.28 1.18.78 0 1.28.46 1.28 1.18v2.05c0 .86.46 1.32 1.32 1.32h.52"
-   118	        fill="none"
-   119	        stroke="#000"
-   120	        strokeLinecap="round"
-   121	        strokeLinejoin="round"
-   122	        strokeWidth="2"
-   123	      />
-   124	      <path
-   125	        d="M13.85 16.55h.52c.86 0 1.32-.46 1.32-1.32v-2.05c0-.72.5-1.18 1.28-1.18-.78 0-1.28-.46-1.28-1.18V8.77c0-.86-.46-1.32-1.32-1.32h-.52"
-   126	        fill="none"
-   127	        stroke="#000"
-   128	        strokeLinecap="round"
-   129	        strokeLinejoin="round"
-   130	        strokeWidth="2"
-   131	      />
-   132	    </svg>
-   133	  );
-   134	}
-   135	
-   136	function InstagramMark() {
-   137	  return (
-   138	    <svg
-   139	      aria-hidden
-   140	      className="instagram-icon-mark"
-   141	      height="32.4"
-   142	      viewBox="0 0 24 24"
-   143	      width="32.4"
-   144	      xmlns="http://www.w3.org/2000/svg"
-   145	    >
-   146	      <rect
-   147	        fill="#f3fff7"
-   148	        height="18"
-   149	        rx="3"
-   150	        stroke="#000"
-   151	        strokeWidth="1.35"
-   152	        width="18"
-   153	        x="3"
-   154	        y="3"
-   155	      />
-   156	      <rect
-   157	        fill="#E1306C"
-   158	        height="9.8"
-   159	        rx="2.5"
-   160	        stroke="#000"
-   161	        strokeWidth="1.2"
-   162	        width="9.8"
-   163	        x="7.1"
-   164	        y="7.1"
-   165	      />
-   166	      <circle
-   167	        cx="12"
-   168	        cy="12"
-   169	        fill="#f3fff7"
-   170	        r="2.05"
-   171	        stroke="#000"
-   172	        strokeWidth="1"
-   173	      />
-   174	      <circle cx="15.05" cy="8.95" fill="#000" r="0.7" />
-   175	    </svg>
-   176	  );
-   177	}
-   178	
-   179	const worklogItems = [
-   180	  "From responsive website prototype to Expo Router mobile architecture",
-   181	  "Secure Stripe card flow, Google Pay, PayPal, and Postmark confirmations",
-   182	  "Android Small, Standard, and Large emulator QA with release-ready EAS builds",
-   183	];
-   184	
-   185	function PhonePreview({
-   186	  title,
-   187	  metric,
-   188	  variant,
-   189	  href,
-   190	  screenImageSrc,
-   191	  screenImageAlt,
-   192	}: {
-   193	  href?: string;
-   194	  title: string;
-   195	  metric: string;
-   196	  variant: "commerce" | "finance";
-   197	  screenImageSrc?: string;
-   198	  screenImageAlt?: string;
-   199	}) {
-   200	  const className = `phone-shell phone-shell-${variant}${
-   201	    screenImageSrc ? " phone-shell-capture" : ""
-   202	  }${href ? " phone-shell-link" : ""}`;
-   203	  const content = (
-   204	    <>
-   205	      <div className="phone-speaker" />
-   206	      <div className={`phone-screen${screenImageSrc ? " has-image" : ""}`}>
-   207	        {screenImageSrc ? (
-   208	          <div className="phone-screen-image-frame">
-   209	            <Image
-   210	              alt={screenImageAlt ?? `${title} app screen`}
-   211	              className="phone-screen-image"
-   212	              fill
-   213	              sizes="245px"
-   214	              src={screenImageSrc}
-   215	            />
-   216	          </div>
-   217	        ) : (
-   218	          <>
-   219	            <div className="phone-status">
-   220	              <span>{title}</span>
-   221	              <span>5G</span>
-   222	            </div>
-   223	            <div className="phone-chart">
-   224	              <div />
-   225	              <div />
-   226	              <div />
-   227	              <div />
-   228	            </div>
-   229	            <div className="phone-cardline wide" />
-   230	            <div className="phone-cardline" />
-   231	            <div className="phone-grid">
-   232	              <span />
-   233	              <span />
-   234	              <span />
-   235	              <span />
-   236	            </div>
-   237	            <div className="phone-cta">{metric}</div>
-   238	          </>
-   239	        )}
-   240	      </div>
-   241	    </>
-   242	  );
-   243	
-   244	  if (href) {
-   245	    return (
-   246	      <a
-   247	        aria-label={`Open ${title} case study`}
-   248	        className={className}
-   249	        href={href}
-   250	      >
-   251	        {content}
-   252	      </a>
-   253	    );
-   254	  }
-   255	
-   256	  return <div className={className}>{content}</div>;
-   257	}
-   258	
-   259	function TabletPreview() {
-   260	  return (
-   261	    <div className="tablet-shell" aria-hidden="true">
-   262	      <div className="tablet-camera" />
-   263	      <div className="tablet-screen">
-   264	        <Image
-   265	          alt=""
-   266	          className="tablet-screen-image"
-   267	          fill
-   268	          sizes="456px"
-   269	          src="/images/cinerific_promo.png"
-   270	        />
-   271	        <div className="tablet-empty-grid" />
-   272	      </div>
-   273	    </div>
-   274	  );
-   275	}
-   276	
-   277	export default function Home() {
-   278	  return (
-   279	    <main>
-   280	      <section className="hero" id="top">
-   281	        <div className="site-shell">
-   282	          <MainNavBar />
-   283	
-   284	          <div className="hero-grid">
-   285	            <div className="hero-copy">
-   286	              <p className="eyebrow hero-eyebrow">
-   287	                <span className="hero-eyebrow-underline">User-friendly</span>{" "}
-   288	                <span className="hero-eyebrow-box">UI/UX</span>
-   289	                <span className="hero-eyebrow-period">,</span>
-   290	                <br />
-   291	                <span className="hero-eyebrow-underline">Butter-Smooth</span>{" "}
-   292	                <span className="hero-eyebrow-box">Front-End</span>
-   293	                <span className="hero-eyebrow-period">,</span>
-   294	                <br />
-   295	                <span className="hero-eyebrow-underline">
-   296	                  Deep, Dependable
-   297	                </span>{" "}
-   298	                <span className="hero-eyebrow-box">Back-end</span>
-   299	                <span className="hero-eyebrow-period">.</span>
-   300	              </p>
-   301	              <h1>
-   302	                Full Stack
-   303	                <br />
-   304	                RN / Kotlin
-   305	                <br />
-   306	                Mobile Developer
-   307	              </h1>
-   308	              <HeroLede />
-   309	
-   310	              <div className="hero-actions">
-   311	                <div className="hero-project-action">
-   312	                  <span
-   313	                    className="hero-view-label carousel-button-project-word"
-   314	                    aria-hidden
-   315	                  >
-   316	                    <span
-   317	                      className="hero-view-label-stack"
-   318	                      style={{
-   319	                        display: "grid",
-   320	                        gap: "0.28em",
-   321	                        justifySelf: "start",
-   322	                        marginLeft: "var(--hero-view-stack-left, 0px)",
-   323	                        minWidth: "var(--hero-view-stack-width, 0px)",
-   324	                        textAlign: "left",
-   325	                        width: "max-content",
-   326	                      }}
-   327	                    >
-   328	                      <span
-   329	                        className="hero-view-word"
-   330	                        aria-label="Check Out"
-   331	                      >
-   332	                        <span>C</span>
-   333	                        <span>h</span>
-   334	                        <span>e</span>
-   335	                        <span>c</span>
-   336	                        <span>k</span>
-   337	                        <span className="hero-word-space" aria-hidden>
-   338	                          {" "}
-   339	                        </span>
-   340	                        <span>O</span>
-   341	                        <span>u</span>
-   342	                        <span>t</span>
-   343	                      </span>
-   344	                      <span
-   345	                        className="hero-project-word"
-   346	                        aria-label="Projects"
-   347	                      >
-   348	                        <span>P</span>
-   349	                        <span>r</span>
-   350	                        <span>o</span>
-   351	                        <span>j</span>
-   352	                        <span>e</span>
-   353	                        <span>c</span>
-   354	                        <span>t</span>
-   355	                        <span>s</span>
-   356	                      </span>
-   357	                    </span>
-   358	                  </span>
-   359	                  <ProjectCarouselButton />
-   360	                </div>
-   361	                <div className="hero-social-buttons">
-   362	                  <a
-   363	                    className="button button-secondary hero-social-button github-button"
-   364	                    href="https://github.com/Prahlin"
-   365	                    rel="noreferrer"
-   366	                    style={{
-   367	                      background: "#f3fff7",
-   368	                      borderColor: "#f3fff7",
-   369	                      color: "#000",
-   370	                    }}
-   371	                    target="_blank"
-   372	                  >
-   373	                    <span className="github-label-text">GitHub</span>
-   374	                    <GitHubBracesMark />
-   375	                  </a>
-   376	                  <a
-   377	                    className="button button-secondary hero-social-button linkedin-button"
-   378	                    href="https://www.linkedin.com/"
-   379	                    rel="noreferrer"
-   380	                    style={{
-   381	                      background: "#60a5fa",
-   382	                      borderColor: "#60a5fa",
-   383	                      color: "#000",
-   384	                    }}
-   385	                    target="_blank"
-   386	                  >
-   387	                    LinkedIn
-   388	                    <LinkedInMark />
-   389	                  </a>
-   390	                  <a
-   391	                    className="button button-secondary hero-social-button instagram-button"
-   392	                    href="https://www.instagram.com/"
-   393	                    rel="noreferrer"
-   394	                    style={{
-   395	                      background: "#E1306C",
-   396	                      borderColor: "#E1306C",
-   397	                      color: "#000",
-   398	                    }}
-   399	                    target="_blank"
-   400	                  >
-   401	                    Instagram
-   402	                    <InstagramMark />
-   403	                  </a>
-   404	                </div>
-   405	              </div>
-   406	
-   407	              <div className="stack-row" aria-label="Primary stack">
-   408	                {stackChips.map((chip) => (
-   409	                  <span key={chip}>{chip}</span>
-   410	                ))}
-   411	              </div>
-   412	
-   413	              <div className="proof-panel">
-   414	                <div className="proof-column">
-   415	                  <div className="proof-item">
-   416	                    <Triangle aria-hidden size={18} />
-   417	                    <span>Vercel</span>
-   418	                  </div>
-   419	                  <div className="proof-item">
-   420	                    <Database aria-hidden size={18} />
-   421	                    <span>EAS</span>
-   422	                  </div>
-   423	                </div>
-   424	                <div className="proof-column">
-   425	                  <div className="proof-item">
-   426	                    <CreditCard aria-hidden size={18} />
-   427	                    <span>Stripe</span>
-   428	                  </div>
+    46	const resumeButtonColor = "#fff";
+    47	const linkedInButtonColor = "#2867B2";
+    48	const githubButtonTextColor = "#f3fff7";
+    49	
+    50	function LinkedInMark() {
+    51	  return (
+    52	    <svg
+    53	      aria-hidden
+    54	      className="linkedin-icon-mark"
+    55	      height="32.4"
+    56	      viewBox="0 0 24 24"
+    57	      width="32.4"
+    58	      xmlns="http://www.w3.org/2000/svg"
+    59	    >
+    60	      <g transform="translate(-3.6 -3.6) scale(1.3)">
+    61	        <rect
+    62	          fill="#f3fff7"
+    63	          height="18"
+    64	          rx="3"
+    65	          stroke="#000"
+    66	          strokeWidth="1.35"
+    67	          width="18"
+    68	          x="3"
+    69	          y="3"
+    70	        />
+    71	        <circle
+    72	          cx="8.1"
+    73	          cy="8.15"
+    74	          fill={linkedInButtonColor}
+    75	          r="1.45"
+    76	          stroke="#000"
+    77	          strokeWidth="0.35"
+    78	        />
+    79	        <rect
+    80	          fill={linkedInButtonColor}
+    81	          height="7.2"
+    82	          rx="0.45"
+    83	          stroke="#000"
+    84	          strokeLinejoin="round"
+    85	          strokeWidth="0.35"
+    86	          width="2.45"
+    87	          x="6.88"
+    88	          y="10.75"
+    89	        />
+    90	        <path
+    91	          d="M11.1 10.75h2.35v.92c.45-.66 1.18-1.08 2.18-1.08 1.88 0 3 1.24 3 3.4v3.96h-2.46v-3.62c0-1.04-.47-1.58-1.29-1.58-.86 0-1.33.58-1.33 1.58v3.62H11.1z"
+    92	          fill={linkedInButtonColor}
+    93	          stroke="#000"
+    94	          strokeLinejoin="round"
+    95	          strokeWidth="0.35"
+    96	        />
+    97	      </g>
+    98	    </svg>
+    99	  );
+   100	}
+   101	
+   102	function GitHubBracesMark() {
+   103	  return (
+   104	    <svg
+   105	      aria-hidden
+   106	      className="github-icon-mark"
+   107	      height="32.4"
+   108	      viewBox="0 0 24 24"
+   109	      width="32.4"
+   110	      xmlns="http://www.w3.org/2000/svg"
+   111	    >
+   112	      <g transform="translate(-3.36 -3.36) scale(1.28)">
+   113	        <rect
+   114	          fill={githubButtonTextColor}
+   115	          height="18"
+   116	          rx="3"
+   117	          stroke="#000"
+   118	          strokeWidth="1.35"
+   119	          width="18"
+   120	          x="3"
+   121	          y="3"
+   122	        />
+   123	        <path
+   124	          d="M10.15 7.45h-.52c-.86 0-1.32.46-1.32 1.32v2.05c0 .72-.5 1.18-1.28 1.18.78 0 1.28.46 1.28 1.18v2.05c0 .86.46 1.32 1.32 1.32h.52"
+   125	          fill="none"
+   126	          stroke="#000"
+   127	          strokeLinecap="round"
+   128	          strokeLinejoin="round"
+   129	          strokeWidth="2"
+   130	        />
+   131	        <path
+   132	          d="M13.85 16.55h.52c.86 0 1.32-.46 1.32-1.32v-2.05c0-.72.5-1.18 1.28-1.18-.78 0-1.28-.46-1.28-1.18V8.77c0-.86-.46-1.32-1.32-1.32h-.52"
+   133	          fill="none"
+   134	          stroke="#000"
+   135	          strokeLinecap="round"
+   136	          strokeLinejoin="round"
+   137	          strokeWidth="2"
+   138	        />
+   139	      </g>
+   140	    </svg>
+   141	  );
+   142	}
+   143	
+   144	function ResumeDownloadMark() {
+   145	  return (
+   146	    <svg
+   147	      aria-hidden
+   148	      className="download-icon-mark"
+   149	      height="32.4"
+   150	      viewBox="0 0 24 24"
+   151	      width="32.4"
+   152	      xmlns="http://www.w3.org/2000/svg"
+   153	    >
+   154	      <g transform="translate(-2.76 -2.76) scale(1.23)">
+   155	        <rect
+   156	          fill="#05AF59"
+   157	          height="18"
+   158	          rx="3"
+   159	          stroke="#000"
+   160	          strokeWidth="1.35"
+   161	          width="18"
+   162	          x="3"
+   163	          y="3"
+   164	        />
+   165	        <g transform="translate(-1.2 -1.18) scale(1.1)">
+   166	          <path
+   167	            d="M11.1 7.05h1.8v5.03l1.65-1.65 1.27 1.27L12 15.52 8.18 11.7l1.27-1.27 1.65 1.65z"
+   168	            fill="#fff"
+   169	            stroke="#000"
+   170	            strokeLinejoin="round"
+   171	            strokeWidth="0.65"
+   172	          />
+   173	          <rect
+   174	            fill="#fff"
+   175	            height="1.45"
+   176	            rx="0.25"
+   177	            stroke="#000"
+   178	            strokeWidth="0.65"
+   179	            width="7.5"
+   180	            x="8.25"
+   181	            y="16.05"
+   182	          />
+   183	        </g>
+   184	      </g>
+   185	    </svg>
+   186	  );
+   187	}
+   188	
+   189	const worklogItems = [
+   190	  "From responsive website prototype to Expo Router mobile architecture",
+   191	  "Secure Stripe card flow, Google Pay, PayPal, and Postmark confirmations",
+   192	  "Android Small, Standard, and Large emulator QA with release-ready EAS builds",
+   193	];
+   194	
+   195	function PhonePreview({
+   196	  title,
+   197	  metric,
+   198	  variant,
+   199	  href,
+   200	  screenImageSrc,
+   201	  screenImageAlt,
+   202	}: {
+   203	  href?: string;
+   204	  title: string;
+   205	  metric: string;
+   206	  variant: "commerce" | "finance";
+   207	  screenImageSrc?: string;
+   208	  screenImageAlt?: string;
+   209	}) {
+   210	  const className = `phone-shell phone-shell-${variant}${
+   211	    screenImageSrc ? " phone-shell-capture" : ""
+   212	  }${href ? " phone-shell-link" : ""}`;
+   213	  const content = (
+   214	    <>
+   215	      <div className="phone-speaker" />
+   216	      <div className={`phone-screen${screenImageSrc ? " has-image" : ""}`}>
+   217	        {screenImageSrc ? (
+   218	          <div className="phone-screen-image-frame">
+   219	            <Image
+   220	              alt={screenImageAlt ?? `${title} app screen`}
+   221	              className="phone-screen-image"
+   222	              fill
+   223	              sizes="245px"
+   224	              src={screenImageSrc}
+   225	            />
+   226	          </div>
+   227	        ) : (
+   228	          <>
+   229	            <div className="phone-status">
+   230	              <span>{title}</span>
+   231	              <span>5G</span>
+   232	            </div>
+   233	            <div className="phone-chart">
+   234	              <div />
+   235	              <div />
+   236	              <div />
+   237	              <div />
+   238	            </div>
+   239	            <div className="phone-cardline wide" />
+   240	            <div className="phone-cardline" />
+   241	            <div className="phone-grid">
+   242	              <span />
+   243	              <span />
+   244	              <span />
+   245	              <span />
+   246	            </div>
+   247	            <div className="phone-cta">{metric}</div>
+   248	          </>
+   249	        )}
+   250	      </div>
+   251	    </>
+   252	  );
+   253	
+   254	  if (href) {
+   255	    return (
+   256	      <a
+   257	        aria-label={`Open ${title} case study`}
+   258	        className={className}
+   259	        href={href}
+   260	      >
+   261	        {content}
+   262	      </a>
+   263	    );
+   264	  }
+   265	
+   266	  return <div className={className}>{content}</div>;
+   267	}
+   268	
+   269	function TabletPreview() {
+   270	  return (
+   271	    <div className="tablet-shell" aria-hidden="true">
+   272	      <div className="tablet-camera" />
+   273	      <div className="tablet-screen">
+   274	        <Image
+   275	          alt=""
+   276	          className="tablet-screen-image"
+   277	          fill
+   278	          sizes="456px"
+   279	          src="/images/cinerific_promo.png"
+   280	        />
+   281	        <div className="tablet-empty-grid" />
+   282	      </div>
+   283	    </div>
+   284	  );
+   285	}
+   286	
+   287	export default function Home() {
+   288	  return (
+   289	    <main>
+   290	      <section className="hero" id="top">
+   291	        <div className="site-shell">
+   292	          <MainNavBar />
+   293	
+   294	          <div className="hero-grid">
+   295	            <div className="hero-copy">
+   296	              <p className="eyebrow hero-eyebrow">
+   297	                <span className="hero-eyebrow-underline">User-friendly</span>{" "}
+   298	                <span className="hero-eyebrow-box">UI/UX</span>
+   299	                <span className="hero-eyebrow-period">,</span>
+   300	                <br />
+   301	                <span className="hero-eyebrow-underline">Butter-Smooth</span>{" "}
+   302	                <span className="hero-eyebrow-box">Front-End</span>
+   303	                <span className="hero-eyebrow-period">,</span>
+   304	                <br />
+   305	                <span className="hero-eyebrow-underline">
+   306	                  Deep, Dependable
+   307	                </span>{" "}
+   308	                <span className="hero-eyebrow-box">Back-end</span>
+   309	                <span className="hero-eyebrow-period">.</span>
+   310	              </p>
+   311	              <h1>
+   312	                    Full-Stack
+   313	                <br />
+   314	                    React Native / Kotlin Developer
+   315	              </h1>
+   316	              <HeroLede />
+   317	
+   318	              <div className="hero-actions">
+   319	                <div className="hero-project-action">
+   320	                  <span
+   321	                    className="hero-view-label carousel-button-project-word"
+   322	                    aria-hidden
+   323	                  >
+   324	                    <span
+   325	                      className="hero-view-label-stack"
+   326	                      style={{
+   327	                        display: "grid",
+   328	                        gap: "0.28em",
+   329	                        justifySelf: "start",
+   330	                        marginLeft: "var(--hero-view-stack-left, 0px)",
+   331	                        minWidth: "var(--hero-view-stack-width, 0px)",
+   332	                        textAlign: "left",
+   333	                        width: "max-content",
+   334	                      }}
+   335	                    >
+   336	                      <span
+   337	                        className="hero-view-word"
+   338	                        aria-label="Check Out"
+   339	                      >
+   340	                        <span>C</span>
+   341	                        <span>h</span>
+   342	                        <span>e</span>
+   343	                        <span>c</span>
+   344	                        <span>k</span>
+   345	                        <span className="hero-word-space" aria-hidden>
+   346	                          {" "}
+   347	                        </span>
+   348	                        <span>O</span>
+   349	                        <span>u</span>
+   350	                        <span>t</span>
+   351	                      </span>
+   352	                      <span
+   353	                        className="hero-project-word"
+   354	                        aria-label="Projects"
+   355	                      >
+   356	                        <span>P</span>
+   357	                        <span>r</span>
+   358	                        <span>o</span>
+   359	                        <span>j</span>
+   360	                        <span>e</span>
+   361	                        <span>c</span>
+   362	                        <span>t</span>
+   363	                        <span>s</span>
+   364	                      </span>
+   365	                    </span>
+   366	                  </span>
+   367	                  <ProjectCarouselButton />
+   368	                </div>
+   369	                <div className="hero-social-buttons">
+   370	                  <a
+   371	                    className="button button-secondary hero-social-button github-button"
+   372	                    href="https://github.com/Prahlin"
+   373	                    rel="noreferrer"
+   374	                    style={{
+   375	                      background: "#000",
+   376	                      borderColor: "#000",
+   377	                      color: githubButtonTextColor,
+   378	                    }}
+   379	                    target="_blank"
+   380	                  >
+   381	                    <GitHubBracesMark />
+   382	                    <span className="github-label-text" data-text="GitHub">
+   383	                      GitHub
+   384	                    </span>
+   385	                  </a>
+   386	                  <a
+   387	                    className="button button-secondary hero-social-button linkedin-button"
+   388	                    href="https://linkedin.com/in/mprahl"
+   389	                    rel="noreferrer"
+   390	                    style={{
+   391	                      background: linkedInButtonColor,
+   392	                      borderColor: linkedInButtonColor,
+   393	                      color: "#fff",
+   394	                    }}
+   395	                    target="_blank"
+   396	                  >
+   397	                    <LinkedInMark />
+   398	                    <span className="linkedin-label-text" data-text="LinkedIn">
+   399	                      LinkedIn
+   400	                    </span>
+   401	                  </a>
+   402	                  <a
+   403	                    className="button button-secondary hero-social-button resume-button"
+   404	                    href="https://www.instagram.com/"
+   405	                    rel="noreferrer"
+   406	                    style={{
+   407	                      background: resumeButtonColor,
+   408	                      borderColor: resumeButtonColor,
+   409	                      color: "#fff",
+   410	                    }}
+   411	                    target="_blank"
+   412	                  >
+   413	                    <ResumeDownloadMark />
+   414	                    <span className="resume-label-text" data-text="Resume">
+   415	                      Resume
+   416	                    </span>
+   417	                  </a>
+   418	                </div>
+   419	              </div>
+   420	
+   421	              <div className="stack-row" aria-label="Primary stack">
+   422	                {stackChips.map((chip) => (
+   423	                  <span key={chip}>{chip}</span>
+   424	                ))}
+   425	              </div>
+   426	
+   427	              <div className="proof-panel">
+   428	                <div className="proof-column">
    429	                  <div className="proof-item">
-   430	                    <MailCheck aria-hidden size={18} />
-   431	                    <span>Postmark</span>
+   430	                    <Triangle aria-hidden size={18} />
+   431	                    <span>Vercel</span>
    432	                  </div>
-   433	                </div>
-   434	                <div className="proof-column">
-   435	                  <div className="proof-item">
-   436	                    <Store aria-hidden size={18} />
-   437	                    <span>GGL Play</span>
-   438	                  </div>
+   433	                  <div className="proof-item">
+   434	                    <Database aria-hidden size={18} />
+   435	                    <span>EAS</span>
+   436	                  </div>
+   437	                </div>
+   438	                <div className="proof-column">
    439	                  <div className="proof-item">
-   440	                    <Apple aria-hidden size={18} />
-   441	                    <span>App Store</span>
+   440	                    <CreditCard aria-hidden size={18} />
+   441	                    <span>Stripe</span>
    442	                  </div>
-   443	                </div>
-   444	              </div>
-   445	            </div>
-   446	
-   447	            <div className="hero-visual" aria-label="Portfolio preview">
-   448	              <div className="profile-orbit">
-   449	                <Image
-   450	                  alt="Martin Prahl profile photo"
-   451	                  src="/images/martin3.jpg"
-   452	                  width={220}
-   453	                  height={220}
-   454	                  priority
-   455	                  className="profile-photo"
-   456	                />
-   457	                <span>Martin Prahl</span>
+   443	                  <div className="proof-item">
+   444	                    <MailCheck aria-hidden size={18} />
+   445	                    <span>Postmark</span>
+   446	                  </div>
+   447	                </div>
+   448	                <div className="proof-column">
+   449	                  <div className="proof-item">
+   450	                    <Store aria-hidden size={18} />
+   451	                    <span>GGL Play</span>
+   452	                  </div>
+   453	                  <div className="proof-item">
+   454	                    <Apple aria-hidden size={18} />
+   455	                    <span>App Store</span>
+   456	                  </div>
+   457	                </div>
    458	              </div>
-   459	
-   460	              <div className="phone-stage">
-   461	                <TabletPreview />
-   462	                <PhonePreview
-   463	                  title="Alla Vostra"
-   464	                  metric="Checkout ready"
-   465	                  variant="commerce"
-   466	                  href="/projects/alla-vostra"
-   467	                  screenImageSrc="/images/startup_screen_large.png"
-   468	                  screenImageAlt="Alla Vostra startup screen"
-   469	                />
-   470	                <PhonePreview
-   471	                  title="CreditKing"
-   472	                  metric="Finance UI"
-   473	                  variant="finance"
-   474	                  screenImageSrc="/images/editor-window-screenshot.png"
-   475	                  screenImageAlt="Prahl.dev portfolio portrait screenshot"
-   476	                />
-   477	              </div>
-   478	            </div>
-   479	          </div>
-   480	
-   481	          <ProofStats stats={proofStats} />
-   482	        </div>
-   483	      </section>
-   484	
-   485	      <FeaturedCaseStudies />
-   486	
-   487	      <section className="stack-section" id="stack">
-   488	        <div className="site-shell split-section">
-   489	          <SectionHeading
-   490	            kicker="Stack"
-   491	            title="Built around React Native, shaped for full stack delivery"
-   492	          />
-   493	          <div className="capability-grid">
-   494	            <div>
-   495	              <MonitorSmartphone aria-hidden />
-   496	              <h3>Main stack</h3>
-   497	              <p>
-   498	                React, React Native, Expo Router, Next.js, Tailwind CSS, and
-   499	                mobile-first responsive UI systems.
-   500	              </p>
-   501	            </div>
-   502	            <div>
-   503	              <Braces aria-hidden />
-   504	              <h3>Backend layer</h3>
-   505	              <p>
-   506	                Node.js serverless routes, Stripe payment setup, Postmark email
-   507	                delivery, environment configuration, and deployment workflows.
-   508	              </p>
-   509	            </div>
-   510	            <div>
-   511	              <Smartphone aria-hidden />
-   512	              <h3>Secondary mobile</h3>
-   513	              <p>
-   514	                Kotlin and Android Studio as the native Android path, aligned
-   515	                with the same release and device-testing discipline.
-   516	              </p>
-   517	            </div>
-   518	          </div>
-   519	        </div>
-   520	      </section>
-   521	
-   522	      <section className="worklog-section" id="worklog">
-   523	        <div className="site-shell worklog-layout">
-   524	          <SectionHeading
-   525	            kicker="Worklog"
-   526	            title="A documented build history, not just final screenshots"
-   527	          />
-   528	          <div className="timeline">
-   529	            {worklogItems.map((item, index) => (
-   530	              <div key={item} className="timeline-item">
-   531	                <span>{String(index + 1).padStart(2, "0")}</span>
-   532	                <p>{item}</p>
-   533	              </div>
-   534	            ))}
-   535	          </div>
-   536	        </div>
-   537	      </section>
-   538	
-   539	      <section className="contact-section" id="contact">
-   540	        <div className="site-shell contact-panel">
-   541	          <div>
-   542	            <p className="eyebrow">Available for full stack mobile work</p>
-   543	            <h2>Let’s build something crisp, fast, and release-ready.</h2>
-   544	          </div>
-   545	          <a
-   546	            className="button button-primary"
-   547	            href="mailto:martin@prahlproductions.com"
-   548	          >
-   549	            <Mail aria-hidden size={18} />
-   550	            martin@prahlproductions.com
-   551	          </a>
-   552	        </div>
-   553	      </section>
-   554	    </main>
-   555	  );
-   556	}
+   459	            </div>
+   460	
+   461	            <div className="hero-visual" aria-label="Portfolio preview">
+   462	              <div className="profile-orbit">
+   463	                <Image
+   464	                  alt="Martin Prahl profile photo"
+   465	                  src="/images/martin3.jpg"
+   466	                  width={220}
+   467	                  height={220}
+   468	                  priority
+   469	                  className="profile-photo"
+   470	                />
+   471	                <span>Martin Prahl</span>
+   472	              </div>
+   473	
+   474	              <div className="phone-stage">
+   475	                <TabletPreview />
+   476	                <PhonePreview
+   477	                  title="Alla Vostra"
+   478	                  metric="Checkout ready"
+   479	                  variant="commerce"
+   480	                  href="/projects/alla-vostra"
+   481	                  screenImageSrc="/images/startup_screen_large.png"
+   482	                  screenImageAlt="Alla Vostra startup screen"
+   483	                />
+   484	                <PhonePreview
+   485	                  title="CreditKing"
+   486	                  metric="Finance UI"
+   487	                  variant="finance"
+   488	                  screenImageSrc="/images/editor-window-screenshot.png"
+   489	                  screenImageAlt="Prahl.dev portfolio portrait screenshot"
+   490	                />
+   491	              </div>
+   492	            </div>
+   493	          </div>
+   494	
+   495	          <ProofStats stats={proofStats} />
+   496	        </div>
+   497	      </section>
+   498	
+   499	      <FeaturedCaseStudies />
+   500	
+   501	      <section className="stack-section" id="stack">
+   502	        <div className="site-shell split-section">
+   503	          <SectionHeading
+   504	            kicker="Stack"
+   505	            title="Built around React Native, shaped for full stack delivery"
+   506	          />
+   507	          <div className="capability-grid">
+   508	            <div>
+   509	              <MonitorSmartphone aria-hidden />
+   510	              <h3>Main stack</h3>
+   511	              <p>
+   512	                React, React Native, Expo Router, Next.js, Tailwind CSS, and
+   513	                mobile-first responsive UI systems.
+   514	              </p>
+   515	            </div>
+   516	            <div>
+   517	              <Braces aria-hidden />
+   518	              <h3>Backend layer</h3>
+   519	              <p>
+   520	                Node.js serverless routes, Stripe payment setup, Postmark email
+   521	                delivery, environment configuration, and deployment workflows.
+   522	              </p>
+   523	            </div>
+   524	            <div>
+   525	              <Smartphone aria-hidden />
+   526	              <h3>Secondary mobile</h3>
+   527	              <p>
+   528	                Kotlin and Android Studio as the native Android path, aligned
+   529	                with the same release and device-testing discipline.
+   530	              </p>
+   531	            </div>
+   532	          </div>
+   533	        </div>
+   534	      </section>
+   535	
+   536	      <section className="worklog-section" id="worklog">
+   537	        <div className="site-shell worklog-layout">
+   538	          <SectionHeading
+   539	            kicker="Worklog"
+   540	            title="A documented build history, not just final screenshots"
+   541	          />
+   542	          <div className="timeline">
+   543	            {worklogItems.map((item, index) => (
+   544	              <div key={item} className="timeline-item">
+   545	                <span>{String(index + 1).padStart(2, "0")}</span>
+   546	                <p>{item}</p>
+   547	              </div>
+   548	            ))}
+   549	          </div>
+   550	        </div>
+   551	      </section>
+   552	
+   553	      <section className="contact-section" id="contact">
+   554	        <div className="site-shell contact-panel">
+   555	          <div>
+   556	            <p className="eyebrow">Available for full stack mobile work</p>
+   557	            <h2>Let’s build something crisp, fast, and release-ready.</h2>
+   558	          </div>
+   559	          <a
+   560	            className="button button-primary"
+   561	            href="mailto:martin@prahlproductions.com"
+   562	          >
+   563	            <Mail aria-hidden size={18} />
+   564	            martin@prahlproductions.com
+   565	          </a>
+   566	        </div>
+   567	      </section>
+   568	    </main>
+   569	  );
+   570	}
 
 
 ============================================================
@@ -1267,213 +1281,224 @@ FILE: app/ProjectCarouselButton.tsx
    486	            setPx("--hero-social-button-height", socialButtonHeight);
    487	            setPx("--hero-social-font-size", socialButtonHeight * 0.295833);
    488	            setPx("--hero-social-icon-size", socialButtonHeight * 0.672);
-   489	            setPx("--hero-social-gap", socialButtonHeight * 0.045833);
-   490	            setPx("--hero-social-pad-x", socialButtonHeight / 8);
-   491	            setPx("--hero-view-label-font-size", socialButtonHeight * 0.275);
-   492	            heroCopy?.style.setProperty(
-   493	              "--hero-eyebrow-font-size",
-   494	              `${socialButtonHeight * 0.367}px`,
-   495	            );
-   496	            heroCopy?.style.setProperty(
-   497	              "--hero-lede-font-size",
-   498	              `${socialButtonHeight * 0.5}px`,
-   499	            );
-   500	            setPx(
-   501	              "--hero-carousel-base-font-size",
-   502	              socialButtonHeight * 0.34375,
-   503	            );
-   504	            setPx(
-   505	              "--hero-carousel-name-font-size",
-   506	              socialButtonHeight * 0.352917,
-   507	            );
-   508	            setPx(
-   509	              "--hero-carousel-category-font-size",
-   510	              socialButtonHeight * 0.176458,
-   511	            );
-   512	            setPx(
-   513	              "--hero-carousel-arrow-font-size",
-   514	              socialButtonHeight * 0.458333,
-   515	            );
-   516	          }
-   517	        }
-   518	
-   519	        window.dispatchEvent(new CustomEvent("hero-stack-sync"));
-   520	
-   521	        const viewLabel =
-   522	          document.querySelector<HTMLElement>(".hero-view-label");
-   523	        const githubText =
-   524	          document.querySelector<HTMLElement>(".github-label-text");
-   525	        const githubIcon =
-   526	          document.querySelector<SVGSVGElement>(".github-icon-mark");
-   527	
-   528	        if (viewLabel && githubText && githubIcon) {
-   529	          const viewLabelRect = viewLabel.getBoundingClientRect();
-   530	          const githubTextRect = githubText.getBoundingClientRect();
-   531	          const githubIconRect = githubIcon.getBoundingClientRect();
-   532	          const stackLeft = githubTextRect.left - viewLabelRect.left;
-   533	          const stackWidth = githubIconRect.right - githubTextRect.left;
-   534	
-   535	          viewLabel.style.setProperty(
-   536	            "--hero-view-stack-left",
-   537	            `${stackLeft}px`,
-   538	          );
-   539	          viewLabel.style.setProperty(
-   540	            "--hero-view-stack-width",
-   541	            `${stackWidth}px`,
+   489	            const baseSocialButtonHeight = 48;
+   490	            const baseSocialGap = baseSocialButtonHeight * 0.045833 + 1;
+   491	            const stretchedSocialGap =
+   492	              Math.max(0, socialButtonHeight - baseSocialButtonHeight) *
+   493	              0.091666;
+   494	
+   495	            setPx("--hero-social-gap", baseSocialGap + stretchedSocialGap);
+   496	            setPx("--hero-social-pad-x", socialButtonHeight / 8);
+   497	            setPx("--hero-view-label-font-size", socialButtonHeight * 0.275);
+   498	            heroCopy?.style.setProperty(
+   499	              "--hero-eyebrow-font-size",
+   500	              `${socialButtonHeight * 0.367}px`,
+   501	            );
+   502	            heroCopy?.style.setProperty(
+   503	              "--hero-lede-font-size",
+   504	              `${socialButtonHeight * 0.5}px`,
+   505	            );
+   506	            setPx(
+   507	              "--hero-carousel-base-font-size",
+   508	              socialButtonHeight * 0.34375,
+   509	            );
+   510	            setPx(
+   511	              "--hero-carousel-name-font-size",
+   512	              socialButtonHeight * 0.352917,
+   513	            );
+   514	            setPx(
+   515	              "--hero-carousel-category-font-size",
+   516	              socialButtonHeight * 0.176458,
+   517	            );
+   518	            setPx(
+   519	              "--hero-carousel-arrow-font-size",
+   520	              socialButtonHeight * 0.458333,
+   521	            );
+   522	          }
+   523	        }
+   524	
+   525	        window.dispatchEvent(new CustomEvent("hero-stack-sync"));
+   526	
+   527	        const viewLabel =
+   528	          document.querySelector<HTMLElement>(".hero-view-label");
+   529	        const githubText =
+   530	          document.querySelector<HTMLElement>(".github-label-text");
+   531	        const githubIcon =
+   532	          document.querySelector<SVGSVGElement>(".github-icon-mark");
+   533	
+   534	        if (viewLabel && githubText && githubIcon) {
+   535	          const viewLabelRect = viewLabel.getBoundingClientRect();
+   536	          const githubTextRect = githubText.getBoundingClientRect();
+   537	          const githubIconRect = githubIcon.getBoundingClientRect();
+   538	          const clusterLeft = Math.min(githubTextRect.left, githubIconRect.left);
+   539	          const clusterRight = Math.max(
+   540	            githubTextRect.right,
+   541	            githubIconRect.right,
    542	          );
-   543	        }
-   544	      });
-   545	    };
-   546	
-   547	    syncHeroActionGeometry();
-   548	    window.addEventListener("resize", syncHeroActionGeometry);
-   549	
-   550	    const targetIcon =
-   551	      document.querySelector<SVGSVGElement>(".dribbble-icon-mark") ??
-   552	      document.querySelector<SVGSVGElement>(".linkedin-icon-mark");
-   553	    const heroActions = document.querySelector<HTMLElement>(".hero-actions");
-   554	    const stackRow = document.querySelector<HTMLElement>(".stack-row");
-   555	    const proofPanel = document.querySelector<HTMLElement>(".proof-panel");
-   556	    const profilePhoto = document.querySelector<HTMLElement>(".profile-photo");
-   557	    const targetButton = targetIcon?.closest(".hero-social-button");
-   558	    const viewLabel = document.querySelector<HTMLElement>(".hero-view-label");
-   559	    const githubText = document.querySelector<HTMLElement>(".github-label-text");
-   560	    const githubIcon =
-   561	      document.querySelector<SVGSVGElement>(".github-icon-mark");
-   562	    const githubButton = githubText?.closest(".github-button");
-   563	    const resizeObserver =
-   564	      typeof ResizeObserver === "undefined"
-   565	        ? null
-   566	        : new ResizeObserver(syncHeroActionGeometry);
-   567	
-   568	    if (resizeObserver) {
-   569	      if (projectButtonRef.current) {
-   570	        resizeObserver.observe(projectButtonRef.current);
-   571	      }
-   572	
-   573	      if (heroActions) {
-   574	        resizeObserver.observe(heroActions);
-   575	      }
-   576	
-   577	      if (stackRow) {
-   578	        resizeObserver.observe(stackRow);
-   579	      }
-   580	
-   581	      if (proofPanel) {
-   582	        resizeObserver.observe(proofPanel);
-   583	      }
-   584	
-   585	      if (profilePhoto) {
-   586	        resizeObserver.observe(profilePhoto);
-   587	      }
-   588	
-   589	      if (targetIcon) {
-   590	        resizeObserver.observe(targetIcon);
-   591	      }
-   592	
-   593	      if (targetButton) {
-   594	        resizeObserver.observe(targetButton);
-   595	      }
-   596	
-   597	      if (viewLabel) {
-   598	        resizeObserver.observe(viewLabel);
-   599	      }
-   600	
-   601	      if (githubText) {
-   602	        resizeObserver.observe(githubText);
-   603	      }
-   604	
-   605	      if (githubIcon) {
-   606	        resizeObserver.observe(githubIcon);
-   607	      }
-   608	
-   609	      if (githubButton) {
-   610	        resizeObserver.observe(githubButton);
-   611	      }
-   612	    }
-   613	
-   614	    if ("fonts" in document) {
-   615	      document.fonts.ready.then(syncHeroActionGeometry).catch(() => {});
-   616	    }
-   617	
-   618	    return () => {
-   619	      if (frame) {
-   620	        window.cancelAnimationFrame(frame);
-   621	      }
-   622	
-   623	      window.removeEventListener("resize", syncHeroActionGeometry);
-   624	      resizeObserver?.disconnect();
-   625	    };
-   626	  }, []);
-   627	
-   628	  return (
-   629	    <span className="carousel-button-group">
-   630	      <a
-   631	        aria-label={`Open ${activeProject.name} project`}
-   632	        className="button button-primary carousel-button"
-   633	        href={activeProject.href}
-   634	        ref={projectButtonRef}
-   635	      >
-   636	        <span className="carousel-button-window" aria-live="polite">
-   637	          <span className="carousel-button-label" key={activeProject.href}>
-   638	            <span
-   639	              className={`carousel-button-action carousel-button-action-${activeProject.tone}`}
-   640	              style={{
-   641	                ...strokedWhiteTextStyle,
-   642	                alignItems: "center",
-   643	                color: projectNameColors[activeProject.tone],
-   644	                display: "inline-flex",
-   645	                flexDirection: "column",
-   646	                fontSize: "var(--hero-carousel-name-font-size)",
-   647	                gap: "2.2px",
-   648	                justifyContent: "center",
-   649	                lineHeight: 0.95,
-   650	              }}
-   651	            >
-   652	              <span
-   653	                className="carousel-button-action-name"
-   654	                style={{ fontSize: activeProject.nameFontSize }}
-   655	              >
-   656	                {activeProject.name}
-   657	              </span>
-   658	              <span
-   659	                className="carousel-button-action-category"
-   660	                style={{
-   661	                  WebkitTextStroke: 0,
-   662	                  color: "#000",
-   663	                  fontSize: "var(--hero-carousel-category-font-size)",
-   664	                  fontWeight: 900,
-   665	                  letterSpacing: "0.06em",
-   666	                  lineHeight: 1,
-   667	                  textAlign: "center",
-   668	                  textShadow: "none",
-   669	                }}
-   670	              >
-   671	                {activeProject.category}
-   672	              </span>
-   673	            </span>
-   674	            <ProjectDeviceStack
-   675	              color={projectNameColors[activeProject.tone]}
-   676	              hasTablet={activeProject.hasTablet}
-   677	              hasWeb={activeProject.hasWeb}
-   678	              mobilePlatforms={activeProject.mobilePlatforms}
-   679	            />
-   680	          </span>
-   681	        </span>
-   682	      </a>
-   683	      <a
-   684	        aria-label={`Scroll to ${activeProject.name} case study`}
-   685	        className="button button-primary carousel-arrow-button"
-   686	        href={`#${activeProject.caseStudyId}`}
-   687	        onClick={handleArrowClick}
-   688	      >
-   689	        <span aria-hidden className="carousel-button-arrow">
-   690	          <CarouselArrowMark />
-   691	        </span>
-   692	      </a>
-   693	    </span>
-   694	  );
-   695	}
+   543	          const stackLeft = clusterLeft - viewLabelRect.left;
+   544	          const stackWidth = clusterRight - clusterLeft;
+   545	
+   546	          viewLabel.style.setProperty(
+   547	            "--hero-view-stack-left",
+   548	            `${stackLeft}px`,
+   549	          );
+   550	          viewLabel.style.setProperty(
+   551	            "--hero-view-stack-width",
+   552	            `${stackWidth}px`,
+   553	          );
+   554	        }
+   555	      });
+   556	    };
+   557	
+   558	    syncHeroActionGeometry();
+   559	    window.addEventListener("resize", syncHeroActionGeometry);
+   560	
+   561	    const targetIcon =
+   562	      document.querySelector<SVGSVGElement>(".dribbble-icon-mark") ??
+   563	      document.querySelector<SVGSVGElement>(".linkedin-icon-mark");
+   564	    const heroActions = document.querySelector<HTMLElement>(".hero-actions");
+   565	    const stackRow = document.querySelector<HTMLElement>(".stack-row");
+   566	    const proofPanel = document.querySelector<HTMLElement>(".proof-panel");
+   567	    const profilePhoto = document.querySelector<HTMLElement>(".profile-photo");
+   568	    const targetButton = targetIcon?.closest(".hero-social-button");
+   569	    const viewLabel = document.querySelector<HTMLElement>(".hero-view-label");
+   570	    const githubText = document.querySelector<HTMLElement>(".github-label-text");
+   571	    const githubIcon =
+   572	      document.querySelector<SVGSVGElement>(".github-icon-mark");
+   573	    const githubButton = githubText?.closest(".github-button");
+   574	    const resizeObserver =
+   575	      typeof ResizeObserver === "undefined"
+   576	        ? null
+   577	        : new ResizeObserver(syncHeroActionGeometry);
+   578	
+   579	    if (resizeObserver) {
+   580	      if (projectButtonRef.current) {
+   581	        resizeObserver.observe(projectButtonRef.current);
+   582	      }
+   583	
+   584	      if (heroActions) {
+   585	        resizeObserver.observe(heroActions);
+   586	      }
+   587	
+   588	      if (stackRow) {
+   589	        resizeObserver.observe(stackRow);
+   590	      }
+   591	
+   592	      if (proofPanel) {
+   593	        resizeObserver.observe(proofPanel);
+   594	      }
+   595	
+   596	      if (profilePhoto) {
+   597	        resizeObserver.observe(profilePhoto);
+   598	      }
+   599	
+   600	      if (targetIcon) {
+   601	        resizeObserver.observe(targetIcon);
+   602	      }
+   603	
+   604	      if (targetButton) {
+   605	        resizeObserver.observe(targetButton);
+   606	      }
+   607	
+   608	      if (viewLabel) {
+   609	        resizeObserver.observe(viewLabel);
+   610	      }
+   611	
+   612	      if (githubText) {
+   613	        resizeObserver.observe(githubText);
+   614	      }
+   615	
+   616	      if (githubIcon) {
+   617	        resizeObserver.observe(githubIcon);
+   618	      }
+   619	
+   620	      if (githubButton) {
+   621	        resizeObserver.observe(githubButton);
+   622	      }
+   623	    }
+   624	
+   625	    if ("fonts" in document) {
+   626	      document.fonts.ready.then(syncHeroActionGeometry).catch(() => {});
+   627	    }
+   628	
+   629	    return () => {
+   630	      if (frame) {
+   631	        window.cancelAnimationFrame(frame);
+   632	      }
+   633	
+   634	      window.removeEventListener("resize", syncHeroActionGeometry);
+   635	      resizeObserver?.disconnect();
+   636	    };
+   637	  }, []);
+   638	
+   639	  return (
+   640	    <span className="carousel-button-group">
+   641	      <a
+   642	        aria-label={`Open ${activeProject.name} project`}
+   643	        className="button button-primary carousel-button"
+   644	        href={activeProject.href}
+   645	        ref={projectButtonRef}
+   646	      >
+   647	        <span className="carousel-button-window" aria-live="polite">
+   648	          <span className="carousel-button-label" key={activeProject.href}>
+   649	            <span
+   650	              className={`carousel-button-action carousel-button-action-${activeProject.tone}`}
+   651	              style={{
+   652	                ...strokedWhiteTextStyle,
+   653	                alignItems: "center",
+   654	                color: projectNameColors[activeProject.tone],
+   655	                display: "inline-flex",
+   656	                flexDirection: "column",
+   657	                fontSize: "var(--hero-carousel-name-font-size)",
+   658	                gap: "2.2px",
+   659	                justifyContent: "center",
+   660	                lineHeight: 0.95,
+   661	              }}
+   662	            >
+   663	              <span
+   664	                className="carousel-button-action-name"
+   665	                style={{ fontSize: activeProject.nameFontSize }}
+   666	              >
+   667	                {activeProject.name}
+   668	              </span>
+   669	              <span
+   670	                className="carousel-button-action-category"
+   671	                style={{
+   672	                  WebkitTextStroke: 0,
+   673	                  color: "#000",
+   674	                  fontSize: "var(--hero-carousel-category-font-size)",
+   675	                  fontWeight: 900,
+   676	                  letterSpacing: "0.06em",
+   677	                  lineHeight: 1,
+   678	                  textAlign: "center",
+   679	                  textShadow: "none",
+   680	                }}
+   681	              >
+   682	                {activeProject.category}
+   683	              </span>
+   684	            </span>
+   685	            <ProjectDeviceStack
+   686	              color={projectNameColors[activeProject.tone]}
+   687	              hasTablet={activeProject.hasTablet}
+   688	              hasWeb={activeProject.hasWeb}
+   689	              mobilePlatforms={activeProject.mobilePlatforms}
+   690	            />
+   691	          </span>
+   692	        </span>
+   693	      </a>
+   694	      <a
+   695	        aria-label={`Scroll to ${activeProject.name} case study`}
+   696	        className="button button-primary carousel-arrow-button"
+   697	        href={`#${activeProject.caseStudyId}`}
+   698	        onClick={handleArrowClick}
+   699	      >
+   700	        <span aria-hidden className="carousel-button-arrow">
+   701	          <CarouselArrowMark />
+   702	        </span>
+   703	      </a>
+   704	    </span>
+   705	  );
+   706	}
 
 
 ============================================================
@@ -1588,7 +1613,7 @@ FILE: app/globals.css
    106	
    107	.nav-bar {
    108	  --nav-bar-inline-padding: 18px;
-   109	  --nav-bar-height: 64px;
+   109	  --nav-bar-height: 48px;
    110	  --nav-bar-two-row-height: calc(var(--nav-bar-height) + var(--nav-bar-height));
    111	  --nav-bar-two-row-gap: 0px;
    112	  --nav-brand-card-bleed: var(--nav-bar-inline-padding);
@@ -1727,7 +1752,7 @@ FILE: app/globals.css
    245	  color: var(--muted);
    246	  font-size: 17px;
    247	  font-weight: 400;
-   248	  padding: 10px 12px;
+   248	  padding: 7.5px 12px;
    249	  white-space: nowrap;
    250	}
    251	
@@ -1932,7 +1957,7 @@ FILE: app/globals.css
    450	  --hero-carousel-name-font-size: 16.94px;
    451	  --hero-social-button-height: 48px;
    452	  --hero-social-font-size: clamp(13.1px, 3.79vw, 14.2px);
-   453	  --hero-social-gap: clamp(1.1px, 0.66vw, 2.2px);
+   453	  --hero-social-gap: clamp(2.1px, calc(0.66vw + 1px), 6.4px);
    454	  --hero-social-icon-size: clamp(29.55px, 8.06vw, 32.23px);
    455	  --hero-social-pad-x: clamp(4px, 1.6vw, 6px);
    456	  --hero-view-label-font-size: 13.2px;
@@ -2368,2258 +2393,2308 @@ FILE: app/globals.css
    886	}
    887	
    888	.github-button {
-   889	  background: #f3fff7;
-   890	  border-color: #f3fff7;
-   891	  color: #000;
+   889	  background: #000;
+   890	  border-color: #000;
+   891	  color: #f3fff7;
    892	}
    893	
    894	.linkedin-button {
-   895	  background: #60a5fa;
-   896	  border-color: #60a5fa;
+   895	  background: #2867B2;
+   896	  border-color: #2867B2;
    897	}
    898	
-   899	.instagram-button {
-   900	  background: #E1306C;
-   901	  border-color: #E1306C;
-   902	  color: #000;
-   903	  column-gap: 2px;
-   904	}
-   905	
-   906	.instagram-icon-mark {
-   907	  margin-left: calc(var(--hero-social-icon-size) * -0.125);
-   908	}
-   909	
-   910	.stack-row {
-   911	  display: grid;
-   912	  gap: 6px;
-   913	  grid-template-columns:
-   914	    minmax(0, 33fr)
-   915	    minmax(0, 34fr)
-   916	    minmax(0, 33fr);
-   917	  margin-top: 26px;
-   918	  width: var(--hero-action-stack-width);
-   919	}
-   920	
-   921	.stack-row span,
-   922	.case-tags span {
-   923	  background: rgba(67, 255, 146, 0.08);
-   924	  border: 1px solid var(--line);
-   925	  border-radius: 999px;
-   926	  color: #d8ffe4;
-   927	  font-size: 13px;
-   928	  font-weight: 400;
-   929	  padding: 8px 11px;
-   930	}
-   931	
-   932	.stack-row span {
-   933	  align-items: center;
-   934	  box-sizing: border-box;
-   935	  display: flex;
-   936	  font-size: 11px;
-   937	  justify-content: center;
-   938	  min-width: 0;
-   939	  padding-left: 4px;
-   940	  padding-right: 4px;
-   941	  text-align: center;
-   942	  white-space: nowrap;
-   943	  width: 100%;
-   944	}
-   945	
-   946	.hero-visual {
-   947	  position: relative;
-   948	}
-   949	
-   950	.profile-orbit {
-   951	  align-items: center;
-   952	  display: flex;
-   953	  flex-direction: column;
-   954	  gap: 12px;
-   955	  position: absolute;
-   956	  right: 18px;
-   957	  top: 0;
-   958	  z-index: 3;
-   959	}
-   960	
-   961	.profile-photo {
-   962	  border: 2px solid rgba(198, 255, 217, 0.34);
-   963	  border-radius: 999px;
-   964	  box-shadow: 0 0 0 10px rgba(67, 255, 146, 0.05), 0 34px 95px rgba(0, 191, 99, 0.22);
-   965	  height: 188px;
-   966	  object-fit: cover;
-   967	  width: 188px;
-   968	}
-   969	
-   970	.profile-orbit span {
-   971	  background: rgba(5, 16, 10, 0.8);
+   899	.resume-button {
+   900	  background: #fff;
+   901	  border-color: #fff;
+   902	  color: #fff;
+   903	}
+   904	
+   905	.github-label-text,
+   906	.linkedin-label-text,
+   907	.resume-label-text {
+   908	  -webkit-text-stroke: 3px #000;
+   909	  display: inline-block;
+   910	  isolation: isolate;
+   911	  paint-order: stroke fill;
+   912	  position: relative;
+   913	}
+   914	
+   915	.github-label-text {
+   916	  --social-label-middle-stroke: #4B5563;
+   917	  color: #f3fff7;
+   918	}
+   919	
+   920	.linkedin-label-text {
+   921	  --social-label-middle-stroke: #2867B2;
+   922	  color: #fff;
+   923	}
+   924	
+   925	.resume-label-text {
+   926	  --social-label-middle-stroke: #05AF59;
+   927	  color: #fff;
+   928	}
+   929	
+   930	.github-label-text::before,
+   931	.github-label-text::after,
+   932	.linkedin-label-text::before,
+   933	.linkedin-label-text::after,
+   934	.resume-label-text::before,
+   935	.resume-label-text::after {
+   936	  color: #fff;
+   937	  content: attr(data-text);
+   938	  inset: 0;
+   939	  paint-order: stroke fill;
+   940	  pointer-events: none;
+   941	  position: absolute;
+   942	}
+   943	
+   944	.github-label-text::before,
+   945	.linkedin-label-text::before,
+   946	.resume-label-text::before {
+   947	  -webkit-text-stroke: 4px var(--social-label-middle-stroke);
+   948	  z-index: -1;
+   949	}
+   950	
+   951	.github-label-text::after,
+   952	.linkedin-label-text::after,
+   953	.resume-label-text::after {
+   954	  -webkit-text-stroke: 6px #000;
+   955	  z-index: -2;
+   956	}
+   957	
+   958	.stack-row {
+   959	  display: grid;
+   960	  gap: 6px;
+   961	  grid-template-columns:
+   962	    minmax(0, 33fr)
+   963	    minmax(0, 34fr)
+   964	    minmax(0, 33fr);
+   965	  margin-top: 26px;
+   966	  width: var(--hero-action-stack-width);
+   967	}
+   968	
+   969	.stack-row span,
+   970	.case-tags span {
+   971	  background: rgba(67, 255, 146, 0.08);
    972	  border: 1px solid var(--line);
-   973	  border-radius: 8px;
-   974	  color: var(--mint);
-   975	  font-size: 12px;
-   976	  font-weight: 750;
-   977	  line-height: 1.25;
-   978	  max-width: 138px;
-   979	  padding: 7px 11px;
-   980	  text-align: center;
-   981	}
-   982	
-   983	.phone-stage {
-   984	  height: 690px;
-   985	  margin-top: 48px;
-   986	  position: relative;
-   987	}
-   988	
-   989	.tablet-shell {
-   990	  background: linear-gradient(145deg, #0c120f, #000);
-   991	  border: 1px solid rgba(198, 255, 217, 0.24);
-   992	  border-radius: var(--capture-frame-radius-standard);
-   993	  box-shadow: 0 34px 96px rgba(0, 0, 0, 0.66), 0 0 56px rgba(0, 191, 99, 0.12);
-   994	  height: 190px;
-   995	  left: 38px;
-   996	  padding: 13px;
-   997	  position: absolute;
-   998	  top: 352px;
-   999	  transform: rotate(-5deg) scale(1.5);
-  1000	  transform-origin: top left;
-  1001	  width: 304px;
-  1002	  z-index: 4;
-  1003	}
-  1004	
-  1005	.tablet-camera {
-  1006	  background: rgba(198, 255, 217, 0.28);
-  1007	  border-radius: 999px;
-  1008	  height: 5px;
-  1009	  left: 50%;
-  1010	  position: absolute;
-  1011	  top: 6px;
-  1012	  transform: translateX(-50%);
-  1013	  width: 5px;
-  1014	}
-  1015	
-  1016	.tablet-screen {
-  1017	  background:
-  1018	    linear-gradient(rgba(67, 255, 146, 0.045) 1px, transparent 1px),
-  1019	    linear-gradient(90deg, rgba(67, 255, 146, 0.045) 1px, transparent 1px),
-  1020	    radial-gradient(circle at 28% 34%, rgba(67, 255, 146, 0.18), transparent 34%),
-  1021	    linear-gradient(180deg, #07140d, #020403 70%);
-  1022	  background-size: 22px 22px, 22px 22px, auto, auto;
-  1023	  border: 1px solid rgba(198, 255, 217, 0.08);
-  1024	  border-radius: var(--capture-screen-radius-standard);
-  1025	  height: 100%;
-  1026	  overflow: hidden;
-  1027	  position: relative;
-  1028	}
-  1029	
-  1030	.tablet-screen-image {
-  1031	  object-fit: contain;
-  1032	  object-position: center center;
-  1033	  transform: translate(28px, 23px) rotate(40deg) scale(1.65);
-  1034	  transform-origin: center center;
-  1035	  z-index: 1;
-  1036	}
-  1037	
-  1038	.tablet-empty-grid {
-  1039	  background:
-  1040	    linear-gradient(90deg, rgba(198, 255, 217, 0.06) 1px, transparent 1px),
-  1041	    linear-gradient(rgba(198, 255, 217, 0.06) 1px, transparent 1px);
-  1042	  background-size: 48px 48px;
-  1043	  inset: 0;
-  1044	  opacity: 0.45;
+   973	  border-radius: 999px;
+   974	  color: #d8ffe4;
+   975	  font-size: 13px;
+   976	  font-weight: 400;
+   977	  padding: 8px 11px;
+   978	}
+   979	
+   980	.stack-row span {
+   981	  align-items: center;
+   982	  box-sizing: border-box;
+   983	  display: flex;
+   984	  font-size: 11px;
+   985	  justify-content: center;
+   986	  min-width: 0;
+   987	  padding-left: 4px;
+   988	  padding-right: 4px;
+   989	  text-align: center;
+   990	  white-space: nowrap;
+   991	  width: 100%;
+   992	}
+   993	
+   994	.hero-visual {
+   995	  position: relative;
+   996	}
+   997	
+   998	.profile-orbit {
+   999	  align-items: center;
+  1000	  display: flex;
+  1001	  flex-direction: column;
+  1002	  gap: 12px;
+  1003	  position: absolute;
+  1004	  right: 18px;
+  1005	  top: 0;
+  1006	  z-index: 3;
+  1007	}
+  1008	
+  1009	.profile-photo {
+  1010	  border: 2px solid rgba(198, 255, 217, 0.34);
+  1011	  border-radius: 999px;
+  1012	  box-shadow: 0 0 0 10px rgba(67, 255, 146, 0.05), 0 34px 95px rgba(0, 191, 99, 0.22);
+  1013	  height: 188px;
+  1014	  object-fit: cover;
+  1015	  width: 188px;
+  1016	}
+  1017	
+  1018	.profile-orbit span {
+  1019	  background: rgba(5, 16, 10, 0.8);
+  1020	  border: 1px solid var(--line);
+  1021	  border-radius: 8px;
+  1022	  color: var(--mint);
+  1023	  font-size: 12px;
+  1024	  font-weight: 750;
+  1025	  line-height: 1.25;
+  1026	  max-width: 138px;
+  1027	  padding: 7px 11px;
+  1028	  text-align: center;
+  1029	}
+  1030	
+  1031	.phone-stage {
+  1032	  height: 690px;
+  1033	  margin-top: 48px;
+  1034	  position: relative;
+  1035	}
+  1036	
+  1037	.tablet-shell {
+  1038	  background: linear-gradient(145deg, #0c120f, #000);
+  1039	  border: 1px solid rgba(198, 255, 217, 0.24);
+  1040	  border-radius: var(--capture-frame-radius-standard);
+  1041	  box-shadow: 0 34px 96px rgba(0, 0, 0, 0.66), 0 0 56px rgba(0, 191, 99, 0.12);
+  1042	  height: 190px;
+  1043	  left: 38px;
+  1044	  padding: 13px;
   1045	  position: absolute;
-  1046	  z-index: 0;
-  1047	}
-  1048	
-  1049	.phone-shell {
-  1050	  background: linear-gradient(145deg, #0c120f, #000);
-  1051	  border: 1px solid rgba(198, 255, 217, 0.22);
-  1052	  border-radius: 34px;
-  1053	  box-shadow: 0 34px 100px rgba(0, 0, 0, 0.62);
-  1054	  height: 500px;
-  1055	  padding: 16px;
-  1056	  position: absolute;
-  1057	  width: 245px;
-  1058	}
-  1059	
-  1060	.phone-shell-link {
-  1061	  color: inherit;
-  1062	  cursor: pointer;
-  1063	  display: block;
-  1064	  text-decoration: none;
-  1065	}
-  1066	
-  1067	.phone-shell-link:focus-visible {
-  1068	  outline: 2px solid var(--mint);
-  1069	  outline-offset: 8px;
-  1070	}
-  1071	
-  1072	.phone-shell-commerce {
-  1073	  left: 68px;
-  1074	  top: 40px;
-  1075	  transform: rotate(-9deg);
-  1076	  z-index: 2;
-  1077	}
-  1078	
-  1079	.phone-shell-finance {
-  1080	  left: 278px;
-  1081	  top: 110px;
-  1082	  transform: rotate(8deg);
+  1046	  top: 352px;
+  1047	  transform: rotate(-5deg) scale(1.5);
+  1048	  transform-origin: top left;
+  1049	  width: 304px;
+  1050	  z-index: 4;
+  1051	}
+  1052	
+  1053	.tablet-camera {
+  1054	  background: rgba(198, 255, 217, 0.28);
+  1055	  border-radius: 999px;
+  1056	  height: 5px;
+  1057	  left: 50%;
+  1058	  position: absolute;
+  1059	  top: 6px;
+  1060	  transform: translateX(-50%);
+  1061	  width: 5px;
+  1062	}
+  1063	
+  1064	.tablet-screen {
+  1065	  background:
+  1066	    linear-gradient(rgba(67, 255, 146, 0.045) 1px, transparent 1px),
+  1067	    linear-gradient(90deg, rgba(67, 255, 146, 0.045) 1px, transparent 1px),
+  1068	    radial-gradient(circle at 28% 34%, rgba(67, 255, 146, 0.18), transparent 34%),
+  1069	    linear-gradient(180deg, #07140d, #020403 70%);
+  1070	  background-size: 22px 22px, 22px 22px, auto, auto;
+  1071	  border: 1px solid rgba(198, 255, 217, 0.08);
+  1072	  border-radius: var(--capture-screen-radius-standard);
+  1073	  height: 100%;
+  1074	  overflow: hidden;
+  1075	  position: relative;
+  1076	}
+  1077	
+  1078	.tablet-screen-image {
+  1079	  object-fit: contain;
+  1080	  object-position: center center;
+  1081	  transform: translate(28px, 23px) rotate(40deg) scale(1.65);
+  1082	  transform-origin: center center;
   1083	  z-index: 1;
   1084	}
   1085	
-  1086	.phone-speaker {
-  1087	  background: #171f1a;
-  1088	  border-radius: 99px;
-  1089	  height: 6px;
-  1090	  margin: 0 auto 12px;
-  1091	  width: 62px;
-  1092	}
-  1093	
-  1094	.phone-screen {
-  1095	  background:
-  1096	    linear-gradient(rgba(67, 255, 146, 0.055) 1px, transparent 1px),
-  1097	    linear-gradient(90deg, rgba(67, 255, 146, 0.055) 1px, transparent 1px),
-  1098	    linear-gradient(180deg, #0b1710, #030705 64%);
-  1099	  background-size: 24px 24px, 24px 24px, auto;
-  1100	  border-radius: 24px;
-  1101	  height: calc(100% - 18px);
-  1102	  overflow: hidden;
-  1103	  padding: 18px;
-  1104	  position: relative;
-  1105	}
-  1106	
-  1107	.phone-screen.has-image {
-  1108	  background: #020403;
-  1109	  border-radius: var(--capture-screen-radius-tall);
-  1110	  padding: 0;
-  1111	}
-  1112	
-  1113	.phone-screen-image-frame {
-  1114	  inset: 2% 0 0;
-  1115	  position: absolute;
-  1116	}
-  1117	
-  1118	.phone-screen-image {
-  1119	  object-fit: contain;
-  1120	  object-position: top center;
-  1121	}
-  1122	
-  1123	.phone-shell-finance .phone-screen-image-frame {
-  1124	  inset: 0;
+  1086	.tablet-empty-grid {
+  1087	  background:
+  1088	    linear-gradient(90deg, rgba(198, 255, 217, 0.06) 1px, transparent 1px),
+  1089	    linear-gradient(rgba(198, 255, 217, 0.06) 1px, transparent 1px);
+  1090	  background-size: 48px 48px;
+  1091	  inset: 0;
+  1092	  opacity: 0.45;
+  1093	  position: absolute;
+  1094	  z-index: 0;
+  1095	}
+  1096	
+  1097	.phone-shell {
+  1098	  background: linear-gradient(145deg, #0c120f, #000);
+  1099	  border: 1px solid rgba(198, 255, 217, 0.22);
+  1100	  border-radius: 34px;
+  1101	  box-shadow: 0 34px 100px rgba(0, 0, 0, 0.62);
+  1102	  height: 500px;
+  1103	  padding: 16px;
+  1104	  position: absolute;
+  1105	  width: 245px;
+  1106	}
+  1107	
+  1108	.phone-shell-link {
+  1109	  color: inherit;
+  1110	  cursor: pointer;
+  1111	  display: block;
+  1112	  text-decoration: none;
+  1113	}
+  1114	
+  1115	.phone-shell-link:focus-visible {
+  1116	  outline: 2px solid var(--mint);
+  1117	  outline-offset: 8px;
+  1118	}
+  1119	
+  1120	.phone-shell-commerce {
+  1121	  left: 68px;
+  1122	  top: 40px;
+  1123	  transform: rotate(-9deg);
+  1124	  z-index: 2;
   1125	}
   1126	
-  1127	.phone-shell-finance .phone-screen-image {
-  1128	  object-position: center center;
-  1129	}
-  1130	
-  1131	.phone-shell-capture {
-  1132	  border-radius: var(--capture-frame-radius-tall);
-  1133	}
-  1134	
-  1135	.phone-status {
-  1136	  align-items: center;
-  1137	  color: var(--mint);
-  1138	  display: flex;
-  1139	  font-size: 11px;
-  1140	  font-weight: 800;
-  1141	  justify-content: space-between;
-  1142	  margin-bottom: 28px;
-  1143	}
-  1144	
-  1145	.phone-chart {
-  1146	  align-items: end;
-  1147	  display: grid;
-  1148	  gap: 8px;
-  1149	  grid-template-columns: repeat(4, 1fr);
-  1150	  height: 118px;
-  1151	  margin-bottom: 26px;
-  1152	}
-  1153	
-  1154	.phone-chart div {
-  1155	  background: linear-gradient(180deg, var(--green), #086c3b);
-  1156	  border-radius: 6px 6px 2px 2px;
-  1157	}
-  1158	
-  1159	.phone-chart div:nth-child(1) {
-  1160	  height: 54%;
-  1161	}
-  1162	
-  1163	.phone-chart div:nth-child(2) {
-  1164	  height: 88%;
-  1165	}
-  1166	
-  1167	.phone-chart div:nth-child(3) {
-  1168	  height: 66%;
+  1127	.phone-shell-finance {
+  1128	  left: 278px;
+  1129	  top: 110px;
+  1130	  transform: rotate(8deg);
+  1131	  z-index: 1;
+  1132	}
+  1133	
+  1134	.phone-speaker {
+  1135	  background: #171f1a;
+  1136	  border-radius: 99px;
+  1137	  height: 6px;
+  1138	  margin: 0 auto 12px;
+  1139	  width: 62px;
+  1140	}
+  1141	
+  1142	.phone-screen {
+  1143	  background:
+  1144	    linear-gradient(rgba(67, 255, 146, 0.055) 1px, transparent 1px),
+  1145	    linear-gradient(90deg, rgba(67, 255, 146, 0.055) 1px, transparent 1px),
+  1146	    linear-gradient(180deg, #0b1710, #030705 64%);
+  1147	  background-size: 24px 24px, 24px 24px, auto;
+  1148	  border-radius: 24px;
+  1149	  height: calc(100% - 18px);
+  1150	  overflow: hidden;
+  1151	  padding: 18px;
+  1152	  position: relative;
+  1153	}
+  1154	
+  1155	.phone-screen.has-image {
+  1156	  background: #020403;
+  1157	  border-radius: var(--capture-screen-radius-tall);
+  1158	  padding: 0;
+  1159	}
+  1160	
+  1161	.phone-screen-image-frame {
+  1162	  inset: 2% 0 0;
+  1163	  position: absolute;
+  1164	}
+  1165	
+  1166	.phone-screen-image {
+  1167	  object-fit: contain;
+  1168	  object-position: top center;
   1169	}
   1170	
-  1171	.phone-chart div:nth-child(4) {
-  1172	  height: 100%;
+  1171	.phone-shell-finance .phone-screen-image-frame {
+  1172	  inset: 0;
   1173	}
   1174	
-  1175	.phone-cardline {
-  1176	  background: rgba(198, 255, 217, 0.14);
-  1177	  border-radius: 999px;
-  1178	  height: 12px;
-  1179	  margin-bottom: 10px;
-  1180	  width: 62%;
+  1175	.phone-shell-finance .phone-screen-image {
+  1176	  object-position: center center;
+  1177	}
+  1178	
+  1179	.phone-shell-capture {
+  1180	  border-radius: var(--capture-frame-radius-tall);
   1181	}
   1182	
-  1183	.phone-cardline.wide {
-  1184	  width: 88%;
-  1185	}
-  1186	
-  1187	.phone-grid {
-  1188	  display: grid;
-  1189	  gap: 9px;
-  1190	  grid-template-columns: 1fr 1fr;
-  1191	  margin-top: 24px;
-  1192	}
-  1193	
-  1194	.phone-grid span {
-  1195	  background: rgba(255, 255, 255, 0.05);
-  1196	  border: 1px solid var(--line);
-  1197	  border-radius: 8px;
-  1198	  height: 54px;
-  1199	}
-  1200	
-  1201	.phone-cta {
-  1202	  align-items: center;
-  1203	  background: var(--green);
-  1204	  border-radius: 8px;
-  1205	  color: #001d0f;
-  1206	  display: flex;
-  1207	  font-size: 13px;
-  1208	  font-weight: 900;
-  1209	  height: 42px;
-  1210	  justify-content: center;
-  1211	  margin-top: 24px;
-  1212	}
-  1213	
-  1214	.proof-panel {
-  1215	  backdrop-filter: blur(16px);
-  1216	  background: rgba(5, 16, 10, 0.76);
-  1217	  border: 1px solid var(--line-strong);
-  1218	  border-radius: 8px;
-  1219	  display: grid;
-  1220	  grid-template-columns: repeat(3, minmax(0, 1fr));
-  1221	  gap: 10px;
-  1222	  margin: 26px 0 0;
-  1223	  padding: 14px;
-  1224	  position: relative;
-  1225	  width: var(--hero-proof-stack-width);
-  1226	  z-index: 2;
-  1227	}
-  1228	
-  1229	.proof-column {
-  1230	  color: #dfffea;
-  1231	  display: grid;
-  1232	  font-size: 13px;
-  1233	  font-weight: 750;
-  1234	  gap: 10px;
-  1235	  line-height: 1.25;
-  1236	}
-  1237	
-  1238	.proof-item {
-  1239	  align-items: center;
-  1240	  display: flex;
-  1241	  gap: 4px;
-  1242	  min-width: 0;
-  1243	}
-  1244	
-  1245	.proof-item svg {
-  1246	  flex: 0 0 auto;
+  1183	.phone-status {
+  1184	  align-items: center;
+  1185	  color: var(--mint);
+  1186	  display: flex;
+  1187	  font-size: 11px;
+  1188	  font-weight: 800;
+  1189	  justify-content: space-between;
+  1190	  margin-bottom: 28px;
+  1191	}
+  1192	
+  1193	.phone-chart {
+  1194	  align-items: end;
+  1195	  display: grid;
+  1196	  gap: 8px;
+  1197	  grid-template-columns: repeat(4, 1fr);
+  1198	  height: 118px;
+  1199	  margin-bottom: 26px;
+  1200	}
+  1201	
+  1202	.phone-chart div {
+  1203	  background: linear-gradient(180deg, var(--green), #086c3b);
+  1204	  border-radius: 6px 6px 2px 2px;
+  1205	}
+  1206	
+  1207	.phone-chart div:nth-child(1) {
+  1208	  height: 54%;
+  1209	}
+  1210	
+  1211	.phone-chart div:nth-child(2) {
+  1212	  height: 88%;
+  1213	}
+  1214	
+  1215	.phone-chart div:nth-child(3) {
+  1216	  height: 66%;
+  1217	}
+  1218	
+  1219	.phone-chart div:nth-child(4) {
+  1220	  height: 100%;
+  1221	}
+  1222	
+  1223	.phone-cardline {
+  1224	  background: rgba(198, 255, 217, 0.14);
+  1225	  border-radius: 999px;
+  1226	  height: 12px;
+  1227	  margin-bottom: 10px;
+  1228	  width: 62%;
+  1229	}
+  1230	
+  1231	.phone-cardline.wide {
+  1232	  width: 88%;
+  1233	}
+  1234	
+  1235	.phone-grid {
+  1236	  display: grid;
+  1237	  gap: 9px;
+  1238	  grid-template-columns: 1fr 1fr;
+  1239	  margin-top: 24px;
+  1240	}
+  1241	
+  1242	.phone-grid span {
+  1243	  background: rgba(255, 255, 255, 0.05);
+  1244	  border: 1px solid var(--line);
+  1245	  border-radius: 8px;
+  1246	  height: 54px;
   1247	}
   1248	
-  1249	.proof-item span {
-  1250	  min-width: 0;
-  1251	  white-space: nowrap;
-  1252	}
-  1253	
-  1254	@media (min-width: 1024px) and (orientation: landscape) {
-  1255	  .proof-panel {
-  1256	    gap: 8px;
-  1257	    grid-template-columns: repeat(6, minmax(0, 1fr));
-  1258	    justify-content: stretch;
-  1259	    justify-items: center;
-  1260	    max-width: calc(100vw - 36px);
-  1261	    width: var(--hero-proof-landscape-width, 100%);
-  1262	  }
-  1263	
-  1264	  .proof-column {
-  1265	    display: contents;
-  1266	  }
-  1267	
-  1268	  .proof-item {
-  1269	    justify-content: center;
-  1270	    width: 100%;
-  1271	  }
-  1272	
-  1273	  .proof-column:nth-child(1) .proof-item:nth-child(1) {
-  1274	    order: 1;
-  1275	  }
+  1249	.phone-cta {
+  1250	  align-items: center;
+  1251	  background: var(--green);
+  1252	  border-radius: 8px;
+  1253	  color: #001d0f;
+  1254	  display: flex;
+  1255	  font-size: 13px;
+  1256	  font-weight: 900;
+  1257	  height: 42px;
+  1258	  justify-content: center;
+  1259	  margin-top: 24px;
+  1260	}
+  1261	
+  1262	.proof-panel {
+  1263	  backdrop-filter: blur(16px);
+  1264	  background: rgba(5, 16, 10, 0.76);
+  1265	  border: 1px solid var(--line-strong);
+  1266	  border-radius: 8px;
+  1267	  display: grid;
+  1268	  grid-template-columns: repeat(3, minmax(0, 1fr));
+  1269	  gap: 10px;
+  1270	  margin: 26px 0 0;
+  1271	  padding: 14px;
+  1272	  position: relative;
+  1273	  width: var(--hero-proof-stack-width);
+  1274	  z-index: 2;
+  1275	}
   1276	
-  1277	  .proof-column:nth-child(2) .proof-item:nth-child(1) {
-  1278	    order: 2;
-  1279	  }
-  1280	
-  1281	  .proof-column:nth-child(3) .proof-item:nth-child(1) {
-  1282	    order: 3;
-  1283	  }
-  1284	
-  1285	  .proof-column:nth-child(1) .proof-item:nth-child(2) {
-  1286	    order: 4;
-  1287	  }
-  1288	
-  1289	  .proof-column:nth-child(2) .proof-item:nth-child(2) {
-  1290	    order: 5;
-  1291	  }
+  1277	.proof-column {
+  1278	  color: #dfffea;
+  1279	  display: grid;
+  1280	  font-size: 13px;
+  1281	  font-weight: 750;
+  1282	  gap: 10px;
+  1283	  line-height: 1.25;
+  1284	}
+  1285	
+  1286	.proof-item {
+  1287	  align-items: center;
+  1288	  display: flex;
+  1289	  gap: 4px;
+  1290	  min-width: 0;
+  1291	}
   1292	
-  1293	  .proof-column:nth-child(3) .proof-item:nth-child(2) {
-  1294	    order: 6;
-  1295	  }
-  1296	}
-  1297	
-  1298	.stats-strip {
-  1299	  border-top: 1px solid var(--line);
-  1300	  display: grid;
-  1301	  gap: 1px;
-  1302	  grid-template-columns: repeat(4, minmax(0, 1fr));
-  1303	  margin-top: 10px;
-  1304	  position: relative;
-  1305	  z-index: 2;
-  1306	}
-  1307	
-  1308	.stats-strip-item {
-  1309	  background: rgba(255, 255, 255, 0.025);
-  1310	  display: flex;
-  1311	  flex-direction: column;
-  1312	  min-width: 0;
-  1313	  min-height: 104px;
-  1314	  padding: 22px;
-  1315	}
-  1316	
-  1317	.stats-strip strong {
-  1318	  color: var(--green);
-  1319	  display: block;
-  1320	  font-size: 34px;
-  1321	  font-weight: 900;
-  1322	  line-height: 1;
-  1323	}
+  1293	.proof-item svg {
+  1294	  flex: 0 0 auto;
+  1295	}
+  1296	
+  1297	.proof-item span {
+  1298	  min-width: 0;
+  1299	  white-space: nowrap;
+  1300	}
+  1301	
+  1302	@media (min-width: 1024px) and (orientation: landscape) {
+  1303	  .proof-panel {
+  1304	    gap: 8px;
+  1305	    grid-template-columns: repeat(6, minmax(0, 1fr));
+  1306	    justify-content: stretch;
+  1307	    justify-items: center;
+  1308	    max-width: calc(100vw - 36px);
+  1309	    width: var(--hero-proof-landscape-width, 100%);
+  1310	  }
+  1311	
+  1312	  .proof-column {
+  1313	    display: contents;
+  1314	  }
+  1315	
+  1316	  .proof-item {
+  1317	    justify-content: center;
+  1318	    width: 100%;
+  1319	  }
+  1320	
+  1321	  .proof-column:nth-child(1) .proof-item:nth-child(1) {
+  1322	    order: 1;
+  1323	  }
   1324	
-  1325	.stats-strip-label,
-  1326	.stats-strip-measure {
-  1327	  color: var(--muted);
-  1328	  display: block;
-  1329	  font-size: 13px;
-  1330	  font-weight: 700;
-  1331	  line-height: 1.22;
-  1332	  margin-top: 8px;
-  1333	}
-  1334	
-  1335	.stats-strip-label {
-  1336	  min-width: 0;
-  1337	}
-  1338	
-  1339	.stats-strip-label-line {
-  1340	  display: block;
-  1341	  min-width: 0;
-  1342	  overflow-wrap: anywhere;
-  1343	  white-space: normal;
+  1325	  .proof-column:nth-child(2) .proof-item:nth-child(1) {
+  1326	    order: 2;
+  1327	  }
+  1328	
+  1329	  .proof-column:nth-child(3) .proof-item:nth-child(1) {
+  1330	    order: 3;
+  1331	  }
+  1332	
+  1333	  .proof-column:nth-child(1) .proof-item:nth-child(2) {
+  1334	    order: 4;
+  1335	  }
+  1336	
+  1337	  .proof-column:nth-child(2) .proof-item:nth-child(2) {
+  1338	    order: 5;
+  1339	  }
+  1340	
+  1341	  .proof-column:nth-child(3) .proof-item:nth-child(2) {
+  1342	    order: 6;
+  1343	  }
   1344	}
   1345	
-  1346	.stats-strip-label-sr {
-  1347	  clip: rect(0 0 0 0);
-  1348	  clip-path: inset(50%);
-  1349	  height: 1px;
-  1350	  overflow: hidden;
-  1351	  position: absolute;
-  1352	  white-space: nowrap;
-  1353	  width: 1px;
+  1346	.stats-strip {
+  1347	  border-top: 1px solid var(--line);
+  1348	  display: grid;
+  1349	  gap: 1px;
+  1350	  grid-template-columns: repeat(4, minmax(0, 1fr));
+  1351	  margin-top: 10px;
+  1352	  position: relative;
+  1353	  z-index: 2;
   1354	}
   1355	
-  1356	.stats-strip-measure {
-  1357	  left: -9999px;
-  1358	  margin-top: 0;
-  1359	  pointer-events: none;
-  1360	  position: absolute;
-  1361	  top: 0;
-  1362	  visibility: hidden;
-  1363	  white-space: nowrap;
-  1364	  width: max-content;
-  1365	}
-  1366	
-  1367	section:not(.hero) {
-  1368	  padding: 88px 0;
-  1369	}
-  1370	
-  1371	.section-heading {
-  1372	  max-width: 720px;
-  1373	}
-  1374	
-  1375	.case-grid {
-  1376	  display: grid;
-  1377	  gap: 18px;
-  1378	  grid-template-columns: repeat(3, minmax(0, 1fr));
-  1379	  margin-top: 34px;
-  1380	}
-  1381	
-  1382	.case-card,
-  1383	.capability-grid div,
-  1384	.contact-panel {
-  1385	  background: linear-gradient(180deg, rgba(13, 31, 22, 0.88), rgba(5, 13, 9, 0.88));
-  1386	  border: 1px solid var(--line);
-  1387	  border-radius: 8px;
-  1388	}
-  1389	
-  1390	.case-card {
-  1391	  --case-stat-font-size: 12px;
-  1392	  --case-stat-chip-font-size: var(--case-stat-font-size);
-  1393	  min-height: 330px;
-  1394	  min-width: 0;
-  1395	  padding: 28px;
-  1396	  width: 100%;
-  1397	}
-  1398	
-  1399	.case-grid > .uiux-principle-card-expanded {
-  1400	  grid-column: 1 / -1;
-  1401	}
-  1402	
-  1403	@media (min-width: 631px) {
-  1404	  .case-grid > .uiux-principle-card-expanded {
-  1405	    align-content: start;
-  1406	    min-height: 330px;
-  1407	  }
-  1408	
-  1409	  .case-grid > .uiux-principle-card-expanded .uiux-principle-long-copy {
-  1410	    column-count: 2;
-  1411	    column-fill: balance;
-  1412	    column-gap: 28px;
-  1413	    display: block;
-  1414	  }
-  1415	
-  1416	  .case-grid > .uiux-principle-card-expanded .uiux-principle-long-copy p {
-  1417	    break-inside: auto;
-  1418	    margin: 0 0 12px;
-  1419	  }
-  1420	}
-  1421	
-  1422	@media (min-width: 981px) {
-  1423	  .case-grid > .uiux-principle-card-expanded .uiux-principle-long-copy {
-  1424	    column-count: 3;
-  1425	  }
-  1426	}
-  1427	
-  1428	.case-card-link {
-  1429	  color: inherit;
-  1430	  cursor: pointer;
-  1431	  display: block;
-  1432	  text-decoration: none;
-  1433	  transition:
-  1434	    border-color 160ms ease,
-  1435	    box-shadow 160ms ease,
-  1436	    transform 160ms ease;
-  1437	}
-  1438	
-  1439	.case-card-link:hover {
-  1440	  border-color: rgba(198, 255, 217, 0.36);
-  1441	  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.28);
-  1442	  transform: translateY(-2px);
-  1443	}
-  1444	
-  1445	.case-card-link:focus-visible {
-  1446	  outline: 2px solid var(--mint);
-  1447	  outline-offset: 6px;
-  1448	}
-  1449	
-  1450	.case-topline {
-  1451	  align-items: start;
-  1452	  display: grid;
-  1453	  gap: 0;
-  1454	  grid-template-columns: repeat(3, minmax(0, 1fr));
-  1455	  min-width: 0;
-  1456	}
-  1457	
-  1458	.case-stat-stack {
-  1459	  display: grid;
-  1460	  gap: 7px;
-  1461	  grid-column: 3;
-  1462	  justify-items: center;
-  1463	  justify-self: end;
-  1464	  max-width: 100%;
-  1465	  min-width: 0;
-  1466	  width: min(112px, 100%);
-  1467	}
-  1468	
-  1469	.case-eyebrow {
-  1470	  color: var(--green);
-  1471	  display: block;
-  1472	  font-size: 12px;
-  1473	  font-weight: 850;
-  1474	  grid-column: 1;
-  1475	  justify-self: start;
-  1476	  line-height: 1.18;
-  1477	  min-width: 0;
-  1478	  overflow-wrap: normal;
-  1479	  text-align: left;
-  1480	  text-transform: uppercase;
-  1481	  white-space: normal;
-  1482	  width: 100%;
-  1483	}
-  1484	
-  1485	.case-topline strong {
-  1486	  align-items: center;
-  1487	  border: 1px solid var(--line);
-  1488	  border-radius: 999px;
-  1489	  color: var(--mint);
-  1490	  display: flex;
-  1491	  font-size: var(--case-stat-chip-font-size);
-  1492	  justify-content: center;
-  1493	  line-height: 1.1;
-  1494	  max-width: 100%;
-  1495	  min-height: 31px;
-  1496	  min-width: 0;
-  1497	  overflow: hidden;
-  1498	  overflow-wrap: normal;
-  1499	  padding: 7px clamp(4px, 1.5vw, 10px);
-  1500	  text-align: center;
-  1501	  text-overflow: clip;
-  1502	  white-space: nowrap;
-  1503	  width: 100%;
+  1356	.stats-strip-item {
+  1357	  background: rgba(255, 255, 255, 0.025);
+  1358	  display: flex;
+  1359	  flex-direction: column;
+  1360	  min-width: 0;
+  1361	  min-height: 104px;
+  1362	  padding: 22px;
+  1363	}
+  1364	
+  1365	.stats-strip strong {
+  1366	  color: var(--green);
+  1367	  display: block;
+  1368	  font-size: 34px;
+  1369	  font-weight: 900;
+  1370	  line-height: 1;
+  1371	}
+  1372	
+  1373	.stats-strip-label,
+  1374	.stats-strip-measure {
+  1375	  color: var(--muted);
+  1376	  display: block;
+  1377	  font-size: 13px;
+  1378	  font-weight: 700;
+  1379	  line-height: 1.22;
+  1380	  margin-top: 8px;
+  1381	}
+  1382	
+  1383	.stats-strip-label {
+  1384	  min-width: 0;
+  1385	}
+  1386	
+  1387	.stats-strip-label-line {
+  1388	  display: block;
+  1389	  min-width: 0;
+  1390	  overflow-wrap: anywhere;
+  1391	  white-space: normal;
+  1392	}
+  1393	
+  1394	.stats-strip-label-sr {
+  1395	  clip: rect(0 0 0 0);
+  1396	  clip-path: inset(50%);
+  1397	  height: 1px;
+  1398	  overflow: hidden;
+  1399	  position: absolute;
+  1400	  white-space: nowrap;
+  1401	  width: 1px;
+  1402	}
+  1403	
+  1404	.stats-strip-measure {
+  1405	  left: -9999px;
+  1406	  margin-top: 0;
+  1407	  pointer-events: none;
+  1408	  position: absolute;
+  1409	  top: 0;
+  1410	  visibility: hidden;
+  1411	  white-space: nowrap;
+  1412	  width: max-content;
+  1413	}
+  1414	
+  1415	section:not(.hero) {
+  1416	  padding: 88px 0;
+  1417	}
+  1418	
+  1419	.section-heading {
+  1420	  max-width: 720px;
+  1421	}
+  1422	
+  1423	.case-grid {
+  1424	  display: grid;
+  1425	  gap: 18px;
+  1426	  grid-template-columns: repeat(3, minmax(0, 1fr));
+  1427	  margin-top: 34px;
+  1428	}
+  1429	
+  1430	.case-card,
+  1431	.capability-grid div,
+  1432	.contact-panel {
+  1433	  background: linear-gradient(180deg, rgba(13, 31, 22, 0.88), rgba(5, 13, 9, 0.88));
+  1434	  border: 1px solid var(--line);
+  1435	  border-radius: 8px;
+  1436	}
+  1437	
+  1438	.case-card {
+  1439	  --case-stat-font-size: 12px;
+  1440	  --case-stat-chip-font-size: var(--case-stat-font-size);
+  1441	  min-height: 330px;
+  1442	  min-width: 0;
+  1443	  padding: 28px;
+  1444	  width: 100%;
+  1445	}
+  1446	
+  1447	.case-grid > .uiux-principle-card-expanded {
+  1448	  grid-column: 1 / -1;
+  1449	}
+  1450	
+  1451	@media (min-width: 631px) {
+  1452	  .case-grid > .uiux-principle-card-expanded {
+  1453	    align-content: start;
+  1454	    min-height: 330px;
+  1455	  }
+  1456	
+  1457	  .case-grid > .uiux-principle-card-expanded .uiux-principle-long-copy {
+  1458	    column-count: 2;
+  1459	    column-fill: balance;
+  1460	    column-gap: 28px;
+  1461	    display: block;
+  1462	  }
+  1463	
+  1464	  .case-grid > .uiux-principle-card-expanded .uiux-principle-long-copy p {
+  1465	    break-inside: auto;
+  1466	    margin: 0 0 12px;
+  1467	  }
+  1468	}
+  1469	
+  1470	@media (min-width: 981px) {
+  1471	  .case-grid > .uiux-principle-card-expanded .uiux-principle-long-copy {
+  1472	    column-count: 3;
+  1473	  }
+  1474	}
+  1475	
+  1476	.case-card-link {
+  1477	  color: inherit;
+  1478	  cursor: pointer;
+  1479	  display: block;
+  1480	  text-decoration: none;
+  1481	  transition:
+  1482	    border-color 160ms ease,
+  1483	    box-shadow 160ms ease,
+  1484	    transform 160ms ease;
+  1485	}
+  1486	
+  1487	.case-card-link:hover {
+  1488	  border-color: rgba(198, 255, 217, 0.36);
+  1489	  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.28);
+  1490	  transform: translateY(-2px);
+  1491	}
+  1492	
+  1493	.case-card-link:focus-visible {
+  1494	  outline: 2px solid var(--mint);
+  1495	  outline-offset: 6px;
+  1496	}
+  1497	
+  1498	.case-topline {
+  1499	  align-items: start;
+  1500	  display: grid;
+  1501	  gap: 0;
+  1502	  grid-template-columns: repeat(3, minmax(0, 1fr));
+  1503	  min-width: 0;
   1504	}
   1505	
-  1506	.case-worklog-stat {
-  1507	  color: var(--mint);
-  1508	  display: block;
-  1509	  font-size: 11px;
-  1510	  font-weight: 400;
-  1511	  line-height: 1;
+  1506	.case-stat-stack {
+  1507	  display: grid;
+  1508	  gap: 7px;
+  1509	  grid-column: 3;
+  1510	  justify-items: center;
+  1511	  justify-self: end;
   1512	  max-width: 100%;
   1513	  min-width: 0;
-  1514	  opacity: 0.5;
-  1515	  overflow: hidden;
-  1516	  overflow-wrap: normal;
-  1517	  text-align: center;
-  1518	  text-overflow: clip;
-  1519	  white-space: nowrap;
-  1520	  width: 100%;
-  1521	}
-  1522	
-  1523	.case-card h3 {
-  1524	  margin: 54px 0 14px;
-  1525	}
-  1526	
-  1527	.case-card-title-underline {
-  1528	  text-decoration: underline;
-  1529	  text-decoration-thickness: 0.08em;
-  1530	  text-underline-offset: 0.12em;
+  1514	  width: min(112px, 100%);
+  1515	}
+  1516	
+  1517	.case-eyebrow {
+  1518	  color: var(--green);
+  1519	  display: block;
+  1520	  font-size: 12px;
+  1521	  font-weight: 850;
+  1522	  grid-column: 1;
+  1523	  justify-self: start;
+  1524	  line-height: 1.18;
+  1525	  min-width: 0;
+  1526	  overflow-wrap: normal;
+  1527	  text-align: left;
+  1528	  text-transform: uppercase;
+  1529	  white-space: normal;
+  1530	  width: 100%;
   1531	}
   1532	
-  1533	.case-card-title-stack {
+  1533	.case-topline strong {
   1534	  align-items: center;
-  1535	  display: grid;
-  1536	  gap: 0;
-  1537	  grid-template-columns: max-content minmax(0, 1fr);
-  1538	  min-width: 0;
-  1539	  width: 100%;
-  1540	}
-  1541	
-  1542	.case-card-title-stack-long {
-  1543	  align-items: start;
-  1544	  grid-template-columns: minmax(0, 1fr);
-  1545	  row-gap: 8px;
-  1546	}
-  1547	
-  1548	.case-card-title-stack-no-devices {
-  1549	  grid-template-columns: minmax(0, 1fr);
-  1550	}
-  1551	
-  1552	.case-card-project-title-name-stack {
-  1553	  grid-column: 1;
-  1554	  justify-self: start;
-  1555	}
-  1556	
-  1557	.case-card-title-stack-no-devices .case-card-project-title-name-stack,
-  1558	.case-card-title-stack-long .case-card-project-title-name-stack {
-  1559	  max-width: 100%;
-  1560	  min-width: 0;
-  1561	}
-  1562	
-  1563	.case-card-project-title-name {
-  1564	  display: block;
-  1565	}
-  1566	
-  1567	.case-card-title-stack-no-devices .case-card-project-title-name,
-  1568	.case-card-title-stack-no-devices .case-card-title-underline,
-  1569	.case-card-title-stack-long .case-card-project-title-name,
-  1570	.case-card-title-stack-long .case-card-title-underline {
-  1571	  overflow-wrap: anywhere;
-  1572	  white-space: normal;
+  1535	  border: 1px solid var(--line);
+  1536	  border-radius: 999px;
+  1537	  color: var(--mint);
+  1538	  display: flex;
+  1539	  font-size: var(--case-stat-chip-font-size);
+  1540	  justify-content: center;
+  1541	  line-height: 1.1;
+  1542	  max-width: 100%;
+  1543	  min-height: 31px;
+  1544	  min-width: 0;
+  1545	  overflow: hidden;
+  1546	  overflow-wrap: normal;
+  1547	  padding: 7px clamp(4px, 1.5vw, 10px);
+  1548	  text-align: center;
+  1549	  text-overflow: clip;
+  1550	  white-space: nowrap;
+  1551	  width: 100%;
+  1552	}
+  1553	
+  1554	.case-worklog-stat {
+  1555	  color: var(--mint);
+  1556	  display: block;
+  1557	  font-size: 11px;
+  1558	  font-weight: 400;
+  1559	  line-height: 1;
+  1560	  max-width: 100%;
+  1561	  min-width: 0;
+  1562	  opacity: 0.5;
+  1563	  overflow: hidden;
+  1564	  overflow-wrap: normal;
+  1565	  text-align: center;
+  1566	  text-overflow: clip;
+  1567	  white-space: nowrap;
+  1568	  width: 100%;
+  1569	}
+  1570	
+  1571	.case-card h3 {
+  1572	  margin: 54px 0 14px;
   1573	}
   1574	
-  1575	.case-card-portfolio-title-stack {
-  1576	  display: inline-grid;
-  1577	  gap: 10px;
-  1578	  justify-items: center;
-  1579	  line-height: 1;
-  1580	}
-  1581	
-  1582	.case-card-title-website-label {
-  1583	  color: var(--mint);
-  1584	  display: block;
-  1585	  font-size: var(--case-stat-chip-font-size);
-  1586	  font-family: inherit;
-  1587	  font-weight: 400;
-  1588	  line-height: 1;
-  1589	  opacity: 0.5;
-  1590	  white-space: nowrap;
-  1591	}
-  1592	
-  1593	.case-card-title-device-stack {
-  1594	  display: inline-flex;
-  1595	  flex: 0 0 auto;
-  1596	  font-size: 27.85px;
-  1597	  grid-column: 2;
-  1598	  justify-content: center;
-  1599	  justify-self: center;
-  1600	  line-height: 1;
-  1601	  min-width: 0;
-  1602	  width: 100%;
+  1575	.case-card-title-underline {
+  1576	  text-decoration: underline;
+  1577	  text-decoration-thickness: 0.08em;
+  1578	  text-underline-offset: 0.12em;
+  1579	}
+  1580	
+  1581	.case-card-title-stack {
+  1582	  align-items: center;
+  1583	  display: grid;
+  1584	  gap: 0;
+  1585	  grid-template-columns: max-content minmax(0, 1fr);
+  1586	  min-width: 0;
+  1587	  width: 100%;
+  1588	}
+  1589	
+  1590	.case-card-title-stack-long {
+  1591	  align-items: start;
+  1592	  grid-template-columns: minmax(0, 1fr);
+  1593	  row-gap: 8px;
+  1594	}
+  1595	
+  1596	.case-card-title-stack-no-devices {
+  1597	  grid-template-columns: minmax(0, 1fr);
+  1598	}
+  1599	
+  1600	.case-card-project-title-name-stack {
+  1601	  grid-column: 1;
+  1602	  justify-self: start;
   1603	}
   1604	
-  1605	.case-card-title-stack-long .case-card-title-device-stack {
-  1606	  grid-column: 1;
-  1607	  justify-content: flex-start;
-  1608	  justify-self: start;
-  1609	  width: auto;
-  1610	}
-  1611	
-  1612	.case-card-title-device-stack .carousel-button-project {
-  1613	  grid-column: auto;
-  1614	}
-  1615	
-  1616	.case-card p,
-  1617	.capability-grid p,
-  1618	.timeline-item p {
-  1619	  color: #b8c9bf;
-  1620	  line-height: 1.6;
-  1621	  overflow-wrap: anywhere;
-  1622	}
-  1623	
-  1624	.case-description {
-  1625	  display: grid;
-  1626	  gap: 0;
-  1627	  width: 100%;
+  1605	.case-card-title-stack-no-devices .case-card-project-title-name-stack,
+  1606	.case-card-title-stack-long .case-card-project-title-name-stack {
+  1607	  max-width: 100%;
+  1608	  min-width: 0;
+  1609	}
+  1610	
+  1611	.case-card-project-title-name {
+  1612	  display: block;
+  1613	}
+  1614	
+  1615	.case-card-title-stack-no-devices .case-card-project-title-name,
+  1616	.case-card-title-stack-no-devices .case-card-title-underline,
+  1617	.case-card-title-stack-long .case-card-project-title-name,
+  1618	.case-card-title-stack-long .case-card-title-underline {
+  1619	  overflow-wrap: anywhere;
+  1620	  white-space: normal;
+  1621	}
+  1622	
+  1623	.case-card-portfolio-title-stack {
+  1624	  display: inline-grid;
+  1625	  gap: 10px;
+  1626	  justify-items: center;
+  1627	  line-height: 1;
   1628	}
   1629	
-  1630	.uiux-principle-card .case-description {
-  1631	  color: #c4d6cc;
-  1632	  font-family: inherit;
-  1633	  font-style: normal;
-  1634	  font-weight: 400;
-  1635	  line-height: 1.45;
-  1636	  max-width: none;
-  1637	}
-  1638	
-  1639	.uiux-principle-long-copy {
-  1640	  color: #c4d6cc;
-  1641	  display: grid;
-  1642	  font-family: inherit;
-  1643	  font-style: normal;
-  1644	  font-weight: 400;
-  1645	  gap: 12px;
-  1646	  line-height: 1.45;
-  1647	  max-width: none;
-  1648	  overflow-wrap: anywhere;
-  1649	}
-  1650	
-  1651	.uiux-principle-long-copy-shell {
-  1652	  display: grid;
-  1653	  gap: 0;
-  1654	  position: relative;
-  1655	}
-  1656	
-  1657	.uiux-principle-long-copy-preview {
-  1658	  -webkit-box-orient: vertical;
-  1659	  -webkit-line-clamp: 8;
-  1660	  color: #c4d6cc;
-  1661	  display: -webkit-box;
-  1662	  font-family: inherit;
-  1663	  font-style: normal;
-  1664	  font-weight: 400;
-  1665	  line-height: 1.45;
-  1666	  margin: 0;
-  1667	  max-height: calc(1.45em * 8);
-  1668	  max-width: none;
-  1669	  overflow: hidden;
-  1670	  overflow-wrap: anywhere;
-  1671	  white-space: pre-line;
-  1672	}
-  1673	
-  1674	.uiux-principle-long-copy-measure {
-  1675	  color: #c4d6cc;
-  1676	  font-family: inherit;
-  1677	  font-style: normal;
-  1678	  font-weight: 400;
-  1679	  height: 0;
-  1680	  left: 0;
-  1681	  line-height: 1.45;
-  1682	  margin: 0;
-  1683	  max-height: 0;
+  1630	.case-card-title-website-label {
+  1631	  color: var(--mint);
+  1632	  display: block;
+  1633	  font-size: var(--case-stat-chip-font-size);
+  1634	  font-family: inherit;
+  1635	  font-weight: 400;
+  1636	  line-height: 1;
+  1637	  opacity: 0.5;
+  1638	  white-space: nowrap;
+  1639	}
+  1640	
+  1641	.case-card-title-device-stack {
+  1642	  display: inline-flex;
+  1643	  flex: 0 0 auto;
+  1644	  font-size: 27.85px;
+  1645	  grid-column: 2;
+  1646	  justify-content: center;
+  1647	  justify-self: center;
+  1648	  line-height: 1;
+  1649	  min-width: 0;
+  1650	  width: 100%;
+  1651	}
+  1652	
+  1653	.case-card-title-stack-long .case-card-title-device-stack {
+  1654	  grid-column: 1;
+  1655	  justify-content: flex-start;
+  1656	  justify-self: start;
+  1657	  width: auto;
+  1658	}
+  1659	
+  1660	.case-card-title-device-stack .carousel-button-project {
+  1661	  grid-column: auto;
+  1662	}
+  1663	
+  1664	.case-card p,
+  1665	.capability-grid p,
+  1666	.timeline-item p {
+  1667	  color: #b8c9bf;
+  1668	  line-height: 1.6;
+  1669	  overflow-wrap: anywhere;
+  1670	}
+  1671	
+  1672	.case-description {
+  1673	  display: grid;
+  1674	  gap: 0;
+  1675	  width: 100%;
+  1676	}
+  1677	
+  1678	.uiux-principle-card .case-description {
+  1679	  color: #c4d6cc;
+  1680	  font-family: inherit;
+  1681	  font-style: normal;
+  1682	  font-weight: 400;
+  1683	  line-height: 1.45;
   1684	  max-width: none;
-  1685	  overflow: hidden;
-  1686	  overflow-wrap: anywhere;
-  1687	  pointer-events: none;
-  1688	  position: absolute;
-  1689	  top: 0;
-  1690	  visibility: hidden;
-  1691	  white-space: pre-line;
-  1692	  width: 100%;
-  1693	}
-  1694	
-  1695	.uiux-principle-long-copy p {
-  1696	  color: inherit;
-  1697	  line-height: inherit;
-  1698	  margin: 0;
-  1699	}
-  1700	
-  1701	.uiux-principle-read-more-line {
-  1702	  color: #c4d6cc;
-  1703	  font-family: inherit;
-  1704	  font-style: normal;
-  1705	  font-weight: 400;
-  1706	  line-height: 1.45;
-  1707	  margin: 0;
-  1708	}
-  1709	
-  1710	.uiux-principle-read-more {
-  1711	  appearance: none;
-  1712	  background: transparent;
-  1713	  border: 0;
-  1714	  color: inherit;
-  1715	  cursor: pointer;
-  1716	  font: inherit;
-  1717	  padding: 0;
-  1718	}
-  1719	
-  1720	.uiux-principle-read-more:hover,
-  1721	.uiux-principle-read-more:focus-visible {
-  1722	  color: var(--green);
-  1723	}
-  1724	
-  1725	.uiux-principle-read-more:focus-visible {
-  1726	  outline: 1px solid var(--green);
-  1727	  outline-offset: 3px;
-  1728	}
-  1729	
-  1730	.case-description-line {
-  1731	  display: block;
-  1732	  min-width: 0;
+  1685	}
+  1686	
+  1687	.uiux-principle-long-copy {
+  1688	  color: #c4d6cc;
+  1689	  display: grid;
+  1690	  font-family: inherit;
+  1691	  font-style: normal;
+  1692	  font-weight: 400;
+  1693	  gap: 12px;
+  1694	  line-height: 1.45;
+  1695	  max-width: none;
+  1696	  overflow-wrap: anywhere;
+  1697	}
+  1698	
+  1699	.uiux-principle-long-copy-shell {
+  1700	  display: grid;
+  1701	  gap: 0;
+  1702	  position: relative;
+  1703	}
+  1704	
+  1705	.uiux-principle-long-copy-preview {
+  1706	  -webkit-box-orient: vertical;
+  1707	  -webkit-line-clamp: 8;
+  1708	  color: #c4d6cc;
+  1709	  display: -webkit-box;
+  1710	  font-family: inherit;
+  1711	  font-style: normal;
+  1712	  font-weight: 400;
+  1713	  line-height: 1.45;
+  1714	  margin: 0;
+  1715	  max-height: calc(1.45em * 8);
+  1716	  max-width: none;
+  1717	  overflow: hidden;
+  1718	  overflow-wrap: anywhere;
+  1719	  white-space: pre-line;
+  1720	}
+  1721	
+  1722	.uiux-principle-long-copy-measure {
+  1723	  color: #c4d6cc;
+  1724	  font-family: inherit;
+  1725	  font-style: normal;
+  1726	  font-weight: 400;
+  1727	  height: 0;
+  1728	  left: 0;
+  1729	  line-height: 1.45;
+  1730	  margin: 0;
+  1731	  max-height: 0;
+  1732	  max-width: none;
   1733	  overflow: hidden;
-  1734	  width: 100%;
-  1735	}
-  1736	
-  1737	.case-description-line-visual {
-  1738	  --case-description-line-scale: 1;
-  1739	  --case-description-word-spacing: 0px;
-  1740	  display: block;
-  1741	  line-height: inherit;
-  1742	  min-width: 0;
-  1743	  transform: scaleX(var(--case-description-line-scale));
-  1744	  transform-origin: left center;
-  1745	  white-space: nowrap;
-  1746	  width: max-content;
-  1747	  word-spacing: var(--case-description-word-spacing);
-  1748	}
-  1749	
-  1750	.case-tags {
-  1751	  display: grid;
-  1752	  gap: 6px;
-  1753	  grid-template-columns:
-  1754	    minmax(0, 33fr)
-  1755	    minmax(0, 34fr)
-  1756	    minmax(0, 33fr);
-  1757	  margin-top: 24px;
-  1758	  width: 100%;
-  1759	}
-  1760	
-  1761	.case-tags span {
-  1762	  align-items: center;
-  1763	  box-sizing: border-box;
-  1764	  display: flex;
-  1765	  font-size: 11px;
-  1766	  justify-content: center;
-  1767	  min-width: 0;
-  1768	  padding-left: 4px;
-  1769	  padding-right: 4px;
-  1770	  text-align: center;
-  1771	  white-space: nowrap;
-  1772	  width: 100%;
-  1773	}
-  1774	
-  1775	.case-miniatures {
-  1776	  display: grid;
-  1777	  gap: 10px;
-  1778	  grid-template-columns: repeat(3, minmax(0, 1fr));
-  1779	  margin-top: 26px;
-  1780	  max-width: 390px;
-  1781	  min-width: 0;
-  1782	  width: min(100%, 390px);
+  1734	  overflow-wrap: anywhere;
+  1735	  pointer-events: none;
+  1736	  position: absolute;
+  1737	  top: 0;
+  1738	  visibility: hidden;
+  1739	  white-space: pre-line;
+  1740	  width: 100%;
+  1741	}
+  1742	
+  1743	.uiux-principle-long-copy p {
+  1744	  color: inherit;
+  1745	  line-height: inherit;
+  1746	  margin: 0;
+  1747	}
+  1748	
+  1749	.uiux-principle-read-more-line {
+  1750	  color: #c4d6cc;
+  1751	  font-family: inherit;
+  1752	  font-style: normal;
+  1753	  font-weight: 400;
+  1754	  line-height: 1.45;
+  1755	  margin: 0;
+  1756	}
+  1757	
+  1758	.uiux-principle-read-more {
+  1759	  appearance: none;
+  1760	  background: transparent;
+  1761	  border: 0;
+  1762	  color: inherit;
+  1763	  cursor: pointer;
+  1764	  font: inherit;
+  1765	  padding: 0;
+  1766	}
+  1767	
+  1768	.uiux-principle-read-more:hover,
+  1769	.uiux-principle-read-more:focus-visible {
+  1770	  color: var(--green);
+  1771	}
+  1772	
+  1773	.uiux-principle-read-more:focus-visible {
+  1774	  outline: 1px solid var(--green);
+  1775	  outline-offset: 3px;
+  1776	}
+  1777	
+  1778	.case-description-line {
+  1779	  display: block;
+  1780	  min-width: 0;
+  1781	  overflow: hidden;
+  1782	  width: 100%;
   1783	}
   1784	
-  1785	.case-miniatures-landscape {
-  1786	  grid-template-columns: 1fr;
-  1787	  max-width: 420px;
-  1788	  width: min(100%, 420px);
-  1789	}
-  1790	
-  1791	.case-miniatures-pair {
-  1792	  align-items: start;
-  1793	  grid-template-columns: minmax(0, 1.442fr) minmax(0, 0.5625fr);
-  1794	  max-width: none;
-  1795	  width: min(100%, 343px);
+  1785	.case-description-line-visual {
+  1786	  --case-description-line-scale: 1;
+  1787	  --case-description-word-spacing: 0px;
+  1788	  display: block;
+  1789	  line-height: inherit;
+  1790	  min-width: 0;
+  1791	  transform: scaleX(var(--case-description-line-scale));
+  1792	  transform-origin: left center;
+  1793	  white-space: nowrap;
+  1794	  width: max-content;
+  1795	  word-spacing: var(--case-description-word-spacing);
   1796	}
   1797	
-  1798	.case-miniatures-pair .case-miniature {
-  1799	  height: auto;
-  1800	  max-height: none;
-  1801	  min-width: 0;
-  1802	  object-fit: contain;
-  1803	  width: 100%;
-  1804	}
-  1805	
-  1806	.case-miniatures-pair .case-miniature-landscape {
-  1807	  aspect-ratio: 2509 / 1740;
-  1808	}
-  1809	
-  1810	.case-miniature {
-  1811	  aspect-ratio: 9 / 16;
-  1812	  background: #020403;
-  1813	  border: 1px solid var(--line);
-  1814	  border-radius: var(--capture-frame-radius-standard);
-  1815	  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.28);
-  1816	  display: block;
-  1817	  height: auto;
-  1818	  object-fit: contain;
-  1819	  width: 100%;
-  1820	}
-  1821	
-  1822	.case-miniature-landscape {
-  1823	  aspect-ratio: 2388 / 1668;
-  1824	  border-radius: var(--capture-frame-radius-standard);
-  1825	}
-  1826	
-  1827	.split-section {
-  1828	  display: grid;
-  1829	  gap: 44px;
-  1830	}
-  1831	
-  1832	.capability-grid {
-  1833	  display: grid;
-  1834	  gap: 18px;
-  1835	  grid-auto-rows: auto;
-  1836	  grid-template-columns: repeat(3, minmax(0, 1fr));
+  1798	.case-tags {
+  1799	  display: grid;
+  1800	  gap: 6px;
+  1801	  grid-template-columns:
+  1802	    minmax(0, 33fr)
+  1803	    minmax(0, 34fr)
+  1804	    minmax(0, 33fr);
+  1805	  margin-top: 24px;
+  1806	  width: 100%;
+  1807	}
+  1808	
+  1809	.case-tags span {
+  1810	  align-items: center;
+  1811	  box-sizing: border-box;
+  1812	  display: flex;
+  1813	  font-size: 11px;
+  1814	  justify-content: center;
+  1815	  min-width: 0;
+  1816	  padding-left: 4px;
+  1817	  padding-right: 4px;
+  1818	  text-align: center;
+  1819	  white-space: nowrap;
+  1820	  width: 100%;
+  1821	}
+  1822	
+  1823	.case-miniatures {
+  1824	  display: grid;
+  1825	  gap: 10px;
+  1826	  grid-template-columns: repeat(3, minmax(0, 1fr));
+  1827	  margin-top: 26px;
+  1828	  max-width: 390px;
+  1829	  min-width: 0;
+  1830	  width: min(100%, 390px);
+  1831	}
+  1832	
+  1833	.case-miniatures-landscape {
+  1834	  grid-template-columns: 1fr;
+  1835	  max-width: 420px;
+  1836	  width: min(100%, 420px);
   1837	}
   1838	
-  1839	.capability-grid div {
-  1840	  min-width: 0;
-  1841	  padding: 24px;
-  1842	}
-  1843	
-  1844	.capability-grid h3 {
-  1845	  min-width: 0;
-  1846	  overflow-wrap: anywhere;
-  1847	}
-  1848	
-  1849	.capability-grid svg {
-  1850	  color: var(--green);
-  1851	  display: block;
-  1852	  margin-bottom: 30px;
-  1853	  max-width: 100%;
-  1854	}
-  1855	
-  1856	.worklog-layout {
-  1857	  display: grid;
-  1858	  gap: 42px;
-  1859	  grid-template-columns: minmax(0, 0.9fr) minmax(320px, 1.1fr);
-  1860	}
-  1861	
-  1862	.timeline {
-  1863	  border-left: 1px solid var(--line-strong);
-  1864	}
-  1865	
-  1866	.timeline-item {
-  1867	  display: grid;
-  1868	  gap: 18px;
-  1869	  grid-template-columns: 56px 1fr;
-  1870	  padding: 8px 0 28px 24px;
-  1871	}
-  1872	
-  1873	.timeline-item span {
-  1874	  color: var(--green);
-  1875	  font-weight: 900;
-  1876	}
-  1877	
-  1878	.contact-panel {
-  1879	  align-items: center;
-  1880	  display: flex;
-  1881	  gap: 28px;
-  1882	  justify-content: space-between;
-  1883	  padding: 30px;
-  1884	}
-  1885	
-  1886	.contact-panel h2 {
-  1887	  font-size: clamp(28px, 4vw, 46px);
-  1888	  margin-bottom: 0;
-  1889	  max-width: 760px;
+  1839	.case-miniatures-pair {
+  1840	  align-items: start;
+  1841	  grid-template-columns: minmax(0, 1.442fr) minmax(0, 0.5625fr);
+  1842	  max-width: none;
+  1843	  width: min(100%, 343px);
+  1844	}
+  1845	
+  1846	.case-miniatures-pair .case-miniature {
+  1847	  height: auto;
+  1848	  max-height: none;
+  1849	  min-width: 0;
+  1850	  object-fit: contain;
+  1851	  width: 100%;
+  1852	}
+  1853	
+  1854	.case-miniatures-pair .case-miniature-landscape {
+  1855	  aspect-ratio: 2509 / 1740;
+  1856	}
+  1857	
+  1858	.case-miniature {
+  1859	  aspect-ratio: 9 / 16;
+  1860	  background: #020403;
+  1861	  border: 1px solid var(--line);
+  1862	  border-radius: var(--capture-frame-radius-standard);
+  1863	  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.28);
+  1864	  display: block;
+  1865	  height: auto;
+  1866	  object-fit: contain;
+  1867	  width: 100%;
+  1868	}
+  1869	
+  1870	.case-miniature-landscape {
+  1871	  aspect-ratio: 2388 / 1668;
+  1872	  border-radius: var(--capture-frame-radius-standard);
+  1873	}
+  1874	
+  1875	.split-section {
+  1876	  display: grid;
+  1877	  gap: 44px;
+  1878	}
+  1879	
+  1880	.capability-grid {
+  1881	  display: grid;
+  1882	  gap: 18px;
+  1883	  grid-auto-rows: auto;
+  1884	  grid-template-columns: repeat(3, minmax(0, 1fr));
+  1885	}
+  1886	
+  1887	.capability-grid div {
+  1888	  min-width: 0;
+  1889	  padding: 24px;
   1890	}
   1891	
-  1892	.project-page {
-  1893	  overflow-x: hidden;
-  1894	}
-  1895	
-  1896	.project-hero-copy,
-  1897	.project-hero-grid > * {
-  1898	  min-width: 0;
-  1899	}
-  1900	
-  1901	.project-page section:not(.project-hero) {
-  1902	  padding: 78px 0;
-  1903	  position: relative;
-  1904	}
-  1905	
-  1906	section.project-hero {
-  1907	  overflow: hidden;
-  1908	  padding: 24px 0 88px;
-  1909	  position: relative;
-  1910	}
-  1911	
-  1912	.project-hero::after {
-  1913	  background: linear-gradient(transparent, var(--bg));
-  1914	  bottom: 0;
-  1915	  content: "";
-  1916	  height: 30%;
-  1917	  left: 0;
-  1918	  pointer-events: none;
-  1919	  position: absolute;
-  1920	  right: 0;
-  1921	}
-  1922	
-  1923	.project-nav {
-  1924	  margin-bottom: 68px;
-  1925	}
-  1926	
-  1927	.project-hero-grid {
-  1928	  align-items: center;
-  1929	  display: grid;
-  1930	  gap: 56px;
-  1931	  grid-template-columns: minmax(0, 0.92fr) minmax(420px, 1.08fr);
-  1932	  position: relative;
-  1933	  z-index: 2;
-  1934	}
-  1935	
-  1936	.project-hero-copy h1 {
-  1937	  margin-bottom: 18px;
+  1892	.capability-grid h3 {
+  1893	  min-width: 0;
+  1894	  overflow-wrap: anywhere;
+  1895	}
+  1896	
+  1897	.capability-grid svg {
+  1898	  color: var(--green);
+  1899	  display: block;
+  1900	  margin-bottom: 30px;
+  1901	  max-width: 100%;
+  1902	}
+  1903	
+  1904	.worklog-layout {
+  1905	  display: grid;
+  1906	  gap: 42px;
+  1907	  grid-template-columns: minmax(0, 0.9fr) minmax(320px, 1.1fr);
+  1908	}
+  1909	
+  1910	.timeline {
+  1911	  border-left: 1px solid var(--line-strong);
+  1912	}
+  1913	
+  1914	.timeline-item {
+  1915	  display: grid;
+  1916	  gap: 18px;
+  1917	  grid-template-columns: 56px 1fr;
+  1918	  padding: 8px 0 28px 24px;
+  1919	}
+  1920	
+  1921	.timeline-item span {
+  1922	  color: var(--green);
+  1923	  font-weight: 900;
+  1924	}
+  1925	
+  1926	.contact-panel {
+  1927	  align-items: center;
+  1928	  display: flex;
+  1929	  gap: 28px;
+  1930	  justify-content: space-between;
+  1931	  padding: 30px;
+  1932	}
+  1933	
+  1934	.contact-panel h2 {
+  1935	  font-size: clamp(28px, 4vw, 46px);
+  1936	  margin-bottom: 0;
+  1937	  max-width: 760px;
   1938	}
   1939	
-  1940	.project-back-link {
-  1941	  align-items: center;
-  1942	  color: var(--muted);
-  1943	  display: inline-flex;
-  1944	  font-size: 13px;
-  1945	  font-weight: 800;
-  1946	  gap: 8px;
-  1947	  margin-bottom: 30px;
-  1948	  transition: color 160ms ease;
-  1949	}
-  1950	
-  1951	.project-back-link:hover {
-  1952	  color: var(--mint);
-  1953	}
-  1954	
-  1955	.project-subtitle {
-  1956	  color: var(--green);
-  1957	  font-size: clamp(20px, 2vw, 28px);
-  1958	  font-weight: 850;
-  1959	  line-height: 1.2;
-  1960	  margin-bottom: 22px;
-  1961	}
-  1962	
-  1963	.project-hero-text,
-  1964	.project-copy-panel p,
-  1965	.architecture-copy,
-  1966	.readiness-copy,
-  1967	.closing-panel p {
-  1968	  color: #c4d6cc;
-  1969	  font-size: 17px;
-  1970	  line-height: 1.65;
-  1971	}
-  1972	
-  1973	.project-hero-text {
-  1974	  max-width: 620px;
-  1975	}
-  1976	
-  1977	.project-meta-row {
-  1978	  display: flex;
-  1979	  flex-wrap: wrap;
-  1980	  gap: 9px;
-  1981	  margin-top: 28px;
-  1982	  max-width: 620px;
-  1983	}
-  1984	
-  1985	.project-meta-row span,
-  1986	.proof-points span,
-  1987	.readiness-list span {
-  1988	  background: rgba(67, 255, 146, 0.08);
-  1989	  border: 1px solid var(--line);
-  1990	  border-radius: 999px;
-  1991	  color: #d8ffe4;
+  1940	.project-page {
+  1941	  overflow-x: hidden;
+  1942	}
+  1943	
+  1944	.project-hero-copy,
+  1945	.project-hero-grid > * {
+  1946	  min-width: 0;
+  1947	}
+  1948	
+  1949	.project-page section:not(.project-hero) {
+  1950	  padding: 78px 0;
+  1951	  position: relative;
+  1952	}
+  1953	
+  1954	section.project-hero {
+  1955	  overflow: hidden;
+  1956	  padding: 24px 0 88px;
+  1957	  position: relative;
+  1958	}
+  1959	
+  1960	.project-hero::after {
+  1961	  background: linear-gradient(transparent, var(--bg));
+  1962	  bottom: 0;
+  1963	  content: "";
+  1964	  height: 30%;
+  1965	  left: 0;
+  1966	  pointer-events: none;
+  1967	  position: absolute;
+  1968	  right: 0;
+  1969	}
+  1970	
+  1971	.project-nav {
+  1972	  margin-bottom: 68px;
+  1973	}
+  1974	
+  1975	.project-hero-grid {
+  1976	  align-items: center;
+  1977	  display: grid;
+  1978	  gap: 56px;
+  1979	  grid-template-columns: minmax(0, 0.92fr) minmax(420px, 1.08fr);
+  1980	  position: relative;
+  1981	  z-index: 2;
+  1982	}
+  1983	
+  1984	.project-hero-copy h1 {
+  1985	  margin-bottom: 18px;
+  1986	}
+  1987	
+  1988	.project-back-link {
+  1989	  align-items: center;
+  1990	  color: var(--muted);
+  1991	  display: inline-flex;
   1992	  font-size: 13px;
-  1993	  font-weight: 750;
-  1994	  padding: 8px 11px;
-  1995	  white-space: nowrap;
-  1996	}
-  1997	
-  1998	.project-actions {
-  1999	  margin-top: 30px;
-  2000	}
-  2001	
-  2002	.av-showcase {
-  2003	  min-height: 610px;
-  2004	  position: relative;
-  2005	}
-  2006	
-  2007	.av-showcase::before {
-  2008	  background:
-  2009	    linear-gradient(rgba(67, 255, 146, 0.045) 1px, transparent 1px),
-  2010	    linear-gradient(90deg, rgba(67, 255, 146, 0.045) 1px, transparent 1px);
-  2011	  background-size: 36px 36px;
-  2012	  content: "";
-  2013	  inset: 34px 12px 52px;
-  2014	  opacity: 0.58;
-  2015	  position: absolute;
-  2016	}
-  2017	
-  2018	.av-device {
-  2019	  background: linear-gradient(145deg, #0c120f, #000);
-  2020	  border: 1px solid rgba(198, 255, 217, 0.24);
-  2021	  border-radius: var(--capture-frame-radius-tall);
-  2022	  box-shadow: 0 34px 100px rgba(0, 0, 0, 0.62), 0 0 64px rgba(0, 191, 99, 0.12);
-  2023	  padding: 16px;
-  2024	  position: absolute;
-  2025	}
-  2026	
-  2027	.av-device-tall {
-  2028	  --av-screen-ratio: 1440 / 3120;
-  2029	}
-  2030	
-  2031	.av-device-standard {
-  2032	  --av-screen-ratio: 720 / 1280;
-  2033	}
-  2034	
-  2035	.av-device-speaker {
-  2036	  background: #171f1a;
-  2037	  border-radius: 99px;
-  2038	  height: 6px;
-  2039	  margin: 0 auto 12px;
-  2040	  width: 62px;
-  2041	}
-  2042	
-  2043	.av-device-screen {
-  2044	  aspect-ratio: var(--av-screen-ratio);
-  2045	  background: #020403;
-  2046	  border-radius: var(--capture-screen-radius-tall);
-  2047	  overflow: hidden;
-  2048	  position: relative;
-  2049	  width: 100%;
-  2050	}
-  2051	
-  2052	.av-device-image {
-  2053	  object-fit: contain;
-  2054	  object-position: top center;
-  2055	}
-  2056	
-  2057	.flow-image-frame img {
-  2058	  object-fit: contain;
-  2059	  object-position: top center;
-  2060	}
-  2061	
-  2062	.av-device-main {
-  2063	  height: auto;
-  2064	  right: 176px;
-  2065	  top: 0;
-  2066	  transform: rotate(-5deg);
-  2067	  width: 260px;
-  2068	  z-index: 3;
-  2069	}
-  2070	
-  2071	.av-device-browse,
-  2072	.av-device-confirm {
-  2073	  border-radius: 15px;
-  2074	  height: auto;
-  2075	  width: 184px;
-  2076	}
-  2077	
-  2078	.av-device-standard.av-device-browse,
-  2079	.av-device-standard.av-device-confirm {
-  2080	  border-radius: var(--capture-frame-radius-standard);
+  1993	  font-weight: 800;
+  1994	  gap: 8px;
+  1995	  margin-bottom: 30px;
+  1996	  transition: color 160ms ease;
+  1997	}
+  1998	
+  1999	.project-back-link:hover {
+  2000	  color: var(--mint);
+  2001	}
+  2002	
+  2003	.project-subtitle {
+  2004	  color: var(--green);
+  2005	  font-size: clamp(20px, 2vw, 28px);
+  2006	  font-weight: 850;
+  2007	  line-height: 1.2;
+  2008	  margin-bottom: 22px;
+  2009	}
+  2010	
+  2011	.project-hero-text,
+  2012	.project-copy-panel p,
+  2013	.architecture-copy,
+  2014	.readiness-copy,
+  2015	.closing-panel p {
+  2016	  color: #c4d6cc;
+  2017	  font-size: 17px;
+  2018	  line-height: 1.65;
+  2019	}
+  2020	
+  2021	.project-hero-text {
+  2022	  max-width: 620px;
+  2023	}
+  2024	
+  2025	.project-meta-row {
+  2026	  display: flex;
+  2027	  flex-wrap: wrap;
+  2028	  gap: 9px;
+  2029	  margin-top: 28px;
+  2030	  max-width: 620px;
+  2031	}
+  2032	
+  2033	.project-meta-row span,
+  2034	.proof-points span,
+  2035	.readiness-list span {
+  2036	  background: rgba(67, 255, 146, 0.08);
+  2037	  border: 1px solid var(--line);
+  2038	  border-radius: 999px;
+  2039	  color: #d8ffe4;
+  2040	  font-size: 13px;
+  2041	  font-weight: 750;
+  2042	  padding: 8px 11px;
+  2043	  white-space: nowrap;
+  2044	}
+  2045	
+  2046	.project-actions {
+  2047	  margin-top: 30px;
+  2048	}
+  2049	
+  2050	.av-showcase {
+  2051	  min-height: 610px;
+  2052	  position: relative;
+  2053	}
+  2054	
+  2055	.av-showcase::before {
+  2056	  background:
+  2057	    linear-gradient(rgba(67, 255, 146, 0.045) 1px, transparent 1px),
+  2058	    linear-gradient(90deg, rgba(67, 255, 146, 0.045) 1px, transparent 1px);
+  2059	  background-size: 36px 36px;
+  2060	  content: "";
+  2061	  inset: 34px 12px 52px;
+  2062	  opacity: 0.58;
+  2063	  position: absolute;
+  2064	}
+  2065	
+  2066	.av-device {
+  2067	  background: linear-gradient(145deg, #0c120f, #000);
+  2068	  border: 1px solid rgba(198, 255, 217, 0.24);
+  2069	  border-radius: var(--capture-frame-radius-tall);
+  2070	  box-shadow: 0 34px 100px rgba(0, 0, 0, 0.62), 0 0 64px rgba(0, 191, 99, 0.12);
+  2071	  padding: 16px;
+  2072	  position: absolute;
+  2073	}
+  2074	
+  2075	.av-device-tall {
+  2076	  --av-screen-ratio: 1440 / 3120;
+  2077	}
+  2078	
+  2079	.av-device-standard {
+  2080	  --av-screen-ratio: 720 / 1280;
   2081	}
   2082	
-  2083	.av-device-standard .av-device-screen {
-  2084	  border-radius: var(--capture-screen-radius-standard);
-  2085	}
-  2086	
-  2087	.av-device-browse {
-  2088	  right: 22px;
-  2089	  top: 126px;
-  2090	  transform: rotate(7deg);
-  2091	  z-index: 2;
-  2092	}
-  2093	
-  2094	.av-device-confirm {
-  2095	  left: 6px;
-  2096	  top: 214px;
-  2097	  transform: rotate(-10deg);
-  2098	  z-index: 1;
-  2099	}
-  2100	
-  2101	.cinerific-case .av-device {
-  2102	  border-radius: var(--capture-frame-radius-standard);
-  2103	  padding: 12px 18px;
-  2104	}
-  2105	
-  2106	.cinerific-case .av-device-screen {
-  2107	  aspect-ratio: 16 / 9;
-  2108	  background:
-  2109	    linear-gradient(rgba(67, 255, 146, 0.04) 1px, transparent 1px),
-  2110	    linear-gradient(90deg, rgba(67, 255, 146, 0.04) 1px, transparent 1px),
-  2111	    #020403;
-  2112	  background-size: 18px 18px;
-  2113	  border: 1px solid rgba(198, 255, 217, 0.16);
-  2114	  border-radius: var(--capture-screen-radius-standard);
-  2115	}
-  2116	
-  2117	.cinerific-tablet-camera {
-  2118	  background: #1d2923;
-  2119	  border: 1px solid rgba(198, 255, 217, 0.24);
-  2120	  border-radius: 999px;
-  2121	  height: 5px;
-  2122	  left: 7px;
-  2123	  position: absolute;
-  2124	  top: 50%;
-  2125	  transform: translateY(-50%);
-  2126	  width: 5px;
-  2127	}
-  2128	
-  2129	.av-showcase-proof {
-  2130	  background: rgba(5, 16, 10, 0.82);
-  2131	  border: 1px solid var(--line-strong);
-  2132	  border-radius: 8px;
-  2133	  bottom: 20px;
-  2134	  max-width: 260px;
-  2135	  padding: 15px;
-  2136	  position: absolute;
-  2137	  right: 16px;
-  2138	  z-index: 4;
-  2139	}
-  2140	
-  2141	.av-showcase-proof strong {
-  2142	  color: var(--green);
-  2143	  display: block;
-  2144	  font-size: 28px;
-  2145	  font-weight: 900;
-  2146	  line-height: 1;
+  2083	.av-device-speaker {
+  2084	  background: #171f1a;
+  2085	  border-radius: 99px;
+  2086	  height: 6px;
+  2087	  margin: 0 auto 12px;
+  2088	  width: 62px;
+  2089	}
+  2090	
+  2091	.av-device-screen {
+  2092	  aspect-ratio: var(--av-screen-ratio);
+  2093	  background: #020403;
+  2094	  border-radius: var(--capture-screen-radius-tall);
+  2095	  overflow: hidden;
+  2096	  position: relative;
+  2097	  width: 100%;
+  2098	}
+  2099	
+  2100	.av-device-image {
+  2101	  object-fit: contain;
+  2102	  object-position: top center;
+  2103	}
+  2104	
+  2105	.flow-image-frame img {
+  2106	  object-fit: contain;
+  2107	  object-position: top center;
+  2108	}
+  2109	
+  2110	.av-device-main {
+  2111	  height: auto;
+  2112	  right: 176px;
+  2113	  top: 0;
+  2114	  transform: rotate(-5deg);
+  2115	  width: 260px;
+  2116	  z-index: 3;
+  2117	}
+  2118	
+  2119	.av-device-browse,
+  2120	.av-device-confirm {
+  2121	  border-radius: 15px;
+  2122	  height: auto;
+  2123	  width: 184px;
+  2124	}
+  2125	
+  2126	.av-device-standard.av-device-browse,
+  2127	.av-device-standard.av-device-confirm {
+  2128	  border-radius: var(--capture-frame-radius-standard);
+  2129	}
+  2130	
+  2131	.av-device-standard .av-device-screen {
+  2132	  border-radius: var(--capture-screen-radius-standard);
+  2133	}
+  2134	
+  2135	.av-device-browse {
+  2136	  right: 22px;
+  2137	  top: 126px;
+  2138	  transform: rotate(7deg);
+  2139	  z-index: 2;
+  2140	}
+  2141	
+  2142	.av-device-confirm {
+  2143	  left: 6px;
+  2144	  top: 214px;
+  2145	  transform: rotate(-10deg);
+  2146	  z-index: 1;
   2147	}
   2148	
-  2149	.av-showcase-proof span {
-  2150	  color: var(--muted);
-  2151	  display: block;
-  2152	  font-size: 13px;
-  2153	  font-weight: 700;
-  2154	  line-height: 1.45;
-  2155	  margin-top: 8px;
-  2156	}
-  2157	
-  2158	.project-section-grid,
-  2159	.readiness-layout {
-  2160	  display: grid;
-  2161	  gap: 44px;
-  2162	  grid-template-columns: minmax(0, 0.82fr) minmax(360px, 1.18fr);
+  2149	.cinerific-case .av-device {
+  2150	  border-radius: var(--capture-frame-radius-standard);
+  2151	  padding: 12px 18px;
+  2152	}
+  2153	
+  2154	.cinerific-case .av-device-screen {
+  2155	  aspect-ratio: 16 / 9;
+  2156	  background:
+  2157	    linear-gradient(rgba(67, 255, 146, 0.04) 1px, transparent 1px),
+  2158	    linear-gradient(90deg, rgba(67, 255, 146, 0.04) 1px, transparent 1px),
+  2159	    #020403;
+  2160	  background-size: 18px 18px;
+  2161	  border: 1px solid rgba(198, 255, 217, 0.16);
+  2162	  border-radius: var(--capture-screen-radius-standard);
   2163	}
   2164	
-  2165	.project-copy-panel {
-  2166	  border-left: 1px solid var(--line-strong);
-  2167	  padding-left: 28px;
-  2168	}
-  2169	
-  2170	.project-copy-panel p:last-child,
-  2171	.closing-panel p:last-child {
-  2172	  margin-bottom: 0;
-  2173	}
-  2174	
-  2175	.project-card-grid {
-  2176	  display: grid;
-  2177	  gap: 16px;
-  2178	  margin-top: 34px;
-  2179	}
-  2180	
-  2181	.ownership-grid {
-  2182	  grid-template-columns: repeat(5, minmax(0, 1fr));
-  2183	}
-  2184	
-  2185	.feature-grid {
-  2186	  grid-template-columns: repeat(3, minmax(0, 1fr));
+  2165	.cinerific-tablet-camera {
+  2166	  background: #1d2923;
+  2167	  border: 1px solid rgba(198, 255, 217, 0.24);
+  2168	  border-radius: 999px;
+  2169	  height: 5px;
+  2170	  left: 7px;
+  2171	  position: absolute;
+  2172	  top: 50%;
+  2173	  transform: translateY(-50%);
+  2174	  width: 5px;
+  2175	}
+  2176	
+  2177	.av-showcase-proof {
+  2178	  background: rgba(5, 16, 10, 0.82);
+  2179	  border: 1px solid var(--line-strong);
+  2180	  border-radius: 8px;
+  2181	  bottom: 20px;
+  2182	  max-width: 260px;
+  2183	  padding: 15px;
+  2184	  position: absolute;
+  2185	  right: 16px;
+  2186	  z-index: 4;
   2187	}
   2188	
-  2189	.decision-grid {
-  2190	  grid-template-columns: repeat(3, minmax(0, 1fr));
-  2191	}
-  2192	
-  2193	.project-card,
-  2194	.flow-checkout-note,
-  2195	.architecture-node,
-  2196	.stack-group,
-  2197	.project-timeline-item {
-  2198	  background: linear-gradient(180deg, rgba(13, 31, 22, 0.88), rgba(5, 13, 9, 0.88));
-  2199	  border: 1px solid var(--line);
-  2200	  border-radius: 8px;
-  2201	}
-  2202	
-  2203	.project-card {
-  2204	  min-height: 184px;
-  2205	  padding: 22px;
-  2206	}
-  2207	
-  2208	.project-card span,
-  2209	.flow-checkout-note span,
-  2210	.stack-group h3 {
-  2211	  color: var(--green);
-  2212	  display: block;
-  2213	  font-size: 12px;
-  2214	  font-weight: 850;
-  2215	  letter-spacing: 0.1em;
-  2216	  margin-bottom: 20px;
-  2217	  text-transform: uppercase;
-  2218	}
-  2219	
-  2220	.project-card p,
-  2221	.flow-checkout-note p,
-  2222	.architecture-node p,
-  2223	.project-timeline-item p {
-  2224	  color: #b8c9bf;
-  2225	  line-height: 1.6;
-  2226	  margin-bottom: 0;
+  2189	.av-showcase-proof strong {
+  2190	  color: var(--green);
+  2191	  display: block;
+  2192	  font-size: 28px;
+  2193	  font-weight: 900;
+  2194	  line-height: 1;
+  2195	}
+  2196	
+  2197	.av-showcase-proof span {
+  2198	  color: var(--muted);
+  2199	  display: block;
+  2200	  font-size: 13px;
+  2201	  font-weight: 700;
+  2202	  line-height: 1.45;
+  2203	  margin-top: 8px;
+  2204	}
+  2205	
+  2206	.project-section-grid,
+  2207	.readiness-layout {
+  2208	  display: grid;
+  2209	  gap: 44px;
+  2210	  grid-template-columns: minmax(0, 0.82fr) minmax(360px, 1.18fr);
+  2211	}
+  2212	
+  2213	.project-copy-panel {
+  2214	  border-left: 1px solid var(--line-strong);
+  2215	  padding-left: 28px;
+  2216	}
+  2217	
+  2218	.project-copy-panel p:last-child,
+  2219	.closing-panel p:last-child {
+  2220	  margin-bottom: 0;
+  2221	}
+  2222	
+  2223	.project-card-grid {
+  2224	  display: grid;
+  2225	  gap: 16px;
+  2226	  margin-top: 34px;
   2227	}
   2228	
-  2229	.flow-segments {
-  2230	  border: 1px solid var(--line);
-  2231	  border-radius: 8px;
-  2232	  display: grid;
-  2233	  gap: 1px;
-  2234	  grid-template-columns: repeat(6, minmax(0, 1fr));
-  2235	  margin-top: 34px;
-  2236	  overflow: hidden;
-  2237	}
-  2238	
-  2239	.flow-segments span {
-  2240	  background: rgba(255, 255, 255, 0.03);
-  2241	  color: var(--mint);
-  2242	  font-size: 13px;
-  2243	  font-weight: 850;
-  2244	  padding: 14px 10px;
-  2245	  text-align: center;
-  2246	}
-  2247	
-  2248	.flow-layout {
-  2249	  align-items: center;
-  2250	  display: grid;
-  2251	  gap: 42px;
-  2252	  grid-template-columns: minmax(260px, 0.82fr) minmax(0, 1.18fr);
-  2253	  margin-top: 34px;
+  2229	.ownership-grid {
+  2230	  grid-template-columns: repeat(5, minmax(0, 1fr));
+  2231	}
+  2232	
+  2233	.feature-grid {
+  2234	  grid-template-columns: repeat(3, minmax(0, 1fr));
+  2235	}
+  2236	
+  2237	.decision-grid {
+  2238	  grid-template-columns: repeat(3, minmax(0, 1fr));
+  2239	}
+  2240	
+  2241	.project-card,
+  2242	.flow-checkout-note,
+  2243	.architecture-node,
+  2244	.stack-group,
+  2245	.project-timeline-item {
+  2246	  background: linear-gradient(180deg, rgba(13, 31, 22, 0.88), rgba(5, 13, 9, 0.88));
+  2247	  border: 1px solid var(--line);
+  2248	  border-radius: 8px;
+  2249	}
+  2250	
+  2251	.project-card {
+  2252	  min-height: 184px;
+  2253	  padding: 22px;
   2254	}
   2255	
-  2256	.flow-screen {
-  2257	  margin: 0;
-  2258	}
-  2259	
-  2260	.flow-image-frame {
-  2261	  aspect-ratio: 9 / 16;
-  2262	  background: #020403;
-  2263	  border: 1px solid var(--line);
-  2264	  border-radius: var(--capture-frame-radius-standard);
-  2265	  box-shadow: 0 30px 72px rgba(0, 0, 0, 0.45);
-  2266	  overflow: hidden;
-  2267	  position: relative;
-  2268	}
-  2269	
-  2270	.flow-screen-tall .flow-image-frame {
-  2271	  aspect-ratio: 1440 / 3120;
-  2272	  border-radius: var(--capture-frame-radius-tall);
-  2273	}
-  2274	
-  2275	.flow-screen-standard .flow-image-frame {
-  2276	  aspect-ratio: 720 / 1280;
-  2277	  border-radius: var(--capture-frame-radius-standard);
-  2278	}
-  2279	
-  2280	.flow-screen-main .flow-image-frame {
-  2281	  margin: 0 auto;
-  2282	  max-width: 330px;
-  2283	}
-  2284	
-  2285	.flow-screen-compact {
-  2286	  width: min(100%, 152px);
-  2287	}
-  2288	
-  2289	.flow-screen-compact .flow-image-frame {
-  2290	  width: 100%;
-  2291	}
-  2292	
-  2293	.flow-screen figcaption {
-  2294	  color: var(--muted);
-  2295	  font-size: 13px;
-  2296	  font-weight: 700;
-  2297	  line-height: 1.45;
-  2298	  margin: 14px auto 0;
-  2299	  max-width: 330px;
-  2300	}
-  2301	
-  2302	.flow-screen-label {
-  2303	  color: var(--green);
-  2304	  display: block;
-  2305	  font-size: 10px;
-  2306	  font-weight: 850;
-  2307	  letter-spacing: 0.12em;
-  2308	  margin: 0 0 8px;
-  2309	  text-align: center;
-  2310	  text-transform: uppercase;
-  2311	}
-  2312	
-  2313	.flow-support {
-  2314	  display: grid;
-  2315	  gap: 18px;
-  2316	  grid-template-columns: repeat(3, minmax(0, 1fr));
-  2317	}
-  2318	
-  2319	.flow-section-intro {
-  2320	  display: grid;
-  2321	  gap: 18px;
-  2322	}
-  2323	
-  2324	.flow-section-intro > p {
-  2325	  border-left: 1px solid var(--line-strong);
-  2326	  color: #b8c9bf;
-  2327	  line-height: 1.65;
-  2328	  margin: 0;
-  2329	  max-width: 560px;
-  2330	  padding-left: 22px;
+  2256	.project-card span,
+  2257	.flow-checkout-note span,
+  2258	.stack-group h3 {
+  2259	  color: var(--green);
+  2260	  display: block;
+  2261	  font-size: 12px;
+  2262	  font-weight: 850;
+  2263	  letter-spacing: 0.1em;
+  2264	  margin-bottom: 20px;
+  2265	  text-transform: uppercase;
+  2266	}
+  2267	
+  2268	.project-card p,
+  2269	.flow-checkout-note p,
+  2270	.architecture-node p,
+  2271	.project-timeline-item p {
+  2272	  color: #b8c9bf;
+  2273	  line-height: 1.6;
+  2274	  margin-bottom: 0;
+  2275	}
+  2276	
+  2277	.flow-segments {
+  2278	  border: 1px solid var(--line);
+  2279	  border-radius: 8px;
+  2280	  display: grid;
+  2281	  gap: 1px;
+  2282	  grid-template-columns: repeat(6, minmax(0, 1fr));
+  2283	  margin-top: 34px;
+  2284	  overflow: hidden;
+  2285	}
+  2286	
+  2287	.flow-segments span {
+  2288	  background: rgba(255, 255, 255, 0.03);
+  2289	  color: var(--mint);
+  2290	  font-size: 13px;
+  2291	  font-weight: 850;
+  2292	  padding: 14px 10px;
+  2293	  text-align: center;
+  2294	}
+  2295	
+  2296	.flow-layout {
+  2297	  align-items: center;
+  2298	  display: grid;
+  2299	  gap: 42px;
+  2300	  grid-template-columns: minmax(260px, 0.82fr) minmax(0, 1.18fr);
+  2301	  margin-top: 34px;
+  2302	}
+  2303	
+  2304	.flow-screen {
+  2305	  margin: 0;
+  2306	}
+  2307	
+  2308	.flow-image-frame {
+  2309	  aspect-ratio: 9 / 16;
+  2310	  background: #020403;
+  2311	  border: 1px solid var(--line);
+  2312	  border-radius: var(--capture-frame-radius-standard);
+  2313	  box-shadow: 0 30px 72px rgba(0, 0, 0, 0.45);
+  2314	  overflow: hidden;
+  2315	  position: relative;
+  2316	}
+  2317	
+  2318	.flow-screen-tall .flow-image-frame {
+  2319	  aspect-ratio: 1440 / 3120;
+  2320	  border-radius: var(--capture-frame-radius-tall);
+  2321	}
+  2322	
+  2323	.flow-screen-standard .flow-image-frame {
+  2324	  aspect-ratio: 720 / 1280;
+  2325	  border-radius: var(--capture-frame-radius-standard);
+  2326	}
+  2327	
+  2328	.flow-screen-main .flow-image-frame {
+  2329	  margin: 0 auto;
+  2330	  max-width: 330px;
   2331	}
   2332	
-  2333	.flow-checkout-note {
-  2334	  align-content: center;
-  2335	  min-height: 260px;
-  2336	  padding: 22px;
-  2337	}
-  2338	
-  2339	.flow-capture-groups {
-  2340	  display: grid;
-  2341	  gap: 48px;
-  2342	  margin-top: 54px;
-  2343	}
-  2344	
-  2345	.flow-capture-group {
-  2346	  border-top: 1px solid var(--line);
-  2347	  display: grid;
-  2348	  gap: 24px;
-  2349	  grid-template-columns: minmax(220px, 0.34fr) minmax(0, 1fr);
-  2350	  padding-top: 30px;
-  2351	}
-  2352	
-  2353	.flow-group-header {
-  2354	  max-width: 360px;
-  2355	}
-  2356	
-  2357	.flow-group-header span {
-  2358	  color: var(--green);
-  2359	  display: block;
-  2360	  font-size: 12px;
-  2361	  font-weight: 850;
-  2362	  letter-spacing: 0.1em;
-  2363	  margin-bottom: 14px;
-  2364	  text-transform: uppercase;
+  2333	.flow-screen-compact {
+  2334	  width: min(100%, 152px);
+  2335	}
+  2336	
+  2337	.flow-screen-compact .flow-image-frame {
+  2338	  width: 100%;
+  2339	}
+  2340	
+  2341	.flow-screen figcaption {
+  2342	  color: var(--muted);
+  2343	  font-size: 13px;
+  2344	  font-weight: 700;
+  2345	  line-height: 1.45;
+  2346	  margin: 14px auto 0;
+  2347	  max-width: 330px;
+  2348	}
+  2349	
+  2350	.flow-screen-label {
+  2351	  color: var(--green);
+  2352	  display: block;
+  2353	  font-size: 10px;
+  2354	  font-weight: 850;
+  2355	  letter-spacing: 0.12em;
+  2356	  margin: 0 0 8px;
+  2357	  text-align: center;
+  2358	  text-transform: uppercase;
+  2359	}
+  2360	
+  2361	.flow-support {
+  2362	  display: grid;
+  2363	  gap: 18px;
+  2364	  grid-template-columns: repeat(3, minmax(0, 1fr));
   2365	}
   2366	
-  2367	.flow-group-header h3 {
-  2368	  font-size: clamp(24px, 3vw, 34px);
-  2369	  line-height: 1;
-  2370	  margin-bottom: 14px;
-  2371	}
-  2372	
-  2373	.flow-group-header p {
+  2367	.flow-section-intro {
+  2368	  display: grid;
+  2369	  gap: 18px;
+  2370	}
+  2371	
+  2372	.flow-section-intro > p {
+  2373	  border-left: 1px solid var(--line-strong);
   2374	  color: #b8c9bf;
-  2375	  line-height: 1.6;
-  2376	  margin-bottom: 0;
-  2377	}
-  2378	
-  2379	.flow-capture-grid {
-  2380	  align-items: start;
-  2381	  display: grid;
-  2382	  gap: 34px;
-  2383	  grid-template-columns: repeat(auto-fit, minmax(285px, 1fr));
-  2384	}
-  2385	
-  2386	.flow-screen-stack {
-  2387	  min-width: 0;
-  2388	}
-  2389	
-  2390	.flow-screen-stack h4 {
-  2391	  color: var(--text);
-  2392	  font-size: 15px;
-  2393	  font-weight: 850;
-  2394	  letter-spacing: 0;
-  2395	  line-height: 1.2;
-  2396	  margin: 0 0 14px;
-  2397	  text-align: center;
-  2398	}
-  2399	
-  2400	.flow-screen-stack-captures {
-  2401	  align-items: start;
-  2402	  display: flex;
-  2403	  gap: 14px;
-  2404	  justify-content: center;
-  2405	}
-  2406	
-  2407	.cinerific-case .flow-image-frame,
-  2408	.cinerific-case .flow-screen-standard .flow-image-frame,
-  2409	.cinerific-case .flow-screen-tall .flow-image-frame {
-  2410	  aspect-ratio: 16 / 9;
-  2411	  background: linear-gradient(145deg, #0c120f, #000);
-  2412	  border-radius: var(--capture-frame-radius-standard);
+  2375	  line-height: 1.65;
+  2376	  margin: 0;
+  2377	  max-width: 560px;
+  2378	  padding-left: 22px;
+  2379	}
+  2380	
+  2381	.flow-checkout-note {
+  2382	  align-content: center;
+  2383	  min-height: 260px;
+  2384	  padding: 22px;
+  2385	}
+  2386	
+  2387	.flow-capture-groups {
+  2388	  display: grid;
+  2389	  gap: 48px;
+  2390	  margin-top: 54px;
+  2391	}
+  2392	
+  2393	.flow-capture-group {
+  2394	  border-top: 1px solid var(--line);
+  2395	  display: grid;
+  2396	  gap: 24px;
+  2397	  grid-template-columns: minmax(220px, 0.34fr) minmax(0, 1fr);
+  2398	  padding-top: 30px;
+  2399	}
+  2400	
+  2401	.flow-group-header {
+  2402	  max-width: 360px;
+  2403	}
+  2404	
+  2405	.flow-group-header span {
+  2406	  color: var(--green);
+  2407	  display: block;
+  2408	  font-size: 12px;
+  2409	  font-weight: 850;
+  2410	  letter-spacing: 0.1em;
+  2411	  margin-bottom: 14px;
+  2412	  text-transform: uppercase;
   2413	}
   2414	
-  2415	.cinerific-case .flow-image-frame::before {
-  2416	  background:
-  2417	    linear-gradient(rgba(67, 255, 146, 0.04) 1px, transparent 1px),
-  2418	    linear-gradient(90deg, rgba(67, 255, 146, 0.04) 1px, transparent 1px),
-  2419	    #020403;
-  2420	  background-size: 14px 14px;
-  2421	  border: 1px solid rgba(198, 255, 217, 0.16);
-  2422	  border-radius: 5px;
-  2423	  content: "";
-  2424	  inset: 10px 14px;
-  2425	  position: absolute;
-  2426	}
-  2427	
-  2428	.cinerific-case .flow-image-frame::after {
-  2429	  background: #1d2923;
-  2430	  border: 1px solid rgba(198, 255, 217, 0.24);
-  2431	  border-radius: 999px;
-  2432	  content: "";
-  2433	  height: 4px;
-  2434	  left: 5px;
-  2435	  position: absolute;
-  2436	  top: 50%;
-  2437	  transform: translateY(-50%);
-  2438	  width: 4px;
-  2439	}
-  2440	
-  2441	.flow-browse-toggle-row {
-  2442	  display: flex;
-  2443	  justify-content: center;
-  2444	  margin-top: 26px;
-  2445	}
-  2446	
-  2447	.flow-browse-toggle {
-  2448	  cursor: pointer;
-  2449	  font-family: inherit;
-  2450	}
-  2451	
-  2452	.flow-browse-toggle svg {
-  2453	  flex: 0 0 auto;
-  2454	}
-  2455	
-  2456	.flow-browse-extra {
-  2457	  max-height: 0;
-  2458	  opacity: 0;
-  2459	  overflow: hidden;
-  2460	  pointer-events: none;
-  2461	  transform: translateY(-8px);
-  2462	  transition: max-height 320ms ease, opacity 220ms ease, transform 220ms ease,
-  2463	    margin-top 220ms ease;
-  2464	}
-  2465	
-  2466	.flow-browse-extra.is-open {
-  2467	  margin-top: 34px;
-  2468	  max-height: 5200px;
-  2469	  opacity: 1;
-  2470	  pointer-events: auto;
-  2471	  transform: translateY(0);
-  2472	}
-  2473	
-  2474	.architecture-map {
-  2475	  display: grid;
-  2476	  gap: 12px;
-  2477	  grid-template-columns: repeat(5, minmax(0, 1fr));
-  2478	}
-  2479	
-  2480	.architecture-node {
-  2481	  min-height: 178px;
-  2482	  padding: 18px;
-  2483	}
-  2484	
-  2485	.architecture-node span {
-  2486	  color: var(--green);
-  2487	  display: block;
-  2488	  font-size: 13px;
-  2489	  font-weight: 900;
-  2490	  margin-bottom: 18px;
-  2491	}
-  2492	
-  2493	.architecture-node strong {
-  2494	  color: var(--text);
-  2495	  display: block;
-  2496	  font-size: 16px;
-  2497	  line-height: 1.25;
-  2498	  margin-bottom: 12px;
-  2499	}
-  2500	
-  2501	.architecture-node p {
-  2502	  font-size: 13px;
-  2503	}
-  2504	
-  2505	.architecture-copy {
-  2506	  margin: 26px 0 0;
-  2507	}
-  2508	
-  2509	.readiness-copy {
-  2510	  margin-bottom: 24px;
-  2511	}
-  2512	
-  2513	.readiness-list,
-  2514	.proof-points {
-  2515	  display: flex;
-  2516	  flex-wrap: wrap;
-  2517	  gap: 10px;
-  2518	}
-  2519	
-  2520	.project-timeline {
-  2521	  display: grid;
-  2522	  gap: 14px;
-  2523	}
-  2524	
-  2525	.project-timeline-item {
-  2526	  display: grid;
-  2527	  gap: 22px;
-  2528	  grid-template-columns: 56px 1fr;
-  2529	  padding: 22px;
-  2530	}
-  2531	
-  2532	.project-timeline-item > span {
-  2533	  color: var(--green);
-  2534	  font-size: 18px;
-  2535	  font-weight: 900;
-  2536	}
-  2537	
-  2538	.project-timeline-item h3 {
-  2539	  font-size: 20px;
-  2540	  line-height: 1.2;
-  2541	  margin-bottom: 10px;
-  2542	}
-  2543	
-  2544	.stack-matrix {
-  2545	  display: grid;
-  2546	  gap: 14px;
-  2547	  grid-template-columns: repeat(5, minmax(0, 1fr));
-  2548	  margin-top: 34px;
-  2549	}
-  2550	
-  2551	.stack-group {
-  2552	  padding: 20px;
-  2553	}
-  2554	
-  2555	.stack-group h3 {
-  2556	  font-size: 11px;
-  2557	}
-  2558	
-  2559	.stack-group div {
-  2560	  display: grid;
-  2561	  gap: 8px;
-  2562	}
-  2563	
-  2564	.stack-group span {
-  2565	  color: #d8ffe4;
-  2566	  font-size: 14px;
-  2567	  font-weight: 750;
-  2568	  line-height: 1.35;
-  2569	}
-  2570	
-  2571	.proof-points {
-  2572	  margin-top: 34px;
-  2573	}
-  2574	
-  2575	.closing-panel {
-  2576	  align-items: center;
-  2577	  background: linear-gradient(180deg, rgba(13, 31, 22, 0.88), rgba(5, 13, 9, 0.88));
-  2578	  border: 1px solid var(--line);
-  2579	  border-radius: 8px;
-  2580	  display: grid;
-  2581	  gap: 34px;
-  2582	  grid-template-columns: minmax(0, 1fr) auto;
-  2583	  padding: 34px;
+  2415	.flow-group-header h3 {
+  2416	  font-size: clamp(24px, 3vw, 34px);
+  2417	  line-height: 1;
+  2418	  margin-bottom: 14px;
+  2419	}
+  2420	
+  2421	.flow-group-header p {
+  2422	  color: #b8c9bf;
+  2423	  line-height: 1.6;
+  2424	  margin-bottom: 0;
+  2425	}
+  2426	
+  2427	.flow-capture-grid {
+  2428	  align-items: start;
+  2429	  display: grid;
+  2430	  gap: 34px;
+  2431	  grid-template-columns: repeat(auto-fit, minmax(285px, 1fr));
+  2432	}
+  2433	
+  2434	.flow-screen-stack {
+  2435	  min-width: 0;
+  2436	}
+  2437	
+  2438	.flow-screen-stack h4 {
+  2439	  color: var(--text);
+  2440	  font-size: 15px;
+  2441	  font-weight: 850;
+  2442	  letter-spacing: 0;
+  2443	  line-height: 1.2;
+  2444	  margin: 0 0 14px;
+  2445	  text-align: center;
+  2446	}
+  2447	
+  2448	.flow-screen-stack-captures {
+  2449	  align-items: start;
+  2450	  display: flex;
+  2451	  gap: 14px;
+  2452	  justify-content: center;
+  2453	}
+  2454	
+  2455	.cinerific-case .flow-image-frame,
+  2456	.cinerific-case .flow-screen-standard .flow-image-frame,
+  2457	.cinerific-case .flow-screen-tall .flow-image-frame {
+  2458	  aspect-ratio: 16 / 9;
+  2459	  background: linear-gradient(145deg, #0c120f, #000);
+  2460	  border-radius: var(--capture-frame-radius-standard);
+  2461	}
+  2462	
+  2463	.cinerific-case .flow-image-frame::before {
+  2464	  background:
+  2465	    linear-gradient(rgba(67, 255, 146, 0.04) 1px, transparent 1px),
+  2466	    linear-gradient(90deg, rgba(67, 255, 146, 0.04) 1px, transparent 1px),
+  2467	    #020403;
+  2468	  background-size: 14px 14px;
+  2469	  border: 1px solid rgba(198, 255, 217, 0.16);
+  2470	  border-radius: 5px;
+  2471	  content: "";
+  2472	  inset: 10px 14px;
+  2473	  position: absolute;
+  2474	}
+  2475	
+  2476	.cinerific-case .flow-image-frame::after {
+  2477	  background: #1d2923;
+  2478	  border: 1px solid rgba(198, 255, 217, 0.24);
+  2479	  border-radius: 999px;
+  2480	  content: "";
+  2481	  height: 4px;
+  2482	  left: 5px;
+  2483	  position: absolute;
+  2484	  top: 50%;
+  2485	  transform: translateY(-50%);
+  2486	  width: 4px;
+  2487	}
+  2488	
+  2489	.flow-browse-toggle-row {
+  2490	  display: flex;
+  2491	  justify-content: center;
+  2492	  margin-top: 26px;
+  2493	}
+  2494	
+  2495	.flow-browse-toggle {
+  2496	  cursor: pointer;
+  2497	  font-family: inherit;
+  2498	}
+  2499	
+  2500	.flow-browse-toggle svg {
+  2501	  flex: 0 0 auto;
+  2502	}
+  2503	
+  2504	.flow-browse-extra {
+  2505	  max-height: 0;
+  2506	  opacity: 0;
+  2507	  overflow: hidden;
+  2508	  pointer-events: none;
+  2509	  transform: translateY(-8px);
+  2510	  transition: max-height 320ms ease, opacity 220ms ease, transform 220ms ease,
+  2511	    margin-top 220ms ease;
+  2512	}
+  2513	
+  2514	.flow-browse-extra.is-open {
+  2515	  margin-top: 34px;
+  2516	  max-height: 5200px;
+  2517	  opacity: 1;
+  2518	  pointer-events: auto;
+  2519	  transform: translateY(0);
+  2520	}
+  2521	
+  2522	.architecture-map {
+  2523	  display: grid;
+  2524	  gap: 12px;
+  2525	  grid-template-columns: repeat(5, minmax(0, 1fr));
+  2526	}
+  2527	
+  2528	.architecture-node {
+  2529	  min-height: 178px;
+  2530	  padding: 18px;
+  2531	}
+  2532	
+  2533	.architecture-node span {
+  2534	  color: var(--green);
+  2535	  display: block;
+  2536	  font-size: 13px;
+  2537	  font-weight: 900;
+  2538	  margin-bottom: 18px;
+  2539	}
+  2540	
+  2541	.architecture-node strong {
+  2542	  color: var(--text);
+  2543	  display: block;
+  2544	  font-size: 16px;
+  2545	  line-height: 1.25;
+  2546	  margin-bottom: 12px;
+  2547	}
+  2548	
+  2549	.architecture-node p {
+  2550	  font-size: 13px;
+  2551	}
+  2552	
+  2553	.architecture-copy {
+  2554	  margin: 26px 0 0;
+  2555	}
+  2556	
+  2557	.readiness-copy {
+  2558	  margin-bottom: 24px;
+  2559	}
+  2560	
+  2561	.readiness-list,
+  2562	.proof-points {
+  2563	  display: flex;
+  2564	  flex-wrap: wrap;
+  2565	  gap: 10px;
+  2566	}
+  2567	
+  2568	.project-timeline {
+  2569	  display: grid;
+  2570	  gap: 14px;
+  2571	}
+  2572	
+  2573	.project-timeline-item {
+  2574	  display: grid;
+  2575	  gap: 22px;
+  2576	  grid-template-columns: 56px 1fr;
+  2577	  padding: 22px;
+  2578	}
+  2579	
+  2580	.project-timeline-item > span {
+  2581	  color: var(--green);
+  2582	  font-size: 18px;
+  2583	  font-weight: 900;
   2584	}
   2585	
-  2586	.closing-panel h2 {
-  2587	  font-size: clamp(30px, 4vw, 50px);
-  2588	  margin-bottom: 18px;
-  2589	  max-width: 720px;
+  2586	.project-timeline-item h3 {
+  2587	  font-size: 20px;
+  2588	  line-height: 1.2;
+  2589	  margin-bottom: 10px;
   2590	}
   2591	
-  2592	.closing-panel p {
-  2593	  max-width: 760px;
-  2594	}
-  2595	
-  2596	.closing-actions {
-  2597	  display: flex;
-  2598	  flex-direction: column;
-  2599	  gap: 12px;
-  2600	  min-width: 190px;
+  2592	.stack-matrix {
+  2593	  display: grid;
+  2594	  gap: 14px;
+  2595	  grid-template-columns: repeat(5, minmax(0, 1fr));
+  2596	  margin-top: 34px;
+  2597	}
+  2598	
+  2599	.stack-group {
+  2600	  padding: 20px;
   2601	}
   2602	
-  2603	@media (max-width: 980px) {
-  2604	  .nav-bar {
-  2605	    --nav-bar-inline-padding: 16px;
-  2606	    --nav-link-bottom-separator-gap: 8px;
-  2607	    --nav-link-separator-gap: 6px;
-  2608	    --nav-link-top-separator-gap: 6px;
-  2609	    align-items: center;
-  2610	    display: block;
-  2611	    height: var(--nav-bar-two-row-height);
-  2612	    row-gap: 10px;
-  2613	    padding: 0 var(--nav-bar-inline-padding);
-  2614	  }
-  2615	
-  2616	  .nav-bar nav {
-  2617	    display: grid;
-  2618	    grid-template-rows: repeat(2, var(--nav-bar-height));
-  2619	    height: 100%;
-  2620	    row-gap: var(--nav-bar-two-row-gap);
-  2621	    width: 100%;
-  2622	  }
-  2623	
-  2624	  .nav-link-row {
-  2625	    display: flex;
-  2626	    flex-wrap: nowrap;
-  2627	    gap: var(--nav-link-separator-gap);
-  2628	    justify-content: space-between;
-  2629	    min-width: 0;
-  2630	    width: 100%;
-  2631	  }
-  2632	
-  2633	  .nav-link-row-top {
-  2634	    align-items: center;
-  2635	    column-gap: var(--nav-brand-gap);
-  2636	    display: flex;
-  2637	    height: var(--nav-bar-height);
-  2638	    justify-content: flex-start;
-  2639	    width: 100%;
-  2640	  }
-  2641	
-  2642	  .nav-top-distribution {
-  2643	    align-items: center;
-  2644	    display: grid;
-  2645	    flex: 1 1 auto;
-  2646	    grid-template-columns: repeat(2, minmax(0, 1fr));
-  2647	    justify-items: center;
-  2648	    min-width: 0;
-  2649	    position: relative;
-  2650	  }
-  2651	
-  2652	  .nav-top-distribution > .nav-top-link-primary {
-  2653	    grid-column: 1;
-  2654	    min-width: max-content;
-  2655	  }
-  2656	
-  2657	  .nav-top-distribution > .nav-top-link-secondary {
-  2658	    grid-column: 2;
-  2659	    min-width: max-content;
-  2660	  }
-  2661	
-  2662	  .nav-top-distribution > .nav-separator-top-center {
-  2663	    left: 50%;
-  2664	    position: absolute;
-  2665	    transform: translateX(-50%);
-  2666	  }
-  2667	
-  2668	  .nav-link-row-bottom {
-  2669	    align-items: center;
-  2670	    column-gap: var(--nav-link-bottom-separator-gap);
-  2671	    display: flex;
-  2672	    height: var(--nav-bar-height);
-  2673	    justify-content: space-evenly;
-  2674	    width: 100%;
-  2675	  }
-  2676	
-  2677	  .nav-separator.nav-separator-row-leading {
-  2678	    display: none;
-  2679	  }
-  2680	
-  2681	  .nav-bar nav a,
-  2682	  .nav-bar nav .nav-text {
-  2683	    flex: 1 1 0;
-  2684	    min-width: 0;
-  2685	    padding-left: 10px;
-  2686	    padding-right: 10px;
-  2687	    text-align: center;
-  2688	  }
-  2689	
-  2690	  .nav-bar nav .nav-link-row > a,
-  2691	  .nav-bar nav .nav-link-row > .nav-text {
-  2692	    flex: 0 0 auto;
-  2693	    justify-self: center;
+  2603	.stack-group h3 {
+  2604	  font-size: 11px;
+  2605	}
+  2606	
+  2607	.stack-group div {
+  2608	  display: grid;
+  2609	  gap: 8px;
+  2610	}
+  2611	
+  2612	.stack-group span {
+  2613	  color: #d8ffe4;
+  2614	  font-size: 14px;
+  2615	  font-weight: 750;
+  2616	  line-height: 1.35;
+  2617	}
+  2618	
+  2619	.proof-points {
+  2620	  margin-top: 34px;
+  2621	}
+  2622	
+  2623	.closing-panel {
+  2624	  align-items: center;
+  2625	  background: linear-gradient(180deg, rgba(13, 31, 22, 0.88), rgba(5, 13, 9, 0.88));
+  2626	  border: 1px solid var(--line);
+  2627	  border-radius: 8px;
+  2628	  display: grid;
+  2629	  gap: 34px;
+  2630	  grid-template-columns: minmax(0, 1fr) auto;
+  2631	  padding: 34px;
+  2632	}
+  2633	
+  2634	.closing-panel h2 {
+  2635	  font-size: clamp(30px, 4vw, 50px);
+  2636	  margin-bottom: 18px;
+  2637	  max-width: 720px;
+  2638	}
+  2639	
+  2640	.closing-panel p {
+  2641	  max-width: 760px;
+  2642	}
+  2643	
+  2644	.closing-actions {
+  2645	  display: flex;
+  2646	  flex-direction: column;
+  2647	  gap: 12px;
+  2648	  min-width: 190px;
+  2649	}
+  2650	
+  2651	@media (max-width: 980px) {
+  2652	  .hero-copy {
+  2653	    --hero-proof-stack-width: min(606px, 100%);
+  2654	    --hero-action-stack-width: var(--hero-proof-stack-width);
+  2655	    --hero-text-stack-width: var(--hero-action-stack-width);
+  2656	  }
+  2657	
+  2658	  .nav-bar {
+  2659	    --nav-bar-inline-padding: 16px;
+  2660	    --nav-link-bottom-separator-gap: 8px;
+  2661	    --nav-link-separator-gap: 6px;
+  2662	    --nav-link-top-separator-gap: 6px;
+  2663	    align-items: center;
+  2664	    display: block;
+  2665	    height: var(--nav-bar-two-row-height);
+  2666	    row-gap: 7.5px;
+  2667	    padding: 0 var(--nav-bar-inline-padding);
+  2668	  }
+  2669	
+  2670	  .nav-bar nav {
+  2671	    display: grid;
+  2672	    grid-template-rows: repeat(2, var(--nav-bar-height));
+  2673	    height: 100%;
+  2674	    row-gap: var(--nav-bar-two-row-gap);
+  2675	    width: 100%;
+  2676	  }
+  2677	
+  2678	  .nav-link-row {
+  2679	    display: flex;
+  2680	    flex-wrap: nowrap;
+  2681	    gap: var(--nav-link-separator-gap);
+  2682	    justify-content: space-between;
+  2683	    min-width: 0;
+  2684	    width: 100%;
+  2685	  }
+  2686	
+  2687	  .nav-link-row-top {
+  2688	    align-items: center;
+  2689	    column-gap: var(--nav-brand-gap);
+  2690	    display: flex;
+  2691	    height: var(--nav-bar-height);
+  2692	    justify-content: flex-start;
+  2693	    width: 100%;
   2694	  }
   2695	
-  2696	  .nav-bar nav .nav-link-row-top > .nav-brand-link {
-  2697	    display: inline-flex;
-  2698	    gap: var(--nav-brand-gap);
-  2699	    grid-column: 1;
-  2700	    height: var(--nav-bar-height);
-  2701	    margin-block: calc(var(--nav-card-border-width) * -1);
-  2702	    margin-right: 0;
-  2703	    min-width: max-content;
-  2704	    padding: 0 calc(var(--nav-brand-gap) + var(--nav-brand-card-bleed)) 0
-  2705	      var(--nav-brand-card-bleed);
-  2706	    justify-self: start;
-  2707	  }
-  2708	
-  2709	  .nav-bar nav .nav-link-row-top > .nav-brand-link .nav-brand-mark {
-  2710	    align-self: center;
-  2711	    flex: none;
-  2712	    height: 34px;
-  2713	    justify-self: center;
-  2714	    max-height: 34px;
-  2715	    max-width: 34px;
-  2716	    min-height: 34px;
-  2717	    min-width: 34px;
-  2718	    width: 34px;
-  2719	  }
-  2720	
-  2721	  .nav-bar nav .nav-link-row-top > .nav-brand-link .nav-brand-name {
-  2722	    align-self: center;
-  2723	    display: inline-flex;
-  2724	    justify-content: center;
-  2725	    line-height: 1;
-  2726	    text-align: center;
-  2727	  }
-  2728	
-  2729	  .nav-bar nav .nav-link-row-bottom > a,
-  2730	  .nav-bar nav .nav-link-row-bottom > .nav-text {
-  2731	    padding-bottom: 5px;
-  2732	    padding-top: 0;
+  2696	  .nav-top-distribution {
+  2697	    align-items: center;
+  2698	    display: grid;
+  2699	    flex: 1 1 auto;
+  2700	    grid-template-columns: repeat(2, minmax(0, 1fr));
+  2701	    justify-items: center;
+  2702	    min-width: 0;
+  2703	    position: relative;
+  2704	  }
+  2705	
+  2706	  .nav-top-distribution > .nav-top-link-primary {
+  2707	    grid-column: 1;
+  2708	    min-width: max-content;
+  2709	  }
+  2710	
+  2711	  .nav-top-distribution > .nav-top-link-secondary {
+  2712	    grid-column: 2;
+  2713	    min-width: max-content;
+  2714	  }
+  2715	
+  2716	  .nav-top-distribution > .nav-separator-top-center {
+  2717	    left: 50%;
+  2718	    position: absolute;
+  2719	    transform: translateX(-50%);
+  2720	  }
+  2721	
+  2722	  .nav-link-row-bottom {
+  2723	    align-items: center;
+  2724	    column-gap: var(--nav-link-bottom-separator-gap);
+  2725	    display: flex;
+  2726	    height: var(--nav-bar-height);
+  2727	    justify-content: space-evenly;
+  2728	    width: 100%;
+  2729	  }
+  2730	
+  2731	  .nav-separator.nav-separator-row-leading {
+  2732	    display: none;
   2733	  }
   2734	
-  2735	  .project-nav nav {
-  2736	    grid-template-columns: repeat(3, minmax(0, 1fr));
-  2737	  }
-  2738	
-  2739	  .hero-grid,
-  2740	  .worklog-layout,
-  2741	  .project-hero-grid,
-  2742	  .project-section-grid,
-  2743	  .readiness-layout {
-  2744	    grid-template-columns: 1fr;
-  2745	  }
-  2746	
-  2747	  .av-showcase {
-  2748	    min-height: 610px;
-  2749	  }
-  2750	
-  2751	  .av-device-main {
-  2752	    left: 32%;
-  2753	    right: auto;
-  2754	  }
-  2755	
-  2756	  .av-device-browse {
-  2757	    right: 6%;
-  2758	  }
-  2759	
-  2760	  .av-device-confirm {
-  2761	    left: 4%;
-  2762	  }
-  2763	
-  2764	  .hero-visual {
-  2765	    min-height: auto;
-  2766	  }
-  2767	
-  2768	  .phone-stage {
-  2769	    height: 710px;
-  2770	    margin-top: 30px;
-  2771	  }
-  2772	
-  2773	  .phone-shell-commerce {
-  2774	    left: 4%;
-  2775	  }
-  2776	
-  2777	  .phone-shell-finance {
-  2778	    left: 42%;
-  2779	  }
-  2780	
-  2781	  .tablet-shell {
-  2782	    left: 9%;
-  2783	    top: 374px;
-  2784	    width: min(74%, 332px);
-  2785	  }
-  2786	
-  2787	  .case-grid,
-  2788	  .capability-grid,
-  2789	  .feature-grid,
-  2790	  .decision-grid,
-  2791	  .architecture-map {
-  2792	    grid-template-columns: repeat(2, minmax(0, 1fr));
-  2793	  }
-  2794	
-  2795	  .ownership-grid,
-  2796	  .stack-matrix {
-  2797	    grid-template-columns: repeat(3, minmax(0, 1fr));
-  2798	  }
-  2799	
-  2800	  .flow-layout {
-  2801	    grid-template-columns: 1fr;
-  2802	  }
-  2803	
-  2804	  .flow-capture-group {
-  2805	    grid-template-columns: 1fr;
-  2806	  }
-  2807	}
-  2808	
-  2809	@media (max-width: 720px) {
-  2810	  .site-shell {
-  2811	    width: min(100% - 24px, 1180px);
+  2735	  .nav-bar nav a,
+  2736	  .nav-bar nav .nav-text {
+  2737	    flex: 1 1 0;
+  2738	    min-width: 0;
+  2739	    padding-left: 10px;
+  2740	    padding-right: 10px;
+  2741	    text-align: center;
+  2742	  }
+  2743	
+  2744	  .nav-bar nav .nav-link-row > a,
+  2745	  .nav-bar nav .nav-link-row > .nav-text {
+  2746	    flex: 0 0 auto;
+  2747	    justify-self: center;
+  2748	  }
+  2749	
+  2750	  .nav-bar nav .nav-link-row-top > .nav-brand-link {
+  2751	    display: inline-flex;
+  2752	    gap: var(--nav-brand-gap);
+  2753	    grid-column: 1;
+  2754	    height: var(--nav-bar-height);
+  2755	    margin-block: calc(var(--nav-card-border-width) * -1);
+  2756	    margin-right: 0;
+  2757	    min-width: max-content;
+  2758	    padding: 0 calc(var(--nav-brand-gap) + var(--nav-brand-card-bleed)) 0
+  2759	      var(--nav-brand-card-bleed);
+  2760	    justify-self: start;
+  2761	  }
+  2762	
+  2763	  .nav-bar nav .nav-link-row-top > .nav-brand-link .nav-brand-mark {
+  2764	    align-self: center;
+  2765	    flex: none;
+  2766	    height: 34px;
+  2767	    justify-self: center;
+  2768	    max-height: 34px;
+  2769	    max-width: 34px;
+  2770	    min-height: 34px;
+  2771	    min-width: 34px;
+  2772	    width: 34px;
+  2773	  }
+  2774	
+  2775	  .nav-bar nav .nav-link-row-top > .nav-brand-link .nav-brand-name {
+  2776	    align-self: center;
+  2777	    display: inline-flex;
+  2778	    justify-content: center;
+  2779	    line-height: 1;
+  2780	    text-align: center;
+  2781	  }
+  2782	
+  2783	  .nav-bar nav .nav-link-row-bottom > a,
+  2784	  .nav-bar nav .nav-link-row-bottom > .nav-text {
+  2785	    padding-bottom: 3.75px;
+  2786	    padding-top: 0;
+  2787	  }
+  2788	
+  2789	  .project-nav nav {
+  2790	    grid-template-columns: repeat(3, minmax(0, 1fr));
+  2791	  }
+  2792	
+  2793	  .hero-grid,
+  2794	  .worklog-layout,
+  2795	  .project-hero-grid,
+  2796	  .project-section-grid,
+  2797	  .readiness-layout {
+  2798	    grid-template-columns: 1fr;
+  2799	  }
+  2800	
+  2801	  .av-showcase {
+  2802	    min-height: 610px;
+  2803	  }
+  2804	
+  2805	  .av-device-main {
+  2806	    left: 32%;
+  2807	    right: auto;
+  2808	  }
+  2809	
+  2810	  .av-device-browse {
+  2811	    right: 6%;
   2812	  }
   2813	
-  2814	  .nav-bar {
-  2815	    --nav-bar-inline-padding: 14px;
-  2816	    --nav-link-bottom-separator-gap: 5px;
-  2817	    --nav-link-separator-gap: 4px;
-  2818	    --nav-link-top-separator-gap: 3px;
-  2819	    max-width: calc(100vw - 24px);
-  2820	    overflow: hidden;
-  2821	    padding: 0 var(--nav-bar-inline-padding);
-  2822	  }
-  2823	
-  2824	  .nav-bar nav {
-  2825	    max-width: 100%;
-  2826	  }
-  2827	
-  2828	  .project-nav nav {
-  2829	    width: 100%;
-  2830	  }
-  2831	
-  2832	  .project-page .site-shell {
-  2833	    max-width: calc(100vw - 24px);
-  2834	    width: calc(100vw - 24px);
-  2835	  }
-  2836	
-  2837	  .project-nav {
-  2838	    max-width: calc(100vw - 24px);
-  2839	    width: calc(100vw - 24px);
-  2840	  }
-  2841	
-  2842	  .project-nav nav a {
-  2843	    font-size: 11px;
-  2844	  }
-  2845	
-  2846	  .nav-bar nav a,
-  2847	  .nav-bar nav .nav-text {
-  2848	    font-size: 15px;
-  2849	    padding-left: 2px;
-  2850	    padding-right: 2px;
-  2851	  }
-  2852	
-  2853	  .nav-separator {
-  2854	    font-size: 15px;
-  2855	  }
-  2856	
-  2857	  .hero {
-  2858	    padding-top: 24px;
-  2859	  }
-  2860	
-  2861	  section.project-hero {
-  2862	    padding-top: 12px;
-  2863	  }
-  2864	
-  2865	  .project-nav {
-  2866	    margin-bottom: 48px;
-  2867	  }
-  2868	
-  2869	  .hero-grid {
-  2870	    gap: 30px;
-  2871	    padding-top: 16px;
-  2872	  }
-  2873	
-  2874	  h1 {
-  2875	    font-size: clamp(42px, 15vw, 64px);
+  2814	  .av-device-confirm {
+  2815	    left: 4%;
+  2816	  }
+  2817	
+  2818	  .hero-visual {
+  2819	    min-height: auto;
+  2820	  }
+  2821	
+  2822	  .phone-stage {
+  2823	    height: 710px;
+  2824	    margin-top: 30px;
+  2825	  }
+  2826	
+  2827	  .phone-shell-commerce {
+  2828	    left: 4%;
+  2829	  }
+  2830	
+  2831	  .phone-shell-finance {
+  2832	    left: 42%;
+  2833	  }
+  2834	
+  2835	  .tablet-shell {
+  2836	    left: 9%;
+  2837	    top: 374px;
+  2838	    width: min(74%, 332px);
+  2839	  }
+  2840	
+  2841	  .case-grid,
+  2842	  .capability-grid,
+  2843	  .feature-grid,
+  2844	  .decision-grid,
+  2845	  .architecture-map {
+  2846	    grid-template-columns: repeat(2, minmax(0, 1fr));
+  2847	  }
+  2848	
+  2849	  .ownership-grid,
+  2850	  .stack-matrix {
+  2851	    grid-template-columns: repeat(3, minmax(0, 1fr));
+  2852	  }
+  2853	
+  2854	  .flow-layout {
+  2855	    grid-template-columns: 1fr;
+  2856	  }
+  2857	
+  2858	  .flow-capture-group {
+  2859	    grid-template-columns: 1fr;
+  2860	  }
+  2861	}
+  2862	
+  2863	@media (max-width: 720px) {
+  2864	  .site-shell {
+  2865	    width: min(100% - 24px, 1180px);
+  2866	  }
+  2867	
+  2868	  .nav-bar {
+  2869	    --nav-bar-inline-padding: 14px;
+  2870	    --nav-link-bottom-separator-gap: 5px;
+  2871	    --nav-link-separator-gap: 4px;
+  2872	    --nav-link-top-separator-gap: 3px;
+  2873	    max-width: calc(100vw - 24px);
+  2874	    overflow: hidden;
+  2875	    padding: 0 var(--nav-bar-inline-padding);
   2876	  }
   2877	
-  2878	  .hero-visual {
-  2879	    min-height: auto;
+  2878	  .nav-bar nav {
+  2879	    max-width: 100%;
   2880	  }
   2881	
-  2882	  .phone-stage {
-  2883	    height: 626px;
-  2884	    margin-top: 18px;
-  2885	  }
-  2886	
-  2887	  .profile-orbit {
-  2888	    right: 0;
+  2882	  .project-nav nav {
+  2883	    width: 100%;
+  2884	  }
+  2885	
+  2886	  .project-page .site-shell {
+  2887	    max-width: calc(100vw - 24px);
+  2888	    width: calc(100vw - 24px);
   2889	  }
   2890	
-  2891	  .profile-photo {
-  2892	    height: 132px;
-  2893	    width: 132px;
+  2891	  .project-nav {
+  2892	    max-width: calc(100vw - 24px);
+  2893	    width: calc(100vw - 24px);
   2894	  }
   2895	
-  2896	  .phone-shell {
-  2897	    height: 420px;
-  2898	    width: 206px;
-  2899	  }
-  2900	
-  2901	  .phone-shell-commerce {
-  2902	    left: -2px;
-  2903	    top: 72px;
-  2904	  }
-  2905	
-  2906	  .phone-shell-finance {
-  2907	    left: auto;
-  2908	    right: -8px;
-  2909	    top: 124px;
-  2910	  }
-  2911	
-  2912	  .tablet-shell {
-  2913	    height: 150px;
-  2914	    left: 14px;
-  2915	    top: 342px;
-  2916	    width: min(84vw, 268px);
+  2896	  .project-nav nav a {
+  2897	    font-size: 11px;
+  2898	  }
+  2899	
+  2900	  .nav-bar nav a,
+  2901	  .nav-bar nav .nav-text {
+  2902	    font-size: 15px;
+  2903	    padding-left: 2px;
+  2904	    padding-right: 2px;
+  2905	  }
+  2906	
+  2907	  .nav-separator {
+  2908	    font-size: 15px;
+  2909	  }
+  2910	
+  2911	  .hero {
+  2912	    padding-top: 24px;
+  2913	  }
+  2914	
+  2915	  section.project-hero {
+  2916	    padding-top: 12px;
   2917	  }
   2918	
-  2919	  .stats-strip {
-  2920	    grid-template-columns: repeat(2, minmax(0, 1fr));
+  2919	  .project-nav {
+  2920	    margin-bottom: 48px;
   2921	  }
   2922	
-  2923	  .stats-strip-item {
-  2924	    min-height: 112px;
-  2925	    padding: 18px;
+  2923	  .hero-grid {
+  2924	    gap: 30px;
+  2925	    padding-top: 16px;
   2926	  }
   2927	
-  2928	  .stack-section .capability-grid {
-  2929	    grid-template-columns: repeat(2, minmax(0, 1fr));
+  2928	  h1 {
+  2929	    font-size: clamp(42px, 15vw, 64px);
   2930	  }
   2931	
-  2932	  .case-card {
+  2932	  .hero-visual {
   2933	    min-height: auto;
   2934	  }
   2935	
-  2936	  .contact-panel {
-  2937	    align-items: flex-start;
-  2938	    flex-direction: column;
+  2936	  .phone-stage {
+  2937	    height: 626px;
+  2938	    margin-top: 18px;
   2939	  }
   2940	
-  2941	  .project-page section:not(.project-hero) {
-  2942	    padding: 58px 0;
+  2941	  .profile-orbit {
+  2942	    right: 0;
   2943	  }
   2944	
-  2945	  .project-hero-grid {
-  2946	    gap: 34px;
-  2947	  }
-  2948	
-  2949	  .project-back-link {
-  2950	    margin-bottom: 24px;
-  2951	  }
-  2952	
-  2953	  .project-copy-panel {
-  2954	    border-left: 0;
-  2955	    padding-left: 0;
-  2956	  }
-  2957	
-  2958	  .project-hero-text,
-  2959	  .project-copy-panel p,
-  2960	  .architecture-copy,
-  2961	  .readiness-copy,
-  2962	  .closing-panel p {
-  2963	    font-size: 16px;
+  2945	  .profile-photo {
+  2946	    height: 132px;
+  2947	    width: 132px;
+  2948	  }
+  2949	
+  2950	  .phone-shell {
+  2951	    height: 420px;
+  2952	    width: 206px;
+  2953	  }
+  2954	
+  2955	  .phone-shell-commerce {
+  2956	    left: -2px;
+  2957	    top: 72px;
+  2958	  }
+  2959	
+  2960	  .phone-shell-finance {
+  2961	    left: auto;
+  2962	    right: -8px;
+  2963	    top: 124px;
   2964	  }
   2965	
-  2966	  .project-subtitle,
-  2967	  .project-hero-text,
-  2968	  .project-meta-row {
-  2969	    max-width: 100%;
-  2970	    overflow-wrap: anywhere;
+  2966	  .tablet-shell {
+  2967	    height: 150px;
+  2968	    left: 14px;
+  2969	    top: 342px;
+  2970	    width: min(84vw, 268px);
   2971	  }
   2972	
-  2973	  .project-meta-row span {
-  2974	    flex: 0 1 auto;
-  2975	    white-space: normal;
+  2973	  .stats-strip-item {
+  2974	    min-height: 104px;
+  2975	    padding: 14px 8px;
   2976	  }
   2977	
-  2978	  .av-showcase {
-  2979	    min-height: auto;
-  2980	    padding: 0 0 18px;
-  2981	  }
-  2982	
-  2983	  .av-showcase::before {
-  2984	    inset: 20px 0 84px;
-  2985	  }
-  2986	
-  2987	  .av-device {
-  2988	    position: relative;
+  2978	  .stack-section .capability-grid {
+  2979	    grid-template-columns: repeat(2, minmax(0, 1fr));
+  2980	  }
+  2981	
+  2982	  .case-card {
+  2983	    min-height: auto;
+  2984	  }
+  2985	
+  2986	  .contact-panel {
+  2987	    align-items: flex-start;
+  2988	    flex-direction: column;
   2989	  }
   2990	
-  2991	  .av-device-main {
-  2992	    height: auto;
-  2993	    left: auto;
-  2994	    margin: 0 auto;
-  2995	    max-width: 292px;
-  2996	    right: auto;
-  2997	    top: auto;
-  2998	    transform: rotate(-4deg);
-  2999	    width: 72vw;
-  3000	  }
-  3001	
-  3002	  .av-device-browse,
-  3003	  .av-device-confirm {
-  3004	    display: none;
-  3005	  }
-  3006	
-  3007	  .av-showcase-proof {
-  3008	    margin: -18px auto 0;
-  3009	    max-width: min(292px, calc(100vw - 48px));
-  3010	    position: relative;
-  3011	    right: auto;
-  3012	  }
-  3013	
-  3014	  .project-card-grid,
-  3015	  .ownership-grid,
-  3016	  .feature-grid,
-  3017	  .decision-grid,
-  3018	  .architecture-map,
-  3019	  .stack-matrix {
-  3020	    grid-template-columns: 1fr;
+  2991	  .project-page section:not(.project-hero) {
+  2992	    padding: 58px 0;
+  2993	  }
+  2994	
+  2995	  .project-hero-grid {
+  2996	    gap: 34px;
+  2997	  }
+  2998	
+  2999	  .project-back-link {
+  3000	    margin-bottom: 24px;
+  3001	  }
+  3002	
+  3003	  .project-copy-panel {
+  3004	    border-left: 0;
+  3005	    padding-left: 0;
+  3006	  }
+  3007	
+  3008	  .project-hero-text,
+  3009	  .project-copy-panel p,
+  3010	  .architecture-copy,
+  3011	  .readiness-copy,
+  3012	  .closing-panel p {
+  3013	    font-size: 16px;
+  3014	  }
+  3015	
+  3016	  .project-subtitle,
+  3017	  .project-hero-text,
+  3018	  .project-meta-row {
+  3019	    max-width: 100%;
+  3020	    overflow-wrap: anywhere;
   3021	  }
   3022	
-  3023	  .flow-segments {
-  3024	    grid-template-columns: repeat(2, minmax(0, 1fr));
-  3025	  }
-  3026	
-  3027	  .flow-support {
-  3028	    grid-template-columns: 1fr;
-  3029	  }
-  3030	
-  3031	  .flow-checkout-note {
-  3032	    min-height: auto;
-  3033	  }
-  3034	
-  3035	  .flow-section-intro > p {
-  3036	    border-left: 0;
-  3037	    padding-left: 0;
-  3038	  }
-  3039	
-  3040	  .flow-capture-groups {
-  3041	    gap: 40px;
-  3042	    margin-top: 44px;
-  3043	  }
-  3044	
-  3045	  .flow-capture-group {
-  3046	    padding-top: 24px;
-  3047	  }
-  3048	
-  3049	  .flow-capture-grid {
-  3050	    gap: 28px;
-  3051	    grid-template-columns: 1fr;
-  3052	  }
-  3053	
-  3054	  .flow-screen-compact {
-  3055	    width: min(42vw, 146px);
-  3056	  }
-  3057	
-  3058	  .flow-screen-stack-captures {
-  3059	    gap: 12px;
-  3060	  }
-  3061	
-  3062	  .flow-screen:not(.flow-screen-main) .flow-image-frame {
-  3063	    margin: 0 auto;
-  3064	    max-width: 230px;
-  3065	  }
-  3066	
-  3067	  .closing-panel {
-  3068	    grid-template-columns: 1fr;
-  3069	    padding: 28px;
-  3070	  }
-  3071	
-  3072	  .closing-actions {
-  3073	    width: 100%;
-  3074	  }
-  3075	}
+  3023	  .project-meta-row span {
+  3024	    flex: 0 1 auto;
+  3025	    white-space: normal;
+  3026	  }
+  3027	
+  3028	  .av-showcase {
+  3029	    min-height: auto;
+  3030	    padding: 0 0 18px;
+  3031	  }
+  3032	
+  3033	  .av-showcase::before {
+  3034	    inset: 20px 0 84px;
+  3035	  }
+  3036	
+  3037	  .av-device {
+  3038	    position: relative;
+  3039	  }
+  3040	
+  3041	  .av-device-main {
+  3042	    height: auto;
+  3043	    left: auto;
+  3044	    margin: 0 auto;
+  3045	    max-width: 292px;
+  3046	    right: auto;
+  3047	    top: auto;
+  3048	    transform: rotate(-4deg);
+  3049	    width: 72vw;
+  3050	  }
+  3051	
+  3052	  .av-device-browse,
+  3053	  .av-device-confirm {
+  3054	    display: none;
+  3055	  }
+  3056	
+  3057	  .av-showcase-proof {
+  3058	    margin: -18px auto 0;
+  3059	    max-width: min(292px, calc(100vw - 48px));
+  3060	    position: relative;
+  3061	    right: auto;
+  3062	  }
+  3063	
+  3064	  .project-card-grid,
+  3065	  .ownership-grid,
+  3066	  .feature-grid,
+  3067	  .decision-grid,
+  3068	  .architecture-map,
+  3069	  .stack-matrix {
+  3070	    grid-template-columns: 1fr;
+  3071	  }
+  3072	
+  3073	  .flow-segments {
+  3074	    grid-template-columns: repeat(2, minmax(0, 1fr));
+  3075	  }
   3076	
-  3077	@media (max-width: 630px) {
-  3078	  .case-grid {
-  3079	    grid-template-columns: 1fr;
-  3080	  }
-  3081	
-  3082	  .case-grid > .uiux-principle-card-expanded {
-  3083	    grid-column: auto;
-  3084	  }
-  3085	
-  3086	  .case-grid > .uiux-principle-card-expanded .uiux-principle-long-copy {
-  3087	    column-count: auto;
-  3088	    display: grid;
-  3089	  }
-  3090	}
-  3091	
-  3092	@media (max-width: 430px) {
-  3093	  .nav-bar {
-  3094	    --nav-brand-gap: 8px;
-  3095	    --nav-link-bottom-separator-gap: 3px;
-  3096	    --nav-link-separator-gap: 2px;
-  3097	    --nav-link-top-separator-gap: 2px;
-  3098	  }
-  3099	
-  3100	  .nav-brand-name {
-  3101	    font-size: 22px;
+  3077	  .flow-support {
+  3078	    grid-template-columns: 1fr;
+  3079	  }
+  3080	
+  3081	  .flow-checkout-note {
+  3082	    min-height: auto;
+  3083	  }
+  3084	
+  3085	  .flow-section-intro > p {
+  3086	    border-left: 0;
+  3087	    padding-left: 0;
+  3088	  }
+  3089	
+  3090	  .flow-capture-groups {
+  3091	    gap: 40px;
+  3092	    margin-top: 44px;
+  3093	  }
+  3094	
+  3095	  .flow-capture-group {
+  3096	    padding-top: 24px;
+  3097	  }
+  3098	
+  3099	  .flow-capture-grid {
+  3100	    gap: 28px;
+  3101	    grid-template-columns: 1fr;
   3102	  }
   3103	
-  3104	  .nav-bar nav a,
-  3105	  .nav-bar nav .nav-text,
-  3106	  .nav-separator {
-  3107	    font-size: 14px;
-  3108	  }
-  3109	}
-  3110	
-  3111	@media (max-width: 380px) {
-  3112	  .nav-bar {
-  3113	    --nav-bar-inline-padding: 12px;
-  3114	    --nav-link-bottom-separator-gap: 2px;
-  3115	    --nav-link-separator-gap: 1px;
-  3116	    --nav-link-top-separator-gap: 1px;
-  3117	  }
-  3118	
-  3119	  .nav-bar nav a,
-  3120	  .nav-bar nav .nav-text {
-  3121	    font-size: 13.5px;
-  3122	    padding-left: 0;
-  3123	    padding-right: 0;
+  3104	  .flow-screen-compact {
+  3105	    width: min(42vw, 146px);
+  3106	  }
+  3107	
+  3108	  .flow-screen-stack-captures {
+  3109	    gap: 12px;
+  3110	  }
+  3111	
+  3112	  .flow-screen:not(.flow-screen-main) .flow-image-frame {
+  3113	    margin: 0 auto;
+  3114	    max-width: 230px;
+  3115	  }
+  3116	
+  3117	  .closing-panel {
+  3118	    grid-template-columns: 1fr;
+  3119	    padding: 28px;
+  3120	  }
+  3121	
+  3122	  .closing-actions {
+  3123	    width: 100%;
   3124	  }
-  3125	
-  3126	  .nav-separator {
-  3127	    font-size: 13.5px;
-  3128	  }
-  3129	}
-  3130	
-  3131	@media (max-width: 340px) {
-  3132	  .nav-bar nav a,
-  3133	  .nav-bar nav .nav-text {
-  3134	    font-size: 13px;
-  3135	  }
-  3136	
-  3137	  .nav-separator {
-  3138	    font-size: 13px;
+  3125	}
+  3126	
+  3127	@media (max-width: 630px) {
+  3128	  .case-grid {
+  3129	    grid-template-columns: 1fr;
+  3130	  }
+  3131	
+  3132	  .case-grid > .uiux-principle-card-expanded {
+  3133	    grid-column: auto;
+  3134	  }
+  3135	
+  3136	  .case-grid > .uiux-principle-card-expanded .uiux-principle-long-copy {
+  3137	    column-count: auto;
+  3138	    display: grid;
   3139	  }
   3140	}
+  3141	
+  3142	@media (max-width: 430px) {
+  3143	  .nav-bar {
+  3144	    --nav-brand-gap: 8px;
+  3145	    --nav-link-bottom-separator-gap: 3px;
+  3146	    --nav-link-separator-gap: 2px;
+  3147	    --nav-link-top-separator-gap: 2px;
+  3148	  }
+  3149	
+  3150	  .nav-brand-name {
+  3151	    font-size: 22px;
+  3152	  }
+  3153	
+  3154	  .nav-bar nav a,
+  3155	  .nav-bar nav .nav-text,
+  3156	  .nav-separator {
+  3157	    font-size: 14px;
+  3158	  }
+  3159	}
+  3160	
+  3161	@media (max-width: 380px) {
+  3162	  .nav-bar {
+  3163	    --nav-bar-inline-padding: 12px;
+  3164	    --nav-link-bottom-separator-gap: 2px;
+  3165	    --nav-link-separator-gap: 1px;
+  3166	    --nav-link-top-separator-gap: 1px;
+  3167	  }
+  3168	
+  3169	  .nav-bar nav a,
+  3170	  .nav-bar nav .nav-text {
+  3171	    font-size: 13.5px;
+  3172	    padding-left: 0;
+  3173	    padding-right: 0;
+  3174	  }
+  3175	
+  3176	  .nav-separator {
+  3177	    font-size: 13.5px;
+  3178	  }
+  3179	}
+  3180	
+  3181	@media (max-width: 340px) {
+  3182	  .nav-bar nav a,
+  3183	  .nav-bar nav .nav-text {
+  3184	    font-size: 13px;
+  3185	  }
+  3186	
+  3187	  .nav-separator {
+  3188	    font-size: 13px;
+  3189	  }
+  3190	}
 
 
 ============================================================
@@ -7565,16 +7640,16 @@ Status:
  M portfolio_PROJECT_SNAPSHOT.txt
 
 Recent commits:
-8073b70 (HEAD -> main, origin/main) generated the latest project session pdf worklog, dated July 24. 2026.
+dbf93a8 (HEAD -> main, origin/main) Refined hero social button spacing, labels, and icon scaling to compensate for any potential optical illusions inferred by the user due to color contrast between text fonts & icon box fillings/borders.
+98ab7b5 Refined hero social buttons and proof stats
+bbc789d Refined landing hero, nav, and resume CTA
+8073b70 generated the latest project session pdf worklog, dated July 24. 2026.
 6cefbc6 Refined Hero Tablet And Articles UI - Swapped the hero tablet preview to the Cinerific promo artwork. - Preserved the tablet frame angle while rotating and scaling only the inner Cinerific image. - Tuned the Cinerific image position so the logo and character details stayed visible. - Added the dedicated Articles page with reused case-study styling and UI/UX Philosophy cards. - Added expandable 8-line previews for long philosophy card descriptions. - Fixed hidden measurement text so it no longer created extra page scroll height. - Updated nav ordering, active-page styling, and Articles link visibility behavior. -Removed article-card chip stacks and tightened Articles page bottom spacing.
 2cee18b Refined responsive hero nav and Instagram CTA - Replaced Dribbble with Instagram styling and icon treatment - Reordered nav links with Worklog/Stack in the top row - Locked two-row nav height to exactly double the brand box height - Aligned the Prahl.dev brand box to parent card edges across breakpoints
 90fd5a9 Refined landing nav and added Instagram CTA - Replaced Dribbble CTA with Instagram icon and #E1306C styling - Reworked landing nav into responsive two-row layout with separators - Removed Experience, renamed About Dev, and emphasized key nav links - Protected P mark sizing while tuning Prahl.dev typography and spacing - Refreshed project snapshot metadata
 df3e633 Fixed commit message generation for blank editor commits
 de9cfc6 Added automatic commit message generation
 79c31b8 Portfolio case-study and hero refinements - Added About text to the top nav - Updated hero proof stats and label wrapping - Refined case-study title/icon and stat layout behavior - Adjusted case-study one-to-two column breakpoint - Added Prahl.dev screenshot to the hero CreditKing phone frame
-122c865 Portfolio landing layout refinements - Forced hero headline into stable three-line wrapping - Added accurate commit and worklog counts to case study cards - Styled Prahl.dev case study title with lighter italic parenthetical - Kept Stack section cards at two columns in narrow portrait layouts - Improved Stack card wrapping so contents expand vertically instead of overflowing
-f5892f4 Refined case study cards and Prahl.dev branding - Protected case-study card margins and image scaling - Standardized chips, descriptions, and eyebrow row behavior - Imported styled project title and device/icon stacks - Tuned stack alignment, responsive spacing, and case-card scale - Updated Prahl.dev branding across portfolio copy and metadata
-e58e8bd generated the customary pdf project worklog for today's date (July 22, 2026).
 
 Remotes:
 origin	https://github.com/Prahlin/portfolio.git (fetch)
