@@ -57,42 +57,44 @@ function LinkedInMark() {
       width="32.4"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <rect
-        fill="#f3fff7"
-        height="18"
-        rx="3"
-        stroke="#000"
-        strokeWidth="1.35"
-        width="18"
-        x="3"
-        y="3"
-      />
-      <circle
-        cx="8.1"
-        cy="8.15"
-        fill={linkedInButtonColor}
-        r="1.45"
-        stroke="#000"
-        strokeWidth="0.35"
-      />
-      <rect
-        fill={linkedInButtonColor}
-        height="7.2"
-        rx="0.45"
-        stroke="#000"
-        strokeLinejoin="round"
-        strokeWidth="0.35"
-        width="2.45"
-        x="6.88"
-        y="10.75"
-      />
-      <path
-        d="M11.1 10.75h2.35v.92c.45-.66 1.18-1.08 2.18-1.08 1.88 0 3 1.24 3 3.4v3.96h-2.46v-3.62c0-1.04-.47-1.58-1.29-1.58-.86 0-1.33.58-1.33 1.58v3.62H11.1z"
-        fill={linkedInButtonColor}
-        stroke="#000"
-        strokeLinejoin="round"
-        strokeWidth="0.35"
-      />
+      <g transform="translate(-3.6 -3.6) scale(1.3)">
+        <rect
+          fill="#f3fff7"
+          height="18"
+          rx="3"
+          stroke="#000"
+          strokeWidth="1.35"
+          width="18"
+          x="3"
+          y="3"
+        />
+        <circle
+          cx="8.1"
+          cy="8.15"
+          fill={linkedInButtonColor}
+          r="1.45"
+          stroke="#000"
+          strokeWidth="0.35"
+        />
+        <rect
+          fill={linkedInButtonColor}
+          height="7.2"
+          rx="0.45"
+          stroke="#000"
+          strokeLinejoin="round"
+          strokeWidth="0.35"
+          width="2.45"
+          x="6.88"
+          y="10.75"
+        />
+        <path
+          d="M11.1 10.75h2.35v.92c.45-.66 1.18-1.08 2.18-1.08 1.88 0 3 1.24 3 3.4v3.96h-2.46v-3.62c0-1.04-.47-1.58-1.29-1.58-.86 0-1.33.58-1.33 1.58v3.62H11.1z"
+          fill={linkedInButtonColor}
+          stroke="#000"
+          strokeLinejoin="round"
+          strokeWidth="0.35"
+        />
+      </g>
     </svg>
   );
 }
@@ -107,32 +109,34 @@ function GitHubBracesMark() {
       width="32.4"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <rect
-        fill={githubButtonTextColor}
-        height="18"
-        rx="3"
-        stroke="#000"
-        strokeWidth="1.35"
-        width="18"
-        x="3"
-        y="3"
-      />
-      <path
-        d="M10.15 7.45h-.52c-.86 0-1.32.46-1.32 1.32v2.05c0 .72-.5 1.18-1.28 1.18.78 0 1.28.46 1.28 1.18v2.05c0 .86.46 1.32 1.32 1.32h.52"
-        fill="none"
-        stroke="#000"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth="2"
-      />
-      <path
-        d="M13.85 16.55h.52c.86 0 1.32-.46 1.32-1.32v-2.05c0-.72.5-1.18 1.28-1.18-.78 0-1.28-.46-1.28-1.18V8.77c0-.86-.46-1.32-1.32-1.32h-.52"
-        fill="none"
-        stroke="#000"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth="2"
-      />
+      <g transform="translate(-3.36 -3.36) scale(1.28)">
+        <rect
+          fill={githubButtonTextColor}
+          height="18"
+          rx="3"
+          stroke="#000"
+          strokeWidth="1.35"
+          width="18"
+          x="3"
+          y="3"
+        />
+        <path
+          d="M10.15 7.45h-.52c-.86 0-1.32.46-1.32 1.32v2.05c0 .72-.5 1.18-1.28 1.18.78 0 1.28.46 1.28 1.18v2.05c0 .86.46 1.32 1.32 1.32h.52"
+          fill="none"
+          stroke="#000"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
+        />
+        <path
+          d="M13.85 16.55h.52c.86 0 1.32-.46 1.32-1.32v-2.05c0-.72.5-1.18 1.28-1.18-.78 0-1.28-.46-1.28-1.18V8.77c0-.86-.46-1.32-1.32-1.32h-.52"
+          fill="none"
+          stroke="#000"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
+        />
+      </g>
     </svg>
   );
 }
@@ -407,8 +411,8 @@ export default function Home() {
                     target="_blank"
                   >
                     <ResumeDownloadMark />
-                    <span className="resume-label-text" data-text="Resumé">
-                      Resumé
+                    <span className="resume-label-text" data-text="Resume">
+                      Resume
                     </span>
                   </a>
                 </div>

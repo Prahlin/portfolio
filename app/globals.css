@@ -450,7 +450,7 @@ h3 {
   --hero-carousel-name-font-size: 16.94px;
   --hero-social-button-height: 48px;
   --hero-social-font-size: clamp(13.1px, 3.79vw, 14.2px);
-  --hero-social-gap: clamp(1.1px, 0.66vw, 2.2px);
+  --hero-social-gap: clamp(2.1px, calc(0.66vw + 1px), 6.4px);
   --hero-social-icon-size: clamp(29.55px, 8.06vw, 32.23px);
   --hero-social-pad-x: clamp(4px, 1.6vw, 6px);
   --hero-view-label-font-size: 13.2px;
@@ -900,7 +900,6 @@ h3 {
   background: #fff;
   border-color: #fff;
   color: #fff;
-  column-gap: 6px;
 }
 
 .github-label-text,
@@ -952,7 +951,7 @@ h3 {
 .github-label-text::after,
 .linkedin-label-text::after,
 .resume-label-text::after {
-  -webkit-text-stroke: 7px #000;
+  -webkit-text-stroke: 6px #000;
   z-index: -2;
 }
 

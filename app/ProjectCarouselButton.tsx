@@ -486,7 +486,13 @@ export function ProjectCarouselButton() {
             setPx("--hero-social-button-height", socialButtonHeight);
             setPx("--hero-social-font-size", socialButtonHeight * 0.295833);
             setPx("--hero-social-icon-size", socialButtonHeight * 0.672);
-            setPx("--hero-social-gap", socialButtonHeight * 0.045833);
+            const baseSocialButtonHeight = 48;
+            const baseSocialGap = baseSocialButtonHeight * 0.045833 + 1;
+            const stretchedSocialGap =
+              Math.max(0, socialButtonHeight - baseSocialButtonHeight) *
+              0.091666;
+
+            setPx("--hero-social-gap", baseSocialGap + stretchedSocialGap);
             setPx("--hero-social-pad-x", socialButtonHeight / 8);
             setPx("--hero-view-label-font-size", socialButtonHeight * 0.275);
             heroCopy?.style.setProperty(
