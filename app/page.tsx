@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { Fragment } from "react";
 import {
   Apple,
   Braces,
@@ -13,44 +12,14 @@ import {
   Store,
   Triangle,
 } from "lucide-react";
-import { CaseDescription, CaseEyebrow } from "./CaseDescription";
 import { HeroLede } from "./HeroLede";
+import { ProjectCarouselButton } from "./ProjectCarouselButton";
 import {
-  type MobilePlatform,
-  ProjectCarouselButton,
-  ProjectDeviceStack,
-} from "./ProjectCarouselButton";
+  FeaturedCaseStudies,
+  MainNavBar,
+  SectionHeading,
+} from "./PortfolioSections";
 import { ProofStats } from "./ProofStats";
-
-type NavItem = {
-  href?: string;
-  isBrand?: boolean;
-  label: string;
-};
-
-const navItems: NavItem[] = [
-  { href: "#top", isBrand: true, label: "Prahl.dev" },
-  { href: "#worklog", label: "Worklog" },
-  { href: "#stack", label: "Stack" },
-  { href: "#case-studies", label: "Case Studies" },
-  { label: "Articles" },
-  { label: "About Dev" },
-  { href: "#contact", label: "Contact" },
-];
-
-const navRowSplitIndex = 3;
-const navTopRowItems = navItems.slice(0, navRowSplitIndex);
-const navTopBrandItem = navTopRowItems[0];
-const navTopLinkItems = navTopRowItems.slice(1);
-const navBottomRowItems = navItems.slice(navRowSplitIndex);
-const navEmphasisLabels = new Set([
-  "Case Studies",
-  "Stack",
-  "Worklog",
-  "Articles",
-  "About Dev",
-  "Contact",
-]);
 
 const stackChips = [
   "React Native",
@@ -73,24 +42,6 @@ const proofStats = [
   { label: "Real-Time Project Worklogs", value: "0.1k+" },
   { label: "Shipped Mob/Web Products", value: "8" },
 ];
-
-type CaseScreenshot = {
-  alt: string;
-  orientation?: "landscape" | "portrait";
-  src: string;
-};
-
-type CaseStudy = {
-  descriptionLines: [string, string, string, string];
-  eyebrowLines: [string, string] | [string, string, string];
-  href?: string;
-  id: string;
-  screenshots: CaseScreenshot[];
-  stat: string;
-  tags: string[];
-  title: string;
-  worklogStat: string;
-};
 
 function LinkedInMark() {
   return (
@@ -225,146 +176,11 @@ function InstagramMark() {
   );
 }
 
-const caseStudies: CaseStudy[] = [
-  {
-    id: "cinerific",
-    title: "Cinerific",
-    eyebrowLines: ["Native Android UI", "Entertainment flow"],
-    href: "/projects/cinerific",
-    descriptionLines: [
-      "Cinerific is a Kotlin and Jetpack Compose",
-      "entertainment prototype, turning Figma concepts into",
-      "tablet-ready onboarding, sign-in flows, drawable assets,",
-      "and motion foundations for streaming identity.",
-    ],
-    tags: ["Kotlin", "Compose", "Gradle", "Android", "Figma", "Animation"],
-    stat: "35 commits",
-    worklogStat: "9 worklogs",
-    screenshots: [
-      {
-        alt: "Cinerific intro logo frame",
-        orientation: "landscape",
-        src: "/images/cinerific-intro.png",
-      },
-    ],
-  },
-  {
-    id: "alla-vostra",
-    title: "Alla Vostra",
-    eyebrowLines: ["Full stack mobile", "Stripe checkout UX"],
-    href: "/projects/alla-vostra",
-    descriptionLines: [
-      "Alla Vostra is a React Native and",
-      "Expo commerce product connecting Stripe checkout,",
-      "Postmark emails, order states, Android UAT,",
-      "EAS builds, and release-ready mobile polish.",
-    ],
-    tags: ["React Native", "Expo", "Stripe", "Postmark", "Node.js", "EAS"],
-    stat: "333 commits",
-    worklogStat: "44 worklogs",
-    screenshots: [
-      {
-        alt: "Alla Vostra startup screen",
-        src: "/images/startup_screen_small.png",
-      },
-      {
-        alt: "Alla Vostra products screen",
-        src: "/images/products_screen_small.png",
-      },
-      {
-        alt: "Alla Vostra confirmation screen",
-        src: "/images/confirmed_overlay_small.png",
-      },
-    ],
-  },
-  {
-    id: "credit-king",
-    title: "Credit King",
-    eyebrowLines: ["Native finance UI", "Credit flow system"],
-    descriptionLines: [
-      "Credit King is a React Native finance",
-      "UI system shaped around dashboard clarity,",
-      "Expo Router navigation, TypeScript structure, SVG",
-      "assets, animation, and Figma translation workflows.",
-    ],
-    tags: ["React Native", "Expo Router", "TypeScript", "SVG", "Animation", "Figma"],
-    stat: "82 commits",
-    worklogStat: "0 worklogs",
-    screenshots: [],
-  },
-  {
-    id: "this-portfolio-website",
-    title: "Prahl.dev (This Website)",
-    eyebrowLines: ["Next.js portfolio", "Prahl.dev web site"],
-    descriptionLines: [
-      "This Portfolio Website is a responsive Prahl.dev",
-      "showcase built using Next.js, React, TypeScript,",
-      "Tailwind CSS, motion-ready patterns, Lucide icons,",
-      "custom assets, and static export deployment.",
-    ],
-    tags: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Motion", "Lucide"],
-    stat: "42 commits",
-    worklogStat: "9 worklogs",
-    screenshots: [
-      {
-        alt: "Prahl.dev portfolio website landscape hero screenshot",
-        orientation: "landscape",
-        src: "/images/portfolio-website-landscape-screenshot.png",
-      },
-      {
-        alt: "Prahl.dev portfolio website landing page screenshot",
-        orientation: "portrait",
-        src: "/images/editor-window-screenshot.png",
-      },
-    ],
-  },
-];
-
 const worklogItems = [
   "From responsive website prototype to Expo Router mobile architecture",
   "Secure Stripe card flow, Google Pay, PayPal, and Postmark confirmations",
   "Android Small, Standard, and Large emulator QA with release-ready EAS builds",
 ];
-
-const caseTitleMatchedWebIconScale = 1.6133333333333333;
-
-const caseTitleVariants: Record<
-  string,
-  {
-    color: string;
-    fontSize: string;
-    hasTablet?: boolean;
-    hasWeb?: boolean;
-    mobilePlatforms: MobilePlatform[];
-    webIconScale?: number;
-  }
-> = {
-  "alla-vostra": {
-    color: "#ffb866",
-    fontSize: "29.89px",
-    hasWeb: true,
-    mobilePlatforms: ["android", "apple"],
-    webIconScale: caseTitleMatchedWebIconScale,
-  },
-  cinerific: {
-    color: "#b88cff",
-    fontSize: "31.76px",
-    hasTablet: true,
-    mobilePlatforms: ["android"],
-  },
-  "credit-king": {
-    color: "#6fa4ff",
-    fontSize: "31.76px",
-    mobilePlatforms: ["android", "apple"],
-  },
-};
-
-const caseTitleDeviceGap = {
-  maxPx: 13,
-  minPx: 1.25,
-  tightLanePx: 125,
-  wideLanePx: 300,
-};
 
 function PhonePreview({
   title,
@@ -450,257 +266,11 @@ function TabletPreview() {
           className="tablet-screen-image"
           fill
           sizes="456px"
-          src="/images/cinerific-intro.png"
+          src="/images/cinerific_promo.png"
         />
         <div className="tablet-empty-grid" />
       </div>
     </div>
-  );
-}
-
-function SectionHeading({
-  kicker,
-  title,
-}: {
-  kicker: string;
-  title: string;
-}) {
-  return (
-    <div className="section-heading">
-      <p>{kicker}</p>
-      <h2>{title}</h2>
-    </div>
-  );
-}
-
-function NavLinkItem({ item }: { item: NavItem }) {
-  const linkClassName = navEmphasisLabels.has(item.label)
-    ? "nav-link-emphasis"
-    : undefined;
-
-  if (item.isBrand) {
-    return (
-      <a className="nav-brand-link" href={item.href} aria-label="Prahl.dev home">
-        <span className="nav-brand-mark">P</span>
-        <strong className="nav-brand-name">{item.label}</strong>
-      </a>
-    );
-  }
-
-  if (item.href) {
-    return (
-      <a className={linkClassName} href={item.href}>
-        {item.label}
-      </a>
-    );
-  }
-
-  return (
-    <span className={linkClassName ? `nav-text ${linkClassName}` : "nav-text"}>
-      {item.label}
-    </span>
-  );
-}
-
-function NavLinkRow({
-  className,
-  firstSeparatorClassName,
-  items,
-  leadingSeparatorClassName,
-}: {
-  className: string;
-  firstSeparatorClassName?: string;
-  items: NavItem[];
-  leadingSeparatorClassName?: string;
-}) {
-  return (
-    <span className={`nav-link-row ${className}`}>
-      {leadingSeparatorClassName ? (
-        <span
-          className={`nav-separator ${leadingSeparatorClassName}`}
-          aria-hidden="true"
-        >
-          |
-        </span>
-      ) : null}
-      {items.map((item, index) => (
-        <Fragment key={item.label}>
-          {index > 0 ? (
-            <span
-              className={
-                index === 1 && firstSeparatorClassName
-                  ? `nav-separator ${firstSeparatorClassName}`
-                  : "nav-separator"
-              }
-              aria-hidden="true"
-            >
-              |
-            </span>
-          ) : null}
-          <NavLinkItem item={item} />
-        </Fragment>
-      ))}
-    </span>
-  );
-}
-
-function NavTopLinkRow() {
-  return (
-    <span className="nav-link-row nav-link-row-top">
-      <NavLinkItem item={navTopBrandItem} />
-      <span className="nav-top-distribution">
-        <NavLinkItem item={navTopLinkItems[0]} />
-        <span
-          className="nav-separator nav-separator-top-center"
-          aria-hidden="true"
-        >
-          |
-        </span>
-        <NavLinkItem item={navTopLinkItems[1]} />
-      </span>
-    </span>
-  );
-}
-
-function CaseStudyTitle({ study }: { study: CaseStudy }) {
-  const variant = caseTitleVariants[study.id];
-
-  if (study.id === "this-portfolio-website") {
-    return (
-      <h3 className="case-card-title-stack" aria-label={study.title}>
-        <span className="case-card-project-title-name-stack case-card-portfolio-title-stack">
-          <span className="case-card-title-underline">Prahl.dev</span>
-          <span className="case-card-title-website-label">(THIS WEBSITE)</span>
-        </span>
-        <span className="case-card-title-device-stack" aria-hidden="true">
-          <ProjectDeviceStack
-            assetGap="0.42em"
-            color="#ffb866"
-            hasWeb
-            mobilePlatforms={[]}
-            responsiveAssetGap={caseTitleDeviceGap}
-            webIconScale={caseTitleMatchedWebIconScale}
-          />
-        </span>
-      </h3>
-    );
-  }
-
-  if (!variant) {
-    return <h3>{study.title}</h3>;
-  }
-
-  return (
-    <h3 className="case-card-title-stack" aria-label={study.title}>
-      <span
-        className="case-card-project-title-name-stack"
-        aria-hidden="true"
-        style={{
-          WebkitTextStroke: "7.88px #000",
-          alignItems: "center",
-          color: variant.color,
-          display: "inline-flex",
-          flexDirection: "column",
-          fontSize: variant.fontSize,
-          gap: "4.13px",
-          justifyContent: "center",
-          lineHeight: 0.95,
-          paintOrder: "stroke fill",
-          textShadow: "0 0 0 #000",
-        }}
-      >
-        <span
-          className="case-card-project-title-name"
-          style={{
-            WebkitTextStroke: "7.88px #000",
-            paintOrder: "stroke fill",
-            textShadow: "0 0 0 #000",
-          }}
-        >
-          {study.title}
-        </span>
-      </span>
-      <span className="case-card-title-device-stack" aria-hidden="true">
-        <ProjectDeviceStack
-          assetGap="0.42em"
-          color={variant.color}
-          hasTablet={variant.hasTablet}
-          hasWeb={variant.hasWeb}
-          mobilePlatforms={variant.mobilePlatforms}
-          responsiveAssetGap={caseTitleDeviceGap}
-          webIconScale={variant.webIconScale}
-        />
-      </span>
-    </h3>
-  );
-}
-
-function CaseStudyCard({ study }: { study: CaseStudy }) {
-  const usesLandscapeLayout =
-    study.screenshots.length === 1 &&
-    study.screenshots[0]?.orientation === "landscape";
-  const usesPairLayout = study.screenshots.length === 2;
-  const description = study.descriptionLines.join(" ");
-  const eyebrow = study.eyebrowLines.join(" ");
-  const content = (
-    <>
-      <div className="case-topline">
-        <CaseEyebrow label={eyebrow} />
-        <div className="case-stat-stack">
-          <strong>{study.stat}</strong>
-          <span className="case-worklog-stat">{study.worklogStat}</span>
-        </div>
-      </div>
-      <CaseStudyTitle study={study} />
-      <CaseDescription label={description} lines={study.descriptionLines} />
-      <div className="case-tags">
-        {study.tags.map((tag) => (
-          <span key={tag}>{tag}</span>
-        ))}
-      </div>
-      {study.screenshots.length > 0 ? (
-        <div
-          aria-label={`${study.title} app screenshots`}
-          className={`case-miniatures${
-            usesLandscapeLayout ? " case-miniatures-landscape" : ""
-          }${usesPairLayout ? " case-miniatures-pair" : ""}`}
-        >
-          {study.screenshots.map((screenshot) => (
-            <Image
-              alt={screenshot.alt}
-              className={`case-miniature${
-                screenshot.orientation === "landscape"
-                  ? " case-miniature-landscape"
-                  : ""
-              }`}
-              height={screenshot.orientation === "landscape" ? 166 : 192}
-              key={screenshot.src}
-              src={screenshot.src}
-              width={screenshot.orientation === "landscape" ? 238 : 108}
-            />
-          ))}
-        </div>
-      ) : null}
-    </>
-  );
-
-  if (study.href) {
-    return (
-      <a
-        aria-label={`Open ${study.title} case study`}
-        className="case-card case-card-link"
-        href={study.href}
-        id={study.id}
-      >
-        {content}
-      </a>
-    );
-  }
-
-  return (
-    <article className="case-card" id={study.id}>
-      {content}
-    </article>
   );
 }
 
@@ -709,16 +279,7 @@ export default function Home() {
     <main>
       <section className="hero" id="top">
         <div className="site-shell">
-          <header className="nav-bar">
-            <nav aria-label="Main navigation">
-              <NavTopLinkRow />
-              <NavLinkRow
-                className="nav-link-row-bottom"
-                items={navBottomRowItems}
-                leadingSeparatorClassName="nav-separator-row-leading"
-              />
-            </nav>
-          </header>
+          <MainNavBar />
 
           <div className="hero-grid">
             <div className="hero-copy">
@@ -921,20 +482,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="case-section" id="case-studies">
-        <div className="site-shell">
-          <SectionHeading
-            kicker="Featured case studies"
-            title="Mobile products with real implementation depth"
-          />
-
-          <div className="case-grid">
-            {caseStudies.map((study) => (
-              <CaseStudyCard key={study.title} study={study} />
-            ))}
-          </div>
-        </div>
-      </section>
+      <FeaturedCaseStudies />
 
       <section className="stack-section" id="stack">
         <div className="site-shell split-section">

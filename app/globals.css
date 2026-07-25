@@ -94,6 +94,16 @@ img[data-screenshot-preview] {
   background: linear-gradient(transparent, var(--bg));
 }
 
+.articles-page {
+  min-height: 0;
+  overflow-x: clip;
+  padding-top: 24px;
+}
+
+.articles-page .case-section {
+  padding-bottom: 18px;
+}
+
 .nav-bar {
   --nav-bar-inline-padding: 18px;
   --nav-bar-height: 64px;
@@ -234,6 +244,7 @@ img[data-screenshot-preview] {
   border-radius: 6px;
   color: var(--muted);
   font-size: 17px;
+  font-weight: 400;
   padding: 10px 12px;
   white-space: nowrap;
 }
@@ -242,7 +253,8 @@ img[data-screenshot-preview] {
   cursor: default;
 }
 
-.nav-link-emphasis {
+.nav-bar nav a.nav-link-active,
+.nav-bar nav .nav-text.nav-link-active {
   color: var(--text);
   font-weight: 800;
 }
@@ -278,6 +290,10 @@ img[data-screenshot-preview] {
 .nav-bar nav a:hover {
   background: rgba(67, 255, 146, 0.08);
   color: var(--text);
+}
+
+.nav-bar nav a[href="/articles"] {
+  opacity: 0;
 }
 
 .hero-grid {
@@ -368,6 +384,26 @@ h3 {
   font-size: 24px;
   font-weight: 800;
   letter-spacing: 0;
+}
+
+.section-heading-title-line,
+.section-heading-subtitle {
+  display: block;
+  width: 100%;
+}
+
+.section-heading-subtitle {
+  clear: both;
+  font-size: clamp(18px, calc(3vw - 4px), 34px);
+  line-height: 1.08;
+  margin-top: 10px;
+}
+
+.articles-page .section-heading-subtitle {
+  color: #c4d6cc;
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 400;
 }
 
 .hero-lede {
@@ -994,6 +1030,9 @@ h3 {
 .tablet-screen-image {
   object-fit: contain;
   object-position: center center;
+  transform: translate(28px, 23px) rotate(40deg) scale(1.65);
+  transform-origin: center center;
+  z-index: 1;
 }
 
 .tablet-empty-grid {
@@ -1004,6 +1043,7 @@ h3 {
   inset: 0;
   opacity: 0.45;
   position: absolute;
+  z-index: 0;
 }
 
 .phone-shell {
@@ -1356,6 +1396,35 @@ section:not(.hero) {
   width: 100%;
 }
 
+.case-grid > .uiux-principle-card-expanded {
+  grid-column: 1 / -1;
+}
+
+@media (min-width: 631px) {
+  .case-grid > .uiux-principle-card-expanded {
+    align-content: start;
+    min-height: 330px;
+  }
+
+  .case-grid > .uiux-principle-card-expanded .uiux-principle-long-copy {
+    column-count: 2;
+    column-fill: balance;
+    column-gap: 28px;
+    display: block;
+  }
+
+  .case-grid > .uiux-principle-card-expanded .uiux-principle-long-copy p {
+    break-inside: auto;
+    margin: 0 0 12px;
+  }
+}
+
+@media (min-width: 981px) {
+  .case-grid > .uiux-principle-card-expanded .uiux-principle-long-copy {
+    column-count: 3;
+  }
+}
+
 .case-card-link {
   color: inherit;
   cursor: pointer;
@@ -1470,13 +1539,37 @@ section:not(.hero) {
   width: 100%;
 }
 
+.case-card-title-stack-long {
+  align-items: start;
+  grid-template-columns: minmax(0, 1fr);
+  row-gap: 8px;
+}
+
+.case-card-title-stack-no-devices {
+  grid-template-columns: minmax(0, 1fr);
+}
+
 .case-card-project-title-name-stack {
   grid-column: 1;
   justify-self: start;
 }
 
+.case-card-title-stack-no-devices .case-card-project-title-name-stack,
+.case-card-title-stack-long .case-card-project-title-name-stack {
+  max-width: 100%;
+  min-width: 0;
+}
+
 .case-card-project-title-name {
   display: block;
+}
+
+.case-card-title-stack-no-devices .case-card-project-title-name,
+.case-card-title-stack-no-devices .case-card-title-underline,
+.case-card-title-stack-long .case-card-project-title-name,
+.case-card-title-stack-long .case-card-title-underline {
+  overflow-wrap: anywhere;
+  white-space: normal;
 }
 
 .case-card-portfolio-title-stack {
@@ -1509,6 +1602,13 @@ section:not(.hero) {
   width: 100%;
 }
 
+.case-card-title-stack-long .case-card-title-device-stack {
+  grid-column: 1;
+  justify-content: flex-start;
+  justify-self: start;
+  width: auto;
+}
+
 .case-card-title-device-stack .carousel-button-project {
   grid-column: auto;
 }
@@ -1525,6 +1625,106 @@ section:not(.hero) {
   display: grid;
   gap: 0;
   width: 100%;
+}
+
+.uiux-principle-card .case-description {
+  color: #c4d6cc;
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.45;
+  max-width: none;
+}
+
+.uiux-principle-long-copy {
+  color: #c4d6cc;
+  display: grid;
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 400;
+  gap: 12px;
+  line-height: 1.45;
+  max-width: none;
+  overflow-wrap: anywhere;
+}
+
+.uiux-principle-long-copy-shell {
+  display: grid;
+  gap: 0;
+  position: relative;
+}
+
+.uiux-principle-long-copy-preview {
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 8;
+  color: #c4d6cc;
+  display: -webkit-box;
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.45;
+  margin: 0;
+  max-height: calc(1.45em * 8);
+  max-width: none;
+  overflow: hidden;
+  overflow-wrap: anywhere;
+  white-space: pre-line;
+}
+
+.uiux-principle-long-copy-measure {
+  color: #c4d6cc;
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 400;
+  height: 0;
+  left: 0;
+  line-height: 1.45;
+  margin: 0;
+  max-height: 0;
+  max-width: none;
+  overflow: hidden;
+  overflow-wrap: anywhere;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  visibility: hidden;
+  white-space: pre-line;
+  width: 100%;
+}
+
+.uiux-principle-long-copy p {
+  color: inherit;
+  line-height: inherit;
+  margin: 0;
+}
+
+.uiux-principle-read-more-line {
+  color: #c4d6cc;
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.45;
+  margin: 0;
+}
+
+.uiux-principle-read-more {
+  appearance: none;
+  background: transparent;
+  border: 0;
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+  padding: 0;
+}
+
+.uiux-principle-read-more:hover,
+.uiux-principle-read-more:focus-visible {
+  color: var(--green);
+}
+
+.uiux-principle-read-more:focus-visible {
+  outline: 1px solid var(--green);
+  outline-offset: 3px;
 }
 
 .case-description-line {
@@ -2449,12 +2649,12 @@ section.project-hero {
     position: relative;
   }
 
-  .nav-top-distribution > a[href="#worklog"] {
+  .nav-top-distribution > .nav-top-link-primary {
     grid-column: 1;
     min-width: max-content;
   }
 
-  .nav-top-distribution > a[href="#stack"] {
+  .nav-top-distribution > .nav-top-link-secondary {
     grid-column: 2;
     min-width: max-content;
   }
@@ -2877,6 +3077,15 @@ section.project-hero {
 @media (max-width: 630px) {
   .case-grid {
     grid-template-columns: 1fr;
+  }
+
+  .case-grid > .uiux-principle-card-expanded {
+    grid-column: auto;
+  }
+
+  .case-grid > .uiux-principle-card-expanded .uiux-principle-long-copy {
+    column-count: auto;
+    display: grid;
   }
 }
 
