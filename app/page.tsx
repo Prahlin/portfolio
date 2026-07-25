@@ -35,7 +35,7 @@ const stackChips = [
 
 const proofStats = [
   {
-    label: "Full Stack Expertise",
+    label: "Full-Stack Expertise",
     value: "3yrs",
   },
   { label: "Quality GitHub Commits", value: "1.0k+" },
@@ -43,7 +43,9 @@ const proofStats = [
   { label: "Shipped Mob/Web Products", value: "8" },
 ];
 
-const resumeButtonColor = "#F4C430";
+const resumeButtonColor = "#fff";
+const linkedInButtonColor = "#2867B2";
+const githubButtonTextColor = "#f3fff7";
 
 function LinkedInMark() {
   return (
@@ -68,13 +70,13 @@ function LinkedInMark() {
       <circle
         cx="8.1"
         cy="8.15"
-        fill="#60a5fa"
+        fill={linkedInButtonColor}
         r="1.45"
         stroke="#000"
         strokeWidth="0.35"
       />
       <rect
-        fill="#60a5fa"
+        fill={linkedInButtonColor}
         height="7.2"
         rx="0.45"
         stroke="#000"
@@ -86,7 +88,7 @@ function LinkedInMark() {
       />
       <path
         d="M11.1 10.75h2.35v.92c.45-.66 1.18-1.08 2.18-1.08 1.88 0 3 1.24 3 3.4v3.96h-2.46v-3.62c0-1.04-.47-1.58-1.29-1.58-.86 0-1.33.58-1.33 1.58v3.62H11.1z"
-        fill="#60a5fa"
+        fill={linkedInButtonColor}
         stroke="#000"
         strokeLinejoin="round"
         strokeWidth="0.35"
@@ -106,7 +108,7 @@ function GitHubBracesMark() {
       xmlns="http://www.w3.org/2000/svg"
     >
       <rect
-        fill="#f3fff7"
+        fill={githubButtonTextColor}
         height="18"
         rx="3"
         stroke="#000"
@@ -145,34 +147,36 @@ function ResumeDownloadMark() {
       width="32.4"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <rect
-        fill="#f3fff7"
-        height="18"
-        rx="3"
-        stroke="#000"
-        strokeWidth="1.35"
-        width="18"
-        x="3"
-        y="3"
-      />
-      <g transform="translate(-1.2 -1.18) scale(1.1)">
-        <path
-          d="M11.1 7.05h1.8v5.03l1.65-1.65 1.27 1.27L12 15.52 8.18 11.7l1.27-1.27 1.65 1.65z"
-          fill={resumeButtonColor}
-          stroke="#000"
-          strokeLinejoin="round"
-          strokeWidth="0.65"
-        />
+      <g transform="translate(-2.76 -2.76) scale(1.23)">
         <rect
-          fill={resumeButtonColor}
-          height="1.45"
-          rx="0.25"
+          fill="#05AF59"
+          height="18"
+          rx="3"
           stroke="#000"
-          strokeWidth="0.65"
-          width="7.5"
-          x="8.25"
-          y="16.05"
+          strokeWidth="1.35"
+          width="18"
+          x="3"
+          y="3"
         />
+        <g transform="translate(-1.2 -1.18) scale(1.1)">
+          <path
+            d="M11.1 7.05h1.8v5.03l1.65-1.65 1.27 1.27L12 15.52 8.18 11.7l1.27-1.27 1.65 1.65z"
+            fill="#fff"
+            stroke="#000"
+            strokeLinejoin="round"
+            strokeWidth="0.65"
+          />
+          <rect
+            fill="#fff"
+            height="1.45"
+            rx="0.25"
+            stroke="#000"
+            strokeWidth="0.65"
+            width="7.5"
+            x="8.25"
+            y="16.05"
+          />
+        </g>
       </g>
     </svg>
   );
@@ -364,28 +368,32 @@ export default function Home() {
                     href="https://github.com/Prahlin"
                     rel="noreferrer"
                     style={{
-                      background: "#f3fff7",
-                      borderColor: "#f3fff7",
-                      color: "#000",
+                      background: "#000",
+                      borderColor: "#000",
+                      color: githubButtonTextColor,
                     }}
                     target="_blank"
                   >
-                    <span className="github-label-text">GitHub</span>
                     <GitHubBracesMark />
+                    <span className="github-label-text" data-text="GitHub">
+                      GitHub
+                    </span>
                   </a>
                   <a
                     className="button button-secondary hero-social-button linkedin-button"
                     href="https://linkedin.com/in/mprahl"
                     rel="noreferrer"
                     style={{
-                      background: "#60a5fa",
-                      borderColor: "#60a5fa",
-                      color: "#000",
+                      background: linkedInButtonColor,
+                      borderColor: linkedInButtonColor,
+                      color: "#fff",
                     }}
                     target="_blank"
                   >
-                    LinkedIn
                     <LinkedInMark />
+                    <span className="linkedin-label-text" data-text="LinkedIn">
+                      LinkedIn
+                    </span>
                   </a>
                   <a
                     className="button button-secondary hero-social-button resume-button"
@@ -394,12 +402,14 @@ export default function Home() {
                     style={{
                       background: resumeButtonColor,
                       borderColor: resumeButtonColor,
-                      color: "#000",
+                      color: "#fff",
                     }}
                     target="_blank"
                   >
-                    Resumé
                     <ResumeDownloadMark />
+                    <span className="resume-label-text" data-text="Resumé">
+                      Resumé
+                    </span>
                   </a>
                 </div>
               </div>

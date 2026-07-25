@@ -529,8 +529,13 @@ export function ProjectCarouselButton() {
           const viewLabelRect = viewLabel.getBoundingClientRect();
           const githubTextRect = githubText.getBoundingClientRect();
           const githubIconRect = githubIcon.getBoundingClientRect();
-          const stackLeft = githubTextRect.left - viewLabelRect.left;
-          const stackWidth = githubIconRect.right - githubTextRect.left;
+          const clusterLeft = Math.min(githubTextRect.left, githubIconRect.left);
+          const clusterRight = Math.max(
+            githubTextRect.right,
+            githubIconRect.right,
+          );
+          const stackLeft = clusterLeft - viewLabelRect.left;
+          const stackWidth = clusterRight - clusterLeft;
 
           viewLabel.style.setProperty(
             "--hero-view-stack-left",

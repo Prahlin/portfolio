@@ -25,6 +25,10 @@ function getLabelLines(label: string, lineMode: LabelLineMode) {
     ].filter(Boolean);
   }
 
+  if (label === "Full-Stack Expertise") {
+    return ["Full-", "Stack", "Expertise"];
+  }
+
   return words;
 }
 

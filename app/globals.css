@@ -886,21 +886,74 @@ h3 {
 }
 
 .github-button {
-  background: #f3fff7;
-  border-color: #f3fff7;
-  color: #000;
+  background: #000;
+  border-color: #000;
+  color: #f3fff7;
 }
 
 .linkedin-button {
-  background: #60a5fa;
-  border-color: #60a5fa;
+  background: #2867B2;
+  border-color: #2867B2;
 }
 
 .resume-button {
-  background: #F4C430;
-  border-color: #F4C430;
-  color: #000;
-  column-gap: 2px;
+  background: #fff;
+  border-color: #fff;
+  color: #fff;
+  column-gap: 6px;
+}
+
+.github-label-text,
+.linkedin-label-text,
+.resume-label-text {
+  -webkit-text-stroke: 3px #000;
+  display: inline-block;
+  isolation: isolate;
+  paint-order: stroke fill;
+  position: relative;
+}
+
+.github-label-text {
+  --social-label-middle-stroke: #4B5563;
+  color: #f3fff7;
+}
+
+.linkedin-label-text {
+  --social-label-middle-stroke: #2867B2;
+  color: #fff;
+}
+
+.resume-label-text {
+  --social-label-middle-stroke: #05AF59;
+  color: #fff;
+}
+
+.github-label-text::before,
+.github-label-text::after,
+.linkedin-label-text::before,
+.linkedin-label-text::after,
+.resume-label-text::before,
+.resume-label-text::after {
+  color: #fff;
+  content: attr(data-text);
+  inset: 0;
+  paint-order: stroke fill;
+  pointer-events: none;
+  position: absolute;
+}
+
+.github-label-text::before,
+.linkedin-label-text::before,
+.resume-label-text::before {
+  -webkit-text-stroke: 4px var(--social-label-middle-stroke);
+  z-index: -1;
+}
+
+.github-label-text::after,
+.linkedin-label-text::after,
+.resume-label-text::after {
+  -webkit-text-stroke: 7px #000;
+  z-index: -2;
 }
 
 .stack-row {
@@ -2918,13 +2971,9 @@ section.project-hero {
     width: min(84vw, 268px);
   }
 
-  .stats-strip {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
   .stats-strip-item {
-    min-height: 112px;
-    padding: 18px;
+    min-height: 104px;
+    padding: 14px 8px;
   }
 
   .stack-section .capability-grid {
