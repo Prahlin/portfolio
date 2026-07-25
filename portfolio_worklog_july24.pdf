@@ -1,0 +1,1364 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [6 0 R 8 0 R 10 0 R 12 0 R 14 0 R 16 0 R] /Count 6 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+5 0 obj
+<< /Length 7384 >>
+stream
+BT
+/F2 12.20 Tf
+54.00 744.00 Td
+(Prahlin Portfolio Work Log - July 24, 2026) Tj
+-54.00 -744.00 Td
+/F1 9.40 Tf
+54.00 732.00 Td
+(Compiled summary for Friday, July 24, 2026 - focus: continued Prahl.dev Portfolio landing-page) Tj
+-54.00 -732.00 Td
+/F1 9.40 Tf
+54.00 720.00 Td
+(refinement after the July 23 case-study pass, including Instagram CTA replacement, responsive top) Tj
+-54.00 -720.00 Td
+/F1 9.40 Tf
+54.00 708.00 Td
+(navigation restructuring, Prahl.dev brand-card spacing, dedicated Articles page creation, UI/UX) Tj
+-54.00 -708.00 Td
+/F1 9.40 Tf
+54.00 696.00 Td
+(Philosophy card expansion, long-copy collapse behavior, article-page scroll fixes, Visual/Textual) Tj
+-54.00 -696.00 Td
+/F1 9.40 Tf
+54.00 684.00 Td
+(Balance copy cleanup, Cinerific hero tablet artwork insertion, image rotation/scale/position) Tj
+-54.00 -684.00 Td
+/F1 9.40 Tf
+54.00 672.00 Td
+(tuning, refreshed project snapshot context, successful validation checks, review of all prior) Tj
+-54.00 -672.00 Td
+/F1 9.40 Tf
+54.00 660.00 Td
+(Portfolio PDF worklogs, and generation of the daily Portfolio PDF worklog.) Tj
+-54.00 -660.00 Td
+/F1 9.40 Tf
+54.00 648.00 Td
+() Tj
+-54.00 -648.00 Td
+/F1 9.40 Tf
+54.00 636.00 Td
+(Generated in continuity with the established Prahlin Portfolio daily worklog cadence: compact) Tj
+-54.00 -636.00 Td
+/F1 9.40 Tf
+54.00 624.00 Td
+(opening summary, source-material section, baseline section, goal list, work-completed sections,) Tj
+-54.00 -624.00 Td
+/F1 9.40 Tf
+54.00 612.00 Td
+(validation section, files-touched list, follow-up context, and output-artifact close.) Tj
+-54.00 -612.00 Td
+/F1 9.40 Tf
+54.00 600.00 Td
+() Tj
+-54.00 -600.00 Td
+/F1 9.40 Tf
+54.00 588.00 Td
+(This artifact intentionally covers only Prahlin/portfolio work performed during the July 24 local) Tj
+-54.00 -588.00 Td
+/F1 9.40 Tf
+54.00 576.00 Td
+(project session: the refreshed project snapshot, review of every pre-existing Portfolio worklog) Tj
+-54.00 -576.00 Td
+/F1 9.40 Tf
+54.00 564.00 Td
+(PDF, the landing-page/navigation work represented by commits 90fd5a9 and 2cee18b, the) Tj
+-54.00 -564.00 Td
+/F1 9.40 Tf
+54.00 552.00 Td
+(Articles/UIUX/Hero tablet work represented by commit 6cefbc6, local validation checks,) Tj
+-54.00 -552.00 Td
+/F1 9.40 Tf
+54.00 540.00 Td
+(development-cache resets, route checks, headless Chrome layout measurement, and this) Tj
+-54.00 -540.00 Td
+/F1 9.40 Tf
+54.00 528.00 Td
+(worklog-generation step. Alla Vostra, Cinerific, and Credit King application repositories were not) Tj
+-54.00 -528.00 Td
+/F1 9.40 Tf
+54.00 516.00 Td
+(changed for this record.) Tj
+-54.00 -516.00 Td
+/F1 9.40 Tf
+54.00 504.00 Td
+() Tj
+-54.00 -504.00 Td
+/F2 10.20 Tf
+54.00 492.00 Td
+(Source Materials Reviewed) Tj
+-54.00 -492.00 Td
+/F1 9.40 Tf
+54.00 480.00 Td
+(- Ran ./read_project.sh from /Users/prahlin/gh/portfolio and regenerated) Tj
+-54.00 -480.00 Td
+/F1 9.40 Tf
+54.00 468.00 Td
+(  portfolio_PROJECT_SNAPSHOT.txt before writing this worklog, preserving the project convention) Tj
+-54.00 -468.00 Td
+/F1 9.40 Tf
+54.00 456.00 Td
+(  that Codex refreshes the current source snapshot before continuing Portfolio work.) Tj
+-54.00 -456.00 Td
+/F1 9.40 Tf
+54.00 444.00 Td
+(- Reviewed the refreshed portfolio_PROJECT_SNAPSHOT.txt, including the current source tree, app) Tj
+-54.00 -444.00 Td
+/F1 9.40 Tf
+54.00 432.00 Td
+(  source dumps, root/tooling/deployment configuration, public image inventory, PDF inventory, git) Tj
+-54.00 -432.00 Td
+/F1 9.40 Tf
+54.00 420.00 Td
+(  context, and the standing instruction to ask for a commit message before committing or pushing.) Tj
+-54.00 -420.00 Td
+/F1 9.40 Tf
+54.00 408.00 Td
+(- Reviewed every pre-existing Portfolio root-level worklog PDF: portfolio_worklog_july11.pdf,) Tj
+-54.00 -408.00 Td
+/F1 9.40 Tf
+54.00 396.00 Td
+(  portfolio_worklog_july14.pdf, portfolio_worklog_july15_part1.pdf,) Tj
+-54.00 -396.00 Td
+/F1 9.40 Tf
+54.00 384.00 Td
+(  portfolio_worklog_july15_part2.pdf, portfolio_worklog_july16.pdf, portfolio_worklog_july19.pdf,) Tj
+-54.00 -384.00 Td
+/F1 9.40 Tf
+54.00 372.00 Td
+(  portfolio_worklog_july20.pdf, portfolio_worklog_july21.pdf, portfolio_worklog_july22.pdf, and) Tj
+-54.00 -372.00 Td
+/F1 9.40 Tf
+54.00 360.00 Td
+(  portfolio_worklog_july23.pdf.) Tj
+-54.00 -360.00 Td
+/F1 9.40 Tf
+54.00 348.00 Td
+(- Extracted text from all ten existing Portfolio PDFs with pdftotext to preserve the same title) Tj
+-54.00 -348.00 Td
+/F1 9.40 Tf
+54.00 336.00 Td
+(  cadence, opening summary density, section order, compact bullet-heavy technical voice, validation) Tj
+-54.00 -336.00 Td
+/F1 9.40 Tf
+54.00 324.00 Td
+(  language, files-touched list, follow-up context, and output-artifact close.) Tj
+-54.00 -324.00 Td
+/F1 9.40 Tf
+54.00 312.00 Td
+(- Used portfolio_worklog_july23.pdf as the closest same-project reference because it already) Tj
+-54.00 -312.00 Td
+/F1 9.40 Tf
+54.00 300.00 Td
+(  documented late-stage responsive landing-card work, nav copy changes, user-directed visual) Tj
+-54.00 -300.00 Td
+/F1 9.40 Tf
+54.00 288.00 Td
+(  iteration, public synchronization, local tool additions, and the current root-level PDF naming) Tj
+-54.00 -288.00 Td
+/F1 9.40 Tf
+54.00 276.00 Td
+(  convention.) Tj
+-54.00 -276.00 Td
+/F1 9.40 Tf
+54.00 264.00 Td
+(- Checked PDF metadata with pdfinfo and confirmed mature Portfolio artifacts use letter-size pages,) Tj
+-54.00 -264.00 Td
+/F1 9.40 Tf
+54.00 252.00 Td
+(  Helvetica/Helvetica-Bold base fonts, six-page compact bodies, root-level filenames, and Codex) Tj
+-54.00 -252.00 Td
+/F1 9.40 Tf
+54.00 240.00 Td
+(  standard-library PDF-generator metadata.) Tj
+-54.00 -240.00 Td
+/F1 9.40 Tf
+54.00 228.00 Td
+(- Reviewed July 24 Git history through git log, git show --stat, git show --name-status, targeted) Tj
+-54.00 -228.00 Td
+/F1 9.40 Tf
+54.00 216.00 Td
+(  source inspection, and the final HEAD/origin/main match at 6cefbc6.) Tj
+-54.00 -216.00 Td
+/F1 9.40 Tf
+54.00 204.00 Td
+(- Reviewed the committed source scopes for 90fd5a9, 2cee18b, and 6cefbc6, covering Instagram CTA) Tj
+-54.00 -204.00 Td
+/F1 9.40 Tf
+54.00 192.00 Td
+(  changes, top-nav restructuring, shared PortfolioSections extraction, Articles page creation,) Tj
+-54.00 -192.00 Td
+/F1 9.40 Tf
+54.00 180.00 Td
+(  UI/UX Philosophy card data, ExpandablePrincipleCopy behavior, and Cinerific promo asset) Tj
+-54.00 -180.00 Td
+/F1 9.40 Tf
+54.00 168.00 Td
+(  insertion.) Tj
+-54.00 -168.00 Td
+/F1 9.40 Tf
+54.00 156.00 Td
+(- Reviewed app/page.tsx, app/PortfolioSections.tsx, app/ExpandablePrincipleCopy.tsx,) Tj
+-54.00 -156.00 Td
+/F1 9.40 Tf
+54.00 144.00 Td
+(  app/articles/page.tsx, app/globals.css, public/images/cinerific_promo.png, package.json,) Tj
+-54.00 -144.00 Td
+/F1 9.40 Tf
+54.00 132.00 Td
+(  read_project.sh, and the refreshed project snapshot.) Tj
+-54.00 -132.00 Td
+/F1 9.40 Tf
+54.00 120.00 Td
+(- Checked local route responses for http://localhost:3000/ and http://localhost:3000/articles) Tj
+-54.00 -120.00 Td
+/F1 9.40 Tf
+54.00 108.00 Td
+(  during the July 24 session after clearing stale development cache output.) Tj
+-54.00 -108.00 Td
+/F1 9.40 Tf
+54.00 96.00 Td
+(- Ran headless Chrome layout measurement against /articles after the scroll-tail bug was fixed,) Tj
+-54.00 -96.00 Td
+/F1 9.40 Tf
+54.00 84.00 Td
+(  confirming document height ended at the final card/grid bottom rather than invisible) Tj
+-54.00 -84.00 Td
+/F1 9.40 Tf
+54.00 72.00 Td
+(  measurement-text overflow.) Tj
+-54.00 -72.00 Td
+/F1 8.60 Tf
+206.97 28.00 Td
+(Prahlin Portfolio Work Log - July 24, 2026 Page 1) Tj
+ET
+endstream
+endobj
+6 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 5 0 R >>
+endobj
+7 0 obj
+<< /Length 7220 >>
+stream
+BT
+/F1 9.40 Tf
+54.00 744.00 Td
+() Tj
+-54.00 -744.00 Td
+/F2 10.20 Tf
+54.00 732.00 Td
+(Baseline Status Before July 24 Work) Tj
+-54.00 -732.00 Td
+/F1 9.40 Tf
+54.00 720.00 Td
+(- The July 23 Portfolio site already had the Prahl.dev brand, stable Full Stack / RN / Kotlin /) Tj
+-54.00 -720.00 Td
+/F1 9.40 Tf
+54.00 708.00 Td
+(  Mobile Developer headline wrapping, four case-study cards with project-title/device-stack) Tj
+-54.00 -708.00 Td
+/F1 9.40 Tf
+54.00 696.00 Td
+(  styling, corrected visible commit/worklog counts, Stack section two-column protection, and) Tj
+-54.00 -696.00 Td
+/F1 9.40 Tf
+54.00 684.00 Td
+(  proof-stat label synchronization.) Tj
+-54.00 -684.00 Td
+/F1 9.40 Tf
+54.00 672.00 Td
+(- The top navigation still carried the previous link ordering and emphasis model. Worklog, Stack,) Tj
+-54.00 -672.00 Td
+/F1 9.40 Tf
+54.00 660.00 Td
+(  Case Studies, Articles, About Dev, and Contact still needed several user-directed passes to) Tj
+-54.00 -660.00 Td
+/F1 9.40 Tf
+54.00 648.00 Td
+(  achieve the desired two-row card distribution, separator placement, active-link behavior, and) Tj
+-54.00 -648.00 Td
+/F1 9.40 Tf
+54.00 636.00 Td
+(  final Articles hiding behavior.) Tj
+-54.00 -636.00 Td
+/F1 9.40 Tf
+54.00 624.00 Td
+(- The social CTA row still used the Dribbble treatment and basketball-style icon before the user) Tj
+-54.00 -624.00 Td
+/F1 9.40 Tf
+54.00 612.00 Td
+(  clarified that Dribbble should become Instagram, using the official-feeling Instagram color) Tj
+-54.00 -612.00 Td
+/F1 9.40 Tf
+54.00 600.00 Td
+(  treatment and matching icon-box sizing.) Tj
+-54.00 -600.00 Td
+/F1 9.40 Tf
+54.00 588.00 Td
+(- The Prahl.dev brand card inside the top nav had become highly sensitive to responsive two-row) Tj
+-54.00 -588.00 Td
+/F1 9.40 Tf
+54.00 576.00 Td
+(  layout changes, especially where the P mark, Prahl.dev wordmark, border box, parent nav-card) Tj
+-54.00 -576.00 Td
+/F1 9.40 Tf
+54.00 564.00 Td
+(  edges, row heights, and separators needed to remain visually stable across window aspect ratios.) Tj
+-54.00 -564.00 Td
+/F1 9.40 Tf
+54.00 552.00 Td
+(- There was no dedicated /articles route at the beginning of the work. The Articles nav text) Tj
+-54.00 -552.00 Td
+/F1 9.40 Tf
+54.00 540.00 Td
+(  existed, but the requested page needed to be made actionable and populated with an exact copy of) Tj
+-54.00 -540.00 Td
+/F1 9.40 Tf
+54.00 528.00 Td
+(  the landing-page Featured Case Studies section before being transformed into a UI/UX Philosophy) Tj
+-54.00 -528.00 Td
+/F1 9.40 Tf
+54.00 516.00 Td
+(  article index.) Tj
+-54.00 -516.00 Td
+/F1 9.40 Tf
+54.00 504.00 Td
+(- The Articles page had not yet received the From UI To 'You-I' title, 12 Philosophical Principles) Tj
+-54.00 -504.00 Td
+/F1 9.40 Tf
+54.00 492.00 Td
+(  subtitle, Principle cards, long description text, card duplication/expansion behavior, or later) Tj
+-54.00 -492.00 Td
+/F1 9.40 Tf
+54.00 480.00 Td
+(  UI/UX Philosophy text replacements.) Tj
+-54.00 -480.00 Td
+/F1 9.40 Tf
+54.00 468.00 Td
+(- Long UI/UX philosophy descriptions did not yet have the requested eight-visible-line default) Tj
+-54.00 -468.00 Td
+/F1 9.40 Tf
+54.00 456.00 Td
+(  collapse rule, read-more expansion behavior, full-row expansion behavior, or no-empty-cell grid) Tj
+-54.00 -456.00 Td
+/F1 9.40 Tf
+54.00 444.00 Td
+(  ordering protection.) Tj
+-54.00 -444.00 Td
+/F1 9.40 Tf
+54.00 432.00 Td
+(- The landing page hero tablet still displayed the older Cinerific intro artwork before the later) Tj
+-54.00 -432.00 Td
+/F1 9.40 Tf
+54.00 420.00 Td
+(  hero-tablet pass, and the user wanted the Cinerific promo artwork inserted, scaled, rotated, and) Tj
+-54.00 -420.00 Td
+/F1 9.40 Tf
+54.00 408.00 Td
+(  nudged inside the landscape tablet frame without disturbing the frame itself.) Tj
+-54.00 -408.00 Td
+/F1 9.40 Tf
+54.00 396.00 Td
+(- The project workflow remained local-first unless the user explicitly requested a commit, push,) Tj
+-54.00 -396.00 Td
+/F1 9.40 Tf
+54.00 384.00 Td
+(  deployment, or public update. Commit-message recommendations continued using the requested) Tj
+-54.00 -384.00 Td
+/F1 9.40 Tf
+54.00 372.00 Td
+(  one-header plus hyphen-bullet style.) Tj
+-54.00 -372.00 Td
+/F1 9.40 Tf
+54.00 360.00 Td
+() Tj
+-54.00 -360.00 Td
+/F2 10.20 Tf
+54.00 348.00 Td
+(Goals for July 24) Tj
+-54.00 -348.00 Td
+/F1 9.40 Tf
+54.00 336.00 Td
+(- Replace the Dribbble social CTA with an Instagram button using #E1306C for button fill and icon) Tj
+-54.00 -336.00 Td
+/F1 9.40 Tf
+54.00 324.00 Td
+(  fill, while preserving button dimensions, icon-box sizing, and hero social-row proportions.) Tj
+-54.00 -324.00 Td
+/F1 9.40 Tf
+54.00 312.00 Td
+(- Rebuild the landing-page top nav so Prahl.dev, Articles or Worklog, Stack, Case Studies, and the) Tj
+-54.00 -312.00 Td
+/F1 9.40 Tf
+54.00 300.00 Td
+(  remaining links distribute responsively according to the user visual feedback, especially in) Tj
+-54.00 -300.00 Td
+/F1 9.40 Tf
+54.00 288.00 Td
+(  two-row states.) Tj
+-54.00 -288.00 Td
+/F1 9.40 Tf
+54.00 276.00 Td
+(- Preserve the P mark aspect ratio, Prahl.dev font treatment, brand-card border, parent nav-card) Tj
+-54.00 -276.00 Td
+/F1 9.40 Tf
+54.00 264.00 Td
+(  height, parent/card edge alignment, and two-row height invariants while tuning separators and row) Tj
+-54.00 -264.00 Td
+/F1 9.40 Tf
+54.00 252.00 Td
+(  spacing.) Tj
+-54.00 -252.00 Td
+/F1 9.40 Tf
+54.00 240.00 Td
+(- Create a dedicated /articles page that contains only the global top nav followed directly by the) Tj
+-54.00 -240.00 Td
+/F1 9.40 Tf
+54.00 228.00 Td
+(  Featured Case Studies section copied from the landing page, then transform that section into the) Tj
+-54.00 -228.00 Td
+/F1 9.40 Tf
+54.00 216.00 Td
+(  UI/UX Philosophy article-card grid.) Tj
+-54.00 -216.00 Td
+/F1 9.40 Tf
+54.00 204.00 Td
+(- Populate the UI/UX Philosophy section with repeated cards, principle titles, random placeholder) Tj
+-54.00 -204.00 Td
+/F1 9.40 Tf
+54.00 192.00 Td
+(  text where requested, and then progressively replace card descriptions with the user supplied) Tj
+-54.00 -192.00 Td
+/F1 9.40 Tf
+54.00 180.00 Td
+(  white-text article snippets.) Tj
+-54.00 -180.00 Td
+/F1 9.40 Tf
+54.00 168.00 Td
+(- Enforce the rule that any UI/UX Philosophy white-text copy exceeding eight rendered lines) Tj
+-54.00 -168.00 Td
+/F1 9.40 Tf
+54.00 156.00 Td
+(  defaults to an eight-line preview followed by . . . [read more].) Tj
+-54.00 -156.00 Td
+/F1 9.40 Tf
+54.00 144.00 Td
+(- Let expanded long-copy cards occupy the full current grid row width in multi-column layouts,) Tj
+-54.00 -144.00 Td
+/F1 9.40 Tf
+54.00 132.00 Td
+(  while avoiding empty grid cells by reordering cards that would otherwise leave gaps before an) Tj
+-54.00 -132.00 Td
+/F1 9.40 Tf
+54.00 120.00 Td
+(  expanded card.) Tj
+-54.00 -120.00 Td
+/F1 9.40 Tf
+54.00 108.00 Td
+(- Remove device-frame stacks, chip stacks, and unintended landing-page side effects from the) Tj
+-54.00 -108.00 Td
+/F1 9.40 Tf
+54.00 96.00 Td
+(  Articles/UIUX work, keeping landing-page case-study visuals restored where the user rejected) Tj
+-54.00 -96.00 Td
+/F1 9.40 Tf
+54.00 84.00 Td
+(  accidental changes.) Tj
+-54.00 -84.00 Td
+/F1 9.40 Tf
+54.00 72.00 Td
+(- Fix Articles page scroll behavior so the page has a single outer browser scrollbar, no massive) Tj
+-54.00 -72.00 Td
+/F1 8.60 Tf
+206.97 28.00 Td
+(Prahlin Portfolio Work Log - July 24, 2026 Page 2) Tj
+ET
+endstream
+endobj
+8 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 7 0 R >>
+endobj
+9 0 obj
+<< /Length 7350 >>
+stream
+BT
+/F1 9.40 Tf
+54.00 744.00 Td
+(  hidden blank tail, and only one row-gap worth of breathing room after the final UI/UX card.) Tj
+-54.00 -744.00 Td
+/F1 9.40 Tf
+54.00 732.00 Td
+(- Insert Cinerific into the landing hero tablet frame with preserved aspect ratio, then tune the) Tj
+-54.00 -732.00 Td
+/F1 9.40 Tf
+54.00 720.00 Td
+(  inner image rotation, scaling, and position without changing the tablet-frame rotation.) Tj
+-54.00 -720.00 Td
+/F1 9.40 Tf
+54.00 708.00 Td
+() Tj
+-54.00 -708.00 Td
+/F2 10.20 Tf
+54.00 696.00 Td
+(Work Completed - Instagram CTA and Responsive Top Navigation) Tj
+-54.00 -696.00 Td
+/F1 9.40 Tf
+54.00 684.00 Td
+(- Replaced the Dribbble social button with an Instagram button and moved the visual treatment to) Tj
+-54.00 -684.00 Td
+/F1 9.40 Tf
+54.00 672.00 Td
+(  the user-requested #E1306C fill color.) Tj
+-54.00 -672.00 Td
+/F1 9.40 Tf
+54.00 660.00 Td
+(- Replaced the previous basketball-style icon treatment with an Instagram icon sized to match the) Tj
+-54.00 -660.00 Td
+/F1 9.40 Tf
+54.00 648.00 Td
+(  surrounding social icon box expectations.) Tj
+-54.00 -648.00 Td
+/F1 9.40 Tf
+54.00 636.00 Td
+(- Tuned the Instagram text-to-icon horizontal gap repeatedly after user feedback, including) Tj
+-54.00 -636.00 Td
+/F1 9.40 Tf
+54.00 624.00 Td
+(  corrections where earlier vertical-gap adjustments targeted the wrong axis.) Tj
+-54.00 -624.00 Td
+/F1 9.40 Tf
+54.00 612.00 Td
+(- Reworked the top nav card into the requested responsive two-row behavior, with Prahl.dev and the) Tj
+-54.00 -612.00 Td
+/F1 9.40 Tf
+54.00 600.00 Td
+(  first-row links distributed separately from the bottom-row links.) Tj
+-54.00 -600.00 Td
+/F1 9.40 Tf
+54.00 588.00 Td
+(- Expanded nav copy to Case Studies, Stack, Worklog, Experience, Articles, About, and Contact) Tj
+-54.00 -588.00 Td
+/F1 9.40 Tf
+54.00 576.00 Td
+(  before later removing Experience and renaming About to About Dev.) Tj
+-54.00 -576.00 Td
+/F1 9.40 Tf
+54.00 564.00 Td
+(- Reduced link font sizing and adjusted row gaps so the top card did not create unintended) Tj
+-54.00 -564.00 Td
+/F1 9.40 Tf
+54.00 552.00 Td
+(  third-row wrapping under compressed widths.) Tj
+-54.00 -552.00 Td
+/F1 9.40 Tf
+54.00 540.00 Td
+(- Added separator pipe characters between link assets and then repeatedly corrected their placement) Tj
+-54.00 -540.00 Td
+/F1 9.40 Tf
+54.00 528.00 Td
+(  so the Prahl.dev/P mark stack was treated as a full nav asset rather than an inherited) Tj
+-54.00 -528.00 Td
+/F1 9.40 Tf
+54.00 516.00 Td
+(  left-aligned exception.) Tj
+-54.00 -516.00 Td
+/F1 9.40 Tf
+54.00 504.00 Td
+(- Broke the older Prahl.dev/P-box alignment assumptions inherited from the original landing page so) Tj
+-54.00 -504.00 Td
+/F1 9.40 Tf
+54.00 492.00 Td
+(  the brand stack could participate in the new responsive top-row distribution.) Tj
+-54.00 -492.00 Td
+/F1 9.40 Tf
+54.00 480.00 Td
+(- Added the thin bordered brand box around the P mark and Prahl.dev wordmark, matched its border,) Tj
+-54.00 -480.00 Td
+/F1 9.40 Tf
+54.00 468.00 Td
+(  radius, color, and visibility to the parent nav card, and later removed internal padding where) Tj
+-54.00 -468.00 Td
+/F1 9.40 Tf
+54.00 456.00 Td
+(  requested.) Tj
+-54.00 -456.00 Td
+/F1 9.40 Tf
+54.00 444.00 Td
+(- Protected the P mark aspect ratio during window resizing and kept the Prahl.dev box/card height) Tj
+-54.00 -444.00 Td
+/F1 9.40 Tf
+54.00 432.00 Td
+(  relationship stable across two-row layouts.) Tj
+-54.00 -432.00 Td
+/F1 9.40 Tf
+54.00 420.00 Td
+(- Swapped Worklog and Articles globally in the shared nav data, then added context-aware active nav) Tj
+-54.00 -420.00 Td
+/F1 9.40 Tf
+54.00 408.00 Td
+(  styling so only the currently opened page receives the bold active weight.) Tj
+-54.00 -408.00 Td
+/F1 9.40 Tf
+54.00 396.00 Td
+(- Preserved the Prahl.dev brand link as an exception: it never receives the active-page font-weight) Tj
+-54.00 -396.00 Td
+/F1 9.40 Tf
+54.00 384.00 Td
+(  class and keeps its established brand font treatment.) Tj
+-54.00 -384.00 Td
+/F1 9.40 Tf
+54.00 372.00 Td
+(- Made the Articles nav link visually invisible through opacity: 0 while preserving its spacing and) Tj
+-54.00 -372.00 Td
+/F1 9.40 Tf
+54.00 360.00 Td
+(  click target, per the final top-nav instruction.) Tj
+-54.00 -360.00 Td
+/F1 9.40 Tf
+54.00 348.00 Td
+() Tj
+-54.00 -348.00 Td
+/F2 10.20 Tf
+54.00 336.00 Td
+(Work Completed - Shared PortfolioSections Extraction and Articles Page) Tj
+-54.00 -336.00 Td
+/F1 9.40 Tf
+54.00 324.00 Td
+(- Moved reusable navigation and featured case-study rendering into app/PortfolioSections.tsx so the) Tj
+-54.00 -324.00 Td
+/F1 9.40 Tf
+54.00 312.00 Td
+(  landing page and Articles page share the same nav/card source of truth.) Tj
+-54.00 -312.00 Td
+/F1 9.40 Tf
+54.00 300.00 Td
+(- Kept app/page.tsx focused on the landing hero, stack, worklog, and contact sections after) Tj
+-54.00 -300.00 Td
+/F1 9.40 Tf
+54.00 288.00 Td
+(  removing the now-shared case-study and nav implementation from the landing page file.) Tj
+-54.00 -288.00 Td
+/F1 9.40 Tf
+54.00 276.00 Td
+(- Added app/articles/page.tsx as a dedicated Articles route that renders the shared MainNavBar and) Tj
+-54.00 -276.00 Td
+/F1 9.40 Tf
+54.00 264.00 Td
+(  the shared FeaturedCaseStudies component in articlesMode.) Tj
+-54.00 -264.00 Td
+/F1 9.40 Tf
+54.00 252.00 Td
+(- Made the landing-page Articles link actionable by pointing the shared nav item to /articles in) Tj
+-54.00 -252.00 Td
+/F1 9.40 Tf
+54.00 240.00 Td
+(  both home and non-home contexts.) Tj
+-54.00 -240.00 Td
+/F1 9.40 Tf
+54.00 228.00 Td
+(- Started the Articles page with a copy of the Featured Case Studies section, then changed its) Tj
+-54.00 -228.00 Td
+/F1 9.40 Tf
+54.00 216.00 Td
+(  heading to UI/UX Philosophy and its title to From UI To 'You-I': with the requested 12) Tj
+-54.00 -216.00 Td
+/F1 9.40 Tf
+54.00 204.00 Td
+(  Philosophical Principles subtitle.) Tj
+-54.00 -204.00 Td
+/F1 9.40 Tf
+54.00 192.00 Td
+(- Preserved the landing-page Featured Case Studies section after user correction by scoping) Tj
+-54.00 -192.00 Td
+/F1 9.40 Tf
+54.00 180.00 Td
+(  Articles-specific content, title replacement, and UI/UX card behavior to articlesMode.) Tj
+-54.00 -180.00 Td
+/F1 9.40 Tf
+54.00 168.00 Td
+(- Duplicated the four case-study cards to form twelve opening UI/UX philosophy cards, then changed) Tj
+-54.00 -168.00 Td
+/F1 9.40 Tf
+54.00 156.00 Td
+(  green eyebrow text to Principle without confusing number-order artifacts.) Tj
+-54.00 -156.00 Td
+/F1 9.40 Tf
+54.00 144.00 Td
+(- Replaced initial card titles with Focus, Dehumanization, Contrast, Grounding, Visual/Textual,) Tj
+-54.00 -144.00 Td
+/F1 9.40 Tf
+54.00 132.00 Td
+(  Anthropomorphization, Pos Space, Emotional Conveyence, Working Around, More Is More, Less Is) Tj
+-54.00 -132.00 Td
+/F1 9.40 Tf
+54.00 120.00 Td
+(  More, and Progress.) Tj
+-54.00 -120.00 Td
+/F1 9.40 Tf
+54.00 108.00 Td
+(- Added the screenshot-derived hash-title principle cards after reading the user provided Adobe) Tj
+-54.00 -108.00 Td
+/F1 9.40 Tf
+54.00 96.00 Td
+(  Portfolio screenshot and extracting only items with a leading hash symbol.) Tj
+-54.00 -96.00 Td
+/F1 9.40 Tf
+54.00 84.00 Td
+(- Removed device-frame/platform stacks from UI/UX Philosophy cards and later removed chip/stat) Tj
+-54.00 -84.00 Td
+/F1 9.40 Tf
+54.00 72.00 Td
+(  stacks from article-mode reused case-study cards, keeping the landing-page case-study cards) Tj
+-54.00 -72.00 Td
+/F1 8.60 Tf
+206.97 28.00 Td
+(Prahlin Portfolio Work Log - July 24, 2026 Page 3) Tj
+ET
+endstream
+endobj
+10 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 9 0 R >>
+endobj
+11 0 obj
+<< /Length 7124 >>
+stream
+BT
+/F1 9.40 Tf
+54.00 744.00 Td
+(  intact.) Tj
+-54.00 -744.00 Td
+/F1 9.40 Tf
+54.00 732.00 Td
+(- Matched article subtitle color, font inheritance, style, and weight to the landing-page lede) Tj
+-54.00 -732.00 Td
+/F1 9.40 Tf
+54.00 720.00 Td
+(  while preserving its current size.) Tj
+-54.00 -720.00 Td
+/F1 9.40 Tf
+54.00 708.00 Td
+(- Replaced or inserted many white-text description bodies from user-provided material, including BE) Tj
+-54.00 -708.00 Td
+/F1 9.40 Tf
+54.00 696.00 Td
+(  PERSISTENT, BE RESILIENT, BE OVERZELOUS, BE ENTERTAINING, BE BORING, BE CONCISE, BE VICARIOUS, BE) Tj
+-54.00 -696.00 Td
+/F1 9.40 Tf
+54.00 684.00 Td
+(  FLEXIBLE, BE CHOOSY, BE SCALABLE, BE WISE, BE IMPERSONAL, BE FOCUSED, BE EMOTIONAL, BE HUMAN,) Tj
+-54.00 -684.00 Td
+/F1 9.40 Tf
+54.00 672.00 Td
+(  MORE IS MORE, VISUAL-TEXTUAL BALANCE, and BE COMMUNICATIVE.) Tj
+-54.00 -672.00 Td
+/F1 9.40 Tf
+54.00 660.00 Td
+() Tj
+-54.00 -660.00 Td
+/F2 10.20 Tf
+54.00 648.00 Td
+(Work Completed - Long-Copy Collapse, Expansion, and Article Layout Fixes) Tj
+-54.00 -648.00 Td
+/F1 9.40 Tf
+54.00 636.00 Td
+(- Added app/ExpandablePrincipleCopy.tsx as the client component responsible for long UI/UX) Tj
+-54.00 -636.00 Td
+/F1 9.40 Tf
+54.00 624.00 Td
+(  Philosophy card copy, eight-line previews, read-more toggles, and expanded-card grid ordering.) Tj
+-54.00 -624.00 Td
+/F1 9.40 Tf
+54.00 612.00 Td
+(- Replaced the first paragraph-count collapse rule with rendered-height measurement so cards with a) Tj
+-54.00 -612.00 Td
+/F1 9.40 Tf
+54.00 600.00 Td
+(  small number of long wrapped paragraphs still collapse when the white text exceeds eight visual) Tj
+-54.00 -600.00 Td
+/F1 9.40 Tf
+54.00 588.00 Td
+(  lines.) Tj
+-54.00 -588.00 Td
+/F1 9.40 Tf
+54.00 576.00 Td
+(- Added a hidden same-width measuring node that uses the same typography, line height, wrapping,) Tj
+-54.00 -576.00 Td
+/F1 9.40 Tf
+54.00 564.00 Td
+(  and white-space behavior as the visible preview text.) Tj
+-54.00 -564.00 Td
+/F1 9.40 Tf
+54.00 552.00 Td
+(- Fixed the measurement node after it created a giant hidden scroll tail by setting its height and) Tj
+-54.00 -552.00 Td
+/F1 9.40 Tf
+54.00 540.00 Td
+(  max-height to zero while preserving scrollHeight for the measurement calculation.) Tj
+-54.00 -540.00 Td
+/F1 9.40 Tf
+54.00 528.00 Td
+(- Confirmed with headless Chrome that the Articles document height dropped from the invisible) Tj
+-54.00 -528.00 Td
+/F1 9.40 Tf
+54.00 516.00 Td
+(  11650px overflow state back to the actual final grid/card bottom.) Tj
+-54.00 -516.00 Td
+/F1 9.40 Tf
+54.00 504.00 Td
+(- Made long cards default to the collapsed eight-line preview when the measured copy needs nine or) Tj
+-54.00 -504.00 Td
+/F1 9.40 Tf
+54.00 492.00 Td
+(  more visual lines, regardless of paragraph breaks or the current column count.) Tj
+-54.00 -492.00 Td
+/F1 9.40 Tf
+54.00 480.00 Td
+(- Added . . . [read more] immediately after the collapsed preview and let the clicked/tapped card) Tj
+-54.00 -480.00 Td
+/F1 9.40 Tf
+54.00 468.00 Td
+(  expand into full copy.) Tj
+-54.00 -468.00 Td
+/F1 9.40 Tf
+54.00 456.00 Td
+(- Changed expanded-card behavior so multi-column layouts use full-row width instead of only growing) Tj
+-54.00 -456.00 Td
+/F1 9.40 Tf
+54.00 444.00 Td
+(  downward, while one-column portrait layouts naturally expand vertically.) Tj
+-54.00 -444.00 Td
+/F1 9.40 Tf
+54.00 432.00 Td
+(- Added grid-order reconciliation so cards before an expanded item can move after it when needed,) Tj
+-54.00 -432.00 Td
+/F1 9.40 Tf
+54.00 420.00 Td
+(  preventing one or more empty card cells from appearing in the UI/UX Philosophy grid.) Tj
+-54.00 -420.00 Td
+/F1 9.40 Tf
+54.00 408.00 Td
+(- Removed the Articles page inner scroll-container behavior by changing the page wrapper from) Tj
+-54.00 -408.00 Td
+/F1 9.40 Tf
+54.00 396.00 Td
+(  overflow-x: hidden to overflow-x: clip, restoring the single outer browser scrollbar.) Tj
+-54.00 -396.00 Td
+/F1 9.40 Tf
+54.00 384.00 Td
+(- Removed the massive blank vertical whitespace below the UI/UX Philosophy section and then) Tj
+-54.00 -384.00 Td
+/F1 9.40 Tf
+54.00 372.00 Td
+(  restored exactly one 18px grid-row gap below the final card for visually consistent breathing) Tj
+-54.00 -372.00 Td
+/F1 9.40 Tf
+54.00 360.00 Td
+(  room.) Tj
+-54.00 -360.00 Td
+/F1 9.40 Tf
+54.00 348.00 Td
+(- Kept these fixes scoped to .articles-page, .uiux-principle-card, and articlesMode so the landing) Tj
+-54.00 -348.00 Td
+/F1 9.40 Tf
+54.00 336.00 Td
+(  page case-study cards and project routes were not changed unintentionally.) Tj
+-54.00 -336.00 Td
+/F1 9.40 Tf
+54.00 324.00 Td
+() Tj
+-54.00 -324.00 Td
+/F2 10.20 Tf
+54.00 312.00 Td
+(Work Completed - Landing Hero Cinerific Tablet Preview) Tj
+-54.00 -312.00 Td
+/F1 9.40 Tf
+54.00 300.00 Td
+(- Swapped the hero tablet preview image source from the older Cinerific intro frame to) Tj
+-54.00 -300.00 Td
+/F1 9.40 Tf
+54.00 288.00 Td
+(  public/images/cinerific_promo.png, the landscape promo artwork that better fills the tablet) Tj
+-54.00 -288.00 Td
+/F1 9.40 Tf
+54.00 276.00 Td
+(  frame.) Tj
+-54.00 -276.00 Td
+/F1 9.40 Tf
+54.00 264.00 Td
+(- Added the Cinerific promo asset to public/images and verified its 1000 x 625 landscape dimensions) Tj
+-54.00 -264.00 Td
+/F1 9.40 Tf
+54.00 252.00 Td
+(  before using it in the hero tablet.) Tj
+-54.00 -252.00 Td
+/F1 9.40 Tf
+54.00 240.00 Td
+(- Put the decorative tablet grid behind the image by assigning z-index values so the Cinerific) Tj
+-54.00 -240.00 Td
+/F1 9.40 Tf
+54.00 228.00 Td
+(  artwork becomes the actual visible screen content.) Tj
+-54.00 -228.00 Td
+/F1 9.40 Tf
+54.00 216.00 Td
+(- Changed tablet image fit behavior several times based on user feedback, moving from contain, to) Tj
+-54.00 -216.00 Td
+/F1 9.40 Tf
+54.00 204.00 Td
+(  cover, back to contain, and finally to a rotated/scaled image treatment that preserves aspect) Tj
+-54.00 -204.00 Td
+/F1 9.40 Tf
+54.00 192.00 Td
+(  ratio while allowing clipped overflow inside the screen.) Tj
+-54.00 -192.00 Td
+/F1 9.40 Tf
+54.00 180.00 Td
+(- Preserved the original tablet frame rotation at rotate\(-5deg\) scale\(1.5\) after the user rejected) Tj
+-54.00 -180.00 Td
+/F1 9.40 Tf
+54.00 168.00 Td
+(  rotating the full frame more aggressively.) Tj
+-54.00 -168.00 Td
+/F1 9.40 Tf
+54.00 156.00 Td
+(- Rotated only the Cinerific image inside the tablet to the final requested clockwise angle after) Tj
+-54.00 -156.00 Td
+/F1 9.40 Tf
+54.00 144.00 Td
+(  several two-degree and eight-degree adjustment passes.) Tj
+-54.00 -144.00 Td
+/F1 9.40 Tf
+54.00 132.00 Td
+(- Scaled the rotated image dramatically so the tablet viewing area is filled while the tablet) Tj
+-54.00 -132.00 Td
+/F1 9.40 Tf
+54.00 120.00 Td
+(  screen overflow hides image portions outside the frame.) Tj
+-54.00 -120.00 Td
+/F1 9.40 Tf
+54.00 108.00 Td
+(- Nudged the inner image down and right, then reduced the down offset slightly, so the Cinerific) Tj
+-54.00 -108.00 Td
+/F1 9.40 Tf
+54.00 96.00 Td
+(  letters, googly eyes, and eyebrows remain visible inside the tablet screen.) Tj
+-54.00 -96.00 Td
+/F1 9.40 Tf
+54.00 84.00 Td
+() Tj
+-54.00 -84.00 Td
+/F2 10.20 Tf
+54.00 72.00 Td
+(Validation and Checks Performed) Tj
+-54.00 -72.00 Td
+/F1 8.60 Tf
+206.97 28.00 Td
+(Prahlin Portfolio Work Log - July 24, 2026 Page 4) Tj
+ET
+endstream
+endobj
+12 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 11 0 R >>
+endobj
+13 0 obj
+<< /Length 7223 >>
+stream
+BT
+/F1 9.40 Tf
+54.00 744.00 Td
+(- Ran npm run check repeatedly during the July 24 session and confirmed TypeScript validation) Tj
+-54.00 -744.00 Td
+/F1 9.40 Tf
+54.00 732.00 Td
+(  passed with tsc --noEmit after the Articles/UIUX, nav, scroll, and hero tablet changes.) Tj
+-54.00 -732.00 Td
+/F1 9.40 Tf
+54.00 720.00 Td
+(- Used curl -I against http://localhost:3000/ and http://localhost:3000/articles to confirm both) Tj
+-54.00 -720.00 Td
+/F1 9.40 Tf
+54.00 708.00 Td
+(  local routes returned 200 OK after cache resets and route additions.) Tj
+-54.00 -708.00 Td
+/F1 9.40 Tf
+54.00 696.00 Td
+(- Cleared the Next.js development cache several times by stopping port 3000 listeners, moving) Tj
+-54.00 -696.00 Td
+/F1 9.40 Tf
+54.00 684.00 Td
+(  .next/dev aside, and restarting npm run dev when Chrome showed stale output.) Tj
+-54.00 -684.00 Td
+/F1 9.40 Tf
+54.00 672.00 Td
+(- Verified /articles HTML contained the expected Articles heading, UI/UX title text, active-nav) Tj
+-54.00 -672.00 Td
+/F1 9.40 Tf
+54.00 660.00 Td
+(  class, and newly inserted user-provided text snippets during the copy-replacement passes.) Tj
+-54.00 -660.00 Td
+/F1 9.40 Tf
+54.00 648.00 Td
+(- Verified the home page did not inherit article-only UI/UX body text where the user specifically) Tj
+-54.00 -648.00 Td
+/F1 9.40 Tf
+54.00 636.00 Td
+(  asked to restore the landing-page case-study section.) Tj
+-54.00 -636.00 Td
+/F1 9.40 Tf
+54.00 624.00 Td
+(- Used source searches to confirm the old nav emphasis label set was removed and replaced by the) Tj
+-54.00 -624.00 Td
+/F1 9.40 Tf
+54.00 612.00 Td
+(  page-context active link class.) Tj
+-54.00 -612.00 Td
+/F1 9.40 Tf
+54.00 600.00 Td
+(- Used headless Chrome and Chrome DevTools Protocol layout metrics to diagnose the Articles page) Tj
+-54.00 -600.00 Td
+/F1 9.40 Tf
+54.00 588.00 Td
+(  scroll-tail bug and confirm hidden measurement text no longer extended scrollHeight after the CSS) Tj
+-54.00 -588.00 Td
+/F1 9.40 Tf
+54.00 576.00 Td
+(  fix.) Tj
+-54.00 -576.00 Td
+/F1 9.40 Tf
+54.00 564.00 Td
+(- Used sips and file checks to confirm the Cinerific hero tablet image dimensions and file type) Tj
+-54.00 -564.00 Td
+/F1 9.40 Tf
+54.00 552.00 Td
+(  before replacing the image source.) Tj
+-54.00 -552.00 Td
+/F1 9.40 Tf
+54.00 540.00 Td
+(- Used git show --stat, git show --name-status, and git log to confirm the July 24 implementation) Tj
+-54.00 -540.00 Td
+/F1 9.40 Tf
+54.00 528.00 Td
+(  scope represented by commits 90fd5a9, 2cee18b, and 6cefbc6.) Tj
+-54.00 -528.00 Td
+/F1 9.40 Tf
+54.00 516.00 Td
+(- Regenerated portfolio_PROJECT_SNAPSHOT.txt before this PDF so the current source tree, recent) Tj
+-54.00 -516.00 Td
+/F1 9.40 Tf
+54.00 504.00 Td
+(  commits, image inventory, PDF inventory, and project context were represented locally.) Tj
+-54.00 -504.00 Td
+/F1 9.40 Tf
+54.00 492.00 Td
+(- Generated this PDF with the same standard-library PDF writer style used by the mature Portfolio) Tj
+-54.00 -492.00 Td
+/F1 9.40 Tf
+54.00 480.00 Td
+(  worklogs and checked metadata/text extraction after writing.) Tj
+-54.00 -480.00 Td
+/F1 9.40 Tf
+54.00 468.00 Td
+() Tj
+-54.00 -468.00 Td
+/F2 10.20 Tf
+54.00 456.00 Td
+(Files Touched During July 24 Portfolio Work) Tj
+-54.00 -456.00 Td
+/F1 9.40 Tf
+54.00 444.00 Td
+(- app/page.tsx - removed duplicated nav/case-study implementation in favor of shared) Tj
+-54.00 -444.00 Td
+/F1 9.40 Tf
+54.00 432.00 Td
+(  PortfolioSections usage, kept landing-specific hero content, wired the Cinerific promo into the) Tj
+-54.00 -432.00 Td
+/F1 9.40 Tf
+54.00 420.00 Td
+(  tablet preview, and preserved the rest of the landing page sections.) Tj
+-54.00 -420.00 Td
+/F1 9.40 Tf
+54.00 408.00 Td
+(- app/PortfolioSections.tsx - added the shared nav, SectionHeading, FeaturedCaseStudies,) Tj
+-54.00 -408.00 Td
+/F1 9.40 Tf
+54.00 396.00 Td
+(  CaseStudyCard, HashPrincipleCard, article-mode data, UI/UX Philosophy titles, body-copy) Tj
+-54.00 -396.00 Td
+/F1 9.40 Tf
+54.00 384.00 Td
+(  constants, nav ordering, Articles link, and active-page nav behavior.) Tj
+-54.00 -384.00 Td
+/F1 9.40 Tf
+54.00 372.00 Td
+(- app/ExpandablePrincipleCopy.tsx - added measured eight-line copy collapse, read-more expansion,) Tj
+-54.00 -372.00 Td
+/F1 9.40 Tf
+54.00 360.00 Td
+(  expanded-card class toggling, resize syncing, and grid-order reconciliation for no-empty-cell) Tj
+-54.00 -360.00 Td
+/F1 9.40 Tf
+54.00 348.00 Td
+(  expanded-card layouts.) Tj
+-54.00 -348.00 Td
+/F1 9.40 Tf
+54.00 336.00 Td
+(- app/articles/page.tsx - added the dedicated Articles route with shared top nav and article-mode) Tj
+-54.00 -336.00 Td
+/F1 9.40 Tf
+54.00 324.00 Td
+(  FeaturedCaseStudies section using the From UI To 'You-I' heading system.) Tj
+-54.00 -324.00 Td
+/F1 9.40 Tf
+54.00 312.00 Td
+(- app/globals.css - tuned Instagram/social styling, nav layout, brand box alignment,) Tj
+-54.00 -312.00 Td
+/F1 9.40 Tf
+54.00 300.00 Td
+(  active/invisible Articles link behavior, Articles page spacing, article subtitle styling, UI/UX) Tj
+-54.00 -300.00 Td
+/F1 9.40 Tf
+54.00 288.00 Td
+(  card typography, long-copy preview/measure behavior, expanded-card columns, scroll fixes, and) Tj
+-54.00 -288.00 Td
+/F1 9.40 Tf
+54.00 276.00 Td
+(  hero tablet image fit/rotation/positioning.) Tj
+-54.00 -276.00 Td
+/F1 9.40 Tf
+54.00 264.00 Td
+(- public/images/cinerific_promo.png - added the Cinerific promo artwork used inside the landing) Tj
+-54.00 -264.00 Td
+/F1 9.40 Tf
+54.00 252.00 Td
+(  hero tablet frame.) Tj
+-54.00 -252.00 Td
+/F1 9.40 Tf
+54.00 240.00 Td
+(- portfolio_PROJECT_SNAPSHOT.txt - regenerated by ./read_project.sh for this worklog pass and left) Tj
+-54.00 -240.00 Td
+/F1 9.40 Tf
+54.00 228.00 Td
+(  modified locally as a project-context artifact.) Tj
+-54.00 -228.00 Td
+/F1 9.40 Tf
+54.00 216.00 Td
+(- portfolio_worklog_july24.pdf - generated as this daily Portfolio worklog artifact in the) Tj
+-54.00 -216.00 Td
+/F1 9.40 Tf
+54.00 204.00 Td
+(  root-level Portfolio worklog convention.) Tj
+-54.00 -204.00 Td
+/F1 9.40 Tf
+54.00 192.00 Td
+() Tj
+-54.00 -192.00 Td
+/F2 10.20 Tf
+54.00 180.00 Td
+(Follow-Up Context) Tj
+-54.00 -180.00 Td
+/F1 9.40 Tf
+54.00 168.00 Td
+(- The public website source is already represented by origin/main at 6cefbc6, and the July 24) Tj
+-54.00 -168.00 Td
+/F1 9.40 Tf
+54.00 156.00 Td
+(  source commits have been pushed to the main branch.) Tj
+-54.00 -156.00 Td
+/F1 9.40 Tf
+54.00 144.00 Td
+(- The refreshed portfolio_PROJECT_SNAPSHOT.txt and this July 24 PDF remain local until the user) Tj
+-54.00 -144.00 Td
+/F1 9.40 Tf
+54.00 132.00 Td
+(  provides or approves a commit message for documentation artifact changes.) Tj
+-54.00 -132.00 Td
+/F1 9.40 Tf
+54.00 120.00 Td
+(- Because this PDF increases the Portfolio worklog count from 10 to 11, the visible Prahl.dev card) Tj
+-54.00 -120.00 Td
+/F1 9.40 Tf
+54.00 108.00 Td
+(  worklog count can be updated later if the user wants the public site to reflect this new) Tj
+-54.00 -108.00 Td
+/F1 9.40 Tf
+54.00 96.00 Td
+(  artifact.) Tj
+-54.00 -96.00 Td
+/F1 9.40 Tf
+54.00 84.00 Td
+(- The Articles link is intentionally invisible through opacity: 0 while preserving its layout space) Tj
+-54.00 -84.00 Td
+/F1 9.40 Tf
+54.00 72.00 Td
+(  and click target. Future nav work should not assume it was removed from the DOM.) Tj
+-54.00 -72.00 Td
+/F1 8.60 Tf
+206.97 28.00 Td
+(Prahlin Portfolio Work Log - July 24, 2026 Page 5) Tj
+ET
+endstream
+endobj
+14 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 13 0 R >>
+endobj
+15 0 obj
+<< /Length 3261 >>
+stream
+BT
+/F1 9.40 Tf
+54.00 744.00 Td
+(- The Prahl.dev brand item remains protected from active-link font-weight changes; only the) Tj
+-54.00 -744.00 Td
+/F1 9.40 Tf
+54.00 732.00 Td
+(  currently opened non-brand page should receive active styling.) Tj
+-54.00 -732.00 Td
+/F1 9.40 Tf
+54.00 720.00 Td
+(- Future Articles/UIUX copy replacement should continue editing only the relevant bodyParagraphs) Tj
+-54.00 -720.00 Td
+/F1 9.40 Tf
+54.00 708.00 Td
+(  constant in app/PortfolioSections.tsx and should not alter landing-page case-study copy unless) Tj
+-54.00 -708.00 Td
+/F1 9.40 Tf
+54.00 696.00 Td
+(  explicitly requested.) Tj
+-54.00 -696.00 Td
+/F1 9.40 Tf
+54.00 684.00 Td
+(- The hidden UI/UX measurement paragraph must keep height: 0, max-height: 0, and overflow: hidden) Tj
+-54.00 -684.00 Td
+/F1 9.40 Tf
+54.00 672.00 Td
+(  so it can measure scrollHeight without creating browser-scroll overflow.) Tj
+-54.00 -672.00 Td
+/F1 9.40 Tf
+54.00 660.00 Td
+(- Expanded UI/UX cards use grid-order manipulation to prevent empty cells. If the grid structure) Tj
+-54.00 -660.00 Td
+/F1 9.40 Tf
+54.00 648.00 Td
+(  changes later, retest expansion in three-column, two-column, and one-column layouts.) Tj
+-54.00 -648.00 Td
+/F1 9.40 Tf
+54.00 636.00 Td
+(- The Cinerific hero tablet currently relies on image-only transform tuning inside the original) Tj
+-54.00 -636.00 Td
+/F1 9.40 Tf
+54.00 624.00 Td
+(  rotated tablet frame. Future edits should distinguish between frame rotation and inner-image) Tj
+-54.00 -624.00 Td
+/F1 9.40 Tf
+54.00 612.00 Td
+(  rotation before changing either.) Tj
+-54.00 -612.00 Td
+/F1 9.40 Tf
+54.00 600.00 Td
+(- Continue treating all future Portfolio work as local-only unless the user explicitly asks to) Tj
+-54.00 -600.00 Td
+/F1 9.40 Tf
+54.00 588.00 Td
+(  commit, push, deploy, publish, or update the public website.) Tj
+-54.00 -588.00 Td
+/F1 9.40 Tf
+54.00 576.00 Td
+() Tj
+-54.00 -576.00 Td
+/F2 10.20 Tf
+54.00 564.00 Td
+(Output Artifact) Tj
+-54.00 -564.00 Td
+/F1 9.40 Tf
+54.00 552.00 Td
+(- Generated file: portfolio_worklog_july24.pdf.) Tj
+-54.00 -552.00 Td
+/F1 9.40 Tf
+54.00 540.00 Td
+(- Location: /Users/prahlin/gh/portfolio/portfolio_worklog_july24.pdf.) Tj
+-54.00 -540.00 Td
+/F1 9.40 Tf
+54.00 528.00 Td
+(- Naming follows the existing root-level Portfolio convention: portfolio_worklog_july24.pdf. No) Tj
+-54.00 -528.00 Td
+/F1 9.40 Tf
+54.00 516.00 Td
+(  part suffix was used because this is the first July 24 Portfolio worklog artifact.) Tj
+-54.00 -516.00 Td
+/F1 9.40 Tf
+54.00 504.00 Td
+(- Uses the same daily worklog structure and compact technical voice established by) Tj
+-54.00 -504.00 Td
+/F1 9.40 Tf
+54.00 492.00 Td
+(  portfolio_worklog_july11.pdf through portfolio_worklog_july23.pdf.) Tj
+-54.00 -492.00 Td
+/F1 9.40 Tf
+54.00 480.00 Td
+(- Generated with a small standard-library PDF writer; no external PDF dependency was installed for) Tj
+-54.00 -480.00 Td
+/F1 9.40 Tf
+54.00 468.00 Td
+(  this artifact.) Tj
+-54.00 -468.00 Td
+/F1 9.40 Tf
+54.00 456.00 Td
+(- The local project date used for this filename and title is Friday, July 24, 2026 EDT, matching) Tj
+-54.00 -456.00 Td
+/F1 9.40 Tf
+54.00 444.00 Td
+(  the machine and repository work session clock.) Tj
+-54.00 -444.00 Td
+/F1 8.60 Tf
+206.97 28.00 Td
+(Prahlin Portfolio Work Log - July 24, 2026 Page 6) Tj
+ET
+endstream
+endobj
+16 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 15 0 R >>
+endobj
+17 0 obj
+<< /Title (Prahlin Portfolio Work Log - July 24, 2026) /Subject (Portfolio website development worklog) /Author (Codex) /Creator (Codex standard-library PDF generator) /Producer (Codex standard-library PDF generator) /CreationDate (D:20260724231500-04'00') /ModDate (D:20260724231500-04'00') >>
+endobj
+xref
+0 18
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000155 00000 n 
+0000000225 00000 n 
+0000000300 00000 n 
+0000007736 00000 n 
+0000007872 00000 n 
+0000015144 00000 n 
+0000015280 00000 n 
+0000022682 00000 n 
+0000022819 00000 n 
+0000029996 00000 n 
+0000030134 00000 n 
+0000037410 00000 n 
+0000037548 00000 n 
+0000040862 00000 n 
+0000041000 00000 n 
+trailer
+<< /Size 18 /Root 1 0 R /Info 17 0 R >>
+startxref
+41311
+%%EOF
