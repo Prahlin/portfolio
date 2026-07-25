@@ -106,7 +106,7 @@ img[data-screenshot-preview] {
 
 .nav-bar {
   --nav-bar-inline-padding: 18px;
-  --nav-bar-height: 64px;
+  --nav-bar-height: 48px;
   --nav-bar-two-row-height: calc(var(--nav-bar-height) + var(--nav-bar-height));
   --nav-bar-two-row-gap: 0px;
   --nav-brand-card-bleed: var(--nav-bar-inline-padding);
@@ -245,7 +245,7 @@ img[data-screenshot-preview] {
   color: var(--muted);
   font-size: 17px;
   font-weight: 400;
-  padding: 10px 12px;
+  padding: 7.5px 12px;
   white-space: nowrap;
 }
 
@@ -896,15 +896,11 @@ h3 {
   border-color: #60a5fa;
 }
 
-.instagram-button {
-  background: #E1306C;
-  border-color: #E1306C;
+.resume-button {
+  background: #F4C430;
+  border-color: #F4C430;
   color: #000;
   column-gap: 2px;
-}
-
-.instagram-icon-mark {
-  margin-left: calc(var(--hero-social-icon-size) * -0.125);
 }
 
 .stack-row {
@@ -2601,6 +2597,12 @@ section.project-hero {
 }
 
 @media (max-width: 980px) {
+  .hero-copy {
+    --hero-proof-stack-width: min(606px, 100%);
+    --hero-action-stack-width: var(--hero-proof-stack-width);
+    --hero-text-stack-width: var(--hero-action-stack-width);
+  }
+
   .nav-bar {
     --nav-bar-inline-padding: 16px;
     --nav-link-bottom-separator-gap: 8px;
@@ -2609,7 +2611,7 @@ section.project-hero {
     align-items: center;
     display: block;
     height: var(--nav-bar-two-row-height);
-    row-gap: 10px;
+    row-gap: 7.5px;
     padding: 0 var(--nav-bar-inline-padding);
   }
 
@@ -2728,7 +2730,7 @@ section.project-hero {
 
   .nav-bar nav .nav-link-row-bottom > a,
   .nav-bar nav .nav-link-row-bottom > .nav-text {
-    padding-bottom: 5px;
+    padding-bottom: 3.75px;
     padding-top: 0;
   }
 

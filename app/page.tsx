@@ -43,6 +43,8 @@ const proofStats = [
   { label: "Shipped Mob/Web Products", value: "8" },
 ];
 
+const resumeButtonColor = "#F4C430";
+
 function LinkedInMark() {
   return (
     <svg
@@ -133,11 +135,11 @@ function GitHubBracesMark() {
   );
 }
 
-function InstagramMark() {
+function ResumeDownloadMark() {
   return (
     <svg
       aria-hidden
-      className="instagram-icon-mark"
+      className="download-icon-mark"
       height="32.4"
       viewBox="0 0 24 24"
       width="32.4"
@@ -153,25 +155,25 @@ function InstagramMark() {
         x="3"
         y="3"
       />
-      <rect
-        fill="#E1306C"
-        height="9.8"
-        rx="2.5"
-        stroke="#000"
-        strokeWidth="1.2"
-        width="9.8"
-        x="7.1"
-        y="7.1"
-      />
-      <circle
-        cx="12"
-        cy="12"
-        fill="#f3fff7"
-        r="2.05"
-        stroke="#000"
-        strokeWidth="1"
-      />
-      <circle cx="15.05" cy="8.95" fill="#000" r="0.7" />
+      <g transform="translate(-1.2 -1.18) scale(1.1)">
+        <path
+          d="M11.1 7.05h1.8v5.03l1.65-1.65 1.27 1.27L12 15.52 8.18 11.7l1.27-1.27 1.65 1.65z"
+          fill={resumeButtonColor}
+          stroke="#000"
+          strokeLinejoin="round"
+          strokeWidth="0.65"
+        />
+        <rect
+          fill={resumeButtonColor}
+          height="1.45"
+          rx="0.25"
+          stroke="#000"
+          strokeWidth="0.65"
+          width="7.5"
+          x="8.25"
+          y="16.05"
+        />
+      </g>
     </svg>
   );
 }
@@ -299,11 +301,9 @@ export default function Home() {
                 <span className="hero-eyebrow-period">.</span>
               </p>
               <h1>
-                Full Stack
+                    Full-Stack
                 <br />
-                RN / Kotlin
-                <br />
-                Mobile Developer
+                    React Native / Kotlin Developer
               </h1>
               <HeroLede />
 
@@ -375,7 +375,7 @@ export default function Home() {
                   </a>
                   <a
                     className="button button-secondary hero-social-button linkedin-button"
-                    href="https://www.linkedin.com/"
+                    href="https://linkedin.com/in/mprahl"
                     rel="noreferrer"
                     style={{
                       background: "#60a5fa",
@@ -388,18 +388,18 @@ export default function Home() {
                     <LinkedInMark />
                   </a>
                   <a
-                    className="button button-secondary hero-social-button instagram-button"
+                    className="button button-secondary hero-social-button resume-button"
                     href="https://www.instagram.com/"
                     rel="noreferrer"
                     style={{
-                      background: "#E1306C",
-                      borderColor: "#E1306C",
+                      background: resumeButtonColor,
+                      borderColor: resumeButtonColor,
                       color: "#000",
                     }}
                     target="_blank"
                   >
-                    Instagram
-                    <InstagramMark />
+                    Resumé
+                    <ResumeDownloadMark />
                   </a>
                 </div>
               </div>
