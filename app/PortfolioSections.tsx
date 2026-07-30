@@ -1258,6 +1258,7 @@ export function MainNavBar({ context = "home" }: { context?: NavContext }) {
 
 function CaseStudyTitle({
   displayTitle,
+  restoreOriginalTitleTypography,
   showDeviceStack,
   study,
   titleColor,
@@ -1265,6 +1266,7 @@ function CaseStudyTitle({
   underlineTitle,
 }: {
   displayTitle?: string;
+  restoreOriginalTitleTypography?: boolean;
   showDeviceStack: boolean;
   study: CaseStudy;
   titleColor: string;
@@ -1275,6 +1277,9 @@ function CaseStudyTitle({
   const renderedTitle = displayTitle ?? study.title;
   const titleClassName = [
     "case-card-title-stack",
+    restoreOriginalTitleTypography
+      ? "case-card-title-stack-original"
+      : undefined,
     !showDeviceStack ? "case-card-title-stack-no-devices" : undefined,
     displayTitle && displayTitle.length > 12
       ? "case-card-title-stack-long"
@@ -1285,7 +1290,7 @@ function CaseStudyTitle({
 
   if (study.id === "this-portfolio-website" && !displayTitle) {
     return (
-      <h3 className="case-card-title-stack" aria-label={study.title}>
+      <h3 className={titleClassName} aria-label={study.title}>
         <span className="case-card-project-title-name-stack case-card-portfolio-title-stack">
           <span className="case-card-title-underline">Prahl.dev</span>
           <span className="case-card-title-website-label">(THIS WEBSITE)</span>
@@ -1298,6 +1303,7 @@ function CaseStudyTitle({
               hasWeb
               mobilePlatforms={[]}
               responsiveAssetGap={caseTitleDeviceGap}
+              showPlatformLabels
               webIconScale={caseTitleMatchedWebIconScale}
             />
           </span>
@@ -1325,6 +1331,7 @@ function CaseStudyTitle({
               hasWeb
               mobilePlatforms={[]}
               responsiveAssetGap={caseTitleDeviceGap}
+              showPlatformLabels
               webIconScale={caseTitleMatchedWebIconScale}
             />
           </span>
@@ -1346,27 +1353,35 @@ function CaseStudyTitle({
       <span
         className="case-card-project-title-name-stack"
         aria-hidden="true"
-        style={{
-          WebkitTextStroke: "7.88px #000",
-          alignItems: "center",
-          color: titleColor || variant.color,
-          display: "inline-flex",
-          flexDirection: "column",
-          fontSize: titleFontSize ?? variant.fontSize,
-          gap: "4.13px",
-          justifyContent: "center",
-          lineHeight: 0.95,
-          paintOrder: "stroke fill",
-          textShadow: "0 0 0 #000",
-        }}
+        style={
+          restoreOriginalTitleTypography
+            ? undefined
+            : {
+                WebkitTextStroke: "7.88px #000",
+                alignItems: "center",
+                color: titleColor || variant.color,
+                display: "inline-flex",
+                flexDirection: "column",
+                fontSize: titleFontSize ?? variant.fontSize,
+                gap: "4.13px",
+                justifyContent: "center",
+                lineHeight: 0.95,
+                paintOrder: "stroke fill",
+                textShadow: "0 0 0 #000",
+              }
+        }
       >
         <span
           className="case-card-project-title-name"
-          style={{
-            WebkitTextStroke: "7.88px #000",
-            paintOrder: "stroke fill",
-            textShadow: "0 0 0 #000",
-          }}
+          style={
+            restoreOriginalTitleTypography
+              ? undefined
+              : {
+                  WebkitTextStroke: "7.88px #000",
+                  paintOrder: "stroke fill",
+                  textShadow: "0 0 0 #000",
+                }
+          }
         >
           {renderedTitle}
         </span>
@@ -1380,6 +1395,7 @@ function CaseStudyTitle({
             hasWeb={variant.hasWeb}
             mobilePlatforms={variant.mobilePlatforms}
             responsiveAssetGap={caseTitleDeviceGap}
+            showPlatformLabels
             webIconScale={variant.webIconScale}
           />
         </span>
@@ -1392,6 +1408,7 @@ function CaseStudyCard({
   cardId,
   displayTitle,
   eyebrow,
+  restoreOriginalTitleTypography,
   showCardChips,
   showTitleDeviceStack,
   study,
@@ -1402,6 +1419,7 @@ function CaseStudyCard({
   cardId: string;
   displayTitle?: string;
   eyebrow: string;
+  restoreOriginalTitleTypography?: boolean;
   showCardChips: boolean;
   showTitleDeviceStack: boolean;
   study: CaseStudy;
@@ -1428,6 +1446,7 @@ function CaseStudyCard({
       </div>
       <CaseStudyTitle
         displayTitle={displayTitle}
+        restoreOriginalTitleTypography={restoreOriginalTitleTypography}
         showDeviceStack={showTitleDeviceStack}
         study={study}
         titleColor={titleColor}
@@ -1606,6 +1625,7 @@ export function FeaturedCaseStudies({
                 displayTitle={displayTitle}
                 eyebrow={eyebrow}
                 key={key}
+                restoreOriginalTitleTypography={!articlesMode}
                 showCardChips={!articlesMode}
                 showTitleDeviceStack={showTitleDeviceStacks}
                 study={study}

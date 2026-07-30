@@ -3,6 +3,7 @@
 import {
   type CSSProperties,
   type MouseEvent,
+  type ReactNode,
   useEffect,
   useLayoutEffect,
   useRef,
@@ -224,7 +225,11 @@ function PhoneMark({
   );
 }
 
-function TabletMark() {
+function TabletMark({
+  showPlatformIcon = true,
+}: {
+  showPlatformIcon?: boolean;
+} = {}) {
   return (
     <svg
       aria-hidden
@@ -263,7 +268,7 @@ function TabletMark() {
         r="0.65"
         stroke="none"
       />
-      <AndroidLogoImage x={13.26608} y={7.65486} />
+      {showPlatformIcon ? <AndroidLogoImage x={13.26608} y={7.65486} /> : null}
     </svg>
   );
 }
@@ -290,6 +295,98 @@ function WebMark({ scale = 1 }: { scale?: number }) {
   );
 }
 
+function PlatformIconSlot({
+  children,
+  label,
+}: {
+  children: ReactNode;
+  label: string;
+}) {
+  return (
+    <span className="case-card-title-platform-slot" data-platform-label={label}>
+      {children}
+    </span>
+  );
+}
+
+function AndroidPlatformMark() {
+  return (
+    <svg
+      aria-hidden
+      className="case-card-title-platform-mark case-card-title-platform-mark-android"
+      viewBox="4 3.4 16 12.8"
+    >
+      <path
+        d="M7.6 7.2 5.7 4.7"
+        fill="none"
+        stroke="#000"
+        strokeLinecap="round"
+        strokeWidth="2.4"
+      />
+      <path
+        d="m16.4 7.2 1.9-2.5"
+        fill="none"
+        stroke="#000"
+        strokeLinecap="round"
+        strokeWidth="2.4"
+      />
+      <path
+        d="M5.5 14a6.5 6.5 0 0 1 13 0v1H5.5z"
+        fill="#f3fff7"
+        stroke="#000"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2.4"
+      />
+      <circle cx="9.7" cy="11.7" fill="#000" r="0.56" />
+      <circle cx="14.3" cy="11.7" fill="#000" r="0.56" />
+    </svg>
+  );
+}
+
+function ApplePlatformMark() {
+  return (
+    <svg
+      aria-hidden
+      className="case-card-title-platform-mark case-card-title-platform-mark-apple"
+      viewBox="0 0 24 24"
+    >
+      <path
+        d="M12 6.5V3.4c0-.9.7-1.6 1.6-1.6h.3"
+        fill="none"
+        stroke="#000"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="4"
+      />
+      <path
+        d="M17.8 21.1c-1.1.7-2.1.8-3 .3-1.7-.8-3.1-.8-4.8 0-1 .5-2 .4-3-.3C4.8 19.5 3.2 15.2 3.4 11.6c.2-3.2 2.4-5.4 5-5.4 1.4 0 2.4.7 3.2.7.7 0 1.8-.7 3.2-.7 2.2 0 4.1 1.5 4.8 3.7-1.6.7-2.4 1.9-2.4 3.5 0 1.8 1 3.1 2.6 3.7-.5 1.6-1.2 3-2 4Z"
+        fill="#f3fff7"
+        stroke="#000"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="4"
+      />
+    </svg>
+  );
+}
+
+function PlatformLogoMark({ platform }: { platform: MobilePlatform }) {
+  return platform === "android" ? (
+    <AndroidPlatformMark />
+  ) : (
+    <ApplePlatformMark />
+  );
+}
+
+function FactorDeviceMark({ device }: { device: "phone" | "tablet" }) {
+  return device === "phone" ? (
+    <PhoneMark mobilePlatforms={[]} />
+  ) : (
+    <TabletMark showPlatformIcon={false} />
+  );
+}
+
 export function ProjectDeviceStack({
   assetGap,
   color,
@@ -297,6 +394,7 @@ export function ProjectDeviceStack({
   hasWeb,
   mobilePlatforms,
   responsiveAssetGap,
+  showPlatformLabels,
   webIconScale,
 }: {
   assetGap?: string;
@@ -305,6 +403,7 @@ export function ProjectDeviceStack({
   hasWeb?: boolean;
   mobilePlatforms: MobilePlatform[];
   responsiveAssetGap?: ResponsiveAssetGap;
+  showPlatformLabels?: boolean;
   webIconScale?: number;
 }) {
   const stackRef = useRef<HTMLSpanElement>(null);
@@ -388,6 +487,74 @@ export function ProjectDeviceStack({
     stackStyle["--project-device-stack-gap"] = stackGap;
   }
 
+  if (showPlatformLabels) {
+    const platforms: Array<MobilePlatform | "web"> = [];
+    const factorDevices: Array<"phone" | "tablet"> = [];
+
+    if (mobilePlatforms.includes("android") || hasTablet) {
+      platforms.push("android");
+    }
+
+    if (mobilePlatforms.includes("apple")) {
+      platforms.push("apple");
+    }
+
+    if (hasWeb) {
+      platforms.push("web");
+    }
+
+    if (mobilePlatforms.length > 0) {
+      factorDevices.push("phone");
+    }
+
+    if (hasTablet) {
+      factorDevices.push("tablet");
+    }
+
+    return (
+      <span
+        className="carousel-button-project case-card-title-platform-list"
+        ref={stackRef}
+        style={stackStyle}
+      >
+        <span className="case-card-title-platform-column">
+          <span className="case-card-title-platform-heading">PLAT:</span>
+          <span className="case-card-title-platform-items">
+            {platforms.map((platform) =>
+              platform === "web" ? (
+                <PlatformIconSlot key={platform} label="WEB">
+                  <WebMark scale={webIconScale} />
+                </PlatformIconSlot>
+              ) : (
+                <PlatformIconSlot
+                  key={platform}
+                  label={platform === "android" ? "AND" : "IOS"}
+                >
+                  <PlatformLogoMark platform={platform} />
+                </PlatformIconSlot>
+              ),
+            )}
+          </span>
+        </span>
+        {factorDevices.length > 0 ? (
+          <span className="case-card-title-platform-column">
+            <span className="case-card-title-platform-heading">FACTOR</span>
+            <span className="case-card-title-platform-items">
+              {factorDevices.map((device) => (
+                <PlatformIconSlot
+                  key={device}
+                  label={device === "phone" ? "PHONE" : "TABLET"}
+                >
+                  <FactorDeviceMark device={device} />
+                </PlatformIconSlot>
+              ))}
+            </span>
+          </span>
+        ) : null}
+      </span>
+    );
+  }
+
   return (
     <span className="carousel-button-project" ref={stackRef} style={stackStyle}>
       {mobilePlatforms.map((platform) => (
@@ -448,10 +615,19 @@ export function ProjectCarouselButton() {
         const heroActions =
           document.querySelector<HTMLElement>(".hero-actions");
         const proofPanel = document.querySelector<HTMLElement>(".proof-panel");
+        const stackRow = document.querySelector<HTMLElement>(".stack-row");
+        const heroVisual = document.querySelector<HTMLElement>(".hero-visual");
+        const navBar = document.querySelector<HTMLElement>(".nav-bar");
         const profilePhoto =
           document.querySelector<HTMLElement>(".profile-photo");
         const socialButton =
           document.querySelector<HTMLElement>(".hero-social-button");
+        const visualFrameSelectors = [
+          ".profile-photo",
+          ".phone-shell-commerce",
+          ".phone-shell-finance",
+          ".tablet-shell",
+        ];
 
         if (proofPanel && profilePhoto) {
           const proofRect = proofPanel.getBoundingClientRect();
@@ -459,10 +635,55 @@ export function ProjectCarouselButton() {
           const proofWidth = profileRect.right - proofRect.left;
 
           if (proofWidth > 0) {
-            proofPanel.style.setProperty(
-              "--hero-proof-landscape-width",
-              `${proofWidth}px`,
-            );
+            [heroCopy, proofPanel, stackRow].forEach((element) => {
+              element?.style.setProperty(
+                "--hero-proof-landscape-width",
+                `${proofWidth}px`,
+              );
+            });
+          }
+        }
+
+        if (heroVisual && navBar && stackRow) {
+          const isTwoColumnHero = window.matchMedia(
+            "(min-width: 981px)",
+          ).matches;
+
+          if (!isTwoColumnHero) {
+            heroVisual.style.removeProperty("--hero-visual-center-offset");
+          } else {
+            const visualRects = visualFrameSelectors
+              .map((selector) =>
+                document.querySelector<HTMLElement>(selector),
+              )
+              .filter((element): element is HTMLElement => Boolean(element))
+              .map((element) => element.getBoundingClientRect());
+
+            if (visualRects.length > 0) {
+              const navRect = navBar.getBoundingClientRect();
+              const stackRect = stackRow.getBoundingClientRect();
+              const visualTop = Math.min(
+                ...visualRects.map((rect) => rect.top),
+              );
+              const visualBottom = Math.max(
+                ...visualRects.map((rect) => rect.bottom),
+              );
+              const currentOffset =
+                Number.parseFloat(
+                  window
+                    .getComputedStyle(heroVisual)
+                    .getPropertyValue("--hero-visual-center-offset"),
+                ) || 0;
+              const visualCenterWithoutOffset =
+                (visualTop + visualBottom) / 2 - currentOffset;
+              const targetCenter = (navRect.top + stackRect.bottom) / 2;
+              const nextOffset = targetCenter - visualCenterWithoutOffset;
+
+              heroVisual.style.setProperty(
+                "--hero-visual-center-offset",
+                `${nextOffset}px`,
+              );
+            }
           }
         }
 
@@ -561,6 +782,8 @@ export function ProjectCarouselButton() {
     const targetIcon =
       document.querySelector<SVGSVGElement>(".dribbble-icon-mark") ??
       document.querySelector<SVGSVGElement>(".linkedin-icon-mark");
+    const navBar = document.querySelector<HTMLElement>(".nav-bar");
+    const heroVisual = document.querySelector<HTMLElement>(".hero-visual");
     const heroActions = document.querySelector<HTMLElement>(".hero-actions");
     const stackRow = document.querySelector<HTMLElement>(".stack-row");
     const proofPanel = document.querySelector<HTMLElement>(".proof-panel");
@@ -583,6 +806,14 @@ export function ProjectCarouselButton() {
 
       if (heroActions) {
         resizeObserver.observe(heroActions);
+      }
+
+      if (navBar) {
+        resizeObserver.observe(navBar);
+      }
+
+      if (heroVisual) {
+        resizeObserver.observe(heroVisual);
       }
 
       if (stackRow) {

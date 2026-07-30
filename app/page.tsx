@@ -35,11 +35,11 @@ const stackChips = [
 
 const proofStats = [
   {
-    label: "Full-Stack Expertise",
+    label: "Full-Stack Mastery",
     value: "3yrs",
   },
-  { label: "Quality GitHub Commits", value: "1.0k+" },
-  { label: "Real-Time Project Worklogs", value: "0.1k+" },
+  { label: "Quality GitHub Commits", value: "1.0k" },
+  { label: "Real-Time Project Worklogs", value: "0.1k" },
   { label: "Shipped Mob/Web Products", value: "8" },
 ];
 
@@ -309,9 +309,12 @@ export default function Home() {
                 <span className="hero-eyebrow-period">.</span>
               </p>
               <h1>
-                    Full-Stack Expertise
+                    Full-Stack
                 <br />
-                    React Native / Kotlin Developer
+                    <span style={{ color: "#43ff92" }}>
+                      <span style={{ whiteSpace: "nowrap" }}>React&nbsp;Native&nbsp;/</span> Kotlin
+                    </span>{" "}
+                    Developer
               </h1>
               <HeroLede />
 
