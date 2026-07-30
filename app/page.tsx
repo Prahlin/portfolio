@@ -57,7 +57,7 @@ function LinkedInMark() {
       width="32.4"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <g transform="translate(-3.6 -3.6) scale(1.3)">
+      <g transform="translate(-2.76 -2.76) scale(1.23)">
         <rect
           fill="#f3fff7"
           height="18"
@@ -309,7 +309,7 @@ export default function Home() {
                 <span className="hero-eyebrow-period">.</span>
               </p>
               <h1>
-                    Full-Stack
+                    Full-Stack Expertise
                 <br />
                     React Native / Kotlin Developer
               </h1>
@@ -384,6 +384,7 @@ export default function Home() {
                     </span>
                   </a>
                   <a
+                    aria-label="LinkedIn"
                     className="button button-secondary hero-social-button linkedin-button"
                     href="https://linkedin.com/in/mprahl"
                     rel="noreferrer"
@@ -395,11 +396,16 @@ export default function Home() {
                     target="_blank"
                   >
                     <LinkedInMark />
-                    <span className="linkedin-label-text" data-text="LinkedIn">
-                      LinkedIn
-                    </span>
+                    <Image
+                      alt=""
+                      className="social-label-image linkedin-label-image"
+                      height={70}
+                      src="/images/social-labels/linkedin-label.png"
+                      width={254}
+                    />
                   </a>
                   <a
+                    aria-label="Resume"
                     className="button button-secondary hero-social-button resume-button"
                     href="https://www.instagram.com/"
                     rel="noreferrer"
@@ -411,9 +417,13 @@ export default function Home() {
                     target="_blank"
                   >
                     <ResumeDownloadMark />
-                    <span className="resume-label-text" data-text="Resume">
-                      Resume
-                    </span>
+                    <Image
+                      alt=""
+                      className="social-label-image resume-label-image"
+                      height={70}
+                      src="/images/social-labels/resume-label.png"
+                      width={244}
+                    />
                   </a>
                 </div>
               </div>

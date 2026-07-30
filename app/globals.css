@@ -885,6 +885,21 @@ h3 {
   width: var(--hero-social-icon-size);
 }
 
+.linkedin-button .linkedin-icon-mark,
+.resume-button .download-icon-mark {
+  height: calc(var(--hero-social-icon-size) * 0.95);
+  width: calc(var(--hero-social-icon-size) * 0.95);
+}
+
+.social-label-image {
+  display: block;
+  flex: 0 0 auto;
+  height: calc(var(--hero-social-font-size) * 1.23);
+  max-width: calc(100% - var(--hero-social-icon-size) - var(--hero-social-gap));
+  object-fit: contain;
+  width: auto;
+}
+
 .github-button {
   background: #000;
   border-color: #000;
@@ -900,6 +915,11 @@ h3 {
   background: #fff;
   border-color: #fff;
   color: #fff;
+}
+
+.linkedin-button,
+.resume-button {
+  gap: max(0px, calc(var(--hero-social-gap) - 2px));
 }
 
 .github-label-text,
@@ -948,11 +968,19 @@ h3 {
   z-index: -1;
 }
 
+.resume-label-text::before {
+  -webkit-text-stroke-width: 4px;
+}
+
 .github-label-text::after,
 .linkedin-label-text::after,
 .resume-label-text::after {
   -webkit-text-stroke: 6px #000;
   z-index: -2;
+}
+
+.resume-label-text::after {
+  -webkit-text-stroke-width: 6px;
 }
 
 .stack-row {
