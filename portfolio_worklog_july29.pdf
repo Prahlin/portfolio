@@ -1,0 +1,340 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [6 0 R 8 0 R 10 0 R 12 0 R 14 0 R] /Count 5 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+5 0 obj
+<< /Length 6616 >>
+stream
+BT /F2 12.50 Tf 1 0 0 1 54 742.00 Tm (Prahlin Portfolio Work Log - July 29, 2026) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 724.00 Tm (Compiled summary for Wednesday, July 29, 2026 - focus: continued Prahl.dev Portfolio) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 711.75 Tm (landing-page refinement after the July 25 Resume, LinkedIn, and proof-stat pass, including) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 699.50 Tm (transparent baked-stroke LinkedIn and Resume label images, social icon-box parity, small-screen) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 687.25 Tm (stroke cleanup, hero headline and proof-copy changes, React Native / Kotlin wrapping, Cinerific) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 675.00 Tm (hero tablet frame restoration, chip/proof responsive matching, hero visual stack re-centering,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 662.75 Tm (case-study title typography restoration, case-study PLAT:/FACTOR icon restructuring, local) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 650.50 Tm (development-cache resets, browser-render verification, public synchronization, refreshed project) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 638.25 Tm (snapshot context, review of all prior Portfolio PDF worklogs, and generation of the daily) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 626.00 Tm (Portfolio PDF worklog.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 601.50 Tm (Generated in continuity with the established Prahlin Portfolio daily worklog cadence: compact) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 589.25 Tm (opening summary, source-material section, baseline section, goal list, work-completed sections,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 577.00 Tm (validation section, files-touched list, follow-up context, and output-artifact close.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 552.50 Tm (This artifact intentionally covers only Prahlin/portfolio work performed for the July 29 design) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 540.25 Tm (session and its late-night continuation: the refreshed project snapshot, review of every) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 528.00 Tm (pre-existing Portfolio worklog PDF, commit 88a864f from Wednesday, July 29, 2026 at 21:07:55) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 515.75 Tm (EDT, commit 3d7619e from Thursday, July 30, 2026 at 00:24:54 EDT, local development-cache) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 503.50 Tm (handling, validation checks, GitHub Actions deployment-status review, and this) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 491.25 Tm (worklog-generation step. The July 30 timestamp is recorded because the final source commit) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 479.00 Tm (crossed midnight while continuing the requested July 29 visual pass.) Tj ET
+BT /F2 9.15 Tf 1 0 0 1 54 454.50 Tm (Source Materials Reviewed) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 442.25 Tm (- Ran ./read_project.sh from /Users/prahlin/gh/portfolio and regenerated) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 430.00 Tm (  portfolio_PROJECT_SNAPSHOT.txt before writing this worklog, preserving the project convention) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 417.75 Tm (  that Codex refreshes the current source snapshot before continuing Portfolio work.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 405.50 Tm (- Reviewed the refreshed portfolio_PROJECT_SNAPSHOT.txt, including project notes, current source) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 393.25 Tm (  tree, line-numbered source dumps, root/tooling/deployment configuration, public image) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 381.00 Tm (  inventory, PDF inventory, git context, and the standing instruction to ask for a commit) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 368.75 Tm (  message before committing or pushing.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 356.50 Tm (- Reviewed every pre-existing Portfolio root-level worklog PDF: portfolio_worklog_july11.pdf,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 344.25 Tm (  portfolio_worklog_july14.pdf, portfolio_worklog_july15_part1.pdf,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 332.00 Tm (  portfolio_worklog_july15_part2.pdf, portfolio_worklog_july16.pdf,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 319.75 Tm (  portfolio_worklog_july19.pdf, portfolio_worklog_july20.pdf, portfolio_worklog_july21.pdf,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 307.50 Tm (  portfolio_worklog_july22.pdf, portfolio_worklog_july23.pdf, portfolio_worklog_july24.pdf, and) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 295.25 Tm (  portfolio_worklog_july25.pdf.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 283.00 Tm (- Extracted text from all twelve existing Portfolio PDFs with pdftotext to preserve the same) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 270.75 Tm (  title cadence, opening-summary density, section order, bullet-heavy technical voice,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 258.50 Tm (  validation language, files-touched list, follow-up context, and output-artifact close.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 246.25 Tm (- Used portfolio_worklog_july25.pdf as the closest same-project reference because it documented) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 234.00 Tm (  the latest hero/social/proof-stat iteration, development-cache reset language, PDF metadata) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 221.75 Tm (  expectations, source/push status wording, and current root-level naming convention.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 209.50 Tm (- Checked mature PDF metadata with pdfinfo and confirmed the current Portfolio artifacts use) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 197.25 Tm (  letter-size pages, Helvetica/Helvetica-Bold base fonts, compact five-to-six page bodies,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 185.00 Tm (  root-level filenames, and Codex standard-library PDF-generator metadata.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 172.75 Tm (- Reviewed Git history through git log, git show --stat, git show --name-status, targeted diffs,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 160.50 Tm (  branch state, and the committed scopes for 88a864f and 3d7619e. HEAD and origin/main both) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 148.25 Tm (  resolved to 3d7619e before this PDF was generated.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 136.00 Tm (- Reviewed app/page.tsx, app/globals.css, app/ProjectCarouselButton.tsx, app/ProofStats.tsx,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 123.75 Tm (  app/PortfolioSections.tsx, public/images/social-labels/linkedin-label.png,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 111.50 Tm (  public/images/social-labels/resume-label.png, package.json, read_project.sh, and the) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 99.25 Tm (  root-level PDF inventory before generating this artifact.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 87.00 Tm (- Checked the running local development route at http://127.0.0.1:3000/ and confirmed the route) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 74.75 Tm (  returned 200 OK from the Next.js dev server.) Tj ET
+BT /F1 8.5 Tf 1 0 0 1 323 30 Tm (Prahlin Portfolio Work Log - July 29, 2026 Page 1) Tj ET
+endstream
+endobj
+6 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 5 0 R >>
+endobj
+7 0 obj
+<< /Length 6378 >>
+stream
+BT /F2 9.15 Tf 1 0 0 1 54 729.75 Tm (Baseline Status Before July 29 Work) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 717.50 Tm (- The July 25 Portfolio site already had the Full-Stack React Native / Kotlin Developer) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 705.25 Tm (  positioning, Resume social CTA, official LinkedIn destination and blue color, icon-left) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 693.00 Tm (  social-button order, layered social text stroke system, responsive hero stack scaling,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 680.75 Tm (  proof-stat one-row behavior, and the July 25 PDF worklog committed to the project history.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 668.50 Tm (- The social labels still depended on live stroked text. On small screens, the Resume and) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 656.25 Tm (  LinkedIn label edges could show jagged stroke artifacts, especially around tight letterforms) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 644.00 Tm (  and layered green/black/blue stroke boundaries.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 631.75 Tm (- The Resume and LinkedIn buttons had similar layout roles but still needed user-directed) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 619.50 Tm (  optical matching across icon-box size, baked label width, horizontal spacing, and center) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 607.25 Tm (  alignment.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 595.00 Tm (- The hero headline and proof stats were still moving through Expertise, Mastery, React Native /) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 582.75 Tm (  Kotlin, and no-plus-sign copy adjustments, while the slash phrase needed protection from) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 570.50 Tm (  awkward wrapping.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 558.25 Tm (- The Cinerific hero tablet image had previously been transformed inside the tablet frame. The) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 546.00 Tm (  user wanted the original-looking device-frame scale and rotation restored, then the) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 533.75 Tm (  surrounding shell dimensions adapted around that appearance.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 521.50 Tm (- The chip stack and proof stack were not yet fully coupled. The user wanted matching widths,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 509.25 Tm (  one-row transition behavior, fixed horizontal gaps, taller one-row chips, and reduced visual) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 497.00 Tm (  distance between the two stacks.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 484.75 Tm (- The profile-photo and device-frame hero visual stack needed a measured vertical centering rule) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 472.50 Tm (  using the top navigation and lower chip/proof area as reference points, followed by a 10) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 460.25 Tm (  percent full-stack reduction.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 448.00 Tm (- The featured case-study cards still carried heavier stylized title and device icon treatments) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 435.75 Tm (  that were useful in the hero carousel but too frame-like for compact card metadata.) Tj ET
+BT /F2 9.15 Tf 1 0 0 1 54 411.25 Tm (Goals for July 29) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 399.00 Tm (- Replace jagged live-stroked LinkedIn and Resume social label text with transparent) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 386.75 Tm (  baked-stroke image labels while preserving the accepted color/stroke appearance.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 374.50 Tm (- Nudge LinkedIn and Resume icon/label spacing and icon-box dimensions until both social buttons) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 362.25 Tm (  read as part of the same system.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 350.00 Tm (- Update the hero headline and proof stats to the requested Mastery, no-plus-sign, green React) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 337.75 Tm (  Native / Kotlin, and no-Mastery-in-headline copy state.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 325.50 Tm (- Keep React Native / together during wrapping, and allow that phrase to stay on one row even) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 313.25 Tm (  when it visually reaches toward the right-side hero devices.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 301.00 Tm (- Restore and adapt the Cinerific hero tablet frame without reintroducing the unwanted inner) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 288.75 Tm (  screenshot transform.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 276.50 Tm (- Match the chip stack to proof-stack width and one-row behavior while keeping exact horizontal) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 264.25 Tm (  gaps through responsive stretching.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 252.00 Tm (- Re-center the profile-photo/device-frame hero stack relative to the navigation and chip/proof) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 239.75 Tm (  reference edges, then scale that entire visual group down by 10 percent.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 227.50 Tm (- Restore landing case-study project titles to the original first-draft font face, 24px size,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 215.25 Tm (  800 weight, unstroked text, and no decorative shadow.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 203.00 Tm (- Replace case-study device/platform artwork with semantic PLAT: and FACTOR stacks: AND, IOS,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 190.75 Tm (  WEB symbols on the platform side, and symbol-free PHONE/TABLET frames on the factor side.) Tj ET
+BT /F2 9.15 Tf 1 0 0 1 54 166.25 Tm (Work Completed - Social Label Images and Hero Copy) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 154.00 Tm (- Investigated the jagged Resume edge behavior and treated it as a layered stroke rasterization) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 141.75 Tm (  problem rather than a single green-or-black color leak.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 129.50 Tm (- Iterated Resume stroke widths through the requested green and black values, then moved the) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 117.25 Tm (  sensitive LinkedIn and Resume words away from live CSS text-stroke rendering.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 105.00 Tm (- Drew LinkedIn and Resume as transparent baked-stroke PNG label assets and imported them under) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 92.75 Tm (  public/images/social-labels/.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 80.50 Tm (- Replaced the live LinkedIn and Resume label text in the hero buttons with image labels so) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 68.25 Tm (  small-screen rendering no longer depends on browser text-stroke edges.) Tj ET
+BT /F1 8.5 Tf 1 0 0 1 323 30 Tm (Prahlin Portfolio Work Log - July 29, 2026 Page 2) Tj ET
+endstream
+endobj
+8 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 7 0 R >>
+endobj
+9 0 obj
+<< /Length 6184 >>
+stream
+BT /F1 9.15 Tf 1 0 0 1 54 742.00 Tm (- Preserved the accepted LinkedIn blue treatment and Resume green/white/black treatment after) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 729.75 Tm (  rasterization.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 717.50 Tm (- Reduced the Resume and LinkedIn icon button scale by the requested 5 percent, moved icon/label) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 705.25 Tm (  pairs 2px closer toward center, and matched the LinkedIn outer icon-box look to Resume after) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 693.00 Tm (  the user noticed uneven edges.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 680.75 Tm (- Updated the hero proof stat from Full-Stack Expertise to Full-Stack Mastery and changed the) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 668.50 Tm (  tight-mode split in ProofStats.tsx to Full-, Stack, Mastery.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 656.25 Tm (- Removed plus signs from the 1.0k and 0.1k proof values.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 644.00 Tm (- Removed Mastery from the visible hero headline and settled the headline into Full-Stack, React) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 631.75 Tm (  Native / Kotlin, Developer, with React Native / Kotlin highlighted in CTA green.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 619.50 Tm (- Protected React Native / as a nowrap unit inside the headline so Native does not wrap away) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 607.25 Tm (  from the slash.) Tj ET
+BT /F2 9.15 Tf 1 0 0 1 54 582.75 Tm (Work Completed - Hero Device, Chip, and Proof Layout) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 570.50 Tm (- Restored the Cinerific hero tablet screen image scale and rotation by removing the previous) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 558.25 Tm (  inner image transform and moving frame adaptation to the tablet shell dimensions.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 546.00 Tm (- Tuned tablet-shell fitted width variables for desktop and mobile so the original-looking) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 533.75 Tm (  rotated frame could remain while fitting the restored image better.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 521.50 Tm (- Matched the chip stack width to the proof stack width through the shared responsive) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 509.25 Tm (  measurement path.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 497.00 Tm (- Increased chip font size by 1px, doubled fixed horizontal chip gaps, reduced the vertical gap) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 484.75 Tm (  between chip and proof stacks in one-row mode, and increased one-row chip height by 10) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 472.50 Tm (  percent.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 460.25 Tm (- Changed the chip stack to expand from multiple rows to one row during the same broad) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 448.00 Tm (  stretching window as the proof stack.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 435.75 Tm (- Updated the hero visual measurement logic so the profile photo, two phone frames, and tablet) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 423.50 Tm (  frame center between the top navigation and lower chip/proof reference area on two-column hero) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 411.25 Tm (  layouts.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 399.00 Tm (- Scaled the full profile-photo/device-frame hero visual group to 0.9 while preserving its) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 386.75 Tm (  internal composition.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 374.50 Tm (- Cleared the local Next.js development cache during rapid CSS/JSX iteration when stale output) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 362.25 Tm (  made visual changes appear unchanged.) Tj ET
+BT /F2 9.15 Tf 1 0 0 1 54 337.75 Tm (Work Completed - Case-Study Titles and Platform/Factor Displays) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 325.50 Tm (- Restored landing case-study project title names to the original first-draft typography for) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 313.25 Tm (  non-article cards: inherited font face, 24px size, 800 weight, unstroked text, and no shadow.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 301.00 Tm (- Kept the Articles/UIUX mode separate so article cards retained their own title behavior.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 288.75 Tm (- Iterated the case-study platform icon treatment from filled device frames through transparent) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 276.50 Tm (  and 0.2-opacity fills before separating platform meaning from form-factor meaning.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 264.25 Tm (- Removed phone/tablet frames from the PLAT platform side in the case-study section and kept) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 252.00 Tm (  Android, Apple/iOS, and web symbols as direct platform indicators.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 239.75 Tm (- Replaced fragile external Android/iOS img rendering with inline SVG platform marks so symbols) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 227.50 Tm (  show reliably in card title rows.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 215.25 Tm (- Added a PLAT: heading above the platform column and labels for AND, IOS, and WEB above the) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 203.00 Tm (  correct Android, Apple, and globe marks.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 190.75 Tm (- Added a FACTOR heading next to PLAT: and centered PHONE and TABLET labels above their) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 178.50 Tm (  corresponding device-frame images.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 166.25 Tm (- Rendered factor phone/tablet frames without Android or iOS symbols inside them, keeping those) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 154.00 Tm (  frames as pure form-factor silhouettes.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 141.75 Tm (- Scoped the PLAT:/FACTOR layout to CaseStudyTitle usage only, leaving the hero carousel device) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 129.50 Tm (  stack unchanged.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 117.25 Tm (- Verified by browser inspection that factor frames contained zero platform-symbol image nodes) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 105.00 Tm (  and that stale PLATFORMS pseudo-label content disappeared after a cache clear.) Tj ET
+BT /F2 9.15 Tf 1 0 0 1 54 80.50 Tm (Work Completed - Commit Handling and Public State) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 68.25 Tm (- Recommended commit messages during the session in the user-requested format: one header) Tj ET
+BT /F1 8.5 Tf 1 0 0 1 323 30 Tm (Prahlin Portfolio Work Log - July 29, 2026 Page 3) Tj ET
+endstream
+endobj
+10 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 9 0 R >>
+endobj
+11 0 obj
+<< /Length 6438 >>
+stream
+BT /F1 9.15 Tf 1 0 0 1 54 742.00 Tm (  followed by hyphen-prefixed summary points in past tense.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 729.75 Tm (- Committed and pushed 88a864f, Refined hero social labels and headline, covering transparent) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 717.50 Tm (  social-label assets, icon-box tuning, headline changes, and snapshot refresh work.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 705.25 Tm (- Committed and pushed 3d7619e, Refined hero layout and case study platform visuals, covering) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 693.00 Tm (  headline/proof changes, hero tablet and visual-stack layout, chip/proof matching, original) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 680.75 Tm (  case-title typography, and PLAT:/FACTOR case-study stacks.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 668.50 Tm (- Confirmed the final source branch state had HEAD and origin/main both at) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 656.25 Tm (  3d7619e728fade254ebf18b153855fe28f915aae before this PDF was generated.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 644.00 Tm (- Reviewed GitHub Actions after the pushes and found that the Build static export for Hostinger) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 631.75 Tm (  workflow runs for both 88a864f and 3d7619e completed with failure status. gh could not) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 619.50 Tm (  retrieve failed job logs for either run.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 607.25 Tm (- Kept the refreshed project snapshot and this worklog PDF local as documentation artifacts) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 595.00 Tm (  pending a user-approved commit message.) Tj ET
+BT /F2 9.15 Tf 1 0 0 1 54 570.50 Tm (Validation and Checks Performed) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 558.25 Tm (- Ran npm run check after the current source state and confirmed TypeScript validation passed) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 546.00 Tm (  with tsc --noEmit.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 533.75 Tm (- Ran npm run build:static and confirmed the local Next.js static export completed successfully,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 521.50 Tm (  compiling, type-checking, collecting page data, generating six static pages, and finalizing) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 509.25 Tm (  page optimization.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 497.00 Tm (- Confirmed http://127.0.0.1:3000/ returned 200 OK from the running local Next.js dev server.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 484.75 Tm (- Confirmed lsof showed node listening on TCP port 3000 and screen -ls showed the detached) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 472.50 Tm (  portfolio-dev screen session.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 460.25 Tm (- Used headless Chrome/CDP checks to verify case-study platform/factor DOM structure, visible) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 448.00 Tm (  symbol dimensions, zero platform-symbol images inside FACTOR frames, and removal of the stale) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 435.75 Tm (  PLATFORMS pseudo-label.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 423.50 Tm (- Captured case-study section screenshots during visual verification and used them to catch) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 411.25 Tm (  stale CSS before clearing the dev cache.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 399.00 Tm (- Checked git rev-parse HEAD and git rev-parse origin/main and confirmed both returned) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 386.75 Tm (  3d7619e728fade254ebf18b153855fe28f915aae before generating this worklog.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 374.50 Tm (- Checked git status and confirmed only portfolio_PROJECT_SNAPSHOT.txt was modified before this) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 362.25 Tm (  PDF was created.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 350.00 Tm (- Restored next-env.d.ts after npm run build:static flipped the route-types import from) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 337.75 Tm (  .next/dev/types/routes.d.ts to .next/types/routes.d.ts, keeping build validation from leaving) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 325.50 Tm (  unrelated generated-file noise.) Tj ET
+BT /F2 9.15 Tf 1 0 0 1 54 301.00 Tm (Files Touched During July 29 Portfolio Work) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 288.75 Tm (- app/page.tsx - updated proof-stat values and labels, hero headline structure, React Native /) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 276.50 Tm (  Kotlin green highlighting and nowrap behavior, LinkedIn/Resume image label usage, icon sizing,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 264.25 Tm (  and social-button image/font relationships.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 252.00 Tm (- app/globals.css - tuned social label/image sizing and gaps, hero chip/proof stack widths, chip) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 239.75 Tm (  font and spacing behavior, one-row chip/proof spacing, hero visual scaling, tablet-shell) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 227.50 Tm (  fitted widths, case-study title typography, and case-study platform/factor column styling.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 215.25 Tm (- app/ProjectCarouselButton.tsx - added measurement updates for hero proof/chip/visual) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 203.00 Tm (  alignment, inline Android and Apple platform marks, optional tablet platform-icon hiding,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 190.75 Tm (  case-study-only PLAT:/FACTOR rendering, and factor device-frame output without symbols.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 178.50 Tm (- app/ProofStats.tsx - updated the special tight-mode proof-stat split from Full-Stack Expertise) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 166.25 Tm (  to Full-Stack Mastery.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 154.00 Tm (- app/PortfolioSections.tsx - passed the case-study-only platform-label mode through) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 141.75 Tm (  CaseStudyTitle and restored original landing-card title typography for non-article cards.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 129.50 Tm (- public/images/social-labels/linkedin-label.png - new transparent baked-stroke LinkedIn label) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 117.25 Tm (  image used in the hero social button.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 105.00 Tm (- public/images/social-labels/resume-label.png - new transparent baked-stroke Resume label image) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 92.75 Tm (  used in the hero social button.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 80.50 Tm (- _martin3.jpg - appeared in the July 29 commit scope as a root-level image artifact; it was not) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 68.25 Tm (  part of the later hero-layout or platform/factor code pass.) Tj ET
+BT /F1 8.5 Tf 1 0 0 1 323 30 Tm (Prahlin Portfolio Work Log - July 29, 2026 Page 4) Tj ET
+endstream
+endobj
+12 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 11 0 R >>
+endobj
+13 0 obj
+<< /Length 5116 >>
+stream
+BT /F1 9.15 Tf 1 0 0 1 54 742.00 Tm (- portfolio_PROJECT_SNAPSHOT.txt - regenerated by ./read_project.sh for this worklog pass and) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 729.75 Tm (  left modified locally as the current project-context artifact.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 717.50 Tm (- portfolio_worklog_july29.pdf - generated as this daily Portfolio worklog artifact in the) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 705.25 Tm (  root-level Portfolio worklog convention.) Tj ET
+BT /F2 9.15 Tf 1 0 0 1 54 680.75 Tm (Follow-Up Context) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 668.50 Tm (- The public source branch is already represented by origin/main at 3d7619e, but the GitHub) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 656.25 Tm (  Actions Build static export for Hostinger workflow currently reports failure for both) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 644.00 Tm (  post-July-25 source pushes. Local npm run build:static succeeds, so the next deployment pass) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 631.75 Tm (  should inspect workflow configuration, runner logs, or GitHub-side publishing conditions) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 619.50 Tm (  rather than assuming a local source build failure.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 607.25 Tm (- The refreshed portfolio_PROJECT_SNAPSHOT.txt and this July 29 PDF remain local until the user) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 595.00 Tm (  provides or approves a commit message for documentation artifact changes.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 582.75 Tm (- Because this PDF increases the Portfolio root-level worklog artifact count from 12 to 13,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 570.50 Tm (  visible public copy can be updated later only if the user wants exact Portfolio worklog) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 558.25 Tm (  inventory reflected in card or proof-stat copy.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 546.00 Tm (- The LinkedIn and Resume hero labels now depend on transparent raster assets. Future) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 533.75 Tm (  social-button font/stroke changes should update those image assets as well as surrounding) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 521.50 Tm (  icon-box CSS.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 509.25 Tm (- The React Native / headline segment is intentionally protected from slash-separated wrapping.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 497.00 Tm (  Future headline copy should preserve that unit unless the user asks to reopen wrapping) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 484.75 Tm (  behavior.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 472.50 Tm (- The hero chip stack and proof stack now share width and one-row behavior. Future breakpoint) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 460.25 Tm (  changes should test both stacks together, especially around wide desktop and the one-row) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 448.00 Tm (  transition.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 435.75 Tm (- The hero visual stack is intentionally centered between the top navigation and lower) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 423.50 Tm (  chip/proof reference area and globally scaled to 0.9. Future device-frame changes should) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 411.25 Tm (  preserve that relationship unless the user asks for a new composition.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 399.00 Tm (- Case-study platform displays now separate platform from factor: PLAT: carries AND, IOS, WEB) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 386.75 Tm (  symbols; FACTOR carries PHONE and TABLET frames without embedded platform symbols.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 374.50 Tm (- Continue treating future Portfolio work as local-only unless the user explicitly asks to) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 362.25 Tm (  commit, push, deploy, publish, or update the public website.) Tj ET
+BT /F2 9.15 Tf 1 0 0 1 54 337.75 Tm (Output Artifact) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 325.50 Tm (- Generated file: portfolio_worklog_july29.pdf.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 313.25 Tm (- Location: /Users/prahlin/gh/portfolio/portfolio_worklog_july29.pdf.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 301.00 Tm (- Naming follows the existing root-level Portfolio convention: portfolio_worklog_july29.pdf. No) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 288.75 Tm (  part suffix was used because this is the first July 29 Portfolio worklog artifact.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 276.50 Tm (- Uses the same daily worklog structure and compact technical voice established by) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 264.25 Tm (  portfolio_worklog_july11.pdf through portfolio_worklog_july25.pdf.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 252.00 Tm (- Generated with a small standard-library PDF writer; no external PDF dependency was installed) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 239.75 Tm (  for this artifact.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 227.50 Tm (- The local project date used for this filename and title is Wednesday, July 29, 2026 EDT,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 215.25 Tm (  matching the requested worklog date while explicitly recording the late-session source commit) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54 203.00 Tm (  that landed after midnight on Thursday, July 30, 2026.) Tj ET
+BT /F1 8.5 Tf 1 0 0 1 323 30 Tm (Prahlin Portfolio Work Log - July 29, 2026 Page 5) Tj ET
+endstream
+endobj
+14 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 13 0 R >>
+endobj
+15 0 obj
+<< /Title (Prahlin Portfolio Work Log - July 29, 2026) /Subject (Portfolio website development worklog) /Author (Codex) /Creator (Codex standard-library PDF generator) /Producer (Codex standard-library PDF generator) /CreationDate (D:20260730004118-04'00') /ModDate (D:20260730004118-04'00') >>
+endobj
+xref
+0 16
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000148 00000 n 
+0000000218 00000 n 
+0000000293 00000 n 
+0000006961 00000 n 
+0000007097 00000 n 
+0000013527 00000 n 
+0000013663 00000 n 
+0000019899 00000 n 
+0000020036 00000 n 
+0000026527 00000 n 
+0000026665 00000 n 
+0000031834 00000 n 
+0000031972 00000 n 
+trailer
+<< /Size 16 /Root 1 0 R /Info 15 0 R >>
+startxref
+32283
+%%EOF
