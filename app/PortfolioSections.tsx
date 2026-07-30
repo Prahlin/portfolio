@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Fragment } from "react";
 import { CaseDescription, CaseEyebrow } from "./CaseDescription";
+import { CaseGridLayoutSync } from "./CaseGridLayoutSync";
 import { ExpandablePrincipleCopy } from "./ExpandablePrincipleCopy";
 import {
   type MobilePlatform,
@@ -1617,7 +1618,12 @@ export function FeaturedCaseStudies({
           title={title}
         />
 
-        <div className="case-grid">
+        <div
+          className={`case-grid ${
+            articlesMode ? "case-grid-articles" : "case-grid-featured"
+          }`}
+        >
+          {articlesMode ? null : <CaseGridLayoutSync />}
           {caseStudyCards.map(
             ({ cardId, displayTitle, eyebrow, key, study, titleColor }) => (
               <CaseStudyCard

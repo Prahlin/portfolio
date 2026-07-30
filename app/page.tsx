@@ -331,7 +331,6 @@ export default function Home() {
                         gap: "0.28em",
                         justifySelf: "start",
                         marginLeft: "var(--hero-view-stack-left, 0px)",
-                        minWidth: "var(--hero-view-stack-width, 0px)",
                         textAlign: "left",
                         width: "max-content",
                       }}
@@ -340,30 +339,13 @@ export default function Home() {
                         className="hero-view-word"
                         aria-label="Check Out"
                       >
-                        <span>C</span>
-                        <span>h</span>
-                        <span>e</span>
-                        <span>c</span>
-                        <span>k</span>
-                        <span className="hero-word-space" aria-hidden>
-                          {" "}
-                        </span>
-                        <span>O</span>
-                        <span>u</span>
-                        <span>t</span>
+                        Check Out
                       </span>
                       <span
                         className="hero-project-word"
                         aria-label="Projects"
                       >
-                        <span>P</span>
-                        <span>r</span>
-                        <span>o</span>
-                        <span>j</span>
-                        <span>e</span>
-                        <span>c</span>
-                        <span>t</span>
-                        <span>s</span>
+                        Projects
                       </span>
                     </span>
                   </span>

@@ -3,7 +3,6 @@
 import {
   type CSSProperties,
   type MouseEvent,
-  type ReactNode,
   useEffect,
   useLayoutEffect,
   useRef,
@@ -295,16 +294,9 @@ function WebMark({ scale = 1 }: { scale?: number }) {
   );
 }
 
-function PlatformIconSlot({
-  children,
-  label,
-}: {
-  children: ReactNode;
-  label: string;
-}) {
+function PlatformIconSlot({ label }: { label: string }) {
   return (
     <span className="case-card-title-platform-slot" data-platform-label={label}>
-      {children}
     </span>
   );
 }
@@ -517,36 +509,32 @@ export function ProjectDeviceStack({
         ref={stackRef}
         style={stackStyle}
       >
-        <span className="case-card-title-platform-column">
-          <span className="case-card-title-platform-heading">PLAT:</span>
+        <span className="case-card-title-platform-column case-card-title-platform-column-platform">
+          <span className="case-card-title-platform-heading">PLATFORM</span>
           <span className="case-card-title-platform-items">
-            {platforms.map((platform) =>
-              platform === "web" ? (
-                <PlatformIconSlot key={platform} label="WEB">
-                  <WebMark scale={webIconScale} />
-                </PlatformIconSlot>
-              ) : (
-                <PlatformIconSlot
-                  key={platform}
-                  label={platform === "android" ? "AND" : "IOS"}
-                >
-                  <PlatformLogoMark platform={platform} />
-                </PlatformIconSlot>
-              ),
-            )}
+            {platforms.map((platform) => (
+              <PlatformIconSlot
+                key={platform}
+                label={
+                  platform === "web"
+                    ? "WEB"
+                    : platform === "android"
+                      ? "AND"
+                      : "IOS"
+                }
+              />
+            ))}
           </span>
         </span>
         {factorDevices.length > 0 ? (
-          <span className="case-card-title-platform-column">
-            <span className="case-card-title-platform-heading">FACTOR</span>
+          <span className="case-card-title-platform-column case-card-title-platform-column-factor">
+            <span className="case-card-title-platform-heading">DEVICE</span>
             <span className="case-card-title-platform-items">
               {factorDevices.map((device) => (
                 <PlatformIconSlot
                   key={device}
                   label={device === "phone" ? "PHONE" : "TABLET"}
-                >
-                  <FactorDeviceMark device={device} />
-                </PlatformIconSlot>
+                />
               ))}
             </span>
           </span>
@@ -757,20 +745,11 @@ export function ProjectCarouselButton() {
           const githubTextRect = githubText.getBoundingClientRect();
           const githubIconRect = githubIcon.getBoundingClientRect();
           const clusterLeft = Math.min(githubTextRect.left, githubIconRect.left);
-          const clusterRight = Math.max(
-            githubTextRect.right,
-            githubIconRect.right,
-          );
           const stackLeft = clusterLeft - viewLabelRect.left;
-          const stackWidth = clusterRight - clusterLeft;
 
           viewLabel.style.setProperty(
             "--hero-view-stack-left",
             `${stackLeft}px`,
-          );
-          viewLabel.style.setProperty(
-            "--hero-view-stack-width",
-            `${stackWidth}px`,
           );
         }
       });

@@ -1,5 +1,5 @@
 Portfolio Next.js PROJECT SNAPSHOT
-Generated: Thu Jul 30 00:31:22 EDT 2026
+Generated: Thu Jul 30 18:18:26 EDT 2026
 Project directory: /Users/prahlin/gh/portfolio
 
 IMPORTANT INSTRUCTIONS FOR CHATGPT & CODEX:
@@ -107,6 +107,7 @@ PROJECT FILE TREE
 /Users/prahlin/gh/portfolio/portfolio_worklog_july23.pdf
 /Users/prahlin/gh/portfolio/portfolio_worklog_july24.pdf
 /Users/prahlin/gh/portfolio/portfolio_worklog_july25.pdf
+/Users/prahlin/gh/portfolio/portfolio_worklog_july29.pdf
 /Users/prahlin/gh/portfolio/postcss.config.mjs
 /Users/prahlin/gh/portfolio/public
 /Users/prahlin/gh/portfolio/public/favicon.svg
@@ -8047,7 +8048,8 @@ Status:
  M portfolio_PROJECT_SNAPSHOT.txt
 
 Recent commits:
-3d7619e (HEAD -> main, origin/main) Refined hero layout and case study platform visuals
+158ed57 (HEAD -> main, origin/main) generated pdf session worklog for the relevant project on July 29, 2026.
+3d7619e Refined hero layout and case study platform visuals
 88a864f Refined hero social labels and headline - Replaced LinkedIn and Resume text with transparent baked-stroke image labels to avoid jagged small-screen font edges. - Tuned LinkedIn and Resume icon sizing, spacing, and icon-box geometry to better match each other. - Updated the hero headline to Full-Stack Expertise and refreshed the project snapshot.
 e1cc2f8 generated the latest pdf session worklog for the relevant project, dated July 25, 2026.
 dbf93a8 Refined hero social button spacing, labels, and icon scaling to compensate for any potential optical illusions inferred by the user due to color contrast between text fonts & icon box fillings/borders.
@@ -8056,7 +8058,6 @@ bbc789d Refined landing hero, nav, and resume CTA
 8073b70 generated the latest project session pdf worklog, dated July 24. 2026.
 6cefbc6 Refined Hero Tablet And Articles UI - Swapped the hero tablet preview to the Cinerific promo artwork. - Preserved the tablet frame angle while rotating and scaling only the inner Cinerific image. - Tuned the Cinerific image position so the logo and character details stayed visible. - Added the dedicated Articles page with reused case-study styling and UI/UX Philosophy cards. - Added expandable 8-line previews for long philosophy card descriptions. - Fixed hidden measurement text so it no longer created extra page scroll height. - Updated nav ordering, active-page styling, and Articles link visibility behavior. -Removed article-card chip stacks and tightened Articles page bottom spacing.
 2cee18b Refined responsive hero nav and Instagram CTA - Replaced Dribbble with Instagram styling and icon treatment - Reordered nav links with Worklog/Stack in the top row - Locked two-row nav height to exactly double the brand box height - Aligned the Prahl.dev brand box to parent card edges across breakpoints
-90fd5a9 Refined landing nav and added Instagram CTA - Replaced Dribbble CTA with Instagram icon and #E1306C styling - Reworked landing nav into responsive two-row layout with separators - Removed Experience, renamed About Dev, and emphasized key nav links - Protected P mark sizing while tuning Prahl.dev typography and spacing - Refreshed project snapshot metadata
 
 Remotes:
 origin	https://github.com/Prahlin/portfolio.git (fetch)
@@ -8134,6 +8135,7 @@ portfolio_worklog_july22.pdf | 32374 bytes | modified 2026-07-22 23:25:09
 portfolio_worklog_july23.pdf | 42055 bytes | modified 2026-07-23 23:39:32
 portfolio_worklog_july24.pdf | 41751 bytes | modified 2026-07-24 23:15:37
 portfolio_worklog_july25.pdf | 36857 bytes | modified 2026-07-25 15:34:52
+portfolio_worklog_july29.pdf | 32683 bytes | modified 2026-07-30 00:41:18
 
 
 ============================================================

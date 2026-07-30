@@ -430,17 +430,10 @@ h3 {
 }
 
 .hero-lede-line-visual {
-  align-items: baseline;
-  display: flex;
-  font-size: var(--hero-lede-line-font-size, 1em);
-  justify-content: space-between;
-  white-space: pre;
-  width: 100%;
-}
-
-.hero-lede-char {
-  flex: 0 0 auto;
-  white-space: pre;
+  display: block;
+  font-size: 1em;
+  white-space: nowrap;
+  width: max-content;
 }
 
 .hero-actions {
@@ -472,9 +465,6 @@ h3 {
 }
 
 .hero-view-label {
-  --hero-checkout-bleed: 3px;
-  --hero-project-squish: 2px;
-
   align-self: center;
   align-items: center;
   display: grid;
@@ -498,7 +488,6 @@ h3 {
   height: max-content;
   justify-self: start;
   margin-left: var(--hero-view-stack-left, 0px);
-  min-width: var(--hero-view-stack-width, 0px);
   text-align: left;
   transform: translateY(1px) scale(1.1);
   transform-origin: center center;
@@ -516,23 +505,8 @@ h3 {
 
 .hero-view-label-stack > .hero-view-word,
 .hero-view-label-stack > .hero-project-word {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-}
-
-.hero-view-label-stack > .hero-view-word {
-  margin-left: calc(var(--hero-checkout-bleed) * -1);
-  width: calc(100% + (var(--hero-checkout-bleed) * 2));
-}
-
-.hero-view-label-stack > .hero-project-word {
-  margin-left: var(--hero-project-squish);
-  width: calc(100% - (var(--hero-project-squish) * 2));
-}
-
-.hero-view-label-stack .hero-word-space {
-  flex: 0 0 0.2em;
+  display: block;
+  width: max-content;
 }
 
 .hero-view-label-stack > span:last-child {
@@ -1547,6 +1521,46 @@ section:not(.hero) {
   outline-offset: 6px;
 }
 
+.case-grid-featured {
+  align-items: stretch;
+}
+
+.case-grid-featured > .case-card {
+  align-content: start;
+  display: grid;
+  grid-template-rows:
+    var(--case-featured-topline-row, auto)
+    var(--case-featured-title-row, auto)
+    var(--case-featured-description-row, auto)
+    var(--case-featured-tags-row, auto)
+    var(--case-featured-media-row, auto);
+}
+
+.case-grid-featured > .case-card > .case-topline {
+  align-self: start;
+  grid-row: 1;
+}
+
+.case-grid-featured > .case-card > .case-card-title-stack {
+  align-self: stretch;
+  grid-row: 2;
+}
+
+.case-grid-featured > .case-card > .case-description {
+  align-self: start;
+  grid-row: 3;
+}
+
+.case-grid-featured > .case-card > .case-tags {
+  align-self: start;
+  grid-row: 4;
+}
+
+.case-grid-featured > .case-card > .case-miniatures {
+  align-self: start;
+  grid-row: 5;
+}
+
 .case-topline {
   align-items: start;
   display: grid;
@@ -1639,6 +1653,10 @@ section:not(.hero) {
   width: 100%;
 }
 
+.case-card-title-stack:not(.case-card-title-stack-no-devices):not(.case-card-title-stack-long) {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
 .case-card-title-stack-long {
   align-items: start;
   grid-template-columns: minmax(0, 1fr);
@@ -1650,7 +1668,11 @@ section:not(.hero) {
 }
 
 .case-card-project-title-name-stack {
+  align-self: center;
+  display: inline-flex;
+  flex-direction: column;
   grid-column: 1;
+  justify-content: center;
   justify-self: start;
 }
 
@@ -1669,7 +1691,7 @@ section:not(.hero) {
 .case-card-title-stack-original .case-card-title-underline {
   color: var(--text);
   font-family: inherit;
-  font-size: 24px;
+  font-size: 30px;
   font-weight: 800;
   letter-spacing: 0;
   line-height: 1;
@@ -1705,15 +1727,20 @@ section:not(.hero) {
 }
 
 .case-card-title-device-stack {
-  display: inline-flex;
+  align-items: center;
+  align-self: center;
+  display: flex;
   flex: 0 0 auto;
   font-size: 27.85px;
   grid-column: 2;
-  justify-content: center;
-  justify-self: center;
+  justify-self: stretch;
   line-height: 1;
   min-width: 0;
   width: 100%;
+}
+
+.case-card-title-stack:not(.case-card-title-stack-no-devices):not(.case-card-title-stack-long) .case-card-title-device-stack {
+  grid-column: 2 / 4;
 }
 
 .case-card-title-stack-long .case-card-title-device-stack {
@@ -1736,13 +1763,13 @@ section:not(.hero) {
 .case-card-title-platform-slot::before {
   color: var(--mint);
   content: attr(data-platform-label);
+  display: block;
   font-family: inherit;
   font-size: 8px;
   font-weight: 850;
   left: 50%;
   letter-spacing: 0.06em;
   line-height: 1;
-  opacity: 0.62;
   text-align: center;
   white-space: nowrap;
 }
@@ -1753,32 +1780,50 @@ section:not(.hero) {
 
 .case-card-title-platform-list {
   -webkit-text-stroke: 0;
-  align-items: flex-start;
-  column-gap: var(--project-device-stack-gap, 0.42em);
-  display: inline-flex;
-  flex-direction: row;
+  align-items: center;
+  column-gap: 12px;
+  display: grid;
+  grid-template-columns: max-content max-content;
+  justify-content: end;
   paint-order: normal;
+  row-gap: 6px;
   text-shadow: none;
+  width: 100%;
 }
 
 .case-card-title-platform-column {
-  align-items: center;
-  display: inline-flex;
-  flex-direction: column;
-  gap: 6px;
-  line-height: 1;
-  min-width: 0;
+  display: contents;
+}
+
+.case-card-title-platform-column-platform > .case-card-title-platform-heading {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.case-card-title-platform-column-platform > .case-card-title-platform-items {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.case-card-title-platform-column-factor > .case-card-title-platform-heading {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.case-card-title-platform-column-factor > .case-card-title-platform-items {
+  grid-column: 2;
+  grid-row: 2;
 }
 
 .case-card-title-platform-heading {
   color: var(--mint);
   display: block;
   font-family: inherit;
-  font-size: 11px;
+  font-size: 12.1px;
   font-weight: 850;
+  justify-self: end;
   letter-spacing: 0.08em;
   line-height: 1;
-  opacity: 0.62;
   text-align: center;
   white-space: nowrap;
 }
@@ -1786,8 +1831,9 @@ section:not(.hero) {
 .case-card-title-platform-items {
   align-items: center;
   display: inline-flex;
-  flex-direction: column;
-  gap: 6px;
+  flex-direction: row;
+  gap: 8px;
+  justify-self: start;
   line-height: 1;
   paint-order: normal;
   text-shadow: none;
@@ -1806,8 +1852,20 @@ section:not(.hero) {
 }
 
 .case-card-title-platform-list .carousel-button-web {
+  height: 0.968em !important;
   margin-left: 0;
   transform: none;
+  width: 0.968em !important;
+}
+
+.case-card-title-platform-slot[data-platform-label="PHONE"] .carousel-button-phone {
+  height: 0.968em !important;
+  width: 0.681em !important;
+}
+
+.case-card-title-platform-slot[data-platform-label="TABLET"] .carousel-button-tablet {
+  height: 0.72em !important;
+  width: 1.08em !important;
 }
 
 .case-card-title-device-stack .phone-mini-frame,
@@ -1828,8 +1886,7 @@ section:not(.hero) {
 }
 
 .case-description {
-  display: grid;
-  gap: 0;
+  display: block;
   width: 100%;
 }
 
@@ -1931,26 +1988,6 @@ section:not(.hero) {
 .uiux-principle-read-more:focus-visible {
   outline: 1px solid var(--green);
   outline-offset: 3px;
-}
-
-.case-description-line {
-  display: block;
-  min-width: 0;
-  overflow: hidden;
-  width: 100%;
-}
-
-.case-description-line-visual {
-  --case-description-line-scale: 1;
-  --case-description-word-spacing: 0px;
-  display: block;
-  line-height: inherit;
-  min-width: 0;
-  transform: scaleX(var(--case-description-line-scale));
-  transform-origin: left center;
-  white-space: nowrap;
-  width: max-content;
-  word-spacing: var(--case-description-word-spacing);
 }
 
 .case-tags {
@@ -2815,6 +2852,7 @@ section.project-hero {
 
   .nav-bar {
     --nav-bar-inline-padding: 16px;
+    --nav-bar-height: clamp(36px, calc(23.61px + 3.87vw), 48px);
     --nav-link-bottom-separator-gap: 8px;
     --nav-link-separator-gap: 6px;
     --nav-link-top-separator-gap: 6px;
@@ -3101,8 +3139,8 @@ section.project-hero {
   }
 
   .profile-photo {
-    height: 132px;
-    width: 132px;
+    height: 165px;
+    width: 165px;
   }
 
   .phone-shell {
@@ -3285,6 +3323,20 @@ section.project-hero {
 @media (max-width: 630px) {
   .case-grid {
     grid-template-columns: 1fr;
+  }
+
+  .case-grid-featured .case-card-title-stack:not(.case-card-title-stack-no-devices):not(.case-card-title-stack-long) {
+    grid-template-columns: max-content minmax(0, 1fr);
+  }
+
+  .case-grid-featured .case-card-title-stack:not(.case-card-title-stack-no-devices):not(.case-card-title-stack-long) .case-card-title-device-stack {
+    grid-column: 2;
+  }
+
+  .case-grid-featured .case-card-project-title-name,
+  .case-grid-featured .case-card-title-underline {
+    overflow-wrap: normal;
+    white-space: nowrap;
   }
 
   .case-grid > .uiux-principle-card-expanded {
