@@ -1,0 +1,379 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [ 6 0 R 8 0 R 10 0 R 12 0 R 14 0 R 16 0 R ] /Count 6 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+5 0 obj
+<< /Length 6732 >>
+stream
+BT /F2 12.50 Tf 1 0 0 1 54.00 742.00 Tm (Prahlin Portfolio Work Log - July 30, 2026) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 716.00 Tm (Compiled summary for Thursday, July 30, 2026 - focus: continued Prahl.dev Portfolio) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 703.75 Tm (landing-page and Alla Vostra project-page refinement after the July 29 hero/social/case-study) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 691.50 Tm (pass, including narrow mobile nav and profile-photo sizing, removal of responsive text) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 679.25 Tm (stretching, featured case-study row synchronization, text-only PLATFORM/DEVICE metadata,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 667.00 Tm (Cinerific promo-card imagery, Prahl.dev card de-emphasis, Alla Vostra GitHub button) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 654.75 Tm (restyling, checkout-stage label cleanup, local dev-cache handling, static-export validation,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 642.50 Tm (refreshed project snapshot context, review of all prior Portfolio PDF worklogs, and) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 630.25 Tm (generation of the daily Portfolio PDF worklog.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 610.00 Tm (Generated in continuity with the established Prahlin Portfolio daily worklog cadence: compact) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 597.75 Tm (opening summary, source-material section, baseline section, goal list, work-completed) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 585.50 Tm (sections, validation section, files-touched list, follow-up context, and output-artifact) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 573.25 Tm (close.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 553.00 Tm (This artifact intentionally covers only Prahlin/portfolio work performed for the July 30) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 540.75 Tm (Eastern-time design session after portfolio_worklog_july29.pdf: source commit 15d84ec from) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 528.50 Tm (Thursday, July 30, 2026 at 19:57:19 EDT, source commit 8868c1a from Thursday, July 30, 2026) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 516.25 Tm (at 21:15:38 EDT, repeated local dev-cache and preview handling, validation checks, the) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 504.00 Tm (refreshed project snapshot, and this worklog-generation step. Alla Vostra, Cinerific, and) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 491.75 Tm (Credit King application repositories were not changed for this record.) Tj ET
+BT /F2 10.70 Tf 1 0 0 1 54.00 471.50 Tm (Source Materials Reviewed) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 455.50 Tm (- Ran ./read_project.sh from /Users/prahlin/gh/portfolio and regenerated) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 443.25 Tm (  portfolio_PROJECT_SNAPSHOT.txt before writing this worklog, preserving the project) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 431.00 Tm (  convention that Codex refreshes the current source snapshot before continuing Portfolio) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 418.75 Tm (  documentation work.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 406.50 Tm (- Reviewed the refreshed portfolio_PROJECT_SNAPSHOT.txt, including project notes, current) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 394.25 Tm (  source tree, line-numbered source dumps, tooling and deployment configuration, public image) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 382.00 Tm (  inventory, root-level PDF inventory, git context, and the standing instruction to ask for a) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 369.75 Tm (  commit message before committing or pushing.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 357.50 Tm (- Reviewed every pre-existing Portfolio root-level worklog PDF: portfolio_worklog_july11.pdf,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 345.25 Tm (  portfolio_worklog_july14.pdf, portfolio_worklog_july15_part1.pdf,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 333.00 Tm (  portfolio_worklog_july15_part2.pdf, portfolio_worklog_july16.pdf,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 320.75 Tm (  portfolio_worklog_july19.pdf, portfolio_worklog_july20.pdf, portfolio_worklog_july21.pdf,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 308.50 Tm (  portfolio_worklog_july22.pdf, portfolio_worklog_july23.pdf, portfolio_worklog_july24.pdf,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 296.25 Tm (  portfolio_worklog_july25.pdf, and portfolio_worklog_july29.pdf.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 284.00 Tm (- Extracted text from all thirteen existing Portfolio PDFs with pdftotext to preserve the) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 271.75 Tm (  same title cadence, opening-summary density, section order, bullet-heavy technical voice,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 259.50 Tm (  validation language, files-touched list, follow-up context, and output-artifact close.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 247.25 Tm (- Used portfolio_worklog_july29.pdf as the closest same-project reference because it) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 235.00 Tm (  documented the latest hero/social/case-study visual pass, source-snapshot refresh behavior,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 222.75 Tm (  late-session date handling, local dev-cache reset language, PDF metadata expectations, and) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 210.50 Tm (  current root-level naming convention.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 198.25 Tm (- Checked mature PDF metadata with pdfinfo and confirmed the current Portfolio artifacts use) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 186.00 Tm (  letter-size pages, Helvetica/Helvetica-Bold base fonts, compact five-to-six page bodies,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 173.75 Tm (  root-level filenames, and Codex standard-library PDF-generator metadata.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 161.50 Tm (- Reviewed Git history through git log, git show --stat, git show --name-status, branch) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 149.25 Tm (  state, and the committed scopes for 15d84ec and 8868c1a. HEAD and origin/main both resolved) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 137.00 Tm (  to 8868c1a before this PDF was generated.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 124.75 Tm (- Reviewed app/CaseDescription.tsx, app/CaseGridLayoutSync.tsx, app/HeroLede.tsx,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 112.50 Tm (  app/page.tsx, app/ProjectCarouselButton.tsx, app/PortfolioSections.tsx, app/globals.css,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 100.25 Tm (  app/projects/alla-vostra/page.tsx, package.json, read_project.sh, and the root-level PDF) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 88.00 Tm (  inventory before generating this artifact.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 75.75 Tm (- Checked the running local development routes at http://127.0.0.1:3000/ and) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 63.50 Tm (  http://127.0.0.1:3000/projects/alla-vostra and confirmed both returned 200 OK from the) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 323.00 30.00 Tm (Prahlin Portfolio Work Log - July 30, 2026 Page 1) Tj ET
+endstream
+endobj
+6 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 5 0 R >>
+endobj
+7 0 obj
+<< /Length 6813 >>
+stream
+BT /F1 9.15 Tf 1 0 0 1 54.00 742.00 Tm (  Next.js dev server.) Tj ET
+BT /F2 10.70 Tf 1 0 0 1 54.00 721.75 Tm (Baseline Status Before July 30 Work) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 705.75 Tm (- The July 29 Portfolio source already had baked LinkedIn and Resume social labels, refined) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 693.50 Tm (  hero proof and chip behavior, restored original case-study title typography, and the first) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 681.25 Tm (  PLAT:/FACTOR case-study metadata direction.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 669.00 Tm (- The featured case-study cards were still being tuned live against very narrow aspect) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 656.75 Tm (  ratios. Text stretching, forced kerning, early wrapping, and invisible clipping edges made) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 644.50 Tm (  the paragraph and title rows feel different from the Stack and Worklog cards.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 632.25 Tm (- The platform and form-factor metadata was still moving from icon-heavy PLAT:/FACTOR) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 620.00 Tm (  language into clearer text-only rows. The user wanted PLATFORM and DEVICE vocabulary, then) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 607.75 Tm (  a stricter row model and right-edge alignment for the headings and values.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 595.50 Tm (- The one-word and two-word case-study project names needed card-to-card vertical alignment) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 583.25 Tm (  that was driven by a stable metadata row, not by project-title height. Without that,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 571.00 Tm (  one-word titles could sit too close to paragraph text when other cards wrapped differently.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 558.75 Tm (- Cinerific still needed its featured-card image swapped from the intro logo frame to the) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 546.50 Tm (  same promo image visible in the landing hero device frame, then cropped to match the) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 534.25 Tm (  three-image Alla Vostra stack height.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 522.00 Tm (- The Prahl.dev featured card still visually competed with the central project cards and) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 509.75 Tm (  still carried a parenthetical THIS WEBSITE label that the user later wanted removed.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 497.50 Tm (- The Alla Vostra dedicated page still used the generic green primary GitHub buttons with) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 485.25 Tm (  lucide braces, while the landing page already had a more specific black GitHub treatment) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 473.00 Tm (  with a custom braces mark and stroked label text.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 460.75 Tm (- The Alla Vostra Product Flow stage names and numbering still reflected Customer Details and) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 448.50 Tm (  a Stage 02 starting offset that no longer matched the desired user-facing flow language.) Tj ET
+BT /F2 10.70 Tf 1 0 0 1 54.00 428.25 Tm (Goals for July 30) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 412.25 Tm (- Keep the narrowest mobile profile-photo and top navigation behavior responsive without) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 400.00 Tm (  disturbing wider aspect ratios that had already been approved.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 387.75 Tm (- Remove responsive text stretching and kerning from landing hero labels and featured) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 375.50 Tm (  case-study descriptions so words wrap naturally instead of being horizontally distorted.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 363.25 Tm (- Make featured case-study paragraphs mimic the natural Stack/Worklog card text behavior,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 351.00 Tm (  avoiding invisible clipping boundaries while preserving padding and professional line flow.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 338.75 Tm (- Synchronize the vertical placement of featured case-study toplines, project titles,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 326.50 Tm (  platform/device rows, paragraphs, chips, and image stacks across every card.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 314.25 Tm (- Move the PLATFORM/DEVICE metadata into its own card row between project title and) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 302.00 Tm (  paragraph, keep the label/value rows horizontal, align the heading right edges, and add the) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 289.75 Tm (  requested centered vertical divider between headings and values.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 277.50 Tm (- Increase featured case-study project-name typography to the requested final 40px state) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 265.25 Tm (  while preventing single-card portrait layouts from wrapping project names prematurely.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 253.00 Tm (- Replace Cinerific featured-card artwork with the landing-hero Cinerific promo image, match) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 240.75 Tm (  its width to Alla Vostra, and crop its vertical height to match the three-image stack.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 228.50 Tm (- Reduce Prahl.dev card emphasis while preserving its hover behavior, remove the THIS WEBSITE) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 216.25 Tm (  label, and keep Prahl.dev visually subordinate to the central project cards.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 204.00 Tm (- Restyle Alla Vostra GitHub buttons to match the landing-page GitHub treatment while) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 191.75 Tm (  preserving dedicated-page button dimensions, layout, and action-row behavior.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 179.50 Tm (- Rename the Alla Vostra flow stage to Checkout, update the matching expandable button text,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 167.25 Tm (  and reduce displayed Stage 0x numbers by one.) Tj ET
+BT /F2 10.70 Tf 1 0 0 1 54.00 147.00 Tm (Work Completed - Responsive Text and Featured Card Row Sync) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 131.00 Tm (- Tightened the mobile-only profile-photo treatment by scaling the narrowest-mode profile) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 118.75 Tm (  bubble while leaving the approved narrow aspect-ratio behavior intact.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 106.50 Tm (- Added a responsive mobile nav height clamp so the Prahl.dev border box hugs the green P-box) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 94.25 Tm (  in very narrow layouts and expands back toward the established height as the viewport) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 82.00 Tm (  becomes wide enough for the CTA and social controls.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 69.75 Tm (- Simplified HeroLede from client-side per-character fitting to plain line spans so the hero) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 323.00 30.00 Tm (Prahlin Portfolio Work Log - July 30, 2026 Page 2) Tj ET
+endstream
+endobj
+8 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 7 0 R >>
+endobj
+9 0 obj
+<< /Length 6573 >>
+stream
+BT /F1 9.15 Tf 1 0 0 1 54.00 742.00 Tm (  lede no longer applies responsive horizontal scaling or live letter stretching.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 729.75 Tm (- Removed per-letter Check Out Projects rendering and the measured hero-view-stack width) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 717.50 Tm (  dependency from app/page.tsx and ProjectCarouselButton.tsx so hero button-label typography) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 705.25 Tm (  no longer depends on stretching calculations.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 693.00 Tm (- Rebuilt CaseDescription as a simple server component that renders one natural paragraph) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 680.75 Tm (  from the provided text lines, eliminating line-scale and word-spacing calculations that) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 668.50 Tm (  caused featured-card descriptions to behave differently from Stack card text.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 656.25 Tm (- Added CaseGridLayoutSync as a client synchronization component for non-article featured) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 644.00 Tm (  case-study grids, measuring row margin-box heights after layout, resize, font readiness,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 631.75 Tm (  and ResizeObserver events.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 619.50 Tm (- Expanded the row synchronization model to include topline, title, device metadata,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 607.25 Tm (  description, tags, and media rows so all featured cards share consistent vertical reference) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 595.00 Tm (  points even when titles or copy wrap differently.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 582.75 Tm (- Scoped the synchronized CSS grid rows to .case-grid-featured > .case-card so the landing) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 570.50 Tm (  featured cards receive the row alignment behavior without rewriting the article-card grid) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 558.25 Tm (  or unrelated sections.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 546.00 Tm (- Added a shared title/device gap variable so the project-title row and the PLATFORM/DEVICE) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 533.75 Tm (  metadata row preserve matching vertical gap behavior while still participating in) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 521.50 Tm (  synchronized row measurements.) Tj ET
+BT /F2 10.70 Tf 1 0 0 1 54.00 501.25 Tm (Work Completed - Platform/Device Metadata and Card Visuals) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 485.25 Tm (- Converted the featured-card platform/factor display from icon-based PLAT:/FACTOR treatments) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 473.00 Tm (  into text-only PLATFORM and DEVICE rows with AND, IOS, WEB, PHONE, and TABLET values.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 460.75 Tm (- Moved the device metadata out of the project-title h3 and into its own direct card row) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 448.50 Tm (  between the project name and paragraph text, making it easier to synchronize the metadata) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 436.25 Tm (  row across cards.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 424.00 Tm (- Updated the metadata grid to direct row placement instead of display: contents wrapper) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 411.75 Tm (  placement, so PLATFORM values occupy row 1 and DEVICE values occupy row 2 without) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 399.50 Tm (  collapsing back into one combined row.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 387.25 Tm (- Aligned the PLATFORM and DEVICE heading right edges while letting the whole two-row stack) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 375.00 Tm (  start from the left edge of the heading column, matching the user requested heading/value) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 362.75 Tm (  relationship.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 350.50 Tm (- Added a 1px vertical divider in the same mint color as the metadata text, centered between) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 338.25 Tm (  the PLATFORM/DEVICE headings and the value words, without increasing the total horizontal) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 326.00 Tm (  gap footprint.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 313.75 Tm (- Raised featured case-study project-name typography through the requested tuning sequence) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 301.50 Tm (  and settled the restored original-card project names at 40px with normal letter spacing, no) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 289.25 Tm (  stroke, and no decorative shadow.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 277.00 Tm (- Protected featured project names from wrapping in one-card portrait layouts unless a) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 264.75 Tm (  standalone word truly cannot fit inside the card padding.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 252.50 Tm (- Removed the Prahl.dev THIS WEBSITE label and deleted its unused CSS, leaving the project) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 240.25 Tm (  title cleaner and avoiding hidden title-stack spacing artifacts.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 228.00 Tm (- Reduced the Prahl.dev featured card to half opacity by default and matched its hover state) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 215.75 Tm (  to the standard case-card hover look, so it reads as less central while still behaving) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 203.50 Tm (  interactively.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 191.25 Tm (- Swapped the Cinerific featured-card screenshot from cinerific-intro.png to) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 179.00 Tm (  cinerific_promo.png, added explicit image dimensions, and gave Cinerific a dedicated) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 166.75 Tm (  miniature class for precise card-level image sizing.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 154.50 Tm (- Matched the Cinerific featured-card image width to the combined width of the Alla Vostra) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 142.25 Tm (  three-image card stack and cropped its top/bottom through an aspect-ratio and) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 130.00 Tm (  container-query height rule so its visible height aligns with Alla Vostra.) Tj ET
+BT /F2 10.70 Tf 1 0 0 1 54.00 109.75 Tm (Work Completed - Alla Vostra Dedicated Page) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 93.75 Tm (- Added a local ProjectGitHubMark SVG to app/projects/alla-vostra/page.tsx so the dedicated) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 81.50 Tm (  page can use the same custom braces concept as the landing GitHub button without importing) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 69.25 Tm (  the landing page component.) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 323.00 30.00 Tm (Prahlin Portfolio Work Log - July 30, 2026 Page 3) Tj ET
+endstream
+endobj
+10 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 9 0 R >>
+endobj
+11 0 obj
+<< /Length 6652 >>
+stream
+BT /F1 9.15 Tf 1 0 0 1 54.00 742.00 Tm (- Restyled both Alla Vostra GitHub links with project-github-button and github-button) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 729.75 Tm (  classes, preserving the project-page .button sizing, padding, layout, and action) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 717.50 Tm (  positioning while adopting the black GitHub surface and stroked GitHub label treatment.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 705.25 Tm (- Changed the Alla Vostra GitHub label from View GitHub through user-directed iterations to) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 693.00 Tm (  the final View GitHub Project wording, updating both the visible text and data-text) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 680.75 Tm (  attribute used by the layered stroke effect.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 668.50 Tm (- Inverted the project GitHub icon asset so the braces mark became white on a black box,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 656.25 Tm (  removed the white border, grew the icon to hug the 48px button height, and tuned the brace) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 644.00 Tm (  separation to a 50 percent wider horizontal gap.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 631.75 Tm (- Scaled the Alla Vostra GitHub button label text to the accepted 21px state, keeping the) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 619.50 Tm (  icon size and button frame stable after the text-size adjustment.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 607.25 Tm (- Renamed the former Customer Details flow group to Checkout and updated the matching) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 595.00 Tm (  initial-stack conditional so the expandable section still opens with the same intended) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 582.75 Tm (  number of visible stacks.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 570.50 Tm (- Allowed the expandable button labels to follow the renamed group automatically, producing) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 558.25 Tm (  More Checkout Screens and Hide Checkout Screens without special-case copy.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 546.00 Tm (- Reduced every displayed Stage 0x card number in the Alla Vostra flow groups by one by) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 533.75 Tm (  changing the rendered offset from index + 2 to index + 1, leaving the content ordering) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 521.50 Tm (  itself unchanged.) Tj ET
+BT /F2 10.70 Tf 1 0 0 1 54.00 501.25 Tm (Work Completed - Commit Handling and Local State) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 485.25 Tm (- Committed and pushed 15d84ec, Refined featured case study layout and responsive text) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 473.00 Tm (  behavior, covering the narrow nav/profile adjustments, removal of text-stretching logic,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 460.75 Tm (  featured-card paragraph behavior, and synchronized row sizing.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 448.50 Tm (- Committed and pushed 8868c1a, Refined case-study cards and Alla Vostra project page,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 436.25 Tm (  covering the final featured-card metadata row, Cinerific/Prahl.dev visual treatments, Alla) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 424.00 Tm (  Vostra GitHub button restyling, Checkout flow labels, and stage-number adjustment.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 411.75 Tm (- Confirmed the final source branch state had HEAD and origin/main both at) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 399.50 Tm (  8868c1a0deabba51389858f0d572d11235c36093 before this PDF was generated.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 387.25 Tm (- Cleared the Next dev cache during the visual iteration sequence and restarted the local) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 375.00 Tm (  development server in a detached screen session named portfolio-dev after plain background) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 362.75 Tm (  launches exited under the tool runner.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 350.50 Tm (- Kept the refreshed project snapshot and this worklog PDF local as documentation artifacts) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 338.25 Tm (  pending a separate user-approved commit message, consistent with the standing) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 326.00 Tm (  no-commit-without-approval preference.) Tj ET
+BT /F2 10.70 Tf 1 0 0 1 54.00 305.75 Tm (Validation and Checks Performed) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 289.75 Tm (- Ran npm run check after the current July 30 source state and confirmed TypeScript) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 277.50 Tm (  validation passed with tsc --noEmit.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 265.25 Tm (- Ran npm run build:static and confirmed the local Next.js static export completed) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 253.00 Tm (  successfully, compiling, running TypeScript, collecting page data, generating six static) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 240.75 Tm (  pages, and finalizing page optimization.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 228.50 Tm (- Confirmed http://127.0.0.1:3000/ returned 200 OK from the running local Next.js dev server.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 216.25 Tm (- Confirmed http://127.0.0.1:3000/projects/alla-vostra returned 200 OK from the same local) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 204.00 Tm (  dev server after the dedicated-page button and flow-label changes.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 191.75 Tm (- Confirmed lsof showed node listening on TCP port 3000 and screen -ls showed the detached) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 179.50 Tm (  portfolio-dev screen session still present.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 167.25 Tm (- Checked git rev-parse HEAD and git rev-parse origin/main and confirmed both returned) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 155.00 Tm (  8868c1a0deabba51389858f0d572d11235c36093 before generating this worklog.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 142.75 Tm (- Checked git show --stat and git show --name-status for 15d84ec and 8868c1a to verify the) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 130.50 Tm (  committed source scope documented in this PDF.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 118.25 Tm (- Regenerated portfolio_PROJECT_SNAPSHOT.txt before this PDF so the current source tree,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 106.00 Tm (  recent commits, file inventory, PDF inventory, and public sync context were represented) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 93.75 Tm (  locally.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 81.50 Tm (- Restored next-env.d.ts after npm run build:static flipped the route-types import from) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 69.25 Tm (  .next/dev/types/routes.d.ts to .next/types/routes.d.ts, keeping build validation from) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 323.00 30.00 Tm (Prahlin Portfolio Work Log - July 30, 2026 Page 4) Tj ET
+endstream
+endobj
+12 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 11 0 R >>
+endobj
+13 0 obj
+<< /Length 6606 >>
+stream
+BT /F1 9.15 Tf 1 0 0 1 54.00 742.00 Tm (  leaving unrelated generated-file noise.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 729.75 Tm (- Generated this PDF with the same standard-library PDF writer style used by the mature) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 717.50 Tm (  Portfolio worklogs and checked metadata/text extraction after writing.) Tj ET
+BT /F2 10.70 Tf 1 0 0 1 54.00 697.25 Tm (Files Touched During July 30 Portfolio Work) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 681.25 Tm (- app/CaseDescription.tsx - simplified the featured-card description renderer from a) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 669.00 Tm (  client-side line-fitting component into natural paragraph output matching the Stack/Worklog) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 656.75 Tm (  card text behavior.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 644.50 Tm (- app/CaseGridLayoutSync.tsx - added and then refined the featured-card row synchronization) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 632.25 Tm (  component so title, device metadata, description, tags, media, and topline rows share) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 620.00 Tm (  measured heights across cards.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 607.75 Tm (- app/HeroLede.tsx - removed per-character hero lede fitting and responsive font-scaling) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 595.50 Tm (  logic so hero lede text no longer stretches during viewport changes.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 583.25 Tm (- app/page.tsx - removed per-letter Check Out Projects rendering and the now-unneeded) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 571.00 Tm (  measured hero-view stack width dependency.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 558.75 Tm (- app/ProjectCarouselButton.tsx - converted featured-card platform/device metadata to) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 546.50 Tm (  text-only rows, removed card metadata icons, added direct grid row classes, inserted the) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 534.25 Tm (  vertical metadata divider, and removed stale measurement behavior.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 522.00 Tm (- app/PortfolioSections.tsx - rendered CaseGridLayoutSync for featured cards, moved device) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 509.75 Tm (  metadata out of h3 title nodes, removed the Prahl.dev THIS WEBSITE label, added Cinerific) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 497.50 Tm (  promo image dimensions, and assigned per-project miniature classes.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 485.25 Tm (- app/globals.css - tuned mobile nav and profile-photo behavior, featured-card grid rows,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 473.00 Tm (  project-name typography, metadata row spacing/alignment/divider styling, Cinerific card) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 460.75 Tm (  image crop rules, Prahl.dev card opacity/hover behavior, and Alla Vostra project GitHub) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 448.50 Tm (  button styling.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 436.25 Tm (- app/projects/alla-vostra/page.tsx - added the custom project GitHub mark, restyled both) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 424.00 Tm (  GitHub buttons, tuned the icon colors/scale/brace gap, changed the button text to View) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 411.75 Tm (  GitHub Project, renamed the flow group to Checkout, and reduced displayed stage numbers by) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 399.50 Tm (  one.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 387.25 Tm (- portfolio_PROJECT_SNAPSHOT.txt - regenerated by ./read_project.sh for this worklog pass and) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 375.00 Tm (  left modified locally as the current project-context artifact.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 362.75 Tm (- portfolio_worklog_july30.pdf - generated as this daily Portfolio worklog artifact in the) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 350.50 Tm (  root-level Portfolio worklog convention.) Tj ET
+BT /F2 10.70 Tf 1 0 0 1 54.00 330.25 Tm (Follow-Up Context) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 314.25 Tm (- The public source branch is already represented by origin/main at 8868c1a, and the July 30) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 302.00 Tm (  source changes have been pushed to main.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 289.75 Tm (- The refreshed portfolio_PROJECT_SNAPSHOT.txt and this July 30 PDF remain local until the) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 277.50 Tm (  user provides or approves a commit message for documentation artifact changes.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 265.25 Tm (- Because this PDF increases the Portfolio root-level worklog artifact count from 13 to 14,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 253.00 Tm (  visible public copy can be updated later only if the user wants exact Portfolio worklog) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 240.75 Tm (  inventory reflected in card or proof-stat copy.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 228.50 Tm (- The featured case-study metadata is now intentionally text-only and divided into PLATFORM) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 216.25 Tm (  and DEVICE rows. Future edits should preserve the separate synchronized row unless the user) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 204.00 Tm (  asks to reopen the card hierarchy.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 191.75 Tm (- The featured-card row synchronizer measures margin-box heights after resize and font) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 179.50 Tm (  readiness. Future CSS row-margin changes should be checked against CaseGridLayoutSync so) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 167.25 Tm (  alignment does not drift between one-word and two-word project titles.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 155.00 Tm (- The Cinerific featured-card image now depends on cinerific_promo.png plus container-query) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 142.75 Tm (  height behavior. Future image swaps should verify the Cinerific crop against the Alla) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 130.50 Tm (  Vostra three-image stack height.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 118.25 Tm (- The Prahl.dev card is intentionally half visible until hover. Future case-card opacity or) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 106.00 Tm (  hover changes should test that card separately because it is meant to read as less) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 93.75 Tm (  important than Alla Vostra, Cinerific, and Credit King.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 81.50 Tm (- The Alla Vostra dedicated-page GitHub buttons now use a local SVG mark rather than the) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 69.25 Tm (  landing-page component. Future GitHub-button visual changes should update both surfaces) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 323.00 30.00 Tm (Prahlin Portfolio Work Log - July 30, 2026 Page 5) Tj ET
+endstream
+endobj
+14 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 13 0 R >>
+endobj
+15 0 obj
+<< /Length 1931 >>
+stream
+BT /F1 9.15 Tf 1 0 0 1 54.00 742.00 Tm (  deliberately if exact parity is desired.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 729.75 Tm (- Continue treating future Portfolio work as local-only unless the user explicitly asks to) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 717.50 Tm (  commit, push, deploy, publish, or update the public website.) Tj ET
+BT /F2 10.70 Tf 1 0 0 1 54.00 697.25 Tm (Output Artifact) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 681.25 Tm (- Generated file: portfolio_worklog_july30.pdf.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 669.00 Tm (- Location: /Users/prahlin/gh/portfolio/portfolio_worklog_july30.pdf.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 656.75 Tm (- Naming follows the existing root-level Portfolio convention: portfolio_worklog_july30.pdf.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 644.50 Tm (  No part suffix was used because this is the first July 30 Portfolio worklog artifact.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 632.25 Tm (- Uses the same daily worklog structure and compact technical voice established by) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 620.00 Tm (  portfolio_worklog_july11.pdf through portfolio_worklog_july29.pdf.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 607.75 Tm (- Generated with a small standard-library PDF writer; no external PDF dependency was) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 595.50 Tm (  installed for this artifact.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 583.25 Tm (- The local project date used for this filename and title is Thursday, July 30, 2026 EDT,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 571.00 Tm (  matching the machine and repository work-session clock. UTC response headers during) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 558.75 Tm (  validation were already Friday, July 31, 2026, but the user requested the U.S. Eastern date) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 546.50 Tm (  convention for this worklog.) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 323.00 30.00 Tm (Prahlin Portfolio Work Log - July 30, 2026 Page 6) Tj ET
+endstream
+endobj
+16 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 15 0 R >>
+endobj
+17 0 obj
+<< /Title (Prahlin Portfolio Work Log - July 30, 2026) /Subject (Portfolio website development worklog) /Author (Codex) /Creator (Codex standard-library PDF generator) /Producer (Codex standard-library PDF generator) /CreationDate (D:20260730212015-04'00') /ModDate (D:20260730212015-04'00') >>
+endobj
+xref
+0 18
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000151 00000 n 
+0000000221 00000 n 
+0000000296 00000 n 
+0000007079 00000 n 
+0000007215 00000 n 
+0000014079 00000 n 
+0000014215 00000 n 
+0000020839 00000 n 
+0000020976 00000 n 
+0000027680 00000 n 
+0000027818 00000 n 
+0000034476 00000 n 
+0000034614 00000 n 
+0000036597 00000 n 
+0000036735 00000 n 
+trailer
+<< /Size 18 /Root 1 0 R /Info 17 0 R >>
+startxref
+37046
+%%EOF
