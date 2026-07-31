@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { ArrowLeft, ArrowRight, Braces, Mail } from "lucide-react";
+import { ArrowLeft, ArrowRight, Mail } from "lucide-react";
 
 import ExpandableFlowStacks from "./ExpandableFlowStacks";
 
@@ -16,6 +16,50 @@ const metadataItems = [
   "Node.js backend",
   "Android QA + release prep",
 ];
+
+function ProjectGitHubMark() {
+  return (
+    <svg
+      aria-hidden
+      className="github-icon-mark project-github-icon-mark"
+      height="32.4"
+      viewBox="0 0 24 24"
+      width="32.4"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g transform="translate(-3.36 -3.36) scale(1.28)">
+        <rect
+          fill="#000"
+          height="18"
+          rx="3"
+          stroke="none"
+          strokeWidth="1.35"
+          width="18"
+          x="3"
+          y="3"
+        />
+        <path
+          d="M10.15 7.45h-.52c-.86 0-1.32.46-1.32 1.32v2.05c0 .72-.5 1.18-1.28 1.18.78 0 1.28.46 1.28 1.18v2.05c0 .86.46 1.32 1.32 1.32h.52"
+          fill="none"
+          stroke="#f3fff7"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
+          transform="translate(-0.93 0)"
+        />
+        <path
+          d="M13.85 16.55h.52c.86 0 1.32-.46 1.32-1.32v-2.05c0-.72.5-1.18 1.28-1.18-.78 0-1.28-.46-1.28-1.18V8.77c0-.86-.46-1.32-1.32-1.32h-.52"
+          fill="none"
+          stroke="#f3fff7"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
+          transform="translate(0.93 0)"
+        />
+      </g>
+    </svg>
+  );
+}
 
 const ownershipItems = [
   {
@@ -250,7 +294,7 @@ const screenshotGroups: {
     ],
   },
   {
-    title: "Customer Details",
+    title: "Checkout",
     copy: "Checkout details break the purchase path into focused, readable steps instead of one overloaded form.",
     stacks: [
       {
@@ -567,13 +611,15 @@ export default function AllaVostraCaseStudy() {
 
               <div className="hero-actions project-actions">
                 <a
-                  className="button button-primary"
+                  className="button button-primary project-github-button github-button"
                   href="https://github.com/Prahlin/alla_vostra"
                   rel="noreferrer"
                   target="_blank"
                 >
-                  <Braces aria-hidden size={18} />
-                  View GitHub
+                  <ProjectGitHubMark />
+                  <span className="github-label-text" data-text="View GitHub Project">
+                    View GitHub Project
+                  </span>
                 </a>
                 <a
                   className="button button-secondary"
@@ -707,7 +753,7 @@ export default function AllaVostraCaseStudy() {
             {screenshotGroups.map((group, index) => (
               <div className="flow-capture-group" key={group.title}>
                 <div className="flow-group-header">
-                  <span>Stage {String(index + 2).padStart(2, "0")}</span>
+                  <span>Stage {String(index + 1).padStart(2, "0")}</span>
                   <h3>{group.title}</h3>
                   <p>{group.copy}</p>
                 </div>
@@ -717,7 +763,7 @@ export default function AllaVostraCaseStudy() {
                   expandedLabel={`Hide ${group.title} Screens`}
                   initialStackCount={
                     group.title === "Browse" ||
-                    group.title === "Customer Details"
+                    group.title === "Checkout"
                       ? 2
                       : group.stacks.length
                   }
@@ -858,13 +904,15 @@ export default function AllaVostraCaseStudy() {
           </div>
           <div className="closing-actions">
             <a
-              className="button button-primary"
+              className="button button-primary project-github-button github-button"
               href="https://github.com/Prahlin/alla_vostra"
               rel="noreferrer"
               target="_blank"
             >
-              <Braces aria-hidden size={18} />
-              View GitHub
+              <ProjectGitHubMark />
+              <span className="github-label-text" data-text="View GitHub Project">
+                View GitHub Project
+              </span>
             </a>
             <a
               className="button button-secondary"

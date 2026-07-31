@@ -4,13 +4,22 @@ import { useLayoutEffect } from "react";
 
 const rowSelectors = {
   description: ".case-description",
+  device: ".case-card-title-device-stack",
   media: ".case-miniatures",
   tags: ".case-tags",
+  title: ".case-card-title-stack",
   topline: ".case-topline",
 } as const;
 
-type RowName = keyof typeof rowSelectors | "title";
-const rowNames: RowName[] = ["description", "media", "tags", "title", "topline"];
+type RowName = keyof typeof rowSelectors;
+const rowNames: RowName[] = [
+  "description",
+  "device",
+  "media",
+  "tags",
+  "title",
+  "topline",
+];
 
 function marginBoxHeight(element: HTMLElement) {
   const style = window.getComputedStyle(element);
@@ -18,26 +27,6 @@ function marginBoxHeight(element: HTMLElement) {
   const marginBottom = Number.parseFloat(style.marginBottom) || 0;
 
   return element.getBoundingClientRect().height + marginTop + marginBottom;
-}
-
-function titleReferenceHeight(card: HTMLElement) {
-  const title = card.querySelector<HTMLElement>(".case-card-title-stack");
-
-  if (!title) {
-    return 0;
-  }
-
-  const reference =
-    title.querySelector<HTMLElement>(".case-card-title-device-stack") ?? title;
-  const style = window.getComputedStyle(title);
-  const marginTop = Number.parseFloat(style.marginTop) || 0;
-  const marginBottom = Number.parseFloat(style.marginBottom) || 0;
-  const titleMarginBoxHeight =
-    title.getBoundingClientRect().height + marginTop + marginBottom;
-  const referenceMarginBoxHeight =
-    reference.getBoundingClientRect().height + marginTop + marginBottom;
-
-  return Math.max(referenceMarginBoxHeight, titleMarginBoxHeight);
 }
 
 export function CaseGridLayoutSync() {
@@ -80,6 +69,7 @@ export function CaseGridLayoutSync() {
         );
         const rowHeights = {
           description: 0,
+          device: 0,
           media: 0,
           tags: 0,
           title: 0,
@@ -87,11 +77,6 @@ export function CaseGridLayoutSync() {
         };
 
         cards.forEach((card) => {
-          rowHeights.title = Math.max(
-            rowHeights.title,
-            titleReferenceHeight(card),
-          );
-
           Object.entries(rowSelectors).forEach(([name, selector]) => {
             const rowElement = card.querySelector<HTMLElement>(selector);
 

@@ -509,27 +509,30 @@ export function ProjectDeviceStack({
         ref={stackRef}
         style={stackStyle}
       >
-        <span className="case-card-title-platform-column case-card-title-platform-column-platform">
-          <span className="case-card-title-platform-heading">PLATFORM</span>
-          <span className="case-card-title-platform-items">
-            {platforms.map((platform) => (
-              <PlatformIconSlot
-                key={platform}
-                label={
-                  platform === "web"
-                    ? "WEB"
-                    : platform === "android"
-                      ? "AND"
-                      : "IOS"
-                }
-              />
-            ))}
-          </span>
+        <span className="case-card-title-platform-heading case-card-title-platform-heading-platform">
+          PLATFORM
+        </span>
+        <span className="case-card-title-platform-divider" aria-hidden="true" />
+        <span className="case-card-title-platform-items case-card-title-platform-items-platform">
+          {platforms.map((platform) => (
+            <PlatformIconSlot
+              key={platform}
+              label={
+                platform === "web"
+                  ? "WEB"
+                  : platform === "android"
+                    ? "AND"
+                    : "IOS"
+              }
+            />
+          ))}
         </span>
         {factorDevices.length > 0 ? (
-          <span className="case-card-title-platform-column case-card-title-platform-column-factor">
-            <span className="case-card-title-platform-heading">DEVICE</span>
-            <span className="case-card-title-platform-items">
+          <>
+            <span className="case-card-title-platform-heading case-card-title-platform-heading-factor">
+              DEVICE
+            </span>
+            <span className="case-card-title-platform-items case-card-title-platform-items-factor">
               {factorDevices.map((device) => (
                 <PlatformIconSlot
                   key={device}
@@ -537,7 +540,7 @@ export function ProjectDeviceStack({
                 />
               ))}
             </span>
-          </span>
+          </>
         ) : null}
       </span>
     );

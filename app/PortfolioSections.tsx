@@ -19,8 +19,10 @@ type NavItem = {
 
 type CaseScreenshot = {
   alt: string;
+  height?: number;
   orientation?: "landscape" | "portrait";
   src: string;
+  width?: number;
 };
 
 type CaseStudy = {
@@ -54,9 +56,11 @@ const caseStudies: CaseStudy[] = [
     worklogStat: "9 worklogs",
     screenshots: [
       {
-        alt: "Cinerific intro logo frame",
+        alt: "Cinerific promo tablet frame",
+        height: 625,
         orientation: "landscape",
-        src: "/images/cinerific-intro.png",
+        src: "/images/cinerific_promo.png",
+        width: 1000,
       },
     ],
   },
@@ -1291,11 +1295,12 @@ function CaseStudyTitle({
 
   if (study.id === "this-portfolio-website" && !displayTitle) {
     return (
-      <h3 className={titleClassName} aria-label={study.title}>
-        <span className="case-card-project-title-name-stack case-card-portfolio-title-stack">
-          <span className="case-card-title-underline">Prahl.dev</span>
-          <span className="case-card-title-website-label">(THIS WEBSITE)</span>
-        </span>
+      <>
+        <h3 className={titleClassName} aria-label={study.title}>
+          <span className="case-card-project-title-name-stack case-card-portfolio-title-stack">
+            <span className="case-card-title-underline">Prahl.dev</span>
+          </span>
+        </h3>
         {showDeviceStack ? (
           <span className="case-card-title-device-stack" aria-hidden="true">
             <ProjectDeviceStack
@@ -1309,21 +1314,23 @@ function CaseStudyTitle({
             />
           </span>
         ) : null}
-      </h3>
+      </>
     );
   }
 
   if (study.id === "this-portfolio-website") {
     return (
-      <h3 className={titleClassName} aria-label={renderedTitle}>
-        <span
-          className="case-card-project-title-name-stack case-card-portfolio-title-stack"
-          style={{ color: titleColor, fontSize: titleFontSize }}
-        >
-          <span className={underlineTitle ? "case-card-title-underline" : undefined}>
-            {renderedTitle}
+      <>
+        <h3 className={titleClassName} aria-label={renderedTitle}>
+          <span
+            className="case-card-project-title-name-stack case-card-portfolio-title-stack"
+            style={{ color: titleColor, fontSize: titleFontSize }}
+          >
+            <span className={underlineTitle ? "case-card-title-underline" : undefined}>
+              {renderedTitle}
+            </span>
           </span>
-        </span>
+        </h3>
         {showDeviceStack ? (
           <span className="case-card-title-device-stack" aria-hidden="true">
             <ProjectDeviceStack
@@ -1337,7 +1344,7 @@ function CaseStudyTitle({
             />
           </span>
         ) : null}
-      </h3>
+      </>
     );
   }
 
@@ -1350,43 +1357,45 @@ function CaseStudyTitle({
   }
 
   return (
-    <h3 className={titleClassName} aria-label={renderedTitle}>
-      <span
-        className="case-card-project-title-name-stack"
-        aria-hidden="true"
-        style={
-          restoreOriginalTitleTypography
-            ? undefined
-            : {
-                WebkitTextStroke: "7.88px #000",
-                alignItems: "center",
-                color: titleColor || variant.color,
-                display: "inline-flex",
-                flexDirection: "column",
-                fontSize: titleFontSize ?? variant.fontSize,
-                gap: "4.13px",
-                justifyContent: "center",
-                lineHeight: 0.95,
-                paintOrder: "stroke fill",
-                textShadow: "0 0 0 #000",
-              }
-        }
-      >
+    <>
+      <h3 className={titleClassName} aria-label={renderedTitle}>
         <span
-          className="case-card-project-title-name"
+          className="case-card-project-title-name-stack"
+          aria-hidden="true"
           style={
             restoreOriginalTitleTypography
               ? undefined
               : {
                   WebkitTextStroke: "7.88px #000",
+                  alignItems: "center",
+                  color: titleColor || variant.color,
+                  display: "inline-flex",
+                  flexDirection: "column",
+                  fontSize: titleFontSize ?? variant.fontSize,
+                  gap: "4.13px",
+                  justifyContent: "center",
+                  lineHeight: 0.95,
                   paintOrder: "stroke fill",
                   textShadow: "0 0 0 #000",
                 }
           }
         >
-          {renderedTitle}
+          <span
+            className="case-card-project-title-name"
+            style={
+              restoreOriginalTitleTypography
+                ? undefined
+                : {
+                    WebkitTextStroke: "7.88px #000",
+                    paintOrder: "stroke fill",
+                    textShadow: "0 0 0 #000",
+                  }
+            }
+          >
+            {renderedTitle}
+          </span>
         </span>
-      </span>
+      </h3>
       {showDeviceStack ? (
         <span className="case-card-title-device-stack" aria-hidden="true">
           <ProjectDeviceStack
@@ -1401,7 +1410,7 @@ function CaseStudyTitle({
           />
         </span>
       ) : null}
-    </h3>
+    </>
   );
 }
 
@@ -1467,7 +1476,7 @@ function CaseStudyCard({
           aria-label={`${study.title} app screenshots`}
           className={`case-miniatures${
             usesLandscapeLayout ? " case-miniatures-landscape" : ""
-          }${usesPairLayout ? " case-miniatures-pair" : ""}`}
+          }${usesPairLayout ? " case-miniatures-pair" : ""} case-miniatures-${study.id}`}
         >
           {study.screenshots.map((screenshot) => (
             <Image
@@ -1477,10 +1486,16 @@ function CaseStudyCard({
                   ? " case-miniature-landscape"
                   : ""
               }`}
-              height={screenshot.orientation === "landscape" ? 166 : 192}
+              height={
+                screenshot.height ??
+                (screenshot.orientation === "landscape" ? 166 : 192)
+              }
               key={screenshot.src}
               src={screenshot.src}
-              width={screenshot.orientation === "landscape" ? 238 : 108}
+              width={
+                screenshot.width ??
+                (screenshot.orientation === "landscape" ? 238 : 108)
+              }
             />
           ))}
         </div>
