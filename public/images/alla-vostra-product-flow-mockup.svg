@@ -1,0 +1,133 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="102 270 862 1312" role="img" aria-labelledby="title desc">
+  <title id="title">Alla Vostra horizontal section product flow mockup</title>
+  <desc id="desc">A green and black product flow diagram for Alla Vostra. Vertical rails label Browse, Cart, Checkout, Payment, and Confirmation. Each section contains its screens arranged horizontally, including Products Overlay and Cart Overlay in Cart, plus Contact, Address, and Date and Time in Checkout.</desc>
+  <defs>
+    <linearGradient id="pageBg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#06140d"/>
+      <stop offset="0.56" stop-color="#020604"/>
+      <stop offset="1" stop-color="#031108"/>
+    </linearGradient>
+    <linearGradient id="panelFill" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#123822" stop-opacity="0.92"/>
+      <stop offset="0.52" stop-color="#05120b" stop-opacity="0.94"/>
+      <stop offset="1" stop-color="#020604" stop-opacity="0.96"/>
+    </linearGradient>
+    <linearGradient id="nodeFill" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#0e3b23"/>
+      <stop offset="0.58" stop-color="#052012"/>
+      <stop offset="1" stop-color="#031008"/>
+    </linearGradient>
+    <linearGradient id="railFill" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#43ff92"/>
+      <stop offset="1" stop-color="#05af59"/>
+    </linearGradient>
+    <pattern id="grid" width="56" height="56" patternUnits="userSpaceOnUse">
+      <path d="M56 0H0V56" fill="none" stroke="#43ff92" stroke-opacity="0.075" stroke-width="1"/>
+    </pattern>
+    <filter id="softGlow" x="-25%" y="-25%" width="150%" height="150%">
+      <feGaussianBlur stdDeviation="9" result="blur"/>
+      <feColorMatrix in="blur" type="matrix" values="0 0 0 0 0.07 0 0 0 0 1 0 0 0 0 0.42 0 0 0 0.46 0"/>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <marker id="arrow" markerHeight="12" markerWidth="12" orient="auto" refX="9" refY="6">
+      <path d="M2 2l8 4-8 4z" fill="#a8f8c3"/>
+    </marker>
+    <style>
+      .node-title { fill: #f3fff7; font: 900 22px ui-sans-serif, system-ui, sans-serif; text-anchor: middle; dominant-baseline: middle; }
+      .node-title-small { fill: #f3fff7; font: 900 18px ui-sans-serif, system-ui, sans-serif; text-anchor: middle; dominant-baseline: middle; }
+      .rail-text { dominant-baseline: middle; fill: #031008; font: 950 19px ui-sans-serif, system-ui, sans-serif; letter-spacing: 3px; text-anchor: middle; }
+      .arrow { fill: none; stroke: #a8f8c3; stroke-linecap: round; stroke-linejoin: round; stroke-opacity: 0.72; stroke-width: 3; marker-end: url(#arrow); }
+      .hairline { fill: none; stroke: #43ff92; stroke-opacity: 0.18; stroke-width: 1; }
+      .section-band { fill: none; fill-opacity: 0; stroke: #43ff92; stroke-opacity: 0; }
+    </style>
+  </defs>
+
+  <rect width="1080" height="1680" fill="url(#pageBg)"/>
+  <rect width="1080" height="1680" fill="url(#grid)"/>
+  <rect x="54" y="48" width="972" height="1584" rx="34" fill="#020604" fill-opacity="0.62" stroke="#43ff92" stroke-opacity="0.18"/>
+  <rect x="82" y="78" width="916" height="1524" rx="24" fill="url(#panelFill)" stroke="#c6ffd9" stroke-opacity="0.16"/>
+  <g>
+    <rect class="section-band" x="112" y="294" width="842" height="250" rx="16"/>
+    <rect x="126" y="314" width="54" height="210" rx="8" fill="url(#railFill)"/>
+    <text class="rail-text" transform="translate(153 419) rotate(-90)">BROWSE</text>
+
+    <rect class="section-band" x="112" y="552" width="842" height="250" rx="16"/>
+    <rect x="126" y="572" width="54" height="210" rx="8" fill="url(#railFill)" opacity="0.86"/>
+    <text class="rail-text" transform="translate(153 677) rotate(-90)">CART</text>
+
+    <rect class="section-band" x="112" y="810" width="842" height="250" rx="16"/>
+    <rect x="126" y="830" width="54" height="210" rx="8" fill="url(#railFill)" opacity="0.76"/>
+    <text class="rail-text" transform="translate(153 935) rotate(-90)">CHECKOUT</text>
+
+    <rect class="section-band" x="112" y="1068" width="842" height="250" rx="16"/>
+    <rect x="126" y="1088" width="54" height="210" rx="8" fill="url(#railFill)" opacity="0.66"/>
+    <text class="rail-text" transform="translate(153 1193) rotate(-90)">PAYMENT</text>
+
+    <rect class="section-band" x="112" y="1326" width="842" height="250" rx="16"/>
+    <rect x="126" y="1346" width="54" height="210" rx="8" fill="url(#railFill)" opacity="0.56"/>
+    <text class="rail-text" transform="translate(153 1451) rotate(-90)">CONFIRMATION</text>
+  </g>
+
+  <g filter="url(#softGlow)">
+    <rect x="224" y="377" width="116" height="84" rx="8" fill="url(#nodeFill)" stroke="#43ff92" stroke-opacity="0.5"/>
+    <text class="node-title" x="282" y="419">Home</text>
+
+    <rect x="354" y="377" width="152" height="84" rx="8" fill="url(#nodeFill)" stroke="#43ff92" stroke-opacity="0.48"/>
+    <text class="node-title" x="430" y="419">Products</text>
+
+    <rect x="520" y="377" width="124" height="84" rx="8" fill="url(#nodeFill)" stroke="#43ff92" stroke-opacity="0.46"/>
+    <text class="node-title" x="582" y="419">About</text>
+
+    <rect x="658" y="377" width="146" height="84" rx="8" fill="url(#nodeFill)" stroke="#43ff92" stroke-opacity="0.44"/>
+    <text class="node-title" x="731" y="419">Contact</text>
+
+    <rect x="818" y="377" width="112" height="84" rx="8" fill="url(#nodeFill)" stroke="#43ff92" stroke-opacity="0.42"/>
+    <text class="node-title" x="874" y="419">Shop</text>
+
+    <rect x="318" y="635" width="240" height="84" rx="8" fill="url(#nodeFill)" stroke="#43ff92" stroke-opacity="0.5"/>
+    <text class="node-title-small" x="438" y="677">Products Overlay</text>
+
+    <rect x="594" y="635" width="270" height="84" rx="8" fill="url(#nodeFill)" stroke="#43ff92" stroke-opacity="0.46"/>
+    <text class="node-title-small" x="729" y="677">Cart Overlay</text>
+
+    <rect x="226" y="893" width="190" height="84" rx="8" fill="url(#nodeFill)" stroke="#43ff92" stroke-opacity="0.5"/>
+    <text class="node-title" x="321" y="935">Contact</text>
+
+    <rect x="438" y="893" width="190" height="84" rx="8" fill="url(#nodeFill)" stroke="#43ff92" stroke-opacity="0.48"/>
+    <text class="node-title" x="533" y="935">Address</text>
+
+    <rect x="650" y="893" width="230" height="84" rx="8" fill="url(#nodeFill)" stroke="#43ff92" stroke-opacity="0.46"/>
+    <text class="node-title" x="765" y="935">Date &amp; Time</text>
+
+    <rect x="390" y="1151" width="300" height="84" rx="8" fill="url(#nodeFill)" stroke="#43ff92" stroke-opacity="0.5"/>
+    <text class="node-title" x="540" y="1193">Payment</text>
+
+    <rect x="354" y="1409" width="372" height="84" rx="8" fill="url(#nodeFill)" stroke="#43ff92" stroke-opacity="0.5"/>
+    <text class="node-title" x="540" y="1451">Confirmation</text>
+  </g>
+
+  <path class="arrow" d="M340 419H348"/>
+  <path class="arrow" d="M506 419H514"/>
+  <path class="arrow" d="M644 419H652"/>
+  <path class="arrow" d="M804 419H812"/>
+  <path class="arrow" d="M874 461V653Q874 677 850 677H558"/>
+
+  <path class="arrow" d="M558 677H588"/>
+  <path class="arrow" d="M729 719V911Q729 935 705 935H416"/>
+
+  <path class="arrow" d="M416 935H432"/>
+  <path class="arrow" d="M628 935H644"/>
+  <path class="arrow" d="M765 977V1169Q765 1193 741 1193H690"/>
+
+  <path class="arrow" d="M540 1235V1384"/>
+
+  <g opacity="0.72">
+    <path class="hairline" d="M204 544H930"/>
+    <path class="hairline" d="M204 802H930"/>
+    <path class="hairline" d="M204 1060H930"/>
+    <path class="hairline" d="M204 1318H930"/>
+  </g>
+</svg>

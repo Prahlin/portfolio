@@ -294,10 +294,114 @@ function WebMark({ scale = 1 }: { scale?: number }) {
   );
 }
 
-function PlatformIconSlot({ label }: { label: string }) {
+const platformLabelColumnStart = 3;
+
+function getPlatformLabelGridColumn(index: number) {
+  return platformLabelColumnStart + index * 2;
+}
+
+function getPlatformDividerGridColumn(index: number) {
+  return getPlatformLabelGridColumn(index) + 1;
+}
+
+function getPlatformListGridTemplate(columnCount: number) {
+  const columns = ["max-content", "1px"];
+
+  Array.from({ length: columnCount }).forEach((_, index) => {
+    columns.push("max-content");
+
+    if (index < columnCount - 1) {
+      columns.push("1px");
+    }
+  });
+
+  return columns.join(" ");
+}
+
+function PlatformIconSlot({
+  gridColumn,
+  gridRow,
+  label,
+}: {
+  gridColumn?: number;
+  gridRow?: number;
+  label: string;
+}) {
   return (
-    <span className="case-card-title-platform-slot" data-platform-label={label}>
+    <span
+      className="case-card-title-platform-slot"
+      data-platform-label={label}
+      style={
+        gridColumn && gridRow
+          ? {
+              gridColumn: String(gridColumn),
+              gridRow: String(gridRow),
+            }
+          : undefined
+      }
+    >
     </span>
+  );
+}
+
+function PlatformLabelDivider({
+  gridColumn,
+  gridRow,
+  kind,
+}: {
+  gridColumn?: number;
+  gridRow?: number | string;
+  kind: "grid" | "item";
+}) {
+  return (
+    <span
+      aria-hidden="true"
+      className={`case-card-title-platform-divider case-card-title-platform-${kind}-divider`}
+      style={
+        gridColumn && gridRow
+          ? {
+              gridColumn: String(gridColumn),
+              gridRow: String(gridRow),
+            }
+          : undefined
+      }
+    />
+  );
+}
+
+function PlatformLabelSlots({
+  labels,
+  row,
+}: {
+  labels: string[];
+  row: number;
+}) {
+  return labels.map((label, index) => (
+    <PlatformIconSlot
+      gridColumn={getPlatformLabelGridColumn(index)}
+      gridRow={row}
+      key={`${row}-${label}`}
+      label={label}
+    />
+  ));
+}
+
+function PlatformColumnDividers({
+  columnCount,
+  gridRow,
+}: {
+  columnCount: number;
+  gridRow: number | string;
+}) {
+  return Array.from({ length: Math.max(0, columnCount - 1) }).map(
+    (_, index) => (
+      <PlatformLabelDivider
+        gridColumn={getPlatformDividerGridColumn(index)}
+        gridRow={gridRow}
+        key={`divider-${index}`}
+        kind="item"
+      />
+    ),
   );
 }
 
@@ -503,43 +607,48 @@ export function ProjectDeviceStack({
       factorDevices.push("tablet");
     }
 
+    const platformLabels = platforms.map((platform) =>
+      platform === "web" ? "WEB" : platform === "android" ? "AND" : "IOS",
+    );
+    const factorDeviceLabels = factorDevices.map((device) =>
+      device === "phone" ? "PHONE" : "TABLET",
+    );
+    const labelColumnCount = Math.max(
+      platformLabels.length,
+      factorDeviceLabels.length,
+      1,
+    );
+    const dividerGridRow = factorDeviceLabels.length > 0 ? "1 / 3" : 1;
+    const platformListStyle = {
+      ...stackStyle,
+      gridTemplateColumns: getPlatformListGridTemplate(labelColumnCount),
+    };
+
     return (
       <span
         className="carousel-button-project case-card-title-platform-list"
         ref={stackRef}
-        style={stackStyle}
+        style={platformListStyle}
       >
         <span className="case-card-title-platform-heading case-card-title-platform-heading-platform">
           PLATFORM
         </span>
-        <span className="case-card-title-platform-divider" aria-hidden="true" />
-        <span className="case-card-title-platform-items case-card-title-platform-items-platform">
-          {platforms.map((platform) => (
-            <PlatformIconSlot
-              key={platform}
-              label={
-                platform === "web"
-                  ? "WEB"
-                  : platform === "android"
-                    ? "AND"
-                    : "IOS"
-              }
-            />
-          ))}
-        </span>
+        <PlatformLabelDivider
+          gridColumn={2}
+          gridRow={dividerGridRow}
+          kind="grid"
+        />
+        <PlatformLabelSlots labels={platformLabels} row={1} />
+        <PlatformColumnDividers
+          columnCount={labelColumnCount}
+          gridRow={dividerGridRow}
+        />
         {factorDevices.length > 0 ? (
           <>
             <span className="case-card-title-platform-heading case-card-title-platform-heading-factor">
               DEVICE
             </span>
-            <span className="case-card-title-platform-items case-card-title-platform-items-factor">
-              {factorDevices.map((device) => (
-                <PlatformIconSlot
-                  key={device}
-                  label={device === "phone" ? "PHONE" : "TABLET"}
-                />
-              ))}
-            </span>
+            <PlatformLabelSlots labels={factorDeviceLabels} row={2} />
           </>
         ) : null}
       </span>

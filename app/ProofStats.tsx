@@ -141,7 +141,7 @@ export function ProofStats({ stats }: { stats: ProofStat[] }) {
       ref={stripRef}
     >
       {stats.map((stat) => (
-        <div className="stats-strip-item" key={stat.label}>
+        <div className="stats-strip-item" key={`${stat.value}-${stat.label}`}>
           <strong>{stat.value}</strong>
           <span className="stats-strip-label" aria-label={stat.label}>
             <span className="stats-strip-label-sr">{stat.label}</span>

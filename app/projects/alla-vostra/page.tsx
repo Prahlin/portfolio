@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { ArrowLeft, ArrowRight, Mail } from "lucide-react";
 
+import { ProofStats } from "../../ProofStats";
 import ExpandableFlowStacks from "./ExpandableFlowStacks";
 
 export const metadata: Metadata = {
@@ -15,6 +16,16 @@ const metadataItems = [
   "Stripe payments",
   "Node.js backend",
   "Android QA + release prep",
+];
+
+const proofStats = [
+  {
+    label: "Quality GitHub Commits",
+    value: "0.4k",
+  },
+  { label: "Real-Time Project Worklogs", value: "0.1k" },
+  { label: "Store Front Releases", value: "2" },
+  { label: "Website", value: "1" },
 ];
 
 function ProjectGitHubMark() {
@@ -125,15 +136,6 @@ type FlowScreenStack = {
   screens: FlowScreen[];
   title: string;
 };
-
-const flowSegments = [
-  "Launch",
-  "Browse",
-  "Cart",
-  "Details",
-  "Payment",
-  "Confirmation",
-];
 
 const launchScreen: FlowScreen = {
   aspect: "tall",
@@ -570,7 +572,7 @@ function CasePhone({
 
 export default function AllaVostraCaseStudy() {
   return (
-    <main className="project-page">
+    <main className="project-page alla-vostra-case">
       <section className="project-hero" id="top">
         <div className="site-shell">
           <header className="nav-bar project-nav">
@@ -617,16 +619,24 @@ export default function AllaVostraCaseStudy() {
                   target="_blank"
                 >
                   <ProjectGitHubMark />
-                  <span className="github-label-text" data-text="View GitHub Project">
-                    View GitHub Project
+                  <span className="github-label-text" data-text="View GitHub">
+                    View GitHub
                   </span>
                 </a>
                 <a
-                  className="button button-secondary"
+                  className="button button-primary project-contact-button"
                   href="mailto:martin@prahlproductions.com"
                 >
-                  <Mail aria-hidden size={18} />
-                  Contact
+                  <span className="project-contact-icon-mark" aria-hidden="true">
+                    <Mail className="project-contact-icon-stroke" size={36} />
+                    <Mail className="project-contact-icon-fill" size={36} />
+                  </span>
+                  <span
+                    className="resume-label-text project-contact-label-text"
+                    data-text="Contact Dev"
+                  >
+                    Contact Dev
+                  </span>
                 </a>
               </div>
             </div>
@@ -651,12 +661,54 @@ export default function AllaVostraCaseStudy() {
                 className="av-device-confirm"
                 src="/images/confirmed_overlay_small.png"
               />
-              <div className="av-showcase-proof">
-                <strong>333 commits</strong>
-                <span>Full stack ordering, payment, QA, and release work.</span>
+              <div className="av-showcase-proof-row">
+                <div className="av-showcase-proof">
+                  <strong>Full-Stack</strong>
+                  <span className="av-showcase-skill-grid">
+                    <span className="av-showcase-skill-item">
+                      <span className="av-showcase-skill-plus">+</span>
+                      <span className="av-showcase-skill-label">UI/UX</span>
+                    </span>
+                    <span className="av-showcase-skill-item">
+                      <span className="av-showcase-skill-plus">+</span>
+                      <span className="av-showcase-skill-label">F-End</span>
+                    </span>
+                    <span className="av-showcase-skill-item">
+                      <span className="av-showcase-skill-plus">+</span>
+                      <span className="av-showcase-skill-label">B-End</span>
+                    </span>
+                    <span className="av-showcase-skill-item">
+                      <span className="av-showcase-skill-plus">+</span>
+                      <span className="av-showcase-skill-label">Release</span>
+                    </span>
+                  </span>
+                </div>
+                <div className="av-showcase-proof">
+                  <strong>X-Platform</strong>
+                  <span className="av-showcase-skill-grid av-showcase-platform-grid">
+                    <span className="av-showcase-platform-column">
+                      <span className="av-showcase-skill-item">
+                        <span className="av-showcase-skill-plus">+</span>
+                        <span className="av-showcase-skill-label">Android</span>
+                      </span>
+                      <span className="av-showcase-skill-item">
+                        <span className="av-showcase-skill-plus">+</span>
+                        <span className="av-showcase-skill-label">iOS</span>
+                      </span>
+                    </span>
+                    <span className="av-showcase-platform-column">
+                      <span className="av-showcase-skill-item">
+                        <span className="av-showcase-skill-plus">+</span>
+                        <span className="av-showcase-skill-label">Web</span>
+                      </span>
+                    </span>
+                  </span>
+                </div>
               </div>
             </div>
           </div>
+
+          <ProofStats stats={proofStats} />
         </div>
       </section>
 
@@ -711,12 +763,6 @@ export default function AllaVostraCaseStudy() {
       <section id="product-flow">
         <div className="site-shell">
           <SectionHeading kicker="Product Flow" title="Product Flow" />
-          <div className="flow-segments" aria-label="Alla Vostra flow stages">
-            {flowSegments.map((segment) => (
-              <span key={segment}>{segment}</span>
-            ))}
-          </div>
-
           <div className="flow-layout">
             <figure
               className={`flow-screen flow-screen-main flow-screen-${launchScreen.aspect}`}
@@ -733,20 +779,16 @@ export default function AllaVostraCaseStudy() {
               <figcaption>{launchScreen.caption}</figcaption>
             </figure>
 
-            <div className="flow-section-intro">
-              <div className="flow-checkout-note">
-                <span>Flow System</span>
-                <p>
-                  The ordering path was built as a connected sequence, from
-                  first impression to product selection, cart review, checkout
-                  details, payment, and confirmation.
-                </p>
-              </div>
-              <p>
-                Android Small and Large captures show how the same purchase
-                flow holds across device classes, from browsing to payment.
-              </p>
-            </div>
+            <figure
+              className="flow-chart-mockup"
+              aria-label="Alla Vostra product flow diagram"
+            >
+              <img
+                alt="Alla Vostra product flow diagram"
+                decoding="async"
+                src="/images/alla-vostra-product-flow-mockup.svg"
+              />
+            </figure>
           </div>
 
           <div className="flow-capture-groups">
@@ -910,16 +952,24 @@ export default function AllaVostraCaseStudy() {
               target="_blank"
             >
               <ProjectGitHubMark />
-              <span className="github-label-text" data-text="View GitHub Project">
-                View GitHub Project
+              <span className="github-label-text" data-text="View GitHub">
+                View GitHub
               </span>
             </a>
             <a
-              className="button button-secondary"
+              className="button button-primary project-contact-button"
               href="mailto:martin@prahlproductions.com"
             >
-              <Mail aria-hidden size={18} />
-              Contact
+              <span className="project-contact-icon-mark" aria-hidden="true">
+                <Mail className="project-contact-icon-stroke" size={36} />
+                <Mail className="project-contact-icon-fill" size={36} />
+              </span>
+              <span
+                className="resume-label-text project-contact-label-text"
+                data-text="Contact Dev"
+              >
+                Contact Dev
+              </span>
               <ArrowRight aria-hidden size={18} />
             </a>
           </div>
