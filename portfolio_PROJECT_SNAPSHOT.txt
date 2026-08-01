@@ -1,5 +1,5 @@
 Portfolio Next.js PROJECT SNAPSHOT
-Generated: Sat Aug  1 14:23:15 EDT 2026
+Generated: Sat Aug  1 19:11:18 EDT 2026
 Project directory: /Users/prahlin/gh/portfolio
 
 IMPORTANT INSTRUCTIONS FOR CHATGPT & CODEX:
@@ -96,6 +96,7 @@ PROJECT FILE TREE
 /Users/prahlin/gh/portfolio/next.config.ts
 /Users/prahlin/gh/portfolio/package-lock.json
 /Users/prahlin/gh/portfolio/package.json
+/Users/prahlin/gh/portfolio/portfolio_worklog_august1_part1.pdf
 /Users/prahlin/gh/portfolio/portfolio_worklog_july11.pdf
 /Users/prahlin/gh/portfolio/portfolio_worklog_july14.pdf
 /Users/prahlin/gh/portfolio/portfolio_worklog_july15_part1.pdf
@@ -119,6 +120,9 @@ PROJECT FILE TREE
 /Users/prahlin/gh/portfolio/public/images/about_us_screen_small.png
 /Users/prahlin/gh/portfolio/public/images/address_overlay_large.png
 /Users/prahlin/gh/portfolio/public/images/address_overlay_small.png
+/Users/prahlin/gh/portfolio/public/images/alla-vostra-hero-confirmed-framed-space-gray.png
+/Users/prahlin/gh/portfolio/public/images/alla-vostra-hero-products-framed-space-gray.png
+/Users/prahlin/gh/portfolio/public/images/alla-vostra-hero-startup-framed.png
 /Users/prahlin/gh/portfolio/public/images/alla-vostra-product-flow-mockup.svg
 /Users/prahlin/gh/portfolio/public/images/android-device-logo.svg
 /Users/prahlin/gh/portfolio/public/images/apple-logo-official.svg
@@ -141,6 +145,7 @@ PROJECT FILE TREE
 /Users/prahlin/gh/portfolio/public/images/home_screen_large.png
 /Users/prahlin/gh/portfolio/public/images/home_screen_small.png
 /Users/prahlin/gh/portfolio/public/images/ios-device-logo.svg
+/Users/prahlin/gh/portfolio/public/images/landing-hero-finance-framed.png
 /Users/prahlin/gh/portfolio/public/images/martin1.jpg
 /Users/prahlin/gh/portfolio/public/images/martin2.jpg
 /Users/prahlin/gh/portfolio/public/images/martin3.jpg
@@ -442,359 +447,353 @@ FILE: app/page.tsx
    210	  const className = `phone-shell phone-shell-${variant}${
    211	    screenImageSrc ? " phone-shell-capture" : ""
    212	  }${href ? " phone-shell-link" : ""}`;
-   213	  const content = (
-   214	    <>
-   215	      <div className="phone-speaker" />
-   216	      <div className={`phone-screen${screenImageSrc ? " has-image" : ""}`}>
-   217	        {screenImageSrc ? (
-   218	          <div className="phone-screen-image-frame">
-   219	            <Image
-   220	              alt={screenImageAlt ?? `${title} app screen`}
-   221	              className="phone-screen-image"
-   222	              fill
-   223	              sizes="245px"
-   224	              src={screenImageSrc}
-   225	            />
-   226	          </div>
-   227	        ) : (
-   228	          <>
-   229	            <div className="phone-status">
-   230	              <span>{title}</span>
-   231	              <span>5G</span>
-   232	            </div>
-   233	            <div className="phone-chart">
-   234	              <div />
-   235	              <div />
-   236	              <div />
-   237	              <div />
-   238	            </div>
-   239	            <div className="phone-cardline wide" />
-   240	            <div className="phone-cardline" />
-   241	            <div className="phone-grid">
-   242	              <span />
-   243	              <span />
-   244	              <span />
-   245	              <span />
-   246	            </div>
-   247	            <div className="phone-cta">{metric}</div>
-   248	          </>
-   249	        )}
-   250	      </div>
-   251	    </>
-   252	  );
-   253	
-   254	  if (href) {
-   255	    return (
-   256	      <a
-   257	        aria-label={`Open ${title} case study`}
-   258	        className={className}
-   259	        href={href}
-   260	      >
-   261	        {content}
-   262	      </a>
-   263	    );
-   264	  }
-   265	
-   266	  return <div className={className}>{content}</div>;
-   267	}
-   268	
-   269	function TabletPreview() {
-   270	  return (
-   271	    <div className="tablet-shell" aria-hidden="true">
-   272	      <div className="tablet-camera" />
-   273	      <div className="tablet-screen">
-   274	        <Image
-   275	          alt=""
-   276	          className="tablet-screen-image"
-   277	          fill
-   278	          sizes="456px"
-   279	          src="/images/cinerific_promo.png"
-   280	        />
-   281	        <div className="tablet-empty-grid" />
-   282	      </div>
-   283	    </div>
-   284	  );
-   285	}
-   286	
-   287	export default function Home() {
-   288	  return (
-   289	    <main>
-   290	      <section className="hero" id="top">
-   291	        <div className="site-shell">
-   292	          <MainNavBar />
-   293	
-   294	          <div className="hero-grid">
-   295	            <div className="hero-copy">
-   296	              <p className="eyebrow hero-eyebrow">
-   297	                <span className="hero-eyebrow-underline">User-friendly</span>{" "}
-   298	                <span className="hero-eyebrow-box">UI/UX</span>
-   299	                <span className="hero-eyebrow-period">,</span>
-   300	                <br />
-   301	                <span className="hero-eyebrow-underline">Butter-Smooth</span>{" "}
-   302	                <span className="hero-eyebrow-box">Front-End</span>
-   303	                <span className="hero-eyebrow-period">,</span>
-   304	                <br />
-   305	                <span className="hero-eyebrow-underline">
-   306	                  Deep, Dependable
-   307	                </span>{" "}
-   308	                <span className="hero-eyebrow-box">Back-end</span>
-   309	                <span className="hero-eyebrow-period">.</span>
-   310	              </p>
-   311	              <h1>
-   312	                    Full-Stack
-   313	                <br />
-   314	                    <span style={{ color: "#43ff92" }}>
-   315	                      <span style={{ whiteSpace: "nowrap" }}>React&nbsp;Native&nbsp;/</span> Kotlin
-   316	                    </span>{" "}
-   317	                    Developer
-   318	              </h1>
-   319	              <HeroLede />
-   320	
-   321	              <div className="hero-actions">
-   322	                <div className="hero-project-action">
-   323	                  <span
-   324	                    className="hero-view-label carousel-button-project-word"
-   325	                    aria-hidden
-   326	                  >
-   327	                    <span
-   328	                      className="hero-view-label-stack"
-   329	                      style={{
-   330	                        display: "grid",
-   331	                        gap: "0.28em",
-   332	                        justifySelf: "start",
-   333	                        marginLeft: "var(--hero-view-stack-left, 0px)",
-   334	                        textAlign: "left",
-   335	                        width: "max-content",
-   336	                      }}
-   337	                    >
+   213	  const content = screenImageSrc ? (
+   214	    <Image
+   215	      alt={screenImageAlt ?? `${title} app screen`}
+   216	      className="phone-framed-image"
+   217	      fill
+   218	      sizes="245px"
+   219	      src={screenImageSrc}
+   220	    />
+   221	  ) : (
+   222	    <>
+   223	      <div className="phone-speaker" />
+   224	      <div className="phone-screen">
+   225	        <div className="phone-status">
+   226	          <span>{title}</span>
+   227	          <span>5G</span>
+   228	        </div>
+   229	        <div className="phone-chart">
+   230	          <div />
+   231	          <div />
+   232	          <div />
+   233	          <div />
+   234	        </div>
+   235	        <div className="phone-cardline wide" />
+   236	        <div className="phone-cardline" />
+   237	        <div className="phone-grid">
+   238	          <span />
+   239	          <span />
+   240	          <span />
+   241	          <span />
+   242	        </div>
+   243	        <div className="phone-cta">{metric}</div>
+   244	      </div>
+   245	    </>
+   246	  );
+   247	
+   248	  if (href) {
+   249	    return (
+   250	      <a
+   251	        aria-label={`Open ${title} case study`}
+   252	        className={className}
+   253	        href={href}
+   254	      >
+   255	        {content}
+   256	      </a>
+   257	    );
+   258	  }
+   259	
+   260	  return <div className={className}>{content}</div>;
+   261	}
+   262	
+   263	function TabletPreview() {
+   264	  return (
+   265	    <div className="tablet-shell" aria-hidden="true">
+   266	      <div className="tablet-camera" />
+   267	      <div className="tablet-screen">
+   268	        <Image
+   269	          alt=""
+   270	          className="tablet-screen-image"
+   271	          fill
+   272	          sizes="456px"
+   273	          src="/images/cinerific_promo.png"
+   274	        />
+   275	        <div className="tablet-empty-grid" />
+   276	      </div>
+   277	    </div>
+   278	  );
+   279	}
+   280	
+   281	export default function Home() {
+   282	  return (
+   283	    <main>
+   284	      <section className="hero" id="top">
+   285	        <div className="site-shell">
+   286	          <MainNavBar />
+   287	
+   288	          <div className="hero-grid">
+   289	            <div className="hero-copy">
+   290	              <p className="eyebrow hero-eyebrow">
+   291	                <span className="hero-eyebrow-underline">User-friendly</span>{" "}
+   292	                <span className="hero-eyebrow-box">UI/UX</span>
+   293	                <span className="hero-eyebrow-period">,</span>
+   294	                <br />
+   295	                <span className="hero-eyebrow-underline">Butter-Smooth</span>{" "}
+   296	                <span className="hero-eyebrow-box">Front-End</span>
+   297	                <span className="hero-eyebrow-period">,</span>
+   298	                <br />
+   299	                <span className="hero-eyebrow-underline">
+   300	                  Deep, Dependable
+   301	                </span>{" "}
+   302	                <span className="hero-eyebrow-box">Back-end</span>
+   303	                <span className="hero-eyebrow-period">.</span>
+   304	              </p>
+   305	              <h1>
+   306	                    Full-Stack
+   307	                <br />
+   308	                    <span style={{ color: "#43ff92" }}>
+   309	                      <span style={{ whiteSpace: "nowrap" }}>React&nbsp;Native&nbsp;/</span> Kotlin
+   310	                    </span>{" "}
+   311	                    Developer
+   312	              </h1>
+   313	              <HeroLede />
+   314	
+   315	              <div className="hero-actions">
+   316	                <div className="hero-project-action">
+   317	                  <span
+   318	                    className="hero-view-label carousel-button-project-word"
+   319	                    aria-hidden
+   320	                  >
+   321	                    <span
+   322	                      className="hero-view-label-stack"
+   323	                      style={{
+   324	                        display: "grid",
+   325	                        gap: "0.28em",
+   326	                        justifySelf: "start",
+   327	                        marginLeft: "var(--hero-view-stack-left, 0px)",
+   328	                        textAlign: "left",
+   329	                        width: "max-content",
+   330	                      }}
+   331	                    >
+   332	                      <span
+   333	                        className="hero-view-word"
+   334	                        aria-label="Check Out"
+   335	                      >
+   336	                        Check Out
+   337	                      </span>
    338	                      <span
-   339	                        className="hero-view-word"
-   340	                        aria-label="Check Out"
+   339	                        className="hero-project-word"
+   340	                        aria-label="Projects"
    341	                      >
-   342	                        Check Out
+   342	                        Projects
    343	                      </span>
-   344	                      <span
-   345	                        className="hero-project-word"
-   346	                        aria-label="Projects"
-   347	                      >
-   348	                        Projects
-   349	                      </span>
-   350	                    </span>
-   351	                  </span>
-   352	                  <ProjectCarouselButton />
-   353	                </div>
-   354	                <div className="hero-social-buttons">
-   355	                  <a
-   356	                    className="button button-secondary hero-social-button github-button"
-   357	                    href="https://github.com/Prahlin"
-   358	                    rel="noreferrer"
-   359	                    style={{
-   360	                      background: "#000",
-   361	                      borderColor: "#000",
-   362	                      color: githubButtonTextColor,
-   363	                    }}
-   364	                    target="_blank"
-   365	                  >
-   366	                    <GitHubBracesMark />
-   367	                    <span className="github-label-text" data-text="GitHub">
-   368	                      GitHub
-   369	                    </span>
-   370	                  </a>
-   371	                  <a
-   372	                    aria-label="LinkedIn"
-   373	                    className="button button-secondary hero-social-button linkedin-button"
-   374	                    href="https://linkedin.com/in/mprahl"
-   375	                    rel="noreferrer"
-   376	                    style={{
-   377	                      background: linkedInButtonColor,
-   378	                      borderColor: linkedInButtonColor,
-   379	                      color: "#fff",
-   380	                    }}
-   381	                    target="_blank"
-   382	                  >
-   383	                    <LinkedInMark />
-   384	                    <Image
-   385	                      alt=""
-   386	                      className="social-label-image linkedin-label-image"
-   387	                      height={70}
-   388	                      src="/images/social-labels/linkedin-label.png"
-   389	                      width={254}
-   390	                    />
-   391	                  </a>
-   392	                  <a
-   393	                    aria-label="Resume"
-   394	                    className="button button-secondary hero-social-button resume-button"
-   395	                    href="https://www.instagram.com/"
-   396	                    rel="noreferrer"
-   397	                    style={{
-   398	                      background: resumeButtonColor,
-   399	                      borderColor: resumeButtonColor,
-   400	                      color: "#fff",
-   401	                    }}
-   402	                    target="_blank"
-   403	                  >
-   404	                    <ResumeDownloadMark />
-   405	                    <Image
-   406	                      alt=""
-   407	                      className="social-label-image resume-label-image"
-   408	                      height={70}
-   409	                      src="/images/social-labels/resume-label.png"
-   410	                      width={244}
-   411	                    />
-   412	                  </a>
-   413	                </div>
+   344	                    </span>
+   345	                  </span>
+   346	                  <ProjectCarouselButton />
+   347	                </div>
+   348	                <div className="hero-social-buttons">
+   349	                  <a
+   350	                    className="button button-secondary hero-social-button github-button"
+   351	                    href="https://github.com/Prahlin"
+   352	                    rel="noreferrer"
+   353	                    style={{
+   354	                      background: "#000",
+   355	                      borderColor: "#000",
+   356	                      color: githubButtonTextColor,
+   357	                    }}
+   358	                    target="_blank"
+   359	                  >
+   360	                    <GitHubBracesMark />
+   361	                    <span className="github-label-text" data-text="GitHub">
+   362	                      GitHub
+   363	                    </span>
+   364	                  </a>
+   365	                  <a
+   366	                    aria-label="LinkedIn"
+   367	                    className="button button-secondary hero-social-button linkedin-button"
+   368	                    href="https://linkedin.com/in/mprahl"
+   369	                    rel="noreferrer"
+   370	                    style={{
+   371	                      background: linkedInButtonColor,
+   372	                      borderColor: linkedInButtonColor,
+   373	                      color: "#fff",
+   374	                    }}
+   375	                    target="_blank"
+   376	                  >
+   377	                    <LinkedInMark />
+   378	                    <Image
+   379	                      alt=""
+   380	                      className="social-label-image linkedin-label-image"
+   381	                      height={70}
+   382	                      src="/images/social-labels/linkedin-label.png"
+   383	                      width={254}
+   384	                    />
+   385	                  </a>
+   386	                  <a
+   387	                    aria-label="Resume"
+   388	                    className="button button-secondary hero-social-button resume-button"
+   389	                    href="https://www.instagram.com/"
+   390	                    rel="noreferrer"
+   391	                    style={{
+   392	                      background: resumeButtonColor,
+   393	                      borderColor: resumeButtonColor,
+   394	                      color: "#fff",
+   395	                    }}
+   396	                    target="_blank"
+   397	                  >
+   398	                    <ResumeDownloadMark />
+   399	                    <Image
+   400	                      alt=""
+   401	                      className="social-label-image resume-label-image"
+   402	                      height={70}
+   403	                      src="/images/social-labels/resume-label.png"
+   404	                      width={244}
+   405	                    />
+   406	                  </a>
+   407	                </div>
+   408	              </div>
+   409	
+   410	              <div className="stack-row" aria-label="Primary stack">
+   411	                {stackChips.map((chip) => (
+   412	                  <span key={chip}>{chip}</span>
+   413	                ))}
    414	              </div>
    415	
-   416	              <div className="stack-row" aria-label="Primary stack">
-   417	                {stackChips.map((chip) => (
-   418	                  <span key={chip}>{chip}</span>
-   419	                ))}
-   420	              </div>
-   421	
-   422	              <div className="proof-panel">
-   423	                <div className="proof-column">
-   424	                  <div className="proof-item">
-   425	                    <Triangle aria-hidden size={18} />
-   426	                    <span>Vercel</span>
-   427	                  </div>
+   416	              <div className="proof-panel">
+   417	                <div className="proof-column">
+   418	                  <div className="proof-item">
+   419	                    <Triangle aria-hidden size={18} />
+   420	                    <span>Vercel</span>
+   421	                  </div>
+   422	                  <div className="proof-item">
+   423	                    <Database aria-hidden size={18} />
+   424	                    <span>EAS</span>
+   425	                  </div>
+   426	                </div>
+   427	                <div className="proof-column">
    428	                  <div className="proof-item">
-   429	                    <Database aria-hidden size={18} />
-   430	                    <span>EAS</span>
+   429	                    <CreditCard aria-hidden size={18} />
+   430	                    <span>Stripe</span>
    431	                  </div>
-   432	                </div>
-   433	                <div className="proof-column">
-   434	                  <div className="proof-item">
-   435	                    <CreditCard aria-hidden size={18} />
-   436	                    <span>Stripe</span>
-   437	                  </div>
+   432	                  <div className="proof-item">
+   433	                    <MailCheck aria-hidden size={18} />
+   434	                    <span>Postmark</span>
+   435	                  </div>
+   436	                </div>
+   437	                <div className="proof-column">
    438	                  <div className="proof-item">
-   439	                    <MailCheck aria-hidden size={18} />
-   440	                    <span>Postmark</span>
+   439	                    <Store aria-hidden size={18} />
+   440	                    <span>GGL Play</span>
    441	                  </div>
-   442	                </div>
-   443	                <div className="proof-column">
-   444	                  <div className="proof-item">
-   445	                    <Store aria-hidden size={18} />
-   446	                    <span>GGL Play</span>
-   447	                  </div>
-   448	                  <div className="proof-item">
-   449	                    <Apple aria-hidden size={18} />
-   450	                    <span>App Store</span>
-   451	                  </div>
-   452	                </div>
-   453	              </div>
-   454	            </div>
-   455	
-   456	            <div className="hero-visual" aria-label="Portfolio preview">
-   457	              <div className="profile-orbit">
-   458	                <Image
-   459	                  alt="Martin Prahl profile photo"
-   460	                  src="/images/martin3.jpg"
-   461	                  width={220}
-   462	                  height={220}
-   463	                  priority
-   464	                  className="profile-photo"
-   465	                />
-   466	                <span>Martin Prahl</span>
-   467	              </div>
-   468	
-   469	              <div className="phone-stage">
-   470	                <TabletPreview />
-   471	                <PhonePreview
-   472	                  title="Alla Vostra"
-   473	                  metric="Checkout ready"
-   474	                  variant="commerce"
-   475	                  href="/projects/alla-vostra"
-   476	                  screenImageSrc="/images/startup_screen_large.png"
-   477	                  screenImageAlt="Alla Vostra startup screen"
-   478	                />
-   479	                <PhonePreview
-   480	                  title="CreditKing"
-   481	                  metric="Finance UI"
-   482	                  variant="finance"
-   483	                  screenImageSrc="/images/editor-window-screenshot.png"
-   484	                  screenImageAlt="Prahl.dev portfolio portrait screenshot"
-   485	                />
-   486	              </div>
-   487	            </div>
-   488	          </div>
+   442	                  <div className="proof-item">
+   443	                    <Apple aria-hidden size={18} />
+   444	                    <span>App Store</span>
+   445	                  </div>
+   446	                </div>
+   447	              </div>
+   448	            </div>
+   449	
+   450	            <div className="hero-visual" aria-label="Portfolio preview">
+   451	              <div className="profile-orbit">
+   452	                <Image
+   453	                  alt="Martin Prahl profile photo"
+   454	                  src="/images/martin3.jpg"
+   455	                  width={220}
+   456	                  height={220}
+   457	                  priority
+   458	                  className="profile-photo"
+   459	                />
+   460	                <span>Martin Prahl</span>
+   461	              </div>
+   462	
+   463	              <div className="phone-stage">
+   464	                <TabletPreview />
+   465	                <PhonePreview
+   466	                  title="Alla Vostra"
+   467	                  metric="Checkout ready"
+   468	                  variant="commerce"
+   469	                  href="/projects/alla-vostra"
+   470	                  screenImageSrc="/images/alla-vostra-hero-startup-framed.png"
+   471	                  screenImageAlt="Alla Vostra startup screen"
+   472	                />
+   473	                <PhonePreview
+   474	                  title="CreditKing"
+   475	                  metric="Finance UI"
+   476	                  variant="finance"
+   477	                  screenImageSrc="/images/landing-hero-finance-framed.png"
+   478	                  screenImageAlt="Prahl.dev portfolio portrait screenshot"
+   479	                />
+   480	              </div>
+   481	            </div>
+   482	          </div>
+   483	
+   484	          <ProofStats stats={proofStats} />
+   485	        </div>
+   486	      </section>
+   487	
+   488	      <FeaturedCaseStudies />
    489	
-   490	          <ProofStats stats={proofStats} />
-   491	        </div>
-   492	      </section>
-   493	
-   494	      <FeaturedCaseStudies />
-   495	
-   496	      <section className="stack-section" id="stack">
-   497	        <div className="site-shell split-section">
-   498	          <SectionHeading
-   499	            kicker="Stack"
-   500	            title="Built around React Native, shaped for full stack delivery"
-   501	          />
-   502	          <div className="capability-grid">
-   503	            <div>
-   504	              <MonitorSmartphone aria-hidden />
-   505	              <h3>Main stack</h3>
-   506	              <p>
-   507	                React, React Native, Expo Router, Next.js, Tailwind CSS, and
-   508	                mobile-first responsive UI systems.
-   509	              </p>
-   510	            </div>
-   511	            <div>
-   512	              <Braces aria-hidden />
-   513	              <h3>Backend layer</h3>
-   514	              <p>
-   515	                Node.js serverless routes, Stripe payment setup, Postmark email
-   516	                delivery, environment configuration, and deployment workflows.
-   517	              </p>
-   518	            </div>
-   519	            <div>
-   520	              <Smartphone aria-hidden />
-   521	              <h3>Secondary mobile</h3>
-   522	              <p>
-   523	                Kotlin and Android Studio as the native Android path, aligned
-   524	                with the same release and device-testing discipline.
-   525	              </p>
-   526	            </div>
-   527	          </div>
-   528	        </div>
-   529	      </section>
-   530	
-   531	      <section className="worklog-section" id="worklog">
-   532	        <div className="site-shell worklog-layout">
-   533	          <SectionHeading
-   534	            kicker="Worklog"
-   535	            title="A documented build history, not just final screenshots"
-   536	          />
-   537	          <div className="timeline">
-   538	            {worklogItems.map((item, index) => (
-   539	              <div key={item} className="timeline-item">
-   540	                <span>{String(index + 1).padStart(2, "0")}</span>
-   541	                <p>{item}</p>
-   542	              </div>
-   543	            ))}
-   544	          </div>
-   545	        </div>
-   546	      </section>
-   547	
-   548	      <section className="contact-section" id="contact">
-   549	        <div className="site-shell contact-panel">
-   550	          <div>
-   551	            <p className="eyebrow">Available for full stack mobile work</p>
-   552	            <h2>Let’s build something crisp, fast, and release-ready.</h2>
-   553	          </div>
-   554	          <a
-   555	            className="button button-primary"
-   556	            href="mailto:martin@prahlproductions.com"
-   557	          >
-   558	            <Mail aria-hidden size={18} />
-   559	            martin@prahlproductions.com
-   560	          </a>
-   561	        </div>
-   562	      </section>
-   563	    </main>
-   564	  );
-   565	}
+   490	      <section className="stack-section" id="stack">
+   491	        <div className="site-shell split-section">
+   492	          <SectionHeading
+   493	            kicker="Stack"
+   494	            title="Built around React Native, shaped for full stack delivery"
+   495	          />
+   496	          <div className="capability-grid">
+   497	            <div>
+   498	              <MonitorSmartphone aria-hidden />
+   499	              <h3>Main stack</h3>
+   500	              <p>
+   501	                React, React Native, Expo Router, Next.js, Tailwind CSS, and
+   502	                mobile-first responsive UI systems.
+   503	              </p>
+   504	            </div>
+   505	            <div>
+   506	              <Braces aria-hidden />
+   507	              <h3>Backend layer</h3>
+   508	              <p>
+   509	                Node.js serverless routes, Stripe payment setup, Postmark email
+   510	                delivery, environment configuration, and deployment workflows.
+   511	              </p>
+   512	            </div>
+   513	            <div>
+   514	              <Smartphone aria-hidden />
+   515	              <h3>Secondary mobile</h3>
+   516	              <p>
+   517	                Kotlin and Android Studio as the native Android path, aligned
+   518	                with the same release and device-testing discipline.
+   519	              </p>
+   520	            </div>
+   521	          </div>
+   522	        </div>
+   523	      </section>
+   524	
+   525	      <section className="worklog-section" id="worklog">
+   526	        <div className="site-shell worklog-layout">
+   527	          <SectionHeading
+   528	            kicker="Worklog"
+   529	            title="A documented build history, not just final screenshots"
+   530	          />
+   531	          <div className="timeline">
+   532	            {worklogItems.map((item, index) => (
+   533	              <div key={item} className="timeline-item">
+   534	                <span>{String(index + 1).padStart(2, "0")}</span>
+   535	                <p>{item}</p>
+   536	              </div>
+   537	            ))}
+   538	          </div>
+   539	        </div>
+   540	      </section>
+   541	
+   542	      <section className="contact-section" id="contact">
+   543	        <div className="site-shell contact-panel">
+   544	          <div>
+   545	            <p className="eyebrow">Available for full stack mobile work</p>
+   546	            <h2>Let’s build something crisp, fast, and release-ready.</h2>
+   547	          </div>
+   548	          <a
+   549	            className="button button-primary"
+   550	            href="mailto:martin@prahlproductions.com"
+   551	          >
+   552	            <Mail aria-hidden size={18} />
+   553	            martin@prahlproductions.com
+   554	          </a>
+   555	        </div>
+   556	      </section>
+   557	    </main>
+   558	  );
+   559	}
 
 
 ============================================================
@@ -3157,2706 +3156,2664 @@ FILE: app/globals.css
   1320	}
   1321	
   1322	.phone-shell-capture {
-  1323	  border-radius: 42px;
-  1324	}
-  1325	
-  1326	.phone-status {
-  1327	  align-items: center;
-  1328	  color: var(--mint);
-  1329	  display: flex;
-  1330	  font-size: 11px;
-  1331	  font-weight: 800;
-  1332	  justify-content: space-between;
-  1333	  margin-bottom: 28px;
-  1334	}
-  1335	
-  1336	.phone-chart {
-  1337	  align-items: end;
-  1338	  display: grid;
-  1339	  gap: 8px;
-  1340	  grid-template-columns: repeat(4, 1fr);
-  1341	  height: 118px;
-  1342	  margin-bottom: 26px;
-  1343	}
-  1344	
-  1345	.phone-chart div {
-  1346	  background: linear-gradient(180deg, var(--green), #086c3b);
-  1347	  border-radius: 6px 6px 2px 2px;
-  1348	}
-  1349	
-  1350	.phone-chart div:nth-child(1) {
-  1351	  height: 54%;
-  1352	}
-  1353	
-  1354	.phone-chart div:nth-child(2) {
-  1355	  height: 88%;
-  1356	}
-  1357	
-  1358	.phone-chart div:nth-child(3) {
-  1359	  height: 66%;
-  1360	}
-  1361	
-  1362	.phone-chart div:nth-child(4) {
-  1363	  height: 100%;
-  1364	}
-  1365	
-  1366	.phone-cardline {
-  1367	  background: rgba(198, 255, 217, 0.14);
-  1368	  border-radius: 999px;
-  1369	  height: 12px;
-  1370	  margin-bottom: 10px;
-  1371	  width: 62%;
+  1323	  aspect-ratio: 1290 / 2661;
+  1324	  background: transparent;
+  1325	  border: 0;
+  1326	  border-radius: 0;
+  1327	  box-shadow: none;
+  1328	  height: auto;
+  1329	  padding: 0;
+  1330	}
+  1331	
+  1332	.phone-shell-capture::before,
+  1333	.phone-shell-capture::after,
+  1334	.phone-shell-capture .phone-speaker {
+  1335	  display: none;
+  1336	}
+  1337	
+  1338	.phone-framed-image {
+  1339	  filter:
+  1340	    drop-shadow(0 28px 42px rgba(0, 0, 0, 0.48))
+  1341	    drop-shadow(0 0 32px rgba(0, 191, 99, 0.08));
+  1342	  object-fit: contain;
+  1343	  object-position: center;
+  1344	}
+  1345	
+  1346	.phone-status {
+  1347	  align-items: center;
+  1348	  color: var(--mint);
+  1349	  display: flex;
+  1350	  font-size: 11px;
+  1351	  font-weight: 800;
+  1352	  justify-content: space-between;
+  1353	  margin-bottom: 28px;
+  1354	}
+  1355	
+  1356	.phone-chart {
+  1357	  align-items: end;
+  1358	  display: grid;
+  1359	  gap: 8px;
+  1360	  grid-template-columns: repeat(4, 1fr);
+  1361	  height: 118px;
+  1362	  margin-bottom: 26px;
+  1363	}
+  1364	
+  1365	.phone-chart div {
+  1366	  background: linear-gradient(180deg, var(--green), #086c3b);
+  1367	  border-radius: 6px 6px 2px 2px;
+  1368	}
+  1369	
+  1370	.phone-chart div:nth-child(1) {
+  1371	  height: 54%;
   1372	}
   1373	
-  1374	.phone-cardline.wide {
-  1375	  width: 88%;
+  1374	.phone-chart div:nth-child(2) {
+  1375	  height: 88%;
   1376	}
   1377	
-  1378	.phone-grid {
-  1379	  display: grid;
-  1380	  gap: 9px;
-  1381	  grid-template-columns: 1fr 1fr;
-  1382	  margin-top: 24px;
-  1383	}
-  1384	
-  1385	.phone-grid span {
-  1386	  background: rgba(255, 255, 255, 0.05);
-  1387	  border: 1px solid var(--line);
-  1388	  border-radius: 8px;
-  1389	  height: 54px;
-  1390	}
-  1391	
-  1392	.phone-cta {
-  1393	  align-items: center;
-  1394	  background: var(--green);
-  1395	  border-radius: 8px;
-  1396	  color: #001d0f;
-  1397	  display: flex;
-  1398	  font-size: 13px;
-  1399	  font-weight: 900;
-  1400	  height: 42px;
-  1401	  justify-content: center;
+  1378	.phone-chart div:nth-child(3) {
+  1379	  height: 66%;
+  1380	}
+  1381	
+  1382	.phone-chart div:nth-child(4) {
+  1383	  height: 100%;
+  1384	}
+  1385	
+  1386	.phone-cardline {
+  1387	  background: rgba(198, 255, 217, 0.14);
+  1388	  border-radius: 999px;
+  1389	  height: 12px;
+  1390	  margin-bottom: 10px;
+  1391	  width: 62%;
+  1392	}
+  1393	
+  1394	.phone-cardline.wide {
+  1395	  width: 88%;
+  1396	}
+  1397	
+  1398	.phone-grid {
+  1399	  display: grid;
+  1400	  gap: 9px;
+  1401	  grid-template-columns: 1fr 1fr;
   1402	  margin-top: 24px;
   1403	}
   1404	
-  1405	.proof-panel {
-  1406	  backdrop-filter: blur(16px);
-  1407	  background: rgba(5, 16, 10, 0.76);
-  1408	  border: 1px solid var(--line-strong);
-  1409	  border-radius: 8px;
-  1410	  display: grid;
-  1411	  grid-template-columns: repeat(3, minmax(0, 1fr));
-  1412	  gap: 10px;
-  1413	  margin: 26px 0 0;
-  1414	  padding: 14px;
-  1415	  position: relative;
-  1416	  width: var(--hero-proof-stack-width);
-  1417	  z-index: 2;
-  1418	}
-  1419	
-  1420	.proof-column {
-  1421	  color: #dfffea;
-  1422	  display: grid;
-  1423	  font-size: 13px;
-  1424	  font-weight: 750;
-  1425	  gap: 10px;
-  1426	  line-height: 1.25;
-  1427	}
-  1428	
-  1429	.proof-item {
-  1430	  align-items: center;
-  1431	  display: flex;
-  1432	  gap: 4px;
-  1433	  min-width: 0;
-  1434	}
-  1435	
-  1436	.proof-item svg {
-  1437	  flex: 0 0 auto;
+  1405	.phone-grid span {
+  1406	  background: rgba(255, 255, 255, 0.05);
+  1407	  border: 1px solid var(--line);
+  1408	  border-radius: 8px;
+  1409	  height: 54px;
+  1410	}
+  1411	
+  1412	.phone-cta {
+  1413	  align-items: center;
+  1414	  background: var(--green);
+  1415	  border-radius: 8px;
+  1416	  color: #001d0f;
+  1417	  display: flex;
+  1418	  font-size: 13px;
+  1419	  font-weight: 900;
+  1420	  height: 42px;
+  1421	  justify-content: center;
+  1422	  margin-top: 24px;
+  1423	}
+  1424	
+  1425	.proof-panel {
+  1426	  backdrop-filter: blur(16px);
+  1427	  background: rgba(5, 16, 10, 0.76);
+  1428	  border: 1px solid var(--line-strong);
+  1429	  border-radius: 8px;
+  1430	  display: grid;
+  1431	  grid-template-columns: repeat(3, minmax(0, 1fr));
+  1432	  gap: 10px;
+  1433	  margin: 26px 0 0;
+  1434	  padding: 14px;
+  1435	  position: relative;
+  1436	  width: var(--hero-proof-stack-width);
+  1437	  z-index: 2;
   1438	}
   1439	
-  1440	.proof-item span {
-  1441	  min-width: 0;
-  1442	  white-space: nowrap;
-  1443	}
-  1444	
-  1445	@media (min-width: 1024px) and (orientation: landscape) {
-  1446	  .stack-row {
-  1447	    max-width: calc(100vw - 36px);
-  1448	    width: var(--hero-proof-landscape-width, 100%);
-  1449	  }
-  1450	}
-  1451	
-  1452	@media (min-width: 1200px) and (orientation: landscape) {
-  1453	  .stack-row {
-  1454	    grid-template-columns: repeat(9, minmax(0, 1fr));
-  1455	  }
-  1456	
-  1457	  .stack-row span {
-  1458	    padding-bottom: 9.6px;
-  1459	    padding-top: 9.6px;
-  1460	  }
-  1461	
-  1462	  .proof-panel {
-  1463	    margin-top: 12px;
-  1464	  }
-  1465	}
-  1466	
-  1467	@media (min-width: 1024px) and (orientation: landscape) {
-  1468	  .proof-panel {
-  1469	    gap: 8px;
-  1470	    grid-template-columns: repeat(6, minmax(0, 1fr));
-  1471	    justify-content: stretch;
-  1472	    justify-items: center;
-  1473	    max-width: calc(100vw - 36px);
-  1474	    width: var(--hero-proof-landscape-width, 100%);
+  1440	.proof-column {
+  1441	  color: #dfffea;
+  1442	  display: grid;
+  1443	  font-size: 13px;
+  1444	  font-weight: 750;
+  1445	  gap: 10px;
+  1446	  line-height: 1.25;
+  1447	}
+  1448	
+  1449	.proof-item {
+  1450	  align-items: center;
+  1451	  display: flex;
+  1452	  gap: 4px;
+  1453	  min-width: 0;
+  1454	}
+  1455	
+  1456	.proof-item svg {
+  1457	  flex: 0 0 auto;
+  1458	}
+  1459	
+  1460	.proof-item span {
+  1461	  min-width: 0;
+  1462	  white-space: nowrap;
+  1463	}
+  1464	
+  1465	@media (min-width: 1024px) and (orientation: landscape) {
+  1466	  .stack-row {
+  1467	    max-width: calc(100vw - 36px);
+  1468	    width: var(--hero-proof-landscape-width, 100%);
+  1469	  }
+  1470	}
+  1471	
+  1472	@media (min-width: 1200px) and (orientation: landscape) {
+  1473	  .stack-row {
+  1474	    grid-template-columns: repeat(9, minmax(0, 1fr));
   1475	  }
   1476	
-  1477	  .proof-column {
-  1478	    display: contents;
-  1479	  }
-  1480	
-  1481	  .proof-item {
-  1482	    justify-content: center;
-  1483	    width: 100%;
+  1477	  .stack-row span {
+  1478	    padding-bottom: 9.6px;
+  1479	    padding-top: 9.6px;
+  1480	  }
+  1481	
+  1482	  .proof-panel {
+  1483	    margin-top: 12px;
   1484	  }
-  1485	
-  1486	  .proof-column:nth-child(1) .proof-item:nth-child(1) {
-  1487	    order: 1;
-  1488	  }
-  1489	
-  1490	  .proof-column:nth-child(2) .proof-item:nth-child(1) {
-  1491	    order: 2;
-  1492	  }
-  1493	
-  1494	  .proof-column:nth-child(3) .proof-item:nth-child(1) {
-  1495	    order: 3;
-  1496	  }
-  1497	
-  1498	  .proof-column:nth-child(1) .proof-item:nth-child(2) {
-  1499	    order: 4;
-  1500	  }
-  1501	
-  1502	  .proof-column:nth-child(2) .proof-item:nth-child(2) {
-  1503	    order: 5;
+  1485	}
+  1486	
+  1487	@media (min-width: 1024px) and (orientation: landscape) {
+  1488	  .proof-panel {
+  1489	    gap: 8px;
+  1490	    grid-template-columns: repeat(6, minmax(0, 1fr));
+  1491	    justify-content: stretch;
+  1492	    justify-items: center;
+  1493	    max-width: calc(100vw - 36px);
+  1494	    width: var(--hero-proof-landscape-width, 100%);
+  1495	  }
+  1496	
+  1497	  .proof-column {
+  1498	    display: contents;
+  1499	  }
+  1500	
+  1501	  .proof-item {
+  1502	    justify-content: center;
+  1503	    width: 100%;
   1504	  }
   1505	
-  1506	  .proof-column:nth-child(3) .proof-item:nth-child(2) {
-  1507	    order: 6;
+  1506	  .proof-column:nth-child(1) .proof-item:nth-child(1) {
+  1507	    order: 1;
   1508	  }
-  1509	}
-  1510	
-  1511	.stats-strip {
-  1512	  border-top: 1px solid var(--line);
-  1513	  display: grid;
-  1514	  gap: 1px;
-  1515	  grid-template-columns: repeat(4, minmax(0, 1fr));
-  1516	  margin-top: 10px;
-  1517	  position: relative;
-  1518	  z-index: 2;
-  1519	}
-  1520	
-  1521	.stats-strip-item {
-  1522	  background: rgba(255, 255, 255, 0.025);
-  1523	  display: flex;
-  1524	  flex-direction: column;
-  1525	  min-width: 0;
-  1526	  min-height: 104px;
-  1527	  padding: 22px;
-  1528	}
-  1529	
-  1530	.stats-strip strong {
-  1531	  color: var(--green);
-  1532	  display: block;
-  1533	  font-size: 34px;
-  1534	  font-weight: 900;
-  1535	  line-height: 1;
-  1536	}
-  1537	
-  1538	.stats-strip-label,
-  1539	.stats-strip-measure {
-  1540	  color: var(--muted);
-  1541	  display: block;
-  1542	  font-size: 13px;
-  1543	  font-weight: 700;
-  1544	  line-height: 1.22;
-  1545	  margin-top: 8px;
-  1546	}
-  1547	
-  1548	.stats-strip-label {
-  1549	  min-width: 0;
-  1550	}
-  1551	
-  1552	.stats-strip-label-line {
-  1553	  display: block;
-  1554	  min-width: 0;
-  1555	  overflow-wrap: anywhere;
-  1556	  white-space: normal;
-  1557	}
-  1558	
-  1559	.stats-strip-label-sr {
-  1560	  clip: rect(0 0 0 0);
-  1561	  clip-path: inset(50%);
-  1562	  height: 1px;
-  1563	  overflow: hidden;
-  1564	  position: absolute;
-  1565	  white-space: nowrap;
-  1566	  width: 1px;
-  1567	}
-  1568	
-  1569	.stats-strip-measure {
-  1570	  left: -9999px;
-  1571	  margin-top: 0;
-  1572	  pointer-events: none;
-  1573	  position: absolute;
-  1574	  top: 0;
-  1575	  visibility: hidden;
-  1576	  white-space: nowrap;
-  1577	  width: max-content;
-  1578	}
-  1579	
-  1580	section:not(.hero) {
-  1581	  padding: 88px 0;
-  1582	}
-  1583	
-  1584	.section-heading {
-  1585	  max-width: 720px;
-  1586	}
-  1587	
-  1588	.case-grid {
-  1589	  display: grid;
-  1590	  gap: 18px;
-  1591	  grid-template-columns: repeat(3, minmax(0, 1fr));
-  1592	  margin-top: 34px;
-  1593	}
-  1594	
-  1595	.case-card,
-  1596	.capability-grid div,
-  1597	.contact-panel {
-  1598	  background: linear-gradient(180deg, rgba(13, 31, 22, 0.88), rgba(5, 13, 9, 0.88));
-  1599	  border: 1px solid var(--line);
-  1600	  border-radius: 8px;
-  1601	}
-  1602	
-  1603	.case-card {
-  1604	  --case-stat-font-size: 12px;
-  1605	  --case-stat-chip-font-size: var(--case-stat-font-size);
-  1606	  min-height: 330px;
-  1607	  min-width: 0;
-  1608	  padding: 28px;
-  1609	  width: 100%;
-  1610	}
-  1611	
-  1612	.case-grid > .uiux-principle-card-expanded {
-  1613	  grid-column: 1 / -1;
-  1614	}
-  1615	
-  1616	@media (min-width: 631px) {
-  1617	  .case-grid > .uiux-principle-card-expanded {
-  1618	    align-content: start;
-  1619	    min-height: 330px;
-  1620	  }
-  1621	
-  1622	  .case-grid > .uiux-principle-card-expanded .uiux-principle-long-copy {
-  1623	    column-count: 2;
-  1624	    column-fill: balance;
-  1625	    column-gap: 28px;
-  1626	    display: block;
-  1627	  }
-  1628	
-  1629	  .case-grid > .uiux-principle-card-expanded .uiux-principle-long-copy p {
-  1630	    break-inside: auto;
-  1631	    margin: 0 0 12px;
-  1632	  }
-  1633	}
-  1634	
-  1635	@media (min-width: 981px) {
-  1636	  .case-grid > .uiux-principle-card-expanded .uiux-principle-long-copy {
-  1637	    column-count: 3;
-  1638	  }
-  1639	}
-  1640	
-  1641	.case-card-link {
-  1642	  color: inherit;
-  1643	  cursor: pointer;
-  1644	  display: block;
-  1645	  text-decoration: none;
-  1646	  transition:
-  1647	    border-color 160ms ease,
-  1648	    box-shadow 160ms ease,
-  1649	    transform 160ms ease;
-  1650	}
-  1651	
-  1652	.case-card-link:hover {
-  1653	  border-color: rgba(198, 255, 217, 0.36);
-  1654	  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.28);
-  1655	  transform: translateY(-2px);
-  1656	}
-  1657	
-  1658	.case-card-link:focus-visible {
-  1659	  outline: 2px solid var(--mint);
-  1660	  outline-offset: 6px;
-  1661	}
-  1662	
-  1663	.case-grid-featured {
-  1664	  align-items: stretch;
-  1665	  --case-featured-title-stack-gap: 14px;
-  1666	}
-  1667	
-  1668	.case-grid-featured > .case-card {
-  1669	  align-content: start;
-  1670	  display: grid;
-  1671	  grid-template-rows:
-  1672	    var(--case-featured-topline-row, auto)
-  1673	    var(--case-featured-title-row, auto)
-  1674	    var(--case-featured-device-row, auto)
-  1675	    var(--case-featured-description-row, auto)
-  1676	    var(--case-featured-tags-row, auto)
-  1677	    var(--case-featured-media-row, auto);
-  1678	}
-  1679	
-  1680	.case-grid-featured > #this-portfolio-website {
-  1681	  opacity: 0.5;
-  1682	  transition:
-  1683	    border-color 160ms ease,
-  1684	    box-shadow 160ms ease,
-  1685	    opacity 160ms ease,
-  1686	    transform 160ms ease;
-  1687	}
-  1688	
-  1689	.case-grid-featured > #this-portfolio-website:hover {
-  1690	  border-color: rgba(198, 255, 217, 0.36);
-  1691	  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.28);
-  1692	  opacity: 1;
-  1693	  transform: translateY(-2px);
-  1694	}
-  1695	
-  1696	.case-grid-featured > .case-card > .case-topline {
-  1697	  align-self: start;
-  1698	  grid-row: 1;
-  1699	}
-  1700	
-  1701	.case-grid-featured > .case-card > .case-card-title-stack {
-  1702	  align-self: start;
-  1703	  grid-row: 2;
-  1704	  margin-bottom: var(--case-featured-title-stack-gap);
-  1705	}
-  1706	
-  1707	.case-grid-featured > .case-card > .case-card-title-device-stack {
-  1708	  align-self: start;
-  1709	  grid-column: 1;
-  1710	  grid-row: 3;
-  1711	  justify-self: stretch;
-  1712	  margin-bottom: var(--case-featured-title-stack-gap);
-  1713	  width: 100%;
+  1509	
+  1510	  .proof-column:nth-child(2) .proof-item:nth-child(1) {
+  1511	    order: 2;
+  1512	  }
+  1513	
+  1514	  .proof-column:nth-child(3) .proof-item:nth-child(1) {
+  1515	    order: 3;
+  1516	  }
+  1517	
+  1518	  .proof-column:nth-child(1) .proof-item:nth-child(2) {
+  1519	    order: 4;
+  1520	  }
+  1521	
+  1522	  .proof-column:nth-child(2) .proof-item:nth-child(2) {
+  1523	    order: 5;
+  1524	  }
+  1525	
+  1526	  .proof-column:nth-child(3) .proof-item:nth-child(2) {
+  1527	    order: 6;
+  1528	  }
+  1529	}
+  1530	
+  1531	.stats-strip {
+  1532	  border-top: 1px solid var(--line);
+  1533	  display: grid;
+  1534	  gap: 1px;
+  1535	  grid-template-columns: repeat(4, minmax(0, 1fr));
+  1536	  margin-top: 10px;
+  1537	  position: relative;
+  1538	  z-index: 2;
+  1539	}
+  1540	
+  1541	.stats-strip-item {
+  1542	  background: rgba(255, 255, 255, 0.025);
+  1543	  display: flex;
+  1544	  flex-direction: column;
+  1545	  min-width: 0;
+  1546	  min-height: 104px;
+  1547	  padding: 22px;
+  1548	}
+  1549	
+  1550	.stats-strip strong {
+  1551	  color: var(--green);
+  1552	  display: block;
+  1553	  font-size: 34px;
+  1554	  font-weight: 900;
+  1555	  line-height: 1;
+  1556	}
+  1557	
+  1558	.stats-strip-label,
+  1559	.stats-strip-measure {
+  1560	  color: var(--muted);
+  1561	  display: block;
+  1562	  font-size: 13px;
+  1563	  font-weight: 700;
+  1564	  line-height: 1.22;
+  1565	  margin-top: 8px;
+  1566	}
+  1567	
+  1568	.stats-strip-label {
+  1569	  min-width: 0;
+  1570	}
+  1571	
+  1572	.stats-strip-label-line {
+  1573	  display: block;
+  1574	  min-width: 0;
+  1575	  overflow-wrap: anywhere;
+  1576	  white-space: normal;
+  1577	}
+  1578	
+  1579	.stats-strip-label-sr {
+  1580	  clip: rect(0 0 0 0);
+  1581	  clip-path: inset(50%);
+  1582	  height: 1px;
+  1583	  overflow: hidden;
+  1584	  position: absolute;
+  1585	  white-space: nowrap;
+  1586	  width: 1px;
+  1587	}
+  1588	
+  1589	.stats-strip-measure {
+  1590	  left: -9999px;
+  1591	  margin-top: 0;
+  1592	  pointer-events: none;
+  1593	  position: absolute;
+  1594	  top: 0;
+  1595	  visibility: hidden;
+  1596	  white-space: nowrap;
+  1597	  width: max-content;
+  1598	}
+  1599	
+  1600	section:not(.hero) {
+  1601	  padding: 88px 0;
+  1602	}
+  1603	
+  1604	.section-heading {
+  1605	  max-width: 720px;
+  1606	}
+  1607	
+  1608	.case-grid {
+  1609	  display: grid;
+  1610	  gap: 18px;
+  1611	  grid-template-columns: repeat(3, minmax(0, 1fr));
+  1612	  margin-top: 34px;
+  1613	}
+  1614	
+  1615	.case-card,
+  1616	.capability-grid div,
+  1617	.contact-panel {
+  1618	  background: linear-gradient(180deg, rgba(13, 31, 22, 0.88), rgba(5, 13, 9, 0.88));
+  1619	  border: 1px solid var(--line);
+  1620	  border-radius: 8px;
+  1621	}
+  1622	
+  1623	.case-card {
+  1624	  --case-stat-font-size: 12px;
+  1625	  --case-stat-chip-font-size: var(--case-stat-font-size);
+  1626	  min-height: 330px;
+  1627	  min-width: 0;
+  1628	  padding: 28px;
+  1629	  width: 100%;
+  1630	}
+  1631	
+  1632	.case-grid > .uiux-principle-card-expanded {
+  1633	  grid-column: 1 / -1;
+  1634	}
+  1635	
+  1636	@media (min-width: 631px) {
+  1637	  .case-grid > .uiux-principle-card-expanded {
+  1638	    align-content: start;
+  1639	    min-height: 330px;
+  1640	  }
+  1641	
+  1642	  .case-grid > .uiux-principle-card-expanded .uiux-principle-long-copy {
+  1643	    column-count: 2;
+  1644	    column-fill: balance;
+  1645	    column-gap: 28px;
+  1646	    display: block;
+  1647	  }
+  1648	
+  1649	  .case-grid > .uiux-principle-card-expanded .uiux-principle-long-copy p {
+  1650	    break-inside: auto;
+  1651	    margin: 0 0 12px;
+  1652	  }
+  1653	}
+  1654	
+  1655	@media (min-width: 981px) {
+  1656	  .case-grid > .uiux-principle-card-expanded .uiux-principle-long-copy {
+  1657	    column-count: 3;
+  1658	  }
+  1659	}
+  1660	
+  1661	.case-card-link {
+  1662	  color: inherit;
+  1663	  cursor: pointer;
+  1664	  display: block;
+  1665	  text-decoration: none;
+  1666	  transition:
+  1667	    border-color 160ms ease,
+  1668	    box-shadow 160ms ease,
+  1669	    transform 160ms ease;
+  1670	}
+  1671	
+  1672	.case-card-link:hover {
+  1673	  border-color: rgba(198, 255, 217, 0.36);
+  1674	  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.28);
+  1675	  transform: translateY(-2px);
+  1676	}
+  1677	
+  1678	.case-card-link:focus-visible {
+  1679	  outline: 2px solid var(--mint);
+  1680	  outline-offset: 6px;
+  1681	}
+  1682	
+  1683	.case-grid-featured {
+  1684	  align-items: stretch;
+  1685	  --case-featured-title-stack-gap: 14px;
+  1686	}
+  1687	
+  1688	.case-grid-featured > .case-card {
+  1689	  align-content: start;
+  1690	  display: grid;
+  1691	  grid-template-rows:
+  1692	    var(--case-featured-topline-row, auto)
+  1693	    var(--case-featured-title-row, auto)
+  1694	    var(--case-featured-device-row, auto)
+  1695	    var(--case-featured-description-row, auto)
+  1696	    var(--case-featured-tags-row, auto)
+  1697	    var(--case-featured-media-row, auto);
+  1698	}
+  1699	
+  1700	.case-grid-featured > #this-portfolio-website {
+  1701	  opacity: 0.5;
+  1702	  transition:
+  1703	    border-color 160ms ease,
+  1704	    box-shadow 160ms ease,
+  1705	    opacity 160ms ease,
+  1706	    transform 160ms ease;
+  1707	}
+  1708	
+  1709	.case-grid-featured > #this-portfolio-website:hover {
+  1710	  border-color: rgba(198, 255, 217, 0.36);
+  1711	  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.28);
+  1712	  opacity: 1;
+  1713	  transform: translateY(-2px);
   1714	}
   1715	
-  1716	.case-grid-featured > .case-card > .case-description {
+  1716	.case-grid-featured > .case-card > .case-topline {
   1717	  align-self: start;
-  1718	  grid-row: 4;
+  1718	  grid-row: 1;
   1719	}
   1720	
-  1721	.case-grid-featured > .case-card > .case-tags {
+  1721	.case-grid-featured > .case-card > .case-card-title-stack {
   1722	  align-self: start;
-  1723	  grid-row: 5;
-  1724	}
-  1725	
-  1726	.case-grid-featured > .case-card > .case-miniatures {
-  1727	  align-self: start;
-  1728	  grid-row: 6;
-  1729	}
-  1730	
-  1731	.case-topline {
-  1732	  align-items: start;
-  1733	  display: grid;
-  1734	  gap: 0;
-  1735	  grid-template-columns: repeat(3, minmax(0, 1fr));
-  1736	  min-width: 0;
-  1737	}
-  1738	
-  1739	.case-stat-stack {
-  1740	  display: grid;
-  1741	  gap: 7px;
-  1742	  grid-column: 3;
-  1743	  justify-items: center;
-  1744	  justify-self: end;
-  1745	  max-width: 100%;
-  1746	  min-width: 0;
-  1747	  width: min(112px, 100%);
-  1748	}
-  1749	
-  1750	.case-eyebrow {
-  1751	  color: var(--green);
-  1752	  display: block;
-  1753	  font-size: 12px;
-  1754	  font-weight: 850;
-  1755	  grid-column: 1;
-  1756	  justify-self: start;
-  1757	  line-height: 1.18;
-  1758	  min-width: 0;
-  1759	  overflow-wrap: normal;
-  1760	  text-align: left;
-  1761	  text-transform: uppercase;
-  1762	  white-space: normal;
-  1763	  width: 100%;
-  1764	}
-  1765	
-  1766	.case-topline strong {
-  1767	  align-items: center;
-  1768	  border: 1px solid var(--line);
-  1769	  border-radius: 999px;
-  1770	  color: var(--mint);
-  1771	  display: flex;
-  1772	  font-size: var(--case-stat-chip-font-size);
-  1773	  justify-content: center;
-  1774	  line-height: 1.1;
-  1775	  max-width: 100%;
-  1776	  min-height: 31px;
-  1777	  min-width: 0;
-  1778	  overflow: hidden;
+  1723	  grid-row: 2;
+  1724	  margin-bottom: var(--case-featured-title-stack-gap);
+  1725	}
+  1726	
+  1727	.case-grid-featured > .case-card > .case-card-title-device-stack {
+  1728	  align-self: start;
+  1729	  grid-column: 1;
+  1730	  grid-row: 3;
+  1731	  justify-self: stretch;
+  1732	  margin-bottom: var(--case-featured-title-stack-gap);
+  1733	  width: 100%;
+  1734	}
+  1735	
+  1736	.case-grid-featured > .case-card > .case-description {
+  1737	  align-self: start;
+  1738	  grid-row: 4;
+  1739	}
+  1740	
+  1741	.case-grid-featured > .case-card > .case-tags {
+  1742	  align-self: start;
+  1743	  grid-row: 5;
+  1744	}
+  1745	
+  1746	.case-grid-featured > .case-card > .case-miniatures {
+  1747	  align-self: start;
+  1748	  grid-row: 6;
+  1749	}
+  1750	
+  1751	.case-topline {
+  1752	  align-items: start;
+  1753	  display: grid;
+  1754	  gap: 0;
+  1755	  grid-template-columns: repeat(3, minmax(0, 1fr));
+  1756	  min-width: 0;
+  1757	}
+  1758	
+  1759	.case-stat-stack {
+  1760	  display: grid;
+  1761	  gap: 7px;
+  1762	  grid-column: 3;
+  1763	  justify-items: center;
+  1764	  justify-self: end;
+  1765	  max-width: 100%;
+  1766	  min-width: 0;
+  1767	  width: min(112px, 100%);
+  1768	}
+  1769	
+  1770	.case-eyebrow {
+  1771	  color: var(--green);
+  1772	  display: block;
+  1773	  font-size: 12px;
+  1774	  font-weight: 850;
+  1775	  grid-column: 1;
+  1776	  justify-self: start;
+  1777	  line-height: 1.18;
+  1778	  min-width: 0;
   1779	  overflow-wrap: normal;
-  1780	  padding: 7px clamp(4px, 1.5vw, 10px);
-  1781	  text-align: center;
-  1782	  text-overflow: clip;
-  1783	  white-space: nowrap;
-  1784	  width: 100%;
-  1785	}
-  1786	
-  1787	.case-worklog-stat {
-  1788	  color: var(--mint);
-  1789	  display: block;
-  1790	  font-size: 11px;
-  1791	  font-weight: 400;
-  1792	  line-height: 1;
-  1793	  max-width: 100%;
-  1794	  min-width: 0;
-  1795	  opacity: 0.5;
-  1796	  overflow: hidden;
-  1797	  overflow-wrap: normal;
-  1798	  text-align: center;
-  1799	  text-overflow: clip;
-  1800	  white-space: nowrap;
-  1801	  width: 100%;
-  1802	}
-  1803	
-  1804	.case-card h3 {
-  1805	  margin: 54px 0 14px;
-  1806	}
-  1807	
-  1808	.case-card-title-underline {
-  1809	  text-decoration: underline;
-  1810	  text-decoration-thickness: 0.08em;
-  1811	  text-underline-offset: 0.12em;
-  1812	}
-  1813	
-  1814	.case-card-title-stack {
-  1815	  align-items: center;
-  1816	  display: grid;
-  1817	  gap: 0;
-  1818	  grid-template-columns: max-content minmax(0, 1fr);
-  1819	  min-width: 0;
-  1820	  width: 100%;
-  1821	}
-  1822	
-  1823	.case-card-title-stack:not(.case-card-title-stack-no-devices):not(.case-card-title-stack-long) {
-  1824	  grid-template-columns: minmax(0, 1fr);
-  1825	}
-  1826	
-  1827	.case-card-title-stack-long {
-  1828	  align-items: start;
-  1829	  grid-template-columns: minmax(0, 1fr);
-  1830	  row-gap: 8px;
-  1831	}
-  1832	
-  1833	.case-card-title-stack-no-devices {
-  1834	  grid-template-columns: minmax(0, 1fr);
-  1835	}
-  1836	
-  1837	.case-card-project-title-name-stack {
-  1838	  align-self: center;
-  1839	  display: inline-flex;
-  1840	  flex-direction: column;
-  1841	  grid-column: 1;
-  1842	  justify-content: center;
-  1843	  justify-self: start;
-  1844	}
-  1845	
-  1846	.case-card-title-stack-no-devices .case-card-project-title-name-stack,
-  1847	.case-card-title-stack-long .case-card-project-title-name-stack {
-  1848	  max-width: 100%;
-  1849	  min-width: 0;
-  1850	}
-  1851	
-  1852	.case-card-project-title-name {
-  1853	  display: block;
-  1854	}
-  1855	
-  1856	.case-card-title-stack-original .case-card-project-title-name-stack,
-  1857	.case-card-title-stack-original .case-card-project-title-name,
-  1858	.case-card-title-stack-original .case-card-title-underline {
-  1859	  color: var(--text);
-  1860	  font-family: inherit;
-  1861	  font-size: 40px;
-  1862	  font-weight: 800;
-  1863	  letter-spacing: 0;
-  1864	  line-height: 1;
-  1865	  paint-order: normal;
-  1866	  text-shadow: none;
-  1867	  -webkit-text-stroke: 0;
-  1868	}
-  1869	
-  1870	.case-card-title-stack-no-devices .case-card-project-title-name,
-  1871	.case-card-title-stack-no-devices .case-card-title-underline,
-  1872	.case-card-title-stack-long .case-card-project-title-name,
-  1873	.case-card-title-stack-long .case-card-title-underline {
-  1874	  overflow-wrap: anywhere;
-  1875	  white-space: normal;
-  1876	}
-  1877	
-  1878	.case-card-portfolio-title-stack {
-  1879	  display: inline-grid;
-  1880	  gap: 10px;
-  1881	  justify-items: center;
-  1882	  line-height: 1;
-  1883	}
-  1884	
-  1885	.case-card-title-device-stack {
-  1886	  align-items: center;
-  1887	  align-self: center;
-  1888	  display: flex;
-  1889	  flex: 0 0 auto;
-  1890	  font-size: 27.85px;
-  1891	  grid-column: 2;
-  1892	  justify-self: stretch;
-  1893	  line-height: 1;
-  1894	  min-width: 0;
-  1895	  width: 100%;
+  1780	  text-align: left;
+  1781	  text-transform: uppercase;
+  1782	  white-space: normal;
+  1783	  width: 100%;
+  1784	}
+  1785	
+  1786	.case-topline strong {
+  1787	  align-items: center;
+  1788	  border: 1px solid var(--line);
+  1789	  border-radius: 999px;
+  1790	  color: var(--mint);
+  1791	  display: flex;
+  1792	  font-size: var(--case-stat-chip-font-size);
+  1793	  justify-content: center;
+  1794	  line-height: 1.1;
+  1795	  max-width: 100%;
+  1796	  min-height: 31px;
+  1797	  min-width: 0;
+  1798	  overflow: hidden;
+  1799	  overflow-wrap: normal;
+  1800	  padding: 7px clamp(4px, 1.5vw, 10px);
+  1801	  text-align: center;
+  1802	  text-overflow: clip;
+  1803	  white-space: nowrap;
+  1804	  width: 100%;
+  1805	}
+  1806	
+  1807	.case-worklog-stat {
+  1808	  color: var(--mint);
+  1809	  display: block;
+  1810	  font-size: 11px;
+  1811	  font-weight: 400;
+  1812	  line-height: 1;
+  1813	  max-width: 100%;
+  1814	  min-width: 0;
+  1815	  opacity: 0.5;
+  1816	  overflow: hidden;
+  1817	  overflow-wrap: normal;
+  1818	  text-align: center;
+  1819	  text-overflow: clip;
+  1820	  white-space: nowrap;
+  1821	  width: 100%;
+  1822	}
+  1823	
+  1824	.case-card h3 {
+  1825	  margin: 54px 0 14px;
+  1826	}
+  1827	
+  1828	.case-card-title-underline {
+  1829	  text-decoration: underline;
+  1830	  text-decoration-thickness: 0.08em;
+  1831	  text-underline-offset: 0.12em;
+  1832	}
+  1833	
+  1834	.case-card-title-stack {
+  1835	  align-items: center;
+  1836	  display: grid;
+  1837	  gap: 0;
+  1838	  grid-template-columns: max-content minmax(0, 1fr);
+  1839	  min-width: 0;
+  1840	  width: 100%;
+  1841	}
+  1842	
+  1843	.case-card-title-stack:not(.case-card-title-stack-no-devices):not(.case-card-title-stack-long) {
+  1844	  grid-template-columns: minmax(0, 1fr);
+  1845	}
+  1846	
+  1847	.case-card-title-stack-long {
+  1848	  align-items: start;
+  1849	  grid-template-columns: minmax(0, 1fr);
+  1850	  row-gap: 8px;
+  1851	}
+  1852	
+  1853	.case-card-title-stack-no-devices {
+  1854	  grid-template-columns: minmax(0, 1fr);
+  1855	}
+  1856	
+  1857	.case-card-project-title-name-stack {
+  1858	  align-self: center;
+  1859	  display: inline-flex;
+  1860	  flex-direction: column;
+  1861	  grid-column: 1;
+  1862	  justify-content: center;
+  1863	  justify-self: start;
+  1864	}
+  1865	
+  1866	.case-card-title-stack-no-devices .case-card-project-title-name-stack,
+  1867	.case-card-title-stack-long .case-card-project-title-name-stack {
+  1868	  max-width: 100%;
+  1869	  min-width: 0;
+  1870	}
+  1871	
+  1872	.case-card-project-title-name {
+  1873	  display: block;
+  1874	}
+  1875	
+  1876	.case-card-title-stack-original .case-card-project-title-name-stack,
+  1877	.case-card-title-stack-original .case-card-project-title-name,
+  1878	.case-card-title-stack-original .case-card-title-underline {
+  1879	  color: var(--text);
+  1880	  font-family: inherit;
+  1881	  font-size: 40px;
+  1882	  font-weight: 800;
+  1883	  letter-spacing: 0;
+  1884	  line-height: 1;
+  1885	  paint-order: normal;
+  1886	  text-shadow: none;
+  1887	  -webkit-text-stroke: 0;
+  1888	}
+  1889	
+  1890	.case-card-title-stack-no-devices .case-card-project-title-name,
+  1891	.case-card-title-stack-no-devices .case-card-title-underline,
+  1892	.case-card-title-stack-long .case-card-project-title-name,
+  1893	.case-card-title-stack-long .case-card-title-underline {
+  1894	  overflow-wrap: anywhere;
+  1895	  white-space: normal;
   1896	}
   1897	
-  1898	.case-card-title-stack-long .case-card-title-device-stack {
-  1899	  grid-column: 1;
-  1900	  justify-content: flex-start;
-  1901	  justify-self: start;
-  1902	  width: auto;
+  1898	.case-card-portfolio-title-stack {
+  1899	  display: inline-grid;
+  1900	  gap: 10px;
+  1901	  justify-items: center;
+  1902	  line-height: 1;
   1903	}
   1904	
-  1905	.case-card-title-platform-slot {
+  1905	.case-card-title-device-stack {
   1906	  align-items: center;
-  1907	  display: flex;
-  1908	  flex: 0 0 auto;
-  1909	  flex-direction: column;
-  1910	  gap: 3px;
-  1911	  justify-self: stretch;
-  1912	  justify-content: center;
+  1907	  align-self: center;
+  1908	  display: flex;
+  1909	  flex: 0 0 auto;
+  1910	  font-size: 27.85px;
+  1911	  grid-column: 2;
+  1912	  justify-self: stretch;
   1913	  line-height: 1;
-  1914	  width: 100%;
-  1915	}
-  1916	
-  1917	.case-card-title-platform-slot::before {
-  1918	  color: var(--mint);
-  1919	  content: attr(data-platform-label);
-  1920	  display: block;
-  1921	  font-family: inherit;
-  1922	  font-size: 8px;
-  1923	  font-weight: 850;
-  1924	  left: 50%;
-  1925	  letter-spacing: 0.06em;
-  1926	  line-height: 1;
-  1927	  text-align: center;
-  1928	  white-space: nowrap;
-  1929	  width: 100%;
-  1930	}
-  1931	
-  1932	.case-card-title-device-stack .carousel-button-project {
-  1933	  grid-column: auto;
-  1934	}
-  1935	
-  1936	.case-card-title-platform-list {
-  1937	  -webkit-text-stroke: 0;
-  1938	  align-items: center;
-  1939	  column-gap: 11px;
-  1940	  display: grid;
-  1941	  grid-template-columns: max-content 1px max-content;
-  1942	  justify-content: start;
-  1943	  paint-order: normal;
-  1944	  row-gap: 6px;
-  1945	  text-shadow: none;
-  1946	  width: 100%;
-  1947	}
-  1948	
-  1949	.case-card-title-platform-heading-platform {
-  1950	  grid-column: 1;
-  1951	  grid-row: 1;
-  1952	}
-  1953	
-  1954	.case-card-title-platform-heading-factor {
-  1955	  grid-column: 1;
-  1956	  grid-row: 2;
-  1957	}
-  1958	
-  1959	.case-card-title-platform-divider {
-  1960	  border-left: 1px solid currentColor;
-  1961	  color: var(--mint);
-  1962	  display: block;
-  1963	  width: 0;
-  1964	}
-  1965	
-  1966	.case-card-title-platform-grid-divider {
-  1967	  align-self: stretch;
-  1968	  grid-column: 2;
-  1969	  grid-row: 1 / 3;
-  1970	  justify-self: center;
-  1971	}
-  1972	
-  1973	.case-card-title-platform-item-divider {
-  1974	  align-self: stretch;
-  1975	  justify-self: center;
-  1976	  min-height: 1em;
+  1914	  min-width: 0;
+  1915	  width: 100%;
+  1916	}
+  1917	
+  1918	.case-card-title-stack-long .case-card-title-device-stack {
+  1919	  grid-column: 1;
+  1920	  justify-content: flex-start;
+  1921	  justify-self: start;
+  1922	  width: auto;
+  1923	}
+  1924	
+  1925	.case-card-title-platform-slot {
+  1926	  align-items: center;
+  1927	  display: flex;
+  1928	  flex: 0 0 auto;
+  1929	  flex-direction: column;
+  1930	  gap: 3px;
+  1931	  justify-self: stretch;
+  1932	  justify-content: center;
+  1933	  line-height: 1;
+  1934	  width: 100%;
+  1935	}
+  1936	
+  1937	.case-card-title-platform-slot::before {
+  1938	  color: var(--mint);
+  1939	  content: attr(data-platform-label);
+  1940	  display: block;
+  1941	  font-family: inherit;
+  1942	  font-size: 8px;
+  1943	  font-weight: 850;
+  1944	  left: 50%;
+  1945	  letter-spacing: 0.06em;
+  1946	  line-height: 1;
+  1947	  text-align: center;
+  1948	  white-space: nowrap;
+  1949	  width: 100%;
+  1950	}
+  1951	
+  1952	.case-card-title-device-stack .carousel-button-project {
+  1953	  grid-column: auto;
+  1954	}
+  1955	
+  1956	.case-card-title-platform-list {
+  1957	  -webkit-text-stroke: 0;
+  1958	  align-items: center;
+  1959	  column-gap: 11px;
+  1960	  display: grid;
+  1961	  grid-template-columns: max-content 1px max-content;
+  1962	  justify-content: start;
+  1963	  paint-order: normal;
+  1964	  row-gap: 6px;
+  1965	  text-shadow: none;
+  1966	  width: 100%;
+  1967	}
+  1968	
+  1969	.case-card-title-platform-heading-platform {
+  1970	  grid-column: 1;
+  1971	  grid-row: 1;
+  1972	}
+  1973	
+  1974	.case-card-title-platform-heading-factor {
+  1975	  grid-column: 1;
+  1976	  grid-row: 2;
   1977	}
   1978	
-  1979	.case-card-title-platform-heading {
-  1980	  color: var(--mint);
-  1981	  display: block;
-  1982	  font-family: inherit;
-  1983	  font-size: 12.1px;
-  1984	  font-weight: 850;
-  1985	  justify-self: end;
-  1986	  letter-spacing: 0.08em;
-  1987	  line-height: 1;
-  1988	  text-align: center;
-  1989	  white-space: nowrap;
-  1990	}
-  1991	
-  1992	.case-card-title-platform-mark {
-  1993	  display: block;
-  1994	  height: 0.8em;
-  1995	  overflow: visible;
-  1996	  width: 0.8em;
+  1979	.case-card-title-platform-divider {
+  1980	  border-left: 1px solid currentColor;
+  1981	  color: var(--mint);
+  1982	  display: block;
+  1983	  width: 0;
+  1984	}
+  1985	
+  1986	.case-card-title-platform-grid-divider {
+  1987	  align-self: stretch;
+  1988	  grid-column: 2;
+  1989	  grid-row: 1 / 3;
+  1990	  justify-self: center;
+  1991	}
+  1992	
+  1993	.case-card-title-platform-item-divider {
+  1994	  align-self: stretch;
+  1995	  justify-self: center;
+  1996	  min-height: 1em;
   1997	}
   1998	
-  1999	.case-card-title-platform-mark-android {
-  2000	  height: 0.72em;
-  2001	  width: 0.9em;
-  2002	}
-  2003	
-  2004	.case-card-title-platform-list .carousel-button-web {
-  2005	  height: 0.968em !important;
-  2006	  margin-left: 0;
-  2007	  transform: none;
-  2008	  width: 0.968em !important;
-  2009	}
-  2010	
-  2011	.case-card-title-platform-slot[data-platform-label="PHONE"] .carousel-button-phone {
-  2012	  height: 0.968em !important;
-  2013	  width: 0.681em !important;
-  2014	}
-  2015	
-  2016	.case-card-title-platform-slot[data-platform-label="TABLET"] .carousel-button-tablet {
-  2017	  height: 0.72em !important;
-  2018	  width: 1.08em !important;
-  2019	}
-  2020	
-  2021	.case-card-title-device-stack .phone-mini-frame,
-  2022	.case-card-title-device-stack .phone-mini-screen,
-  2023	.case-card-title-device-stack .tablet-mini-frame,
-  2024	.case-card-title-device-stack .tablet-mini-screen,
-  2025	.case-card-title-device-stack .web-globe-shell {
-  2026	  fill: currentColor;
-  2027	  fill-opacity: 0.2;
-  2028	}
-  2029	
-  2030	.case-card p,
-  2031	.capability-grid p,
-  2032	.timeline-item p {
-  2033	  color: #b8c9bf;
-  2034	  line-height: 1.6;
-  2035	  overflow-wrap: anywhere;
-  2036	}
-  2037	
-  2038	.case-description {
-  2039	  display: block;
-  2040	  width: 100%;
-  2041	}
-  2042	
-  2043	.uiux-principle-card .case-description {
-  2044	  color: #c4d6cc;
-  2045	  font-family: inherit;
-  2046	  font-style: normal;
-  2047	  font-weight: 400;
-  2048	  line-height: 1.45;
-  2049	  max-width: none;
-  2050	}
-  2051	
-  2052	.uiux-principle-long-copy {
-  2053	  color: #c4d6cc;
-  2054	  display: grid;
-  2055	  font-family: inherit;
-  2056	  font-style: normal;
-  2057	  font-weight: 400;
-  2058	  gap: 12px;
-  2059	  line-height: 1.45;
-  2060	  max-width: none;
-  2061	  overflow-wrap: anywhere;
-  2062	}
-  2063	
-  2064	.uiux-principle-long-copy-shell {
-  2065	  display: grid;
-  2066	  gap: 0;
-  2067	  position: relative;
-  2068	}
-  2069	
-  2070	.uiux-principle-long-copy-preview {
-  2071	  -webkit-box-orient: vertical;
-  2072	  -webkit-line-clamp: 8;
+  1999	.case-card-title-platform-heading {
+  2000	  color: var(--mint);
+  2001	  display: block;
+  2002	  font-family: inherit;
+  2003	  font-size: 12.1px;
+  2004	  font-weight: 850;
+  2005	  justify-self: end;
+  2006	  letter-spacing: 0.08em;
+  2007	  line-height: 1;
+  2008	  text-align: center;
+  2009	  white-space: nowrap;
+  2010	}
+  2011	
+  2012	.case-card-title-platform-mark {
+  2013	  display: block;
+  2014	  height: 0.8em;
+  2015	  overflow: visible;
+  2016	  width: 0.8em;
+  2017	}
+  2018	
+  2019	.case-card-title-platform-mark-android {
+  2020	  height: 0.72em;
+  2021	  width: 0.9em;
+  2022	}
+  2023	
+  2024	.case-card-title-platform-list .carousel-button-web {
+  2025	  height: 0.968em !important;
+  2026	  margin-left: 0;
+  2027	  transform: none;
+  2028	  width: 0.968em !important;
+  2029	}
+  2030	
+  2031	.case-card-title-platform-slot[data-platform-label="PHONE"] .carousel-button-phone {
+  2032	  height: 0.968em !important;
+  2033	  width: 0.681em !important;
+  2034	}
+  2035	
+  2036	.case-card-title-platform-slot[data-platform-label="TABLET"] .carousel-button-tablet {
+  2037	  height: 0.72em !important;
+  2038	  width: 1.08em !important;
+  2039	}
+  2040	
+  2041	.case-card-title-device-stack .phone-mini-frame,
+  2042	.case-card-title-device-stack .phone-mini-screen,
+  2043	.case-card-title-device-stack .tablet-mini-frame,
+  2044	.case-card-title-device-stack .tablet-mini-screen,
+  2045	.case-card-title-device-stack .web-globe-shell {
+  2046	  fill: currentColor;
+  2047	  fill-opacity: 0.2;
+  2048	}
+  2049	
+  2050	.case-card p,
+  2051	.capability-grid p,
+  2052	.timeline-item p {
+  2053	  color: #b8c9bf;
+  2054	  line-height: 1.6;
+  2055	  overflow-wrap: anywhere;
+  2056	}
+  2057	
+  2058	.case-description {
+  2059	  display: block;
+  2060	  width: 100%;
+  2061	}
+  2062	
+  2063	.uiux-principle-card .case-description {
+  2064	  color: #c4d6cc;
+  2065	  font-family: inherit;
+  2066	  font-style: normal;
+  2067	  font-weight: 400;
+  2068	  line-height: 1.45;
+  2069	  max-width: none;
+  2070	}
+  2071	
+  2072	.uiux-principle-long-copy {
   2073	  color: #c4d6cc;
-  2074	  display: -webkit-box;
+  2074	  display: grid;
   2075	  font-family: inherit;
   2076	  font-style: normal;
   2077	  font-weight: 400;
-  2078	  line-height: 1.45;
-  2079	  margin: 0;
-  2080	  max-height: calc(1.45em * 8);
-  2081	  max-width: none;
-  2082	  overflow: hidden;
-  2083	  overflow-wrap: anywhere;
-  2084	  white-space: pre-line;
-  2085	}
-  2086	
-  2087	.uiux-principle-long-copy-measure {
-  2088	  color: #c4d6cc;
-  2089	  font-family: inherit;
-  2090	  font-style: normal;
-  2091	  font-weight: 400;
-  2092	  height: 0;
-  2093	  left: 0;
-  2094	  line-height: 1.45;
-  2095	  margin: 0;
-  2096	  max-height: 0;
-  2097	  max-width: none;
-  2098	  overflow: hidden;
-  2099	  overflow-wrap: anywhere;
-  2100	  pointer-events: none;
-  2101	  position: absolute;
-  2102	  top: 0;
-  2103	  visibility: hidden;
+  2078	  gap: 12px;
+  2079	  line-height: 1.45;
+  2080	  max-width: none;
+  2081	  overflow-wrap: anywhere;
+  2082	}
+  2083	
+  2084	.uiux-principle-long-copy-shell {
+  2085	  display: grid;
+  2086	  gap: 0;
+  2087	  position: relative;
+  2088	}
+  2089	
+  2090	.uiux-principle-long-copy-preview {
+  2091	  -webkit-box-orient: vertical;
+  2092	  -webkit-line-clamp: 8;
+  2093	  color: #c4d6cc;
+  2094	  display: -webkit-box;
+  2095	  font-family: inherit;
+  2096	  font-style: normal;
+  2097	  font-weight: 400;
+  2098	  line-height: 1.45;
+  2099	  margin: 0;
+  2100	  max-height: calc(1.45em * 8);
+  2101	  max-width: none;
+  2102	  overflow: hidden;
+  2103	  overflow-wrap: anywhere;
   2104	  white-space: pre-line;
-  2105	  width: 100%;
-  2106	}
-  2107	
-  2108	.uiux-principle-long-copy p {
-  2109	  color: inherit;
-  2110	  line-height: inherit;
-  2111	  margin: 0;
-  2112	}
-  2113	
-  2114	.uiux-principle-read-more-line {
-  2115	  color: #c4d6cc;
-  2116	  font-family: inherit;
-  2117	  font-style: normal;
-  2118	  font-weight: 400;
-  2119	  line-height: 1.45;
-  2120	  margin: 0;
-  2121	}
-  2122	
-  2123	.uiux-principle-read-more {
-  2124	  appearance: none;
-  2125	  background: transparent;
-  2126	  border: 0;
-  2127	  color: inherit;
-  2128	  cursor: pointer;
-  2129	  font: inherit;
-  2130	  padding: 0;
-  2131	}
-  2132	
-  2133	.uiux-principle-read-more:hover,
-  2134	.uiux-principle-read-more:focus-visible {
-  2135	  color: var(--green);
-  2136	}
-  2137	
-  2138	.uiux-principle-read-more:focus-visible {
-  2139	  outline: 1px solid var(--green);
-  2140	  outline-offset: 3px;
+  2105	}
+  2106	
+  2107	.uiux-principle-long-copy-measure {
+  2108	  color: #c4d6cc;
+  2109	  font-family: inherit;
+  2110	  font-style: normal;
+  2111	  font-weight: 400;
+  2112	  height: 0;
+  2113	  left: 0;
+  2114	  line-height: 1.45;
+  2115	  margin: 0;
+  2116	  max-height: 0;
+  2117	  max-width: none;
+  2118	  overflow: hidden;
+  2119	  overflow-wrap: anywhere;
+  2120	  pointer-events: none;
+  2121	  position: absolute;
+  2122	  top: 0;
+  2123	  visibility: hidden;
+  2124	  white-space: pre-line;
+  2125	  width: 100%;
+  2126	}
+  2127	
+  2128	.uiux-principle-long-copy p {
+  2129	  color: inherit;
+  2130	  line-height: inherit;
+  2131	  margin: 0;
+  2132	}
+  2133	
+  2134	.uiux-principle-read-more-line {
+  2135	  color: #c4d6cc;
+  2136	  font-family: inherit;
+  2137	  font-style: normal;
+  2138	  font-weight: 400;
+  2139	  line-height: 1.45;
+  2140	  margin: 0;
   2141	}
   2142	
-  2143	.case-tags {
-  2144	  display: grid;
-  2145	  gap: 6px;
-  2146	  grid-template-columns:
-  2147	    minmax(0, 33fr)
-  2148	    minmax(0, 34fr)
-  2149	    minmax(0, 33fr);
-  2150	  margin-top: 24px;
-  2151	  width: 100%;
-  2152	}
-  2153	
-  2154	.case-tags span {
-  2155	  align-items: center;
-  2156	  box-sizing: border-box;
-  2157	  display: flex;
-  2158	  font-size: 11px;
-  2159	  justify-content: center;
-  2160	  min-width: 0;
-  2161	  padding-left: 4px;
-  2162	  padding-right: 4px;
-  2163	  text-align: center;
-  2164	  white-space: nowrap;
-  2165	  width: 100%;
-  2166	}
-  2167	
-  2168	.case-miniatures {
-  2169	  display: grid;
-  2170	  gap: 10px;
-  2171	  grid-template-columns: repeat(3, minmax(0, 1fr));
-  2172	  margin-top: 26px;
-  2173	  max-width: 390px;
-  2174	  min-width: 0;
-  2175	  width: min(100%, 390px);
-  2176	}
-  2177	
-  2178	.case-miniatures-landscape {
-  2179	  grid-template-columns: 1fr;
-  2180	  max-width: 420px;
-  2181	  width: min(100%, 420px);
-  2182	}
-  2183	
-  2184	.case-miniatures-cinerific {
-  2185	  container-type: inline-size;
-  2186	  max-width: 390px;
-  2187	  width: min(100%, 390px);
-  2188	}
-  2189	
-  2190	.case-miniatures-cinerific .case-miniature-landscape {
-  2191	  aspect-ratio: 5265 / 2960;
-  2192	  object-fit: cover;
-  2193	  object-position: center center;
-  2194	}
-  2195	
-  2196	@supports (width: 1cqw) {
-  2197	  .case-miniatures-cinerific .case-miniature-landscape {
-  2198	    aspect-ratio: auto;
-  2199	    height: calc(((100cqw - 20px) / 3) * 16 / 9);
-  2200	  }
-  2201	}
-  2202	
-  2203	.case-miniatures-pair {
-  2204	  align-items: start;
-  2205	  grid-template-columns: minmax(0, 1.442fr) minmax(0, 0.5625fr);
-  2206	  max-width: none;
-  2207	  width: min(100%, 343px);
+  2143	.uiux-principle-read-more {
+  2144	  appearance: none;
+  2145	  background: transparent;
+  2146	  border: 0;
+  2147	  color: inherit;
+  2148	  cursor: pointer;
+  2149	  font: inherit;
+  2150	  padding: 0;
+  2151	}
+  2152	
+  2153	.uiux-principle-read-more:hover,
+  2154	.uiux-principle-read-more:focus-visible {
+  2155	  color: var(--green);
+  2156	}
+  2157	
+  2158	.uiux-principle-read-more:focus-visible {
+  2159	  outline: 1px solid var(--green);
+  2160	  outline-offset: 3px;
+  2161	}
+  2162	
+  2163	.case-tags {
+  2164	  display: grid;
+  2165	  gap: 6px;
+  2166	  grid-template-columns:
+  2167	    minmax(0, 33fr)
+  2168	    minmax(0, 34fr)
+  2169	    minmax(0, 33fr);
+  2170	  margin-top: 24px;
+  2171	  width: 100%;
+  2172	}
+  2173	
+  2174	.case-tags span {
+  2175	  align-items: center;
+  2176	  box-sizing: border-box;
+  2177	  display: flex;
+  2178	  font-size: 11px;
+  2179	  justify-content: center;
+  2180	  min-width: 0;
+  2181	  padding-left: 4px;
+  2182	  padding-right: 4px;
+  2183	  text-align: center;
+  2184	  white-space: nowrap;
+  2185	  width: 100%;
+  2186	}
+  2187	
+  2188	.case-miniatures {
+  2189	  display: grid;
+  2190	  gap: 10px;
+  2191	  grid-template-columns: repeat(3, minmax(0, 1fr));
+  2192	  margin-top: 26px;
+  2193	  max-width: 390px;
+  2194	  min-width: 0;
+  2195	  width: min(100%, 390px);
+  2196	}
+  2197	
+  2198	.case-miniatures-landscape {
+  2199	  grid-template-columns: 1fr;
+  2200	  max-width: 420px;
+  2201	  width: min(100%, 420px);
+  2202	}
+  2203	
+  2204	.case-miniatures-cinerific {
+  2205	  container-type: inline-size;
+  2206	  max-width: 390px;
+  2207	  width: min(100%, 390px);
   2208	}
   2209	
-  2210	.case-miniatures-pair .case-miniature {
-  2211	  height: auto;
-  2212	  max-height: none;
-  2213	  min-width: 0;
-  2214	  object-fit: contain;
-  2215	  width: 100%;
-  2216	}
-  2217	
-  2218	.case-miniatures-pair .case-miniature-landscape {
-  2219	  aspect-ratio: 2509 / 1740;
-  2220	}
-  2221	
-  2222	.case-miniature {
-  2223	  aspect-ratio: 9 / 16;
-  2224	  background: #020403;
-  2225	  border: 1px solid var(--line);
-  2226	  border-radius: var(--capture-frame-radius-standard);
-  2227	  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.28);
-  2228	  display: block;
-  2229	  height: auto;
-  2230	  object-fit: contain;
-  2231	  width: 100%;
-  2232	}
-  2233	
-  2234	.case-miniature-landscape {
-  2235	  aspect-ratio: 2388 / 1668;
-  2236	  border-radius: var(--capture-frame-radius-standard);
-  2237	}
-  2238	
-  2239	.split-section {
-  2240	  display: grid;
-  2241	  gap: 44px;
-  2242	}
-  2243	
-  2244	.capability-grid {
-  2245	  display: grid;
-  2246	  gap: 18px;
-  2247	  grid-auto-rows: auto;
-  2248	  grid-template-columns: repeat(3, minmax(0, 1fr));
-  2249	}
-  2250	
-  2251	.capability-grid div {
-  2252	  min-width: 0;
-  2253	  padding: 24px;
-  2254	}
-  2255	
-  2256	.capability-grid h3 {
-  2257	  min-width: 0;
-  2258	  overflow-wrap: anywhere;
-  2259	}
-  2260	
-  2261	.capability-grid svg {
-  2262	  color: var(--green);
-  2263	  display: block;
-  2264	  margin-bottom: 30px;
-  2265	  max-width: 100%;
-  2266	}
-  2267	
-  2268	.worklog-layout {
-  2269	  display: grid;
-  2270	  gap: 42px;
-  2271	  grid-template-columns: minmax(0, 0.9fr) minmax(320px, 1.1fr);
-  2272	}
-  2273	
-  2274	.timeline {
-  2275	  border-left: 1px solid var(--line-strong);
-  2276	}
-  2277	
-  2278	.timeline-item {
-  2279	  display: grid;
-  2280	  gap: 18px;
-  2281	  grid-template-columns: 56px 1fr;
-  2282	  padding: 8px 0 28px 24px;
-  2283	}
-  2284	
-  2285	.timeline-item span {
-  2286	  color: var(--green);
-  2287	  font-weight: 900;
-  2288	}
-  2289	
-  2290	.contact-panel {
-  2291	  align-items: center;
-  2292	  display: flex;
-  2293	  gap: 28px;
-  2294	  justify-content: space-between;
-  2295	  padding: 30px;
+  2210	.case-miniatures-cinerific .case-miniature-landscape {
+  2211	  aspect-ratio: 5265 / 2960;
+  2212	  object-fit: cover;
+  2213	  object-position: center center;
+  2214	}
+  2215	
+  2216	@supports (width: 1cqw) {
+  2217	  .case-miniatures-cinerific .case-miniature-landscape {
+  2218	    aspect-ratio: auto;
+  2219	    height: calc(((100cqw - 20px) / 3) * 16 / 9);
+  2220	  }
+  2221	}
+  2222	
+  2223	.case-miniatures-pair {
+  2224	  align-items: start;
+  2225	  grid-template-columns: minmax(0, 1.442fr) minmax(0, 0.5625fr);
+  2226	  max-width: none;
+  2227	  width: min(100%, 343px);
+  2228	}
+  2229	
+  2230	.case-miniatures-pair .case-miniature {
+  2231	  height: auto;
+  2232	  max-height: none;
+  2233	  min-width: 0;
+  2234	  object-fit: contain;
+  2235	  width: 100%;
+  2236	}
+  2237	
+  2238	.case-miniatures-pair .case-miniature-landscape {
+  2239	  aspect-ratio: 2509 / 1740;
+  2240	}
+  2241	
+  2242	.case-miniature {
+  2243	  aspect-ratio: 9 / 16;
+  2244	  background: #020403;
+  2245	  border: 1px solid var(--line);
+  2246	  border-radius: var(--capture-frame-radius-standard);
+  2247	  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.28);
+  2248	  display: block;
+  2249	  height: auto;
+  2250	  object-fit: contain;
+  2251	  width: 100%;
+  2252	}
+  2253	
+  2254	.case-miniature-landscape {
+  2255	  aspect-ratio: 2388 / 1668;
+  2256	  border-radius: var(--capture-frame-radius-standard);
+  2257	}
+  2258	
+  2259	.split-section {
+  2260	  display: grid;
+  2261	  gap: 44px;
+  2262	}
+  2263	
+  2264	.capability-grid {
+  2265	  display: grid;
+  2266	  gap: 18px;
+  2267	  grid-auto-rows: auto;
+  2268	  grid-template-columns: repeat(3, minmax(0, 1fr));
+  2269	}
+  2270	
+  2271	.capability-grid div {
+  2272	  min-width: 0;
+  2273	  padding: 24px;
+  2274	}
+  2275	
+  2276	.capability-grid h3 {
+  2277	  min-width: 0;
+  2278	  overflow-wrap: anywhere;
+  2279	}
+  2280	
+  2281	.capability-grid svg {
+  2282	  color: var(--green);
+  2283	  display: block;
+  2284	  margin-bottom: 30px;
+  2285	  max-width: 100%;
+  2286	}
+  2287	
+  2288	.worklog-layout {
+  2289	  display: grid;
+  2290	  gap: 42px;
+  2291	  grid-template-columns: minmax(0, 0.9fr) minmax(320px, 1.1fr);
+  2292	}
+  2293	
+  2294	.timeline {
+  2295	  border-left: 1px solid var(--line-strong);
   2296	}
   2297	
-  2298	.contact-panel h2 {
-  2299	  font-size: clamp(28px, 4vw, 46px);
-  2300	  margin-bottom: 0;
-  2301	  max-width: 760px;
-  2302	}
-  2303	
-  2304	.project-page {
-  2305	  overflow-x: hidden;
-  2306	}
-  2307	
-  2308	.project-hero-copy,
-  2309	.project-hero-grid > * {
-  2310	  min-width: 0;
-  2311	}
-  2312	
-  2313	.project-page section:not(.project-hero) {
-  2314	  padding: 78px 0;
-  2315	  position: relative;
+  2298	.timeline-item {
+  2299	  display: grid;
+  2300	  gap: 18px;
+  2301	  grid-template-columns: 56px 1fr;
+  2302	  padding: 8px 0 28px 24px;
+  2303	}
+  2304	
+  2305	.timeline-item span {
+  2306	  color: var(--green);
+  2307	  font-weight: 900;
+  2308	}
+  2309	
+  2310	.contact-panel {
+  2311	  align-items: center;
+  2312	  display: flex;
+  2313	  gap: 28px;
+  2314	  justify-content: space-between;
+  2315	  padding: 30px;
   2316	}
   2317	
-  2318	section.project-hero {
-  2319	  overflow: hidden;
-  2320	  padding: 24px 0 88px;
-  2321	  position: relative;
+  2318	.contact-panel h2 {
+  2319	  font-size: clamp(28px, 4vw, 46px);
+  2320	  margin-bottom: 0;
+  2321	  max-width: 760px;
   2322	}
   2323	
-  2324	.project-hero::after {
-  2325	  background: linear-gradient(transparent, var(--bg));
-  2326	  bottom: 0;
-  2327	  content: "";
-  2328	  height: 30%;
-  2329	  left: 0;
-  2330	  pointer-events: none;
-  2331	  position: absolute;
-  2332	  right: 0;
-  2333	}
-  2334	
-  2335	.project-nav {
-  2336	  margin-bottom: 68px;
-  2337	}
-  2338	
-  2339	.project-hero-grid {
-  2340	  align-items: center;
-  2341	  display: grid;
-  2342	  gap: 56px;
-  2343	  grid-template-columns: minmax(0, 0.92fr) minmax(420px, 1.08fr);
-  2344	  position: relative;
-  2345	  z-index: 2;
-  2346	}
-  2347	
-  2348	.project-hero-copy h1 {
-  2349	  margin-bottom: 18px;
-  2350	}
-  2351	
-  2352	.project-back-link {
-  2353	  align-items: center;
-  2354	  color: var(--muted);
-  2355	  display: inline-flex;
-  2356	  font-size: 13px;
-  2357	  font-weight: 800;
-  2358	  gap: 8px;
-  2359	  margin-bottom: 30px;
-  2360	  transition: color 160ms ease;
-  2361	}
-  2362	
-  2363	.project-back-link:hover {
-  2364	  color: var(--mint);
-  2365	}
-  2366	
-  2367	.project-subtitle {
-  2368	  color: var(--green);
-  2369	  font-size: clamp(20px, 2vw, 28px);
-  2370	  font-weight: 850;
-  2371	  line-height: 1.2;
-  2372	  margin-bottom: 22px;
-  2373	}
-  2374	
-  2375	.project-hero-text,
-  2376	.project-copy-panel p,
-  2377	.architecture-copy,
-  2378	.readiness-copy,
-  2379	.closing-panel p {
-  2380	  color: #c4d6cc;
-  2381	  font-size: 17px;
-  2382	  line-height: 1.65;
-  2383	}
-  2384	
-  2385	.project-hero-text {
-  2386	  max-width: 620px;
-  2387	}
-  2388	
-  2389	.project-meta-row {
-  2390	  display: flex;
-  2391	  flex-wrap: wrap;
-  2392	  gap: 9px;
-  2393	  margin-top: 28px;
-  2394	  max-width: 620px;
-  2395	}
-  2396	
-  2397	.project-meta-row span,
-  2398	.proof-points span,
-  2399	.readiness-list span {
-  2400	  background: rgba(67, 255, 146, 0.08);
-  2401	  border: 1px solid var(--line);
-  2402	  border-radius: 999px;
-  2403	  color: #d8ffe4;
-  2404	  font-size: 13px;
-  2405	  font-weight: 750;
-  2406	  padding: 8px 11px;
-  2407	  white-space: nowrap;
-  2408	}
-  2409	
-  2410	.project-actions {
-  2411	  --hero-action-gap: 12px;
-  2412	  margin-top: 30px;
-  2413	  max-width: 520px;
-  2414	  width: min(100%, calc(100vw - 24px), 520px);
+  2324	.project-page {
+  2325	  overflow-x: hidden;
+  2326	}
+  2327	
+  2328	.project-hero-copy,
+  2329	.project-hero-grid > * {
+  2330	  min-width: 0;
+  2331	}
+  2332	
+  2333	.project-page section:not(.project-hero) {
+  2334	  padding: 78px 0;
+  2335	  position: relative;
+  2336	}
+  2337	
+  2338	section.project-hero {
+  2339	  overflow: hidden;
+  2340	  padding: 24px 0 88px;
+  2341	  position: relative;
+  2342	}
+  2343	
+  2344	.project-hero::after {
+  2345	  background: linear-gradient(transparent, var(--bg));
+  2346	  bottom: 0;
+  2347	  content: "";
+  2348	  height: 30%;
+  2349	  left: 0;
+  2350	  pointer-events: none;
+  2351	  position: absolute;
+  2352	  right: 0;
+  2353	}
+  2354	
+  2355	.project-nav {
+  2356	  margin-bottom: 68px;
+  2357	}
+  2358	
+  2359	.project-hero-grid {
+  2360	  align-items: center;
+  2361	  display: grid;
+  2362	  gap: 56px;
+  2363	  grid-template-columns: minmax(0, 0.92fr) minmax(420px, 1.08fr);
+  2364	  position: relative;
+  2365	  z-index: 2;
+  2366	}
+  2367	
+  2368	.project-hero-copy h1 {
+  2369	  margin-bottom: 18px;
+  2370	}
+  2371	
+  2372	.project-back-link {
+  2373	  align-items: center;
+  2374	  color: var(--muted);
+  2375	  display: inline-flex;
+  2376	  font-size: 13px;
+  2377	  font-weight: 800;
+  2378	  gap: 8px;
+  2379	  margin-bottom: 30px;
+  2380	  transition: color 160ms ease;
+  2381	}
+  2382	
+  2383	.project-back-link:hover {
+  2384	  color: var(--mint);
+  2385	}
+  2386	
+  2387	.project-subtitle {
+  2388	  color: var(--green);
+  2389	  font-size: clamp(20px, 2vw, 28px);
+  2390	  font-weight: 850;
+  2391	  line-height: 1.2;
+  2392	  margin-bottom: 22px;
+  2393	}
+  2394	
+  2395	.project-hero-text,
+  2396	.project-copy-panel p,
+  2397	.architecture-copy,
+  2398	.readiness-copy,
+  2399	.closing-panel p {
+  2400	  color: #c4d6cc;
+  2401	  font-size: 17px;
+  2402	  line-height: 1.65;
+  2403	}
+  2404	
+  2405	.project-hero-text {
+  2406	  max-width: 620px;
+  2407	}
+  2408	
+  2409	.project-meta-row {
+  2410	  display: flex;
+  2411	  flex-wrap: wrap;
+  2412	  gap: 9px;
+  2413	  margin-top: 28px;
+  2414	  max-width: 620px;
   2415	}
   2416	
-  2417	.project-page .project-source-actions {
-  2418	  display: grid;
-  2419	  gap: var(--hero-action-gap);
-  2420	  grid-template-columns: repeat(3, minmax(0, 1fr));
-  2421	  min-width: 0;
-  2422	  width: 100%;
-  2423	}
-  2424	
-  2425	.project-page .project-source-actions > .button {
-  2426	  min-width: 0;
-  2427	  width: 100%;
+  2417	.project-meta-row span,
+  2418	.proof-points span,
+  2419	.readiness-list span {
+  2420	  background: rgba(67, 255, 146, 0.08);
+  2421	  border: 1px solid var(--line);
+  2422	  border-radius: 999px;
+  2423	  color: #d8ffe4;
+  2424	  font-size: 13px;
+  2425	  font-weight: 750;
+  2426	  padding: 8px 11px;
+  2427	  white-space: nowrap;
   2428	}
   2429	
-  2430	.project-page .project-source-actions-icon-only > .button {
-  2431	  gap: 0;
-  2432	}
-  2433	
-  2434	.project-page .project-github-button {
-  2435	  background: #000;
-  2436	  border: 1px solid #000;
-  2437	  color: #f3fff7;
-  2438	  overflow: hidden;
-  2439	}
-  2440	
-  2441	.project-page .project-figma-button {
-  2442	  background: linear-gradient(135deg, #a259ff, #6f3ff5);
-  2443	  border: 1px solid #000;
-  2444	  color: #fff;
-  2445	  overflow: hidden;
-  2446	}
-  2447	
-  2448	.project-page .project-play-store-button {
-  2449	  background: #ea4335;
-  2450	  border: 1px solid #000;
-  2451	  color: #fff;
-  2452	  overflow: hidden;
-  2453	}
-  2454	
-  2455	.project-page .project-app-store-button {
-  2456	  background: #f3fff7;
-  2457	}
-  2458	
-  2459	.project-page .project-github-icon-mark {
-  2460	  flex: 0 0 auto;
-  2461	  height: 46px;
-  2462	  margin-right: -5px;
-  2463	  width: 46px;
-  2464	}
-  2465	
-  2466	.project-page .project-source-actions-icon-only .project-github-icon-mark {
-  2467	  margin-right: 0;
-  2468	}
-  2469	
-  2470	.project-page .project-figma-icon-mark {
-  2471	  display: block;
-  2472	  flex: 0 0 auto;
-  2473	  filter:
-  2474	    drop-shadow(0 0.4px 0 #000)
-  2475	    drop-shadow(0 -0.4px 0 #000)
-  2476	    drop-shadow(0.4px 0 0 #000)
-  2477	    drop-shadow(-0.4px 0 0 #000);
-  2478	  height: 34px;
-  2479	  width: auto;
-  2480	}
-  2481	
-  2482	.project-page .project-play-store-icon-mark,
-  2483	.project-page .project-app-store-icon-mark {
-  2484	  display: block;
-  2485	  flex: 0 0 auto;
-  2486	  height: 28.83px;
-  2487	  width: auto;
+  2430	.project-actions {
+  2431	  --hero-action-gap: 12px;
+  2432	  margin-top: 30px;
+  2433	  max-width: 520px;
+  2434	  width: min(100%, calc(100vw - 24px), 520px);
+  2435	}
+  2436	
+  2437	.project-page .project-source-actions {
+  2438	  display: grid;
+  2439	  gap: var(--hero-action-gap);
+  2440	  grid-template-columns: repeat(3, minmax(0, 1fr));
+  2441	  min-width: 0;
+  2442	  width: 100%;
+  2443	}
+  2444	
+  2445	.project-page .project-source-actions > .button {
+  2446	  min-width: 0;
+  2447	  width: 100%;
+  2448	}
+  2449	
+  2450	.project-page .project-source-actions-icon-only > .button {
+  2451	  gap: 0;
+  2452	}
+  2453	
+  2454	.project-page .project-github-button {
+  2455	  background: #000;
+  2456	  border: 1px solid #000;
+  2457	  color: #f3fff7;
+  2458	  overflow: hidden;
+  2459	}
+  2460	
+  2461	.project-page .project-figma-button {
+  2462	  background: linear-gradient(135deg, #a259ff, #6f3ff5);
+  2463	  border: 1px solid #000;
+  2464	  color: #fff;
+  2465	  overflow: hidden;
+  2466	}
+  2467	
+  2468	.project-page .project-play-store-button {
+  2469	  background: #ea4335;
+  2470	  border: 1px solid #000;
+  2471	  color: #fff;
+  2472	  overflow: hidden;
+  2473	}
+  2474	
+  2475	.project-page .project-app-store-button {
+  2476	  background: #f3fff7;
+  2477	}
+  2478	
+  2479	.project-page .project-github-icon-mark {
+  2480	  flex: 0 0 auto;
+  2481	  height: 46px;
+  2482	  margin-right: -5px;
+  2483	  width: 46px;
+  2484	}
+  2485	
+  2486	.project-page .project-source-actions-icon-only .project-github-icon-mark {
+  2487	  margin-right: 0;
   2488	}
   2489	
-  2490	.project-page .project-play-store-icon-mark {
-  2491	  filter:
-  2492	    drop-shadow(0 1.2px 0 #000)
-  2493	    drop-shadow(0 -1.2px 0 #000)
-  2494	    drop-shadow(1.2px 0 0 #000)
-  2495	    drop-shadow(-1.2px 0 0 #000);
-  2496	}
-  2497	
-  2498	.project-page .project-app-store-icon-mark {
-  2499	  filter: none;
-  2500	  transform: scale(1.18);
-  2501	}
-  2502	
-  2503	.project-page .project-contact-icon-mark {
-  2504	  align-items: center;
-  2505	  color: #f3fff7;
-  2506	  display: inline-flex;
-  2507	  flex: 0 0 auto;
-  2508	  height: 46px;
-  2509	  justify-content: center;
-  2510	  position: relative;
-  2511	  width: 46px;
-  2512	}
-  2513	
-  2514	.project-page .project-contact-icon-mark svg {
-  2515	  inset: 50% auto auto 50%;
-  2516	  position: absolute;
-  2517	  transform: translate(-50%, -50%);
-  2518	}
-  2519	
-  2520	.project-page .project-contact-icon-mark .project-contact-icon-stroke {
-  2521	  color: #000;
-  2522	  stroke: currentColor;
-  2523	  stroke-width: 4.4px;
-  2524	  z-index: 0;
-  2525	}
-  2526	
-  2527	.project-page .project-contact-icon-mark .project-contact-icon-fill {
-  2528	  color: #f3fff7;
-  2529	  stroke: currentColor;
-  2530	  stroke-width: 2px;
-  2531	  z-index: 1;
+  2490	.project-page .project-figma-icon-mark {
+  2491	  display: block;
+  2492	  flex: 0 0 auto;
+  2493	  filter:
+  2494	    drop-shadow(0 0.4px 0 #000)
+  2495	    drop-shadow(0 -0.4px 0 #000)
+  2496	    drop-shadow(0.4px 0 0 #000)
+  2497	    drop-shadow(-0.4px 0 0 #000);
+  2498	  height: 34px;
+  2499	  width: auto;
+  2500	}
+  2501	
+  2502	.project-page .project-play-store-icon-mark,
+  2503	.project-page .project-app-store-icon-mark {
+  2504	  display: block;
+  2505	  flex: 0 0 auto;
+  2506	  height: 28.83px;
+  2507	  width: auto;
+  2508	}
+  2509	
+  2510	.project-page .project-play-store-icon-mark {
+  2511	  filter:
+  2512	    drop-shadow(0 1.2px 0 #000)
+  2513	    drop-shadow(0 -1.2px 0 #000)
+  2514	    drop-shadow(1.2px 0 0 #000)
+  2515	    drop-shadow(-1.2px 0 0 #000);
+  2516	}
+  2517	
+  2518	.project-page .project-app-store-icon-mark {
+  2519	  filter: none;
+  2520	  transform: scale(1.18);
+  2521	}
+  2522	
+  2523	.project-page .project-contact-icon-mark {
+  2524	  align-items: center;
+  2525	  color: #f3fff7;
+  2526	  display: inline-flex;
+  2527	  flex: 0 0 auto;
+  2528	  height: 46px;
+  2529	  justify-content: center;
+  2530	  position: relative;
+  2531	  width: 46px;
   2532	}
   2533	
-  2534	.project-page .project-github-button .github-label-text,
-  2535	.project-page .project-source-button-label {
-  2536	  font-family: inherit;
-  2537	  font-size: 21px;
-  2538	  font-weight: 800;
-  2539	  line-height: 1;
-  2540	  white-space: nowrap;
-  2541	}
-  2542	
-  2543	.project-page .project-contact-button .project-contact-label-text {
-  2544	  font-family: inherit;
-  2545	  font-size: 21px;
-  2546	  font-weight: 800;
-  2547	  line-height: 1;
-  2548	  white-space: nowrap;
-  2549	}
-  2550	
-  2551	.project-page .project-play-store-button .project-source-button-label,
-  2552	.project-page .project-contact-button .project-contact-label-text {
-  2553	  word-spacing: 0.19em;
-  2554	}
-  2555	
-  2556	@media (max-width: 720px) {
-  2557	  .project-page .project-source-actions {
-  2558	    grid-template-columns: repeat(2, minmax(0, 1fr));
-  2559	  }
-  2560	
-  2561	  .project-page .project-play-store-button {
-  2562	    grid-column: 1 / -1;
-  2563	  }
-  2564	
-  2565	  .project-page .project-source-actions-icon-only {
-  2566	    grid-template-columns: repeat(3, minmax(0, 1fr));
-  2567	  }
-  2568	
-  2569	  .project-page .project-source-actions-icon-only .project-play-store-button {
-  2570	    grid-column: auto;
-  2571	  }
-  2572	}
-  2573	
-  2574	@media (max-width: 460px) {
-  2575	  .project-page .project-source-actions > .button {
-  2576	    gap: 6px;
-  2577	    padding-inline: 7px;
-  2578	  }
-  2579	
-  2580	  .project-page .project-source-actions .project-github-icon-mark {
-  2581	    height: 32px;
-  2582	    margin-right: -4px;
-  2583	    width: 32px;
-  2584	  }
-  2585	
-  2586	  .project-page .project-source-actions-icon-only .project-github-icon-mark {
-  2587	    margin-right: 0;
-  2588	  }
-  2589	
-  2590	  .project-page .project-source-actions .project-figma-icon-mark {
-  2591	    height: 28px;
-  2592	    width: auto;
-  2593	  }
-  2594	
-  2595	  .project-page .project-source-actions .project-play-store-icon-mark,
-  2596	  .project-page .project-source-actions .project-app-store-icon-mark {
-  2597	    height: 23.96px;
-  2598	    width: auto;
-  2599	  }
-  2600	
-  2601	  .project-page .project-source-actions .project-source-button-label {
-  2602	    font-size: clamp(15px, 4.2vw, 21px);
-  2603	  }
-  2604	}
+  2534	.project-page .project-contact-icon-mark svg {
+  2535	  inset: 50% auto auto 50%;
+  2536	  position: absolute;
+  2537	  transform: translate(-50%, -50%);
+  2538	}
+  2539	
+  2540	.project-page .project-contact-icon-mark .project-contact-icon-stroke {
+  2541	  color: #000;
+  2542	  stroke: currentColor;
+  2543	  stroke-width: 4.4px;
+  2544	  z-index: 0;
+  2545	}
+  2546	
+  2547	.project-page .project-contact-icon-mark .project-contact-icon-fill {
+  2548	  color: #f3fff7;
+  2549	  stroke: currentColor;
+  2550	  stroke-width: 2px;
+  2551	  z-index: 1;
+  2552	}
+  2553	
+  2554	.project-page .project-github-button .github-label-text,
+  2555	.project-page .project-source-button-label {
+  2556	  font-family: inherit;
+  2557	  font-size: 21px;
+  2558	  font-weight: 800;
+  2559	  line-height: 1;
+  2560	  white-space: nowrap;
+  2561	}
+  2562	
+  2563	.project-page .project-contact-button .project-contact-label-text {
+  2564	  font-family: inherit;
+  2565	  font-size: 21px;
+  2566	  font-weight: 800;
+  2567	  line-height: 1;
+  2568	  white-space: nowrap;
+  2569	}
+  2570	
+  2571	.project-page .project-play-store-button .project-source-button-label,
+  2572	.project-page .project-contact-button .project-contact-label-text {
+  2573	  word-spacing: 0.19em;
+  2574	}
+  2575	
+  2576	@media (max-width: 720px) {
+  2577	  .project-page .project-source-actions {
+  2578	    grid-template-columns: repeat(2, minmax(0, 1fr));
+  2579	  }
+  2580	
+  2581	  .project-page .project-play-store-button {
+  2582	    grid-column: 1 / -1;
+  2583	  }
+  2584	
+  2585	  .project-page .project-source-actions-icon-only {
+  2586	    grid-template-columns: repeat(3, minmax(0, 1fr));
+  2587	  }
+  2588	
+  2589	  .project-page .project-source-actions-icon-only .project-play-store-button {
+  2590	    grid-column: auto;
+  2591	  }
+  2592	}
+  2593	
+  2594	@media (max-width: 460px) {
+  2595	  .project-page .project-source-actions > .button {
+  2596	    gap: 6px;
+  2597	    padding-inline: 7px;
+  2598	  }
+  2599	
+  2600	  .project-page .project-source-actions .project-github-icon-mark {
+  2601	    height: 32px;
+  2602	    margin-right: -4px;
+  2603	    width: 32px;
+  2604	  }
   2605	
-  2606	.av-showcase {
-  2607	  min-height: 610px;
-  2608	  position: relative;
-  2609	}
-  2610	
-  2611	.av-showcase::before {
-  2612	  background:
-  2613	    linear-gradient(rgba(67, 255, 146, 0.045) 1px, transparent 1px),
-  2614	    linear-gradient(90deg, rgba(67, 255, 146, 0.045) 1px, transparent 1px);
-  2615	  background-size: 36px 36px;
-  2616	  content: "";
-  2617	  inset: 34px 12px 52px;
-  2618	  opacity: 0.58;
-  2619	  position: absolute;
-  2620	}
-  2621	
-  2622	.av-device {
-  2623	  background: linear-gradient(145deg, #0c120f, #000);
-  2624	  border: 1px solid rgba(198, 255, 217, 0.24);
-  2625	  border-radius: var(--capture-frame-radius-tall);
-  2626	  box-shadow: 0 34px 100px rgba(0, 0, 0, 0.62), 0 0 64px rgba(0, 191, 99, 0.12);
-  2627	  padding: 16px;
-  2628	  position: absolute;
+  2606	  .project-page .project-source-actions-icon-only .project-github-icon-mark {
+  2607	    margin-right: 0;
+  2608	  }
+  2609	
+  2610	  .project-page .project-source-actions .project-figma-icon-mark {
+  2611	    height: 28px;
+  2612	    width: auto;
+  2613	  }
+  2614	
+  2615	  .project-page .project-source-actions .project-play-store-icon-mark,
+  2616	  .project-page .project-source-actions .project-app-store-icon-mark {
+  2617	    height: 23.96px;
+  2618	    width: auto;
+  2619	  }
+  2620	
+  2621	  .project-page .project-source-actions .project-source-button-label {
+  2622	    font-size: clamp(15px, 4.2vw, 21px);
+  2623	  }
+  2624	}
+  2625	
+  2626	.av-showcase {
+  2627	  min-height: 610px;
+  2628	  position: relative;
   2629	}
   2630	
-  2631	.alla-vostra-case .av-device {
+  2631	.av-showcase::before {
   2632	  background:
-  2633	    linear-gradient(135deg, rgba(255, 255, 255, 0.09), transparent 7%),
-  2634	    linear-gradient(315deg, rgba(255, 255, 255, 0.07), transparent 9%),
-  2635	    linear-gradient(145deg, #616762 0%, #1a1d1b 12%, #050606 48%, #202522 78%, #89918b 100%);
-  2636	  border: 1px solid rgba(255, 255, 255, 0.16);
-  2637	  border-radius: 42px;
-  2638	  box-shadow:
-  2639	    0 34px 100px rgba(0, 0, 0, 0.62),
-  2640	    0 0 64px rgba(0, 191, 99, 0.12),
-  2641	    0 0 0 1px rgba(198, 255, 217, 0.08),
-  2642	    inset 0 0 0 1px rgba(255, 255, 255, 0.1),
-  2643	    inset 0 0 0 5px rgba(0, 0, 0, 0.72);
-  2644	  isolation: isolate;
-  2645	  padding: 16px;
-  2646	  position: absolute;
-  2647	}
-  2648	
-  2649	.alla-vostra-case .av-device::before,
-  2650	.alla-vostra-case .av-device::after {
-  2651	  background: linear-gradient(180deg, #5c635e, #151817 68%, #030404);
-  2652	  border-radius: 99px;
-  2653	  box-shadow:
-  2654	    inset 1px 0 0 rgba(255, 255, 255, 0.16),
-  2655	    inset -1px 0 0 rgba(0, 0, 0, 0.75);
-  2656	  content: "";
-  2657	  pointer-events: none;
-  2658	  position: absolute;
-  2659	  z-index: 1;
-  2660	}
-  2661	
-  2662	.alla-vostra-case .av-device::before {
-  2663	  height: 48px;
-  2664	  left: -4px;
-  2665	  top: 118px;
-  2666	  width: 4px;
-  2667	}
-  2668	
-  2669	.alla-vostra-case .av-device::after {
-  2670	  height: 76px;
-  2671	  right: -4px;
-  2672	  top: 156px;
-  2673	  width: 4px;
+  2633	    linear-gradient(rgba(67, 255, 146, 0.045) 1px, transparent 1px),
+  2634	    linear-gradient(90deg, rgba(67, 255, 146, 0.045) 1px, transparent 1px);
+  2635	  background-size: 36px 36px;
+  2636	  content: "";
+  2637	  inset: 34px 12px 52px;
+  2638	  opacity: 0.58;
+  2639	  position: absolute;
+  2640	}
+  2641	
+  2642	.av-device {
+  2643	  background: linear-gradient(145deg, #0c120f, #000);
+  2644	  border: 1px solid rgba(198, 255, 217, 0.24);
+  2645	  border-radius: var(--capture-frame-radius-tall);
+  2646	  box-shadow: 0 34px 100px rgba(0, 0, 0, 0.62), 0 0 64px rgba(0, 191, 99, 0.12);
+  2647	  padding: 16px;
+  2648	  position: absolute;
+  2649	}
+  2650	
+  2651	.alla-vostra-case .av-device {
+  2652	  background: transparent;
+  2653	  border: 0;
+  2654	  border-radius: 0;
+  2655	  box-shadow: none;
+  2656	  padding: 0;
+  2657	  position: absolute;
+  2658	}
+  2659	
+  2660	.alla-vostra-case .av-device-tall {
+  2661	  aspect-ratio: 1290 / 2661;
+  2662	}
+  2663	
+  2664	.alla-vostra-case .av-device-standard {
+  2665	  aspect-ratio: 1242 / 2567;
+  2666	}
+  2667	
+  2668	.av-device-tall {
+  2669	  --av-screen-ratio: 1440 / 3120;
+  2670	}
+  2671	
+  2672	.av-device-standard {
+  2673	  --av-screen-ratio: 720 / 1280;
   2674	}
   2675	
-  2676	.alla-vostra-case .av-device > * {
-  2677	  position: relative;
-  2678	  z-index: 2;
-  2679	}
-  2680	
-  2681	.av-device-tall {
-  2682	  --av-screen-ratio: 1440 / 3120;
-  2683	}
-  2684	
-  2685	.av-device-standard {
-  2686	  --av-screen-ratio: 720 / 1280;
-  2687	}
-  2688	
-  2689	.av-device-speaker {
-  2690	  background: #171f1a;
-  2691	  border-radius: 99px;
-  2692	  height: 6px;
-  2693	  margin: 0 auto 12px;
-  2694	  width: 62px;
+  2676	.av-device-speaker {
+  2677	  background: #171f1a;
+  2678	  border-radius: 99px;
+  2679	  height: 6px;
+  2680	  margin: 0 auto 12px;
+  2681	  width: 62px;
+  2682	}
+  2683	
+  2684	.alla-vostra-case .av-device-speaker {
+  2685	  display: none;
+  2686	}
+  2687	
+  2688	.av-device-screen {
+  2689	  aspect-ratio: var(--av-screen-ratio);
+  2690	  background: #020403;
+  2691	  border-radius: var(--capture-screen-radius-tall);
+  2692	  overflow: hidden;
+  2693	  position: relative;
+  2694	  width: 100%;
   2695	}
   2696	
-  2697	.alla-vostra-case .av-device-speaker {
-  2698	  background:
-  2699	    radial-gradient(circle at calc(100% - 9px) 50%, #050706 0 1.5px, #28312c 2px 3px, transparent 3.5px),
-  2700	    linear-gradient(180deg, #020303, #151b18);
-  2701	  border-radius: 99px;
-  2702	  box-shadow:
-  2703	    inset 0 1px 1px rgba(255, 255, 255, 0.08),
-  2704	    0 0 0 1px rgba(255, 255, 255, 0.07);
-  2705	  height: 8px;
-  2706	  margin: 0 auto 10px;
-  2707	  width: 70px;
+  2697	.alla-vostra-case .av-device-screen {
+  2698	  display: none;
+  2699	}
+  2700	
+  2701	.alla-vostra-case .av-device-screen::after {
+  2702	  display: none;
+  2703	}
+  2704	
+  2705	.av-device-image {
+  2706	  object-fit: contain;
+  2707	  object-position: top center;
   2708	}
   2709	
-  2710	.av-device-screen {
-  2711	  aspect-ratio: var(--av-screen-ratio);
-  2712	  background: #020403;
-  2713	  border-radius: var(--capture-screen-radius-tall);
-  2714	  overflow: hidden;
-  2715	  position: relative;
-  2716	  width: 100%;
-  2717	}
-  2718	
-  2719	.alla-vostra-case .av-device-screen {
-  2720	  aspect-ratio: var(--av-screen-ratio);
-  2721	  background: #020403;
-  2722	  border-radius: 29px;
-  2723	  box-shadow:
-  2724	    0 0 0 1px rgba(255, 255, 255, 0.06),
-  2725	    inset 0 0 0 1px rgba(0, 0, 0, 0.78),
-  2726	    inset 0 0 34px rgba(0, 0, 0, 0.64);
-  2727	  overflow: hidden;
-  2728	  position: relative;
-  2729	  width: 100%;
-  2730	}
-  2731	
-  2732	.alla-vostra-case .av-device-screen::after {
-  2733	  background:
-  2734	    linear-gradient(122deg, rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0.04) 22%, transparent 42%),
-  2735	    radial-gradient(circle at 72% 12%, rgba(255, 255, 255, 0.14), transparent 22%);
-  2736	  content: "";
-  2737	  inset: 0;
-  2738	  mix-blend-mode: screen;
-  2739	  opacity: 0.3;
-  2740	  pointer-events: none;
-  2741	  position: absolute;
+  2710	.alla-vostra-case .av-device-image {
+  2711	  filter:
+  2712	    drop-shadow(0 28px 42px rgba(0, 0, 0, 0.48))
+  2713	    drop-shadow(0 0 32px rgba(0, 191, 99, 0.08));
+  2714	  object-position: center;
+  2715	}
+  2716	
+  2717	.flow-image-frame img {
+  2718	  object-fit: contain;
+  2719	  object-position: top center;
+  2720	}
+  2721	
+  2722	.av-device-main {
+  2723	  height: auto;
+  2724	  right: 176px;
+  2725	  top: 0;
+  2726	  transform: rotate(-5deg);
+  2727	  width: 260px;
+  2728	  z-index: 3;
+  2729	}
+  2730	
+  2731	.av-device-browse,
+  2732	.av-device-confirm {
+  2733	  border-radius: 15px;
+  2734	  height: auto;
+  2735	  width: 184px;
+  2736	}
+  2737	
+  2738	.av-device-browse {
+  2739	  right: 22px;
+  2740	  top: 126px;
+  2741	  transform: rotate(7deg);
   2742	  z-index: 2;
   2743	}
   2744	
-  2745	.av-device-image {
-  2746	  object-fit: contain;
-  2747	  object-position: top center;
-  2748	}
-  2749	
-  2750	.flow-image-frame img {
-  2751	  object-fit: contain;
-  2752	  object-position: top center;
-  2753	}
-  2754	
-  2755	.av-device-main {
-  2756	  height: auto;
-  2757	  right: 176px;
-  2758	  top: 0;
-  2759	  transform: rotate(-5deg);
-  2760	  width: 260px;
-  2761	  z-index: 3;
-  2762	}
-  2763	
-  2764	.av-device-browse,
-  2765	.av-device-confirm {
-  2766	  border-radius: 15px;
-  2767	  height: auto;
-  2768	  width: 184px;
-  2769	}
-  2770	
-  2771	.alla-vostra-case .av-device-standard.av-device-browse,
-  2772	.alla-vostra-case .av-device-standard.av-device-confirm {
-  2773	  border-radius: 34px;
-  2774	}
-  2775	
-  2776	.alla-vostra-case .av-device-standard .av-device-screen {
-  2777	  border-radius: 23px;
+  2745	.av-device-confirm {
+  2746	  left: 6px;
+  2747	  top: 214px;
+  2748	  transform: rotate(-10deg);
+  2749	  z-index: 1;
+  2750	}
+  2751	
+  2752	.cinerific-case .av-device {
+  2753	  border-radius: var(--capture-frame-radius-standard);
+  2754	  padding: 12px 18px;
+  2755	}
+  2756	
+  2757	.cinerific-case .av-device-screen {
+  2758	  aspect-ratio: 16 / 9;
+  2759	  background:
+  2760	    linear-gradient(rgba(67, 255, 146, 0.04) 1px, transparent 1px),
+  2761	    linear-gradient(90deg, rgba(67, 255, 146, 0.04) 1px, transparent 1px),
+  2762	    #020403;
+  2763	  background-size: 18px 18px;
+  2764	  border: 1px solid rgba(198, 255, 217, 0.16);
+  2765	  border-radius: var(--capture-screen-radius-standard);
+  2766	}
+  2767	
+  2768	.cinerific-tablet-camera {
+  2769	  background: #1d2923;
+  2770	  border: 1px solid rgba(198, 255, 217, 0.24);
+  2771	  border-radius: 999px;
+  2772	  height: 5px;
+  2773	  left: 7px;
+  2774	  position: absolute;
+  2775	  top: 50%;
+  2776	  transform: translateY(-50%);
+  2777	  width: 5px;
   2778	}
   2779	
-  2780	.av-device-browse {
-  2781	  right: 22px;
-  2782	  top: 126px;
-  2783	  transform: rotate(7deg);
-  2784	  z-index: 2;
-  2785	}
-  2786	
-  2787	.av-device-confirm {
-  2788	  left: 6px;
-  2789	  top: 214px;
-  2790	  transform: rotate(-10deg);
-  2791	  z-index: 1;
-  2792	}
-  2793	
-  2794	.cinerific-case .av-device {
-  2795	  border-radius: var(--capture-frame-radius-standard);
-  2796	  padding: 12px 18px;
-  2797	}
-  2798	
-  2799	.cinerific-case .av-device-screen {
-  2800	  aspect-ratio: 16 / 9;
-  2801	  background:
-  2802	    linear-gradient(rgba(67, 255, 146, 0.04) 1px, transparent 1px),
-  2803	    linear-gradient(90deg, rgba(67, 255, 146, 0.04) 1px, transparent 1px),
-  2804	    #020403;
-  2805	  background-size: 18px 18px;
-  2806	  border: 1px solid rgba(198, 255, 217, 0.16);
-  2807	  border-radius: var(--capture-screen-radius-standard);
-  2808	}
-  2809	
-  2810	.cinerific-tablet-camera {
-  2811	  background: #1d2923;
-  2812	  border: 1px solid rgba(198, 255, 217, 0.24);
-  2813	  border-radius: 999px;
-  2814	  height: 5px;
-  2815	  left: 7px;
-  2816	  position: absolute;
-  2817	  top: 50%;
-  2818	  transform: translateY(-50%);
-  2819	  width: 5px;
+  2780	.av-showcase-proof {
+  2781	  background: rgba(5, 16, 10, 0.82);
+  2782	  border: 1px solid var(--line-strong);
+  2783	  border-radius: 8px;
+  2784	  bottom: 20px;
+  2785	  max-width: 260px;
+  2786	  padding: 15px;
+  2787	  position: absolute;
+  2788	  right: 16px;
+  2789	  z-index: 4;
+  2790	}
+  2791	
+  2792	.av-showcase-proof-row {
+  2793	  bottom: 20px;
+  2794	  display: flex;
+  2795	  gap: 12px;
+  2796	  justify-content: flex-end;
+  2797	  left: 16px;
+  2798	  position: absolute;
+  2799	  right: 16px;
+  2800	  z-index: 4;
+  2801	}
+  2802	
+  2803	.av-showcase-proof-row .av-showcase-proof {
+  2804	  bottom: auto;
+  2805	  flex: 0 0 auto;
+  2806	  max-width: min(260px, 100%);
+  2807	  min-width: 0;
+  2808	  position: relative;
+  2809	  right: auto;
+  2810	  width: max-content;
+  2811	  z-index: auto;
+  2812	}
+  2813	
+  2814	.av-showcase-proof strong {
+  2815	  color: var(--green);
+  2816	  display: block;
+  2817	  font-size: 28px;
+  2818	  font-weight: 900;
+  2819	  line-height: 1;
   2820	}
   2821	
-  2822	.av-showcase-proof {
-  2823	  background: rgba(5, 16, 10, 0.82);
-  2824	  border: 1px solid var(--line-strong);
-  2825	  border-radius: 8px;
-  2826	  bottom: 20px;
-  2827	  max-width: 260px;
-  2828	  padding: 15px;
-  2829	  position: absolute;
-  2830	  right: 16px;
-  2831	  z-index: 4;
-  2832	}
-  2833	
-  2834	.av-showcase-proof-row {
-  2835	  bottom: 20px;
-  2836	  display: flex;
-  2837	  gap: 12px;
-  2838	  justify-content: flex-end;
-  2839	  left: 16px;
-  2840	  position: absolute;
-  2841	  right: 16px;
-  2842	  z-index: 4;
-  2843	}
-  2844	
-  2845	.av-showcase-proof-row .av-showcase-proof {
-  2846	  bottom: auto;
-  2847	  flex: 0 0 auto;
-  2848	  max-width: min(260px, 100%);
-  2849	  min-width: 0;
-  2850	  position: relative;
-  2851	  right: auto;
-  2852	  width: max-content;
-  2853	  z-index: auto;
-  2854	}
-  2855	
-  2856	.av-showcase-proof strong {
-  2857	  color: var(--green);
-  2858	  display: block;
-  2859	  font-size: 28px;
-  2860	  font-weight: 900;
-  2861	  line-height: 1;
-  2862	}
-  2863	
-  2864	.av-showcase-proof span {
-  2865	  color: var(--muted);
-  2866	  display: block;
-  2867	  font-size: calc(13px + 2pt);
-  2868	  font-weight: 700;
-  2869	  line-height: 1.45;
-  2870	  margin-top: 8px;
-  2871	}
-  2872	
-  2873	.av-showcase-proof .av-showcase-skill-grid {
-  2874	  column-gap: 14px;
-  2875	  display: grid;
-  2876	  grid-template-columns: max-content max-content;
-  2877	  justify-content: start;
-  2878	  row-gap: 2px;
-  2879	}
-  2880	
-  2881	.av-showcase-proof .av-showcase-skill-item {
-  2882	  align-items: baseline;
-  2883	  column-gap: 4px;
-  2884	  display: grid;
-  2885	  grid-template-columns: 1ch max-content;
-  2886	  margin-top: 0;
-  2887	  text-align: left;
-  2888	  white-space: nowrap;
-  2889	}
-  2890	
-  2891	.av-showcase-proof .av-showcase-skill-plus,
-  2892	.av-showcase-proof .av-showcase-skill-label {
-  2893	  display: block;
-  2894	  margin-top: 0;
-  2895	}
-  2896	
-  2897	.av-showcase-proof .av-showcase-platform-grid {
-  2898	  grid-template-columns: repeat(2, max-content);
-  2899	}
-  2900	
-  2901	.av-showcase-proof .av-showcase-platform-column {
-  2902	  display: grid;
-  2903	  margin-top: 0;
-  2904	  row-gap: 2px;
-  2905	}
-  2906	
-  2907	.project-section-grid,
-  2908	.readiness-layout {
-  2909	  display: grid;
-  2910	  gap: 44px;
-  2911	  grid-template-columns: minmax(0, 0.82fr) minmax(360px, 1.18fr);
-  2912	}
-  2913	
-  2914	.project-copy-panel {
-  2915	  border-left: 1px solid var(--line-strong);
-  2916	  padding-left: 28px;
-  2917	}
-  2918	
-  2919	.project-copy-panel p:last-child,
-  2920	.closing-panel p:last-child {
-  2921	  margin-bottom: 0;
-  2922	}
-  2923	
-  2924	.project-card-grid {
-  2925	  display: grid;
-  2926	  gap: 16px;
-  2927	  margin-top: 34px;
-  2928	}
-  2929	
-  2930	.ownership-grid {
-  2931	  grid-template-columns: repeat(5, minmax(0, 1fr));
-  2932	}
-  2933	
-  2934	.feature-grid {
-  2935	  grid-template-columns: repeat(3, minmax(0, 1fr));
-  2936	}
-  2937	
-  2938	.decision-grid {
-  2939	  grid-template-columns: repeat(3, minmax(0, 1fr));
-  2940	}
-  2941	
-  2942	.project-card,
-  2943	.flow-checkout-note,
-  2944	.architecture-node,
-  2945	.stack-group,
-  2946	.project-timeline-item {
-  2947	  background: linear-gradient(180deg, rgba(13, 31, 22, 0.88), rgba(5, 13, 9, 0.88));
-  2948	  border: 1px solid var(--line);
-  2949	  border-radius: 8px;
-  2950	}
-  2951	
-  2952	.project-card {
-  2953	  min-height: 184px;
-  2954	  padding: 22px;
-  2955	}
-  2956	
-  2957	.project-card span,
-  2958	.flow-checkout-note span,
-  2959	.stack-group h3 {
-  2960	  color: var(--green);
-  2961	  display: block;
-  2962	  font-size: 12px;
-  2963	  font-weight: 850;
-  2964	  letter-spacing: 0.1em;
-  2965	  margin-bottom: 20px;
-  2966	  text-transform: uppercase;
-  2967	}
-  2968	
-  2969	.project-card p,
-  2970	.flow-checkout-note p,
-  2971	.architecture-node p,
-  2972	.project-timeline-item p {
-  2973	  color: #b8c9bf;
-  2974	  line-height: 1.6;
-  2975	  margin-bottom: 0;
-  2976	}
-  2977	
-  2978	.flow-segments {
-  2979	  border: 1px solid var(--line);
-  2980	  border-radius: 8px;
-  2981	  display: grid;
-  2982	  gap: 1px;
-  2983	  grid-template-columns: repeat(6, minmax(0, 1fr));
-  2984	  margin-top: 34px;
-  2985	  overflow: hidden;
-  2986	}
-  2987	
-  2988	.flow-segments span {
-  2989	  background: rgba(255, 255, 255, 0.03);
-  2990	  color: var(--mint);
-  2991	  font-size: 13px;
-  2992	  font-weight: 850;
-  2993	  padding: 14px 10px;
-  2994	  text-align: center;
-  2995	}
-  2996	
-  2997	.flow-layout {
-  2998	  --flow-phone-width: 444px;
-  2999	  --flow-chart-width: calc(var(--flow-phone-width) * 0.929881337648);
-  3000	  align-items: center;
-  3001	  display: grid;
-  3002	  gap: 42px;
-  3003	  grid-template-columns: minmax(260px, 0.82fr) minmax(0, 1.18fr);
-  3004	  margin-top: 34px;
-  3005	}
-  3006	
-  3007	.flow-chart-mockup {
-  3008	  align-self: start;
-  3009	  margin: 0;
-  3010	  max-width: 100%;
-  3011	  width: min(100%, var(--flow-chart-width));
-  3012	}
-  3013	
-  3014	.flow-chart-mockup img {
-  3015	  border-radius: 8px;
-  3016	  display: block;
-  3017	  height: auto;
-  3018	  width: 100%;
-  3019	}
-  3020	
-  3021	.flow-screen {
-  3022	  margin: 0;
+  2822	.av-showcase-proof span {
+  2823	  color: var(--muted);
+  2824	  display: block;
+  2825	  font-size: calc(13px + 2pt);
+  2826	  font-weight: 700;
+  2827	  line-height: 1.45;
+  2828	  margin-top: 8px;
+  2829	}
+  2830	
+  2831	.av-showcase-proof .av-showcase-skill-grid {
+  2832	  column-gap: 14px;
+  2833	  display: grid;
+  2834	  grid-template-columns: max-content max-content;
+  2835	  justify-content: start;
+  2836	  row-gap: 2px;
+  2837	}
+  2838	
+  2839	.av-showcase-proof .av-showcase-skill-item {
+  2840	  align-items: baseline;
+  2841	  column-gap: 4px;
+  2842	  display: grid;
+  2843	  grid-template-columns: 1ch max-content;
+  2844	  margin-top: 0;
+  2845	  text-align: left;
+  2846	  white-space: nowrap;
+  2847	}
+  2848	
+  2849	.av-showcase-proof .av-showcase-skill-plus,
+  2850	.av-showcase-proof .av-showcase-skill-label {
+  2851	  display: block;
+  2852	  margin-top: 0;
+  2853	}
+  2854	
+  2855	.av-showcase-proof .av-showcase-platform-grid {
+  2856	  grid-template-columns: repeat(2, max-content);
+  2857	}
+  2858	
+  2859	.av-showcase-proof .av-showcase-platform-column {
+  2860	  display: grid;
+  2861	  margin-top: 0;
+  2862	  row-gap: 2px;
+  2863	}
+  2864	
+  2865	.project-section-grid,
+  2866	.readiness-layout {
+  2867	  display: grid;
+  2868	  gap: 44px;
+  2869	  grid-template-columns: minmax(0, 0.82fr) minmax(360px, 1.18fr);
+  2870	}
+  2871	
+  2872	.project-copy-panel {
+  2873	  border-left: 1px solid var(--line-strong);
+  2874	  padding-left: 28px;
+  2875	}
+  2876	
+  2877	.project-copy-panel p:last-child,
+  2878	.closing-panel p:last-child {
+  2879	  margin-bottom: 0;
+  2880	}
+  2881	
+  2882	.project-card-grid {
+  2883	  display: grid;
+  2884	  gap: 16px;
+  2885	  margin-top: 34px;
+  2886	}
+  2887	
+  2888	.ownership-grid {
+  2889	  grid-template-columns: repeat(5, minmax(0, 1fr));
+  2890	}
+  2891	
+  2892	.feature-grid {
+  2893	  grid-template-columns: repeat(3, minmax(0, 1fr));
+  2894	}
+  2895	
+  2896	.decision-grid {
+  2897	  grid-template-columns: repeat(3, minmax(0, 1fr));
+  2898	}
+  2899	
+  2900	.project-card,
+  2901	.flow-checkout-note,
+  2902	.architecture-node,
+  2903	.stack-group,
+  2904	.project-timeline-item {
+  2905	  background: linear-gradient(180deg, rgba(13, 31, 22, 0.88), rgba(5, 13, 9, 0.88));
+  2906	  border: 1px solid var(--line);
+  2907	  border-radius: 8px;
+  2908	}
+  2909	
+  2910	.project-card {
+  2911	  min-height: 184px;
+  2912	  padding: 22px;
+  2913	}
+  2914	
+  2915	.project-card span,
+  2916	.flow-checkout-note span,
+  2917	.stack-group h3 {
+  2918	  color: var(--green);
+  2919	  display: block;
+  2920	  font-size: 12px;
+  2921	  font-weight: 850;
+  2922	  letter-spacing: 0.1em;
+  2923	  margin-bottom: 20px;
+  2924	  text-transform: uppercase;
+  2925	}
+  2926	
+  2927	.project-card p,
+  2928	.flow-checkout-note p,
+  2929	.architecture-node p,
+  2930	.project-timeline-item p {
+  2931	  color: #b8c9bf;
+  2932	  line-height: 1.6;
+  2933	  margin-bottom: 0;
+  2934	}
+  2935	
+  2936	.flow-segments {
+  2937	  border: 1px solid var(--line);
+  2938	  border-radius: 8px;
+  2939	  display: grid;
+  2940	  gap: 1px;
+  2941	  grid-template-columns: repeat(6, minmax(0, 1fr));
+  2942	  margin-top: 34px;
+  2943	  overflow: hidden;
+  2944	}
+  2945	
+  2946	.flow-segments span {
+  2947	  background: rgba(255, 255, 255, 0.03);
+  2948	  color: var(--mint);
+  2949	  font-size: 13px;
+  2950	  font-weight: 850;
+  2951	  padding: 14px 10px;
+  2952	  text-align: center;
+  2953	}
+  2954	
+  2955	.flow-layout {
+  2956	  --flow-phone-width: 444px;
+  2957	  --flow-chart-width: calc(var(--flow-phone-width) * 0.929881337648);
+  2958	  align-items: center;
+  2959	  display: grid;
+  2960	  gap: 42px;
+  2961	  grid-template-columns: minmax(260px, 0.82fr) minmax(0, 1.18fr);
+  2962	  margin-top: 34px;
+  2963	}
+  2964	
+  2965	.flow-chart-mockup {
+  2966	  align-self: start;
+  2967	  margin: 0;
+  2968	  max-width: 100%;
+  2969	  width: min(100%, var(--flow-chart-width));
+  2970	}
+  2971	
+  2972	.flow-chart-mockup img {
+  2973	  border-radius: 8px;
+  2974	  display: block;
+  2975	  height: auto;
+  2976	  width: 100%;
+  2977	}
+  2978	
+  2979	.flow-screen {
+  2980	  margin: 0;
+  2981	}
+  2982	
+  2983	.flow-image-frame {
+  2984	  aspect-ratio: 9 / 16;
+  2985	  background: #020403;
+  2986	  border: 1px solid var(--line);
+  2987	  border-radius: var(--capture-frame-radius-standard);
+  2988	  box-shadow: 0 30px 72px rgba(0, 0, 0, 0.45);
+  2989	  overflow: hidden;
+  2990	  position: relative;
+  2991	}
+  2992	
+  2993	.flow-screen-tall .flow-image-frame {
+  2994	  aspect-ratio: 1440 / 3120;
+  2995	  border-radius: var(--capture-frame-radius-tall);
+  2996	}
+  2997	
+  2998	.flow-screen-standard .flow-image-frame {
+  2999	  aspect-ratio: 720 / 1280;
+  3000	  border-radius: var(--capture-frame-radius-standard);
+  3001	}
+  3002	
+  3003	.flow-screen-main .flow-image-frame {
+  3004	  margin: 0 auto;
+  3005	  max-width: var(--flow-phone-width);
+  3006	}
+  3007	
+  3008	.flow-screen-compact {
+  3009	  width: min(100%, 152px);
+  3010	}
+  3011	
+  3012	.flow-screen-compact .flow-image-frame {
+  3013	  width: 100%;
+  3014	}
+  3015	
+  3016	.flow-screen figcaption {
+  3017	  color: var(--muted);
+  3018	  font-size: 13px;
+  3019	  font-weight: 700;
+  3020	  line-height: 1.45;
+  3021	  margin: 14px auto 0;
+  3022	  max-width: var(--flow-phone-width, 330px);
   3023	}
   3024	
-  3025	.flow-image-frame {
-  3026	  aspect-ratio: 9 / 16;
-  3027	  background: #020403;
-  3028	  border: 1px solid var(--line);
-  3029	  border-radius: var(--capture-frame-radius-standard);
-  3030	  box-shadow: 0 30px 72px rgba(0, 0, 0, 0.45);
-  3031	  overflow: hidden;
-  3032	  position: relative;
-  3033	}
-  3034	
-  3035	.flow-screen-tall .flow-image-frame {
-  3036	  aspect-ratio: 1440 / 3120;
-  3037	  border-radius: var(--capture-frame-radius-tall);
-  3038	}
-  3039	
-  3040	.flow-screen-standard .flow-image-frame {
-  3041	  aspect-ratio: 720 / 1280;
-  3042	  border-radius: var(--capture-frame-radius-standard);
-  3043	}
-  3044	
-  3045	.flow-screen-main .flow-image-frame {
-  3046	  margin: 0 auto;
-  3047	  max-width: var(--flow-phone-width);
-  3048	}
-  3049	
-  3050	.flow-screen-compact {
-  3051	  width: min(100%, 152px);
-  3052	}
-  3053	
-  3054	.flow-screen-compact .flow-image-frame {
-  3055	  width: 100%;
-  3056	}
-  3057	
-  3058	.flow-screen figcaption {
-  3059	  color: var(--muted);
-  3060	  font-size: 13px;
-  3061	  font-weight: 700;
-  3062	  line-height: 1.45;
-  3063	  margin: 14px auto 0;
-  3064	  max-width: var(--flow-phone-width, 330px);
-  3065	}
-  3066	
-  3067	.flow-screen-label {
-  3068	  color: var(--green);
-  3069	  display: block;
-  3070	  font-size: 10px;
-  3071	  font-weight: 850;
-  3072	  letter-spacing: 0.12em;
-  3073	  margin: 0 0 8px;
-  3074	  text-align: center;
-  3075	  text-transform: uppercase;
-  3076	}
-  3077	
-  3078	.flow-support {
-  3079	  display: grid;
-  3080	  gap: 18px;
-  3081	  grid-template-columns: repeat(3, minmax(0, 1fr));
-  3082	}
-  3083	
-  3084	.flow-section-intro {
-  3085	  display: grid;
-  3086	  gap: 18px;
-  3087	}
-  3088	
-  3089	.flow-section-intro > p {
-  3090	  border-left: 1px solid var(--line-strong);
-  3091	  color: #b8c9bf;
-  3092	  line-height: 1.65;
-  3093	  margin: 0;
-  3094	  max-width: 560px;
-  3095	  padding-left: 22px;
-  3096	}
-  3097	
-  3098	.flow-checkout-note {
-  3099	  align-content: center;
-  3100	  min-height: 260px;
-  3101	  padding: 22px;
-  3102	}
-  3103	
-  3104	.flow-capture-groups {
-  3105	  display: grid;
-  3106	  gap: 48px;
-  3107	  margin-top: 54px;
-  3108	}
-  3109	
-  3110	.flow-capture-group {
-  3111	  border-top: 1px solid var(--line);
-  3112	  display: grid;
-  3113	  gap: 24px;
-  3114	  grid-template-columns: minmax(220px, 0.34fr) minmax(0, 1fr);
-  3115	  padding-top: 30px;
-  3116	}
-  3117	
-  3118	.flow-group-header {
-  3119	  max-width: 360px;
-  3120	}
-  3121	
-  3122	.flow-group-header span {
-  3123	  color: var(--green);
-  3124	  display: block;
-  3125	  font-size: 12px;
-  3126	  font-weight: 850;
-  3127	  letter-spacing: 0.1em;
-  3128	  margin-bottom: 14px;
-  3129	  text-transform: uppercase;
-  3130	}
-  3131	
-  3132	.flow-group-header h3 {
-  3133	  font-size: clamp(24px, 3vw, 34px);
-  3134	  line-height: 1;
-  3135	  margin-bottom: 14px;
+  3025	.flow-screen-label {
+  3026	  color: var(--green);
+  3027	  display: block;
+  3028	  font-size: 10px;
+  3029	  font-weight: 850;
+  3030	  letter-spacing: 0.12em;
+  3031	  margin: 0 0 8px;
+  3032	  text-align: center;
+  3033	  text-transform: uppercase;
+  3034	}
+  3035	
+  3036	.flow-support {
+  3037	  display: grid;
+  3038	  gap: 18px;
+  3039	  grid-template-columns: repeat(3, minmax(0, 1fr));
+  3040	}
+  3041	
+  3042	.flow-section-intro {
+  3043	  display: grid;
+  3044	  gap: 18px;
+  3045	}
+  3046	
+  3047	.flow-section-intro > p {
+  3048	  border-left: 1px solid var(--line-strong);
+  3049	  color: #b8c9bf;
+  3050	  line-height: 1.65;
+  3051	  margin: 0;
+  3052	  max-width: 560px;
+  3053	  padding-left: 22px;
+  3054	}
+  3055	
+  3056	.flow-checkout-note {
+  3057	  align-content: center;
+  3058	  min-height: 260px;
+  3059	  padding: 22px;
+  3060	}
+  3061	
+  3062	.flow-capture-groups {
+  3063	  display: grid;
+  3064	  gap: 48px;
+  3065	  margin-top: 54px;
+  3066	}
+  3067	
+  3068	.flow-capture-group {
+  3069	  border-top: 1px solid var(--line);
+  3070	  display: grid;
+  3071	  gap: 24px;
+  3072	  grid-template-columns: minmax(220px, 0.34fr) minmax(0, 1fr);
+  3073	  padding-top: 30px;
+  3074	}
+  3075	
+  3076	.flow-group-header {
+  3077	  max-width: 360px;
+  3078	}
+  3079	
+  3080	.flow-group-header span {
+  3081	  color: var(--green);
+  3082	  display: block;
+  3083	  font-size: 12px;
+  3084	  font-weight: 850;
+  3085	  letter-spacing: 0.1em;
+  3086	  margin-bottom: 14px;
+  3087	  text-transform: uppercase;
+  3088	}
+  3089	
+  3090	.flow-group-header h3 {
+  3091	  font-size: clamp(24px, 3vw, 34px);
+  3092	  line-height: 1;
+  3093	  margin-bottom: 14px;
+  3094	}
+  3095	
+  3096	.flow-group-header p {
+  3097	  color: #b8c9bf;
+  3098	  line-height: 1.6;
+  3099	  margin-bottom: 0;
+  3100	}
+  3101	
+  3102	.flow-capture-grid {
+  3103	  align-items: start;
+  3104	  display: grid;
+  3105	  gap: 34px;
+  3106	  grid-template-columns: repeat(auto-fit, minmax(285px, 1fr));
+  3107	}
+  3108	
+  3109	.flow-screen-stack {
+  3110	  min-width: 0;
+  3111	}
+  3112	
+  3113	.flow-screen-stack h4 {
+  3114	  color: var(--text);
+  3115	  font-size: 15px;
+  3116	  font-weight: 850;
+  3117	  letter-spacing: 0;
+  3118	  line-height: 1.2;
+  3119	  margin: 0 0 14px;
+  3120	  text-align: center;
+  3121	}
+  3122	
+  3123	.flow-screen-stack-captures {
+  3124	  align-items: start;
+  3125	  display: flex;
+  3126	  gap: 14px;
+  3127	  justify-content: center;
+  3128	}
+  3129	
+  3130	.cinerific-case .flow-image-frame,
+  3131	.cinerific-case .flow-screen-standard .flow-image-frame,
+  3132	.cinerific-case .flow-screen-tall .flow-image-frame {
+  3133	  aspect-ratio: 16 / 9;
+  3134	  background: linear-gradient(145deg, #0c120f, #000);
+  3135	  border-radius: var(--capture-frame-radius-standard);
   3136	}
   3137	
-  3138	.flow-group-header p {
-  3139	  color: #b8c9bf;
-  3140	  line-height: 1.6;
-  3141	  margin-bottom: 0;
-  3142	}
-  3143	
-  3144	.flow-capture-grid {
-  3145	  align-items: start;
-  3146	  display: grid;
-  3147	  gap: 34px;
-  3148	  grid-template-columns: repeat(auto-fit, minmax(285px, 1fr));
+  3138	.cinerific-case .flow-image-frame::before {
+  3139	  background:
+  3140	    linear-gradient(rgba(67, 255, 146, 0.04) 1px, transparent 1px),
+  3141	    linear-gradient(90deg, rgba(67, 255, 146, 0.04) 1px, transparent 1px),
+  3142	    #020403;
+  3143	  background-size: 14px 14px;
+  3144	  border: 1px solid rgba(198, 255, 217, 0.16);
+  3145	  border-radius: 5px;
+  3146	  content: "";
+  3147	  inset: 10px 14px;
+  3148	  position: absolute;
   3149	}
   3150	
-  3151	.flow-screen-stack {
-  3152	  min-width: 0;
-  3153	}
-  3154	
-  3155	.flow-screen-stack h4 {
-  3156	  color: var(--text);
-  3157	  font-size: 15px;
-  3158	  font-weight: 850;
-  3159	  letter-spacing: 0;
-  3160	  line-height: 1.2;
-  3161	  margin: 0 0 14px;
-  3162	  text-align: center;
-  3163	}
-  3164	
-  3165	.flow-screen-stack-captures {
-  3166	  align-items: start;
-  3167	  display: flex;
-  3168	  gap: 14px;
-  3169	  justify-content: center;
-  3170	}
-  3171	
-  3172	.cinerific-case .flow-image-frame,
-  3173	.cinerific-case .flow-screen-standard .flow-image-frame,
-  3174	.cinerific-case .flow-screen-tall .flow-image-frame {
-  3175	  aspect-ratio: 16 / 9;
-  3176	  background: linear-gradient(145deg, #0c120f, #000);
-  3177	  border-radius: var(--capture-frame-radius-standard);
-  3178	}
-  3179	
-  3180	.cinerific-case .flow-image-frame::before {
-  3181	  background:
-  3182	    linear-gradient(rgba(67, 255, 146, 0.04) 1px, transparent 1px),
-  3183	    linear-gradient(90deg, rgba(67, 255, 146, 0.04) 1px, transparent 1px),
-  3184	    #020403;
-  3185	  background-size: 14px 14px;
-  3186	  border: 1px solid rgba(198, 255, 217, 0.16);
-  3187	  border-radius: 5px;
-  3188	  content: "";
-  3189	  inset: 10px 14px;
-  3190	  position: absolute;
-  3191	}
-  3192	
-  3193	.cinerific-case .flow-image-frame::after {
-  3194	  background: #1d2923;
-  3195	  border: 1px solid rgba(198, 255, 217, 0.24);
-  3196	  border-radius: 999px;
-  3197	  content: "";
-  3198	  height: 4px;
-  3199	  left: 5px;
-  3200	  position: absolute;
-  3201	  top: 50%;
-  3202	  transform: translateY(-50%);
-  3203	  width: 4px;
-  3204	}
-  3205	
-  3206	.flow-browse-toggle-row {
-  3207	  display: flex;
-  3208	  justify-content: center;
-  3209	  margin-top: 26px;
-  3210	}
-  3211	
-  3212	.flow-browse-toggle {
-  3213	  cursor: pointer;
-  3214	  font-family: inherit;
-  3215	}
-  3216	
-  3217	.flow-browse-toggle svg {
-  3218	  flex: 0 0 auto;
-  3219	}
-  3220	
-  3221	.flow-browse-extra {
-  3222	  max-height: 0;
-  3223	  opacity: 0;
-  3224	  overflow: hidden;
-  3225	  pointer-events: none;
-  3226	  transform: translateY(-8px);
-  3227	  transition: max-height 320ms ease, opacity 220ms ease, transform 220ms ease,
-  3228	    margin-top 220ms ease;
-  3229	}
-  3230	
-  3231	.flow-browse-extra.is-open {
-  3232	  margin-top: 34px;
-  3233	  max-height: 5200px;
-  3234	  opacity: 1;
-  3235	  pointer-events: auto;
-  3236	  transform: translateY(0);
-  3237	}
-  3238	
-  3239	.architecture-map {
-  3240	  display: grid;
-  3241	  gap: 12px;
-  3242	  grid-template-columns: repeat(5, minmax(0, 1fr));
-  3243	}
-  3244	
-  3245	.architecture-node {
-  3246	  min-height: 178px;
-  3247	  padding: 18px;
-  3248	}
-  3249	
-  3250	.architecture-node span {
-  3251	  color: var(--green);
-  3252	  display: block;
-  3253	  font-size: 13px;
-  3254	  font-weight: 900;
-  3255	  margin-bottom: 18px;
-  3256	}
-  3257	
-  3258	.architecture-node strong {
-  3259	  color: var(--text);
-  3260	  display: block;
-  3261	  font-size: 16px;
-  3262	  line-height: 1.25;
-  3263	  margin-bottom: 12px;
-  3264	}
-  3265	
-  3266	.architecture-node p {
-  3267	  font-size: 13px;
-  3268	}
-  3269	
-  3270	.architecture-copy {
-  3271	  margin: 26px 0 0;
+  3151	.cinerific-case .flow-image-frame::after {
+  3152	  background: #1d2923;
+  3153	  border: 1px solid rgba(198, 255, 217, 0.24);
+  3154	  border-radius: 999px;
+  3155	  content: "";
+  3156	  height: 4px;
+  3157	  left: 5px;
+  3158	  position: absolute;
+  3159	  top: 50%;
+  3160	  transform: translateY(-50%);
+  3161	  width: 4px;
+  3162	}
+  3163	
+  3164	.flow-browse-toggle-row {
+  3165	  display: flex;
+  3166	  justify-content: center;
+  3167	  margin-top: 26px;
+  3168	}
+  3169	
+  3170	.flow-browse-toggle {
+  3171	  cursor: pointer;
+  3172	  font-family: inherit;
+  3173	}
+  3174	
+  3175	.flow-browse-toggle svg {
+  3176	  flex: 0 0 auto;
+  3177	}
+  3178	
+  3179	.flow-browse-extra {
+  3180	  max-height: 0;
+  3181	  opacity: 0;
+  3182	  overflow: hidden;
+  3183	  pointer-events: none;
+  3184	  transform: translateY(-8px);
+  3185	  transition: max-height 320ms ease, opacity 220ms ease, transform 220ms ease,
+  3186	    margin-top 220ms ease;
+  3187	}
+  3188	
+  3189	.flow-browse-extra.is-open {
+  3190	  margin-top: 34px;
+  3191	  max-height: 5200px;
+  3192	  opacity: 1;
+  3193	  pointer-events: auto;
+  3194	  transform: translateY(0);
+  3195	}
+  3196	
+  3197	.architecture-map {
+  3198	  display: grid;
+  3199	  gap: 12px;
+  3200	  grid-template-columns: repeat(5, minmax(0, 1fr));
+  3201	}
+  3202	
+  3203	.architecture-node {
+  3204	  min-height: 178px;
+  3205	  padding: 18px;
+  3206	}
+  3207	
+  3208	.architecture-node span {
+  3209	  color: var(--green);
+  3210	  display: block;
+  3211	  font-size: 13px;
+  3212	  font-weight: 900;
+  3213	  margin-bottom: 18px;
+  3214	}
+  3215	
+  3216	.architecture-node strong {
+  3217	  color: var(--text);
+  3218	  display: block;
+  3219	  font-size: 16px;
+  3220	  line-height: 1.25;
+  3221	  margin-bottom: 12px;
+  3222	}
+  3223	
+  3224	.architecture-node p {
+  3225	  font-size: 13px;
+  3226	}
+  3227	
+  3228	.architecture-copy {
+  3229	  margin: 26px 0 0;
+  3230	}
+  3231	
+  3232	.readiness-copy {
+  3233	  margin-bottom: 24px;
+  3234	}
+  3235	
+  3236	.readiness-list,
+  3237	.proof-points {
+  3238	  display: flex;
+  3239	  flex-wrap: wrap;
+  3240	  gap: 10px;
+  3241	}
+  3242	
+  3243	.project-timeline {
+  3244	  display: grid;
+  3245	  gap: 14px;
+  3246	}
+  3247	
+  3248	.project-timeline-item {
+  3249	  display: grid;
+  3250	  gap: 22px;
+  3251	  grid-template-columns: 56px 1fr;
+  3252	  padding: 22px;
+  3253	}
+  3254	
+  3255	.project-timeline-item > span {
+  3256	  color: var(--green);
+  3257	  font-size: 18px;
+  3258	  font-weight: 900;
+  3259	}
+  3260	
+  3261	.project-timeline-item h3 {
+  3262	  font-size: 20px;
+  3263	  line-height: 1.2;
+  3264	  margin-bottom: 10px;
+  3265	}
+  3266	
+  3267	.stack-matrix {
+  3268	  display: grid;
+  3269	  gap: 14px;
+  3270	  grid-template-columns: repeat(5, minmax(0, 1fr));
+  3271	  margin-top: 34px;
   3272	}
   3273	
-  3274	.readiness-copy {
-  3275	  margin-bottom: 24px;
+  3274	.stack-group {
+  3275	  padding: 20px;
   3276	}
   3277	
-  3278	.readiness-list,
-  3279	.proof-points {
-  3280	  display: flex;
-  3281	  flex-wrap: wrap;
-  3282	  gap: 10px;
-  3283	}
-  3284	
-  3285	.project-timeline {
-  3286	  display: grid;
-  3287	  gap: 14px;
-  3288	}
-  3289	
-  3290	.project-timeline-item {
-  3291	  display: grid;
-  3292	  gap: 22px;
-  3293	  grid-template-columns: 56px 1fr;
-  3294	  padding: 22px;
-  3295	}
-  3296	
-  3297	.project-timeline-item > span {
-  3298	  color: var(--green);
-  3299	  font-size: 18px;
-  3300	  font-weight: 900;
-  3301	}
-  3302	
-  3303	.project-timeline-item h3 {
-  3304	  font-size: 20px;
-  3305	  line-height: 1.2;
-  3306	  margin-bottom: 10px;
+  3278	.stack-group h3 {
+  3279	  font-size: 11px;
+  3280	}
+  3281	
+  3282	.stack-group div {
+  3283	  display: grid;
+  3284	  gap: 8px;
+  3285	}
+  3286	
+  3287	.stack-group span {
+  3288	  color: #d8ffe4;
+  3289	  font-size: 14px;
+  3290	  font-weight: 750;
+  3291	  line-height: 1.35;
+  3292	}
+  3293	
+  3294	.proof-points {
+  3295	  margin-top: 34px;
+  3296	}
+  3297	
+  3298	.closing-panel {
+  3299	  align-items: center;
+  3300	  background: linear-gradient(180deg, rgba(13, 31, 22, 0.88), rgba(5, 13, 9, 0.88));
+  3301	  border: 1px solid var(--line);
+  3302	  border-radius: 8px;
+  3303	  display: grid;
+  3304	  gap: 34px;
+  3305	  grid-template-columns: minmax(0, 1fr) auto;
+  3306	  padding: 34px;
   3307	}
   3308	
-  3309	.stack-matrix {
-  3310	  display: grid;
-  3311	  gap: 14px;
-  3312	  grid-template-columns: repeat(5, minmax(0, 1fr));
-  3313	  margin-top: 34px;
-  3314	}
-  3315	
-  3316	.stack-group {
-  3317	  padding: 20px;
-  3318	}
-  3319	
-  3320	.stack-group h3 {
-  3321	  font-size: 11px;
-  3322	}
-  3323	
-  3324	.stack-group div {
-  3325	  display: grid;
-  3326	  gap: 8px;
-  3327	}
-  3328	
-  3329	.stack-group span {
-  3330	  color: #d8ffe4;
-  3331	  font-size: 14px;
-  3332	  font-weight: 750;
-  3333	  line-height: 1.35;
-  3334	}
-  3335	
-  3336	.proof-points {
-  3337	  margin-top: 34px;
-  3338	}
-  3339	
-  3340	.closing-panel {
-  3341	  align-items: center;
-  3342	  background: linear-gradient(180deg, rgba(13, 31, 22, 0.88), rgba(5, 13, 9, 0.88));
-  3343	  border: 1px solid var(--line);
-  3344	  border-radius: 8px;
-  3345	  display: grid;
-  3346	  gap: 34px;
-  3347	  grid-template-columns: minmax(0, 1fr) auto;
-  3348	  padding: 34px;
-  3349	}
-  3350	
-  3351	.closing-panel h2 {
-  3352	  font-size: clamp(30px, 4vw, 50px);
-  3353	  margin-bottom: 18px;
-  3354	  max-width: 720px;
-  3355	}
-  3356	
-  3357	.closing-panel p {
-  3358	  max-width: 760px;
-  3359	}
-  3360	
-  3361	.closing-actions {
-  3362	  display: flex;
-  3363	  flex-direction: column;
-  3364	  gap: 12px;
-  3365	  min-width: 190px;
-  3366	}
-  3367	
-  3368	@media (max-width: 980px) {
-  3369	  .hero-copy {
-  3370	    --hero-proof-stack-width: min(606px, 100%);
-  3371	    --hero-action-stack-width: var(--hero-proof-stack-width);
-  3372	    --hero-text-stack-width: var(--hero-action-stack-width);
-  3373	  }
-  3374	
-  3375	  .nav-bar {
-  3376	    --nav-bar-inline-padding: 16px;
-  3377	    --nav-bar-height: clamp(36px, calc(23.61px + 3.87vw), 48px);
-  3378	    --nav-link-bottom-separator-gap: 8px;
-  3379	    --nav-link-separator-gap: 6px;
-  3380	    --nav-link-top-separator-gap: 6px;
-  3381	    align-items: center;
-  3382	    display: block;
-  3383	    height: var(--nav-bar-two-row-height);
-  3384	    row-gap: 7.5px;
-  3385	    padding: 0 var(--nav-bar-inline-padding);
-  3386	  }
-  3387	
-  3388	  .nav-bar nav {
-  3389	    display: grid;
-  3390	    grid-template-rows: repeat(2, var(--nav-bar-height));
-  3391	    height: 100%;
-  3392	    row-gap: var(--nav-bar-two-row-gap);
-  3393	    width: 100%;
-  3394	  }
-  3395	
-  3396	  .nav-link-row {
-  3397	    display: flex;
-  3398	    flex-wrap: nowrap;
-  3399	    gap: var(--nav-link-separator-gap);
-  3400	    justify-content: space-between;
-  3401	    min-width: 0;
-  3402	    width: 100%;
-  3403	  }
-  3404	
-  3405	  .nav-link-row-top {
-  3406	    align-items: center;
-  3407	    column-gap: var(--nav-brand-gap);
-  3408	    display: flex;
-  3409	    height: var(--nav-bar-height);
-  3410	    justify-content: flex-start;
-  3411	    width: 100%;
-  3412	  }
-  3413	
-  3414	  .nav-top-distribution {
-  3415	    align-items: center;
-  3416	    display: grid;
-  3417	    flex: 1 1 auto;
-  3418	    grid-template-columns: repeat(2, minmax(0, 1fr));
-  3419	    justify-items: center;
-  3420	    min-width: 0;
-  3421	    position: relative;
-  3422	  }
-  3423	
-  3424	  .nav-top-distribution > .nav-top-link-primary {
-  3425	    grid-column: 1;
-  3426	    min-width: max-content;
-  3427	  }
-  3428	
-  3429	  .nav-top-distribution > .nav-top-link-secondary {
-  3430	    grid-column: 2;
-  3431	    min-width: max-content;
-  3432	  }
-  3433	
-  3434	  .nav-top-distribution > .nav-separator-top-center {
-  3435	    left: 50%;
-  3436	    position: absolute;
-  3437	    transform: translateX(-50%);
-  3438	  }
-  3439	
-  3440	  .nav-link-row-bottom {
-  3441	    align-items: center;
-  3442	    column-gap: var(--nav-link-bottom-separator-gap);
-  3443	    display: flex;
-  3444	    height: var(--nav-bar-height);
-  3445	    justify-content: space-evenly;
-  3446	    width: 100%;
-  3447	  }
-  3448	
-  3449	  .nav-separator.nav-separator-row-leading {
-  3450	    display: none;
-  3451	  }
-  3452	
-  3453	  .nav-bar nav a,
-  3454	  .nav-bar nav .nav-text {
-  3455	    flex: 1 1 0;
-  3456	    min-width: 0;
-  3457	    padding-left: 10px;
-  3458	    padding-right: 10px;
-  3459	    text-align: center;
-  3460	  }
-  3461	
-  3462	  .nav-bar nav .nav-link-row > a,
-  3463	  .nav-bar nav .nav-link-row > .nav-text {
-  3464	    flex: 0 0 auto;
-  3465	    justify-self: center;
-  3466	  }
-  3467	
-  3468	  .nav-bar nav .nav-link-row-top > .nav-brand-link {
-  3469	    display: inline-flex;
-  3470	    gap: var(--nav-brand-gap);
-  3471	    grid-column: 1;
-  3472	    height: var(--nav-bar-height);
-  3473	    margin-block: calc(var(--nav-card-border-width) * -1);
-  3474	    margin-right: 0;
-  3475	    min-width: max-content;
-  3476	    padding: 0 calc(var(--nav-brand-gap) + var(--nav-brand-card-bleed)) 0
-  3477	      var(--nav-brand-card-bleed);
-  3478	    justify-self: start;
+  3309	.closing-panel h2 {
+  3310	  font-size: clamp(30px, 4vw, 50px);
+  3311	  margin-bottom: 18px;
+  3312	  max-width: 720px;
+  3313	}
+  3314	
+  3315	.closing-panel p {
+  3316	  max-width: 760px;
+  3317	}
+  3318	
+  3319	.closing-actions {
+  3320	  display: flex;
+  3321	  flex-direction: column;
+  3322	  gap: 12px;
+  3323	  min-width: 190px;
+  3324	}
+  3325	
+  3326	@media (max-width: 980px) {
+  3327	  .hero-copy {
+  3328	    --hero-proof-stack-width: min(606px, 100%);
+  3329	    --hero-action-stack-width: var(--hero-proof-stack-width);
+  3330	    --hero-text-stack-width: var(--hero-action-stack-width);
+  3331	  }
+  3332	
+  3333	  .nav-bar {
+  3334	    --nav-bar-inline-padding: 16px;
+  3335	    --nav-bar-height: clamp(36px, calc(23.61px + 3.87vw), 48px);
+  3336	    --nav-link-bottom-separator-gap: 8px;
+  3337	    --nav-link-separator-gap: 6px;
+  3338	    --nav-link-top-separator-gap: 6px;
+  3339	    align-items: center;
+  3340	    display: block;
+  3341	    height: var(--nav-bar-two-row-height);
+  3342	    row-gap: 7.5px;
+  3343	    padding: 0 var(--nav-bar-inline-padding);
+  3344	  }
+  3345	
+  3346	  .nav-bar nav {
+  3347	    display: grid;
+  3348	    grid-template-rows: repeat(2, var(--nav-bar-height));
+  3349	    height: 100%;
+  3350	    row-gap: var(--nav-bar-two-row-gap);
+  3351	    width: 100%;
+  3352	  }
+  3353	
+  3354	  .nav-link-row {
+  3355	    display: flex;
+  3356	    flex-wrap: nowrap;
+  3357	    gap: var(--nav-link-separator-gap);
+  3358	    justify-content: space-between;
+  3359	    min-width: 0;
+  3360	    width: 100%;
+  3361	  }
+  3362	
+  3363	  .nav-link-row-top {
+  3364	    align-items: center;
+  3365	    column-gap: var(--nav-brand-gap);
+  3366	    display: flex;
+  3367	    height: var(--nav-bar-height);
+  3368	    justify-content: flex-start;
+  3369	    width: 100%;
+  3370	  }
+  3371	
+  3372	  .nav-top-distribution {
+  3373	    align-items: center;
+  3374	    display: grid;
+  3375	    flex: 1 1 auto;
+  3376	    grid-template-columns: repeat(2, minmax(0, 1fr));
+  3377	    justify-items: center;
+  3378	    min-width: 0;
+  3379	    position: relative;
+  3380	  }
+  3381	
+  3382	  .nav-top-distribution > .nav-top-link-primary {
+  3383	    grid-column: 1;
+  3384	    min-width: max-content;
+  3385	  }
+  3386	
+  3387	  .nav-top-distribution > .nav-top-link-secondary {
+  3388	    grid-column: 2;
+  3389	    min-width: max-content;
+  3390	  }
+  3391	
+  3392	  .nav-top-distribution > .nav-separator-top-center {
+  3393	    left: 50%;
+  3394	    position: absolute;
+  3395	    transform: translateX(-50%);
+  3396	  }
+  3397	
+  3398	  .nav-link-row-bottom {
+  3399	    align-items: center;
+  3400	    column-gap: var(--nav-link-bottom-separator-gap);
+  3401	    display: flex;
+  3402	    height: var(--nav-bar-height);
+  3403	    justify-content: space-evenly;
+  3404	    width: 100%;
+  3405	  }
+  3406	
+  3407	  .nav-separator.nav-separator-row-leading {
+  3408	    display: none;
+  3409	  }
+  3410	
+  3411	  .nav-bar nav a,
+  3412	  .nav-bar nav .nav-text {
+  3413	    flex: 1 1 0;
+  3414	    min-width: 0;
+  3415	    padding-left: 10px;
+  3416	    padding-right: 10px;
+  3417	    text-align: center;
+  3418	  }
+  3419	
+  3420	  .nav-bar nav .nav-link-row > a,
+  3421	  .nav-bar nav .nav-link-row > .nav-text {
+  3422	    flex: 0 0 auto;
+  3423	    justify-self: center;
+  3424	  }
+  3425	
+  3426	  .nav-bar nav .nav-link-row-top > .nav-brand-link {
+  3427	    display: inline-flex;
+  3428	    gap: var(--nav-brand-gap);
+  3429	    grid-column: 1;
+  3430	    height: var(--nav-bar-height);
+  3431	    margin-block: calc(var(--nav-card-border-width) * -1);
+  3432	    margin-right: 0;
+  3433	    min-width: max-content;
+  3434	    padding: 0 calc(var(--nav-brand-gap) + var(--nav-brand-card-bleed)) 0
+  3435	      var(--nav-brand-card-bleed);
+  3436	    justify-self: start;
+  3437	  }
+  3438	
+  3439	  .nav-bar nav .nav-link-row-top > .nav-brand-link .nav-brand-mark {
+  3440	    align-self: center;
+  3441	    flex: none;
+  3442	    height: 34px;
+  3443	    justify-self: center;
+  3444	    max-height: 34px;
+  3445	    max-width: 34px;
+  3446	    min-height: 34px;
+  3447	    min-width: 34px;
+  3448	    width: 34px;
+  3449	  }
+  3450	
+  3451	  .nav-bar nav .nav-link-row-top > .nav-brand-link .nav-brand-name {
+  3452	    align-self: center;
+  3453	    display: inline-flex;
+  3454	    justify-content: center;
+  3455	    line-height: 1;
+  3456	    text-align: center;
+  3457	  }
+  3458	
+  3459	  .nav-bar nav .nav-link-row-bottom > a,
+  3460	  .nav-bar nav .nav-link-row-bottom > .nav-text {
+  3461	    padding-bottom: 3.75px;
+  3462	    padding-top: 0;
+  3463	  }
+  3464	
+  3465	  .project-nav nav {
+  3466	    grid-template-columns: repeat(3, minmax(0, 1fr));
+  3467	  }
+  3468	
+  3469	  .hero-grid,
+  3470	  .worklog-layout,
+  3471	  .project-hero-grid,
+  3472	  .project-section-grid,
+  3473	  .readiness-layout {
+  3474	    grid-template-columns: 1fr;
+  3475	  }
+  3476	
+  3477	  .av-showcase {
+  3478	    min-height: 610px;
   3479	  }
   3480	
-  3481	  .nav-bar nav .nav-link-row-top > .nav-brand-link .nav-brand-mark {
-  3482	    align-self: center;
-  3483	    flex: none;
-  3484	    height: 34px;
-  3485	    justify-self: center;
-  3486	    max-height: 34px;
-  3487	    max-width: 34px;
-  3488	    min-height: 34px;
-  3489	    min-width: 34px;
-  3490	    width: 34px;
-  3491	  }
-  3492	
-  3493	  .nav-bar nav .nav-link-row-top > .nav-brand-link .nav-brand-name {
-  3494	    align-self: center;
-  3495	    display: inline-flex;
-  3496	    justify-content: center;
-  3497	    line-height: 1;
-  3498	    text-align: center;
-  3499	  }
-  3500	
-  3501	  .nav-bar nav .nav-link-row-bottom > a,
-  3502	  .nav-bar nav .nav-link-row-bottom > .nav-text {
-  3503	    padding-bottom: 3.75px;
-  3504	    padding-top: 0;
+  3481	  .av-device-main {
+  3482	    left: 32%;
+  3483	    right: auto;
+  3484	  }
+  3485	
+  3486	  .av-device-browse {
+  3487	    right: 6%;
+  3488	  }
+  3489	
+  3490	  .av-device-confirm {
+  3491	    left: 4%;
+  3492	  }
+  3493	
+  3494	  .hero-visual {
+  3495	    min-height: auto;
+  3496	  }
+  3497	
+  3498	  .phone-stage {
+  3499	    height: 710px;
+  3500	    margin-top: 30px;
+  3501	  }
+  3502	
+  3503	  .phone-shell-commerce {
+  3504	    left: 4%;
   3505	  }
   3506	
-  3507	  .project-nav nav {
-  3508	    grid-template-columns: repeat(3, minmax(0, 1fr));
+  3507	  .phone-shell-finance {
+  3508	    left: 42%;
   3509	  }
   3510	
-  3511	  .hero-grid,
-  3512	  .worklog-layout,
-  3513	  .project-hero-grid,
-  3514	  .project-section-grid,
-  3515	  .readiness-layout {
-  3516	    grid-template-columns: 1fr;
-  3517	  }
-  3518	
-  3519	  .av-showcase {
-  3520	    min-height: 610px;
-  3521	  }
-  3522	
-  3523	  .av-device-main {
-  3524	    left: 32%;
-  3525	    right: auto;
-  3526	  }
-  3527	
-  3528	  .av-device-browse {
-  3529	    right: 6%;
-  3530	  }
-  3531	
-  3532	  .av-device-confirm {
-  3533	    left: 4%;
-  3534	  }
-  3535	
-  3536	  .hero-visual {
-  3537	    min-height: auto;
-  3538	  }
+  3511	  .tablet-shell {
+  3512	    left: 9%;
+  3513	    top: 374px;
+  3514	    width: var(--tablet-shell-fitted-width);
+  3515	  }
+  3516	
+  3517	  .case-grid,
+  3518	  .capability-grid,
+  3519	  .feature-grid,
+  3520	  .decision-grid,
+  3521	  .architecture-map {
+  3522	    grid-template-columns: repeat(2, minmax(0, 1fr));
+  3523	  }
+  3524	
+  3525	  .ownership-grid,
+  3526	  .stack-matrix {
+  3527	    grid-template-columns: repeat(3, minmax(0, 1fr));
+  3528	  }
+  3529	
+  3530	  .flow-layout {
+  3531	    --flow-chart-width: var(--flow-phone-width);
+  3532	    grid-template-columns: 1fr;
+  3533	  }
+  3534	
+  3535	  .flow-capture-group {
+  3536	    grid-template-columns: 1fr;
+  3537	  }
+  3538	}
   3539	
-  3540	  .phone-stage {
-  3541	    height: 710px;
-  3542	    margin-top: 30px;
-  3543	  }
-  3544	
-  3545	  .phone-shell-commerce {
-  3546	    left: 4%;
-  3547	  }
-  3548	
-  3549	  .phone-shell-finance {
-  3550	    left: 42%;
-  3551	  }
-  3552	
-  3553	  .tablet-shell {
-  3554	    left: 9%;
-  3555	    top: 374px;
-  3556	    width: var(--tablet-shell-fitted-width);
-  3557	  }
-  3558	
-  3559	  .case-grid,
-  3560	  .capability-grid,
-  3561	  .feature-grid,
-  3562	  .decision-grid,
-  3563	  .architecture-map {
-  3564	    grid-template-columns: repeat(2, minmax(0, 1fr));
-  3565	  }
-  3566	
-  3567	  .ownership-grid,
-  3568	  .stack-matrix {
-  3569	    grid-template-columns: repeat(3, minmax(0, 1fr));
-  3570	  }
-  3571	
-  3572	  .flow-layout {
-  3573	    --flow-chart-width: var(--flow-phone-width);
-  3574	    grid-template-columns: 1fr;
-  3575	  }
-  3576	
-  3577	  .flow-capture-group {
-  3578	    grid-template-columns: 1fr;
-  3579	  }
-  3580	}
-  3581	
-  3582	@media (max-width: 980px) and (orientation: portrait) {
-  3583	  .flow-chart-mockup {
-  3584	    justify-self: center;
-  3585	    margin-inline: auto;
-  3586	  }
-  3587	}
-  3588	
-  3589	@media (max-width: 720px) {
-  3590	  .site-shell {
-  3591	    width: min(100% - 24px, 1180px);
-  3592	  }
-  3593	
-  3594	  .nav-bar {
-  3595	    --nav-bar-inline-padding: 14px;
-  3596	    --nav-link-bottom-separator-gap: 5px;
-  3597	    --nav-link-separator-gap: 4px;
-  3598	    --nav-link-top-separator-gap: 3px;
-  3599	    max-width: calc(100vw - 24px);
-  3600	    overflow: hidden;
-  3601	    padding: 0 var(--nav-bar-inline-padding);
-  3602	  }
-  3603	
-  3604	  .nav-bar nav {
-  3605	    max-width: 100%;
-  3606	  }
-  3607	
-  3608	  .project-nav nav {
-  3609	    width: 100%;
+  3540	@media (max-width: 980px) and (orientation: portrait) {
+  3541	  .flow-chart-mockup {
+  3542	    justify-self: center;
+  3543	    margin-inline: auto;
+  3544	  }
+  3545	}
+  3546	
+  3547	@media (max-width: 720px) {
+  3548	  .site-shell {
+  3549	    width: min(100% - 24px, 1180px);
+  3550	  }
+  3551	
+  3552	  .nav-bar {
+  3553	    --nav-bar-inline-padding: 14px;
+  3554	    --nav-link-bottom-separator-gap: 5px;
+  3555	    --nav-link-separator-gap: 4px;
+  3556	    --nav-link-top-separator-gap: 3px;
+  3557	    max-width: calc(100vw - 24px);
+  3558	    overflow: hidden;
+  3559	    padding: 0 var(--nav-bar-inline-padding);
+  3560	  }
+  3561	
+  3562	  .nav-bar nav {
+  3563	    max-width: 100%;
+  3564	  }
+  3565	
+  3566	  .project-nav nav {
+  3567	    width: 100%;
+  3568	  }
+  3569	
+  3570	  .project-page .site-shell {
+  3571	    max-width: calc(100vw - 24px);
+  3572	    width: calc(100vw - 24px);
+  3573	  }
+  3574	
+  3575	  .project-nav {
+  3576	    max-width: calc(100vw - 24px);
+  3577	    width: calc(100vw - 24px);
+  3578	  }
+  3579	
+  3580	  .project-nav nav a {
+  3581	    font-size: 11px;
+  3582	  }
+  3583	
+  3584	  .nav-bar nav a,
+  3585	  .nav-bar nav .nav-text {
+  3586	    font-size: 15px;
+  3587	    padding-left: 2px;
+  3588	    padding-right: 2px;
+  3589	  }
+  3590	
+  3591	  .nav-separator {
+  3592	    font-size: 15px;
+  3593	  }
+  3594	
+  3595	  .hero {
+  3596	    padding-top: 24px;
+  3597	  }
+  3598	
+  3599	  section.project-hero {
+  3600	    padding-top: 12px;
+  3601	  }
+  3602	
+  3603	  .project-nav {
+  3604	    margin-bottom: 48px;
+  3605	  }
+  3606	
+  3607	  .hero-grid {
+  3608	    gap: 30px;
+  3609	    padding-top: 16px;
   3610	  }
   3611	
-  3612	  .project-page .site-shell {
-  3613	    max-width: calc(100vw - 24px);
-  3614	    width: calc(100vw - 24px);
-  3615	  }
-  3616	
-  3617	  .project-nav {
-  3618	    max-width: calc(100vw - 24px);
-  3619	    width: calc(100vw - 24px);
-  3620	  }
-  3621	
-  3622	  .project-nav nav a {
-  3623	    font-size: 11px;
-  3624	  }
-  3625	
-  3626	  .nav-bar nav a,
-  3627	  .nav-bar nav .nav-text {
-  3628	    font-size: 15px;
-  3629	    padding-left: 2px;
-  3630	    padding-right: 2px;
-  3631	  }
-  3632	
-  3633	  .nav-separator {
-  3634	    font-size: 15px;
-  3635	  }
-  3636	
-  3637	  .hero {
-  3638	    padding-top: 24px;
-  3639	  }
-  3640	
-  3641	  section.project-hero {
-  3642	    padding-top: 12px;
-  3643	  }
-  3644	
-  3645	  .project-nav {
-  3646	    margin-bottom: 48px;
-  3647	  }
-  3648	
-  3649	  .hero-grid {
-  3650	    gap: 30px;
-  3651	    padding-top: 16px;
-  3652	  }
-  3653	
-  3654	  h1 {
-  3655	    font-size: clamp(42px, 15vw, 64px);
-  3656	  }
-  3657	
-  3658	  .hero-visual {
-  3659	    min-height: auto;
+  3612	  h1 {
+  3613	    font-size: clamp(42px, 15vw, 64px);
+  3614	  }
+  3615	
+  3616	  .hero-visual {
+  3617	    min-height: auto;
+  3618	  }
+  3619	
+  3620	  .phone-stage {
+  3621	    height: 626px;
+  3622	    margin-top: 18px;
+  3623	  }
+  3624	
+  3625	  .profile-orbit {
+  3626	    right: 0;
+  3627	  }
+  3628	
+  3629	  .profile-photo {
+  3630	    height: 165px;
+  3631	    width: 165px;
+  3632	  }
+  3633	
+  3634	  .phone-shell {
+  3635	    height: 420px;
+  3636	    width: 206px;
+  3637	  }
+  3638	
+  3639	  .phone-shell-commerce {
+  3640	    left: -2px;
+  3641	    top: 72px;
+  3642	  }
+  3643	
+  3644	  .phone-shell-finance {
+  3645	    left: auto;
+  3646	    right: -8px;
+  3647	    top: 124px;
+  3648	  }
+  3649	
+  3650	  .tablet-shell {
+  3651	    --tablet-shell-fitted-width: 223px;
+  3652	    height: 150px;
+  3653	    left: 14px;
+  3654	    top: 342px;
+  3655	  }
+  3656	
+  3657	  .stats-strip-item {
+  3658	    min-height: 104px;
+  3659	    padding: 14px 8px;
   3660	  }
   3661	
-  3662	  .phone-stage {
-  3663	    height: 626px;
-  3664	    margin-top: 18px;
-  3665	  }
-  3666	
-  3667	  .profile-orbit {
-  3668	    right: 0;
-  3669	  }
-  3670	
-  3671	  .profile-photo {
-  3672	    height: 165px;
-  3673	    width: 165px;
-  3674	  }
-  3675	
-  3676	  .phone-shell {
-  3677	    height: 420px;
-  3678	    width: 206px;
-  3679	  }
-  3680	
-  3681	  .phone-shell-commerce {
-  3682	    left: -2px;
-  3683	    top: 72px;
-  3684	  }
-  3685	
-  3686	  .phone-shell-finance {
-  3687	    left: auto;
-  3688	    right: -8px;
-  3689	    top: 124px;
+  3662	  .stack-section .capability-grid {
+  3663	    grid-template-columns: repeat(2, minmax(0, 1fr));
+  3664	  }
+  3665	
+  3666	  .case-card {
+  3667	    min-height: auto;
+  3668	  }
+  3669	
+  3670	  .contact-panel {
+  3671	    align-items: flex-start;
+  3672	    flex-direction: column;
+  3673	  }
+  3674	
+  3675	  .project-page section:not(.project-hero) {
+  3676	    padding: 58px 0;
+  3677	  }
+  3678	
+  3679	  .project-hero-grid {
+  3680	    gap: 34px;
+  3681	  }
+  3682	
+  3683	  .project-back-link {
+  3684	    margin-bottom: 24px;
+  3685	  }
+  3686	
+  3687	  .project-copy-panel {
+  3688	    border-left: 0;
+  3689	    padding-left: 0;
   3690	  }
   3691	
-  3692	  .tablet-shell {
-  3693	    --tablet-shell-fitted-width: 223px;
-  3694	    height: 150px;
-  3695	    left: 14px;
-  3696	    top: 342px;
-  3697	  }
-  3698	
-  3699	  .stats-strip-item {
-  3700	    min-height: 104px;
-  3701	    padding: 14px 8px;
-  3702	  }
-  3703	
-  3704	  .stack-section .capability-grid {
-  3705	    grid-template-columns: repeat(2, minmax(0, 1fr));
-  3706	  }
-  3707	
-  3708	  .case-card {
-  3709	    min-height: auto;
+  3692	  .project-hero-text,
+  3693	  .project-copy-panel p,
+  3694	  .architecture-copy,
+  3695	  .readiness-copy,
+  3696	  .closing-panel p {
+  3697	    font-size: 16px;
+  3698	  }
+  3699	
+  3700	  .project-subtitle,
+  3701	  .project-hero-text,
+  3702	  .project-meta-row {
+  3703	    max-width: 100%;
+  3704	    overflow-wrap: anywhere;
+  3705	  }
+  3706	
+  3707	  .project-meta-row span {
+  3708	    flex: 0 1 auto;
+  3709	    white-space: normal;
   3710	  }
   3711	
-  3712	  .contact-panel {
-  3713	    align-items: flex-start;
-  3714	    flex-direction: column;
+  3712	  .av-showcase {
+  3713	    min-height: auto;
+  3714	    padding: 0 0 18px;
   3715	  }
   3716	
-  3717	  .project-page section:not(.project-hero) {
-  3718	    padding: 58px 0;
+  3717	  .av-showcase::before {
+  3718	    inset: 20px 0 84px;
   3719	  }
   3720	
-  3721	  .project-hero-grid {
-  3722	    gap: 34px;
+  3721	  .av-device {
+  3722	    position: relative;
   3723	  }
   3724	
-  3725	  .project-back-link {
-  3726	    margin-bottom: 24px;
-  3727	  }
-  3728	
-  3729	  .project-copy-panel {
-  3730	    border-left: 0;
-  3731	    padding-left: 0;
-  3732	  }
-  3733	
-  3734	  .project-hero-text,
-  3735	  .project-copy-panel p,
-  3736	  .architecture-copy,
-  3737	  .readiness-copy,
-  3738	  .closing-panel p {
-  3739	    font-size: 16px;
-  3740	  }
-  3741	
-  3742	  .project-subtitle,
-  3743	  .project-hero-text,
-  3744	  .project-meta-row {
-  3745	    max-width: 100%;
-  3746	    overflow-wrap: anywhere;
-  3747	  }
-  3748	
-  3749	  .project-meta-row span {
-  3750	    flex: 0 1 auto;
-  3751	    white-space: normal;
-  3752	  }
-  3753	
-  3754	  .av-showcase {
-  3755	    min-height: auto;
-  3756	    padding: 0 0 18px;
+  3725	  .av-device-main {
+  3726	    height: auto;
+  3727	    left: auto;
+  3728	    margin: 0 auto;
+  3729	    max-width: 292px;
+  3730	    right: auto;
+  3731	    top: auto;
+  3732	    transform: rotate(-4deg);
+  3733	    width: 72vw;
+  3734	  }
+  3735	
+  3736	  .av-device-browse,
+  3737	  .av-device-confirm {
+  3738	    display: none;
+  3739	  }
+  3740	
+  3741	  .av-showcase-proof {
+  3742	    margin: -18px auto 0;
+  3743	    max-width: min(292px, calc(100vw - 48px));
+  3744	    position: relative;
+  3745	    right: auto;
+  3746	  }
+  3747	
+  3748	  .av-showcase-proof-row {
+  3749	    align-items: stretch;
+  3750	    bottom: auto;
+  3751	    flex-direction: column;
+  3752	    margin: -18px auto 0;
+  3753	    max-width: min(292px, calc(100vw - 48px));
+  3754	    position: relative;
+  3755	    left: auto;
+  3756	    right: auto;
   3757	  }
   3758	
-  3759	  .av-showcase::before {
-  3760	    inset: 20px 0 84px;
-  3761	  }
-  3762	
-  3763	  .av-device {
-  3764	    position: relative;
-  3765	  }
-  3766	
-  3767	  .av-device-main {
-  3768	    height: auto;
-  3769	    left: auto;
-  3770	    margin: 0 auto;
-  3771	    max-width: 292px;
-  3772	    right: auto;
-  3773	    top: auto;
-  3774	    transform: rotate(-4deg);
-  3775	    width: 72vw;
-  3776	  }
-  3777	
-  3778	  .av-device-browse,
-  3779	  .av-device-confirm {
-  3780	    display: none;
-  3781	  }
-  3782	
-  3783	  .av-showcase-proof {
-  3784	    margin: -18px auto 0;
-  3785	    max-width: min(292px, calc(100vw - 48px));
-  3786	    position: relative;
-  3787	    right: auto;
-  3788	  }
-  3789	
-  3790	  .av-showcase-proof-row {
-  3791	    align-items: stretch;
-  3792	    bottom: auto;
-  3793	    flex-direction: column;
-  3794	    margin: -18px auto 0;
-  3795	    max-width: min(292px, calc(100vw - 48px));
-  3796	    position: relative;
-  3797	    left: auto;
-  3798	    right: auto;
-  3799	  }
-  3800	
-  3801	  .av-showcase-proof-row .av-showcase-proof {
-  3802	    margin: 0;
-  3803	    max-width: none;
-  3804	    width: max-content;
+  3759	  .av-showcase-proof-row .av-showcase-proof {
+  3760	    margin: 0;
+  3761	    max-width: none;
+  3762	    width: max-content;
+  3763	  }
+  3764	
+  3765	  .alla-vostra-case .av-showcase {
+  3766	    --av-mobile-device-width: min(62vw, 262px);
+  3767	    align-items: center;
+  3768	    display: flex;
+  3769	    justify-content: center;
+  3770	    min-height: clamp(560px, 126vw, 635px);
+  3771	    overflow: visible;
+  3772	    padding: 8px 0 18px;
+  3773	  }
+  3774	
+  3775	  .alla-vostra-case .av-showcase::before {
+  3776	    inset: 0 0 38px;
+  3777	  }
+  3778	
+  3779	  .alla-vostra-case .av-device-main {
+  3780	    margin: 0;
+  3781	    max-width: 262px;
+  3782	    transform-origin: center top;
+  3783	    width: var(--av-mobile-device-width);
+  3784	  }
+  3785	
+  3786	  .alla-vostra-case .av-showcase-proof-row {
+  3787	    align-items: end;
+  3788	    bottom: clamp(2px, 1vw, 8px);
+  3789	    display: grid;
+  3790	    gap: 10px;
+  3791	    grid-template-columns: repeat(2, minmax(0, max-content));
+  3792	    justify-content: space-between;
+  3793	    left: clamp(12px, 3.5vw, 20px);
+  3794	    margin: 0;
+  3795	    max-width: none;
+  3796	    position: absolute;
+  3797	    right: clamp(12px, 3.5vw, 20px);
+  3798	    top: auto;
+  3799	    width: auto;
+  3800	  }
+  3801	
+  3802	  .alla-vostra-case .av-showcase-proof-row .av-showcase-proof {
+  3803	    max-width: calc((100vw - 42px) / 2);
+  3804	    padding: 10px 12px;
   3805	  }
   3806	
-  3807	  .alla-vostra-case .av-showcase {
-  3808	    --av-mobile-device-width: min(62vw, 262px);
-  3809	    align-items: center;
-  3810	    display: flex;
-  3811	    justify-content: center;
-  3812	    min-height: clamp(560px, 126vw, 635px);
-  3813	    overflow: visible;
-  3814	    padding: 8px 0 18px;
-  3815	  }
-  3816	
-  3817	  .alla-vostra-case .av-showcase::before {
-  3818	    inset: 0 0 38px;
-  3819	  }
-  3820	
-  3821	  .alla-vostra-case .av-device-main {
-  3822	    margin: 0;
-  3823	    max-width: 262px;
-  3824	    transform-origin: center top;
-  3825	    width: var(--av-mobile-device-width);
-  3826	  }
-  3827	
-  3828	  .alla-vostra-case .av-showcase-proof-row {
-  3829	    align-items: end;
-  3830	    bottom: clamp(2px, 1vw, 8px);
-  3831	    display: grid;
-  3832	    gap: 10px;
-  3833	    grid-template-columns: repeat(2, minmax(0, max-content));
-  3834	    justify-content: space-between;
-  3835	    left: clamp(12px, 3.5vw, 20px);
-  3836	    margin: 0;
-  3837	    max-width: none;
-  3838	    position: absolute;
-  3839	    right: clamp(12px, 3.5vw, 20px);
-  3840	    top: auto;
-  3841	    width: auto;
-  3842	  }
-  3843	
-  3844	  .alla-vostra-case .av-showcase-proof-row .av-showcase-proof {
-  3845	    max-width: calc((100vw - 42px) / 2);
-  3846	    padding: 10px 12px;
-  3847	  }
-  3848	
-  3849	  .alla-vostra-case .av-showcase-proof-row .av-showcase-proof:first-child {
-  3850	    justify-self: start;
-  3851	  }
-  3852	
-  3853	  .alla-vostra-case .av-showcase-proof-row .av-showcase-proof:last-child {
-  3854	    justify-self: end;
+  3807	  .alla-vostra-case .av-showcase-proof-row .av-showcase-proof:first-child {
+  3808	    justify-self: start;
+  3809	  }
+  3810	
+  3811	  .alla-vostra-case .av-showcase-proof-row .av-showcase-proof:last-child {
+  3812	    justify-self: end;
+  3813	  }
+  3814	
+  3815	  .alla-vostra-case .av-showcase-proof strong {
+  3816	    font-size: clamp(20px, 6vw, 30px);
+  3817	  }
+  3818	
+  3819	  .alla-vostra-case .av-showcase-proof span {
+  3820	    font-size: clamp(12px, 3.2vw, 15px);
+  3821	    line-height: 1.32;
+  3822	  }
+  3823	
+  3824	  .alla-vostra-case .stats-strip {
+  3825	    border-top: 1px solid var(--line);
+  3826	    gap: 1px;
+  3827	    grid-template-columns: repeat(4, minmax(0, 1fr));
+  3828	    margin: 26px 0 0;
+  3829	    width: 100%;
+  3830	  }
+  3831	
+  3832	  .alla-vostra-case .stats-strip-item {
+  3833	    background: rgba(255, 255, 255, 0.025);
+  3834	    min-height: auto;
+  3835	    padding: 14px 8px;
+  3836	  }
+  3837	
+  3838	  .alla-vostra-case .stats-strip strong {
+  3839	    font-size: clamp(30px, 8vw, 44px);
+  3840	  }
+  3841	
+  3842	  .alla-vostra-case .stats-strip-label,
+  3843	  .alla-vostra-case .stats-strip-measure {
+  3844	    font-size: clamp(12px, 3.2vw, 16px);
+  3845	    line-height: 1.16;
+  3846	  }
+  3847	
+  3848	  .project-card-grid,
+  3849	  .ownership-grid,
+  3850	  .feature-grid,
+  3851	  .decision-grid,
+  3852	  .architecture-map,
+  3853	  .stack-matrix {
+  3854	    grid-template-columns: 1fr;
   3855	  }
   3856	
-  3857	  .alla-vostra-case .av-showcase-proof strong {
-  3858	    font-size: clamp(20px, 6vw, 30px);
+  3857	  .flow-segments {
+  3858	    grid-template-columns: repeat(2, minmax(0, 1fr));
   3859	  }
   3860	
-  3861	  .alla-vostra-case .av-showcase-proof span {
-  3862	    font-size: clamp(12px, 3.2vw, 15px);
-  3863	    line-height: 1.32;
-  3864	  }
-  3865	
-  3866	  .alla-vostra-case .stats-strip {
-  3867	    border-top: 1px solid var(--line);
-  3868	    gap: 1px;
-  3869	    grid-template-columns: repeat(4, minmax(0, 1fr));
-  3870	    margin: 26px 0 0;
-  3871	    width: 100%;
+  3861	  .flow-support {
+  3862	    grid-template-columns: 1fr;
+  3863	  }
+  3864	
+  3865	  .flow-checkout-note {
+  3866	    min-height: auto;
+  3867	  }
+  3868	
+  3869	  .flow-section-intro > p {
+  3870	    border-left: 0;
+  3871	    padding-left: 0;
   3872	  }
   3873	
-  3874	  .alla-vostra-case .stats-strip-item {
-  3875	    background: rgba(255, 255, 255, 0.025);
-  3876	    min-height: auto;
-  3877	    padding: 14px 8px;
-  3878	  }
-  3879	
-  3880	  .alla-vostra-case .stats-strip strong {
-  3881	    font-size: clamp(30px, 8vw, 44px);
-  3882	  }
-  3883	
-  3884	  .alla-vostra-case .stats-strip-label,
-  3885	  .alla-vostra-case .stats-strip-measure {
-  3886	    font-size: clamp(12px, 3.2vw, 16px);
-  3887	    line-height: 1.16;
-  3888	  }
-  3889	
-  3890	  .project-card-grid,
-  3891	  .ownership-grid,
-  3892	  .feature-grid,
-  3893	  .decision-grid,
-  3894	  .architecture-map,
-  3895	  .stack-matrix {
-  3896	    grid-template-columns: 1fr;
-  3897	  }
-  3898	
-  3899	  .flow-segments {
-  3900	    grid-template-columns: repeat(2, minmax(0, 1fr));
-  3901	  }
-  3902	
-  3903	  .flow-support {
-  3904	    grid-template-columns: 1fr;
-  3905	  }
-  3906	
-  3907	  .flow-checkout-note {
-  3908	    min-height: auto;
-  3909	  }
+  3874	  .flow-capture-groups {
+  3875	    gap: 40px;
+  3876	    margin-top: 44px;
+  3877	  }
+  3878	
+  3879	  .flow-capture-group {
+  3880	    padding-top: 24px;
+  3881	  }
+  3882	
+  3883	  .flow-capture-grid {
+  3884	    gap: 28px;
+  3885	    grid-template-columns: 1fr;
+  3886	  }
+  3887	
+  3888	  .flow-screen-compact {
+  3889	    width: min(42vw, 146px);
+  3890	  }
+  3891	
+  3892	  .flow-screen-stack-captures {
+  3893	    gap: 12px;
+  3894	  }
+  3895	
+  3896	  .flow-screen:not(.flow-screen-main) .flow-image-frame {
+  3897	    margin: 0 auto;
+  3898	    max-width: 230px;
+  3899	  }
+  3900	
+  3901	  .closing-panel {
+  3902	    grid-template-columns: 1fr;
+  3903	    padding: 28px;
+  3904	  }
+  3905	
+  3906	  .closing-actions {
+  3907	    width: 100%;
+  3908	  }
+  3909	}
   3910	
-  3911	  .flow-section-intro > p {
-  3912	    border-left: 0;
-  3913	    padding-left: 0;
+  3911	@media (max-width: 630px) {
+  3912	  .case-grid {
+  3913	    grid-template-columns: 1fr;
   3914	  }
   3915	
-  3916	  .flow-capture-groups {
-  3917	    gap: 40px;
-  3918	    margin-top: 44px;
-  3919	  }
-  3920	
-  3921	  .flow-capture-group {
-  3922	    padding-top: 24px;
-  3923	  }
-  3924	
-  3925	  .flow-capture-grid {
-  3926	    gap: 28px;
-  3927	    grid-template-columns: 1fr;
-  3928	  }
-  3929	
-  3930	  .flow-screen-compact {
-  3931	    width: min(42vw, 146px);
-  3932	  }
-  3933	
-  3934	  .flow-screen-stack-captures {
-  3935	    gap: 12px;
-  3936	  }
-  3937	
-  3938	  .flow-screen:not(.flow-screen-main) .flow-image-frame {
-  3939	    margin: 0 auto;
-  3940	    max-width: 230px;
-  3941	  }
-  3942	
-  3943	  .closing-panel {
-  3944	    grid-template-columns: 1fr;
-  3945	    padding: 28px;
-  3946	  }
-  3947	
-  3948	  .closing-actions {
-  3949	    width: 100%;
-  3950	  }
-  3951	}
-  3952	
-  3953	@media (max-width: 630px) {
-  3954	  .case-grid {
-  3955	    grid-template-columns: 1fr;
-  3956	  }
-  3957	
-  3958	  .case-grid-featured .case-card-project-title-name,
-  3959	  .case-grid-featured .case-card-title-underline {
-  3960	    overflow-wrap: normal;
-  3961	    white-space: nowrap;
-  3962	  }
-  3963	
-  3964	  .case-grid > .uiux-principle-card-expanded {
-  3965	    grid-column: auto;
-  3966	  }
-  3967	
-  3968	  .case-grid > .uiux-principle-card-expanded .uiux-principle-long-copy {
-  3969	    column-count: auto;
-  3970	    display: grid;
-  3971	  }
-  3972	}
-  3973	
-  3974	@media (max-width: 430px) {
-  3975	  .nav-bar {
-  3976	    --nav-brand-gap: 8px;
-  3977	    --nav-link-bottom-separator-gap: 3px;
-  3978	    --nav-link-separator-gap: 2px;
-  3979	    --nav-link-top-separator-gap: 2px;
-  3980	  }
-  3981	
-  3982	  .nav-brand-name {
-  3983	    font-size: 22px;
-  3984	  }
-  3985	
-  3986	  .nav-bar nav a,
-  3987	  .nav-bar nav .nav-text,
-  3988	  .nav-separator {
-  3989	    font-size: 14px;
-  3990	  }
-  3991	}
-  3992	
-  3993	@media (max-width: 380px) {
-  3994	  .nav-bar {
-  3995	    --nav-bar-inline-padding: 12px;
-  3996	    --nav-link-bottom-separator-gap: 2px;
-  3997	    --nav-link-separator-gap: 1px;
-  3998	    --nav-link-top-separator-gap: 1px;
-  3999	  }
-  4000	
-  4001	  .nav-bar nav a,
-  4002	  .nav-bar nav .nav-text {
-  4003	    font-size: 13.5px;
-  4004	    padding-left: 0;
-  4005	    padding-right: 0;
-  4006	  }
-  4007	
-  4008	  .nav-separator {
-  4009	    font-size: 13.5px;
-  4010	  }
-  4011	}
-  4012	
-  4013	@media (max-width: 340px) {
-  4014	  .nav-bar nav a,
-  4015	  .nav-bar nav .nav-text {
-  4016	    font-size: 13px;
-  4017	  }
-  4018	
-  4019	  .nav-separator {
-  4020	    font-size: 13px;
-  4021	  }
-  4022	}
+  3916	  .case-grid-featured .case-card-project-title-name,
+  3917	  .case-grid-featured .case-card-title-underline {
+  3918	    overflow-wrap: normal;
+  3919	    white-space: nowrap;
+  3920	  }
+  3921	
+  3922	  .case-grid > .uiux-principle-card-expanded {
+  3923	    grid-column: auto;
+  3924	  }
+  3925	
+  3926	  .case-grid > .uiux-principle-card-expanded .uiux-principle-long-copy {
+  3927	    column-count: auto;
+  3928	    display: grid;
+  3929	  }
+  3930	}
+  3931	
+  3932	@media (max-width: 430px) {
+  3933	  .nav-bar {
+  3934	    --nav-brand-gap: 8px;
+  3935	    --nav-link-bottom-separator-gap: 3px;
+  3936	    --nav-link-separator-gap: 2px;
+  3937	    --nav-link-top-separator-gap: 2px;
+  3938	  }
+  3939	
+  3940	  .nav-brand-name {
+  3941	    font-size: 22px;
+  3942	  }
+  3943	
+  3944	  .nav-bar nav a,
+  3945	  .nav-bar nav .nav-text,
+  3946	  .nav-separator {
+  3947	    font-size: 14px;
+  3948	  }
+  3949	}
+  3950	
+  3951	@media (max-width: 380px) {
+  3952	  .nav-bar {
+  3953	    --nav-bar-inline-padding: 12px;
+  3954	    --nav-link-bottom-separator-gap: 2px;
+  3955	    --nav-link-separator-gap: 1px;
+  3956	    --nav-link-top-separator-gap: 1px;
+  3957	  }
+  3958	
+  3959	  .nav-bar nav a,
+  3960	  .nav-bar nav .nav-text {
+  3961	    font-size: 13.5px;
+  3962	    padding-left: 0;
+  3963	    padding-right: 0;
+  3964	  }
+  3965	
+  3966	  .nav-separator {
+  3967	    font-size: 13.5px;
+  3968	  }
+  3969	}
+  3970	
+  3971	@media (max-width: 340px) {
+  3972	  .nav-bar nav a,
+  3973	  .nav-bar nav .nav-text {
+  3974	    font-size: 13px;
+  3975	  }
+  3976	
+  3977	  .nav-separator {
+  3978	    font-size: 13px;
+  3979	  }
+  3980	}
 
 
 ============================================================
@@ -8802,7 +8759,8 @@ Status:
  M portfolio_PROJECT_SNAPSHOT.txt
 
 Recent commits:
-a796e3d (HEAD -> main, origin/main) feat(projects): refreshed app store hero CTAs across case studies
+1f903dc (HEAD -> main, origin/main) Refined portfolio device mockups and August worklog - Replaced Alla Vostra hero device frames with photoreal framed mockups, including dark Space Gray short devices. - Updated landing page hero smartphone mockups to use matching real device frames while leaving the tablet frame unchanged. - Added the August 1 Part 1 worklog PDF and refreshed the project snapshot.
+a796e3d feat(projects): refreshed app store hero CTAs across case studies
 22aab85 Refined Alla Vostra product flow presentation
 4faf781 generated the customary pdf session worklog for the relevant project on July 31, 2026.
 370412d feat(alla-vostra,landing): polish hero, buttons, and product-flow presentation across pages - Refined the landing page hero text pipeline row so the Concept > Prototype > Build > Shipment line matched the timing/sizing and stayed single-line/clipping-safe alongside the target row. - Replaced and tuned landing hero screenshot device frames to a more realistic phone/tablet visual style with reduced corner shininess and smoother scaling behavior. - Updated the Alla Vostra landing CTAs so View GitHub Project became View GitHub, then aligned the Contact button styling to the project’s Resume/Martin button language treatment. - Switched Contact label to Contact Dev, preserved the envelope icon, and increased the envelope hairline stroke as requested. Reworked Alla Vostra hero proof stats into the requested compact stack (including 0.4k, 0.1k, 2, and 1 values) and adjusted typography and stacking behavior. - Rebuilt the Alla Vostra feature/info cards in the hero (Full-Stack and X-Platform cards), including text wrapping, plus-sign alignment, and corner placement tweaks for mobile/desktop balance. - Replaced the Product Flow section copy and structure by removing the legacy “Flow System” explainer content, retaining only the visual sequence and requested sections/subsections. - Revised the flow diagram to include the updated sequence naming and structure (Browse/Cart/Checkout/Payment/Confirmation), removed Empty Cart Overlay, and renamed Filled-Cart Overlay to Cart Overlay. - Adjusted flow-subsection boxes for requested vertical sizing and spacing (including halving and then decreasing nested-box height again) while preserving horizontal section-level consistency and center alignment. - Restored and resized the left-hand launch screenshot beside the flow chart, removed dark framing around the chart, kept the chart aligned to match device-frame height, and made it fully transparent where needed so the portfolio background grid remained visible.
@@ -8811,7 +8769,6 @@ c9ca77d generated the customary pdf session worklog for the relevant project, da
 15d84ec Refined featured case study layout and responsive text behavior
 158ed57 generated pdf session worklog for the relevant project on July 29, 2026.
 3d7619e Refined hero layout and case study platform visuals
-88a864f Refined hero social labels and headline - Replaced LinkedIn and Resume text with transparent baked-stroke image labels to avoid jagged small-screen font edges. - Tuned LinkedIn and Resume icon sizing, spacing, and icon-box geometry to better match each other. - Updated the hero headline to Full-Stack Expertise and refreshed the project snapshot.
 
 Remotes:
 origin	https://github.com/Prahlin/portfolio.git (fetch)
@@ -8826,6 +8783,9 @@ public/images/about_us_screen_large.png | 2122423 bytes | modified 2026-07-16 18
 public/images/about_us_screen_small.png | 1192853 bytes | modified 2026-07-16 18:32:33
 public/images/address_overlay_large.png | 209339 bytes | modified 2026-07-15 19:25:04
 public/images/address_overlay_small.png | 102975 bytes | modified 2026-07-15 19:25:04
+public/images/alla-vostra-hero-confirmed-framed-space-gray.png | 756405 bytes | modified 2026-08-01 18:01:46
+public/images/alla-vostra-hero-products-framed-space-gray.png | 2013506 bytes | modified 2026-08-01 18:01:46
+public/images/alla-vostra-hero-startup-framed.png | 1902601 bytes | modified 2026-08-01 14:50:53
 public/images/alla-vostra-product-flow-mockup.svg | 11052 bytes | modified 2026-08-01 11:58:59
 public/images/android-device-logo.svg | 594 bytes | modified 2026-07-20 18:45:20
 public/images/apple-logo-official.svg | 663 bytes | modified 2026-08-01 13:48:45
@@ -8848,6 +8808,7 @@ public/images/google-play-official-triangle.png | 12241 bytes | modified 2026-08
 public/images/home_screen_large.png | 3370882 bytes | modified 2026-07-16 18:32:33
 public/images/home_screen_small.png | 529728 bytes | modified 2026-07-16 18:32:33
 public/images/ios-device-logo.svg | 597 bytes | modified 2026-07-20 18:46:29
+public/images/landing-hero-finance-framed.png | 2106738 bytes | modified 2026-08-01 18:20:47
 public/images/martin1.jpg | 178343 bytes | modified 2026-07-11 20:43:41
 public/images/martin2.jpg | 146510 bytes | modified 2026-07-11 21:29:17
 public/images/martin3.jpg | 141871 bytes | modified 2026-07-11 21:15:24
@@ -8881,6 +8842,7 @@ public/images/time_date_overlay_small.png | 104568 bytes | modified 2026-07-15 1
 PDF WORKLOG INVENTORY
 ============================================================
 
+portfolio_worklog_august1_part1.pdf | 36347 bytes | modified 2026-08-01 14:29:45
 portfolio_worklog_july11.pdf | 23528 bytes | modified 2026-07-12 00:10:01
 portfolio_worklog_july14.pdf | 29767 bytes | modified 2026-07-14 22:44:02
 portfolio_worklog_july15_part1.pdf | 25059 bytes | modified 2026-07-15 18:07:04

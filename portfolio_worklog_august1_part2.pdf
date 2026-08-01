@@ -1,0 +1,352 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [6 0 R 8 0 R 10 0 R 12 0 R 14 0 R 16 0 R] /Count 6 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+5 0 obj
+<< /Length 5954 >>
+stream
+BT /F2 13.20 Tf 54.00 742.00 Td (Prahlin Portfolio Work Log - August 1, 2026 \(Part 2\)) Tj ET
+BT /F1 9.60 Tf 54.00 726.75 Td (Compiled summary for Saturday, August 1, 2026 - Part 2 - focus: replacing the remaining) Tj ET
+BT /F1 9.60 Tf 54.00 714.50 Td (  Portfolio smartphone mockups with real photographic device frames after the August 1 Part 1) Tj ET
+BT /F1 9.60 Tf 54.00 702.25 Td (  flow-diagram and source-button pass, including Alla Vostra hero device-frame replacement,) Tj ET
+BT /F1 9.60 Tf 54.00 690.00 Td (  dark Space Gray short-device frames, landing-page upright smartphone frame replacement,) Tj ET
+BT /F1 9.60 Tf 54.00 677.75 Td (  removal of the old outer CSS phone shell from image-backed landing hero phones, local) Tj ET
+BT /F1 9.60 Tf 54.00 665.50 Td (  validation, deployment-status review, refreshed project snapshot context, review of all) Tj ET
+BT /F1 9.60 Tf 54.00 653.25 Td (  prior Portfolio PDF worklogs, and generation of the August 1 Part 2 Portfolio PDF worklog.) Tj ET
+BT /F1 9.60 Tf 54.00 639.50 Td (Generated in continuity with the established Prahlin Portfolio daily worklog cadence:) Tj ET
+BT /F1 9.60 Tf 54.00 627.25 Td (  compact opening summary, source-material section, baseline section, goal list,) Tj ET
+BT /F1 9.60 Tf 54.00 615.00 Td (  work-completed sections, validation section, files-touched list, follow-up context, and) Tj ET
+BT /F1 9.60 Tf 54.00 602.75 Td (  output-artifact close.) Tj ET
+BT /F1 9.60 Tf 54.00 589.00 Td (This artifact intentionally covers Prahlin/portfolio work performed after) Tj ET
+BT /F1 9.60 Tf 54.00 576.75 Td (  portfolio_worklog_august1_part1.pdf and after the August 1 Part 1 source commits. The) Tj ET
+BT /F1 9.60 Tf 54.00 564.50 Td (  committed source state reviewed for this record is 1f903dca1c38e617ad23641a46c199b52488d76a) Tj ET
+BT /F1 9.60 Tf 54.00 552.25 Td (  on main, matching origin/main before this PDF was generated. Alla Vostra, Cinerific, Credit) Tj ET
+BT /F1 9.60 Tf 54.00 540.00 Td (  King, Figma, App Store, and Google Play external repositories were not changed for this) Tj ET
+BT /F1 9.60 Tf 54.00 527.75 Td (  record.) Tj ET
+BT /F2 11.10 Tf 54.00 499.75 Td (Source Materials Reviewed) Tj ET
+BT /F1 9.60 Tf 54.00 485.75 Td (- Ran ./read_project.sh from /Users/prahlin/gh/portfolio and regenerated) Tj ET
+BT /F1 9.60 Tf 68.00 473.50 Td (  portfolio_PROJECT_SNAPSHOT.txt before writing this worklog, preserving the project) Tj ET
+BT /F1 9.60 Tf 68.00 461.25 Td (  convention that Codex refreshes the current source snapshot before continuing Portfolio) Tj ET
+BT /F1 9.60 Tf 68.00 449.00 Td (  documentation work.) Tj ET
+BT /F1 9.60 Tf 54.00 435.25 Td (- Reviewed the refreshed portfolio_PROJECT_SNAPSHOT.txt, including project notes, current) Tj ET
+BT /F1 9.60 Tf 68.00 423.00 Td (  source tree, line-numbered source dumps, public asset inventory, PDF inventory,) Tj ET
+BT /F1 9.60 Tf 68.00 410.75 Td (  tooling/deployment configuration, git context, and the standing instruction to ask for a) Tj ET
+BT /F1 9.60 Tf 68.00 398.50 Td (  commit message before committing or pushing.) Tj ET
+BT /F1 9.60 Tf 54.00 384.75 Td (- Reviewed every pre-existing Portfolio root-level worklog PDF:) Tj ET
+BT /F1 9.60 Tf 68.00 372.50 Td (  portfolio_worklog_july11.pdf, portfolio_worklog_july14.pdf,) Tj ET
+BT /F1 9.60 Tf 68.00 360.25 Td (  portfolio_worklog_july15_part1.pdf, portfolio_worklog_july15_part2.pdf,) Tj ET
+BT /F1 9.60 Tf 68.00 348.00 Td (  portfolio_worklog_july16.pdf, portfolio_worklog_july19.pdf,) Tj ET
+BT /F1 9.60 Tf 68.00 335.75 Td (  portfolio_worklog_july20.pdf, portfolio_worklog_july21.pdf,) Tj ET
+BT /F1 9.60 Tf 68.00 323.50 Td (  portfolio_worklog_july22.pdf, portfolio_worklog_july23.pdf,) Tj ET
+BT /F1 9.60 Tf 68.00 311.25 Td (  portfolio_worklog_july24.pdf, portfolio_worklog_july25.pdf,) Tj ET
+BT /F1 9.60 Tf 68.00 299.00 Td (  portfolio_worklog_july29.pdf, portfolio_worklog_july30.pdf,) Tj ET
+BT /F1 9.60 Tf 68.00 286.75 Td (  portfolio_worklog_july31.pdf, and portfolio_worklog_august1_part1.pdf.) Tj ET
+BT /F1 9.60 Tf 54.00 273.00 Td (- Extracted representative text with pdftotext and used) Tj ET
+BT /F1 9.60 Tf 68.00 260.75 Td (  portfolio_worklog_august1_part1.pdf as the closest same-day structural baseline, while) Tj ET
+BT /F1 9.60 Tf 68.00 248.50 Td (  also comparing portfolio_worklog_july30.pdf as the mature six-page daily-reference) Tj ET
+BT /F1 9.60 Tf 68.00 236.25 Td (  format and portfolio_worklog_july31.pdf as the compact two-page follow-up reference.) Tj ET
+BT /F1 9.60 Tf 54.00 222.50 Td (- Checked prior PDF metadata with pdfinfo and preserved the same root-level naming, letter) Tj ET
+BT /F1 9.60 Tf 68.00 210.25 Td (  page size, PDF 1.4 output, Codex author/creator metadata, title cadence, and) Tj ET
+BT /F1 9.60 Tf 68.00 198.00 Td (  Helvetica-style base-font convention.) Tj ET
+BT /F1 9.60 Tf 54.00 184.25 Td (- Reviewed git history through git log, git show --stat, git show --name-status, branch) Tj ET
+BT /F1 9.60 Tf 68.00 172.00 Td (  state, and the committed scope for 1f903dc. HEAD and origin/main both resolved to) Tj ET
+BT /F1 9.60 Tf 68.00 159.75 Td (  1f903dc before this PDF was generated.) Tj ET
+BT /F1 9.60 Tf 54.00 146.00 Td (- Reviewed app/page.tsx, app/globals.css, app/projects/alla-vostra/page.tsx, the new) Tj ET
+BT /F1 9.60 Tf 68.00 133.75 Td (  public device-frame PNGs, portfolio_worklog_august1_part1.pdf, read_project.sh,) Tj ET
+BT /F1 9.60 Tf 68.00 121.50 Td (  package.json, and the root-level PDF inventory.) Tj ET
+BT /F1 9.60 Tf 54.00 107.75 Td (- Reviewed frame-source context from the August 1 device-frame pass: WithFrame-generated) Tj ET
+BT /F1 9.60 Tf 68.00 95.50 Td (  Pro Max outputs, WithFrame iPhone 8 Plus frame colorways, transparent PNG shell) Tj ET
+BT /F1 9.60 Tf 68.00 83.25 Td (  behavior, and the template-screen dimensions used to fit the Alla Vostra screenshots) Tj ET
+BT /F1 8.50 Tf 305.00 31.00 Td (Prahlin Portfolio Work Log - August 1, 2026 \(Part 2\) Page 1) Tj ET
+endstream
+endobj
+6 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 5 0 R >>
+endobj
+7 0 obj
+<< /Length 5404 >>
+stream
+BT /F1 9.60 Tf 68.00 742.00 Td (  without stretching the app UI.) Tj ET
+BT /F1 9.60 Tf 54.00 728.25 Td (- Checked local routes at http://127.0.0.1:3000/, /projects/alla-vostra, and) Tj ET
+BT /F1 9.60 Tf 68.00 716.00 Td (  /projects/cinerific, then checked gh run list for the latest Hostinger workflow state.) Tj ET
+BT /F2 11.10 Tf 54.00 688.00 Td (Baseline Status Before August 1 Part 2 Work) Tj ET
+BT /F1 9.60 Tf 54.00 674.00 Td (- August 1 Part 1 had already documented the Alla Vostra Product Flow diagram) Tj ET
+BT /F1 9.60 Tf 68.00 661.75 Td (  restructuring, Tutorial/Browse/Shop/Cart/Checkout/Payment/Confirmed routing,) Tj ET
+BT /F1 9.60 Tf 68.00 649.50 Td (  screenshot/diagram responsive pairing, logo-only source buttons, Cinerific source-button) Tj ET
+BT /F1 9.60 Tf 68.00 637.25 Td (  parity, and August 1 Part 1 PDF generation.) Tj ET
+BT /F1 9.60 Tf 54.00 623.50 Td (- After that pass, the project still had device-frame work to resolve. The Alla Vostra) Tj ET
+BT /F1 9.60 Tf 68.00 611.25 Td (  project hero had used CSS-drawn phone shells, and the user rejected the sleeker CSS-only) Tj ET
+BT /F1 9.60 Tf 68.00 599.00 Td (  frame attempt because it still read as the same old artificial device treatment.) Tj ET
+BT /F1 9.60 Tf 54.00 585.25 Td (- The Alla Vostra hero contained a tall 1440 x 3120 startup screenshot and two short 720 x) Tj ET
+BT /F1 9.60 Tf 68.00 573.00 Td (  1280 screenshots. Matching those screenshots required real frame assets with different) Tj ET
+BT /F1 9.60 Tf 68.00 560.75 Td (  screen aspect ratios rather than forcing a single generic shell across all images.) Tj ET
+BT /F1 9.60 Tf 54.00 547.00 Td (- The initial real-frame replacement needed a dark version for the two short devices,) Tj ET
+BT /F1 9.60 Tf 68.00 534.75 Td (  because the light/silver iPhone 8 Plus fronts created too much contrast against the) Tj ET
+BT /F1 9.60 Tf 68.00 522.50 Td (  green Portfolio hero background.) Tj ET
+BT /F1 9.60 Tf 54.00 508.75 Td (- The landing page hero still carried older CSS-framed upright smartphone mockups around) Tj ET
+BT /F1 9.60 Tf 68.00 496.50 Td (  the Cinerific tablet composition. The user wanted the large smartphone frames there to) Tj ET
+BT /F1 9.60 Tf 68.00 484.25 Td (  match the accepted Alla Vostra large Pro Max treatment while leaving the tablet frame) Tj ET
+BT /F1 9.60 Tf 68.00 472.00 Td (  untouched.) Tj ET
+BT /F1 9.60 Tf 54.00 458.25 Td (- One landing-page iteration still showed a visible old outer phone shell around a real) Tj ET
+BT /F1 9.60 Tf 68.00 446.00 Td (  framed image, creating a double-frame appearance. The image-backed phone rendering path) Tj ET
+BT /F1 9.60 Tf 68.00 433.75 Td (  needed to stop nesting framed PNG mockups inside the old phone-speaker and phone-screen) Tj ET
+BT /F1 9.60 Tf 68.00 421.50 Td (  DOM structure.) Tj ET
+BT /F1 9.60 Tf 54.00 407.75 Td (- The remote Hostinger static-export workflow was already known to fail quickly even) Tj ET
+BT /F1 9.60 Tf 68.00 395.50 Td (  though local TypeScript and static export checks passed. That split remained part of the) Tj ET
+BT /F1 9.60 Tf 68.00 383.25 Td (  deployment-health baseline.) Tj ET
+BT /F2 11.10 Tf 54.00 355.25 Td (Goals for August 1 Part 2) Tj ET
+BT /F1 9.60 Tf 54.00 341.25 Td (- Replace the Alla Vostra project-page hero device frames with exact photographic-real) Tj ET
+BT /F1 9.60 Tf 68.00 329.00 Td (  device-frame assets sourced from the web, matching the screenshot aspect-ratio) Tj ET
+BT /F1 9.60 Tf 68.00 316.75 Td (  constraints rather than reusing CSS-drawn shells.) Tj ET
+BT /F1 9.60 Tf 54.00 303.00 Td (- Use a modern Pro Max-class frame for the tall Alla Vostra startup screenshot and an) Tj ET
+BT /F1 9.60 Tf 68.00 290.75 Td (  iPhone 8 Plus-class frame for the 9:16 short screenshots, because the short products and) Tj ET
+BT /F1 9.60 Tf 68.00 278.50 Td (  confirmation screenshots match the iPhone 8 Plus screen ratio.) Tj ET
+BT /F1 9.60 Tf 54.00 264.75 Td (- Switch the two short Alla Vostra hero frames from the bright silver/light front to a) Tj ET
+BT /F1 9.60 Tf 68.00 252.50 Td (  dark iPhone 8 Plus Space Gray treatment while preserving the same screenshot crop and) Tj ET
+BT /F1 9.60 Tf 68.00 240.25 Td (  output dimensions.) Tj ET
+BT /F1 9.60 Tf 54.00 226.50 Td (- Apply the same large Pro Max photographic frame treatment to the landing page hero) Tj ET
+BT /F1 9.60 Tf 68.00 214.25 Td (  upright smartphones, while explicitly leaving the tablet frame unchanged for this pass.) Tj ET
+BT /F1 9.60 Tf 54.00 200.50 Td (- Remove the old outer phone-shell structure from image-backed landing hero phones so) Tj ET
+BT /F1 9.60 Tf 68.00 188.25 Td (  framed PNG mockups render as the final device surface and do not sit inside a second CSS) Tj ET
+BT /F1 9.60 Tf 68.00 176.00 Td (  frame.) Tj ET
+BT /F1 9.60 Tf 54.00 162.25 Td (- Keep the local development server healthy on 127.0.0.1:3000, validate project routes,) Tj ET
+BT /F1 9.60 Tf 68.00 150.00 Td (  run npm run check and npm run build:static, and restore generated next-env.d.ts noise) Tj ET
+BT /F1 9.60 Tf 68.00 137.75 Td (  after static export.) Tj ET
+BT /F1 9.60 Tf 54.00 124.00 Td (- Generate portfolio_worklog_august1_part2.pdf in the established root-level Portfolio) Tj ET
+BT /F1 9.60 Tf 68.00 111.75 Td (  worklog format after studying all pre-existing worklogs.) Tj ET
+BT /F1 8.50 Tf 305.00 31.00 Td (Prahlin Portfolio Work Log - August 1, 2026 \(Part 2\) Page 2) Tj ET
+endstream
+endobj
+8 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 7 0 R >>
+endobj
+9 0 obj
+<< /Length 5539 >>
+stream
+BT /F2 11.10 Tf 54.00 740.00 Td (Work Completed - Photographic Device Frame Sourcing) Tj ET
+BT /F1 9.60 Tf 54.00 726.00 Td (- Located and evaluated real transparent/photographic device-frame assets from web sources) Tj ET
+BT /F1 9.60 Tf 68.00 713.75 Td (  instead of continuing with locally drawn CSS shells. The accepted source path used) Tj ET
+BT /F1 9.60 Tf 68.00 701.50 Td (  WithFrame frame/generator output and frame metadata to build final PNG mockups.) Tj ET
+BT /F1 9.60 Tf 54.00 687.75 Td (- Verified the screenshot dimensions before framing: startup_screen_large.png is 1440 x) Tj ET
+BT /F1 9.60 Tf 68.00 675.50 Td (  3120, while products_screen_small.png and confirmed_overlay_small.png are each 720 x) Tj ET
+BT /F1 9.60 Tf 68.00 663.25 Td (  1280.) Tj ET
+BT /F1 9.60 Tf 54.00 649.50 Td (- Matched the tall startup screenshot to a Pro Max-class WithFrame output, generating) Tj ET
+BT /F1 9.60 Tf 68.00 637.25 Td (  public/images/alla-vostra-hero-startup-framed.png at 1290 x 2661 with a real) Tj ET
+BT /F1 9.60 Tf 68.00 625.00 Td (  photographic frame around the live app screen.) Tj ET
+BT /F1 9.60 Tf 54.00 611.25 Td (- Matched the two short 9:16 screenshots to the iPhone 8 Plus screen class, using the 1242) Tj ET
+BT /F1 9.60 Tf 68.00 599.00 Td (  x 2208 screen target and generating final 1242 x 2567 mockups for the products and) Tj ET
+BT /F1 9.60 Tf 68.00 586.75 Td (  confirmation screenshots.) Tj ET
+BT /F1 9.60 Tf 54.00 573.00 Td (- Confirmed that the two short devices should be Apple iPhone 8 Plus and answered the) Tj ET
+BT /F1 9.60 Tf 68.00 560.75 Td (  model question directly before changing them from the first light/silver treatment to a) Tj ET
+BT /F1 9.60 Tf 68.00 548.50 Td (  dark colorway.) Tj ET
+BT /F1 9.60 Tf 54.00 534.75 Td (- Generated and checked true Space Gray short-frame composites after the first WithFrame) Tj ET
+BT /F1 9.60 Tf 68.00 522.50 Td (  color request still returned a white-front device. The accepted dark assets became) Tj ET
+BT /F1 9.60 Tf 68.00 510.25 Td (  public/images/alla-vostra-hero-products-framed-space-gray.png and) Tj ET
+BT /F1 9.60 Tf 68.00 498.00 Td (  public/images/alla-vostra-hero-confirmed-framed-space-gray.png.) Tj ET
+BT /F1 9.60 Tf 54.00 484.25 Td (- Used the dark transparent iPhone 8 Plus Space Gray shell over the already fitted app) Tj ET
+BT /F1 9.60 Tf 68.00 472.00 Td (  screenshots so the app crop, screen dimensions, and output size stayed stable while only) Tj ET
+BT /F1 9.60 Tf 68.00 459.75 Td (  the visible hardware color changed.) Tj ET
+BT /F1 9.60 Tf 54.00 446.00 Td (- Generated public/images/landing-hero-finance-framed.png at 1290 x 2661 so the landing) Tj ET
+BT /F1 9.60 Tf 68.00 433.75 Td (  page right-hand upright phone could use the same Pro Max output dimensions as the Alla) Tj ET
+BT /F1 9.60 Tf 68.00 421.50 Td (  Vostra large frame.) Tj ET
+BT /F2 11.10 Tf 54.00 393.50 Td (Work Completed - Alla Vostra Hero Device Frames) Tj ET
+BT /F1 9.60 Tf 54.00 379.50 Td (- Simplified the Alla Vostra CasePhone rendering path in app/projects/alla-vostra/page.tsx) Tj ET
+BT /F1 9.60 Tf 68.00 367.25 Td (  so hero devices now render the final framed mockup image directly instead of building a) Tj ET
+BT /F1 9.60 Tf 68.00 355.00 Td (  CSS speaker, screen, and inset screenshot stack.) Tj ET
+BT /F1 9.60 Tf 54.00 341.25 Td (- Changed the Alla Vostra hero startup device source from /images/startup_screen_large.png) Tj ET
+BT /F1 9.60 Tf 68.00 329.00 Td (  to /images/alla-vostra-hero-startup-framed.png.) Tj ET
+BT /F1 9.60 Tf 54.00 315.25 Td (- Changed the short Alla Vostra products and confirmation hero device sources to) Tj ET
+BT /F1 9.60 Tf 68.00 303.00 Td (  /images/alla-vostra-hero-products-framed-space-gray.png and) Tj ET
+BT /F1 9.60 Tf 68.00 290.75 Td (  /images/alla-vostra-hero-confirmed-framed-space-gray.png.) Tj ET
+BT /F1 9.60 Tf 54.00 277.00 Td (- Removed the old Alla Vostra-specific CSS device shell treatment from app/globals.css:) Tj ET
+BT /F1 9.60 Tf 68.00 264.75 Td (  fake metallic gradients, inset bevels, side-button pseudo-elements, speaker bars, screen) Tj ET
+BT /F1 9.60 Tf 68.00 252.50 Td (  overlays, and stale border-radius overrides no longer participate in the Alla Vostra) Tj ET
+BT /F1 9.60 Tf 68.00 240.25 Td (  hero frames.) Tj ET
+BT /F1 9.60 Tf 54.00 226.50 Td (- Added explicit aspect ratios for Alla Vostra framed devices: 1290 / 2661 for the tall) Tj ET
+BT /F1 9.60 Tf 68.00 214.25 Td (  Pro Max mockup and 1242 / 2567 for the short Space Gray iPhone 8 Plus mockups.) Tj ET
+BT /F1 9.60 Tf 54.00 200.50 Td (- Kept the accepted Alla Vostra hero composition, rotations, proof-card overlap, and) Tj ET
+BT /F1 9.60 Tf 68.00 188.25 Td (  mobile behavior intact while changing the device artwork from CSS shells to real framed) Tj ET
+BT /F1 9.60 Tf 68.00 176.00 Td (  PNGs.) Tj ET
+BT /F1 9.60 Tf 54.00 162.25 Td (- Verified the project page visually with fresh Chrome screenshots and corrected the early) Tj ET
+BT /F1 9.60 Tf 68.00 150.00 Td (  collapsed-image issue by applying direct aspect-ratio rules to the device wrappers.) Tj ET
+BT /F2 11.10 Tf 54.00 122.00 Td (Work Completed - Landing Page Hero Smartphones) Tj ET
+BT /F1 9.60 Tf 54.00 108.00 Td (- Updated the landing page Alla Vostra upright phone to use the same) Tj ET
+BT /F1 9.60 Tf 68.00 95.75 Td (  public/images/alla-vostra-hero-startup-framed.png asset as the Alla Vostra project-page) Tj ET
+BT /F1 9.60 Tf 68.00 83.50 Td (  large hero device.) Tj ET
+BT /F1 8.50 Tf 305.00 31.00 Td (Prahlin Portfolio Work Log - August 1, 2026 \(Part 2\) Page 3) Tj ET
+endstream
+endobj
+10 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 9 0 R >>
+endobj
+11 0 obj
+<< /Length 5586 >>
+stream
+BT /F1 9.60 Tf 54.00 742.00 Td (- Generated and wired the second landing-page upright smartphone to) Tj ET
+BT /F1 9.60 Tf 68.00 729.75 Td (  public/images/landing-hero-finance-framed.png so both large landing hero phones use the) Tj ET
+BT /F1 9.60 Tf 68.00 717.50 Td (  same Pro Max-style photographic frame family.) Tj ET
+BT /F1 9.60 Tf 54.00 703.75 Td (- Left the Cinerific-style horizontal tablet frame untouched, preserving the) Tj ET
+BT /F1 9.60 Tf 68.00 691.50 Td (  user-requested tablet exception while changing only the upright smartphone treatments.) Tj ET
+BT /F1 9.60 Tf 54.00 677.75 Td (- Generalized the landing hero image-backed phone CSS so .phone-shell-capture stops) Tj ET
+BT /F1 9.60 Tf 68.00 665.50 Td (  drawing the old gradient shell, fake side buttons, speaker, inset screen, and shine) Tj ET
+BT /F1 9.60 Tf 68.00 653.25 Td (  overlay around real framed PNGs.) Tj ET
+BT /F1 9.60 Tf 54.00 639.50 Td (- Reworked the PhonePreview image-backed branch in app/page.tsx so framed mockups render) Tj ET
+BT /F1 9.60 Tf 68.00 627.25 Td (  as a direct Image with class phone-framed-image, rather than being nested inside) Tj ET
+BT /F1 9.60 Tf 68.00 615.00 Td (  phone-speaker, phone-screen, and phone-screen-image-frame elements.) Tj ET
+BT /F1 9.60 Tf 54.00 601.25 Td (- Removed the double-frame problem shown by the user screenshot: the real phone PNG now) Tj ET
+BT /F1 9.60 Tf 68.00 589.00 Td (  supplies the only smartphone frame, and the old outer CSS frame is no longer present in) Tj ET
+BT /F1 9.60 Tf 68.00 576.75 Td (  the image-backed landing hero path.) Tj ET
+BT /F1 9.60 Tf 54.00 563.00 Td (- Kept non-image/generated phone UI logic available for any future PhonePreview instances) Tj ET
+BT /F1 9.60 Tf 68.00 550.75 Td (  that do not pass screenImageSrc, so the cleanup stays scoped to the hero mockup use) Tj ET
+BT /F1 9.60 Tf 68.00 538.50 Td (  case.) Tj ET
+BT /F2 11.10 Tf 54.00 510.50 Td (Work Completed - Commit, Snapshot, and Documentation State) Tj ET
+BT /F1 9.60 Tf 54.00 496.50 Td (- Committed and pushed 1f903dc, Refined portfolio device mockups and August worklog,) Tj ET
+BT /F1 9.60 Tf 68.00 484.25 Td (  covering the Alla Vostra photoreal hero frames, dark Space Gray short devices,) Tj ET
+BT /F1 9.60 Tf 68.00 472.00 Td (  landing-page smartphone frame replacement, Part 1 worklog PDF, and refreshed project) Tj ET
+BT /F1 9.60 Tf 68.00 459.75 Td (  snapshot.) Tj ET
+BT /F1 9.60 Tf 54.00 446.00 Td (- Confirmed HEAD and origin/main both resolved to 1f903dca1c38e617ad23641a46c199b52488d76a) Tj ET
+BT /F1 9.60 Tf 68.00 433.75 Td (  before generating this Part 2 worklog.) Tj ET
+BT /F1 9.60 Tf 54.00 420.00 Td (- Regenerated portfolio_PROJECT_SNAPSHOT.txt again immediately before this PDF, preserving) Tj ET
+BT /F1 9.60 Tf 68.00 407.75 Td (  the Portfolio convention that documentation passes begin from a fresh source snapshot.) Tj ET
+BT /F1 9.60 Tf 54.00 394.00 Td (- Observed that the working tree showed only portfolio_PROJECT_SNAPSHOT.txt modified after) Tj ET
+BT /F1 9.60 Tf 68.00 381.75 Td (  snapshot refresh and before this PDF was written. No source-code files were dirty during) Tj ET
+BT /F1 9.60 Tf 68.00 369.50 Td (  the Part 2 PDF generation step.) Tj ET
+BT /F1 9.60 Tf 54.00 355.75 Td (- Generated this August 1 Part 2 PDF as a new local documentation artifact after the user) Tj ET
+BT /F1 9.60 Tf 68.00 343.50 Td (  requested the latest same-day follow-up worklog.) Tj ET
+BT /F2 11.10 Tf 54.00 315.50 Td (Validation and Checks Performed) Tj ET
+BT /F1 9.60 Tf 54.00 301.50 Td (- Ran npm run check after the current August 1 Part 2 source state and confirmed) Tj ET
+BT /F1 9.60 Tf 68.00 289.25 Td (  TypeScript validation passed with tsc --noEmit.) Tj ET
+BT /F1 9.60 Tf 54.00 275.50 Td (- Confirmed http://127.0.0.1:3000/, http://127.0.0.1:3000/projects/alla-vostra, and) Tj ET
+BT /F1 9.60 Tf 68.00 263.25 Td (  http://127.0.0.1:3000/projects/cinerific each returned HTTP 200 OK from the running) Tj ET
+BT /F1 9.60 Tf 68.00 251.00 Td (  local Next.js development server.) Tj ET
+BT /F1 9.60 Tf 54.00 237.25 Td (- Ran npm run build:static and confirmed the local Next.js static export completed) Tj ET
+BT /F1 9.60 Tf 68.00 225.00 Td (  successfully, compiling, running TypeScript, collecting page data, generating six static) Tj ET
+BT /F1 9.60 Tf 68.00 212.75 Td (  pages, and listing /, /articles, /projects/alla-vostra, and /projects/cinerific as) Tj ET
+BT /F1 9.60 Tf 68.00 200.50 Td (  static routes.) Tj ET
+BT /F1 9.60 Tf 54.00 186.75 Td (- Restored next-env.d.ts after npm run build:static flipped the generated route-types) Tj ET
+BT /F1 9.60 Tf 68.00 174.50 Td (  import from the dev path to the static-build path, avoiding unrelated generated-file) Tj ET
+BT /F1 9.60 Tf 68.00 162.25 Td (  churn in the final local state.) Tj ET
+BT /F1 9.60 Tf 54.00 148.50 Td (- Captured fresh Chrome screenshots during the device-frame pass for the Alla Vostra hero) Tj ET
+BT /F1 9.60 Tf 68.00 136.25 Td (  and landing page hero across desktop and mobile viewports, then used those renders to) Tj ET
+BT /F1 9.60 Tf 68.00 124.00 Td (  catch and correct collapsed framed images, stale optimized images, and the old) Tj ET
+BT /F1 9.60 Tf 68.00 111.75 Td (  outer-shell double-frame issue.) Tj ET
+BT /F1 9.60 Tf 54.00 98.00 Td (- Checked gh run list after commit 1f903dc. The latest Build static export for Hostinger) Tj ET
+BT /F1 9.60 Tf 68.00 85.75 Td (  workflow still completed with failure status in about six seconds, continuing the known) Tj ET
+BT /F1 8.50 Tf 305.00 31.00 Td (Prahlin Portfolio Work Log - August 1, 2026 \(Part 2\) Page 4) Tj ET
+endstream
+endobj
+12 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 11 0 R >>
+endobj
+13 0 obj
+<< /Length 5130 >>
+stream
+BT /F1 9.60 Tf 68.00 742.00 Td (  remote deployment failure pattern even though local check and static export passed.) Tj ET
+BT /F1 9.60 Tf 54.00 728.25 Td (- Checked PDF metadata/text extraction conventions with pdfinfo and pdftotext before) Tj ET
+BT /F1 9.60 Tf 68.00 716.00 Td (  generating this artifact.) Tj ET
+BT /F2 11.10 Tf 54.00 688.00 Td (Files Touched During August 1 Part 2 Portfolio Work) Tj ET
+BT /F1 9.60 Tf 54.00 674.00 Td (- app/page.tsx - switched landing hero image-backed phones to framed mockup assets and) Tj ET
+BT /F1 9.60 Tf 68.00 661.75 Td (  simplified PhonePreview so framed mockups render as direct images instead of nested old) Tj ET
+BT /F1 9.60 Tf 68.00 649.50 Td (  phone-shell screens.) Tj ET
+BT /F1 9.60 Tf 54.00 635.75 Td (- app/globals.css - removed old image-backed phone shell visuals, added direct) Tj ET
+BT /F1 9.60 Tf 68.00 623.50 Td (  framed-image styling, added Alla Vostra framed-device aspect ratios, removed fake device) Tj ET
+BT /F1 9.60 Tf 68.00 611.25 Td (  gradients/speakers/side-button overlays, and preserved tablet-specific styling.) Tj ET
+BT /F1 9.60 Tf 54.00 597.50 Td (- app/projects/alla-vostra/page.tsx - changed CasePhone to direct framed image rendering) Tj ET
+BT /F1 9.60 Tf 68.00 585.25 Td (  and updated Alla Vostra hero sources to the photoreal startup, products, and) Tj ET
+BT /F1 9.60 Tf 68.00 573.00 Td (  confirmation mockup PNGs.) Tj ET
+BT /F1 9.60 Tf 54.00 559.25 Td (- public/images/alla-vostra-hero-startup-framed.png - added the Pro Max-style photographic) Tj ET
+BT /F1 9.60 Tf 68.00 547.00 Td (  Alla Vostra startup hero device mockup.) Tj ET
+BT /F1 9.60 Tf 54.00 533.25 Td (- public/images/alla-vostra-hero-products-framed-space-gray.png - added the dark Space) Tj ET
+BT /F1 9.60 Tf 68.00 521.00 Td (  Gray iPhone 8 Plus framed Alla Vostra products hero mockup.) Tj ET
+BT /F1 9.60 Tf 54.00 507.25 Td (- public/images/alla-vostra-hero-confirmed-framed-space-gray.png - added the dark Space) Tj ET
+BT /F1 9.60 Tf 68.00 495.00 Td (  Gray iPhone 8 Plus framed Alla Vostra confirmation hero mockup.) Tj ET
+BT /F1 9.60 Tf 54.00 481.25 Td (- public/images/landing-hero-finance-framed.png - added the Pro Max-style framed landing) Tj ET
+BT /F1 9.60 Tf 68.00 469.00 Td (  hero finance/right-upright smartphone mockup.) Tj ET
+BT /F1 9.60 Tf 54.00 455.25 Td (- portfolio_PROJECT_SNAPSHOT.txt - refreshed by ./read_project.sh before the Part 2 PDF) Tj ET
+BT /F1 9.60 Tf 68.00 443.00 Td (  generation step.) Tj ET
+BT /F1 9.60 Tf 54.00 429.25 Td (- portfolio_worklog_august1_part1.pdf - added in commit 1f903dc as the prior same-day PDF) Tj ET
+BT /F1 9.60 Tf 68.00 417.00 Td (  artifact documented by this follow-up.) Tj ET
+BT /F1 9.60 Tf 54.00 403.25 Td (- portfolio_worklog_august1_part2.pdf - generated as this latest August 1 Part 2 Portfolio) Tj ET
+BT /F1 9.60 Tf 68.00 391.00 Td (  worklog artifact.) Tj ET
+BT /F2 11.10 Tf 54.00 363.00 Td (Follow-Up Context) Tj ET
+BT /F1 9.60 Tf 54.00 349.00 Td (- The source branch is currently represented by main and origin/main at 1f903dc. This Part) Tj ET
+BT /F1 9.60 Tf 68.00 336.75 Td (  2 PDF and the refreshed snapshot are local documentation artifacts until the user) Tj ET
+BT /F1 9.60 Tf 68.00 324.50 Td (  requests or approves a documentation commit.) Tj ET
+BT /F1 9.60 Tf 54.00 310.75 Td (- The landing page tablet frame was intentionally left unchanged. Future tablet-frame work) Tj ET
+BT /F1 9.60 Tf 68.00 298.50 Td (  should be treated as a separate visual request rather than bundled with the) Tj ET
+BT /F1 9.60 Tf 68.00 286.25 Td (  smartphone-frame cleanup.) Tj ET
+BT /F1 9.60 Tf 54.00 272.50 Td (- The accepted pattern for image-backed Portfolio hero phones is now direct framed PNG) Tj ET
+BT /F1 9.60 Tf 68.00 260.25 Td (  rendering. Future phone-frame edits should avoid reintroducing the old CSS phone shell) Tj ET
+BT /F1 9.60 Tf 68.00 248.00 Td (  around already framed assets.) Tj ET
+BT /F1 9.60 Tf 54.00 234.25 Td (- Alla Vostra large startup uses the Pro Max-style framed mockup; Alla Vostra short) Tj ET
+BT /F1 9.60 Tf 68.00 222.00 Td (  products and confirmation use dark iPhone 8 Plus Space Gray framed mockups because their) Tj ET
+BT /F1 9.60 Tf 68.00 209.75 Td (  screenshots are 9:16.) Tj ET
+BT /F1 9.60 Tf 54.00 196.00 Td (- The local project health is good: npm run check, npm run build:static, and local route) Tj ET
+BT /F1 9.60 Tf 68.00 183.75 Td (  checks passed. The Hostinger GitHub Actions workflow still fails remotely and should be) Tj ET
+BT /F1 9.60 Tf 68.00 171.50 Td (  debugged independently from local source correctness.) Tj ET
+BT /F1 9.60 Tf 54.00 157.75 Td (- Continue treating future Portfolio source, PDF, and snapshot changes as local-only) Tj ET
+BT /F1 9.60 Tf 68.00 145.50 Td (  unless the user explicitly asks to commit, push, deploy, publish, or update the public) Tj ET
+BT /F1 9.60 Tf 68.00 133.25 Td (  website.) Tj ET
+BT /F2 11.10 Tf 54.00 105.25 Td (Output Artifact) Tj ET
+BT /F1 9.60 Tf 54.00 91.25 Td (- Generated file: portfolio_worklog_august1_part2.pdf.) Tj ET
+BT /F1 8.50 Tf 305.00 31.00 Td (Prahlin Portfolio Work Log - August 1, 2026 \(Part 2\) Page 5) Tj ET
+endstream
+endobj
+14 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 13 0 R >>
+endobj
+15 0 obj
+<< /Length 1097 >>
+stream
+BT /F1 9.60 Tf 54.00 742.00 Td (- Location: /Users/prahlin/gh/portfolio/portfolio_worklog_august1_part2.pdf.) Tj ET
+BT /F1 9.60 Tf 54.00 728.25 Td (- Naming follows the existing root-level Portfolio convention and the established) Tj ET
+BT /F1 9.60 Tf 68.00 716.00 Td (  part-number convention: portfolio_worklog_august1_part2.pdf.) Tj ET
+BT /F1 9.60 Tf 54.00 702.25 Td (- Uses the same daily worklog structure and compact technical voice established by) Tj ET
+BT /F1 9.60 Tf 68.00 690.00 Td (  portfolio_worklog_july11.pdf through portfolio_worklog_august1_part1.pdf.) Tj ET
+BT /F1 9.60 Tf 54.00 676.25 Td (- Generated with a small standard-library PDF writer; no external PDF dependency was) Tj ET
+BT /F1 9.60 Tf 68.00 664.00 Td (  installed for this artifact.) Tj ET
+BT /F1 9.60 Tf 54.00 650.25 Td (- The local project date used for this filename and title is Saturday, August 1, 2026 EDT,) Tj ET
+BT /F1 9.60 Tf 68.00 638.00 Td (  matching the machine and repository work-session clock.) Tj ET
+BT /F1 8.50 Tf 305.00 31.00 Td (Prahlin Portfolio Work Log - August 1, 2026 \(Part 2\) Page 6) Tj ET
+endstream
+endobj
+16 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 15 0 R >>
+endobj
+17 0 obj
+<< /Title (Prahlin Portfolio Work Log - August 1, 2026 \(Part 2\)) /Subject (Portfolio website development worklog) /Author (Codex) /Creator (Codex standard-library PDF generator) /Producer (Codex standard-library PDF generator) /CreationDate (D:20260801191637-04'00') /ModDate (D:20260801191637-04'00') >>
+endobj
+xref
+0 18
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000149 00000 n 
+0000000219 00000 n 
+0000000294 00000 n 
+0000006300 00000 n 
+0000006436 00000 n 
+0000011892 00000 n 
+0000012028 00000 n 
+0000017619 00000 n 
+0000017756 00000 n 
+0000023395 00000 n 
+0000023533 00000 n 
+0000028716 00000 n 
+0000028854 00000 n 
+0000030004 00000 n 
+0000030142 00000 n 
+trailer
+<< /Size 18 /Root 1 0 R /Info 17 0 R >>
+startxref
+30465
+%%EOF
