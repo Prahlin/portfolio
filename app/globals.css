@@ -905,7 +905,8 @@ h3 {
 
 .github-label-text,
 .linkedin-label-text,
-.resume-label-text {
+.resume-label-text,
+.figma-label-text {
   -webkit-text-stroke: 3px #000;
   display: inline-block;
   isolation: isolate;
@@ -928,12 +929,27 @@ h3 {
   color: #fff;
 }
 
+.figma-label-text {
+  --social-label-middle-stroke: #a259ff;
+  color: #fff;
+}
+
+.project-page .project-play-store-button .resume-label-text {
+  --social-label-middle-stroke: #ea4335;
+}
+
+.project-page .project-app-store-button .resume-label-text {
+  --social-label-middle-stroke: #000000;
+}
+
 .github-label-text::before,
 .github-label-text::after,
 .linkedin-label-text::before,
 .linkedin-label-text::after,
 .resume-label-text::before,
-.resume-label-text::after {
+.resume-label-text::after,
+.figma-label-text::before,
+.figma-label-text::after {
   color: #fff;
   content: attr(data-text);
   inset: 0;
@@ -944,7 +960,8 @@ h3 {
 
 .github-label-text::before,
 .linkedin-label-text::before,
-.resume-label-text::before {
+.resume-label-text::before,
+.figma-label-text::before {
   -webkit-text-stroke: 4px var(--social-label-middle-stroke);
   z-index: -1;
 }
@@ -955,7 +972,8 @@ h3 {
 
 .github-label-text::after,
 .linkedin-label-text::after,
-.resume-label-text::after {
+.resume-label-text::after,
+.figma-label-text::after {
   -webkit-text-stroke: 6px #000;
   z-index: -2;
 }
@@ -2390,7 +2408,27 @@ section.project-hero {
 }
 
 .project-actions {
+  --hero-action-gap: 12px;
   margin-top: 30px;
+  max-width: 520px;
+  width: min(100%, calc(100vw - 24px), 520px);
+}
+
+.project-page .project-source-actions {
+  display: grid;
+  gap: var(--hero-action-gap);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  min-width: 0;
+  width: 100%;
+}
+
+.project-page .project-source-actions > .button {
+  min-width: 0;
+  width: 100%;
+}
+
+.project-page .project-source-actions-icon-only > .button {
+  gap: 0;
 }
 
 .project-page .project-github-button {
@@ -2400,10 +2438,66 @@ section.project-hero {
   overflow: hidden;
 }
 
+.project-page .project-figma-button {
+  background: linear-gradient(135deg, #a259ff, #6f3ff5);
+  border: 1px solid #000;
+  color: #fff;
+  overflow: hidden;
+}
+
+.project-page .project-play-store-button {
+  background: #ea4335;
+  border: 1px solid #000;
+  color: #fff;
+  overflow: hidden;
+}
+
+.project-page .project-app-store-button {
+  background: #f3fff7;
+}
+
 .project-page .project-github-icon-mark {
   flex: 0 0 auto;
   height: 46px;
+  margin-right: -5px;
   width: 46px;
+}
+
+.project-page .project-source-actions-icon-only .project-github-icon-mark {
+  margin-right: 0;
+}
+
+.project-page .project-figma-icon-mark {
+  display: block;
+  flex: 0 0 auto;
+  filter:
+    drop-shadow(0 0.4px 0 #000)
+    drop-shadow(0 -0.4px 0 #000)
+    drop-shadow(0.4px 0 0 #000)
+    drop-shadow(-0.4px 0 0 #000);
+  height: 34px;
+  width: auto;
+}
+
+.project-page .project-play-store-icon-mark,
+.project-page .project-app-store-icon-mark {
+  display: block;
+  flex: 0 0 auto;
+  height: 28.83px;
+  width: auto;
+}
+
+.project-page .project-play-store-icon-mark {
+  filter:
+    drop-shadow(0 1.2px 0 #000)
+    drop-shadow(0 -1.2px 0 #000)
+    drop-shadow(1.2px 0 0 #000)
+    drop-shadow(-1.2px 0 0 #000);
+}
+
+.project-page .project-app-store-icon-mark {
+  filter: none;
+  transform: scale(1.18);
 }
 
 .project-page .project-contact-icon-mark {
@@ -2437,8 +2531,11 @@ section.project-hero {
   z-index: 1;
 }
 
-.project-page .project-github-button .github-label-text {
+.project-page .project-github-button .github-label-text,
+.project-page .project-source-button-label {
+  font-family: inherit;
   font-size: 21px;
+  font-weight: 800;
   line-height: 1;
   white-space: nowrap;
 }
@@ -2449,6 +2546,61 @@ section.project-hero {
   font-weight: 800;
   line-height: 1;
   white-space: nowrap;
+}
+
+.project-page .project-play-store-button .project-source-button-label,
+.project-page .project-contact-button .project-contact-label-text {
+  word-spacing: 0.19em;
+}
+
+@media (max-width: 720px) {
+  .project-page .project-source-actions {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .project-page .project-play-store-button {
+    grid-column: 1 / -1;
+  }
+
+  .project-page .project-source-actions-icon-only {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .project-page .project-source-actions-icon-only .project-play-store-button {
+    grid-column: auto;
+  }
+}
+
+@media (max-width: 460px) {
+  .project-page .project-source-actions > .button {
+    gap: 6px;
+    padding-inline: 7px;
+  }
+
+  .project-page .project-source-actions .project-github-icon-mark {
+    height: 32px;
+    margin-right: -4px;
+    width: 32px;
+  }
+
+  .project-page .project-source-actions-icon-only .project-github-icon-mark {
+    margin-right: 0;
+  }
+
+  .project-page .project-source-actions .project-figma-icon-mark {
+    height: 28px;
+    width: auto;
+  }
+
+  .project-page .project-source-actions .project-play-store-icon-mark,
+  .project-page .project-source-actions .project-app-store-icon-mark {
+    height: 23.96px;
+    width: auto;
+  }
+
+  .project-page .project-source-actions .project-source-button-label {
+    font-size: clamp(15px, 4.2vw, 21px);
+  }
 }
 
 .av-showcase {

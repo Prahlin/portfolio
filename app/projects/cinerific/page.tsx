@@ -16,6 +16,53 @@ const metadataItems = [
   "Android QA + release prep",
 ];
 
+const playStoreUrl =
+  "https://play.google.com/store/apps/details?id=com.prahlin.cinerific&showAllReviews=true";
+
+function ProjectGitHubMark() {
+  return (
+    <svg
+      aria-hidden
+      className="github-icon-mark project-github-icon-mark"
+      height="32.4"
+      viewBox="0 0 24 24"
+      width="32.4"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g transform="translate(-3.36 -3.36) scale(1.28)">
+        <rect
+          fill="#000"
+          height="18"
+          rx="3"
+          stroke="none"
+          strokeWidth="1.35"
+          width="18"
+          x="3"
+          y="3"
+        />
+        <path
+          d="M10.15 7.45h-.52c-.86 0-1.32.46-1.32 1.32v2.05c0 .72-.5 1.18-1.28 1.18.78 0 1.28.46 1.28 1.18v2.05c0 .86.46 1.32 1.32 1.32h.52"
+          fill="none"
+          stroke="#f3fff7"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
+          transform="translate(-0.93 0)"
+        />
+        <path
+          d="M13.85 16.55h.52c.86 0 1.32-.46 1.32-1.32v-2.05c0-.72.5-1.18 1.28-1.18-.78 0-1.28-.46-1.28-1.18V8.77c0-.86-.46-1.32-1.32-1.32h-.52"
+          fill="none"
+          stroke="#f3fff7"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
+          transform="translate(0.93 0)"
+        />
+      </g>
+    </svg>
+  );
+}
+
 const ownershipItems = [
   {
     title: "Mobile Frontend",
@@ -552,21 +599,62 @@ export default function CinerificCaseStudy() {
               </div>
 
               <div className="hero-actions project-actions">
-                <a
-                  className="button button-primary"
-                  href="https://github.com/Prahlin/alla_vostra"
-                  rel="noreferrer"
-                  target="_blank"
+                <div
+                  className="project-source-actions project-source-actions-icon-only"
+                  aria-label="Project source links"
                 >
-                  <Braces aria-hidden size={18} />
-                  View GitHub
-                </a>
+                  <a
+                    aria-label="Open Cinerific GitHub repository"
+                    className="button button-primary project-github-button github-button"
+                    href="https://github.com/Prahlin/cinerific"
+                    rel="noreferrer"
+                    target="_blank"
+                  >
+                    <ProjectGitHubMark />
+                  </a>
+                  <a
+                    aria-label="Open Cinerific Figma file"
+                    className="button button-primary project-figma-button"
+                    href="https://www.figma.com/"
+                    rel="noreferrer"
+                    target="_blank"
+                  >
+                    <img
+                      alt=""
+                      aria-hidden="true"
+                      className="project-figma-icon-mark"
+                      src="/images/figma-logo-official.svg"
+                    />
+                  </a>
+                  <a
+                    aria-label="Open Cinerific on Google Play"
+                    className="button button-primary project-play-store-button"
+                    href={playStoreUrl}
+                    rel="noreferrer"
+                    target="_blank"
+                  >
+                    <img
+                      alt=""
+                      aria-hidden="true"
+                      className="project-play-store-icon-mark"
+                      src="/images/google-play-official-triangle.png"
+                    />
+                  </a>
+                </div>
                 <a
-                  className="button button-secondary"
+                  className="button button-primary project-contact-button"
                   href="mailto:martin@prahlproductions.com"
                 >
-                  <Mail aria-hidden size={18} />
-                  Contact
+                  <span className="project-contact-icon-mark" aria-hidden="true">
+                    <Mail className="project-contact-icon-stroke" size={36} />
+                    <Mail className="project-contact-icon-fill" size={36} />
+                  </span>
+                  <span
+                    className="resume-label-text project-contact-label-text"
+                    data-text="Contact Dev"
+                  >
+                    Contact Dev
+                  </span>
                 </a>
               </div>
             </div>
@@ -834,7 +922,7 @@ export default function CinerificCaseStudy() {
           <div className="closing-actions">
             <a
               className="button button-primary"
-              href="https://github.com/Prahlin/alla_vostra"
+              href="https://github.com/Prahlin/cinerific"
               rel="noreferrer"
               target="_blank"
             >

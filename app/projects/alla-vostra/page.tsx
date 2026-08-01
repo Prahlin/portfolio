@@ -18,6 +18,10 @@ const metadataItems = [
   "Android QA + release prep",
 ];
 
+const playStoreUrl =
+  "https://play.google.com/store/apps/details?id=com.allavostra.app&showAllReviews=true";
+const appStoreUrl = "https://apps.apple.com/us/search?term=Alla%20Vostra";
+
 const proofStats = [
   {
     label: "Quality GitHub Commits",
@@ -612,17 +616,48 @@ export default function AllaVostraCaseStudy() {
               </div>
 
               <div className="hero-actions project-actions">
-                <a
-                  className="button button-primary project-github-button github-button"
-                  href="https://github.com/Prahlin/alla_vostra"
-                  rel="noreferrer"
-                  target="_blank"
+                <div
+                  className="project-source-actions project-source-actions-icon-only"
+                  aria-label="Project source links"
                 >
-                  <ProjectGitHubMark />
-                  <span className="github-label-text" data-text="View GitHub">
-                    View GitHub
-                  </span>
-                </a>
+                  <a
+                    aria-label="Open Alla Vostra GitHub repository"
+                    className="button button-primary project-github-button github-button"
+                    href="https://github.com/Prahlin/alla_vostra"
+                    rel="noreferrer"
+                    target="_blank"
+                  >
+                    <ProjectGitHubMark />
+                  </a>
+                  <a
+                    aria-label="Open Alla Vostra on the App Store"
+                    className="button button-primary project-play-store-button project-app-store-button"
+                    href={appStoreUrl}
+                    rel="noreferrer"
+                    target="_blank"
+                  >
+                    <img
+                      alt=""
+                      aria-hidden="true"
+                      className="project-play-store-icon-mark project-app-store-icon-mark"
+                      src="/images/apple-logo-official.svg"
+                    />
+                  </a>
+                  <a
+                    aria-label="Open Alla Vostra on Google Play"
+                    className="button button-primary project-play-store-button"
+                    href={playStoreUrl}
+                    rel="noreferrer"
+                    target="_blank"
+                  >
+                    <img
+                      alt=""
+                      aria-hidden="true"
+                      className="project-play-store-icon-mark"
+                      src="/images/google-play-official-triangle.png"
+                    />
+                  </a>
+                </div>
                 <a
                   className="button button-primary project-contact-button"
                   href="mailto:martin@prahlproductions.com"
@@ -952,8 +987,8 @@ export default function AllaVostraCaseStudy() {
               target="_blank"
             >
               <ProjectGitHubMark />
-              <span className="github-label-text" data-text="View GitHub">
-                View GitHub
+              <span className="github-label-text" data-text="GitHub">
+                GitHub
               </span>
             </a>
             <a
