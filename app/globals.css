@@ -2843,6 +2843,8 @@ section.project-hero {
 }
 
 .flow-layout {
+  --flow-phone-width: 444px;
+  --flow-chart-width: calc(var(--flow-phone-width) * 0.929881337648);
   align-items: center;
   display: grid;
   gap: 42px;
@@ -2851,9 +2853,10 @@ section.project-hero {
 }
 
 .flow-chart-mockup {
+  align-self: start;
   margin: 0;
   max-width: 100%;
-  width: min(100%, 470px);
+  width: min(100%, var(--flow-chart-width));
 }
 
 .flow-chart-mockup img {
@@ -2889,7 +2892,7 @@ section.project-hero {
 
 .flow-screen-main .flow-image-frame {
   margin: 0 auto;
-  max-width: 330px;
+  max-width: var(--flow-phone-width);
 }
 
 .flow-screen-compact {
@@ -2906,7 +2909,7 @@ section.project-hero {
   font-weight: 700;
   line-height: 1.45;
   margin: 14px auto 0;
-  max-width: 330px;
+  max-width: var(--flow-phone-width, 330px);
 }
 
 .flow-screen-label {
@@ -3415,11 +3418,19 @@ section.project-hero {
   }
 
   .flow-layout {
+    --flow-chart-width: var(--flow-phone-width);
     grid-template-columns: 1fr;
   }
 
   .flow-capture-group {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 980px) and (orientation: portrait) {
+  .flow-chart-mockup {
+    justify-self: center;
+    margin-inline: auto;
   }
 }
 

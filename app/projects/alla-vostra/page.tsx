@@ -138,10 +138,10 @@ type FlowScreenStack = {
 };
 
 const launchScreen: FlowScreen = {
-  aspect: "tall",
-  label: "Large",
+  aspect: "standard",
+  label: "Small",
   title: "Startup Screen",
-  src: "/images/startup_screen_large.png",
+  src: "/images/startup_screen_small.png",
   caption: "Launch screen establishing brand tone and first-use polish.",
 };
 
@@ -772,7 +772,7 @@ export default function AllaVostraCaseStudy() {
                   alt={launchScreen.title}
                   fill
                   priority
-                  sizes="(max-width: 720px) 72vw, 330px"
+                  sizes="(max-width: 720px) 72vw, 444px"
                   src={launchScreen.src}
                 />
               </div>
@@ -786,7 +786,7 @@ export default function AllaVostraCaseStudy() {
               <img
                 alt="Alla Vostra product flow diagram"
                 decoding="async"
-                src="/images/alla-vostra-product-flow-mockup.svg"
+                src="/images/alla-vostra-product-flow-mockup.svg?v=thank-you-order-confirmed-20260801"
               />
             </figure>
           </div>
