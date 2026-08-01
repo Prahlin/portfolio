@@ -559,17 +559,14 @@ function CasePhone({
 }) {
   return (
     <div className={`av-device av-device-${aspect} ${className}`}>
-      <div className="av-device-speaker" />
-      <div className="av-device-screen">
-        <Image
-          alt={alt}
-          className="av-device-image"
-          fill
-          priority={priority}
-          sizes="(max-width: 720px) 72vw, 280px"
-          src={src}
-        />
-      </div>
+      <Image
+        alt={alt}
+        className="av-device-image"
+        fill
+        priority={priority}
+        sizes="(max-width: 720px) 72vw, 280px"
+        src={src}
+      />
     </div>
   );
 }
@@ -682,19 +679,19 @@ export default function AllaVostraCaseStudy() {
                 aspect="tall"
                 className="av-device-main"
                 priority
-                src="/images/startup_screen_large.png"
+                src="/images/alla-vostra-hero-startup-framed.png"
               />
               <CasePhone
                 alt="Alla Vostra products screen"
                 aspect="standard"
                 className="av-device-browse"
-                src="/images/products_screen_small.png"
+                src="/images/alla-vostra-hero-products-framed-space-gray.png"
               />
               <CasePhone
                 alt="Alla Vostra confirmation screen"
                 aspect="standard"
                 className="av-device-confirm"
-                src="/images/confirmed_overlay_small.png"
+                src="/images/alla-vostra-hero-confirmed-framed-space-gray.png"
               />
               <div className="av-showcase-proof-row">
                 <div className="av-showcase-proof">

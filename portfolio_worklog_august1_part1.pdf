@@ -1,0 +1,373 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [6 0 R 8 0 R 10 0 R 12 0 R 14 0 R 16 0 R] /Count 6 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+5 0 obj
+<< /Length 6447 >>
+stream
+BT /F2 13.60 Tf 1 0 0 1 54.00 748.00 Tm (Prahlin Portfolio Work Log - August 1, 2026 \(Part 1\)) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 727.00 Tm (Compiled summary for Saturday, August 1, 2026 - Part 1 - focus: continuing the Prahl.dev) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 714.75 Tm (Portfolio Alla Vostra case-study page after the July 31 flow-chart transparency pass,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 702.50 Tm (restructuring the Alla Vostra Product Flow diagram into Tutorial, Browse, Shop, Cart, Checkout,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 690.25 Tm (Payment, and Confirmed sections, pairing the diagram with the small startup screenshot,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 678.00 Tm (rebuilding Alla Vostra and Cinerific hero source buttons with logo-only store/source controls,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 665.75 Tm (adding Apple/Figma/Google Play logo assets, validating local routes and static export, checking) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 653.50 Tm (Hostinger workflow status, and generating the August 1 Part 1 Portfolio PDF worklog.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 641.25 Tm (Generated in continuity with the established Prahlin Portfolio daily worklog cadence: compact) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 629.00 Tm (opening summary, source-material section, baseline section, goal list, work-completed sections,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 616.75 Tm (validation section, files-touched list, follow-up context, and output-artifact close.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 604.50 Tm (This artifact intentionally covers only Prahlin/portfolio work performed for the August 1 Part 1) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 592.25 Tm (local project session after portfolio_worklog_july31.pdf: source commit) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 580.00 Tm (22aab85966ba4ecfbe3dc835a20ebe6bd5564cce, source commit) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 567.75 Tm (a796e3d1a70559433c4e8d5062426c0f76212681, the refreshed project snapshot, local validation) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 555.50 Tm (checks, GitHub Actions status review, and this worklog-generation step. Alla Vostra, Cinerific,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 543.25 Tm (and Credit King application repositories were not changed for this record.) Tj ET
+BT /F2 10.40 Tf 1 0 0 1 54.00 505.00 Tm (Source Materials Reviewed) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 492.75 Tm (- Ran ./read_project.sh from /Users/prahlin/gh/portfolio and regenerated) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 480.50 Tm (  portfolio_PROJECT_SNAPSHOT.txt before writing this worklog, preserving the project convention) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 468.25 Tm (  that Codex refreshes the current source snapshot before continuing Portfolio documentation) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 456.00 Tm (  work.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 443.75 Tm (- Reviewed the refreshed portfolio_PROJECT_SNAPSHOT.txt, including project notes, current) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 431.50 Tm (  source tree, line-numbered source dumps, tooling/deployment configuration, public image) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 419.25 Tm (  inventory, root-level PDF inventory, git context, and the standing commit-message instruction.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 407.00 Tm (- Reviewed every pre-existing Portfolio root-level worklog PDF: portfolio_worklog_july11.pdf,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 394.75 Tm (  portfolio_worklog_july14.pdf, portfolio_worklog_july15_part1.pdf,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 382.50 Tm (  portfolio_worklog_july15_part2.pdf, portfolio_worklog_july16.pdf,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 370.25 Tm (  portfolio_worklog_july19.pdf, portfolio_worklog_july20.pdf, portfolio_worklog_july21.pdf,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 358.00 Tm (  portfolio_worklog_july22.pdf, portfolio_worklog_july23.pdf, portfolio_worklog_july24.pdf,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 345.75 Tm (  portfolio_worklog_july25.pdf, portfolio_worklog_july29.pdf, portfolio_worklog_july30.pdf, and) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 333.50 Tm (  portfolio_worklog_july31.pdf.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 321.25 Tm (- Extracted text from all fifteen existing Portfolio PDFs with pdftotext to preserve title) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 309.00 Tm (  cadence, opening-summary density, section order, bullet-heavy technical voice, validation) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 296.75 Tm (  language, files-touched lists, follow-up context, and output-artifact close.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 284.50 Tm (- Used portfolio_worklog_july30.pdf as the mature six-page same-project reference while also) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 272.25 Tm (  reviewing portfolio_worklog_july31.pdf as the latest naming and metadata baseline.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 260.00 Tm (- Checked PDF metadata with pdfinfo and confirmed the current Portfolio artifacts use) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 247.75 Tm (  root-level filenames, letter-size pages, PDF 1.4 output, Codex author/creator metadata, and) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 235.50 Tm (  Helvetica-style base fonts.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 223.25 Tm (- Reviewed Git history through git log, git show --stat, git show --name-status, branch state,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 211.00 Tm (  and the committed scopes for 22aab85 and a796e3d. HEAD and origin/main both resolved to) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 198.75 Tm (  a796e3d before this PDF was generated.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 186.50 Tm (- Reviewed app/globals.css, app/projects/alla-vostra/page.tsx,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 174.25 Tm (  app/projects/cinerific/page.tsx, public/images/alla-vostra-product-flow-mockup.svg, the new) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 162.00 Tm (  Apple/Figma/Google Play logo assets, read_project.sh, and the root-level PDF inventory.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 149.75 Tm (- Checked local routes at http://127.0.0.1:3000/, /projects/alla-vostra, and) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 137.50 Tm (  /projects/cinerific, then checked gh run list for the latest Hostinger workflow state.) Tj ET
+BT /F2 10.40 Tf 1 0 0 1 54.00 99.25 Tm (Baseline Status Before August 1 Part 1 Work) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 87.00 Tm (- The July 31 Portfolio worklog had already recorded the first Alla Vostra flow-chart) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 342.65 38.00 Tm (Prahlin Portfolio Work Log - August 1, 2026 \(Part 1\) Page 1) Tj ET
+endstream
+endobj
+6 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 5 0 R >>
+endobj
+7 0 obj
+<< /Length 6039 >>
+stream
+BT /F1 9.15 Tf 1 0 0 1 54.00 738.00 Tm (  visibility pass: section-band opacity was driven to transparent, the green portfolio grid) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 725.75 Tm (  remained visible, local dev cache was cleared, and Alla Vostra route availability was) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 713.50 Tm (  confirmed.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 701.25 Tm (- The Product Flow diagram still needed structural work after the transparency cycle. Shop) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 689.00 Tm (  needed its own section, Tutorial needed to precede Browse, Cart needed a) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 676.75 Tm (  Tutorial/Selection/Cart arrangement, and arrows still needed several user-directed routing) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 664.50 Tm (  corrections.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 652.25 Tm (- The screenshot/diagram pair still needed responsive relationship tuning. Portrait/mobile) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 640.00 Tm (  views needed width matching and vertical centering, while horizontal layouts needed the) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 627.75 Tm (  diagram height matched to the adjacent screenshot height.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 615.50 Tm (- The Product Flow launch screenshot still used the larger startup screen before the user) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 603.25 Tm (  requested the smaller startup capture from the landing-page Alla Vostra Featured Case Studies) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 591.00 Tm (  card.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 578.75 Tm (- The Alla Vostra hero still used the earlier project-page GitHub and Contact Dev action) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 566.50 Tm (  treatment and did not yet have the logo-only GitHub/App Store/GGL Play row requested during) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 554.25 Tm (  the August 1 pass.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 542.00 Tm (- Cinerific already had a dedicated project page, but its hero actions did not yet share the) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 529.75 Tm (  new source-button stack or the corrected Prahlin/cinerific GitHub destination.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 517.50 Tm (- Figma, Google Play, and Apple logo assets were not yet represented as local reusable public) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 505.25 Tm (  assets for the project-page source buttons.) Tj ET
+BT /F2 10.40 Tf 1 0 0 1 54.00 467.00 Tm (Goals for August 1 Part 1) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 454.75 Tm (- Rebuild the Alla Vostra Product Flow diagram around Tutorial, Browse, Shop, Cart, Checkout,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 442.50 Tm (  Payment, and Confirmed rails while preserving the existing neon-green visual language.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 430.25 Tm (- Keep every subsection stack vertically centered inside its section and spread rows) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 418.00 Tm (  horizontally from the green section rail to the right diagram edge.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 405.75 Tm (- Move Shop into its own standalone section between Browse and Cart without increasing Browse) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 393.50 Tm (  row height.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 381.25 Tm (- Add Tutorial steps above Browse, wrap Step 1 through Step 5 into the requested two-row) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 369.00 Tm (  layout, and keep the logical arrow order intact even when visual direction changes.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 356.75 Tm (- Remove standalone arrow triangles that do not have visible line bodies and redraw routes) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 344.50 Tm (  with attached down/right/left arrow paths.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 332.25 Tm (- Replace the Product Flow launch screenshot with the small startup capture and tune portrait) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 320.00 Tm (  versus horizontal screenshot/diagram scaling.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 307.75 Tm (- Rebuild Alla Vostra hero source actions into logo-only GitHub, App Store, and GGL Play) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 295.50 Tm (  buttons while leaving Contact Dev text visible.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 283.25 Tm (- Copy the same source-button system to Cinerific, keeping Cinerific's middle source action as) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 271.00 Tm (  Figma and pointing GitHub to Prahlin/cinerific.) Tj ET
+BT /F2 10.40 Tf 1 0 0 1 54.00 232.75 Tm (Work Completed - Alla Vostra Product Flow Diagram) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 220.50 Tm (- Preserved the transparent diagram background state so the portfolio grid continues to read) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 208.25 Tm (  through the flow canvas instead of returning to a darker section-band box.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 196.00 Tm (- Added a new Tutorial section above Browse and finalized the section rail as the stacked TUT) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 183.75 Tm (  / ORIAL label treatment.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 171.50 Tm (- Added Step 1, Step 2, Step 3, Step 4, and Step 5 subsection boxes, wrapped after Step 3,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 159.25 Tm (  centered Step 4 and Step 5 between the two boxes above them, and preserved the Step 1-to-Step) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 147.00 Tm (  5-to-Home arrow logic.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 134.75 Tm (- Moved Shop out of Browse and into a separate Shop section between Browse and Cart, with the) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 122.50 Tm (  section itself named SHOP and the subsection box also named Shop.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 110.25 Tm (- Reworked Browse so Home, Products, About Us, and Contact each route toward Shop or Cart with) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 98.00 Tm (  visible arrow bodies and attached arrowheads.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 85.75 Tm (- Renamed About to About Us in the diagram and kept Browse row height stable by moving later) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 342.65 38.00 Tm (Prahlin Portfolio Work Log - August 1, 2026 \(Part 1\) Page 2) Tj ET
+endstream
+endobj
+8 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 7 0 R >>
+endobj
+9 0 obj
+<< /Length 5954 >>
+stream
+BT /F1 9.15 Tf 1 0 0 1 54.00 738.00 Tm (  subsection rows upward instead of enlarging the Browse band.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 725.75 Tm (- Renamed Products Overlay to Selection and Cart Overlay to Cart, added a Cart-section) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 713.50 Tm (  Tutorial subsection, swapped Tutorial and Selection placement, and ensured Shop routes into) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 701.25 Tm (  all Cart-section destinations.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 689.00 Tm (- Redrew cart and checkout routing so paths move left between section boxes, travel through) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 676.75 Tm (  the intended centerlines, and drop into the checkout contact row rather than relying on) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 664.50 Tm (  detached arrowheads.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 652.25 Tm (- Expanded Payment from one subsection into Payment Method, Details Input, and Confirmation) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 640.00 Tm (  Prompt.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 627.75 Tm (- Renamed the final confirmation output to Thank You / Order Confirmed and wrapped the) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 615.50 Tm (  Confirmed rail label as CONFIRM / ATION.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 603.25 Tm (- Increased section-box fonts, widened section boxes, reduced the widened rail boxes by 20) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 591.00 Tm (  percent, and tightened section-label line spacing for TUT/ORIAL, CHECK/OUT, PAY/MENT, and) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 578.75 Tm (  CONFIRM/ATION.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 566.50 Tm (- Removed standalone triangle arrowheads that did not have visible route bodies, preserving) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 554.25 Tm (  only arrowheads attached to actual line paths.) Tj ET
+BT /F2 10.40 Tf 1 0 0 1 54.00 516.00 Tm (Work Completed - Flow Pairing and Responsive Scaling) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 503.75 Tm (- Replaced the Product Flow launch screenshot source with startup_screen_small.png, matching) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 491.50 Tm (  the small startup screen already shown in the landing-page Alla Vostra Featured Case Studies) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 479.25 Tm (  card.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 467.00 Tm (- Vertically centered the flow diagram during portrait/mobile view modes so the stacked) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 454.75 Tm (  product-flow composition reads as a balanced pair.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 442.50 Tm (- Scaled the screenshot and diagram pairing upward until both reached the horizontal left-edge) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 430.25 Tm (  reference point of the Release Pipeline Awareness text zone.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 418.00 Tm (- Scaled the startup screenshot until its width matched the flow diagram width in) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 405.75 Tm (  portrait/mobile stacked behavior.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 393.50 Tm (- Added horizontal/wider-screen behavior that matches the flow diagram by height to the) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 381.25 Tm (  adjacent screenshot height, while portrait/mobile behavior continues matching width to width.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 369.00 Tm (- Compressed the overall flow-diagram height by roughly 10 percent without changing diagram) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 356.75 Tm (  fonts, subsection box sizes, or arrow appearances.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 344.50 Tm (- Kept the Browse row height unchanged through Tutorial and Shop additions by shifting later) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 332.25 Tm (  rows upward and tuning the SVG section rail spacing.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 320.00 Tm (- Updated Alla Vostra page and global CSS rules so the screenshot/diagram composition responds) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 307.75 Tm (  differently for portrait and horizontal aspect ratios without affecting unrelated project) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 295.50 Tm (  pages.) Tj ET
+BT /F2 10.40 Tf 1 0 0 1 54.00 257.25 Tm (Work Completed - Alla Vostra Hero Source Buttons) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 245.00 Tm (- Reduced the original Alla Vostra GitHub button into a narrower source-control role and added) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 232.75 Tm (  a second project source button beside it during the early Figma pass.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 220.50 Tm (- Added the purple Figma button with black borders, matching text face/size, Contact Dev-style) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 208.25 Tm (  layered stroke treatment, and a local Figma logo asset while Figma was still part of the Alla) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 196.00 Tm (  Vostra hero.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 183.75 Tm (- Tuned button gaps to match the landing-page CTA/social-button rhythm, then added the Google) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 171.50 Tm (  Play source button as a third project-store action.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 159.25 Tm (- Removed View from source-button labels, iterated Play Store through Play and GGL Play) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 147.00 Tm (  wording, and tuned icon-to-text spacing before the final logo-only direction.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 134.75 Tm (- Moved the source-button treatment into shared project-page CSS classes, including) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 122.50 Tm (  project-source-actions, icon-only button sizing, source icon classes, and responsive) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 110.25 Tm (  three-column behavior.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 98.00 Tm (- Replaced Alla Vostra's Figma source button with an App Store button only on the Alla Vostra) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 85.75 Tm (  page, keeping the same sizing and alignment rules used by Google Play.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 342.65 38.00 Tm (Prahlin Portfolio Work Log - August 1, 2026 \(Part 1\) Page 3) Tj ET
+endstream
+endobj
+10 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 9 0 R >>
+endobj
+11 0 obj
+<< /Length 5867 >>
+stream
+BT /F1 9.15 Tf 1 0 0 1 54.00 738.00 Tm (- Added a local Apple logo SVG asset, inverted the App Store button into a light surface with) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 725.75 Tm (  black Apple artwork, and scaled the Apple mark inside the button without expanding the button) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 713.50 Tm (  box.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 701.25 Tm (- Added a transparent Google Play triangle PNG asset, removed the white backing, tuned the) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 689.00 Tm (  triangle size downward, and thickened the black stroke treatment to the accepted weight.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 676.75 Tm (- Settled the Google Play button fill on Google red after several color passes, then converted) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 664.50 Tm (  the Alla Vostra GitHub, App Store, and GGL Play buttons to logo-only controls with) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 652.25 Tm (  aria-labels.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 640.00 Tm (- Preserved the Contact Dev button text and contact CTA role, explicitly keeping it outside) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 627.75 Tm (  the logo-only source-button treatment.) Tj ET
+BT /F2 10.40 Tf 1 0 0 1 54.00 589.50 Tm (Work Completed - Cinerific Hero Source Buttons and Assets) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 577.25 Tm (- Copied the accepted four-button stack pattern from Alla Vostra to the Cinerific project page) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 565.00 Tm (  so Cinerific now uses the same source row plus Contact Dev hero action structure.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 552.75 Tm (- Corrected the Cinerific GitHub source link to https://github.com/Prahlin/cinerific and kept) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 540.50 Tm (  the lower Cinerific GitHub CTA aligned to the same repository target.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 528.25 Tm (- Added a Cinerific playStoreUrl constant pointing at the com.prahlin.cinerific Google Play) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 516.00 Tm (  package path used by the new source button.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 503.75 Tm (- Kept Cinerific's middle source button as Figma after Alla Vostra moved from Figma to App) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 491.50 Tm (  Store, preserving page-specific source meaning while sharing the same button system.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 479.25 Tm (- Added a local ProjectGitHubMark SVG function in the Cinerific page so the Cinerific hero can) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 467.00 Tm (  match the project-page GitHub mark style used by Alla Vostra.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 454.75 Tm (- Applied the same logo-only treatment to Cinerific's GitHub, Figma, and GGL Play buttons) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 442.50 Tm (  while keeping Cinerific Contact Dev text untouched.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 430.25 Tm (- Added public/images/figma-logo-official.svg, public/images/apple-logo-official.svg, and) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 418.00 Tm (  public/images/google-play-official-triangle.png as local reusable assets for the project) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 405.75 Tm (  source controls.) Tj ET
+BT /F2 10.40 Tf 1 0 0 1 54.00 367.50 Tm (Work Completed - Commit Handling and Local State) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 355.25 Tm (- Committed and pushed 22aab85, Refined Alla Vostra product flow presentation, covering the) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 343.00 Tm (  small startup screenshot swap, screenshot/diagram scaling behavior,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 330.75 Tm (  Tutorial/Shop/Cart/Payment/Confirmed diagram restructuring, subsection typography) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 318.50 Tm (  normalization, and project snapshot regeneration.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 306.25 Tm (- Committed and pushed a796e3d, feat\(projects\): refreshed app store hero CTAs across case) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 294.00 Tm (  studies, covering the logo-only Alla Vostra source row, App Store replacement, Google) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 281.75 Tm (  Play/Figma/Apple assets, shared source-button CSS, Cinerific button-stack parity, Cinerific) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 269.50 Tm (  GitHub correction, and final npm run check verification.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 257.25 Tm (- Confirmed HEAD and origin/main both resolved to a796e3d1a70559433c4e8d5062426c0f76212681) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 245.00 Tm (  before this PDF was generated.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 232.75 Tm (- Regenerated portfolio_PROJECT_SNAPSHOT.txt again for this worklog pass. That snapshot) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 220.50 Tm (  remains a local modified documentation artifact after the source commits.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 208.25 Tm (- Kept this August 1 Part 1 PDF local as a documentation artifact pending any later) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 196.00 Tm (  user-approved documentation commit.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 183.75 Tm (- Did not edit external Alla Vostra, Cinerific Android, Credit King, Figma, App Store, or) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 171.50 Tm (  Google Play source repositories during this worklog pass.) Tj ET
+BT /F2 10.40 Tf 1 0 0 1 54.00 133.25 Tm (Validation and Checks Performed) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 121.00 Tm (- Ran npm run check after the current August 1 source state and confirmed TypeScript) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 108.75 Tm (  validation passed with tsc --noEmit.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 96.50 Tm (- Confirmed http://127.0.0.1:3000/, http://127.0.0.1:3000/projects/alla-vostra, and) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 84.25 Tm (  http://127.0.0.1:3000/projects/cinerific each returned HTTP 200 OK from the running local) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 342.65 38.00 Tm (Prahlin Portfolio Work Log - August 1, 2026 \(Part 1\) Page 4) Tj ET
+endstream
+endobj
+12 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 11 0 R >>
+endobj
+13 0 obj
+<< /Length 6157 >>
+stream
+BT /F1 9.15 Tf 1 0 0 1 54.00 738.00 Tm (  Next.js development server.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 725.75 Tm (- Ran npm run build:static and confirmed the local Next.js static export completed) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 713.50 Tm (  successfully, compiling, running TypeScript, collecting page data, generating six static) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 701.25 Tm (  pages, and listing /, /articles, /projects/alla-vostra, and /projects/cinerific as static) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 689.00 Tm (  routes.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 676.75 Tm (- Restored next-env.d.ts after npm run build:static flipped the generated route-types import) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 664.50 Tm (  from the dev path to the static-build path, avoiding unrelated generated-file noise in the) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 652.25 Tm (  working tree.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 640.00 Tm (- Checked GitHub Actions with gh run list. The latest Build static export for Hostinger) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 627.75 Tm (  workflow runs for a796e3d and 22aab85 completed with failure status, matching the fast-failure) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 615.50 Tm (  pattern already visible in recent workflow history.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 603.25 Tm (- Distinguished remote workflow status from local project health: npm run check and npm run) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 591.00 Tm (  build:static both passed locally, while the remote Hostinger static-export workflow still) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 578.75 Tm (  needs separate GitHub-side investigation.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 566.50 Tm (- Checked git status before PDF generation and confirmed the only tracked local modification) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 554.25 Tm (  was the refreshed portfolio_PROJECT_SNAPSHOT.txt produced by ./read_project.sh.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 542.00 Tm (- Generated this PDF with a small standard-library PDF writer and checked metadata/text) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 529.75 Tm (  extraction after writing.) Tj ET
+BT /F2 10.40 Tf 1 0 0 1 54.00 491.50 Tm (Files Touched During August 1 Part 1 Portfolio Work) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 479.25 Tm (- app/globals.css - tuned Product Flow screenshot/diagram pairing, responsive) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 467.00 Tm (  width-versus-height matching, project source-action grids, logo-only button behavior,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 454.75 Tm (  source-button fills, icon sizing, hairline/stroke effects, Contact Dev preservation, mobile) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 442.50 Tm (  source-button behavior, and App Store / Google Play / Figma button classes.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 430.25 Tm (- app/projects/alla-vostra/page.tsx - replaced the Product Flow startup screenshot with the) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 418.00 Tm (  small asset, added App Store and Google Play URLs, rebuilt the hero source row as logo-only) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 405.75 Tm (  GitHub/App Store/GGL Play actions, kept Contact Dev text intact, and wired accessible labels) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 393.50 Tm (  for logo-only buttons.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 381.25 Tm (- app/projects/cinerific/page.tsx - added Cinerific Google Play URL handling, corrected GitHub) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 369.00 Tm (  routing to Prahlin/cinerific, added the local GitHub mark, copied the shared source-action row) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 356.75 Tm (  into the hero, kept Figma as the Cinerific middle source action, and switched the source row) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 344.50 Tm (  to logo-only buttons.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 332.25 Tm (- public/images/alla-vostra-product-flow-mockup.svg - reworked the diagram sections, rerouted) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 320.00 Tm (  arrows, renamed subsection boxes, normalized typography/padding, updated section rail labels,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 307.75 Tm (  removed unattached triangle arrows, and compressed/scaled the overall flow visual.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 295.50 Tm (- public/images/apple-logo-official.svg - added the local Apple logo mark used by the Alla) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 283.25 Tm (  Vostra App Store source button.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 271.00 Tm (- public/images/figma-logo-official.svg - added the local cropped Figma logo mark used by the) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 258.75 Tm (  Cinerific source button and earlier Figma treatment.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 246.50 Tm (- public/images/google-play-official-triangle.png - added the transparent Google Play triangle) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 234.25 Tm (  artwork used by Google Play source buttons.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 222.00 Tm (- portfolio_PROJECT_SNAPSHOT.txt - regenerated by ./read_project.sh for current source context) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 209.75 Tm (  and left modified locally after this documentation pass.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 197.50 Tm (- portfolio_worklog_august1_part1.pdf - generated as this August 1 Part 1 Portfolio worklog) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 185.25 Tm (  artifact in the root-level Portfolio worklog convention.) Tj ET
+BT /F2 10.40 Tf 1 0 0 1 54.00 147.00 Tm (Follow-Up Context) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 134.75 Tm (- The public source branch is already represented by origin/main at a796e3d, and the August 1) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 122.50 Tm (  source commits have been pushed to main.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 110.25 Tm (- The refreshed portfolio_PROJECT_SNAPSHOT.txt and this August 1 Part 1 PDF remain local until) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 98.00 Tm (  the user provides or approves a commit message for documentation artifact changes.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 85.75 Tm (- The latest Hostinger static-export GitHub Actions runs are still failing quickly even though) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 342.65 38.00 Tm (Prahlin Portfolio Work Log - August 1, 2026 \(Part 1\) Page 5) Tj ET
+endstream
+endobj
+14 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 13 0 R >>
+endobj
+15 0 obj
+<< /Length 3694 >>
+stream
+BT /F1 9.15 Tf 1 0 0 1 54.00 738.00 Tm (  local npm run check and npm run build:static pass. The next deployment-health pass should) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 725.75 Tm (  inspect GitHub-side workflow logs, token/branch permissions, checkout/setup steps, or) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 713.50 Tm (  publishing conditions instead of assuming a local build failure.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 701.25 Tm (- Future Product Flow diagram edits should preserve the new Tutorial > Browse > Shop > Cart >) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 689.00 Tm (  Checkout > Payment > Confirmed structure, the separated Shop section, centered subsection) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 676.75 Tm (  rows, and no-detached-triangle arrow rule.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 664.50 Tm (- Future screenshot/diagram sizing work should preserve the current responsive distinction:) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 652.25 Tm (  portrait/mobile layouts match screenshot and diagram by width, while wider horizontal layouts) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 640.00 Tm (  match flow diagram height to screenshot height.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 627.75 Tm (- Alla Vostra now uses GitHub, App Store, and GGL Play as logo-only source buttons; Cinerific) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 615.50 Tm (  uses GitHub, Figma, and GGL Play. Future cross-page source-button work should preserve that) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 603.25 Tm (  page-specific middle-button difference unless the user asks for parity.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 591.00 Tm (- Contact Dev remains text-visible on both project pages and was intentionally not included in) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 578.75 Tm (  the logo-only treatment.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 566.50 Tm (- The Google Play triangle now relies on a transparent PNG plus CSS stroke/drop-shadow) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 554.25 Tm (  treatment. Future resizing should test both Alla Vostra and Cinerific buttons because they) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 542.00 Tm (  share the same asset and classes.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 529.75 Tm (- Continue treating future Portfolio work as local-only unless the user explicitly asks to) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 517.50 Tm (  commit, push, deploy, publish, or update the public website.) Tj ET
+BT /F2 10.40 Tf 1 0 0 1 54.00 479.25 Tm (Output Artifact) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 467.00 Tm (- Generated file: portfolio_worklog_august1_part1.pdf.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 454.75 Tm (- Location: /Users/prahlin/gh/portfolio/portfolio_worklog_august1_part1.pdf.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 442.50 Tm (- Naming follows the existing root-level Portfolio convention and the prior part-number) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 430.25 Tm (  convention: portfolio_worklog_august1_part1.pdf.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 418.00 Tm (- Uses the same daily worklog structure and compact technical voice established by) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 405.75 Tm (  portfolio_worklog_july11.pdf through portfolio_worklog_july31.pdf.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 393.50 Tm (- Generated with a small standard-library PDF writer; no external PDF dependency was installed) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 381.25 Tm (  for this artifact.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 369.00 Tm (- The local project date used for this filename and title is Saturday, August 1, 2026 EDT,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 356.75 Tm (  matching the machine and repository work-session clock.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 342.65 38.00 Tm (Prahlin Portfolio Work Log - August 1, 2026 \(Part 1\) Page 6) Tj ET
+endstream
+endobj
+16 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 15 0 R >>
+endobj
+17 0 obj
+<< /Title (Prahlin Portfolio Work Log - August 1, 2026 \(Part 1\)) /Subject (Portfolio website development worklog) /Author (Codex) /Creator (Codex standard-library PDF generator) /Producer (Codex standard-library PDF generator) /CreationDate (D:20260801143000-04'00') /ModDate (D:20260801143000-04'00') >>
+endobj
+xref
+0 18
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000149 00000 n 
+0000000219 00000 n 
+0000000294 00000 n 
+0000006792 00000 n 
+0000006928 00000 n 
+0000013018 00000 n 
+0000013154 00000 n 
+0000019159 00000 n 
+0000019296 00000 n 
+0000025215 00000 n 
+0000025353 00000 n 
+0000031562 00000 n 
+0000031700 00000 n 
+0000035446 00000 n 
+0000035584 00000 n 
+trailer
+<< /Size 18 /Root 1 0 R /Info 17 0 R >>
+startxref
+35907
+%%EOF

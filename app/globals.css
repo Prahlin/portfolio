@@ -1320,7 +1320,27 @@ h3 {
 }
 
 .phone-shell-capture {
-  border-radius: 42px;
+  aspect-ratio: 1290 / 2661;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  height: auto;
+  padding: 0;
+}
+
+.phone-shell-capture::before,
+.phone-shell-capture::after,
+.phone-shell-capture .phone-speaker {
+  display: none;
+}
+
+.phone-framed-image {
+  filter:
+    drop-shadow(0 28px 42px rgba(0, 0, 0, 0.48))
+    drop-shadow(0 0 32px rgba(0, 191, 99, 0.08));
+  object-fit: contain;
+  object-position: center;
 }
 
 .phone-status {
@@ -2629,53 +2649,20 @@ section.project-hero {
 }
 
 .alla-vostra-case .av-device {
-  background:
-    linear-gradient(135deg, rgba(255, 255, 255, 0.09), transparent 7%),
-    linear-gradient(315deg, rgba(255, 255, 255, 0.07), transparent 9%),
-    linear-gradient(145deg, #616762 0%, #1a1d1b 12%, #050606 48%, #202522 78%, #89918b 100%);
-  border: 1px solid rgba(255, 255, 255, 0.16);
-  border-radius: 42px;
-  box-shadow:
-    0 34px 100px rgba(0, 0, 0, 0.62),
-    0 0 64px rgba(0, 191, 99, 0.12),
-    0 0 0 1px rgba(198, 255, 217, 0.08),
-    inset 0 0 0 1px rgba(255, 255, 255, 0.1),
-    inset 0 0 0 5px rgba(0, 0, 0, 0.72);
-  isolation: isolate;
-  padding: 16px;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 0;
   position: absolute;
 }
 
-.alla-vostra-case .av-device::before,
-.alla-vostra-case .av-device::after {
-  background: linear-gradient(180deg, #5c635e, #151817 68%, #030404);
-  border-radius: 99px;
-  box-shadow:
-    inset 1px 0 0 rgba(255, 255, 255, 0.16),
-    inset -1px 0 0 rgba(0, 0, 0, 0.75);
-  content: "";
-  pointer-events: none;
-  position: absolute;
-  z-index: 1;
+.alla-vostra-case .av-device-tall {
+  aspect-ratio: 1290 / 2661;
 }
 
-.alla-vostra-case .av-device::before {
-  height: 48px;
-  left: -4px;
-  top: 118px;
-  width: 4px;
-}
-
-.alla-vostra-case .av-device::after {
-  height: 76px;
-  right: -4px;
-  top: 156px;
-  width: 4px;
-}
-
-.alla-vostra-case .av-device > * {
-  position: relative;
-  z-index: 2;
+.alla-vostra-case .av-device-standard {
+  aspect-ratio: 1242 / 2567;
 }
 
 .av-device-tall {
@@ -2695,16 +2682,7 @@ section.project-hero {
 }
 
 .alla-vostra-case .av-device-speaker {
-  background:
-    radial-gradient(circle at calc(100% - 9px) 50%, #050706 0 1.5px, #28312c 2px 3px, transparent 3.5px),
-    linear-gradient(180deg, #020303, #151b18);
-  border-radius: 99px;
-  box-shadow:
-    inset 0 1px 1px rgba(255, 255, 255, 0.08),
-    0 0 0 1px rgba(255, 255, 255, 0.07);
-  height: 8px;
-  margin: 0 auto 10px;
-  width: 70px;
+  display: none;
 }
 
 .av-device-screen {
@@ -2717,34 +2695,23 @@ section.project-hero {
 }
 
 .alla-vostra-case .av-device-screen {
-  aspect-ratio: var(--av-screen-ratio);
-  background: #020403;
-  border-radius: 29px;
-  box-shadow:
-    0 0 0 1px rgba(255, 255, 255, 0.06),
-    inset 0 0 0 1px rgba(0, 0, 0, 0.78),
-    inset 0 0 34px rgba(0, 0, 0, 0.64);
-  overflow: hidden;
-  position: relative;
-  width: 100%;
+  display: none;
 }
 
 .alla-vostra-case .av-device-screen::after {
-  background:
-    linear-gradient(122deg, rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0.04) 22%, transparent 42%),
-    radial-gradient(circle at 72% 12%, rgba(255, 255, 255, 0.14), transparent 22%);
-  content: "";
-  inset: 0;
-  mix-blend-mode: screen;
-  opacity: 0.3;
-  pointer-events: none;
-  position: absolute;
-  z-index: 2;
+  display: none;
 }
 
 .av-device-image {
   object-fit: contain;
   object-position: top center;
+}
+
+.alla-vostra-case .av-device-image {
+  filter:
+    drop-shadow(0 28px 42px rgba(0, 0, 0, 0.48))
+    drop-shadow(0 0 32px rgba(0, 191, 99, 0.08));
+  object-position: center;
 }
 
 .flow-image-frame img {
@@ -2766,15 +2733,6 @@ section.project-hero {
   border-radius: 15px;
   height: auto;
   width: 184px;
-}
-
-.alla-vostra-case .av-device-standard.av-device-browse,
-.alla-vostra-case .av-device-standard.av-device-confirm {
-  border-radius: 34px;
-}
-
-.alla-vostra-case .av-device-standard .av-device-screen {
-  border-radius: 23px;
 }
 
 .av-device-browse {

@@ -210,43 +210,37 @@ function PhonePreview({
   const className = `phone-shell phone-shell-${variant}${
     screenImageSrc ? " phone-shell-capture" : ""
   }${href ? " phone-shell-link" : ""}`;
-  const content = (
+  const content = screenImageSrc ? (
+    <Image
+      alt={screenImageAlt ?? `${title} app screen`}
+      className="phone-framed-image"
+      fill
+      sizes="245px"
+      src={screenImageSrc}
+    />
+  ) : (
     <>
       <div className="phone-speaker" />
-      <div className={`phone-screen${screenImageSrc ? " has-image" : ""}`}>
-        {screenImageSrc ? (
-          <div className="phone-screen-image-frame">
-            <Image
-              alt={screenImageAlt ?? `${title} app screen`}
-              className="phone-screen-image"
-              fill
-              sizes="245px"
-              src={screenImageSrc}
-            />
-          </div>
-        ) : (
-          <>
-            <div className="phone-status">
-              <span>{title}</span>
-              <span>5G</span>
-            </div>
-            <div className="phone-chart">
-              <div />
-              <div />
-              <div />
-              <div />
-            </div>
-            <div className="phone-cardline wide" />
-            <div className="phone-cardline" />
-            <div className="phone-grid">
-              <span />
-              <span />
-              <span />
-              <span />
-            </div>
-            <div className="phone-cta">{metric}</div>
-          </>
-        )}
+      <div className="phone-screen">
+        <div className="phone-status">
+          <span>{title}</span>
+          <span>5G</span>
+        </div>
+        <div className="phone-chart">
+          <div />
+          <div />
+          <div />
+          <div />
+        </div>
+        <div className="phone-cardline wide" />
+        <div className="phone-cardline" />
+        <div className="phone-grid">
+          <span />
+          <span />
+          <span />
+          <span />
+        </div>
+        <div className="phone-cta">{metric}</div>
       </div>
     </>
   );
@@ -473,14 +467,14 @@ export default function Home() {
                   metric="Checkout ready"
                   variant="commerce"
                   href="/projects/alla-vostra"
-                  screenImageSrc="/images/startup_screen_large.png"
+                  screenImageSrc="/images/alla-vostra-hero-startup-framed.png"
                   screenImageAlt="Alla Vostra startup screen"
                 />
                 <PhonePreview
                   title="CreditKing"
                   metric="Finance UI"
                   variant="finance"
-                  screenImageSrc="/images/editor-window-screenshot.png"
+                  screenImageSrc="/images/landing-hero-finance-framed.png"
                   screenImageAlt="Prahl.dev portfolio portrait screenshot"
                 />
               </div>
