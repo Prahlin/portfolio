@@ -1,0 +1,296 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+2 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+3 0 obj
+<< /Length 6164 >>
+stream
+BT /F2 13.40 Tf 54.00 738.00 Td (Prahlin Portfolio Work Log - August 1, 2026 \(Part 3\)) Tj ET
+BT /F1 9.20 Tf 54.00 714.00 Td (Compiled summary for Saturday, August 1, 2026 - Part 3 - focus: continuing the Prahl.dev Portfolio) Tj ET
+BT /F1 9.20 Tf 54.00 701.25 Td (landing-page hero device-frame cleanup after the August 1 Part 2 smartphone-frame pass, replacing the) Tj ET
+BT /F1 9.20 Tf 54.00 688.50 Td (remaining Cinerific tablet mock/cartoon presentation with a cleaned real-world black/silver tablet-frame) Tj ET
+BT /F1 9.20 Tf 54.00 675.75 Td (asset, removing visible bezel seam artifacts from the tablet treatment, locking the profile-photo plus) Tj ET
+BT /F1 9.20 Tf 54.00 663.00 Td (three-device hero stack between the top navigation bar and the tech-chip stack, clearing local development) Tj ET
+BT /F1 9.20 Tf 54.00 650.25 Td (cache after stale-client behavior, validating the corrected wide-layout behavior, refreshing the project) Tj ET
+BT /F1 9.20 Tf 54.00 637.50 Td (snapshot, and generating the August 1 Part 3 Portfolio PDF worklog.) Tj ET
+BT /F1 9.20 Tf 54.00 624.75 Td (Generated in continuity with the established Prahlin Portfolio daily worklog cadence: compact opening) Tj ET
+BT /F1 9.20 Tf 54.00 612.00 Td (summary, source-material section, baseline section, goal list, work-completed sections, validation) Tj ET
+BT /F1 9.20 Tf 54.00 599.25 Td (section, files-touched list, follow-up context, and output-artifact close.) Tj ET
+BT /F2 10.60 Tf 54.00 578.50 Td (This artifact intentionally covers Prahlin/portfolio work performed after) Tj ET
+BT /F1 9.20 Tf 54.00 565.75 Td (portfolio_worklog_august1_part2.pdf and after the August 1 Part 2 source/documentation commits. The) Tj ET
+BT /F1 9.20 Tf 54.00 553.00 Td (committed source state reviewed for this record is e1c2a81ae5852554cad8d0a66b91b4d35e129bac on main,) Tj ET
+BT /F1 9.20 Tf 54.00 540.25 Td (matching origin/main before this PDF was generated. Alla Vostra, Cinerific, Credit King, Figma, App Store,) Tj ET
+BT /F1 9.20 Tf 54.00 527.50 Td (and Google Play external repositories were not changed for this record.) Tj ET
+BT /F2 10.60 Tf 54.00 498.75 Td (Source Materials Reviewed) Tj ET
+BT /F1 9.20 Tf 54.00 486.00 Td (- Ran ./read_project.sh from /Users/prahlin/gh/portfolio and regenerated portfolio_PROJECT_SNAPSHOT.txt) Tj ET
+BT /F1 9.20 Tf 54.00 473.25 Td (  before writing this worklog, preserving the project convention that Codex refreshes the current source) Tj ET
+BT /F1 9.20 Tf 54.00 460.50 Td (  snapshot before continuing Portfolio documentation work.) Tj ET
+BT /F1 9.20 Tf 54.00 447.75 Td (- Reviewed the refreshed portfolio_PROJECT_SNAPSHOT.txt, including project notes, current source tree,) Tj ET
+BT /F1 9.20 Tf 54.00 435.00 Td (  line-numbered source dumps, public image inventory, PDF inventory, tooling/deployment configuration,) Tj ET
+BT /F1 9.20 Tf 54.00 422.25 Td (  git context, and the standing instruction to ask for a commit message before committing or pushing.) Tj ET
+BT /F1 9.20 Tf 54.00 409.50 Td (- Reviewed every pre-existing Portfolio root-level worklog PDF: portfolio_worklog_july11.pdf,) Tj ET
+BT /F1 9.20 Tf 54.00 396.75 Td (  portfolio_worklog_july14.pdf, portfolio_worklog_july15_part1.pdf, portfolio_worklog_july15_part2.pdf,) Tj ET
+BT /F1 9.20 Tf 54.00 384.00 Td (  portfolio_worklog_july16.pdf, portfolio_worklog_july19.pdf, portfolio_worklog_july20.pdf,) Tj ET
+BT /F1 9.20 Tf 54.00 371.25 Td (  portfolio_worklog_july21.pdf, portfolio_worklog_july22.pdf, portfolio_worklog_july23.pdf,) Tj ET
+BT /F1 9.20 Tf 54.00 358.50 Td (  portfolio_worklog_july24.pdf, portfolio_worklog_july25.pdf, portfolio_worklog_july29.pdf,) Tj ET
+BT /F1 9.20 Tf 54.00 345.75 Td (  portfolio_worklog_july30.pdf, portfolio_worklog_july31.pdf, portfolio_worklog_august1_part1.pdf, and) Tj ET
+BT /F1 9.20 Tf 54.00 333.00 Td (  portfolio_worklog_august1_part2.pdf.) Tj ET
+BT /F1 9.20 Tf 54.00 320.25 Td (- Extracted text from the existing Portfolio PDFs with pdftotext to preserve the established title) Tj ET
+BT /F1 9.20 Tf 54.00 307.50 Td (  cadence, opening-summary density, section order, compact bullet-heavy technical voice, validation) Tj ET
+BT /F1 9.20 Tf 54.00 294.75 Td (  language, files-touched lists, follow-up context, and output-artifact close.) Tj ET
+BT /F1 9.20 Tf 54.00 282.00 Td (- Used portfolio_worklog_august1_part2.pdf as the closest same-day structural baseline because it) Tj ET
+BT /F1 9.20 Tf 54.00 269.25 Td (  documented the immediately preceding photographic-device-frame pass, local validation language, PDF) Tj ET
+BT /F1 9.20 Tf 54.00 256.50 Td (  metadata expectations, and the root-level part-number naming convention.) Tj ET
+BT /F1 9.20 Tf 54.00 243.75 Td (- Compared portfolio_worklog_august1_part1.pdf and portfolio_worklog_july30.pdf as mature longer-form) Tj ET
+BT /F1 9.20 Tf 54.00 231.00 Td (  references, while keeping portfolio_worklog_july31.pdf in view as the compact follow-up exception.) Tj ET
+BT /F1 9.20 Tf 54.00 218.25 Td (- Checked PDF metadata with pdfinfo and preserved the same root-level filename style, letter-size page) Tj ET
+BT /F1 9.20 Tf 54.00 205.50 Td (  geometry, PDF 1.4 output, Codex author/creator/producer metadata, and Helvetica-style base-font) Tj ET
+BT /F1 9.20 Tf 54.00 192.75 Td (  convention.) Tj ET
+BT /F1 9.20 Tf 54.00 180.00 Td (- Reviewed git history through git log, git show --stat, git show --name-status, git diff --stat,) Tj ET
+BT /F1 9.20 Tf 54.00 167.25 Td (  targeted source inspection, and the final source commit e1c2a81. HEAD and origin/main both resolved to) Tj ET
+BT /F1 9.20 Tf 54.00 154.50 Td (  e1c2a81 before this PDF was generated.) Tj ET
+BT /F1 9.20 Tf 54.00 141.75 Td (- Reviewed app/page.tsx, app/globals.css, app/ProjectCarouselButton.tsx,) Tj ET
+BT /F1 9.20 Tf 54.00 129.00 Td (  public/images/cinerific-hero-tablet-tab-s7-uniform.png, and the refreshed) Tj ET
+BT /F1 9.20 Tf 54.00 116.25 Td (  portfolio_PROJECT_SNAPSHOT.txt as the direct files involved in the Part 3 work scope.) Tj ET
+BT /F2 10.60 Tf 54.00 87.50 Td (Baseline Status Before August 1 Part 3 Work) Tj ET
+BT /F1 8.30 Tf 305.80 24.00 Td (Prahlin Portfolio Work Log - August 1, 2026 \(Part 3\) Page 1) Tj ET
+endstream
+endobj
+4 0 obj
+<< /Length 5908 >>
+stream
+BT /F1 9.20 Tf 54.00 738.00 Td (- August 1 Part 2 had already replaced the landing-page and Alla Vostra smartphone hero treatments with) Tj ET
+BT /F1 9.20 Tf 54.00 725.25 Td (  photographic device-frame PNGs and documented that the landing-page tablet frame was intentionally left) Tj ET
+BT /F1 9.20 Tf 54.00 712.50 Td (  unchanged for a separate request.) Tj ET
+BT /F1 9.20 Tf 54.00 699.75 Td (- The remaining landing-page Cinerific tablet preview still used the older CSS tablet shell around) Tj ET
+BT /F1 9.20 Tf 54.00 687.00 Td (  cinerific_promo.png, which made it look more like a mock/cartoon frame than the newly upgraded) Tj ET
+BT /F1 9.20 Tf 54.00 674.25 Td (  smartphone frames.) Tj ET
+BT /F1 9.20 Tf 54.00 661.50 Td (- The Cinerific tablet frame needed to remain landing-page-only and should not change project-detail) Tj ET
+BT /F1 9.20 Tf 54.00 632.75 Td (  screenshots, Cinerific app source, or unrelated Portfolio case-study surfaces.) Tj ET
+BT /F1 9.20 Tf 54.00 620.00 Td (- The user prioritized the visual quality of the first-viewport hero over exact aspect-ratio) Tj ET
+BT /F1 9.20 Tf 54.00 607.25 Td (  preservation, allowing AR/dimension adjustments if they made the real-world frame look sleeker and) Tj ET
+BT /F1 9.20 Tf 54.00 594.50 Td (  closer to the black/silver smartphone frames.) Tj ET
+BT /F1 9.20 Tf 54.00 581.75 Td (- The hero visual stack already had responsive sizing and centering logic from earlier work, but the) Tj ET
+BT /F1 9.20 Tf 54.00 569.00 Td (  browser-side offset still centered against the full chip-stack height. When the tech chips changed from) Tj ET
+BT /F1 9.20 Tf 54.00 556.25 Td (  a one-row layout to a three-row layout, the profile/photo/device composition could drift downward.) Tj ET
+BT /F1 9.20 Tf 54.00 543.50 Td (- The local dev workflow was still using 127.0.0.1:3000 and required cache resets when stale) Tj ET
+BT /F2 10.60 Tf 54.00 522.75 Td (Turbopack/client behavior masked source changes.) Tj ET
+BT /F2 10.60 Tf 54.00 494.00 Td (Goals for August 1 Part 3) Tj ET
+BT /F1 9.20 Tf 54.00 481.25 Td (- Replace the landing-page Cinerific tablet presentation with a real-world, black/silver, thin-bezel) Tj ET
+BT /F1 9.20 Tf 54.00 468.50 Td (  device-frame treatment that visually belongs beside the photographic smartphone frames.) Tj ET
+BT /F1 9.20 Tf 54.00 455.75 Td (- Keep the change scoped to the landing page hero and avoid altering Cinerific project-page content or) Tj ET
+BT /F1 9.20 Tf 54.00 443.00 Td (  external application repositories.) Tj ET
+BT /F1 9.20 Tf 54.00 430.25 Td (- Remove or neutralize the ugly gray/thick-bezel effect and visible dark-gray horizontal/vertical seam) Tj ET
+BT /F1 9.20 Tf 54.00 417.50 Td (  lines that appeared during early tablet-frame attempts.) Tj ET
+BT /F1 9.20 Tf 54.00 404.75 Td (- Preserve the Cinerific screenshot content inside the tablet frame, allowing crop, resize, or edge) Tj ET
+BT /F1 9.20 Tf 54.00 392.00 Td (  clipping as needed for a cleaner hero composition.) Tj ET
+BT /F1 9.20 Tf 54.00 379.25 Td (- Lock the profile photo plus three device-frame screenshot stack between the top navigation bar and the) Tj ET
+BT /F1 9.20 Tf 54.00 366.50 Td (  tech-chip stack so the stack no longer moves downward when the chips wrap from one row to three rows.) Tj ET
+BT /F1 9.20 Tf 54.00 353.75 Td (- Clear dev cache when needed, verify the corrected behavior in the browser, and leave changes local) Tj ET
+BT /F1 9.20 Tf 54.00 341.00 Td (  unless the user explicitly requests pushing or deployment.) Tj ET
+BT /F1 9.20 Tf 54.00 328.25 Td (- Generate the next August 1 Portfolio worklog PDF using the established part-number convention.) Tj ET
+BT /F2 10.60 Tf 54.00 299.50 Td (Work Completed - Worklog and Snapshot Review) Tj ET
+BT /F1 9.20 Tf 54.00 286.75 Td (- Confirmed the current Portfolio worklog inventory and recognized that August 1 already had Part 1 and) Tj ET
+BT /F1 9.20 Tf 54.00 274.00 Td (  Part 2 PDFs, making the correct next artifact portfolio_worklog_august1_part3.pdf after the user) Tj ET
+BT /F1 9.20 Tf 54.00 261.25 Td (  clarified that the intended session date is August 1.) Tj ET
+BT /F1 9.20 Tf 54.00 248.50 Td (- Regenerated portfolio_PROJECT_SNAPSHOT.txt with ./read_project.sh before creating the PDF so the) Tj ET
+BT /F1 9.20 Tf 54.00 235.75 Td (  documentation reflects the current app source, committed tablet asset, PDF inventory, and git context.) Tj ET
+BT /F1 9.20 Tf 54.00 223.00 Td (- Re-extracted and reviewed all existing Portfolio worklog PDFs to maintain the same section order,) Tj ET
+BT /F1 9.20 Tf 54.00 210.25 Td (  technical voice, validation wording, files-touched style, local-only notes, and output-artifact close.) Tj ET
+BT /F1 9.20 Tf 54.00 197.50 Td (- Confirmed the source branch state: main and origin/main both pointed at e1c2a81, while the refreshed) Tj ET
+BT /F1 9.20 Tf 54.00 184.75 Td (  snapshot and new PDF were local documentation artifacts at generation time.) Tj ET
+BT /F2 10.60 Tf 54.00 156.00 Td (Work Completed - Cinerific Hero Tablet Frame Research and Replacement) Tj ET
+BT /F1 9.20 Tf 54.00 143.25 Td (- Investigated real-world tablet-frame options for the landing-page Cinerific hero, starting from the) Tj ET
+BT /F1 9.20 Tf 54.00 130.50 Td (  user request for a real photoreplica-style device frame that matched the Cinerific Standard AVD aspect) Tj ET
+BT /F1 9.20 Tf 54.00 117.75 Td (  ratio/pixel-dimension intent.) Tj ET
+BT /F1 9.20 Tf 54.00 105.00 Td (- Compared early tablet-frame attempts against the existing photographic smartphone frames and rejected) Tj ET
+BT /F1 9.20 Tf 54.00 92.25 Td (  treatments that looked too gray, too thick, grainy, uneven, or less sleek than the phones.) Tj ET
+BT /F1 9.20 Tf 54.00 79.50 Td (- Used a Samsung Galaxy Tab S7-style thin black/silver tablet proportion as the accepted visual) Tj ET
+BT /F1 8.30 Tf 305.80 24.00 Td (Prahlin Portfolio Work Log - August 1, 2026 \(Part 3\) Page 2) Tj ET
+endstream
+endobj
+5 0 obj
+<< /Length 5726 >>
+stream
+BT /F1 9.20 Tf 54.00 738.00 Td (  direction, because its landscape tablet silhouette better matched the Cinerific screenshot than a phone) Tj ET
+BT /F1 9.20 Tf 54.00 725.25 Td (  frame while still reading as a real device.) Tj ET
+BT /F1 9.20 Tf 54.00 712.50 Td (- Created public/images/cinerific-hero-tablet-tab-s7-uniform.png as a 1372 x 895 PNG containing the) Tj ET
+BT /F1 9.20 Tf 54.00 699.75 Td (  Cinerific hero screenshot inside a cleaned, uniform tablet frame.) Tj ET
+BT /F1 9.20 Tf 54.00 687.00 Td (- Removed the dark-gray bezel seam/button/speaker artifacts that caused visible horizontal and vertical) Tj ET
+BT /F1 9.20 Tf 54.00 674.25 Td (  line marks along the top, left, and bottom rails during earlier iterations.) Tj ET
+BT /F1 9.20 Tf 54.00 661.50 Td (- Matched the problematic seam regions to the surrounding bezel look so the final frame reads as a smooth) Tj ET
+BT /F1 9.20 Tf 54.00 648.75 Td (  black/silver device, closer to the landing-page smartphone-frame language.) Tj ET
+BT /F1 9.20 Tf 54.00 636.00 Td (- Allowed the Cinerific screenshot to clip and scale inside the tablet device as needed for a polished) Tj ET
+BT /F1 9.20 Tf 54.00 623.25 Td (  first-viewport composition rather than forcing the old CSS mockup geometry.) Tj ET
+BT /F2 10.60 Tf 54.00 594.50 Td (Work Completed - Landing Hero Tablet Rendering) Tj ET
+BT /F1 9.20 Tf 54.00 581.75 Td (- Updated TabletPreview in app/page.tsx so the landing hero now renders the new full-frame Cinerific PNG) Tj ET
+BT /F1 9.20 Tf 54.00 569.00 Td (  directly instead of building a CSS tablet shell, CSS camera, CSS screen, and cinerific_promo.png image) Tj ET
+BT /F1 9.20 Tf 54.00 556.25 Td (  inlay.) Tj ET
+BT /F1 9.20 Tf 54.00 527.50 Td (- Added the tablet-shell-capture class path for the new direct image-backed frame while preserving the) Tj ET
+BT /F1 9.20 Tf 54.00 514.75 Td (  existing tablet-shell positioning, rotation, scale, and layering that place the tablet among the two) Tj ET
+BT /F1 9.20 Tf 54.00 502.00 Td (  phone frames.) Tj ET
+BT /F1 9.20 Tf 54.00 489.25 Td (- Updated app/globals.css so .tablet-shell.tablet-shell-capture has a transparent background, no CSS) Tj ET
+BT /F1 9.20 Tf 54.00 476.50 Td (  border, no border radius, no box-shadow, no padding, an explicit 1372 / 895 aspect ratio, and disabled) Tj ET
+BT /F1 9.20 Tf 54.00 463.75 Td (  inherited pseudo-element frame overlays.) Tj ET
+BT /F1 9.20 Tf 54.00 451.00 Td (- Added .tablet-framed-image object-fit/object-position and drop-shadow rules so the new real-frame asset) Tj ET
+BT /F1 9.20 Tf 54.00 438.25 Td (  sits in the established hero composition without reintroducing the old mock-device shell.) Tj ET
+BT /F1 9.20 Tf 54.00 425.50 Td (- Kept the change scoped to the landing-page hero; dedicated project pages and screenshot-preview systems) Tj ET
+BT /F1 9.20 Tf 54.00 412.75 Td (  were not changed by this tablet-frame pass.) Tj ET
+BT /F2 10.60 Tf 54.00 384.00 Td (Work Completed - Hero Visual Centering) Tj ET
+BT /F1 9.20 Tf 54.00 371.25 Td (- Inspected the existing hero sizing and ProjectCarouselButton layout synchronizer to understand why the) Tj ET
+BT /F1 9.20 Tf 54.00 358.50 Td (  profile/photo/device stack still shifted when the tech-chip stack changed row count.) Tj ET
+BT /F1 9.20 Tf 54.00 345.75 Td (- Identified that the browser-side --hero-visual-center-offset calculation targeted the midpoint between) Tj ET
+BT /F1 9.20 Tf 54.00 333.00 Td (  navRect.top and stackRect.bottom, so the visual target moved down when the chip stack became taller.) Tj ET
+BT /F1 9.20 Tf 54.00 320.25 Td (- Changed the centering target in app/ProjectCarouselButton.tsx to the midpoint between navRect.bottom) Tj ET
+BT /F1 9.20 Tf 54.00 307.50 Td (  and stackRect.top, matching the user-confirmed reference points: the bottom of the top nav bar and the) Tj ET
+BT /F1 9.20 Tf 54.00 294.75 Td (  top of the chip stack.) Tj ET
+BT /F1 9.20 Tf 54.00 282.00 Td (- Preserved the existing visual-frame union measurement across .profile-photo, .phone-shell-commerce,) Tj ET
+BT /F1 9.20 Tf 54.00 269.25 Td (  .phone-shell-finance, and .tablet-shell so the offset still responds to the actual rendered) Tj ET
+BT /F1 9.20 Tf 54.00 256.50 Td (  device/profile bounds.) Tj ET
+BT /F1 9.20 Tf 54.00 243.75 Td (- Preserved the mobile/single-column guard that removes --hero-visual-center-offset below the two-column) Tj ET
+BT /F1 9.20 Tf 54.00 231.00 Td (  breakpoint, keeping the correction scoped to the wide hero layout where the drift occurred.) Tj ET
+BT /F1 9.20 Tf 54.00 218.25 Td (- Added a hero-grid min-height variable and desktop hero-visual layout-height/margin-top CSS support so) Tj ET
+BT /F1 9.20 Tf 54.00 205.50 Td (  the two-column visual area continues to have a stable geometry base while runtime centering locks to) Tj ET
+BT /F1 9.20 Tf 54.00 192.75 Td (  the nav-to-chip corridor.) Tj ET
+BT /F1 9.20 Tf 54.00 180.00 Td (- Corrected the earlier over-broad viewport-centering attempt after the user clarified that the nav bar) Tj ET
+BT /F1 9.20 Tf 54.00 167.25 Td (  and chip stack were the top/bottom reference points.) Tj ET
+BT /F2 10.60 Tf 54.00 138.50 Td (Work Completed - Local Cache Handling and Verification) Tj ET
+BT /F1 9.20 Tf 54.00 125.75 Td (- Cleared stale Next/Turbopack development output by stopping the existing port-3000 dev processes and) Tj ET
+BT /F1 9.20 Tf 54.00 113.00 Td (  moving .next aside into /tmp instead of deleting it directly.) Tj ET
+BT /F1 9.20 Tf 54.00 100.25 Td (- Restarted npm run dev -- --hostname 127.0.0.1 --port 3000 after cache resets and confirmed the local) Tj ET
+BT /F1 9.20 Tf 54.00 87.50 Td (  page returned HTTP 200.) Tj ET
+BT /F1 8.30 Tf 305.80 24.00 Td (Prahlin Portfolio Work Log - August 1, 2026 \(Part 3\) Page 3) Tj ET
+endstream
+endobj
+6 0 obj
+<< /Length 5650 >>
+stream
+BT /F1 9.20 Tf 54.00 738.00 Td (- Used direct Chrome DevTools Protocol measurements to compare wide hero states around the chip-wrap) Tj ET
+BT /F1 9.20 Tf 54.00 725.25 Td (  breakpoint, including 1240 x 1000, 1180 x 1000, 1210 x 1180, 1190 x 1180, 1600 x 1180, and 1900 x 1180.) Tj ET
+BT /F1 9.20 Tf 54.00 712.50 Td (- Verified that the final nav-to-chip corridor logic produced a visual-center delta of 0 at both the) Tj ET
+BT /F1 9.20 Tf 54.00 699.75 Td (  one-row and three-row chip states.) Tj ET
+BT /F1 9.20 Tf 54.00 687.00 Td (- Verified that the final three-row state did not overlap the chip stack and that the tablet remained) Tj ET
+BT /F1 9.20 Tf 54.00 674.25 Td (  above the chip area while the profile/device composition stayed centered in the intended corridor.) Tj ET
+BT /F1 9.20 Tf 54.00 661.50 Td (- Captured and inspected local screenshots, including the final 1180 x 1000 three-row state, to confirm) Tj ET
+BT /F1 9.20 Tf 54.00 648.75 Td (  the math also looked visually acceptable.) Tj ET
+BT /F1 9.20 Tf 54.00 636.00 Td (- Ran npm run check successfully after the source changes.) Tj ET
+BT /F1 9.20 Tf 54.00 623.25 Td (- Confirmed the restarted local dev server continued serving http://127.0.0.1:3000/ after the final cache) Tj ET
+BT /F1 9.20 Tf 54.00 610.50 Td (  refresh.) Tj ET
+BT /F2 10.60 Tf 54.00 581.75 Td (Validation Summary) Tj ET
+BT /F1 9.20 Tf 54.00 569.00 Td (- npm run check passed with tsc --noEmit.) Tj ET
+BT /F1 9.20 Tf 54.00 556.25 Td (- curl against http://127.0.0.1:3000/ returned 200 after the final dev-cache reset.) Tj ET
+BT /F1 9.20 Tf 54.00 543.50 Td (- Headless Chrome/CDP measurement confirmed the profile/photo/device visual center exactly matched the) Tj ET
+BT /F1 9.20 Tf 54.00 530.75 Td (  midpoint between the nav-bar bottom and chip-stack top in the tested one-row and three-row chip states.) Tj ET
+BT /F1 9.20 Tf 54.00 518.00 Td (- Final measured states reported 0 center delta and no visual overlap with the chip stack.) Tj ET
+BT /F1 9.20 Tf 54.00 505.25 Td (- The new Cinerific tablet asset was verified as a PNG image at 1372 x 895 pixels with RGBA data.) Tj ET
+BT /F1 9.20 Tf 54.00 492.50 Td (- The final source commit reviewed for this worklog was e1c2a81, and main matched origin/main before the) Tj ET
+BT /F2 10.60 Tf 54.00 471.75 Td (PDF-generation step.) Tj ET
+BT /F1 9.20 Tf 54.00 459.00 Td (- No commit, push, deployment, external app repository change, package install, or production-site update) Tj ET
+BT /F1 9.20 Tf 54.00 446.25 Td (  was performed as part of this worklog-generation step.) Tj ET
+BT /F2 10.60 Tf 54.00 409.50 Td (Files Touched During August 1 Part 3 Portfolio Work) Tj ET
+BT /F1 9.20 Tf 54.00 396.75 Td (- app/ProjectCarouselButton.tsx - changed the hero visual centering target from the) Tj ET
+BT /F1 9.20 Tf 54.00 384.00 Td (  nav-top/full-chip-stack-bottom midpoint to the nav-bottom/chip-stack-top midpoint, preventing downward) Tj ET
+BT /F1 9.20 Tf 54.00 371.25 Td (  drift when the chips wrap into more rows.) Tj ET
+BT /F1 9.20 Tf 54.00 358.50 Td (- app/globals.css - added hero-grid min-height variable support, desktop hero-visual) Tj ET
+BT /F1 9.20 Tf 54.00 345.75 Td (  layout-height/margin-top support, tablet-shell-capture direct-image styling, disabled old CSS tablet) Tj ET
+BT /F1 9.20 Tf 54.00 333.00 Td (  pseudo-frame overlays for the captured tablet asset, and added tablet-framed-image fit/shadow behavior.) Tj ET
+BT /F1 9.20 Tf 54.00 320.25 Td (- app/page.tsx - changed TabletPreview to render the new Cinerific real-frame PNG directly instead of) Tj ET
+BT /F1 9.20 Tf 54.00 307.50 Td (  composing the old CSS tablet shell, camera, screen, and cinerific_promo.png inlay.) Tj ET
+BT /F1 9.20 Tf 54.00 294.75 Td (- public/images/cinerific-hero-tablet-tab-s7-uniform.png - added the cleaned 1372 x 895 Cinerific) Tj ET
+BT /F1 9.20 Tf 54.00 282.00 Td (  tablet-frame hero asset with the screenshot set into a smoother black/silver tablet bezel.) Tj ET
+BT /F1 9.20 Tf 54.00 269.25 Td (- portfolio_PROJECT_SNAPSHOT.txt - regenerated by ./read_project.sh for current source context before the) Tj ET
+BT /F2 10.60 Tf 54.00 248.50 Td (PDF generation pass.) Tj ET
+BT /F1 9.20 Tf 54.00 235.75 Td (- portfolio_worklog_august1_part3.pdf - generated as this August 1 Part 3 Portfolio worklog artifact in) Tj ET
+BT /F1 9.20 Tf 54.00 223.00 Td (  the root-level Portfolio worklog convention.) Tj ET
+BT /F2 10.60 Tf 54.00 194.25 Td (Follow-Up Context) Tj ET
+BT /F1 9.20 Tf 54.00 181.50 Td (- The public source branch is already represented by origin/main at e1c2a81, including the landing hero) Tj ET
+BT /F1 9.20 Tf 54.00 168.75 Td (  tablet-frame and centering updates documented by this PDF.) Tj ET
+BT /F1 9.20 Tf 54.00 156.00 Td (- The refreshed portfolio_PROJECT_SNAPSHOT.txt and this August 1 Part 3 PDF remain local documentation) Tj ET
+BT /F1 9.20 Tf 54.00 143.25 Td (  artifacts until the user provides or approves a documentation commit.) Tj ET
+BT /F1 9.20 Tf 54.00 130.50 Td (- The accepted hero-centering invariant is now explicit: in wide/two-column layouts, the) Tj ET
+BT /F1 9.20 Tf 54.00 117.75 Td (  profile/photo/device-frame stack should center between the bottom of the top navigation bar and the top) Tj ET
+BT /F1 9.20 Tf 54.00 105.00 Td (  of the tech-chip stack, not between the nav top and the bottom of however many chip rows are currently) Tj ET
+BT /F1 9.20 Tf 54.00 92.25 Td (  visible.) Tj ET
+BT /F1 9.20 Tf 54.00 79.50 Td (- Future hero-chip breakpoint work should retest widths around the 1200px transition where the tech-chip) Tj ET
+BT /F1 8.30 Tf 305.80 24.00 Td (Prahlin Portfolio Work Log - August 1, 2026 \(Part 3\) Page 4) Tj ET
+endstream
+endobj
+7 0 obj
+<< /Length 2593 >>
+stream
+BT /F1 9.20 Tf 54.00 738.00 Td (  stack changes from one row to three rows.) Tj ET
+BT /F1 9.20 Tf 54.00 725.25 Td (- Future tablet-frame edits should preserve the final black/silver, thin-bezel, uniform-rail look unless) Tj ET
+BT /F1 9.20 Tf 54.00 712.50 Td (  the user asks to restore real hardware seam details.) Tj ET
+BT /F1 9.20 Tf 54.00 699.75 Td (- Because the Cinerific hero tablet now uses a full-frame raster asset, future Cinerific hero artwork) Tj ET
+BT /F1 9.20 Tf 54.00 687.00 Td (  changes should update the PNG asset or switch to another direct-image frame rather than mixing the old) Tj ET
+BT /F2 10.60 Tf 54.00 666.25 Td (CSS tablet shell back into the landing hero.) Tj ET
+BT /F1 9.20 Tf 54.00 653.50 Td (- The direct framed PNG pattern now applies to the landing hero smartphone and Cinerific tablet) Tj ET
+BT /F1 9.20 Tf 54.00 640.75 Td (  treatments. Future device-frame changes should distinguish between already-framed images and raw) Tj ET
+BT /F1 9.20 Tf 54.00 628.00 Td (  screenshots before adding CSS borders, cameras, or pseudo-elements.) Tj ET
+BT /F1 9.20 Tf 54.00 615.25 Td (- Continue treating future Portfolio source, PDF, and snapshot changes as local-only unless the user) Tj ET
+BT /F1 9.20 Tf 54.00 602.50 Td (  explicitly asks to commit, push, deploy, publish, or update the public website.) Tj ET
+BT /F2 10.60 Tf 54.00 573.75 Td (Output Artifact) Tj ET
+BT /F1 9.20 Tf 54.00 561.00 Td (- Generated file: portfolio_worklog_august1_part3.pdf.) Tj ET
+BT /F1 9.20 Tf 54.00 548.25 Td (- Location: /Users/prahlin/gh/portfolio/portfolio_worklog_august1_part3.pdf.) Tj ET
+BT /F1 9.20 Tf 54.00 535.50 Td (- Naming follows the existing root-level Portfolio convention and the established same-day part-number) Tj ET
+BT /F1 9.20 Tf 54.00 522.75 Td (  convention: portfolio_worklog_august1_part3.pdf.) Tj ET
+BT /F1 9.20 Tf 54.00 510.00 Td (- Uses the same daily worklog structure and compact technical voice established by) Tj ET
+BT /F1 9.20 Tf 54.00 497.25 Td (  portfolio_worklog_july11.pdf through portfolio_worklog_august1_part2.pdf.) Tj ET
+BT /F1 9.20 Tf 54.00 484.50 Td (- Generated with a small standard-library PDF writer; no external PDF dependency was installed for this) Tj ET
+BT /F1 9.20 Tf 54.00 471.75 Td (  artifact.) Tj ET
+BT /F1 9.20 Tf 54.00 459.00 Td (- The local project date used for this filename and title is Saturday, August 1, 2026 EDT, following the) Tj ET
+BT /F1 9.20 Tf 54.00 446.25 Td (  user's date clarification for this session.) Tj ET
+BT /F1 8.30 Tf 305.80 24.00 Td (Prahlin Portfolio Work Log - August 1, 2026 \(Part 3\) Page 5) Tj ET
+endstream
+endobj
+8 0 obj
+<< /Type /Page /Parent 13 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> /Contents 3 0 R >>
+endobj
+9 0 obj
+<< /Type /Page /Parent 13 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> /Contents 4 0 R >>
+endobj
+10 0 obj
+<< /Type /Page /Parent 13 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> /Contents 5 0 R >>
+endobj
+11 0 obj
+<< /Type /Page /Parent 13 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> /Contents 6 0 R >>
+endobj
+12 0 obj
+<< /Type /Page /Parent 13 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> /Contents 7 0 R >>
+endobj
+13 0 obj
+<< /Type /Pages /Kids [8 0 R 9 0 R 10 0 R 11 0 R 12 0 R] /Count 5 >>
+endobj
+14 0 obj
+<< /Type /Catalog /Pages 13 0 R >>
+endobj
+15 0 obj
+<< /Title (Prahlin Portfolio Work Log - August 1, 2026 \(Part 3\)) /Subject (Portfolio website development worklog) /Author (Codex) /Creator (Codex standard-library PDF generator) /Producer (Codex standard-library PDF generator) /CreationDate (D:20260801203550-04'00') /ModDate (D:20260801203550-04'00') >>
+endobj
+xref
+0 16
+0000000000 65535 f 
+0000000015 00000 n 
+0000000085 00000 n 
+0000000160 00000 n 
+0000006375 00000 n 
+0000012334 00000 n 
+0000018111 00000 n 
+0000023812 00000 n 
+0000026456 00000 n 
+0000026593 00000 n 
+0000026730 00000 n 
+0000026868 00000 n 
+0000027006 00000 n 
+0000027144 00000 n 
+0000027229 00000 n 
+0000027280 00000 n 
+trailer
+<< /Size 16 /Root 14 0 R /Info 15 0 R >>
+startxref
+27603
+%%EOF
