@@ -1,5 +1,5 @@
 Portfolio Next.js PROJECT SNAPSHOT
-Generated: Sat Aug  1 19:11:18 EDT 2026
+Generated: Sat Aug  1 19:23:20 EDT 2026
 Project directory: /Users/prahlin/gh/portfolio
 
 IMPORTANT INSTRUCTIONS FOR CHATGPT & CODEX:
@@ -97,6 +97,7 @@ PROJECT FILE TREE
 /Users/prahlin/gh/portfolio/package-lock.json
 /Users/prahlin/gh/portfolio/package.json
 /Users/prahlin/gh/portfolio/portfolio_worklog_august1_part1.pdf
+/Users/prahlin/gh/portfolio/portfolio_worklog_august1_part2.pdf
 /Users/prahlin/gh/portfolio/portfolio_worklog_july11.pdf
 /Users/prahlin/gh/portfolio/portfolio_worklog_july14.pdf
 /Users/prahlin/gh/portfolio/portfolio_worklog_july15_part1.pdf
@@ -8759,7 +8760,8 @@ Status:
  M portfolio_PROJECT_SNAPSHOT.txt
 
 Recent commits:
-1f903dc (HEAD -> main, origin/main) Refined portfolio device mockups and August worklog - Replaced Alla Vostra hero device frames with photoreal framed mockups, including dark Space Gray short devices. - Updated landing page hero smartphone mockups to use matching real device frames while leaving the tablet frame unchanged. - Added the August 1 Part 1 worklog PDF and refreshed the project snapshot.
+2a963b7 (HEAD -> main, origin/main) Generated the latest customary session pdf worklog for the relevant project, dated August 1 (Part 2), 2026.
+1f903dc Refined portfolio device mockups and August worklog - Replaced Alla Vostra hero device frames with photoreal framed mockups, including dark Space Gray short devices. - Updated landing page hero smartphone mockups to use matching real device frames while leaving the tablet frame unchanged. - Added the August 1 Part 1 worklog PDF and refreshed the project snapshot.
 a796e3d feat(projects): refreshed app store hero CTAs across case studies
 22aab85 Refined Alla Vostra product flow presentation
 4faf781 generated the customary pdf session worklog for the relevant project on July 31, 2026.
@@ -8768,7 +8770,6 @@ c9ca77d generated the customary pdf session worklog for the relevant project, da
 8868c1a Refined case-study cards and Alla Vostra project page
 15d84ec Refined featured case study layout and responsive text behavior
 158ed57 generated pdf session worklog for the relevant project on July 29, 2026.
-3d7619e Refined hero layout and case study platform visuals
 
 Remotes:
 origin	https://github.com/Prahlin/portfolio.git (fetch)
@@ -8843,6 +8844,7 @@ PDF WORKLOG INVENTORY
 ============================================================
 
 portfolio_worklog_august1_part1.pdf | 36347 bytes | modified 2026-08-01 14:29:45
+portfolio_worklog_august1_part2.pdf | 30905 bytes | modified 2026-08-01 19:16:37
 portfolio_worklog_july11.pdf | 23528 bytes | modified 2026-07-12 00:10:01
 portfolio_worklog_july14.pdf | 29767 bytes | modified 2026-07-14 22:44:02
 portfolio_worklog_july15_part1.pdf | 25059 bytes | modified 2026-07-15 18:07:04

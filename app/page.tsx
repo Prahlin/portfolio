@@ -262,18 +262,14 @@ function PhonePreview({
 
 function TabletPreview() {
   return (
-    <div className="tablet-shell" aria-hidden="true">
-      <div className="tablet-camera" />
-      <div className="tablet-screen">
-        <Image
-          alt=""
-          className="tablet-screen-image"
-          fill
-          sizes="456px"
-          src="/images/cinerific_promo.png"
-        />
-        <div className="tablet-empty-grid" />
-      </div>
+    <div className="tablet-shell tablet-shell-capture" aria-hidden="true">
+      <Image
+        alt=""
+        className="tablet-framed-image"
+        fill
+        sizes="456px"
+        src="/images/cinerific-hero-tablet-tab-s7-uniform.png"
+      />
     </div>
   );
 }

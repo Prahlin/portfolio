@@ -776,7 +776,7 @@ export function ProjectCarouselButton() {
                 ) || 0;
               const visualCenterWithoutOffset =
                 (visualTop + visualBottom) / 2 - currentOffset;
-              const targetCenter = (navRect.top + stackRect.bottom) / 2;
+              const targetCenter = (navRect.bottom + stackRect.top) / 2;
               const nextOffset = targetCenter - visualCenterWithoutOffset;
 
               heroVisual.style.setProperty(

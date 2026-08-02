@@ -297,11 +297,12 @@ img[data-screenshot-preview] {
 }
 
 .hero-grid {
+  --hero-grid-min-height: calc(100vh - 140px);
   align-items: center;
   display: grid;
   gap: 56px;
   grid-template-columns: minmax(0, 0.95fr) minmax(420px, 1.05fr);
-  min-height: calc(100vh - 140px);
+  min-height: var(--hero-grid-min-height);
   padding: 16px 0 28px;
   position: relative;
   z-index: 2;
@@ -1025,6 +1026,17 @@ h3 {
   transform-origin: center center;
 }
 
+@media (min-width: 981px) {
+  .hero-visual {
+    --hero-visual-layout-height: 738px;
+    align-self: start;
+    margin-top: max(
+      0px,
+      calc((var(--hero-grid-min-height) - var(--hero-visual-layout-height)) / 2)
+    );
+  }
+}
+
 .profile-orbit {
   align-items: center;
   display: flex;
@@ -1088,6 +1100,16 @@ h3 {
   z-index: 4;
 }
 
+.tablet-shell.tablet-shell-capture {
+  aspect-ratio: 1372 / 895;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  height: auto;
+  padding: 0;
+}
+
 .tablet-shell::before {
   background: linear-gradient(180deg, #5c625d, #141615);
   border-radius: 99px;
@@ -1100,6 +1122,10 @@ h3 {
   width: 52px;
 }
 
+.tablet-shell.tablet-shell-capture::before {
+  display: none;
+}
+
 .tablet-shell::after {
   border-radius: inherit;
   box-shadow:
@@ -1109,6 +1135,10 @@ h3 {
   inset: 0;
   pointer-events: none;
   position: absolute;
+}
+
+.tablet-shell.tablet-shell-capture::after {
+  display: none;
 }
 
 .tablet-camera {
@@ -1161,6 +1191,14 @@ h3 {
   object-fit: contain;
   object-position: center center;
   z-index: 1;
+}
+
+.tablet-framed-image {
+  filter:
+    drop-shadow(0 34px 52px rgba(0, 0, 0, 0.52))
+    drop-shadow(0 0 36px rgba(0, 191, 99, 0.1));
+  object-fit: contain;
+  object-position: center center;
 }
 
 .tablet-empty-grid {
