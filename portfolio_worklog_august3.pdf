@@ -1,0 +1,784 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [5 0 R 7 0 R 9 0 R 11 0 R 13 0 R 15 0 R 17 0 R] /Count 7 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+4 0 obj
+<< /Length 4674 >>
+stream
+BT
+/F1 10 Tf
+13.4 TL
+1 0 0 1 54 742 Tm
+(Prahlin Portfolio Work Log - August 3, 2026) Tj
+T*
+(Compiled summary for Monday, August 3, 2026 - focus: continuing the Prahl.dev Portfolio Alla) Tj
+T*
+(Vostra case-study page after the August 1 device-frame and product-flow passes, adding a) Tj
+T*
+(dedicated UI Foundations / UX Product Flow switcher, rebuilding the Product Flow visual as a) Tj
+T*
+(responsive DOM-based diagram, creating UI Foundations categories for color, typography,) Tj
+T*
+(iconography, photography, hero, and sticky icon samples, importing Alla Vostra app fonts and) Tj
+T*
+(image assets, validating the local and static-export builds, manually updating the Hostinger) Tj
+T*
+(deploy branch after GitHub Actions was blocked by an account billing issue, confirming prahl.dev) Tj
+T*
+(served the updated site, refreshing the Portfolio project snapshot, reviewing all prior) Tj
+T*
+(Portfolio PDF worklogs, and generating the August 3 Portfolio PDF worklog.) Tj
+T*
+(Generated in continuity with the established Prahlin Portfolio daily worklog cadence: compact) Tj
+T*
+(opening summary, source-material section, baseline section, goal list, work-completed sections,) Tj
+T*
+(validation section, files-touched list, follow-up context, and output-artifact close.) Tj
+T*
+() Tj
+T*
+(This artifact intentionally covers Prahlin/portfolio work performed after) Tj
+T*
+(portfolio_worklog_august1_part3.pdf and after the August 1 Part 3 source/documentation state.) Tj
+T*
+(The committed source state reviewed for this record is be8047df4b8b05587db53b6976e721ce6bdc84c1) Tj
+T*
+(on main, matching origin/main before this PDF was generated. The public Hostinger deploy branch) Tj
+T*
+(was manually updated to 5ecd726a927949de27b4c3f5f066180c4884c839 because the normal GitHub) Tj
+T*
+(Actions runner could not start. Alla Vostra application assets were read and copied only as) Tj
+T*
+(Portfolio documentation/display sources; Alla Vostra, Cinerific, Credit King, Figma, App Store,) Tj
+T*
+(and Google Play external application repositories were not modified for this record.) Tj
+T*
+() Tj
+T*
+(Source Materials Reviewed) Tj
+T*
+(- Ran ./read_project.sh from /Users/prahlin/gh/portfolio and regenerated) Tj
+T*
+(  portfolio_PROJECT_SNAPSHOT.txt before writing this worklog, preserving the project convention) Tj
+T*
+(  that Codex refreshes the current source snapshot before continuing Portfolio documentation) Tj
+T*
+(  work.) Tj
+T*
+(- Reviewed the refreshed portfolio_PROJECT_SNAPSHOT.txt, including project notes, current source) Tj
+T*
+(  tree, line-numbered source dumps, public image and font inventories, PDF inventory, deployment) Tj
+T*
+(  notes, git context, and the standing instruction to ask for a commit message before committing) Tj
+T*
+(  or pushing.) Tj
+T*
+(- Reviewed every pre-existing Portfolio root-level worklog PDF: portfolio_worklog_july11.pdf,) Tj
+T*
+(  portfolio_worklog_july14.pdf, portfolio_worklog_july15_part1.pdf,) Tj
+T*
+(  portfolio_worklog_july15_part2.pdf, portfolio_worklog_july16.pdf,) Tj
+T*
+(  portfolio_worklog_july19.pdf, portfolio_worklog_july20.pdf, portfolio_worklog_july21.pdf,) Tj
+T*
+(  portfolio_worklog_july22.pdf, portfolio_worklog_july23.pdf, portfolio_worklog_july24.pdf,) Tj
+T*
+(  portfolio_worklog_july25.pdf, portfolio_worklog_july29.pdf, portfolio_worklog_july30.pdf,) Tj
+T*
+(  portfolio_worklog_july31.pdf, portfolio_worklog_august1_part1.pdf,) Tj
+T*
+(  portfolio_worklog_august1_part2.pdf, and portfolio_worklog_august1_part3.pdf.) Tj
+T*
+(- Extracted text from all eighteen existing Portfolio PDFs with pdftotext and checked) Tj
+T*
+(  metadata/page counts with pdfinfo to preserve title cadence, opening-summary density, section) Tj
+T*
+(  order, compact bullet-heavy technical voice, validation language, files-touched lists,) Tj
+T*
+(  follow-up context, output-artifact close, root-level filename style, letter-size pages, PDF) Tj
+T*
+(  1.4 output, Codex author/creator/producer metadata, and Helvetica-style base-font convention.) Tj
+T*
+(- Used portfolio_worklog_august1_part3.pdf as the closest mature structural baseline because it) Tj
+T*
+(  documented the immediately preceding Portfolio visual-system cleanup and explicitly recorded) Tj
+T*
+(  snapshot refresh, full worklog review, local validation, and local-only artifact conventions.) Tj
+T*
+(- Kept portfolio_worklog_august1_part1.pdf in view as the closest Alla Vostra Product Flow) Tj
+T*
+(  reference, because it documented the earlier SVG-based flow diagram, source-button work,) Tj
+T*
+(  static-export validation language, Hostinger workflow review, and Product Flow page context.) Tj
+ET
+BT
+/F1 9 Tf
+1 0 0 1 338.00 35 Tm
+(Prahlin Portfolio Work Log - August 3, 2026 Page 1) Tj
+ET
+endstream
+endobj
+5 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 4 0 R >>
+endobj
+6 0 obj
+<< /Length 4246 >>
+stream
+BT
+/F1 10 Tf
+13.4 TL
+1 0 0 1 54 742 Tm
+(- Reviewed app/projects/alla-vostra/page.tsx, app/projects/alla-vostra/ProductFlowSwitcher.tsx,) Tj
+T*
+(  app/globals.css, public/fonts/alla-vostra/*, public/images/alla-vostra/*, package.json,) Tj
+T*
+(  .github/workflows/hostinger-static-export.yml, README.md, git history, the current origin/main) Tj
+T*
+(  state, and the manual hostinger-deploy branch state.) Tj
+T*
+(- Reviewed selected Alla Vostra application source files from /Users/prahlin/gh/alla_vostra/mob) Tj
+T*
+(  as asset/style references only, including data/shopOverlayProducts.js,) Tj
+T*
+(  components/AppHeader.js, components/StickyCartButton.js, components/StickyQuestionButton.js,) Tj
+T*
+(  components/ShoppingCartIcon.js, styles/stickyCartStyles.js, styles/stickyQuestionStyles.js,) Tj
+T*
+(  styles/headerStyles.js, and utils/stickyButtonLayout.js.) Tj
+T*
+() Tj
+T*
+(Baseline Status Before August 3 Work) Tj
+T*
+(- The August 1 work had already moved the Portfolio toward photographic device frames, refined) Tj
+T*
+(  the landing hero visual stack, and established stronger case-study source controls and Product) Tj
+T*
+(  Flow expectations.) Tj
+T*
+(- The Alla Vostra Product Flow section still mixed a static product-flow screenshot/SVG approach) Tj
+T*
+(  with the surrounding page and did not yet provide the requested UI Foundations versus UX) Tj
+T*
+(  Product Flow split.) Tj
+T*
+(- The user wanted a top-of-section switcher placed above the Product Flow heading, using) Tj
+T*
+(  full-width joined buttons whose labels resized on narrow screens without scaling the button) Tj
+T*
+(  boxes themselves.) Tj
+T*
+(- The UX Product Flow diagram needed to stop behaving like a static image. Its width needed to) Tj
+T*
+(  stretch horizontally with the window while preserving vertical geometry, section alignment,) Tj
+T*
+(  arrow centerlines, and node positions.) Tj
+T*
+(- The UI Foundations side needed to display the startup screenshot separately from the UX flow) Tj
+T*
+(  diagram and then scaffold reusable design-system categories beneath it.) Tj
+T*
+(- The Color, Typography, Iconography, Photography, Hero, and Icon samples needed to be grounded) Tj
+T*
+(  in actual Alla Vostra app assets, colors, fonts, labels, and source-component styling rather) Tj
+T*
+(  than generic placeholders.) Tj
+T*
+(- The existing screenshot reveal behavior was important: wide windows should initially show two) Tj
+T*
+(  stacks, narrow portrait windows should initially show one stack, and Show More / Show Less) Tj
+T*
+(  should remain generic and consistent.) Tj
+T*
+(- The official public website deployment path was still the Hostinger static export branch,) Tj
+T*
+(  normally produced by GitHub Actions from main.) Tj
+T*
+() Tj
+T*
+(Goals for August 3) Tj
+T*
+(- Replace the old Product Flow presentation with a switchable UI Foundations / UX Product Flow) Tj
+T*
+(  component while preserving the surrounding Alla Vostra page structure.) Tj
+T*
+(- Keep UX Product Flow as the default active view and show only the flow diagram there, while) Tj
+T*
+(  moving the startup screenshot into the UI Foundations view.) Tj
+T*
+(- Rebuild the UX Product Flow diagram as a DOM-based visual with stable vertical positioning and) Tj
+T*
+(  horizontally responsive width behavior instead of relying on a static image asset.) Tj
+T*
+(- Add UI Foundations categories 00 through 05, preserve the category/stage reveal interaction,) Tj
+T*
+(  and limit customized categories to the correct step sets.) Tj
+T*
+(- Build Colors & Theming around recurring Alla Vostra app colors, grouped as Primaries, Accents,) Tj
+T*
+(  and Neutrals, with named color squares and square-ish device-frame logic.) Tj
+T*
+(- Build Typography & Spacing using the app's Dream Avenue and TT Fors fonts, with orange sample) Tj
+T*
+(  frames and cream text matching the Alla Vostra palette.) Tj
+T*
+(- Build Iconography & Imagery around real app art, product photography, the layered app header) Tj
+T*
+(  hero, and sticky button icons, while removing unfinished placeholder stacks from that) Tj
+T*
+(  category.) Tj
+T*
+(- Validate locally, build for static export, work around the blocked GitHub Actions deploy path,) Tj
+ET
+BT
+/F1 9 Tf
+1 0 0 1 338.00 35 Tm
+(Prahlin Portfolio Work Log - August 3, 2026 Page 2) Tj
+ET
+endstream
+endobj
+7 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 6 0 R >>
+endobj
+8 0 obj
+<< /Length 4195 >>
+stream
+BT
+/F1 10 Tf
+13.4 TL
+1 0 0 1 54 742 Tm
+(  publish the current static export to the official hostinger-deploy branch, and confirm) Tj
+T*
+(  prahl.dev served the update.) Tj
+T*
+(- Generate the next Portfolio PDF worklog using Eastern-time date, existing naming conventions,) Tj
+T*
+(  and the mature 5-6 page worklog structure.) Tj
+T*
+() Tj
+T*
+(Work Completed - Product Flow Switcher and Page Rewire) Tj
+T*
+(- Replaced the inline Product Flow section in app/projects/alla-vostra/page.tsx with a dedicated) Tj
+T*
+(  ProductFlowSwitcher client component, passing through the existing launchScreen and) Tj
+T*
+(  screenshotGroups data.) Tj
+T*
+(- Added the full-width joined UI Foundations / UX Product Flow button stack above the Product) Tj
+T*
+(  Flow heading, preserving the requested placement above the green eyebrow text and matching the) Tj
+T*
+(  page's layout width.) Tj
+T*
+(- Renamed the UI side from UI Blueprint to UI Foundations everywhere visible in the new) Tj
+T*
+(  component.) Tj
+T*
+(- Set the heading eyebrow and headline to update with the active view: UI Foundations for the) Tj
+T*
+(  design-system side and UX Product Flow for the flow side.) Tj
+T*
+(- Preserved UX Product Flow as the default active view so the page continues opening on the) Tj
+T*
+(  user's product-flow diagram unless the user chooses UI Foundations.) Tj
+T*
+(- Ensured the UX view shows the flow diagram without the startup screenshot, and the UI) Tj
+T*
+(  Foundations view shows the startup screenshot without the flow diagram.) Tj
+T*
+(- Restored the existing UX stage sections after an intermediate regression, keeping stages 1-7) Tj
+T*
+(  available only when UX Product Flow is active.) Tj
+T*
+(- Added Stage 0 Tutorial to UX Product Flow with placeholder copy, Small/Large screenshot) Tj
+T*
+(  placeholders, and the same Show More / Show Less behavior used elsewhere.) Tj
+T*
+() Tj
+T*
+(Work Completed - Responsive UX Flow Diagram) Tj
+T*
+(- Rebuilt the Product Flow diagram as a coordinate-based DOM layout with rails, nodes, line) Tj
+T*
+(  segments, arrowheads, background plane, panel plane, and responsive CSS variables.) Tj
+T*
+(- Preserved the Tutorial, Browse, Shop, Cart, Checkout, Payment, and Confirmation rail structure) Tj
+T*
+(  from the prior static diagram.) Tj
+T*
+(- Recreated the node labels and routing structure, including Step 1 through Step 5, Home,) Tj
+T*
+(  Products, About Us, Contact, Shop, Tutorial, Selection, Cart, Contact, Address, Date & Time,) Tj
+T*
+(  Payment Method, Details Input, Confirmation Prompt, and Thank You / Order Confirmed.) Tj
+T*
+(- Adjusted the diagram background plane so it uses the same coordinate frame as the foreground) Tj
+T*
+(  nodes/arrows instead of scaling differently from the rest of the diagram.) Tj
+T*
+(- Anchored eyebrow/headline sizing in the Product Flow area so window stretching changes) Tj
+T*
+(  horizontal diagram behavior without changing heading height or moving vertical positions.) Tj
+T*
+(- Removed the former static-image scalability behavior for the flow diagram and startup) Tj
+T*
+(  screenshot, replacing it with a horizontally stretchable diagram whose vertical structure) Tj
+T*
+(  remains fixed.) Tj
+T*
+(- Kept the flow chart centered in the single-column visual layout and constrained its) Tj
+T*
+(  wide-screen width to the intended maximum without changing the vertical table height.) Tj
+T*
+() Tj
+T*
+(Work Completed - UI Foundations Category System) Tj
+T*
+(- Added UI Foundations category scaffolding for Colors & Theming, Typography & Spacing,) Tj
+T*
+(  Iconography & Imagery, Navigations, Controls & Inputs, and Visual Hierarchy.) Tj
+T*
+(- Renamed UI category labels through the requested iteration sequence, including the final) Tj
+T*
+(  category terminology and the CATEGORY label replacing STAGE on UI Foundations sections.) Tj
+T*
+(- Preserved the one-row-at-a-time reveal logic: wide windows show two stacks initially, narrow) Tj
+T*
+(  portrait windows show one stack initially, and additional stacks appear through Show More.) Tj
+T*
+(- Simplified all reveal buttons across the UI Foundations and UX Product Flow screen sections to) Tj
+ET
+BT
+/F1 9 Tf
+1 0 0 1 338.00 35 Tm
+(Prahlin Portfolio Work Log - August 3, 2026 Page 3) Tj
+ET
+endstream
+endobj
+9 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 8 0 R >>
+endobj
+10 0 obj
+<< /Length 4077 >>
+stream
+BT
+/F1 10 Tf
+13.4 TL
+1 0 0 1 54 742 Tm
+(  the generic Show More and Show Less labels.) Tj
+T*
+(- Limited Colors & Theming to Steps 1-3, Typography & Spacing to Steps 1-2, and Iconography &) Tj
+T*
+(  Imagery to Steps 1-4 so those customized categories no longer show irrelevant placeholder) Tj
+T*
+(  stacks.) Tj
+T*
+(- Kept the remaining UI Foundations categories on the default placeholder behavior so future) Tj
+T*
+(  work can fill them without disturbing the working reveal system.) Tj
+T*
+() Tj
+T*
+(Work Completed - Colors and Typography Foundations) Tj
+T*
+(- Identified and represented the recurring non-gradient Alla Vostra color set used across) Tj
+T*
+(  screenshots and app overlays, including cream/white, orange, brown accent, white, and) Tj
+T*
+(  black/charcoal neutral tones.) Tj
+T*
+(- Built Colors & Theming swatch groups as Primaries, Accents, and Neutrals, replacing generic) Tj
+T*
+(  Step labels with square color-frame presentations.) Tj
+T*
+(- Added official/common color names above the color squares, including Quarter Pearl Lusta,) Tj
+T*
+(  Rajah, Breen, White, Cod Gray, and Tuatara.) Tj
+T*
+(- Tuned portrait-mode alignment so one-line and two-line color names remain vertically balanced) Tj
+T*
+(  above their corresponding square swatches.) Tj
+T*
+(- Removed Step 4 and Step 5 only from Colors & Theming while preserving the Show More button) Tj
+T*
+(  when extra stacks are available.) Tj
+T*
+(- Copied Dream Avenue and TT Fors font files from the Alla Vostra app assets into) Tj
+T*
+(  public/fonts/alla-vostra and declared @font-face rules in app/globals.css.) Tj
+T*
+(- Built Typography & Spacing Step 1 as Fonts, showing Dream Avenue and TT Fors inside orange) Tj
+T*
+(  square frames with cream text, then tuned the sample sizing through the requested increases.) Tj
+T*
+(- Kept Typography Step 2 as a placeholder while removing Steps 3-5 from that category.) Tj
+T*
+() Tj
+T*
+(Work Completed - Iconography, Photography, Hero, and Sticky Icons) Tj
+T*
+(- Added Original Art under Iconography & Imagery using the app's truck, bargain, and SOFLO art) Tj
+T*
+(  assets, with the final labels Speedy Delivery, Great Deal, and Local Availability.) Tj
+T*
+(- Set the Original Art frames to the app-correct cream background after checking the Alla Vostra) Tj
+T*
+(  app source for the correct overlay fill behavior.) Tj
+T*
+(- Added Original Photography with the three checkout product images Piccola, Sei Perfetto, and) Tj
+T*
+(  Buon Natale, then anonymized the green eyebrow labels to Product #1, Product #2, and Product) Tj
+T*
+(  #3 while preserving product-name captions.) Tj
+T*
+(- Added Original Hero as Step 3, using the app header background image and cheeseboard_products) Tj
+T*
+(  overlay as layered assets rather than a screenshot crop.) Tj
+T*
+(- Changed Original Hero to include both Small and Android Large/tall device-frame versions, with) Tj
+T*
+(  transparent frame backing so the unused lower transparent area no longer appears as cream or) Tj
+T*
+(  black fill.) Tj
+T*
+(- Added Original Icons as Step 4 and recreated the Sticky Cart and question-mark Tutorial) Tj
+T*
+(  buttons as static samples from the actual app source styling.) Tj
+T*
+(- Ported the Shopping Cart SVG path directly from ShoppingCartIcon.js and matched the cart) Tj
+T*
+(  button's orange gradient, black border, rounded rectangle, white cart strokes, and shadow) Tj
+T*
+(  plate.) Tj
+T*
+(- Recreated the Tutorial sticky question button with white fill, black border, circular shape,) Tj
+T*
+(  and the orange gradient question mark treatment from StickyQuestionButton.js.) Tj
+T*
+(- Removed the abandoned Product #4 cheeseboard-only photo tile and removed Step 5 from) Tj
+T*
+(  Iconography & Imagery so the section ends on Original Icons.) Tj
+T*
+() Tj
+T*
+(Work Completed - Assets, Styling, and Deployment) Tj
+T*
+(- Imported Alla Vostra app image assets into public/images/alla-vostra, including) Tj
+T*
+(  truck1_square_whitefill.png, bargain_square_whitefill.png, soflo_square.png, Piccola, Sei) Tj
+ET
+BT
+/F1 9 Tf
+1 0 0 1 338.00 35 Tm
+(Prahlin Portfolio Work Log - August 3, 2026 Page 4) Tj
+ET
+endstream
+endobj
+11 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 10 0 R >>
+endobj
+12 0 obj
+<< /Length 3942 >>
+stream
+BT
+/F1 10 Tf
+13.4 TL
+1 0 0 1 54 742 Tm
+(  Perfetto, Buon Natale product PNGs, header-background-no-cheeseboard.png, and) Tj
+T*
+(  cheeseboard-products-overlay.png.) Tj
+T*
+(- Added substantial global CSS for the product-flow nav, single-view layout, DOM flow diagram,) Tj
+T*
+(  UI swatches, font samples, original art/photo grids, hero composition, sticky icon samples,) Tj
+T*
+(  and responsive narrow-window behavior.) Tj
+T*
+(- Ran npm run check and npm run build during the implementation cycle and kept the local Alla) Tj
+T*
+(  Vostra route returning HTTP 200.) Tj
+T*
+(- Confirmed main and origin/main both pointed to be8047d before the public deployment pass.) Tj
+T*
+(- Built the static export locally with npm run build:static after the GitHub Actions Hostinger) Tj
+T*
+(  workflow failed to start because the GitHub account was locked due to a billing issue.) Tj
+T*
+(- Mirrored the workflow locally by initializing the generated out directory as a) Tj
+T*
+(  hostinger-deploy branch payload, committing the static export as 5ecd726, and force-pushing) Tj
+T*
+(  hostinger-deploy to origin.) Tj
+T*
+(- Verified the remote hostinger-deploy branch points to 5ecd726a927949de27b4c3f5f066180c4884c839) Tj
+T*
+(  and main points to be8047df4b8b05587db53b6976e721ce6bdc84c1.) Tj
+T*
+(- Confirmed https://prahl.dev returned HTTP 200 with a Hostinger response and a Monday, August) Tj
+T*
+(  3, 2026 Last-Modified timestamp after the manual deploy.) Tj
+T*
+(- Confirmed the live https://prahl.dev/projects/alla-vostra page contained the new UI) Tj
+T*
+(  Foundations / UX Product Flow section content.) Tj
+T*
+() Tj
+T*
+(Validation Summary) Tj
+T*
+(- npm run check passed with tsc --noEmit during the final Iconography & Imagery section updates.) Tj
+T*
+(- npm run build passed with Next.js 16.2.10 and generated the expected static pages for /,) Tj
+T*
+(  /articles, /projects/alla-vostra, and /projects/cinerific.) Tj
+T*
+(- npm run build:static passed with NEXT_OUTPUT=export next build before the manual Hostinger) Tj
+T*
+(  deploy branch push.) Tj
+T*
+(- curl -I http://127.0.0.1:3000/projects/alla-vostra returned HTTP 200 during the local) Tj
+T*
+(  verification cycle.) Tj
+T*
+(- git push origin main reported Everything up-to-date because be8047d was already on) Tj
+T*
+(  origin/main.) Tj
+T*
+(- gh run list showed the automatic Hostinger workflow for be8047d failed before starting because) Tj
+T*
+(  the account was locked due to a billing issue.) Tj
+T*
+(- git -C out push --force --progress origin hostinger-deploy completed successfully, updating) Tj
+T*
+(  hostinger-deploy from b65dabe to 5ecd726.) Tj
+T*
+(- git ls-remote confirmed origin/main at be8047d and origin/hostinger-deploy at 5ecd726 after) Tj
+T*
+(  the manual deploy.) Tj
+T*
+(- curl -I https://prahl.dev returned HTTP 200, platform: hostinger, and Last-Modified: Tue, 04) Tj
+T*
+(  Aug 2026 04:17:26 GMT.) Tj
+T*
+(- curl -sL https://prahl.dev/projects/alla-vostra confirmed the live page includes the new UI) Tj
+T*
+(  Foundations / UX Product Flow content.) Tj
+T*
+(- ./read_project.sh completed successfully after deployment and regenerated) Tj
+T*
+(  portfolio_PROJECT_SNAPSHOT.txt for current source context before this PDF generation pass.) Tj
+T*
+() Tj
+T*
+(Files Touched During August 3 Portfolio Work) Tj
+T*
+(- app/projects/alla-vostra/ProductFlowSwitcher.tsx - added the new client-side UI Foundations /) Tj
+T*
+(  UX Product Flow switcher, DOM flow diagram, UI category scaffolding,) Tj
+T*
+(  color/font/icon/photo/hero/icon sample renderers, and reveal logic wiring.) Tj
+T*
+(- app/projects/alla-vostra/page.tsx - replaced the old inline Product Flow section rendering) Tj
+T*
+(  with ProductFlowSwitcher while preserving the existing launchScreen and screenshotGroups data) Tj
+T*
+(  source.) Tj
+T*
+(- app/globals.css - added product-flow switcher styling, DOM diagram styling, UI Foundations) Tj
+ET
+BT
+/F1 9 Tf
+1 0 0 1 338.00 35 Tm
+(Prahlin Portfolio Work Log - August 3, 2026 Page 5) Tj
+ET
+endstream
+endobj
+13 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 12 0 R >>
+endobj
+14 0 obj
+<< /Length 3872 >>
+stream
+BT
+/F1 10 Tf
+13.4 TL
+1 0 0 1 54 742 Tm
+(  swatch/font/photo/art/hero/icon presentation rules, responsive behavior, @font-face) Tj
+T*
+(  declarations, and heading/layout adjustments.) Tj
+T*
+(- public/fonts/alla-vostra/dream_avenue.ttf - added the Alla Vostra Dream Avenue font used by) Tj
+T*
+(  the Typography & Spacing sample.) Tj
+T*
+(- public/fonts/alla-vostra/tt_fors_trial_variable.ttf - added the Alla Vostra TT Fors variable) Tj
+T*
+(  font used by the Typography & Spacing sample and the Tutorial icon treatment.) Tj
+T*
+(- public/images/alla-vostra/truck1_square_whitefill.png, bargain_square_whitefill.png, and) Tj
+T*
+(  soflo_square.png - added original art assets for the Iconography & Imagery Original Art) Tj
+T*
+(  section.) Tj
+T*
+(- public/images/alla-vostra/piccola-product.png, sei-perfetto-product.png, and) Tj
+T*
+(  buon-natale-product.png - added product photography assets for the Original Photography) Tj
+T*
+(  section.) Tj
+T*
+(- public/images/alla-vostra/header-background-no-cheeseboard.png and) Tj
+T*
+(  cheeseboard-products-overlay.png - added layered header hero assets for the Original Hero) Tj
+T*
+(  section.) Tj
+T*
+(- next-env.d.ts - updated by the Next.js build/type-generation path from) Tj
+T*
+(  .next/dev/types/routes.d.ts to .next/types/routes.d.ts.) Tj
+T*
+(- portfolio_PROJECT_SNAPSHOT.txt - regenerated by ./read_project.sh after deployment for current) Tj
+T*
+(  project context.) Tj
+T*
+(- out/ - generated locally by npm run build:static and used as the manual hostinger-deploy) Tj
+T*
+(  branch payload; ignored by the Portfolio source snapshot and not part of the main source tree.) Tj
+T*
+(- portfolio_worklog_august3.pdf - generated as this August 3 Portfolio worklog artifact in the) Tj
+T*
+(  root-level Portfolio worklog convention.) Tj
+T*
+() Tj
+T*
+(Follow-Up Context) Tj
+T*
+(- The official website update was completed through the manual hostinger-deploy branch path) Tj
+T*
+(  because the configured GitHub Actions workflow could not run under the current GitHub account) Tj
+T*
+(  billing lock.) Tj
+T*
+(- Future normal deploys should return to the .github/workflows/hostinger-static-export.yml path) Tj
+T*
+(  once the GitHub Actions billing/account issue is resolved.) Tj
+T*
+(- The hostinger-deploy branch now contains a fresh static export from source commit be8047d, and) Tj
+T*
+(  prahl.dev served the updated content immediately after the branch push.) Tj
+T*
+(- The UI Foundations category system is now established enough for future category filling.) Tj
+T*
+(  Remaining placeholder-heavy categories include Navigations, Controls & Inputs, and Visual) Tj
+T*
+(  Hierarchy.) Tj
+T*
+(- The DOM-based UX Product Flow diagram should preserve vertical geometry during horizontal) Tj
+T*
+(  stretching. Future edits should adjust the shared coordinate data and CSS variables rather) Tj
+T*
+(  than returning to a static image.) Tj
+T*
+(- The Iconography & Imagery section now intentionally stops after Original Icons. Future) Tj
+T*
+(  additions should add explicit step titles and step arrays so placeholder stacks do not) Tj
+T*
+(  reappear unintentionally.) Tj
+T*
+(- The refreshed portfolio_PROJECT_SNAPSHOT.txt and this August 3 PDF are local documentation) Tj
+T*
+(  artifacts until the user requests or approves a documentation commit.) Tj
+T*
+(- Continue treating future Portfolio source, PDF, and snapshot changes as local-only unless the) Tj
+T*
+(  user explicitly asks to commit, push, deploy, publish, or update the public website.) Tj
+T*
+() Tj
+T*
+(Output Artifact) Tj
+T*
+(- Generated file: portfolio_worklog_august3.pdf.) Tj
+T*
+(- Location: /Users/prahlin/gh/portfolio/portfolio_worklog_august3.pdf.) Tj
+T*
+(- Naming follows the existing root-level Portfolio convention for a single daily PDF:) Tj
+T*
+(  portfolio_worklog_august3.pdf.) Tj
+ET
+BT
+/F1 9 Tf
+1 0 0 1 338.00 35 Tm
+(Prahlin Portfolio Work Log - August 3, 2026 Page 6) Tj
+ET
+endstream
+endobj
+15 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 14 0 R >>
+endobj
+16 0 obj
+<< /Length 617 >>
+stream
+BT
+/F1 10 Tf
+13.4 TL
+1 0 0 1 54 742 Tm
+(- Uses the same daily worklog structure and compact technical voice established by) Tj
+T*
+(  portfolio_worklog_july11.pdf through portfolio_worklog_august1_part3.pdf.) Tj
+T*
+(- Generated with a small standard-library PDF writer; no external PDF dependency was installed) Tj
+T*
+(  for this artifact.) Tj
+T*
+(- The local project date used for this filename and title is Monday, August 3, 2026 EDT,) Tj
+T*
+(  following the user's August 3 date correction for this session.) Tj
+T*
+() Tj
+ET
+BT
+/F1 9 Tf
+1 0 0 1 338.00 35 Tm
+(Prahlin Portfolio Work Log - August 3, 2026 Page 7) Tj
+ET
+endstream
+endobj
+17 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 16 0 R >>
+endobj
+18 0 obj
+<< /Title (Prahlin Portfolio Work Log - August 3, 2026) /Subject (Portfolio website development worklog) /Author (Codex) /Creator (Codex standard-library PDF generator) /Producer (Codex standard-library PDF generator) /CreationDate (D:20260803235000-04'00') /ModDate (D:20260803235000-04'00') >>
+endobj
+xref
+0 19
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000155 00000 n 
+0000000225 00000 n 
+0000004951 00000 n 
+0000005077 00000 n 
+0000009375 00000 n 
+0000009501 00000 n 
+0000013748 00000 n 
+0000013874 00000 n 
+0000018004 00000 n 
+0000018132 00000 n 
+0000022127 00000 n 
+0000022255 00000 n 
+0000026180 00000 n 
+0000026308 00000 n 
+0000026977 00000 n 
+0000027105 00000 n 
+trailer
+<< /Size 19 /Root 1 0 R /Info 18 0 R >>
+startxref
+27417
+%%EOF
