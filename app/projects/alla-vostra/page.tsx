@@ -3,7 +3,7 @@ import Image from "next/image";
 import { ArrowLeft, ArrowRight, Mail } from "lucide-react";
 
 import { ProofStats } from "../../ProofStats";
-import ExpandableFlowStacks from "./ExpandableFlowStacks";
+import ProductFlowSwitcher from "./ProductFlowSwitcher";
 
 export const metadata: Metadata = {
   title: "Alla Vostra | Full Stack Mobile Commerce Case Study",
@@ -794,59 +794,10 @@ export default function AllaVostraCaseStudy() {
 
       <section id="product-flow">
         <div className="site-shell">
-          <SectionHeading kicker="Product Flow" title="Product Flow" />
-          <div className="flow-layout">
-            <figure
-              className={`flow-screen flow-screen-main flow-screen-${launchScreen.aspect}`}
-            >
-              <div className="flow-image-frame">
-                <Image
-                  alt={launchScreen.title}
-                  fill
-                  priority
-                  sizes="(max-width: 720px) 72vw, 444px"
-                  src={launchScreen.src}
-                />
-              </div>
-              <figcaption>{launchScreen.caption}</figcaption>
-            </figure>
-
-            <figure
-              className="flow-chart-mockup"
-              aria-label="Alla Vostra product flow diagram"
-            >
-              <img
-                alt="Alla Vostra product flow diagram"
-                decoding="async"
-                src="/images/alla-vostra-product-flow-mockup.svg?v=thank-you-order-confirmed-20260801"
-              />
-            </figure>
-          </div>
-
-          <div className="flow-capture-groups">
-            {screenshotGroups.map((group, index) => (
-              <div className="flow-capture-group" key={group.title}>
-                <div className="flow-group-header">
-                  <span>Stage {String(index + 1).padStart(2, "0")}</span>
-                  <h3>{group.title}</h3>
-                  <p>{group.copy}</p>
-                </div>
-
-                <ExpandableFlowStacks
-                  collapsedLabel={`More ${group.title} Screens`}
-                  expandedLabel={`Hide ${group.title} Screens`}
-                  initialStackCount={
-                    group.title === "Browse" ||
-                    group.title === "Checkout"
-                      ? 2
-                      : group.stacks.length
-                  }
-                  mobilePortraitInitialStackCount={1}
-                  stacks={group.stacks}
-                />
-              </div>
-            ))}
-          </div>
+          <ProductFlowSwitcher
+            launchScreen={launchScreen}
+            screenshotGroups={screenshotGroups}
+          />
         </div>
       </section>
 

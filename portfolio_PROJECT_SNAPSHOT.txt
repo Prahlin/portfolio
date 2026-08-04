@@ -1,5 +1,5 @@
 Portfolio Next.js PROJECT SNAPSHOT
-Generated: Sat Aug  1 20:34:21 EDT 2026
+Generated: Mon Aug  3 17:32:14 EDT 2026
 Project directory: /Users/prahlin/gh/portfolio
 
 IMPORTANT INSTRUCTIONS FOR CHATGPT & CODEX:
@@ -98,6 +98,7 @@ PROJECT FILE TREE
 /Users/prahlin/gh/portfolio/package.json
 /Users/prahlin/gh/portfolio/portfolio_worklog_august1_part1.pdf
 /Users/prahlin/gh/portfolio/portfolio_worklog_august1_part2.pdf
+/Users/prahlin/gh/portfolio/portfolio_worklog_august1_part3.pdf
 /Users/prahlin/gh/portfolio/portfolio_worklog_july11.pdf
 /Users/prahlin/gh/portfolio/portfolio_worklog_july14.pdf
 /Users/prahlin/gh/portfolio/portfolio_worklog_july15_part1.pdf
@@ -8795,7 +8796,8 @@ Status:
  M portfolio_PROJECT_SNAPSHOT.txt
 
 Recent commits:
-e1c2a81 (HEAD -> main, origin/main) Updated landing hero device framing and alignment
+fd50ab9 (HEAD -> main, origin/main) Generated the latest customary session pdf worklog for the relevant project, dated August 1 (Part 3), 2026.
+e1c2a81 Updated landing hero device framing and alignment
 2a963b7 Generated the latest customary session pdf worklog for the relevant project, dated August 1 (Part 2), 2026.
 1f903dc Refined portfolio device mockups and August worklog - Replaced Alla Vostra hero device frames with photoreal framed mockups, including dark Space Gray short devices. - Updated landing page hero smartphone mockups to use matching real device frames while leaving the tablet frame unchanged. - Added the August 1 Part 1 worklog PDF and refreshed the project snapshot.
 a796e3d feat(projects): refreshed app store hero CTAs across case studies
@@ -8804,7 +8806,6 @@ a796e3d feat(projects): refreshed app store hero CTAs across case studies
 370412d feat(alla-vostra,landing): polish hero, buttons, and product-flow presentation across pages - Refined the landing page hero text pipeline row so the Concept > Prototype > Build > Shipment line matched the timing/sizing and stayed single-line/clipping-safe alongside the target row. - Replaced and tuned landing hero screenshot device frames to a more realistic phone/tablet visual style with reduced corner shininess and smoother scaling behavior. - Updated the Alla Vostra landing CTAs so View GitHub Project became View GitHub, then aligned the Contact button styling to the project’s Resume/Martin button language treatment. - Switched Contact label to Contact Dev, preserved the envelope icon, and increased the envelope hairline stroke as requested. Reworked Alla Vostra hero proof stats into the requested compact stack (including 0.4k, 0.1k, 2, and 1 values) and adjusted typography and stacking behavior. - Rebuilt the Alla Vostra feature/info cards in the hero (Full-Stack and X-Platform cards), including text wrapping, plus-sign alignment, and corner placement tweaks for mobile/desktop balance. - Replaced the Product Flow section copy and structure by removing the legacy “Flow System” explainer content, retaining only the visual sequence and requested sections/subsections. - Revised the flow diagram to include the updated sequence naming and structure (Browse/Cart/Checkout/Payment/Confirmation), removed Empty Cart Overlay, and renamed Filled-Cart Overlay to Cart Overlay. - Adjusted flow-subsection boxes for requested vertical sizing and spacing (including halving and then decreasing nested-box height again) while preserving horizontal section-level consistency and center alignment. - Restored and resized the left-hand launch screenshot beside the flow chart, removed dark framing around the chart, kept the chart aligned to match device-frame height, and made it fully transparent where needed so the portfolio background grid remained visible.
 c9ca77d generated the customary pdf session worklog for the relevant project, dated July 30, 2026.
 8868c1a Refined case-study cards and Alla Vostra project page
-15d84ec Refined featured case study layout and responsive text behavior
 
 Remotes:
 origin	https://github.com/Prahlin/portfolio.git (fetch)
@@ -8881,6 +8882,7 @@ PDF WORKLOG INVENTORY
 
 portfolio_worklog_august1_part1.pdf | 36347 bytes | modified 2026-08-01 14:29:45
 portfolio_worklog_august1_part2.pdf | 30905 bytes | modified 2026-08-01 19:16:37
+portfolio_worklog_august1_part3.pdf | 28004 bytes | modified 2026-08-01 20:38:07
 portfolio_worklog_july11.pdf | 23528 bytes | modified 2026-07-12 00:10:01
 portfolio_worklog_july14.pdf | 29767 bytes | modified 2026-07-14 22:44:02
 portfolio_worklog_july15_part1.pdf | 25059 bytes | modified 2026-07-15 18:07:04
