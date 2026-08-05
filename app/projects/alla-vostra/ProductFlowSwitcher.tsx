@@ -100,9 +100,12 @@ type FlowFontSample = {
 
 type FlowArtSample = {
   alt: string;
-  caption?: string;
   name: string;
   src: string;
+};
+
+type FlowActionSample = FlowArtSample & {
+  caption: string;
 };
 
 const placeholderSteps = ["Step 1", "Step 2", "Step 3", "Step 4", "Step 5"];
@@ -153,9 +156,9 @@ const typographyFontSamples: [FlowFontSample, FlowFontSample] = [
   },
 ];
 const iconographyAndImageryStepTitles = {
-  "Step 1": "Original Art",
+  "Step 1": "Original Hero",
   "Step 2": "Original Photography",
-  "Step 3": "Original Hero",
+  "Step 3": "Original Art",
   "Step 4": "Original Icons",
 };
 const iconographyAndImagerySteps = Object.keys(iconographyAndImageryStepTitles);
@@ -179,19 +182,16 @@ const originalArtSamples: FlowArtSample[] = [
 const originalPhotographySamples: FlowArtSample[] = [
   {
     alt: "Alla Vostra Piccola grazing board",
-    caption: "Piccola grazing board.",
     name: "Product #1",
     src: "/images/alla-vostra/piccola-product.png",
   },
   {
     alt: "Alla Vostra Sei Perfetto grazing board",
-    caption: "Sei Perfetto grazing board.",
     name: "Product #2",
     src: "/images/alla-vostra/sei-perfetto-product.png",
   },
   {
     alt: "Alla Vostra Buon Natale grazing board",
-    caption: "Buon Natale grazing board.",
     name: "Product #3",
     src: "/images/alla-vostra/buon-natale-product.png",
   },
@@ -199,7 +199,138 @@ const originalPhotographySamples: FlowArtSample[] = [
 const stickyButtonIconSamples = [
   { kind: "cart", name: "Shopping Cart" },
   { kind: "tutorial", name: "Tutorial" },
+  { kind: "close", name: "Close" },
 ] as const;
+const navigationActionStepTitles = {
+  "Step 1": "Header CTA",
+  "Step 2": "Shop Preview CTA",
+  "Step 3": "Overlay Nav",
+  "Step 4": "Overlay Return",
+  "Step 5": "Product Nav",
+};
+const navigationActionSteps = Object.keys(navigationActionStepTitles);
+const navigationActionSamplesByStep: Record<string, FlowActionSample[]> = {
+  "Step 1": [
+    {
+      alt: "Alla Vostra app header SHOP button",
+      caption: "SHOP app header button.",
+      name: "SHOP",
+      src: "/images/alla-vostra/ui-assets/header-shop.png",
+    },
+  ],
+  "Step 2": [
+    {
+      alt: "Alla Vostra Shop preview action button",
+      caption: "Shop preview action button.",
+      name: "Shop",
+      src: "/images/alla-vostra/ui-assets/shop-preview.png",
+    },
+  ],
+  "Step 3": [
+    {
+      alt: "Alla Vostra bottom overlay previous button",
+      caption: "Bottom overlay previous button.",
+      name: "Left Nav",
+      src: "/images/alla-vostra/ui-assets/overlay-nav-left.png",
+    },
+    {
+      alt: "Alla Vostra bottom overlay next button",
+      caption: "Bottom overlay next button.",
+      name: "Right Nav",
+      src: "/images/alla-vostra/ui-assets/overlay-nav-right.png",
+    },
+  ],
+  "Step 4": [
+    {
+      alt: "Alla Vostra Products overlay return button",
+      caption: "Products overlay return button.",
+      name: "Products",
+      src: "/images/alla-vostra/ui-assets/overlay-center-products.png",
+    },
+    {
+      alt: "Alla Vostra Cart overlay return button",
+      caption: "Cart overlay return button.",
+      name: "Cart",
+      src: "/images/alla-vostra/ui-assets/overlay-center-cart.png",
+    },
+  ],
+  "Step 5": [
+    {
+      alt: "Alla Vostra active product navigation tab",
+      caption: "Active product navigation tab.",
+      name: "Active Tab",
+      src: "/images/alla-vostra/ui-assets/product-tab-active.png",
+    },
+    {
+      alt: "Alla Vostra inactive product navigation tab",
+      caption: "Inactive product navigation tab.",
+      name: "Inactive Tab",
+      src: "/images/alla-vostra/ui-assets/product-tab-inactive.png",
+    },
+    {
+      alt: "Alla Vostra product image previous chevron",
+      caption: "Product image previous chevron.",
+      name: "Image Prev",
+      src: "/images/alla-vostra/ui-assets/product-image-prev.png",
+    },
+    {
+      alt: "Alla Vostra product image next chevron",
+      caption: "Product image next chevron.",
+      name: "Image Next",
+      src: "/images/alla-vostra/ui-assets/product-image-next.png",
+    },
+  ],
+};
+const controlsAndInputsStepTitles = {
+  "Step 1": "Product Add",
+  "Step 2": "Quantity Counter",
+  "Step 3": "Remove",
+  "Step 4": "Cart Add Items",
+  "Step 5": "Checkout",
+};
+const controlsAndInputsSteps = Object.keys(controlsAndInputsStepTitles);
+const controlsAndInputsSamplesByStep: Record<string, FlowActionSample[]> = {
+  "Step 1": [
+    {
+      alt: "Alla Vostra green ADD product button",
+      caption: "Green ADD product button.",
+      name: "ADD",
+      src: "/images/alla-vostra/ui-assets/product-add.png",
+    },
+  ],
+  "Step 2": [
+    {
+      alt: "Alla Vostra quantity counter control",
+      caption: "Quantity counter control.",
+      name: "Counter",
+      src: "/images/alla-vostra/ui-assets/cart-counter.png",
+    },
+  ],
+  "Step 3": [
+    {
+      alt: "Alla Vostra red remove product button",
+      caption: "Red remove product button.",
+      name: "Remove",
+      src: "/images/alla-vostra/ui-assets/cart-remove.png",
+    },
+  ],
+  "Step 4": [
+    {
+      alt: "Alla Vostra cart Add items button",
+      caption: "Cart Add items button.",
+      name: "Add items",
+      src: "/images/alla-vostra/ui-assets/cart-add-items.png",
+    },
+  ],
+  "Step 5": [
+    {
+      alt: "Alla Vostra cart checkout button",
+      caption: "Cart checkout button.",
+      name: "Checkout",
+      src: "/images/alla-vostra/ui-assets/cart-checkout.png",
+    },
+  ],
+};
 const uiBlueprintSections = [
   { stage: "00", title: "Colors & Theming" },
   { stage: "01", title: "Typography & Spacing" },
@@ -282,7 +413,7 @@ const productFlowConnectors: ProductFlowConnector[] = [
   { d: "M204 1472H930", kind: "hairline" },
   { d: "M204 1704H930", kind: "hairline" },
 ];
-const mobilePortraitQuery = "(max-width: 720px) and (orientation: portrait)";
+const narrowFlowQuery = "(max-width: 720px)";
 
 function getFlowXPercent(x: number) {
   return ((x - flowCoordinateFrame.x) / flowCoordinateFrame.width) * 100;
@@ -385,12 +516,12 @@ function getFlowConnectorArrowStyle(
   };
 }
 
-function useIsMobilePortrait() {
-  const [isMobilePortrait, setIsMobilePortrait] = useState(false);
+function useIsNarrowFlowLayout() {
+  const [isNarrowFlowLayout, setIsNarrowFlowLayout] = useState(false);
 
   useEffect(() => {
-    const mediaQuery = window.matchMedia(mobilePortraitQuery);
-    const handleChange = () => setIsMobilePortrait(mediaQuery.matches);
+    const mediaQuery = window.matchMedia(narrowFlowQuery);
+    const handleChange = () => setIsNarrowFlowLayout(mediaQuery.matches);
 
     handleChange();
     mediaQuery.addEventListener("change", handleChange);
@@ -400,7 +531,7 @@ function useIsMobilePortrait() {
     };
   }, []);
 
-  return isMobilePortrait;
+  return isNarrowFlowLayout;
 }
 
 function SectionHeading({ kicker, title }: { kicker: string; title: string }) {
@@ -586,10 +717,26 @@ function OriginalArtScreen({ sample }: { sample: FlowArtSample }) {
   );
 }
 
-function OriginalArtScreens() {
+function OriginalArtScreens({
+  overflowOnly = false,
+  showAll = false,
+}: {
+  overflowOnly?: boolean;
+  showAll?: boolean;
+}) {
+  const samples = overflowOnly
+    ? originalArtSamples.slice(2)
+    : showAll
+      ? originalArtSamples
+      : originalArtSamples.slice(0, 2);
+
+  if (samples.length === 0) {
+    return null;
+  }
+
   return (
     <div className="flow-original-art-grid">
-      {originalArtSamples.map((sample) => (
+      {samples.map((sample) => (
         <OriginalArtScreen key={sample.name} sample={sample} />
       ))}
     </div>
@@ -612,36 +759,35 @@ function OriginalPhotographyScreen({ sample }: { sample: FlowArtSample }) {
           src={sample.src}
         />
       </div>
-      <figcaption>
-        {sample.caption ?? `${sample.name} original photography.`}
-      </figcaption>
+      <figcaption
+        aria-hidden
+        className="flow-original-photo-caption-spacer"
+      />
     </figure>
   );
 }
 
-function HeroCompositionScreen({ label }: { label: "Small" | "Large" }) {
-  const aspect = label === "Small" ? "standard" : "tall";
+function HeroCompositionScreen() {
   const screenClassName = [
     "flow-screen",
     "flow-screen-compact",
-    `flow-screen-${aspect}`,
+    "flow-screen-swatch",
     "flow-hero-composition-screen",
-    `flow-hero-composition-screen-${label.toLowerCase()}`,
   ].join(" ");
 
   return (
     <figure
-      aria-label={`Alla Vostra app header hero composition ${label}`}
+      aria-label="Alla Vostra app header hero composition"
       className={screenClassName}
     >
-      <span className="flow-screen-label">{label}</span>
+      <span className="flow-screen-label">Hero</span>
       <div className="flow-image-frame flow-hero-composition-frame">
         <Image
           alt="Alla Vostra header background"
           className="flow-hero-composition-background"
           draggable={false}
           fill
-          sizes="152px"
+          sizes="(max-width: 720px) calc(min(84vw, 292px) + 12px), 318px"
           src="/images/alla-vostra/header-background-no-cheeseboard.png"
         />
         <Image
@@ -653,7 +799,7 @@ function HeroCompositionScreen({ label }: { label: "Small" | "Large" }) {
           width={405}
         />
       </div>
-      <figcaption>{`Android ${label} app header hero composition.`}</figcaption>
+      <figcaption>Hero app header composition.</figcaption>
     </figure>
   );
 }
@@ -661,8 +807,7 @@ function HeroCompositionScreen({ label }: { label: "Small" | "Large" }) {
 function HeroCompositionScreens() {
   return (
     <div className="flow-hero-composition-grid">
-      <HeroCompositionScreen label="Small" />
-      <HeroCompositionScreen label="Large" />
+      <HeroCompositionScreen />
     </div>
   );
 }
@@ -695,6 +840,20 @@ function StickyButtonIcon({
           <circle cx="9.85" cy="20.1" fill="#FFFFFF" r="1.05" />
           <circle cx="16.75" cy="20.1" fill="#FFFFFF" r="1.05" />
         </svg>
+      </div>
+    );
+  }
+
+  if (kind === "close") {
+    return (
+      <div
+        aria-hidden
+        className="flow-sticky-button flow-sticky-button-close"
+      >
+        <span className="flow-sticky-button-close-icon">
+          <span className="flow-sticky-button-close-stroke flow-sticky-button-close-stroke-forward" />
+          <span className="flow-sticky-button-close-stroke flow-sticky-button-close-stroke-back" />
+        </span>
       </div>
     );
   }
@@ -767,6 +926,40 @@ function StickyButtonIconScreens() {
   );
 }
 
+function ActionButtonAssetScreen({ sample }: { sample: FlowActionSample }) {
+  return (
+    <figure
+      aria-label={`${sample.name} action button device frame`}
+      className="flow-screen flow-screen-compact flow-screen-standard flow-screen-swatch flow-action-asset-screen"
+    >
+      <span className="flow-screen-label">{sample.name}</span>
+      <div className="flow-image-frame flow-action-asset-frame">
+        <Image
+          alt={sample.alt}
+          fill
+          sizes="152px"
+          src={sample.src}
+        />
+      </div>
+      <figcaption>{sample.caption}</figcaption>
+    </figure>
+  );
+}
+
+function ActionButtonAssetScreens({
+  samples,
+}: {
+  samples: FlowActionSample[];
+}) {
+  return (
+    <div className="flow-action-asset-grid">
+      {samples.map((sample) => (
+        <ActionButtonAssetScreen key={sample.name} sample={sample} />
+      ))}
+    </div>
+  );
+}
+
 function OriginalPhotographyScreens() {
   return (
     <div className="flow-original-photo-grid">
@@ -779,6 +972,7 @@ function OriginalPhotographyScreens() {
 
 function PlaceholderStage({
   copy,
+  renderExpandedStepScreens,
   renderStepScreens,
   sectionLabel = "Stage",
   stage,
@@ -787,7 +981,8 @@ function PlaceholderStage({
   title,
 }: {
   copy: string;
-  renderStepScreens?: (step: string) => ReactNode;
+  renderExpandedStepScreens?: (step: string) => ReactNode;
+  renderStepScreens?: (step: string, isExpanded: boolean) => ReactNode;
   sectionLabel?: "Category" | "Stage";
   stage: string;
   steps?: string[];
@@ -795,11 +990,26 @@ function PlaceholderStage({
   title: string;
 }) {
   const [isExpanded, setIsExpanded] = useState(false);
-  const isMobilePortrait = useIsMobilePortrait();
+  const isNarrowFlowLayout = useIsNarrowFlowLayout();
   const placeholderScreenshotsId = useId();
-  const visibleStepCount = isMobilePortrait ? 1 : 2;
+  const visibleStepCount = isNarrowFlowLayout ? 1 : 2;
   const visibleSteps = steps.slice(0, visibleStepCount);
   const extraSteps = steps.slice(visibleStepCount);
+  const [firstExtraStep, ...remainingExtraSteps] = extraSteps;
+  const expandedVisibleStepScreens = renderExpandedStepScreens
+    ? visibleSteps.reduce<Array<{ screens: ReactNode; step: string }>>(
+        (items, step) => {
+          const screens = renderExpandedStepScreens(step);
+
+          if (screens) {
+            items.push({ screens, step });
+          }
+
+          return items;
+        },
+        [],
+      )
+    : [];
 
   return (
     <div className="flow-capture-group">
@@ -817,7 +1027,7 @@ function PlaceholderStage({
             <div className="flow-screen-stack" key={step}>
               <h4>{stepTitles[step] ?? step}</h4>
               <div className="flow-screen-stack-captures">
-                {renderStepScreens?.(step) ?? (
+                {renderStepScreens?.(step, false) ?? (
                   <>
                     <PlaceholderScreen label="Small" step={step} />
                     <PlaceholderScreen label="Large" step={step} />
@@ -854,11 +1064,35 @@ function PlaceholderStage({
             id={placeholderScreenshotsId}
           >
             <div className="flow-capture-grid">
-              {extraSteps.map((step) => (
+              {firstExtraStep ? (
+                <div className="flow-screen-stack" key={firstExtraStep}>
+                  <h4>{stepTitles[firstExtraStep] ?? firstExtraStep}</h4>
+                  <div className="flow-screen-stack-captures">
+                    {renderStepScreens?.(firstExtraStep, isExpanded) ?? (
+                      <>
+                        <PlaceholderScreen label="Small" step={firstExtraStep} />
+                        <PlaceholderScreen label="Large" step={firstExtraStep} />
+                      </>
+                    )}
+                  </div>
+                </div>
+              ) : null}
+              {expandedVisibleStepScreens.map(({ screens, step }) => (
+                <div
+                  className={`flow-screen-stack flow-screen-stack-expanded-${step
+                    .toLowerCase()
+                    .replace(/\s+/g, "-")}`}
+                  key={`expanded-${step}`}
+                >
+                  <h4>{stepTitles[step] ?? step}</h4>
+                  <div className="flow-screen-stack-captures">{screens}</div>
+                </div>
+              ))}
+              {remainingExtraSteps.map((step) => (
                 <div className="flow-screen-stack" key={step}>
                   <h4>{stepTitles[step] ?? step}</h4>
                   <div className="flow-screen-stack-captures">
-                    {renderStepScreens?.(step) ?? (
+                    {renderStepScreens?.(step, isExpanded) ?? (
                       <>
                         <PlaceholderScreen label="Small" step={step} />
                         <PlaceholderScreen label="Large" step={step} />
@@ -984,17 +1218,41 @@ export default function ProductFlowSwitcher({
                           </>
                         ) : undefined
                     : section.title === "Iconography & Imagery"
-                      ? (step) =>
+                      ? (step, isExpanded) =>
                           step === "Step 1" ? (
-                            <OriginalArtScreens />
+                            <HeroCompositionScreens />
                           ) : step === "Step 2" ? (
                             <OriginalPhotographyScreens />
                           ) : step === "Step 3" ? (
-                            <HeroCompositionScreens />
+                            <OriginalArtScreens showAll={isExpanded} />
                           ) : step === "Step 4" ? (
                             <StickyButtonIconScreens />
                           ) : undefined
+                    : section.title === "Navigations"
+                      ? (step) => {
+                          const samples = navigationActionSamplesByStep[step];
+
+                          return samples ? (
+                            <ActionButtonAssetScreens samples={samples} />
+                          ) : undefined;
+                        }
+                    : section.title === "Controls & Inputs"
+                      ? (step) => {
+                          const samples = controlsAndInputsSamplesByStep[step];
+
+                          return samples ? (
+                            <ActionButtonAssetScreens samples={samples} />
+                          ) : undefined;
+                        }
                       : undefined
+              }
+              renderExpandedStepScreens={
+                section.title === "Iconography & Imagery"
+                  ? (step) =>
+                      step === "Step 3" ? (
+                        <OriginalArtScreens overflowOnly />
+                      ) : undefined
+                  : undefined
               }
               sectionLabel="Category"
               stage={section.stage}
@@ -1005,6 +1263,10 @@ export default function ProductFlowSwitcher({
                     ? typographyAndSpacingSteps
                     : section.title === "Iconography & Imagery"
                       ? iconographyAndImagerySteps
+                    : section.title === "Navigations"
+                      ? navigationActionSteps
+                    : section.title === "Controls & Inputs"
+                      ? controlsAndInputsSteps
                   : undefined
               }
               stepTitles={
@@ -1014,6 +1276,10 @@ export default function ProductFlowSwitcher({
                     ? typographyAndSpacingStepTitles
                     : section.title === "Iconography & Imagery"
                       ? iconographyAndImageryStepTitles
+                    : section.title === "Navigations"
+                      ? navigationActionStepTitles
+                    : section.title === "Controls & Inputs"
+                      ? controlsAndInputsStepTitles
                   : undefined
               }
               title={section.title}
@@ -1039,12 +1305,8 @@ export default function ProductFlowSwitcher({
               <ExpandableFlowStacks
                 collapsedLabel="Show More"
                 expandedLabel="Show Less"
-                initialStackCount={
-                  group.title === "Browse" || group.title === "Checkout"
-                    ? 2
-                    : group.stacks.length
-                }
-                mobilePortraitInitialStackCount={1}
+                initialStackCount={2}
+                narrowInitialStackCount={1}
                 stacks={group.stacks}
               />
             </div>

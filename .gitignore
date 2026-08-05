@@ -16,6 +16,11 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 
+# Playwright
+test-results/
+playwright-report/
+blob-report/
+
 # Local environment files
 .env
 .env*.local

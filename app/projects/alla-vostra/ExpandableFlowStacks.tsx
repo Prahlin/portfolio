@@ -23,18 +23,18 @@ type ExpandableFlowStacksProps = {
   collapsedLabel: string;
   expandedLabel: string;
   initialStackCount: number;
-  mobilePortraitInitialStackCount?: number;
+  narrowInitialStackCount?: number;
   stacks: FlowScreenStack[];
 };
 
-const mobilePortraitQuery = "(max-width: 720px) and (orientation: portrait)";
+const narrowFlowQuery = "(max-width: 720px)";
 
-function useIsMobilePortrait() {
-  const [isMobilePortrait, setIsMobilePortrait] = useState(false);
+function useIsNarrowFlowLayout() {
+  const [isNarrowFlowLayout, setIsNarrowFlowLayout] = useState(false);
 
   useEffect(() => {
-    const mediaQuery = window.matchMedia(mobilePortraitQuery);
-    const handleChange = () => setIsMobilePortrait(mediaQuery.matches);
+    const mediaQuery = window.matchMedia(narrowFlowQuery);
+    const handleChange = () => setIsNarrowFlowLayout(mediaQuery.matches);
 
     handleChange();
     mediaQuery.addEventListener("change", handleChange);
@@ -44,7 +44,7 @@ function useIsMobilePortrait() {
     };
   }, []);
 
-  return isMobilePortrait;
+  return isNarrowFlowLayout;
 }
 
 function FlowStack({ stack }: { stack: FlowScreenStack }) {
@@ -79,15 +79,15 @@ export default function ExpandableFlowStacks({
   collapsedLabel,
   expandedLabel,
   initialStackCount,
-  mobilePortraitInitialStackCount,
+  narrowInitialStackCount,
   stacks,
 }: ExpandableFlowStacksProps) {
   const [isExpanded, setIsExpanded] = useState(false);
-  const isMobilePortrait = useIsMobilePortrait();
+  const isNarrowFlowLayout = useIsNarrowFlowLayout();
   const extraStacksId = useId();
   const visibleStackCount =
-    isMobilePortrait && mobilePortraitInitialStackCount !== undefined
-      ? mobilePortraitInitialStackCount
+    isNarrowFlowLayout && narrowInitialStackCount !== undefined
+      ? narrowInitialStackCount
       : initialStackCount;
   const visibleStacks = stacks.slice(0, visibleStackCount);
   const extraStacks = stacks.slice(visibleStackCount);

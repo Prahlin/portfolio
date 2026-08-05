@@ -3412,6 +3412,11 @@ section.project-hero {
   justify-self: center;
 }
 
+.flow-original-art-grid .flow-original-art-screen:only-child {
+  grid-column: 1 / -1;
+  justify-self: center;
+}
+
 .flow-original-art-frame {
   background: #fffcf2;
   border-color: rgba(17, 17, 17, 0.22);
@@ -3435,6 +3440,11 @@ section.project-hero {
   justify-self: center;
 }
 
+.flow-original-photo-grid .flow-original-photo-screen:only-child {
+  grid-column: 1 / -1;
+  justify-self: center;
+}
+
 .flow-original-photo-frame {
   background: none;
   border-color: rgba(17, 17, 17, 0.22);
@@ -3445,30 +3455,36 @@ section.project-hero {
   padding: 0;
 }
 
+.flow-original-photo-caption-spacer {
+  min-height: 1.45em;
+  visibility: hidden;
+}
+
 .flow-hero-composition-grid {
   display: grid;
   gap: 14px;
-  grid-template-columns: repeat(2, minmax(0, 152px));
+  grid-template-columns: minmax(0, 318px);
   justify-content: center;
   width: 100%;
 }
 
 .flow-hero-composition-screen {
-  --flow-hero-cheeseboard-top: 27.1912%;
-}
-
-.flow-hero-composition-screen-small {
-  --flow-hero-cheeseboard-top: 33.1308%;
+  --flow-hero-cheeseboard-top: 58.9143%;
+  width: 100%;
 }
 
 .flow-hero-composition-frame {
+  aspect-ratio: 1 / 1;
   background: transparent;
   border-color: rgba(17, 17, 17, 0.22);
 }
 
 .flow-hero-composition-background {
+  height: auto !important;
+  inset: 0 auto auto 0 !important;
   object-fit: contain;
   object-position: top center;
+  width: 100% !important;
 }
 
 .flow-hero-composition-cheeseboard {
@@ -3488,6 +3504,11 @@ section.project-hero {
   grid-template-columns: repeat(2, minmax(0, 152px));
   justify-content: center;
   width: 100%;
+}
+
+.flow-sticky-icon-grid .flow-sticky-icon-screen:nth-child(3) {
+  grid-column: 1 / -1;
+  justify-self: center;
 }
 
 .flow-sticky-icon-frame {
@@ -3534,6 +3555,37 @@ section.project-hero {
   width: 31.9px;
 }
 
+.flow-sticky-button-close {
+  background: linear-gradient(180deg, #ffc878 0%, #f7b967 52%, #d9953f 100%);
+  border-radius: 12px;
+}
+
+.flow-sticky-button-close-icon {
+  display: block;
+  height: 24px;
+  position: relative;
+  width: 24px;
+  z-index: 1;
+}
+
+.flow-sticky-button-close-stroke {
+  background: #ffffff;
+  border-radius: 2px;
+  height: 4px;
+  left: 0;
+  position: absolute;
+  top: 10px;
+  width: 24px;
+}
+
+.flow-sticky-button-close-stroke-forward {
+  transform: rotate(45deg);
+}
+
+.flow-sticky-button-close-stroke-back {
+  transform: rotate(-45deg);
+}
+
 .flow-sticky-button-tutorial {
   background: #ffffff;
   border-radius: 999px;
@@ -3542,6 +3594,32 @@ section.project-hero {
 .flow-sticky-button-tutorial svg {
   height: 40px;
   width: 40px;
+}
+
+.flow-action-asset-grid {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(2, minmax(0, 152px));
+  justify-content: center;
+  width: 100%;
+}
+
+.flow-action-asset-grid .flow-action-asset-screen:only-child,
+.flow-action-asset-grid .flow-action-asset-screen:nth-child(3):last-child {
+  grid-column: 1 / -1;
+  justify-self: center;
+}
+
+.flow-action-asset-frame {
+  align-items: center;
+  background: #fffcf2;
+  border-color: rgba(17, 17, 17, 0.22);
+  display: flex;
+  justify-content: center;
+}
+
+.flow-action-asset-frame img {
+  object-position: center;
 }
 
 .flow-screen-swatch .flow-screen-label {
@@ -3714,6 +3792,10 @@ section.project-hero {
 .flow-browse-toggle {
   cursor: pointer;
   font-family: inherit;
+}
+
+.alla-vostra-case .flow-browse-toggle {
+  inline-size: 154px;
 }
 
 .flow-browse-toggle svg {
@@ -4467,7 +4549,11 @@ section.project-hero {
 
   .flow-hero-composition-grid {
     gap: 12px;
-    grid-template-columns: repeat(2, minmax(0, min(42vw, 146px)));
+    grid-template-columns: minmax(0, calc(min(84vw, 292px) + 12px));
+  }
+
+  .flow-hero-composition-screen {
+    width: 100%;
   }
 
   .flow-sticky-icon-grid {
@@ -4475,9 +4561,18 @@ section.project-hero {
     grid-template-columns: repeat(2, minmax(0, min(42vw, 146px)));
   }
 
+  .flow-action-asset-grid {
+    gap: 12px;
+    grid-template-columns: repeat(2, minmax(0, min(42vw, 146px)));
+  }
+
   .flow-screen:not(.flow-screen-main) .flow-image-frame {
     margin: 0 auto;
     max-width: 230px;
+  }
+
+  .flow-screen.flow-hero-composition-screen .flow-image-frame {
+    max-width: none;
   }
 
   .closing-panel {
