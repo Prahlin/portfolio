@@ -12,19 +12,19 @@ endobj
 << /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
 endobj
 5 0 obj
-<< /Title (Prahlin Portfolio Work Log - August 5, 2026) /Subject (Portfolio website development worklog) /Author (Codex) /Creator (Codex standard-library PDF generator) /Producer (Codex standard-library PDF generator) /CreationDate (D:20260805000000-04'00') /ModDate (D:20260805000000-04'00') >>
+<< /Title (Prahlin Portfolio Work Log - August 4, 2026) /Subject (Portfolio website development worklog) /Author (Codex) /Creator (Codex standard-library PDF generator) /Producer (Codex standard-library PDF generator) /CreationDate (D:20260804225532-04'00') /ModDate (D:20260804225532-04'00') >>
 endobj
 6 0 obj
-<< /Length 5990 >>
+<< /Length 5994 >>
 stream
 BT
 /F2 14 Tf
 54.00 738.00 Td
-(Prahlin Portfolio Work Log - August 5, 2026) Tj
+(Prahlin Portfolio Work Log - August 4, 2026) Tj
 -54.00 -738.00 Td
 /F1 10 Tf
 54.00 712.80 Td
-(Compiled summary for Wednesday, August 5, 2026 - focus: continuing the Prahl.dev Portfolio Alla) Tj
+(Compiled summary for Tuesday, August 4, 2026 - focus: continuing the Prahl.dev Portfolio Alla) Tj
 -54.00 -712.80 Td
 /F1 10 Tf
 54.00 699.60 Td
@@ -60,7 +60,7 @@ BT
 -54.00 -607.20 Td
 /F1 10 Tf
 54.00 594.00 Td
-(August 5 Portfolio PDF worklog.) Tj
+(August 4 Portfolio PDF worklog.) Tj
 -54.00 -594.00 Td
 /F1 10 Tf
 54.00 575.80 Td
@@ -88,23 +88,23 @@ BT
 -54.00 -504.80 Td
 /F1 10 Tf
 54.00 491.60 Td
-(origin/main before this PDF was generated. The local Alla Vostra application repository was used) Tj
+(origin/main before this PDF was first generated. The local Alla Vostra application repository) Tj
 -54.00 -491.60 Td
 /F1 10 Tf
 54.00 478.40 Td
-(only as a style and capture reference during the real-control-asset pass; temporary capture) Tj
+(was used only as a style and capture reference during the real-control-asset pass; temporary) Tj
 -54.00 -478.40 Td
 /F1 10 Tf
 54.00 465.20 Td
-(scaffolding was removed, leaving no committed Alla Vostra application source changes for this) Tj
+(capture scaffolding was removed, leaving no committed Alla Vostra application source changes for) Tj
 -54.00 -465.20 Td
 /F1 10 Tf
 54.00 452.00 Td
-(record. Cinerific, Credit King, Figma, App Store, Google Play, and public Hostinger deployment) Tj
+(this record. Cinerific, Credit King, Figma, App Store, Google Play, and public Hostinger) Tj
 -54.00 -452.00 Td
 /F1 10 Tf
 54.00 438.80 Td
-(branches were not modified for this record.) Tj
+(deployment branches were not modified for this record.) Tj
 -54.00 -438.80 Td
 /F2 12 Tf
 54.00 412.60 Td
@@ -204,7 +204,7 @@ BT
 -66.00 -98.00 Td
 /F1 8 Tf
 328.00 28.00 Td
-(Prahlin Portfolio Work Log - August 5, 2026 Page 1) Tj
+(Prahlin Portfolio Work Log - August 4, 2026 Page 1) Tj
 -328.00 -28.00 Td
 ET
 endstream
@@ -213,7 +213,7 @@ endobj
 << /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 6 0 R >>
 endobj
 8 0 obj
-<< /Length 6032 >>
+<< /Length 6036 >>
 stream
 BT
 /F1 10 Tf
@@ -254,7 +254,7 @@ BT
 -66.00 -628.40 Td
 /F1 10 Tf
 66.00 615.20 Td
-(  HEAD and origin/main both resolved to 529bd98 before this PDF generation step.) Tj
+(  HEAD and origin/main both resolved to 529bd98 before this PDF was first generated.) Tj
 -66.00 -615.20 Td
 /F1 10 Tf
 54.00 600.00 Td
@@ -286,7 +286,7 @@ BT
 -66.00 -518.80 Td
 /F2 12 Tf
 54.00 495.60 Td
-(Baseline Status Before August 5 Work) Tj
+(Baseline Status Before August 4 Work) Tj
 -54.00 -495.60 Td
 /F1 10 Tf
 54.00 477.40 Td
@@ -402,7 +402,7 @@ BT
 -66.00 -103.00 Td
 /F1 8 Tf
 328.00 28.00 Td
-(Prahlin Portfolio Work Log - August 5, 2026 Page 2) Tj
+(Prahlin Portfolio Work Log - August 4, 2026 Page 2) Tj
 -328.00 -28.00 Td
 ET
 endstream
@@ -416,7 +416,7 @@ stream
 BT
 /F2 12 Tf
 54.00 738.00 Td
-(Goals for August 5) Tj
+(Goals for August 4) Tj
 -54.00 -738.00 Td
 /F1 10 Tf
 54.00 719.80 Td
@@ -600,7 +600,7 @@ BT
 -66.00 -79.00 Td
 /F1 8 Tf
 328.00 28.00 Td
-(Prahlin Portfolio Work Log - August 5, 2026 Page 3) Tj
+(Prahlin Portfolio Work Log - August 4, 2026 Page 3) Tj
 -328.00 -28.00 Td
 ET
 endstream
@@ -798,7 +798,7 @@ BT
 -66.00 -101.00 Td
 /F1 8 Tf
 328.00 28.00 Td
-(Prahlin Portfolio Work Log - August 5, 2026 Page 4) Tj
+(Prahlin Portfolio Work Log - August 4, 2026 Page 4) Tj
 -328.00 -28.00 Td
 ET
 endstream
@@ -820,7 +820,7 @@ BT
 -54.00 -719.80 Td
 /F1 10 Tf
 66.00 706.60 Td
-(  during this August 5 worklog-generation pass.) Tj
+(  during this August 4 worklog-generation pass.) Tj
 -66.00 -706.60 Td
 /F1 10 Tf
 54.00 691.40 Td
@@ -892,7 +892,7 @@ BT
 -66.00 -468.20 Td
 /F2 12 Tf
 54.00 445.00 Td
-(Files Touched During August 5 Portfolio Work) Tj
+(Files Touched During August 4 Portfolio Work) Tj
 -54.00 -445.00 Td
 /F1 10 Tf
 54.00 426.80 Td
@@ -968,7 +968,7 @@ BT
 -66.00 -188.40 Td
 /F1 10 Tf
 54.00 173.20 Td
-(- portfolio_worklog_august5.pdf - generated as this August 5 Portfolio worklog artifact in the) Tj
+(- portfolio_worklog_august4.pdf - generated as this August 4 Portfolio worklog artifact in the) Tj
 -54.00 -173.20 Td
 /F1 10 Tf
 66.00 160.00 Td
@@ -992,7 +992,7 @@ BT
 -66.00 -92.20 Td
 /F1 8 Tf
 328.00 28.00 Td
-(Prahlin Portfolio Work Log - August 5, 2026 Page 5) Tj
+(Prahlin Portfolio Work Log - August 4, 2026 Page 5) Tj
 -328.00 -28.00 Td
 ET
 endstream
@@ -1001,7 +1001,7 @@ endobj
 << /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 14 0 R >>
 endobj
 16 0 obj
-<< /Length 3208 >>
+<< /Length 3206 >>
 stream
 BT
 /F1 10 Tf
@@ -1058,7 +1058,7 @@ BT
 -66.00 -571.60 Td
 /F1 10 Tf
 54.00 556.40 Td
-(- The refreshed snapshot and this August 5 PDF are local documentation artifacts until the) Tj
+(- The refreshed snapshot and this August 4 PDF are local documentation artifacts until the) Tj
 -54.00 -556.40 Td
 /F1 10 Tf
 66.00 543.20 Td
@@ -1070,11 +1070,11 @@ BT
 -54.00 -520.00 Td
 /F1 10 Tf
 54.00 501.80 Td
-(- Generated file: portfolio_worklog_august5.pdf.) Tj
+(- Generated file: portfolio_worklog_august4.pdf.) Tj
 -54.00 -501.80 Td
 /F1 10 Tf
 54.00 486.60 Td
-(- Location: /Users/prahlin/gh/portfolio/portfolio_worklog_august5.pdf.) Tj
+(- Location: /Users/prahlin/gh/portfolio/portfolio_worklog_august4.pdf.) Tj
 -54.00 -486.60 Td
 /F1 10 Tf
 54.00 471.40 Td
@@ -1082,7 +1082,7 @@ BT
 -54.00 -471.40 Td
 /F1 10 Tf
 66.00 458.20 Td
-(  portfolio_worklog_august5.pdf.) Tj
+(  portfolio_worklog_august4.pdf.) Tj
 -66.00 -458.20 Td
 /F1 10 Tf
 54.00 443.00 Td
@@ -1102,7 +1102,7 @@ BT
 -66.00 -401.40 Td
 /F1 10 Tf
 54.00 386.20 Td
-(- The local project date used for this filename and title is Wednesday, August 5, 2026 in the) Tj
+(- The local project date used for this filename and title is Tuesday, August 4, 2026 in the) Tj
 -54.00 -386.20 Td
 /F1 10 Tf
 66.00 373.00 Td
@@ -1110,7 +1110,7 @@ BT
 -66.00 -373.00 Td
 /F1 8 Tf
 328.00 28.00 Td
-(Prahlin Portfolio Work Log - August 5, 2026 Page 6) Tj
+(Prahlin Portfolio Work Log - August 4, 2026 Page 6) Tj
 -328.00 -28.00 Td
 ET
 endstream
@@ -1120,26 +1120,26 @@ endobj
 endobj
 xref
 0 18
-0000000000 65535 f 
-0000000009 00000 n 
-0000000058 00000 n 
-0000000149 00000 n 
-0000000219 00000 n 
-0000000294 00000 n 
-0000000605 00000 n 
-0000006647 00000 n 
-0000006783 00000 n 
-0000012867 00000 n 
-0000013003 00000 n 
-0000018793 00000 n 
-0000018931 00000 n 
-0000024625 00000 n 
-0000024763 00000 n 
-0000030306 00000 n 
-0000030444 00000 n 
-0000033705 00000 n 
+0000000000 65535 f
+0000000009 00000 n
+0000000058 00000 n
+0000000149 00000 n
+0000000219 00000 n
+0000000294 00000 n
+0000000605 00000 n
+0000006651 00000 n
+0000006787 00000 n
+0000012875 00000 n
+0000013011 00000 n
+0000018801 00000 n
+0000018939 00000 n
+0000024633 00000 n
+0000024771 00000 n
+0000030314 00000 n
+0000030452 00000 n
+0000033711 00000 n
 trailer
 << /Size 18 /Root 1 0 R /Info 5 0 R >>
 startxref
-33843
+33849
 %%EOF
