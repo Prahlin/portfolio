@@ -1,0 +1,1145 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [7 0 R 9 0 R 11 0 R 13 0 R 15 0 R 17 0 R] /Count 6 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+5 0 obj
+<< /Title (Prahlin Portfolio Work Log - August 5, 2026) /Subject (Portfolio website development worklog) /Author (Codex) /Creator (Codex standard-library PDF generator) /Producer (Codex standard-library PDF generator) /CreationDate (D:20260805000000-04'00') /ModDate (D:20260805000000-04'00') >>
+endobj
+6 0 obj
+<< /Length 5990 >>
+stream
+BT
+/F2 14 Tf
+54.00 738.00 Td
+(Prahlin Portfolio Work Log - August 5, 2026) Tj
+-54.00 -738.00 Td
+/F1 10 Tf
+54.00 712.80 Td
+(Compiled summary for Wednesday, August 5, 2026 - focus: continuing the Prahl.dev Portfolio Alla) Tj
+-54.00 -712.80 Td
+/F1 10 Tf
+54.00 699.60 Td
+(Vostra case-study page after the August 3 UI Foundations / UX Product Flow pass, keeping the) Tj
+-54.00 -699.60 Td
+/F1 10 Tf
+54.00 686.40 Td
+(website local-only at http://127.0.0.1:3000, tightening the one-row reveal behavior, refining) Tj
+-54.00 -686.40 Td
+/F1 10 Tf
+54.00 673.20 Td
+(Iconography & Imagery ordering and square-frame treatment, preserving the Original Hero) Tj
+-54.00 -673.20 Td
+/F1 10 Tf
+54.00 660.00 Td
+(background and cheeseboard alignment, adding the Close sticky-icon sample, installing Playwright) Tj
+-54.00 -660.00 Td
+/F1 10 Tf
+54.00 646.80 Td
+(for browser verification without running concurrent AVDs, capturing real Alla Vostra app) Tj
+-54.00 -646.80 Td
+/F1 10 Tf
+54.00 633.60 Td
+(navigation and control assets, replacing the Navigations and Controls & Inputs placeholder) Tj
+-54.00 -633.60 Td
+/F1 10 Tf
+54.00 620.40 Td
+(imagery with real PNG crops, validating the local route and TypeScript build, refreshing the) Tj
+-54.00 -620.40 Td
+/F1 10 Tf
+54.00 607.20 Td
+(Portfolio project snapshot, reviewing all prior Portfolio PDF worklogs, and generating the) Tj
+-54.00 -607.20 Td
+/F1 10 Tf
+54.00 594.00 Td
+(August 5 Portfolio PDF worklog.) Tj
+-54.00 -594.00 Td
+/F1 10 Tf
+54.00 575.80 Td
+(Generated in continuity with the established Prahlin Portfolio daily worklog cadence: compact) Tj
+-54.00 -575.80 Td
+/F1 10 Tf
+54.00 562.60 Td
+(opening summary, source-material section, baseline section, goal list, work-completed sections,) Tj
+-54.00 -562.60 Td
+/F1 10 Tf
+54.00 549.40 Td
+(validation section, files-touched list, follow-up context, and output-artifact close.) Tj
+-54.00 -549.40 Td
+/F1 10 Tf
+54.00 531.20 Td
+(This artifact intentionally covers Prahlin/portfolio work performed after) Tj
+-54.00 -531.20 Td
+/F1 10 Tf
+54.00 518.00 Td
+(portfolio_worklog_august3.pdf and the August 3 documentation state. The committed source state) Tj
+-54.00 -518.00 Td
+/F1 10 Tf
+54.00 504.80 Td
+(reviewed for this record is 529bd9808ae9e4e9d50c45f812e9f8f408ad4597 on main, matching) Tj
+-54.00 -504.80 Td
+/F1 10 Tf
+54.00 491.60 Td
+(origin/main before this PDF was generated. The local Alla Vostra application repository was used) Tj
+-54.00 -491.60 Td
+/F1 10 Tf
+54.00 478.40 Td
+(only as a style and capture reference during the real-control-asset pass; temporary capture) Tj
+-54.00 -478.40 Td
+/F1 10 Tf
+54.00 465.20 Td
+(scaffolding was removed, leaving no committed Alla Vostra application source changes for this) Tj
+-54.00 -465.20 Td
+/F1 10 Tf
+54.00 452.00 Td
+(record. Cinerific, Credit King, Figma, App Store, Google Play, and public Hostinger deployment) Tj
+-54.00 -452.00 Td
+/F1 10 Tf
+54.00 438.80 Td
+(branches were not modified for this record.) Tj
+-54.00 -438.80 Td
+/F2 12 Tf
+54.00 412.60 Td
+(Source Materials Reviewed) Tj
+-54.00 -412.60 Td
+/F1 10 Tf
+54.00 394.40 Td
+(- Ran ./read_project.sh from /Users/prahlin/gh/portfolio and regenerated) Tj
+-54.00 -394.40 Td
+/F1 10 Tf
+66.00 381.20 Td
+(  portfolio_PROJECT_SNAPSHOT.txt before writing this worklog, preserving the project) Tj
+-66.00 -381.20 Td
+/F1 10 Tf
+66.00 368.00 Td
+(  convention that Codex refreshes the current source snapshot before continuing Portfolio) Tj
+-66.00 -368.00 Td
+/F1 10 Tf
+66.00 354.80 Td
+(  documentation work.) Tj
+-66.00 -354.80 Td
+/F1 10 Tf
+54.00 339.60 Td
+(- Reviewed the refreshed portfolio_PROJECT_SNAPSHOT.txt, including project notes, current) Tj
+-54.00 -339.60 Td
+/F1 10 Tf
+66.00 326.40 Td
+(  source tree, line-numbered source dumps, public image and font inventories, PDF inventory,) Tj
+-66.00 -326.40 Td
+/F1 10 Tf
+66.00 313.20 Td
+(  package and deployment configuration, git context, and the standing instruction to ask for a) Tj
+-66.00 -313.20 Td
+/F1 10 Tf
+66.00 300.00 Td
+(  commit message before committing or pushing.) Tj
+-66.00 -300.00 Td
+/F1 10 Tf
+54.00 284.80 Td
+(- Reviewed every pre-existing Portfolio root-level worklog PDF: portfolio_worklog_july11.pdf,) Tj
+-54.00 -284.80 Td
+/F1 10 Tf
+66.00 271.60 Td
+(  portfolio_worklog_july14.pdf, portfolio_worklog_july15_part1.pdf,) Tj
+-66.00 -271.60 Td
+/F1 10 Tf
+66.00 258.40 Td
+(  portfolio_worklog_july15_part2.pdf, portfolio_worklog_july16.pdf,) Tj
+-66.00 -258.40 Td
+/F1 10 Tf
+66.00 245.20 Td
+(  portfolio_worklog_july19.pdf, portfolio_worklog_july20.pdf, portfolio_worklog_july21.pdf,) Tj
+-66.00 -245.20 Td
+/F1 10 Tf
+66.00 232.00 Td
+(  portfolio_worklog_july22.pdf, portfolio_worklog_july23.pdf, portfolio_worklog_july24.pdf,) Tj
+-66.00 -232.00 Td
+/F1 10 Tf
+66.00 218.80 Td
+(  portfolio_worklog_july25.pdf, portfolio_worklog_july29.pdf, portfolio_worklog_july30.pdf,) Tj
+-66.00 -218.80 Td
+/F1 10 Tf
+66.00 205.60 Td
+(  portfolio_worklog_july31.pdf, portfolio_worklog_august1_part1.pdf,) Tj
+-66.00 -205.60 Td
+/F1 10 Tf
+66.00 192.40 Td
+(  portfolio_worklog_august1_part2.pdf, portfolio_worklog_august1_part3.pdf, and) Tj
+-66.00 -192.40 Td
+/F1 10 Tf
+66.00 179.20 Td
+(  portfolio_worklog_august3.pdf.) Tj
+-66.00 -179.20 Td
+/F1 10 Tf
+54.00 164.00 Td
+(- Extracted text from all nineteen existing Portfolio PDFs with pdftotext and checked) Tj
+-54.00 -164.00 Td
+/F1 10 Tf
+66.00 150.80 Td
+(  metadata/page counts with pdfinfo to preserve title cadence, opening-summary density,) Tj
+-66.00 -150.80 Td
+/F1 10 Tf
+66.00 137.60 Td
+(  section order, compact bullet-heavy technical voice, validation language, files-touched) Tj
+-66.00 -137.60 Td
+/F1 10 Tf
+66.00 124.40 Td
+(  lists, follow-up context, output-artifact close, root-level filename style, letter-size) Tj
+-66.00 -124.40 Td
+/F1 10 Tf
+66.00 111.20 Td
+(  pages, PDF 1.4 output, Codex author/creator/producer metadata, and Helvetica-style base-font) Tj
+-66.00 -111.20 Td
+/F1 10 Tf
+66.00 98.00 Td
+(  convention.) Tj
+-66.00 -98.00 Td
+/F1 8 Tf
+328.00 28.00 Td
+(Prahlin Portfolio Work Log - August 5, 2026 Page 1) Tj
+-328.00 -28.00 Td
+ET
+endstream
+endobj
+7 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 6 0 R >>
+endobj
+8 0 obj
+<< /Length 6032 >>
+stream
+BT
+/F1 10 Tf
+54.00 738.00 Td
+(- Used portfolio_worklog_august3.pdf as the closest structural baseline because it documented) Tj
+-54.00 -738.00 Td
+/F1 10 Tf
+66.00 724.80 Td
+(  the UI Foundations / UX Product Flow split, DOM-based flow chart, custom category system,) Tj
+-66.00 -724.80 Td
+/F1 10 Tf
+66.00 711.60 Td
+(  imported Alla Vostra app fonts and assets, local validation language, and manual-deploy) Tj
+-66.00 -711.60 Td
+/F1 10 Tf
+66.00 698.40 Td
+(  context.) Tj
+-66.00 -698.40 Td
+/F1 10 Tf
+54.00 683.20 Td
+(- Kept the August 1 multi-part worklogs in view as the nearest visual-system references for) Tj
+-54.00 -683.20 Td
+/F1 10 Tf
+66.00 670.00 Td
+(  device-frame, hero-composition, local-preview, and static-export wording, while keeping July) Tj
+-66.00 -670.00 Td
+/F1 10 Tf
+66.00 656.80 Td
+(  30 and July 31 in view for compact daily and follow-up PDF structure.) Tj
+-66.00 -656.80 Td
+/F1 10 Tf
+54.00 641.60 Td
+(- Reviewed git history and source state through git log, git show --stat, git show) Tj
+-54.00 -641.60 Td
+/F1 10 Tf
+66.00 628.40 Td
+(  --name-status, git diff --stat, current branch state, and the committed scope for 529bd98.) Tj
+-66.00 -628.40 Td
+/F1 10 Tf
+66.00 615.20 Td
+(  HEAD and origin/main both resolved to 529bd98 before this PDF generation step.) Tj
+-66.00 -615.20 Td
+/F1 10 Tf
+54.00 600.00 Td
+(- Reviewed app/projects/alla-vostra/ProductFlowSwitcher.tsx,) Tj
+-54.00 -600.00 Td
+/F1 10 Tf
+66.00 586.80 Td
+(  app/projects/alla-vostra/ExpandableFlowStacks.tsx, app/projects/alla-vostra/page.tsx,) Tj
+-66.00 -586.80 Td
+/F1 10 Tf
+66.00 573.60 Td
+(  app/globals.css, .gitignore, package.json, package-lock.json, next-env.d.ts,) Tj
+-66.00 -573.60 Td
+/F1 10 Tf
+66.00 560.40 Td
+(  read_project.sh, and the new public/images/alla-vostra/ui-assets PNG inventory.) Tj
+-66.00 -560.40 Td
+/F1 10 Tf
+54.00 545.20 Td
+(- Reviewed selected Alla Vostra application source and live-rendered styling as references) Tj
+-54.00 -545.20 Td
+/F1 10 Tf
+66.00 532.00 Td
+(  only while capturing controls, including app header, shop overlay, button shadow, sticky) Tj
+-66.00 -532.00 Td
+/F1 10 Tf
+66.00 518.80 Td
+(  icon, cart, product-tab, quantity-counter, and checkout-control treatments.) Tj
+-66.00 -518.80 Td
+/F2 12 Tf
+54.00 495.60 Td
+(Baseline Status Before August 5 Work) Tj
+-54.00 -495.60 Td
+/F1 10 Tf
+54.00 477.40 Td
+(- The August 3 Portfolio work had already established the Alla Vostra UI Foundations / UX) Tj
+-54.00 -477.40 Td
+/F1 10 Tf
+66.00 464.20 Td
+(  Product Flow switcher, moved the startup screenshot into UI Foundations, rebuilt the UX flow) Tj
+-66.00 -464.20 Td
+/F1 10 Tf
+66.00 451.00 Td
+(  diagram as a DOM layout, and filled Colors & Theming, Typography & Spacing, and Iconography) Tj
+-66.00 -451.00 Td
+/F1 10 Tf
+66.00 437.80 Td
+(  & Imagery with app-grounded samples.) Tj
+-66.00 -437.80 Td
+/F1 10 Tf
+54.00 422.60 Td
+(- Navigations, Controls & Inputs, and Visual Hierarchy still contained placeholder-heavy or) Tj
+-54.00 -422.60 Td
+/F1 10 Tf
+66.00 409.40 Td
+(  incomplete presentation paths after August 3, leaving future work to replace generic sample) Tj
+-66.00 -409.40 Td
+/F1 10 Tf
+66.00 396.20 Td
+(  stacks with real Alla Vostra interface assets.) Tj
+-66.00 -396.20 Td
+/F1 10 Tf
+54.00 381.00 Td
+(- The reveal behavior still needed refinement so every UI Foundations and UX Product Flow) Tj
+-54.00 -381.00 Td
+/F1 10 Tf
+66.00 367.80 Td
+(  section initially showed only one row of image/device-frame stacks, then exposed overflow) Tj
+-66.00 -367.80 Td
+/F1 10 Tf
+66.00 354.60 Td
+(  assets only after Show More was clicked.) Tj
+-66.00 -354.60 Td
+/F1 10 Tf
+54.00 339.40 Td
+(- The Show More / Show Less button row needed stable positioning during state transfer so the) Tj
+-54.00 -339.40 Td
+/F1 10 Tf
+66.00 326.20 Td
+(  button did not jump when the label changed or when hidden stacks became visible.) Tj
+-66.00 -326.20 Td
+/F1 10 Tf
+54.00 311.00 Td
+(- Iconography & Imagery was still under active ordering and sizing iteration. Original Hero,) Tj
+-54.00 -311.00 Td
+/F1 10 Tf
+66.00 297.80 Td
+(  Original Art, Original Photography, and Original Icons needed stack swaps, square-frame) Tj
+-66.00 -297.80 Td
+/F1 10 Tf
+66.00 284.60 Td
+(  consistency, and final one-row/narrow-layout behavior.) Tj
+-66.00 -284.60 Td
+/F1 10 Tf
+54.00 269.40 Td
+(- The Original Hero sample had previously used Small and Android Large variants. The user) Tj
+-54.00 -269.40 Td
+/F1 10 Tf
+66.00 256.20 Td
+(  wanted only one square Hero frame, scaled to match the combined width of a two-square stack) Tj
+-66.00 -256.20 Td
+/F1 10 Tf
+66.00 243.00 Td
+(  row, without disturbing the original header-background and cheeseboard asset positioning.) Tj
+-66.00 -243.00 Td
+/F1 10 Tf
+54.00 227.80 Td
+(- Original Photography still carried gray product captions and an Original Photography header) Tj
+-54.00 -227.80 Td
+/F1 10 Tf
+66.00 214.60 Td
+(  above Product #3 in some wide two-column modes, even after the user wanted the image/text) Tj
+-66.00 -214.60 Td
+/F1 10 Tf
+66.00 201.40 Td
+(  stack preserved while removing that extra heading.) Tj
+-66.00 -201.40 Td
+/F1 10 Tf
+54.00 186.20 Td
+(- The Original Icons category had Shopping Cart and Tutorial samples but did not yet include) Tj
+-54.00 -186.20 Td
+/F1 10 Tf
+66.00 173.00 Td
+(  the app-correct Close button sample from the Alla Vostra interaction language.) Tj
+-66.00 -173.00 Td
+/F1 10 Tf
+54.00 157.80 Td
+(- The user rejected CSS-drawn button approximations for Navigations and Controls & Inputs and) Tj
+-54.00 -157.80 Td
+/F1 10 Tf
+66.00 144.60 Td
+(  asked for honest real-life imagery of the actual app buttons and nav controls.) Tj
+-66.00 -144.60 Td
+/F1 10 Tf
+54.00 129.40 Td
+(- Playwright was not yet installed in the Portfolio project. The user preferred installing) Tj
+-54.00 -129.40 Td
+/F1 10 Tf
+66.00 116.20 Td
+(  Playwright locally over running two Android Virtual Devices concurrently for visual capture) Tj
+-66.00 -116.20 Td
+/F1 10 Tf
+66.00 103.00 Td
+(  and verification.) Tj
+-66.00 -103.00 Td
+/F1 8 Tf
+328.00 28.00 Td
+(Prahlin Portfolio Work Log - August 5, 2026 Page 2) Tj
+-328.00 -28.00 Td
+ET
+endstream
+endobj
+9 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 8 0 R >>
+endobj
+10 0 obj
+<< /Length 5737 >>
+stream
+BT
+/F2 12 Tf
+54.00 738.00 Td
+(Goals for August 5) Tj
+-54.00 -738.00 Td
+/F1 10 Tf
+54.00 719.80 Td
+(- Keep the Portfolio site running locally only at http://127.0.0.1:3000 during this work) Tj
+-54.00 -719.80 Td
+/F1 10 Tf
+66.00 706.60 Td
+(  cycle.) Tj
+-66.00 -706.60 Td
+/F1 10 Tf
+54.00 691.40 Td
+(- Study existing snapshots and worklogs before continuing, then maintain the established) Tj
+-54.00 -691.40 Td
+/F1 10 Tf
+66.00 678.20 Td
+(  Portfolio layout, naming, validation, and documentation conventions.) Tj
+-66.00 -678.20 Td
+/F1 10 Tf
+54.00 663.00 Td
+(- Make every UI Foundations and UX Product Flow section display only one row of) Tj
+-54.00 -663.00 Td
+/F1 10 Tf
+66.00 649.80 Td
+(  image/device-frame assets before Show More, even when additional sibling assets exist below) Tj
+-66.00 -649.80 Td
+/F1 10 Tf
+66.00 636.60 Td
+(  the fold.) Tj
+-66.00 -636.60 Td
+/F1 10 Tf
+54.00 621.40 Td
+(- Preserve Show More / Show Less button placement during expansion and collapse, avoiding) Tj
+-54.00 -621.40 Td
+/F1 10 Tf
+66.00 608.20 Td
+(  layout jumps caused by label width or expanded-state transfer.) Tj
+-66.00 -608.20 Td
+/F1 10 Tf
+54.00 593.00 Td
+(- Refine Iconography & Imagery ordering and content: swap Original Hero, Original Art, and) Tj
+-54.00 -593.00 Td
+/F1 10 Tf
+66.00 579.80 Td
+(  Original Photography placement as requested; remove product captions; preserve Product #3) Tj
+-66.00 -579.80 Td
+/F1 10 Tf
+66.00 566.60 Td
+(  image placement; and add the Close icon sample.) Tj
+-66.00 -566.60 Td
+/F1 10 Tf
+54.00 551.40 Td
+(- Convert Original Hero into one square Hero frame whose size matches the two-square stack) Tj
+-54.00 -551.40 Td
+/F1 10 Tf
+66.00 538.20 Td
+(  width in the relevant layouts, while protecting the existing background PNG and cheeseboard) Tj
+-66.00 -538.20 Td
+/F1 10 Tf
+66.00 525.00 Td
+(  PNG visual positions.) Tj
+-66.00 -525.00 Td
+/F1 10 Tf
+54.00 509.80 Td
+(- Install Playwright as a project dependency, update ignore rules for generated Playwright) Tj
+-54.00 -509.80 Td
+/F1 10 Tf
+66.00 496.60 Td
+(  artifacts, and use it for truthful browser-based verification.) Tj
+-66.00 -496.60 Td
+/F1 10 Tf
+54.00 481.40 Td
+(- Capture real Alla Vostra app controls and replace the Navigations and Controls & Inputs) Tj
+-54.00 -481.40 Td
+/F1 10 Tf
+66.00 468.20 Td
+(  sections with image-backed square frames rather than CSS-drawn button replicas.) Tj
+-66.00 -468.20 Td
+/F1 10 Tf
+54.00 453.00 Td
+(- Validate TypeScript, local route health, loaded UI asset imagery, and diff whitespace before) Tj
+-54.00 -453.00 Td
+/F1 10 Tf
+66.00 439.80 Td
+(  generating the next dated Portfolio worklog PDF.) Tj
+-66.00 -439.80 Td
+/F2 12 Tf
+54.00 416.60 Td
+(Work Completed - Local Preview, Snapshot, and Reveal Behavior) Tj
+-54.00 -416.60 Td
+/F1 10 Tf
+54.00 398.40 Td
+(- Ran the project read script at the start of the working sequence and reviewed the existing) Tj
+-54.00 -398.40 Td
+/F1 10 Tf
+66.00 385.20 Td
+(  snapshot and worklog cadence before changing the Alla Vostra page presentation.) Tj
+-66.00 -385.20 Td
+/F1 10 Tf
+54.00 370.00 Td
+(- Kept the Portfolio dev workflow local at http://127.0.0.1:3000 and restarted or cleared the) Tj
+-54.00 -370.00 Td
+/F1 10 Tf
+66.00 356.80 Td
+(  local development cache when stale UI state or requested cache clearing made it necessary.) Tj
+-66.00 -356.80 Td
+/F1 10 Tf
+54.00 341.60 Td
+(- Updated the shared reveal logic so narrow layouts use a max-width driven flow query rather) Tj
+-54.00 -341.60 Td
+/F1 10 Tf
+66.00 328.40 Td
+(  than the previous portrait-only query, matching the user request for one visible section) Tj
+-66.00 -328.40 Td
+/F1 10 Tf
+66.00 315.20 Td
+(  column when only one column can appear at a time.) Tj
+-66.00 -315.20 Td
+/F1 10 Tf
+54.00 300.00 Td
+(- Adjusted UI Foundations and UX Product Flow section rendering so collapsed states show only) Tj
+-54.00 -300.00 Td
+/F1 10 Tf
+66.00 286.80 Td
+(  the first row of assets per section, with additional stacks held behind the Show More) Tj
+-66.00 -286.80 Td
+/F1 10 Tf
+66.00 273.60 Td
+(  interaction.) Tj
+-66.00 -273.60 Td
+/F1 10 Tf
+54.00 258.40 Td
+(- Added an expanded-visible rendering path for assets that needed to exist below the initially) Tj
+-54.00 -258.40 Td
+/F1 10 Tf
+66.00 245.20 Td
+(  visible row without changing the collapsed row count or disturbing the already-visible) Tj
+-66.00 -245.20 Td
+/F1 10 Tf
+66.00 232.00 Td
+(  sibling stacks.) Tj
+-66.00 -232.00 Td
+/F1 10 Tf
+54.00 216.80 Td
+(- Fixed the Show More / Show Less control width for the Alla Vostra case page so the button) Tj
+-54.00 -216.80 Td
+/F1 10 Tf
+66.00 203.60 Td
+(  position remains visually stable when the expanded state changes.) Tj
+-66.00 -203.60 Td
+/F1 10 Tf
+54.00 188.40 Td
+(- Preserved the existing category/stage headings, green eyebrows, and square-frame sizing) Tj
+-54.00 -188.40 Td
+/F1 10 Tf
+66.00 175.20 Td
+(  model while limiting the actual behavior change to the requested reveal mechanics.) Tj
+-66.00 -175.20 Td
+/F2 12 Tf
+54.00 152.00 Td
+(Work Completed - Iconography & Imagery Refinement) Tj
+-54.00 -152.00 Td
+/F1 10 Tf
+54.00 133.80 Td
+(- Reordered Iconography & Imagery so Original Hero, Original Photography, Original Art, and) Tj
+-54.00 -133.80 Td
+/F1 10 Tf
+66.00 120.60 Td
+(  Original Icons landed in the requested sequence after the user-directed stack swaps.) Tj
+-66.00 -120.60 Td
+/F1 10 Tf
+54.00 105.40 Td
+(- Removed the Small Original Hero device frame and renamed the remaining sample to Hero, then) Tj
+-54.00 -105.40 Td
+/F1 10 Tf
+66.00 92.20 Td
+(  converted it from an Android Large/tall frame into a square-shaped frame consistent with the) Tj
+-66.00 -92.20 Td
+/F1 10 Tf
+66.00 79.00 Td
+(  surrounding UI Foundation samples.) Tj
+-66.00 -79.00 Td
+/F1 8 Tf
+328.00 28.00 Td
+(Prahlin Portfolio Work Log - August 5, 2026 Page 3) Tj
+-328.00 -28.00 Td
+ET
+endstream
+endobj
+11 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 10 0 R >>
+endobj
+12 0 obj
+<< /Length 5641 >>
+stream
+BT
+/F1 10 Tf
+54.00 738.00 Td
+(- Scaled the Hero square frame so its width matches the combined width of a two-square row) Tj
+-54.00 -738.00 Td
+/F1 10 Tf
+66.00 724.80 Td
+(  where applicable, including the later portrait-mode request to let Hero fill the equivalent) Tj
+-66.00 -724.80 Td
+/F1 10 Tf
+66.00 711.60 Td
+(  full width in single-column modes.) Tj
+-66.00 -711.60 Td
+/F1 10 Tf
+54.00 696.40 Td
+(- Restored the exact accepted Original Hero background and cheeseboard appearance after an) Tj
+-54.00 -696.40 Td
+/F1 10 Tf
+66.00 683.20 Td
+(  intermediate adjustment moved those source assets instead of only changing the frame shape) Tj
+-66.00 -683.20 Td
+/F1 10 Tf
+66.00 670.00 Td
+(  and scale.) Tj
+-66.00 -670.00 Td
+/F1 10 Tf
+54.00 654.80 Td
+(- Swapped Original Hero with Original Art, then moved Original Art relative to the Product #3) Tj
+-54.00 -654.80 Td
+/F1 10 Tf
+66.00 641.60 Td
+(  photography stack per the user-directed ordering changes.) Tj
+-66.00 -641.60 Td
+/F1 10 Tf
+54.00 626.40 Td
+(- Removed the Original Photography header above Product #3 in the wide two-column) Tj
+-54.00 -626.40 Td
+/F1 10 Tf
+66.00 613.20 Td
+(  section-asset mode without moving the Product #3 text/image placement stack that the user) Tj
+-66.00 -613.20 Td
+/F1 10 Tf
+66.00 600.00 Td
+(  wanted protected.) Tj
+-66.00 -600.00 Td
+/F1 10 Tf
+54.00 584.80 Td
+(- Removed the gray caption text from Products #1 through #3, preserved the green labels and) Tj
+-54.00 -584.80 Td
+/F1 10 Tf
+66.00 571.60 Td
+(  image vertical positions, and placed Product #3 into the first-row grouping centered between) Tj
+-66.00 -571.60 Td
+/F1 10 Tf
+66.00 558.40 Td
+(  Product #1 and Product #2.) Tj
+-66.00 -558.40 Td
+/F1 10 Tf
+54.00 543.20 Td
+(- Added the Close sticky icon sample into Original Icons using the Alla Vostra close-button) Tj
+-54.00 -543.20 Td
+/F1 10 Tf
+66.00 530.00 Td
+(  visual language, then positioned and reordered Shopping Cart, Tutorial, and Close as) Tj
+-66.00 -530.00 Td
+/F1 10 Tf
+66.00 516.80 Td
+(  requested.) Tj
+-66.00 -516.80 Td
+/F2 12 Tf
+54.00 493.60 Td
+(Work Completed - Real Navigation and Control Assets) Tj
+-54.00 -493.60 Td
+/F1 10 Tf
+54.00 475.40 Td
+(- Installed @playwright/test as a Portfolio dev dependency so visual inspection and capture) Tj
+-54.00 -475.40 Td
+/F1 10 Tf
+66.00 462.20 Td
+(  could happen inside the local project without requiring two concurrent Android emulator) Tj
+-66.00 -462.20 Td
+/F1 10 Tf
+66.00 449.00 Td
+(  sessions.) Tj
+-66.00 -449.00 Td
+/F1 10 Tf
+54.00 433.80 Td
+(- Added Playwright output folders to .gitignore so test-results, playwright-report, and) Tj
+-54.00 -433.80 Td
+/F1 10 Tf
+66.00 420.60 Td
+(  blob-report artifacts do not pollute future source changes.) Tj
+-66.00 -420.60 Td
+/F1 10 Tf
+54.00 405.40 Td
+(- Used Playwright against a temporary local Alla Vostra app web capture route to inspect and) Tj
+-54.00 -405.40 Td
+/F1 10 Tf
+66.00 392.20 Td
+(  crop actual controls from the rendered React Native styling instead of recreating buttons by) Tj
+-66.00 -392.20 Td
+/F1 10 Tf
+66.00 379.00 Td
+(  approximation in CSS.) Tj
+-66.00 -379.00 Td
+/F1 10 Tf
+54.00 363.80 Td
+(- Captured fifteen real Alla Vostra control/nav PNGs into public/images/alla-vostra/ui-assets:) Tj
+-54.00 -363.80 Td
+/F1 10 Tf
+66.00 350.60 Td
+(  header-shop.png, shop-preview.png, overlay-nav-left.png, overlay-nav-right.png,) Tj
+-66.00 -350.60 Td
+/F1 10 Tf
+66.00 337.40 Td
+(  overlay-center-products.png, overlay-center-cart.png, product-tab-active.png,) Tj
+-66.00 -337.40 Td
+/F1 10 Tf
+66.00 324.20 Td
+(  product-tab-inactive.png, product-image-prev.png, product-image-next.png, product-add.png,) Tj
+-66.00 -324.20 Td
+/F1 10 Tf
+66.00 311.00 Td
+(  cart-counter.png, cart-remove.png, cart-add-items.png, and cart-checkout.png.) Tj
+-66.00 -311.00 Td
+/F1 10 Tf
+54.00 295.80 Td
+(- Removed stale rough-capture assets from the UI asset directory so only the real captured set) Tj
+-54.00 -295.80 Td
+/F1 10 Tf
+66.00 282.60 Td
+(  remains available for the Portfolio sections.) Tj
+-66.00 -282.60 Td
+/F1 10 Tf
+54.00 267.40 Td
+(- Replaced the Navigations section with image-backed samples for SHOP, Shop, overlay) Tj
+-54.00 -267.40 Td
+/F1 10 Tf
+66.00 254.20 Td
+(  previous/next controls, Products, Cart, active/inactive product tabs, and product-image) Tj
+-66.00 -254.20 Td
+/F1 10 Tf
+66.00 241.00 Td
+(  chevrons.) Tj
+-66.00 -241.00 Td
+/F1 10 Tf
+54.00 225.80 Td
+(- Replaced the Controls & Inputs section with image-backed samples for ADD, quantity counter,) Tj
+-54.00 -225.80 Td
+/F1 10 Tf
+66.00 212.60 Td
+(  remove, Add items, and Checkout.) Tj
+-66.00 -212.60 Td
+/F1 10 Tf
+54.00 197.40 Td
+(- Removed the old CSS-drawn ActionButtonAsset renderer and quantity-triangle stand-ins from) Tj
+-54.00 -197.40 Td
+/F1 10 Tf
+66.00 184.20 Td
+(  ProductFlowSwitcher so these sections now depend on the captured app imagery.) Tj
+-66.00 -184.20 Td
+/F1 10 Tf
+54.00 169.00 Td
+(- Added square-frame CSS for the real action assets, centering the contained PNGs while) Tj
+-54.00 -169.00 Td
+/F1 10 Tf
+66.00 155.80 Td
+(  preserving the existing UI Foundations swatch/device-frame structure and responsive grid) Tj
+-66.00 -155.80 Td
+/F1 10 Tf
+66.00 142.60 Td
+(  behavior.) Tj
+-66.00 -142.60 Td
+/F1 10 Tf
+54.00 127.40 Td
+(- Stopped the temporary Alla Vostra capture server after generating the assets and reverted) Tj
+-54.00 -127.40 Td
+/F1 10 Tf
+66.00 114.20 Td
+(  capture-only changes in the Alla Vostra application repo so the Portfolio commit retained) Tj
+-66.00 -114.20 Td
+/F1 10 Tf
+66.00 101.00 Td
+(  the new PNGs without leaving external app scaffolding behind.) Tj
+-66.00 -101.00 Td
+/F1 8 Tf
+328.00 28.00 Td
+(Prahlin Portfolio Work Log - August 5, 2026 Page 4) Tj
+-328.00 -28.00 Td
+ET
+endstream
+endobj
+13 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 12 0 R >>
+endobj
+14 0 obj
+<< /Length 5490 >>
+stream
+BT
+/F2 12 Tf
+54.00 738.00 Td
+(Validation Summary) Tj
+-54.00 -738.00 Td
+/F1 10 Tf
+54.00 719.80 Td
+(- npm run check passed with tsc --noEmit after the real-control-asset implementation and again) Tj
+-54.00 -719.80 Td
+/F1 10 Tf
+66.00 706.60 Td
+(  during this August 5 worklog-generation pass.) Tj
+-66.00 -706.60 Td
+/F1 10 Tf
+54.00 691.40 Td
+(- curl -I http://127.0.0.1:3000/projects/alla-vostra returned HTTP 200 from the local Next.js) Tj
+-54.00 -691.40 Td
+/F1 10 Tf
+66.00 678.20 Td
+(  dev server during the final documentation pass.) Tj
+-66.00 -678.20 Td
+/F1 10 Tf
+54.00 663.00 Td
+(- A Playwright browser pass loaded http://127.0.0.1:3000/projects/alla-vostra, switched to UI) Tj
+-54.00 -663.00 Td
+/F1 10 Tf
+66.00 649.80 Td
+(  Foundations, scrolled through the page, and confirmed 15 ui-assets images were present with) Tj
+-66.00 -649.80 Td
+/F1 10 Tf
+66.00 636.60 Td
+(  unloadedCount: 0.) Tj
+-66.00 -636.60 Td
+/F1 10 Tf
+54.00 621.40 Td
+(- git diff --check passed after normalizing trailing whitespace inside the regenerated) Tj
+-54.00 -621.40 Td
+/F1 10 Tf
+66.00 608.20 Td
+(  snapshot text file.) Tj
+-66.00 -608.20 Td
+/F1 10 Tf
+54.00 593.00 Td
+(- The generated Portfolio dev server remained local-only for this work cycle; no Hostinger) Tj
+-54.00 -593.00 Td
+/F1 10 Tf
+66.00 579.80 Td
+(  deploy or public static-export branch update was performed as part of this record.) Tj
+-66.00 -579.80 Td
+/F1 10 Tf
+54.00 564.60 Td
+(- The temporary Expo web capture server used for Alla Vostra asset extraction was stopped) Tj
+-54.00 -564.60 Td
+/F1 10 Tf
+66.00 551.40 Td
+(  after the PNGs were produced.) Tj
+-66.00 -551.40 Td
+/F1 10 Tf
+54.00 536.20 Td
+(- The Alla Vostra application repo showed no remaining diff in the temporarily touched capture) Tj
+-54.00 -536.20 Td
+/F1 10 Tf
+66.00 523.00 Td
+(  files after cleanup; unrelated pre-existing snapshot artifacts in that sibling repo were) Tj
+-66.00 -523.00 Td
+/F1 10 Tf
+66.00 509.80 Td
+(  left alone.) Tj
+-66.00 -509.80 Td
+/F1 10 Tf
+54.00 494.60 Td
+(- The new PDF was generated with the same standard-library PDF writer pattern, letter page) Tj
+-54.00 -494.60 Td
+/F1 10 Tf
+66.00 481.40 Td
+(  size, Helvetica-style font usage, Codex metadata, and root-level Portfolio filename) Tj
+-66.00 -481.40 Td
+/F1 10 Tf
+66.00 468.20 Td
+(  convention as the mature prior worklogs.) Tj
+-66.00 -468.20 Td
+/F2 12 Tf
+54.00 445.00 Td
+(Files Touched During August 5 Portfolio Work) Tj
+-54.00 -445.00 Td
+/F1 10 Tf
+54.00 426.80 Td
+(- app/projects/alla-vostra/ProductFlowSwitcher.tsx - refined UI Foundations category ordering,) Tj
+-54.00 -426.80 Td
+/F1 10 Tf
+66.00 413.60 Td
+(  Original Hero square-frame rendering, Original Art/Photography layout behavior, Original) Tj
+-66.00 -413.60 Td
+/F1 10 Tf
+66.00 400.40 Td
+(  Icons Close sample, Navigations asset data, Controls & Inputs asset data, and image-backed) Tj
+-66.00 -400.40 Td
+/F1 10 Tf
+66.00 387.20 Td
+(  action-asset rendering.) Tj
+-66.00 -387.20 Td
+/F1 10 Tf
+54.00 372.00 Td
+(- app/projects/alla-vostra/ExpandableFlowStacks.tsx - updated collapsed-stack logic from) Tj
+-54.00 -372.00 Td
+/F1 10 Tf
+66.00 358.80 Td
+(  portrait-only behavior to the shared narrow-layout behavior used by the one-row reveal rule.) Tj
+-66.00 -358.80 Td
+/F1 10 Tf
+54.00 343.60 Td
+(- app/globals.css - added and tuned square-grid behavior, Hero composition sizing, sticky) Tj
+-54.00 -343.60 Td
+/F1 10 Tf
+66.00 330.40 Td
+(  Close icon styling, action-asset square frames, stable Alla Vostra Show More button width,) Tj
+-66.00 -330.40 Td
+/F1 10 Tf
+66.00 317.20 Td
+(  and responsive narrow-layout frame constraints.) Tj
+-66.00 -317.20 Td
+/F1 10 Tf
+54.00 302.00 Td
+(- public/images/alla-vostra/ui-assets/*.png - added the real captured Alla Vostra navigation) Tj
+-54.00 -302.00 Td
+/F1 10 Tf
+66.00 288.80 Td
+(  and control assets used by the Navigations and Controls & Inputs categories.) Tj
+-66.00 -288.80 Td
+/F1 10 Tf
+54.00 273.60 Td
+(- .gitignore - added Playwright generated-output folders.) Tj
+-54.00 -273.60 Td
+/F1 10 Tf
+54.00 258.40 Td
+(- package.json and package-lock.json - added @playwright/test as a development dependency for) Tj
+-54.00 -258.40 Td
+/F1 10 Tf
+66.00 245.20 Td
+(  local browser validation and capture work.) Tj
+-66.00 -245.20 Td
+/F1 10 Tf
+54.00 230.00 Td
+(- next-env.d.ts - reflected the Next.js generated route-types path state produced during the) Tj
+-54.00 -230.00 Td
+/F1 10 Tf
+66.00 216.80 Td
+(  local development and validation cycle.) Tj
+-66.00 -216.80 Td
+/F1 10 Tf
+54.00 201.60 Td
+(- portfolio_PROJECT_SNAPSHOT.txt - regenerated with ./read_project.sh for current project) Tj
+-54.00 -201.60 Td
+/F1 10 Tf
+66.00 188.40 Td
+(  context and normalized after generation so diff whitespace checks pass.) Tj
+-66.00 -188.40 Td
+/F1 10 Tf
+54.00 173.20 Td
+(- portfolio_worklog_august5.pdf - generated as this August 5 Portfolio worklog artifact in the) Tj
+-54.00 -173.20 Td
+/F1 10 Tf
+66.00 160.00 Td
+(  root-level Portfolio worklog convention.) Tj
+-66.00 -160.00 Td
+/F2 12 Tf
+54.00 136.80 Td
+(Follow-Up Context) Tj
+-54.00 -136.80 Td
+/F1 10 Tf
+54.00 118.60 Td
+(- Navigations and Controls & Inputs are now image-backed with real app captures. Future) Tj
+-54.00 -118.60 Td
+/F1 10 Tf
+66.00 105.40 Td
+(  changes to those controls should prefer fresh app captures or source-backed assets over CSS) Tj
+-66.00 -105.40 Td
+/F1 10 Tf
+66.00 92.20 Td
+(  approximation so the Portfolio stays honest to the mobile product.) Tj
+-66.00 -92.20 Td
+/F1 8 Tf
+328.00 28.00 Td
+(Prahlin Portfolio Work Log - August 5, 2026 Page 5) Tj
+-328.00 -28.00 Td
+ET
+endstream
+endobj
+15 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 14 0 R >>
+endobj
+16 0 obj
+<< /Length 3208 >>
+stream
+BT
+/F1 10 Tf
+54.00 738.00 Td
+(- Playwright is now available inside the Portfolio project for repeatable local page) Tj
+-54.00 -738.00 Td
+/F1 10 Tf
+66.00 724.80 Td
+(  inspection, screenshot capture, and asset-load verification.) Tj
+-66.00 -724.80 Td
+/F1 10 Tf
+54.00 709.60 Td
+(- The one-row collapsed reveal behavior is intentionally shared across UI Foundations and UX) Tj
+-54.00 -709.60 Td
+/F1 10 Tf
+66.00 696.40 Td
+(  Product Flow sections. Future additions should account for the visible-row count instead of) Tj
+-66.00 -696.40 Td
+/F1 10 Tf
+66.00 683.20 Td
+(  assuming all sibling stacks are visible before expansion.) Tj
+-66.00 -683.20 Td
+/F1 10 Tf
+54.00 668.00 Td
+(- Original Hero uses layered background and cheeseboard assets rather than a full screenshot.) Tj
+-54.00 -668.00 Td
+/F1 10 Tf
+66.00 654.80 Td
+(  Any future size changes should protect the current asset positions unless the user) Tj
+-66.00 -654.80 Td
+/F1 10 Tf
+66.00 641.60 Td
+(  explicitly asks to move the imagery itself.) Tj
+-66.00 -641.60 Td
+/F1 10 Tf
+54.00 626.40 Td
+(- The Close, Tutorial, and Shopping Cart icon samples remain static Portfolio recreations) Tj
+-54.00 -626.40 Td
+/F1 10 Tf
+66.00 613.20 Td
+(  grounded in the Alla Vostra app source styling, while the action/nav controls are now raster) Tj
+-66.00 -613.20 Td
+/F1 10 Tf
+66.00 600.00 Td
+(  captures from the app appearance.) Tj
+-66.00 -600.00 Td
+/F1 10 Tf
+54.00 584.80 Td
+(- No public deployment was performed during this record. The active local preview remains the) Tj
+-54.00 -584.80 Td
+/F1 10 Tf
+66.00 571.60 Td
+(  verified reference until the user requests deploy, publish, push, or Hostinger branch work.) Tj
+-66.00 -571.60 Td
+/F1 10 Tf
+54.00 556.40 Td
+(- The refreshed snapshot and this August 5 PDF are local documentation artifacts until the) Tj
+-54.00 -556.40 Td
+/F1 10 Tf
+66.00 543.20 Td
+(  user requests or approves a documentation commit.) Tj
+-66.00 -543.20 Td
+/F2 12 Tf
+54.00 520.00 Td
+(Output Artifact) Tj
+-54.00 -520.00 Td
+/F1 10 Tf
+54.00 501.80 Td
+(- Generated file: portfolio_worklog_august5.pdf.) Tj
+-54.00 -501.80 Td
+/F1 10 Tf
+54.00 486.60 Td
+(- Location: /Users/prahlin/gh/portfolio/portfolio_worklog_august5.pdf.) Tj
+-54.00 -486.60 Td
+/F1 10 Tf
+54.00 471.40 Td
+(- Naming follows the existing root-level Portfolio convention for a single daily PDF:) Tj
+-54.00 -471.40 Td
+/F1 10 Tf
+66.00 458.20 Td
+(  portfolio_worklog_august5.pdf.) Tj
+-66.00 -458.20 Td
+/F1 10 Tf
+54.00 443.00 Td
+(- Uses the same daily worklog structure and compact technical voice established by) Tj
+-54.00 -443.00 Td
+/F1 10 Tf
+66.00 429.80 Td
+(  portfolio_worklog_july11.pdf through portfolio_worklog_august3.pdf.) Tj
+-66.00 -429.80 Td
+/F1 10 Tf
+54.00 414.60 Td
+(- Generated with a small standard-library PDF writer; no external PDF dependency was installed) Tj
+-54.00 -414.60 Td
+/F1 10 Tf
+66.00 401.40 Td
+(  for this artifact.) Tj
+-66.00 -401.40 Td
+/F1 10 Tf
+54.00 386.20 Td
+(- The local project date used for this filename and title is Wednesday, August 5, 2026 in the) Tj
+-54.00 -386.20 Td
+/F1 10 Tf
+66.00 373.00 Td
+(  current Eastern-time project context.) Tj
+-66.00 -373.00 Td
+/F1 8 Tf
+328.00 28.00 Td
+(Prahlin Portfolio Work Log - August 5, 2026 Page 6) Tj
+-328.00 -28.00 Td
+ET
+endstream
+endobj
+17 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 16 0 R >>
+endobj
+xref
+0 18
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000149 00000 n 
+0000000219 00000 n 
+0000000294 00000 n 
+0000000605 00000 n 
+0000006647 00000 n 
+0000006783 00000 n 
+0000012867 00000 n 
+0000013003 00000 n 
+0000018793 00000 n 
+0000018931 00000 n 
+0000024625 00000 n 
+0000024763 00000 n 
+0000030306 00000 n 
+0000030444 00000 n 
+0000033705 00000 n 
+trailer
+<< /Size 18 /Root 1 0 R /Info 5 0 R >>
+startxref
+33843
+%%EOF
