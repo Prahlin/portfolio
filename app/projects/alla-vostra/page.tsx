@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import type { CSSProperties } from "react";
 import { ArrowLeft, ArrowRight, Mail } from "lucide-react";
 
 import { ProofStats } from "../../ProofStats";
@@ -21,6 +22,7 @@ const metadataItems = [
 const playStoreUrl =
   "https://play.google.com/store/apps/details?id=com.allavostra.app&showAllReviews=true";
 const appStoreUrl = "https://apps.apple.com/us/search?term=Alla%20Vostra";
+const appStoreBlue = "#0D96F6";
 
 const proofStats = [
   {
@@ -31,6 +33,190 @@ const proofStats = [
   { label: "Store Front Releases", value: "2" },
   { label: "Website", value: "1" },
 ];
+
+const fullStackSkillLabels = ["UI/UX", "F-End", "B-End", "Release"];
+
+const fullStackSkillGridStyle: CSSProperties = {
+  marginTop: "var(--av-skill-grid-margin-top, 8px)",
+  rowGap: "var(--av-skill-grid-row-gap, 7.15px)",
+  transform: "translateY(var(--av-skill-grid-y-offset, 0px))",
+};
+
+const xPlatformListStyle: CSSProperties = {
+  alignItems: "center",
+  columnGap: "14px",
+  display: "grid",
+  gridTemplateColumns: "repeat(3, max-content)",
+  justifyItems: "center",
+  marginTop: "8px",
+  rowGap: "3px",
+};
+
+const xPlatformLabelStyle: CSSProperties = {
+  color: "var(--muted)",
+  display: "block",
+  fontSize: "calc(13px + 2pt)",
+  fontWeight: 700,
+  lineHeight: 1.45,
+  marginTop: 0,
+  textAlign: "center",
+  whiteSpace: "nowrap",
+};
+
+const xPlatformSymbolCellStyle: CSSProperties = {
+  alignItems: "center",
+  display: "flex",
+  fontSize: "calc(13px + 2pt)",
+  height: "1.98em",
+  justifyContent: "center",
+  marginTop: 0,
+  minWidth: "1.98em",
+};
+
+const xPlatformAndroidMarkStyle: CSSProperties = {
+  alignSelf: "center",
+  display: "block",
+  flex: "0 0 auto",
+  fontSize: "calc(13px + 2pt)",
+  height: "1.25em",
+  marginTop: 0,
+  width: "auto",
+};
+
+const xPlatformAppleMarkStyle: CSSProperties = {
+  background: "#f3fff7",
+  border: 0,
+  borderRadius: 0,
+  boxSizing: "border-box",
+  display: "block",
+  flex: "0 0 auto",
+  fontSize: "calc(13px + 2pt)",
+  height: "1.62em",
+  marginTop: 0,
+  maskImage: "url('/images/apple-logo-official.svg')",
+  maskPosition: "center",
+  maskRepeat: "no-repeat",
+  maskSize: "100% 100%",
+  WebkitMaskImage: "url('/images/apple-logo-official.svg')",
+  WebkitMaskPosition: "center",
+  WebkitMaskRepeat: "no-repeat",
+  WebkitMaskSize: "100% 100%",
+  padding: 0,
+  width: "1.8em",
+};
+
+const xPlatformWebMarkStyle: CSSProperties = {
+  color: "#aebeb5",
+  display: "block",
+  flex: "0 0 auto",
+  fontSize: "calc(13px + 2pt)",
+  height: "1.98em",
+  marginLeft: 0,
+  marginTop: 0,
+  transform: "none",
+  width: "1.98em",
+};
+
+const xPlatformWebStrokeStyle: CSSProperties = {
+  stroke: "#aebeb5",
+};
+
+function FullStackSkillItem({ label }: { label: string }) {
+  return (
+    <span
+      className="av-showcase-skill-item"
+      style={{
+        alignItems: "center",
+        columnGap: "5px",
+        gridTemplateColumns: "1.331em max-content",
+      }}
+    >
+      <Image
+        alt=""
+        aria-hidden="true"
+        className="av-showcase-skill-checkmark"
+        height={24}
+        src="/images/alla-vostra/checkmark-box.svg"
+        style={{ display: "block", height: "1.331em", marginTop: 0, width: "1.331em" }}
+        width={24}
+      />
+      <span className="av-showcase-skill-label">{label}</span>
+    </span>
+  );
+}
+
+function XPlatformWebMark() {
+  return (
+    <svg
+      aria-hidden
+      className="carousel-button-web av-showcase-platform-web-mark"
+      height="1.98em"
+      style={xPlatformWebMarkStyle}
+      viewBox="0 0 24 24"
+      width="1.98em"
+    >
+      <circle
+        className="av-showcase-platform-web-stroke-outline av-showcase-platform-web-shell-outline"
+        cx="12"
+        cy="12"
+        r="8.2"
+      />
+      <path
+        className="av-showcase-platform-web-stroke-outline av-showcase-platform-web-line-outline"
+        d="M3.8 12h16.4"
+      />
+      <path
+        className="av-showcase-platform-web-stroke-outline av-showcase-platform-web-line-outline"
+        d="M5.6 8.1h12.8"
+      />
+      <path
+        className="av-showcase-platform-web-stroke-outline av-showcase-platform-web-line-outline"
+        d="M5.6 15.9h12.8"
+      />
+      <path
+        className="av-showcase-platform-web-stroke-outline av-showcase-platform-web-line-outline"
+        d="M12 3.8c2.2 2.3 3.3 5 3.3 8.2s-1.1 5.9-3.3 8.2"
+      />
+      <path
+        className="av-showcase-platform-web-stroke-outline av-showcase-platform-web-line-outline"
+        d="M12 3.8c-2.2 2.3-3.3 5-3.3 8.2s1.1 5.9 3.3 8.2"
+      />
+      <circle
+        className="web-globe-shell av-showcase-platform-web-shell"
+        cx="12"
+        cy="12"
+        fill="transparent"
+        r="8.2"
+        style={{ fill: "transparent", fillOpacity: 0, ...xPlatformWebStrokeStyle }}
+      />
+      <path
+        className="web-globe-line av-showcase-platform-web-line"
+        d="M3.8 12h16.4"
+        style={xPlatformWebStrokeStyle}
+      />
+      <path
+        className="web-globe-line av-showcase-platform-web-line"
+        d="M5.6 8.1h12.8"
+        style={xPlatformWebStrokeStyle}
+      />
+      <path
+        className="web-globe-line av-showcase-platform-web-line"
+        d="M5.6 15.9h12.8"
+        style={xPlatformWebStrokeStyle}
+      />
+      <path
+        className="web-globe-line av-showcase-platform-web-line"
+        d="M12 3.8c2.2 2.3 3.3 5 3.3 8.2s-1.1 5.9-3.3 8.2"
+        style={xPlatformWebStrokeStyle}
+      />
+      <path
+        className="web-globe-line av-showcase-platform-web-line"
+        d="M12 3.8c-2.2 2.3-3.3 5-3.3 8.2s1.1 5.9 3.3 8.2"
+        style={xPlatformWebStrokeStyle}
+      />
+    </svg>
+  );
+}
 
 function ProjectGitHubMark() {
   return (
@@ -631,13 +817,14 @@ export default function AllaVostraCaseStudy() {
                     className="button button-primary project-play-store-button project-app-store-button"
                     href={appStoreUrl}
                     rel="noreferrer"
+                    style={{ background: appStoreBlue }}
                     target="_blank"
                   >
                     <img
                       alt=""
                       aria-hidden="true"
                       className="project-play-store-icon-mark project-app-store-icon-mark"
-                      src="/images/apple-logo-official.svg"
+                      src="/images/app-store-mark.svg"
                     />
                   </a>
                   <a
@@ -696,43 +883,66 @@ export default function AllaVostraCaseStudy() {
               <div className="av-showcase-proof-row">
                 <div className="av-showcase-proof">
                   <strong>Full-Stack</strong>
-                  <span className="av-showcase-skill-grid">
-                    <span className="av-showcase-skill-item">
-                      <span className="av-showcase-skill-plus">+</span>
-                      <span className="av-showcase-skill-label">UI/UX</span>
-                    </span>
-                    <span className="av-showcase-skill-item">
-                      <span className="av-showcase-skill-plus">+</span>
-                      <span className="av-showcase-skill-label">F-End</span>
-                    </span>
-                    <span className="av-showcase-skill-item">
-                      <span className="av-showcase-skill-plus">+</span>
-                      <span className="av-showcase-skill-label">B-End</span>
-                    </span>
-                    <span className="av-showcase-skill-item">
-                      <span className="av-showcase-skill-plus">+</span>
-                      <span className="av-showcase-skill-label">Release</span>
-                    </span>
+                  <span
+                    className="av-showcase-skill-grid"
+                    style={fullStackSkillGridStyle}
+                  >
+                    {fullStackSkillLabels.map((label) => (
+                      <FullStackSkillItem key={label} label={label} />
+                    ))}
                   </span>
                 </div>
                 <div className="av-showcase-proof">
-                  <strong>X-Platform</strong>
-                  <span className="av-showcase-skill-grid av-showcase-platform-grid">
-                    <span className="av-showcase-platform-column">
-                      <span className="av-showcase-skill-item">
-                        <span className="av-showcase-skill-plus">+</span>
-                        <span className="av-showcase-skill-label">Android</span>
-                      </span>
-                      <span className="av-showcase-skill-item">
-                        <span className="av-showcase-skill-plus">+</span>
-                        <span className="av-showcase-skill-label">iOS</span>
-                      </span>
+                  <strong>Platforms</strong>
+                  <span
+                    className="av-showcase-platform-list"
+                    style={xPlatformListStyle}
+                  >
+                    <span
+                      className="av-showcase-platform-label"
+                      style={xPlatformLabelStyle}
+                    >
+                      And
                     </span>
-                    <span className="av-showcase-platform-column">
-                      <span className="av-showcase-skill-item">
-                        <span className="av-showcase-skill-plus">+</span>
-                        <span className="av-showcase-skill-label">Web</span>
-                      </span>
+                    <span
+                      className="av-showcase-platform-label"
+                      style={xPlatformLabelStyle}
+                    >
+                      iOS
+                    </span>
+                    <span
+                      className="av-showcase-platform-label"
+                      style={xPlatformLabelStyle}
+                    >
+                      Web
+                    </span>
+                    <span
+                      className="av-showcase-platform-symbol-cell"
+                      style={xPlatformSymbolCellStyle}
+                    >
+                      <img
+                        alt=""
+                        aria-hidden="true"
+                        className="av-showcase-platform-android-mark"
+                        src="/images/android-robot-head.svg"
+                        style={xPlatformAndroidMarkStyle}
+                      />
+                    </span>
+                    <span
+                      className="av-showcase-platform-symbol-cell"
+                      style={xPlatformSymbolCellStyle}
+                    >
+                      <span
+                        aria-hidden
+                        className="av-showcase-platform-apple-mark"
+                        style={xPlatformAppleMarkStyle}
+                      />
+                    </span>
+                    <span
+                      className="av-showcase-platform-symbol-cell av-showcase-platform-symbol-cell-empty"
+                      style={xPlatformSymbolCellStyle}
+                    >
+                      <XPlatformWebMark />
                     </span>
                   </span>
                 </div>

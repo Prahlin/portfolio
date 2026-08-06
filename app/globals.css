@@ -2527,7 +2527,7 @@ section.project-hero {
 }
 
 .project-page .project-app-store-button {
-  background: #f3fff7;
+  background: #0d96f6;
 }
 
 .project-page .project-github-icon-mark {
@@ -2571,7 +2571,7 @@ section.project-hero {
 
 .project-page .project-app-store-icon-mark {
   filter: none;
-  transform: scale(1.18);
+  transform: none;
 }
 
 .project-page .project-contact-icon-mark {
@@ -2887,33 +2887,131 @@ section.project-hero {
   display: grid;
   grid-template-columns: max-content max-content;
   justify-content: start;
-  row-gap: 2px;
+  margin-top: var(--av-skill-grid-margin-top, 8px);
+  row-gap: var(--av-skill-grid-row-gap, 7.15px);
+  transform: translateY(var(--av-skill-grid-y-offset, 0px));
 }
 
 .av-showcase-proof .av-showcase-skill-item {
-  align-items: baseline;
-  column-gap: 4px;
+  align-items: center;
+  column-gap: 5px;
   display: grid;
-  grid-template-columns: 1ch max-content;
+  grid-template-columns: 1.331em max-content;
   margin-top: 0;
   text-align: left;
   white-space: nowrap;
 }
 
-.av-showcase-proof .av-showcase-skill-plus,
 .av-showcase-proof .av-showcase-skill-label {
   display: block;
   margin-top: 0;
 }
 
-.av-showcase-proof .av-showcase-platform-grid {
-  grid-template-columns: repeat(2, max-content);
+.av-showcase-proof .av-showcase-skill-checkmark {
+  display: block;
+  height: 1.331em;
+  margin-top: 0;
+  width: 1.331em;
 }
 
-.av-showcase-proof .av-showcase-platform-column {
+.av-showcase-proof .av-showcase-platform-list {
+  align-items: center;
+  column-gap: 14px;
   display: grid;
+  grid-template-columns: repeat(3, max-content);
+  justify-items: center;
+  margin-top: 8px;
+  row-gap: 3px;
+}
+
+.av-showcase-proof .av-showcase-platform-label {
+  color: var(--muted);
+  display: block;
+  font-size: calc(13px + 2pt);
+  font-weight: 700;
+  line-height: 1.45;
   margin-top: 0;
-  row-gap: 2px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.av-showcase-proof .av-showcase-platform-list > span {
+  margin-top: 0;
+}
+
+.av-showcase-proof .av-showcase-platform-symbol-cell {
+  align-items: center;
+  display: flex;
+  font-size: calc(13px + 2pt);
+  height: 1.98em;
+  justify-content: center;
+  margin-top: 0;
+  min-width: 1.98em;
+}
+
+.av-showcase-proof .av-showcase-platform-android-mark {
+  align-self: center;
+  display: block;
+  flex: 0 0 auto;
+  font-size: calc(13px + 2pt);
+  height: 1.25em;
+  margin-top: 0;
+  width: auto;
+}
+
+.av-showcase-proof .av-showcase-platform-apple-mark {
+  background: #f3fff7;
+  border: 0;
+  border-radius: 0;
+  box-sizing: border-box;
+  display: block;
+  flex: 0 0 auto;
+  font-size: calc(13px + 2pt);
+  height: 1.62em;
+  margin-top: 0;
+  mask: url("/images/apple-logo-official.svg") center / 100% 100% no-repeat;
+  padding: 0;
+  width: 1.8em;
+}
+
+.av-showcase-proof .av-showcase-platform-web-mark {
+  color: #aebeb5;
+  display: block;
+  flex: 0 0 auto;
+  font-size: calc(13px + 2pt);
+  height: 1.98em;
+  margin-left: 0;
+  margin-top: 0;
+  transform: none;
+  width: 1.98em;
+}
+
+.av-showcase-proof .av-showcase-platform-web-stroke-outline {
+  fill: none;
+  stroke: #000;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.av-showcase-proof .av-showcase-platform-web-shell-outline {
+  stroke-width: 4px;
+}
+
+.av-showcase-proof .av-showcase-platform-web-line-outline {
+  stroke-width: 3px;
+}
+
+.av-showcase-proof .av-showcase-platform-web-shell {
+  fill: transparent !important;
+  fill-opacity: 0;
+  stroke: #aebeb5 !important;
+  stroke-width: 1.65px;
+}
+
+.av-showcase-proof .av-showcase-platform-web-line {
+  fill: none;
+  stroke: #aebeb5 !important;
+  stroke-width: 1.15px;
 }
 
 .project-section-grid,
@@ -4449,6 +4547,11 @@ section.project-hero {
   .alla-vostra-case .av-showcase-proof span {
     font-size: clamp(12px, 3.2vw, 15px);
     line-height: 1.32;
+  }
+
+  .alla-vostra-case .av-showcase-proof:first-child {
+    --av-skill-grid-row-gap: clamp(9.92px, calc(28.48px - 3.8667vw), 13.4px);
+    --av-skill-grid-y-offset: clamp(-7.27px, calc(1.9222vw - 14.77px), -5.54px);
   }
 
   .alla-vostra-case .stats-strip {
