@@ -38,5 +38,6 @@ build/
 
 # OS/editor files
 .DS_Store
+.DS_store
 .idea/
 .vscode/
