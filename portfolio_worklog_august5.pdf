@@ -1,0 +1,372 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [6 0 R 8 0 R 10 0 R 12 0 R 14 0 R 16 0 R] /Count 6 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+5 0 obj
+<< /Length 6408 >>
+stream
+BT /F2 12.80 Tf 1 0 0 1 54.00 724.00 Tm (Prahlin Portfolio Work Log - August 5, 2026) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 706.00 Tm (Compiled summary for Wednesday, August 5, 2026 - focus: continuing the Prahl.dev Portfolio) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 693.75 Tm (Alla Vostra case-study page after the August 4 real-control-asset pass, rebuilding the hero) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 681.50 Tm (proof cards from plus-sign shorthand into icon-backed Full-Stack and Platforms cards,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 669.25 Tm (importing and trimming platform marks, matching card sizing and row alignment across narrow) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 657.00 Tm (portrait windows, tuning the hero device composition and proof-stat strip, cleaning the UX) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 644.75 Tm (Product Flow diagram connectors and underlay, hardening local cache/deploy repository) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 632.50 Tm (hygiene, validating TypeScript and static export, refreshing the Portfolio project snapshot,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 620.25 Tm (reviewing all prior Portfolio PDF worklogs, and generating the August 5 Portfolio PDF) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 608.00 Tm (worklog.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 595.75 Tm (Generated in continuity with the established Prahlin Portfolio daily worklog cadence:) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 583.50 Tm (compact opening summary, source-material section, baseline section, goal list, work-) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 571.25 Tm (completed sections, validation section, files-touched list, follow-up context, and output-) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 559.00 Tm (artifact close.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 546.75 Tm (This artifact intentionally covers Prahlin/portfolio work performed after) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 534.50 Tm (portfolio_worklog_august4.pdf and after the corrected August 4 documentation state. The) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 522.25 Tm (source commits reviewed for this record are f4ef9d43ec25a489cd6f89148ae1833a4a953b3e,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 510.00 Tm (8caad05cc008b41c532e685b18f2ed9c4aeac890, and 8e21e8d55922f66fecfe7ffe52952f51b3864814. The) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 497.75 Tm (last two source commits were made just after midnight on Thursday, August 6, 2026 during the) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 485.50 Tm (same late August 5 work cycle; the user explicitly requested August 5 as the worklog date) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 473.25 Tm (for this artifact. Public Hostinger deployment was not pushed during this record.) Tj ET
+BT /F2 10.60 Tf 1 0 0 1 54.00 453.00 Tm (Source Materials Reviewed) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 437.00 Tm (- Ran ./read_project.sh from /Users/prahlin/gh/portfolio and regenerated) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 424.75 Tm (  portfolio_PROJECT_SNAPSHOT.txt before writing this worklog, preserving the project) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 412.50 Tm (  convention that Codex refreshes the current source snapshot before continuing Portfolio) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 400.25 Tm (  documentation work.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 388.00 Tm (- Reviewed the refreshed portfolio_PROJECT_SNAPSHOT.txt, including project notes, current) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 375.75 Tm (  source tree, line-numbered source dumps, public image and font inventories, PDF) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 363.50 Tm (  inventory, package and deployment configuration, git context, and the standing) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 351.25 Tm (  instruction to ask for a commit message before committing or pushing.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 339.00 Tm (- Reviewed every pre-existing Portfolio root-level worklog PDF:) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 326.75 Tm (  portfolio_worklog_july11.pdf, portfolio_worklog_july14.pdf,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 314.50 Tm (  portfolio_worklog_july15_part1.pdf, portfolio_worklog_july15_part2.pdf,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 302.25 Tm (  portfolio_worklog_july16.pdf, portfolio_worklog_july19.pdf,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 290.00 Tm (  portfolio_worklog_july20.pdf, portfolio_worklog_july21.pdf,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 277.75 Tm (  portfolio_worklog_july22.pdf, portfolio_worklog_july23.pdf,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 265.50 Tm (  portfolio_worklog_july24.pdf, portfolio_worklog_july25.pdf,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 253.25 Tm (  portfolio_worklog_july29.pdf, portfolio_worklog_july30.pdf,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 241.00 Tm (  portfolio_worklog_july31.pdf, portfolio_worklog_august1_part1.pdf,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 228.75 Tm (  portfolio_worklog_august1_part2.pdf, portfolio_worklog_august1_part3.pdf,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 216.50 Tm (  portfolio_worklog_august3.pdf, and portfolio_worklog_august4.pdf.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 204.25 Tm (- Extracted text from all twenty existing Portfolio PDFs with pdftotext and checked) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 192.00 Tm (  metadata/page counts with pdfinfo to preserve title cadence, opening-summary density,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 179.75 Tm (  section order, compact bullet-heavy technical voice, validation language, files-touched) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 167.50 Tm (  lists, follow-up context, output-artifact close, root-level filename style, letter-size) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 155.25 Tm (  pages, PDF 1.4 output, Codex author/creator/producer metadata, and Helvetica-style base-) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 143.00 Tm (  font convention.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 130.75 Tm (- Used portfolio_worklog_august4.pdf as the closest structural baseline because it) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 118.50 Tm (  documented the immediately preceding Alla Vostra UI Foundations refinements, local-) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 106.25 Tm (  preview behavior, snapshot refresh, full prior-worklog review, validation summary,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 94.00 Tm (  files-touched list, and local-only output-artifact language.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 81.75 Tm (- Reviewed git history and source state through git log, git show --stat, git show --name-) Tj ET
+BT /F1 8.00 Tf 1 0 0 1 366.00 34.00 Tm (Prahlin Portfolio Work Log - August 5, 2026 Page 1) Tj ET
+endstream
+endobj
+6 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 5 0 R >>
+endobj
+7 0 obj
+<< /Length 6188 >>
+stream
+BT /F1 9.15 Tf 1 0 0 1 54.00 724.00 Tm (  status, git diff --stat, git diff --name-status, and current branch status. main and) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 711.75 Tm (  origin/main both resolved to 8e21e8d before this PDF was generated.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 699.50 Tm (- Reviewed app/projects/alla-vostra/page.tsx, app/projects/alla-) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 687.25 Tm (  vostra/ProductFlowSwitcher.tsx, app/projects/alla-vostra/HeroProofBottomAligner.tsx,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 675.00 Tm (  app/globals.css, app/PortfolioSections.tsx, .gitignore, next-env.d.ts, package.json,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 662.75 Tm (  next.config.ts, read_project.sh, and the newly added public/images/alla-vostra and) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 650.50 Tm (  platform SVG assets.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 638.25 Tm (- Reviewed the nested out deployment directory state after VS Code reported a push-ref) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 626.00 Tm (  error, then compared the local hostinger-deploy state against origin/hostinger-deploy) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 613.75 Tm (  before repairing the local generated-output state without pushing a public deploy) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 601.50 Tm (  branch.) Tj ET
+BT /F2 10.60 Tf 1 0 0 1 54.00 581.25 Tm (Baseline Status Before August 5 Work) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 565.25 Tm (- The August 4 Portfolio work had already filled UI Foundations with real Alla Vostra app) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 553.00 Tm (  navigation and control captures, replaced CSS-drawn controls with PNG crops, added) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 540.75 Tm (  Playwright, and established local-only validation around the Alla Vostra page.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 528.50 Tm (- The Alla Vostra hero proof cards still used plus-sign shorthand and an X-Platform title,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 516.25 Tm (  which read less like a polished product proof badge than the surrounding store, GitHub,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 504.00 Tm (  and contact-button language.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 491.75 Tm (- The user wanted the Full-Stack card to inherit the green checkmark-box language from the) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 479.50 Tm (  Alla Vostra app rather than displaying plain plus signs beside UI/UX, F-End, B-End, and) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 467.25 Tm (  Release.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 455.00 Tm (- The X-Platform card needed to become Platforms, remove bullet and plus-sign notation,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 442.75 Tm (  and show a two-row matrix where Android, iOS, and Web labels sit above corresponding) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 430.50 Tm (  symbols.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 418.25 Tm (- The platform symbols required several brand-specific passes: App Store blue, a clipped) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 406.00 Tm (  white App Store A mark, an Apple symbol without its imported white box, an Android) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 393.75 Tm (  robot-head mark, and the existing Alla Vostra landing CTA web globe converted into the) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 381.50 Tm (  hero-card context.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 369.25 Tm (- Narrow portrait windows still produced mismatched proof-card geometry, with one card) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 357.00 Tm (  acting taller/wider than the other and the Full-Stack skill rows failing to align) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 344.75 Tm (  cleanly against the Platforms label/icon rows.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 332.50 Tm (- The hero device composition still needed screenshot swapping, a more intentional left-) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 320.25 Tm (  device vertical relationship, and better coupling between proof-card bottom edges and) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 308.00 Tm (  the Contact Dev button in wide aspect ratios.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 295.75 Tm (- The UX Product Flow diagram still contained a Home-to-Cart connector path and a leftover) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 283.50 Tm (  horizontal noodle body that no longer matched the requested flow presentation.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 271.25 Tm (- Generated caches and OS metadata had begun to interfere with local source-control) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 259.00 Tm (  surfaces, making .next cleanup folders and lowercase .DS_store files worth ignoring) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 246.75 Tm (  explicitly.) Tj ET
+BT /F2 10.60 Tf 1 0 0 1 54.00 226.50 Tm (Goals for August 5) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 210.50 Tm (- Replace Full-Stack plus signs with app-inspired green checkmark boxes whose visible size) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 198.25 Tm (  tracks the skill-label font size and whose fill/stroke treatment matches the final hero-) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 186.00 Tm (  card language.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 173.75 Tm (- Rename X-Platform to Platforms and rebuild that proof card as a clean Android/iOS/Web) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 161.50 Tm (  matrix without plus signs, bullet points, or placeholder text treatments.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 149.25 Tm (- Use official or official-like platform source art where possible, then trim away) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 137.00 Tm (  imported background boxes so the existing card/button fills become the only visible) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 124.75 Tm (  backing shapes.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 112.50 Tm (- Tune Android, Apple, App Store, Play Store, and Web symbol sizing, aspect ratio, fill) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 100.25 Tm (  color, stroke color, and optical alignment through user-directed comparison passes.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 88.00 Tm (- Protect proof-card sizing and vertical row alignment in portrait and narrow windows by) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 75.75 Tm (  letting the largest card define the shared card footprint and row grid.) Tj ET
+BT /F1 8.00 Tf 1 0 0 1 366.00 34.00 Tm (Prahlin Portfolio Work Log - August 5, 2026 Page 2) Tj ET
+endstream
+endobj
+8 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 7 0 R >>
+endobj
+9 0 obj
+<< /Length 6355 >>
+stream
+BT /F1 9.15 Tf 1 0 0 1 54.00 724.00 Tm (- Rework Alla Vostra hero device positions and screenshot assignment so the left, middle,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 711.75 Tm (  and right phone frames feel deliberate while preserving the existing hero system.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 699.50 Tm (- Update Alla Vostra hero proof stats to full values, reduce awkward lower black gaps, and) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 687.25 Tm (  protect large bottom visual spacing across portrait breakpoints.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 675.00 Tm (- Clean the UX Product Flow diagram by removing obsolete noodles, matching underlay and) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 662.75 Tm (  grid planes, and tightening vertical rail label kerning without changing the overall) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 650.50 Tm (  table structure.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 638.25 Tm (- Keep all work local unless the user explicitly asks for commit, push, deploy, or public) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 626.00 Tm (  website updates.) Tj ET
+BT /F2 10.60 Tf 1 0 0 1 54.00 605.75 Tm (Work Completed - Full-Stack and Platforms Cards) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 589.75 Tm (- Replaced the Full-Stack card plus-sign markers with a custom SVG checkmark-box asset at) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 577.50 Tm (  public/images/alla-vostra/checkmark-box.svg, borrowing the Alla Vostra app's green) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 565.25 Tm (  confirmed-box visual language for the hero proof card.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 553.00 Tm (- Scaled the checkmark boxes upward through repeated passes, matched their visible height) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 540.75 Tm (  to the UI/UX, F-End, B-End, and Release text scale, restored the dark green box fill,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 528.50 Tm (  and applied black hairline detailing to the check mark and box outline where requested.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 516.25 Tm (- Renamed the X-Platform hero card to Platforms and removed all plus signs and bullet-) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 504.00 Tm (  style cues, turning the card into a compact proof matrix rather than a text list.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 491.75 Tm (- Moved the Apple symbol out of the left hero source-button area and into the Platforms) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 479.50 Tm (  card, then removed the imported white square backing, doubled and later reduced the) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 467.25 Tm (  symbol scale, inverted it to the final off-white tone, and compressed it until the) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 455.00 Tm (  visible mark read as a square-ish platform symbol.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 442.75 Tm (- Updated the App Store button fill to the App Store blue hex value #0D96F6, inserted a) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 430.50 Tm (  clipped App Store A-style mark, removed its extra square background, and applied the) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 418.25 Tm (  Play Store logo's black hairline stroke treatment to the A mark.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 406.00 Tm (- Added public/images/app-store-mark.svg for the standalone App Store mark, then used it) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 393.75 Tm (  only as foreground geometry so the existing blue button fill remained the single visible) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 381.50 Tm (  background.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 369.25 Tm (- Added public/images/android-robot-head.svg, iterated through official and simpler) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 357.00 Tm (  Android mark candidates, compressed the robot head horizontally until its face read more) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 344.75 Tm (  squarely, and tested the final dark green fill from the checkmark-box system.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 332.50 Tm (- Pulled the exact Web globe geometry already used in the Alla Vostra landing CTA button,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 320.25 Tm (  placed it as the Web platform symbol, removed orange fill, scaled it up, thinned the) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 308.00 Tm (  strokes, and changed the final stroke color to a stylish gray so it would not merge) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 295.75 Tm (  visually with the Apple mark.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 283.50 Tm (- Kept the final Platforms matrix as a two-row presentation: top row labels And, iOS, and) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 271.25 Tm (  Web; second row Android robot head, Apple symbol, and Web globe.) Tj ET
+BT /F2 10.60 Tf 1 0 0 1 54.00 251.00 Tm (Work Completed - Hero Layout, Alignment, and Proof Stats) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 235.00 Tm (- Added shared CSS variables and grid rules so the Full-Stack and Platforms cards use the) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 222.75 Tm (  same column-gap, content-top, top-row, bottom-row, and card-height references in narrow) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 210.50 Tm (  windows.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 198.25 Tm (- Made the widest/tallest hero proof card act as the sizing reference in portrait-style) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 186.00 Tm (  layouts by switching the proof-card row to equal grid columns, stretched card heights,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 173.75 Tm (  and shared row tracks.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 161.50 Tm (- Aligned the UI/UX and platform-label rows to the same vertical centerline, then aligned) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 149.25 Tm (  the B-End/Release row with the platform-icon row so the two hero cards read as one) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 137.00 Tm (  coordinated proof system.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 124.75 Tm (- Added app/projects/alla-vostra/HeroProofBottomAligner.tsx as a small client-side) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 112.50 Tm (  synchronizer that observes the wide hero layout and sets --av-proof-row-bottom so the) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 100.25 Tm (  proof cards' bottom edge tracks the Contact Dev button bottom without resizing the) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 88.00 Tm (  cards.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 75.75 Tm (- Swapped the left and right Alla Vostra hero screenshot assets so the products screen) Tj ET
+BT /F1 8.00 Tf 1 0 0 1 366.00 34.00 Tm (Prahlin Portfolio Work Log - August 5, 2026 Page 3) Tj ET
+endstream
+endobj
+10 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 9 0 R >>
+endobj
+11 0 obj
+<< /Length 6092 >>
+stream
+BT /F1 9.15 Tf 1 0 0 1 54.00 724.00 Tm (  moved into the right-side device and the confirmation screen moved into the left-side) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 711.75 Tm (  frame.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 699.50 Tm (- Moved the leftmost hero device upward so its lower edge visually landed between the) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 687.25 Tm (  middle and right device-frame bottom edges, improving the staggered three-phone) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 675.00 Tm (  composition.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 662.75 Tm (- Changed the Alla Vostra hero proof stat values from 0.4k and 0.1k to 400 and 200,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 650.50 Tm (  preserving the labels Quality GitHub Commits and Real-Time Project Worklogs.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 638.25 Tm (- Expanded the proof-stats strip downward, reduced awkward black lower gaps, and protected) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 626.00 Tm (  the large bottom vertical spacing in portrait modes through a consistent stats-strip) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 613.75 Tm (  item height.) Tj ET
+BT /F2 10.60 Tf 1 0 0 1 54.00 593.50 Tm (Work Completed - UX Product Flow and Button Responsiveness) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 577.50 Tm (- Kept the UI Foundations and UX Product Flow switcher as a two-column row in) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 565.25 Tm (  narrow/portrait views, scaling the button font down through responsive variables instead) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 553.00 Tm (  of allowing UI/UX text to break into a two-line stack.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 540.75 Tm (- Rolled back the experimental text-stroke changes on the UI Foundations and UX Product) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 528.50 Tm (  Flow button fonts after user review, returning those controls to their original font) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 516.25 Tm (  treatment.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 504.00 Tm (- Removed the obsolete Home-to-Cart connector path from the UX Product Flow diagram so the) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 491.75 Tm (  Browse and Shop flow no longer implied a direct bypass into Cart.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 479.50 Tm (- Removed the leftover horizontal noodle body that remained after the first connector) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 467.25 Tm (  pass, cleaning the diagram line work around the Home/Browse rail junction.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 455.00 Tm (- Matched the flow diagram panel rectangle to the full coordinate frame so the dark) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 442.75 Tm (  underlay no longer protruded beneath or around the lighter grid-pattern overlay.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 430.50 Tm (- Added rail-specific class names and tightened vertical green section-box letter spacing,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 418.25 Tm (  with a special Confirmation rail adjustment so its long label fits the same vertical) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 406.00 Tm (  visual system.) Tj ET
+BT /F2 10.60 Tf 1 0 0 1 54.00 385.75 Tm (Work Completed - Repository Hygiene and Local Output Repair) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 369.75 Tm (- Added .next.cleared-*/ to .gitignore during the local cache-clearing pass so timestamped) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 357.50 Tm (  Next cache backup directories created during development do not surface as source) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 345.25 Tm (  changes.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 333.00 Tm (- Added lowercase .DS_store beside the existing .DS_Store ignore rule so both macOS) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 320.75 Tm (  metadata spellings are explicitly ignored by the source repository.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 308.50 Tm (- Investigated the VS Code push-ref error and confirmed the main Portfolio source repo was) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 296.25 Tm (  clean and aligned with origin/main while the nested generated out directory had become a) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 284.00 Tm (  separate local repo on hostinger-deploy.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 271.75 Tm (- Fetched origin metadata for the nested out repo, identified an accidental local) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 259.50 Tm (  .DS_Store binary commit with no merge base against origin/hostinger-deploy, and reset) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 247.25 Tm (  that generated deploy repo back to origin/hostinger-deploy after user approval.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 235.00 Tm (- Rebuilt the static export locally with npm run build:static, removed generated) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 222.75 Tm (  out/.DS_Store metadata, and restored next-env.d.ts to the dev route-types path so) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 210.50 Tm (  source-control state stayed clean and intentional.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 198.25 Tm (- Left public deployment untouched: no hostinger-deploy push, GitHub Actions dispatch,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 186.00 Tm (  production publish, or live-site update was performed during this record.) Tj ET
+BT /F2 10.60 Tf 1 0 0 1 54.00 165.75 Tm (Validation Summary) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 149.75 Tm (- npm run check passed with tsc --noEmit after the August 5 source commits and again) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 137.50 Tm (  before this PDF generation pass.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 125.25 Tm (- npm run build:static passed with Next.js 16.2.10 and generated static routes for /,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 113.00 Tm (  /_not-found, /articles, /projects/alla-vostra, and /projects/cinerific.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 100.75 Tm (- git diff --check initially caught trailing whitespace introduced by the regenerated) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 88.50 Tm (  snapshot; the snapshot was normalized, and git diff --check then passed.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 76.25 Tm (- pdfinfo and pdftotext were available locally and were used to inspect prior worklog) Tj ET
+BT /F1 8.00 Tf 1 0 0 1 366.00 34.00 Tm (Prahlin Portfolio Work Log - August 5, 2026 Page 4) Tj ET
+endstream
+endobj
+12 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 11 0 R >>
+endobj
+13 0 obj
+<< /Length 6152 >>
+stream
+BT /F1 9.15 Tf 1 0 0 1 54.00 724.00 Tm (  metadata, page counts, title cadence, and extracted text structure before generating) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 711.75 Tm (  this artifact.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 699.50 Tm (- git status before PDF generation showed main aligned with origin/main and only the) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 687.25 Tm (  refreshed portfolio_PROJECT_SNAPSHOT.txt modified.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 675.00 Tm (- The static export validation created generated output only. Any incidental .DS_Store) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 662.75 Tm (  file in out/ was removed and no generated out repository was pushed.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 650.50 Tm (- This PDF was generated with the same small standard-library PDF writer pattern, letter) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 638.25 Tm (  page size, Helvetica-style font usage, Codex metadata, and root-level Portfolio filename) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 626.00 Tm (  convention as the mature prior worklogs.) Tj ET
+BT /F2 10.60 Tf 1 0 0 1 54.00 605.75 Tm (Files Touched During August 5 Portfolio Work) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 589.75 Tm (- app/projects/alla-vostra/page.tsx - updated Alla Vostra proof stats, imported the hero) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 577.50 Tm (  proof bottom aligner, rewired Full-Stack and Platforms proof-card data, inserted the) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 565.25 Tm (  platform/checkmark asset usage, and swapped the hero products/confirmation screenshots.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 553.00 Tm (- app/projects/alla-vostra/HeroProofBottomAligner.tsx - added the wide-layout observer) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 540.75 Tm (  that keeps the hero proof-card row bottom aligned with the Contact Dev button bottom) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 528.50 Tm (  edge.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 516.25 Tm (- app/projects/alla-vostra/ProductFlowSwitcher.tsx - removed the Home-to-Cart connector) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 504.00 Tm (  and leftover horizontal noodle, matched the panel rectangle to the flow coordinate) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 491.75 Tm (  frame, and added rail-specific class names for label kerning control.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 479.50 Tm (- app/globals.css - tuned App Store mark hairlines, Alla Vostra hero padding, device) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 467.25 Tm (  placement, proof-card row positioning, equal-card responsive behavior, shared row) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 455.00 Tm (  tracks, stats-strip height, product-flow nav sizing, flow-rail kerning, and narrow-) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 442.75 Tm (  window safeguards.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 430.50 Tm (- public/images/alla-vostra/checkmark-box.svg - added the dark green checkmark box used by) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 418.25 Tm (  the Full-Stack hero card.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 406.00 Tm (- public/images/android-robot-head.svg - added the simplified Android robot-head platform) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 393.75 Tm (  symbol used by the Platforms card.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 381.50 Tm (- public/images/app-store-mark.svg - added the clipped App Store A-style symbol used) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 369.25 Tm (  inside the App Store source button.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 357.00 Tm (- .gitignore - added .next.cleared-*/ for local cache backups and .DS_store for lowercase) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 344.75 Tm (  macOS metadata files.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 332.50 Tm (- portfolio_PROJECT_SNAPSHOT.txt - regenerated with ./read_project.sh for current project) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 320.25 Tm (  context and normalized after generation so diff whitespace checks pass.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 308.00 Tm (- portfolio_worklog_august5.pdf - generated as this August 5 Portfolio worklog artifact in) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 295.75 Tm (  the root-level Portfolio worklog convention.) Tj ET
+BT /F2 10.60 Tf 1 0 0 1 54.00 275.50 Tm (Follow-Up Context) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 259.50 Tm (- The Alla Vostra hero proof cards now depend on shared row tracks and a wide-layout) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 247.25 Tm (  bottom aligner. Future hero-card edits should preserve the Full-Stack and Platforms row-) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 235.00 Tm (  pair relationship before changing individual icon sizes.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 222.75 Tm (- The Platforms card intentionally uses And as the Android label, iOS as the Apple label,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 210.50 Tm (  and Web as the globe label, matching the user-approved shortened copy inside the) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 198.25 Tm (  constrained card.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 186.00 Tm (- The App Store A mark is foreground-only against the blue button fill, while the Apple) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 173.75 Tm (  platform symbol is foreground-only inside the Platforms card. Avoid reintroducing) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 161.50 Tm (  imported square backings unless the user asks for a boxed logo treatment.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 149.25 Tm (- The Android robot head uses the dark green visual family from the checkmark boxes rather) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 137.00 Tm (  than a default bright Android green, because that was the accepted final direction for) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 124.75 Tm (  this card.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 112.50 Tm (- The UX Product Flow diagram no longer contains the direct Home-to-Cart noodle. Future) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 100.25 Tm (  connector changes should be checked against the current Browse -> Shop -> Cart ->) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 88.00 Tm (  Checkout -> Payment -> Confirmation structure.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 75.75 Tm (- The nested out directory should be treated as generated output unless the user) Tj ET
+BT /F1 8.00 Tf 1 0 0 1 366.00 34.00 Tm (Prahlin Portfolio Work Log - August 5, 2026 Page 5) Tj ET
+endstream
+endobj
+14 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 13 0 R >>
+endobj
+15 0 obj
+<< /Length 2030 >>
+stream
+BT /F1 9.15 Tf 1 0 0 1 54.00 724.00 Tm (  explicitly requests a manual Hostinger branch update. Normal source work should stay in) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 711.75 Tm (  main and avoid committing OS metadata or generated cache folders.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 699.50 Tm (- No public deployment was performed during this record. The current source state is) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 687.25 Tm (  committed and aligned with origin/main, while the refreshed snapshot and this August 5) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 675.00 Tm (  PDF are local documentation artifacts until the user requests or approves a) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 662.75 Tm (  documentation commit.) Tj ET
+BT /F2 10.60 Tf 1 0 0 1 54.00 642.50 Tm (Output Artifact) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 626.50 Tm (- Generated file: portfolio_worklog_august5.pdf.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 614.25 Tm (- Location: /Users/prahlin/gh/portfolio/portfolio_worklog_august5.pdf.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 602.00 Tm (- Naming follows the existing root-level Portfolio convention for a single daily PDF:) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 589.75 Tm (  portfolio_worklog_august5.pdf.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 577.50 Tm (- Uses the same daily worklog structure and compact technical voice established by) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 565.25 Tm (  portfolio_worklog_july11.pdf through portfolio_worklog_august4.pdf.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 553.00 Tm (- Generated with a small standard-library PDF writer; no external PDF dependency was) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 540.75 Tm (  installed for this artifact.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 528.50 Tm (- The local project date used for this filename and title is Wednesday, August 5, 2026,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 516.25 Tm (  per the user's explicit request during the Thursday, August 6, 2026 runtime context.) Tj ET
+BT /F1 8.00 Tf 1 0 0 1 366.00 34.00 Tm (Prahlin Portfolio Work Log - August 5, 2026 Page 6) Tj ET
+endstream
+endobj
+16 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 15 0 R >>
+endobj
+17 0 obj
+<< /Title (Prahlin Portfolio Work Log - August 5, 2026) /Author (Codex) /Creator (Codex standard-library PDF generator) /Producer (Codex standard-library PDF generator) /CreationDate (D:20260805000000-04'00') /ModDate (D:20260805000000-04'00') >>
+endobj
+xref
+0 18
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000155 00000 n 
+0000000225 00000 n 
+0000000300 00000 n 
+0000006760 00000 n 
+0000006896 00000 n 
+0000013136 00000 n 
+0000013272 00000 n 
+0000019679 00000 n 
+0000019816 00000 n 
+0000025961 00000 n 
+0000026099 00000 n 
+0000032304 00000 n 
+0000032442 00000 n 
+0000034525 00000 n 
+0000034663 00000 n 
+trailer
+<< /Size 18 /Root 1 0 R /Info 17 0 R >>
+startxref
+34926
+%%EOF
