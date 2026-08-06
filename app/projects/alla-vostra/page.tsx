@@ -4,6 +4,7 @@ import type { CSSProperties } from "react";
 import { ArrowLeft, ArrowRight, Mail } from "lucide-react";
 
 import { ProofStats } from "../../ProofStats";
+import HeroProofBottomAligner from "./HeroProofBottomAligner";
 import ProductFlowSwitcher from "./ProductFlowSwitcher";
 
 export const metadata: Metadata = {
@@ -27,9 +28,9 @@ const appStoreBlue = "#0D96F6";
 const proofStats = [
   {
     label: "Quality GitHub Commits",
-    value: "0.4k",
+    value: "400",
   },
-  { label: "Real-Time Project Worklogs", value: "0.1k" },
+  { label: "Real-Time Project Worklogs", value: "200" },
   { label: "Store Front Releases", value: "2" },
   { label: "Website", value: "1" },
 ];
@@ -37,19 +38,19 @@ const proofStats = [
 const fullStackSkillLabels = ["UI/UX", "F-End", "B-End", "Release"];
 
 const fullStackSkillGridStyle: CSSProperties = {
-  marginTop: "var(--av-skill-grid-margin-top, 8px)",
-  rowGap: "var(--av-skill-grid-row-gap, 7.15px)",
+  marginTop: "var(--av-proof-content-margin-top, var(--av-skill-grid-margin-top, 8px))",
+  rowGap: "var(--av-skill-grid-row-gap, var(--av-proof-row-gap, 7.15px))",
   transform: "translateY(var(--av-skill-grid-y-offset, 0px))",
 };
 
 const xPlatformListStyle: CSSProperties = {
   alignItems: "center",
-  columnGap: "14px",
+  columnGap: "var(--av-proof-column-gap, 14px)",
   display: "grid",
   gridTemplateColumns: "repeat(3, max-content)",
   justifyItems: "center",
-  marginTop: "8px",
-  rowGap: "3px",
+  marginTop: "var(--av-proof-content-margin-top, 8px)",
+  rowGap: "var(--av-platform-list-row-gap, var(--av-proof-row-gap, 3px))",
 };
 
 const xPlatformLabelStyle: CSSProperties = {
@@ -127,7 +128,7 @@ function FullStackSkillItem({ label }: { label: string }) {
       className="av-showcase-skill-item"
       style={{
         alignItems: "center",
-        columnGap: "5px",
+        columnGap: "var(--av-skill-item-gap, 5px)",
         gridTemplateColumns: "1.331em max-content",
       }}
     >
@@ -861,6 +862,7 @@ export default function AllaVostraCaseStudy() {
             </div>
 
             <div className="av-showcase" aria-label="Alla Vostra app screens">
+              <HeroProofBottomAligner />
               <CasePhone
                 alt="Alla Vostra startup screen"
                 aspect="tall"
@@ -869,16 +871,16 @@ export default function AllaVostraCaseStudy() {
                 src="/images/alla-vostra-hero-startup-framed.png"
               />
               <CasePhone
-                alt="Alla Vostra products screen"
-                aspect="standard"
-                className="av-device-browse"
-                src="/images/alla-vostra-hero-products-framed-space-gray.png"
-              />
-              <CasePhone
                 alt="Alla Vostra confirmation screen"
                 aspect="standard"
-                className="av-device-confirm"
+                className="av-device-browse"
                 src="/images/alla-vostra-hero-confirmed-framed-space-gray.png"
+              />
+              <CasePhone
+                alt="Alla Vostra products screen"
+                aspect="standard"
+                className="av-device-confirm"
+                src="/images/alla-vostra-hero-products-framed-space-gray.png"
               />
               <div className="av-showcase-proof-row">
                 <div className="av-showcase-proof">

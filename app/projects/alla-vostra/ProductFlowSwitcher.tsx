@@ -341,10 +341,10 @@ const uiBlueprintSections = [
 ];
 const flowCoordinateFrame = { height: 1648, width: 862, x: 102, y: 270 };
 const flowPanelRect: ProductFlowRect = {
-  height: 1624,
-  width: 842,
-  x: 112,
-  y: 294,
+  height: flowCoordinateFrame.height,
+  width: flowCoordinateFrame.width,
+  x: flowCoordinateFrame.x,
+  y: flowCoordinateFrame.y,
 };
 const productFlowRails: ProductFlowBox[] = [
   { height: 210, title: "Tutorial", width: 86.4, x: 122.8, y: 314 },
@@ -391,8 +391,6 @@ const productFlowConnectors: ProductFlowConnector[] = [
   { d: "M466 609V589", kind: "arrow-body" },
   { d: "M652 609V589", kind: "arrow-body" },
   { d: "M834 609V589", kind: "arrow-body" },
-  { d: "M285 589H931", kind: "arrow-body" },
-  { d: "M954 589V1115H878.9" },
   { d: "M567 925V1008", kind: "arrow-body" },
   { d: "M567 1008H341V1067" },
   { d: "M567 1008H581V1067" },
@@ -591,7 +589,7 @@ function ProductFlowDiagramTable() {
           </div>
           {productFlowRails.map((rail) => (
             <span
-              className="flow-diagram-rail"
+              className={`flow-diagram-rail flow-diagram-rail-${rail.title.toLowerCase()}`}
               key={rail.title}
               style={getFlowBoxStyle(rail)}
             >
