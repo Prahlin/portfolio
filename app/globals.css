@@ -67,7 +67,10 @@ a {
   -webkit-tap-highlight-color: transparent;
 }
 
-img[data-screenshot-preview] {
+img[data-screenshot-preview],
+[data-screenshot-preview-scope] img,
+[data-screenshot-preview-scope] .flow-image-frame,
+[data-screenshot-preview-scope] .flow-screen-label {
   -webkit-touch-callout: none;
   cursor: zoom-in;
   user-select: none;
@@ -81,12 +84,26 @@ img[data-screenshot-preview] {
 }
 
 .screenshot-preview-popover {
-  background: #020403;
-  border: 1px solid var(--line-strong);
-  box-shadow: 0 42px 120px rgba(0, 0, 0, 0.72), 0 0 80px rgba(0, 191, 99, 0.16);
+  background: transparent;
+  border: 0;
+  box-shadow: none;
   display: block;
   pointer-events: none;
   position: fixed;
+}
+
+.screenshot-preview-element-popover {
+  background: transparent;
+  border: 0;
+  overflow: hidden;
+}
+
+.screenshot-preview-element-clone {
+  margin: 0;
+}
+
+.screenshot-preview-element-clone figcaption {
+  display: none !important;
 }
 
 .site-shell {
@@ -3044,6 +3061,86 @@ section.project-hero {
   margin-bottom: 0;
 }
 
+.overview-heading-stack {
+  align-content: start;
+  display: grid;
+  gap: 28px;
+}
+
+.overview-section-grid {
+  --overview-play-store-width: 480px;
+  align-items: start;
+  gap: 28px 44px;
+  grid-template-columns: var(--overview-play-store-width) minmax(360px, 1fr);
+  grid-template-areas:
+    "heading ."
+    "screens copy";
+}
+
+.overview-heading-slot {
+  grid-area: heading;
+}
+
+.overview-copy-panel {
+  align-self: start;
+  grid-area: copy;
+  min-width: 0;
+}
+
+.overview-play-store-strip {
+  align-items: start;
+  display: block;
+  grid-area: screens;
+  max-width: 100%;
+  overflow: visible;
+  width: var(--overview-play-store-width);
+}
+
+.overview-play-store-supporting-row {
+  --overview-play-store-gap: 8px;
+  align-items: start;
+  display: flex;
+  gap: var(--overview-play-store-gap);
+  margin-top: 24px;
+  max-width: 100%;
+  overflow: visible;
+  width: 100%;
+}
+
+.overview-play-store-shot {
+  border: 1px solid rgba(67, 255, 146, 0.24);
+  border-radius: 4px;
+  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.28);
+  width: 208px;
+  margin: 0;
+  min-width: 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.overview-play-store-shot-feature {
+  aspect-ratio: 1024 / 500;
+  width: var(--overview-play-store-width);
+}
+
+.overview-play-store-shot-supporting {
+  width: calc(
+    (100% - (2 * var(--overview-play-store-gap))) / 3
+  );
+}
+
+.overview-play-store-shot-wide {
+  aspect-ratio: 16 / 9;
+}
+
+.overview-play-store-shot img {
+  object-fit: cover;
+}
+
+.overview-play-store-shot figcaption {
+  display: none;
+}
+
 .project-card-grid {
   display: grid;
   gap: 16px;
@@ -3125,8 +3222,23 @@ section.project-hero {
   display: grid;
   gap: 0;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  margin-bottom: 30px;
   width: 100%;
+}
+
+.product-flow-nav-wrap {
+  margin-bottom: 30px;
+  min-height: var(--product-flow-nav-measured-height);
+  position: relative;
+  width: 100%;
+  z-index: 50;
+}
+
+.product-flow-nav-wrap.product-flow-nav-pinned .product-flow-nav {
+  left: var(--product-flow-nav-fixed-left);
+  position: fixed;
+  top: env(safe-area-inset-top, 0px);
+  width: var(--product-flow-nav-fixed-width);
+  z-index: 50;
 }
 
 .product-flow-nav .button {
@@ -3150,7 +3262,53 @@ section.project-hero {
 }
 
 .product-flow-nav .button-secondary {
+  --product-flow-inactive-fill: rgba(255, 255, 255, 0.95);
+  --product-flow-nav-text-rgb: 0, 27, 13;
+  --product-flow-nav-text-alpha: 0.95;
+  --product-flow-nav-text-shadow: none;
+  --product-flow-nav-text-stroke-alpha: 0;
+  --product-flow-nav-text-stroke-width: 0;
+  background: var(--product-flow-inactive-fill);
   border-color: var(--line-strong);
+}
+
+.product-flow-nav .button[aria-pressed="true"] {
+  --product-flow-active-fill-end: rgba(0, 191, 99, 0.95);
+  --product-flow-active-fill-start: rgba(67, 255, 146, 0.95);
+  --product-flow-nav-text-rgb: 255, 255, 255;
+  --product-flow-nav-text-alpha: 0.95;
+  --product-flow-nav-text-stroke-alpha: 0.95;
+  --product-flow-nav-text-stroke-width: 2px;
+  background: linear-gradient(
+    135deg,
+    var(--product-flow-active-fill-start),
+    var(--product-flow-active-fill-end)
+  );
+  --product-flow-nav-text-shadow:
+    -2px 0 var(--product-flow-nav-text-stroke),
+    0 2px var(--product-flow-nav-text-stroke),
+    2px 0 var(--product-flow-nav-text-stroke),
+    0 -2px var(--product-flow-nav-text-stroke);
+}
+
+.product-flow-nav .button-primary,
+.product-flow-nav .button-secondary {
+  --product-flow-nav-text: rgba(
+    var(--product-flow-nav-text-rgb),
+    var(--product-flow-nav-text-alpha)
+  );
+  --product-flow-nav-text-stroke: rgba(
+    0,
+    0,
+    0,
+    var(--product-flow-nav-text-stroke-alpha)
+  );
+  -webkit-text-stroke:
+    var(--product-flow-nav-text-stroke-width)
+    var(--product-flow-nav-text-stroke);
+  color: var(--product-flow-nav-text);
+  paint-order: stroke fill;
+  text-shadow: var(--product-flow-nav-text-shadow);
 }
 
 .product-flow-nav .button:first-child {
@@ -3728,7 +3886,7 @@ section.project-hero {
 
 .flow-action-asset-frame {
   align-items: center;
-  background: #fffcf2;
+  background: transparent;
   border-color: rgba(17, 17, 17, 0.22);
   display: flex;
   justify-content: center;
@@ -3911,7 +4069,8 @@ section.project-hero {
 }
 
 .alla-vostra-case .flow-browse-toggle {
-  inline-size: 154px;
+  inline-size: calc((152px * 2) + 14px);
+  max-inline-size: 100%;
 }
 
 .flow-browse-toggle svg {
@@ -4220,6 +4379,14 @@ section.project-hero {
     grid-template-columns: 1fr;
   }
 
+  .overview-section-grid {
+    grid-template-areas:
+      "heading"
+      "screens"
+      "copy";
+    grid-template-columns: 1fr;
+  }
+
   .av-showcase {
     min-height: 610px;
   }
@@ -4420,6 +4587,10 @@ section.project-hero {
 
   .project-page section:not(.project-hero) {
     padding: 58px 0;
+  }
+
+  .overview-section-grid {
+    --overview-play-store-width: 100%;
   }
 
   .project-hero-grid {
@@ -4676,6 +4847,10 @@ section.project-hero {
 
   .flow-screen-stack-captures {
     gap: 12px;
+  }
+
+  .alla-vostra-case .flow-browse-toggle {
+    inline-size: calc((min(42vw, 146px) * 2) + 12px);
   }
 
   .flow-original-art-grid {

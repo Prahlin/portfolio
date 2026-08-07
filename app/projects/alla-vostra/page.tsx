@@ -37,6 +37,32 @@ const proofStats = [
 
 const fullStackSkillLabels = ["UI/UX", "F-End", "B-End", "Release"];
 
+const playStoreScreenshots = [
+  {
+    alt: "Alla Vostra Play Store feature graphic",
+    aspect: "feature",
+    src: "/images/alla-vostra/play-store/playstore1.png",
+  },
+  {
+    alt: "Alla Vostra Play Store screenshot 2",
+    aspect: "wide",
+    src: "/images/alla-vostra/play-store/playstore2.png",
+  },
+  {
+    alt: "Alla Vostra Play Store screenshot 4",
+    aspect: "wide",
+    src: "/images/alla-vostra/play-store/playstore4.png",
+  },
+  {
+    alt: "Alla Vostra Play Store screenshot 5",
+    aspect: "wide",
+    src: "/images/alla-vostra/play-store/playstore5.png",
+  },
+] as const;
+
+const featuredPlayStoreScreenshot = playStoreScreenshots[0];
+const supportingPlayStoreScreenshots = playStoreScreenshots.slice(1);
+
 const fullStackSkillGridStyle: CSSProperties = {
   marginTop: "var(--av-proof-content-margin-top, var(--av-skill-grid-margin-top, 8px))",
   rowGap: "var(--av-skill-grid-row-gap, var(--av-proof-row-gap, 7.15px))",
@@ -957,9 +983,27 @@ export default function AllaVostraCaseStudy() {
       </section>
 
       <section id="overview">
-        <div className="site-shell project-section-grid">
-          <SectionHeading kicker="Overview" title="Overview" />
-          <div className="project-copy-panel">
+        <div className="site-shell project-section-grid overview-section-grid">
+          <div className="overview-heading-slot">
+            <SectionHeading kicker="Overview" title="Overview" />
+          </div>
+          <div
+            aria-label="Alla Vostra Play Store feature screenshot"
+            className="overview-play-store-strip"
+          >
+            <figure
+              className={`overview-play-store-shot overview-play-store-shot-${featuredPlayStoreScreenshot.aspect}`}
+            >
+              <Image
+                alt={featuredPlayStoreScreenshot.alt}
+                fill
+                sizes="480px"
+                src={featuredPlayStoreScreenshot.src}
+              />
+              <figcaption>Play Store 1</figcaption>
+            </figure>
+          </div>
+          <div className="project-copy-panel overview-copy-panel">
             <p>
               Alla Vostra was built as a full stack mobile ordering experience
               where the product quality had to hold up across interface design,
@@ -972,6 +1016,25 @@ export default function AllaVostraCaseStudy() {
               flows, transactional messaging, emulator and device QA, and
               release-focused iteration.
             </p>
+            <div
+              aria-label="Alla Vostra Play Store screenshots"
+              className="overview-play-store-supporting-row"
+            >
+              {supportingPlayStoreScreenshots.map((screenshot, index) => (
+                <figure
+                  className={`overview-play-store-shot overview-play-store-shot-${screenshot.aspect} overview-play-store-shot-supporting`}
+                  key={screenshot.src}
+                >
+                  <Image
+                    alt={screenshot.alt}
+                    fill
+                    sizes="155px"
+                    src={screenshot.src}
+                  />
+                  <figcaption>{`Play Store ${index + 2}`}</figcaption>
+                </figure>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -1004,7 +1067,7 @@ export default function AllaVostraCaseStudy() {
         </div>
       </section>
 
-      <section id="product-flow">
+      <section data-screenshot-preview-scope id="product-flow">
         <div className="site-shell">
           <ProductFlowSwitcher
             launchScreen={launchScreen}

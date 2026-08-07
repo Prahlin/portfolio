@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { ChevronDown, ChevronUp } from "lucide-react";
 import type { CSSProperties, ReactNode } from "react";
-import { useEffect, useId, useState } from "react";
+import { useEffect, useId, useRef, useState } from "react";
 
 import ExpandableFlowStacks from "./ExpandableFlowStacks";
 
@@ -108,6 +108,12 @@ type FlowActionSample = FlowArtSample & {
   caption: string;
 };
 
+type ProductFlowNavStyle = CSSProperties & {
+  "--product-flow-nav-fixed-left": string;
+  "--product-flow-nav-fixed-width": string;
+  "--product-flow-nav-measured-height": string;
+};
+
 const placeholderSteps = ["Step 1", "Step 2", "Step 3", "Step 4", "Step 5"];
 const colorsAndThemingSwatchGroups: Record<string, FlowSwatchGroup> = {
   "Step 1": {
@@ -203,30 +209,27 @@ const stickyButtonIconSamples = [
 ] as const;
 const navigationActionStepTitles = {
   "Step 1": "Header CTA",
-  "Step 2": "Shop Preview CTA",
-  "Step 3": "Overlay Nav",
-  "Step 4": "Overlay Return",
-  "Step 5": "Product Nav",
+  "Step 2": "Overlay Nav",
+  "Step 3": "Overlay Return",
+  "Step 4": "Product Nav",
 };
 const navigationActionSteps = Object.keys(navigationActionStepTitles);
 const navigationActionSamplesByStep: Record<string, FlowActionSample[]> = {
   "Step 1": [
     {
       alt: "Alla Vostra app header SHOP button",
-      caption: "SHOP app header button.",
+      caption: "Navigate to Shop Preview Screen",
       name: "SHOP",
       src: "/images/alla-vostra/ui-assets/header-shop.png",
     },
-  ],
-  "Step 2": [
     {
       alt: "Alla Vostra Shop preview action button",
-      caption: "Shop preview action button.",
+      caption: "Begin the Shopping Process",
       name: "Shop",
       src: "/images/alla-vostra/ui-assets/shop-preview.png",
     },
   ],
-  "Step 3": [
+  "Step 2": [
     {
       alt: "Alla Vostra bottom overlay previous button",
       caption: "Bottom overlay previous button.",
@@ -240,7 +243,7 @@ const navigationActionSamplesByStep: Record<string, FlowActionSample[]> = {
       src: "/images/alla-vostra/ui-assets/overlay-nav-right.png",
     },
   ],
-  "Step 4": [
+  "Step 3": [
     {
       alt: "Alla Vostra Products overlay return button",
       caption: "Products overlay return button.",
@@ -254,7 +257,7 @@ const navigationActionSamplesByStep: Record<string, FlowActionSample[]> = {
       src: "/images/alla-vostra/ui-assets/overlay-center-cart.png",
     },
   ],
-  "Step 5": [
+  "Step 4": [
     {
       alt: "Alla Vostra active product navigation tab",
       caption: "Active product navigation tab.",
@@ -282,52 +285,76 @@ const navigationActionSamplesByStep: Record<string, FlowActionSample[]> = {
   ],
 };
 const controlsAndInputsStepTitles = {
-  "Step 1": "Product Add",
-  "Step 2": "Quantity Counter",
-  "Step 3": "Remove",
-  "Step 4": "Cart Add Items",
-  "Step 5": "Checkout",
+  "Step 1": "Add (This) Item",
+  "Step 2": "Edit Quantity",
+  "Step 3": "Remove Item",
+  "Step 4": "Add (Any) Item",
+  "Step 5": "Proceed To Checkout",
 };
 const controlsAndInputsSteps = Object.keys(controlsAndInputsStepTitles);
 const controlsAndInputsSamplesByStep: Record<string, FlowActionSample[]> = {
   "Step 1": [
     {
       alt: "Alla Vostra green ADD product button",
-      caption: "Green ADD product button.",
-      name: "ADD",
+      caption: "High Visibility = Item Not Yet Added",
+      name: "Before Added",
       src: "/images/alla-vostra/ui-assets/product-add.png",
+    },
+    {
+      alt: "Alla Vostra low-visibility ADD product button after tap",
+      caption: "Low Visibility = Item Successfully Added",
+      name: "After Added",
+      src: "/images/alla-vostra/ui-assets/product-add-tapped.png",
     },
   ],
   "Step 2": [
     {
       alt: "Alla Vostra quantity counter control",
-      caption: "Quantity counter control.",
-      name: "Counter",
-      src: "/images/alla-vostra/ui-assets/cart-counter.png",
+      caption: "High Visibility = No Quantity Set",
+      name: "Before Set",
+      src: "/images/alla-vostra/ui-assets/product-counter-high-vis.png",
+    },
+    {
+      alt: "Alla Vostra low-visibility quantity counter control at zero",
+      caption: "Low Visibility = Quantity Set",
+      name: "After Set",
+      src: "/images/alla-vostra/ui-assets/product-counter-low-vis.png",
     },
   ],
   "Step 3": [
     {
       alt: "Alla Vostra red remove product button",
-      caption: "Red remove product button.",
-      name: "Remove",
+      caption: "Remove Item From Cart",
+      name: "Remove Item",
       src: "/images/alla-vostra/ui-assets/cart-remove.png",
     },
   ],
   "Step 4": [
     {
       alt: "Alla Vostra cart Add items button",
-      caption: "Cart Add items button.",
-      name: "Add items",
+      caption: "High Visibility = Few (Or No) Items Have Been Added To Cart",
+      name: "Before Added",
       src: "/images/alla-vostra/ui-assets/cart-add-items.png",
+    },
+    {
+      alt: "Alla Vostra low-visibility cart Add items button",
+      caption: "Low Visibility = All Items Already Added To Cart",
+      name: "After Added",
+      src: "/images/alla-vostra/ui-assets/cart-add-items-low-vis.png",
     },
   ],
   "Step 5": [
     {
       alt: "Alla Vostra cart checkout button",
-      caption: "Cart checkout button.",
-      name: "Checkout",
+      caption: "High Visibility = Checkout Enabled (One Or More Items In Cart)",
+      name: "Checkout Allowed",
       src: "/images/alla-vostra/ui-assets/cart-checkout.png",
+    },
+    {
+      alt: "Alla Vostra low-visibility cart checkout button",
+      caption: "Low Visibility = Checkout Disabled (No Items In Cart)",
+      name: "Checkout Disallowed",
+      src: "/images/alla-vostra/ui-assets/cart-checkout-low-vis.png",
     },
   ],
 };
@@ -779,7 +806,10 @@ function HeroCompositionScreen() {
       className={screenClassName}
     >
       <span className="flow-screen-label">Hero</span>
-      <div className="flow-image-frame flow-hero-composition-frame">
+      <div
+        className="flow-image-frame flow-hero-composition-frame"
+        data-screenshot-preview-src="/images/alla-vostra/header-hero-composition-preview.png"
+      >
         <Image
           alt="Alla Vostra header background"
           className="flow-hero-composition-background"
@@ -924,6 +954,10 @@ function StickyButtonIconScreens() {
   );
 }
 
+function getTransparentActionAssetSrc(src: string) {
+  return src.replace("/ui-assets/", "/ui-assets/transparent-bgless/");
+}
+
 function ActionButtonAssetScreen({ sample }: { sample: FlowActionSample }) {
   return (
     <figure
@@ -936,7 +970,7 @@ function ActionButtonAssetScreen({ sample }: { sample: FlowActionSample }) {
           alt={sample.alt}
           fill
           sizes="152px"
-          src={sample.src}
+          src={getTransparentActionAssetSrc(sample.src)}
         />
       </div>
       <figcaption>{sample.caption}</figcaption>
@@ -949,8 +983,15 @@ function ActionButtonAssetScreens({
 }: {
   samples: FlowActionSample[];
 }) {
+  const className = [
+    "flow-action-asset-grid",
+    samples.length === 3 ? "flow-action-asset-grid-three" : "",
+  ]
+    .filter(Boolean)
+    .join(" ");
+
   return (
-    <div className="flow-action-asset-grid">
+    <div className={className}>
       {samples.map((sample) => (
         <ActionButtonAssetScreen key={sample.name} sample={sample} />
       ))}
@@ -1115,40 +1156,197 @@ export default function ProductFlowSwitcher({
   screenshotGroups: ScreenshotGroup[];
 }) {
   const [activeView, setActiveView] = useState<FlowView>("ux");
+  const [productFlowScrollRequestId, setProductFlowScrollRequestId] =
+    useState(0);
+  const pendingProductFlowScrollRef = useRef(false);
+  const productFlowNavRef = useRef<HTMLElement>(null);
+  const productFlowNavWrapRef = useRef<HTMLDivElement>(null);
+  const productFlowViewStartRef = useRef<HTMLDivElement>(null);
+  const [isProductFlowNavPinned, setIsProductFlowNavPinned] = useState(false);
+  const [productFlowNavStyle, setProductFlowNavStyle] =
+    useState<ProductFlowNavStyle>({
+      "--product-flow-nav-fixed-left": "0px",
+      "--product-flow-nav-fixed-width": "100%",
+      "--product-flow-nav-measured-height": "var(--product-flow-nav-height)",
+    });
   const isUiBlueprint = activeView === "ui";
+
+  const switchProductFlowView = (nextView: FlowView) => {
+    pendingProductFlowScrollRef.current = true;
+    setActiveView(nextView);
+    setProductFlowScrollRequestId((currentId) => currentId + 1);
+  };
+
+  useEffect(() => {
+    const nav = productFlowNavRef.current;
+    const navWrap = productFlowNavWrapRef.current;
+
+    if (!nav || !navWrap) {
+      return undefined;
+    }
+
+    let frameId = 0;
+
+    const setPinnedFromAnchor = () => {
+      const navWrapRect = navWrap.getBoundingClientRect();
+      const anchorTop = navWrapRect.top + window.scrollY;
+      const shouldPin = window.scrollY >= anchorTop;
+
+      setIsProductFlowNavPinned((isPinned) =>
+        isPinned === shouldPin ? isPinned : shouldPin,
+      );
+    };
+
+    const measureNav = () => {
+      frameId = 0;
+
+      const navWrapRect = navWrap.getBoundingClientRect();
+      const nextStyle: ProductFlowNavStyle = {
+        "--product-flow-nav-fixed-left": `${navWrapRect.left}px`,
+        "--product-flow-nav-fixed-width": `${navWrapRect.width}px`,
+        "--product-flow-nav-measured-height": `${nav.offsetHeight}px`,
+      };
+
+      setProductFlowNavStyle((currentStyle) =>
+        currentStyle["--product-flow-nav-fixed-left"] ===
+          nextStyle["--product-flow-nav-fixed-left"] &&
+        currentStyle["--product-flow-nav-fixed-width"] ===
+          nextStyle["--product-flow-nav-fixed-width"] &&
+        currentStyle["--product-flow-nav-measured-height"] ===
+          nextStyle["--product-flow-nav-measured-height"]
+          ? currentStyle
+          : nextStyle,
+      );
+      setPinnedFromAnchor();
+    };
+
+    const requestMeasure = () => {
+      if (frameId) {
+        return;
+      }
+
+      frameId = window.requestAnimationFrame(measureNav);
+    };
+
+    measureNav();
+
+    window.addEventListener("scroll", setPinnedFromAnchor, { passive: true });
+    window.addEventListener("resize", requestMeasure);
+
+    const resizeObserver = new ResizeObserver(requestMeasure);
+    resizeObserver.observe(nav);
+    resizeObserver.observe(navWrap);
+
+    return () => {
+      if (frameId) {
+        window.cancelAnimationFrame(frameId);
+      }
+
+      resizeObserver.disconnect();
+      window.removeEventListener("scroll", setPinnedFromAnchor);
+      window.removeEventListener("resize", requestMeasure);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (!pendingProductFlowScrollRef.current) {
+      return undefined;
+    }
+
+    let frameId = 0;
+    let timeoutId = 0;
+
+    const scrollToProductFlowViewStart = (behavior: ScrollBehavior) => {
+      const viewStart = productFlowViewStartRef.current;
+
+      if (!viewStart) {
+        return;
+      }
+
+      const navHeight = productFlowNavRef.current?.offsetHeight ?? 0;
+      const targetTop =
+        viewStart.getBoundingClientRect().top +
+        window.scrollY -
+        navHeight -
+        18;
+
+      window.scrollTo({
+        behavior,
+        top: Math.max(0, targetTop),
+      });
+      pendingProductFlowScrollRef.current = false;
+    };
+
+    frameId = window.requestAnimationFrame(() => {
+      frameId = window.requestAnimationFrame(() => {
+        const prefersReducedMotion = window.matchMedia(
+          "(prefers-reduced-motion: reduce)",
+        ).matches;
+        const scrollBehavior: ScrollBehavior = prefersReducedMotion
+          ? "instant"
+          : "smooth";
+
+        scrollToProductFlowViewStart(scrollBehavior);
+        timeoutId = window.setTimeout(() => {
+          scrollToProductFlowViewStart(scrollBehavior);
+        }, 220);
+      });
+    });
+
+    return () => {
+      if (frameId) {
+        window.cancelAnimationFrame(frameId);
+      }
+
+      if (timeoutId) {
+        window.clearTimeout(timeoutId);
+      }
+    };
+  }, [activeView, productFlowScrollRequestId]);
 
   return (
     <>
-      <nav
-        aria-label="Alla Vostra product flow navigation"
-        className="product-flow-nav"
+      <div
+        className={`product-flow-nav-wrap ${
+          isProductFlowNavPinned ? "product-flow-nav-pinned" : ""
+        }`}
+        ref={productFlowNavWrapRef}
+        style={productFlowNavStyle}
       >
-        <button
-          aria-pressed={isUiBlueprint}
-          className={`button ${
-            isUiBlueprint ? "button-primary" : "button-secondary"
-          }`}
-          onClick={() => setActiveView("ui")}
-          type="button"
+        <nav
+          aria-label="Alla Vostra product flow navigation"
+          className="product-flow-nav"
+          ref={productFlowNavRef}
         >
-          UI Foundations
-        </button>
-        <button
-          aria-pressed={!isUiBlueprint}
-          className={`button ${
-            isUiBlueprint ? "button-secondary" : "button-primary"
-          }`}
-          onClick={() => setActiveView("ux")}
-          type="button"
-        >
-          UX Product Flow
-        </button>
-      </nav>
+          <button
+            aria-pressed={isUiBlueprint}
+            className={`button ${
+              isUiBlueprint ? "button-primary" : "button-secondary"
+            }`}
+            onClick={() => switchProductFlowView("ui")}
+            type="button"
+          >
+            UI Foundations
+          </button>
+          <button
+            aria-pressed={!isUiBlueprint}
+            className={`button ${
+              isUiBlueprint ? "button-secondary" : "button-primary"
+            }`}
+            onClick={() => switchProductFlowView("ux")}
+            type="button"
+          >
+            UX Product Flow
+          </button>
+        </nav>
+      </div>
 
-      <SectionHeading
-        kicker={isUiBlueprint ? "UI Foundations" : "UX Product Flow"}
-        title={isUiBlueprint ? "UI Foundations" : "UX Product Flow"}
-      />
+      <div ref={productFlowViewStartRef}>
+        <SectionHeading
+          kicker={isUiBlueprint ? "UI Foundations" : "UX Product Flow"}
+          title={isUiBlueprint ? "UI Foundations" : "UX Product Flow"}
+        />
+      </div>
 
       <div
         className="flow-layout flow-layout-single"
