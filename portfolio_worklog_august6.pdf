@@ -1,0 +1,368 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [6 0 R 8 0 R 10 0 R 12 0 R 14 0 R 16 0 R] /Count 6 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+5 0 obj
+<< /Length 6342 >>
+stream
+BT /F2 14.20 Tf 1 0 0 1 54.00 742.00 Tm (Prahlin Portfolio Work Log - August 6, 2026) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 721.75 Tm (Compiled summary for Thursday, August 6, 2026 - focus: continuing the Prahl.dev Portfolio) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 709.50 Tm (Alla Vostra case-study page after the August 5 hero proof-card and platform-badge pass,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 697.25 Tm (refining the UI Foundations / UX Product Flow navigation, universalizing hover/tap) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 685.00 Tm (screenshot magnification, replacing opaque preview and crop backgrounds with true) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 672.75 Tm (transparency, grouping Original Hero assets, importing Play Store media, rebuilding Controls) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 660.50 Tm (& Inputs into product and cart state stacks, validating TypeScript and static export,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 648.25 Tm (refreshing the Portfolio project snapshot, reviewing all prior Portfolio PDF worklogs, and) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 636.00 Tm (generating the August 6 Portfolio PDF worklog.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 618.75 Tm (Generated in continuity with the established Prahlin Portfolio daily worklog cadence:) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 606.50 Tm (compact opening summary, source-material section, baseline section, goal list,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 594.25 Tm (work-completed sections, validation section, files-touched list, follow-up context, and) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 582.00 Tm (output-artifact close.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 564.75 Tm (This artifact intentionally covers Prahlin/portfolio work performed after) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 552.50 Tm (portfolio_worklog_august5.pdf and after the August 5 documentation state. The committed) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 540.25 Tm (source state reviewed for this record is d3bda6a6a7293e34d3ead8df83875f192f3001c0 on main,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 528.00 Tm (matching origin/main before this PDF was generated. The August 5 PDF already covered) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 515.75 Tm (f4ef9d4, 8caad05, and 8e21e8d even though the last two source commits were timestamped just) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 503.50 Tm (after midnight on August 6 during the prior work cycle. No Hostinger production deployment) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 491.25 Tm (was pushed during this record.) Tj ET
+BT /F2 10.60 Tf 1 0 0 1 54.00 466.00 Tm (Source Materials Reviewed) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 450.75 Tm (- Ran ./read_project.sh from /Users/prahlin/gh/portfolio and regenerated) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 438.50 Tm (  portfolio_PROJECT_SNAPSHOT.txt before writing this worklog, preserving the project) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 426.25 Tm (  convention that Codex refreshes the current source snapshot before continuing Portfolio) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 414.00 Tm (  documentation work.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 399.75 Tm (- Reviewed the refreshed portfolio_PROJECT_SNAPSHOT.txt, including project notes, current) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 387.50 Tm (  source tree, line-numbered source dumps, public image and font inventories, PDF inventory,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 375.25 Tm (  package and deployment configuration, git context, and the standing instruction to ask for) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 363.00 Tm (  a commit message before committing or pushing.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 348.75 Tm (- Reviewed every pre-existing Portfolio root-level worklog PDF:) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 336.50 Tm (  portfolio_worklog_july11.pdf, portfolio_worklog_july14.pdf,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 324.25 Tm (  portfolio_worklog_july15_part1.pdf, portfolio_worklog_july15_part2.pdf,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 312.00 Tm (  portfolio_worklog_july16.pdf, portfolio_worklog_july19.pdf, portfolio_worklog_july20.pdf,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 299.75 Tm (  portfolio_worklog_july21.pdf, portfolio_worklog_july22.pdf, portfolio_worklog_july23.pdf,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 287.50 Tm (  portfolio_worklog_july24.pdf, portfolio_worklog_july25.pdf, portfolio_worklog_july29.pdf,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 275.25 Tm (  portfolio_worklog_july30.pdf, portfolio_worklog_july31.pdf,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 263.00 Tm (  portfolio_worklog_august1_part1.pdf, portfolio_worklog_august1_part2.pdf,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 250.75 Tm (  portfolio_worklog_august1_part3.pdf, portfolio_worklog_august3.pdf,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 238.50 Tm (  portfolio_worklog_august4.pdf, and portfolio_worklog_august5.pdf.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 224.25 Tm (- Extracted text from all twenty-one existing Portfolio PDFs with pdftotext and checked) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 212.00 Tm (  metadata/page counts with pdfinfo to preserve title cadence, opening-summary density,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 199.75 Tm (  section order, compact bullet-heavy technical voice, validation language, files-touched) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 187.50 Tm (  lists, follow-up context, output-artifact close, root-level filename style, letter-size) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 175.25 Tm (  pages, PDF 1.4 output, Codex author/creator/producer metadata, and Helvetica-style) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 163.00 Tm (  base-font convention.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 148.75 Tm (- Used portfolio_worklog_august5.pdf as the closest structural baseline because it) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 136.50 Tm (  documented the immediately preceding Alla Vostra hero proof-card polish, platform badge) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 124.25 Tm (  refinements, UX Product Flow diagram cleanup, repository hygiene, validation summary, and) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 112.00 Tm (  local-only output-artifact language.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 97.75 Tm (- Reviewed git history and source state through git log, git show --stat, git show) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 85.50 Tm (  --name-status, git diff --stat, git diff --check, current branch state, and the committed) Tj ET
+BT /F1 8.40 Tf 1 0 0 1 54.00 40.00 Tm (Prahlin Portfolio Work Log - August 6, 2026 Page 1) Tj ET
+endstream
+endobj
+6 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 5 0 R >>
+endobj
+7 0 obj
+<< /Length 6058 >>
+stream
+BT /F1 9.15 Tf 1 0 0 1 54.00 742.00 Tm (  scope for d3bda6a. HEAD and origin/main both resolved to d3bda6a before this PDF was) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 729.75 Tm (  generated.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 715.50 Tm (- Reviewed app/ScreenshotPreviewLayer.tsx, app/projects/alla-vostra/ProductFlowSwitcher.tsx,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 703.25 Tm (  app/projects/alla-vostra/page.tsx, app/globals.css, .gitignore, read_project.sh, and the) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 691.00 Tm (  public/images/alla-vostra Play Store, hero-preview, ui-assets, and transparent-bgless) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 678.75 Tm (  asset inventories.) Tj ET
+BT /F2 10.60 Tf 1 0 0 1 54.00 656.50 Tm (Baseline Status Before August 6 Work) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 641.25 Tm (- The August 5 Portfolio work had already polished the Alla Vostra hero proof cards,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 629.00 Tm (  restored app-correct platform iconography, aligned the Full-Stack and Platforms card rows,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 616.75 Tm (  tightened the UX Product Flow diagram, and hardened local cache and OS-metadata hygiene.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 602.50 Tm (- The UI Foundations / UX Product Flow switcher still behaved like a normal in-page control) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 590.25 Tm (  instead of staying available during deeper downward scrolling, and it did not always) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 578.00 Tm (  return the user to the start of the selected view when the active option was clicked) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 565.75 Tm (  again.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 551.50 Tm (- The active and inactive switcher button styling still needed final user-directed tuning) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 539.25 Tm (  around fill opacity, text color, and text-stroke behavior so the selected state felt) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 527.00 Tm (  decisive without breaking the Alla Vostra green visual language.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 512.75 Tm (- Screenshot magnification existed only for some image classes and did not yet behave as a) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 500.50 Tm (  universal rule for all visible UI Foundations and UX Product Flow assets, including) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 488.25 Tm (  CSS-rendered swatches, typography samples, button frames, and labels.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 474.00 Tm (- Magnification could still surface hidden or collapsed assets after Show Less, and some) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 461.75 Tm (  transparent-looking crops exposed black or dark backing rectangles that did not match the) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 449.50 Tm (  project page background.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 435.25 Tm (- Original Hero background and cheeseboard imagery still magnified as separate pieces) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 423.00 Tm (  instead of as the single composed hero asset the user expected under Iconography &) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 410.75 Tm (  Imagery.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 396.50 Tm (- The real Navigations and Controls & Inputs PNG crops were available, but several carried) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 384.25 Tm (  unwanted cream or white outer backing around controls while still requiring intentional) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 372.00 Tm (  internal fills, such as the counter box and inactive product navigation tab, to remain) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 359.75 Tm (  intact.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 345.50 Tm (- The Controls & Inputs section still used earlier general-purpose labels and did not yet) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 333.25 Tm (  communicate the before/after product, quantity, cart-add, checkout-allowed, and) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 321.00 Tm (  checkout-disabled states with the final user-approved language.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 306.75 Tm (- The Overview section explained the full-stack mobile ordering project in text, but did not) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 294.50 Tm (  yet show the imported Google Play listing and screenshot materials that make the Android) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 282.25 Tm (  release-preparation work visually concrete.) Tj ET
+BT /F2 10.60 Tf 1 0 0 1 54.00 260.00 Tm (Goals for August 6) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 244.75 Tm (- Make the UI Foundations / UX Product Flow two-button navigation sticky during continued) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 232.50 Tm (  downward scrolling, then release that stickiness naturally when scrolling back above the) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 220.25 Tm (  original control position.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 206.00 Tm (- Make either switcher button autoscroll to the start of its own screen every time it is) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 193.75 Tm (  tapped or clicked, including when the user clicks the already-active option.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 179.50 Tm (- Finalize active and inactive switcher button visuals with the requested green fill,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 167.25 Tm (  opacity, text, and stroke relationship while preserving the two-button bar layout.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 153.00 Tm (- Apply hover/tap magnification universally inside the scoped UI Foundations and UX Product) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 140.75 Tm (  Flow sections, including normal screenshots, frame elements, swatches, typography samples,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 128.50 Tm (  labels, and grouped composite assets.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 114.25 Tm (- Prevent magnification for assets that are not currently visible because a section has been) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 102.00 Tm (  collapsed behind Show Less.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 87.75 Tm (- Remove unwanted black, cream, or white preview backgrounds while preserving intentional) Tj ET
+BT /F1 8.40 Tf 1 0 0 1 54.00 40.00 Tm (Prahlin Portfolio Work Log - August 6, 2026 Page 2) Tj ET
+endstream
+endobj
+8 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 7 0 R >>
+endobj
+9 0 obj
+<< /Length 5802 >>
+stream
+BT /F1 9.15 Tf 1 0 0 1 54.00 742.00 Tm (  internal control fills and making transparent areas sit on the same background as the) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 729.75 Tm (  project page.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 715.50 Tm (- Add Play Store screenshots under the Overview header, keep the overview divider and) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 703.25 Tm (  paragraph on the right side, preserve image aspect ratios, and settle the approved) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 691.00 Tm (  feature-plus-supporting-image layout.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 676.75 Tm (- Rebuild the control and navigation stacks around product states, cart states, and final) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 664.50 Tm (  user-approved caption language, including low-visibility and high-visibility versions of) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 652.25 Tm (  Add, quantity, cart-add, and checkout controls.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 638.00 Tm (- Keep all work local unless the user explicitly asks for commit, push, deploy, or public) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 625.75 Tm (  website updates.) Tj ET
+BT /F2 10.60 Tf 1 0 0 1 54.00 603.50 Tm (Work Completed - Product Flow Navigation) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 588.25 Tm (- Reworked the UI Foundations / UX Product Flow navigation into a scroll-aware tab bar that) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 576.00 Tm (  becomes sticky during continued downward scrolling and releases when the user scrolls) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 563.75 Tm (  upward past its original anchor.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 549.50 Tm (- Updated the tab-button click path so selecting UI Foundations or UX Product Flow always) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 537.25 Tm (  autoscrolls to the beginning of that selected screen, even if the selected button was) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 525.00 Tm (  already active.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 510.75 Tm (- Iterated the active and inactive button styling through user-directed opacity and fill) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 498.50 Tm (  passes, then settled the active state on green filling with white text and heavier black) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 486.25 Tm (  text stroke while keeping the inactive state at matching opacity without text stroke.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 472.00 Tm (- Preserved the tab bar as a two-button navigation row so the user can move between) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 459.75 Tm (  foundations and flow content without losing the current case-study context.) Tj ET
+BT /F2 10.60 Tf 1 0 0 1 54.00 437.50 Tm (Work Completed - Magnification and Preview Behavior) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 422.25 Tm (- Expanded app/ScreenshotPreviewLayer.tsx from image-only behavior into a scoped preview) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 410.00 Tm (  system that can magnify both real img elements and visible element frames under) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 397.75 Tm (  data-screenshot-preview-scope.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 383.50 Tm (- Added visible-rectangle checks so hover/tap previews only trigger for assets that are) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 371.25 Tm (  actually visible on screen, preventing collapsed Show Less content from appearing) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 359.00 Tm (  unexpectedly.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 344.75 Tm (- Grouped green eyebrow titles and captions with the asset being magnified, so the preview) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 332.50 Tm (  carries the section label context along with the image, square frame, swatch, or control) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 320.25 Tm (  sample.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 306.00 Tm (- Added element-clone preview handling for color squares, font samples, CSS-rendered UI) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 293.75 Tm (  samples, and other non-img foundations content that still belongs to the UI Foundations /) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 281.50 Tm (  UX Product Flow visual system.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 267.25 Tm (- Removed black preview backfills and changed preview popovers to preserve true transparency) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 255.00 Tm (  so transparent pixels sit over the same dark gridded project background as the source) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 242.75 Tm (  page.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 228.50 Tm (- Created and wired public/images/alla-vostra/header-hero-composition-preview.png so) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 216.25 Tm (  Original Hero magnifies as the accepted background-plus-cheeseboard composition instead of) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 204.00 Tm (  treating those source layers separately.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 189.75 Tm (- Updated CSS for screenshot preview layers, image frames, labels, and element clones so) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 177.50 Tm (  preview geometry, border radii, object fit, and background behavior match the underlying) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 165.25 Tm (  asset rather than introducing a separate framed box.) Tj ET
+BT /F2 10.60 Tf 1 0 0 1 54.00 143.00 Tm (Work Completed - Overview Play Store Media) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 127.75 Tm (- Located and imported the Alla Vostra Play Store image set into) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 115.50 Tm (  public/images/alla-vostra/play-store/playstore1.png through playstore5.png.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 101.25 Tm (- Placed the Play Store feature graphic beneath the Overview header on the left side of the) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 89.00 Tm (  Overview section while keeping the vertical divider, paragraph copy, and supporting image) Tj ET
+BT /F1 8.40 Tf 1 0 0 1 54.00 40.00 Tm (Prahlin Portfolio Work Log - August 6, 2026 Page 3) Tj ET
+endstream
+endobj
+10 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 9 0 R >>
+endobj
+11 0 obj
+<< /Length 5860 >>
+stream
+BT /F1 9.15 Tf 1 0 0 1 54.00 742.00 Tm (  stack on the right side.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 727.75 Tm (- Iterated Play Store image scale from very small thumbnails through larger two-row and) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 715.50 Tm (  grouped layouts, then settled on the approved feature image plus three-image supporting) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 703.25 Tm (  row under the paragraph copy.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 689.00 Tm (- Removed the no-text image and the rightmost image from the rendered Overview media layout,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 676.75 Tm (  while leaving the imported source files available in the public image inventory.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 662.50 Tm (- Scaled the supporting three-image row to match the paragraph width and aligned the) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 650.25 Tm (  Overview copy/divider area with the approved top-edge relationship to the feature image) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 638.00 Tm (  row.) Tj ET
+BT /F2 10.60 Tf 1 0 0 1 54.00 615.75 Tm (Work Completed - Navigation and Control Asset Stacks) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 600.50 Tm (- Grouped SHOP app header and Shop preview action buttons under Header CTA, with the final) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 588.25 Tm (  captions Navigate to Shop Preview Screen and Begin the Shopping Process.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 574.00 Tm (- Rebuilt Controls & Inputs around final product/cart state stacks: Add \(This\) Item, Edit) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 561.75 Tm (  Quantity, Remove Item, Add \(Any\) Item, and Proceed To Checkout.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 547.50 Tm (- Inserted high-visibility and low-visibility product Add states with the approved labels) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 535.25 Tm (  Before Added and After Added, then updated the descriptive copy to High Visibility = Item) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 523.00 Tm (  Not Yet Added and Low Visibility = Item Successfully Added.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 508.75 Tm (- Moved the quantity controls into an Edit Quantity stack, swapped Before Set and After Set) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 496.50 Tm (  placement per the final instruction, and described those states as High Visibility = No) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 484.25 Tm (  Quantity Set and Low Visibility = Quantity Set.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 470.00 Tm (- Moved Remove Item into its own stack and updated the remove product button language to) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 457.75 Tm (  Remove Item From Cart.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 443.50 Tm (- Added low-visibility cart Add Items and Checkout assets, then labeled cart-add states as) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 431.25 Tm (  Before Added and After Added and checkout states as Checkout Allowed and Checkout) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 419.00 Tm (  Disallowed.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 404.75 Tm (- Matched the high-visibility product counter shape, size, and proportions to the) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 392.50 Tm (  low-visibility zero-counter version so the before/after quantity states no longer looked) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 380.25 Tm (  mismatched or misleading.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 366.00 Tm (- Removed unwanted cream/white outer backing around navigation and control crops while) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 353.75 Tm (  preserving intentional internal fills such as the quantity counter box and inactive) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 341.50 Tm (  product tab color.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 327.25 Tm (- Increased Show More / Show Less button width so those controls match the combined width of) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 315.00 Tm (  a two-square device-frame stack across the Alla Vostra flow sections.) Tj ET
+BT /F2 10.60 Tf 1 0 0 1 54.00 292.75 Tm (Work Completed - Assets, Styling, and Snapshot Hygiene) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 277.50 Tm (- Added transparent-bgless variants for the real app control crops so magnified controls and) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 265.25 Tm (  in-page square samples can use honest transparent backgrounds instead of captured outer) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 253.00 Tm (  panels.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 238.75 Tm (- Added product-add-tapped.png, product-counter-high-vis.png, product-counter-low-vis.png,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 226.50 Tm (  cart-add-items-low-vis.png, cart-checkout-low-vis.png, and related transparent-bgless) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 214.25 Tm (  copies for the final low/high visibility control states.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 200.00 Tm (- Updated app/globals.css for sticky switcher positioning, final button visual states,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 187.75 Tm (  universal preview cursor affordances, transparent preview layers, flow asset layout,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 175.50 Tm (  Overview media sizing, control-stack grid behavior, and Show More / Show Less width.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 161.25 Tm (- Added .next.stale-* to .gitignore for dev cache directories produced by the local) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 149.00 Tm (  cache-clearing pass.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 134.75 Tm (- Regenerated portfolio_PROJECT_SNAPSHOT.txt for the current project state and normalized) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 122.50 Tm (  trailing whitespace after the snapshot script surfaced generated-cache inventory lines.) Tj ET
+BT /F2 10.60 Tf 1 0 0 1 54.00 100.25 Tm (Validation Summary) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 85.00 Tm (- npm run check passed with tsc --noEmit after the committed August 6 source state and again) Tj ET
+BT /F1 8.40 Tf 1 0 0 1 54.00 40.00 Tm (Prahlin Portfolio Work Log - August 6, 2026 Page 4) Tj ET
+endstream
+endobj
+12 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 11 0 R >>
+endobj
+13 0 obj
+<< /Length 6122 >>
+stream
+BT /F1 9.15 Tf 1 0 0 1 54.00 742.00 Tm (  during this worklog-generation pass.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 727.75 Tm (- npm run build:static passed with Next.js 16.2.10 and generated static routes for /,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 715.50 Tm (  /_not-found, /articles, /projects/alla-vostra, and /projects/cinerific.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 701.25 Tm (- The static-export validation flipped next-env.d.ts from the dev route-types reference to) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 689.00 Tm (  the production route-types reference as a generated side effect; that line was restored to) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 676.75 Tm (  the preexisting source state after validation.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 662.50 Tm (- git diff --check initially caught trailing whitespace inside the regenerated snapshot;) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 650.25 Tm (  portfolio_PROJECT_SNAPSHOT.txt was normalized, and git diff --check then passed.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 636.00 Tm (- pdfinfo and pdftotext were available locally and were used to inspect all prior worklog) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 623.75 Tm (  PDFs and to verify the generated August 6 PDF artifact.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 609.50 Tm (- git status before PDF generation showed only the refreshed portfolio_PROJECT_SNAPSHOT.txt) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 597.25 Tm (  modified. After PDF generation, the expected additional local artifact is) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 585.00 Tm (  portfolio_worklog_august6.pdf.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 570.75 Tm (- No Hostinger deploy branch update, GitHub Actions deployment dispatch, production publish,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 558.50 Tm (  or live-site verification was performed during this documentation record.) Tj ET
+BT /F2 10.60 Tf 1 0 0 1 54.00 536.25 Tm (Files Touched During August 6 Portfolio Work) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 521.00 Tm (- app/ScreenshotPreviewLayer.tsx - expanded screenshot preview behavior into scoped image) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 508.75 Tm (  and element magnification, added visible-element guards, grouped labels with assets, and) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 496.50 Tm (  preserved transparent preview backgrounds.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 482.25 Tm (- app/projects/alla-vostra/ProductFlowSwitcher.tsx - refined UI Foundations / UX Product) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 470.00 Tm (  Flow navigation, grouped hero preview composition, reorganized navigation and control) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 457.75 Tm (  stacks, updated labels/captions, and wired new transparent/high-low visibility assets.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 443.50 Tm (- app/projects/alla-vostra/page.tsx - added the Overview Play Store media layout, feature) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 431.25 Tm (  graphic, supporting screenshot row, and selected approved image ordering under the) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 419.00 Tm (  Overview section.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 404.75 Tm (- app/globals.css - tuned sticky tab behavior, active/inactive switcher states, preview) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 392.50 Tm (  layer transparency, asset-frame sizing, Overview media placement, control-stack layout,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 380.25 Tm (  and Show More / Show Less width.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 366.00 Tm (- .gitignore - added .next.stale-* so stale development cache folders created during local) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 353.75 Tm (  cache-clearing passes stay out of source control.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 339.50 Tm (- public/images/alla-vostra/header-hero-composition-preview.png - added the grouped Original) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 327.25 Tm (  Hero preview composition for magnification.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 313.00 Tm (- public/images/alla-vostra/play-store/*.png - imported the Play Store image set used and) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 300.75 Tm (  inventoried by the Overview presentation.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 286.50 Tm (- public/images/alla-vostra/ui-assets/*.png and) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 274.25 Tm (  public/images/alla-vostra/ui-assets/transparent-bgless/*.png - added low-visibility) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 262.00 Tm (  product/cart controls, high/low counter states, and transparent control variants.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 247.75 Tm (- portfolio_PROJECT_SNAPSHOT.txt - regenerated with ./read_project.sh for current project) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 235.50 Tm (  context and normalized after generation so diff whitespace checks pass.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 221.25 Tm (- portfolio_worklog_august6.pdf - generated as this August 6 Portfolio worklog artifact in) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 209.00 Tm (  the root-level Portfolio worklog convention.) Tj ET
+BT /F2 10.60 Tf 1 0 0 1 54.00 186.75 Tm (Follow-Up Context) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 171.50 Tm (- The Product Flow switcher now carries scroll behavior as well as view switching. Future) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 159.25 Tm (  edits should keep the anchor/release behavior and active-button autoscroll rule intact) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 147.00 Tm (  unless the user asks for a navigation behavior change.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 132.75 Tm (- The magnification system is now intentionally scoped by data-screenshot-preview-scope. New) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 120.50 Tm (  UI Foundations or UX Product Flow assets inside that scope should magnify automatically) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 108.25 Tm (  only when visible; hidden collapsed assets should remain inert.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 94.00 Tm (- Transparent-bgless UI asset variants are the preferred control crops for preview and) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 81.75 Tm (  square-frame display where an outer captured panel would create black, cream, or) Tj ET
+BT /F1 8.40 Tf 1 0 0 1 54.00 40.00 Tm (Prahlin Portfolio Work Log - August 6, 2026 Page 5) Tj ET
+endstream
+endobj
+14 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 13 0 R >>
+endobj
+15 0 obj
+<< /Length 2774 >>
+stream
+BT /F1 9.15 Tf 1 0 0 1 54.00 742.00 Tm (  mismatched backing. Intentional internal fills, including counter boxes and inactive tabs,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 729.75 Tm (  should remain visible.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 715.50 Tm (- The Overview Play Store directory contains all five imported files, while the rendered) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 703.25 Tm (  page uses the final approved subset and layout. Future swaps can reuse the unused file) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 691.00 Tm (  without another import pass.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 676.75 Tm (- The refreshed snapshot currently inventories timestamped .next.cleared-* cache directories) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 664.50 Tm (  produced by prior local cache-clearing work. That is snapshot context, not a new source) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 652.25 Tm (  feature; changing the snapshot ignore policy should be a separate explicit maintenance) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 640.00 Tm (  task.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 625.75 Tm (- No public deployment was performed during this record. The current source state is) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 613.50 Tm (  committed and aligned with origin/main, while the refreshed snapshot and this August 6 PDF) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 601.25 Tm (  are local documentation artifacts until the user requests or approves a documentation) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 589.00 Tm (  commit.) Tj ET
+BT /F2 10.60 Tf 1 0 0 1 54.00 566.75 Tm (Output Artifact) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 551.50 Tm (- Generated file: portfolio_worklog_august6.pdf.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 537.25 Tm (- Location: /Users/prahlin/gh/portfolio/portfolio_worklog_august6.pdf.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 523.00 Tm (- Naming follows the existing root-level Portfolio convention for a single daily PDF:) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 510.75 Tm (  portfolio_worklog_august6.pdf.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 496.50 Tm (- Uses the same daily worklog structure and compact technical voice established by) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 484.25 Tm (  portfolio_worklog_july11.pdf through portfolio_worklog_august5.pdf.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 470.00 Tm (- Generated with a small standard-library PDF writer; no external PDF dependency was) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 457.75 Tm (  installed for this artifact.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 443.50 Tm (- The local project date used for this filename and title is Thursday, August 6, 2026,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 431.25 Tm (  matching the user-requested latest August 6 worklog.) Tj ET
+BT /F1 8.40 Tf 1 0 0 1 54.00 40.00 Tm (Prahlin Portfolio Work Log - August 6, 2026 Page 6) Tj ET
+endstream
+endobj
+16 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 15 0 R >>
+endobj
+17 0 obj
+<< /Title (Prahlin Portfolio Work Log - August 6, 2026) /Subject (Portfolio website development worklog) /Author (Codex) /Creator (Codex standard-library PDF generator) /Producer (Codex standard-library PDF generator) /CreationDate (D:20260806000000-04'00') /ModDate (D:20260806000000-04'00') >>
+endobj
+xref
+0 18
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000149 00000 n 
+0000000219 00000 n 
+0000000294 00000 n 
+0000006688 00000 n 
+0000006824 00000 n 
+0000012934 00000 n 
+0000013070 00000 n 
+0000018924 00000 n 
+0000019061 00000 n 
+0000024974 00000 n 
+0000025112 00000 n 
+0000031287 00000 n 
+0000031425 00000 n 
+0000034252 00000 n 
+0000034390 00000 n 
+trailer
+<< /Size 18 /Root 1 0 R /Info 17 0 R >>
+startxref
+34702
+%%EOF
