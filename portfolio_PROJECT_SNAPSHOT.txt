@@ -1,5 +1,5 @@
 Portfolio Next.js PROJECT SNAPSHOT
-Generated: Mon Aug 10 17:38:27 EDT 2026
+Generated: Mon Aug 10 19:38:34 EDT 2026
 Project directory: /Users/prahlin/gh/portfolio
 
 IMPORTANT INSTRUCTIONS FOR CHATGPT & CODEX:
@@ -8658,6 +8658,7 @@ PROJECT FILE TREE
 /Users/prahlin/gh/portfolio/next.config.ts
 /Users/prahlin/gh/portfolio/package-lock.json
 /Users/prahlin/gh/portfolio/package.json
+/Users/prahlin/gh/portfolio/portfolio_worklog_august10_part1.pdf
 /Users/prahlin/gh/portfolio/portfolio_worklog_august1_part1.pdf
 /Users/prahlin/gh/portfolio/portfolio_worklog_august1_part2.pdf
 /Users/prahlin/gh/portfolio/portfolio_worklog_august1_part3.pdf
@@ -8695,6 +8696,7 @@ PROJECT FILE TREE
 /Users/prahlin/gh/portfolio/public/images/alla-vostra
 /Users/prahlin/gh/portfolio/public/images/alla-vostra-hero-confirmed-framed-space-gray.png
 /Users/prahlin/gh/portfolio/public/images/alla-vostra-hero-products-framed-space-gray.png
+/Users/prahlin/gh/portfolio/public/images/alla-vostra-hero-startup-framed-lower-muted.png
 /Users/prahlin/gh/portfolio/public/images/alla-vostra-hero-startup-framed.png
 /Users/prahlin/gh/portfolio/public/images/alla-vostra-product-flow-mockup.svg
 /Users/prahlin/gh/portfolio/public/images/alla-vostra/bargain_square_whitefill.png
@@ -18476,9 +18478,11 @@ main
 Status:
 ## main...origin/main
  M portfolio_PROJECT_SNAPSHOT.txt
+?? portfolio_worklog_august10_part1.pdf
 
 Recent commits:
-6a05703 (HEAD -> main, origin/main) generated pdf session worklog for the relevant project on August 6, 2026.
+c496a04 (HEAD -> main, origin/main) Refined portfolio hero and case studies
+6a05703 generated pdf session worklog for the relevant project on August 6, 2026.
 d3bda6a Refined Alla Vostra case study previews, controls, and overview assets
 a149e29 generated the pdf session worklog for the relevant project on August 5, 2026.
 8e21e8d Ignored lowercase .DS_store files in gitignore
@@ -18487,7 +18491,6 @@ f4ef9d4 Refined Alla Vostra hero proof cards and platform badges
 beebf97 Correct August worklog and landing stats
 29911ee generated the pdf session worklog for the relevant project on August 4, 2026.
 529bd98 Refined Alla Vostra UI foundations with real app control assets
-b389f01 generated pdf session worklog for the relevant project on August 3, 2026.
 
 Remotes:
 origin	https://github.com/Prahlin/portfolio.git (fetch)
@@ -18504,6 +18507,7 @@ public/images/address_overlay_large.png | 209339 bytes | modified 2026-07-15 19:
 public/images/address_overlay_small.png | 102975 bytes | modified 2026-07-15 19:25:04
 public/images/alla-vostra-hero-confirmed-framed-space-gray.png | 756405 bytes | modified 2026-08-01 18:01:46
 public/images/alla-vostra-hero-products-framed-space-gray.png | 2013506 bytes | modified 2026-08-01 18:01:46
+public/images/alla-vostra-hero-startup-framed-lower-muted.png | 3147026 bytes | modified 2026-08-10 18:50:51
 public/images/alla-vostra-hero-startup-framed.png | 1902601 bytes | modified 2026-08-01 14:50:53
 public/images/alla-vostra-product-flow-mockup.svg | 11052 bytes | modified 2026-08-01 11:58:59
 public/images/alla-vostra/bargain_square_whitefill.png | 87208 bytes | modified 2026-08-03 21:48:27
@@ -18623,6 +18627,7 @@ public/images/time_date_overlay_small.png | 104568 bytes | modified 2026-07-15 1
 PDF WORKLOG INVENTORY
 ============================================================
 
+portfolio_worklog_august10_part1.pdf | 30442 bytes | modified 2026-08-10 19:35:28
 portfolio_worklog_august1_part1.pdf | 36347 bytes | modified 2026-08-01 14:29:45
 portfolio_worklog_august1_part2.pdf | 30905 bytes | modified 2026-08-01 19:16:37
 portfolio_worklog_august1_part3.pdf | 28004 bytes | modified 2026-08-01 20:38:07

@@ -1,0 +1,836 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [6 0 R 8 0 R 10 0 R 12 0 R 14 0 R 16 0 R] /Count 6 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+5 0 obj
+<< /Length 5510 >>
+stream
+BT
+/F2 12.20 Tf
+1 0 0 1 54.00 738.00 Tm
+(Prahlin Portfolio Work Log - August 10, 2026 \(Part 1\)) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 717.20 Tm
+(Compiled summary for Monday, August 10, 2026 - Part 1 - focus: resuming the Prahl.dev) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 704.00 Tm
+(Portfolio project from the refreshed snapshot and prior PDF worklogs, running the local) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 690.80 Tm
+(Next.js site at http://127.0.0.1:3000, diagnosing apparently missing Alla Vostra UI) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 677.60 Tm
+(Foundations assets, advising the Controls & Inputs state-catalog strategy, rebuilding the) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 664.40 Tm
+(Alla Vostra Visual Hierarchy section around real framed startup-device imagery, generating) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 651.20 Tm
+(a muted lower-screen Focal Point variant, adding TT Fors annotations, validating) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 638.00 Tm
+(TypeScript and browser-rendered measurements, refreshing the Portfolio project snapshot,) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 624.80 Tm
+(reviewing all prior Portfolio PDF worklogs, and generating the August 10 Part 1 Portfolio) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 611.60 Tm
+(PDF worklog.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 593.78 Tm
+(Generated in continuity with the established Prahlin Portfolio daily worklog cadence:) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 580.58 Tm
+(compact opening summary, source-material section, baseline section, goal list,) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 567.38 Tm
+(work-completed sections, validation section, files-touched list, follow-up context, and) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 554.18 Tm
+(output-artifact close.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 536.36 Tm
+(This artifact intentionally covers Prahlin/portfolio work performed after) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 523.16 Tm
+(portfolio_worklog_august6.pdf and after the August 6 documentation state, including the) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 509.96 Tm
+(current committed source state c496a04  on main, which matched origin/main before this PDF) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 496.76 Tm
+(was generated. No new Hostinger production deployment, GitHub Actions dispatch, or) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 483.56 Tm
+(public-site publish was performed during this record. The only local source change left) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 470.36 Tm
+(after the final snapshot refresh was portfolio_PROJECT_SNAPSHOT.txt, and this PDF was) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 457.16 Tm
+(produced as the requested August 10 Part 1 documentation artifact.) Tj
+/F2 11.20 Tf
+1 0 0 1 54.00 430.76 Tm
+(Source Materials Reviewed) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 413.76 Tm
+(- Ran ./read_project.sh from /Users/prahlin/gh/portfolio and regenerated) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 400.56 Tm
+(  portfolio_PROJECT_SNAPSHOT.txt before writing this worklog, preserving the project) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 387.36 Tm
+(  convention that Codex refreshes the current source snapshot before continuing Portfolio) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 374.16 Tm
+(  documentation work.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 360.96 Tm
+(- Reviewed the refreshed portfolio_PROJECT_SNAPSHOT.txt, including project notes, source) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 347.76 Tm
+(  tree, public image and font inventories, PDF worklog inventory, package and deployment) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 334.56 Tm
+(  configuration, git context, recent commits, and the standing instruction to ask for a) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 321.36 Tm
+(  commit message before committing or pushing.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 308.16 Tm
+(- Reviewed every pre-existing Portfolio root-level worklog PDF:) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 294.96 Tm
+(  portfolio_worklog_july11.pdf, portfolio_worklog_july14.pdf,) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 281.76 Tm
+(  portfolio_worklog_july15_part1.pdf, portfolio_worklog_july15_part2.pdf,) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 268.56 Tm
+(  portfolio_worklog_july16.pdf, portfolio_worklog_july19.pdf, portfolio_worklog_july20.pdf,) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 255.36 Tm
+(  portfolio_worklog_july21.pdf, portfolio_worklog_july22.pdf, portfolio_worklog_july23.pdf,) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 242.16 Tm
+(  portfolio_worklog_july24.pdf, portfolio_worklog_july25.pdf, portfolio_worklog_july29.pdf,) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 228.96 Tm
+(  portfolio_worklog_july30.pdf, portfolio_worklog_july31.pdf,) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 215.76 Tm
+(  portfolio_worklog_august1_part1.pdf, portfolio_worklog_august1_part2.pdf,) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 202.56 Tm
+(  portfolio_worklog_august1_part3.pdf, portfolio_worklog_august3.pdf,) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 189.36 Tm
+(  portfolio_worklog_august4.pdf, portfolio_worklog_august5.pdf, and) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 176.16 Tm
+(  portfolio_worklog_august6.pdf.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 162.96 Tm
+(- Extracted text from all twenty-two existing Portfolio PDFs with pdftotext and checked) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 149.76 Tm
+(  recent metadata with pdfinfo to preserve title cadence, Part 1 naming, opening-summary) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 136.56 Tm
+(  density, section order, bullet-heavy technical voice, validation language, files-touched) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 123.36 Tm
+(  lists, local-only deployment language, root-level filename style, letter-size pages, PDF) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 110.16 Tm
+(  1.4 output, Codex author/creator/producer metadata, and Helvetica-style base-font) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 96.96 Tm
+(  convention.) Tj
+/F1 8.50 Tf
+1 0 0 1 312.00 36.00 Tm
+(Prahlin Portfolio Work Log - August 10, 2026 \(Part 1\) Page 1) Tj
+ET
+endstream
+endobj
+6 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 5 0 R >>
+endobj
+7 0 obj
+<< /Length 5478 >>
+stream
+BT
+/F1 9.60 Tf
+1 0 0 1 54.00 738.00 Tm
+(- Used portfolio_worklog_august6.pdf as the closest structural baseline because it) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 724.80 Tm
+(  documented the immediately preceding UI Foundations, screenshot-preview,) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 711.60 Tm
+(  transparent-asset, product-flow navigation, Overview media, and Controls & Inputs work) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 698.40 Tm
+(  around the same Alla Vostra case-study page.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 685.20 Tm
+(- Reviewed current git state through git status, git log, git show --stat, git show) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 672.00 Tm
+(  --name-status, git diff --stat, git diff --name-status, and git diff --check. The current) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 658.80 Tm
+(  source commit reviewed for the Visual Hierarchy work was c496a04, with the regenerated) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 645.60 Tm
+(  snapshot carrying the latest timestamp and public image inventory updates.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 632.40 Tm
+(- Reviewed app/projects/alla-vostra/ProductFlowSwitcher.tsx, app/globals.css,) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 619.20 Tm
+(  public/images/alla-vostra-hero-startup-framed.png, public/images/startup_screen_large.png,) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 606.00 Tm
+(  public/images/startup_screen_small.png, the generated lower-muted startup-frame asset,) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 592.80 Tm
+(  package scripts, and the local Next.js route at /projects/alla-vostra.) Tj
+/F2 11.20 Tf
+1 0 0 1 54.00 571.02 Tm
+(Baseline Status Before August 10 Part 1 Work) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 554.02 Tm
+(- The August 6 Portfolio work had already rebuilt large parts of the Alla Vostra UI) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 540.82 Tm
+(  Foundations and UX Product Flow system, including sticky view switching, universal) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 527.62 Tm
+(  screenshot magnification, transparent preview behavior, real Play Store media,) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 514.42 Tm
+(  transparent-bgless navigation and control crops, and final Controls & Inputs) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 501.22 Tm
+(  high/low-visibility state stacks.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 488.02 Tm
+(- The current project needed re-orientation before edits continued, so the working cycle) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 474.82 Tm
+(  began by running the project snapshot script and reading all root-level snapshot and) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 461.62 Tm
+(  worklog materials.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 448.42 Tm
+(- The local development server needed to be available at http://127.0.0.1:3000 so the user) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 435.22 Tm
+(  could inspect the Portfolio page and direct visual changes live.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 422.02 Tm
+(- Several UI Foundations assets appeared not to show in the browser, especially in the) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 408.82 Tm
+(  Navigations section. The files existed on disk and the rendered URLs returned 200) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 395.62 Tm
+(  responses, so the issue needed to be separated from an actual missing-asset problem.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 382.42 Tm
+(- The Controls & Inputs section already had meaningful before/after state samples, but the) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 369.22 Tm
+(  user wanted product guidance on whether tapped/untapped versions and every individual app) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 356.02 Tm
+(  button belonged in the UI Foundations presentation.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 342.82 Tm
+(- The Visual Hierarchy category still used placeholder frames and did not yet communicate a) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 329.62 Tm
+(  concrete design-system idea through real Alla Vostra app screenshots, real device frames,) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 316.42 Tm
+(  or annotated viewing/focal-area comparisons.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 303.22 Tm
+(- The user wanted the Visual Hierarchy previews to reference the existing Original Hero) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 290.02 Tm
+(  asset scale under Iconography & Imagery rather than becoming a separate oversized) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 276.82 Tm
+(  device-preview system.) Tj
+/F2 11.20 Tf
+1 0 0 1 54.00 255.04 Tm
+(Goals for August 10 Part 1) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 238.04 Tm
+(- Resume the Portfolio project context by studying all existing snapshots and worklogs, then) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 224.84 Tm
+(  keep later edits consistent with the established Alla Vostra UI Foundations direction.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 211.64 Tm
+(- Run the local Portfolio site at http://127.0.0.1:3000 and keep browser validation anchored) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 198.44 Tm
+(  to the actual rendered page rather than source-only assumptions.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 185.24 Tm
+(- Diagnose the apparently missing UI Foundations assets without renaming or deleting public) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 172.04 Tm
+(  image files unnecessarily.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 158.84 Tm
+(- Advise the user on a sustainable Controls & Inputs documentation strategy: show meaningful) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 145.64 Tm
+(  state pairs and distinct interaction patterns, not every repeated button instance.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 132.44 Tm
+(- Replace Visual Hierarchy placeholders with real framed Alla Vostra startup-device previews) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 119.24 Tm
+(  while keeping the rest of the UI Foundations layout stable.) Tj
+/F1 8.50 Tf
+1 0 0 1 312.00 36.00 Tm
+(Prahlin Portfolio Work Log - August 10, 2026 \(Part 1\) Page 2) Tj
+ET
+endstream
+endobj
+8 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 7 0 R >>
+endobj
+9 0 obj
+<< /Length 5318 >>
+stream
+BT
+/F1 9.60 Tf
+1 0 0 1 54.00 738.00 Tm
+(- Create a second Visual Hierarchy preview that keeps the full screen visible but) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 724.80 Tm
+(  deemphasizes the non-focal lower screen area at 50% opacity.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 711.60 Tm
+(- Add clear TT Fors labels for Viewing Area and Focal Point, position them using the sticky) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 698.40 Tm
+(  cart button as the bottom edge for the lower text area, and scale the labels to the) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 685.20 Tm
+(  user-approved prominence.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 672.00 Tm
+(- Validate the final visual state with TypeScript and Playwright browser measurements, then) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 658.80 Tm
+(  generate the August 10 Part 1 PDF worklog in the established format.) Tj
+/F2 11.20 Tf
+1 0 0 1 54.00 637.02 Tm
+(Work Completed - Project Orientation and Local Preview) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 620.02 Tm
+(- Ran ./read_project.sh at the start of the session, generated a fresh) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 606.82 Tm
+(  portfolio_PROJECT_SNAPSHOT.txt, and reviewed the snapshot context before continuing) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 593.62 Tm
+(  user-directed page work.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 580.42 Tm
+(- Located and studied every existing Portfolio PDF worklog, covering the July 11 initial) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 567.22 Tm
+(  portfolio setup through the August 6 UI Foundations and product-flow refinement pass.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 554.02 Tm
+(- Started the Next.js development server with npm run dev -- --hostname 127.0.0.1 --port) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 540.82 Tm
+(  3000 and confirmed Next.js 16.2.10 reported ready at the requested local address.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 527.62 Tm
+(- Kept the local server running through the visual-edit sequence, restarting it once after a) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 514.42 Tm
+(  stale stylesheet check showed that the browser was not yet applying a newly added CSS) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 501.22 Tm
+(  selector.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 488.02 Tm
+(- Used Playwright repeatedly against http://127.0.0.1:3000/projects/alla-vostra to switch) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 474.82 Tm
+(  into UI Foundations, scroll to target categories, measure rendered element sizes, inspect) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 461.62 Tm
+(  image URLs, and capture verification screenshots.) Tj
+/F2 11.20 Tf
+1 0 0 1 54.00 439.84 Tm
+(Work Completed - Asset Diagnosis and Controls Advice) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 422.84 Tm
+(- Investigated the apparently missing Navigation assets by checking) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 409.64 Tm
+(  public/images/alla-vostra/ui-assets and transparent-bgless counterparts, then confirmed) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 396.44 Tm
+(  the expected files existed on disk.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 383.24 Tm
+(- Queried the local server with curl and confirmed the real transparent-bgless asset URLs) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 370.04 Tm
+(  returned 200 OK, while intentionally nonexistent navigation-header-cta-before paths) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 356.84 Tm
+(  returned 404 and were not the paths used by the component.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 343.64 Tm
+(- Used Playwright to inspect the rendered img elements in the Navigations section and) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 330.44 Tm
+(  confirmed there were no failed image requests, normal opacity, valid _next/image URLs, and) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 317.24 Tm
+(  loaded natural image dimensions.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 304.04 Tm
+(- Identified the visual problem as a presentation/cache/contrast issue rather than a) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 290.84 Tm
+(  missing-folder issue: transparent button crops and dark surrounding frames could appear) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 277.64 Tm
+(  ghosted against the dark gridded UI Foundations background, especially in a stale browser) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 264.44 Tm
+(  tab.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 251.24 Tm
+(- Advised that Controls & Inputs should include tapped/untapped or before/after versions) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 238.04 Tm
+(  only when the state teaches a real interaction rule, such as Default, Added, Enabled,) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 224.84 Tm
+(  Disabled, Active, Inactive, or Destructive.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 211.64 Tm
+(- Advised against featuring every single Alla Vostra button instance, recommending that UI) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 198.44 Tm
+(  Foundations document distinct button patterns and interaction responsibilities rather than) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 185.24 Tm
+(  becoming an exhaustive screenshot inventory.) Tj
+/F2 11.20 Tf
+1 0 0 1 54.00 163.46 Tm
+(Work Completed - Visual Hierarchy Frame System) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 146.46 Tm
+(- Scoped the Visual Hierarchy category so it no longer inherited the default Small plus) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 133.26 Tm
+(  Large placeholder pair for every step.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 120.06 Tm
+(- Iterated the user-directed frame selection: first removing small frames, then reversing to) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 106.86 Tm
+(  small-only, then making Step 1 Large while Steps 2 through 5 remained Small placeholders.) Tj
+/F1 8.50 Tf
+1 0 0 1 312.00 36.00 Tm
+(Prahlin Portfolio Work Log - August 10, 2026 \(Part 1\) Page 3) Tj
+ET
+endstream
+endobj
+10 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 9 0 R >>
+endobj
+11 0 obj
+<< /Length 5466 >>
+stream
+BT
+/F1 9.60 Tf
+1 0 0 1 54.00 738.00 Tm
+(- Extended PlaceholderScreen in ProductFlowSwitcher so it can accept class names, inline) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 724.80 Tm
+(  frame styles, image sources, image styles, outer sizing, overlay labels, and) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 711.60 Tm
+(  overlay-specific text styles without disturbing the other UI Foundations categories.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 698.40 Tm
+(- Inserted the startup_screen_large.png screenshot into Visual Hierarchy Step 1 during the) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 685.20 Tm
+(  early pass, then replaced that raw screenshot box with the actual baked large device-frame) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 672.00 Tm
+(  asset at /images/alla-vostra-hero-startup-framed.png.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 658.80 Tm
+(- Matched Visual Hierarchy Steps 1 and 2 to the Original Hero asset width under Iconography) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 645.60 Tm
+(  & Imagery. Browser measurement confirmed Original Hero, Step 1, and Step 2 all rendered at) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 632.40 Tm
+(  318px wide after the final sizing pass.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 619.20 Tm
+(- Kept Steps 3, 4, and 5 as Small placeholders at the reduced Visual Hierarchy width while) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 606.00 Tm
+(  Steps 1 and 2 became Large framed devices, preserving the remaining section structure for) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 592.80 Tm
+(  future visual hierarchy examples.) Tj
+/F2 11.20 Tf
+1 0 0 1 54.00 571.02 Tm
+(Work Completed - Muted Focal-Point Asset) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 554.02 Tm
+(- Created a derived PNG from /images/alla-vostra-hero-startup-framed.png at) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 540.82 Tm
+(  public/images/alla-vostra-hero-startup-framed-lower-muted.png using sharp.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 527.62 Tm
+(- Generated and inspected an intermediate transparent-lower-frame variant, then removed it) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 514.42 Tm
+(  after the user clarified that the full screen should remain visible with selected lower) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 501.22 Tm
+(  assets at 50% opacity rather than being completely cut away.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 488.02 Tm
+(- Refined the generated lower-muted asset so the app header, top navigation, hero image, and) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 474.82 Tm
+(  cheeseboard stay visually present while the lower cream area, sticky cart button, and) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 461.62 Tm
+(  native bottom orange bar are reduced to 50% opacity.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 448.42 Tm
+(- Protected the cheeseboard itself during the muting pass after an initial mask also dimmed) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 435.22 Tm
+(  a few edge pixels around the board. The final mask keeps the focal hero content clear) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 422.02 Tm
+(  while the lower screen reads as secondary.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 408.82 Tm
+(- Wired Visual Hierarchy Step 2 to the new lower-muted framed asset while Step 1 uses the) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 395.62 Tm
+(  fully opaque framed startup image, creating a direct side-by-side comparison between) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 382.42 Tm
+(  Viewing Area and Focal Point.) Tj
+/F2 11.20 Tf
+1 0 0 1 54.00 360.64 Tm
+(Work Completed - TT Fors Annotations) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 343.64 Tm
+(- Added a reusable Visual Hierarchy annotation layer inside the framed image area so) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 330.44 Tm
+(  explanatory labels sit over the app screen instead of becoming external captions.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 317.24 Tm
+(- Set Step 1 annotation lines to Viewing and Area, and Step 2 annotation lines to Focal and) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 304.04 Tm
+(  Point, using the Alla Vostra TT Fors font family already registered in app/globals.css.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 290.84 Tm
+(- Moved annotation styling inline in ProductFlowSwitcher after the dev server failed to) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 277.64 Tm
+(  immediately serve a newly added CSS selector, ensuring font family, size, position, and) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 264.44 Tm
+(  stroke styling applied deterministically.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 251.24 Tm
+(- Measured the sticky cart button top edge in the framed startup asset and used it as the) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 238.04 Tm
+(  bottom boundary for vertical placement. The final label center sits at 73.6% of the) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 224.84 Tm
+(  device-frame height, midway between the lower cream start area and the sticky cart button) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 211.64 Tm
+(  top.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 198.44 Tm
+(- Increased both annotation snippets from 28px to 42px, making them 50% larger as requested.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 185.24 Tm
+(- Changed the Focal Point annotation to white with a black stroke and supporting black) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 172.04 Tm
+(  text-shadow, while preserving the darker TT Fors treatment for the Viewing Area label.) Tj
+/F2 11.20 Tf
+1 0 0 1 54.00 150.26 Tm
+(Work Completed - Snapshot and Commit-Message Context) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 133.26 Tm
+(- Regenerated portfolio_PROJECT_SNAPSHOT.txt after the work sequence so the snapshot now) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 120.06 Tm
+(  inventories the new lower-muted framed startup image and records the current c496a04) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 106.86 Tm
+(  source commit in recent history.) Tj
+/F1 8.50 Tf
+1 0 0 1 312.00 36.00 Tm
+(Prahlin Portfolio Work Log - August 10, 2026 \(Part 1\) Page 4) Tj
+ET
+endstream
+endobj
+12 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 11 0 R >>
+endobj
+13 0 obj
+<< /Length 5346 >>
+stream
+BT
+/F1 9.60 Tf
+1 0 0 1 54.00 738.00 Tm
+(- Provided the requested commit-message recommendation in the established format: one header) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 724.80 Tm
+(  followed by hyphen-led change points describing the framed Visual Hierarchy previews,) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 711.60 Tm
+(  muted lower-screen asset, TT Fors annotations, smaller remaining placeholders, and) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 698.40 Tm
+(  snapshot refresh.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 685.20 Tm
+(- Observed that c496a04, Refined portfolio hero and case studies, already contained the) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 672.00 Tm
+(  ProductFlowSwitcher changes and the new lower-muted asset before this PDF was generated.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 658.80 Tm
+(  No additional commit, push, or deployment was performed during the PDF-generation step.) Tj
+/F2 11.20 Tf
+1 0 0 1 54.00 637.02 Tm
+(Validation Summary) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 620.02 Tm
+(- npm run check passed with tsc --noEmit after the final Visual Hierarchy annotation and) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 606.82 Tm
+(  asset work, and again during the August 10 Part 1 worklog-generation pass.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 593.62 Tm
+(- git diff --check passed after the final snapshot refresh, indicating no) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 580.42 Tm
+(  trailing-whitespace or whitespace-error issues in the remaining local diff.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 567.22 Tm
+(- curl -I http://127.0.0.1:3000/projects/alla-vostra returned HTTP 200 from the local) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 554.02 Tm
+(  Next.js dev server during the final documentation pass.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 540.82 Tm
+(- Playwright browser checks confirmed Visual Hierarchy Step 1 and Step 2 load the intended) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 527.62 Tm
+(  framed image assets, render as Large frames, and match the Original Hero width at 318px.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 514.42 Tm
+(- Playwright browser checks confirmed the annotation lines are Viewing/Area and Focal/Point,) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 501.22 Tm
+(  use the Alla Vostra TT Fors font stack, render at 42px, remain horizontally centered with) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 488.02 Tm
+(  zero center offset, and sit at the cart-edge-derived 73.6% vertical placement.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 474.82 Tm
+(- Playwright screenshot passes were captured during the sizing, lower-muted, and annotation) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 461.62 Tm
+(  stages to verify the visual state against the actual local page.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 448.42 Tm
+(- Static export and production deployment were not run during this record because the user) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 435.22 Tm
+(  asked for the PDF worklog, not a deployment pass.) Tj
+/F2 11.20 Tf
+1 0 0 1 54.00 413.44 Tm
+(Files Touched) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 396.44 Tm
+(- app/projects/alla-vostra/ProductFlowSwitcher.tsx - extended PlaceholderScreen to support) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 383.24 Tm
+(  image-backed frames and annotations, then configured Visual Hierarchy Steps 1 and 2 as) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 370.04 Tm
+(  framed large-device startup previews with Viewing Area and Focal Point overlays.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 356.84 Tm
+(- public/images/alla-vostra-hero-startup-framed-lower-muted.png - added a derived framed) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 343.64 Tm
+(  startup image where the lower cream area, sticky cart button, and native bottom bar are) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 330.44 Tm
+(  muted to 50% opacity while the hero content remains the focal layer.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 317.24 Tm
+(- portfolio_PROJECT_SNAPSHOT.txt - regenerated to reflect the current source tree, recent) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 304.04 Tm
+(  commit state, public image inventory, and PDF/worklog context after the August 10 work) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 290.84 Tm
+(  cycle.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 277.64 Tm
+(- portfolio_worklog_august10_part1.pdf - generated this new root-level PDF worklog artifact) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 264.44 Tm
+(  following the existing Portfolio naming and structure conventions.) Tj
+/F2 11.20 Tf
+1 0 0 1 54.00 242.66 Tm
+(Follow-Up Context) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 225.66 Tm
+(- Visual Hierarchy Steps 3 through 5 still remain placeholder examples and can be filled) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 212.46 Tm
+(  later with additional hierarchy concepts, but the Step 1 and Step 2 system now establishes) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 199.26 Tm
+(  the intended device-frame, scale, and annotation language.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 186.06 Tm
+(- The lower-muted framed asset is derived from the existing Alla Vostra framed startup) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 172.86 Tm
+(  image. Future changes to the base device frame would require regenerating the muted) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 159.66 Tm
+(  derivative so both examples stay visually synchronized.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 146.46 Tm
+(- The Navigation assets that initially looked missing were verified as loading. If they) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 133.26 Tm
+(  continue to appear too subtle in normal browsing, the likely fix is a visual treatment or) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 120.06 Tm
+(  cache refresh rather than public asset restoration.) Tj
+/F1 8.50 Tf
+1 0 0 1 312.00 36.00 Tm
+(Prahlin Portfolio Work Log - August 10, 2026 \(Part 1\) Page 5) Tj
+ET
+endstream
+endobj
+14 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 13 0 R >>
+endobj
+15 0 obj
+<< /Length 1134 >>
+stream
+BT
+/F1 9.60 Tf
+1 0 0 1 54.00 738.00 Tm
+(- The local dev server remained available at http://127.0.0.1:3000 during this work cycle.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 724.80 Tm
+(  Public Hostinger deployment was intentionally left untouched.) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 711.60 Tm
+(- As with prior Portfolio work, any future commit or push should still ask the user for the) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 698.40 Tm
+(  exact commit message before proceeding.) Tj
+/F2 11.20 Tf
+1 0 0 1 54.00 676.62 Tm
+(Output Artifact) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 659.62 Tm
+(Generated portfolio_worklog_august10_part1.pdf in the Portfolio project root as the latest) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 646.42 Tm
+(dated PDF worklog. The artifact follows the established Prahlin Portfolio convention for) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 633.22 Tm
+(title format, source-material review, baseline and goals, work-completed sections,) Tj
+/F1 9.60 Tf
+1 0 0 1 54.00 620.02 Tm
+(validation summary, files-touched list, follow-up context, and output-artifact close.) Tj
+/F1 8.50 Tf
+1 0 0 1 312.00 36.00 Tm
+(Prahlin Portfolio Work Log - August 10, 2026 \(Part 1\) Page 6) Tj
+ET
+endstream
+endobj
+16 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 15 0 R >>
+endobj
+17 0 obj
+<< /Title (Prahlin Portfolio Work Log - August 10, 2026 \(Part 1\)) /Subject (Portfolio website development worklog) /Author (Codex) /Creator (Codex standard-library PDF generator) /Producer (Codex standard-library PDF generator) /CreationDate (D:20260810193000-04'00') /ModDate (D:20260810193000-04'00') >>
+endobj
+xref
+0 18
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000149 00000 n 
+0000000219 00000 n 
+0000000294 00000 n 
+0000005855 00000 n 
+0000005991 00000 n 
+0000011520 00000 n 
+0000011656 00000 n 
+0000017025 00000 n 
+0000017162 00000 n 
+0000022680 00000 n 
+0000022818 00000 n 
+0000028216 00000 n 
+0000028354 00000 n 
+0000029540 00000 n 
+0000029678 00000 n 
+trailer
+<< /Size 18 /Root 1 0 R /Info 17 0 R >>
+startxref
+30002
+%%EOF
