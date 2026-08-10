@@ -1,5 +1,5 @@
 Portfolio Next.js PROJECT SNAPSHOT
-Generated: Thu Aug  6 23:15:19 EDT 2026
+Generated: Mon Aug 10 17:38:27 EDT 2026
 Project directory: /Users/prahlin/gh/portfolio
 
 IMPORTANT INSTRUCTIONS FOR CHATGPT & CODEX:
@@ -8664,6 +8664,7 @@ PROJECT FILE TREE
 /Users/prahlin/gh/portfolio/portfolio_worklog_august3.pdf
 /Users/prahlin/gh/portfolio/portfolio_worklog_august4.pdf
 /Users/prahlin/gh/portfolio/portfolio_worklog_august5.pdf
+/Users/prahlin/gh/portfolio/portfolio_worklog_august6.pdf
 /Users/prahlin/gh/portfolio/portfolio_worklog_july11.pdf
 /Users/prahlin/gh/portfolio/portfolio_worklog_july14.pdf
 /Users/prahlin/gh/portfolio/portfolio_worklog_july15_part1.pdf
@@ -8831,7 +8832,7 @@ FILE: app/layout.tsx
      1	import type { Metadata, Viewport } from "next";
      2	import { ScreenshotPreviewLayer } from "./ScreenshotPreviewLayer";
      3	import "./globals.css";
-     4
+     4	
      5	export const metadata: Metadata = {
      6	  metadataBase: new URL(
      7	    process.env.NEXT_PUBLIC_SITE_URL || "https://prahl.dev",
@@ -8846,12 +8847,12 @@ FILE: app/layout.tsx
     16	    images: ["/images/start-page-mockup-reference.png"],
     17	  },
     18	};
-    19
+    19	
     20	export const viewport: Viewport = {
     21	  width: "device-width",
     22	  initialScale: 1,
     23	};
-    24
+    24	
     25	export default function RootLayout({
     26	  children,
     27	}: Readonly<{
@@ -8894,7 +8895,7 @@ FILE: app/page.tsx
     20	  SectionHeading,
     21	} from "./PortfolioSections";
     22	import { ProofStats } from "./ProofStats";
-    23
+    23	
     24	const stackChips = [
     25	  "React Native",
     26	  "Tailwind CSS",
@@ -8906,7 +8907,7 @@ FILE: app/page.tsx
     32	  "Compose",
     33	  "REST APIs",
     34	];
-    35
+    35	
     36	const proofStats = [
     37	  {
     38	    label: "Full-Stack Mastery",
@@ -8916,11 +8917,11 @@ FILE: app/page.tsx
     42	  { label: "Real-Time Project Worklogs", value: "0.1k" },
     43	  { label: "Shipped Mob/Web Products", value: "8" },
     44	];
-    45
+    45	
     46	const resumeButtonColor = "#fff";
     47	const linkedInButtonColor = "#2867B2";
     48	const githubButtonTextColor = "#f3fff7";
-    49
+    49	
     50	function LinkedInMark() {
     51	  return (
     52	    <svg
@@ -8972,7 +8973,7 @@ FILE: app/page.tsx
     98	    </svg>
     99	  );
    100	}
-   101
+   101	
    102	function GitHubBracesMark() {
    103	  return (
    104	    <svg
@@ -9014,7 +9015,7 @@ FILE: app/page.tsx
    140	    </svg>
    141	  );
    142	}
-   143
+   143	
    144	function ResumeDownloadMark() {
    145	  return (
    146	    <svg
@@ -9059,13 +9060,13 @@ FILE: app/page.tsx
    185	    </svg>
    186	  );
    187	}
-   188
+   188	
    189	const worklogItems = [
    190	  "From responsive website prototype to Expo Router mobile architecture",
    191	  "Secure Stripe card flow, Google Pay, PayPal, and Postmark confirmations",
    192	  "Android Small, Standard, and Large emulator QA with release-ready EAS builds",
    193	];
-   194
+   194	
    195	function PhonePreview({
    196	  title,
    197	  metric,
@@ -9118,7 +9119,7 @@ FILE: app/page.tsx
    244	      </div>
    245	    </>
    246	  );
-   247
+   247	
    248	  if (href) {
    249	    return (
    250	      <a
@@ -9130,10 +9131,10 @@ FILE: app/page.tsx
    256	      </a>
    257	    );
    258	  }
-   259
+   259	
    260	  return <div className={className}>{content}</div>;
    261	}
-   262
+   262	
    263	function TabletPreview() {
    264	  return (
    265	    <div className="tablet-shell tablet-shell-capture" aria-hidden="true">
@@ -9147,14 +9148,14 @@ FILE: app/page.tsx
    273	    </div>
    274	  );
    275	}
-   276
+   276	
    277	export default function Home() {
    278	  return (
    279	    <main>
    280	      <section className="hero" id="top">
    281	        <div className="site-shell">
    282	          <MainNavBar />
-   283
+   283	
    284	          <div className="hero-grid">
    285	            <div className="hero-copy">
    286	              <p className="eyebrow hero-eyebrow">
@@ -9181,7 +9182,7 @@ FILE: app/page.tsx
    307	                    Developer
    308	              </h1>
    309	              <HeroLede />
-   310
+   310	
    311	              <div className="hero-actions">
    312	                <div className="hero-project-action">
    313	                  <span
@@ -9276,13 +9277,13 @@ FILE: app/page.tsx
    402	                  </a>
    403	                </div>
    404	              </div>
-   405
+   405	
    406	              <div className="stack-row" aria-label="Primary stack">
    407	                {stackChips.map((chip) => (
    408	                  <span key={chip}>{chip}</span>
    409	                ))}
    410	              </div>
-   411
+   411	
    412	              <div className="proof-panel">
    413	                <div className="proof-column">
    414	                  <div className="proof-item">
@@ -9316,7 +9317,7 @@ FILE: app/page.tsx
    442	                </div>
    443	              </div>
    444	            </div>
-   445
+   445	
    446	            <div className="hero-visual" aria-label="Portfolio preview">
    447	              <div className="profile-orbit">
    448	                <Image
@@ -9329,7 +9330,7 @@ FILE: app/page.tsx
    455	                />
    456	                <span>Martin Prahl</span>
    457	              </div>
-   458
+   458	
    459	              <div className="phone-stage">
    460	                <TabletPreview />
    461	                <PhonePreview
@@ -9350,13 +9351,13 @@ FILE: app/page.tsx
    476	              </div>
    477	            </div>
    478	          </div>
-   479
+   479	
    480	          <ProofStats stats={proofStats} />
    481	        </div>
    482	      </section>
-   483
+   483	
    484	      <FeaturedCaseStudies />
-   485
+   485	
    486	      <section className="stack-section" id="stack">
    487	        <div className="site-shell split-section">
    488	          <SectionHeading
@@ -9391,7 +9392,7 @@ FILE: app/page.tsx
    517	          </div>
    518	        </div>
    519	      </section>
-   520
+   520	
    521	      <section className="worklog-section" id="worklog">
    522	        <div className="site-shell worklog-layout">
    523	          <SectionHeading
@@ -9408,7 +9409,7 @@ FILE: app/page.tsx
    534	          </div>
    535	        </div>
    536	      </section>
-   537
+   537	
    538	      <section className="contact-section" id="contact">
    539	        <div className="site-shell contact-panel">
    540	          <div>
@@ -9434,7 +9435,7 @@ FILE: app/ProjectCarouselButton.tsx
 ============================================================
 
      1	"use client";
-     2
+     2	
      3	import {
      4	  type CSSProperties,
      5	  type MouseEvent,
@@ -9443,7 +9444,7 @@ FILE: app/ProjectCarouselButton.tsx
      8	  useRef,
      9	  useState,
     10	} from "react";
-    11
+    11	
     12	export type MobilePlatform = "android" | "apple";
     13	type ProjectTone = "commerce" | "entertainment" | "finance";
     14	type ResponsiveAssetGap = {
@@ -9452,20 +9453,20 @@ FILE: app/ProjectCarouselButton.tsx
     17	  tightLanePx: number;
     18	  wideLanePx: number;
     19	};
-    20
+    20	
     21	const projectNameColors: Record<ProjectTone, string> = {
     22	  commerce: "#ffb866",
     23	  entertainment: "#b88cff",
     24	  finance: "#6fa4ff",
     25	};
-    26
+    26	
     27	const strokedWhiteTextStyle = {
     28	  WebkitTextStroke: "4.2px #000",
     29	  color: "#f3fff7",
     30	  paintOrder: "stroke fill",
     31	  textShadow: "0 0 0 #000",
     32	};
-    33
+    33	
     34	const projectLinks: Array<{
     35	  caseStudyId: string;
     36	  category: string;
@@ -9505,31 +9506,31 @@ FILE: app/ProjectCarouselButton.tsx
     70	    tone: "finance",
     71	  },
     72	];
-    73
+    73	
     74	function getCaseStudyRowScrollOffset() {
     75	  const isWideLandscape = window.matchMedia(
     76	    "(min-width: 1024px) and (orientation: landscape)",
     77	  ).matches;
     78	  const isPortrait = window.matchMedia("(orientation: portrait)").matches;
-    79
+    79	
     80	  if (isWideLandscape) {
     81	    return Math.max(18, Math.min(44, window.innerHeight * 0.035));
     82	  }
-    83
+    83	
     84	  if (isPortrait) {
     85	    return Math.max(14, Math.min(36, window.innerHeight * 0.03));
     86	  }
-    87
+    87	
     88	  return Math.max(16, Math.min(40, window.innerHeight * 0.0325));
     89	}
-    90
+    90	
     91	function scrollCaseStudyRowIntoView(caseStudyId: string) {
     92	  const targetCard = document.getElementById(caseStudyId);
-    93
+    93	
     94	  if (!targetCard) {
     95	    return;
     96	  }
-    97
+    97	
     98	  const caseGrid = targetCard.closest<HTMLElement>(".case-grid");
     99	  const targetTop = targetCard.getBoundingClientRect().top;
    100	  const rowCards = caseGrid
@@ -9537,34 +9538,34 @@ FILE: app/ProjectCarouselButton.tsx
    102	        if (!(child instanceof HTMLElement)) {
    103	          return false;
    104	        }
-   105
+   105	
    106	        const cardTop = child.getBoundingClientRect().top;
-   107
+   107	
    108	        return Math.abs(cardTop - targetTop) <= 8;
    109	      })
    110	    : [targetCard];
    111	  const rowTop = Math.min(
    112	    ...rowCards.map((card) => card.getBoundingClientRect().top),
    113	  );
-   114
+   114	
    115	  window.scrollTo({
    116	    behavior: "smooth",
    117	    top: window.scrollY + rowTop - getCaseStudyRowScrollOffset(),
    118	  });
-   119
+   119	
    120	  window.history.replaceState(null, "", `#${caseStudyId}`);
    121	}
-   122
+   122	
    123	const androidLogoSize = {
    124	  height: 8.69299,
    125	  width: 10.86624,
    126	};
-   127
+   127	
    128	const iosLogoSize = {
    129	  height: 10.47816,
    130	  width: 10.47816,
    131	};
-   132
+   132	
    133	function AndroidLogoImage({ x, y }: { x: number; y: number }) {
    134	  return (
    135	    <image
@@ -9577,13 +9578,13 @@ FILE: app/ProjectCarouselButton.tsx
    142	    />
    143	  );
    144	}
-   145
+   145	
    146	function PhoneAndroidIcon({ slot }: { slot: "single" | "top" }) {
    147	  const y = slot === "single" ? 11.43286 : 6.93286;
-   148
+   148	
    149	  return <AndroidLogoImage x={6.23608} y={y} />;
    150	}
-   151
+   151	
    152	function IosLogoImage({ x, y }: { x: number; y: number }) {
    153	  return (
    154	    <image
@@ -9596,13 +9597,13 @@ FILE: app/ProjectCarouselButton.tsx
    161	    />
    162	  );
    163	}
-   164
+   164	
    165	function PhoneAppleIcon({ slot }: { slot: "bottom" | "single" }) {
    166	  const y = slot === "single" ? 11.27372 : 17.47372;
-   167
+   167	
    168	  return <IosLogoImage x={5.92372} y={y} />;
    169	}
-   170
+   170	
    171	function PhoneMark({
    172	  mobilePlatforms,
    173	}: {
@@ -9642,7 +9643,7 @@ FILE: app/ProjectCarouselButton.tsx
    207	            : index === 0
    208	              ? "top"
    209	              : "bottom";
-   210
+   210	
    211	        return platform === "android" ? (
    212	          <PhoneAndroidIcon
    213	            key={platform}
@@ -9658,7 +9659,7 @@ FILE: app/ProjectCarouselButton.tsx
    223	    </svg>
    224	  );
    225	}
-   226
+   226	
    227	function TabletMark({
    228	  showPlatformIcon = true,
    229	}: {
@@ -9706,10 +9707,10 @@ FILE: app/ProjectCarouselButton.tsx
    271	    </svg>
    272	  );
    273	}
-   274
+   274	
    275	function WebMark({ scale = 1 }: { scale?: number }) {
    276	  const size = `${(1.2 * scale).toFixed(3)}em`;
-   277
+   277	
    278	  return (
    279	    <svg
    280	      aria-hidden
@@ -9728,31 +9729,31 @@ FILE: app/ProjectCarouselButton.tsx
    293	    </svg>
    294	  );
    295	}
-   296
+   296	
    297	const platformLabelColumnStart = 3;
-   298
+   298	
    299	function getPlatformLabelGridColumn(index: number) {
    300	  return platformLabelColumnStart + index * 2;
    301	}
-   302
+   302	
    303	function getPlatformDividerGridColumn(index: number) {
    304	  return getPlatformLabelGridColumn(index) + 1;
    305	}
-   306
+   306	
    307	function getPlatformListGridTemplate(columnCount: number) {
    308	  const columns = ["max-content", "1px"];
-   309
+   309	
    310	  Array.from({ length: columnCount }).forEach((_, index) => {
    311	    columns.push("max-content");
-   312
+   312	
    313	    if (index < columnCount - 1) {
    314	      columns.push("1px");
    315	    }
    316	  });
-   317
+   317	
    318	  return columns.join(" ");
    319	}
-   320
+   320	
    321	function PlatformIconSlot({
    322	  gridColumn,
    323	  gridRow,
@@ -9778,7 +9779,7 @@ FILE: app/ProjectCarouselButton.tsx
    343	    </span>
    344	  );
    345	}
-   346
+   346	
    347	function PlatformLabelDivider({
    348	  gridColumn,
    349	  gridRow,
@@ -9803,7 +9804,7 @@ FILE: app/ProjectCarouselButton.tsx
    368	    />
    369	  );
    370	}
-   371
+   371	
    372	function PlatformLabelSlots({
    373	  labels,
    374	  row,
@@ -9820,7 +9821,7 @@ FILE: app/ProjectCarouselButton.tsx
    385	    />
    386	  ));
    387	}
-   388
+   388	
    389	function PlatformColumnDividers({
    390	  columnCount,
    391	  gridRow,
@@ -9839,7 +9840,7 @@ FILE: app/ProjectCarouselButton.tsx
    404	    ),
    405	  );
    406	}
-   407
+   407	
    408	function AndroidPlatformMark() {
    409	  return (
    410	    <svg
@@ -9874,7 +9875,7 @@ FILE: app/ProjectCarouselButton.tsx
    439	    </svg>
    440	  );
    441	}
-   442
+   442	
    443	function ApplePlatformMark() {
    444	  return (
    445	    <svg
@@ -9901,7 +9902,7 @@ FILE: app/ProjectCarouselButton.tsx
    466	    </svg>
    467	  );
    468	}
-   469
+   469	
    470	function PlatformLogoMark({ platform }: { platform: MobilePlatform }) {
    471	  return platform === "android" ? (
    472	    <AndroidPlatformMark />
@@ -9909,7 +9910,7 @@ FILE: app/ProjectCarouselButton.tsx
    474	    <ApplePlatformMark />
    475	  );
    476	}
-   477
+   477	
    478	function FactorDeviceMark({ device }: { device: "phone" | "tablet" }) {
    479	  return device === "phone" ? (
    480	    <PhoneMark mobilePlatforms={[]} />
@@ -9917,7 +9918,7 @@ FILE: app/ProjectCarouselButton.tsx
    482	    <TabletMark showPlatformIcon={false} />
    483	  );
    484	}
-   485
+   485	
    486	export function ProjectDeviceStack({
    487	  assetGap,
    488	  color,
@@ -9945,26 +9946,26 @@ FILE: app/ProjectCarouselButton.tsx
    510	    color,
    511	  };
    512	  const stackGap = measuredAssetGap ?? assetGap;
-   513
+   513	
    514	  useLayoutEffect(() => {
    515	    if (!responsiveAssetGap) {
    516	      setMeasuredAssetGap(null);
    517	      return;
    518	    }
-   519
+   519	
    520	    const stack = stackRef.current;
    521	    const measurementTarget = stack?.parentElement ?? stack;
-   522
+   522	
    523	    if (!measurementTarget) {
    524	      return;
    525	    }
-   526
+   526	
    527	    let frame = 0;
    528	    const updateGap = () => {
    529	      if (frame) {
    530	        window.cancelAnimationFrame(frame);
    531	      }
-   532
+   532	
    533	      frame = window.requestAnimationFrame(() => {
    534	        const laneWidth = measurementTarget.getBoundingClientRect().width;
    535	        const activeRange = Math.max(
@@ -9982,28 +9983,28 @@ FILE: app/ProjectCarouselButton.tsx
    547	          responsiveAssetGap.minPx +
    548	          (responsiveAssetGap.maxPx - responsiveAssetGap.minPx) * progress;
    549	        const nextGapValue = `${nextGap.toFixed(2)}px`;
-   550
+   550	
    551	        setMeasuredAssetGap((currentGap) =>
    552	          currentGap === nextGapValue ? currentGap : nextGapValue,
    553	        );
    554	      });
    555	    };
-   556
+   556	
    557	    updateGap();
-   558
+   558	
    559	    const resizeObserver =
    560	      typeof ResizeObserver === "undefined"
    561	        ? null
    562	        : new ResizeObserver(updateGap);
-   563
+   563	
    564	    resizeObserver?.observe(measurementTarget);
    565	    window.addEventListener("resize", updateGap);
-   566
+   566	
    567	    return () => {
    568	      if (frame) {
    569	        window.cancelAnimationFrame(frame);
    570	      }
-   571
+   571	
    572	      resizeObserver?.disconnect();
    573	      window.removeEventListener("resize", updateGap);
    574	    };
@@ -10013,35 +10014,35 @@ FILE: app/ProjectCarouselButton.tsx
    578	    responsiveAssetGap?.tightLanePx,
    579	    responsiveAssetGap?.wideLanePx,
    580	  ]);
-   581
+   581	
    582	  if (stackGap) {
    583	    stackStyle["--project-device-stack-gap"] = stackGap;
    584	  }
-   585
+   585	
    586	  if (showPlatformLabels) {
    587	    const platforms: Array<MobilePlatform | "web"> = [];
    588	    const factorDevices: Array<"phone" | "tablet"> = [];
-   589
+   589	
    590	    if (mobilePlatforms.includes("android") || hasTablet) {
    591	      platforms.push("android");
    592	    }
-   593
+   593	
    594	    if (mobilePlatforms.includes("apple")) {
    595	      platforms.push("apple");
    596	    }
-   597
+   597	
    598	    if (hasWeb) {
    599	      platforms.push("web");
    600	    }
-   601
+   601	
    602	    if (mobilePlatforms.length > 0) {
    603	      factorDevices.push("phone");
    604	    }
-   605
+   605	
    606	    if (hasTablet) {
    607	      factorDevices.push("tablet");
    608	    }
-   609
+   609	
    610	    const platformLabels = platforms.map((platform) =>
    611	      platform === "web" ? "WEB" : platform === "android" ? "AND" : "IOS",
    612	    );
@@ -10058,7 +10059,7 @@ FILE: app/ProjectCarouselButton.tsx
    623	      ...stackStyle,
    624	      gridTemplateColumns: getPlatformListGridTemplate(labelColumnCount),
    625	    };
-   626
+   626	
    627	    return (
    628	      <span
    629	        className="carousel-button-project case-card-title-platform-list"
@@ -10089,7 +10090,7 @@ FILE: app/ProjectCarouselButton.tsx
    654	      </span>
    655	    );
    656	  }
-   657
+   657	
    658	  return (
    659	    <span className="carousel-button-project" ref={stackRef} style={stackStyle}>
    660	      {mobilePlatforms.map((platform) => (
@@ -10100,7 +10101,7 @@ FILE: app/ProjectCarouselButton.tsx
    665	    </span>
    666	  );
    667	}
-   668
+   668	
    669	function CarouselArrowMark() {
    670	  return (
    671	    <img
@@ -10118,33 +10119,33 @@ FILE: app/ProjectCarouselButton.tsx
    683	    />
    684	  );
    685	}
-   686
+   686	
    687	export function ProjectCarouselButton() {
    688	  const [activeIndex, setActiveIndex] = useState(0);
    689	  const projectButtonRef = useRef<HTMLAnchorElement>(null);
    690	  const activeProject = projectLinks[activeIndex];
-   691
+   691	
    692	  const handleArrowClick = (event: MouseEvent<HTMLAnchorElement>) => {
    693	    event.preventDefault();
    694	    scrollCaseStudyRowIntoView(activeProject.caseStudyId);
    695	  };
-   696
+   696	
    697	  useEffect(() => {
    698	    const interval = window.setInterval(() => {
    699	      setActiveIndex((currentIndex) => (currentIndex + 1) % projectLinks.length);
    700	    }, 5000);
-   701
+   701	
    702	    return () => window.clearInterval(interval);
    703	  }, []);
-   704
+   704	
    705	  useLayoutEffect(() => {
    706	    let frame = 0;
-   707
+   707	
    708	    const syncHeroActionGeometry = () => {
    709	      if (frame) {
    710	        window.cancelAnimationFrame(frame);
    711	      }
-   712
+   712	
    713	      frame = window.requestAnimationFrame(() => {
    714	        const heroCopy = document.querySelector<HTMLElement>(".hero-copy");
    715	        const heroActions =
@@ -10163,12 +10164,12 @@ FILE: app/ProjectCarouselButton.tsx
    728	          ".phone-shell-finance",
    729	          ".tablet-shell",
    730	        ];
-   731
+   731	
    732	        if (proofPanel && profilePhoto) {
    733	          const proofRect = proofPanel.getBoundingClientRect();
    734	          const profileRect = profilePhoto.getBoundingClientRect();
    735	          const proofWidth = profileRect.right - proofRect.left;
-   736
+   736	
    737	          if (proofWidth > 0) {
    738	            [heroCopy, proofPanel, stackRow].forEach((element) => {
    739	              element?.style.setProperty(
@@ -10178,12 +10179,12 @@ FILE: app/ProjectCarouselButton.tsx
    743	            });
    744	          }
    745	        }
-   746
+   746	
    747	        if (heroVisual && navBar && stackRow) {
    748	          const isTwoColumnHero = window.matchMedia(
    749	            "(min-width: 981px)",
    750	          ).matches;
-   751
+   751	
    752	          if (!isTwoColumnHero) {
    753	            heroVisual.style.removeProperty("--hero-visual-center-offset");
    754	          } else {
@@ -10193,7 +10194,7 @@ FILE: app/ProjectCarouselButton.tsx
    758	              )
    759	              .filter((element): element is HTMLElement => Boolean(element))
    760	              .map((element) => element.getBoundingClientRect());
-   761
+   761	
    762	            if (visualRects.length > 0) {
    763	              const navRect = navBar.getBoundingClientRect();
    764	              const stackRect = stackRow.getBoundingClientRect();
@@ -10213,7 +10214,7 @@ FILE: app/ProjectCarouselButton.tsx
    778	                (visualTop + visualBottom) / 2 - currentOffset;
    779	              const targetCenter = (navRect.bottom + stackRect.top) / 2;
    780	              const nextOffset = targetCenter - visualCenterWithoutOffset;
-   781
+   781	
    782	              heroVisual.style.setProperty(
    783	                "--hero-visual-center-offset",
    784	                `${nextOffset}px`,
@@ -10221,24 +10222,24 @@ FILE: app/ProjectCarouselButton.tsx
    786	            }
    787	          }
    788	        }
-   789
+   789	
    790	        if (heroActions && socialButton) {
    791	          const heroActionsWidth = heroActions.getBoundingClientRect().width;
    792	          const socialButtonHeight =
    793	            socialButton.getBoundingClientRect().height;
-   794
+   794	
    795	          if (heroCopy && heroActionsWidth > 0) {
    796	            heroCopy.style.setProperty(
    797	              "--hero-text-stack-width",
    798	              `${heroActionsWidth}px`,
    799	            );
    800	          }
-   801
+   801	
    802	          if (socialButtonHeight > 0) {
    803	            const setPx = (name: string, value: number) => {
    804	              heroActions.style.setProperty(name, `${value}px`);
    805	            };
-   806
+   806	
    807	            setPx("--hero-social-button-height", socialButtonHeight);
    808	            setPx("--hero-social-font-size", socialButtonHeight * 0.295833);
    809	            setPx("--hero-social-icon-size", socialButtonHeight * 0.672);
@@ -10247,7 +10248,7 @@ FILE: app/ProjectCarouselButton.tsx
    812	            const stretchedSocialGap =
    813	              Math.max(0, socialButtonHeight - baseSocialButtonHeight) *
    814	              0.091666;
-   815
+   815	
    816	            setPx("--hero-social-gap", baseSocialGap + stretchedSocialGap);
    817	            setPx("--hero-social-pad-x", socialButtonHeight / 8);
    818	            setPx("--hero-view-label-font-size", socialButtonHeight * 0.275);
@@ -10277,23 +10278,23 @@ FILE: app/ProjectCarouselButton.tsx
    842	            );
    843	          }
    844	        }
-   845
+   845	
    846	        window.dispatchEvent(new CustomEvent("hero-stack-sync"));
-   847
+   847	
    848	        const viewLabel =
    849	          document.querySelector<HTMLElement>(".hero-view-label");
    850	        const githubText =
    851	          document.querySelector<HTMLElement>(".github-label-text");
    852	        const githubIcon =
    853	          document.querySelector<SVGSVGElement>(".github-icon-mark");
-   854
+   854	
    855	        if (viewLabel && githubText && githubIcon) {
    856	          const viewLabelRect = viewLabel.getBoundingClientRect();
    857	          const githubTextRect = githubText.getBoundingClientRect();
    858	          const githubIconRect = githubIcon.getBoundingClientRect();
    859	          const clusterLeft = Math.min(githubTextRect.left, githubIconRect.left);
    860	          const stackLeft = clusterLeft - viewLabelRect.left;
-   861
+   861	
    862	          viewLabel.style.setProperty(
    863	            "--hero-view-stack-left",
    864	            `${stackLeft}px`,
@@ -10301,10 +10302,10 @@ FILE: app/ProjectCarouselButton.tsx
    866	        }
    867	      });
    868	    };
-   869
+   869	
    870	    syncHeroActionGeometry();
    871	    window.addEventListener("resize", syncHeroActionGeometry);
-   872
+   872	
    873	    const targetIcon =
    874	      document.querySelector<SVGSVGElement>(".dribbble-icon-mark") ??
    875	      document.querySelector<SVGSVGElement>(".linkedin-icon-mark");
@@ -10324,75 +10325,75 @@ FILE: app/ProjectCarouselButton.tsx
    889	      typeof ResizeObserver === "undefined"
    890	        ? null
    891	        : new ResizeObserver(syncHeroActionGeometry);
-   892
+   892	
    893	    if (resizeObserver) {
    894	      if (projectButtonRef.current) {
    895	        resizeObserver.observe(projectButtonRef.current);
    896	      }
-   897
+   897	
    898	      if (heroActions) {
    899	        resizeObserver.observe(heroActions);
    900	      }
-   901
+   901	
    902	      if (navBar) {
    903	        resizeObserver.observe(navBar);
    904	      }
-   905
+   905	
    906	      if (heroVisual) {
    907	        resizeObserver.observe(heroVisual);
    908	      }
-   909
+   909	
    910	      if (stackRow) {
    911	        resizeObserver.observe(stackRow);
    912	      }
-   913
+   913	
    914	      if (proofPanel) {
    915	        resizeObserver.observe(proofPanel);
    916	      }
-   917
+   917	
    918	      if (profilePhoto) {
    919	        resizeObserver.observe(profilePhoto);
    920	      }
-   921
+   921	
    922	      if (targetIcon) {
    923	        resizeObserver.observe(targetIcon);
    924	      }
-   925
+   925	
    926	      if (targetButton) {
    927	        resizeObserver.observe(targetButton);
    928	      }
-   929
+   929	
    930	      if (viewLabel) {
    931	        resizeObserver.observe(viewLabel);
    932	      }
-   933
+   933	
    934	      if (githubText) {
    935	        resizeObserver.observe(githubText);
    936	      }
-   937
+   937	
    938	      if (githubIcon) {
    939	        resizeObserver.observe(githubIcon);
    940	      }
-   941
+   941	
    942	      if (githubButton) {
    943	        resizeObserver.observe(githubButton);
    944	      }
    945	    }
-   946
+   946	
    947	    if ("fonts" in document) {
    948	      document.fonts.ready.then(syncHeroActionGeometry).catch(() => {});
    949	    }
-   950
+   950	
    951	    return () => {
    952	      if (frame) {
    953	        window.cancelAnimationFrame(frame);
    954	      }
-   955
+   955	
    956	      window.removeEventListener("resize", syncHeroActionGeometry);
    957	      resizeObserver?.disconnect();
    958	    };
    959	  }, []);
-   960
+   960	
    961	  return (
    962	    <span className="carousel-button-group">
    963	      <a
@@ -10468,7 +10469,7 @@ FILE: app/globals.css
 ============================================================
 
      1	@import "tailwindcss";
-     2
+     2	
      3	@font-face {
      4	  font-display: swap;
      5	  font-family: "Alla Vostra Dream Avenue";
@@ -10476,7 +10477,7 @@ FILE: app/globals.css
      7	  font-weight: 400;
      8	  src: url("/fonts/alla-vostra/dream_avenue.ttf") format("truetype");
      9	}
-    10
+    10	
     11	@font-face {
     12	  font-display: swap;
     13	  font-family: "Alla Vostra TT Fors";
@@ -10484,7 +10485,7 @@ FILE: app/globals.css
     15	  font-weight: 100 900;
     16	  src: url("/fonts/alla-vostra/tt_fors_trial_variable.ttf") format("truetype");
     17	}
-    18
+    18	
     19	:root {
     20	  color-scheme: dark;
     21	  --bg: #030705;
@@ -10502,15 +10503,15 @@ FILE: app/globals.css
     33	  --capture-screen-radius-tall: 12px;
     34	  --capture-screen-radius-standard: 6px;
     35	}
-    36
+    36	
     37	* {
     38	  box-sizing: border-box;
     39	}
-    40
+    40	
     41	html {
     42	  scroll-behavior: smooth;
     43	}
-    44
+    44	
     45	body {
     46	  min-height: 100vh;
     47	  margin: 0;
@@ -10525,17 +10526,17 @@ FILE: app/globals.css
     56	    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
     57	    sans-serif;
     58	}
-    59
+    59	
     60	a {
     61	  color: inherit;
     62	  text-decoration: none;
     63	}
-    64
+    64	
     65	button,
     66	a {
     67	  -webkit-tap-highlight-color: transparent;
     68	}
-    69
+    69	
     70	img[data-screenshot-preview],
     71	[data-screenshot-preview-scope] img,
     72	[data-screenshot-preview-scope] .flow-image-frame,
@@ -10544,14 +10545,14 @@ FILE: app/globals.css
     75	  cursor: zoom-in;
     76	  user-select: none;
     77	}
-    78
+    78	
     79	.screenshot-preview-layer {
     80	  inset: 0;
     81	  pointer-events: none;
     82	  position: fixed;
     83	  z-index: 10000;
     84	}
-    85
+    85	
     86	.screenshot-preview-popover {
     87	  background: transparent;
     88	  border: 0;
@@ -10560,33 +10561,33 @@ FILE: app/globals.css
     91	  pointer-events: none;
     92	  position: fixed;
     93	}
-    94
+    94	
     95	.screenshot-preview-element-popover {
     96	  background: transparent;
     97	  border: 0;
     98	  overflow: hidden;
     99	}
-   100
+   100	
    101	.screenshot-preview-element-clone {
    102	  margin: 0;
    103	}
-   104
+   104	
    105	.screenshot-preview-element-clone figcaption {
    106	  display: none !important;
    107	}
-   108
+   108	
    109	.site-shell {
    110	  width: min(1180px, calc(100% - 36px));
    111	  margin: 0 auto;
    112	}
-   113
+   113	
    114	.hero {
    115	  min-height: 100vh;
    116	  overflow: hidden;
    117	  padding: 24px 0 48px;
    118	  position: relative;
    119	}
-   120
+   120	
    121	.hero::after {
    122	  content: "";
    123	  position: absolute;
@@ -10595,17 +10596,17 @@ FILE: app/globals.css
    126	  pointer-events: none;
    127	  background: linear-gradient(transparent, var(--bg));
    128	}
-   129
+   129	
    130	.articles-page {
    131	  min-height: 0;
    132	  overflow-x: clip;
    133	  padding-top: 24px;
    134	}
-   135
+   135	
    136	.articles-page .case-section {
    137	  padding-bottom: 18px;
    138	}
-   139
+   139	
    140	.nav-bar {
    141	  --nav-bar-inline-padding: 18px;
    142	  --nav-bar-height: 48px;
@@ -10631,7 +10632,7 @@ FILE: app/globals.css
    162	  position: relative;
    163	  z-index: 3;
    164	}
-   165
+   165	
    166	.brand {
    167	  align-items: center;
    168	  display: inline-flex;
@@ -10640,7 +10641,7 @@ FILE: app/globals.css
    171	  font-size: 13px;
    172	  white-space: nowrap;
    173	}
-   174
+   174	
    175	.brand span {
    176	  aspect-ratio: 1 / 1;
    177	  align-items: center;
@@ -10656,11 +10657,11 @@ FILE: app/globals.css
    187	  line-height: 1;
    188	  width: 34px;
    189	}
-   190
+   190	
    191	.brand strong {
    192	  font-size: 19px;
    193	}
-   194
+   194	
    195	.nav-brand-link {
    196	  align-items: center;
    197	  background: var(--nav-card-background);
@@ -10679,7 +10680,7 @@ FILE: app/globals.css
    210	  text-align: left;
    211	  white-space: nowrap;
    212	}
-   213
+   213	
    214	.nav-brand-mark {
    215	  align-items: center;
    216	  aspect-ratio: 1 / 1;
@@ -10695,11 +10696,11 @@ FILE: app/globals.css
    226	  line-height: 1;
    227	  width: 34px;
    228	}
-   229
+   229	
    230	.nav-brand-name {
    231	  font-size: 24px;
    232	}
-   233
+   233	
    234	.nav-bar nav {
    235	  align-items: center;
    236	  display: flex;
@@ -10707,23 +10708,23 @@ FILE: app/globals.css
    238	  min-width: 0;
    239	  width: 100%;
    240	}
-   241
+   241	
    242	.nav-link-row {
    243	  align-items: center;
    244	  display: flex;
    245	  gap: var(--nav-link-separator-gap);
    246	  min-width: 0;
    247	}
-   248
+   248	
    249	.nav-link-row-top,
    250	.nav-link-row-bottom {
    251	  display: contents;
    252	}
-   253
+   253	
    254	.nav-top-distribution {
    255	  display: contents;
    256	}
-   257
+   257	
    258	.nav-separator {
    259	  align-items: center;
    260	  color: var(--muted);
@@ -10736,11 +10737,11 @@ FILE: app/globals.css
    267	  pointer-events: none;
    268	  user-select: none;
    269	}
-   270
+   270	
    271	.nav-separator.nav-separator-brand {
    272	  display: none;
    273	}
-   274
+   274	
    275	.nav-bar nav a,
    276	.nav-bar nav .nav-text {
    277	  border-radius: 6px;
@@ -10750,21 +10751,21 @@ FILE: app/globals.css
    281	  padding: 7.5px 12px;
    282	  white-space: nowrap;
    283	}
-   284
+   284	
    285	.nav-bar nav .nav-text {
    286	  cursor: default;
    287	}
-   288
+   288	
    289	.nav-bar nav a.nav-link-active,
    290	.nav-bar nav .nav-text.nav-link-active {
    291	  color: var(--text);
    292	  font-weight: 800;
    293	}
-   294
+   294	
    295	.nav-bar nav a {
    296	  transition: background 160ms ease, color 160ms ease;
    297	}
-   298
+   298	
    299	.nav-bar nav .brand {
    300	  color: inherit;
    301	  justify-content: center;
@@ -10772,32 +10773,32 @@ FILE: app/globals.css
    303	  padding: 0;
    304	  text-align: center;
    305	}
-   306
+   306	
    307	.nav-bar nav .nav-brand-link {
    308	  color: var(--text);
    309	  justify-content: center;
    310	  min-width: max-content;
    311	  text-align: center;
    312	}
-   313
+   313	
    314	.nav-link-row-top .nav-brand-link {
    315	  margin-right: auto;
    316	}
-   317
+   317	
    318	.nav-bar nav .brand:hover,
    319	.nav-bar nav .nav-brand-link:hover {
    320	  background: var(--nav-card-background);
    321	}
-   322
+   322	
    323	.nav-bar nav a:hover {
    324	  background: rgba(67, 255, 146, 0.08);
    325	  color: var(--text);
    326	}
-   327
+   327	
    328	.nav-bar nav a[href="/articles"] {
    329	  opacity: 0;
    330	}
-   331
+   331	
    332	.hero-grid {
    333	  --hero-grid-min-height: calc(100vh - 140px);
    334	  align-items: center;
@@ -10809,7 +10810,7 @@ FILE: app/globals.css
    340	  position: relative;
    341	  z-index: 2;
    342	}
-   343
+   343	
    344	.hero-copy {
    345	  --hero-action-gap: 12px;
    346	  --hero-proof-stack-width: min(460px, 100%);
@@ -10817,11 +10818,11 @@ FILE: app/globals.css
    348	  --hero-eyebrow-font-size: 16px;
    349	  --hero-lede-font-size: clamp(18px, 2vw, 24px);
    350	  --hero-text-stack-width: var(--hero-action-stack-width);
-   351
+   351	
    352	  max-width: 670px;
    353	  min-width: 0;
    354	}
-   355
+   355	
    356	.eyebrow,
    357	.section-heading p {
    358	  color: var(--green);
@@ -10831,7 +10832,7 @@ FILE: app/globals.css
    362	  margin: 0 0 16px;
    363	  text-transform: uppercase;
    364	}
-   365
+   365	
    366	.hero-eyebrow {
    367	  font-size: var(--hero-eyebrow-font-size);
    368	  font-weight: 850;
@@ -10841,7 +10842,7 @@ FILE: app/globals.css
    372	  text-transform: none;
    373	  width: var(--hero-text-stack-width);
    374	}
-   375
+   375	
    376	.hero-eyebrow-box {
    377	  border: 1px solid rgba(67, 255, 146, 0.5);
    378	  border-radius: 2px;
@@ -10850,24 +10851,24 @@ FILE: app/globals.css
    381	  margin-left: 0.28em;
    382	  padding: 0.03em 0.24em 0.06em;
    383	}
-   384
+   384	
    385	.hero-eyebrow-underline {
    386	  border-bottom: 1px solid currentColor;
    387	  padding-bottom: 1px;
    388	  text-decoration: none;
    389	}
-   390
+   390	
    391	.hero-eyebrow-period {
    392	  margin-left: 0.28em;
    393	}
-   394
+   394	
    395	h1,
    396	h2,
    397	h3,
    398	p {
    399	  margin-top: 0;
    400	}
-   401
+   401	
    402	h1 {
    403	  font-size: clamp(47px, 7vw, 91px);
    404	  font-weight: 900;
@@ -10875,40 +10876,40 @@ FILE: app/globals.css
    406	  line-height: 0.92;
    407	  margin-bottom: 16px;
    408	}
-   409
+   409	
    410	h2 {
    411	  font-size: clamp(32px, 4vw, 56px);
    412	  font-weight: 850;
    413	  letter-spacing: 0;
    414	  line-height: 1;
    415	}
-   416
+   416	
    417	h3 {
    418	  font-size: 24px;
    419	  font-weight: 800;
    420	  letter-spacing: 0;
    421	}
-   422
+   422	
    423	.section-heading-title-line,
    424	.section-heading-subtitle {
    425	  display: block;
    426	  width: 100%;
    427	}
-   428
+   428	
    429	.section-heading-subtitle {
    430	  clear: both;
    431	  font-size: clamp(18px, calc(3vw - 4px), 34px);
    432	  line-height: 1.08;
    433	  margin-top: 10px;
    434	}
-   435
+   435	
    436	.articles-page .section-heading-subtitle {
    437	  color: #c4d6cc;
    438	  font-family: inherit;
    439	  font-style: normal;
    440	  font-weight: 400;
    441	}
-   442
+   442	
    443	.hero-lede {
    444	  color: #c4d6cc;
    445	  display: grid;
@@ -10918,7 +10919,7 @@ FILE: app/globals.css
    449	  min-width: 0;
    450	  width: var(--hero-text-stack-width);
    451	}
-   452
+   452	
    453	.hero-lede-line {
    454	  display: block;
    455	  min-width: 0;
@@ -10926,12 +10927,12 @@ FILE: app/globals.css
    457	  white-space: nowrap;
    458	  width: 100%;
    459	}
-   460
+   460	
    461	.hero-lede-line > strong {
    462	  display: block;
    463	  width: 100%;
    464	}
-   465
+   465	
    466	.hero-lede-line-visual {
    467	  display: block;
    468	  font-size: 1em;
@@ -10941,11 +10942,11 @@ FILE: app/globals.css
    472	  width: max-content;
    473	  will-change: transform;
    474	}
-   475
+   475	
    476	.hero-lede-line-visual-compact {
    477	  font-size: calc(1em - 2pt);
    478	}
-   479
+   479	
    480	.hero-actions {
    481	  --hero-carousel-arrow-font-size: 22px;
    482	  --hero-carousel-base-font-size: 16.5px;
@@ -10957,14 +10958,14 @@ FILE: app/globals.css
    488	  --hero-social-icon-size: clamp(29.55px, 8.06vw, 32.23px);
    489	  --hero-social-pad-x: clamp(4px, 1.6vw, 6px);
    490	  --hero-view-label-font-size: 13.2px;
-   491
+   491	
    492	  align-items: stretch;
    493	  display: grid;
    494	  gap: var(--hero-action-gap);
    495	  margin-top: 16px;
    496	  width: var(--hero-action-stack-width);
    497	}
-   498
+   498	
    499	.hero-project-action {
    500	  align-items: stretch;
    501	  display: grid;
@@ -10973,7 +10974,7 @@ FILE: app/globals.css
    504	  grid-template-columns: repeat(3, minmax(0, 1fr));
    505	  width: 100%;
    506	}
-   507
+   507	
    508	.hero-view-label {
    509	  align-self: center;
    510	  align-items: center;
@@ -10989,7 +10990,7 @@ FILE: app/globals.css
    520	  width: 100%;
    521	  z-index: 1;
    522	}
-   523
+   523	
    524	.hero-view-label .hero-view-label-stack {
    525	  align-content: center;
    526	  align-self: center;
@@ -11003,38 +11004,38 @@ FILE: app/globals.css
    534	  transform-origin: center center;
    535	  width: max-content;
    536	}
-   537
+   537	
    538	.hero-view-label-stack > span {
    539	  display: block;
    540	}
-   541
+   541	
    542	.hero-view-label-stack > span:first-child {
    543	  font-size: inherit;
    544	  transform: translateY(0.25px);
    545	}
-   546
+   546	
    547	.hero-view-label-stack > .hero-view-word,
    548	.hero-view-label-stack > .hero-project-word {
    549	  display: block;
    550	  width: max-content;
    551	}
-   552
+   552	
    553	.hero-view-label-stack > span:last-child {
    554	  font-size: inherit;
    555	  transform: translateY(-0.25px);
    556	}
-   557
+   557	
    558	.hero-project-action .carousel-button-group {
    559	  grid-column: 2 / 4;
    560	}
-   561
+   561	
    562	.hero-social-buttons {
    563	  display: grid;
    564	  gap: var(--hero-action-gap);
    565	  grid-template-columns: repeat(3, minmax(0, 1fr));
    566	  width: 100%;
    567	}
-   568
+   568	
    569	.button {
    570	  align-items: center;
    571	  border-radius: 8px;
@@ -11047,23 +11048,23 @@ FILE: app/globals.css
    578	  padding: 0 18px;
    579	  transition: transform 160ms ease, border-color 160ms ease, background 160ms ease;
    580	}
-   581
+   581	
    582	.button:hover {
    583	  transform: translateY(-2px);
    584	}
-   585
+   585	
    586	.button-primary {
    587	  background: linear-gradient(135deg, var(--green), var(--green-2));
    588	  color: #001b0d;
    589	}
-   590
+   590	
    591	.carousel-button-group {
    592	  --carousel-arrow-bleed: calc(var(--hero-social-button-height) * 0.2);
    593	  --carousel-arrow-button-width: calc(
    594	    var(--hero-social-button-height) - var(--carousel-arrow-bleed)
    595	  );
    596	  --carousel-button-gap: clamp(8px, 2vw, var(--hero-action-gap));
-   597
+   597	
    598	  align-items: stretch;
    599	  display: grid;
    600	  gap: var(--carousel-button-gap);
@@ -11074,7 +11075,7 @@ FILE: app/globals.css
    605	  position: relative;
    606	  width: 100%;
    607	}
-   608
+   608	
    609	.carousel-button {
    610	  border-bottom-right-radius: 0;
    611	  border-top-right-radius: 0;
@@ -11090,7 +11091,7 @@ FILE: app/globals.css
    621	  position: relative;
    622	  width: 100%;
    623	}
-   624
+   624	
    625	.carousel-button-window {
    626	  align-items: center;
    627	  display: grid;
@@ -11105,7 +11106,7 @@ FILE: app/globals.css
    636	  width: 100%;
    637	  white-space: nowrap;
    638	}
-   639
+   639	
    640	.carousel-button-label {
    641	  align-items: center;
    642	  animation: project-swoosh 720ms cubic-bezier(0.18, 0.9, 0.28, 1.18);
@@ -11124,7 +11125,7 @@ FILE: app/globals.css
    655	  white-space: nowrap;
    656	  will-change: transform, opacity;
    657	}
-   658
+   658	
    659	.carousel-button-action {
    660	  -webkit-text-stroke: 4.2px #000;
    661	  align-items: center;
@@ -11139,11 +11140,11 @@ FILE: app/globals.css
    670	  paint-order: stroke fill;
    671	  text-shadow: 0 0 0 #000;
    672	}
-   673
+   673	
    674	.carousel-button-action-name {
    675	  display: block;
    676	}
-   677
+   677	
    678	.carousel-button-action-category {
    679	  -webkit-text-stroke: 0;
    680	  color: #000;
@@ -11155,19 +11156,19 @@ FILE: app/globals.css
    686	  text-align: center;
    687	  text-shadow: none;
    688	}
-   689
+   689	
    690	.carousel-button-action-commerce {
    691	  color: #ffad4d;
    692	}
-   693
+   693	
    694	.carousel-button-action-entertainment {
    695	  color: #9b5cff;
    696	}
-   697
+   697	
    698	.carousel-button-action-finance {
    699	  color: #2f6bff;
    700	}
-   701
+   701	
    702	.carousel-button-project {
    703	  -webkit-text-stroke: 4.2px #000;
    704	  align-items: center;
@@ -11178,14 +11179,14 @@ FILE: app/globals.css
    709	  paint-order: stroke fill;
    710	  text-shadow: 0 0 0 #000;
    711	}
-   712
+   712	
    713	.carousel-button-project-word {
    714	  -webkit-text-stroke: 4.2px #000;
    715	  color: #f3fff7;
    716	  paint-order: stroke fill;
    717	  text-shadow: 0 0 0 #000;
    718	}
-   719
+   719	
    720	.carousel-button-arrow {
    721	  align-items: center;
    722	  display: grid;
@@ -11198,7 +11199,7 @@ FILE: app/globals.css
    729	  transform: none;
    730	  width: 1.485em;
    731	}
-   732
+   732	
    733	.carousel-arrow-button {
    734	  align-items: center;
    735	  border-bottom-left-radius: 0;
@@ -11212,7 +11213,7 @@ FILE: app/globals.css
    743	  position: relative;
    744	  width: var(--carousel-arrow-button-width);
    745	}
-   746
+   746	
    747	.carousel-button-arrow-mark {
    748	  display: block;
    749	  height: 100%;
@@ -11222,7 +11223,7 @@ FILE: app/globals.css
    753	  user-select: none;
    754	  width: 100%;
    755	}
-   756
+   756	
    757	.carousel-button-phone,
    758	.carousel-button-web {
    759	  align-self: center;
@@ -11235,34 +11236,34 @@ FILE: app/globals.css
    766	  stroke-width: 3px;
    767	  width: 0.8em;
    768	}
-   769
+   769	
    770	.carousel-button-phone {
    771	  height: 1.936em;
    772	  width: 1.36125em;
    773	}
-   774
+   774	
    775	.phone-mini-frame {
    776	  fill: #20261f;
    777	  stroke: #000;
    778	  stroke-width: 2.4px;
    779	}
-   780
+   780	
    781	.phone-mini-screen {
    782	  fill: currentColor;
    783	  stroke: none;
    784	}
-   785
+   785	
    786	.phone-mini-speaker {
    787	  fill: none;
    788	  stroke: #000;
    789	  stroke-width: 1.6px;
    790	}
-   791
+   791	
    792	.phone-mini-home {
    793	  fill: #000;
    794	  stroke: none;
    795	}
-   796
+   796	
    797	.carousel-button-tablet {
    798	  align-self: center;
    799	  display: block;
@@ -11272,23 +11273,23 @@ FILE: app/globals.css
    803	  stroke-linejoin: round;
    804	  width: 2.16em;
    805	}
-   806
+   806	
    807	.tablet-mini-frame {
    808	  fill: #20261f;
    809	  stroke: #000;
    810	  stroke-width: 2.2px;
    811	}
-   812
+   812	
    813	.tablet-mini-screen {
    814	  fill: currentColor;
    815	  stroke: none;
    816	}
-   817
+   817	
    818	.tablet-mini-camera {
    819	  fill: #000;
    820	  stroke: none;
    821	}
-   822
+   822	
    823	.carousel-button-web {
    824	  height: 1.2em;
    825	  margin-left: -0.15em;
@@ -11296,60 +11297,60 @@ FILE: app/globals.css
    827	  transform: translateY(0.06em);
    828	  width: 1.2em;
    829	}
-   830
+   830	
    831	.web-globe-shell {
    832	  fill: currentColor;
    833	  stroke: #000;
    834	  stroke-width: 4px;
    835	}
-   836
+   836	
    837	.web-globe-line {
    838	  fill: none;
    839	  stroke: #000;
    840	  stroke-width: 2px;
    841	}
-   842
+   842	
    843	@keyframes project-swoosh {
    844	  0% {
    845	    opacity: 0;
    846	    transform: translateY(28px);
    847	  }
-   848
+   848	
    849	  48% {
    850	    opacity: 1;
    851	    transform: translateY(-5px);
    852	  }
-   853
+   853	
    854	  68% {
    855	    transform: translateY(3px);
    856	  }
-   857
+   857	
    858	  84% {
    859	    transform: translateY(-2px);
    860	  }
-   861
+   861	
    862	  100% {
    863	    opacity: 1;
    864	    transform: translateY(0);
    865	  }
    866	}
-   867
+   867	
    868	@media (prefers-reduced-motion: reduce) {
    869	  .carousel-button-label {
    870	    animation: none;
    871	  }
-   872
+   872	
    873	  .flow-browse-extra {
    874	    transition: none;
    875	  }
    876	}
-   877
+   877	
    878	.button-secondary {
    879	  background: rgba(255, 255, 255, 0.04);
    880	  border: 1px solid var(--line-strong);
    881	  color: var(--text);
    882	}
-   883
+   883	
    884	.hero-social-button {
    885	  aspect-ratio: 4.5 / 2;
    886	  gap: var(--hero-social-gap);
@@ -11362,19 +11363,19 @@ FILE: app/globals.css
    893	  padding-right: var(--hero-social-pad-x);
    894	  width: 100%;
    895	}
-   896
+   896	
    897	.hero-social-button svg {
    898	  flex: 0 0 auto;
    899	  height: var(--hero-social-icon-size);
    900	  width: var(--hero-social-icon-size);
    901	}
-   902
+   902	
    903	.linkedin-button .linkedin-icon-mark,
    904	.resume-button .download-icon-mark {
    905	  height: calc(var(--hero-social-icon-size) * 0.95);
    906	  width: calc(var(--hero-social-icon-size) * 0.95);
    907	}
-   908
+   908	
    909	.social-label-image {
    910	  display: block;
    911	  flex: 0 0 auto;
@@ -11383,29 +11384,29 @@ FILE: app/globals.css
    914	  object-fit: contain;
    915	  width: auto;
    916	}
-   917
+   917	
    918	.github-button {
    919	  background: #000;
    920	  border-color: #000;
    921	  color: #f3fff7;
    922	}
-   923
+   923	
    924	.linkedin-button {
    925	  background: #2867B2;
    926	  border-color: #2867B2;
    927	}
-   928
+   928	
    929	.resume-button {
    930	  background: #fff;
    931	  border-color: #fff;
    932	  color: #fff;
    933	}
-   934
+   934	
    935	.linkedin-button,
    936	.resume-button {
    937	  gap: max(0px, calc(var(--hero-social-gap) - 2px));
    938	}
-   939
+   939	
    940	.github-label-text,
    941	.linkedin-label-text,
    942	.resume-label-text,
@@ -11416,35 +11417,35 @@ FILE: app/globals.css
    947	  paint-order: stroke fill;
    948	  position: relative;
    949	}
-   950
+   950	
    951	.github-label-text {
    952	  --social-label-middle-stroke: #4B5563;
    953	  color: #f3fff7;
    954	}
-   955
+   955	
    956	.linkedin-label-text {
    957	  --social-label-middle-stroke: #2867B2;
    958	  color: #fff;
    959	}
-   960
+   960	
    961	.resume-label-text {
    962	  --social-label-middle-stroke: #05AF59;
    963	  color: #fff;
    964	}
-   965
+   965	
    966	.figma-label-text {
    967	  --social-label-middle-stroke: #a259ff;
    968	  color: #fff;
    969	}
-   970
+   970	
    971	.project-page .project-play-store-button .resume-label-text {
    972	  --social-label-middle-stroke: #ea4335;
    973	}
-   974
+   974	
    975	.project-page .project-app-store-button .resume-label-text {
    976	  --social-label-middle-stroke: #000000;
    977	}
-   978
+   978	
    979	.github-label-text::before,
    980	.github-label-text::after,
    981	.linkedin-label-text::before,
@@ -11460,7 +11461,7 @@ FILE: app/globals.css
    991	  pointer-events: none;
    992	  position: absolute;
    993	}
-   994
+   994	
    995	.github-label-text::before,
    996	.linkedin-label-text::before,
    997	.resume-label-text::before,
@@ -11468,11 +11469,11 @@ FILE: app/globals.css
    999	  -webkit-text-stroke: 4px var(--social-label-middle-stroke);
   1000	  z-index: -1;
   1001	}
-  1002
+  1002	
   1003	.resume-label-text::before {
   1004	  -webkit-text-stroke-width: 4px;
   1005	}
-  1006
+  1006	
   1007	.github-label-text::after,
   1008	.linkedin-label-text::after,
   1009	.resume-label-text::after,
@@ -11480,11 +11481,11 @@ FILE: app/globals.css
   1011	  -webkit-text-stroke: 6px #000;
   1012	  z-index: -2;
   1013	}
-  1014
+  1014	
   1015	.resume-label-text::after {
   1016	  -webkit-text-stroke-width: 6px;
   1017	}
-  1018
+  1018	
   1019	.stack-row {
   1020	  display: grid;
   1021	  column-gap: 12px;
@@ -11496,7 +11497,7 @@ FILE: app/globals.css
   1027	  row-gap: 6px;
   1028	  width: var(--hero-proof-stack-width);
   1029	}
-  1030
+  1030	
   1031	.stack-row span,
   1032	.case-tags span {
   1033	  background: rgba(67, 255, 146, 0.08);
@@ -11507,7 +11508,7 @@ FILE: app/globals.css
   1038	  font-weight: 400;
   1039	  padding: 8px 11px;
   1040	}
-  1041
+  1041	
   1042	.stack-row span {
   1043	  align-items: center;
   1044	  box-sizing: border-box;
@@ -11521,13 +11522,13 @@ FILE: app/globals.css
   1052	  white-space: nowrap;
   1053	  width: 100%;
   1054	}
-  1055
+  1055	
   1056	.hero-visual {
   1057	  position: relative;
   1058	  transform: translateY(var(--hero-visual-center-offset, 0px)) scale(0.9);
   1059	  transform-origin: center center;
   1060	}
-  1061
+  1061	
   1062	@media (min-width: 981px) {
   1063	  .hero-visual {
   1064	    --hero-visual-layout-height: 738px;
@@ -11538,7 +11539,7 @@ FILE: app/globals.css
   1069	    );
   1070	  }
   1071	}
-  1072
+  1072	
   1073	.profile-orbit {
   1074	  align-items: center;
   1075	  display: flex;
@@ -11549,7 +11550,7 @@ FILE: app/globals.css
   1080	  top: 0;
   1081	  z-index: 3;
   1082	}
-  1083
+  1083	
   1084	.profile-photo {
   1085	  border: 2px solid rgba(198, 255, 217, 0.34);
   1086	  border-radius: 999px;
@@ -11558,7 +11559,7 @@ FILE: app/globals.css
   1089	  object-fit: cover;
   1090	  width: 188px;
   1091	}
-  1092
+  1092	
   1093	.profile-orbit span {
   1094	  background: rgba(5, 16, 10, 0.8);
   1095	  border: 1px solid var(--line);
@@ -11571,13 +11572,13 @@ FILE: app/globals.css
   1102	  padding: 7px 11px;
   1103	  text-align: center;
   1104	}
-  1105
+  1105	
   1106	.phone-stage {
   1107	  height: 690px;
   1108	  margin-top: 48px;
   1109	  position: relative;
   1110	}
-  1111
+  1111	
   1112	.tablet-shell {
   1113	  --tablet-shell-fitted-width: 287px;
   1114	  background:
@@ -11601,7 +11602,7 @@ FILE: app/globals.css
   1132	  width: var(--tablet-shell-fitted-width);
   1133	  z-index: 4;
   1134	}
-  1135
+  1135	
   1136	.tablet-shell.tablet-shell-capture {
   1137	  aspect-ratio: 1372 / 895;
   1138	  background: transparent;
@@ -11611,7 +11612,7 @@ FILE: app/globals.css
   1142	  height: auto;
   1143	  padding: 0;
   1144	}
-  1145
+  1145	
   1146	.tablet-shell::before {
   1147	  background: linear-gradient(180deg, #5c625d, #141615);
   1148	  border-radius: 99px;
@@ -11623,11 +11624,11 @@ FILE: app/globals.css
   1154	  top: -4px;
   1155	  width: 52px;
   1156	}
-  1157
+  1157	
   1158	.tablet-shell.tablet-shell-capture::before {
   1159	  display: none;
   1160	}
-  1161
+  1161	
   1162	.tablet-shell::after {
   1163	  border-radius: inherit;
   1164	  box-shadow:
@@ -11638,11 +11639,11 @@ FILE: app/globals.css
   1169	  pointer-events: none;
   1170	  position: absolute;
   1171	}
-  1172
+  1172	
   1173	.tablet-shell.tablet-shell-capture::after {
   1174	  display: none;
   1175	}
-  1176
+  1176	
   1177	.tablet-camera {
   1178	  background:
   1179	    radial-gradient(circle at 42% 38%, rgba(198, 255, 217, 0.34), transparent 18%),
@@ -11658,7 +11659,7 @@ FILE: app/globals.css
   1189	  width: 6px;
   1190	  z-index: 3;
   1191	}
-  1192
+  1192	
   1193	.tablet-screen {
   1194	  background:
   1195	    linear-gradient(rgba(67, 255, 146, 0.045) 1px, transparent 1px),
@@ -11675,7 +11676,7 @@ FILE: app/globals.css
   1206	  overflow: hidden;
   1207	  position: relative;
   1208	}
-  1209
+  1209	
   1210	.tablet-screen::after {
   1211	  background:
   1212	    linear-gradient(115deg, rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0.04) 24%, transparent 42%),
@@ -11688,13 +11689,13 @@ FILE: app/globals.css
   1219	  position: absolute;
   1220	  z-index: 2;
   1221	}
-  1222
+  1222	
   1223	.tablet-screen-image {
   1224	  object-fit: contain;
   1225	  object-position: center center;
   1226	  z-index: 1;
   1227	}
-  1228
+  1228	
   1229	.tablet-framed-image {
   1230	  filter:
   1231	    drop-shadow(0 34px 52px rgba(0, 0, 0, 0.52))
@@ -11702,7 +11703,7 @@ FILE: app/globals.css
   1233	  object-fit: contain;
   1234	  object-position: center center;
   1235	}
-  1236
+  1236	
   1237	.tablet-empty-grid {
   1238	  background:
   1239	    linear-gradient(90deg, rgba(198, 255, 217, 0.06) 1px, transparent 1px),
@@ -11713,7 +11714,7 @@ FILE: app/globals.css
   1244	  position: absolute;
   1245	  z-index: 0;
   1246	}
-  1247
+  1247	
   1248	.phone-shell {
   1249	  background:
   1250	    linear-gradient(135deg, rgba(255, 255, 255, 0.09), transparent 7%),
@@ -11732,7 +11733,7 @@ FILE: app/globals.css
   1263	  position: absolute;
   1264	  width: 245px;
   1265	}
-  1266
+  1266	
   1267	.phone-shell::before,
   1268	.phone-shell::after {
   1269	  background: linear-gradient(180deg, #5c635e, #151817 68%, #030404);
@@ -11745,52 +11746,52 @@ FILE: app/globals.css
   1276	  position: absolute;
   1277	  z-index: 1;
   1278	}
-  1279
+  1279	
   1280	.phone-shell::before {
   1281	  height: 48px;
   1282	  left: -4px;
   1283	  top: 118px;
   1284	  width: 4px;
   1285	}
-  1286
+  1286	
   1287	.phone-shell::after {
   1288	  height: 76px;
   1289	  right: -4px;
   1290	  top: 156px;
   1291	  width: 4px;
   1292	}
-  1293
+  1293	
   1294	.phone-shell > * {
   1295	  position: relative;
   1296	  z-index: 2;
   1297	}
-  1298
+  1298	
   1299	.phone-shell-link {
   1300	  color: inherit;
   1301	  cursor: pointer;
   1302	  display: block;
   1303	  text-decoration: none;
   1304	}
-  1305
+  1305	
   1306	.phone-shell-link:focus-visible {
   1307	  outline: 2px solid var(--mint);
   1308	  outline-offset: 8px;
   1309	}
-  1310
+  1310	
   1311	.phone-shell-commerce {
   1312	  left: 68px;
   1313	  top: 40px;
   1314	  transform: rotate(-9deg);
   1315	  z-index: 2;
   1316	}
-  1317
+  1317	
   1318	.phone-shell-finance {
   1319	  left: 278px;
   1320	  top: 110px;
   1321	  transform: rotate(8deg);
   1322	  z-index: 1;
   1323	}
-  1324
+  1324	
   1325	.phone-speaker {
   1326	  background:
   1327	    radial-gradient(circle at calc(100% - 9px) 50%, #050706 0 1.5px, #28312c 2px 3px, transparent 3.5px),
@@ -11803,7 +11804,7 @@ FILE: app/globals.css
   1334	  margin: 0 auto 10px;
   1335	  width: 70px;
   1336	}
-  1337
+  1337	
   1338	.phone-screen {
   1339	  background:
   1340	    linear-gradient(rgba(67, 255, 146, 0.055) 1px, transparent 1px),
@@ -11820,13 +11821,13 @@ FILE: app/globals.css
   1351	  padding: 18px;
   1352	  position: relative;
   1353	}
-  1354
+  1354	
   1355	.phone-screen.has-image {
   1356	  background: #020403;
   1357	  border-radius: 29px;
   1358	  padding: 0;
   1359	}
-  1360
+  1360	
   1361	.phone-screen.has-image::after {
   1362	  background:
   1363	    linear-gradient(122deg, rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0.04) 22%, transparent 42%),
@@ -11839,26 +11840,26 @@ FILE: app/globals.css
   1370	  position: absolute;
   1371	  z-index: 2;
   1372	}
-  1373
+  1373	
   1374	.phone-screen-image-frame {
   1375	  inset: 2% 0 0;
   1376	  position: absolute;
   1377	  z-index: 1;
   1378	}
-  1379
+  1379	
   1380	.phone-screen-image {
   1381	  object-fit: contain;
   1382	  object-position: top center;
   1383	}
-  1384
+  1384	
   1385	.phone-shell-finance .phone-screen-image-frame {
   1386	  inset: 0;
   1387	}
-  1388
+  1388	
   1389	.phone-shell-finance .phone-screen-image {
   1390	  object-position: center center;
   1391	}
-  1392
+  1392	
   1393	.phone-shell-capture {
   1394	  aspect-ratio: 1290 / 2661;
   1395	  background: transparent;
@@ -11868,13 +11869,13 @@ FILE: app/globals.css
   1399	  height: auto;
   1400	  padding: 0;
   1401	}
-  1402
+  1402	
   1403	.phone-shell-capture::before,
   1404	.phone-shell-capture::after,
   1405	.phone-shell-capture .phone-speaker {
   1406	  display: none;
   1407	}
-  1408
+  1408	
   1409	.phone-framed-image {
   1410	  filter:
   1411	    drop-shadow(0 28px 42px rgba(0, 0, 0, 0.48))
@@ -11882,7 +11883,7 @@ FILE: app/globals.css
   1413	  object-fit: contain;
   1414	  object-position: center;
   1415	}
-  1416
+  1416	
   1417	.phone-status {
   1418	  align-items: center;
   1419	  color: var(--mint);
@@ -11892,7 +11893,7 @@ FILE: app/globals.css
   1423	  justify-content: space-between;
   1424	  margin-bottom: 28px;
   1425	}
-  1426
+  1426	
   1427	.phone-chart {
   1428	  align-items: end;
   1429	  display: grid;
@@ -11901,28 +11902,28 @@ FILE: app/globals.css
   1432	  height: 118px;
   1433	  margin-bottom: 26px;
   1434	}
-  1435
+  1435	
   1436	.phone-chart div {
   1437	  background: linear-gradient(180deg, var(--green), #086c3b);
   1438	  border-radius: 6px 6px 2px 2px;
   1439	}
-  1440
+  1440	
   1441	.phone-chart div:nth-child(1) {
   1442	  height: 54%;
   1443	}
-  1444
+  1444	
   1445	.phone-chart div:nth-child(2) {
   1446	  height: 88%;
   1447	}
-  1448
+  1448	
   1449	.phone-chart div:nth-child(3) {
   1450	  height: 66%;
   1451	}
-  1452
+  1452	
   1453	.phone-chart div:nth-child(4) {
   1454	  height: 100%;
   1455	}
-  1456
+  1456	
   1457	.phone-cardline {
   1458	  background: rgba(198, 255, 217, 0.14);
   1459	  border-radius: 999px;
@@ -11930,25 +11931,25 @@ FILE: app/globals.css
   1461	  margin-bottom: 10px;
   1462	  width: 62%;
   1463	}
-  1464
+  1464	
   1465	.phone-cardline.wide {
   1466	  width: 88%;
   1467	}
-  1468
+  1468	
   1469	.phone-grid {
   1470	  display: grid;
   1471	  gap: 9px;
   1472	  grid-template-columns: 1fr 1fr;
   1473	  margin-top: 24px;
   1474	}
-  1475
+  1475	
   1476	.phone-grid span {
   1477	  background: rgba(255, 255, 255, 0.05);
   1478	  border: 1px solid var(--line);
   1479	  border-radius: 8px;
   1480	  height: 54px;
   1481	}
-  1482
+  1482	
   1483	.phone-cta {
   1484	  align-items: center;
   1485	  background: var(--green);
@@ -11961,7 +11962,7 @@ FILE: app/globals.css
   1492	  justify-content: center;
   1493	  margin-top: 24px;
   1494	}
-  1495
+  1495	
   1496	.proof-panel {
   1497	  backdrop-filter: blur(16px);
   1498	  background: rgba(5, 16, 10, 0.76);
@@ -11976,7 +11977,7 @@ FILE: app/globals.css
   1507	  width: var(--hero-proof-stack-width);
   1508	  z-index: 2;
   1509	}
-  1510
+  1510	
   1511	.proof-column {
   1512	  color: #dfffea;
   1513	  display: grid;
@@ -11985,45 +11986,45 @@ FILE: app/globals.css
   1516	  gap: 10px;
   1517	  line-height: 1.25;
   1518	}
-  1519
+  1519	
   1520	.proof-item {
   1521	  align-items: center;
   1522	  display: flex;
   1523	  gap: 4px;
   1524	  min-width: 0;
   1525	}
-  1526
+  1526	
   1527	.proof-item svg {
   1528	  flex: 0 0 auto;
   1529	}
-  1530
+  1530	
   1531	.proof-item span {
   1532	  min-width: 0;
   1533	  white-space: nowrap;
   1534	}
-  1535
+  1535	
   1536	@media (min-width: 1024px) and (orientation: landscape) {
   1537	  .stack-row {
   1538	    max-width: calc(100vw - 36px);
   1539	    width: var(--hero-proof-landscape-width, 100%);
   1540	  }
   1541	}
-  1542
+  1542	
   1543	@media (min-width: 1200px) and (orientation: landscape) {
   1544	  .stack-row {
   1545	    grid-template-columns: repeat(9, minmax(0, 1fr));
   1546	  }
-  1547
+  1547	
   1548	  .stack-row span {
   1549	    padding-bottom: 9.6px;
   1550	    padding-top: 9.6px;
   1551	  }
-  1552
+  1552	
   1553	  .proof-panel {
   1554	    margin-top: 12px;
   1555	  }
   1556	}
-  1557
+  1557	
   1558	@media (min-width: 1024px) and (orientation: landscape) {
   1559	  .proof-panel {
   1560	    gap: 8px;
@@ -12033,41 +12034,41 @@ FILE: app/globals.css
   1564	    max-width: calc(100vw - 36px);
   1565	    width: var(--hero-proof-landscape-width, 100%);
   1566	  }
-  1567
+  1567	
   1568	  .proof-column {
   1569	    display: contents;
   1570	  }
-  1571
+  1571	
   1572	  .proof-item {
   1573	    justify-content: center;
   1574	    width: 100%;
   1575	  }
-  1576
+  1576	
   1577	  .proof-column:nth-child(1) .proof-item:nth-child(1) {
   1578	    order: 1;
   1579	  }
-  1580
+  1580	
   1581	  .proof-column:nth-child(2) .proof-item:nth-child(1) {
   1582	    order: 2;
   1583	  }
-  1584
+  1584	
   1585	  .proof-column:nth-child(3) .proof-item:nth-child(1) {
   1586	    order: 3;
   1587	  }
-  1588
+  1588	
   1589	  .proof-column:nth-child(1) .proof-item:nth-child(2) {
   1590	    order: 4;
   1591	  }
-  1592
+  1592	
   1593	  .proof-column:nth-child(2) .proof-item:nth-child(2) {
   1594	    order: 5;
   1595	  }
-  1596
+  1596	
   1597	  .proof-column:nth-child(3) .proof-item:nth-child(2) {
   1598	    order: 6;
   1599	  }
   1600	}
-  1601
+  1601	
   1602	.stats-strip {
   1603	  border-top: 1px solid var(--line);
   1604	  display: grid;
@@ -12077,7 +12078,7 @@ FILE: app/globals.css
   1608	  position: relative;
   1609	  z-index: 2;
   1610	}
-  1611
+  1611	
   1612	.stats-strip-item {
   1613	  background: rgba(255, 255, 255, 0.025);
   1614	  display: flex;
@@ -12086,11 +12087,11 @@ FILE: app/globals.css
   1617	  min-height: 104px;
   1618	  padding: 22px;
   1619	}
-  1620
+  1620	
   1621	.alla-vostra-case .stats-strip-item {
   1622	  min-height: 178px;
   1623	}
-  1624
+  1624	
   1625	.stats-strip strong {
   1626	  color: var(--green);
   1627	  display: block;
@@ -12098,7 +12099,7 @@ FILE: app/globals.css
   1629	  font-weight: 900;
   1630	  line-height: 1;
   1631	}
-  1632
+  1632	
   1633	.stats-strip-label,
   1634	.stats-strip-measure {
   1635	  color: var(--muted);
@@ -12108,18 +12109,18 @@ FILE: app/globals.css
   1639	  line-height: 1.22;
   1640	  margin-top: 8px;
   1641	}
-  1642
+  1642	
   1643	.stats-strip-label {
   1644	  min-width: 0;
   1645	}
-  1646
+  1646	
   1647	.stats-strip-label-line {
   1648	  display: block;
   1649	  min-width: 0;
   1650	  overflow-wrap: anywhere;
   1651	  white-space: normal;
   1652	}
-  1653
+  1653	
   1654	.stats-strip-label-sr {
   1655	  clip: rect(0 0 0 0);
   1656	  clip-path: inset(50%);
@@ -12129,7 +12130,7 @@ FILE: app/globals.css
   1660	  white-space: nowrap;
   1661	  width: 1px;
   1662	}
-  1663
+  1663	
   1664	.stats-strip-measure {
   1665	  left: -9999px;
   1666	  margin-top: 0;
@@ -12140,22 +12141,22 @@ FILE: app/globals.css
   1671	  white-space: nowrap;
   1672	  width: max-content;
   1673	}
-  1674
+  1674	
   1675	section:not(.hero) {
   1676	  padding: 88px 0;
   1677	}
-  1678
+  1678	
   1679	.section-heading {
   1680	  max-width: 720px;
   1681	}
-  1682
+  1682	
   1683	.case-grid {
   1684	  display: grid;
   1685	  gap: 18px;
   1686	  grid-template-columns: repeat(3, minmax(0, 1fr));
   1687	  margin-top: 34px;
   1688	}
-  1689
+  1689	
   1690	.case-card,
   1691	.capability-grid div,
   1692	.contact-panel {
@@ -12163,7 +12164,7 @@ FILE: app/globals.css
   1694	  border: 1px solid var(--line);
   1695	  border-radius: 8px;
   1696	}
-  1697
+  1697	
   1698	.case-card {
   1699	  --case-stat-font-size: 12px;
   1700	  --case-stat-chip-font-size: var(--case-stat-font-size);
@@ -12172,36 +12173,36 @@ FILE: app/globals.css
   1703	  padding: 28px;
   1704	  width: 100%;
   1705	}
-  1706
+  1706	
   1707	.case-grid > .uiux-principle-card-expanded {
   1708	  grid-column: 1 / -1;
   1709	}
-  1710
+  1710	
   1711	@media (min-width: 631px) {
   1712	  .case-grid > .uiux-principle-card-expanded {
   1713	    align-content: start;
   1714	    min-height: 330px;
   1715	  }
-  1716
+  1716	
   1717	  .case-grid > .uiux-principle-card-expanded .uiux-principle-long-copy {
   1718	    column-count: 2;
   1719	    column-fill: balance;
   1720	    column-gap: 28px;
   1721	    display: block;
   1722	  }
-  1723
+  1723	
   1724	  .case-grid > .uiux-principle-card-expanded .uiux-principle-long-copy p {
   1725	    break-inside: auto;
   1726	    margin: 0 0 12px;
   1727	  }
   1728	}
-  1729
+  1729	
   1730	@media (min-width: 981px) {
   1731	  .case-grid > .uiux-principle-card-expanded .uiux-principle-long-copy {
   1732	    column-count: 3;
   1733	  }
   1734	}
-  1735
+  1735	
   1736	.case-card-link {
   1737	  color: inherit;
   1738	  cursor: pointer;
@@ -12212,23 +12213,23 @@ FILE: app/globals.css
   1743	    box-shadow 160ms ease,
   1744	    transform 160ms ease;
   1745	}
-  1746
+  1746	
   1747	.case-card-link:hover {
   1748	  border-color: rgba(198, 255, 217, 0.36);
   1749	  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.28);
   1750	  transform: translateY(-2px);
   1751	}
-  1752
+  1752	
   1753	.case-card-link:focus-visible {
   1754	  outline: 2px solid var(--mint);
   1755	  outline-offset: 6px;
   1756	}
-  1757
+  1757	
   1758	.case-grid-featured {
   1759	  align-items: stretch;
   1760	  --case-featured-title-stack-gap: 14px;
   1761	}
-  1762
+  1762	
   1763	.case-grid-featured > .case-card {
   1764	  align-content: start;
   1765	  display: grid;
@@ -12240,7 +12241,7 @@ FILE: app/globals.css
   1771	    var(--case-featured-tags-row, auto)
   1772	    var(--case-featured-media-row, auto);
   1773	}
-  1774
+  1774	
   1775	.case-grid-featured > #this-portfolio-website {
   1776	  opacity: 0.5;
   1777	  transition:
@@ -12249,25 +12250,25 @@ FILE: app/globals.css
   1780	    opacity 160ms ease,
   1781	    transform 160ms ease;
   1782	}
-  1783
+  1783	
   1784	.case-grid-featured > #this-portfolio-website:hover {
   1785	  border-color: rgba(198, 255, 217, 0.36);
   1786	  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.28);
   1787	  opacity: 1;
   1788	  transform: translateY(-2px);
   1789	}
-  1790
+  1790	
   1791	.case-grid-featured > .case-card > .case-topline {
   1792	  align-self: start;
   1793	  grid-row: 1;
   1794	}
-  1795
+  1795	
   1796	.case-grid-featured > .case-card > .case-card-title-stack {
   1797	  align-self: start;
   1798	  grid-row: 2;
   1799	  margin-bottom: var(--case-featured-title-stack-gap);
   1800	}
-  1801
+  1801	
   1802	.case-grid-featured > .case-card > .case-card-title-device-stack {
   1803	  align-self: start;
   1804	  grid-column: 1;
@@ -12276,22 +12277,22 @@ FILE: app/globals.css
   1807	  margin-bottom: var(--case-featured-title-stack-gap);
   1808	  width: 100%;
   1809	}
-  1810
+  1810	
   1811	.case-grid-featured > .case-card > .case-description {
   1812	  align-self: start;
   1813	  grid-row: 4;
   1814	}
-  1815
+  1815	
   1816	.case-grid-featured > .case-card > .case-tags {
   1817	  align-self: start;
   1818	  grid-row: 5;
   1819	}
-  1820
+  1820	
   1821	.case-grid-featured > .case-card > .case-miniatures {
   1822	  align-self: start;
   1823	  grid-row: 6;
   1824	}
-  1825
+  1825	
   1826	.case-topline {
   1827	  align-items: start;
   1828	  display: grid;
@@ -12299,7 +12300,7 @@ FILE: app/globals.css
   1830	  grid-template-columns: repeat(3, minmax(0, 1fr));
   1831	  min-width: 0;
   1832	}
-  1833
+  1833	
   1834	.case-stat-stack {
   1835	  display: grid;
   1836	  gap: 7px;
@@ -12310,7 +12311,7 @@ FILE: app/globals.css
   1841	  min-width: 0;
   1842	  width: min(112px, 100%);
   1843	}
-  1844
+  1844	
   1845	.case-eyebrow {
   1846	  color: var(--green);
   1847	  display: block;
@@ -12326,7 +12327,7 @@ FILE: app/globals.css
   1857	  white-space: normal;
   1858	  width: 100%;
   1859	}
-  1860
+  1860	
   1861	.case-topline strong {
   1862	  align-items: center;
   1863	  border: 1px solid var(--line);
@@ -12347,7 +12348,7 @@ FILE: app/globals.css
   1878	  white-space: nowrap;
   1879	  width: 100%;
   1880	}
-  1881
+  1881	
   1882	.case-worklog-stat {
   1883	  color: var(--mint);
   1884	  display: block;
@@ -12364,17 +12365,17 @@ FILE: app/globals.css
   1895	  white-space: nowrap;
   1896	  width: 100%;
   1897	}
-  1898
+  1898	
   1899	.case-card h3 {
   1900	  margin: 54px 0 14px;
   1901	}
-  1902
+  1902	
   1903	.case-card-title-underline {
   1904	  text-decoration: underline;
   1905	  text-decoration-thickness: 0.08em;
   1906	  text-underline-offset: 0.12em;
   1907	}
-  1908
+  1908	
   1909	.case-card-title-stack {
   1910	  align-items: center;
   1911	  display: grid;
@@ -12383,21 +12384,21 @@ FILE: app/globals.css
   1914	  min-width: 0;
   1915	  width: 100%;
   1916	}
-  1917
+  1917	
   1918	.case-card-title-stack:not(.case-card-title-stack-no-devices):not(.case-card-title-stack-long) {
   1919	  grid-template-columns: minmax(0, 1fr);
   1920	}
-  1921
+  1921	
   1922	.case-card-title-stack-long {
   1923	  align-items: start;
   1924	  grid-template-columns: minmax(0, 1fr);
   1925	  row-gap: 8px;
   1926	}
-  1927
+  1927	
   1928	.case-card-title-stack-no-devices {
   1929	  grid-template-columns: minmax(0, 1fr);
   1930	}
-  1931
+  1931	
   1932	.case-card-project-title-name-stack {
   1933	  align-self: center;
   1934	  display: inline-flex;
@@ -12406,17 +12407,17 @@ FILE: app/globals.css
   1937	  justify-content: center;
   1938	  justify-self: start;
   1939	}
-  1940
+  1940	
   1941	.case-card-title-stack-no-devices .case-card-project-title-name-stack,
   1942	.case-card-title-stack-long .case-card-project-title-name-stack {
   1943	  max-width: 100%;
   1944	  min-width: 0;
   1945	}
-  1946
+  1946	
   1947	.case-card-project-title-name {
   1948	  display: block;
   1949	}
-  1950
+  1950	
   1951	.case-card-title-stack-original .case-card-project-title-name-stack,
   1952	.case-card-title-stack-original .case-card-project-title-name,
   1953	.case-card-title-stack-original .case-card-title-underline {
@@ -12430,7 +12431,7 @@ FILE: app/globals.css
   1961	  text-shadow: none;
   1962	  -webkit-text-stroke: 0;
   1963	}
-  1964
+  1964	
   1965	.case-card-title-stack-no-devices .case-card-project-title-name,
   1966	.case-card-title-stack-no-devices .case-card-title-underline,
   1967	.case-card-title-stack-long .case-card-project-title-name,
@@ -12438,14 +12439,14 @@ FILE: app/globals.css
   1969	  overflow-wrap: anywhere;
   1970	  white-space: normal;
   1971	}
-  1972
+  1972	
   1973	.case-card-portfolio-title-stack {
   1974	  display: inline-grid;
   1975	  gap: 10px;
   1976	  justify-items: center;
   1977	  line-height: 1;
   1978	}
-  1979
+  1979	
   1980	.case-card-title-device-stack {
   1981	  align-items: center;
   1982	  align-self: center;
@@ -12458,14 +12459,14 @@ FILE: app/globals.css
   1989	  min-width: 0;
   1990	  width: 100%;
   1991	}
-  1992
+  1992	
   1993	.case-card-title-stack-long .case-card-title-device-stack {
   1994	  grid-column: 1;
   1995	  justify-content: flex-start;
   1996	  justify-self: start;
   1997	  width: auto;
   1998	}
-  1999
+  1999	
   2000	.case-card-title-platform-slot {
   2001	  align-items: center;
   2002	  display: flex;
@@ -12477,7 +12478,7 @@ FILE: app/globals.css
   2008	  line-height: 1;
   2009	  width: 100%;
   2010	}
-  2011
+  2011	
   2012	.case-card-title-platform-slot::before {
   2013	  color: var(--mint);
   2014	  content: attr(data-platform-label);
@@ -12492,11 +12493,11 @@ FILE: app/globals.css
   2023	  white-space: nowrap;
   2024	  width: 100%;
   2025	}
-  2026
+  2026	
   2027	.case-card-title-device-stack .carousel-button-project {
   2028	  grid-column: auto;
   2029	}
-  2030
+  2030	
   2031	.case-card-title-platform-list {
   2032	  -webkit-text-stroke: 0;
   2033	  align-items: center;
@@ -12509,37 +12510,37 @@ FILE: app/globals.css
   2040	  text-shadow: none;
   2041	  width: 100%;
   2042	}
-  2043
+  2043	
   2044	.case-card-title-platform-heading-platform {
   2045	  grid-column: 1;
   2046	  grid-row: 1;
   2047	}
-  2048
+  2048	
   2049	.case-card-title-platform-heading-factor {
   2050	  grid-column: 1;
   2051	  grid-row: 2;
   2052	}
-  2053
+  2053	
   2054	.case-card-title-platform-divider {
   2055	  border-left: 1px solid currentColor;
   2056	  color: var(--mint);
   2057	  display: block;
   2058	  width: 0;
   2059	}
-  2060
+  2060	
   2061	.case-card-title-platform-grid-divider {
   2062	  align-self: stretch;
   2063	  grid-column: 2;
   2064	  grid-row: 1 / 3;
   2065	  justify-self: center;
   2066	}
-  2067
+  2067	
   2068	.case-card-title-platform-item-divider {
   2069	  align-self: stretch;
   2070	  justify-self: center;
   2071	  min-height: 1em;
   2072	}
-  2073
+  2073	
   2074	.case-card-title-platform-heading {
   2075	  color: var(--mint);
   2076	  display: block;
@@ -12552,36 +12553,36 @@ FILE: app/globals.css
   2083	  text-align: center;
   2084	  white-space: nowrap;
   2085	}
-  2086
+  2086	
   2087	.case-card-title-platform-mark {
   2088	  display: block;
   2089	  height: 0.8em;
   2090	  overflow: visible;
   2091	  width: 0.8em;
   2092	}
-  2093
+  2093	
   2094	.case-card-title-platform-mark-android {
   2095	  height: 0.72em;
   2096	  width: 0.9em;
   2097	}
-  2098
+  2098	
   2099	.case-card-title-platform-list .carousel-button-web {
   2100	  height: 0.968em !important;
   2101	  margin-left: 0;
   2102	  transform: none;
   2103	  width: 0.968em !important;
   2104	}
-  2105
+  2105	
   2106	.case-card-title-platform-slot[data-platform-label="PHONE"] .carousel-button-phone {
   2107	  height: 0.968em !important;
   2108	  width: 0.681em !important;
   2109	}
-  2110
+  2110	
   2111	.case-card-title-platform-slot[data-platform-label="TABLET"] .carousel-button-tablet {
   2112	  height: 0.72em !important;
   2113	  width: 1.08em !important;
   2114	}
-  2115
+  2115	
   2116	.case-card-title-device-stack .phone-mini-frame,
   2117	.case-card-title-device-stack .phone-mini-screen,
   2118	.case-card-title-device-stack .tablet-mini-frame,
@@ -12590,7 +12591,7 @@ FILE: app/globals.css
   2121	  fill: currentColor;
   2122	  fill-opacity: 0.2;
   2123	}
-  2124
+  2124	
   2125	.case-card p,
   2126	.capability-grid p,
   2127	.timeline-item p {
@@ -12598,12 +12599,12 @@ FILE: app/globals.css
   2129	  line-height: 1.6;
   2130	  overflow-wrap: anywhere;
   2131	}
-  2132
+  2132	
   2133	.case-description {
   2134	  display: block;
   2135	  width: 100%;
   2136	}
-  2137
+  2137	
   2138	.uiux-principle-card .case-description {
   2139	  color: #c4d6cc;
   2140	  font-family: inherit;
@@ -12612,7 +12613,7 @@ FILE: app/globals.css
   2143	  line-height: 1.45;
   2144	  max-width: none;
   2145	}
-  2146
+  2146	
   2147	.uiux-principle-long-copy {
   2148	  color: #c4d6cc;
   2149	  display: grid;
@@ -12624,13 +12625,13 @@ FILE: app/globals.css
   2155	  max-width: none;
   2156	  overflow-wrap: anywhere;
   2157	}
-  2158
+  2158	
   2159	.uiux-principle-long-copy-shell {
   2160	  display: grid;
   2161	  gap: 0;
   2162	  position: relative;
   2163	}
-  2164
+  2164	
   2165	.uiux-principle-long-copy-preview {
   2166	  -webkit-box-orient: vertical;
   2167	  -webkit-line-clamp: 8;
@@ -12647,7 +12648,7 @@ FILE: app/globals.css
   2178	  overflow-wrap: anywhere;
   2179	  white-space: pre-line;
   2180	}
-  2181
+  2181	
   2182	.uiux-principle-long-copy-measure {
   2183	  color: #c4d6cc;
   2184	  font-family: inherit;
@@ -12668,13 +12669,13 @@ FILE: app/globals.css
   2199	  white-space: pre-line;
   2200	  width: 100%;
   2201	}
-  2202
+  2202	
   2203	.uiux-principle-long-copy p {
   2204	  color: inherit;
   2205	  line-height: inherit;
   2206	  margin: 0;
   2207	}
-  2208
+  2208	
   2209	.uiux-principle-read-more-line {
   2210	  color: #c4d6cc;
   2211	  font-family: inherit;
@@ -12683,7 +12684,7 @@ FILE: app/globals.css
   2214	  line-height: 1.45;
   2215	  margin: 0;
   2216	}
-  2217
+  2217	
   2218	.uiux-principle-read-more {
   2219	  appearance: none;
   2220	  background: transparent;
@@ -12693,17 +12694,17 @@ FILE: app/globals.css
   2224	  font: inherit;
   2225	  padding: 0;
   2226	}
-  2227
+  2227	
   2228	.uiux-principle-read-more:hover,
   2229	.uiux-principle-read-more:focus-visible {
   2230	  color: var(--green);
   2231	}
-  2232
+  2232	
   2233	.uiux-principle-read-more:focus-visible {
   2234	  outline: 1px solid var(--green);
   2235	  outline-offset: 3px;
   2236	}
-  2237
+  2237	
   2238	.case-tags {
   2239	  display: grid;
   2240	  gap: 6px;
@@ -12714,7 +12715,7 @@ FILE: app/globals.css
   2245	  margin-top: 24px;
   2246	  width: 100%;
   2247	}
-  2248
+  2248	
   2249	.case-tags span {
   2250	  align-items: center;
   2251	  box-sizing: border-box;
@@ -12728,7 +12729,7 @@ FILE: app/globals.css
   2259	  white-space: nowrap;
   2260	  width: 100%;
   2261	}
-  2262
+  2262	
   2263	.case-miniatures {
   2264	  display: grid;
   2265	  gap: 10px;
@@ -12738,39 +12739,39 @@ FILE: app/globals.css
   2269	  min-width: 0;
   2270	  width: min(100%, 390px);
   2271	}
-  2272
+  2272	
   2273	.case-miniatures-landscape {
   2274	  grid-template-columns: 1fr;
   2275	  max-width: 420px;
   2276	  width: min(100%, 420px);
   2277	}
-  2278
+  2278	
   2279	.case-miniatures-cinerific {
   2280	  container-type: inline-size;
   2281	  max-width: 390px;
   2282	  width: min(100%, 390px);
   2283	}
-  2284
+  2284	
   2285	.case-miniatures-cinerific .case-miniature-landscape {
   2286	  aspect-ratio: 5265 / 2960;
   2287	  object-fit: cover;
   2288	  object-position: center center;
   2289	}
-  2290
+  2290	
   2291	@supports (width: 1cqw) {
   2292	  .case-miniatures-cinerific .case-miniature-landscape {
   2293	    aspect-ratio: auto;
   2294	    height: calc(((100cqw - 20px) / 3) * 16 / 9);
   2295	  }
   2296	}
-  2297
+  2297	
   2298	.case-miniatures-pair {
   2299	  align-items: start;
   2300	  grid-template-columns: minmax(0, 1.442fr) minmax(0, 0.5625fr);
   2301	  max-width: none;
   2302	  width: min(100%, 343px);
   2303	}
-  2304
+  2304	
   2305	.case-miniatures-pair .case-miniature {
   2306	  height: auto;
   2307	  max-height: none;
@@ -12778,11 +12779,11 @@ FILE: app/globals.css
   2309	  object-fit: contain;
   2310	  width: 100%;
   2311	}
-  2312
+  2312	
   2313	.case-miniatures-pair .case-miniature-landscape {
   2314	  aspect-ratio: 2509 / 1740;
   2315	}
-  2316
+  2316	
   2317	.case-miniature {
   2318	  aspect-ratio: 9 / 16;
   2319	  background: #020403;
@@ -12794,63 +12795,63 @@ FILE: app/globals.css
   2325	  object-fit: contain;
   2326	  width: 100%;
   2327	}
-  2328
+  2328	
   2329	.case-miniature-landscape {
   2330	  aspect-ratio: 2388 / 1668;
   2331	  border-radius: var(--capture-frame-radius-standard);
   2332	}
-  2333
+  2333	
   2334	.split-section {
   2335	  display: grid;
   2336	  gap: 44px;
   2337	}
-  2338
+  2338	
   2339	.capability-grid {
   2340	  display: grid;
   2341	  gap: 18px;
   2342	  grid-auto-rows: auto;
   2343	  grid-template-columns: repeat(3, minmax(0, 1fr));
   2344	}
-  2345
+  2345	
   2346	.capability-grid div {
   2347	  min-width: 0;
   2348	  padding: 24px;
   2349	}
-  2350
+  2350	
   2351	.capability-grid h3 {
   2352	  min-width: 0;
   2353	  overflow-wrap: anywhere;
   2354	}
-  2355
+  2355	
   2356	.capability-grid svg {
   2357	  color: var(--green);
   2358	  display: block;
   2359	  margin-bottom: 30px;
   2360	  max-width: 100%;
   2361	}
-  2362
+  2362	
   2363	.worklog-layout {
   2364	  display: grid;
   2365	  gap: 42px;
   2366	  grid-template-columns: minmax(0, 0.9fr) minmax(320px, 1.1fr);
   2367	}
-  2368
+  2368	
   2369	.timeline {
   2370	  border-left: 1px solid var(--line-strong);
   2371	}
-  2372
+  2372	
   2373	.timeline-item {
   2374	  display: grid;
   2375	  gap: 18px;
   2376	  grid-template-columns: 56px 1fr;
   2377	  padding: 8px 0 28px 24px;
   2378	}
-  2379
+  2379	
   2380	.timeline-item span {
   2381	  color: var(--green);
   2382	  font-weight: 900;
   2383	}
-  2384
+  2384	
   2385	.contact-panel {
   2386	  align-items: center;
   2387	  display: flex;
@@ -12858,37 +12859,37 @@ FILE: app/globals.css
   2389	  justify-content: space-between;
   2390	  padding: 30px;
   2391	}
-  2392
+  2392	
   2393	.contact-panel h2 {
   2394	  font-size: clamp(28px, 4vw, 46px);
   2395	  margin-bottom: 0;
   2396	  max-width: 760px;
   2397	}
-  2398
+  2398	
   2399	.project-page {
   2400	  overflow-x: hidden;
   2401	}
-  2402
+  2402	
   2403	.project-hero-copy,
   2404	.project-hero-grid > * {
   2405	  min-width: 0;
   2406	}
-  2407
+  2407	
   2408	.project-page section:not(.project-hero) {
   2409	  padding: 78px 0;
   2410	  position: relative;
   2411	}
-  2412
+  2412	
   2413	section.project-hero {
   2414	  overflow: hidden;
   2415	  padding: 24px 0 88px;
   2416	  position: relative;
   2417	}
-  2418
+  2418	
   2419	.alla-vostra-case .project-hero {
   2420	  padding-bottom: 14px;
   2421	}
-  2422
+  2422	
   2423	.project-hero::after {
   2424	  background: linear-gradient(transparent, var(--bg));
   2425	  bottom: 0;
@@ -12899,11 +12900,11 @@ FILE: app/globals.css
   2430	  position: absolute;
   2431	  right: 0;
   2432	}
-  2433
+  2433	
   2434	.project-nav {
   2435	  margin-bottom: 68px;
   2436	}
-  2437
+  2437	
   2438	.project-hero-grid {
   2439	  align-items: center;
   2440	  display: grid;
@@ -12912,11 +12913,11 @@ FILE: app/globals.css
   2443	  position: relative;
   2444	  z-index: 2;
   2445	}
-  2446
+  2446	
   2447	.project-hero-copy h1 {
   2448	  margin-bottom: 18px;
   2449	}
-  2450
+  2450	
   2451	.project-back-link {
   2452	  align-items: center;
   2453	  color: var(--muted);
@@ -12927,11 +12928,11 @@ FILE: app/globals.css
   2458	  margin-bottom: 30px;
   2459	  transition: color 160ms ease;
   2460	}
-  2461
+  2461	
   2462	.project-back-link:hover {
   2463	  color: var(--mint);
   2464	}
-  2465
+  2465	
   2466	.project-subtitle {
   2467	  color: var(--green);
   2468	  font-size: clamp(20px, 2vw, 28px);
@@ -12939,7 +12940,7 @@ FILE: app/globals.css
   2470	  line-height: 1.2;
   2471	  margin-bottom: 22px;
   2472	}
-  2473
+  2473	
   2474	.project-hero-text,
   2475	.project-copy-panel p,
   2476	.architecture-copy,
@@ -12949,11 +12950,11 @@ FILE: app/globals.css
   2480	  font-size: 17px;
   2481	  line-height: 1.65;
   2482	}
-  2483
+  2483	
   2484	.project-hero-text {
   2485	  max-width: 620px;
   2486	}
-  2487
+  2487	
   2488	.project-meta-row {
   2489	  display: flex;
   2490	  flex-wrap: wrap;
@@ -12961,7 +12962,7 @@ FILE: app/globals.css
   2492	  margin-top: 28px;
   2493	  max-width: 620px;
   2494	}
-  2495
+  2495	
   2496	.project-meta-row span,
   2497	.proof-points span,
   2498	.readiness-list span {
@@ -12974,14 +12975,14 @@ FILE: app/globals.css
   2505	  padding: 8px 11px;
   2506	  white-space: nowrap;
   2507	}
-  2508
+  2508	
   2509	.project-actions {
   2510	  --hero-action-gap: 12px;
   2511	  margin-top: 30px;
   2512	  max-width: 520px;
   2513	  width: min(100%, calc(100vw - 24px), 520px);
   2514	}
-  2515
+  2515	
   2516	.project-page .project-source-actions {
   2517	  display: grid;
   2518	  gap: var(--hero-action-gap);
@@ -12989,52 +12990,52 @@ FILE: app/globals.css
   2520	  min-width: 0;
   2521	  width: 100%;
   2522	}
-  2523
+  2523	
   2524	.project-page .project-source-actions > .button {
   2525	  min-width: 0;
   2526	  width: 100%;
   2527	}
-  2528
+  2528	
   2529	.project-page .project-source-actions-icon-only > .button {
   2530	  gap: 0;
   2531	}
-  2532
+  2532	
   2533	.project-page .project-github-button {
   2534	  background: #000;
   2535	  border: 1px solid #000;
   2536	  color: #f3fff7;
   2537	  overflow: hidden;
   2538	}
-  2539
+  2539	
   2540	.project-page .project-figma-button {
   2541	  background: linear-gradient(135deg, #a259ff, #6f3ff5);
   2542	  border: 1px solid #000;
   2543	  color: #fff;
   2544	  overflow: hidden;
   2545	}
-  2546
+  2546	
   2547	.project-page .project-play-store-button {
   2548	  background: #ea4335;
   2549	  border: 1px solid #000;
   2550	  color: #fff;
   2551	  overflow: hidden;
   2552	}
-  2553
+  2553	
   2554	.project-page .project-app-store-button {
   2555	  background: #0d96f6;
   2556	}
-  2557
+  2557	
   2558	.project-page .project-github-icon-mark {
   2559	  flex: 0 0 auto;
   2560	  height: 46px;
   2561	  margin-right: -5px;
   2562	  width: 46px;
   2563	}
-  2564
+  2564	
   2565	.project-page .project-source-actions-icon-only .project-github-icon-mark {
   2566	  margin-right: 0;
   2567	}
-  2568
+  2568	
   2569	.project-page .project-figma-icon-mark {
   2570	  display: block;
   2571	  flex: 0 0 auto;
@@ -13046,7 +13047,7 @@ FILE: app/globals.css
   2577	  height: 34px;
   2578	  width: auto;
   2579	}
-  2580
+  2580	
   2581	.project-page .project-play-store-icon-mark,
   2582	.project-page .project-app-store-icon-mark {
   2583	  display: block;
@@ -13054,7 +13055,7 @@ FILE: app/globals.css
   2585	  height: 28.83px;
   2586	  width: auto;
   2587	}
-  2588
+  2588	
   2589	.project-page .project-play-store-icon-mark {
   2590	  filter:
   2591	    drop-shadow(0 1.2px 0 #000)
@@ -13062,7 +13063,7 @@ FILE: app/globals.css
   2593	    drop-shadow(1.2px 0 0 #000)
   2594	    drop-shadow(-1.2px 0 0 #000);
   2595	}
-  2596
+  2596	
   2597	.project-page .project-app-store-icon-mark {
   2598	  filter:
   2599	    drop-shadow(0 1.2px 0 #000)
@@ -13071,7 +13072,7 @@ FILE: app/globals.css
   2602	    drop-shadow(-1.2px 0 0 #000);
   2603	  transform: none;
   2604	}
-  2605
+  2605	
   2606	.project-page .project-contact-icon-mark {
   2607	  align-items: center;
   2608	  color: #f3fff7;
@@ -13082,27 +13083,27 @@ FILE: app/globals.css
   2613	  position: relative;
   2614	  width: 46px;
   2615	}
-  2616
+  2616	
   2617	.project-page .project-contact-icon-mark svg {
   2618	  inset: 50% auto auto 50%;
   2619	  position: absolute;
   2620	  transform: translate(-50%, -50%);
   2621	}
-  2622
+  2622	
   2623	.project-page .project-contact-icon-mark .project-contact-icon-stroke {
   2624	  color: #000;
   2625	  stroke: currentColor;
   2626	  stroke-width: 4.4px;
   2627	  z-index: 0;
   2628	}
-  2629
+  2629	
   2630	.project-page .project-contact-icon-mark .project-contact-icon-fill {
   2631	  color: #f3fff7;
   2632	  stroke: currentColor;
   2633	  stroke-width: 2px;
   2634	  z-index: 1;
   2635	}
-  2636
+  2636	
   2637	.project-page .project-github-button .github-label-text,
   2638	.project-page .project-source-button-label {
   2639	  font-family: inherit;
@@ -13111,7 +13112,7 @@ FILE: app/globals.css
   2642	  line-height: 1;
   2643	  white-space: nowrap;
   2644	}
-  2645
+  2645	
   2646	.project-page .project-contact-button .project-contact-label-text {
   2647	  font-family: inherit;
   2648	  font-size: 21px;
@@ -13119,67 +13120,67 @@ FILE: app/globals.css
   2650	  line-height: 1;
   2651	  white-space: nowrap;
   2652	}
-  2653
+  2653	
   2654	.project-page .project-play-store-button .project-source-button-label,
   2655	.project-page .project-contact-button .project-contact-label-text {
   2656	  word-spacing: 0.19em;
   2657	}
-  2658
+  2658	
   2659	@media (max-width: 720px) {
   2660	  .project-page .project-source-actions {
   2661	    grid-template-columns: repeat(2, minmax(0, 1fr));
   2662	  }
-  2663
+  2663	
   2664	  .project-page .project-play-store-button {
   2665	    grid-column: 1 / -1;
   2666	  }
-  2667
+  2667	
   2668	  .project-page .project-source-actions-icon-only {
   2669	    grid-template-columns: repeat(3, minmax(0, 1fr));
   2670	  }
-  2671
+  2671	
   2672	  .project-page .project-source-actions-icon-only .project-play-store-button {
   2673	    grid-column: auto;
   2674	  }
   2675	}
-  2676
+  2676	
   2677	@media (max-width: 460px) {
   2678	  .project-page .project-source-actions > .button {
   2679	    gap: 6px;
   2680	    padding-inline: 7px;
   2681	  }
-  2682
+  2682	
   2683	  .project-page .project-source-actions .project-github-icon-mark {
   2684	    height: 32px;
   2685	    margin-right: -4px;
   2686	    width: 32px;
   2687	  }
-  2688
+  2688	
   2689	  .project-page .project-source-actions-icon-only .project-github-icon-mark {
   2690	    margin-right: 0;
   2691	  }
-  2692
+  2692	
   2693	  .project-page .project-source-actions .project-figma-icon-mark {
   2694	    height: 28px;
   2695	    width: auto;
   2696	  }
-  2697
+  2697	
   2698	  .project-page .project-source-actions .project-play-store-icon-mark,
   2699	  .project-page .project-source-actions .project-app-store-icon-mark {
   2700	    height: 23.96px;
   2701	    width: auto;
   2702	  }
-  2703
+  2703	
   2704	  .project-page .project-source-actions .project-source-button-label {
   2705	    font-size: clamp(15px, 4.2vw, 21px);
   2706	  }
   2707	}
-  2708
+  2708	
   2709	.av-showcase {
   2710	  min-height: 610px;
   2711	  position: relative;
   2712	}
-  2713
+  2713	
   2714	.av-showcase::before {
   2715	  background:
   2716	    linear-gradient(rgba(67, 255, 146, 0.045) 1px, transparent 1px),
@@ -13190,7 +13191,7 @@ FILE: app/globals.css
   2721	  opacity: 0.58;
   2722	  position: absolute;
   2723	}
-  2724
+  2724	
   2725	.av-device {
   2726	  background: linear-gradient(145deg, #0c120f, #000);
   2727	  border: 1px solid rgba(198, 255, 217, 0.24);
@@ -13199,7 +13200,7 @@ FILE: app/globals.css
   2730	  padding: 16px;
   2731	  position: absolute;
   2732	}
-  2733
+  2733	
   2734	.alla-vostra-case .av-device {
   2735	  background: transparent;
   2736	  border: 0;
@@ -13208,23 +13209,23 @@ FILE: app/globals.css
   2739	  padding: 0;
   2740	  position: absolute;
   2741	}
-  2742
+  2742	
   2743	.alla-vostra-case .av-device-tall {
   2744	  aspect-ratio: 1290 / 2661;
   2745	}
-  2746
+  2746	
   2747	.alla-vostra-case .av-device-standard {
   2748	  aspect-ratio: 1242 / 2567;
   2749	}
-  2750
+  2750	
   2751	.av-device-tall {
   2752	  --av-screen-ratio: 1440 / 3120;
   2753	}
-  2754
+  2754	
   2755	.av-device-standard {
   2756	  --av-screen-ratio: 720 / 1280;
   2757	}
-  2758
+  2758	
   2759	.av-device-speaker {
   2760	  background: #171f1a;
   2761	  border-radius: 99px;
@@ -13232,11 +13233,11 @@ FILE: app/globals.css
   2763	  margin: 0 auto 12px;
   2764	  width: 62px;
   2765	}
-  2766
+  2766	
   2767	.alla-vostra-case .av-device-speaker {
   2768	  display: none;
   2769	}
-  2770
+  2770	
   2771	.av-device-screen {
   2772	  aspect-ratio: var(--av-screen-ratio);
   2773	  background: #020403;
@@ -13245,32 +13246,32 @@ FILE: app/globals.css
   2776	  position: relative;
   2777	  width: 100%;
   2778	}
-  2779
+  2779	
   2780	.alla-vostra-case .av-device-screen {
   2781	  display: none;
   2782	}
-  2783
+  2783	
   2784	.alla-vostra-case .av-device-screen::after {
   2785	  display: none;
   2786	}
-  2787
+  2787	
   2788	.av-device-image {
   2789	  object-fit: contain;
   2790	  object-position: top center;
   2791	}
-  2792
+  2792	
   2793	.alla-vostra-case .av-device-image {
   2794	  filter:
   2795	    drop-shadow(0 28px 42px rgba(0, 0, 0, 0.48))
   2796	    drop-shadow(0 0 32px rgba(0, 191, 99, 0.08));
   2797	  object-position: center;
   2798	}
-  2799
+  2799	
   2800	.flow-image-frame img {
   2801	  object-fit: contain;
   2802	  object-position: top center;
   2803	}
-  2804
+  2804	
   2805	.av-device-main {
   2806	  height: auto;
   2807	  right: 176px;
@@ -13279,33 +13280,33 @@ FILE: app/globals.css
   2810	  width: 260px;
   2811	  z-index: 3;
   2812	}
-  2813
+  2813	
   2814	.av-device-browse,
   2815	.av-device-confirm {
   2816	  border-radius: 15px;
   2817	  height: auto;
   2818	  width: 184px;
   2819	}
-  2820
+  2820	
   2821	.av-device-browse {
   2822	  right: 22px;
   2823	  top: 126px;
   2824	  transform: rotate(7deg);
   2825	  z-index: 2;
   2826	}
-  2827
+  2827	
   2828	.av-device-confirm {
   2829	  left: 6px;
   2830	  top: 138px;
   2831	  transform: rotate(-10deg);
   2832	  z-index: 1;
   2833	}
-  2834
+  2834	
   2835	.cinerific-case .av-device {
   2836	  border-radius: var(--capture-frame-radius-standard);
   2837	  padding: 12px 18px;
   2838	}
-  2839
+  2839	
   2840	.cinerific-case .av-device-screen {
   2841	  aspect-ratio: 16 / 9;
   2842	  background:
@@ -13316,7 +13317,7 @@ FILE: app/globals.css
   2847	  border: 1px solid rgba(198, 255, 217, 0.16);
   2848	  border-radius: var(--capture-screen-radius-standard);
   2849	}
-  2850
+  2850	
   2851	.cinerific-tablet-camera {
   2852	  background: #1d2923;
   2853	  border: 1px solid rgba(198, 255, 217, 0.24);
@@ -13328,7 +13329,7 @@ FILE: app/globals.css
   2859	  transform: translateY(-50%);
   2860	  width: 5px;
   2861	}
-  2862
+  2862	
   2863	.av-showcase-proof {
   2864	  background: rgba(5, 16, 10, 0.82);
   2865	  border: 1px solid var(--line-strong);
@@ -13340,7 +13341,7 @@ FILE: app/globals.css
   2871	  right: 16px;
   2872	  z-index: 4;
   2873	}
-  2874
+  2874	
   2875	.av-showcase-proof-row {
   2876	  bottom: var(--av-proof-row-bottom, 20px);
   2877	  display: flex;
@@ -13351,7 +13352,7 @@ FILE: app/globals.css
   2882	  right: 16px;
   2883	  z-index: 4;
   2884	}
-  2885
+  2885	
   2886	.av-showcase-proof-row .av-showcase-proof {
   2887	  bottom: auto;
   2888	  flex: 0 0 auto;
@@ -13362,7 +13363,7 @@ FILE: app/globals.css
   2893	  width: max-content;
   2894	  z-index: auto;
   2895	}
-  2896
+  2896	
   2897	.av-showcase-proof strong {
   2898	  color: var(--green);
   2899	  display: block;
@@ -13370,7 +13371,7 @@ FILE: app/globals.css
   2901	  font-weight: 900;
   2902	  line-height: 1;
   2903	}
-  2904
+  2904	
   2905	.av-showcase-proof span {
   2906	  color: var(--muted);
   2907	  display: block;
@@ -13379,7 +13380,7 @@ FILE: app/globals.css
   2910	  line-height: 1.45;
   2911	  margin-top: 8px;
   2912	}
-  2913
+  2913	
   2914	.av-showcase-proof .av-showcase-skill-grid {
   2915	  align-items: center;
   2916	  column-gap: var(--av-proof-column-gap, 14px);
@@ -13390,7 +13391,7 @@ FILE: app/globals.css
   2921	  row-gap: var(--av-skill-grid-row-gap, var(--av-proof-row-gap, 7.15px));
   2922	  transform: translateY(var(--av-skill-grid-y-offset, 0px));
   2923	}
-  2924
+  2924	
   2925	.av-showcase-proof .av-showcase-skill-item {
   2926	  align-items: center;
   2927	  column-gap: var(--av-skill-item-gap, 5px);
@@ -13400,19 +13401,19 @@ FILE: app/globals.css
   2931	  text-align: left;
   2932	  white-space: nowrap;
   2933	}
-  2934
+  2934	
   2935	.av-showcase-proof .av-showcase-skill-label {
   2936	  display: block;
   2937	  margin-top: 0;
   2938	}
-  2939
+  2939	
   2940	.av-showcase-proof .av-showcase-skill-checkmark {
   2941	  display: block;
   2942	  height: 1.331em;
   2943	  margin-top: 0;
   2944	  width: 1.331em;
   2945	}
-  2946
+  2946	
   2947	.av-showcase-proof .av-showcase-platform-list {
   2948	  align-items: center;
   2949	  column-gap: var(--av-proof-column-gap, 14px);
@@ -13422,7 +13423,7 @@ FILE: app/globals.css
   2953	  margin-top: var(--av-proof-content-margin-top, 8px);
   2954	  row-gap: var(--av-platform-list-row-gap, var(--av-proof-row-gap, 3px));
   2955	}
-  2956
+  2956	
   2957	.av-showcase-proof .av-showcase-platform-label {
   2958	  color: var(--muted);
   2959	  display: block;
@@ -13433,11 +13434,11 @@ FILE: app/globals.css
   2964	  text-align: center;
   2965	  white-space: nowrap;
   2966	}
-  2967
+  2967	
   2968	.av-showcase-proof .av-showcase-platform-list > span {
   2969	  margin-top: 0;
   2970	}
-  2971
+  2971	
   2972	.av-showcase-proof .av-showcase-platform-symbol-cell {
   2973	  align-items: center;
   2974	  display: flex;
@@ -13447,7 +13448,7 @@ FILE: app/globals.css
   2978	  margin-top: 0;
   2979	  min-width: 1.98em;
   2980	}
-  2981
+  2981	
   2982	.av-showcase-proof .av-showcase-platform-android-mark {
   2983	  align-self: center;
   2984	  display: block;
@@ -13457,7 +13458,7 @@ FILE: app/globals.css
   2988	  margin-top: 0;
   2989	  width: auto;
   2990	}
-  2991
+  2991	
   2992	.av-showcase-proof .av-showcase-platform-apple-mark {
   2993	  background: #f3fff7;
   2994	  border: 0;
@@ -13472,7 +13473,7 @@ FILE: app/globals.css
   3003	  padding: 0;
   3004	  width: 1.8em;
   3005	}
-  3006
+  3006	
   3007	.av-showcase-proof .av-showcase-platform-web-mark {
   3008	  color: #aebeb5;
   3009	  display: block;
@@ -13484,58 +13485,58 @@ FILE: app/globals.css
   3015	  transform: none;
   3016	  width: 1.98em;
   3017	}
-  3018
+  3018	
   3019	.av-showcase-proof .av-showcase-platform-web-stroke-outline {
   3020	  fill: none;
   3021	  stroke: #000;
   3022	  stroke-linecap: round;
   3023	  stroke-linejoin: round;
   3024	}
-  3025
+  3025	
   3026	.av-showcase-proof .av-showcase-platform-web-shell-outline {
   3027	  stroke-width: 4px;
   3028	}
-  3029
+  3029	
   3030	.av-showcase-proof .av-showcase-platform-web-line-outline {
   3031	  stroke-width: 3px;
   3032	}
-  3033
+  3033	
   3034	.av-showcase-proof .av-showcase-platform-web-shell {
   3035	  fill: transparent !important;
   3036	  fill-opacity: 0;
   3037	  stroke: #aebeb5 !important;
   3038	  stroke-width: 1.65px;
   3039	}
-  3040
+  3040	
   3041	.av-showcase-proof .av-showcase-platform-web-line {
   3042	  fill: none;
   3043	  stroke: #aebeb5 !important;
   3044	  stroke-width: 1.15px;
   3045	}
-  3046
+  3046	
   3047	.project-section-grid,
   3048	.readiness-layout {
   3049	  display: grid;
   3050	  gap: 44px;
   3051	  grid-template-columns: minmax(0, 0.82fr) minmax(360px, 1.18fr);
   3052	}
-  3053
+  3053	
   3054	.project-copy-panel {
   3055	  border-left: 1px solid var(--line-strong);
   3056	  padding-left: 28px;
   3057	}
-  3058
+  3058	
   3059	.project-copy-panel p:last-child,
   3060	.closing-panel p:last-child {
   3061	  margin-bottom: 0;
   3062	}
-  3063
+  3063	
   3064	.overview-heading-stack {
   3065	  align-content: start;
   3066	  display: grid;
   3067	  gap: 28px;
   3068	}
-  3069
+  3069	
   3070	.overview-section-grid {
   3071	  --overview-play-store-width: 480px;
   3072	  align-items: start;
@@ -13545,17 +13546,17 @@ FILE: app/globals.css
   3076	    "heading ."
   3077	    "screens copy";
   3078	}
-  3079
+  3079	
   3080	.overview-heading-slot {
   3081	  grid-area: heading;
   3082	}
-  3083
+  3083	
   3084	.overview-copy-panel {
   3085	  align-self: start;
   3086	  grid-area: copy;
   3087	  min-width: 0;
   3088	}
-  3089
+  3089	
   3090	.overview-play-store-strip {
   3091	  align-items: start;
   3092	  display: block;
@@ -13564,7 +13565,7 @@ FILE: app/globals.css
   3095	  overflow: visible;
   3096	  width: var(--overview-play-store-width);
   3097	}
-  3098
+  3098	
   3099	.overview-play-store-supporting-row {
   3100	  --overview-play-store-gap: 8px;
   3101	  align-items: start;
@@ -13575,7 +13576,7 @@ FILE: app/globals.css
   3106	  overflow: visible;
   3107	  width: 100%;
   3108	}
-  3109
+  3109	
   3110	.overview-play-store-shot {
   3111	  border: 1px solid rgba(67, 255, 146, 0.24);
   3112	  border-radius: 4px;
@@ -13586,48 +13587,48 @@ FILE: app/globals.css
   3117	  overflow: hidden;
   3118	  position: relative;
   3119	}
-  3120
+  3120	
   3121	.overview-play-store-shot-feature {
   3122	  aspect-ratio: 1024 / 500;
   3123	  width: var(--overview-play-store-width);
   3124	}
-  3125
+  3125	
   3126	.overview-play-store-shot-supporting {
   3127	  width: calc(
   3128	    (100% - (2 * var(--overview-play-store-gap))) / 3
   3129	  );
   3130	}
-  3131
+  3131	
   3132	.overview-play-store-shot-wide {
   3133	  aspect-ratio: 16 / 9;
   3134	}
-  3135
+  3135	
   3136	.overview-play-store-shot img {
   3137	  object-fit: cover;
   3138	}
-  3139
+  3139	
   3140	.overview-play-store-shot figcaption {
   3141	  display: none;
   3142	}
-  3143
+  3143	
   3144	.project-card-grid {
   3145	  display: grid;
   3146	  gap: 16px;
   3147	  margin-top: 34px;
   3148	}
-  3149
+  3149	
   3150	.ownership-grid {
   3151	  grid-template-columns: repeat(5, minmax(0, 1fr));
   3152	}
-  3153
+  3153	
   3154	.feature-grid {
   3155	  grid-template-columns: repeat(3, minmax(0, 1fr));
   3156	}
-  3157
+  3157	
   3158	.decision-grid {
   3159	  grid-template-columns: repeat(3, minmax(0, 1fr));
   3160	}
-  3161
+  3161	
   3162	.project-card,
   3163	.flow-checkout-note,
   3164	.architecture-node,
@@ -13637,12 +13638,12 @@ FILE: app/globals.css
   3168	  border: 1px solid var(--line);
   3169	  border-radius: 8px;
   3170	}
-  3171
+  3171	
   3172	.project-card {
   3173	  min-height: 184px;
   3174	  padding: 22px;
   3175	}
-  3176
+  3176	
   3177	.project-card span,
   3178	.flow-checkout-note span,
   3179	.stack-group h3 {
@@ -13654,7 +13655,7 @@ FILE: app/globals.css
   3185	  margin-bottom: 20px;
   3186	  text-transform: uppercase;
   3187	}
-  3188
+  3188	
   3189	.project-card p,
   3190	.flow-checkout-note p,
   3191	.architecture-node p,
@@ -13663,7 +13664,7 @@ FILE: app/globals.css
   3194	  line-height: 1.6;
   3195	  margin-bottom: 0;
   3196	}
-  3197
+  3197	
   3198	.flow-segments {
   3199	  border: 1px solid var(--line);
   3200	  border-radius: 8px;
@@ -13673,7 +13674,7 @@ FILE: app/globals.css
   3204	  margin-top: 34px;
   3205	  overflow: hidden;
   3206	}
-  3207
+  3207	
   3208	.flow-segments span {
   3209	  background: rgba(255, 255, 255, 0.03);
   3210	  color: var(--mint);
@@ -13682,18 +13683,18 @@ FILE: app/globals.css
   3213	  padding: 14px 10px;
   3214	  text-align: center;
   3215	}
-  3216
+  3216	
   3217	.product-flow-nav {
   3218	  --product-flow-nav-font-size: 56px;
   3219	  --product-flow-nav-height: 80px;
-  3220
+  3220	
   3221	  align-items: stretch;
   3222	  display: grid;
   3223	  gap: 0;
   3224	  grid-template-columns: repeat(2, minmax(0, 1fr));
   3225	  width: 100%;
   3226	}
-  3227
+  3227	
   3228	.product-flow-nav-wrap {
   3229	  margin-bottom: 30px;
   3230	  min-height: var(--product-flow-nav-measured-height);
@@ -13701,7 +13702,7 @@ FILE: app/globals.css
   3232	  width: 100%;
   3233	  z-index: 50;
   3234	}
-  3235
+  3235	
   3236	.product-flow-nav-wrap.product-flow-nav-pinned .product-flow-nav {
   3237	  left: var(--product-flow-nav-fixed-left);
   3238	  position: fixed;
@@ -13709,7 +13710,7 @@ FILE: app/globals.css
   3240	  width: var(--product-flow-nav-fixed-width);
   3241	  z-index: 50;
   3242	}
-  3243
+  3243	
   3244	.product-flow-nav .button {
   3245	  appearance: none;
   3246	  border: 1px solid transparent;
@@ -13729,7 +13730,7 @@ FILE: app/globals.css
   3260	  white-space: nowrap;
   3261	  width: 100%;
   3262	}
-  3263
+  3263	
   3264	.product-flow-nav .button-secondary {
   3265	  --product-flow-inactive-fill: rgba(255, 255, 255, 0.95);
   3266	  --product-flow-nav-text-rgb: 0, 27, 13;
@@ -13740,7 +13741,7 @@ FILE: app/globals.css
   3271	  background: var(--product-flow-inactive-fill);
   3272	  border-color: var(--line-strong);
   3273	}
-  3274
+  3274	
   3275	.product-flow-nav .button[aria-pressed="true"] {
   3276	  --product-flow-active-fill-end: rgba(0, 191, 99, 0.95);
   3277	  --product-flow-active-fill-start: rgba(67, 255, 146, 0.95);
@@ -13759,7 +13760,7 @@ FILE: app/globals.css
   3290	    2px 0 var(--product-flow-nav-text-stroke),
   3291	    0 -2px var(--product-flow-nav-text-stroke);
   3292	}
-  3293
+  3293	
   3294	.product-flow-nav .button-primary,
   3295	.product-flow-nav .button-secondary {
   3296	  --product-flow-nav-text: rgba(
@@ -13779,15 +13780,15 @@ FILE: app/globals.css
   3310	  paint-order: stroke fill;
   3311	  text-shadow: var(--product-flow-nav-text-shadow);
   3312	}
-  3313
+  3313	
   3314	.product-flow-nav .button:first-child {
   3315	  border-radius: 8px 0 0 8px;
   3316	}
-  3317
+  3317	
   3318	.product-flow-nav .button:last-child {
   3319	  border-radius: 0 8px 8px 0;
   3320	}
-  3321
+  3321	
   3322	.flow-layout {
   3323	  --flow-phone-width: 444px;
   3324	  --flow-chart-static-width: calc(var(--flow-phone-width) * 0.929881337648);
@@ -13798,55 +13799,55 @@ FILE: app/globals.css
   3329	  grid-template-columns: minmax(260px, 0.82fr) minmax(0, 1.18fr);
   3330	  margin-top: 34px;
   3331	}
-  3332
+  3332	
   3333	#product-flow .section-heading p {
   3334	  font-size: 13px;
   3335	  line-height: 1;
   3336	}
-  3337
+  3337	
   3338	#product-flow .section-heading h2 {
   3339	  font-size: 56px;
   3340	}
-  3341
+  3341	
   3342	.flow-layout-single {
   3343	  grid-template-columns: 1fr;
   3344	  justify-items: center;
   3345	}
-  3346
+  3346	
   3347	.flow-layout-single .flow-chart-mockup,
   3348	.flow-layout-single .flow-screen-main {
   3349	  justify-self: center;
   3350	}
-  3351
+  3351	
   3352	.flow-layout-single .flow-chart-mockup {
   3353	  width: min(100%, max(var(--flow-chart-static-width), 50%));
   3354	}
-  3355
+  3355	
   3356	.flow-primary-visual,
   3357	.flow-primary-visual img {
   3358	  cursor: default;
   3359	  pointer-events: none;
   3360	  user-select: none;
   3361	}
-  3362
+  3362	
   3363	.flow-chart-mockup {
   3364	  align-self: start;
   3365	  margin: 0;
   3366	  max-width: 100%;
   3367	  width: min(100%, var(--flow-chart-width));
   3368	}
-  3369
+  3369	
   3370	.flow-chart-mockup img {
   3371	  border-radius: 8px;
   3372	  display: block;
   3373	  height: auto;
   3374	  width: 100%;
   3375	}
-  3376
+  3376	
   3377	.flow-chart-table-mockup {
   3378	  --flow-table-height: calc(var(--flow-chart-static-width) * 1.9129930394);
   3379	}
-  3380
+  3380	
   3381	.flow-table-frame {
   3382	  background: #020604;
   3383	  border: 1px solid rgba(198, 255, 217, 0.08);
@@ -13857,7 +13858,7 @@ FILE: app/globals.css
   3388	  position: relative;
   3389	  width: 100%;
   3390	}
-  3391
+  3391	
   3392	.flow-diagram-background-plane {
   3393	  background:
   3394	    linear-gradient(rgba(67, 255, 146, 0.075) 1px, transparent 1px),
@@ -13872,7 +13873,7 @@ FILE: app/globals.css
   3403	  position: absolute;
   3404	  z-index: 0;
   3405	}
-  3406
+  3406	
   3407	.flow-diagram-panel-plane {
   3408	  background: linear-gradient(135deg, rgba(67, 255, 146, 0.02), rgba(18, 56, 34, 0.09) 52%, rgba(5, 18, 11, 0.14));
   3409	  border: 1px solid rgba(198, 255, 217, 0.04);
@@ -13883,21 +13884,21 @@ FILE: app/globals.css
   3414	  top: var(--flow-box-top);
   3415	  width: var(--flow-box-width);
   3416	}
-  3417
+  3417	
   3418	.flow-diagram-coordinate-plane {
   3419	  inset: 0;
   3420	  pointer-events: none;
   3421	  position: absolute;
   3422	  z-index: 1;
   3423	}
-  3424
+  3424	
   3425	.flow-diagram-connector-layer {
   3426	  inset: 0;
   3427	  pointer-events: none;
   3428	  position: absolute;
   3429	  z-index: 1;
   3430	}
-  3431
+  3431	
   3432	.flow-diagram-connector-segment {
   3433	  background: #a8f8c3;
   3434	  border-radius: 999px;
@@ -13905,7 +13906,7 @@ FILE: app/globals.css
   3436	  opacity: 0.72;
   3437	  position: absolute;
   3438	}
-  3439
+  3439	
   3440	.flow-diagram-connector-segment-horizontal {
   3441	  height: 3px;
   3442	  left: var(--flow-connector-left);
@@ -13913,7 +13914,7 @@ FILE: app/globals.css
   3444	  transform: translateY(-50%);
   3445	  width: var(--flow-connector-length);
   3446	}
-  3447
+  3447	
   3448	.flow-diagram-connector-segment-vertical {
   3449	  height: var(--flow-connector-length);
   3450	  left: var(--flow-connector-left);
@@ -13921,21 +13922,21 @@ FILE: app/globals.css
   3452	  transform: translateX(-50%);
   3453	  width: 3px;
   3454	}
-  3455
+  3455	
   3456	.flow-diagram-connector-segment-hairline {
   3457	  background: #43ff92;
   3458	  box-shadow: none;
   3459	  opacity: 0.18;
   3460	}
-  3461
+  3461	
   3462	.flow-diagram-connector-segment-horizontal.flow-diagram-connector-segment-hairline {
   3463	  height: 1px;
   3464	}
-  3465
+  3465	
   3466	.flow-diagram-connector-segment-vertical.flow-diagram-connector-segment-hairline {
   3467	  width: 1px;
   3468	}
-  3469
+  3469	
   3470	.flow-diagram-arrowhead {
   3471	  filter: drop-shadow(0 0 8px rgba(67, 255, 146, 0.2));
   3472	  height: 0;
@@ -13945,35 +13946,35 @@ FILE: app/globals.css
   3476	  top: var(--flow-arrow-top);
   3477	  width: 0;
   3478	}
-  3479
+  3479	
   3480	.flow-diagram-arrowhead-right {
   3481	  border-bottom: 8px solid transparent;
   3482	  border-left: 16px solid #a8f8c3;
   3483	  border-top: 8px solid transparent;
   3484	  transform: translate(-12%, -50%);
   3485	}
-  3486
+  3486	
   3487	.flow-diagram-arrowhead-left {
   3488	  border-bottom: 8px solid transparent;
   3489	  border-right: 16px solid #a8f8c3;
   3490	  border-top: 8px solid transparent;
   3491	  transform: translate(-88%, -50%);
   3492	}
-  3493
+  3493	
   3494	.flow-diagram-arrowhead-down {
   3495	  border-left: 8px solid transparent;
   3496	  border-right: 8px solid transparent;
   3497	  border-top: 16px solid #a8f8c3;
   3498	  transform: translate(-50%, -12%);
   3499	}
-  3500
+  3500	
   3501	.flow-diagram-arrowhead-up {
   3502	  border-bottom: 16px solid #a8f8c3;
   3503	  border-left: 8px solid transparent;
   3504	  border-right: 8px solid transparent;
   3505	  transform: translate(-50%, -88%);
   3506	}
-  3507
+  3507	
   3508	.flow-diagram-rail {
   3509	  align-items: center;
   3510	  background: linear-gradient(180deg, #43ff92, #05af59);
@@ -13989,7 +13990,7 @@ FILE: app/globals.css
   3520	  width: var(--flow-box-width);
   3521	  z-index: 2;
   3522	}
-  3523
+  3523	
   3524	.flow-diagram-rail span {
   3525	  color: #031008;
   3526	  display: block;
@@ -14001,12 +14002,12 @@ FILE: app/globals.css
   3532	  transform: rotate(180deg);
   3533	  writing-mode: vertical-rl;
   3534	}
-  3535
+  3535	
   3536	.flow-diagram-rail-confirmation span {
   3537	  font-size: 10.5px;
   3538	  letter-spacing: 0.02em;
   3539	}
-  3540
+  3540	
   3541	.flow-diagram-node {
   3542	  align-items: center;
   3543	  background: linear-gradient(180deg, rgba(13, 31, 22, 0.96), rgba(4, 12, 8, 0.96));
@@ -14030,15 +14031,15 @@ FILE: app/globals.css
   3561	  width: var(--flow-box-width);
   3562	  z-index: 2;
   3563	}
-  3564
+  3564	
   3565	.flow-diagram-node-line {
   3566	  display: block;
   3567	}
-  3568
+  3568	
   3569	.flow-screen {
   3570	  margin: 0;
   3571	}
-  3572
+  3572	
   3573	.flow-image-frame {
   3574	  aspect-ratio: 9 / 16;
   3575	  background: #020403;
@@ -14048,30 +14049,30 @@ FILE: app/globals.css
   3579	  overflow: hidden;
   3580	  position: relative;
   3581	}
-  3582
+  3582	
   3583	.flow-screen-tall .flow-image-frame {
   3584	  aspect-ratio: 1440 / 3120;
   3585	  border-radius: var(--capture-frame-radius-tall);
   3586	}
-  3587
+  3587	
   3588	.flow-screen-standard .flow-image-frame {
   3589	  aspect-ratio: 720 / 1280;
   3590	  border-radius: var(--capture-frame-radius-standard);
   3591	}
-  3592
+  3592	
   3593	.flow-screen-main .flow-image-frame {
   3594	  margin: 0 auto;
   3595	  max-width: var(--flow-phone-width);
   3596	}
-  3597
+  3597	
   3598	.flow-screen-compact {
   3599	  width: min(100%, 152px);
   3600	}
-  3601
+  3601	
   3602	.flow-screen-compact .flow-image-frame {
   3603	  width: 100%;
   3604	}
-  3605
+  3605	
   3606	.flow-placeholder-frame {
   3607	  align-items: center;
   3608	  background:
@@ -14082,7 +14083,7 @@ FILE: app/globals.css
   3613	  display: flex;
   3614	  justify-content: center;
   3615	}
-  3616
+  3616	
   3617	.flow-placeholder-frame span {
   3618	  color: #8fa89b;
   3619	  font-size: 11px;
@@ -14092,7 +14093,7 @@ FILE: app/globals.css
   3623	  text-align: center;
   3624	  text-transform: uppercase;
   3625	}
-  3626
+  3626	
   3627	.flow-screen-swatch.flow-screen-standard .flow-image-frame,
   3628	.flow-screen-swatch.flow-screen-tall .flow-image-frame,
   3629	.flow-screen-swatch .flow-image-frame {
@@ -14103,23 +14104,23 @@ FILE: app/globals.css
   3634	  min-height: 0;
   3635	  width: 100%;
   3636	}
-  3637
+  3637	
   3638	.flow-swatch-frame {
   3639	  background: var(--flow-swatch-color);
   3640	  border-color: rgba(17, 17, 17, 0.22);
   3641	}
-  3642
+  3642	
   3643	.flow-swatch-frame span {
   3644	  color: var(--flow-swatch-text);
   3645	  font-size: 13px;
   3646	  letter-spacing: 0.02em;
   3647	}
-  3648
+  3648	
   3649	.flow-font-frame {
   3650	  background: #f7b967;
   3651	  border-color: rgba(17, 17, 17, 0.22);
   3652	}
-  3653
+  3653	
   3654	.flow-font-frame span {
   3655	  color: #fffcf2;
   3656	  font-size: 24.2px;
@@ -14127,13 +14128,13 @@ FILE: app/globals.css
   3658	  padding: 0 12px;
   3659	  text-transform: none;
   3660	}
-  3661
+  3661	
   3662	.flow-font-frame .flow-font-sample-dream-avenue {
   3663	  font-family: "Alla Vostra Dream Avenue", Georgia, "Times New Roman", serif;
   3664	  font-size: 31.46px;
   3665	  font-weight: 400;
   3666	}
-  3667
+  3667	
   3668	.flow-font-frame .flow-font-sample-tt-fors {
   3669	  font-family: "Alla Vostra TT Fors", Inter, ui-sans-serif, system-ui, sans-serif;
   3670	  font-size: 29.28px;
@@ -14141,7 +14142,7 @@ FILE: app/globals.css
   3672	  line-height: 0.95;
   3673	  max-width: min-content;
   3674	}
-  3675
+  3675	
   3676	.flow-original-art-grid {
   3677	  display: grid;
   3678	  gap: 14px;
@@ -14149,27 +14150,27 @@ FILE: app/globals.css
   3680	  justify-content: center;
   3681	  width: 100%;
   3682	}
-  3683
+  3683	
   3684	.flow-original-art-grid .flow-original-art-screen:nth-child(3) {
   3685	  grid-column: 1 / -1;
   3686	  justify-self: center;
   3687	}
-  3688
+  3688	
   3689	.flow-original-art-grid .flow-original-art-screen:only-child {
   3690	  grid-column: 1 / -1;
   3691	  justify-self: center;
   3692	}
-  3693
+  3693	
   3694	.flow-original-art-frame {
   3695	  background: #fffcf2;
   3696	  border-color: rgba(17, 17, 17, 0.22);
   3697	}
-  3698
+  3698	
   3699	.flow-original-art-frame img {
   3700	  object-fit: contain;
   3701	  padding: 18%;
   3702	}
-  3703
+  3703	
   3704	.flow-original-photo-grid {
   3705	  display: grid;
   3706	  gap: 14px;
@@ -14177,32 +14178,32 @@ FILE: app/globals.css
   3708	  justify-content: center;
   3709	  width: 100%;
   3710	}
-  3711
+  3711	
   3712	.flow-original-photo-grid .flow-original-photo-screen:nth-child(3):last-child {
   3713	  grid-column: 1 / -1;
   3714	  justify-self: center;
   3715	}
-  3716
+  3716	
   3717	.flow-original-photo-grid .flow-original-photo-screen:only-child {
   3718	  grid-column: 1 / -1;
   3719	  justify-self: center;
   3720	}
-  3721
+  3721	
   3722	.flow-original-photo-frame {
   3723	  background: none;
   3724	  border-color: rgba(17, 17, 17, 0.22);
   3725	}
-  3726
+  3726	
   3727	.flow-original-photo-frame img {
   3728	  object-fit: contain;
   3729	  padding: 0;
   3730	}
-  3731
+  3731	
   3732	.flow-original-photo-caption-spacer {
   3733	  min-height: 1.45em;
   3734	  visibility: hidden;
   3735	}
-  3736
+  3736	
   3737	.flow-hero-composition-grid {
   3738	  display: grid;
   3739	  gap: 14px;
@@ -14210,18 +14211,18 @@ FILE: app/globals.css
   3741	  justify-content: center;
   3742	  width: 100%;
   3743	}
-  3744
+  3744	
   3745	.flow-hero-composition-screen {
   3746	  --flow-hero-cheeseboard-top: 58.9143%;
   3747	  width: 100%;
   3748	}
-  3749
+  3749	
   3750	.flow-hero-composition-frame {
   3751	  aspect-ratio: 1 / 1;
   3752	  background: transparent;
   3753	  border-color: rgba(17, 17, 17, 0.22);
   3754	}
-  3755
+  3755	
   3756	.flow-hero-composition-background {
   3757	  height: auto !important;
   3758	  inset: 0 auto auto 0 !important;
@@ -14229,7 +14230,7 @@ FILE: app/globals.css
   3760	  object-position: top center;
   3761	  width: 100% !important;
   3762	}
-  3763
+  3763	
   3764	.flow-hero-composition-cheeseboard {
   3765	  height: auto;
   3766	  left: 33.6305%;
@@ -14240,7 +14241,7 @@ FILE: app/globals.css
   3771	  width: 32.8201%;
   3772	  z-index: 1;
   3773	}
-  3774
+  3774	
   3775	.flow-sticky-icon-grid {
   3776	  display: grid;
   3777	  gap: 14px;
@@ -14248,12 +14249,12 @@ FILE: app/globals.css
   3779	  justify-content: center;
   3780	  width: 100%;
   3781	}
-  3782
+  3782	
   3783	.flow-sticky-icon-grid .flow-sticky-icon-screen:nth-child(3) {
   3784	  grid-column: 1 / -1;
   3785	  justify-self: center;
   3786	}
-  3787
+  3787	
   3788	.flow-sticky-icon-frame {
   3789	  align-items: center;
   3790	  background: transparent;
@@ -14261,7 +14262,7 @@ FILE: app/globals.css
   3792	  display: flex;
   3793	  justify-content: center;
   3794	}
-  3795
+  3795	
   3796	.flow-sticky-button-shadow {
   3797	  background: rgba(17, 17, 17, 0.09);
   3798	  border-radius: 12px;
@@ -14270,7 +14271,7 @@ FILE: app/globals.css
   3801	  transform: translate(2px, 3px);
   3802	  width: 56px;
   3803	}
-  3804
+  3804	
   3805	.flow-sticky-button {
   3806	  align-items: center;
   3807	  border: 2px solid #111111;
@@ -14283,26 +14284,26 @@ FILE: app/globals.css
   3814	  width: 56px;
   3815	  z-index: 1;
   3816	}
-  3817
+  3817	
   3818	.flow-sticky-button svg {
   3819	  display: block;
   3820	}
-  3821
+  3821	
   3822	.flow-sticky-button-cart {
   3823	  background: linear-gradient(180deg, #ffc878 0%, #f7b967 52%, #d9953f 100%);
   3824	  border-radius: 12px;
   3825	}
-  3826
+  3826	
   3827	.flow-sticky-button-cart svg {
   3828	  height: 31.9px;
   3829	  width: 31.9px;
   3830	}
-  3831
+  3831	
   3832	.flow-sticky-button-close {
   3833	  background: linear-gradient(180deg, #ffc878 0%, #f7b967 52%, #d9953f 100%);
   3834	  border-radius: 12px;
   3835	}
-  3836
+  3836	
   3837	.flow-sticky-button-close-icon {
   3838	  display: block;
   3839	  height: 24px;
@@ -14310,7 +14311,7 @@ FILE: app/globals.css
   3841	  width: 24px;
   3842	  z-index: 1;
   3843	}
-  3844
+  3844	
   3845	.flow-sticky-button-close-stroke {
   3846	  background: #ffffff;
   3847	  border-radius: 2px;
@@ -14320,25 +14321,25 @@ FILE: app/globals.css
   3851	  top: 10px;
   3852	  width: 24px;
   3853	}
-  3854
+  3854	
   3855	.flow-sticky-button-close-stroke-forward {
   3856	  transform: rotate(45deg);
   3857	}
-  3858
+  3858	
   3859	.flow-sticky-button-close-stroke-back {
   3860	  transform: rotate(-45deg);
   3861	}
-  3862
+  3862	
   3863	.flow-sticky-button-tutorial {
   3864	  background: #ffffff;
   3865	  border-radius: 999px;
   3866	}
-  3867
+  3867	
   3868	.flow-sticky-button-tutorial svg {
   3869	  height: 40px;
   3870	  width: 40px;
   3871	}
-  3872
+  3872	
   3873	.flow-action-asset-grid {
   3874	  display: grid;
   3875	  gap: 14px;
@@ -14346,13 +14347,13 @@ FILE: app/globals.css
   3877	  justify-content: center;
   3878	  width: 100%;
   3879	}
-  3880
+  3880	
   3881	.flow-action-asset-grid .flow-action-asset-screen:only-child,
   3882	.flow-action-asset-grid .flow-action-asset-screen:nth-child(3):last-child {
   3883	  grid-column: 1 / -1;
   3884	  justify-self: center;
   3885	}
-  3886
+  3886	
   3887	.flow-action-asset-frame {
   3888	  align-items: center;
   3889	  background: transparent;
@@ -14360,11 +14361,11 @@ FILE: app/globals.css
   3891	  display: flex;
   3892	  justify-content: center;
   3893	}
-  3894
+  3894	
   3895	.flow-action-asset-frame img {
   3896	  object-position: center;
   3897	}
-  3898
+  3898	
   3899	.flow-screen-swatch .flow-screen-label {
   3900	  align-items: center;
   3901	  display: flex;
@@ -14376,7 +14377,7 @@ FILE: app/globals.css
   3907	  overflow-wrap: normal;
   3908	  text-wrap: balance;
   3909	}
-  3910
+  3910	
   3911	.flow-screen figcaption {
   3912	  color: var(--muted);
   3913	  font-size: 13px;
@@ -14385,7 +14386,7 @@ FILE: app/globals.css
   3916	  margin: 14px auto 0;
   3917	  max-width: var(--flow-phone-width, 330px);
   3918	}
-  3919
+  3919	
   3920	.flow-screen-label {
   3921	  color: var(--green);
   3922	  display: block;
@@ -14396,18 +14397,18 @@ FILE: app/globals.css
   3927	  text-align: center;
   3928	  text-transform: uppercase;
   3929	}
-  3930
+  3930	
   3931	.flow-support {
   3932	  display: grid;
   3933	  gap: 18px;
   3934	  grid-template-columns: repeat(3, minmax(0, 1fr));
   3935	}
-  3936
+  3936	
   3937	.flow-section-intro {
   3938	  display: grid;
   3939	  gap: 18px;
   3940	}
-  3941
+  3941	
   3942	.flow-section-intro > p {
   3943	  border-left: 1px solid var(--line-strong);
   3944	  color: #b8c9bf;
@@ -14416,19 +14417,19 @@ FILE: app/globals.css
   3947	  max-width: 560px;
   3948	  padding-left: 22px;
   3949	}
-  3950
+  3950	
   3951	.flow-checkout-note {
   3952	  align-content: center;
   3953	  min-height: 260px;
   3954	  padding: 22px;
   3955	}
-  3956
+  3956	
   3957	.flow-capture-groups {
   3958	  display: grid;
   3959	  gap: 48px;
   3960	  margin-top: 54px;
   3961	}
-  3962
+  3962	
   3963	.flow-capture-group {
   3964	  border-top: 1px solid var(--line);
   3965	  display: grid;
@@ -14436,11 +14437,11 @@ FILE: app/globals.css
   3967	  grid-template-columns: minmax(220px, 0.34fr) minmax(0, 1fr);
   3968	  padding-top: 30px;
   3969	}
-  3970
+  3970	
   3971	.flow-group-header {
   3972	  max-width: 360px;
   3973	}
-  3974
+  3974	
   3975	.flow-group-header span {
   3976	  color: var(--green);
   3977	  display: block;
@@ -14451,30 +14452,30 @@ FILE: app/globals.css
   3982	  margin-bottom: 14px;
   3983	  text-transform: uppercase;
   3984	}
-  3985
+  3985	
   3986	.flow-group-header h3 {
   3987	  font-size: 34px;
   3988	  line-height: 1;
   3989	  margin-bottom: 14px;
   3990	}
-  3991
+  3991	
   3992	.flow-group-header p {
   3993	  color: #b8c9bf;
   3994	  line-height: 1.6;
   3995	  margin-bottom: 0;
   3996	}
-  3997
+  3997	
   3998	.flow-capture-grid {
   3999	  align-items: start;
   4000	  display: grid;
   4001	  gap: 34px;
   4002	  grid-template-columns: repeat(auto-fit, minmax(285px, 1fr));
   4003	}
-  4004
+  4004	
   4005	.flow-screen-stack {
   4006	  min-width: 0;
   4007	}
-  4008
+  4008	
   4009	.flow-screen-stack h4 {
   4010	  color: var(--text);
   4011	  font-size: 15px;
@@ -14484,14 +14485,14 @@ FILE: app/globals.css
   4015	  margin: 0 0 14px;
   4016	  text-align: center;
   4017	}
-  4018
+  4018	
   4019	.flow-screen-stack-captures {
   4020	  align-items: start;
   4021	  display: flex;
   4022	  gap: 14px;
   4023	  justify-content: center;
   4024	}
-  4025
+  4025	
   4026	.cinerific-case .flow-image-frame,
   4027	.cinerific-case .flow-screen-standard .flow-image-frame,
   4028	.cinerific-case .flow-screen-tall .flow-image-frame {
@@ -14499,7 +14500,7 @@ FILE: app/globals.css
   4030	  background: linear-gradient(145deg, #0c120f, #000);
   4031	  border-radius: var(--capture-frame-radius-standard);
   4032	}
-  4033
+  4033	
   4034	.cinerific-case .flow-image-frame::before {
   4035	  background:
   4036	    linear-gradient(rgba(67, 255, 146, 0.04) 1px, transparent 1px),
@@ -14512,7 +14513,7 @@ FILE: app/globals.css
   4043	  inset: 10px 14px;
   4044	  position: absolute;
   4045	}
-  4046
+  4046	
   4047	.cinerific-case .flow-image-frame::after {
   4048	  background: #1d2923;
   4049	  border: 1px solid rgba(198, 255, 217, 0.24);
@@ -14525,27 +14526,27 @@ FILE: app/globals.css
   4056	  transform: translateY(-50%);
   4057	  width: 4px;
   4058	}
-  4059
+  4059	
   4060	.flow-browse-toggle-row {
   4061	  display: flex;
   4062	  justify-content: center;
   4063	  margin-top: 26px;
   4064	}
-  4065
+  4065	
   4066	.flow-browse-toggle {
   4067	  cursor: pointer;
   4068	  font-family: inherit;
   4069	}
-  4070
+  4070	
   4071	.alla-vostra-case .flow-browse-toggle {
   4072	  inline-size: calc((152px * 2) + 14px);
   4073	  max-inline-size: 100%;
   4074	}
-  4075
+  4075	
   4076	.flow-browse-toggle svg {
   4077	  flex: 0 0 auto;
   4078	}
-  4079
+  4079	
   4080	.flow-browse-extra {
   4081	  max-height: 0;
   4082	  opacity: 0;
@@ -14555,7 +14556,7 @@ FILE: app/globals.css
   4086	  transition: max-height 320ms ease, opacity 220ms ease, transform 220ms ease,
   4087	    margin-top 220ms ease;
   4088	}
-  4089
+  4089	
   4090	.flow-browse-extra.is-open {
   4091	  margin-top: 34px;
   4092	  max-height: 5200px;
@@ -14563,18 +14564,18 @@ FILE: app/globals.css
   4094	  pointer-events: auto;
   4095	  transform: translateY(0);
   4096	}
-  4097
+  4097	
   4098	.architecture-map {
   4099	  display: grid;
   4100	  gap: 12px;
   4101	  grid-template-columns: repeat(5, minmax(0, 1fr));
   4102	}
-  4103
+  4103	
   4104	.architecture-node {
   4105	  min-height: 178px;
   4106	  padding: 18px;
   4107	}
-  4108
+  4108	
   4109	.architecture-node span {
   4110	  color: var(--green);
   4111	  display: block;
@@ -14582,7 +14583,7 @@ FILE: app/globals.css
   4113	  font-weight: 900;
   4114	  margin-bottom: 18px;
   4115	}
-  4116
+  4116	
   4117	.architecture-node strong {
   4118	  color: var(--text);
   4119	  display: block;
@@ -14590,81 +14591,81 @@ FILE: app/globals.css
   4121	  line-height: 1.25;
   4122	  margin-bottom: 12px;
   4123	}
-  4124
+  4124	
   4125	.architecture-node p {
   4126	  font-size: 13px;
   4127	}
-  4128
+  4128	
   4129	.architecture-copy {
   4130	  margin: 26px 0 0;
   4131	}
-  4132
+  4132	
   4133	.readiness-copy {
   4134	  margin-bottom: 24px;
   4135	}
-  4136
+  4136	
   4137	.readiness-list,
   4138	.proof-points {
   4139	  display: flex;
   4140	  flex-wrap: wrap;
   4141	  gap: 10px;
   4142	}
-  4143
+  4143	
   4144	.project-timeline {
   4145	  display: grid;
   4146	  gap: 14px;
   4147	}
-  4148
+  4148	
   4149	.project-timeline-item {
   4150	  display: grid;
   4151	  gap: 22px;
   4152	  grid-template-columns: 56px 1fr;
   4153	  padding: 22px;
   4154	}
-  4155
+  4155	
   4156	.project-timeline-item > span {
   4157	  color: var(--green);
   4158	  font-size: 18px;
   4159	  font-weight: 900;
   4160	}
-  4161
+  4161	
   4162	.project-timeline-item h3 {
   4163	  font-size: 20px;
   4164	  line-height: 1.2;
   4165	  margin-bottom: 10px;
   4166	}
-  4167
+  4167	
   4168	.stack-matrix {
   4169	  display: grid;
   4170	  gap: 14px;
   4171	  grid-template-columns: repeat(5, minmax(0, 1fr));
   4172	  margin-top: 34px;
   4173	}
-  4174
+  4174	
   4175	.stack-group {
   4176	  padding: 20px;
   4177	}
-  4178
+  4178	
   4179	.stack-group h3 {
   4180	  font-size: 11px;
   4181	}
-  4182
+  4182	
   4183	.stack-group div {
   4184	  display: grid;
   4185	  gap: 8px;
   4186	}
-  4187
+  4187	
   4188	.stack-group span {
   4189	  color: #d8ffe4;
   4190	  font-size: 14px;
   4191	  font-weight: 750;
   4192	  line-height: 1.35;
   4193	}
-  4194
+  4194	
   4195	.proof-points {
   4196	  margin-top: 34px;
   4197	}
-  4198
+  4198	
   4199	.closing-panel {
   4200	  align-items: center;
   4201	  background: linear-gradient(180deg, rgba(13, 31, 22, 0.88), rgba(5, 13, 9, 0.88));
@@ -14675,35 +14676,35 @@ FILE: app/globals.css
   4206	  grid-template-columns: minmax(0, 1fr) auto;
   4207	  padding: 34px;
   4208	}
-  4209
+  4209	
   4210	.closing-panel h2 {
   4211	  font-size: clamp(30px, 4vw, 50px);
   4212	  margin-bottom: 18px;
   4213	  max-width: 720px;
   4214	}
-  4215
+  4215	
   4216	.closing-panel p {
   4217	  max-width: 760px;
   4218	}
-  4219
+  4219	
   4220	.closing-actions {
   4221	  display: flex;
   4222	  flex-direction: column;
   4223	  gap: 12px;
   4224	  min-width: 190px;
   4225	}
-  4226
+  4226	
   4227	@media (max-width: 980px) {
   4228	  .product-flow-nav {
   4229	    --product-flow-nav-font-size: clamp(40px, 5.7vw, 56px);
   4230	  }
-  4231
+  4231	
   4232	  .hero-copy {
   4233	    --hero-proof-stack-width: min(606px, 100%);
   4234	    --hero-action-stack-width: var(--hero-proof-stack-width);
   4235	    --hero-text-stack-width: var(--hero-action-stack-width);
   4236	  }
-  4237
+  4237	
   4238	  .nav-bar {
   4239	    --nav-bar-inline-padding: 16px;
   4240	    --nav-bar-height: clamp(36px, calc(23.61px + 3.87vw), 48px);
@@ -14716,7 +14717,7 @@ FILE: app/globals.css
   4247	    row-gap: 7.5px;
   4248	    padding: 0 var(--nav-bar-inline-padding);
   4249	  }
-  4250
+  4250	
   4251	  .nav-bar nav {
   4252	    display: grid;
   4253	    grid-template-rows: repeat(2, var(--nav-bar-height));
@@ -14724,7 +14725,7 @@ FILE: app/globals.css
   4255	    row-gap: var(--nav-bar-two-row-gap);
   4256	    width: 100%;
   4257	  }
-  4258
+  4258	
   4259	  .nav-link-row {
   4260	    display: flex;
   4261	    flex-wrap: nowrap;
@@ -14733,7 +14734,7 @@ FILE: app/globals.css
   4264	    min-width: 0;
   4265	    width: 100%;
   4266	  }
-  4267
+  4267	
   4268	  .nav-link-row-top {
   4269	    align-items: center;
   4270	    column-gap: var(--nav-brand-gap);
@@ -14742,7 +14743,7 @@ FILE: app/globals.css
   4273	    justify-content: flex-start;
   4274	    width: 100%;
   4275	  }
-  4276
+  4276	
   4277	  .nav-top-distribution {
   4278	    align-items: center;
   4279	    display: grid;
@@ -14752,23 +14753,23 @@ FILE: app/globals.css
   4283	    min-width: 0;
   4284	    position: relative;
   4285	  }
-  4286
+  4286	
   4287	  .nav-top-distribution > .nav-top-link-primary {
   4288	    grid-column: 1;
   4289	    min-width: max-content;
   4290	  }
-  4291
+  4291	
   4292	  .nav-top-distribution > .nav-top-link-secondary {
   4293	    grid-column: 2;
   4294	    min-width: max-content;
   4295	  }
-  4296
+  4296	
   4297	  .nav-top-distribution > .nav-separator-top-center {
   4298	    left: 50%;
   4299	    position: absolute;
   4300	    transform: translateX(-50%);
   4301	  }
-  4302
+  4302	
   4303	  .nav-link-row-bottom {
   4304	    align-items: center;
   4305	    column-gap: var(--nav-link-bottom-separator-gap);
@@ -14777,11 +14778,11 @@ FILE: app/globals.css
   4308	    justify-content: space-evenly;
   4309	    width: 100%;
   4310	  }
-  4311
+  4311	
   4312	  .nav-separator.nav-separator-row-leading {
   4313	    display: none;
   4314	  }
-  4315
+  4315	
   4316	  .nav-bar nav a,
   4317	  .nav-bar nav .nav-text {
   4318	    flex: 1 1 0;
@@ -14790,13 +14791,13 @@ FILE: app/globals.css
   4321	    padding-right: 10px;
   4322	    text-align: center;
   4323	  }
-  4324
+  4324	
   4325	  .nav-bar nav .nav-link-row > a,
   4326	  .nav-bar nav .nav-link-row > .nav-text {
   4327	    flex: 0 0 auto;
   4328	    justify-self: center;
   4329	  }
-  4330
+  4330	
   4331	  .nav-bar nav .nav-link-row-top > .nav-brand-link {
   4332	    display: inline-flex;
   4333	    gap: var(--nav-brand-gap);
@@ -14809,7 +14810,7 @@ FILE: app/globals.css
   4340	      var(--nav-brand-card-bleed);
   4341	    justify-self: start;
   4342	  }
-  4343
+  4343	
   4344	  .nav-bar nav .nav-link-row-top > .nav-brand-link .nav-brand-mark {
   4345	    align-self: center;
   4346	    flex: none;
@@ -14821,7 +14822,7 @@ FILE: app/globals.css
   4352	    min-width: 34px;
   4353	    width: 34px;
   4354	  }
-  4355
+  4355	
   4356	  .nav-bar nav .nav-link-row-top > .nav-brand-link .nav-brand-name {
   4357	    align-self: center;
   4358	    display: inline-flex;
@@ -14829,17 +14830,17 @@ FILE: app/globals.css
   4360	    line-height: 1;
   4361	    text-align: center;
   4362	  }
-  4363
+  4363	
   4364	  .nav-bar nav .nav-link-row-bottom > a,
   4365	  .nav-bar nav .nav-link-row-bottom > .nav-text {
   4366	    padding-bottom: 3.75px;
   4367	    padding-top: 0;
   4368	  }
-  4369
+  4369	
   4370	  .project-nav nav {
   4371	    grid-template-columns: repeat(3, minmax(0, 1fr));
   4372	  }
-  4373
+  4373	
   4374	  .hero-grid,
   4375	  .worklog-layout,
   4376	  .project-hero-grid,
@@ -14847,7 +14848,7 @@ FILE: app/globals.css
   4378	  .readiness-layout {
   4379	    grid-template-columns: 1fr;
   4380	  }
-  4381
+  4381	
   4382	  .overview-section-grid {
   4383	    grid-template-areas:
   4384	      "heading"
@@ -14855,47 +14856,47 @@ FILE: app/globals.css
   4386	      "copy";
   4387	    grid-template-columns: 1fr;
   4388	  }
-  4389
+  4389	
   4390	  .av-showcase {
   4391	    min-height: 610px;
   4392	  }
-  4393
+  4393	
   4394	  .av-device-main {
   4395	    left: 32%;
   4396	    right: auto;
   4397	  }
-  4398
+  4398	
   4399	  .av-device-browse {
   4400	    right: 6%;
   4401	  }
-  4402
+  4402	
   4403	  .av-device-confirm {
   4404	    left: 4%;
   4405	  }
-  4406
+  4406	
   4407	  .hero-visual {
   4408	    min-height: auto;
   4409	  }
-  4410
+  4410	
   4411	  .phone-stage {
   4412	    height: 710px;
   4413	    margin-top: 30px;
   4414	  }
-  4415
+  4415	
   4416	  .phone-shell-commerce {
   4417	    left: 4%;
   4418	  }
-  4419
+  4419	
   4420	  .phone-shell-finance {
   4421	    left: 42%;
   4422	  }
-  4423
+  4423	
   4424	  .tablet-shell {
   4425	    left: 9%;
   4426	    top: 374px;
   4427	    width: var(--tablet-shell-fitted-width);
   4428	  }
-  4429
+  4429	
   4430	  .case-grid,
   4431	  .capability-grid,
   4432	  .feature-grid,
@@ -14903,34 +14904,34 @@ FILE: app/globals.css
   4434	  .architecture-map {
   4435	    grid-template-columns: repeat(2, minmax(0, 1fr));
   4436	  }
-  4437
+  4437	
   4438	  .ownership-grid,
   4439	  .stack-matrix {
   4440	    grid-template-columns: repeat(3, minmax(0, 1fr));
   4441	  }
-  4442
+  4442	
   4443	  .flow-layout {
   4444	    --flow-chart-width: var(--flow-phone-width);
   4445	    grid-template-columns: 1fr;
   4446	  }
-  4447
+  4447	
   4448	  .flow-capture-group {
   4449	    grid-template-columns: 1fr;
   4450	  }
   4451	}
-  4452
+  4452	
   4453	@media (max-width: 980px) and (orientation: portrait) {
   4454	  .flow-chart-mockup {
   4455	    justify-self: center;
   4456	    margin-inline: auto;
   4457	  }
   4458	}
-  4459
+  4459	
   4460	@media (max-width: 720px) {
   4461	  .site-shell {
   4462	    width: min(100% - 24px, 1180px);
   4463	  }
-  4464
+  4464	
   4465	  .nav-bar {
   4466	    --nav-bar-inline-padding: 14px;
   4467	    --nav-link-bottom-separator-gap: 5px;
@@ -14940,141 +14941,141 @@ FILE: app/globals.css
   4471	    overflow: hidden;
   4472	    padding: 0 var(--nav-bar-inline-padding);
   4473	  }
-  4474
+  4474	
   4475	  .nav-bar nav {
   4476	    max-width: 100%;
   4477	  }
-  4478
+  4478	
   4479	  .project-nav nav {
   4480	    width: 100%;
   4481	  }
-  4482
+  4482	
   4483	  .project-page .site-shell {
   4484	    max-width: calc(100vw - 24px);
   4485	    width: calc(100vw - 24px);
   4486	  }
-  4487
+  4487	
   4488	  .project-nav {
   4489	    max-width: calc(100vw - 24px);
   4490	    width: calc(100vw - 24px);
   4491	  }
-  4492
+  4492	
   4493	  .project-nav nav a {
   4494	    font-size: 11px;
   4495	  }
-  4496
+  4496	
   4497	  .nav-bar nav a,
   4498	  .nav-bar nav .nav-text {
   4499	    font-size: 15px;
   4500	    padding-left: 2px;
   4501	    padding-right: 2px;
   4502	  }
-  4503
+  4503	
   4504	  .nav-separator {
   4505	    font-size: 15px;
   4506	  }
-  4507
+  4507	
   4508	  .hero {
   4509	    padding-top: 24px;
   4510	  }
-  4511
+  4511	
   4512	  section.project-hero {
   4513	    padding-top: 12px;
   4514	  }
-  4515
+  4515	
   4516	  .project-nav {
   4517	    margin-bottom: 48px;
   4518	  }
-  4519
+  4519	
   4520	  .hero-grid {
   4521	    gap: 30px;
   4522	    padding-top: 16px;
   4523	  }
-  4524
+  4524	
   4525	  h1 {
   4526	    font-size: clamp(42px, 15vw, 64px);
   4527	  }
-  4528
+  4528	
   4529	  .hero-visual {
   4530	    min-height: auto;
   4531	  }
-  4532
+  4532	
   4533	  .phone-stage {
   4534	    height: 626px;
   4535	    margin-top: 18px;
   4536	  }
-  4537
+  4537	
   4538	  .profile-orbit {
   4539	    right: 0;
   4540	  }
-  4541
+  4541	
   4542	  .profile-photo {
   4543	    height: 165px;
   4544	    width: 165px;
   4545	  }
-  4546
+  4546	
   4547	  .phone-shell {
   4548	    height: 420px;
   4549	    width: 206px;
   4550	  }
-  4551
+  4551	
   4552	  .phone-shell-commerce {
   4553	    left: -2px;
   4554	    top: 72px;
   4555	  }
-  4556
+  4556	
   4557	  .phone-shell-finance {
   4558	    left: auto;
   4559	    right: -8px;
   4560	    top: 124px;
   4561	  }
-  4562
+  4562	
   4563	  .tablet-shell {
   4564	    --tablet-shell-fitted-width: 223px;
   4565	    height: 150px;
   4566	    left: 14px;
   4567	    top: 342px;
   4568	  }
-  4569
+  4569	
   4570	  .stats-strip-item {
   4571	    min-height: 104px;
   4572	    padding: 14px 8px;
   4573	  }
-  4574
+  4574	
   4575	  .stack-section .capability-grid {
   4576	    grid-template-columns: repeat(2, minmax(0, 1fr));
   4577	  }
-  4578
+  4578	
   4579	  .case-card {
   4580	    min-height: auto;
   4581	  }
-  4582
+  4582	
   4583	  .contact-panel {
   4584	    align-items: flex-start;
   4585	    flex-direction: column;
   4586	  }
-  4587
+  4587	
   4588	  .project-page section:not(.project-hero) {
   4589	    padding: 58px 0;
   4590	  }
-  4591
+  4591	
   4592	  .overview-section-grid {
   4593	    --overview-play-store-width: 100%;
   4594	  }
-  4595
+  4595	
   4596	  .project-hero-grid {
   4597	    gap: 34px;
   4598	  }
-  4599
+  4599	
   4600	  .project-back-link {
   4601	    margin-bottom: 24px;
   4602	  }
-  4603
+  4603	
   4604	  .project-copy-panel {
   4605	    border-left: 0;
   4606	    padding-left: 0;
   4607	  }
-  4608
+  4608	
   4609	  .project-hero-text,
   4610	  .project-copy-panel p,
   4611	  .architecture-copy,
@@ -15082,32 +15083,32 @@ FILE: app/globals.css
   4613	  .closing-panel p {
   4614	    font-size: 16px;
   4615	  }
-  4616
+  4616	
   4617	  .project-subtitle,
   4618	  .project-hero-text,
   4619	  .project-meta-row {
   4620	    max-width: 100%;
   4621	    overflow-wrap: anywhere;
   4622	  }
-  4623
+  4623	
   4624	  .project-meta-row span {
   4625	    flex: 0 1 auto;
   4626	    white-space: normal;
   4627	  }
-  4628
+  4628	
   4629	  .av-showcase {
   4630	    min-height: auto;
   4631	    padding: 0 0 18px;
   4632	  }
-  4633
+  4633	
   4634	  .av-showcase::before {
   4635	    inset: 20px 0 84px;
   4636	  }
-  4637
+  4637	
   4638	  .av-device {
   4639	    position: relative;
   4640	  }
-  4641
+  4641	
   4642	  .av-device-main {
   4643	    height: auto;
   4644	    left: auto;
@@ -15118,19 +15119,19 @@ FILE: app/globals.css
   4649	    transform: rotate(-4deg);
   4650	    width: 72vw;
   4651	  }
-  4652
+  4652	
   4653	  .av-device-browse,
   4654	  .av-device-confirm {
   4655	    display: none;
   4656	  }
-  4657
+  4657	
   4658	  .av-showcase-proof {
   4659	    margin: -18px auto 0;
   4660	    max-width: min(292px, calc(100vw - 48px));
   4661	    position: relative;
   4662	    right: auto;
   4663	  }
-  4664
+  4664	
   4665	  .av-showcase-proof-row {
   4666	    align-items: stretch;
   4667	    bottom: auto;
@@ -15141,13 +15142,13 @@ FILE: app/globals.css
   4672	    left: auto;
   4673	    right: auto;
   4674	  }
-  4675
+  4675	
   4676	  .av-showcase-proof-row .av-showcase-proof {
   4677	    margin: 0;
   4678	    max-width: none;
   4679	    width: max-content;
   4680	  }
-  4681
+  4681	
   4682	  .alla-vostra-case .av-showcase {
   4683	    --av-mobile-device-width: min(62vw, 262px);
   4684	    align-items: center;
@@ -15157,18 +15158,18 @@ FILE: app/globals.css
   4688	    overflow: visible;
   4689	    padding: 8px 0 18px;
   4690	  }
-  4691
+  4691	
   4692	  .alla-vostra-case .av-showcase::before {
   4693	    inset: 0 0 38px;
   4694	  }
-  4695
+  4695	
   4696	  .alla-vostra-case .av-device-main {
   4697	    margin: 0;
   4698	    max-width: 262px;
   4699	    transform-origin: center top;
   4700	    width: var(--av-mobile-device-width);
   4701	  }
-  4702
+  4702	
   4703	  .alla-vostra-case .av-showcase-proof-row {
   4704	    --av-platform-list-row-gap: var(--av-proof-row-gap);
   4705	    --av-proof-column-gap: clamp(4px, calc(25vw - 86px), 14px);
@@ -15179,7 +15180,7 @@ FILE: app/globals.css
   4710	    --av-skill-item-gap: clamp(3px, 1vw, 5px);
   4711	    --av-skill-grid-row-gap: var(--av-proof-row-gap);
   4712	    --av-skill-grid-y-offset: 0px;
-  4713
+  4713	
   4714	    align-items: stretch;
   4715	    bottom: clamp(2px, 1vw, 8px);
   4716	    display: grid;
@@ -15195,7 +15196,7 @@ FILE: app/globals.css
   4726	    top: auto;
   4727	    width: auto;
   4728	  }
-  4729
+  4729	
   4730	  .alla-vostra-case .av-showcase-proof-row .av-showcase-proof {
   4731	    align-self: stretch;
   4732	    display: flex;
@@ -15204,29 +15205,29 @@ FILE: app/globals.css
   4735	    padding: 10px clamp(8px, 2.5vw, 12px);
   4736	    width: auto;
   4737	  }
-  4738
+  4738	
   4739	  .alla-vostra-case .av-showcase-proof-row .av-showcase-proof:first-child {
   4740	    justify-self: stretch;
   4741	  }
-  4742
+  4742	
   4743	  .alla-vostra-case .av-showcase-proof-row .av-showcase-proof:last-child {
   4744	    justify-self: stretch;
   4745	  }
-  4746
+  4746	
   4747	  .alla-vostra-case .av-showcase-proof strong {
   4748	    font-size: clamp(20px, 6vw, 30px);
   4749	  }
-  4750
+  4750	
   4751	  .alla-vostra-case .av-showcase-proof span {
   4752	    font-size: clamp(12px, 3.2vw, 15px);
   4753	    line-height: 1.32;
   4754	  }
-  4755
+  4755	
   4756	  .alla-vostra-case .av-showcase-proof .av-showcase-skill-grid,
   4757	  .alla-vostra-case .av-showcase-proof .av-showcase-platform-list {
   4758	    grid-template-rows: var(--av-proof-top-row-height) var(--av-proof-bottom-row-height);
   4759	  }
-  4760
+  4760	
   4761	  .alla-vostra-case .stats-strip {
   4762	    border-top: 1px solid var(--line);
   4763	    gap: 1px;
@@ -15234,23 +15235,23 @@ FILE: app/globals.css
   4765	    margin: 26px 0 0;
   4766	    width: 100%;
   4767	  }
-  4768
+  4768	
   4769	  .alla-vostra-case .stats-strip-item {
   4770	    background: rgba(255, 255, 255, 0.025);
   4771	    min-height: 178px;
   4772	    padding: 14px 8px;
   4773	  }
-  4774
+  4774	
   4775	  .alla-vostra-case .stats-strip strong {
   4776	    font-size: clamp(30px, 8vw, 44px);
   4777	  }
-  4778
+  4778	
   4779	  .alla-vostra-case .stats-strip-label,
   4780	  .alla-vostra-case .stats-strip-measure {
   4781	    font-size: clamp(12px, 3.2vw, 16px);
   4782	    line-height: 1.16;
   4783	  }
-  4784
+  4784	
   4785	  .project-card-grid,
   4786	  .ownership-grid,
   4787	  .feature-grid,
@@ -15259,144 +15260,144 @@ FILE: app/globals.css
   4790	  .stack-matrix {
   4791	    grid-template-columns: 1fr;
   4792	  }
-  4793
+  4793	
   4794	  .flow-segments {
   4795	    grid-template-columns: repeat(2, minmax(0, 1fr));
   4796	  }
-  4797
+  4797	
   4798	  .flow-support {
   4799	    grid-template-columns: 1fr;
   4800	  }
-  4801
+  4801	
   4802	  .flow-checkout-note {
   4803	    min-height: auto;
   4804	  }
-  4805
+  4805	
   4806	  .flow-section-intro > p {
   4807	    border-left: 0;
   4808	    padding-left: 0;
   4809	  }
-  4810
+  4810	
   4811	  .product-flow-nav {
   4812	    --product-flow-nav-font-size: clamp(15px, 5vw, 28px);
   4813	    --product-flow-nav-height: clamp(58px, 14vw, 72px);
-  4814
+  4814	
   4815	    grid-template-columns: repeat(2, minmax(0, 1fr));
   4816	  }
-  4817
+  4817	
   4818	  .product-flow-nav .button {
   4819	    padding: 8px clamp(6px, 2vw, 12px) 10px;
   4820	  }
-  4821
+  4821	
   4822	  .product-flow-nav .button:first-child {
   4823	    border-radius: 8px 0 0 8px;
   4824	  }
-  4825
+  4825	
   4826	  .product-flow-nav .button:last-child {
   4827	    border-radius: 0 8px 8px 0;
   4828	  }
-  4829
+  4829	
   4830	  .flow-capture-groups {
   4831	    gap: 40px;
   4832	    margin-top: 44px;
   4833	  }
-  4834
+  4834	
   4835	  .flow-capture-group {
   4836	    padding-top: 24px;
   4837	  }
-  4838
+  4838	
   4839	  .flow-capture-grid {
   4840	    gap: 28px;
   4841	    grid-template-columns: 1fr;
   4842	  }
-  4843
+  4843	
   4844	  .flow-screen-compact {
   4845	    width: min(42vw, 146px);
   4846	  }
-  4847
+  4847	
   4848	  .flow-screen-stack-captures {
   4849	    gap: 12px;
   4850	  }
-  4851
+  4851	
   4852	  .alla-vostra-case .flow-browse-toggle {
   4853	    inline-size: calc((min(42vw, 146px) * 2) + 12px);
   4854	  }
-  4855
+  4855	
   4856	  .flow-original-art-grid {
   4857	    gap: 12px;
   4858	    grid-template-columns: repeat(2, minmax(0, min(42vw, 146px)));
   4859	  }
-  4860
+  4860	
   4861	  .flow-original-photo-grid {
   4862	    gap: 12px;
   4863	    grid-template-columns: repeat(2, minmax(0, min(42vw, 146px)));
   4864	  }
-  4865
+  4865	
   4866	  .flow-hero-composition-grid {
   4867	    gap: 12px;
   4868	    grid-template-columns: minmax(0, calc(min(84vw, 292px) + 12px));
   4869	  }
-  4870
+  4870	
   4871	  .flow-hero-composition-screen {
   4872	    width: 100%;
   4873	  }
-  4874
+  4874	
   4875	  .flow-sticky-icon-grid {
   4876	    gap: 12px;
   4877	    grid-template-columns: repeat(2, minmax(0, min(42vw, 146px)));
   4878	  }
-  4879
+  4879	
   4880	  .flow-action-asset-grid {
   4881	    gap: 12px;
   4882	    grid-template-columns: repeat(2, minmax(0, min(42vw, 146px)));
   4883	  }
-  4884
+  4884	
   4885	  .flow-screen:not(.flow-screen-main) .flow-image-frame {
   4886	    margin: 0 auto;
   4887	    max-width: 230px;
   4888	  }
-  4889
+  4889	
   4890	  .flow-screen.flow-hero-composition-screen .flow-image-frame {
   4891	    max-width: none;
   4892	  }
-  4893
+  4893	
   4894	  .closing-panel {
   4895	    grid-template-columns: 1fr;
   4896	    padding: 28px;
   4897	  }
-  4898
+  4898	
   4899	  .closing-actions {
   4900	    width: 100%;
   4901	  }
   4902	}
-  4903
+  4903	
   4904	@media (max-width: 720px) {
   4905	  .project-page.alla-vostra-case .stats-strip-item {
   4906	    min-height: 178px;
   4907	  }
   4908	}
-  4909
+  4909	
   4910	@media (max-width: 630px) {
   4911	  .case-grid {
   4912	    grid-template-columns: 1fr;
   4913	  }
-  4914
+  4914	
   4915	  .case-grid-featured .case-card-project-title-name,
   4916	  .case-grid-featured .case-card-title-underline {
   4917	    overflow-wrap: normal;
   4918	    white-space: nowrap;
   4919	  }
-  4920
+  4920	
   4921	  .case-grid > .uiux-principle-card-expanded {
   4922	    grid-column: auto;
   4923	  }
-  4924
+  4924	
   4925	  .case-grid > .uiux-principle-card-expanded .uiux-principle-long-copy {
   4926	    column-count: auto;
   4927	    display: grid;
   4928	  }
   4929	}
-  4930
+  4930	
   4931	@media (max-width: 430px) {
   4932	  .nav-bar {
   4933	    --nav-brand-gap: 8px;
@@ -15404,18 +15405,18 @@ FILE: app/globals.css
   4935	    --nav-link-separator-gap: 2px;
   4936	    --nav-link-top-separator-gap: 2px;
   4937	  }
-  4938
+  4938	
   4939	  .nav-brand-name {
   4940	    font-size: 22px;
   4941	  }
-  4942
+  4942	
   4943	  .nav-bar nav a,
   4944	  .nav-bar nav .nav-text,
   4945	  .nav-separator {
   4946	    font-size: 14px;
   4947	  }
   4948	}
-  4949
+  4949	
   4950	@media (max-width: 380px) {
   4951	  .nav-bar {
   4952	    --nav-bar-inline-padding: 12px;
@@ -15423,38 +15424,38 @@ FILE: app/globals.css
   4954	    --nav-link-separator-gap: 1px;
   4955	    --nav-link-top-separator-gap: 1px;
   4956	  }
-  4957
+  4957	
   4958	  .nav-bar nav a,
   4959	  .nav-bar nav .nav-text {
   4960	    font-size: 13.5px;
   4961	    padding-left: 0;
   4962	    padding-right: 0;
   4963	  }
-  4964
+  4964	
   4965	  .nav-separator {
   4966	    font-size: 13.5px;
   4967	  }
   4968	}
-  4969
+  4969	
   4970	@media (max-width: 340px) {
   4971	  .alla-vostra-case .av-showcase-proof-row {
   4972	    --av-proof-column-gap: 3px;
   4973	    --av-skill-item-gap: 2.5px;
-  4974
+  4974	
   4975	    gap: 6px;
   4976	    left: 4px;
   4977	    right: 4px;
   4978	  }
-  4979
+  4979	
   4980	  .alla-vostra-case .av-showcase-proof-row .av-showcase-proof {
   4981	    padding-inline: 6px;
   4982	  }
-  4983
+  4983	
   4984	  .nav-bar nav a,
   4985	  .nav-bar nav .nav-text {
   4986	    font-size: 13px;
   4987	  }
-  4988
+  4988	
   4989	  .nav-separator {
   4990	    font-size: 13px;
   4991	  }
@@ -15473,43 +15474,43 @@ FILE: .gitignore
 
      1	# Dependencies
      2	node_modules/
-     3
+     3	
      4	# Next.js build output
      5	.next/
      6	.next.cleared-*/
      7	.next.stale-*/
      8	out/
-     9
+     9	
     10	# TypeScript
     11	*.tsbuildinfo
     12	next-env.d.ts
-    13
+    13	
     14	# Logs
     15	*.log
     16	npm-debug.log*
     17	yarn-debug.log*
     18	yarn-error.log*
     19	pnpm-debug.log*
-    20
+    20	
     21	# Playwright
     22	test-results/
     23	playwright-report/
     24	blob-report/
-    25
+    25	
     26	# Local environment files
     27	.env
     28	.env*.local
-    29
+    29	
     30	# Package manager caches
     31	.npm/
     32	.pnpm-store/
     33	.yarn/
-    34
+    34	
     35	# Deployment archives and generated bundles
     36	*.zip
     37	dist/
     38	build/
-    39
+    39	
     40	# OS/editor files
     41	.DS_Store
     42	.DS_store
@@ -15522,50 +15523,50 @@ FILE: README.md
 ============================================================
 
      1	# Prahl.dev Portfolio Site
-     2
+     2	
      3	Next.js + Tailwind CSS portfolio start page for Prahl.dev.
-     4
+     4	
      5	## What is included
-     6
+     6	
      7	- `app/page.tsx` - the homepage/start page.
      8	- `app/globals.css` - the green/black visual system and responsive layout.
      9	- `public/images/profile-placeholder.png` - generated AI profile placeholder; replace this with your own square photo later using the same filename.
     10	- `public/images/start-page-mockup-reference.png` - the original generated mockup reference.
     11	- `public/favicon.svg` - simple green/black monogram favicon.
-    12
+    12	
     13	## Local development
-    14
+    14	
     15	```sh
     16	npm install
     17	npm run dev
     18	```
-    19
+    19	
     20	Open `http://localhost:3000`.
-    21
+    21	
     22	## Production build
-    23
+    23	
     24	For Vercel, Netlify, or another Next.js host:
-    25
+    25	
     26	```sh
     27	npm run build
     28	```
-    29
+    29	
     30	For a simple static host:
-    31
+    31	
     32	```sh
     33	npm run build:static
     34	```
-    35
+    35	
     36	Then upload the generated `out/` folder.
-    37
+    37	
     38	## Replace the profile photo
-    39
+    39	
     40	Put your real square profile photo at:
-    41
+    41	
     42	```txt
     43	public/images/profile-placeholder.png
     44	```
-    45
+    45	
     46	Keep the filename the same and rebuild.
 
 
@@ -15574,47 +15575,47 @@ FILE: DEPLOYMENT.md
 ============================================================
 
      1	# Deployment Notes
-     2
+     2	
      3	## Best Option: Vercel
-     4
+     4	
      5	1. Upload this `portfolio-site` folder to a GitHub repo.
      6	2. Import the repo in Vercel.
      7	3. Use the default Next.js settings.
      8	4. Build command: `npm run build`.
-     9
+     9	
     10	## Netlify
-    11
+    11	
     12	1. Upload this folder to a GitHub repo.
     13	2. Connect the repo in Netlify.
     14	3. Build command: `npm run build`.
     15	4. Publish directory: `.next`.
     16	5. Enable Netlify's Next.js runtime if prompted.
-    17
+    17	
     18	## Simple Static Hosting
-    19
+    19	
     20	Use this when the host only accepts HTML/CSS/JS files:
-    21
+    21	
     22	```sh
     23	npm install
     24	npm run build:static
     25	```
-    26
+    26	
     27	Upload the contents of:
-    28
+    28	
     29	```txt
     30	out/
     31	```
-    32
+    32	
     33	This mode does not need a running Node.js server after upload.
-    34
+    34	
     35	## Contact Button
-    36
+    36	
     37	The contact button currently uses:
-    38
+    38	
     39	```txt
     40	mailto:hello@example.com
     41	```
-    42
+    42	
     43	Replace `hello@example.com` in `app/page.tsx` with your real email address.
 
 
@@ -18040,9 +18041,9 @@ FILE: next.config.ts
 ============================================================
 
      1	import type { NextConfig } from "next";
-     2
+     2	
      3	const isStaticExport = process.env.NEXT_OUTPUT === "export";
-     4
+     4	
      5	const nextConfig: NextConfig = {
      6	  allowedDevOrigins: ["127.0.0.1"],
      7	  output: isStaticExport ? "export" : undefined,
@@ -18054,7 +18055,7 @@ FILE: next.config.ts
     13	    root: process.cwd(),
     14	  },
     15	};
-    16
+    16	
     17	export default nextConfig;
 
 
@@ -18067,7 +18068,7 @@ FILE: postcss.config.mjs
      3	    "@tailwindcss/postcss": {},
      4	  },
      5	};
-     6
+     6	
      7	export default config;
 
 
@@ -18115,38 +18116,38 @@ FILE: .github/workflows/hostinger-static-export.yml
 ============================================================
 
      1	name: Build static export for Hostinger
-     2
+     2	
      3	on:
      4	  push:
      5	    branches: [main]
      6	  workflow_dispatch:
-     7
+     7	
      8	permissions:
      9	  contents: write
-    10
+    10	
     11	concurrency:
     12	  group: hostinger-static-export
     13	  cancel-in-progress: true
-    14
+    14	
     15	jobs:
     16	  build-and-publish:
     17	    runs-on: ubuntu-latest
     18	    steps:
     19	      - name: Check out source
     20	        uses: actions/checkout@v4
-    21
+    21	
     22	      - name: Set up Node
     23	        uses: actions/setup-node@v4
     24	        with:
     25	          node-version: 22
     26	          cache: npm
-    27
+    27	
     28	      - name: Install dependencies
     29	        run: npm ci
-    30
+    30	
     31	      - name: Build static export
     32	        run: npm run build:static
-    33
+    33	
     34	      - name: Publish static export branch
     35	        env:
     36	          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -18176,21 +18177,21 @@ FILE: read_project.sh
 ============================================================
 
      1	#!/bin/bash
-     2
+     2	
      3	PROJECT_DIR="$(cd "$(dirname "$0")" && pwd)"
      4	OUTPUT_FILE="$PROJECT_DIR/portfolio_PROJECT_SNAPSHOT.txt"
-     5
+     5	
      6	echo "Generating Portfolio project snapshot..."
      7	echo "Project directory: $PROJECT_DIR"
      8	echo "Snapshot: $OUTPUT_FILE"
      9	echo ""
-    10
+    10	
     11	write_header() {
     12	  cat > "$OUTPUT_FILE" <<EOF
     13	Portfolio Next.js PROJECT SNAPSHOT
     14	Generated: $(date)
     15	Project directory: $PROJECT_DIR
-    16
+    16	
     17	IMPORTANT INSTRUCTIONS FOR CHATGPT & CODEX:
     18	1. Read this entire snapshot before giving code edits.
     19	2. Preserve all assets, spacing, alignment, fonts, images, layout, animations, and relative positioning unless specifically asked to change them.
@@ -18202,27 +18203,27 @@ FILE: read_project.sh
     25	8. If you do not understand something, ask for clarification instead of making assumptions.
     26	9. Warn me, or at least caution me, if I ask for something that would break the project or cause it to not work as intended.
     27	10. For this Portfolio repo/website project, always ask me for the commit message before committing or pushing.
-    28
-    29
+    28	
+    29	
     30	============================================================
     31	PORTFOLIO PROJECT NOTES
     32	============================================================
-    33
+    33	
     34	- Main source branch: main
     35	- Deployment source: GitHub Actions builds main into the hostinger-deploy branch
     36	- Hostinger root directory: public_html
     37	- Main stack represented by the website: React / React Native, Next.js, Tailwind CSS, Node.js, Kotlin
     38	- Public website assets live under public/
     39	- Run this script before starting a Portfolio session to refresh the project snapshot.
-    40
-    41
+    40	
+    41	
     42	============================================================
     43	SNAPSHOT IGNORE POLICY
     44	============================================================
-    45
+    45	
     46	This file is rebuilt from the current Portfolio workspace every time ./read_project.sh runs.
     47	Ignored paths are omitted from the project tree and file dumps unless they appear inside an included text file such as .gitignore or read_project.sh.
-    48
+    48	
     49	The snapshot intentionally ignores generated/cache/runtime/private files:
     50	- .git
     51	- node_modules
@@ -18241,20 +18242,20 @@ FILE: read_project.sh
     64	- *_PROJECT_SNAPSHOT.txt
     65	- *.zip
     66	- .env and .env*.local
-    67
+    67	
     68	Binary image, PDF, and archive files are inventoried by path, size, and modified time only. Raw binary bytes are not printed.
-    69
-    70
+    69	
+    70	
     71	============================================================
     72	PROJECT FILE TREE
     73	============================================================
-    74
+    74	
     75	EOF
     76	}
-    77
+    77	
     78	print_file() {
     79	  local file="$1"
-    80
+    80	
     81	  if [ -f "$file" ]; then
     82	    {
     83	      echo ""
@@ -18267,10 +18268,10 @@ FILE: read_project.sh
     90	    } >> "$OUTPUT_FILE"
     91	  fi
     92	}
-    93
+    93	
     94	print_inventory_header() {
     95	  local title="$1"
-    96
+    96	
     97	  {
     98	    echo ""
     99	    echo ""
@@ -18280,28 +18281,28 @@ FILE: read_project.sh
    103	    echo ""
    104	  } >> "$OUTPUT_FILE"
    105	}
-   106
+   106	
    107	print_file_inventory_line() {
    108	  local file="$1"
    109	  local size
    110	  local modified
-   111
+   111	
    112	  size="$(stat -f "%z" "$file" 2>/dev/null || stat -c "%s" "$file" 2>/dev/null || echo "unknown")"
    113	  modified="$(stat -f "%Sm" -t "%Y-%m-%d %H:%M:%S" "$file" 2>/dev/null || stat -c "%y" "$file" 2>/dev/null || echo "unknown")"
    114	  printf '%s | %s bytes | modified %s\n' "${file#$PROJECT_DIR/}" "$size" "$modified" >> "$OUTPUT_FILE"
    115	}
-   116
+   116	
    117	print_dir_inventory() {
    118	  local title="$1"
    119	  local dir="$2"
-   120
+   120	
    121	  print_inventory_header "$title"
-   122
+   122	
    123	  if [ ! -d "$dir" ]; then
    124	    echo "Directory not present: ${dir#$PROJECT_DIR/}" >> "$OUTPUT_FILE"
    125	    return
    126	  fi
-   127
+   127	
    128	  find "$dir" -type f \
    129	    ! -name ".DS_Store" \
    130	    ! -name "*_PROJECT_SNAPSHOT.txt" \
@@ -18309,13 +18310,13 @@ FILE: read_project.sh
    132	    print_file_inventory_line "$file"
    133	  done
    134	}
-   135
+   135	
    136	print_matching_inventory() {
    137	  local title="$1"
    138	  shift
-   139
+   139	
    140	  print_inventory_header "$title"
-   141
+   141	
    142	  find "$PROJECT_DIR" "$@" -type f \
    143	    ! -path "$PROJECT_DIR/.git/*" \
    144	    ! -path "$PROJECT_DIR/node_modules/*" \
@@ -18327,7 +18328,7 @@ FILE: read_project.sh
    150	    print_file_inventory_line "$file"
    151	  done
    152	}
-   153
+   153	
    154	append_git_context() {
    155	  {
    156	    echo ""
@@ -18349,10 +18350,10 @@ FILE: read_project.sh
    172	    git -C "$PROJECT_DIR" remote -v 2>/dev/null || true
    173	  } >> "$OUTPUT_FILE"
    174	}
-   175
+   175	
    176	write_snapshot() {
    177	  write_header
-   178
+   178	
    179	  find "$PROJECT_DIR" \
    180	    -path "$PROJECT_DIR/.git" -prune -o \
    181	    -path "$PROJECT_DIR/node_modules" -prune -o \
@@ -18373,16 +18374,16 @@ FILE: read_project.sh
    196	    -name ".env" -prune -o \
    197	    -name ".env*.local" -prune -o \
    198	    -print | sort >> "$OUTPUT_FILE"
-   199
+   199	
    200	  cat >> "$OUTPUT_FILE" <<EOF
-   201
-   202
+   201	
+   202	
    203	============================================================
    204	FILE CONTENTS - APP SOURCE
    205	============================================================
-   206
+   206	
    207	EOF
-   208
+   208	
    209	  for file in \
    210	    "$PROJECT_DIR/app/layout.tsx" \
    211	    "$PROJECT_DIR/app/page.tsx" \
@@ -18391,16 +18392,16 @@ FILE: read_project.sh
    214	  do
    215	    print_file "$file"
    216	  done
-   217
+   217	
    218	  cat >> "$OUTPUT_FILE" <<EOF
-   219
-   220
+   219	
+   220	
    221	============================================================
    222	FILE CONTENTS - ROOT / TOOLING / DEPLOYMENT
    223	============================================================
-   224
+   224	
    225	EOF
-   226
+   226	
    227	  for file in \
    228	    "$PROJECT_DIR/.gitignore" \
    229	    "$PROJECT_DIR/README.md" \
@@ -18416,20 +18417,20 @@ FILE: read_project.sh
    239	  do
    240	    print_file "$file"
    241	  done
-   242
+   242	
    243	  append_git_context
-   244
+   244	
    245	  print_dir_inventory "BINARY / IMAGE ASSET INVENTORY - PUBLIC IMAGES" "$PROJECT_DIR/public/images"
    246	  print_matching_inventory "PDF WORKLOG INVENTORY" \( -name "portfolio_worklog_*.pdf" \)
    247	  print_matching_inventory "DEPLOYMENT ARCHIVE INVENTORY" \( -name "*.zip" \)
-   248
+   248	
    249	  cat >> "$OUTPUT_FILE" <<EOF
-   250
-   251
+   250	
+   251	
    252	============================================================
    253	NOT INCLUDED IN SNAPSHOT
    254	============================================================
-   255
+   255	
    256	The Portfolio snapshot intentionally excludes generated/cache/runtime/private paths:
    257	- .git
    258	- node_modules
@@ -18448,14 +18449,14 @@ FILE: read_project.sh
    271	- *_PROJECT_SNAPSHOT.txt
    272	- *.zip
    273	- .env and .env*.local
-   274
+   274	
    275	The snapshot lists public images, PDF worklogs, and deployment archives by path, size, and modified time, but does not print raw PNG/JPG/PDF/ZIP bytes.
-   276
+   276	
    277	EOF
    278	}
-   279
+   279	
    280	write_snapshot
-   281
+   281	
    282	echo "Done."
    283	echo ""
    284	echo "Snapshot created here:"
@@ -18473,12 +18474,13 @@ Current branch:
 main
 
 Status:
-## main...origin/main [ahead 1]
+## main...origin/main
  M portfolio_PROJECT_SNAPSHOT.txt
 
 Recent commits:
-d3bda6a (HEAD -> main) Refined Alla Vostra case study previews, controls, and overview assets
-a149e29 (origin/main) generated the pdf session worklog for the relevant project on August 5, 2026.
+6a05703 (HEAD -> main, origin/main) generated pdf session worklog for the relevant project on August 6, 2026.
+d3bda6a Refined Alla Vostra case study previews, controls, and overview assets
+a149e29 generated the pdf session worklog for the relevant project on August 5, 2026.
 8e21e8d Ignored lowercase .DS_store files in gitignore
 8caad05 Polished Alla Vostra hero alignment and product flow responsiveness
 f4ef9d4 Refined Alla Vostra hero proof cards and platform badges
@@ -18486,7 +18488,6 @@ beebf97 Correct August worklog and landing stats
 29911ee generated the pdf session worklog for the relevant project on August 4, 2026.
 529bd98 Refined Alla Vostra UI foundations with real app control assets
 b389f01 generated pdf session worklog for the relevant project on August 3, 2026.
-be8047d Refined Alla Vostra UI Foundations and UX product flow presentation
 
 Remotes:
 origin	https://github.com/Prahlin/portfolio.git (fetch)
@@ -18628,6 +18629,7 @@ portfolio_worklog_august1_part3.pdf | 28004 bytes | modified 2026-08-01 20:38:07
 portfolio_worklog_august3.pdf | 27877 bytes | modified 2026-08-04 00:32:17
 portfolio_worklog_august4.pdf | 34270 bytes | modified 2026-08-04 23:43:10
 portfolio_worklog_august5.pdf | 35366 bytes | modified 2026-08-06 00:18:13
+portfolio_worklog_august6.pdf | 35142 bytes | modified 2026-08-06 23:19:40
 portfolio_worklog_july11.pdf | 23528 bytes | modified 2026-07-12 00:10:01
 portfolio_worklog_july14.pdf | 29767 bytes | modified 2026-07-14 22:44:02
 portfolio_worklog_july15_part1.pdf | 25059 bytes | modified 2026-07-15 18:07:04

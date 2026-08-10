@@ -114,6 +114,34 @@ type ProductFlowNavStyle = CSSProperties & {
   "--product-flow-nav-measured-height": string;
 };
 
+const visualHierarchyAnnotationStyle: CSSProperties = {
+  color: "#3c3b3a",
+  display: "grid",
+  fontFamily:
+    '"Alla Vostra TT Fors", Inter, ui-sans-serif, system-ui, sans-serif',
+  fontSize: "42px",
+  fontWeight: 520,
+  left: "50%",
+  letterSpacing: 0,
+  lineHeight: 1.06,
+  pointerEvents: "none",
+  position: "absolute",
+  textAlign: "center",
+  textShadow: "0 1px 2px rgba(255, 252, 242, 0.28)",
+  top: "73.6%",
+  transform: "translate(-50%, -50%)",
+  whiteSpace: "nowrap",
+  zIndex: 2,
+};
+
+const visualHierarchyFocalPointAnnotationStyle: CSSProperties = {
+  ...visualHierarchyAnnotationStyle,
+  color: "#ffffff",
+  textShadow:
+    "-1px 0 #111111, 0 1px #111111, 1px 0 #111111, 0 -1px #111111",
+  WebkitTextStroke: "0.8px #111111",
+};
+
 const placeholderSteps = ["Step 1", "Step 2", "Step 3", "Step 4", "Step 5"];
 const colorsAndThemingSwatchGroups: Record<string, FlowSwatchGroup> = {
   "Step 1": {
@@ -643,24 +671,78 @@ function ProductFlowDiagramTable() {
 }
 
 function PlaceholderScreen({
+  className = "",
+  frameStyle,
+  imageAlt,
+  imageSrc,
+  imageStyle,
   label,
+  overlayStyle,
+  overlayLines,
   step,
+  style,
 }: {
+  className?: string;
+  frameStyle?: CSSProperties;
+  imageAlt?: string;
+  imageSrc?: string;
+  imageStyle?: CSSProperties;
   label: "Small" | "Large";
+  overlayStyle?: CSSProperties;
+  overlayLines?: string[];
   step: string;
+  style?: CSSProperties;
 }) {
   const aspect = label === "Small" ? "standard" : "tall";
+  const frameClassName = [
+    "flow-image-frame",
+    imageSrc ? "" : "flow-placeholder-frame",
+  ]
+    .filter(Boolean)
+    .join(" ");
+  const screenClassName = [
+    "flow-screen",
+    "flow-screen-compact",
+    `flow-screen-${aspect}`,
+    className,
+  ]
+    .filter(Boolean)
+    .join(" ");
 
   return (
     <figure
       aria-label={`${step} ${label} screenshot placeholder`}
-      className={`flow-screen flow-screen-compact flow-screen-${aspect}`}
+      className={screenClassName}
+      style={style}
     >
       <span className="flow-screen-label">{label}</span>
-      <div className="flow-image-frame flow-placeholder-frame">
-        <span>Screenshot pending</span>
+      <div className={frameClassName} style={frameStyle}>
+        {imageSrc ? (
+          <Image
+            alt={imageAlt ?? `${step} ${label} screenshot`}
+            data-screenshot-preview
+            fill
+            sizes="(max-width: 720px) calc(min(84vw, 292px) + 12px), 318px"
+            style={imageStyle}
+            src={imageSrc}
+          />
+        ) : (
+          <span>Screenshot pending</span>
+        )}
+        {overlayLines ? (
+          <span
+            className="flow-visual-hierarchy-annotation"
+            style={overlayStyle ?? visualHierarchyAnnotationStyle}
+          >
+            {overlayLines.map((line) => (
+              <span key={line}>{line}</span>
+            ))}
+          </span>
+        ) : null}
       </div>
-      <figcaption>{`${step} ${label} placeholder.`}</figcaption>
+      <figcaption>{`${step} ${label} ${
+        imageSrc ? "screenshot" : "placeholder"
+      }.`}</figcaption>
     </figure>
   );
 }
@@ -1440,6 +1522,59 @@ export default function ProductFlowSwitcher({
                             <ActionButtonAssetScreens samples={samples} />
                           ) : undefined;
                         }
+                    : section.title === "Visual Hierarchy"
+                      ? (step) => (
+                          <PlaceholderScreen
+                            className="flow-visual-hierarchy-frame"
+                            imageAlt={
+                              step === "Step 1" || step === "Step 2"
+                                ? "Alla Vostra startup screen"
+                                : undefined
+                            }
+                            imageSrc={
+                              step === "Step 1"
+                                ? "/images/alla-vostra-hero-startup-framed.png"
+                                : step === "Step 2"
+                                  ? "/images/alla-vostra-hero-startup-framed-lower-muted.png"
+                                  : undefined
+                            }
+                            frameStyle={
+                              step === "Step 1" || step === "Step 2"
+                                ? {
+                                    aspectRatio: "1290 / 2661",
+                                    background: "transparent",
+                                    border: 0,
+                                    borderRadius: 0,
+                                    boxShadow: "none",
+                                  }
+                                : undefined
+                            }
+                            label={
+                              step === "Step 1" || step === "Step 2"
+                                ? "Large"
+                                : "Small"
+                            }
+                            overlayLines={
+                              step === "Step 1"
+                                ? ["Viewing", "Area"]
+                                : step === "Step 2"
+                                  ? ["Focal", "Point"]
+                                  : undefined
+                            }
+                            overlayStyle={
+                              step === "Step 2"
+                                ? visualHierarchyFocalPointAnnotationStyle
+                                : undefined
+                            }
+                            step={step}
+                            style={{
+                              width:
+                                step === "Step 1" || step === "Step 2"
+                                  ? "min(100%, 318px)"
+                                  : "min(100%, 228px)",
+                            }}
+                          />
+                        )
                       : undefined
               }
               renderExpandedStepScreens={
