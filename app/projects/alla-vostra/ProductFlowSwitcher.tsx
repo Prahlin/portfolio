@@ -114,6 +114,85 @@ type ProductFlowNavStyle = CSSProperties & {
   "--product-flow-nav-measured-height": string;
 };
 
+type VisualHierarchyBraceTone = "dark" | "light";
+type VisualHierarchySectionLineCallout = {
+  label: string;
+  top: string;
+};
+type VisualHierarchyBraceStack = {
+  ariaLabel?: string;
+  bracePath?: string;
+  braceTipTop: string;
+  overlayLines?: string[];
+  pathOffsetY?: number;
+  tone?: VisualHierarchyBraceTone;
+};
+
+const visualHierarchyBracePath =
+  "M57 34 C31 35 25 58 25 104 L25 306 C25 330 18 342 12 350 L3 360 L12 370 C18 378 25 390 25 414 L25 616 C25 662 31 685 57 686";
+
+const visualHierarchyCompressedBracePath =
+  "M57 34 C31 35 25 58 25 104 L25 143 C25 167 18 179 12 187 L3 197 L12 207 C18 215 25 227 25 251 L25 290 C25 336 31 359 57 360";
+
+const visualHierarchyTenBracePath =
+  "M57 34 C31 34.1 25 36.3 25 41 L25 58.5 C25 62.1 18 63.9 12 65.1 C8.8 65.7 8.8 67.5 12 68.1 C18 69.3 25 71.1 25 74.7 L25 92.2 C25 96.9 31 99.1 57 99.2";
+
+const visualHierarchyNinetyBracePath =
+  "M57 34 C31 35 25 58 25 104 L25 273.4 C25 297.4 18 309.4 12 317.4 L3 327.4 L12 337.4 C18 345.4 25 357.4 25 381.4 L25 550.8 C25 596.8 31 619.8 57 620.8";
+
+const visualHierarchyBraceTipTop = "50%";
+const visualHierarchyCompressedBraceTipTop = "27.36%";
+const visualHierarchySupportingElementsBraceTipTop = "72.64%";
+const visualHierarchyCompressedBracePathOffsetY = 326;
+const visualHierarchyTenBraceTipTop = "9.25%";
+const visualHierarchyNinetyBraceTipTop = "54.53%";
+const visualHierarchyNinetyBracePathOffsetY = 65.2;
+
+const visualHierarchySectionLineCallouts: VisualHierarchySectionLineCallout[] = [
+  { label: "APP HEADER", top: "7.65%" },
+  { label: "NAV BAR", top: "17.62%" },
+  { label: "HERO", top: "37.04%" },
+];
+
+const visualHierarchyViewingAreaLineCallouts: VisualHierarchySectionLineCallout[] = [
+  ...visualHierarchySectionLineCallouts,
+  { label: "MAIN CONTENT", top: "70.39%" },
+  { label: "SHOPPING CART", top: "91.05%" },
+];
+
+const visualHierarchyStepThreeLineCallouts: VisualHierarchySectionLineCallout[] = [
+  { label: "TOOLBAR", top: "2.87%" },
+  { label: "NAV BAR", top: "7.76%" },
+  { label: "MAIN CONTENT", top: "49.92%" },
+  { label: "SHOPPING CART", top: "90.87%" },
+];
+
+const visualHierarchySupportingElementsBraceStacks: VisualHierarchyBraceStack[] =
+  [
+    {
+      bracePath: visualHierarchyCompressedBracePath,
+      braceTipTop: visualHierarchySupportingElementsBraceTipTop,
+      overlayLines: ["Supporting", "Elements"],
+      pathOffsetY: visualHierarchyCompressedBracePathOffsetY,
+    },
+  ];
+
+const visualHierarchyStepFourBraceStacks: VisualHierarchyBraceStack[] = [
+  {
+    bracePath: visualHierarchyTenBracePath,
+    braceTipTop: visualHierarchyTenBraceTipTop,
+    overlayLines: ["Supporting", "Elements"],
+    tone: "light",
+  },
+  {
+    bracePath: visualHierarchyNinetyBracePath,
+    braceTipTop: visualHierarchyNinetyBraceTipTop,
+    overlayLines: ["Focal", "Point"],
+    pathOffsetY: visualHierarchyNinetyBracePathOffsetY,
+    tone: "light",
+  },
+];
+
 const visualHierarchyAnnotationStyle: CSSProperties = {
   color: "#3c3b3a",
   display: "grid",
@@ -143,6 +222,7 @@ const visualHierarchyFocalPointAnnotationStyle: CSSProperties = {
 };
 
 const placeholderSteps = ["Step 1", "Step 2", "Step 3", "Step 4", "Step 5"];
+const visualHierarchySteps = ["Step 1", "Step 2", "Step 3", "Step 4"];
 const colorsAndThemingSwatchGroups: Record<string, FlowSwatchGroup> = {
   "Step 1": {
     swatches: [
@@ -679,8 +759,15 @@ function PlaceholderScreen({
   label,
   overlayStyle,
   overlayLines,
+  bracePath = visualHierarchyBracePath,
+  braceTipTop = visualHierarchyBraceTipTop,
+  extraBraceStacks = [],
+  sectionLineCallouts = visualHierarchySectionLineCallouts,
+  showVisualHierarchySectionLines,
   step,
   style,
+  useVisualHierarchyFramePair,
+  visualHierarchyBraceTone,
 }: {
   className?: string;
   frameStyle?: CSSProperties;
@@ -690,9 +777,18 @@ function PlaceholderScreen({
   label: "Small" | "Large";
   overlayStyle?: CSSProperties;
   overlayLines?: string[];
+  bracePath?: string;
+  braceTipTop?: string;
+  extraBraceStacks?: VisualHierarchyBraceStack[];
+  sectionLineCallouts?: VisualHierarchySectionLineCallout[];
+  showVisualHierarchySectionLines?: boolean;
   step: string;
   style?: CSSProperties;
+  useVisualHierarchyFramePair?: boolean;
+  visualHierarchyBraceTone?: VisualHierarchyBraceTone;
 }) {
+  const usesVisualHierarchyFramePair =
+    useVisualHierarchyFramePair || Boolean(visualHierarchyBraceTone);
   const aspect = label === "Small" ? "standard" : "tall";
   const frameClassName = [
     "flow-image-frame",
@@ -708,6 +804,143 @@ function PlaceholderScreen({
   ]
     .filter(Boolean)
     .join(" ");
+  const annotationStyle = overlayStyle ?? visualHierarchyAnnotationStyle;
+  const annotationElement = overlayLines ? (
+    <span className="flow-visual-hierarchy-annotation" style={annotationStyle}>
+      {overlayLines.map((line) => (
+        <span key={line}>{line}</span>
+      ))}
+    </span>
+  ) : null;
+  const renderExternalAnnotationElement = (
+    lines: string[] | undefined,
+    top: string,
+    key?: string,
+  ) =>
+    lines ? (
+      <span
+        className="flow-visual-hierarchy-annotation flow-visual-hierarchy-external-annotation"
+        key={key}
+        style={
+          {
+            ...annotationStyle,
+            left: "auto",
+            right: "calc(100% + 8px)",
+            textAlign: "right",
+            top,
+            transform: "translateY(-50%)",
+          } as CSSProperties
+        }
+      >
+        {lines.map((line) => (
+          <span key={line}>{line}</span>
+        ))}
+      </span>
+    ) : null;
+  const externalAnnotationElement = renderExternalAnnotationElement(
+    overlayLines,
+    braceTipTop,
+  );
+  const renderBraceElement = ({
+    ariaLabel,
+    currentBracePath,
+    currentTone,
+    key,
+    pathOffsetY,
+  }: {
+    ariaLabel: string;
+    currentBracePath: string;
+    currentTone: VisualHierarchyBraceTone;
+    key?: string;
+    pathOffsetY?: number;
+  }) => (
+    <span
+      aria-hidden="true"
+      className="flow-visual-hierarchy-brace-wrap"
+      key={key}
+    >
+      <svg
+        aria-label={ariaLabel}
+        className={`flow-visual-hierarchy-brace flow-visual-hierarchy-brace-${currentTone}`}
+        focusable="false"
+        preserveAspectRatio="xMidYMid meet"
+        viewBox="0 0 70 720"
+      >
+        <g
+          transform={
+            pathOffsetY ? `translate(0 ${pathOffsetY})` : undefined
+          }
+        >
+          <path
+            className="flow-visual-hierarchy-brace-path flow-visual-hierarchy-brace-outline"
+            d={currentBracePath}
+          />
+          <path
+            className="flow-visual-hierarchy-brace-path flow-visual-hierarchy-brace-line"
+            d={currentBracePath}
+          />
+        </g>
+      </svg>
+    </span>
+  );
+  const extraBraceStackElements =
+    extraBraceStacks.length > 0
+      ? extraBraceStacks.flatMap((stack, index) => {
+          const stackLabel =
+            stack.overlayLines?.join(" ") ??
+            stack.ariaLabel ??
+            `Visual hierarchy brace ${index + 1}`;
+          const stackKey = stackLabel.toLowerCase().replace(/\s+/g, "-");
+
+          return [
+            renderBraceElement({
+              ariaLabel: stackLabel,
+              currentBracePath: stack.bracePath ?? bracePath,
+              currentTone: stack.tone ?? visualHierarchyBraceTone ?? "light",
+              key: `${stackKey}-brace`,
+              pathOffsetY: stack.pathOffsetY,
+            }),
+            renderExternalAnnotationElement(
+              stack.overlayLines,
+              stack.braceTipTop,
+              `${stackKey}-label`,
+            ),
+          ];
+        })
+      : null;
+  const sectionLinesElement =
+    visualHierarchyBraceTone || showVisualHierarchySectionLines ? (
+    <span className="flow-visual-hierarchy-section-lines">
+      {sectionLineCallouts.map((callout) => (
+        <span
+          className="flow-visual-hierarchy-section-line"
+          key={callout.label}
+          style={{ "--flow-section-line-top": callout.top } as CSSProperties}
+        >
+          <span className="flow-visual-hierarchy-section-label">
+            {callout.label}
+          </span>
+        </span>
+      ))}
+    </span>
+    ) : null;
+  const frameElement = (
+    <div className={frameClassName} style={frameStyle}>
+      {imageSrc ? (
+        <Image
+          alt={imageAlt ?? `${step} ${label} screenshot`}
+          data-screenshot-preview
+          fill
+          sizes="(max-width: 720px) calc(min(84vw, 292px) + 12px), 318px"
+          style={imageStyle}
+          src={imageSrc}
+        />
+      ) : (
+        <span>Screenshot pending</span>
+      )}
+      {visualHierarchyBraceTone ? null : annotationElement}
+    </div>
+  );
 
   return (
     <figure
@@ -715,31 +948,37 @@ function PlaceholderScreen({
       className={screenClassName}
       style={style}
     >
-      <span className="flow-screen-label">{label}</span>
-      <div className={frameClassName} style={frameStyle}>
-        {imageSrc ? (
-          <Image
-            alt={imageAlt ?? `${step} ${label} screenshot`}
-            data-screenshot-preview
-            fill
-            sizes="(max-width: 720px) calc(min(84vw, 292px) + 12px), 318px"
-            style={imageStyle}
-            src={imageSrc}
-          />
-        ) : (
-          <span>Screenshot pending</span>
-        )}
-        {overlayLines ? (
-          <span
-            className="flow-visual-hierarchy-annotation"
-            style={overlayStyle ?? visualHierarchyAnnotationStyle}
-          >
-            {overlayLines.map((line) => (
-              <span key={line}>{line}</span>
-            ))}
-          </span>
-        ) : null}
-      </div>
+      {usesVisualHierarchyFramePair ? null : (
+        <span className="flow-screen-label">{label}</span>
+      )}
+      {usesVisualHierarchyFramePair ? (
+        <div className="flow-visual-hierarchy-frame-pair">
+          {frameElement}
+          {visualHierarchyBraceTone ? (
+            <svg
+              aria-hidden="true"
+              className={`flow-visual-hierarchy-brace flow-visual-hierarchy-brace-${visualHierarchyBraceTone}`}
+              focusable="false"
+              preserveAspectRatio="xMidYMid meet"
+              viewBox="0 0 70 720"
+            >
+              <path
+                className="flow-visual-hierarchy-brace-path flow-visual-hierarchy-brace-outline"
+                d={bracePath}
+              />
+              <path
+                className="flow-visual-hierarchy-brace-path flow-visual-hierarchy-brace-line"
+                d={bracePath}
+              />
+            </svg>
+          ) : null}
+          {sectionLinesElement}
+          {externalAnnotationElement}
+          {extraBraceStackElements}
+        </div>
+      ) : (
+        frameElement
+      )}
       <figcaption>{`${step} ${label} ${
         imageSrc ? "screenshot" : "placeholder"
       }.`}</figcaption>
@@ -1092,28 +1331,36 @@ function OriginalPhotographyScreens() {
 }
 
 function PlaceholderStage({
+  className,
   copy,
   renderExpandedStepScreens,
   renderStepScreens,
+  rowLabels = [],
   sectionLabel = "Stage",
   stage,
+  style,
   steps = placeholderSteps,
   stepTitles = {},
   title,
+  visibleStepLimit,
 }: {
+  className?: string;
   copy: string;
   renderExpandedStepScreens?: (step: string) => ReactNode;
   renderStepScreens?: (step: string, isExpanded: boolean) => ReactNode;
+  rowLabels?: string[];
   sectionLabel?: "Category" | "Stage";
   stage: string;
+  style?: CSSProperties;
   steps?: string[];
   stepTitles?: Record<string, string>;
   title: string;
+  visibleStepLimit?: number;
 }) {
   const [isExpanded, setIsExpanded] = useState(false);
   const isNarrowFlowLayout = useIsNarrowFlowLayout();
   const placeholderScreenshotsId = useId();
-  const visibleStepCount = isNarrowFlowLayout ? 1 : 2;
+  const visibleStepCount = visibleStepLimit ?? (isNarrowFlowLayout ? 1 : 2);
   const visibleSteps = steps.slice(0, visibleStepCount);
   const extraSteps = steps.slice(visibleStepCount);
   const [firstExtraStep, ...remainingExtraSteps] = extraSteps;
@@ -1133,7 +1380,12 @@ function PlaceholderStage({
     : [];
 
   return (
-    <div className="flow-capture-group">
+    <div
+      className={["flow-capture-group", className]
+        .filter(Boolean)
+        .join(" ")}
+      style={style}
+    >
       <div className="flow-group-header">
         <span>
           {sectionLabel} {stage}
@@ -1142,8 +1394,18 @@ function PlaceholderStage({
         <p>{copy}</p>
       </div>
 
-      <div>
+      <div className="flow-capture-body">
         <div className="flow-capture-grid">
+          {rowLabels.map((label, index) => (
+            <span
+              className={`flow-visual-hierarchy-row-label flow-visual-hierarchy-row-label-${
+                index + 1
+              }`}
+              key={label}
+            >
+              {label}
+            </span>
+          ))}
           {visibleSteps.map((step) => (
             <div className="flow-screen-stack" key={step}>
               <h4>{stepTitles[step] ?? step}</h4>
@@ -1459,8 +1721,18 @@ export default function ProductFlowSwitcher({
         <div className="flow-capture-groups">
           {uiBlueprintSections.map((section) => (
             <PlaceholderStage
+              className={
+                section.title === "Visual Hierarchy"
+                  ? "flow-capture-group-full-row flow-capture-group-visual-hierarchy"
+                  : undefined
+              }
               copy={`This UI Foundations category will outline the ${section.title} system.`}
               key={section.stage}
+              style={
+                section.title === "Visual Hierarchy"
+                  ? { gridTemplateColumns: "1fr" }
+                  : undefined
+              }
               renderStepScreens={
                 section.title === "Colors & Theming"
                   ? (step) => {
@@ -1523,58 +1795,104 @@ export default function ProductFlowSwitcher({
                           ) : undefined;
                         }
                     : section.title === "Visual Hierarchy"
-                      ? (step) => (
-                          <PlaceholderScreen
-                            className="flow-visual-hierarchy-frame"
-                            imageAlt={
-                              step === "Step 1" || step === "Step 2"
-                                ? "Alla Vostra startup screen"
-                                : undefined
-                            }
-                            imageSrc={
-                              step === "Step 1"
-                                ? "/images/alla-vostra-hero-startup-framed.png"
-                                : step === "Step 2"
-                                  ? "/images/alla-vostra-hero-startup-framed-lower-muted.png"
+                      ? (step) => {
+                          const isStartupScreenStep = step === "Step 1";
+                          const isHomeScreenStep =
+                            step === "Step 3" || step === "Step 4";
+                          const isViewingAreaStep =
+                            isStartupScreenStep || step === "Step 3";
+                          const isFocalPointStep = step === "Step 2";
+                          const isBracedStep =
+                            isViewingAreaStep || isFocalPointStep;
+                          const isMutedHomeScreenStep = step === "Step 4";
+
+                          return (
+                            <PlaceholderScreen
+                              bracePath={
+                                isFocalPointStep
+                                  ? visualHierarchyCompressedBracePath
                                   : undefined
-                            }
-                            frameStyle={
-                              step === "Step 1" || step === "Step 2"
-                                ? {
-                                    aspectRatio: "1290 / 2661",
-                                    background: "transparent",
-                                    border: 0,
-                                    borderRadius: 0,
-                                    boxShadow: "none",
-                                  }
-                                : undefined
-                            }
-                            label={
-                              step === "Step 1" || step === "Step 2"
-                                ? "Large"
-                                : "Small"
-                            }
-                            overlayLines={
-                              step === "Step 1"
-                                ? ["Viewing", "Area"]
-                                : step === "Step 2"
-                                  ? ["Focal", "Point"]
+                              }
+                              braceTipTop={
+                                isFocalPointStep
+                                  ? visualHierarchyCompressedBraceTipTop
                                   : undefined
-                            }
-                            overlayStyle={
-                              step === "Step 2"
-                                ? visualHierarchyFocalPointAnnotationStyle
-                                : undefined
-                            }
-                            step={step}
-                            style={{
-                              width:
-                                step === "Step 1" || step === "Step 2"
-                                  ? "min(100%, 318px)"
+                              }
+                              extraBraceStacks={
+                                isFocalPointStep
+                                  ? visualHierarchySupportingElementsBraceStacks
+                                  : isMutedHomeScreenStep
+                                    ? visualHierarchyStepFourBraceStacks
+                                  : undefined
+                              }
+                              sectionLineCallouts={
+                                isHomeScreenStep
+                                  ? visualHierarchyStepThreeLineCallouts
+                                  : isStartupScreenStep
+                                    ? visualHierarchyViewingAreaLineCallouts
+                                    : undefined
+                              }
+                              className="flow-visual-hierarchy-frame"
+                              imageAlt={
+                                isHomeScreenStep
+                                    ? "Alla Vostra home screen"
+                                  : isStartupScreenStep || isFocalPointStep
+                                    ? "Alla Vostra startup screen"
+                                    : undefined
+                              }
+                              imageSrc={
+                                isHomeScreenStep
+                                  ? isMutedHomeScreenStep
+                                    ? "/images/alla-vostra-home-framed-toolbar-nav-muted-no-island.png"
+                                    : "/images/alla-vostra-home-framed-no-island.png"
+                                  : isStartupScreenStep
+                                    ? "/images/alla-vostra-hero-startup-framed-no-island.png"
+                                    : isFocalPointStep
+                                    ? "/images/alla-vostra-hero-startup-framed-lower-muted-no-island.png"
+                                    : undefined
+                              }
+                              frameStyle={
+                                isBracedStep || isHomeScreenStep
+                                  ? {
+                                      aspectRatio: "1290 / 2661",
+                                      background: "transparent",
+                                      border: 0,
+                                      borderRadius: 0,
+                                      boxShadow: "none",
+                                    }
+                                  : undefined
+                              }
+                              label={
+                                isBracedStep || isHomeScreenStep
+                                  ? "Large"
+                                  : "Small"
+                              }
+                              overlayLines={
+                                isViewingAreaStep
+                                  ? ["Viewing", "Area"]
+                                  : isFocalPointStep
+                                    ? ["Focal", "Point"]
+                                    : undefined
+                              }
+                              overlayStyle={
+                                isBracedStep || isMutedHomeScreenStep
+                                  ? visualHierarchyFocalPointAnnotationStyle
+                                  : undefined
+                              }
+                              step={step}
+                              showVisualHierarchySectionLines={isHomeScreenStep}
+                              style={{
+                                width: isBracedStep || isHomeScreenStep
+                                  ? "min(100%, 444px)"
                                   : "min(100%, 228px)",
-                            }}
-                          />
-                        )
+                              }}
+                              useVisualHierarchyFramePair={isHomeScreenStep}
+                              visualHierarchyBraceTone={
+                                isBracedStep ? "light" : undefined
+                              }
+                            />
+                          );
+                        }
                       : undefined
               }
               renderExpandedStepScreens={
@@ -1583,6 +1901,11 @@ export default function ProductFlowSwitcher({
                       step === "Step 3" ? (
                         <OriginalArtScreens overflowOnly />
                       ) : undefined
+                      : undefined
+              }
+              rowLabels={
+                section.title === "Visual Hierarchy"
+                  ? ["PRE-SCROLLING", "ON-SCROLLING"]
                   : undefined
               }
               sectionLabel="Category"
@@ -1594,6 +1917,8 @@ export default function ProductFlowSwitcher({
                     ? typographyAndSpacingSteps
                     : section.title === "Iconography & Imagery"
                       ? iconographyAndImagerySteps
+                    : section.title === "Visual Hierarchy"
+                      ? visualHierarchySteps
                     : section.title === "Navigations"
                       ? navigationActionSteps
                     : section.title === "Controls & Inputs"
@@ -1611,9 +1936,12 @@ export default function ProductFlowSwitcher({
                       ? navigationActionStepTitles
                     : section.title === "Controls & Inputs"
                       ? controlsAndInputsStepTitles
-                  : undefined
+                    : undefined
               }
               title={section.title}
+              visibleStepLimit={
+                section.title === "Visual Hierarchy" ? 4 : undefined
+              }
             />
           ))}
         </div>

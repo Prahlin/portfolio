@@ -3896,6 +3896,127 @@ section.project-hero {
   object-position: center;
 }
 
+.flow-visual-hierarchy-frame-pair {
+  --flow-visual-hierarchy-brace-gap: 18px;
+  --flow-visual-hierarchy-brace-width: 96px;
+  --flow-visual-hierarchy-tip-frame-gap: 35.83px;
+
+  display: block;
+  margin-inline: auto;
+  max-width: none;
+  position: relative;
+  width: calc(
+    318px + var(--flow-visual-hierarchy-brace-gap) +
+      var(--flow-visual-hierarchy-brace-width)
+  );
+}
+
+.flow-visual-hierarchy-frame.flow-screen
+  .flow-visual-hierarchy-frame-pair
+  > .flow-image-frame {
+  margin-left: calc(
+    var(--flow-visual-hierarchy-brace-width) +
+      var(--flow-visual-hierarchy-brace-gap)
+  );
+  margin-right: 0;
+  max-width: none;
+  width: 318px;
+}
+
+.flow-visual-hierarchy-brace {
+  bottom: 0;
+  display: block;
+  height: 100%;
+  left: 0;
+  overflow: visible;
+  position: absolute;
+  top: 0;
+  width: var(--flow-visual-hierarchy-brace-width);
+}
+
+.flow-visual-hierarchy-brace-path {
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: miter;
+  stroke-miterlimit: 12;
+  vector-effect: non-scaling-stroke;
+}
+
+.flow-visual-hierarchy-brace-outline {
+  stroke-width: 4.8px;
+}
+
+.flow-visual-hierarchy-brace-line {
+  stroke-width: 2.3px;
+}
+
+.flow-visual-hierarchy-brace-dark .flow-visual-hierarchy-brace-outline {
+  stroke: #ffffff;
+}
+
+.flow-visual-hierarchy-brace-dark .flow-visual-hierarchy-brace-line {
+  stroke: #111111;
+}
+
+.flow-visual-hierarchy-brace-light .flow-visual-hierarchy-brace-outline {
+  stroke: #111111;
+}
+
+.flow-visual-hierarchy-brace-light .flow-visual-hierarchy-brace-line {
+  stroke: #ffffff;
+}
+
+.flow-visual-hierarchy-external-annotation {
+  max-width: max-content;
+}
+
+.flow-visual-hierarchy-section-lines {
+  bottom: 0;
+  left: calc(100% + var(--flow-visual-hierarchy-tip-frame-gap));
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  width: 50px;
+  z-index: 3;
+}
+
+.flow-visual-hierarchy-section-line {
+  background: #111111;
+  border-radius: 999px;
+  display: block;
+  height: 4.8px;
+  left: 0;
+  position: absolute;
+  top: var(--flow-section-line-top);
+  transform: translateY(-50%);
+  width: 50px;
+}
+
+.flow-visual-hierarchy-section-label {
+  color: var(--green);
+  display: block;
+  font-size: 20px;
+  font-weight: 850;
+  left: calc(100% + var(--flow-visual-hierarchy-tip-frame-gap));
+  letter-spacing: 0.12em;
+  line-height: 1;
+  position: absolute;
+  text-transform: uppercase;
+  top: 50%;
+  transform: translateY(-50%);
+  white-space: nowrap;
+}
+
+.flow-visual-hierarchy-section-line::after {
+  background: #ffffff;
+  border-radius: inherit;
+  content: "";
+  height: 2.3px;
+  inset: 50% 0 auto;
+  position: absolute;
+  transform: translateY(-50%);
+}
+
 .flow-screen-swatch .flow-screen-label {
   align-items: center;
   display: flex;
@@ -3966,6 +4087,70 @@ section.project-hero {
   gap: 24px;
   grid-template-columns: minmax(220px, 0.34fr) minmax(0, 1fr);
   padding-top: 30px;
+}
+
+.flow-capture-group-full-row {
+  grid-template-columns: 1fr;
+}
+
+.flow-capture-group-full-row > .flow-group-header,
+.flow-capture-group-full-row > .flow-capture-body {
+  grid-column: 1 / -1;
+}
+
+.flow-capture-group-full-row > .flow-group-header {
+  max-width: 560px;
+}
+
+.flow-capture-group-full-row .flow-capture-grid {
+  grid-template-columns: 1fr;
+}
+
+.flow-capture-group-visual-hierarchy .flow-capture-grid {
+  --flow-visual-hierarchy-scaled-row-height: 360px;
+
+  gap: 24px 34px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  justify-items: center;
+  overflow: visible;
+  position: relative;
+}
+
+.flow-capture-group-visual-hierarchy .flow-screen-stack {
+  justify-self: center;
+  zoom: 0.5;
+}
+
+.flow-visual-hierarchy-row-label {
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 850;
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
+  left: 50%;
+  letter-spacing: 0.08em;
+  line-height: 1;
+  pointer-events: none;
+  position: absolute;
+  text-align: center;
+  text-transform: uppercase;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  z-index: 5;
+}
+
+.flow-visual-hierarchy-row-label-1 {
+  top: 0;
+}
+
+.flow-visual-hierarchy-row-label-2 {
+  top: calc(var(--flow-visual-hierarchy-scaled-row-height) + 24px);
+}
+
+.flow-capture-group-full-row
+  .flow-screen-stack:has(.flow-visual-hierarchy-frame-pair)
+  h4 {
+  transform: translateX(57px);
 }
 
 .flow-group-header {
