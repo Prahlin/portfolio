@@ -1,0 +1,676 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [ 6 0 R 8 0 R 10 0 R 12 0 R 14 0 R 16 0 R ] /Count 6 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+5 0 obj
+<< /Length 6360 >>
+stream
+BT
+/F2 11.20 Tf
+1 0 0 1 54.00 738.00 Tm (Prahlin Portfolio Work Log - August 10, 2026 \(Part 2\)) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 723.80 Tm (Compiled summary for Monday, August 10, 2026 - Part 2 - focus: continuing the Prahl.dev) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 711.65 Tm (Portfolio Alla Vostra UI Foundations Visual Hierarchy section after the August 10 Part 1) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 699.50 Tm (framed-startup pass, forcing Visual Hierarchy stacks below the category copy, building) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 687.35 Tm (custom curly-brace annotation geometry, adding right-side section callout lines and green) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 675.20 Tm (eyebrow labels, adding Step 3 and Step 4 home-screen device-frame examples, rebuilding) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 663.05 Tm (no-island and muted mockup assets with matching device-frame depth order, scaling the four) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 650.90 Tm (Visual Hierarchy stacks into a compact two-by-two layout, adding PRE-SCROLLING and) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 638.75 Tm (ON-SCROLLING row headers centered between the stack pairs, validating TypeScript and) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 626.60 Tm (browser-rendered geometry, refreshing the Portfolio project snapshot, reviewing all prior) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 614.45 Tm (Portfolio PDF worklogs, and generating the August 10 Part 2 Portfolio PDF worklog.) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 602.30 Tm (Generated in continuity with the established Prahlin Portfolio daily worklog cadence:) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 590.15 Tm (compact opening summary, source-material section, baseline section, goal list,) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 578.00 Tm (work-completed sections, validation section, files-touched list, follow-up context, and) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 565.85 Tm (output-artifact close.) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 553.70 Tm (This artifact intentionally covers Prahlin/portfolio work performed after) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 541.55 Tm (portfolio_worklog_august10_part1.pdf and after the August 10 Part 1 documentation state. The) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 529.40 Tm (committed source state reviewed for this record is 6de20a9e44e2f23d6ac265d82d6269628aad5602) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 517.25 Tm (on main, matching origin/main before this PDF was generated. That commit already contains) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 505.10 Tm (the Visual Hierarchy source and asset work described here. This PDF and the refreshed) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 492.95 Tm (project snapshot are the new documentation artifacts produced for the August 10 Part 2) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 480.80 Tm (record before the requested public-site push/deployment verification pass.) Tj
+/F2 9.35 Tf
+1 0 0 1 54.00 456.50 Tm (Source Materials Reviewed) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 444.35 Tm (- Ran ./read_project.sh from /Users/prahlin/gh/portfolio and regenerated) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 432.20 Tm (  portfolio_PROJECT_SNAPSHOT.txt before writing this worklog, preserving the project) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 420.05 Tm (  convention that Codex refreshes the current source snapshot before continuing Portfolio) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 407.90 Tm (  documentation work.) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 395.75 Tm (- Reviewed the refreshed portfolio_PROJECT_SNAPSHOT.txt, including project notes, source) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 383.60 Tm (  tree, public image and font inventories, PDF worklog inventory, package and deployment) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 371.45 Tm (  configuration, git context, recent commits, and the standing instruction to ask for a) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 359.30 Tm (  commit message before committing or pushing.) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 347.15 Tm (- Reviewed every pre-existing Portfolio root-level worklog PDF:) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 335.00 Tm (  portfolio_worklog_july11.pdf, portfolio_worklog_july14.pdf,) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 322.85 Tm (  portfolio_worklog_july15_part1.pdf, portfolio_worklog_july15_part2.pdf,) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 310.70 Tm (  portfolio_worklog_july16.pdf, portfolio_worklog_july19.pdf,) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 298.55 Tm (  portfolio_worklog_july20.pdf, portfolio_worklog_july21.pdf,) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 286.40 Tm (  portfolio_worklog_july22.pdf, portfolio_worklog_july23.pdf,) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 274.25 Tm (  portfolio_worklog_july24.pdf, portfolio_worklog_july25.pdf,) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 262.10 Tm (  portfolio_worklog_july29.pdf, portfolio_worklog_july30.pdf,) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 249.95 Tm (  portfolio_worklog_july31.pdf, portfolio_worklog_august1_part1.pdf,) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 237.80 Tm (  portfolio_worklog_august1_part2.pdf, portfolio_worklog_august1_part3.pdf,) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 225.65 Tm (  portfolio_worklog_august3.pdf, portfolio_worklog_august4.pdf,) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 213.50 Tm (  portfolio_worklog_august5.pdf, portfolio_worklog_august6.pdf, and) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 201.35 Tm (  portfolio_worklog_august10_part1.pdf.) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 189.20 Tm (- Extracted text from all twenty-three existing Portfolio PDFs with pdftotext and checked) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 177.05 Tm (  recent metadata with pdfinfo to preserve title cadence, Part 2 naming, opening-summary) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 164.90 Tm (  density, section order, compact bullet-heavy technical voice, validation language,) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 152.75 Tm (  files-touched lists, follow-up context, output-artifact close, root-level filename) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 140.60 Tm (  style, letter-size pages, PDF 1.4 output, Codex author/creator/producer metadata, and) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 128.45 Tm (  Helvetica-style base-font convention.) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 116.30 Tm (- Used portfolio_worklog_august10_part1.pdf as the closest same-day structural baseline) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 104.15 Tm (  because it documented the first Visual Hierarchy startup-frame pass, the framed-device) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 92.00 Tm (  scale language, lower-muted Focal Point treatment, TT Fors annotations, local browser) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 79.85 Tm (  measurement workflow, and local-only deployment wording.) Tj
+/F1 8.5 Tf
+1 0 0 1 293.00 28.00 Tm (Prahlin Portfolio Work Log - August 10, 2026 \(Part 2\) Page 1) Tj
+ET
+endstream
+endobj
+6 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 5 0 R >>
+endobj
+7 0 obj
+<< /Length 6175 >>
+stream
+BT
+/F1 9.35 Tf
+1 0 0 1 54.00 738.00 Tm (- Reviewed git history through git log, git show --stat, git show --name-status, git) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 725.85 Tm (  status, git diff --stat, and git diff --check. HEAD and origin/main resolved to 6de20a9) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 713.70 Tm (  before this PDF was generated.) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 701.55 Tm (- Reviewed app/projects/alla-vostra/ProductFlowSwitcher.tsx, app/globals.css,) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 689.40 Tm (  public/images/alla-vostra-hero-startup-framed-no-island.png,) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 677.25 Tm (  public/images/alla-vostra-hero-startup-framed-lower-muted-no-island.png,) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 665.10 Tm (  public/images/alla-vostra-home-framed-no-island.png,) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 652.95 Tm (  public/images/alla-vostra-home-framed-toolbar-nav-muted-no-island.png, the Visual) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 640.80 Tm (  Hierarchy brace SVG assets, package scripts, the Hostinger static-export workflow, and) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 628.65 Tm (  the local route at /projects/alla-vostra.) Tj
+/F2 9.35 Tf
+1 0 0 1 54.00 604.35 Tm (Baseline Status Before August 10 Part 2 Work) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 592.20 Tm (- August 10 Part 1 had already established real framed startup-device screenshots for) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 580.05 Tm (  Visual Hierarchy Step 1 and Step 2, including Viewing Area and Focal Point TT Fors) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 567.90 Tm (  annotations and a lower-muted focal-point asset.) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 555.75 Tm (- The Visual Hierarchy section still needed a stronger system explanation across more than) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 543.60 Tm (  two examples. Steps 3 and 4 were not yet populated with home-screen device-frame) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 531.45 Tm (  examples, and the user wanted the section to read as a complete design-system breakdown) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 519.30 Tm (  rather than a partially filled placeholder set.) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 507.15 Tm (- The Visual Hierarchy category originally sat in a wide grid where Step 1 and Step 2) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 495.00 Tm (  could appear alongside the category copy. The user wanted all device-frame/screenshot) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 482.85 Tm (  stacks to start on a new row beneath the Visual Hierarchy title and description before) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 470.70 Tm (  later requesting a compact two-stack-per-row arrangement.) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 458.55 Tm (- The early annotation approach relied on text overlays inside the framed screenshots. The) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 446.40 Tm (  user wanted external brace-and-label systems that could point at regions of the app UI) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 434.25 Tm (  without covering the screenshots themselves.) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 422.10 Tm (- Step 3 and Step 4 needed to use home_screen_large.png inside the same accepted device) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 409.95 Tm (  frame and depth order as Steps 1 and 2, including corrected no-island top treatment and) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 397.80 Tm (  matching hardware-over-screen compositing.) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 385.65 Tm (- The right-side white section lines and green eyebrow labels needed to identify precise) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 373.50 Tm (  UI zones, then remain aligned while line widths, device-frame order, row scaling, and) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 361.35 Tm ( grid placement changed through the design pass.) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 349.20 Tm (- The local Next.js dev server repeatedly held stale CSS and optimized image output after) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 337.05 Tm (  rapid asset/CSS iteration, so cache clears and dev-server restarts remained part of the) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 324.90 Tm (  verification baseline.) Tj
+/F2 9.35 Tf
+1 0 0 1 54.00 300.60 Tm (Goals for August 10 Part 2) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 288.45 Tm (- Force the Visual Hierarchy screenshot stacks to sit below the category header and) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 276.30 Tm (  description whenever the section is in its expanded UI Foundations layout.) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 264.15 Tm (- Replace the in-device text-only hierarchy labels with custom external curly-brace) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 252.00 Tm (  systems that preserve a thin flow-diagram look, left-side placement, jagged or smoothed) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 239.85 Tm (  center tips as requested, and consistent black/white stroke treatment.) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 227.70 Tm (- Add right-side section lines and green eyebrow labels for app header, navigation bar,) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 215.55 Tm (  hero, main content, shopping cart, toolbar, and related Step-specific regions using) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 203.40 Tm (  vertical-center logic from the real screenshots.) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 191.25 Tm (- Populate Step 3 and Step 4 with home-screen framed screenshots that use the same device) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 179.10 Tm (  frame, no-island top treatment, and screenshot-under-frame depth order as Steps 1 and 2.) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 166.95 Tm (- Build Step 4 as a gray-out mockup for toolbar/navigation emphasis while keeping main) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 154.80 Tm (  content, cart button, bottom bar, and hardware frame outside the outdated rounding mask.) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 142.65 Tm (- Save accepted curly-brace variants as reusable SVG reference assets for future Visual) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 130.50 Tm (  Hierarchy work.) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 118.35 Tm (- Compact the finished Visual Hierarchy sequence by scaling Steps 1 through 4 as whole) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 106.20 Tm (  stacks to 50 percent and arranging them as Step 1 plus Step 2 on row one and Step 3 plus) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 94.05 Tm (  Step 4 on row two.) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 81.90 Tm (- Add row headers PRE-SCROLLING and ON-SCROLLING centered horizontally between the pair of) Tj
+/F1 8.5 Tf
+1 0 0 1 293.00 28.00 Tm (Prahlin Portfolio Work Log - August 10, 2026 \(Part 2\) Page 2) Tj
+ET
+endstream
+endobj
+8 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 7 0 R >>
+endobj
+9 0 obj
+<< /Length 6067 >>
+stream
+BT
+/F1 9.35 Tf
+1 0 0 1 54.00 738.00 Tm (  stacks in each row, then validate the actual rendered centers in the browser.) Tj
+/F2 9.35 Tf
+1 0 0 1 54.00 713.70 Tm (Work Completed - Visual Hierarchy Layout and Stack Flow) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 701.55 Tm (- Added a Visual-Hierarchy-specific full-row capture group so the category header and body) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 689.40 Tm (  span the full layout width, preventing Step 1 and Step 2 from sitting beside the Visual) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 677.25 Tm (  Hierarchy copy in wide aspect ratios.) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 665.10 Tm (- Later restored a two-column Visual Hierarchy grid after the stack scale changed, keeping) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 652.95 Tm (  the category copy above the grid while arranging the four active steps as a 2x2 matrix.) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 640.80 Tm (- Limited the Visual Hierarchy sequence to Steps 1 through 4 for the visible documentation) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 628.65 Tm (  set, removing the old Show More break for this category while leaving other UI) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 616.50 Tm (  Foundations categories on their established expansion behavior.) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 604.35 Tm (- Added a visibleStepLimit hook to PlaceholderStage so Visual Hierarchy could request four) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 592.20 Tm (  visible steps without changing the default two-step or narrow-layout behavior for other) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 580.05 Tm (  sections.) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 567.90 Tm (- Scaled each Visual Hierarchy Step 1 through Step 4 stack to 50 percent as a complete) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 555.75 Tm (  unit with CSS zoom, preserving internal relationships among the Step header, screenshot,) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 543.60 Tm (  brace, brace text, section lines, green labels, and caption.) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 531.45 Tm (- Added PRE-SCROLLING and ON-SCROLLING row labels, then corrected them so each label is) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 519.30 Tm (  horizontally centered in the gap between the two stacks in its row rather than centered) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 507.15 Tm (  over either individual stack.) Tj
+/F2 9.35 Tf
+1 0 0 1 54.00 482.85 Tm (Work Completed - Brace Geometry and Annotation System) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 470.70 Tm (- Extended PlaceholderScreen with reusable Visual Hierarchy brace support, external) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 458.55 Tm (  annotation placement, optional extra brace stacks, configurable brace paths,) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 446.40 Tm (  section-line callout arrays, and braced frame-pair wrapping.) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 434.25 Tm (- Built the first custom full-height left-side curly brace for Viewing Area, iterating) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 422.10 Tm (  through the requested thin noodle-like look, left-of-device placement, smoother top and) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 409.95 Tm (  bottom transitions, sharper center bump, doubled stroke thickness, and unclipped pointed) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 397.80 Tm (  tip.) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 385.65 Tm (- Reused the accepted Step 2 brace language for Step 1 so both main Viewing Area examples) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 373.50 Tm (  shared the same white-with-black-stroke visual treatment.) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 361.35 Tm (- Created a 50 percent compressed brace variant for Step 2 Focal Point and a matching) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 349.20 Tm (  lower-half Supporting Elements brace, preserving the same curvature language while) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 337.05 Tm (  shortening the long vertical runs.) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 324.90 Tm (- Added 10 percent and 90 percent Step 4 brace variants, then smoothed the 10 percent) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 312.75 Tm (  Supporting Elements tip after the user approved de-jagging that compact top brace.) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 300.60 Tm (- Saved reusable SVG reference assets for the full, 50 percent, 10 percent, and 90 percent) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 288.45 Tm (  white/black brace variants under public/images/alla-vostra/.) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 276.30 Tm (- Kept brace widths fixed so the braces do not resize independently during window widening) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 264.15 Tm (  or compression, preserving the accepted optical thickness and relative spacing.) Tj
+/F2 9.35 Tf
+1 0 0 1 54.00 239.85 Tm (Work Completed - Section Lines and Eyebrow Labels) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 227.70 Tm (- Added right-side white line callouts that match the brace stroke thickness and run) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 215.55 Tm (  outward from the device frame at each annotated section center.) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 203.40 Tm (- Moved the green Step eyebrow labels from above the device frames to the right side of) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 191.25 Tm (  the new white lines, renamed them APP HEADER, NAV BAR, HERO, TOOLBAR, MAIN CONTENT, and) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 179.10 Tm (  SHOPPING CART according to the active step context, and scaled them up to the requested) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 166.95 Tm (  prominence.) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 154.80 Tm (- Calculated Step 1 and Step 2 callouts for the orange app header, white navigation bar,) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 142.65 Tm (  hero image, main content area, and shopping cart region, using the table area rather) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 130.50 Tm (  than the cheeseboard where the user corrected the boundary.) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 118.35 Tm (- Added Step 3 and Step 4 callout sets for toolbar, nav bar, main content, and shopping) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 106.20 Tm ( cart on the home-screen screenshot assets.) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 94.05 Tm (- Moved MAIN CONTENT and SHOPPING CART callouts from the focal-point stack to the Step 1) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 81.90 Tm (  stack when the user clarified the hierarchy grouping.) Tj
+/F1 8.5 Tf
+1 0 0 1 293.00 28.00 Tm (Prahlin Portfolio Work Log - August 10, 2026 \(Part 2\) Page 3) Tj
+ET
+endstream
+endobj
+10 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 9 0 R >>
+endobj
+11 0 obj
+<< /Length 6133 >>
+stream
+BT
+/F1 9.35 Tf
+1 0 0 1 54.00 738.00 Tm (- Shortened all right-side connector lines from 100px to 50px while keeping the green) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 725.85 Tm (  labels anchored to the new line end and preserving the same post-line label gap.) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 713.70 Tm (- Validated that the scaled two-by-two grid reduces the rendered connector-line width to) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 701.55 Tm (  25px as part of the complete 50 percent stack scale while retaining the 50px source) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 689.40 Tm (  rule.) Tj
+/F2 9.35 Tf
+1 0 0 1 54.00 665.10 Tm (Work Completed - Step 3 and Step 4 Home-Screen Assets) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 652.95 Tm (- Generated public/images/alla-vostra-home-framed.png as the first home-screen framed) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 640.80 Tm (  derivative, then replaced the active Visual Hierarchy usage with no-island variants) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 628.65 Tm (  after the user asked to remove the awkward top rounded rectangle/dynamic-island) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 616.50 Tm (  obstruction.) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 604.35 Tm (- Added public/images/alla-vostra-home-framed-no-island.png for Step 3 and) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 592.20 Tm (  public/images/alla-vostra-home-framed-toolbar-nav-muted-no-island.png for Step 4.) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 580.05 Tm (- Rebuilt Step 3 and Step 4 home-screen mockups from home_screen_large.png using the same) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 567.90 Tm (  1290 x 2661 device-frame canvas, screenshot scale, crop, no-island top treatment, and) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 555.75 Tm (  frame-over-screenshot depth order as the Step 1 and Step 2 startup assets.) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 543.60 Tm (- Generated no-island startup variants for Step 1 and Step 2 so the Visual Hierarchy) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 531.45 Tm (  examples share the same unobstructed app-header treatment.) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 519.30 Tm (- Rebuilt the Step 4 muted mockup so only the toolbar and nav bar are dimmed while main) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 507.15 Tm (  content, shopping cart, bottom native bar, and the hardware frame remain fully opaque.) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 495.00 Tm (- Corrected the Step 4 gray-out region after it followed outdated corner-rounding behavior) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 482.85 Tm (  by muting the final framed image and preserving frame pixels over the muted band.) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 470.70 Tm (- Verified alpha samples in the generated assets so toolbar/nav pixels use 50 percent) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 458.55 Tm (  opacity where intended while frame corners, main content, cart button, and lower device) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 446.40 Tm (  frame remain fully opaque.) Tj
+/F2 9.35 Tf
+1 0 0 1 54.00 422.10 Tm (Work Completed - Browser Validation and Cache Handling) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 409.95 Tm (- Repeatedly cleared .next/cache and .next/dev/cache after stale optimized images or stale) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 397.80 Tm (  CSS rules caused the browser to show old Visual Hierarchy widths, old line lengths, or) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 385.65 Tm (  old layout behavior.) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 373.50 Tm (- Restarted the local Next.js dev server on http://127.0.0.1:3000 after stale Turbopack) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 361.35 Tm (  CSS bundles omitted newly added Visual Hierarchy selectors.) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 349.20 Tm (- Used Playwright to switch into UI Foundations, locate the Visual Hierarchy section,) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 337.05 Tm (  expand or inspect the rendered stacks, and measure frame width, stack zoom, line width,) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 324.90 Tm (  row count, label text, row-header centers, and image URLs.) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 312.75 Tm (- Confirmed the final Visual Hierarchy grid renders four visible stacks, two columns, no) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 300.60 Tm (  category-specific Show More button, 50 percent stack zoom, 159px rendered device-frame) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 288.45 Tm (  width, and row-header centers aligned to the gap between stack pairs.) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 276.30 Tm (- Captured temporary browser screenshots during the device-frame, muted-image,) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 264.15 Tm (  row-scaling, connector-line, and row-label passes to compare the rendered page against) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 252.00 Tm (  the user-provided visual direction.) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 239.85 Tm (- Ran npm run check after the major JSX/CSS passes and after the final row-label) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 227.70 Tm (  adjustment, confirming TypeScript passed with tsc --noEmit.) Tj
+/F2 9.35 Tf
+1 0 0 1 54.00 203.40 Tm (Work Completed - Commit and Documentation Context) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 191.25 Tm (- Recommended a commit message in the requested one-header plus hyphen-line format,) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 179.10 Tm (  covering the Visual Hierarchy stack rendering, no-island framed assets, muted Step 4) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 166.95 Tm (  mockup, saved brace SVGs, section callouts, 50 percent scale, and row headers.) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 154.80 Tm (- The current source work was committed as 6de20a9, Refined Alla Vostra Visual Hierarchy) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 142.65 Tm (  stacks, with app/globals.css, app/projects/alla-vostra/ProductFlowSwitcher.tsx,) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 130.50 Tm (  generated PNG assets, and brace SVG reference assets included.) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 118.35 Tm (- Confirmed after that commit that main and origin/main matched at 6de20a9 before) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 106.20 Tm (  beginning the August 10 Part 2 worklog-generation task.) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 94.05 Tm (- Regenerated portfolio_PROJECT_SNAPSHOT.txt for the current project state before this PDF) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 81.90 Tm (  was written, then used the refreshed snapshot and all prior worklogs as source material) Tj
+/F1 8.5 Tf
+1 0 0 1 293.00 28.00 Tm (Prahlin Portfolio Work Log - August 10, 2026 \(Part 2\) Page 4) Tj
+ET
+endstream
+endobj
+12 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 11 0 R >>
+endobj
+13 0 obj
+<< /Length 5821 >>
+stream
+BT
+/F1 9.35 Tf
+1 0 0 1 54.00 738.00 Tm (  for this August 10 Part 2 record.) Tj
+/F2 9.35 Tf
+1 0 0 1 54.00 713.70 Tm (Validation Summary) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 701.55 Tm (- npm run check passed with tsc --noEmit after the Visual Hierarchy row scaling and) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 689.40 Tm (  row-header work, and again during the August 10 Part 2 worklog-generation pass.) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 677.25 Tm (- Playwright confirmed the Visual Hierarchy section has four visible stacks, grid columns) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 665.10 Tm (  of approximately 573px and 573px on a 1440px viewport, no Visual Hierarchy Show More) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 652.95 Tm (  button, and Step 1 through Step 4 rendered at zoom 0.5.) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 640.80 Tm (- Playwright confirmed the rendered device frames scale from the 318px source width to) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 628.65 Tm (  159px inside the final compact grid.) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 616.50 Tm (- Playwright confirmed PRE-SCROLLING and ON-SCROLLING render in white and center at the) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 604.35 Tm (  horizontal gap between Step 1/Step 2 and Step 3/Step 4 respectively.) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 592.20 Tm (- Browser measurements confirmed right-side connector lines use the shortened 50px source) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 580.05 Tm (  width before stack scaling and render proportionally within the scaled Visual Hierarchy) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 567.90 Tm (  stacks.) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 555.75 Tm (- Pixel checks confirmed Step 4 toolbar and nav pixels were muted while the current) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 543.60 Tm (  hardware frame, corners, main content, cart button, and bottom frame remain fully) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 531.45 Tm (  opaque.) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 519.30 Tm (- Static export was not rerun before this PDF was drafted because the source Visual) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 507.15 Tm (  Hierarchy commit was already pushed to origin/main; a final build/push/deployment) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 495.00 Tm (  verification pass follows this documentation artifact at the user request.) Tj
+/F2 9.35 Tf
+1 0 0 1 54.00 470.70 Tm (Files Touched) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 458.55 Tm (- app/projects/alla-vostra/ProductFlowSwitcher.tsx - extended the screenshot) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 446.40 Tm (  placeholder/rendering system with Visual Hierarchy brace stacks, section-line callouts,) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 434.25 Tm (  row labels, four-step visible layout support, no-island framed image sources, Step 3/4) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 422.10 Tm (  home-screen examples, and Step 4 brace split configuration.) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 409.95 Tm (- app/globals.css - added Visual Hierarchy frame-pair geometry, fixed brace sizing,) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 397.80 Tm (  white/black brace strokes, section-line styling, shortened connector widths, full-row) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 385.65 Tm (  category layout, two-column compact grid behavior, 50 percent stack scaling, and) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 373.50 Tm (  centered row-header positioning.) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 361.35 Tm (- public/images/alla-vostra-hero-startup-framed-no-island.png - added the clean startup) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 349.20 Tm (  framed image used by Visual Hierarchy Step 1.) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 337.05 Tm (- public/images/alla-vostra-hero-startup-framed-lower-muted-no-island.png - added the Step) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 324.90 Tm (  2 no-island lower-muted startup focal-point image.) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 312.75 Tm (- public/images/alla-vostra-home-framed.png - added the first generated home-screen framed) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 300.60 Tm (  derivative for future/reference use.) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 288.45 Tm (- public/images/alla-vostra-home-framed-no-island.png - added the Step 3 home-screen) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 276.30 Tm (  framed image with matching device-frame depth order.) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 264.15 Tm (- public/images/alla-vostra-home-framed-toolbar-nav-muted-no-island.png - added the Step 4) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 252.00 Tm (  home-screen framed image with toolbar/nav muted and the updated current frame boundary) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 239.85 Tm (  preserved.) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 227.70 Tm (- public/images/alla-vostra/visual-hierarchy-brace-white-black.svg,) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 215.55 Tm (  visual-hierarchy-brace-white-black-50.svg, visual-hierarchy-brace-white-black-10.svg,) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 203.40 Tm (  and visual-hierarchy-brace-white-black-90.svg - added reusable brace reference assets) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 191.25 Tm (  for the accepted full, half, 10 percent, and 90 percent variants.) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 179.10 Tm (- portfolio_PROJECT_SNAPSHOT.txt - regenerated to reflect the current source tree, recent) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 166.95 Tm (  source commit, public image inventory, PDF inventory, and documentation context.) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 154.80 Tm (- portfolio_worklog_august10_part2.pdf - generated this new root-level PDF worklog) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 142.65 Tm (  artifact following the existing Portfolio naming, style, metadata, and structure) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 130.50 Tm (  conventions.) Tj
+/F2 9.35 Tf
+1 0 0 1 54.00 106.20 Tm (Follow-Up Context) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 94.05 Tm (- The Visual Hierarchy section now uses a compact explanatory grid rather than the earlier) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 81.90 Tm (  full-size one-stack-per-row inspection layout. Future additions should account for the) Tj
+/F1 8.5 Tf
+1 0 0 1 293.00 28.00 Tm (Prahlin Portfolio Work Log - August 10, 2026 \(Part 2\) Page 5) Tj
+ET
+endstream
+endobj
+14 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 13 0 R >>
+endobj
+15 0 obj
+<< /Length 2154 >>
+stream
+BT
+/F1 9.35 Tf
+1 0 0 1 54.00 738.00 Tm (  50 percent stack scale before changing line lengths or brace text sizes.) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 725.85 Tm (- The generated no-island and muted PNGs are derived assets. If the base device frame,) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 713.70 Tm (  source screenshot crop, or home/startup screen source changes, the derivative assets) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 701.55 Tm (  should be regenerated together so Steps 1 through 4 remain synchronized.) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 689.40 Tm (- The saved brace SVGs are reference files only; the live page still renders brace paths) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 677.25 Tm (  from ProductFlowSwitcher constants so interactive layout changes can keep the same) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 665.10 Tm (  geometry without loading separate SVG files.) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 652.95 Tm (- The local Next.js dev workflow showed stale CSS/image behavior during rapid iteration.) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 640.80 Tm (  Future visual passes should continue clearing .next caches and restarting the dev server) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 628.65 Tm (  when browser measurements do not match the current source.) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 616.50 Tm (- The Hostinger deployment path remains the GitHub Actions static-export workflow on) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 604.35 Tm (  pushes to main, publishing the out/ directory to the hostinger-deploy branch.) Tj
+/F2 9.35 Tf
+1 0 0 1 54.00 580.05 Tm (Output Artifact) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 567.90 Tm (- Generated: /Users/prahlin/gh/portfolio/portfolio_worklog_august10_part2.pdf) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 555.75 Tm (- Companion sync file: /Users/prahlin/gh/portfolio/portfolio_PROJECT_SNAPSHOT.txt) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 543.60 Tm (- Next requested action after this PDF: commit/push the documentation artifact and) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 531.45 Tm (  refreshed snapshot, then confirm the public prahl.dev deployment path completes) Tj
+/F1 9.35 Tf
+1 0 0 1 54.00 519.30 Tm (  successfully.) Tj
+/F1 8.5 Tf
+1 0 0 1 293.00 28.00 Tm (Prahlin Portfolio Work Log - August 10, 2026 \(Part 2\) Page 6) Tj
+ET
+endstream
+endobj
+16 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 15 0 R >>
+endobj
+17 0 obj
+<< /Title (Prahlin Portfolio Work Log - August 10, 2026 \(Part 2\)) /Subject (Portfolio website development worklog) /Author (Codex) /Creator (Codex standard-library PDF generator) /Producer (Codex standard-library PDF generator) /CreationDate (D:20260810235800-04'00') /ModDate (D:20260810235800-04'00') >>
+endobj
+xref
+0 18
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000157 00000 n 
+0000000227 00000 n 
+0000000302 00000 n 
+0000006714 00000 n 
+0000006850 00000 n 
+0000013077 00000 n 
+0000013213 00000 n 
+0000019332 00000 n 
+0000019469 00000 n 
+0000025655 00000 n 
+0000025793 00000 n 
+0000031667 00000 n 
+0000031805 00000 n 
+0000034012 00000 n 
+0000034150 00000 n 
+trailer
+<< /Size 18 /Root 1 0 R /Info 17 0 R >>
+startxref
+34474
+%%EOF
