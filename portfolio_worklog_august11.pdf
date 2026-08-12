@@ -1,0 +1,420 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [5 0 R 7 0 R 9 0 R 11 0 R 13 0 R 15 0 R] /Count 6 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+4 0 obj
+<< /Length 6571 >>
+stream
+BT /F1 11.40 Tf 1 0 0 1 54.00 742.00 Tm (Prahlin Portfolio Work Log - August 11, 2026) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 729.85 Tm () Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 717.70 Tm (Compiled summary for Tuesday, August 11, 2026 - focus: continuing the Prahl.dev Portfolio) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 705.55 Tm (Alla Vostra UI Foundations Visual Hierarchy section after the August 10 Part 2) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 693.40 Tm (brace-and-callout pass, adding a new Step 1b focal stack between Step 1 and Step 2,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 681.25 Tm (deriving transparent no-frame startup focal screenshots, removing low-visibility cream) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 669.10 Tm (and muted areas, preserving the cheeseboard position and scale, adding Step 1c and Step) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 656.95 Tm (1d layer-isolation stacks, cropping invisible regions into real asset bounds, scaling) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 644.80 Tm (Step 1 to the accepted Original Hero width, enforcing two Visual Hierarchy stacks per) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 632.65 Tm (row, matching Step label sizing, doubling PRE-SCROLLING and ON-SCROLLING headers,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 620.50 Tm (validating TypeScript, static export, and browser-rendered dimensions, refreshing the) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 608.35 Tm (Portfolio project snapshot, reviewing all prior Portfolio PDF worklogs, and generating) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 596.20 Tm (the August 11 Portfolio PDF worklog.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 584.05 Tm (Generated in continuity with the established Prahlin Portfolio daily worklog cadence:) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 571.90 Tm (compact opening summary, source-material section, baseline section, goal list,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 559.75 Tm (work-completed sections, validation section, files-touched list, follow-up context, and) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 547.60 Tm (output-artifact close.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 535.45 Tm (This artifact intentionally covers Prahlin/portfolio work performed after) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 523.30 Tm (portfolio_worklog_august10_part2.pdf and after the August 10 Part 2 documentation state.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 511.15 Tm (The source commit reviewed for this record is 06c8cb475a45f718b928f7756b092aa5caaabc54 on) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 499.00 Tm (main, matching origin/main before this PDF was generated. That commit contains the Visual) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 486.85 Tm (Hierarchy Step 1b, Step 1c, and Step 1d source and asset work described here. No separate) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 474.70 Tm (Hostinger production deployment command was run during this worklog-generation pass; the) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 462.55 Tm (new local artifacts produced for this record are the refreshed project snapshot and this) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 450.40 Tm (August 11 PDF worklog.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 438.25 Tm () Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 426.10 Tm (Source Materials Reviewed) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 413.95 Tm (- Ran ./read_project.sh from /Users/prahlin/gh/portfolio and regenerated) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 401.80 Tm (  portfolio_PROJECT_SNAPSHOT.txt before writing this worklog, preserving the project) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 389.65 Tm (  convention that Codex refreshes the current source snapshot before continuing Portfolio) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 377.50 Tm (  documentation work.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 365.35 Tm (- Reviewed the refreshed portfolio_PROJECT_SNAPSHOT.txt, including project notes, source) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 353.20 Tm (  tree, public image and font inventories, PDF worklog inventory, package and deployment) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 341.05 Tm (  configuration, git context, recent commits, and the standing instruction to ask for a) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 328.90 Tm (  commit message before committing or pushing.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 316.75 Tm (- Reviewed every pre-existing Portfolio root-level worklog PDF:) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 304.60 Tm (  portfolio_worklog_july11.pdf, portfolio_worklog_july14.pdf,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 292.45 Tm (  portfolio_worklog_july15_part1.pdf, portfolio_worklog_july15_part2.pdf,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 280.30 Tm (  portfolio_worklog_july16.pdf, portfolio_worklog_july19.pdf,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 268.15 Tm (  portfolio_worklog_july20.pdf, portfolio_worklog_july21.pdf,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 256.00 Tm (  portfolio_worklog_july22.pdf, portfolio_worklog_july23.pdf,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 243.85 Tm (  portfolio_worklog_july24.pdf, portfolio_worklog_july25.pdf,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 231.70 Tm (  portfolio_worklog_july29.pdf, portfolio_worklog_july30.pdf,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 219.55 Tm (  portfolio_worklog_july31.pdf, portfolio_worklog_august1_part1.pdf,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 207.40 Tm (  portfolio_worklog_august1_part2.pdf, portfolio_worklog_august1_part3.pdf,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 195.25 Tm (  portfolio_worklog_august3.pdf, portfolio_worklog_august4.pdf,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 183.10 Tm (  portfolio_worklog_august5.pdf, portfolio_worklog_august6.pdf,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 170.95 Tm (  portfolio_worklog_august10_part1.pdf, and portfolio_worklog_august10_part2.pdf.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 158.80 Tm (- Extracted text from all twenty-four existing Portfolio PDFs with pdftotext and checked) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 146.65 Tm (  recent metadata with pdfinfo to preserve title cadence, daily naming, opening-summary) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 134.50 Tm (  density, section order, compact bullet-heavy technical voice, validation language,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 122.35 Tm (  files-touched lists, follow-up context, output-artifact close, root-level filename) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 110.20 Tm (  style, letter-size pages, PDF 1.4 output, Codex author/creator/producer metadata, and) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 98.05 Tm (  Helvetica-style base-font convention.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 85.90 Tm (- Used portfolio_worklog_august10_part2.pdf as the closest structural baseline because it) Tj ET
+BT /F1 8.00 Tf 1 0 0 1 359.10 34.00 Tm (Prahlin Portfolio Work Log - August 11, 2026 Page 1) Tj ET
+endstream
+endobj
+5 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 4 0 R >>
+endobj
+6 0 obj
+<< /Length 6509 >>
+stream
+BT /F1 9.15 Tf 1 0 0 1 54.00 742.00 Tm (  documented the immediately preceding Visual Hierarchy grid, brace geometry, row) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 729.85 Tm (  headers, no-island framed assets, muted home-screen examples, browser-measurement) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 717.70 Tm (  workflow, cache-clearing pattern, and local-only documentation language.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 705.55 Tm (- Reviewed git history through git log, git show --stat, git show --name-status, git diff) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 693.40 Tm (  --stat, git diff --name-status, git status, git branch -vv, and git diff --check. The) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 681.25 Tm (  reviewed source state was 06c8cb4 on main and origin/main before the August 11 PDF was) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 669.10 Tm (  generated.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 656.95 Tm (- Reviewed app/projects/alla-vostra/ProductFlowSwitcher.tsx, app/globals.css,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 644.80 Tm (  public/images/alla-vostra-hero-startup-focal-clipped-no-frame.png,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 632.65 Tm (  public/images/alla-vostra-hero-startup-focal-photo-only-no-frame.png,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 620.50 Tm (  public/images/alla-vostra-hero-startup-focal-cheeseboard-only-no-frame.png,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 608.35 Tm (  public/images/alla-vostra/cheeseboard_products.png, the existing startup/home framed) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 596.20 Tm (  assets, package scripts, and the local /projects/alla-vostra route.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 584.05 Tm () Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 571.90 Tm (Baseline Status Before August 11 Work) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 559.75 Tm (- August 10 Part 2 had already turned the Visual Hierarchy section into a compact) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 547.60 Tm (  two-by-two explanatory grid with Step 1 through Step 4 visible, external brace systems,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 535.45 Tm (  right-side section callout lines, PRE-SCROLLING and ON-SCROLLING row labels, no-island) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 523.30 Tm (  startup and home-screen mockups, and a 50 percent stack scale.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 511.15 Tm (- The user wanted an additional pre-scrolling breakdown between Step 1 and Step 2 so the) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 499.00 Tm (  Visual Hierarchy sequence could explain the focal startup composition in layers rather) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 486.85 Tm (  than jumping directly from the full device frame to the muted Step 2 device.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 474.70 Tm (- Step 1b needed to be based on Step 2's screenshot language but without the device) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 462.55 Tm (  frame, with the low-visibility lower areas made fully transparent, the image clipped) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 450.40 Tm (  after the cheeseboard, the cream area around the cheeseboard removed, and the) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 438.25 Tm (  cheeseboard kept in the original vertical relationship where only the bottom half) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 426.10 Tm (  crosses into the transparent region.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 413.95 Tm (- Early generated focal crops needed user-directed correction: the background photo was) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 401.80 Tm (  over-clipped in one pass, the cheeseboard briefly showed unwanted dark pinholes or) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 389.65 Tm (  source artifacts in another pass, and the cheeseplate scale needed to be restudied) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 377.50 Tm (  against Step 1 and Step 2 rather than guessed.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 365.35 Tm (- The accepted cheeseboard source needed to be) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 353.20 Tm (  public/images/alla-vostra/cheeseboard_products.png so the isolated focal variants) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 341.05 Tm (  reused the same app product overlay asset instead of a mismatched or ad hoc board) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 328.90 Tm (  image.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 316.75 Tm (- Step 1c needed to duplicate the Step 1b stack but hide the orange nav indicator, white) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 304.60 Tm (  nav bar, and orange app header above the hero photo, then physically crop out that) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 292.45 Tm (  invisible top area so the final asset bounds matched the visible photo-plus-cheeseboard) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 280.30 Tm (  layer.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 268.15 Tm (- Step 1d needed to duplicate the Step 1c language but remove the hero photo and leave) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 256.00 Tm (  only the cheeseboard, first with the photo area transparent and then as a true square) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 243.85 Tm (  crop around the cheeseboard so the invisible photo canvas was gone.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 231.70 Tm (- The layout still needed to protect the accepted Step 1 device-frame scale, limit Visual) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 219.55 Tm (  Hierarchy to two stacks per row, spread the new Step 1b, Step 1c, and Step 1d column) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 207.40 Tm (  across the Step 1 device height, and keep label typography coherent after stack zoom) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 195.25 Tm (  changes.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 183.10 Tm () Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 170.95 Tm (Goals for August 11) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 158.80 Tm (- Add Step 1b, Step 1c, and Step 1d to the Visual Hierarchy sequence without disturbing) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 146.65 Tm (  the existing Step 1 through Step 4 brace and callout behavior.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 134.50 Tm (- Generate transparent, no-device-frame focal startup assets that reflect the accepted) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 122.35 Tm (  Step 2 screenshot state while removing dimmed or low-visibility regions entirely where) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 110.20 Tm (  requested.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 98.05 Tm (- Preserve the cheeseboard position and visual scale from the accepted Step 1/Step 2) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 85.90 Tm (  startup examples, including the relationship where the board sits partly over the) Tj ET
+BT /F1 8.00 Tf 1 0 0 1 359.10 34.00 Tm (Prahlin Portfolio Work Log - August 11, 2026 Page 2) Tj ET
+endstream
+endobj
+7 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 6 0 R >>
+endobj
+8 0 obj
+<< /Length 6352 >>
+stream
+BT /F1 9.15 Tf 1 0 0 1 54.00 742.00 Tm (  transparent lower region rather than being moved downward.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 729.85 Tm (- Use public/images/alla-vostra/cheeseboard_products.png as the canonical cheeseboard) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 717.70 Tm (  cutout source and keep the remaining cheeseboard pixels unchanged during the final Step) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 705.55 Tm (  1d crop.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 693.40 Tm (- Convert transparent-only hidden regions into real cropped-out asset bounds for Step 1c) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 681.25 Tm (  and Step 1d so invisible canvas areas are truly gone rather than merely alpha-cleared.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 669.10 Tm (- Reflow the Visual Hierarchy grid so no row contains more than two stacks, Step 1 keeps) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 656.95 Tm (  the accepted larger device-frame width, and Step 1b through Step 1d align vertically) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 644.80 Tm (  beside that device frame.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 632.65 Tm (- Match all Visual Hierarchy Step header font sizes to the visible Step 1 header size) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 620.50 Tm (  after zoom and double the PRE-SCROLLING and ON-SCROLLING row-label size for stronger) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 608.35 Tm (  section hierarchy.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 596.20 Tm (- Clear stale Next.js caches or route confusion as needed, validate the rendered result) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 584.05 Tm (  in browser context, refresh the project snapshot, and produce the August 11 PDF worklog) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 571.90 Tm (  in the established Portfolio format.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 559.75 Tm () Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 547.60 Tm (Work Completed - Context, Sync, and Cache Handling) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 535.45 Tm (- Continued from the synced Portfolio source state after the August 10 Part 2 worklog had) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 523.30 Tm (  been committed and the Visual Hierarchy source branch had moved forward to 06c8cb4.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 511.15 Tm (- Confirmed main and origin/main matched at the August 11 source commit before this) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 499.00 Tm (  documentation artifact was generated, making the PDF a record of already-synced source) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 486.85 Tm (  work rather than an unpushed feature change.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 474.70 Tm (- Responded to the user's local-preview issue at http://127.0.0.1:3000 by checking route) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 462.55 Tm (  availability and separating stale or wrong-tab browser state from actual missing DOM or) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 450.40 Tm (  missing asset problems.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 438.25 Tm (- Cleared Next.js development caches during the visual pass after rapid PNG, CSS, and JSX) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 426.10 Tm (  edits caused stale optimized images or stale markup to appear in the browser.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 413.95 Tm (- Used the UI Foundations tab explicitly during browser verification because the Alla) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 401.80 Tm (  Vostra page defaults to UX Product Flow and the Visual Hierarchy stacks are not present) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 389.65 Tm (  in the DOM until the UI Foundations view is active.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 377.50 Tm (- Used a temporary static-export server on a separate port for final visual verification) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 365.35 Tm (  when the existing port 3000 process served an older or non-target render state.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 353.20 Tm () Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 341.05 Tm (Work Completed - Step 1b Focal Stack) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 328.90 Tm (- Inserted Step 1b directly after Step 1 in the Visual Hierarchy step list so the) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 316.75 Tm (  pre-scrolling sequence now moves from the full framed startup screen into a cropped) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 304.60 Tm (  focal-layer example before Step 2.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 292.45 Tm (- Built public/images/alla-vostra-hero-startup-focal-clipped-no-frame.png as the Step 1b) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 280.30 Tm (  no-frame focal screenshot at 1182 x 1508.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 268.15 Tm (- Based Step 1b on the Step 2 startup-screen visual state while removing the device) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 256.00 Tm (  frame, making the muted lower screen and surrounding cream areas transparent, and) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 243.85 Tm (  clipping the image below the cheeseboard's lower edge.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 231.70 Tm (- Iterated the transparent lower area after user review so the cream to the left, right,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 219.55 Tm (  and bottom of the cheeseboard no longer remained as a visible panel.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 207.40 Tm (- Corrected the cheeseboard vertical relationship so the board kept the original startup) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 195.25 Tm (  composition position and only its bottom half crossed into the transparent lower) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 183.10 Tm (  region.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 170.95 Tm (- Removed the device-frame treatment from Step 1b by giving the focal stack transparent) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 158.80 Tm (  frame styling, no border, no radius, no shadow, and an explicit 1182 / 1508 aspect) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 146.65 Tm (  ratio.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 134.50 Tm (- Kept Step 1b as a Large labeled Visual Hierarchy frame-pair participant so its caption) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 122.35 Tm (  and sizing language continue to match the rest of the section.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 110.20 Tm () Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 98.05 Tm (Work Completed - Step 1c Photo-Only Stack) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 85.90 Tm (- Added Step 1c as another Visual Hierarchy stack using the accepted Step 1b focal) Tj ET
+BT /F1 8.00 Tf 1 0 0 1 359.10 34.00 Tm (Prahlin Portfolio Work Log - August 11, 2026 Page 3) Tj ET
+endstream
+endobj
+9 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 8 0 R >>
+endobj
+10 0 obj
+<< /Length 6636 >>
+stream
+BT /F1 9.15 Tf 1 0 0 1 54.00 742.00 Tm (  language as its starting point.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 729.85 Tm (- Placed Step 1c below Step 1b in the right-hand pre-scrolling column while keeping it) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 717.70 Tm (  visually next to the enlarged Step 1 device frame, per the user's layout correction.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 705.55 Tm (- Generated public/images/alla-vostra-hero-startup-focal-photo-only-no-frame.png as a) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 693.40 Tm (  1182 x 961 asset after making everything above the background photo layer transparent) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 681.25 Tm (  and then physically cropping that invisible top region away.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 669.10 Tm (- Removed the orange nav indicator bar, white navigation bar, and orange app header from) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 656.95 Tm (  Step 1c without affecting the photo or cheeseboard relationship.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 644.80 Tm (- Preserved the accepted Step 1c look after the user approved it, converting the hidden) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 632.65 Tm (  top portion into a real crop rather than leaving dead alpha space above the hero photo.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 620.50 Tm (- Wired Step 1c to the transparent frame style and its own 1182 / 961 aspect ratio so the) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 608.35 Tm (  browser layout follows the cropped asset dimensions instead of the older Step 1b) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 596.20 Tm (  canvas.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 584.05 Tm () Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 571.90 Tm (Work Completed - Step 1d Cheeseboard-Only Stack) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 559.75 Tm (- Added Step 1d at the bottom of the right-hand pre-scrolling column as a) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 547.60 Tm (  cheeseboard-only layer derived from the finalized Step 1c concept.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 535.45 Tm (- Copied the canonical cheeseboard source into) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 523.30 Tm (  public/images/alla-vostra/cheeseboard_products.png and wired the existing Hero) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 511.15 Tm (  Composition sample to use that same source path.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 499.00 Tm (- Generated public/images/alla-vostra-hero-startup-focal-cheeseboard-only-no-frame.png) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 486.85 Tm (  first as a transparent-photo-area version, then corrected the board bounds after the) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 474.70 Tm (  user noted that the top and bottom of the cheeseboard had been clipped.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 462.55 Tm (- Studied Step 1 and Step 2 sizing to avoid over-scaling the cheeseplate, settling the) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 450.40 Tm (  Step 1d visible board on the same visual family as the accepted startup focal examples.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 438.25 Tm (- Cropped Step 1d into a true 543 x 543 square around the cheeseboard so the invisible) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 426.10 Tm (  hero photo region is not just transparent but physically absent from the final PNG.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 413.95 Tm (- Left the cheeseboard pixels themselves unchanged in the final square crop, including) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 401.80 Tm (  source-level transparency behavior inherited from cheeseboard_products.png, because the) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 389.65 Tm (  user's final instruction was to crop without altering the remaining asset.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 377.50 Tm (- Updated Step 1d frame styling to use a 1 / 1 aspect ratio so the rendered browser stack) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 365.35 Tm (  matches the square asset and does not reserve the older photo-sized canvas.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 353.20 Tm () Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 341.05 Tm (Work Completed - Visual Hierarchy Layout and Typography) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 328.90 Tm (- Expanded the Visual Hierarchy visible step limit from four to seven so Step 1, Step 1b,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 316.75 Tm (  Step 2, Step 1c, Step 1d, Step 3, and Step 4 all render without a category-specific) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 304.60 Tm (  Show More break.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 292.45 Tm (- Added deterministic step-specific stack classes in PlaceholderStage, such as) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 280.30 Tm (  flow-screen-stack-step-1b, flow-screen-stack-step-1c, and flow-screen-stack-step-1d, so) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 268.15 Tm (  CSS can place each Visual Hierarchy stack intentionally.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 256.00 Tm (- Scaled the Step 1 stack back to full size while keeping the other Visual Hierarchy) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 243.85 Tm (  stacks at 50 percent, making Step 1's framed screenshot width match the accepted Fonts) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 231.70 Tm (  and Original Hero stack width.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 219.55 Tm (- Enforced a two-column Visual Hierarchy grid so no row contains more than two stacks and) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 207.40 Tm (  the added pre-scrolling layer stack column does not collapse into a crowded multi-item) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 195.25 Tm (  row.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 183.10 Tm (- Positioned Step 1 across the first three grid rows, placed Step 1b, Step 1c, and Step) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 170.95 Tm (  1d in the right column, and tuned their margins so the three smaller stacks spread) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 158.80 Tm (  vertically across the Step 1 device-frame height.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 146.65 Tm (- Moved Step 2, Step 3, and Step 4 into later two-column rows so the original Visual) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 134.50 Tm (  Hierarchy comparison remains visible after the new pre-scrolling stack sequence.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 122.35 Tm (- Matched the visible Step header font sizes by setting non-Step-1 h4 text larger before) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 110.20 Tm (  50 percent stack zoom and restoring the Step 1 h4 source size at full zoom.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 98.05 Tm (- Doubled the PRE-SCROLLING and ON-SCROLLING row-header font size from the prior 13px) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 85.90 Tm (  source size to 26px and adjusted row-label placement for the taller Step 1 plus) Tj ET
+BT /F1 8.00 Tf 1 0 0 1 359.10 34.00 Tm (Prahlin Portfolio Work Log - August 11, 2026 Page 4) Tj ET
+endstream
+endobj
+11 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 10 0 R >>
+endobj
+12 0 obj
+<< /Length 6239 >>
+stream
+BT /F1 9.15 Tf 1 0 0 1 54.00 742.00 Tm (  stacked-right-column layout.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 729.85 Tm () Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 717.70 Tm (Work Completed - Validation, Commit, and Documentation Context) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 705.55 Tm (- Used Playwright against the exported page, switched to UI Foundations, and confirmed) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 693.40 Tm (  the Visual Hierarchy section rendered Step 1, Step 1b, Step 2, Step 1c, Step 1d, Step) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 681.25 Tm (  3, and Step 4 in the expected DOM order.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 669.10 Tm (- Verified browser image sources and natural dimensions for the final focal assets,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 656.95 Tm (  including the 543 x 543 Step 1d square crop and the 1182 x 961 Step 1c cropped) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 644.80 Tm (  photo-only asset.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 632.65 Tm (- Captured a Step 1d browser screenshot showing only the square cheeseboard crop in the) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 620.50 Tm (  stack, with the old photo area absent rather than transparent.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 608.35 Tm (- Ran npm run check and confirmed TypeScript passed with tsc --noEmit after the visual) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 596.20 Tm (  and layout changes.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 584.05 Tm (- Ran npm run build:static during the source pass and confirmed Next.js 16.2.10 completed) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 571.90 Tm (  the static export for /, /articles, /projects/alla-vostra, and /projects/cinerific.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 559.75 Tm (- Ran git diff --check after normalizing the generated snapshot whitespace during the) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 547.60 Tm (  source pass and confirmed the source diff was clean.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 535.45 Tm (- Recommended the final commit message in the user's requested one-header plus) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 523.30 Tm (  hyphen-line format, covering Step 1b/1c/1d, transparent focal screenshots, Step 1) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 511.15 Tm (  scaling, two-stack rows, vertical right-column placement, label sizing, row-header) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 499.00 Tm (  sizing, cheeseboard source reuse, and snapshot refresh.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 486.85 Tm (- The source work was committed as 06c8cb4, Refined Alla Vostra visual hierarchy stacks,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 474.70 Tm (  with app/globals.css, app/projects/alla-vostra/ProductFlowSwitcher.tsx, the new focal) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 462.55 Tm (  PNG assets, cheeseboard_products.png, and the refreshed snapshot included.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 450.40 Tm () Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 438.25 Tm (Validation Summary) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 426.10 Tm (- npm run check passed with tsc --noEmit during the August 11 visual source pass and) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 413.95 Tm (  again during this August 11 PDF-generation pass.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 401.80 Tm (- npm run build:static passed during the August 11 source pass, generating a successful) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 389.65 Tm (  static export for the Portfolio routes including /projects/alla-vostra.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 377.50 Tm (- Playwright confirmed the exported Alla Vostra page can switch to UI Foundations and) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 365.35 Tm (  expose the Visual Hierarchy group containing the seven visible stacks in the intended) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 353.20 Tm (  order.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 341.05 Tm (- Browser measurements confirmed Step 1 rendered at approximately 318px framed-image) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 328.90 Tm (  width while Step 1b, Step 1c, Step 1d, Step 2, Step 3, and Step 4 rendered at the) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 316.75 Tm (  scaled 159px image width.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 304.60 Tm (- Browser measurements confirmed Step 1d loads) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 292.45 Tm (  /images/alla-vostra-hero-startup-focal-cheeseboard-only-no-frame.png with 543 x 543) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 280.30 Tm (  natural dimensions and renders as a square stack image.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 268.15 Tm (- Asset inspection confirmed Step 1b is 1182 x 1508, Step 1c is 1182 x 961, Step 1d is) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 256.00 Tm (  543 x 543, and cheeseboard_products.png is 405 x 250.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 243.85 Tm (- git branch -vv confirmed main and origin/main both pointed at 06c8cb4 before this PDF) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 231.70 Tm (  was generated.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 219.55 Tm (- git diff --check initially reported trailing whitespace only in the regenerated) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 207.40 Tm (  snapshot output from read_project.sh; the snapshot was normalized afterward using the) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 195.25 Tm (  established trailing-whitespace cleanup step.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 183.10 Tm () Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 170.95 Tm (Files Touched) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 158.80 Tm (- app/projects/alla-vostra/ProductFlowSwitcher.tsx - added Step 1b, Step 1c, and Step 1d) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 146.65 Tm (  to the Visual Hierarchy sequence; added step-specific stack classes; wired the focal,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 134.50 Tm (  photo-only, and cheeseboard-only image sources; added transparent frame styling and) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 122.35 Tm (  per-asset aspect ratios; kept the new stacks as Large frame-pair examples; switched) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 110.20 Tm (  Hero Composition to cheeseboard_products.png; and raised the Visual Hierarchy visible) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 98.05 Tm (  step limit to seven.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 85.90 Tm (- app/globals.css - reworked the Visual Hierarchy grid into a two-column layout, restored) Tj ET
+BT /F1 8.00 Tf 1 0 0 1 359.10 34.00 Tm (Prahlin Portfolio Work Log - August 11, 2026 Page 5) Tj ET
+endstream
+endobj
+13 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 12 0 R >>
+endobj
+14 0 obj
+<< /Length 6195 >>
+stream
+BT /F1 9.15 Tf 1 0 0 1 54.00 742.00 Tm (  full-size Step 1 scaling, kept the remaining stacks at 50 percent, placed Step 1b/1c/1d) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 729.85 Tm (  vertically beside Step 1, moved later steps into the following two-column rows, matched) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 717.70 Tm (  Step header sizes across zoom levels, and doubled the PRE-SCROLLING / ON-SCROLLING) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 705.55 Tm (  header size.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 693.40 Tm (- public/images/alla-vostra-hero-startup-focal-clipped-no-frame.png - added the Step 1b) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 681.25 Tm (  no-frame startup focal screenshot with low-visibility regions made transparent and the) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 669.10 Tm (  image cropped below the cheeseboard area.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 656.95 Tm (- public/images/alla-vostra-hero-startup-focal-photo-only-no-frame.png - added the Step) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 644.80 Tm (  1c cropped photo-plus-cheeseboard layer with the app-header/navigation region) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 632.65 Tm (  physically removed.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 620.50 Tm (- public/images/alla-vostra-hero-startup-focal-cheeseboard-only-no-frame.png - added the) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 608.35 Tm (  Step 1d square cheeseboard-only layer with the former photo canvas physically cropped) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 596.20 Tm (  away.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 584.05 Tm (- public/images/alla-vostra/cheeseboard_products.png - added the canonical cheeseboard) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 571.90 Tm (  source asset requested by the user and reused it for the visible hero-composition) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 559.75 Tm (  cheeseboard source path.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 547.60 Tm (- portfolio_PROJECT_SNAPSHOT.txt - regenerated and normalized to reflect the synced) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 535.45 Tm (  06c8cb4 source state, public asset inventory, recent commit history, and new) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 523.30 Tm (  documentation context.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 511.15 Tm (- portfolio_worklog_august11.pdf - generated this new root-level PDF worklog artifact) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 499.00 Tm (  following the existing Portfolio naming, structure, metadata, length, and local) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 486.85 Tm (  documentation conventions.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 474.70 Tm () Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 462.55 Tm (Follow-Up Context) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 450.40 Tm (- Step 1b, Step 1c, and Step 1d are derived layer assets from the startup focal) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 438.25 Tm (  composition. If the source startup screenshot, Step 2 muted state, or cheeseboard) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 426.10 Tm (  source changes, the three derived assets should be regenerated together so their scale) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 413.95 Tm (  and position stay synchronized.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 401.80 Tm (- Step 1d intentionally preserves the original cheeseboard cutout pixels from) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 389.65 Tm (  cheeseboard_products.png. Any future cleanup of tiny transparent source artifacts) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 377.50 Tm (  should be treated as a deliberate source-asset edit rather than part of crop-only work.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 365.35 Tm (- The Visual Hierarchy section now mixes one full-size Step 1 stack with a 50 percent) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 353.20 Tm (  right-column layer sequence. Future grid, label, or row-header changes should be) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 341.05 Tm (  measured in-browser because CSS zoom affects the visible size of frame images, Step) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 328.90 Tm (  headers, captions, callout lines, and annotation text together.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 316.75 Tm (- The UI Foundations view must be active before browser scripts or screenshots can) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 304.60 Tm (  inspect the Visual Hierarchy stacks. The default Alla Vostra product-flow view remains) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 292.45 Tm (  UX Product Flow.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 280.30 Tm (- The local Next.js workflow can show stale CSS or image output during rapid visual) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 268.15 Tm (  iteration. Future passes should continue clearing .next caches and restarting or) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 256.00 Tm (  static-serving the current build when rendered measurements do not match source edits.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 243.85 Tm (- The Hostinger deployment path remains the GitHub Actions static-export workflow on) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 231.70 Tm (  pushes to main, publishing the out/ directory to the hostinger-deploy branch.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 219.55 Tm () Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 207.40 Tm (Output Artifact) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 195.25 Tm (- Generated: /Users/prahlin/gh/portfolio/portfolio_worklog_august11.pdf) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 183.10 Tm (- Companion sync file: /Users/prahlin/gh/portfolio/portfolio_PROJECT_SNAPSHOT.txt) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 170.95 Tm (- Source state reviewed: 06c8cb475a45f718b928f7756b092aa5caaabc54 on main and) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 158.80 Tm (  origin/main.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 146.65 Tm (- Naming follows the existing root-level Portfolio convention:) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 134.50 Tm (  portfolio_worklog_august11.pdf. No part suffix was used because this is the first) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 122.35 Tm (  August 11 Portfolio worklog artifact.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 110.20 Tm (- Next likely action: commit and push portfolio_worklog_august11.pdf with the refreshed) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 98.05 Tm (  snapshot when the user is ready to sync the documentation artifact.) Tj ET
+BT /F1 8.00 Tf 1 0 0 1 359.10 34.00 Tm (Prahlin Portfolio Work Log - August 11, 2026 Page 6) Tj ET
+endstream
+endobj
+15 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 14 0 R >>
+endobj
+16 0 obj
+<< /Title (Prahlin Portfolio Work Log - August 11, 2026) /Subject (Portfolio website development worklog) /Author (Codex) /Creator (Codex standard-library PDF generator) /Producer (Codex standard-library PDF generator) /CreationDate (D:20260811235900-04'00') /ModDate (D:20260811235900-04'00') >>
+endobj
+xref
+0 17
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000148 00000 n 
+0000000218 00000 n 
+0000006840 00000 n 
+0000006966 00000 n 
+0000013526 00000 n 
+0000013652 00000 n 
+0000020055 00000 n 
+0000020181 00000 n 
+0000026869 00000 n 
+0000026997 00000 n 
+0000033288 00000 n 
+0000033416 00000 n 
+0000039663 00000 n 
+0000039791 00000 n 
+trailer
+<< /Size 17 /Root 1 0 R /Info 16 0 R >>
+startxref
+40104
+%%EOF
