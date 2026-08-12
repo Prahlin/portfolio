@@ -1,5 +1,5 @@
 Portfolio Next.js PROJECT SNAPSHOT
-Generated: Tue Aug 11 00:56:40 EDT 2026
+Generated: Tue Aug 11 23:46:16 EDT 2026
 Project directory: /Users/prahlin/gh/portfolio
 
 IMPORTANT INSTRUCTIONS FOR CHATGPT & CODEX:
@@ -8697,6 +8697,9 @@ PROJECT FILE TREE
 /Users/prahlin/gh/portfolio/public/images/alla-vostra
 /Users/prahlin/gh/portfolio/public/images/alla-vostra-hero-confirmed-framed-space-gray.png
 /Users/prahlin/gh/portfolio/public/images/alla-vostra-hero-products-framed-space-gray.png
+/Users/prahlin/gh/portfolio/public/images/alla-vostra-hero-startup-focal-cheeseboard-only-no-frame.png
+/Users/prahlin/gh/portfolio/public/images/alla-vostra-hero-startup-focal-clipped-no-frame.png
+/Users/prahlin/gh/portfolio/public/images/alla-vostra-hero-startup-focal-photo-only-no-frame.png
 /Users/prahlin/gh/portfolio/public/images/alla-vostra-hero-startup-framed-lower-muted-no-island.png
 /Users/prahlin/gh/portfolio/public/images/alla-vostra-hero-startup-framed-lower-muted.png
 /Users/prahlin/gh/portfolio/public/images/alla-vostra-hero-startup-framed-no-island.png
@@ -8709,6 +8712,7 @@ PROJECT FILE TREE
 /Users/prahlin/gh/portfolio/public/images/alla-vostra/buon-natale-product.png
 /Users/prahlin/gh/portfolio/public/images/alla-vostra/checkmark-box.svg
 /Users/prahlin/gh/portfolio/public/images/alla-vostra/cheeseboard-products-overlay.png
+/Users/prahlin/gh/portfolio/public/images/alla-vostra/cheeseboard_products.png
 /Users/prahlin/gh/portfolio/public/images/alla-vostra/header-background-no-cheeseboard.png
 /Users/prahlin/gh/portfolio/public/images/alla-vostra/header-hero-composition-preview.png
 /Users/prahlin/gh/portfolio/public/images/alla-vostra/piccola-product.png
@@ -14589,1074 +14593,1155 @@ FILE: app/globals.css
   4107	}
   4108
   4109	.flow-capture-group-visual-hierarchy .flow-capture-grid {
-  4110	  --flow-visual-hierarchy-scaled-row-height: 360px;
+  4110	  --flow-visual-hierarchy-scaled-row-height: 720px;
   4111
   4112	  gap: 24px 34px;
   4113	  grid-template-columns: repeat(2, minmax(0, 1fr));
   4114	  justify-items: center;
   4115	  overflow: visible;
-  4116	  position: relative;
-  4117	}
-  4118
-  4119	.flow-capture-group-visual-hierarchy .flow-screen-stack {
-  4120	  justify-self: center;
-  4121	  zoom: 0.5;
-  4122	}
-  4123
-  4124	.flow-visual-hierarchy-row-label {
-  4125	  color: #ffffff;
-  4126	  font-size: 13px;
-  4127	  font-weight: 850;
-  4128	  grid-column: 1 / -1;
-  4129	  grid-row: 1 / -1;
-  4130	  left: 50%;
-  4131	  letter-spacing: 0.08em;
-  4132	  line-height: 1;
-  4133	  pointer-events: none;
-  4134	  position: absolute;
-  4135	  text-align: center;
-  4136	  text-transform: uppercase;
-  4137	  transform: translateX(-50%);
-  4138	  white-space: nowrap;
-  4139	  z-index: 5;
-  4140	}
-  4141
-  4142	.flow-visual-hierarchy-row-label-1 {
-  4143	  top: 0;
-  4144	}
-  4145
-  4146	.flow-visual-hierarchy-row-label-2 {
-  4147	  top: calc(var(--flow-visual-hierarchy-scaled-row-height) + 24px);
+  4116	  padding-top: 24px;
+  4117	  position: relative;
+  4118	}
+  4119
+  4120	.flow-capture-group-visual-hierarchy .flow-screen-stack {
+  4121	  justify-self: center;
+  4122	  zoom: 0.5;
+  4123	}
+  4124
+  4125	.flow-capture-group-visual-hierarchy .flow-screen-stack:first-of-type {
+  4126	  zoom: 1;
+  4127	}
+  4128
+  4129	.flow-capture-group-visual-hierarchy .flow-screen-stack h4 {
+  4130	  font-size: 30px;
+  4131	}
+  4132
+  4133	.flow-capture-group-visual-hierarchy
+  4134	  .flow-screen-stack:first-of-type
+  4135	  h4 {
+  4136	  font-size: 15px;
+  4137	}
+  4138
+  4139	.flow-capture-group-visual-hierarchy .flow-screen-stack-step-1 {
+  4140	  grid-column: 1 / 2;
+  4141	  grid-row: 1 / 4;
+  4142	}
+  4143
+  4144	.flow-capture-group-visual-hierarchy .flow-screen-stack-step-1b {
+  4145	  grid-column: 2 / 3;
+  4146	  grid-row: 1 / 2;
+  4147	  margin-top: 56px;
   4148	}
   4149
-  4150	.flow-capture-group-full-row
-  4151	  .flow-screen-stack:has(.flow-visual-hierarchy-frame-pair)
-  4152	  h4 {
-  4153	  transform: translateX(57px);
-  4154	}
-  4155
-  4156	.flow-group-header {
-  4157	  max-width: 360px;
-  4158	}
-  4159
-  4160	.flow-group-header span {
-  4161	  color: var(--green);
-  4162	  display: block;
-  4163	  font-size: 12px;
-  4164	  font-weight: 850;
-  4165	  letter-spacing: 0.1em;
-  4166	  line-height: 1;
-  4167	  margin-bottom: 14px;
-  4168	  text-transform: uppercase;
-  4169	}
-  4170
-  4171	.flow-group-header h3 {
-  4172	  font-size: 34px;
-  4173	  line-height: 1;
-  4174	  margin-bottom: 14px;
+  4150	.flow-capture-group-visual-hierarchy .flow-screen-stack-step-2 {
+  4151	  grid-column: 1 / 2;
+  4152	  grid-row: 4 / 5;
+  4153	}
+  4154
+  4155	.flow-capture-group-visual-hierarchy .flow-screen-stack-step-1c {
+  4156	  grid-column: 2 / 3;
+  4157	  grid-row: 2 / 3;
+  4158	  margin-top: 13px;
+  4159	}
+  4160
+  4161	.flow-capture-group-visual-hierarchy .flow-screen-stack-step-1d {
+  4162	  grid-column: 2 / 3;
+  4163	  grid-row: 3 / 4;
+  4164	  margin-top: 14px;
+  4165	}
+  4166
+  4167	.flow-capture-group-visual-hierarchy .flow-screen-stack-step-3 {
+  4168	  grid-column: 1 / 2;
+  4169	  grid-row: 5 / 6;
+  4170	}
+  4171
+  4172	.flow-capture-group-visual-hierarchy .flow-screen-stack-step-4 {
+  4173	  grid-column: 2 / 3;
+  4174	  grid-row: 5 / 6;
   4175	}
   4176
-  4177	.flow-group-header p {
-  4178	  color: #b8c9bf;
-  4179	  line-height: 1.6;
-  4180	  margin-bottom: 0;
+  4177	.flow-capture-group-visual-hierarchy
+  4178	  .flow-screen-stack:first-of-type
+  4179	  .flow-visual-hierarchy-frame-pair {
+  4180	  --flow-visual-hierarchy-tip-frame-gap: 6px;
   4181	}
   4182
-  4183	.flow-capture-grid {
-  4184	  align-items: start;
-  4185	  display: grid;
-  4186	  gap: 34px;
-  4187	  grid-template-columns: repeat(auto-fit, minmax(285px, 1fr));
+  4183	.flow-capture-group-visual-hierarchy
+  4184	  .flow-screen-stack:first-of-type
+  4185	  .flow-visual-hierarchy-external-annotation {
+  4186	  font-size: 28px !important;
+  4187	  right: calc(100% - 16px) !important;
   4188	}
   4189
-  4190	.flow-screen-stack {
-  4191	  min-width: 0;
-  4192	}
-  4193
-  4194	.flow-screen-stack h4 {
-  4195	  color: var(--text);
-  4196	  font-size: 15px;
-  4197	  font-weight: 850;
-  4198	  letter-spacing: 0;
-  4199	  line-height: 1.2;
-  4200	  margin: 0 0 14px;
-  4201	  text-align: center;
-  4202	}
-  4203
-  4204	.flow-screen-stack-captures {
-  4205	  align-items: start;
-  4206	  display: flex;
-  4207	  gap: 14px;
-  4208	  justify-content: center;
-  4209	}
-  4210
-  4211	.cinerific-case .flow-image-frame,
-  4212	.cinerific-case .flow-screen-standard .flow-image-frame,
-  4213	.cinerific-case .flow-screen-tall .flow-image-frame {
-  4214	  aspect-ratio: 16 / 9;
-  4215	  background: linear-gradient(145deg, #0c120f, #000);
-  4216	  border-radius: var(--capture-frame-radius-standard);
-  4217	}
-  4218
-  4219	.cinerific-case .flow-image-frame::before {
-  4220	  background:
-  4221	    linear-gradient(rgba(67, 255, 146, 0.04) 1px, transparent 1px),
-  4222	    linear-gradient(90deg, rgba(67, 255, 146, 0.04) 1px, transparent 1px),
-  4223	    #020403;
-  4224	  background-size: 14px 14px;
-  4225	  border: 1px solid rgba(198, 255, 217, 0.16);
-  4226	  border-radius: 5px;
-  4227	  content: "";
-  4228	  inset: 10px 14px;
-  4229	  position: absolute;
-  4230	}
-  4231
-  4232	.cinerific-case .flow-image-frame::after {
-  4233	  background: #1d2923;
-  4234	  border: 1px solid rgba(198, 255, 217, 0.24);
-  4235	  border-radius: 999px;
-  4236	  content: "";
-  4237	  height: 4px;
-  4238	  left: 5px;
-  4239	  position: absolute;
-  4240	  top: 50%;
-  4241	  transform: translateY(-50%);
-  4242	  width: 4px;
-  4243	}
-  4244
-  4245	.flow-browse-toggle-row {
-  4246	  display: flex;
-  4247	  justify-content: center;
-  4248	  margin-top: 26px;
-  4249	}
-  4250
-  4251	.flow-browse-toggle {
-  4252	  cursor: pointer;
-  4253	  font-family: inherit;
-  4254	}
-  4255
-  4256	.alla-vostra-case .flow-browse-toggle {
-  4257	  inline-size: calc((152px * 2) + 14px);
-  4258	  max-inline-size: 100%;
-  4259	}
-  4260
-  4261	.flow-browse-toggle svg {
-  4262	  flex: 0 0 auto;
-  4263	}
-  4264
-  4265	.flow-browse-extra {
-  4266	  max-height: 0;
-  4267	  opacity: 0;
-  4268	  overflow: hidden;
-  4269	  pointer-events: none;
-  4270	  transform: translateY(-8px);
-  4271	  transition: max-height 320ms ease, opacity 220ms ease, transform 220ms ease,
-  4272	    margin-top 220ms ease;
+  4190	.flow-capture-group-visual-hierarchy
+  4191	  .flow-screen-stack:first-of-type
+  4192	  .flow-visual-hierarchy-section-lines,
+  4193	.flow-capture-group-visual-hierarchy
+  4194	  .flow-screen-stack:first-of-type
+  4195	  .flow-visual-hierarchy-section-line {
+  4196	  width: 24px;
+  4197	}
+  4198
+  4199	.flow-capture-group-visual-hierarchy
+  4200	  .flow-screen-stack:first-of-type
+  4201	  .flow-visual-hierarchy-section-label {
+  4202	  font-size: 10px;
+  4203	}
+  4204
+  4205	.flow-visual-hierarchy-row-label {
+  4206	  color: #ffffff;
+  4207	  font-size: 26px;
+  4208	  font-weight: 850;
+  4209	  grid-column: 1 / -1;
+  4210	  grid-row: 1 / -1;
+  4211	  left: 50%;
+  4212	  letter-spacing: 0.08em;
+  4213	  line-height: 1;
+  4214	  pointer-events: none;
+  4215	  position: absolute;
+  4216	  text-align: center;
+  4217	  text-transform: uppercase;
+  4218	  transform: translateX(-50%);
+  4219	  white-space: nowrap;
+  4220	  z-index: 5;
+  4221	}
+  4222
+  4223	.flow-visual-hierarchy-row-label-1 {
+  4224	  top: -18px;
+  4225	}
+  4226
+  4227	.flow-visual-hierarchy-row-label-2 {
+  4228	  top: calc(var(--flow-visual-hierarchy-scaled-row-height) + 540px);
+  4229	}
+  4230
+  4231	.flow-capture-group-full-row
+  4232	  .flow-screen-stack:has(.flow-visual-hierarchy-frame-pair)
+  4233	  h4 {
+  4234	  transform: translateX(57px);
+  4235	}
+  4236
+  4237	.flow-group-header {
+  4238	  max-width: 360px;
+  4239	}
+  4240
+  4241	.flow-group-header span {
+  4242	  color: var(--green);
+  4243	  display: block;
+  4244	  font-size: 12px;
+  4245	  font-weight: 850;
+  4246	  letter-spacing: 0.1em;
+  4247	  line-height: 1;
+  4248	  margin-bottom: 14px;
+  4249	  text-transform: uppercase;
+  4250	}
+  4251
+  4252	.flow-group-header h3 {
+  4253	  font-size: 34px;
+  4254	  line-height: 1;
+  4255	  margin-bottom: 14px;
+  4256	}
+  4257
+  4258	.flow-group-header p {
+  4259	  color: #b8c9bf;
+  4260	  line-height: 1.6;
+  4261	  margin-bottom: 0;
+  4262	}
+  4263
+  4264	.flow-capture-grid {
+  4265	  align-items: start;
+  4266	  display: grid;
+  4267	  gap: 34px;
+  4268	  grid-template-columns: repeat(auto-fit, minmax(285px, 1fr));
+  4269	}
+  4270
+  4271	.flow-screen-stack {
+  4272	  min-width: 0;
   4273	}
   4274
-  4275	.flow-browse-extra.is-open {
-  4276	  margin-top: 34px;
-  4277	  max-height: 5200px;
-  4278	  opacity: 1;
-  4279	  pointer-events: auto;
-  4280	  transform: translateY(0);
-  4281	}
-  4282
-  4283	.architecture-map {
-  4284	  display: grid;
-  4285	  gap: 12px;
-  4286	  grid-template-columns: repeat(5, minmax(0, 1fr));
-  4287	}
-  4288
-  4289	.architecture-node {
-  4290	  min-height: 178px;
-  4291	  padding: 18px;
-  4292	}
-  4293
-  4294	.architecture-node span {
-  4295	  color: var(--green);
-  4296	  display: block;
-  4297	  font-size: 13px;
-  4298	  font-weight: 900;
-  4299	  margin-bottom: 18px;
-  4300	}
-  4301
-  4302	.architecture-node strong {
-  4303	  color: var(--text);
-  4304	  display: block;
-  4305	  font-size: 16px;
-  4306	  line-height: 1.25;
-  4307	  margin-bottom: 12px;
-  4308	}
-  4309
-  4310	.architecture-node p {
-  4311	  font-size: 13px;
-  4312	}
-  4313
-  4314	.architecture-copy {
-  4315	  margin: 26px 0 0;
-  4316	}
-  4317
-  4318	.readiness-copy {
-  4319	  margin-bottom: 24px;
-  4320	}
-  4321
-  4322	.readiness-list,
-  4323	.proof-points {
-  4324	  display: flex;
-  4325	  flex-wrap: wrap;
-  4326	  gap: 10px;
-  4327	}
-  4328
-  4329	.project-timeline {
-  4330	  display: grid;
-  4331	  gap: 14px;
-  4332	}
-  4333
-  4334	.project-timeline-item {
-  4335	  display: grid;
-  4336	  gap: 22px;
-  4337	  grid-template-columns: 56px 1fr;
-  4338	  padding: 22px;
-  4339	}
-  4340
-  4341	.project-timeline-item > span {
-  4342	  color: var(--green);
-  4343	  font-size: 18px;
-  4344	  font-weight: 900;
-  4345	}
-  4346
-  4347	.project-timeline-item h3 {
-  4348	  font-size: 20px;
-  4349	  line-height: 1.2;
-  4350	  margin-bottom: 10px;
-  4351	}
-  4352
-  4353	.stack-matrix {
-  4354	  display: grid;
-  4355	  gap: 14px;
-  4356	  grid-template-columns: repeat(5, minmax(0, 1fr));
+  4275	.flow-screen-stack h4 {
+  4276	  color: var(--text);
+  4277	  font-size: 15px;
+  4278	  font-weight: 850;
+  4279	  letter-spacing: 0;
+  4280	  line-height: 1.2;
+  4281	  margin: 0 0 14px;
+  4282	  text-align: center;
+  4283	}
+  4284
+  4285	.flow-screen-stack-captures {
+  4286	  align-items: start;
+  4287	  display: flex;
+  4288	  gap: 14px;
+  4289	  justify-content: center;
+  4290	}
+  4291
+  4292	.cinerific-case .flow-image-frame,
+  4293	.cinerific-case .flow-screen-standard .flow-image-frame,
+  4294	.cinerific-case .flow-screen-tall .flow-image-frame {
+  4295	  aspect-ratio: 16 / 9;
+  4296	  background: linear-gradient(145deg, #0c120f, #000);
+  4297	  border-radius: var(--capture-frame-radius-standard);
+  4298	}
+  4299
+  4300	.cinerific-case .flow-image-frame::before {
+  4301	  background:
+  4302	    linear-gradient(rgba(67, 255, 146, 0.04) 1px, transparent 1px),
+  4303	    linear-gradient(90deg, rgba(67, 255, 146, 0.04) 1px, transparent 1px),
+  4304	    #020403;
+  4305	  background-size: 14px 14px;
+  4306	  border: 1px solid rgba(198, 255, 217, 0.16);
+  4307	  border-radius: 5px;
+  4308	  content: "";
+  4309	  inset: 10px 14px;
+  4310	  position: absolute;
+  4311	}
+  4312
+  4313	.cinerific-case .flow-image-frame::after {
+  4314	  background: #1d2923;
+  4315	  border: 1px solid rgba(198, 255, 217, 0.24);
+  4316	  border-radius: 999px;
+  4317	  content: "";
+  4318	  height: 4px;
+  4319	  left: 5px;
+  4320	  position: absolute;
+  4321	  top: 50%;
+  4322	  transform: translateY(-50%);
+  4323	  width: 4px;
+  4324	}
+  4325
+  4326	.flow-browse-toggle-row {
+  4327	  display: flex;
+  4328	  justify-content: center;
+  4329	  margin-top: 26px;
+  4330	}
+  4331
+  4332	.flow-browse-toggle {
+  4333	  cursor: pointer;
+  4334	  font-family: inherit;
+  4335	}
+  4336
+  4337	.alla-vostra-case .flow-browse-toggle {
+  4338	  inline-size: calc((152px * 2) + 14px);
+  4339	  max-inline-size: 100%;
+  4340	}
+  4341
+  4342	.flow-browse-toggle svg {
+  4343	  flex: 0 0 auto;
+  4344	}
+  4345
+  4346	.flow-browse-extra {
+  4347	  max-height: 0;
+  4348	  opacity: 0;
+  4349	  overflow: hidden;
+  4350	  pointer-events: none;
+  4351	  transform: translateY(-8px);
+  4352	  transition: max-height 320ms ease, opacity 220ms ease, transform 220ms ease,
+  4353	    margin-top 220ms ease;
+  4354	}
+  4355
+  4356	.flow-browse-extra.is-open {
   4357	  margin-top: 34px;
-  4358	}
-  4359
-  4360	.stack-group {
-  4361	  padding: 20px;
+  4358	  max-height: 5200px;
+  4359	  opacity: 1;
+  4360	  pointer-events: auto;
+  4361	  transform: translateY(0);
   4362	}
   4363
-  4364	.stack-group h3 {
-  4365	  font-size: 11px;
-  4366	}
-  4367
-  4368	.stack-group div {
-  4369	  display: grid;
-  4370	  gap: 8px;
-  4371	}
-  4372
-  4373	.stack-group span {
-  4374	  color: #d8ffe4;
-  4375	  font-size: 14px;
-  4376	  font-weight: 750;
-  4377	  line-height: 1.35;
-  4378	}
-  4379
-  4380	.proof-points {
-  4381	  margin-top: 34px;
-  4382	}
-  4383
-  4384	.closing-panel {
-  4385	  align-items: center;
-  4386	  background: linear-gradient(180deg, rgba(13, 31, 22, 0.88), rgba(5, 13, 9, 0.88));
-  4387	  border: 1px solid var(--line);
-  4388	  border-radius: 8px;
-  4389	  display: grid;
-  4390	  gap: 34px;
-  4391	  grid-template-columns: minmax(0, 1fr) auto;
-  4392	  padding: 34px;
+  4364	.architecture-map {
+  4365	  display: grid;
+  4366	  gap: 12px;
+  4367	  grid-template-columns: repeat(5, minmax(0, 1fr));
+  4368	}
+  4369
+  4370	.architecture-node {
+  4371	  min-height: 178px;
+  4372	  padding: 18px;
+  4373	}
+  4374
+  4375	.architecture-node span {
+  4376	  color: var(--green);
+  4377	  display: block;
+  4378	  font-size: 13px;
+  4379	  font-weight: 900;
+  4380	  margin-bottom: 18px;
+  4381	}
+  4382
+  4383	.architecture-node strong {
+  4384	  color: var(--text);
+  4385	  display: block;
+  4386	  font-size: 16px;
+  4387	  line-height: 1.25;
+  4388	  margin-bottom: 12px;
+  4389	}
+  4390
+  4391	.architecture-node p {
+  4392	  font-size: 13px;
   4393	}
   4394
-  4395	.closing-panel h2 {
-  4396	  font-size: clamp(30px, 4vw, 50px);
-  4397	  margin-bottom: 18px;
-  4398	  max-width: 720px;
-  4399	}
-  4400
-  4401	.closing-panel p {
-  4402	  max-width: 760px;
-  4403	}
-  4404
-  4405	.closing-actions {
-  4406	  display: flex;
-  4407	  flex-direction: column;
-  4408	  gap: 12px;
-  4409	  min-width: 190px;
-  4410	}
-  4411
-  4412	@media (max-width: 980px) {
-  4413	  .product-flow-nav {
-  4414	    --product-flow-nav-font-size: clamp(40px, 5.7vw, 56px);
-  4415	  }
-  4416
-  4417	  .hero-copy {
-  4418	    --hero-proof-stack-width: min(606px, 100%);
-  4419	    --hero-action-stack-width: var(--hero-proof-stack-width);
-  4420	    --hero-text-stack-width: var(--hero-action-stack-width);
-  4421	  }
-  4422
-  4423	  .nav-bar {
-  4424	    --nav-bar-inline-padding: 16px;
-  4425	    --nav-bar-height: clamp(36px, calc(23.61px + 3.87vw), 48px);
-  4426	    --nav-link-bottom-separator-gap: 8px;
-  4427	    --nav-link-separator-gap: 6px;
-  4428	    --nav-link-top-separator-gap: 6px;
-  4429	    align-items: center;
-  4430	    display: block;
-  4431	    height: var(--nav-bar-two-row-height);
-  4432	    row-gap: 7.5px;
-  4433	    padding: 0 var(--nav-bar-inline-padding);
-  4434	  }
-  4435
-  4436	  .nav-bar nav {
-  4437	    display: grid;
-  4438	    grid-template-rows: repeat(2, var(--nav-bar-height));
-  4439	    height: 100%;
-  4440	    row-gap: var(--nav-bar-two-row-gap);
-  4441	    width: 100%;
-  4442	  }
-  4443
-  4444	  .nav-link-row {
-  4445	    display: flex;
-  4446	    flex-wrap: nowrap;
-  4447	    gap: var(--nav-link-separator-gap);
-  4448	    justify-content: space-between;
-  4449	    min-width: 0;
-  4450	    width: 100%;
-  4451	  }
-  4452
-  4453	  .nav-link-row-top {
-  4454	    align-items: center;
-  4455	    column-gap: var(--nav-brand-gap);
-  4456	    display: flex;
-  4457	    height: var(--nav-bar-height);
-  4458	    justify-content: flex-start;
-  4459	    width: 100%;
-  4460	  }
-  4461
-  4462	  .nav-top-distribution {
-  4463	    align-items: center;
-  4464	    display: grid;
-  4465	    flex: 1 1 auto;
-  4466	    grid-template-columns: repeat(2, minmax(0, 1fr));
-  4467	    justify-items: center;
-  4468	    min-width: 0;
-  4469	    position: relative;
-  4470	  }
-  4471
-  4472	  .nav-top-distribution > .nav-top-link-primary {
-  4473	    grid-column: 1;
-  4474	    min-width: max-content;
-  4475	  }
-  4476
-  4477	  .nav-top-distribution > .nav-top-link-secondary {
-  4478	    grid-column: 2;
-  4479	    min-width: max-content;
-  4480	  }
+  4395	.architecture-copy {
+  4396	  margin: 26px 0 0;
+  4397	}
+  4398
+  4399	.readiness-copy {
+  4400	  margin-bottom: 24px;
+  4401	}
+  4402
+  4403	.readiness-list,
+  4404	.proof-points {
+  4405	  display: flex;
+  4406	  flex-wrap: wrap;
+  4407	  gap: 10px;
+  4408	}
+  4409
+  4410	.project-timeline {
+  4411	  display: grid;
+  4412	  gap: 14px;
+  4413	}
+  4414
+  4415	.project-timeline-item {
+  4416	  display: grid;
+  4417	  gap: 22px;
+  4418	  grid-template-columns: 56px 1fr;
+  4419	  padding: 22px;
+  4420	}
+  4421
+  4422	.project-timeline-item > span {
+  4423	  color: var(--green);
+  4424	  font-size: 18px;
+  4425	  font-weight: 900;
+  4426	}
+  4427
+  4428	.project-timeline-item h3 {
+  4429	  font-size: 20px;
+  4430	  line-height: 1.2;
+  4431	  margin-bottom: 10px;
+  4432	}
+  4433
+  4434	.stack-matrix {
+  4435	  display: grid;
+  4436	  gap: 14px;
+  4437	  grid-template-columns: repeat(5, minmax(0, 1fr));
+  4438	  margin-top: 34px;
+  4439	}
+  4440
+  4441	.stack-group {
+  4442	  padding: 20px;
+  4443	}
+  4444
+  4445	.stack-group h3 {
+  4446	  font-size: 11px;
+  4447	}
+  4448
+  4449	.stack-group div {
+  4450	  display: grid;
+  4451	  gap: 8px;
+  4452	}
+  4453
+  4454	.stack-group span {
+  4455	  color: #d8ffe4;
+  4456	  font-size: 14px;
+  4457	  font-weight: 750;
+  4458	  line-height: 1.35;
+  4459	}
+  4460
+  4461	.proof-points {
+  4462	  margin-top: 34px;
+  4463	}
+  4464
+  4465	.closing-panel {
+  4466	  align-items: center;
+  4467	  background: linear-gradient(180deg, rgba(13, 31, 22, 0.88), rgba(5, 13, 9, 0.88));
+  4468	  border: 1px solid var(--line);
+  4469	  border-radius: 8px;
+  4470	  display: grid;
+  4471	  gap: 34px;
+  4472	  grid-template-columns: minmax(0, 1fr) auto;
+  4473	  padding: 34px;
+  4474	}
+  4475
+  4476	.closing-panel h2 {
+  4477	  font-size: clamp(30px, 4vw, 50px);
+  4478	  margin-bottom: 18px;
+  4479	  max-width: 720px;
+  4480	}
   4481
-  4482	  .nav-top-distribution > .nav-separator-top-center {
-  4483	    left: 50%;
-  4484	    position: absolute;
-  4485	    transform: translateX(-50%);
-  4486	  }
-  4487
-  4488	  .nav-link-row-bottom {
-  4489	    align-items: center;
-  4490	    column-gap: var(--nav-link-bottom-separator-gap);
-  4491	    display: flex;
-  4492	    height: var(--nav-bar-height);
-  4493	    justify-content: space-evenly;
-  4494	    width: 100%;
-  4495	  }
-  4496
-  4497	  .nav-separator.nav-separator-row-leading {
-  4498	    display: none;
-  4499	  }
-  4500
-  4501	  .nav-bar nav a,
-  4502	  .nav-bar nav .nav-text {
-  4503	    flex: 1 1 0;
-  4504	    min-width: 0;
-  4505	    padding-left: 10px;
-  4506	    padding-right: 10px;
-  4507	    text-align: center;
-  4508	  }
-  4509
-  4510	  .nav-bar nav .nav-link-row > a,
-  4511	  .nav-bar nav .nav-link-row > .nav-text {
-  4512	    flex: 0 0 auto;
-  4513	    justify-self: center;
-  4514	  }
-  4515
-  4516	  .nav-bar nav .nav-link-row-top > .nav-brand-link {
-  4517	    display: inline-flex;
-  4518	    gap: var(--nav-brand-gap);
-  4519	    grid-column: 1;
-  4520	    height: var(--nav-bar-height);
-  4521	    margin-block: calc(var(--nav-card-border-width) * -1);
-  4522	    margin-right: 0;
-  4523	    min-width: max-content;
-  4524	    padding: 0 calc(var(--nav-brand-gap) + var(--nav-brand-card-bleed)) 0
-  4525	      var(--nav-brand-card-bleed);
-  4526	    justify-self: start;
-  4527	  }
-  4528
-  4529	  .nav-bar nav .nav-link-row-top > .nav-brand-link .nav-brand-mark {
-  4530	    align-self: center;
-  4531	    flex: none;
-  4532	    height: 34px;
-  4533	    justify-self: center;
-  4534	    max-height: 34px;
-  4535	    max-width: 34px;
-  4536	    min-height: 34px;
-  4537	    min-width: 34px;
-  4538	    width: 34px;
-  4539	  }
-  4540
-  4541	  .nav-bar nav .nav-link-row-top > .nav-brand-link .nav-brand-name {
-  4542	    align-self: center;
-  4543	    display: inline-flex;
-  4544	    justify-content: center;
-  4545	    line-height: 1;
-  4546	    text-align: center;
-  4547	  }
-  4548
-  4549	  .nav-bar nav .nav-link-row-bottom > a,
-  4550	  .nav-bar nav .nav-link-row-bottom > .nav-text {
-  4551	    padding-bottom: 3.75px;
-  4552	    padding-top: 0;
-  4553	  }
-  4554
-  4555	  .project-nav nav {
-  4556	    grid-template-columns: repeat(3, minmax(0, 1fr));
-  4557	  }
-  4558
-  4559	  .hero-grid,
-  4560	  .worklog-layout,
-  4561	  .project-hero-grid,
-  4562	  .project-section-grid,
-  4563	  .readiness-layout {
-  4564	    grid-template-columns: 1fr;
-  4565	  }
-  4566
-  4567	  .overview-section-grid {
-  4568	    grid-template-areas:
-  4569	      "heading"
-  4570	      "screens"
-  4571	      "copy";
-  4572	    grid-template-columns: 1fr;
-  4573	  }
-  4574
-  4575	  .av-showcase {
-  4576	    min-height: 610px;
-  4577	  }
-  4578
-  4579	  .av-device-main {
-  4580	    left: 32%;
-  4581	    right: auto;
-  4582	  }
-  4583
-  4584	  .av-device-browse {
-  4585	    right: 6%;
-  4586	  }
-  4587
-  4588	  .av-device-confirm {
-  4589	    left: 4%;
-  4590	  }
-  4591
-  4592	  .hero-visual {
-  4593	    min-height: auto;
-  4594	  }
-  4595
-  4596	  .phone-stage {
-  4597	    height: 710px;
-  4598	    margin-top: 30px;
-  4599	  }
-  4600
-  4601	  .phone-shell-commerce {
-  4602	    left: 4%;
-  4603	  }
-  4604
-  4605	  .phone-shell-finance {
-  4606	    left: 42%;
-  4607	  }
-  4608
-  4609	  .tablet-shell {
-  4610	    left: 9%;
-  4611	    top: 374px;
-  4612	    width: var(--tablet-shell-fitted-width);
-  4613	  }
-  4614
-  4615	  .case-grid,
-  4616	  .capability-grid,
-  4617	  .feature-grid,
-  4618	  .decision-grid,
-  4619	  .architecture-map {
-  4620	    grid-template-columns: repeat(2, minmax(0, 1fr));
-  4621	  }
-  4622
-  4623	  .ownership-grid,
-  4624	  .stack-matrix {
-  4625	    grid-template-columns: repeat(3, minmax(0, 1fr));
-  4626	  }
-  4627
-  4628	  .flow-layout {
-  4629	    --flow-chart-width: var(--flow-phone-width);
-  4630	    grid-template-columns: 1fr;
-  4631	  }
-  4632
-  4633	  .flow-capture-group {
-  4634	    grid-template-columns: 1fr;
-  4635	  }
-  4636	}
-  4637
-  4638	@media (max-width: 980px) and (orientation: portrait) {
-  4639	  .flow-chart-mockup {
-  4640	    justify-self: center;
-  4641	    margin-inline: auto;
-  4642	  }
-  4643	}
-  4644
-  4645	@media (max-width: 720px) {
-  4646	  .site-shell {
-  4647	    width: min(100% - 24px, 1180px);
-  4648	  }
-  4649
-  4650	  .nav-bar {
-  4651	    --nav-bar-inline-padding: 14px;
-  4652	    --nav-link-bottom-separator-gap: 5px;
-  4653	    --nav-link-separator-gap: 4px;
-  4654	    --nav-link-top-separator-gap: 3px;
-  4655	    max-width: calc(100vw - 24px);
-  4656	    overflow: hidden;
-  4657	    padding: 0 var(--nav-bar-inline-padding);
+  4482	.closing-panel p {
+  4483	  max-width: 760px;
+  4484	}
+  4485
+  4486	.closing-actions {
+  4487	  display: flex;
+  4488	  flex-direction: column;
+  4489	  gap: 12px;
+  4490	  min-width: 190px;
+  4491	}
+  4492
+  4493	@media (max-width: 980px) {
+  4494	  .product-flow-nav {
+  4495	    --product-flow-nav-font-size: clamp(40px, 5.7vw, 56px);
+  4496	  }
+  4497
+  4498	  .hero-copy {
+  4499	    --hero-proof-stack-width: min(606px, 100%);
+  4500	    --hero-action-stack-width: var(--hero-proof-stack-width);
+  4501	    --hero-text-stack-width: var(--hero-action-stack-width);
+  4502	  }
+  4503
+  4504	  .nav-bar {
+  4505	    --nav-bar-inline-padding: 16px;
+  4506	    --nav-bar-height: clamp(36px, calc(23.61px + 3.87vw), 48px);
+  4507	    --nav-link-bottom-separator-gap: 8px;
+  4508	    --nav-link-separator-gap: 6px;
+  4509	    --nav-link-top-separator-gap: 6px;
+  4510	    align-items: center;
+  4511	    display: block;
+  4512	    height: var(--nav-bar-two-row-height);
+  4513	    row-gap: 7.5px;
+  4514	    padding: 0 var(--nav-bar-inline-padding);
+  4515	  }
+  4516
+  4517	  .nav-bar nav {
+  4518	    display: grid;
+  4519	    grid-template-rows: repeat(2, var(--nav-bar-height));
+  4520	    height: 100%;
+  4521	    row-gap: var(--nav-bar-two-row-gap);
+  4522	    width: 100%;
+  4523	  }
+  4524
+  4525	  .nav-link-row {
+  4526	    display: flex;
+  4527	    flex-wrap: nowrap;
+  4528	    gap: var(--nav-link-separator-gap);
+  4529	    justify-content: space-between;
+  4530	    min-width: 0;
+  4531	    width: 100%;
+  4532	  }
+  4533
+  4534	  .nav-link-row-top {
+  4535	    align-items: center;
+  4536	    column-gap: var(--nav-brand-gap);
+  4537	    display: flex;
+  4538	    height: var(--nav-bar-height);
+  4539	    justify-content: flex-start;
+  4540	    width: 100%;
+  4541	  }
+  4542
+  4543	  .nav-top-distribution {
+  4544	    align-items: center;
+  4545	    display: grid;
+  4546	    flex: 1 1 auto;
+  4547	    grid-template-columns: repeat(2, minmax(0, 1fr));
+  4548	    justify-items: center;
+  4549	    min-width: 0;
+  4550	    position: relative;
+  4551	  }
+  4552
+  4553	  .nav-top-distribution > .nav-top-link-primary {
+  4554	    grid-column: 1;
+  4555	    min-width: max-content;
+  4556	  }
+  4557
+  4558	  .nav-top-distribution > .nav-top-link-secondary {
+  4559	    grid-column: 2;
+  4560	    min-width: max-content;
+  4561	  }
+  4562
+  4563	  .nav-top-distribution > .nav-separator-top-center {
+  4564	    left: 50%;
+  4565	    position: absolute;
+  4566	    transform: translateX(-50%);
+  4567	  }
+  4568
+  4569	  .nav-link-row-bottom {
+  4570	    align-items: center;
+  4571	    column-gap: var(--nav-link-bottom-separator-gap);
+  4572	    display: flex;
+  4573	    height: var(--nav-bar-height);
+  4574	    justify-content: space-evenly;
+  4575	    width: 100%;
+  4576	  }
+  4577
+  4578	  .nav-separator.nav-separator-row-leading {
+  4579	    display: none;
+  4580	  }
+  4581
+  4582	  .nav-bar nav a,
+  4583	  .nav-bar nav .nav-text {
+  4584	    flex: 1 1 0;
+  4585	    min-width: 0;
+  4586	    padding-left: 10px;
+  4587	    padding-right: 10px;
+  4588	    text-align: center;
+  4589	  }
+  4590
+  4591	  .nav-bar nav .nav-link-row > a,
+  4592	  .nav-bar nav .nav-link-row > .nav-text {
+  4593	    flex: 0 0 auto;
+  4594	    justify-self: center;
+  4595	  }
+  4596
+  4597	  .nav-bar nav .nav-link-row-top > .nav-brand-link {
+  4598	    display: inline-flex;
+  4599	    gap: var(--nav-brand-gap);
+  4600	    grid-column: 1;
+  4601	    height: var(--nav-bar-height);
+  4602	    margin-block: calc(var(--nav-card-border-width) * -1);
+  4603	    margin-right: 0;
+  4604	    min-width: max-content;
+  4605	    padding: 0 calc(var(--nav-brand-gap) + var(--nav-brand-card-bleed)) 0
+  4606	      var(--nav-brand-card-bleed);
+  4607	    justify-self: start;
+  4608	  }
+  4609
+  4610	  .nav-bar nav .nav-link-row-top > .nav-brand-link .nav-brand-mark {
+  4611	    align-self: center;
+  4612	    flex: none;
+  4613	    height: 34px;
+  4614	    justify-self: center;
+  4615	    max-height: 34px;
+  4616	    max-width: 34px;
+  4617	    min-height: 34px;
+  4618	    min-width: 34px;
+  4619	    width: 34px;
+  4620	  }
+  4621
+  4622	  .nav-bar nav .nav-link-row-top > .nav-brand-link .nav-brand-name {
+  4623	    align-self: center;
+  4624	    display: inline-flex;
+  4625	    justify-content: center;
+  4626	    line-height: 1;
+  4627	    text-align: center;
+  4628	  }
+  4629
+  4630	  .nav-bar nav .nav-link-row-bottom > a,
+  4631	  .nav-bar nav .nav-link-row-bottom > .nav-text {
+  4632	    padding-bottom: 3.75px;
+  4633	    padding-top: 0;
+  4634	  }
+  4635
+  4636	  .project-nav nav {
+  4637	    grid-template-columns: repeat(3, minmax(0, 1fr));
+  4638	  }
+  4639
+  4640	  .hero-grid,
+  4641	  .worklog-layout,
+  4642	  .project-hero-grid,
+  4643	  .project-section-grid,
+  4644	  .readiness-layout {
+  4645	    grid-template-columns: 1fr;
+  4646	  }
+  4647
+  4648	  .overview-section-grid {
+  4649	    grid-template-areas:
+  4650	      "heading"
+  4651	      "screens"
+  4652	      "copy";
+  4653	    grid-template-columns: 1fr;
+  4654	  }
+  4655
+  4656	  .av-showcase {
+  4657	    min-height: 610px;
   4658	  }
   4659
-  4660	  .nav-bar nav {
-  4661	    max-width: 100%;
-  4662	  }
-  4663
-  4664	  .project-nav nav {
-  4665	    width: 100%;
-  4666	  }
-  4667
-  4668	  .project-page .site-shell {
-  4669	    max-width: calc(100vw - 24px);
-  4670	    width: calc(100vw - 24px);
+  4660	  .av-device-main {
+  4661	    left: 32%;
+  4662	    right: auto;
+  4663	  }
+  4664
+  4665	  .av-device-browse {
+  4666	    right: 6%;
+  4667	  }
+  4668
+  4669	  .av-device-confirm {
+  4670	    left: 4%;
   4671	  }
   4672
-  4673	  .project-nav {
-  4674	    max-width: calc(100vw - 24px);
-  4675	    width: calc(100vw - 24px);
-  4676	  }
-  4677
-  4678	  .project-nav nav a {
-  4679	    font-size: 11px;
+  4673	  .hero-visual {
+  4674	    min-height: auto;
+  4675	  }
+  4676
+  4677	  .phone-stage {
+  4678	    height: 710px;
+  4679	    margin-top: 30px;
   4680	  }
   4681
-  4682	  .nav-bar nav a,
-  4683	  .nav-bar nav .nav-text {
-  4684	    font-size: 15px;
-  4685	    padding-left: 2px;
-  4686	    padding-right: 2px;
-  4687	  }
-  4688
-  4689	  .nav-separator {
-  4690	    font-size: 15px;
-  4691	  }
-  4692
-  4693	  .hero {
-  4694	    padding-top: 24px;
-  4695	  }
-  4696
-  4697	  section.project-hero {
-  4698	    padding-top: 12px;
-  4699	  }
-  4700
-  4701	  .project-nav {
-  4702	    margin-bottom: 48px;
-  4703	  }
-  4704
-  4705	  .hero-grid {
-  4706	    gap: 30px;
-  4707	    padding-top: 16px;
-  4708	  }
-  4709
-  4710	  h1 {
-  4711	    font-size: clamp(42px, 15vw, 64px);
+  4682	  .phone-shell-commerce {
+  4683	    left: 4%;
+  4684	  }
+  4685
+  4686	  .phone-shell-finance {
+  4687	    left: 42%;
+  4688	  }
+  4689
+  4690	  .tablet-shell {
+  4691	    left: 9%;
+  4692	    top: 374px;
+  4693	    width: var(--tablet-shell-fitted-width);
+  4694	  }
+  4695
+  4696	  .case-grid,
+  4697	  .capability-grid,
+  4698	  .feature-grid,
+  4699	  .decision-grid,
+  4700	  .architecture-map {
+  4701	    grid-template-columns: repeat(2, minmax(0, 1fr));
+  4702	  }
+  4703
+  4704	  .ownership-grid,
+  4705	  .stack-matrix {
+  4706	    grid-template-columns: repeat(3, minmax(0, 1fr));
+  4707	  }
+  4708
+  4709	  .flow-layout {
+  4710	    --flow-chart-width: var(--flow-phone-width);
+  4711	    grid-template-columns: 1fr;
   4712	  }
   4713
-  4714	  .hero-visual {
-  4715	    min-height: auto;
+  4714	  .flow-capture-group {
+  4715	    grid-template-columns: 1fr;
   4716	  }
-  4717
-  4718	  .phone-stage {
-  4719	    height: 626px;
-  4720	    margin-top: 18px;
-  4721	  }
-  4722
-  4723	  .profile-orbit {
-  4724	    right: 0;
-  4725	  }
-  4726
-  4727	  .profile-photo {
-  4728	    height: 165px;
-  4729	    width: 165px;
-  4730	  }
-  4731
-  4732	  .phone-shell {
-  4733	    height: 420px;
-  4734	    width: 206px;
-  4735	  }
-  4736
-  4737	  .phone-shell-commerce {
-  4738	    left: -2px;
-  4739	    top: 72px;
-  4740	  }
-  4741
-  4742	  .phone-shell-finance {
-  4743	    left: auto;
-  4744	    right: -8px;
-  4745	    top: 124px;
-  4746	  }
-  4747
-  4748	  .tablet-shell {
-  4749	    --tablet-shell-fitted-width: 223px;
-  4750	    height: 150px;
-  4751	    left: 14px;
-  4752	    top: 342px;
-  4753	  }
-  4754
-  4755	  .stats-strip-item {
-  4756	    min-height: 104px;
-  4757	    padding: 14px 8px;
-  4758	  }
-  4759
-  4760	  .stack-section .capability-grid {
-  4761	    grid-template-columns: repeat(2, minmax(0, 1fr));
-  4762	  }
-  4763
-  4764	  .case-card {
-  4765	    min-height: auto;
-  4766	  }
-  4767
-  4768	  .contact-panel {
-  4769	    align-items: flex-start;
-  4770	    flex-direction: column;
-  4771	  }
-  4772
-  4773	  .project-page section:not(.project-hero) {
-  4774	    padding: 58px 0;
-  4775	  }
-  4776
-  4777	  .overview-section-grid {
-  4778	    --overview-play-store-width: 100%;
-  4779	  }
-  4780
-  4781	  .project-hero-grid {
-  4782	    gap: 34px;
-  4783	  }
-  4784
-  4785	  .project-back-link {
-  4786	    margin-bottom: 24px;
-  4787	  }
-  4788
-  4789	  .project-copy-panel {
-  4790	    border-left: 0;
-  4791	    padding-left: 0;
-  4792	  }
-  4793
-  4794	  .project-hero-text,
-  4795	  .project-copy-panel p,
-  4796	  .architecture-copy,
-  4797	  .readiness-copy,
-  4798	  .closing-panel p {
-  4799	    font-size: 16px;
-  4800	  }
-  4801
-  4802	  .project-subtitle,
-  4803	  .project-hero-text,
-  4804	  .project-meta-row {
-  4805	    max-width: 100%;
-  4806	    overflow-wrap: anywhere;
-  4807	  }
-  4808
-  4809	  .project-meta-row span {
-  4810	    flex: 0 1 auto;
-  4811	    white-space: normal;
-  4812	  }
-  4813
-  4814	  .av-showcase {
-  4815	    min-height: auto;
-  4816	    padding: 0 0 18px;
-  4817	  }
-  4818
-  4819	  .av-showcase::before {
-  4820	    inset: 20px 0 84px;
+  4717	}
+  4718
+  4719	@media (max-width: 980px) and (orientation: portrait) {
+  4720	  .flow-chart-mockup {
+  4721	    justify-self: center;
+  4722	    margin-inline: auto;
+  4723	  }
+  4724	}
+  4725
+  4726	@media (max-width: 720px) {
+  4727	  .site-shell {
+  4728	    width: min(100% - 24px, 1180px);
+  4729	  }
+  4730
+  4731	  .nav-bar {
+  4732	    --nav-bar-inline-padding: 14px;
+  4733	    --nav-link-bottom-separator-gap: 5px;
+  4734	    --nav-link-separator-gap: 4px;
+  4735	    --nav-link-top-separator-gap: 3px;
+  4736	    max-width: calc(100vw - 24px);
+  4737	    overflow: hidden;
+  4738	    padding: 0 var(--nav-bar-inline-padding);
+  4739	  }
+  4740
+  4741	  .nav-bar nav {
+  4742	    max-width: 100%;
+  4743	  }
+  4744
+  4745	  .project-nav nav {
+  4746	    width: 100%;
+  4747	  }
+  4748
+  4749	  .project-page .site-shell {
+  4750	    max-width: calc(100vw - 24px);
+  4751	    width: calc(100vw - 24px);
+  4752	  }
+  4753
+  4754	  .project-nav {
+  4755	    max-width: calc(100vw - 24px);
+  4756	    width: calc(100vw - 24px);
+  4757	  }
+  4758
+  4759	  .project-nav nav a {
+  4760	    font-size: 11px;
+  4761	  }
+  4762
+  4763	  .nav-bar nav a,
+  4764	  .nav-bar nav .nav-text {
+  4765	    font-size: 15px;
+  4766	    padding-left: 2px;
+  4767	    padding-right: 2px;
+  4768	  }
+  4769
+  4770	  .nav-separator {
+  4771	    font-size: 15px;
+  4772	  }
+  4773
+  4774	  .hero {
+  4775	    padding-top: 24px;
+  4776	  }
+  4777
+  4778	  section.project-hero {
+  4779	    padding-top: 12px;
+  4780	  }
+  4781
+  4782	  .project-nav {
+  4783	    margin-bottom: 48px;
+  4784	  }
+  4785
+  4786	  .hero-grid {
+  4787	    gap: 30px;
+  4788	    padding-top: 16px;
+  4789	  }
+  4790
+  4791	  h1 {
+  4792	    font-size: clamp(42px, 15vw, 64px);
+  4793	  }
+  4794
+  4795	  .hero-visual {
+  4796	    min-height: auto;
+  4797	  }
+  4798
+  4799	  .phone-stage {
+  4800	    height: 626px;
+  4801	    margin-top: 18px;
+  4802	  }
+  4803
+  4804	  .profile-orbit {
+  4805	    right: 0;
+  4806	  }
+  4807
+  4808	  .profile-photo {
+  4809	    height: 165px;
+  4810	    width: 165px;
+  4811	  }
+  4812
+  4813	  .phone-shell {
+  4814	    height: 420px;
+  4815	    width: 206px;
+  4816	  }
+  4817
+  4818	  .phone-shell-commerce {
+  4819	    left: -2px;
+  4820	    top: 72px;
   4821	  }
   4822
-  4823	  .av-device {
-  4824	    position: relative;
-  4825	  }
-  4826
-  4827	  .av-device-main {
-  4828	    height: auto;
-  4829	    left: auto;
-  4830	    margin: 0 auto;
-  4831	    max-width: 292px;
-  4832	    right: auto;
-  4833	    top: auto;
-  4834	    transform: rotate(-4deg);
-  4835	    width: 72vw;
-  4836	  }
-  4837
-  4838	  .av-device-browse,
-  4839	  .av-device-confirm {
-  4840	    display: none;
-  4841	  }
-  4842
-  4843	  .av-showcase-proof {
-  4844	    margin: -18px auto 0;
-  4845	    max-width: min(292px, calc(100vw - 48px));
-  4846	    position: relative;
-  4847	    right: auto;
-  4848	  }
-  4849
-  4850	  .av-showcase-proof-row {
-  4851	    align-items: stretch;
-  4852	    bottom: auto;
-  4853	    flex-direction: column;
-  4854	    margin: -18px auto 0;
-  4855	    max-width: min(292px, calc(100vw - 48px));
-  4856	    position: relative;
-  4857	    left: auto;
-  4858	    right: auto;
-  4859	  }
-  4860
-  4861	  .av-showcase-proof-row .av-showcase-proof {
-  4862	    margin: 0;
-  4863	    max-width: none;
-  4864	    width: max-content;
-  4865	  }
-  4866
-  4867	  .alla-vostra-case .av-showcase {
-  4868	    --av-mobile-device-width: min(62vw, 262px);
-  4869	    align-items: center;
-  4870	    display: flex;
-  4871	    justify-content: center;
-  4872	    min-height: clamp(560px, 126vw, 635px);
-  4873	    overflow: visible;
-  4874	    padding: 8px 0 18px;
-  4875	  }
-  4876
-  4877	  .alla-vostra-case .av-showcase::before {
-  4878	    inset: 0 0 38px;
-  4879	  }
-  4880
-  4881	  .alla-vostra-case .av-device-main {
-  4882	    margin: 0;
-  4883	    max-width: 262px;
-  4884	    transform-origin: center top;
-  4885	    width: var(--av-mobile-device-width);
-  4886	  }
-  4887
-  4888	  .alla-vostra-case .av-showcase-proof-row {
-  4889	    --av-platform-list-row-gap: var(--av-proof-row-gap);
-  4890	    --av-proof-column-gap: clamp(4px, calc(25vw - 86px), 14px);
-  4891	    --av-proof-content-margin-top: 8px;
-  4892	    --av-proof-row-gap: 3px;
-  4893	    --av-proof-top-row-height: 22.7px;
-  4894	    --av-proof-bottom-row-height: 31px;
-  4895	    --av-skill-item-gap: clamp(3px, 1vw, 5px);
-  4896	    --av-skill-grid-row-gap: var(--av-proof-row-gap);
-  4897	    --av-skill-grid-y-offset: 0px;
-  4898
-  4899	    align-items: stretch;
-  4900	    bottom: clamp(2px, 1vw, 8px);
-  4901	    display: grid;
-  4902	    gap: clamp(6px, 2.5vw, 10px);
-  4903	    grid-auto-rows: 1fr;
-  4904	    grid-template-columns: repeat(2, minmax(0, 1fr));
-  4905	    justify-content: space-between;
-  4906	    left: clamp(4px, 2.4vw, 20px);
-  4907	    margin: 0;
-  4908	    max-width: none;
-  4909	    position: absolute;
-  4910	    right: clamp(4px, 2.4vw, 20px);
-  4911	    top: auto;
-  4912	    width: auto;
-  4913	  }
-  4914
-  4915	  .alla-vostra-case .av-showcase-proof-row .av-showcase-proof {
-  4916	    align-self: stretch;
-  4917	    display: flex;
-  4918	    flex-direction: column;
-  4919	    max-width: none;
-  4920	    padding: 10px clamp(8px, 2.5vw, 12px);
-  4921	    width: auto;
+  4823	  .phone-shell-finance {
+  4824	    left: auto;
+  4825	    right: -8px;
+  4826	    top: 124px;
+  4827	  }
+  4828
+  4829	  .tablet-shell {
+  4830	    --tablet-shell-fitted-width: 223px;
+  4831	    height: 150px;
+  4832	    left: 14px;
+  4833	    top: 342px;
+  4834	  }
+  4835
+  4836	  .stats-strip-item {
+  4837	    min-height: 104px;
+  4838	    padding: 14px 8px;
+  4839	  }
+  4840
+  4841	  .stack-section .capability-grid {
+  4842	    grid-template-columns: repeat(2, minmax(0, 1fr));
+  4843	  }
+  4844
+  4845	  .case-card {
+  4846	    min-height: auto;
+  4847	  }
+  4848
+  4849	  .contact-panel {
+  4850	    align-items: flex-start;
+  4851	    flex-direction: column;
+  4852	  }
+  4853
+  4854	  .project-page section:not(.project-hero) {
+  4855	    padding: 58px 0;
+  4856	  }
+  4857
+  4858	  .overview-section-grid {
+  4859	    --overview-play-store-width: 100%;
+  4860	  }
+  4861
+  4862	  .project-hero-grid {
+  4863	    gap: 34px;
+  4864	  }
+  4865
+  4866	  .project-back-link {
+  4867	    margin-bottom: 24px;
+  4868	  }
+  4869
+  4870	  .project-copy-panel {
+  4871	    border-left: 0;
+  4872	    padding-left: 0;
+  4873	  }
+  4874
+  4875	  .project-hero-text,
+  4876	  .project-copy-panel p,
+  4877	  .architecture-copy,
+  4878	  .readiness-copy,
+  4879	  .closing-panel p {
+  4880	    font-size: 16px;
+  4881	  }
+  4882
+  4883	  .project-subtitle,
+  4884	  .project-hero-text,
+  4885	  .project-meta-row {
+  4886	    max-width: 100%;
+  4887	    overflow-wrap: anywhere;
+  4888	  }
+  4889
+  4890	  .project-meta-row span {
+  4891	    flex: 0 1 auto;
+  4892	    white-space: normal;
+  4893	  }
+  4894
+  4895	  .av-showcase {
+  4896	    min-height: auto;
+  4897	    padding: 0 0 18px;
+  4898	  }
+  4899
+  4900	  .av-showcase::before {
+  4901	    inset: 20px 0 84px;
+  4902	  }
+  4903
+  4904	  .av-device {
+  4905	    position: relative;
+  4906	  }
+  4907
+  4908	  .av-device-main {
+  4909	    height: auto;
+  4910	    left: auto;
+  4911	    margin: 0 auto;
+  4912	    max-width: 292px;
+  4913	    right: auto;
+  4914	    top: auto;
+  4915	    transform: rotate(-4deg);
+  4916	    width: 72vw;
+  4917	  }
+  4918
+  4919	  .av-device-browse,
+  4920	  .av-device-confirm {
+  4921	    display: none;
   4922	  }
   4923
-  4924	  .alla-vostra-case .av-showcase-proof-row .av-showcase-proof:first-child {
-  4925	    justify-self: stretch;
-  4926	  }
-  4927
-  4928	  .alla-vostra-case .av-showcase-proof-row .av-showcase-proof:last-child {
-  4929	    justify-self: stretch;
-  4930	  }
-  4931
-  4932	  .alla-vostra-case .av-showcase-proof strong {
-  4933	    font-size: clamp(20px, 6vw, 30px);
-  4934	  }
-  4935
-  4936	  .alla-vostra-case .av-showcase-proof span {
-  4937	    font-size: clamp(12px, 3.2vw, 15px);
-  4938	    line-height: 1.32;
-  4939	  }
-  4940
-  4941	  .alla-vostra-case .av-showcase-proof .av-showcase-skill-grid,
-  4942	  .alla-vostra-case .av-showcase-proof .av-showcase-platform-list {
-  4943	    grid-template-rows: var(--av-proof-top-row-height) var(--av-proof-bottom-row-height);
-  4944	  }
-  4945
-  4946	  .alla-vostra-case .stats-strip {
-  4947	    border-top: 1px solid var(--line);
-  4948	    gap: 1px;
-  4949	    grid-template-columns: repeat(4, minmax(0, 1fr));
-  4950	    margin: 26px 0 0;
-  4951	    width: 100%;
-  4952	  }
-  4953
-  4954	  .alla-vostra-case .stats-strip-item {
-  4955	    background: rgba(255, 255, 255, 0.025);
-  4956	    min-height: 178px;
-  4957	    padding: 14px 8px;
-  4958	  }
-  4959
-  4960	  .alla-vostra-case .stats-strip strong {
-  4961	    font-size: clamp(30px, 8vw, 44px);
-  4962	  }
-  4963
-  4964	  .alla-vostra-case .stats-strip-label,
-  4965	  .alla-vostra-case .stats-strip-measure {
-  4966	    font-size: clamp(12px, 3.2vw, 16px);
-  4967	    line-height: 1.16;
-  4968	  }
-  4969
-  4970	  .project-card-grid,
-  4971	  .ownership-grid,
-  4972	  .feature-grid,
-  4973	  .decision-grid,
-  4974	  .architecture-map,
-  4975	  .stack-matrix {
-  4976	    grid-template-columns: 1fr;
-  4977	  }
-  4978
-  4979	  .flow-segments {
-  4980	    grid-template-columns: repeat(2, minmax(0, 1fr));
-  4981	  }
-  4982
-  4983	  .flow-support {
-  4984	    grid-template-columns: 1fr;
-  4985	  }
-  4986
-  4987	  .flow-checkout-note {
-  4988	    min-height: auto;
-  4989	  }
-  4990
-  4991	  .flow-section-intro > p {
-  4992	    border-left: 0;
-  4993	    padding-left: 0;
+  4924	  .av-showcase-proof {
+  4925	    margin: -18px auto 0;
+  4926	    max-width: min(292px, calc(100vw - 48px));
+  4927	    position: relative;
+  4928	    right: auto;
+  4929	  }
+  4930
+  4931	  .av-showcase-proof-row {
+  4932	    align-items: stretch;
+  4933	    bottom: auto;
+  4934	    flex-direction: column;
+  4935	    margin: -18px auto 0;
+  4936	    max-width: min(292px, calc(100vw - 48px));
+  4937	    position: relative;
+  4938	    left: auto;
+  4939	    right: auto;
+  4940	  }
+  4941
+  4942	  .av-showcase-proof-row .av-showcase-proof {
+  4943	    margin: 0;
+  4944	    max-width: none;
+  4945	    width: max-content;
+  4946	  }
+  4947
+  4948	  .alla-vostra-case .av-showcase {
+  4949	    --av-mobile-device-width: min(62vw, 262px);
+  4950	    align-items: center;
+  4951	    display: flex;
+  4952	    justify-content: center;
+  4953	    min-height: clamp(560px, 126vw, 635px);
+  4954	    overflow: visible;
+  4955	    padding: 8px 0 18px;
+  4956	  }
+  4957
+  4958	  .alla-vostra-case .av-showcase::before {
+  4959	    inset: 0 0 38px;
+  4960	  }
+  4961
+  4962	  .alla-vostra-case .av-device-main {
+  4963	    margin: 0;
+  4964	    max-width: 262px;
+  4965	    transform-origin: center top;
+  4966	    width: var(--av-mobile-device-width);
+  4967	  }
+  4968
+  4969	  .alla-vostra-case .av-showcase-proof-row {
+  4970	    --av-platform-list-row-gap: var(--av-proof-row-gap);
+  4971	    --av-proof-column-gap: clamp(4px, calc(25vw - 86px), 14px);
+  4972	    --av-proof-content-margin-top: 8px;
+  4973	    --av-proof-row-gap: 3px;
+  4974	    --av-proof-top-row-height: 22.7px;
+  4975	    --av-proof-bottom-row-height: 31px;
+  4976	    --av-skill-item-gap: clamp(3px, 1vw, 5px);
+  4977	    --av-skill-grid-row-gap: var(--av-proof-row-gap);
+  4978	    --av-skill-grid-y-offset: 0px;
+  4979
+  4980	    align-items: stretch;
+  4981	    bottom: clamp(2px, 1vw, 8px);
+  4982	    display: grid;
+  4983	    gap: clamp(6px, 2.5vw, 10px);
+  4984	    grid-auto-rows: 1fr;
+  4985	    grid-template-columns: repeat(2, minmax(0, 1fr));
+  4986	    justify-content: space-between;
+  4987	    left: clamp(4px, 2.4vw, 20px);
+  4988	    margin: 0;
+  4989	    max-width: none;
+  4990	    position: absolute;
+  4991	    right: clamp(4px, 2.4vw, 20px);
+  4992	    top: auto;
+  4993	    width: auto;
   4994	  }
   4995
-  4996	  .product-flow-nav {
-  4997	    --product-flow-nav-font-size: clamp(15px, 5vw, 28px);
-  4998	    --product-flow-nav-height: clamp(58px, 14vw, 72px);
-  4999
-  5000	    grid-template-columns: repeat(2, minmax(0, 1fr));
-  5001	  }
-  5002
-  5003	  .product-flow-nav .button {
-  5004	    padding: 8px clamp(6px, 2vw, 12px) 10px;
-  5005	  }
-  5006
-  5007	  .product-flow-nav .button:first-child {
-  5008	    border-radius: 8px 0 0 8px;
-  5009	  }
-  5010
-  5011	  .product-flow-nav .button:last-child {
-  5012	    border-radius: 0 8px 8px 0;
-  5013	  }
-  5014
-  5015	  .flow-capture-groups {
-  5016	    gap: 40px;
-  5017	    margin-top: 44px;
-  5018	  }
-  5019
-  5020	  .flow-capture-group {
-  5021	    padding-top: 24px;
-  5022	  }
-  5023
-  5024	  .flow-capture-grid {
-  5025	    gap: 28px;
-  5026	    grid-template-columns: 1fr;
-  5027	  }
-  5028
-  5029	  .flow-screen-compact {
-  5030	    width: min(42vw, 146px);
-  5031	  }
-  5032
-  5033	  .flow-screen-stack-captures {
-  5034	    gap: 12px;
-  5035	  }
-  5036
-  5037	  .alla-vostra-case .flow-browse-toggle {
-  5038	    inline-size: calc((min(42vw, 146px) * 2) + 12px);
+  4996	  .alla-vostra-case .av-showcase-proof-row .av-showcase-proof {
+  4997	    align-self: stretch;
+  4998	    display: flex;
+  4999	    flex-direction: column;
+  5000	    max-width: none;
+  5001	    padding: 10px clamp(8px, 2.5vw, 12px);
+  5002	    width: auto;
+  5003	  }
+  5004
+  5005	  .alla-vostra-case .av-showcase-proof-row .av-showcase-proof:first-child {
+  5006	    justify-self: stretch;
+  5007	  }
+  5008
+  5009	  .alla-vostra-case .av-showcase-proof-row .av-showcase-proof:last-child {
+  5010	    justify-self: stretch;
+  5011	  }
+  5012
+  5013	  .alla-vostra-case .av-showcase-proof strong {
+  5014	    font-size: clamp(20px, 6vw, 30px);
+  5015	  }
+  5016
+  5017	  .alla-vostra-case .av-showcase-proof span {
+  5018	    font-size: clamp(12px, 3.2vw, 15px);
+  5019	    line-height: 1.32;
+  5020	  }
+  5021
+  5022	  .alla-vostra-case .av-showcase-proof .av-showcase-skill-grid,
+  5023	  .alla-vostra-case .av-showcase-proof .av-showcase-platform-list {
+  5024	    grid-template-rows: var(--av-proof-top-row-height) var(--av-proof-bottom-row-height);
+  5025	  }
+  5026
+  5027	  .alla-vostra-case .stats-strip {
+  5028	    border-top: 1px solid var(--line);
+  5029	    gap: 1px;
+  5030	    grid-template-columns: repeat(4, minmax(0, 1fr));
+  5031	    margin: 26px 0 0;
+  5032	    width: 100%;
+  5033	  }
+  5034
+  5035	  .alla-vostra-case .stats-strip-item {
+  5036	    background: rgba(255, 255, 255, 0.025);
+  5037	    min-height: 178px;
+  5038	    padding: 14px 8px;
   5039	  }
   5040
-  5041	  .flow-original-art-grid {
-  5042	    gap: 12px;
-  5043	    grid-template-columns: repeat(2, minmax(0, min(42vw, 146px)));
-  5044	  }
-  5045
-  5046	  .flow-original-photo-grid {
-  5047	    gap: 12px;
-  5048	    grid-template-columns: repeat(2, minmax(0, min(42vw, 146px)));
+  5041	  .alla-vostra-case .stats-strip strong {
+  5042	    font-size: clamp(30px, 8vw, 44px);
+  5043	  }
+  5044
+  5045	  .alla-vostra-case .stats-strip-label,
+  5046	  .alla-vostra-case .stats-strip-measure {
+  5047	    font-size: clamp(12px, 3.2vw, 16px);
+  5048	    line-height: 1.16;
   5049	  }
   5050
-  5051	  .flow-hero-composition-grid {
-  5052	    gap: 12px;
-  5053	    grid-template-columns: minmax(0, calc(min(84vw, 292px) + 12px));
-  5054	  }
-  5055
-  5056	  .flow-hero-composition-screen {
-  5057	    width: 100%;
+  5051	  .project-card-grid,
+  5052	  .ownership-grid,
+  5053	  .feature-grid,
+  5054	  .decision-grid,
+  5055	  .architecture-map,
+  5056	  .stack-matrix {
+  5057	    grid-template-columns: 1fr;
   5058	  }
   5059
-  5060	  .flow-sticky-icon-grid {
-  5061	    gap: 12px;
-  5062	    grid-template-columns: repeat(2, minmax(0, min(42vw, 146px)));
-  5063	  }
-  5064
-  5065	  .flow-action-asset-grid {
-  5066	    gap: 12px;
-  5067	    grid-template-columns: repeat(2, minmax(0, min(42vw, 146px)));
-  5068	  }
-  5069
-  5070	  .flow-screen:not(.flow-screen-main) .flow-image-frame {
-  5071	    margin: 0 auto;
-  5072	    max-width: 230px;
-  5073	  }
-  5074
-  5075	  .flow-screen.flow-hero-composition-screen .flow-image-frame {
-  5076	    max-width: none;
-  5077	  }
-  5078
-  5079	  .closing-panel {
-  5080	    grid-template-columns: 1fr;
-  5081	    padding: 28px;
+  5060	  .flow-segments {
+  5061	    grid-template-columns: repeat(2, minmax(0, 1fr));
+  5062	  }
+  5063
+  5064	  .flow-support {
+  5065	    grid-template-columns: 1fr;
+  5066	  }
+  5067
+  5068	  .flow-checkout-note {
+  5069	    min-height: auto;
+  5070	  }
+  5071
+  5072	  .flow-section-intro > p {
+  5073	    border-left: 0;
+  5074	    padding-left: 0;
+  5075	  }
+  5076
+  5077	  .product-flow-nav {
+  5078	    --product-flow-nav-font-size: clamp(15px, 5vw, 28px);
+  5079	    --product-flow-nav-height: clamp(58px, 14vw, 72px);
+  5080
+  5081	    grid-template-columns: repeat(2, minmax(0, 1fr));
   5082	  }
   5083
-  5084	  .closing-actions {
-  5085	    width: 100%;
+  5084	  .product-flow-nav .button {
+  5085	    padding: 8px clamp(6px, 2vw, 12px) 10px;
   5086	  }
-  5087	}
-  5088
-  5089	@media (max-width: 720px) {
-  5090	  .project-page.alla-vostra-case .stats-strip-item {
-  5091	    min-height: 178px;
-  5092	  }
-  5093	}
-  5094
-  5095	@media (max-width: 630px) {
-  5096	  .case-grid {
-  5097	    grid-template-columns: 1fr;
-  5098	  }
-  5099
-  5100	  .case-grid-featured .case-card-project-title-name,
-  5101	  .case-grid-featured .case-card-title-underline {
-  5102	    overflow-wrap: normal;
-  5103	    white-space: nowrap;
-  5104	  }
-  5105
-  5106	  .case-grid > .uiux-principle-card-expanded {
-  5107	    grid-column: auto;
+  5087
+  5088	  .product-flow-nav .button:first-child {
+  5089	    border-radius: 8px 0 0 8px;
+  5090	  }
+  5091
+  5092	  .product-flow-nav .button:last-child {
+  5093	    border-radius: 0 8px 8px 0;
+  5094	  }
+  5095
+  5096	  .flow-capture-groups {
+  5097	    gap: 40px;
+  5098	    margin-top: 44px;
+  5099	  }
+  5100
+  5101	  .flow-capture-group {
+  5102	    padding-top: 24px;
+  5103	  }
+  5104
+  5105	  .flow-capture-grid {
+  5106	    gap: 28px;
+  5107	    grid-template-columns: 1fr;
   5108	  }
   5109
-  5110	  .case-grid > .uiux-principle-card-expanded .uiux-principle-long-copy {
-  5111	    column-count: auto;
-  5112	    display: grid;
-  5113	  }
-  5114	}
-  5115
-  5116	@media (max-width: 430px) {
-  5117	  .nav-bar {
-  5118	    --nav-brand-gap: 8px;
-  5119	    --nav-link-bottom-separator-gap: 3px;
-  5120	    --nav-link-separator-gap: 2px;
-  5121	    --nav-link-top-separator-gap: 2px;
-  5122	  }
-  5123
-  5124	  .nav-brand-name {
-  5125	    font-size: 22px;
-  5126	  }
-  5127
-  5128	  .nav-bar nav a,
-  5129	  .nav-bar nav .nav-text,
-  5130	  .nav-separator {
-  5131	    font-size: 14px;
-  5132	  }
-  5133	}
-  5134
-  5135	@media (max-width: 380px) {
-  5136	  .nav-bar {
-  5137	    --nav-bar-inline-padding: 12px;
-  5138	    --nav-link-bottom-separator-gap: 2px;
-  5139	    --nav-link-separator-gap: 1px;
-  5140	    --nav-link-top-separator-gap: 1px;
-  5141	  }
-  5142
-  5143	  .nav-bar nav a,
-  5144	  .nav-bar nav .nav-text {
-  5145	    font-size: 13.5px;
-  5146	    padding-left: 0;
-  5147	    padding-right: 0;
-  5148	  }
-  5149
-  5150	  .nav-separator {
-  5151	    font-size: 13.5px;
-  5152	  }
-  5153	}
-  5154
-  5155	@media (max-width: 340px) {
-  5156	  .alla-vostra-case .av-showcase-proof-row {
-  5157	    --av-proof-column-gap: 3px;
-  5158	    --av-skill-item-gap: 2.5px;
+  5110	  .flow-screen-compact {
+  5111	    width: min(42vw, 146px);
+  5112	  }
+  5113
+  5114	  .flow-screen-stack-captures {
+  5115	    gap: 12px;
+  5116	  }
+  5117
+  5118	  .alla-vostra-case .flow-browse-toggle {
+  5119	    inline-size: calc((min(42vw, 146px) * 2) + 12px);
+  5120	  }
+  5121
+  5122	  .flow-original-art-grid {
+  5123	    gap: 12px;
+  5124	    grid-template-columns: repeat(2, minmax(0, min(42vw, 146px)));
+  5125	  }
+  5126
+  5127	  .flow-original-photo-grid {
+  5128	    gap: 12px;
+  5129	    grid-template-columns: repeat(2, minmax(0, min(42vw, 146px)));
+  5130	  }
+  5131
+  5132	  .flow-hero-composition-grid {
+  5133	    gap: 12px;
+  5134	    grid-template-columns: minmax(0, calc(min(84vw, 292px) + 12px));
+  5135	  }
+  5136
+  5137	  .flow-hero-composition-screen {
+  5138	    width: 100%;
+  5139	  }
+  5140
+  5141	  .flow-sticky-icon-grid {
+  5142	    gap: 12px;
+  5143	    grid-template-columns: repeat(2, minmax(0, min(42vw, 146px)));
+  5144	  }
+  5145
+  5146	  .flow-action-asset-grid {
+  5147	    gap: 12px;
+  5148	    grid-template-columns: repeat(2, minmax(0, min(42vw, 146px)));
+  5149	  }
+  5150
+  5151	  .flow-screen:not(.flow-screen-main) .flow-image-frame {
+  5152	    margin: 0 auto;
+  5153	    max-width: 230px;
+  5154	  }
+  5155
+  5156	  .flow-screen.flow-hero-composition-screen .flow-image-frame {
+  5157	    max-width: none;
+  5158	  }
   5159
-  5160	    gap: 6px;
-  5161	    left: 4px;
-  5162	    right: 4px;
+  5160	  .closing-panel {
+  5161	    grid-template-columns: 1fr;
+  5162	    padding: 28px;
   5163	  }
   5164
-  5165	  .alla-vostra-case .av-showcase-proof-row .av-showcase-proof {
-  5166	    padding-inline: 6px;
+  5165	  .closing-actions {
+  5166	    width: 100%;
   5167	  }
-  5168
-  5169	  .nav-bar nav a,
-  5170	  .nav-bar nav .nav-text {
-  5171	    font-size: 13px;
-  5172	  }
-  5173
-  5174	  .nav-separator {
-  5175	    font-size: 13px;
-  5176	  }
-  5177	}
+  5168	}
+  5169
+  5170	@media (max-width: 720px) {
+  5171	  .project-page.alla-vostra-case .stats-strip-item {
+  5172	    min-height: 178px;
+  5173	  }
+  5174	}
+  5175
+  5176	@media (max-width: 630px) {
+  5177	  .case-grid {
+  5178	    grid-template-columns: 1fr;
+  5179	  }
+  5180
+  5181	  .case-grid-featured .case-card-project-title-name,
+  5182	  .case-grid-featured .case-card-title-underline {
+  5183	    overflow-wrap: normal;
+  5184	    white-space: nowrap;
+  5185	  }
+  5186
+  5187	  .case-grid > .uiux-principle-card-expanded {
+  5188	    grid-column: auto;
+  5189	  }
+  5190
+  5191	  .case-grid > .uiux-principle-card-expanded .uiux-principle-long-copy {
+  5192	    column-count: auto;
+  5193	    display: grid;
+  5194	  }
+  5195	}
+  5196
+  5197	@media (max-width: 430px) {
+  5198	  .nav-bar {
+  5199	    --nav-brand-gap: 8px;
+  5200	    --nav-link-bottom-separator-gap: 3px;
+  5201	    --nav-link-separator-gap: 2px;
+  5202	    --nav-link-top-separator-gap: 2px;
+  5203	  }
+  5204
+  5205	  .nav-brand-name {
+  5206	    font-size: 22px;
+  5207	  }
+  5208
+  5209	  .nav-bar nav a,
+  5210	  .nav-bar nav .nav-text,
+  5211	  .nav-separator {
+  5212	    font-size: 14px;
+  5213	  }
+  5214	}
+  5215
+  5216	@media (max-width: 380px) {
+  5217	  .nav-bar {
+  5218	    --nav-bar-inline-padding: 12px;
+  5219	    --nav-link-bottom-separator-gap: 2px;
+  5220	    --nav-link-separator-gap: 1px;
+  5221	    --nav-link-top-separator-gap: 1px;
+  5222	  }
+  5223
+  5224	  .nav-bar nav a,
+  5225	  .nav-bar nav .nav-text {
+  5226	    font-size: 13.5px;
+  5227	    padding-left: 0;
+  5228	    padding-right: 0;
+  5229	  }
+  5230
+  5231	  .nav-separator {
+  5232	    font-size: 13.5px;
+  5233	  }
+  5234	}
+  5235
+  5236	@media (max-width: 340px) {
+  5237	  .alla-vostra-case .av-showcase-proof-row {
+  5238	    --av-proof-column-gap: 3px;
+  5239	    --av-skill-item-gap: 2.5px;
+  5240
+  5241	    gap: 6px;
+  5242	    left: 4px;
+  5243	    right: 4px;
+  5244	  }
+  5245
+  5246	  .alla-vostra-case .av-showcase-proof-row .av-showcase-proof {
+  5247	    padding-inline: 6px;
+  5248	  }
+  5249
+  5250	  .nav-bar nav a,
+  5251	  .nav-bar nav .nav-text {
+  5252	    font-size: 13px;
+  5253	  }
+  5254
+  5255	  .nav-separator {
+  5256	    font-size: 13px;
+  5257	  }
+  5258	}
 
 
 ============================================================
@@ -18672,12 +18757,17 @@ main
 
 Status:
 ## main...origin/main
- M next-env.d.ts
+ M app/globals.css
+ M app/projects/alla-vostra/ProductFlowSwitcher.tsx
  M portfolio_PROJECT_SNAPSHOT.txt
-?? portfolio_worklog_august10_part2.pdf
+?? public/images/alla-vostra-hero-startup-focal-cheeseboard-only-no-frame.png
+?? public/images/alla-vostra-hero-startup-focal-clipped-no-frame.png
+?? public/images/alla-vostra-hero-startup-focal-photo-only-no-frame.png
+?? public/images/alla-vostra/cheeseboard_products.png
 
 Recent commits:
-6de20a9 (HEAD -> main, origin/main) Refined Alla Vostra Visual Hierarchy stacks
+f8be376 (HEAD -> main, origin/main) Generated August 10 Part 2 Portfolio worklog
+6de20a9 Refined Alla Vostra Visual Hierarchy stacks
 00085d2 Generated the latest customary session pdf worklog for the relevant project, dated August 10 (Part 1), 2026.
 c496a04 Refined portfolio hero and case studies
 6a05703 generated pdf session worklog for the relevant project on August 6, 2026.
@@ -18686,7 +18776,6 @@ a149e29 generated the pdf session worklog for the relevant project on August 5, 
 8e21e8d Ignored lowercase .DS_store files in gitignore
 8caad05 Polished Alla Vostra hero alignment and product flow responsiveness
 f4ef9d4 Refined Alla Vostra hero proof cards and platform badges
-beebf97 Correct August worklog and landing stats
 
 Remotes:
 origin	https://github.com/Prahlin/portfolio.git (fetch)
@@ -18703,6 +18792,9 @@ public/images/address_overlay_large.png | 209339 bytes | modified 2026-07-15 19:
 public/images/address_overlay_small.png | 102975 bytes | modified 2026-07-15 19:25:04
 public/images/alla-vostra-hero-confirmed-framed-space-gray.png | 756405 bytes | modified 2026-08-01 18:01:46
 public/images/alla-vostra-hero-products-framed-space-gray.png | 2013506 bytes | modified 2026-08-01 18:01:46
+public/images/alla-vostra-hero-startup-focal-cheeseboard-only-no-frame.png | 367546 bytes | modified 2026-08-11 23:32:39
+public/images/alla-vostra-hero-startup-focal-clipped-no-frame.png | 2711830 bytes | modified 2026-08-11 21:28:27
+public/images/alla-vostra-hero-startup-focal-photo-only-no-frame.png | 2640060 bytes | modified 2026-08-11 22:36:39
 public/images/alla-vostra-hero-startup-framed-lower-muted-no-island.png | 3140718 bytes | modified 2026-08-10 21:28:24
 public/images/alla-vostra-hero-startup-framed-lower-muted.png | 3147026 bytes | modified 2026-08-10 18:50:51
 public/images/alla-vostra-hero-startup-framed-no-island.png | 3139479 bytes | modified 2026-08-10 21:28:24
@@ -18715,6 +18807,7 @@ public/images/alla-vostra/bargain_square_whitefill.png | 87208 bytes | modified 
 public/images/alla-vostra/buon-natale-product.png | 1852650 bytes | modified 2026-08-03 22:01:30
 public/images/alla-vostra/checkmark-box.svg | 471 bytes | modified 2026-08-05 19:12:04
 public/images/alla-vostra/cheeseboard-products-overlay.png | 152967 bytes | modified 2026-08-03 22:25:41
+public/images/alla-vostra/cheeseboard_products.png | 152967 bytes | modified 2026-08-11 21:07:40
 public/images/alla-vostra/header-background-no-cheeseboard.png | 1493645 bytes | modified 2026-08-03 22:25:41
 public/images/alla-vostra/header-hero-composition-preview.png | 2944603 bytes | modified 2026-08-06 19:29:10
 public/images/alla-vostra/piccola-product.png | 1935933 bytes | modified 2026-08-03 22:01:30
