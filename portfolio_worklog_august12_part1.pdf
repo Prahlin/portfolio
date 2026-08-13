@@ -1,0 +1,740 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [5 0 R 7 0 R 9 0 R 11 0 R 13 0 R 15 0 R] /Count 6 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+4 0 obj
+<< /Length 5807 >>
+stream
+BT
+/F1 9.60 Tf
+54 738.00 Td
+(Prahlin Portfolio Work Log - August 12, 2026 \(Part 1\)) Tj
+0 -11.25 Td
+(Compiled summary for Wednesday, August 12, 2026 - Part 1 - focus: continuing the Prahl.dev) Tj
+0 -11.25 Td
+(Portfolio Alla Vostra UI Foundations Visual Hierarchy section after the August 11 Step 1b/1c/1d) Tj
+0 -11.25 Td
+(layer-isolation pass, cleaning the Step 1d cheeseboard source, removing the remaining Step 4) Tj
+0 -11.25 Td
+(device-frame shell and transparent bands, matching stack-header placement and vertical breathing) Tj
+0 -11.25 Td
+(room across the Pre-Scrolling and On-Scrolling rows, scaling Step 3 to the accepted Step 1) Tj
+0 -11.25 Td
+(large-stack size, adding Step 5 as a cropped mosaic detail under Step 4, adding a new During) Tj
+0 -11.25 Td
+(Shopping row with Step 6 using the Piccola products overlay screenshot, validating TypeScript,) Tj
+0 -11.25 Td
+(static export, and browser-rendered dimensions, refreshing the Portfolio project snapshot,) Tj
+0 -11.25 Td
+(reviewing all prior Portfolio PDF worklogs, and generating the August 12 Part 1 Portfolio PDF) Tj
+0 -11.25 Td
+(worklog.) Tj
+0 -11.25 Td
+(Generated in continuity with the established Prahlin Portfolio daily worklog cadence: compact) Tj
+0 -11.25 Td
+(opening summary, source-material section, baseline section, goal list, work-completed sections,) Tj
+0 -11.25 Td
+(validation section, files-touched list, follow-up context, and output-artifact close.) Tj
+0 -11.25 Td
+(This artifact intentionally covers Prahlin/portfolio work performed after) Tj
+0 -11.25 Td
+(portfolio_worklog_august11.pdf and after the August 11 documentation state. The source commit) Tj
+0 -11.25 Td
+(reviewed for this record is e219cef07 on main, matching origin/main before this PDF was) Tj
+0 -11.25 Td
+(generated. That commit contains the Visual Hierarchy source and asset work described here. No) Tj
+0 -11.25 Td
+(separate Hostinger production deployment command was run during this worklog-generation pass;) Tj
+0 -11.25 Td
+(the new local artifacts produced for this record are the refreshed project snapshot and this) Tj
+0 -11.25 Td
+(August 12 Part 1 PDF worklog.) Tj
+0 -11.25 Td
+0 -11.25 Td
+(Source Materials Reviewed) Tj
+0 -11.25 Td
+(- Ran ./read_project.sh from /Users/prahlin/gh/portfolio and regenerated) Tj
+0 -11.25 Td
+(  portfolio_PROJECT_SNAPSHOT.txt before writing this worklog, preserving the project convention) Tj
+0 -11.25 Td
+(  that Codex refreshes the current source snapshot before continuing Portfolio documentation) Tj
+0 -11.25 Td
+(  work.) Tj
+0 -11.25 Td
+(- Reviewed the refreshed portfolio_PROJECT_SNAPSHOT.txt, including project notes, source tree,) Tj
+0 -11.25 Td
+(  public image and font inventories, PDF worklog inventory, package and deployment) Tj
+0 -11.25 Td
+(  configuration, git context, recent commits, and the standing instruction to ask for a commit) Tj
+0 -11.25 Td
+(  message before committing or pushing.) Tj
+0 -11.25 Td
+(- Reviewed every pre-existing Portfolio root-level worklog PDF: portfolio_worklog_july11.pdf,) Tj
+0 -11.25 Td
+(  portfolio_worklog_july14.pdf, portfolio_worklog_july15_part1.pdf,) Tj
+0 -11.25 Td
+(  portfolio_worklog_july15_part2.pdf, portfolio_worklog_july16.pdf,) Tj
+0 -11.25 Td
+(  portfolio_worklog_july19.pdf, portfolio_worklog_july20.pdf, portfolio_worklog_july21.pdf,) Tj
+0 -11.25 Td
+(  portfolio_worklog_july22.pdf, portfolio_worklog_july23.pdf, portfolio_worklog_july24.pdf,) Tj
+0 -11.25 Td
+(  portfolio_worklog_july25.pdf, portfolio_worklog_july29.pdf, portfolio_worklog_july30.pdf,) Tj
+0 -11.25 Td
+(  portfolio_worklog_july31.pdf, portfolio_worklog_august1_part1.pdf,) Tj
+0 -11.25 Td
+(  portfolio_worklog_august1_part2.pdf, portfolio_worklog_august1_part3.pdf,) Tj
+0 -11.25 Td
+(  portfolio_worklog_august3.pdf, portfolio_worklog_august4.pdf, portfolio_worklog_august5.pdf,) Tj
+0 -11.25 Td
+(  portfolio_worklog_august6.pdf, portfolio_worklog_august10_part1.pdf,) Tj
+0 -11.25 Td
+(  portfolio_worklog_august10_part2.pdf, and portfolio_worklog_august11.pdf.) Tj
+0 -11.25 Td
+(- Extracted text from all twenty-five existing Portfolio PDFs with pdftotext and checked recent) Tj
+0 -11.25 Td
+(  metadata with pdfinfo to preserve title cadence, Part 1 naming, opening-summary density,) Tj
+0 -11.25 Td
+(  section order, compact bullet-heavy technical voice, validation language, files-touched lists,) Tj
+0 -11.25 Td
+(  follow-up context, output-artifact close, root-level filename style, letter-size pages, PDF) Tj
+0 -11.25 Td
+(  1.4 output, Codex author/creator/producer metadata, and Helvetica-style base-font convention.) Tj
+0 -11.25 Td
+(- Used portfolio_worklog_august11.pdf as the closest structural baseline because it documented) Tj
+0 -11.25 Td
+(  the immediately preceding Alla Vostra Visual Hierarchy layer-stack work, transparent no-frame) Tj
+0 -11.25 Td
+(  focal assets, stack scaling, row-header placement, cache-clearing pattern, browser-measurement) Tj
+0 -11.25 Td
+(  workflow, and documentation language.) Tj
+0 -11.25 Td
+(- Reviewed git history and state through git log, git show --stat, git show --name-status, git) Tj
+0 -11.25 Td
+(  status, git branch -vv, git diff --stat, git diff --name-status, git diff --check, file, and) Tj
+0 -11.25 Td
+(  source-specific searches. HEAD and origin/main resolved to e219cef before this PDF was) Tj
+0 -11.25 Td
+(  generated.) Tj
+0 -11.25 Td
+(- Reviewed app/projects/alla-vostra/ProductFlowSwitcher.tsx, app/globals.css, next-env.d.ts,) Tj
+0 -11.25 Td
+(  public/images/alla-vostra/cheeseboard_products.png, public/images/alla-) Tj
+0 -11.25 Td
+(  vostra/cheeseboard_products_clean.png, the generated Step 4 and Step 5 home-screen) Tj
+0 -11.25 Td
+(  derivatives, public/images/products_overlay_piccola_large.png, the matching Alla Vostra raw) Tj
+ET
+BT
+/F1 8.50 Tf
+313.20 28 Td
+(Prahlin Portfolio Work Log - August 12, 2026 \(Part 1\) Page 1) Tj
+ET
+endstream
+endobj
+5 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 4 0 R >>
+endobj
+6 0 obj
+<< /Length 5009 >>
+stream
+BT
+/F1 9.60 Tf
+54 738.00 Td
+0 -11.25 Td
+( Android_Large/products_overlay.png, package scripts, and the local /projects/alla-vostra) Tj
+0 -11.25 Td
+( route.) Tj
+0 -11.25 Td
+0 -11.25 Td
+(Baseline Status Before August 12 Part 1 Work) Tj
+0 -11.25 Td
+0 -11.25 Td
+(- August 11 had already expanded the Visual Hierarchy section into a layered pre-scrolling) Tj
+0 -11.25 Td
+(  explanation with Step 1, Step 1b, Step 2, Step 1c, Step 1d, Step 3, and Step 4 visible without) Tj
+0 -11.25 Td
+(  a category-specific Show More break.) Tj
+0 -11.25 Td
+(- Step 1 was the accepted full-size large device stack, while the surrounding explanatory stacks) Tj
+0 -11.25 Td
+(  used a mixture of 50 percent scale and transparent no-frame focal crops.) Tj
+0 -11.25 Td
+(- Step 1d still needed a cleaner cheeseboard source. The portfolio copy of) Tj
+0 -11.25 Td
+(  cheeseboard_products.png matched the Alla Vostra repo source, but the source alpha carried) Tj
+0 -11.25 Td
+(  tiny dark or transparent pinholes that became visible on the dark gridded Portfolio) Tj
+0 -11.25 Td
+(  background.) Tj
+0 -11.25 Td
+(- Step 4 still needed to become a no-device-frame home-screen artifact with its grayed top and) Tj
+0 -11.25 Td
+(  orange bottom banner made fully transparent and then physically cropped so the old transparent) Tj
+0 -11.25 Td
+(  zones did not reserve vertical layout space.) Tj
+0 -11.25 Td
+(- The Pre-Scrolling and On-Scrolling row labels, Step headers, and screenshot/device-frame stack) Tj
+0 -11.25 Td
+(  gaps needed to be harmonized after the extra Step 1b/1c/1d right-column stacks and the large) Tj
+0 -11.25 Td
+(  Step 1 treatment changed the optical rhythm.) Tj
+0 -11.25 Td
+(- Step 3 still rendered at the smaller Visual Hierarchy scale from the August 10/11 comparison) Tj
+0 -11.25 Td
+(  pass, but the user wanted the full On-Scrolling home-screen stack scaled up to match Step 1) Tj
+0 -11.25 Td
+(  exactly.) Tj
+0 -11.25 Td
+(- The user wanted a new Step 5 below Step 4 that reused the Step 4 home-screen mosaic image but) Tj
+0 -11.25 Td
+(  removed the lower cream/text/cart area through transparency and later through a true alpha-) Tj
+0 -11.25 Td
+(  bound crop.) Tj
+0 -11.25 Td
+(- The Visual Hierarchy section did not yet include a third row for active shopping. A Piccola) Tj
+0 -11.25 Td
+(  products overlay screenshot existed in both the portfolio public images and the Alla Vostra) Tj
+0 -11.25 Td
+(  repo raw Play Store screenshot folder, but it had not yet been wired into the UI Foundations) Tj
+0 -11.25 Td
+(  walkthrough.) Tj
+0 -11.25 Td
+0 -11.25 Td
+(Goals for August 12 Part 1) Tj
+0 -11.25 Td
+(- Clean the Step 1d cheeseboard visual so the board uses the exact Alla Vostra cheeseboard) Tj
+0 -11.25 Td
+(  product image while eliminating dark pinholes and transparent speckles that read as black dots) Tj
+0 -11.25 Td
+(  in the Portfolio grid.) Tj
+0 -11.25 Td
+(- Convert Step 4 from a framed or partially framed home-screen treatment into a no-frame) Tj
+0 -11.25 Td
+(  screenshot with transparent top and bottom regions, then crop away the fully transparent zones) Tj
+0 -11.25 Td
+(  while leaving Step 4 otherwise intact after user approval.) Tj
+0 -11.25 Td
+(- Normalize header vertical placement and screenshot/device-frame stack gaps across Step 1b,) Tj
+0 -11.25 Td
+(  Step 1c, Step 1d, Step 3, Step 4, and the row headers so the Visual Hierarchy section reads as) Tj
+0 -11.25 Td
+(  one system.) Tj
+0 -11.25 Td
+(- Scale Step 3 to the same full visual size as Step 1 without accidentally changing Step 4 after) Tj
+0 -11.25 Td
+(  the user explicitly said not to touch Step 4 further.) Tj
+0 -11.25 Td
+(- Add Step 5 below Step 4 in the right column, based on the Step 4 image, while making) Tj
+0 -11.25 Td
+(  everything after the cutting-board/salami mosaic region transparent and then cropping the) Tj
+0 -11.25 Td
+(  transparent area out of the asset bounds.) Tj
+0 -11.25 Td
+(- Add a new DURING SHOPPING section label below PRE-SCROLLING and ON-SCROLLING, then place Step) Tj
+0 -11.25 Td
+(  6 as a large left-column stack using the Piccola products overlay during the shopping process.) Tj
+0 -11.25 Td
+(- Keep browser validation grounded in the actual UI Foundations view on) Tj
+0 -11.25 Td
+(  http://127.0.0.1:3000/projects/alla-vostra, including cache resets when Turbopack serves stale) Tj
+0 -11.25 Td
+(  CSS or stale image output.) Tj
+0 -11.25 Td
+0 -11.25 Td
+(Work Completed - Context, Source Review, and Cache Handling) Tj
+0 -11.25 Td
+(- Began by running the Portfolio project reader and reviewing the existing project snapshot and) Tj
+0 -11.25 Td
+(  root-level Portfolio worklogs so the Visual Hierarchy edits stayed aligned with the) Tj
+0 -11.25 Td
+(  established UI Foundations documentation style.) Tj
+0 -11.25 Td
+(- Confirmed the Alla Vostra page defaults to UX Product Flow, so every browser measurement had) Tj
+0 -11.25 Td
+(  to click the UI Foundations tab before querying the Visual Hierarchy group.) Tj
+ET
+BT
+/F1 8.50 Tf
+313.20 28 Td
+(Prahlin Portfolio Work Log - August 12, 2026 \(Part 1\) Page 2) Tj
+ET
+endstream
+endobj
+7 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 6 0 R >>
+endobj
+8 0 obj
+<< /Length 5328 >>
+stream
+BT
+/F1 9.60 Tf
+54 738.00 Td
+(- Kept the local Next.js development server available at http://127.0.0.1:3000 for user) Tj
+0 -11.25 Td
+0 -11.25 Td
+(  inspection, restarting it when stale CSS bundles omitted new selectors or when Next image) Tj
+0 -11.25 Td
+(  optimization continued to show older asset variants.) Tj
+0 -11.25 Td
+(- Cleared the development cache by moving .next aside into ignored stale-cache folders when) Tj
+0 -11.25 Td
+(  ordinary browser refreshes still served outdated CSS or old optimized image results.) Tj
+0 -11.25 Td
+(- Used Playwright repeatedly to switch to UI Foundations, locate Step stacks by visible header) Tj
+0 -11.25 Td
+(  text, measure zoom, frame width, frame height, header-to-frame gaps, label placement, grid) Tj
+0 -11.25 Td
+(  rows, and active image sources, and capture temporary verification screenshots.) Tj
+0 -11.25 Td
+0 -11.25 Td
+(Work Completed - Step 1d Cheeseboard Cleanup) Tj
+0 -11.25 Td
+0 -11.25 Td
+(- Compared public/images/alla-vostra/cheeseboard_products.png with the Alla Vostra repo source) Tj
+0 -11.25 Td
+(  and confirmed the source image was the intended exact cheeseboard product image even though) Tj
+0 -11.25 Td
+(  its alpha holes produced visible black-dot artifacts on the dark Portfolio background.) Tj
+0 -11.25 Td
+(- Generated public/images/alla-vostra/cheeseboard_products_clean.png at the original 405 x 250) Tj
+0 -11.25 Td
+(  size, filling the pinholes and preserving the cheeseboard shape, scale, and product pixels for) Tj
+0 -11.25 Td
+(  the Step 1d layer.) Tj
+0 -11.25 Td
+(- Extended PlaceholderScreen with an imageUnoptimized prop so transparent source images that) Tj
+0 -11.25 Td
+(  must render exactly can bypass Next image optimization when needed.) Tj
+0 -11.25 Td
+(- Rewired Step 1d to use /images/alla-vostra/cheeseboard_products_clean.png, gave it the more) Tj
+0 -11.25 Td
+(  accurate 405 / 250 aspect ratio, updated the alt text to identify the cheeseboard product) Tj
+0 -11.25 Td
+(  image, and left the rest of the Step 1b/1c/1d layout intact.) Tj
+0 -11.25 Td
+(- Rechecked the local page after the user reported the image was unchanged at port 3000,) Tj
+0 -11.25 Td
+(  confirming that stale dev output rather than missing source edits could keep the old dotted) Tj
+0 -11.25 Td
+(  board visible until cache refresh.) Tj
+0 -11.25 Td
+0 -11.25 Td
+(Work Completed - Step 4 No-Frame and Transparent Crop) Tj
+0 -11.25 Td
+(- Removed the device-frame encasing from the Step 4 home-screen screenshot by deriving a no-) Tj
+0 -11.25 Td
+(  frame home-screen PNG from home_screen_large.png rather than continuing to use the framed) Tj
+0 -11.25 Td
+(  muted asset from the earlier Visual Hierarchy pass.) Tj
+0 -11.25 Td
+(- Generated public/images/alla-vostra-home-toolbar-bottom-transparent-no-frame.png at 1440 x) Tj
+0 -11.25 Td
+(  3120 with the old grayed top region and orange bottom banner made fully transparent.) Tj
+0 -11.25 Td
+(- Cropped the fully transparent top and bottom zones into public/images/alla-vostra-home-) Tj
+0 -11.25 Td
+(  toolbar-bottom-transparent-no-frame-cropped.png at 1440 x 2713, preserving the visible home-) Tj
+0 -11.25 Td
+(  screen mosaic/content pixels while removing transparent canvas rows.) Tj
+0 -11.25 Td
+(- Rewired Step 4 to the cropped no-frame PNG, updated its aspect ratio to 1440 / 2713, and) Tj
+0 -11.25 Td
+(  marked the image unoptimized so the transparent no-frame asset renders as authored.) Tj
+0 -11.25 Td
+(- Preserved Step 4 after the user later said not to touch Step 4, treating that instruction as a) Tj
+0 -11.25 Td
+(  boundary against further Step 4 edits rather than a request to revert the already accepted no-) Tj
+0 -11.25 Td
+(  frame/crop work.) Tj
+0 -11.25 Td
+0 -11.25 Td
+(Work Completed - Row Spacing, Headers, and Step 3 Scaling) Tj
+0 -11.25 Td
+(- Added a Visual-Hierarchy-specific row-label stack gap variable and increased the grid top) Tj
+0 -11.25 Td
+(  padding so PRE-SCROLLING has more breathing room below the category copy and above the first) Tj
+0 -11.25 Td
+(  row of stacks.) Tj
+0 -11.25 Td
+(- Matched Step 1b header vertical placement to Step 1 and normalized Step-header-to-) Tj
+0 -11.25 Td
+(  screenshot/frame gaps across the other Visual Hierarchy stack siblings.) Tj
+0 -11.25 Td
+(- Added the ON-SCROLLING row label above the Step 3/4 stack row with the same approximate 24px) Tj
+0 -11.25 Td
+(  breathing room used for PRE-SCROLLING.) Tj
+0 -11.25 Td
+(- Scaled Step 3 to full size by grouping it with Step 1 for zoom, h4 font size, h4 margin,) Tj
+0 -11.25 Td
+(  brace/frame-pair gap, external annotation sizing, section-line widths, and section-label font) Tj
+0 -11.25 Td
+(  sizing.) Tj
+0 -11.25 Td
+(- Measured the browser-rendered Step 1 and Step 3 stacks after the cache refresh and confirmed) Tj
+0 -11.25 Td
+(  both rendered at zoom 1, 432px stack width, 720.8px stack height, 15px header font, 14px) Tj
+0 -11.25 Td
+(  header-to-frame gap, 432px frame width, 688.8px frame height, 28px external annotation font,) Tj
+0 -11.25 Td
+(  24px section-line width, and 10px section-label font.) Tj
+0 -11.25 Td
+(- Confirmed Step 4 remained at the smaller 0.5 scale while Step 3 adopted the large Step 1) Tj
+0 -11.25 Td
+(  scale, satisfying the user request without changing Step 4 during that pass.) Tj
+ET
+BT
+/F1 8.50 Tf
+313.20 28 Td
+(Prahlin Portfolio Work Log - August 12, 2026 \(Part 1\) Page 3) Tj
+ET
+endstream
+endobj
+9 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 8 0 R >>
+endobj
+10 0 obj
+<< /Length 5221 >>
+stream
+BT
+/F1 9.60 Tf
+54 738.00 Td
+0 -11.25 Td
+(Work Completed - Step 5 Mosaic Detail Stack) Tj
+0 -11.25 Td
+0 -11.25 Td
+(- Added Step 5 to the Visual Hierarchy step list and placed it directly below Step 4 in the) Tj
+0 -11.25 Td
+(  right column, while Step 3 spans the combined Step 4 and Step 5 rows on the left.) Tj
+0 -11.25 Td
+(- Built public/images/alla-vostra-home-mosaic-transparent-after-polygons.png from the Step 4) Tj
+0 -11.25 Td
+(  cropped no-frame home-screen image, initially making the area below the fully cream section) Tj
+0 -11.25 Td
+(  transparent, then iterating the cutoff after user review.) Tj
+0 -11.25 Td
+(- Moved the Step 5 transparency cutoff upward to the cutting-board edge, then corrected the) Tj
+0 -11.25 Td
+(  over-clipped version so no dark-brown shards or salami pixels were removed.) Tj
+0 -11.25 Td
+(- Settled the final Step 5 alpha cutoff below the preserved dark-brown board and salami edge,) Tj
+0 -11.25 Td
+(  with row 1279 opaque and row 1280 onward transparent before cropping.) Tj
+0 -11.25 Td
+(- Cropped Step 5 transparent region out of the file itself, changing the asset from 1440 x) Tj
+0 -11.25 Td
+(  2713 to 1440 x 1280 and updating the Step 5 frame ratio to 1440 / 1280 so the browser no) Tj
+0 -11.25 Td
+(  longer reserved the old dead transparent height.) Tj
+0 -11.25 Td
+(- Added Step 5-specific callout percentages after the crop so TOOLBAR, NAV BAR, MAIN CONTENT,) Tj
+0 -11.25 Td
+(  and SHOPPING CART labels remained readable in the shorter frame and no longer collided.) Tj
+0 -11.25 Td
+0 -11.25 Td
+(Work Completed - Step 6 During Shopping Stack) Tj
+0 -11.25 Td
+(- Added a third Visual Hierarchy row label, DURING SHOPPING, below the existing PRE-SCROLLING) Tj
+0 -11.25 Td
+(  and ON-SCROLLING labels.) Tj
+0 -11.25 Td
+(- Located the requested Piccola shopping screenshot in the portfolio repo as) Tj
+0 -11.25 Td
+(  public/images/products_overlay_piccola_large.png and confirmed it is byte-identical to) Tj
+0 -11.25 Td
+(  /Users/prahlin/gh/alla_vostra/docs/play-) Tj
+0 -11.25 Td
+(  store/screenshots/raw/Android_Large/products_overlay.png.) Tj
+0 -11.25 Td
+(- Added Step 6 to the Visual Hierarchy visible step list and wired it to) Tj
+0 -11.25 Td
+(  /images/products_overlay_piccola_large.png with alt text identifying the Alla Vostra Piccola) Tj
+0 -11.25 Td
+(  products overlay.) Tj
+0 -11.25 Td
+(- Extended PlaceholderScreen with a showScreenLabel option so Step 6 can be a clean large) Tj
+0 -11.25 Td
+(  screenshot stack without an extra green Large label above the device image.) Tj
+0 -11.25 Td
+(- Placed Step 6 in the left column below the On-Scrolling row and forced its figure and stack) Tj
+0 -11.25 Td
+(  width to 318px so it renders as a true large stack rather than shrinking to the intrinsic) Tj
+0 -11.25 Td
+(  narrow tall-phone width.) Tj
+0 -11.25 Td
+(- Tuned the DURING SHOPPING label placement so it sits above the Step 6 header with) Tj
+0 -11.25 Td
+(  approximately the same 24px breathing room used by the earlier row labels.) Tj
+0 -11.25 Td
+0 -11.25 Td
+(Work Completed - Validation, Commit Message, and Documentation Context) Tj
+0 -11.25 Td
+(- Ran npm run check multiple times during the August 12 source work and during this PDF-) Tj
+0 -11.25 Td
+(  generation pass, confirming TypeScript passed with tsc --noEmit.) Tj
+0 -11.25 Td
+(- Ran npm run build:static and confirmed Next.js 16.2.10 completed the static export for /,) Tj
+0 -11.25 Td
+(  /articles, /projects/alla-vostra, and /projects/cinerific after the Visual Hierarchy changes.) Tj
+0 -11.25 Td
+(- Ran git diff --check against the edited source files and generated asset paths during the) Tj
+0 -11.25 Td
+(  source pass, confirming no whitespace errors in the relevant source diff.) Tj
+0 -11.25 Td
+(- Captured Playwright screenshots for Step 3 full-size comparison, Step 5 before and after) Tj
+0 -11.25 Td
+(  cropping, and the final Step 6 During Shopping row.) Tj
+0 -11.25 Td
+(- Recommended the user-requested commit message in one-header plus hyphen-line format, covering) Tj
+0 -11.25 Td
+(  cleaned Visual Hierarchy assets, Step 1/3/6 large-stack alignment, Step 5 cropped mosaic) Tj
+0 -11.25 Td
+(  treatment, and the new During Shopping row.) Tj
+0 -11.25 Td
+(- The source work was committed as e219cef, Refined Alla Vostra visual hierarchy walkthrough,) Tj
+0 -11.25 Td
+(  with ProductFlowSwitcher, globals.css, next-env.d.ts, the cleaned cheeseboard image, Step 4) Tj
+0 -11.25 Td
+(  no-frame crops, Step 5 cropped mosaic asset, and a refreshed snapshot included.) Tj
+0 -11.25 Td
+0 -11.25 Td
+(Validation Summary) Tj
+0 -11.25 Td
+(- npm run check passed with tsc --noEmit during the August 12 source pass and again during this) Tj
+0 -11.25 Td
+(  August 12 Part 1 PDF-generation pass.) Tj
+0 -11.25 Td
+(- npm run build:static passed during the August 12 source pass, generating a successful static) Tj
+0 -11.25 Td
+(  export for the Portfolio routes including /projects/alla-vostra.) Tj
+0 -11.25 Td
+(- Playwright confirmed the Alla Vostra page can switch to UI Foundations and expose the Visual) Tj
+0 -11.25 Td
+(  Hierarchy group containing Step 1, Step 1b, Step 2, Step 1c, Step 1d, Step 3, Step 4, Step 5,) Tj
+ET
+BT
+/F1 8.50 Tf
+313.20 28 Td
+(Prahlin Portfolio Work Log - August 12, 2026 \(Part 1\) Page 4) Tj
+ET
+endstream
+endobj
+11 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 10 0 R >>
+endobj
+12 0 obj
+<< /Length 5431 >>
+stream
+BT
+/F1 9.60 Tf
+54 738.00 Td
+(  and Step 6.) Tj
+0 -11.25 Td
+(- Browser measurements confirmed Step 1 and Step 3 render as matching large stacks after the) Tj
+0 -11.25 Td
+(  Step 3 scale-up, while Step 4 remains at the smaller right-column scale.) Tj
+0 -11.25 Td
+0 -11.25 Td
+(- Browser measurements confirmed Step 5 renders below Step 4 in the right column, uses) Tj
+0 -11.25 Td
+(  /images/alla-vostra-home-mosaic-transparent-after-polygons.png, and uses the cropped 1440 /) Tj
+0 -11.25 Td
+(  1280 ratio without retaining the earlier transparent 2713px height.) Tj
+0 -11.25 Td
+(- Browser measurements confirmed Step 6 renders in the left column under DURING SHOPPING, uses) Tj
+0 -11.25 Td
+(  /images/products_overlay_piccola_large.png, sits at zoom 1, uses a 318px frame width, and) Tj
+0 -11.25 Td
+(  preserves the 14px header-to-frame gap.) Tj
+0 -11.25 Td
+(- Asset inspection confirmed cheeseboard_products_clean.png is 405 x 250, Step 4 cropped no-) Tj
+0 -11.25 Td
+(  frame is 1440 x 2713, Step 5 cropped mosaic is 1440 x 1280, and the Piccola products overlay) Tj
+0 -11.25 Td
+(  source is 1440 x 3120.) Tj
+0 -11.25 Td
+(- git branch -vv confirmed main and origin/main both pointed at e219cef before this PDF was) Tj
+0 -11.25 Td
+(  generated.) Tj
+0 -11.25 Td
+0 -11.25 Td
+(Files Touched) Tj
+0 -11.25 Td
+(- app/projects/alla-vostra/ProductFlowSwitcher.tsx - added imageUnoptimized and showScreenLabel) Tj
+0 -11.25 Td
+(  controls to PlaceholderScreen; rewired Step 1d to the cleaned cheeseboard asset; wired Step 4) Tj
+0 -11.25 Td
+(  to the cropped no-frame home-screen asset; added Step 5 with a cropped mosaic image and Step-) Tj
+0 -11.25 Td
+(  specific callouts; added Step 6 with the Piccola products overlay; added DURING SHOPPING to) Tj
+0 -11.25 Td
+(  the Visual Hierarchy row labels; and raised the Visual Hierarchy visible step limit to nine.) Tj
+0 -11.25 Td
+0 -11.25 Td
+(- app/globals.css - increased Visual Hierarchy row-label breathing room; normalized Step header) Tj
+0 -11.25 Td
+(  and stack gaps; scaled Step 3 to match Step 1; positioned Step 4 and Step 5 in the right-) Tj
+0 -11.25 Td
+(  column On-Scrolling stack; placed Step 6 in the new During Shopping row; forced Step 6 to the) Tj
+0 -11.25 Td
+(  318px large-stack width; and added row-label placement for DURING SHOPPING.) Tj
+0 -11.25 Td
+(- next-env.d.ts - reflected the active Next.js development route-type import after the) Tj
+0 -11.25 Td
+(  cache/build refresh cycle.) Tj
+0 -11.25 Td
+(- public/images/alla-vostra/cheeseboard_products_clean.png - added the cleaned 405 x 250) Tj
+0 -11.25 Td
+(  cheeseboard product cutout used by Step 1d to remove visible pinholes and black-dot artifacts.) Tj
+0 -11.25 Td
+(- public/images/alla-vostra-home-toolbar-bottom-transparent-no-frame.png - added the full 1440 x) Tj
+0 -11.25 Td
+(  3120 no-frame Step 4 source derivative with top and bottom bands made transparent.) Tj
+0 -11.25 Td
+(- public/images/alla-vostra-home-toolbar-bottom-transparent-no-frame-cropped.png - added the) Tj
+0 -11.25 Td
+(  1440 x 2713 cropped Step 4 no-frame asset with fully transparent top and bottom zones removed.) Tj
+0 -11.25 Td
+(- public/images/alla-vostra-home-mosaic-transparent-after-polygons.png - added the Step 5) Tj
+0 -11.25 Td
+(  cropped 1440 x 1280 mosaic detail that preserves the cutting-board and salami edge while) Tj
+0 -11.25 Td
+(  removing the lower cream/text/cart content.) Tj
+0 -11.25 Td
+(- public/images/products_overlay_piccola_large.png - reused the existing Piccola products) Tj
+0 -11.25 Td
+(  overlay as the Step 6 During Shopping screenshot source; the file matched the Alla Vostra raw) Tj
+0 -11.25 Td
+(  Android_Large/products_overlay.png source exactly and was not regenerated.) Tj
+0 -11.25 Td
+(- portfolio_PROJECT_SNAPSHOT.txt - regenerated to reflect the synced e219cef source state,) Tj
+0 -11.25 Td
+(  public asset inventory, recent commit history, and new documentation context.) Tj
+0 -11.25 Td
+(- portfolio_worklog_august12_part1.pdf - generated this new root-level PDF worklog artifact) Tj
+0 -11.25 Td
+(  following the existing Portfolio naming, structure, metadata, length, and local documentation) Tj
+0 -11.25 Td
+(  conventions.) Tj
+0 -11.25 Td
+0 -11.25 Td
+(Follow-Up Context) Tj
+0 -11.25 Td
+(- Step 4 and Step 5 intentionally share the same home-screen mosaic source family but now have) Tj
+0 -11.25 Td
+(  different asset bounds and aspect ratios: Step 4 remains the full cropped no-frame screen at) Tj
+0 -11.25 Td
+(  1440 / 2713, while Step 5 is the board/salami detail crop at 1440 / 1280.) Tj
+0 -11.25 Td
+(- Step 5 crop was user-approved after moving the cutoff low enough to preserve all dark-brown) Tj
+0 -11.25 Td
+(  board shards and salami pixels. Future Step 5 edits should avoid clipping those pixels even if) Tj
+0 -11.25 Td
+(  the transparent area is adjusted again.) Tj
+0 -11.25 Td
+(- Step 6 uses the existing Piccola products overlay screenshot rather than a newly generated) Tj
+0 -11.25 Td
+(  image. If the Alla Vostra shopping overlay changes, the portfolio source image and the Alla) Tj
+0 -11.25 Td
+(  Vostra raw screenshot should be compared before replacing it.) Tj
+0 -11.25 Td
+(- The Visual Hierarchy section now has three conceptual rows: PRE-SCROLLING, ON-SCROLLING, and) Tj
+0 -11.25 Td
+(  DURING SHOPPING. Future additions should account for the absolute row-label placement and the) Tj
+ET
+BT
+/F1 8.50 Tf
+313.20 28 Td
+(Prahlin Portfolio Work Log - August 12, 2026 \(Part 1\) Page 5) Tj
+ET
+endstream
+endobj
+13 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 12 0 R >>
+endobj
+14 0 obj
+<< /Length 1641 >>
+stream
+BT
+/F1 9.60 Tf
+54 738.00 Td
+(  mixed large-stack plus smaller-right-column layout.) Tj
+0 -11.25 Td
+(- The UI Foundations view must remain active before inspecting Visual Hierarchy DOM in browser) Tj
+0 -11.25 Td
+(  scripts; the Alla Vostra page still defaults to UX Product Flow.) Tj
+0 -11.25 Td
+(- The local Next.js workflow can continue to serve stale CSS or image output after rapid asset) Tj
+0 -11.25 Td
+0 -11.25 Td
+(  and layout changes. Future visual passes should keep using cache moves/restarts and Playwright) Tj
+0 -11.25 Td
+(  measurements when source and browser disagree.) Tj
+0 -11.25 Td
+(- The Hostinger deployment path remains the GitHub Actions static-export workflow on pushes to) Tj
+0 -11.25 Td
+(  main, publishing the out/ directory to the hostinger-deploy branch.) Tj
+0 -11.25 Td
+0 -11.25 Td
+(Output Artifact) Tj
+0 -11.25 Td
+(- Generated: /Users/prahlin/gh/portfolio/portfolio_worklog_august12_part1.pdf) Tj
+0 -11.25 Td
+(- Companion sync file: /Users/prahlin/gh/portfolio/portfolio_PROJECT_SNAPSHOT.txt) Tj
+0 -11.25 Td
+(- Source state reviewed: e219cef07 on main and origin/main.) Tj
+0 -11.25 Td
+(- Naming follows the existing root-level Portfolio convention:) Tj
+0 -11.25 Td
+(  portfolio_worklog_august12_part1.pdf. The Part 1 suffix was used because the user explicitly) Tj
+0 -11.25 Td
+(  requested August 12 Part 1.) Tj
+0 -11.25 Td
+(- Next likely action: commit and push portfolio_worklog_august12_part1.pdf with the refreshed) Tj
+0 -11.25 Td
+(  snapshot when the user is ready to sync the documentation artifact.) Tj
+ET
+BT
+/F1 8.50 Tf
+313.20 28 Td
+(Prahlin Portfolio Work Log - August 12, 2026 \(Part 1\) Page 6) Tj
+ET
+endstream
+endobj
+15 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 14 0 R >>
+endobj
+16 0 obj
+<< /Title (Prahlin Portfolio Work Log - August 12, 2026 \(Part 1\)) /Subject (Portfolio website development worklog) /Author (Codex) /Creator (Codex standard-library PDF generator) /Producer (Codex standard-library PDF generator) /CreationDate (D:20260812235900-04'00') /ModDate (D:20260812235900-04'00') >>
+endobj
+xref
+0 17
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000154 00000 n 
+0000000224 00000 n 
+0000006082 00000 n 
+0000006208 00000 n 
+0000011268 00000 n 
+0000011394 00000 n 
+0000016773 00000 n 
+0000016899 00000 n 
+0000022172 00000 n 
+0000022300 00000 n 
+0000027783 00000 n 
+0000027911 00000 n 
+0000029604 00000 n 
+0000029732 00000 n 
+trailer
+<< /Size 17 /Root 1 0 R /Info 16 0 R >>
+startxref
+30056
+%%EOF
