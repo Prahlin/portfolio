@@ -230,6 +230,7 @@ const visualHierarchyFocalPointAnnotationStyle: CSSProperties = {
 
 const placeholderSteps = ["Step 1", "Step 2", "Step 3", "Step 4", "Step 5"];
 const visualHierarchySteps = [
+  "Step 0",
   "Step 1",
   "Step 1b",
   "Step 2",
@@ -239,7 +240,22 @@ const visualHierarchySteps = [
   "Step 4",
   "Step 5",
   "Step 6",
+  "Step 6b",
+  "Step 6c",
 ];
+const visualHierarchyStepTitles: Record<string, string> = {
+  "Step 0": "PRIMARY FOCUS",
+  "Step 1": "PRIMARY FOCUS",
+  "Step 1b": "SECONDARY FOCUS",
+  "Step 1c": "TERTIARY FOCUS",
+  "Step 1d": "QUATERNARY FOCUS",
+  "Step 3": "PRIMARY FOCUS",
+  "Step 4": "SECONDARY FOCUS",
+  "Step 5": "TERTIARY FOCUS",
+  "Step 6": "PRIMARY FOCUS",
+  "Step 6b": "SECONDARY FOCUS",
+  "Step 6c": "TERTIARY FOCUS",
+};
 const colorsAndThemingSwatchGroups: Record<string, FlowSwatchGroup> = {
   "Step 1": {
     swatches: [
@@ -1823,6 +1839,7 @@ export default function ProductFlowSwitcher({
                         }
                     : section.title === "Visual Hierarchy"
                       ? (step) => {
+                          const isTutorialPlaceholderStep = step === "Step 0";
                           const isStartupScreenStep = step === "Step 1";
                           const isClippedFocalStep = step === "Step 1b";
                           const isPhotoOnlyFocalStep = step === "Step 1c";
@@ -1830,13 +1847,25 @@ export default function ProductFlowSwitcher({
                           const isStepFourHomeScreenStep = step === "Step 4";
                           const isStepFiveMosaicStep = step === "Step 5";
                           const isShoppingOverlayStep = step === "Step 6";
+                          const isShoppingOverlayIsolatedStep =
+                            step === "Step 6b";
+                          const isShoppingOverlayOnlyStep =
+                            step === "Step 6c";
+                          const isShoppingOverlaySmallColumnStep =
+                            isShoppingOverlayIsolatedStep ||
+                            isShoppingOverlayOnlyStep;
+                          const isShoppingOverlayVariantStep =
+                            isShoppingOverlayStep ||
+                            isShoppingOverlaySmallColumnStep;
                           const usesStepFourHomeScreenTreatment =
                             isStepFourHomeScreenStep || isStepFiveMosaicStep;
                           const isHomeScreenStep =
                             step === "Step 3" ||
                             usesStepFourHomeScreenTreatment;
                           const isViewingAreaStep =
-                            isStartupScreenStep || step === "Step 3";
+                            isStartupScreenStep ||
+                            step === "Step 3" ||
+                            isShoppingOverlayStep;
                           const isFocalPointStep = step === "Step 2";
                           const isBracedStep =
                             isViewingAreaStep || isFocalPointStep;
@@ -1871,21 +1900,29 @@ export default function ProductFlowSwitcher({
                               }
                               className="flow-visual-hierarchy-frame"
                               imageAlt={
-                                isHomeScreenStep
+                                isTutorialPlaceholderStep
+                                  ? "Empty Alla Vostra tutorial device frame"
+                                  : isHomeScreenStep
                                   ? "Alla Vostra home screen"
-                                  : isShoppingOverlayStep
-                                    ? "Alla Vostra Piccola products overlay"
+                                  : isShoppingOverlayVariantStep
+                                  ? isShoppingOverlayOnlyStep
+                                    ? "Alla Vostra Piccola products overlay with surrounding buttons removed"
+                                    : isShoppingOverlayIsolatedStep
+                                      ? "Alla Vostra Piccola products overlay with dimmed screen areas removed"
+                                      : "Alla Vostra Piccola products overlay"
                                   : isCheeseboardOnlyFocalStep
-                                    ? "Alla Vostra cheeseboard product image"
+                                  ? "Alla Vostra cheeseboard product image"
                                   : isStartupScreenStep ||
                                       isClippedFocalStep ||
                                       isPhotoOnlyFocalStep ||
                                       isFocalPointStep
-                                    ? "Alla Vostra startup screen"
-                                    : undefined
+                                  ? "Alla Vostra startup screen"
+                                  : undefined
                               }
                               imageSrc={
-                                isHomeScreenStep
+                                isTutorialPlaceholderStep
+                                  ? "/images/alla-vostra-empty-framed-no-island.png"
+                                  : isHomeScreenStep
                                   ? isStepFourHomeScreenStep
                                     ? "/images/alla-vostra-home-toolbar-bottom-transparent-no-frame-cropped.png"
                                     : isStepFiveMosaicStep
@@ -1899,22 +1936,34 @@ export default function ProductFlowSwitcher({
                                     ? "/images/alla-vostra-hero-startup-focal-photo-only-no-frame.png"
                                   : isCheeseboardOnlyFocalStep
                                     ? "/images/alla-vostra/cheeseboard_products_clean.png"
-                                    : isShoppingOverlayStep
-                                      ? "/images/products_overlay_piccola_large.png"
-                                    : isFocalPointStep
+                                  : isShoppingOverlayVariantStep
+                                    ? isShoppingOverlayOnlyStep
+                                      ? "/images/products_overlay_piccola_overlay_only_large.png"
+                                      : isShoppingOverlayIsolatedStep
+                                        ? "/images/products_overlay_piccola_isolated_large.png"
+                                        : "/images/products_overlay_piccola_framed_no_island.png"
+                                  : isFocalPointStep
                                     ? "/images/alla-vostra-hero-startup-framed-lower-muted-no-island.png"
                                     : undefined
                               }
                               imageUnoptimized={
+                                isTutorialPlaceholderStep ||
                                 isCheeseboardOnlyFocalStep ||
-                                usesStepFourHomeScreenTreatment
+                                usesStepFourHomeScreenTreatment ||
+                                isShoppingOverlayStep ||
+                                isShoppingOverlaySmallColumnStep
                               }
                               frameStyle={
                                 isClippedFocalStep ||
                                 isPhotoOnlyFocalStep ||
-                                isCheeseboardOnlyFocalStep
+                                isCheeseboardOnlyFocalStep ||
+                                isShoppingOverlaySmallColumnStep
                                   ? {
-                                      aspectRatio: isPhotoOnlyFocalStep ||
+                                      aspectRatio: isShoppingOverlaySmallColumnStep
+                                        ? isShoppingOverlayOnlyStep
+                                          ? "1440 / 2241"
+                                          : "1440 / 2862"
+                                        : isPhotoOnlyFocalStep ||
                                         isCheeseboardOnlyFocalStep
                                         ? isCheeseboardOnlyFocalStep
                                           ? "405 / 250"
@@ -1924,8 +1973,21 @@ export default function ProductFlowSwitcher({
                                       border: 0,
                                       borderRadius: 0,
                                       boxShadow: "none",
+                                      marginInline:
+                                        isShoppingOverlaySmallColumnStep
+                                          ? "auto"
+                                          : undefined,
+                                      maxWidth:
+                                        isShoppingOverlaySmallColumnStep
+                                          ? "100%"
+                                          : undefined,
+                                      width: isShoppingOverlaySmallColumnStep
+                                        ? "318px"
+                                        : undefined,
                                     }
-                                  : isBracedStep || isHomeScreenStep
+                                  : isBracedStep ||
+                                      isHomeScreenStep ||
+                                      isTutorialPlaceholderStep
                                   ? {
                                       aspectRatio: isStepFiveMosaicStep
                                         ? "1440 / 1280"
@@ -1936,6 +1998,15 @@ export default function ProductFlowSwitcher({
                                       border: 0,
                                       borderRadius: 0,
                                       boxShadow: "none",
+                                      marginInline: isTutorialPlaceholderStep
+                                        ? "auto"
+                                        : undefined,
+                                      maxWidth: isTutorialPlaceholderStep
+                                        ? "100%"
+                                        : undefined,
+                                      width: isTutorialPlaceholderStep
+                                        ? "318px"
+                                        : undefined,
                                     }
                                   : undefined
                               }
@@ -1945,7 +2016,8 @@ export default function ProductFlowSwitcher({
                                 isPhotoOnlyFocalStep ||
                                 isCheeseboardOnlyFocalStep ||
                                 isHomeScreenStep ||
-                                isShoppingOverlayStep
+                                isTutorialPlaceholderStep ||
+                                isShoppingOverlayVariantStep
                                   ? "Large"
                                   : "Small"
                               }
@@ -1963,12 +2035,17 @@ export default function ProductFlowSwitcher({
                                   : undefined
                               }
                               step={step}
-                              showScreenLabel={!isShoppingOverlayStep}
+                              showScreenLabel={
+                                !isShoppingOverlayVariantStep &&
+                                !isTutorialPlaceholderStep
+                              }
                               showVisualHierarchySectionLines={isHomeScreenStep}
                               style={{
                                 width:
-                                  isShoppingOverlayStep
-                                    ? "min(100%, 318px)"
+                                  isTutorialPlaceholderStep
+                                    ? "min(100%, 432px)"
+                                    : isShoppingOverlaySmallColumnStep
+                                      ? "min(100%, 432px)"
                                     : isBracedStep ||
                                   isClippedFocalStep ||
                                   isPhotoOnlyFocalStep ||
@@ -2001,7 +2078,12 @@ export default function ProductFlowSwitcher({
               }
               rowLabels={
                 section.title === "Visual Hierarchy"
-                  ? ["PRE-SCROLLING", "ON-SCROLLING", "DURING SHOPPING"]
+                  ? [
+                      "TUTORIAL",
+                      "PRE-SCROLLING",
+                      "ON-SCROLLING",
+                      "DURING SHOPPING",
+                    ]
                   : undefined
               }
               sectionLabel="Category"
@@ -2028,6 +2110,8 @@ export default function ProductFlowSwitcher({
                     ? typographyAndSpacingStepTitles
                     : section.title === "Iconography & Imagery"
                       ? iconographyAndImageryStepTitles
+                    : section.title === "Visual Hierarchy"
+                      ? visualHierarchyStepTitles
                     : section.title === "Navigations"
                       ? navigationActionStepTitles
                     : section.title === "Controls & Inputs"
@@ -2036,7 +2120,7 @@ export default function ProductFlowSwitcher({
               }
               title={section.title}
               visibleStepLimit={
-                section.title === "Visual Hierarchy" ? 9 : undefined
+                section.title === "Visual Hierarchy" ? 12 : undefined
               }
             />
           ))}

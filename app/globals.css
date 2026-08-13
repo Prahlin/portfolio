@@ -4109,11 +4109,23 @@ section.project-hero {
 .flow-capture-group-visual-hierarchy .flow-capture-grid {
   --flow-visual-hierarchy-scaled-row-height: 720px;
   --flow-visual-hierarchy-row-label-stack-gap: 24px;
+  --flow-visual-hierarchy-section-break-gap: calc(
+    var(--flow-visual-hierarchy-row-label-stack-gap) * 2
+  );
+  --flow-visual-hierarchy-section-offset: calc(
+    26px + var(--flow-visual-hierarchy-section-break-gap)
+  );
+  --flow-visual-hierarchy-tutorial-offset: calc(
+    var(--flow-visual-hierarchy-scaled-row-height) +
+      var(--flow-visual-hierarchy-section-break-gap) + 26px +
+      var(--flow-visual-hierarchy-row-label-stack-gap)
+  );
 
   gap: 24px 34px;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   justify-items: center;
   overflow: visible;
+  padding-bottom: calc(var(--flow-visual-hierarchy-section-offset) * 3);
   padding-top: 50px;
   position: relative;
 }
@@ -4124,6 +4136,7 @@ section.project-hero {
 }
 
 .flow-capture-group-visual-hierarchy .flow-screen-stack:first-of-type,
+.flow-capture-group-visual-hierarchy .flow-screen-stack-step-1,
 .flow-capture-group-visual-hierarchy .flow-screen-stack-step-3,
 .flow-capture-group-visual-hierarchy .flow-screen-stack-step-6 {
   zoom: 1;
@@ -4138,6 +4151,9 @@ section.project-hero {
   .flow-screen-stack:first-of-type
   h4,
 .flow-capture-group-visual-hierarchy
+  .flow-screen-stack-step-1
+  h4,
+.flow-capture-group-visual-hierarchy
   .flow-screen-stack-step-3
   h4,
 .flow-capture-group-visual-hierarchy
@@ -4147,65 +4163,118 @@ section.project-hero {
   margin-bottom: 14px;
 }
 
-.flow-capture-group-visual-hierarchy .flow-screen-stack-step-1 {
+.flow-capture-group-visual-hierarchy .flow-screen-stack-step-0 {
   grid-column: 1 / 2;
   grid-row: 1 / 4;
+  width: 432px;
+}
+
+.flow-capture-group-visual-hierarchy .flow-screen-stack-step-1 {
+  grid-column: 1 / 2;
+  grid-row: 4 / 7;
+  position: relative;
+  top: var(--flow-visual-hierarchy-section-offset);
 }
 
 .flow-capture-group-visual-hierarchy .flow-screen-stack-step-1b {
   grid-column: 2 / 3;
-  grid-row: 1 / 2;
+  grid-row: 4 / 5;
+  position: relative;
+  top: calc(var(--flow-visual-hierarchy-section-offset) * 2);
 }
 
 .flow-capture-group-visual-hierarchy .flow-screen-stack-step-2 {
   grid-column: 1 / 2;
-  grid-row: 4 / 5;
+  grid-row: 7 / 8;
+  position: relative;
+  top: calc(var(--flow-visual-hierarchy-section-offset) * 2);
 }
 
 .flow-capture-group-visual-hierarchy .flow-screen-stack-step-1c {
   grid-column: 2 / 3;
-  grid-row: 2 / 3;
+  grid-row: 5 / 6;
   margin-top: 13px;
+  position: relative;
+  top: calc(var(--flow-visual-hierarchy-section-offset) * 2);
 }
 
 .flow-capture-group-visual-hierarchy .flow-screen-stack-step-1d {
   grid-column: 2 / 3;
-  grid-row: 3 / 4;
+  grid-row: 6 / 7;
   margin-top: 14px;
+  position: relative;
+  top: calc(var(--flow-visual-hierarchy-section-offset) * 2);
 }
 
 .flow-capture-group-visual-hierarchy .flow-screen-stack-step-3 {
   grid-column: 1 / 2;
-  grid-row: 5 / 7;
+  grid-row: 8 / 10;
+  position: relative;
+  top: calc(var(--flow-visual-hierarchy-section-offset) * 2);
 }
 
 .flow-capture-group-visual-hierarchy .flow-screen-stack-step-4 {
   grid-column: 2 / 3;
-  grid-row: 5 / 6;
+  grid-row: 8 / 9;
+  position: relative;
+  top: calc(var(--flow-visual-hierarchy-section-offset) * 4);
 }
 
 .flow-capture-group-visual-hierarchy .flow-screen-stack-step-5 {
   grid-column: 2 / 3;
-  grid-row: 6 / 7;
+  grid-row: 9 / 10;
+  position: relative;
+  top: calc(var(--flow-visual-hierarchy-section-offset) * 4);
 }
 
 .flow-capture-group-visual-hierarchy .flow-screen-stack-step-6 {
   grid-column: 1 / 2;
-  grid-row: 7 / 8;
-  width: 318px;
+  grid-row: 10 / 12;
+  position: relative;
+  top: calc(var(--flow-visual-hierarchy-section-offset) * 3);
+  width: 432px;
+}
+
+.flow-capture-group-visual-hierarchy .flow-screen-stack-step-6b {
+  grid-column: 2 / 3;
+  grid-row: 10 / 11;
+  position: relative;
+  top: calc(var(--flow-visual-hierarchy-section-offset) * 6);
+}
+
+.flow-capture-group-visual-hierarchy .flow-screen-stack-step-6c {
+  grid-column: 2 / 3;
+  grid-row: 11 / 12;
+  position: relative;
+  top: calc(var(--flow-visual-hierarchy-section-offset) * 6);
+}
+
+.flow-capture-group-visual-hierarchy
+  .flow-screen-stack-step-6b
+  .flow-screen,
+.flow-capture-group-visual-hierarchy
+  .flow-screen-stack-step-6c
+  .flow-screen {
+  width: 432px !important;
 }
 
 .flow-capture-group-visual-hierarchy
   .flow-screen-stack-step-6
   .flow-screen {
-  width: 318px !important;
+  width: min(100%, 444px) !important;
 }
 
 .flow-capture-group-visual-hierarchy
   .flow-screen-stack:first-of-type
   .flow-visual-hierarchy-frame-pair,
 .flow-capture-group-visual-hierarchy
+  .flow-screen-stack-step-1
+  .flow-visual-hierarchy-frame-pair,
+.flow-capture-group-visual-hierarchy
   .flow-screen-stack-step-3
+  .flow-visual-hierarchy-frame-pair,
+.flow-capture-group-visual-hierarchy
+  .flow-screen-stack-step-6
   .flow-visual-hierarchy-frame-pair {
   --flow-visual-hierarchy-tip-frame-gap: 6px;
 }
@@ -4214,7 +4283,13 @@ section.project-hero {
   .flow-screen-stack:first-of-type
   .flow-visual-hierarchy-external-annotation,
 .flow-capture-group-visual-hierarchy
+  .flow-screen-stack-step-1
+  .flow-visual-hierarchy-external-annotation,
+.flow-capture-group-visual-hierarchy
   .flow-screen-stack-step-3
+  .flow-visual-hierarchy-external-annotation,
+.flow-capture-group-visual-hierarchy
+  .flow-screen-stack-step-6
   .flow-visual-hierarchy-external-annotation {
   font-size: 28px !important;
   right: calc(100% - 16px) !important;
@@ -4227,10 +4302,22 @@ section.project-hero {
   .flow-screen-stack:first-of-type
   .flow-visual-hierarchy-section-line,
 .flow-capture-group-visual-hierarchy
+  .flow-screen-stack-step-1
+  .flow-visual-hierarchy-section-lines,
+.flow-capture-group-visual-hierarchy
+  .flow-screen-stack-step-1
+  .flow-visual-hierarchy-section-line,
+.flow-capture-group-visual-hierarchy
   .flow-screen-stack-step-3
   .flow-visual-hierarchy-section-lines,
 .flow-capture-group-visual-hierarchy
   .flow-screen-stack-step-3
+  .flow-visual-hierarchy-section-line,
+.flow-capture-group-visual-hierarchy
+  .flow-screen-stack-step-6
+  .flow-visual-hierarchy-section-lines,
+.flow-capture-group-visual-hierarchy
+  .flow-screen-stack-step-6
   .flow-visual-hierarchy-section-line {
   width: 24px;
 }
@@ -4239,7 +4326,13 @@ section.project-hero {
   .flow-screen-stack:first-of-type
   .flow-visual-hierarchy-section-label,
 .flow-capture-group-visual-hierarchy
+  .flow-screen-stack-step-1
+  .flow-visual-hierarchy-section-label,
+.flow-capture-group-visual-hierarchy
   .flow-screen-stack-step-3
+  .flow-visual-hierarchy-section-label,
+.flow-capture-group-visual-hierarchy
+  .flow-screen-stack-step-6
   .flow-visual-hierarchy-section-label {
   font-size: 10px;
 }
@@ -4268,13 +4361,24 @@ section.project-hero {
 
 .flow-visual-hierarchy-row-label-2 {
   top: calc(
-    var(--flow-visual-hierarchy-scaled-row-height) + 375px
+    var(--flow-visual-hierarchy-scaled-row-height) +
+      var(--flow-visual-hierarchy-section-break-gap)
   );
 }
 
 .flow-visual-hierarchy-row-label-3 {
   top: calc(
-    var(--flow-visual-hierarchy-scaled-row-height) * 2 + 400px
+    var(--flow-visual-hierarchy-tutorial-offset) +
+      var(--flow-visual-hierarchy-scaled-row-height) + 375px +
+      var(--flow-visual-hierarchy-section-offset)
+  );
+}
+
+.flow-visual-hierarchy-row-label-4 {
+  top: calc(
+    var(--flow-visual-hierarchy-tutorial-offset) +
+      var(--flow-visual-hierarchy-scaled-row-height) * 2 + 400px +
+      var(--flow-visual-hierarchy-section-offset) * 2
   );
 }
 
