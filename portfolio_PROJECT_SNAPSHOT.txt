@@ -1,5 +1,5 @@
 Portfolio Next.js PROJECT SNAPSHOT
-Generated: Wed Aug 12 22:32:01 EDT 2026
+Generated: Thu Aug 13 00:07:17 EDT 2026
 Project directory: /Users/prahlin/gh/portfolio
 
 IMPORTANT INSTRUCTIONS FOR CHATGPT & CODEX:
@@ -12530,6 +12530,7 @@ PROJECT FILE TREE
 /Users/prahlin/gh/portfolio/portfolio_worklog_august10_part2.pdf
 /Users/prahlin/gh/portfolio/portfolio_worklog_august11.pdf
 /Users/prahlin/gh/portfolio/portfolio_worklog_august12_part1.pdf
+/Users/prahlin/gh/portfolio/portfolio_worklog_august12_part2.pdf
 /Users/prahlin/gh/portfolio/portfolio_worklog_august1_part1.pdf
 /Users/prahlin/gh/portfolio/portfolio_worklog_august1_part2.pdf
 /Users/prahlin/gh/portfolio/portfolio_worklog_august1_part3.pdf
@@ -12565,6 +12566,7 @@ PROJECT FILE TREE
 /Users/prahlin/gh/portfolio/public/images/address_overlay_large.png
 /Users/prahlin/gh/portfolio/public/images/address_overlay_small.png
 /Users/prahlin/gh/portfolio/public/images/alla-vostra
+/Users/prahlin/gh/portfolio/public/images/alla-vostra-empty-framed-no-island.png
 /Users/prahlin/gh/portfolio/public/images/alla-vostra-hero-confirmed-framed-space-gray.png
 /Users/prahlin/gh/portfolio/public/images/alla-vostra-hero-products-framed-space-gray.png
 /Users/prahlin/gh/portfolio/public/images/alla-vostra-hero-startup-focal-cheeseboard-only-no-frame.png
@@ -12686,7 +12688,10 @@ PROJECT FILE TREE
 /Users/prahlin/gh/portfolio/public/images/portfolio-website-landscape-screenshot.png
 /Users/prahlin/gh/portfolio/public/images/products_overlay_buon_natale_large.png
 /Users/prahlin/gh/portfolio/public/images/products_overlay_buon_natale_small.png
+/Users/prahlin/gh/portfolio/public/images/products_overlay_piccola_framed_no_island.png
+/Users/prahlin/gh/portfolio/public/images/products_overlay_piccola_isolated_large.png
 /Users/prahlin/gh/portfolio/public/images/products_overlay_piccola_large.png
+/Users/prahlin/gh/portfolio/public/images/products_overlay_piccola_overlay_only_large.png
 /Users/prahlin/gh/portfolio/public/images/products_overlay_piccola_small.png
 /Users/prahlin/gh/portfolio/public/images/products_overlay_sei_perfetto_large.png
 /Users/prahlin/gh/portfolio/public/images/products_overlay_sei_perfetto_small.png
@@ -18469,1203 +18474,1307 @@ FILE: app/globals.css
   4109	.flow-capture-group-visual-hierarchy .flow-capture-grid {
   4110	  --flow-visual-hierarchy-scaled-row-height: 720px;
   4111	  --flow-visual-hierarchy-row-label-stack-gap: 24px;
-  4112	
-  4113	  gap: 24px 34px;
-  4114	  grid-template-columns: repeat(2, minmax(0, 1fr));
-  4115	  justify-items: center;
-  4116	  overflow: visible;
-  4117	  padding-top: 50px;
-  4118	  position: relative;
-  4119	}
-  4120	
-  4121	.flow-capture-group-visual-hierarchy .flow-screen-stack {
-  4122	  justify-self: center;
-  4123	  zoom: 0.5;
-  4124	}
-  4125	
-  4126	.flow-capture-group-visual-hierarchy .flow-screen-stack:first-of-type,
-  4127	.flow-capture-group-visual-hierarchy .flow-screen-stack-step-3,
-  4128	.flow-capture-group-visual-hierarchy .flow-screen-stack-step-6 {
-  4129	  zoom: 1;
-  4130	}
-  4131	
-  4132	.flow-capture-group-visual-hierarchy .flow-screen-stack h4 {
-  4133	  font-size: 30px;
-  4134	  margin-bottom: 28px;
-  4135	}
-  4136	
-  4137	.flow-capture-group-visual-hierarchy
-  4138	  .flow-screen-stack:first-of-type
-  4139	  h4,
-  4140	.flow-capture-group-visual-hierarchy
-  4141	  .flow-screen-stack-step-3
-  4142	  h4,
-  4143	.flow-capture-group-visual-hierarchy
-  4144	  .flow-screen-stack-step-6
-  4145	  h4 {
-  4146	  font-size: 15px;
-  4147	  margin-bottom: 14px;
+  4112	  --flow-visual-hierarchy-section-break-gap: calc(
+  4113	    var(--flow-visual-hierarchy-row-label-stack-gap) * 2
+  4114	  );
+  4115	  --flow-visual-hierarchy-section-offset: calc(
+  4116	    26px + var(--flow-visual-hierarchy-section-break-gap)
+  4117	  );
+  4118	  --flow-visual-hierarchy-tutorial-offset: calc(
+  4119	    var(--flow-visual-hierarchy-scaled-row-height) +
+  4120	      var(--flow-visual-hierarchy-section-break-gap) + 26px +
+  4121	      var(--flow-visual-hierarchy-row-label-stack-gap)
+  4122	  );
+  4123	
+  4124	  gap: 24px 34px;
+  4125	  grid-template-columns: repeat(2, minmax(0, 1fr));
+  4126	  justify-items: center;
+  4127	  overflow: visible;
+  4128	  padding-bottom: calc(var(--flow-visual-hierarchy-section-offset) * 3);
+  4129	  padding-top: 50px;
+  4130	  position: relative;
+  4131	}
+  4132	
+  4133	.flow-capture-group-visual-hierarchy .flow-screen-stack {
+  4134	  justify-self: center;
+  4135	  zoom: 0.5;
+  4136	}
+  4137	
+  4138	.flow-capture-group-visual-hierarchy .flow-screen-stack:first-of-type,
+  4139	.flow-capture-group-visual-hierarchy .flow-screen-stack-step-1,
+  4140	.flow-capture-group-visual-hierarchy .flow-screen-stack-step-3,
+  4141	.flow-capture-group-visual-hierarchy .flow-screen-stack-step-6 {
+  4142	  zoom: 1;
+  4143	}
+  4144	
+  4145	.flow-capture-group-visual-hierarchy .flow-screen-stack h4 {
+  4146	  font-size: 30px;
+  4147	  margin-bottom: 28px;
   4148	}
   4149	
-  4150	.flow-capture-group-visual-hierarchy .flow-screen-stack-step-1 {
-  4151	  grid-column: 1 / 2;
-  4152	  grid-row: 1 / 4;
-  4153	}
-  4154	
-  4155	.flow-capture-group-visual-hierarchy .flow-screen-stack-step-1b {
-  4156	  grid-column: 2 / 3;
-  4157	  grid-row: 1 / 2;
-  4158	}
-  4159	
-  4160	.flow-capture-group-visual-hierarchy .flow-screen-stack-step-2 {
-  4161	  grid-column: 1 / 2;
-  4162	  grid-row: 4 / 5;
-  4163	}
-  4164	
-  4165	.flow-capture-group-visual-hierarchy .flow-screen-stack-step-1c {
-  4166	  grid-column: 2 / 3;
-  4167	  grid-row: 2 / 3;
-  4168	  margin-top: 13px;
-  4169	}
-  4170	
-  4171	.flow-capture-group-visual-hierarchy .flow-screen-stack-step-1d {
-  4172	  grid-column: 2 / 3;
-  4173	  grid-row: 3 / 4;
-  4174	  margin-top: 14px;
-  4175	}
-  4176	
-  4177	.flow-capture-group-visual-hierarchy .flow-screen-stack-step-3 {
-  4178	  grid-column: 1 / 2;
-  4179	  grid-row: 5 / 7;
-  4180	}
-  4181	
-  4182	.flow-capture-group-visual-hierarchy .flow-screen-stack-step-4 {
-  4183	  grid-column: 2 / 3;
-  4184	  grid-row: 5 / 6;
-  4185	}
-  4186	
-  4187	.flow-capture-group-visual-hierarchy .flow-screen-stack-step-5 {
-  4188	  grid-column: 2 / 3;
-  4189	  grid-row: 6 / 7;
-  4190	}
-  4191	
-  4192	.flow-capture-group-visual-hierarchy .flow-screen-stack-step-6 {
-  4193	  grid-column: 1 / 2;
-  4194	  grid-row: 7 / 8;
-  4195	  width: 318px;
-  4196	}
-  4197	
-  4198	.flow-capture-group-visual-hierarchy
-  4199	  .flow-screen-stack-step-6
-  4200	  .flow-screen {
-  4201	  width: 318px !important;
-  4202	}
-  4203	
-  4204	.flow-capture-group-visual-hierarchy
-  4205	  .flow-screen-stack:first-of-type
-  4206	  .flow-visual-hierarchy-frame-pair,
-  4207	.flow-capture-group-visual-hierarchy
-  4208	  .flow-screen-stack-step-3
-  4209	  .flow-visual-hierarchy-frame-pair {
-  4210	  --flow-visual-hierarchy-tip-frame-gap: 6px;
-  4211	}
-  4212	
-  4213	.flow-capture-group-visual-hierarchy
-  4214	  .flow-screen-stack:first-of-type
-  4215	  .flow-visual-hierarchy-external-annotation,
-  4216	.flow-capture-group-visual-hierarchy
-  4217	  .flow-screen-stack-step-3
-  4218	  .flow-visual-hierarchy-external-annotation {
-  4219	  font-size: 28px !important;
-  4220	  right: calc(100% - 16px) !important;
+  4150	.flow-capture-group-visual-hierarchy
+  4151	  .flow-screen-stack:first-of-type
+  4152	  h4,
+  4153	.flow-capture-group-visual-hierarchy
+  4154	  .flow-screen-stack-step-1
+  4155	  h4,
+  4156	.flow-capture-group-visual-hierarchy
+  4157	  .flow-screen-stack-step-3
+  4158	  h4,
+  4159	.flow-capture-group-visual-hierarchy
+  4160	  .flow-screen-stack-step-6
+  4161	  h4 {
+  4162	  font-size: 15px;
+  4163	  margin-bottom: 14px;
+  4164	}
+  4165	
+  4166	.flow-capture-group-visual-hierarchy .flow-screen-stack-step-0 {
+  4167	  grid-column: 1 / 2;
+  4168	  grid-row: 1 / 4;
+  4169	  width: 432px;
+  4170	}
+  4171	
+  4172	.flow-capture-group-visual-hierarchy .flow-screen-stack-step-1 {
+  4173	  grid-column: 1 / 2;
+  4174	  grid-row: 4 / 7;
+  4175	  position: relative;
+  4176	  top: var(--flow-visual-hierarchy-section-offset);
+  4177	}
+  4178	
+  4179	.flow-capture-group-visual-hierarchy .flow-screen-stack-step-1b {
+  4180	  grid-column: 2 / 3;
+  4181	  grid-row: 4 / 5;
+  4182	  position: relative;
+  4183	  top: calc(var(--flow-visual-hierarchy-section-offset) * 2);
+  4184	}
+  4185	
+  4186	.flow-capture-group-visual-hierarchy .flow-screen-stack-step-2 {
+  4187	  grid-column: 1 / 2;
+  4188	  grid-row: 7 / 8;
+  4189	  position: relative;
+  4190	  top: calc(var(--flow-visual-hierarchy-section-offset) * 2);
+  4191	}
+  4192	
+  4193	.flow-capture-group-visual-hierarchy .flow-screen-stack-step-1c {
+  4194	  grid-column: 2 / 3;
+  4195	  grid-row: 5 / 6;
+  4196	  margin-top: 13px;
+  4197	  position: relative;
+  4198	  top: calc(var(--flow-visual-hierarchy-section-offset) * 2);
+  4199	}
+  4200	
+  4201	.flow-capture-group-visual-hierarchy .flow-screen-stack-step-1d {
+  4202	  grid-column: 2 / 3;
+  4203	  grid-row: 6 / 7;
+  4204	  margin-top: 14px;
+  4205	  position: relative;
+  4206	  top: calc(var(--flow-visual-hierarchy-section-offset) * 2);
+  4207	}
+  4208	
+  4209	.flow-capture-group-visual-hierarchy .flow-screen-stack-step-3 {
+  4210	  grid-column: 1 / 2;
+  4211	  grid-row: 8 / 10;
+  4212	  position: relative;
+  4213	  top: calc(var(--flow-visual-hierarchy-section-offset) * 2);
+  4214	}
+  4215	
+  4216	.flow-capture-group-visual-hierarchy .flow-screen-stack-step-4 {
+  4217	  grid-column: 2 / 3;
+  4218	  grid-row: 8 / 9;
+  4219	  position: relative;
+  4220	  top: calc(var(--flow-visual-hierarchy-section-offset) * 4);
   4221	}
   4222	
-  4223	.flow-capture-group-visual-hierarchy
-  4224	  .flow-screen-stack:first-of-type
-  4225	  .flow-visual-hierarchy-section-lines,
-  4226	.flow-capture-group-visual-hierarchy
-  4227	  .flow-screen-stack:first-of-type
-  4228	  .flow-visual-hierarchy-section-line,
-  4229	.flow-capture-group-visual-hierarchy
-  4230	  .flow-screen-stack-step-3
-  4231	  .flow-visual-hierarchy-section-lines,
-  4232	.flow-capture-group-visual-hierarchy
-  4233	  .flow-screen-stack-step-3
-  4234	  .flow-visual-hierarchy-section-line {
-  4235	  width: 24px;
+  4223	.flow-capture-group-visual-hierarchy .flow-screen-stack-step-5 {
+  4224	  grid-column: 2 / 3;
+  4225	  grid-row: 9 / 10;
+  4226	  position: relative;
+  4227	  top: calc(var(--flow-visual-hierarchy-section-offset) * 4);
+  4228	}
+  4229	
+  4230	.flow-capture-group-visual-hierarchy .flow-screen-stack-step-6 {
+  4231	  grid-column: 1 / 2;
+  4232	  grid-row: 10 / 12;
+  4233	  position: relative;
+  4234	  top: calc(var(--flow-visual-hierarchy-section-offset) * 3);
+  4235	  width: 432px;
   4236	}
   4237	
-  4238	.flow-capture-group-visual-hierarchy
-  4239	  .flow-screen-stack:first-of-type
-  4240	  .flow-visual-hierarchy-section-label,
-  4241	.flow-capture-group-visual-hierarchy
-  4242	  .flow-screen-stack-step-3
-  4243	  .flow-visual-hierarchy-section-label {
-  4244	  font-size: 10px;
-  4245	}
-  4246	
-  4247	.flow-visual-hierarchy-row-label {
-  4248	  color: #ffffff;
-  4249	  font-size: 26px;
-  4250	  font-weight: 850;
-  4251	  grid-column: 1 / -1;
-  4252	  grid-row: 1 / -1;
-  4253	  left: 50%;
-  4254	  letter-spacing: 0.08em;
-  4255	  line-height: 1;
-  4256	  pointer-events: none;
-  4257	  position: absolute;
-  4258	  text-align: center;
-  4259	  text-transform: uppercase;
-  4260	  transform: translateX(-50%);
-  4261	  white-space: nowrap;
-  4262	  z-index: 5;
-  4263	}
-  4264	
-  4265	.flow-visual-hierarchy-row-label-1 {
-  4266	  top: calc(-26px - var(--flow-visual-hierarchy-row-label-stack-gap));
-  4267	}
-  4268	
-  4269	.flow-visual-hierarchy-row-label-2 {
-  4270	  top: calc(
-  4271	    var(--flow-visual-hierarchy-scaled-row-height) + 375px
-  4272	  );
-  4273	}
-  4274	
-  4275	.flow-visual-hierarchy-row-label-3 {
-  4276	  top: calc(
-  4277	    var(--flow-visual-hierarchy-scaled-row-height) * 2 + 400px
-  4278	  );
-  4279	}
-  4280	
-  4281	.flow-capture-group-full-row
-  4282	  .flow-screen-stack:has(.flow-visual-hierarchy-frame-pair)
-  4283	  h4 {
-  4284	  transform: translateX(57px);
-  4285	}
-  4286	
-  4287	.flow-group-header {
-  4288	  max-width: 360px;
-  4289	}
-  4290	
-  4291	.flow-group-header span {
-  4292	  color: var(--green);
-  4293	  display: block;
-  4294	  font-size: 12px;
-  4295	  font-weight: 850;
-  4296	  letter-spacing: 0.1em;
-  4297	  line-height: 1;
-  4298	  margin-bottom: 14px;
-  4299	  text-transform: uppercase;
-  4300	}
-  4301	
-  4302	.flow-group-header h3 {
-  4303	  font-size: 34px;
-  4304	  line-height: 1;
-  4305	  margin-bottom: 14px;
-  4306	}
-  4307	
-  4308	.flow-group-header p {
-  4309	  color: #b8c9bf;
-  4310	  line-height: 1.6;
-  4311	  margin-bottom: 0;
-  4312	}
-  4313	
-  4314	.flow-capture-grid {
-  4315	  align-items: start;
-  4316	  display: grid;
-  4317	  gap: 34px;
-  4318	  grid-template-columns: repeat(auto-fit, minmax(285px, 1fr));
-  4319	}
-  4320	
-  4321	.flow-screen-stack {
-  4322	  min-width: 0;
+  4238	.flow-capture-group-visual-hierarchy .flow-screen-stack-step-6b {
+  4239	  grid-column: 2 / 3;
+  4240	  grid-row: 10 / 11;
+  4241	  position: relative;
+  4242	  top: calc(var(--flow-visual-hierarchy-section-offset) * 6);
+  4243	}
+  4244	
+  4245	.flow-capture-group-visual-hierarchy .flow-screen-stack-step-6c {
+  4246	  grid-column: 2 / 3;
+  4247	  grid-row: 11 / 12;
+  4248	  position: relative;
+  4249	  top: calc(var(--flow-visual-hierarchy-section-offset) * 6);
+  4250	}
+  4251	
+  4252	.flow-capture-group-visual-hierarchy
+  4253	  .flow-screen-stack-step-6b
+  4254	  .flow-screen,
+  4255	.flow-capture-group-visual-hierarchy
+  4256	  .flow-screen-stack-step-6c
+  4257	  .flow-screen {
+  4258	  width: 432px !important;
+  4259	}
+  4260	
+  4261	.flow-capture-group-visual-hierarchy
+  4262	  .flow-screen-stack-step-6
+  4263	  .flow-screen {
+  4264	  width: min(100%, 444px) !important;
+  4265	}
+  4266	
+  4267	.flow-capture-group-visual-hierarchy
+  4268	  .flow-screen-stack:first-of-type
+  4269	  .flow-visual-hierarchy-frame-pair,
+  4270	.flow-capture-group-visual-hierarchy
+  4271	  .flow-screen-stack-step-1
+  4272	  .flow-visual-hierarchy-frame-pair,
+  4273	.flow-capture-group-visual-hierarchy
+  4274	  .flow-screen-stack-step-3
+  4275	  .flow-visual-hierarchy-frame-pair,
+  4276	.flow-capture-group-visual-hierarchy
+  4277	  .flow-screen-stack-step-6
+  4278	  .flow-visual-hierarchy-frame-pair {
+  4279	  --flow-visual-hierarchy-tip-frame-gap: 6px;
+  4280	}
+  4281	
+  4282	.flow-capture-group-visual-hierarchy
+  4283	  .flow-screen-stack:first-of-type
+  4284	  .flow-visual-hierarchy-external-annotation,
+  4285	.flow-capture-group-visual-hierarchy
+  4286	  .flow-screen-stack-step-1
+  4287	  .flow-visual-hierarchy-external-annotation,
+  4288	.flow-capture-group-visual-hierarchy
+  4289	  .flow-screen-stack-step-3
+  4290	  .flow-visual-hierarchy-external-annotation,
+  4291	.flow-capture-group-visual-hierarchy
+  4292	  .flow-screen-stack-step-6
+  4293	  .flow-visual-hierarchy-external-annotation {
+  4294	  font-size: 28px !important;
+  4295	  right: calc(100% - 16px) !important;
+  4296	}
+  4297	
+  4298	.flow-capture-group-visual-hierarchy
+  4299	  .flow-screen-stack:first-of-type
+  4300	  .flow-visual-hierarchy-section-lines,
+  4301	.flow-capture-group-visual-hierarchy
+  4302	  .flow-screen-stack:first-of-type
+  4303	  .flow-visual-hierarchy-section-line,
+  4304	.flow-capture-group-visual-hierarchy
+  4305	  .flow-screen-stack-step-1
+  4306	  .flow-visual-hierarchy-section-lines,
+  4307	.flow-capture-group-visual-hierarchy
+  4308	  .flow-screen-stack-step-1
+  4309	  .flow-visual-hierarchy-section-line,
+  4310	.flow-capture-group-visual-hierarchy
+  4311	  .flow-screen-stack-step-3
+  4312	  .flow-visual-hierarchy-section-lines,
+  4313	.flow-capture-group-visual-hierarchy
+  4314	  .flow-screen-stack-step-3
+  4315	  .flow-visual-hierarchy-section-line,
+  4316	.flow-capture-group-visual-hierarchy
+  4317	  .flow-screen-stack-step-6
+  4318	  .flow-visual-hierarchy-section-lines,
+  4319	.flow-capture-group-visual-hierarchy
+  4320	  .flow-screen-stack-step-6
+  4321	  .flow-visual-hierarchy-section-line {
+  4322	  width: 24px;
   4323	}
   4324	
-  4325	.flow-screen-stack h4 {
-  4326	  color: var(--text);
-  4327	  font-size: 15px;
-  4328	  font-weight: 850;
-  4329	  letter-spacing: 0;
-  4330	  line-height: 1.2;
-  4331	  margin: 0 0 14px;
-  4332	  text-align: center;
-  4333	}
-  4334	
-  4335	.flow-screen-stack-captures {
-  4336	  align-items: start;
-  4337	  display: flex;
-  4338	  gap: 14px;
-  4339	  justify-content: center;
-  4340	}
-  4341	
-  4342	.cinerific-case .flow-image-frame,
-  4343	.cinerific-case .flow-screen-standard .flow-image-frame,
-  4344	.cinerific-case .flow-screen-tall .flow-image-frame {
-  4345	  aspect-ratio: 16 / 9;
-  4346	  background: linear-gradient(145deg, #0c120f, #000);
-  4347	  border-radius: var(--capture-frame-radius-standard);
-  4348	}
-  4349	
-  4350	.cinerific-case .flow-image-frame::before {
-  4351	  background:
-  4352	    linear-gradient(rgba(67, 255, 146, 0.04) 1px, transparent 1px),
-  4353	    linear-gradient(90deg, rgba(67, 255, 146, 0.04) 1px, transparent 1px),
-  4354	    #020403;
-  4355	  background-size: 14px 14px;
-  4356	  border: 1px solid rgba(198, 255, 217, 0.16);
-  4357	  border-radius: 5px;
-  4358	  content: "";
-  4359	  inset: 10px 14px;
-  4360	  position: absolute;
-  4361	}
-  4362	
-  4363	.cinerific-case .flow-image-frame::after {
-  4364	  background: #1d2923;
-  4365	  border: 1px solid rgba(198, 255, 217, 0.24);
-  4366	  border-radius: 999px;
-  4367	  content: "";
-  4368	  height: 4px;
-  4369	  left: 5px;
-  4370	  position: absolute;
-  4371	  top: 50%;
-  4372	  transform: translateY(-50%);
-  4373	  width: 4px;
-  4374	}
-  4375	
-  4376	.flow-browse-toggle-row {
-  4377	  display: flex;
-  4378	  justify-content: center;
-  4379	  margin-top: 26px;
-  4380	}
-  4381	
-  4382	.flow-browse-toggle {
-  4383	  cursor: pointer;
-  4384	  font-family: inherit;
-  4385	}
-  4386	
-  4387	.alla-vostra-case .flow-browse-toggle {
-  4388	  inline-size: calc((152px * 2) + 14px);
-  4389	  max-inline-size: 100%;
-  4390	}
-  4391	
-  4392	.flow-browse-toggle svg {
-  4393	  flex: 0 0 auto;
-  4394	}
-  4395	
-  4396	.flow-browse-extra {
-  4397	  max-height: 0;
-  4398	  opacity: 0;
-  4399	  overflow: hidden;
-  4400	  pointer-events: none;
-  4401	  transform: translateY(-8px);
-  4402	  transition: max-height 320ms ease, opacity 220ms ease, transform 220ms ease,
-  4403	    margin-top 220ms ease;
+  4325	.flow-capture-group-visual-hierarchy
+  4326	  .flow-screen-stack:first-of-type
+  4327	  .flow-visual-hierarchy-section-label,
+  4328	.flow-capture-group-visual-hierarchy
+  4329	  .flow-screen-stack-step-1
+  4330	  .flow-visual-hierarchy-section-label,
+  4331	.flow-capture-group-visual-hierarchy
+  4332	  .flow-screen-stack-step-3
+  4333	  .flow-visual-hierarchy-section-label,
+  4334	.flow-capture-group-visual-hierarchy
+  4335	  .flow-screen-stack-step-6
+  4336	  .flow-visual-hierarchy-section-label {
+  4337	  font-size: 10px;
+  4338	}
+  4339	
+  4340	.flow-visual-hierarchy-row-label {
+  4341	  color: #ffffff;
+  4342	  font-size: 26px;
+  4343	  font-weight: 850;
+  4344	  grid-column: 1 / -1;
+  4345	  grid-row: 1 / -1;
+  4346	  left: 50%;
+  4347	  letter-spacing: 0.08em;
+  4348	  line-height: 1;
+  4349	  pointer-events: none;
+  4350	  position: absolute;
+  4351	  text-align: center;
+  4352	  text-transform: uppercase;
+  4353	  transform: translateX(-50%);
+  4354	  white-space: nowrap;
+  4355	  z-index: 5;
+  4356	}
+  4357	
+  4358	.flow-visual-hierarchy-row-label-1 {
+  4359	  top: calc(-26px - var(--flow-visual-hierarchy-row-label-stack-gap));
+  4360	}
+  4361	
+  4362	.flow-visual-hierarchy-row-label-2 {
+  4363	  top: calc(
+  4364	    var(--flow-visual-hierarchy-scaled-row-height) +
+  4365	      var(--flow-visual-hierarchy-section-break-gap)
+  4366	  );
+  4367	}
+  4368	
+  4369	.flow-visual-hierarchy-row-label-3 {
+  4370	  top: calc(
+  4371	    var(--flow-visual-hierarchy-tutorial-offset) +
+  4372	      var(--flow-visual-hierarchy-scaled-row-height) + 375px +
+  4373	      var(--flow-visual-hierarchy-section-offset)
+  4374	  );
+  4375	}
+  4376	
+  4377	.flow-visual-hierarchy-row-label-4 {
+  4378	  top: calc(
+  4379	    var(--flow-visual-hierarchy-tutorial-offset) +
+  4380	      var(--flow-visual-hierarchy-scaled-row-height) * 2 + 400px +
+  4381	      var(--flow-visual-hierarchy-section-offset) * 2
+  4382	  );
+  4383	}
+  4384	
+  4385	.flow-capture-group-full-row
+  4386	  .flow-screen-stack:has(.flow-visual-hierarchy-frame-pair)
+  4387	  h4 {
+  4388	  transform: translateX(57px);
+  4389	}
+  4390	
+  4391	.flow-group-header {
+  4392	  max-width: 360px;
+  4393	}
+  4394	
+  4395	.flow-group-header span {
+  4396	  color: var(--green);
+  4397	  display: block;
+  4398	  font-size: 12px;
+  4399	  font-weight: 850;
+  4400	  letter-spacing: 0.1em;
+  4401	  line-height: 1;
+  4402	  margin-bottom: 14px;
+  4403	  text-transform: uppercase;
   4404	}
   4405	
-  4406	.flow-browse-extra.is-open {
-  4407	  margin-top: 34px;
-  4408	  max-height: 5200px;
-  4409	  opacity: 1;
-  4410	  pointer-events: auto;
-  4411	  transform: translateY(0);
-  4412	}
-  4413	
-  4414	.architecture-map {
-  4415	  display: grid;
-  4416	  gap: 12px;
-  4417	  grid-template-columns: repeat(5, minmax(0, 1fr));
-  4418	}
-  4419	
-  4420	.architecture-node {
-  4421	  min-height: 178px;
-  4422	  padding: 18px;
+  4406	.flow-group-header h3 {
+  4407	  font-size: 34px;
+  4408	  line-height: 1;
+  4409	  margin-bottom: 14px;
+  4410	}
+  4411	
+  4412	.flow-group-header p {
+  4413	  color: #b8c9bf;
+  4414	  line-height: 1.6;
+  4415	  margin-bottom: 0;
+  4416	}
+  4417	
+  4418	.flow-capture-grid {
+  4419	  align-items: start;
+  4420	  display: grid;
+  4421	  gap: 34px;
+  4422	  grid-template-columns: repeat(auto-fit, minmax(285px, 1fr));
   4423	}
   4424	
-  4425	.architecture-node span {
-  4426	  color: var(--green);
-  4427	  display: block;
-  4428	  font-size: 13px;
-  4429	  font-weight: 900;
-  4430	  margin-bottom: 18px;
-  4431	}
-  4432	
-  4433	.architecture-node strong {
-  4434	  color: var(--text);
-  4435	  display: block;
-  4436	  font-size: 16px;
-  4437	  line-height: 1.25;
-  4438	  margin-bottom: 12px;
-  4439	}
-  4440	
-  4441	.architecture-node p {
-  4442	  font-size: 13px;
-  4443	}
-  4444	
-  4445	.architecture-copy {
-  4446	  margin: 26px 0 0;
-  4447	}
-  4448	
-  4449	.readiness-copy {
-  4450	  margin-bottom: 24px;
-  4451	}
-  4452	
-  4453	.readiness-list,
-  4454	.proof-points {
-  4455	  display: flex;
-  4456	  flex-wrap: wrap;
-  4457	  gap: 10px;
-  4458	}
-  4459	
-  4460	.project-timeline {
-  4461	  display: grid;
-  4462	  gap: 14px;
-  4463	}
-  4464	
-  4465	.project-timeline-item {
-  4466	  display: grid;
-  4467	  gap: 22px;
-  4468	  grid-template-columns: 56px 1fr;
-  4469	  padding: 22px;
-  4470	}
-  4471	
-  4472	.project-timeline-item > span {
-  4473	  color: var(--green);
-  4474	  font-size: 18px;
-  4475	  font-weight: 900;
-  4476	}
-  4477	
-  4478	.project-timeline-item h3 {
-  4479	  font-size: 20px;
-  4480	  line-height: 1.2;
-  4481	  margin-bottom: 10px;
-  4482	}
-  4483	
-  4484	.stack-matrix {
-  4485	  display: grid;
-  4486	  gap: 14px;
-  4487	  grid-template-columns: repeat(5, minmax(0, 1fr));
-  4488	  margin-top: 34px;
+  4425	.flow-screen-stack {
+  4426	  min-width: 0;
+  4427	}
+  4428	
+  4429	.flow-screen-stack h4 {
+  4430	  color: var(--text);
+  4431	  font-size: 15px;
+  4432	  font-weight: 850;
+  4433	  letter-spacing: 0;
+  4434	  line-height: 1.2;
+  4435	  margin: 0 0 14px;
+  4436	  text-align: center;
+  4437	}
+  4438	
+  4439	.flow-screen-stack-captures {
+  4440	  align-items: start;
+  4441	  display: flex;
+  4442	  gap: 14px;
+  4443	  justify-content: center;
+  4444	}
+  4445	
+  4446	.cinerific-case .flow-image-frame,
+  4447	.cinerific-case .flow-screen-standard .flow-image-frame,
+  4448	.cinerific-case .flow-screen-tall .flow-image-frame {
+  4449	  aspect-ratio: 16 / 9;
+  4450	  background: linear-gradient(145deg, #0c120f, #000);
+  4451	  border-radius: var(--capture-frame-radius-standard);
+  4452	}
+  4453	
+  4454	.cinerific-case .flow-image-frame::before {
+  4455	  background:
+  4456	    linear-gradient(rgba(67, 255, 146, 0.04) 1px, transparent 1px),
+  4457	    linear-gradient(90deg, rgba(67, 255, 146, 0.04) 1px, transparent 1px),
+  4458	    #020403;
+  4459	  background-size: 14px 14px;
+  4460	  border: 1px solid rgba(198, 255, 217, 0.16);
+  4461	  border-radius: 5px;
+  4462	  content: "";
+  4463	  inset: 10px 14px;
+  4464	  position: absolute;
+  4465	}
+  4466	
+  4467	.cinerific-case .flow-image-frame::after {
+  4468	  background: #1d2923;
+  4469	  border: 1px solid rgba(198, 255, 217, 0.24);
+  4470	  border-radius: 999px;
+  4471	  content: "";
+  4472	  height: 4px;
+  4473	  left: 5px;
+  4474	  position: absolute;
+  4475	  top: 50%;
+  4476	  transform: translateY(-50%);
+  4477	  width: 4px;
+  4478	}
+  4479	
+  4480	.flow-browse-toggle-row {
+  4481	  display: flex;
+  4482	  justify-content: center;
+  4483	  margin-top: 26px;
+  4484	}
+  4485	
+  4486	.flow-browse-toggle {
+  4487	  cursor: pointer;
+  4488	  font-family: inherit;
   4489	}
   4490	
-  4491	.stack-group {
-  4492	  padding: 20px;
-  4493	}
-  4494	
-  4495	.stack-group h3 {
-  4496	  font-size: 11px;
-  4497	}
-  4498	
-  4499	.stack-group div {
-  4500	  display: grid;
-  4501	  gap: 8px;
-  4502	}
-  4503	
-  4504	.stack-group span {
-  4505	  color: #d8ffe4;
-  4506	  font-size: 14px;
-  4507	  font-weight: 750;
-  4508	  line-height: 1.35;
-  4509	}
-  4510	
-  4511	.proof-points {
-  4512	  margin-top: 34px;
-  4513	}
-  4514	
-  4515	.closing-panel {
-  4516	  align-items: center;
-  4517	  background: linear-gradient(180deg, rgba(13, 31, 22, 0.88), rgba(5, 13, 9, 0.88));
-  4518	  border: 1px solid var(--line);
-  4519	  border-radius: 8px;
-  4520	  display: grid;
-  4521	  gap: 34px;
-  4522	  grid-template-columns: minmax(0, 1fr) auto;
-  4523	  padding: 34px;
-  4524	}
-  4525	
-  4526	.closing-panel h2 {
-  4527	  font-size: clamp(30px, 4vw, 50px);
-  4528	  margin-bottom: 18px;
-  4529	  max-width: 720px;
-  4530	}
-  4531	
-  4532	.closing-panel p {
-  4533	  max-width: 760px;
-  4534	}
-  4535	
-  4536	.closing-actions {
-  4537	  display: flex;
-  4538	  flex-direction: column;
-  4539	  gap: 12px;
-  4540	  min-width: 190px;
-  4541	}
-  4542	
-  4543	@media (max-width: 980px) {
-  4544	  .product-flow-nav {
-  4545	    --product-flow-nav-font-size: clamp(40px, 5.7vw, 56px);
-  4546	  }
-  4547	
-  4548	  .hero-copy {
-  4549	    --hero-proof-stack-width: min(606px, 100%);
-  4550	    --hero-action-stack-width: var(--hero-proof-stack-width);
-  4551	    --hero-text-stack-width: var(--hero-action-stack-width);
-  4552	  }
-  4553	
-  4554	  .nav-bar {
-  4555	    --nav-bar-inline-padding: 16px;
-  4556	    --nav-bar-height: clamp(36px, calc(23.61px + 3.87vw), 48px);
-  4557	    --nav-link-bottom-separator-gap: 8px;
-  4558	    --nav-link-separator-gap: 6px;
-  4559	    --nav-link-top-separator-gap: 6px;
-  4560	    align-items: center;
-  4561	    display: block;
-  4562	    height: var(--nav-bar-two-row-height);
-  4563	    row-gap: 7.5px;
-  4564	    padding: 0 var(--nav-bar-inline-padding);
-  4565	  }
-  4566	
-  4567	  .nav-bar nav {
-  4568	    display: grid;
-  4569	    grid-template-rows: repeat(2, var(--nav-bar-height));
-  4570	    height: 100%;
-  4571	    row-gap: var(--nav-bar-two-row-gap);
-  4572	    width: 100%;
-  4573	  }
-  4574	
-  4575	  .nav-link-row {
-  4576	    display: flex;
-  4577	    flex-wrap: nowrap;
-  4578	    gap: var(--nav-link-separator-gap);
-  4579	    justify-content: space-between;
-  4580	    min-width: 0;
-  4581	    width: 100%;
-  4582	  }
-  4583	
-  4584	  .nav-link-row-top {
-  4585	    align-items: center;
-  4586	    column-gap: var(--nav-brand-gap);
-  4587	    display: flex;
-  4588	    height: var(--nav-bar-height);
-  4589	    justify-content: flex-start;
-  4590	    width: 100%;
-  4591	  }
-  4592	
-  4593	  .nav-top-distribution {
-  4594	    align-items: center;
-  4595	    display: grid;
-  4596	    flex: 1 1 auto;
-  4597	    grid-template-columns: repeat(2, minmax(0, 1fr));
-  4598	    justify-items: center;
-  4599	    min-width: 0;
-  4600	    position: relative;
-  4601	  }
+  4491	.alla-vostra-case .flow-browse-toggle {
+  4492	  inline-size: calc((152px * 2) + 14px);
+  4493	  max-inline-size: 100%;
+  4494	}
+  4495	
+  4496	.flow-browse-toggle svg {
+  4497	  flex: 0 0 auto;
+  4498	}
+  4499	
+  4500	.flow-browse-extra {
+  4501	  max-height: 0;
+  4502	  opacity: 0;
+  4503	  overflow: hidden;
+  4504	  pointer-events: none;
+  4505	  transform: translateY(-8px);
+  4506	  transition: max-height 320ms ease, opacity 220ms ease, transform 220ms ease,
+  4507	    margin-top 220ms ease;
+  4508	}
+  4509	
+  4510	.flow-browse-extra.is-open {
+  4511	  margin-top: 34px;
+  4512	  max-height: 5200px;
+  4513	  opacity: 1;
+  4514	  pointer-events: auto;
+  4515	  transform: translateY(0);
+  4516	}
+  4517	
+  4518	.architecture-map {
+  4519	  display: grid;
+  4520	  gap: 12px;
+  4521	  grid-template-columns: repeat(5, minmax(0, 1fr));
+  4522	}
+  4523	
+  4524	.architecture-node {
+  4525	  min-height: 178px;
+  4526	  padding: 18px;
+  4527	}
+  4528	
+  4529	.architecture-node span {
+  4530	  color: var(--green);
+  4531	  display: block;
+  4532	  font-size: 13px;
+  4533	  font-weight: 900;
+  4534	  margin-bottom: 18px;
+  4535	}
+  4536	
+  4537	.architecture-node strong {
+  4538	  color: var(--text);
+  4539	  display: block;
+  4540	  font-size: 16px;
+  4541	  line-height: 1.25;
+  4542	  margin-bottom: 12px;
+  4543	}
+  4544	
+  4545	.architecture-node p {
+  4546	  font-size: 13px;
+  4547	}
+  4548	
+  4549	.architecture-copy {
+  4550	  margin: 26px 0 0;
+  4551	}
+  4552	
+  4553	.readiness-copy {
+  4554	  margin-bottom: 24px;
+  4555	}
+  4556	
+  4557	.readiness-list,
+  4558	.proof-points {
+  4559	  display: flex;
+  4560	  flex-wrap: wrap;
+  4561	  gap: 10px;
+  4562	}
+  4563	
+  4564	.project-timeline {
+  4565	  display: grid;
+  4566	  gap: 14px;
+  4567	}
+  4568	
+  4569	.project-timeline-item {
+  4570	  display: grid;
+  4571	  gap: 22px;
+  4572	  grid-template-columns: 56px 1fr;
+  4573	  padding: 22px;
+  4574	}
+  4575	
+  4576	.project-timeline-item > span {
+  4577	  color: var(--green);
+  4578	  font-size: 18px;
+  4579	  font-weight: 900;
+  4580	}
+  4581	
+  4582	.project-timeline-item h3 {
+  4583	  font-size: 20px;
+  4584	  line-height: 1.2;
+  4585	  margin-bottom: 10px;
+  4586	}
+  4587	
+  4588	.stack-matrix {
+  4589	  display: grid;
+  4590	  gap: 14px;
+  4591	  grid-template-columns: repeat(5, minmax(0, 1fr));
+  4592	  margin-top: 34px;
+  4593	}
+  4594	
+  4595	.stack-group {
+  4596	  padding: 20px;
+  4597	}
+  4598	
+  4599	.stack-group h3 {
+  4600	  font-size: 11px;
+  4601	}
   4602	
-  4603	  .nav-top-distribution > .nav-top-link-primary {
-  4604	    grid-column: 1;
-  4605	    min-width: max-content;
-  4606	  }
+  4603	.stack-group div {
+  4604	  display: grid;
+  4605	  gap: 8px;
+  4606	}
   4607	
-  4608	  .nav-top-distribution > .nav-top-link-secondary {
-  4609	    grid-column: 2;
-  4610	    min-width: max-content;
-  4611	  }
-  4612	
-  4613	  .nav-top-distribution > .nav-separator-top-center {
-  4614	    left: 50%;
-  4615	    position: absolute;
-  4616	    transform: translateX(-50%);
-  4617	  }
+  4608	.stack-group span {
+  4609	  color: #d8ffe4;
+  4610	  font-size: 14px;
+  4611	  font-weight: 750;
+  4612	  line-height: 1.35;
+  4613	}
+  4614	
+  4615	.proof-points {
+  4616	  margin-top: 34px;
+  4617	}
   4618	
-  4619	  .nav-link-row-bottom {
-  4620	    align-items: center;
-  4621	    column-gap: var(--nav-link-bottom-separator-gap);
-  4622	    display: flex;
-  4623	    height: var(--nav-bar-height);
-  4624	    justify-content: space-evenly;
-  4625	    width: 100%;
-  4626	  }
-  4627	
-  4628	  .nav-separator.nav-separator-row-leading {
-  4629	    display: none;
-  4630	  }
-  4631	
-  4632	  .nav-bar nav a,
-  4633	  .nav-bar nav .nav-text {
-  4634	    flex: 1 1 0;
-  4635	    min-width: 0;
-  4636	    padding-left: 10px;
-  4637	    padding-right: 10px;
-  4638	    text-align: center;
-  4639	  }
-  4640	
-  4641	  .nav-bar nav .nav-link-row > a,
-  4642	  .nav-bar nav .nav-link-row > .nav-text {
-  4643	    flex: 0 0 auto;
-  4644	    justify-self: center;
-  4645	  }
+  4619	.closing-panel {
+  4620	  align-items: center;
+  4621	  background: linear-gradient(180deg, rgba(13, 31, 22, 0.88), rgba(5, 13, 9, 0.88));
+  4622	  border: 1px solid var(--line);
+  4623	  border-radius: 8px;
+  4624	  display: grid;
+  4625	  gap: 34px;
+  4626	  grid-template-columns: minmax(0, 1fr) auto;
+  4627	  padding: 34px;
+  4628	}
+  4629	
+  4630	.closing-panel h2 {
+  4631	  font-size: clamp(30px, 4vw, 50px);
+  4632	  margin-bottom: 18px;
+  4633	  max-width: 720px;
+  4634	}
+  4635	
+  4636	.closing-panel p {
+  4637	  max-width: 760px;
+  4638	}
+  4639	
+  4640	.closing-actions {
+  4641	  display: flex;
+  4642	  flex-direction: column;
+  4643	  gap: 12px;
+  4644	  min-width: 190px;
+  4645	}
   4646	
-  4647	  .nav-bar nav .nav-link-row-top > .nav-brand-link {
-  4648	    display: inline-flex;
-  4649	    gap: var(--nav-brand-gap);
-  4650	    grid-column: 1;
-  4651	    height: var(--nav-bar-height);
-  4652	    margin-block: calc(var(--nav-card-border-width) * -1);
-  4653	    margin-right: 0;
-  4654	    min-width: max-content;
-  4655	    padding: 0 calc(var(--nav-brand-gap) + var(--nav-brand-card-bleed)) 0
-  4656	      var(--nav-brand-card-bleed);
-  4657	    justify-self: start;
-  4658	  }
-  4659	
-  4660	  .nav-bar nav .nav-link-row-top > .nav-brand-link .nav-brand-mark {
-  4661	    align-self: center;
-  4662	    flex: none;
-  4663	    height: 34px;
-  4664	    justify-self: center;
-  4665	    max-height: 34px;
-  4666	    max-width: 34px;
-  4667	    min-height: 34px;
-  4668	    min-width: 34px;
-  4669	    width: 34px;
-  4670	  }
-  4671	
-  4672	  .nav-bar nav .nav-link-row-top > .nav-brand-link .nav-brand-name {
-  4673	    align-self: center;
-  4674	    display: inline-flex;
-  4675	    justify-content: center;
-  4676	    line-height: 1;
-  4677	    text-align: center;
-  4678	  }
-  4679	
-  4680	  .nav-bar nav .nav-link-row-bottom > a,
-  4681	  .nav-bar nav .nav-link-row-bottom > .nav-text {
-  4682	    padding-bottom: 3.75px;
-  4683	    padding-top: 0;
-  4684	  }
-  4685	
-  4686	  .project-nav nav {
-  4687	    grid-template-columns: repeat(3, minmax(0, 1fr));
-  4688	  }
-  4689	
-  4690	  .hero-grid,
-  4691	  .worklog-layout,
-  4692	  .project-hero-grid,
-  4693	  .project-section-grid,
-  4694	  .readiness-layout {
-  4695	    grid-template-columns: 1fr;
-  4696	  }
-  4697	
-  4698	  .overview-section-grid {
-  4699	    grid-template-areas:
-  4700	      "heading"
-  4701	      "screens"
-  4702	      "copy";
-  4703	    grid-template-columns: 1fr;
-  4704	  }
-  4705	
-  4706	  .av-showcase {
-  4707	    min-height: 610px;
-  4708	  }
-  4709	
-  4710	  .av-device-main {
-  4711	    left: 32%;
-  4712	    right: auto;
-  4713	  }
-  4714	
-  4715	  .av-device-browse {
-  4716	    right: 6%;
-  4717	  }
-  4718	
-  4719	  .av-device-confirm {
-  4720	    left: 4%;
+  4647	@media (max-width: 980px) {
+  4648	  .product-flow-nav {
+  4649	    --product-flow-nav-font-size: clamp(40px, 5.7vw, 56px);
+  4650	  }
+  4651	
+  4652	  .hero-copy {
+  4653	    --hero-proof-stack-width: min(606px, 100%);
+  4654	    --hero-action-stack-width: var(--hero-proof-stack-width);
+  4655	    --hero-text-stack-width: var(--hero-action-stack-width);
+  4656	  }
+  4657	
+  4658	  .nav-bar {
+  4659	    --nav-bar-inline-padding: 16px;
+  4660	    --nav-bar-height: clamp(36px, calc(23.61px + 3.87vw), 48px);
+  4661	    --nav-link-bottom-separator-gap: 8px;
+  4662	    --nav-link-separator-gap: 6px;
+  4663	    --nav-link-top-separator-gap: 6px;
+  4664	    align-items: center;
+  4665	    display: block;
+  4666	    height: var(--nav-bar-two-row-height);
+  4667	    row-gap: 7.5px;
+  4668	    padding: 0 var(--nav-bar-inline-padding);
+  4669	  }
+  4670	
+  4671	  .nav-bar nav {
+  4672	    display: grid;
+  4673	    grid-template-rows: repeat(2, var(--nav-bar-height));
+  4674	    height: 100%;
+  4675	    row-gap: var(--nav-bar-two-row-gap);
+  4676	    width: 100%;
+  4677	  }
+  4678	
+  4679	  .nav-link-row {
+  4680	    display: flex;
+  4681	    flex-wrap: nowrap;
+  4682	    gap: var(--nav-link-separator-gap);
+  4683	    justify-content: space-between;
+  4684	    min-width: 0;
+  4685	    width: 100%;
+  4686	  }
+  4687	
+  4688	  .nav-link-row-top {
+  4689	    align-items: center;
+  4690	    column-gap: var(--nav-brand-gap);
+  4691	    display: flex;
+  4692	    height: var(--nav-bar-height);
+  4693	    justify-content: flex-start;
+  4694	    width: 100%;
+  4695	  }
+  4696	
+  4697	  .nav-top-distribution {
+  4698	    align-items: center;
+  4699	    display: grid;
+  4700	    flex: 1 1 auto;
+  4701	    grid-template-columns: repeat(2, minmax(0, 1fr));
+  4702	    justify-items: center;
+  4703	    min-width: 0;
+  4704	    position: relative;
+  4705	  }
+  4706	
+  4707	  .nav-top-distribution > .nav-top-link-primary {
+  4708	    grid-column: 1;
+  4709	    min-width: max-content;
+  4710	  }
+  4711	
+  4712	  .nav-top-distribution > .nav-top-link-secondary {
+  4713	    grid-column: 2;
+  4714	    min-width: max-content;
+  4715	  }
+  4716	
+  4717	  .nav-top-distribution > .nav-separator-top-center {
+  4718	    left: 50%;
+  4719	    position: absolute;
+  4720	    transform: translateX(-50%);
   4721	  }
   4722	
-  4723	  .hero-visual {
-  4724	    min-height: auto;
-  4725	  }
-  4726	
-  4727	  .phone-stage {
-  4728	    height: 710px;
-  4729	    margin-top: 30px;
+  4723	  .nav-link-row-bottom {
+  4724	    align-items: center;
+  4725	    column-gap: var(--nav-link-bottom-separator-gap);
+  4726	    display: flex;
+  4727	    height: var(--nav-bar-height);
+  4728	    justify-content: space-evenly;
+  4729	    width: 100%;
   4730	  }
   4731	
-  4732	  .phone-shell-commerce {
-  4733	    left: 4%;
+  4732	  .nav-separator.nav-separator-row-leading {
+  4733	    display: none;
   4734	  }
   4735	
-  4736	  .phone-shell-finance {
-  4737	    left: 42%;
-  4738	  }
-  4739	
-  4740	  .tablet-shell {
-  4741	    left: 9%;
-  4742	    top: 374px;
-  4743	    width: var(--tablet-shell-fitted-width);
-  4744	  }
-  4745	
-  4746	  .case-grid,
-  4747	  .capability-grid,
-  4748	  .feature-grid,
-  4749	  .decision-grid,
-  4750	  .architecture-map {
-  4751	    grid-template-columns: repeat(2, minmax(0, 1fr));
-  4752	  }
-  4753	
-  4754	  .ownership-grid,
-  4755	  .stack-matrix {
-  4756	    grid-template-columns: repeat(3, minmax(0, 1fr));
-  4757	  }
-  4758	
-  4759	  .flow-layout {
-  4760	    --flow-chart-width: var(--flow-phone-width);
-  4761	    grid-template-columns: 1fr;
+  4736	  .nav-bar nav a,
+  4737	  .nav-bar nav .nav-text {
+  4738	    flex: 1 1 0;
+  4739	    min-width: 0;
+  4740	    padding-left: 10px;
+  4741	    padding-right: 10px;
+  4742	    text-align: center;
+  4743	  }
+  4744	
+  4745	  .nav-bar nav .nav-link-row > a,
+  4746	  .nav-bar nav .nav-link-row > .nav-text {
+  4747	    flex: 0 0 auto;
+  4748	    justify-self: center;
+  4749	  }
+  4750	
+  4751	  .nav-bar nav .nav-link-row-top > .nav-brand-link {
+  4752	    display: inline-flex;
+  4753	    gap: var(--nav-brand-gap);
+  4754	    grid-column: 1;
+  4755	    height: var(--nav-bar-height);
+  4756	    margin-block: calc(var(--nav-card-border-width) * -1);
+  4757	    margin-right: 0;
+  4758	    min-width: max-content;
+  4759	    padding: 0 calc(var(--nav-brand-gap) + var(--nav-brand-card-bleed)) 0
+  4760	      var(--nav-brand-card-bleed);
+  4761	    justify-self: start;
   4762	  }
   4763	
-  4764	  .flow-capture-group {
-  4765	    grid-template-columns: 1fr;
-  4766	  }
-  4767	}
-  4768	
-  4769	@media (max-width: 980px) and (orientation: portrait) {
-  4770	  .flow-chart-mockup {
-  4771	    justify-self: center;
-  4772	    margin-inline: auto;
-  4773	  }
-  4774	}
+  4764	  .nav-bar nav .nav-link-row-top > .nav-brand-link .nav-brand-mark {
+  4765	    align-self: center;
+  4766	    flex: none;
+  4767	    height: 34px;
+  4768	    justify-self: center;
+  4769	    max-height: 34px;
+  4770	    max-width: 34px;
+  4771	    min-height: 34px;
+  4772	    min-width: 34px;
+  4773	    width: 34px;
+  4774	  }
   4775	
-  4776	@media (max-width: 720px) {
-  4777	  .site-shell {
-  4778	    width: min(100% - 24px, 1180px);
-  4779	  }
-  4780	
-  4781	  .nav-bar {
-  4782	    --nav-bar-inline-padding: 14px;
-  4783	    --nav-link-bottom-separator-gap: 5px;
-  4784	    --nav-link-separator-gap: 4px;
-  4785	    --nav-link-top-separator-gap: 3px;
-  4786	    max-width: calc(100vw - 24px);
-  4787	    overflow: hidden;
-  4788	    padding: 0 var(--nav-bar-inline-padding);
-  4789	  }
-  4790	
-  4791	  .nav-bar nav {
-  4792	    max-width: 100%;
-  4793	  }
-  4794	
-  4795	  .project-nav nav {
-  4796	    width: 100%;
-  4797	  }
-  4798	
-  4799	  .project-page .site-shell {
-  4800	    max-width: calc(100vw - 24px);
-  4801	    width: calc(100vw - 24px);
-  4802	  }
-  4803	
-  4804	  .project-nav {
-  4805	    max-width: calc(100vw - 24px);
-  4806	    width: calc(100vw - 24px);
-  4807	  }
-  4808	
-  4809	  .project-nav nav a {
-  4810	    font-size: 11px;
-  4811	  }
-  4812	
-  4813	  .nav-bar nav a,
-  4814	  .nav-bar nav .nav-text {
-  4815	    font-size: 15px;
-  4816	    padding-left: 2px;
-  4817	    padding-right: 2px;
-  4818	  }
-  4819	
-  4820	  .nav-separator {
-  4821	    font-size: 15px;
-  4822	  }
-  4823	
-  4824	  .hero {
-  4825	    padding-top: 24px;
-  4826	  }
-  4827	
-  4828	  section.project-hero {
-  4829	    padding-top: 12px;
-  4830	  }
-  4831	
-  4832	  .project-nav {
-  4833	    margin-bottom: 48px;
+  4776	  .nav-bar nav .nav-link-row-top > .nav-brand-link .nav-brand-name {
+  4777	    align-self: center;
+  4778	    display: inline-flex;
+  4779	    justify-content: center;
+  4780	    line-height: 1;
+  4781	    text-align: center;
+  4782	  }
+  4783	
+  4784	  .nav-bar nav .nav-link-row-bottom > a,
+  4785	  .nav-bar nav .nav-link-row-bottom > .nav-text {
+  4786	    padding-bottom: 3.75px;
+  4787	    padding-top: 0;
+  4788	  }
+  4789	
+  4790	  .project-nav nav {
+  4791	    grid-template-columns: repeat(3, minmax(0, 1fr));
+  4792	  }
+  4793	
+  4794	  .hero-grid,
+  4795	  .worklog-layout,
+  4796	  .project-hero-grid,
+  4797	  .project-section-grid,
+  4798	  .readiness-layout {
+  4799	    grid-template-columns: 1fr;
+  4800	  }
+  4801	
+  4802	  .overview-section-grid {
+  4803	    grid-template-areas:
+  4804	      "heading"
+  4805	      "screens"
+  4806	      "copy";
+  4807	    grid-template-columns: 1fr;
+  4808	  }
+  4809	
+  4810	  .av-showcase {
+  4811	    min-height: 610px;
+  4812	  }
+  4813	
+  4814	  .av-device-main {
+  4815	    left: 32%;
+  4816	    right: auto;
+  4817	  }
+  4818	
+  4819	  .av-device-browse {
+  4820	    right: 6%;
+  4821	  }
+  4822	
+  4823	  .av-device-confirm {
+  4824	    left: 4%;
+  4825	  }
+  4826	
+  4827	  .hero-visual {
+  4828	    min-height: auto;
+  4829	  }
+  4830	
+  4831	  .phone-stage {
+  4832	    height: 710px;
+  4833	    margin-top: 30px;
   4834	  }
   4835	
-  4836	  .hero-grid {
-  4837	    gap: 30px;
-  4838	    padding-top: 16px;
-  4839	  }
-  4840	
-  4841	  h1 {
-  4842	    font-size: clamp(42px, 15vw, 64px);
-  4843	  }
-  4844	
-  4845	  .hero-visual {
-  4846	    min-height: auto;
-  4847	  }
-  4848	
-  4849	  .phone-stage {
-  4850	    height: 626px;
-  4851	    margin-top: 18px;
-  4852	  }
-  4853	
-  4854	  .profile-orbit {
-  4855	    right: 0;
+  4836	  .phone-shell-commerce {
+  4837	    left: 4%;
+  4838	  }
+  4839	
+  4840	  .phone-shell-finance {
+  4841	    left: 42%;
+  4842	  }
+  4843	
+  4844	  .tablet-shell {
+  4845	    left: 9%;
+  4846	    top: 374px;
+  4847	    width: var(--tablet-shell-fitted-width);
+  4848	  }
+  4849	
+  4850	  .case-grid,
+  4851	  .capability-grid,
+  4852	  .feature-grid,
+  4853	  .decision-grid,
+  4854	  .architecture-map {
+  4855	    grid-template-columns: repeat(2, minmax(0, 1fr));
   4856	  }
   4857	
-  4858	  .profile-photo {
-  4859	    height: 165px;
-  4860	    width: 165px;
+  4858	  .ownership-grid,
+  4859	  .stack-matrix {
+  4860	    grid-template-columns: repeat(3, minmax(0, 1fr));
   4861	  }
   4862	
-  4863	  .phone-shell {
-  4864	    height: 420px;
-  4865	    width: 206px;
+  4863	  .flow-layout {
+  4864	    --flow-chart-width: var(--flow-phone-width);
+  4865	    grid-template-columns: 1fr;
   4866	  }
   4867	
-  4868	  .phone-shell-commerce {
-  4869	    left: -2px;
-  4870	    top: 72px;
-  4871	  }
+  4868	  .flow-capture-group {
+  4869	    grid-template-columns: 1fr;
+  4870	  }
+  4871	}
   4872	
-  4873	  .phone-shell-finance {
-  4874	    left: auto;
-  4875	    right: -8px;
-  4876	    top: 124px;
+  4873	@media (max-width: 980px) and (orientation: portrait) {
+  4874	  .flow-chart-mockup {
+  4875	    justify-self: center;
+  4876	    margin-inline: auto;
   4877	  }
-  4878	
-  4879	  .tablet-shell {
-  4880	    --tablet-shell-fitted-width: 223px;
-  4881	    height: 150px;
-  4882	    left: 14px;
-  4883	    top: 342px;
-  4884	  }
-  4885	
-  4886	  .stats-strip-item {
-  4887	    min-height: 104px;
-  4888	    padding: 14px 8px;
-  4889	  }
-  4890	
-  4891	  .stack-section .capability-grid {
-  4892	    grid-template-columns: repeat(2, minmax(0, 1fr));
+  4878	}
+  4879	
+  4880	@media (max-width: 720px) {
+  4881	  .site-shell {
+  4882	    width: min(100% - 24px, 1180px);
+  4883	  }
+  4884	
+  4885	  .nav-bar {
+  4886	    --nav-bar-inline-padding: 14px;
+  4887	    --nav-link-bottom-separator-gap: 5px;
+  4888	    --nav-link-separator-gap: 4px;
+  4889	    --nav-link-top-separator-gap: 3px;
+  4890	    max-width: calc(100vw - 24px);
+  4891	    overflow: hidden;
+  4892	    padding: 0 var(--nav-bar-inline-padding);
   4893	  }
   4894	
-  4895	  .case-card {
-  4896	    min-height: auto;
+  4895	  .nav-bar nav {
+  4896	    max-width: 100%;
   4897	  }
   4898	
-  4899	  .contact-panel {
-  4900	    align-items: flex-start;
-  4901	    flex-direction: column;
-  4902	  }
-  4903	
-  4904	  .project-page section:not(.project-hero) {
-  4905	    padding: 58px 0;
+  4899	  .project-nav nav {
+  4900	    width: 100%;
+  4901	  }
+  4902	
+  4903	  .project-page .site-shell {
+  4904	    max-width: calc(100vw - 24px);
+  4905	    width: calc(100vw - 24px);
   4906	  }
   4907	
-  4908	  .overview-section-grid {
-  4909	    --overview-play-store-width: 100%;
-  4910	  }
-  4911	
-  4912	  .project-hero-grid {
-  4913	    gap: 34px;
-  4914	  }
-  4915	
-  4916	  .project-back-link {
-  4917	    margin-bottom: 24px;
-  4918	  }
-  4919	
-  4920	  .project-copy-panel {
-  4921	    border-left: 0;
-  4922	    padding-left: 0;
-  4923	  }
-  4924	
-  4925	  .project-hero-text,
-  4926	  .project-copy-panel p,
-  4927	  .architecture-copy,
-  4928	  .readiness-copy,
-  4929	  .closing-panel p {
-  4930	    font-size: 16px;
-  4931	  }
-  4932	
-  4933	  .project-subtitle,
-  4934	  .project-hero-text,
-  4935	  .project-meta-row {
-  4936	    max-width: 100%;
-  4937	    overflow-wrap: anywhere;
+  4908	  .project-nav {
+  4909	    max-width: calc(100vw - 24px);
+  4910	    width: calc(100vw - 24px);
+  4911	  }
+  4912	
+  4913	  .project-nav nav a {
+  4914	    font-size: 11px;
+  4915	  }
+  4916	
+  4917	  .nav-bar nav a,
+  4918	  .nav-bar nav .nav-text {
+  4919	    font-size: 15px;
+  4920	    padding-left: 2px;
+  4921	    padding-right: 2px;
+  4922	  }
+  4923	
+  4924	  .nav-separator {
+  4925	    font-size: 15px;
+  4926	  }
+  4927	
+  4928	  .hero {
+  4929	    padding-top: 24px;
+  4930	  }
+  4931	
+  4932	  section.project-hero {
+  4933	    padding-top: 12px;
+  4934	  }
+  4935	
+  4936	  .project-nav {
+  4937	    margin-bottom: 48px;
   4938	  }
   4939	
-  4940	  .project-meta-row span {
-  4941	    flex: 0 1 auto;
-  4942	    white-space: normal;
+  4940	  .hero-grid {
+  4941	    gap: 30px;
+  4942	    padding-top: 16px;
   4943	  }
   4944	
-  4945	  .av-showcase {
-  4946	    min-height: auto;
-  4947	    padding: 0 0 18px;
-  4948	  }
-  4949	
-  4950	  .av-showcase::before {
-  4951	    inset: 20px 0 84px;
-  4952	  }
-  4953	
-  4954	  .av-device {
-  4955	    position: relative;
+  4945	  h1 {
+  4946	    font-size: clamp(42px, 15vw, 64px);
+  4947	  }
+  4948	
+  4949	  .hero-visual {
+  4950	    min-height: auto;
+  4951	  }
+  4952	
+  4953	  .phone-stage {
+  4954	    height: 626px;
+  4955	    margin-top: 18px;
   4956	  }
   4957	
-  4958	  .av-device-main {
-  4959	    height: auto;
-  4960	    left: auto;
-  4961	    margin: 0 auto;
-  4962	    max-width: 292px;
-  4963	    right: auto;
-  4964	    top: auto;
-  4965	    transform: rotate(-4deg);
-  4966	    width: 72vw;
-  4967	  }
-  4968	
-  4969	  .av-device-browse,
-  4970	  .av-device-confirm {
-  4971	    display: none;
-  4972	  }
-  4973	
-  4974	  .av-showcase-proof {
-  4975	    margin: -18px auto 0;
-  4976	    max-width: min(292px, calc(100vw - 48px));
-  4977	    position: relative;
-  4978	    right: auto;
-  4979	  }
-  4980	
-  4981	  .av-showcase-proof-row {
-  4982	    align-items: stretch;
-  4983	    bottom: auto;
-  4984	    flex-direction: column;
-  4985	    margin: -18px auto 0;
-  4986	    max-width: min(292px, calc(100vw - 48px));
-  4987	    position: relative;
-  4988	    left: auto;
-  4989	    right: auto;
-  4990	  }
-  4991	
-  4992	  .av-showcase-proof-row .av-showcase-proof {
-  4993	    margin: 0;
-  4994	    max-width: none;
-  4995	    width: max-content;
-  4996	  }
-  4997	
-  4998	  .alla-vostra-case .av-showcase {
-  4999	    --av-mobile-device-width: min(62vw, 262px);
-  5000	    align-items: center;
-  5001	    display: flex;
-  5002	    justify-content: center;
-  5003	    min-height: clamp(560px, 126vw, 635px);
-  5004	    overflow: visible;
-  5005	    padding: 8px 0 18px;
+  4958	  .profile-orbit {
+  4959	    right: 0;
+  4960	  }
+  4961	
+  4962	  .profile-photo {
+  4963	    height: 165px;
+  4964	    width: 165px;
+  4965	  }
+  4966	
+  4967	  .phone-shell {
+  4968	    height: 420px;
+  4969	    width: 206px;
+  4970	  }
+  4971	
+  4972	  .phone-shell-commerce {
+  4973	    left: -2px;
+  4974	    top: 72px;
+  4975	  }
+  4976	
+  4977	  .phone-shell-finance {
+  4978	    left: auto;
+  4979	    right: -8px;
+  4980	    top: 124px;
+  4981	  }
+  4982	
+  4983	  .tablet-shell {
+  4984	    --tablet-shell-fitted-width: 223px;
+  4985	    height: 150px;
+  4986	    left: 14px;
+  4987	    top: 342px;
+  4988	  }
+  4989	
+  4990	  .stats-strip-item {
+  4991	    min-height: 104px;
+  4992	    padding: 14px 8px;
+  4993	  }
+  4994	
+  4995	  .stack-section .capability-grid {
+  4996	    grid-template-columns: repeat(2, minmax(0, 1fr));
+  4997	  }
+  4998	
+  4999	  .case-card {
+  5000	    min-height: auto;
+  5001	  }
+  5002	
+  5003	  .contact-panel {
+  5004	    align-items: flex-start;
+  5005	    flex-direction: column;
   5006	  }
   5007	
-  5008	  .alla-vostra-case .av-showcase::before {
-  5009	    inset: 0 0 38px;
+  5008	  .project-page section:not(.project-hero) {
+  5009	    padding: 58px 0;
   5010	  }
   5011	
-  5012	  .alla-vostra-case .av-device-main {
-  5013	    margin: 0;
-  5014	    max-width: 262px;
-  5015	    transform-origin: center top;
-  5016	    width: var(--av-mobile-device-width);
-  5017	  }
-  5018	
-  5019	  .alla-vostra-case .av-showcase-proof-row {
-  5020	    --av-platform-list-row-gap: var(--av-proof-row-gap);
-  5021	    --av-proof-column-gap: clamp(4px, calc(25vw - 86px), 14px);
-  5022	    --av-proof-content-margin-top: 8px;
-  5023	    --av-proof-row-gap: 3px;
-  5024	    --av-proof-top-row-height: 22.7px;
-  5025	    --av-proof-bottom-row-height: 31px;
-  5026	    --av-skill-item-gap: clamp(3px, 1vw, 5px);
-  5027	    --av-skill-grid-row-gap: var(--av-proof-row-gap);
-  5028	    --av-skill-grid-y-offset: 0px;
-  5029	
-  5030	    align-items: stretch;
-  5031	    bottom: clamp(2px, 1vw, 8px);
-  5032	    display: grid;
-  5033	    gap: clamp(6px, 2.5vw, 10px);
-  5034	    grid-auto-rows: 1fr;
-  5035	    grid-template-columns: repeat(2, minmax(0, 1fr));
-  5036	    justify-content: space-between;
-  5037	    left: clamp(4px, 2.4vw, 20px);
-  5038	    margin: 0;
-  5039	    max-width: none;
-  5040	    position: absolute;
-  5041	    right: clamp(4px, 2.4vw, 20px);
-  5042	    top: auto;
-  5043	    width: auto;
-  5044	  }
-  5045	
-  5046	  .alla-vostra-case .av-showcase-proof-row .av-showcase-proof {
-  5047	    align-self: stretch;
-  5048	    display: flex;
-  5049	    flex-direction: column;
-  5050	    max-width: none;
-  5051	    padding: 10px clamp(8px, 2.5vw, 12px);
-  5052	    width: auto;
-  5053	  }
-  5054	
-  5055	  .alla-vostra-case .av-showcase-proof-row .av-showcase-proof:first-child {
-  5056	    justify-self: stretch;
-  5057	  }
-  5058	
-  5059	  .alla-vostra-case .av-showcase-proof-row .av-showcase-proof:last-child {
-  5060	    justify-self: stretch;
-  5061	  }
-  5062	
-  5063	  .alla-vostra-case .av-showcase-proof strong {
-  5064	    font-size: clamp(20px, 6vw, 30px);
-  5065	  }
-  5066	
-  5067	  .alla-vostra-case .av-showcase-proof span {
-  5068	    font-size: clamp(12px, 3.2vw, 15px);
-  5069	    line-height: 1.32;
-  5070	  }
-  5071	
-  5072	  .alla-vostra-case .av-showcase-proof .av-showcase-skill-grid,
-  5073	  .alla-vostra-case .av-showcase-proof .av-showcase-platform-list {
-  5074	    grid-template-rows: var(--av-proof-top-row-height) var(--av-proof-bottom-row-height);
-  5075	  }
-  5076	
-  5077	  .alla-vostra-case .stats-strip {
-  5078	    border-top: 1px solid var(--line);
-  5079	    gap: 1px;
-  5080	    grid-template-columns: repeat(4, minmax(0, 1fr));
-  5081	    margin: 26px 0 0;
-  5082	    width: 100%;
+  5012	  .overview-section-grid {
+  5013	    --overview-play-store-width: 100%;
+  5014	  }
+  5015	
+  5016	  .project-hero-grid {
+  5017	    gap: 34px;
+  5018	  }
+  5019	
+  5020	  .project-back-link {
+  5021	    margin-bottom: 24px;
+  5022	  }
+  5023	
+  5024	  .project-copy-panel {
+  5025	    border-left: 0;
+  5026	    padding-left: 0;
+  5027	  }
+  5028	
+  5029	  .project-hero-text,
+  5030	  .project-copy-panel p,
+  5031	  .architecture-copy,
+  5032	  .readiness-copy,
+  5033	  .closing-panel p {
+  5034	    font-size: 16px;
+  5035	  }
+  5036	
+  5037	  .project-subtitle,
+  5038	  .project-hero-text,
+  5039	  .project-meta-row {
+  5040	    max-width: 100%;
+  5041	    overflow-wrap: anywhere;
+  5042	  }
+  5043	
+  5044	  .project-meta-row span {
+  5045	    flex: 0 1 auto;
+  5046	    white-space: normal;
+  5047	  }
+  5048	
+  5049	  .av-showcase {
+  5050	    min-height: auto;
+  5051	    padding: 0 0 18px;
+  5052	  }
+  5053	
+  5054	  .av-showcase::before {
+  5055	    inset: 20px 0 84px;
+  5056	  }
+  5057	
+  5058	  .av-device {
+  5059	    position: relative;
+  5060	  }
+  5061	
+  5062	  .av-device-main {
+  5063	    height: auto;
+  5064	    left: auto;
+  5065	    margin: 0 auto;
+  5066	    max-width: 292px;
+  5067	    right: auto;
+  5068	    top: auto;
+  5069	    transform: rotate(-4deg);
+  5070	    width: 72vw;
+  5071	  }
+  5072	
+  5073	  .av-device-browse,
+  5074	  .av-device-confirm {
+  5075	    display: none;
+  5076	  }
+  5077	
+  5078	  .av-showcase-proof {
+  5079	    margin: -18px auto 0;
+  5080	    max-width: min(292px, calc(100vw - 48px));
+  5081	    position: relative;
+  5082	    right: auto;
   5083	  }
   5084	
-  5085	  .alla-vostra-case .stats-strip-item {
-  5086	    background: rgba(255, 255, 255, 0.025);
-  5087	    min-height: 178px;
-  5088	    padding: 14px 8px;
-  5089	  }
-  5090	
-  5091	  .alla-vostra-case .stats-strip strong {
-  5092	    font-size: clamp(30px, 8vw, 44px);
-  5093	  }
-  5094	
-  5095	  .alla-vostra-case .stats-strip-label,
-  5096	  .alla-vostra-case .stats-strip-measure {
-  5097	    font-size: clamp(12px, 3.2vw, 16px);
-  5098	    line-height: 1.16;
-  5099	  }
-  5100	
-  5101	  .project-card-grid,
-  5102	  .ownership-grid,
-  5103	  .feature-grid,
-  5104	  .decision-grid,
-  5105	  .architecture-map,
-  5106	  .stack-matrix {
-  5107	    grid-template-columns: 1fr;
-  5108	  }
-  5109	
-  5110	  .flow-segments {
-  5111	    grid-template-columns: repeat(2, minmax(0, 1fr));
-  5112	  }
-  5113	
-  5114	  .flow-support {
-  5115	    grid-template-columns: 1fr;
-  5116	  }
-  5117	
-  5118	  .flow-checkout-note {
-  5119	    min-height: auto;
-  5120	  }
-  5121	
-  5122	  .flow-section-intro > p {
-  5123	    border-left: 0;
-  5124	    padding-left: 0;
-  5125	  }
-  5126	
-  5127	  .product-flow-nav {
-  5128	    --product-flow-nav-font-size: clamp(15px, 5vw, 28px);
-  5129	    --product-flow-nav-height: clamp(58px, 14vw, 72px);
-  5130	
-  5131	    grid-template-columns: repeat(2, minmax(0, 1fr));
-  5132	  }
+  5085	  .av-showcase-proof-row {
+  5086	    align-items: stretch;
+  5087	    bottom: auto;
+  5088	    flex-direction: column;
+  5089	    margin: -18px auto 0;
+  5090	    max-width: min(292px, calc(100vw - 48px));
+  5091	    position: relative;
+  5092	    left: auto;
+  5093	    right: auto;
+  5094	  }
+  5095	
+  5096	  .av-showcase-proof-row .av-showcase-proof {
+  5097	    margin: 0;
+  5098	    max-width: none;
+  5099	    width: max-content;
+  5100	  }
+  5101	
+  5102	  .alla-vostra-case .av-showcase {
+  5103	    --av-mobile-device-width: min(62vw, 262px);
+  5104	    align-items: center;
+  5105	    display: flex;
+  5106	    justify-content: center;
+  5107	    min-height: clamp(560px, 126vw, 635px);
+  5108	    overflow: visible;
+  5109	    padding: 8px 0 18px;
+  5110	  }
+  5111	
+  5112	  .alla-vostra-case .av-showcase::before {
+  5113	    inset: 0 0 38px;
+  5114	  }
+  5115	
+  5116	  .alla-vostra-case .av-device-main {
+  5117	    margin: 0;
+  5118	    max-width: 262px;
+  5119	    transform-origin: center top;
+  5120	    width: var(--av-mobile-device-width);
+  5121	  }
+  5122	
+  5123	  .alla-vostra-case .av-showcase-proof-row {
+  5124	    --av-platform-list-row-gap: var(--av-proof-row-gap);
+  5125	    --av-proof-column-gap: clamp(4px, calc(25vw - 86px), 14px);
+  5126	    --av-proof-content-margin-top: 8px;
+  5127	    --av-proof-row-gap: 3px;
+  5128	    --av-proof-top-row-height: 22.7px;
+  5129	    --av-proof-bottom-row-height: 31px;
+  5130	    --av-skill-item-gap: clamp(3px, 1vw, 5px);
+  5131	    --av-skill-grid-row-gap: var(--av-proof-row-gap);
+  5132	    --av-skill-grid-y-offset: 0px;
   5133	
-  5134	  .product-flow-nav .button {
-  5135	    padding: 8px clamp(6px, 2vw, 12px) 10px;
-  5136	  }
-  5137	
-  5138	  .product-flow-nav .button:first-child {
-  5139	    border-radius: 8px 0 0 8px;
-  5140	  }
-  5141	
-  5142	  .product-flow-nav .button:last-child {
-  5143	    border-radius: 0 8px 8px 0;
-  5144	  }
-  5145	
-  5146	  .flow-capture-groups {
-  5147	    gap: 40px;
-  5148	    margin-top: 44px;
-  5149	  }
-  5150	
-  5151	  .flow-capture-group {
-  5152	    padding-top: 24px;
-  5153	  }
-  5154	
-  5155	  .flow-capture-grid {
-  5156	    gap: 28px;
-  5157	    grid-template-columns: 1fr;
-  5158	  }
-  5159	
-  5160	  .flow-screen-compact {
-  5161	    width: min(42vw, 146px);
-  5162	  }
-  5163	
-  5164	  .flow-screen-stack-captures {
-  5165	    gap: 12px;
-  5166	  }
-  5167	
-  5168	  .alla-vostra-case .flow-browse-toggle {
-  5169	    inline-size: calc((min(42vw, 146px) * 2) + 12px);
-  5170	  }
-  5171	
-  5172	  .flow-original-art-grid {
-  5173	    gap: 12px;
-  5174	    grid-template-columns: repeat(2, minmax(0, min(42vw, 146px)));
-  5175	  }
-  5176	
-  5177	  .flow-original-photo-grid {
-  5178	    gap: 12px;
-  5179	    grid-template-columns: repeat(2, minmax(0, min(42vw, 146px)));
-  5180	  }
-  5181	
-  5182	  .flow-hero-composition-grid {
-  5183	    gap: 12px;
-  5184	    grid-template-columns: minmax(0, calc(min(84vw, 292px) + 12px));
-  5185	  }
-  5186	
-  5187	  .flow-hero-composition-screen {
-  5188	    width: 100%;
-  5189	  }
-  5190	
-  5191	  .flow-sticky-icon-grid {
-  5192	    gap: 12px;
-  5193	    grid-template-columns: repeat(2, minmax(0, min(42vw, 146px)));
-  5194	  }
-  5195	
-  5196	  .flow-action-asset-grid {
-  5197	    gap: 12px;
-  5198	    grid-template-columns: repeat(2, minmax(0, min(42vw, 146px)));
-  5199	  }
-  5200	
-  5201	  .flow-screen:not(.flow-screen-main) .flow-image-frame {
-  5202	    margin: 0 auto;
-  5203	    max-width: 230px;
-  5204	  }
-  5205	
-  5206	  .flow-screen.flow-hero-composition-screen .flow-image-frame {
-  5207	    max-width: none;
-  5208	  }
-  5209	
-  5210	  .closing-panel {
+  5134	    align-items: stretch;
+  5135	    bottom: clamp(2px, 1vw, 8px);
+  5136	    display: grid;
+  5137	    gap: clamp(6px, 2.5vw, 10px);
+  5138	    grid-auto-rows: 1fr;
+  5139	    grid-template-columns: repeat(2, minmax(0, 1fr));
+  5140	    justify-content: space-between;
+  5141	    left: clamp(4px, 2.4vw, 20px);
+  5142	    margin: 0;
+  5143	    max-width: none;
+  5144	    position: absolute;
+  5145	    right: clamp(4px, 2.4vw, 20px);
+  5146	    top: auto;
+  5147	    width: auto;
+  5148	  }
+  5149	
+  5150	  .alla-vostra-case .av-showcase-proof-row .av-showcase-proof {
+  5151	    align-self: stretch;
+  5152	    display: flex;
+  5153	    flex-direction: column;
+  5154	    max-width: none;
+  5155	    padding: 10px clamp(8px, 2.5vw, 12px);
+  5156	    width: auto;
+  5157	  }
+  5158	
+  5159	  .alla-vostra-case .av-showcase-proof-row .av-showcase-proof:first-child {
+  5160	    justify-self: stretch;
+  5161	  }
+  5162	
+  5163	  .alla-vostra-case .av-showcase-proof-row .av-showcase-proof:last-child {
+  5164	    justify-self: stretch;
+  5165	  }
+  5166	
+  5167	  .alla-vostra-case .av-showcase-proof strong {
+  5168	    font-size: clamp(20px, 6vw, 30px);
+  5169	  }
+  5170	
+  5171	  .alla-vostra-case .av-showcase-proof span {
+  5172	    font-size: clamp(12px, 3.2vw, 15px);
+  5173	    line-height: 1.32;
+  5174	  }
+  5175	
+  5176	  .alla-vostra-case .av-showcase-proof .av-showcase-skill-grid,
+  5177	  .alla-vostra-case .av-showcase-proof .av-showcase-platform-list {
+  5178	    grid-template-rows: var(--av-proof-top-row-height) var(--av-proof-bottom-row-height);
+  5179	  }
+  5180	
+  5181	  .alla-vostra-case .stats-strip {
+  5182	    border-top: 1px solid var(--line);
+  5183	    gap: 1px;
+  5184	    grid-template-columns: repeat(4, minmax(0, 1fr));
+  5185	    margin: 26px 0 0;
+  5186	    width: 100%;
+  5187	  }
+  5188	
+  5189	  .alla-vostra-case .stats-strip-item {
+  5190	    background: rgba(255, 255, 255, 0.025);
+  5191	    min-height: 178px;
+  5192	    padding: 14px 8px;
+  5193	  }
+  5194	
+  5195	  .alla-vostra-case .stats-strip strong {
+  5196	    font-size: clamp(30px, 8vw, 44px);
+  5197	  }
+  5198	
+  5199	  .alla-vostra-case .stats-strip-label,
+  5200	  .alla-vostra-case .stats-strip-measure {
+  5201	    font-size: clamp(12px, 3.2vw, 16px);
+  5202	    line-height: 1.16;
+  5203	  }
+  5204	
+  5205	  .project-card-grid,
+  5206	  .ownership-grid,
+  5207	  .feature-grid,
+  5208	  .decision-grid,
+  5209	  .architecture-map,
+  5210	  .stack-matrix {
   5211	    grid-template-columns: 1fr;
-  5212	    padding: 28px;
-  5213	  }
-  5214	
-  5215	  .closing-actions {
-  5216	    width: 100%;
-  5217	  }
-  5218	}
-  5219	
-  5220	@media (max-width: 720px) {
-  5221	  .project-page.alla-vostra-case .stats-strip-item {
-  5222	    min-height: 178px;
-  5223	  }
-  5224	}
+  5212	  }
+  5213	
+  5214	  .flow-segments {
+  5215	    grid-template-columns: repeat(2, minmax(0, 1fr));
+  5216	  }
+  5217	
+  5218	  .flow-support {
+  5219	    grid-template-columns: 1fr;
+  5220	  }
+  5221	
+  5222	  .flow-checkout-note {
+  5223	    min-height: auto;
+  5224	  }
   5225	
-  5226	@media (max-width: 630px) {
-  5227	  .case-grid {
-  5228	    grid-template-columns: 1fr;
+  5226	  .flow-section-intro > p {
+  5227	    border-left: 0;
+  5228	    padding-left: 0;
   5229	  }
   5230	
-  5231	  .case-grid-featured .case-card-project-title-name,
-  5232	  .case-grid-featured .case-card-title-underline {
-  5233	    overflow-wrap: normal;
-  5234	    white-space: nowrap;
-  5235	  }
-  5236	
-  5237	  .case-grid > .uiux-principle-card-expanded {
-  5238	    grid-column: auto;
-  5239	  }
-  5240	
-  5241	  .case-grid > .uiux-principle-card-expanded .uiux-principle-long-copy {
-  5242	    column-count: auto;
-  5243	    display: grid;
+  5231	  .product-flow-nav {
+  5232	    --product-flow-nav-font-size: clamp(15px, 5vw, 28px);
+  5233	    --product-flow-nav-height: clamp(58px, 14vw, 72px);
+  5234	
+  5235	    grid-template-columns: repeat(2, minmax(0, 1fr));
+  5236	  }
+  5237	
+  5238	  .product-flow-nav .button {
+  5239	    padding: 8px clamp(6px, 2vw, 12px) 10px;
+  5240	  }
+  5241	
+  5242	  .product-flow-nav .button:first-child {
+  5243	    border-radius: 8px 0 0 8px;
   5244	  }
-  5245	}
-  5246	
-  5247	@media (max-width: 430px) {
-  5248	  .nav-bar {
-  5249	    --nav-brand-gap: 8px;
-  5250	    --nav-link-bottom-separator-gap: 3px;
-  5251	    --nav-link-separator-gap: 2px;
-  5252	    --nav-link-top-separator-gap: 2px;
+  5245	
+  5246	  .product-flow-nav .button:last-child {
+  5247	    border-radius: 0 8px 8px 0;
+  5248	  }
+  5249	
+  5250	  .flow-capture-groups {
+  5251	    gap: 40px;
+  5252	    margin-top: 44px;
   5253	  }
   5254	
-  5255	  .nav-brand-name {
-  5256	    font-size: 22px;
+  5255	  .flow-capture-group {
+  5256	    padding-top: 24px;
   5257	  }
   5258	
-  5259	  .nav-bar nav a,
-  5260	  .nav-bar nav .nav-text,
-  5261	  .nav-separator {
-  5262	    font-size: 14px;
-  5263	  }
-  5264	}
-  5265	
-  5266	@media (max-width: 380px) {
-  5267	  .nav-bar {
-  5268	    --nav-bar-inline-padding: 12px;
-  5269	    --nav-link-bottom-separator-gap: 2px;
-  5270	    --nav-link-separator-gap: 1px;
-  5271	    --nav-link-top-separator-gap: 1px;
-  5272	  }
-  5273	
-  5274	  .nav-bar nav a,
-  5275	  .nav-bar nav .nav-text {
-  5276	    font-size: 13.5px;
-  5277	    padding-left: 0;
-  5278	    padding-right: 0;
+  5259	  .flow-capture-grid {
+  5260	    gap: 28px;
+  5261	    grid-template-columns: 1fr;
+  5262	  }
+  5263	
+  5264	  .flow-screen-compact {
+  5265	    width: min(42vw, 146px);
+  5266	  }
+  5267	
+  5268	  .flow-screen-stack-captures {
+  5269	    gap: 12px;
+  5270	  }
+  5271	
+  5272	  .alla-vostra-case .flow-browse-toggle {
+  5273	    inline-size: calc((min(42vw, 146px) * 2) + 12px);
+  5274	  }
+  5275	
+  5276	  .flow-original-art-grid {
+  5277	    gap: 12px;
+  5278	    grid-template-columns: repeat(2, minmax(0, min(42vw, 146px)));
   5279	  }
   5280	
-  5281	  .nav-separator {
-  5282	    font-size: 13.5px;
-  5283	  }
-  5284	}
+  5281	  .flow-original-photo-grid {
+  5282	    gap: 12px;
+  5283	    grid-template-columns: repeat(2, minmax(0, min(42vw, 146px)));
+  5284	  }
   5285	
-  5286	@media (max-width: 340px) {
-  5287	  .alla-vostra-case .av-showcase-proof-row {
-  5288	    --av-proof-column-gap: 3px;
-  5289	    --av-skill-item-gap: 2.5px;
+  5286	  .flow-hero-composition-grid {
+  5287	    gap: 12px;
+  5288	    grid-template-columns: minmax(0, calc(min(84vw, 292px) + 12px));
+  5289	  }
   5290	
-  5291	    gap: 6px;
-  5292	    left: 4px;
-  5293	    right: 4px;
-  5294	  }
-  5295	
-  5296	  .alla-vostra-case .av-showcase-proof-row .av-showcase-proof {
-  5297	    padding-inline: 6px;
+  5291	  .flow-hero-composition-screen {
+  5292	    width: 100%;
+  5293	  }
+  5294	
+  5295	  .flow-sticky-icon-grid {
+  5296	    gap: 12px;
+  5297	    grid-template-columns: repeat(2, minmax(0, min(42vw, 146px)));
   5298	  }
   5299	
-  5300	  .nav-bar nav a,
-  5301	  .nav-bar nav .nav-text {
-  5302	    font-size: 13px;
+  5300	  .flow-action-asset-grid {
+  5301	    gap: 12px;
+  5302	    grid-template-columns: repeat(2, minmax(0, min(42vw, 146px)));
   5303	  }
   5304	
-  5305	  .nav-separator {
-  5306	    font-size: 13px;
-  5307	  }
-  5308	}
+  5305	  .flow-screen:not(.flow-screen-main) .flow-image-frame {
+  5306	    margin: 0 auto;
+  5307	    max-width: 230px;
+  5308	  }
+  5309	
+  5310	  .flow-screen.flow-hero-composition-screen .flow-image-frame {
+  5311	    max-width: none;
+  5312	  }
+  5313	
+  5314	  .closing-panel {
+  5315	    grid-template-columns: 1fr;
+  5316	    padding: 28px;
+  5317	  }
+  5318	
+  5319	  .closing-actions {
+  5320	    width: 100%;
+  5321	  }
+  5322	}
+  5323	
+  5324	@media (max-width: 720px) {
+  5325	  .project-page.alla-vostra-case .stats-strip-item {
+  5326	    min-height: 178px;
+  5327	  }
+  5328	}
+  5329	
+  5330	@media (max-width: 630px) {
+  5331	  .case-grid {
+  5332	    grid-template-columns: 1fr;
+  5333	  }
+  5334	
+  5335	  .case-grid-featured .case-card-project-title-name,
+  5336	  .case-grid-featured .case-card-title-underline {
+  5337	    overflow-wrap: normal;
+  5338	    white-space: nowrap;
+  5339	  }
+  5340	
+  5341	  .case-grid > .uiux-principle-card-expanded {
+  5342	    grid-column: auto;
+  5343	  }
+  5344	
+  5345	  .case-grid > .uiux-principle-card-expanded .uiux-principle-long-copy {
+  5346	    column-count: auto;
+  5347	    display: grid;
+  5348	  }
+  5349	}
+  5350	
+  5351	@media (max-width: 430px) {
+  5352	  .nav-bar {
+  5353	    --nav-brand-gap: 8px;
+  5354	    --nav-link-bottom-separator-gap: 3px;
+  5355	    --nav-link-separator-gap: 2px;
+  5356	    --nav-link-top-separator-gap: 2px;
+  5357	  }
+  5358	
+  5359	  .nav-brand-name {
+  5360	    font-size: 22px;
+  5361	  }
+  5362	
+  5363	  .nav-bar nav a,
+  5364	  .nav-bar nav .nav-text,
+  5365	  .nav-separator {
+  5366	    font-size: 14px;
+  5367	  }
+  5368	}
+  5369	
+  5370	@media (max-width: 380px) {
+  5371	  .nav-bar {
+  5372	    --nav-bar-inline-padding: 12px;
+  5373	    --nav-link-bottom-separator-gap: 2px;
+  5374	    --nav-link-separator-gap: 1px;
+  5375	    --nav-link-top-separator-gap: 1px;
+  5376	  }
+  5377	
+  5378	  .nav-bar nav a,
+  5379	  .nav-bar nav .nav-text {
+  5380	    font-size: 13.5px;
+  5381	    padding-left: 0;
+  5382	    padding-right: 0;
+  5383	  }
+  5384	
+  5385	  .nav-separator {
+  5386	    font-size: 13.5px;
+  5387	  }
+  5388	}
+  5389	
+  5390	@media (max-width: 340px) {
+  5391	  .alla-vostra-case .av-showcase-proof-row {
+  5392	    --av-proof-column-gap: 3px;
+  5393	    --av-skill-item-gap: 2.5px;
+  5394	
+  5395	    gap: 6px;
+  5396	    left: 4px;
+  5397	    right: 4px;
+  5398	  }
+  5399	
+  5400	  .alla-vostra-case .av-showcase-proof-row .av-showcase-proof {
+  5401	    padding-inline: 6px;
+  5402	  }
+  5403	
+  5404	  .nav-bar nav a,
+  5405	  .nav-bar nav .nav-text {
+  5406	    font-size: 13px;
+  5407	  }
+  5408	
+  5409	  .nav-separator {
+  5410	    font-size: 13px;
+  5411	  }
+  5412	}
 
 
 ============================================================
@@ -22681,10 +22790,13 @@ main
 
 Status:
 ## main...origin/main
+ M next-env.d.ts
  M portfolio_PROJECT_SNAPSHOT.txt
+?? portfolio_worklog_august12_part2.pdf
 
 Recent commits:
-da37f3c (HEAD -> main, origin/main) Generated the latest customary session pdf worklog for the relevant project, dated August 12 (Part 1), 2026.
+529c8b2 (HEAD -> main, origin/main) Added Alla Vostra visual hierarchy tutorial and focus variants
+da37f3c Generated the latest customary session pdf worklog for the relevant project, dated August 12 (Part 1), 2026.
 e219cef Refined Alla Vostra visual hierarchy walkthrough
 ac6d438 Generated the latest customary session pdf worklog for the relevant project, dated August 11, 2026.
 06c8cb4 Refined Alla Vostra visual hierarchy stacks - Added Step 1b, Step 1c, and Step 1d to the Visual Hierarchy sequence. - Created transparent, no-frame focal screenshots for the new pre-scrolling stack variants. - Cropped Step 1d into a true square cheeseboard-only asset with the photo area removed. - Reused cheeseboard_products.png for the cheeseboard source asset. - Scaled Step 1 to match the larger stack width used by Fonts and Original Hero. - Limited the Visual Hierarchy grid to two stacks per row. - Evenly positioned Step 1b, Step 1c, and Step 1d alongside the Step 1 device frame. - Matched visual hierarchy step label sizing and doubled the PRE-SCROLLING / ON-SCROLLING headers.
@@ -22693,7 +22805,6 @@ f8be376 Generated August 10 Part 2 Portfolio worklog
 00085d2 Generated the latest customary session pdf worklog for the relevant project, dated August 10 (Part 1), 2026.
 c496a04 Refined portfolio hero and case studies
 6a05703 generated pdf session worklog for the relevant project on August 6, 2026.
-d3bda6a Refined Alla Vostra case study previews, controls, and overview assets
 
 Remotes:
 origin	https://github.com/Prahlin/portfolio.git (fetch)
@@ -22708,6 +22819,7 @@ public/images/about_us_screen_large.png | 2122423 bytes | modified 2026-07-16 18
 public/images/about_us_screen_small.png | 1192853 bytes | modified 2026-07-16 18:32:33
 public/images/address_overlay_large.png | 209339 bytes | modified 2026-07-15 19:25:04
 public/images/address_overlay_small.png | 102975 bytes | modified 2026-07-15 19:25:04
+public/images/alla-vostra-empty-framed-no-island.png | 435949 bytes | modified 2026-08-12 23:51:31
 public/images/alla-vostra-hero-confirmed-framed-space-gray.png | 756405 bytes | modified 2026-08-01 18:01:46
 public/images/alla-vostra-hero-products-framed-space-gray.png | 2013506 bytes | modified 2026-08-01 18:01:46
 public/images/alla-vostra-hero-startup-focal-cheeseboard-only-no-frame.png | 367546 bytes | modified 2026-08-11 23:32:39
@@ -22826,7 +22938,10 @@ public/images/payment_overlay_small.png | 106712 bytes | modified 2026-07-15 19:
 public/images/portfolio-website-landscape-screenshot.png | 2284773 bytes | modified 2026-07-22 22:36:49
 public/images/products_overlay_buon_natale_large.png | 888504 bytes | modified 2026-07-16 18:04:05
 public/images/products_overlay_buon_natale_small.png | 300132 bytes | modified 2026-07-16 18:12:11
+public/images/products_overlay_piccola_framed_no_island.png | 1358331 bytes | modified 2026-08-12 23:44:54
+public/images/products_overlay_piccola_isolated_large.png | 1008125 bytes | modified 2026-08-12 23:14:04
 public/images/products_overlay_piccola_large.png | 883015 bytes | modified 2026-07-15 19:34:08
+public/images/products_overlay_piccola_overlay_only_large.png | 970264 bytes | modified 2026-08-12 23:14:04
 public/images/products_overlay_piccola_small.png | 294819 bytes | modified 2026-07-16 18:14:18
 public/images/products_overlay_sei_perfetto_large.png | 827085 bytes | modified 2026-07-16 18:03:32
 public/images/products_overlay_sei_perfetto_small.png | 281229 bytes | modified 2026-07-16 18:11:53
@@ -22851,6 +22966,7 @@ portfolio_worklog_august10_part1.pdf | 30442 bytes | modified 2026-08-10 19:35:2
 portfolio_worklog_august10_part2.pdf | 34914 bytes | modified 2026-08-11 00:52:06
 portfolio_worklog_august11.pdf | 40524 bytes | modified 2026-08-11 23:55:47
 portfolio_worklog_august12_part1.pdf | 30476 bytes | modified 2026-08-12 22:27:26
+portfolio_worklog_august12_part2.pdf | 40229 bytes | modified 2026-08-13 00:07:13
 portfolio_worklog_august1_part1.pdf | 36347 bytes | modified 2026-08-01 14:29:45
 portfolio_worklog_august1_part2.pdf | 30905 bytes | modified 2026-08-01 19:16:37
 portfolio_worklog_august1_part3.pdf | 28004 bytes | modified 2026-08-01 20:38:07

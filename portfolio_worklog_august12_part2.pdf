@@ -1,0 +1,399 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [6 0 R 8 0 R 10 0 R 12 0 R 14 0 R 16 0 R] /Count 6 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+5 0 obj
+<< /Length 6894 >>
+stream
+BT /F2 14.20 Tf 1 0 0 1 54.00 742.00 Tm (Prahlin Portfolio Work Log - August 12, 2026 \(Part 2\)) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 723.93 Tm (Compiled summary for Wednesday, August 12, 2026 - Part 2 - focus: continuing the Prahl.dev) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 711.88 Tm (Portfolio Alla Vostra UI Foundations Visual Hierarchy section after the August 12 Part 1 During) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 699.83 Tm (Shopping pass, adding Step 6b and Step 6c right-column shopping overlay variants, isolating) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 687.78 Tm (visible overlay/button layers through transparent PNG assets, keeping the overlay bottom orange) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 675.73 Tm (banner visible after user review, cropping transparent top and bottom regions out of the) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 663.68 Tm (derivative assets, rebuilding Step 6 with the screenshot under the device frame and the device) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 651.63 Tm (frame on top, matching Step 6 corner rounding to the existing Step 1 and Step 2 framed) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 639.58 Tm (screenshots, adding the Viewing Area brace treatment to Step 6, introducing a new Tutorial) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 627.53 Tm (subsection above Pre-Scrolling with a single blank large device frame on the left and an empty) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 615.48 Tm (right column, renaming Visual Hierarchy headers into Primary/Secondary/Tertiary/Quaternary Focus) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 603.43 Tm (labels, clearing stale local dev caches, validating TypeScript, static export, browser-rendered) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 591.38 Tm (layout, refreshing the Portfolio project snapshot, reviewing all prior Portfolio PDF worklogs,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 579.33 Tm (and generating the August 12 Part 2 Portfolio PDF worklog.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 562.21 Tm (Generated in continuity with the established Prahlin Portfolio daily worklog cadence: compact) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 550.16 Tm (opening summary, source-material section, baseline section, goal list, work-completed sections,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 538.11 Tm (validation section, files-touched list, follow-up context, and output-artifact close.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 521.00 Tm (This artifact intentionally covers Prahlin/portfolio work performed after) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 508.95 Tm (portfolio_worklog_august12_part1.pdf and after the August 12 Part 1 documentation state. The) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 496.90 Tm (source commit reviewed for this record is 529c8b2 on main, matching origin/main before this PDF) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 484.85 Tm (was generated. That commit contains the Visual Hierarchy Tutorial row, Step 6b/6c shopping) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 472.80 Tm (overlay variants, Step 6 frame/corner correction, focus-label rename, and asset work described) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 460.75 Tm (here. No separate Hostinger production deployment command was run during this worklog-generation) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 448.70 Tm (pass; the user specifically requested local preview at http://127.0.0.1:3000 during the visual) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 436.65 Tm (pass. The new local artifacts produced for this record are the refreshed project snapshot and) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 424.60 Tm (this August 12 Part 2 PDF worklog.) Tj ET
+BT /F2 11.20 Tf 1 0 0 1 54.00 402.43 Tm (Source Materials Reviewed) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 387.73 Tm (- Ran ./read_project.sh from /Users/prahlin/gh/portfolio and regenerated) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 375.68 Tm (  portfolio_PROJECT_SNAPSHOT.txt before writing this worklog, preserving the project) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 363.63 Tm (  convention that Codex refreshes the current source snapshot before continuing Portfolio) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 351.58 Tm (  documentation work.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 338.08 Tm (- Reviewed the refreshed portfolio_PROJECT_SNAPSHOT.txt, including project notes, source tree,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 326.03 Tm (  public image and font inventories, PDF worklog inventory, package and deployment) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 313.98 Tm (  configuration, git context, recent commits, and the standing instruction to ask for a commit) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 301.93 Tm (  message before committing or pushing.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 288.44 Tm (- Reviewed every pre-existing Portfolio root-level worklog PDF: portfolio_worklog_july11.pdf,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 276.39 Tm (  portfolio_worklog_july14.pdf, portfolio_worklog_july15_part1.pdf,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 264.34 Tm (  portfolio_worklog_july15_part2.pdf, portfolio_worklog_july16.pdf,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 252.29 Tm (  portfolio_worklog_july19.pdf, portfolio_worklog_july20.pdf, portfolio_worklog_july21.pdf,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 240.24 Tm (  portfolio_worklog_july22.pdf, portfolio_worklog_july23.pdf, portfolio_worklog_july24.pdf,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 228.19 Tm (  portfolio_worklog_july25.pdf, portfolio_worklog_july29.pdf, portfolio_worklog_july30.pdf,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 216.14 Tm (  portfolio_worklog_july31.pdf, portfolio_worklog_august1_part1.pdf,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 204.09 Tm (  portfolio_worklog_august1_part2.pdf, portfolio_worklog_august1_part3.pdf,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 192.04 Tm (  portfolio_worklog_august3.pdf, portfolio_worklog_august4.pdf, portfolio_worklog_august5.pdf,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 179.99 Tm (  portfolio_worklog_august6.pdf, portfolio_worklog_august10_part1.pdf,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 167.94 Tm (  portfolio_worklog_august10_part2.pdf, portfolio_worklog_august11.pdf,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 155.89 Tm (  portfolio_worklog_august12_part1.pdf.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 142.39 Tm (- Extracted text from all twenty-six existing Portfolio PDFs with pdftotext and checked recent) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 130.34 Tm (  metadata with pdfinfo to preserve title cadence, Part 2 naming, opening-summary density,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 118.29 Tm (  section order, compact bullet-heavy technical voice, validation language, files-touched) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 106.24 Tm (  lists, follow-up context, output-artifact close, root-level filename style, letter-size) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 94.19 Tm (  pages, PDF 1.4 output, Codex author/creator/producer metadata, and Helvetica-style base-font) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 82.14 Tm (  convention.) Tj ET
+BT /F1 8.40 Tf 1 0 0 1 54.00 30.00 Tm (Prahlin Portfolio Work Log - August 12, 2026 \(Part 2\) Page 1) Tj ET
+endstream
+endobj
+6 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 5 0 R >>
+endobj
+7 0 obj
+<< /Length 6805 >>
+stream
+BT /F1 9.15 Tf 1 0 0 1 54.00 742.00 Tm (- Used portfolio_worklog_august12_part1.pdf as the closest same-day structural baseline) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 729.95 Tm (  because it documented the immediately preceding Alla Vostra Visual Hierarchy row expansion,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 717.90 Tm (  Step 4/5 transparent asset handling, Step 6 During Shopping screenshot wiring, local) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 705.85 Tm (  cache-clearing pattern, browser-measurement workflow, and documentation language.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 692.35 Tm (- Reviewed git history and state through git log, git show --stat, git show --name-status, git) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 680.30 Tm (  branch -vv, git status, git diff --stat, git diff --name-status, git diff --check,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 668.25 Tm (  source-specific diff checks, file inventory commands, sharp metadata checks, npm validation) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 656.20 Tm (  commands, and local route checks. HEAD and origin/main resolved to 529c8b2 before this PDF) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 644.15 Tm (  was generated.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 630.66 Tm (- Reviewed app/projects/alla-vostra/ProductFlowSwitcher.tsx, app/globals.css,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 618.61 Tm (  portfolio_PROJECT_SNAPSHOT.txt, public/images/alla-vostra-empty-framed-no-island.png,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 606.56 Tm (  public/images/products_overlay_piccola_framed_no_island.png,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 594.51 Tm (  public/images/products_overlay_piccola_isolated_large.png,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 582.46 Tm (  public/images/products_overlay_piccola_overlay_only_large.png, package scripts, and the) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 570.41 Tm (  local /projects/alla-vostra route.) Tj ET
+BT /F2 11.20 Tf 1 0 0 1 54.00 551.85 Tm (Baseline Status Before August 12 Part 2 Work) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 537.15 Tm (- August 12 Part 1 had already built the Visual Hierarchy section into three conceptual rows:) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 525.10 Tm (  PRE-SCROLLING, ON-SCROLLING, and DURING SHOPPING. Step 1 and Step 3 were large left-column) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 513.05 Tm (  framed examples; Step 4 and Step 5 were smaller right-column no-frame/mosaic examples; Step) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 501.00 Tm (  6 used the Piccola products overlay screenshot as the first During Shopping example.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 487.50 Tm (- Step 6 initially used the raw Piccola overlay screenshot directly, so it did not yet share) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 475.45 Tm (  the exact device-frame depth order, rounded-corner aperture, external Viewing Area brace) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 463.40 Tm (  system, or left-column large-stack framing language used by Step 1 and Step 3.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 449.91 Tm (- The user wanted Step 6b on the right side of the Step 6 stack: smaller, without a device) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 437.86 Tm (  frame, and with all grayed-out, dimmed, dark, or inactive screenshot regions made fully) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 425.81 Tm (  transparent while keeping the top-right SHOP button, shopping cart, large overlay, arrow) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 413.76 Tm (  buttons, center button, and close button visible.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 400.26 Tm (- The user then wanted Step 6c to look like Step 6b but with the X button, arrow buttons,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 388.21 Tm (  center button, cart button, and shop button fully transparent. Later correction clarified) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 376.16 Tm (  that the bottom orange banner inside the overlay should stay visible in both 6b and 6c.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 362.67 Tm (- The derived Step 6b and Step 6c files needed their fully transparent top and bottom zones) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 350.62 Tm (  physically cropped out so invisible rows would not reserve space in the right-column) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 338.57 Tm (  screenshot stack.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 325.07 Tm (- The conceptual row spacing still needed one more pass: the in-between vertical space between) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 313.02 Tm (  Visual Hierarchy subsections had to be twice the spacing between a subsection label and its) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 300.97 Tm (  first image, preserving the accepted 24px label-to-image gap and roughly 48px gap between) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 288.92 Tm (  rows.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 275.42 Tm (- The section did not yet have a Tutorial subsection above Pre-Scrolling. The user wanted that) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 263.37 Tm (  row to contain one large empty device frame on the left, with the right side left blank) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 251.32 Tm (  until future tutorial imagery exists.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 237.83 Tm (- The visible stack headers still used Step labels. The user wanted the primary left-column) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 225.78 Tm (  screenshots labeled PRIMARY FOCUS and the smaller right-column stacks labeled SECONDARY) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 213.73 Tm (  FOCUS, TERTIARY FOCUS, and QUATERNARY FOCUS from top to bottom within each subsection.) Tj ET
+BT /F2 11.20 Tf 1 0 0 1 54.00 195.17 Tm (Goals for August 12 Part 2) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 180.47 Tm (- Add Step 6b and Step 6c as right-column During Shopping variants without disturbing the) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 168.42 Tm (  accepted Step 6 left-column placement or the earlier Pre-Scrolling and On-Scrolling rows.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 154.92 Tm (- Generate transparent shopping-overlay PNG assets that preserve only the intended visual) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 142.87 Tm (  hierarchy layers, then crop transparent zones out of their actual file bounds and wire the) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 130.82 Tm (  resulting aspect ratios into the React layout.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 117.33 Tm (- Rebuild Step 6 so the screenshot is the underlay and the device frame is the overlay, then) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 105.28 Tm (  match the same rounded-corner device aperture used by Step 1 and Step 2.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 91.78 Tm (- Apply the Viewing Area brace, text, and section-line treatment to Step 6 so the During) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 79.73 Tm (  Shopping primary image communicates the same hierarchy taxonomy as the earlier large stacks.) Tj ET
+BT /F1 8.40 Tf 1 0 0 1 54.00 30.00 Tm (Prahlin Portfolio Work Log - August 12, 2026 \(Part 2\) Page 2) Tj ET
+endstream
+endobj
+8 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 7 0 R >>
+endobj
+9 0 obj
+<< /Length 6152 >>
+stream
+BT /F1 9.15 Tf 1 0 0 1 54.00 742.00 Tm (- Double the spacing between Visual Hierarchy subsections relative to the label-to-image gap,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 729.95 Tm (  while keeping the layout readable in the local UI Foundations view.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 716.45 Tm (- Add the Tutorial subsection above Pre-Scrolling with one large empty framed device on the) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 704.40 Tm (  left and an intentionally empty right column.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 690.91 Tm (- Rename Visual Hierarchy stack headers into focus labels while preserving the underlying step) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 678.86 Tm (  ids and CSS class hooks used for deterministic grid placement.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 665.36 Tm (- Keep the work local to http://127.0.0.1:3000, clear stale development caches when source and) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 653.31 Tm (  browser output disagree, run TypeScript/static-export validation, refresh the snapshot, and) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 641.26 Tm (  produce the August 12 Part 2 PDF worklog in the established Portfolio format.) Tj ET
+BT /F2 11.20 Tf 1 0 0 1 54.00 622.71 Tm (Work Completed - Context, Local Server, and Cache Handling) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 608.00 Tm (- Continued from the committed August 12 Part 1 documentation state after da37f3c and then) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 595.95 Tm (  documented the later source commit 529c8b2, Added Alla Vostra visual hierarchy tutorial and) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 583.90 Tm (  focus variants.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 570.41 Tm (- Kept the local Next.js development server available at http://127.0.0.1:3000 for user) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 558.36 Tm (  inspection and confirmed /projects/alla-vostra returned HTTP 200 during the Part 2) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 546.31 Tm (  verification pass.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 532.81 Tm (- Cleared the development cache when requested by the user and again when Turbopack served) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 520.76 Tm (  stale CSS or optimized image output after rapid JSX, CSS, and PNG asset changes.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 507.27 Tm (- Restarted the dev server on 127.0.0.1:3000 after cache removal so visual checks ran against) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 495.22 Tm (  the current source and generated images rather than stale .next artifacts.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 481.72 Tm (- Used Playwright repeatedly to switch to UI Foundations, scroll to the Visual Hierarchy) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 469.67 Tm (  group, read image sources and natural dimensions, measure label-to-stack gaps, capture Step) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 457.62 Tm (  6 and full-section screenshots, and verify that the rendered page matched the intended) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 445.57 Tm (  source state.) Tj ET
+BT /F2 11.20 Tf 1 0 0 1 54.00 427.01 Tm (Work Completed - Step 6b and Step 6c Shopping Overlay Variants) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 412.31 Tm (- Added Step 6b and Step 6c to the Visual Hierarchy sequence after Step 6, increasing the) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 400.26 Tm (  Visual Hierarchy visible step limit from nine to eleven and later to twelve once the) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 388.21 Tm (  Tutorial row was added.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 374.72 Tm (- Generated public/images/products_overlay_piccola_isolated_large.png as the Step 6b no-frame) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 362.67 Tm (  shopping-overlay asset at 1440 x 2862. The file keeps the overlay, top-right SHOP button,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 350.62 Tm (  shopping cart, close button, arrow buttons, center Products button, and overlay-internal) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 338.57 Tm (  bottom orange banner visible while alpha-clearing the surrounding dimmed/dark regions.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 325.07 Tm (- Generated public/images/products_overlay_piccola_overlay_only_large.png as the Step 6c) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 313.02 Tm (  no-frame overlay-only asset at 1440 x 2241. The file preserves the product overlay and its) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 300.97 Tm (  internal orange footer but alpha-clears the surrounding SHOP button, cart button, close) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 288.92 Tm (  button, arrow buttons, and center Products control.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 275.42 Tm (- Cropped away transparent-only top and bottom zones from Step 6b and Step 6c so the) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 263.37 Tm (  right-column stacks reflect the visible asset bounds instead of reserving the original) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 251.32 Tm (  full-screen transparent height.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 237.83 Tm (- Matched the Step 6b and Step 6c display width to the other small-column screenshot stacks by) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 225.78 Tm (  centering their no-frame images at a 318px frame width inside the same 432px stack width) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 213.73 Tm (  family.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 200.23 Tm (- Marked the transparent shopping-overlay variants unoptimized so Next image handling would) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 188.18 Tm (  not flatten alpha channels or continue showing older optimized derivatives during local) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 176.13 Tm (  review.) Tj ET
+BT /F2 11.20 Tf 1 0 0 1 54.00 157.58 Tm (Work Completed - Step 6 Device Frame, Rounding, and Viewing Area) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 142.87 Tm (- Replaced the raw Step 6 Piccola overlay source with) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 130.82 Tm (  public/images/products_overlay_piccola_framed_no_island.png, a 1290 x 2661 framed) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 118.77 Tm (  composition built from the Piccola overlay screenshot and the accepted Alla Vostra no-island) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 106.72 Tm (  device frame.) Tj ET
+BT /F1 8.40 Tf 1 0 0 1 54.00 30.00 Tm (Prahlin Portfolio Work Log - August 12, 2026 \(Part 2\) Page 3) Tj ET
+endstream
+endobj
+10 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 9 0 R >>
+endobj
+11 0 obj
+<< /Length 6350 >>
+stream
+BT /F1 9.15 Tf 1 0 0 1 54.00 742.00 Tm (- Corrected the compositing order so the Piccola screenshot sits underneath and the device) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 729.95 Tm (  frame sits on top, fixing the requested df-over-ss layering rather than allowing the) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 717.90 Tm (  screenshot to obscure edge chrome.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 704.40 Tm (- Matched Step 6 corner rounding to the Step 1 and Step 2 framed screenshots by using the same) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 692.35 Tm (  full-phone canvas size and a larger rounded screen aperture, then explicitly punched the) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 680.30 Tm (  reference screenshot out of the frame overlay so only the device chrome remained above the) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 668.25 Tm (  new underlay.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 654.76 Tm (- Changed Step 6 to direct-load the framed PNG rather than using the Next optimized) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 642.71 Tm (  /_next/image path, making repeated image-generation corrections visible immediately after) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 630.66 Tm (  local refreshes.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 617.16 Tm (- Added Step 6 to the Viewing Area treatment by grouping it with Step 1 and Step 3 for the) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 605.11 Tm (  external brace, brace text, section-line widths, callout label sizing, large-stack zoom, and) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 593.06 Tm (  section-frame pair spacing.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 579.57 Tm (- Verified Step 6 in browser context with a targeted Playwright screenshot and confirmed the) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 567.52 Tm (  live image source was /images/products_overlay_piccola_framed_no_island.png with natural) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 555.47 Tm (  dimensions 1290 x 2661 and rendered dimensions matching the accepted large-stack footprint.) Tj ET
+BT /F2 11.20 Tf 1 0 0 1 54.00 536.91 Tm (Work Completed - Visual Hierarchy Spacing, Tutorial Row, and Focus Labels) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 522.21 Tm (- Added Visual-Hierarchy-specific section-break variables so the distance between subsection) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 510.16 Tm (  groups is twice the label-to-image gap, preserving about 24px between a row label and first) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 498.11 Tm (  image and about 48px between one subsection stack and the next subsection label.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 484.61 Tm (- Inserted Step 0 at the top of the Visual Hierarchy sequence as the Tutorial primary-focus) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 472.56 Tm (  placeholder and added TUTORIAL as the first row label above PRE-SCROLLING, ON-SCROLLING, and) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 460.51 Tm (  DURING SHOPPING.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 447.02 Tm (- Generated public/images/alla-vostra-empty-framed-no-island.png at 1290 x 2661 as a blank) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 434.97 Tm (  black screen inside the same no-island device shell, giving the Tutorial row a real empty) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 422.92 Tm (  phone frame instead of the generic Screenshot pending placeholder.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 409.42 Tm (- Placed the Tutorial stack in the left column at full large-stack scale and intentionally) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 397.37 Tm (  left the right side blank, matching the user instruction that no Tutorial right-column image) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 385.32 Tm (  exists yet.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 371.82 Tm (- Reworked the Visual Hierarchy grid rows after inserting Tutorial so Step 1/1b/1c/1d, Step 2,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 359.77 Tm (  Step 3/4/5, and Step 6/6b/6c kept deterministic two-column placement beneath the new first) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 347.72 Tm (  subsection.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 334.23 Tm (- Replaced visible Step headers with semantic focus labels through a visualHierarchyStepTitles) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 322.18 Tm (  map: Step 0, Step 1, Step 3, and Step 6 now render PRIMARY FOCUS; right-column stacks render) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 310.13 Tm (  SECONDARY FOCUS, TERTIARY FOCUS, and QUATERNARY FOCUS as appropriate.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 296.63 Tm (- Preserved the underlying Step ids and CSS classes, including flow-screen-stack-step-0) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 284.58 Tm (  through flow-screen-stack-step-6c, so the visual labels can change without destabilizing) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 272.53 Tm (  placement selectors or source-step logic.) Tj ET
+BT /F2 11.20 Tf 1 0 0 1 54.00 253.98 Tm (Work Completed - Commit and Documentation Context) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 239.27 Tm (- Recommended the user-requested commit message in one-header plus hyphen-line format,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 227.22 Tm (  covering the Tutorial subsection, focus-label rename, Step 6b/6c transparent shopping) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 215.17 Tm (  variants, Step 6 frame rounding, Viewing Area brace treatment, and spacing adjustments.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 201.68 Tm (- The source work was committed as 529c8b2, Added Alla Vostra visual hierarchy tutorial and) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 189.63 Tm (  focus variants, with app/globals.css, app/projects/alla-vostra/ProductFlowSwitcher.tsx, the) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 177.58 Tm (  refreshed snapshot, and the four generated PNG assets included.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 164.08 Tm (- Confirmed after that commit that main and origin/main matched at 529c8b2 before beginning) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 152.03 Tm (  the August 12 Part 2 worklog-generation task.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 138.54 Tm (- Regenerated portfolio_PROJECT_SNAPSHOT.txt during this worklog pass, then used the refreshed) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 126.49 Tm (  snapshot, all extracted prior Portfolio PDF worklogs, and current git state as source) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 114.44 Tm (  material for this August 12 Part 2 record.) Tj ET
+BT /F2 11.20 Tf 1 0 0 1 54.00 95.88 Tm (Validation Summary) Tj ET
+BT /F1 8.40 Tf 1 0 0 1 54.00 30.00 Tm (Prahlin Portfolio Work Log - August 12, 2026 \(Part 2\) Page 4) Tj ET
+endstream
+endobj
+12 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 11 0 R >>
+endobj
+13 0 obj
+<< /Length 6312 >>
+stream
+BT /F1 9.15 Tf 1 0 0 1 54.00 742.00 Tm (- npm run check passed with tsc --noEmit during the August 12 Part 2 source pass and again) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 729.95 Tm (  during this worklog-generation pass.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 716.45 Tm (- npm run build:static passed during this worklog-generation pass, with Next.js 16.2.10) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 704.40 Tm (  compiling successfully and prerendering /, /articles, /projects/alla-vostra, and) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 692.35 Tm (  /projects/cinerific as static routes.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 678.86 Tm (- curl -I http://127.0.0.1:3000/projects/alla-vostra returned HTTP 200 OK while the local dev) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 666.81 Tm (  server was running on 127.0.0.1:3000.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 653.31 Tm (- Playwright confirmed the Visual Hierarchy section could be inspected after switching to UI) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 641.26 Tm (  Foundations and measured TUTORIAL, PRE-SCROLLING, ON-SCROLLING, and DURING SHOPPING row) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 629.21 Tm (  labels in the expected vertical order.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 615.72 Tm (- Browser measurements confirmed the Tutorial row contains only the left-column blank framed) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 603.67 Tm (  device at 432px stack width and approximately 720.8px rendered height, while the right) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 591.62 Tm (  column remains empty.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 578.12 Tm (- Browser measurements confirmed Step 1, Step 3, and Step 6 render as PRIMARY FOCUS large) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 566.07 Tm (  left-column stacks and that the right-column stacks render the intended SECONDARY, TERTIARY,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 554.02 Tm (  and QUATERNARY FOCUS labels.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 540.52 Tm (- Browser measurements confirmed Step 6 uses) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 528.47 Tm (  /images/products_overlay_piccola_framed_no_island.png directly, while Step 6b and Step 6c) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 516.42 Tm (  use their no-frame transparent PNGs with 1440 / 2862 and 1440 / 2241 aspect ratios) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 504.37 Tm (  respectively.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 490.88 Tm (- Sharp metadata confirmed alla-vostra-empty-framed-no-island.png and) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 478.83 Tm (  products_overlay_piccola_framed_no_island.png are 1290 x 2661,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 466.78 Tm (  products_overlay_piccola_isolated_large.png is 1440 x 2862, and) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 454.73 Tm (  products_overlay_piccola_overlay_only_large.png is 1440 x 2241.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 441.23 Tm (- git diff --check passed for the committed source files app/globals.css and) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 429.18 Tm (  app/projects/alla-vostra/ProductFlowSwitcher.tsx. A broader diff-check reported) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 417.13 Tm (  trailing-whitespace warnings only inside generated portfolio_PROJECT_SNAPSHOT.txt) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 405.08 Tm (  line-numbered snapshot output, which is documentation inventory noise rather than app source) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 393.03 Tm (  whitespace.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 379.54 Tm (- git branch -vv confirmed main and origin/main both pointed at 529c8b2 before this PDF was) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 367.49 Tm (  generated.) Tj ET
+BT /F2 11.20 Tf 1 0 0 1 54.00 348.93 Tm (Files Touched) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 334.23 Tm (- app/projects/alla-vostra/ProductFlowSwitcher.tsx - added Step 0, Step 6b, and Step 6c to the) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 322.18 Tm (  Visual Hierarchy sequence; added visualHierarchyStepTitles for focus-header renaming; wired) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 310.13 Tm (  the Tutorial empty frame asset; wired Step 6 framed, Step 6b isolated, and Step 6c) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 298.08 Tm (  overlay-only shopping assets; added shopping-overlay variant logic; added Step 6 to the) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 286.03 Tm (  Viewing Area/brace behavior; hid screen labels for Tutorial and shopping variants; marked) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 273.98 Tm (  transparent assets unoptimized; and raised the Visual Hierarchy visible step limit to) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 261.93 Tm (  twelve.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 248.43 Tm (- app/globals.css - added Visual Hierarchy section-break and tutorial-offset variables;) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 236.38 Tm (  inserted Step 0 grid placement; shifted existing Visual Hierarchy rows below the Tutorial) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 224.33 Tm (  subsection; positioned Step 6b and Step 6c beside Step 6; applied Step 6 to the large-stack) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 212.28 Tm (  brace sizing groups; tuned row-label positions for four subsections; and preserved the 24px) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 200.23 Tm (  label-to-image plus doubled subsection spacing rhythm.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 186.74 Tm (- public/images/alla-vostra-empty-framed-no-island.png - added the 1290 x 2661 blank Tutorial) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 174.69 Tm (  phone frame using the accepted no-island device shell and an empty dark screen.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 161.19 Tm (- public/images/products_overlay_piccola_framed_no_island.png - added the 1290 x 2661 Step 6) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 149.14 Tm (  framed shopping overlay with the Piccola screenshot underlay, device-frame overlay, and) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 137.09 Tm (  corner rounding matched to the existing Step 1/Step 2 framed assets.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 123.59 Tm (- public/images/products_overlay_piccola_isolated_large.png - added the 1440 x 2862 Step 6b) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 111.54 Tm (  transparent no-frame shopping-overlay variant that keeps the requested overlay, SHOP/cart,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 99.49 Tm (  close, arrows, center button, and internal orange footer visible.) Tj ET
+BT /F1 8.40 Tf 1 0 0 1 54.00 30.00 Tm (Prahlin Portfolio Work Log - August 12, 2026 \(Part 2\) Page 5) Tj ET
+endstream
+endobj
+14 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 13 0 R >>
+endobj
+15 0 obj
+<< /Length 5526 >>
+stream
+BT /F1 9.15 Tf 1 0 0 1 54.00 742.00 Tm (- public/images/products_overlay_piccola_overlay_only_large.png - added the 1440 x 2241 Step) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 729.95 Tm (  6c transparent no-frame overlay-only variant that keeps the product overlay and internal) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 717.90 Tm (  orange footer while hiding the surrounding control buttons.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 704.40 Tm (- portfolio_PROJECT_SNAPSHOT.txt - refreshed for the current Portfolio source tree, git state,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 692.35 Tm (  public asset inventory, PDF inventory, validation context, and documentation pass.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 678.86 Tm (- portfolio_worklog_august12_part2.pdf - generated this new root-level PDF worklog artifact) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 666.81 Tm (  following the existing Portfolio naming, structure, metadata, length, and local) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 654.76 Tm (  documentation conventions.) Tj ET
+BT /F2 11.20 Tf 1 0 0 1 54.00 636.20 Tm (Follow-Up Context) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 621.50 Tm (- The Visual Hierarchy section now has four conceptual subsections: TUTORIAL, PRE-SCROLLING,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 609.45 Tm (  ON-SCROLLING, and DURING SHOPPING. Future additions should preserve the label-to-first-image) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 597.40 Tm (  spacing and doubled in-between-subsection spacing unless the entire rhythm is revisited.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 583.90 Tm (- The Tutorial row intentionally has no right-column content. Future Tutorial imagery can use) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 571.85 Tm (  the same right-column pattern as the other rows, but the current blank space is deliberate) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 559.80 Tm (  rather than a missing render.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 546.31 Tm (- Step 6 is now a generated framed derivative rather than the raw Piccola screenshot. If the) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 534.26 Tm (  raw shopping screenshot changes, the framed Step 6 image and the Step 6b/6c transparent) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 522.21 Tm (  variants should be regenerated together so overlay scale, cropping, and button visibility) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 510.16 Tm (  stay synchronized.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 496.66 Tm (- Step 6b and Step 6c intentionally keep the orange banner inside the product overlay visible.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 484.61 Tm (  Earlier instructions removed orange banners more broadly, but the final user correction) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 472.56 Tm (  restored the internal overlay footer for both files.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 459.07 Tm (- Step 6 direct-loads its PNG to avoid stale optimized image output while iterating the) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 447.02 Tm (  frame/corner treatment. If the asset becomes stable for production-only optimization later,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 434.97 Tm (  that choice can be revisited carefully.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 421.47 Tm (- The UI Foundations view must remain active before browser scripts inspect Visual Hierarchy) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 409.42 Tm (  DOM. The Alla Vostra page still defaults to UX Product Flow, so automation should click UI) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 397.37 Tm (  Foundations first.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 383.87 Tm (- The local Next.js workflow can show stale CSS or image output after rapid asset and layout) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 371.82 Tm (  changes. Future visual passes should keep using guarded .next cache removal, server) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 359.77 Tm (  restarts, Playwright measurements, and direct image-source checks when source and browser) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 347.72 Tm (  disagree.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 334.23 Tm (- The Hostinger deployment path remains the GitHub Actions static-export workflow on pushes to) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 322.18 Tm (  main, publishing the out/ directory to the hostinger-deploy branch. No new production) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 310.13 Tm (  deployment command was part of this local-only visual pass.) Tj ET
+BT /F2 11.20 Tf 1 0 0 1 54.00 291.57 Tm (Output Artifact) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 276.87 Tm (- Generated: /Users/prahlin/gh/portfolio/portfolio_worklog_august12_part2.pdf) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 263.37 Tm (- Companion sync file: /Users/prahlin/gh/portfolio/portfolio_PROJECT_SNAPSHOT.txt) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 249.88 Tm (- Source state reviewed: 529c8b2 on main and origin/main.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 236.38 Tm (- Naming follows the existing root-level Portfolio convention:) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 224.33 Tm (  portfolio_worklog_august12_part2.pdf. The Part 2 suffix was used because) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 212.28 Tm (  portfolio_worklog_august12_part1.pdf already exists and this artifact covers the later) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 200.23 Tm (  August 12 Visual Hierarchy work.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 186.74 Tm (- Next likely action: commit and push portfolio_worklog_august12_part2.pdf with the refreshed) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 174.69 Tm (  snapshot when the user is ready to sync the documentation artifact.) Tj ET
+BT /F1 8.40 Tf 1 0 0 1 54.00 30.00 Tm (Prahlin Portfolio Work Log - August 12, 2026 \(Part 2\) Page 6) Tj ET
+endstream
+endobj
+16 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 15 0 R >>
+endobj
+17 0 obj
+<< /Title (Prahlin Portfolio Work Log - August 12, 2026 \(Part 2\)) /Subject (Portfolio website development worklog) /Author (Codex) /Creator (Codex standard-library PDF generator) /Producer (Codex standard-library PDF generator) /CreationDate (D:20260813000400-04'00') /ModDate (D:20260813000400-04'00') >>
+endobj
+xref
+0 18
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000149 00000 n 
+0000000219 00000 n 
+0000000294 00000 n 
+0000007239 00000 n 
+0000007375 00000 n 
+0000014231 00000 n 
+0000014367 00000 n 
+0000020570 00000 n 
+0000020707 00000 n 
+0000027109 00000 n 
+0000027247 00000 n 
+0000033611 00000 n 
+0000033749 00000 n 
+0000039327 00000 n 
+0000039465 00000 n 
+trailer
+<< /Size 18 /Root 1 0 R /Info 17 0 R >>
+startxref
+39789
+%%EOF
