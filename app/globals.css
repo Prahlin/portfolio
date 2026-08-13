@@ -4108,12 +4108,13 @@ section.project-hero {
 
 .flow-capture-group-visual-hierarchy .flow-capture-grid {
   --flow-visual-hierarchy-scaled-row-height: 720px;
+  --flow-visual-hierarchy-row-label-stack-gap: 24px;
 
   gap: 24px 34px;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   justify-items: center;
   overflow: visible;
-  padding-top: 24px;
+  padding-top: 50px;
   position: relative;
 }
 
@@ -4122,18 +4123,28 @@ section.project-hero {
   zoom: 0.5;
 }
 
-.flow-capture-group-visual-hierarchy .flow-screen-stack:first-of-type {
+.flow-capture-group-visual-hierarchy .flow-screen-stack:first-of-type,
+.flow-capture-group-visual-hierarchy .flow-screen-stack-step-3,
+.flow-capture-group-visual-hierarchy .flow-screen-stack-step-6 {
   zoom: 1;
 }
 
 .flow-capture-group-visual-hierarchy .flow-screen-stack h4 {
   font-size: 30px;
+  margin-bottom: 28px;
 }
 
 .flow-capture-group-visual-hierarchy
   .flow-screen-stack:first-of-type
+  h4,
+.flow-capture-group-visual-hierarchy
+  .flow-screen-stack-step-3
+  h4,
+.flow-capture-group-visual-hierarchy
+  .flow-screen-stack-step-6
   h4 {
   font-size: 15px;
+  margin-bottom: 14px;
 }
 
 .flow-capture-group-visual-hierarchy .flow-screen-stack-step-1 {
@@ -4144,7 +4155,6 @@ section.project-hero {
 .flow-capture-group-visual-hierarchy .flow-screen-stack-step-1b {
   grid-column: 2 / 3;
   grid-row: 1 / 2;
-  margin-top: 56px;
 }
 
 .flow-capture-group-visual-hierarchy .flow-screen-stack-step-2 {
@@ -4166,7 +4176,7 @@ section.project-hero {
 
 .flow-capture-group-visual-hierarchy .flow-screen-stack-step-3 {
   grid-column: 1 / 2;
-  grid-row: 5 / 6;
+  grid-row: 5 / 7;
 }
 
 .flow-capture-group-visual-hierarchy .flow-screen-stack-step-4 {
@@ -4174,14 +4184,37 @@ section.project-hero {
   grid-row: 5 / 6;
 }
 
+.flow-capture-group-visual-hierarchy .flow-screen-stack-step-5 {
+  grid-column: 2 / 3;
+  grid-row: 6 / 7;
+}
+
+.flow-capture-group-visual-hierarchy .flow-screen-stack-step-6 {
+  grid-column: 1 / 2;
+  grid-row: 7 / 8;
+  width: 318px;
+}
+
+.flow-capture-group-visual-hierarchy
+  .flow-screen-stack-step-6
+  .flow-screen {
+  width: 318px !important;
+}
+
 .flow-capture-group-visual-hierarchy
   .flow-screen-stack:first-of-type
+  .flow-visual-hierarchy-frame-pair,
+.flow-capture-group-visual-hierarchy
+  .flow-screen-stack-step-3
   .flow-visual-hierarchy-frame-pair {
   --flow-visual-hierarchy-tip-frame-gap: 6px;
 }
 
 .flow-capture-group-visual-hierarchy
   .flow-screen-stack:first-of-type
+  .flow-visual-hierarchy-external-annotation,
+.flow-capture-group-visual-hierarchy
+  .flow-screen-stack-step-3
   .flow-visual-hierarchy-external-annotation {
   font-size: 28px !important;
   right: calc(100% - 16px) !important;
@@ -4192,12 +4225,21 @@ section.project-hero {
   .flow-visual-hierarchy-section-lines,
 .flow-capture-group-visual-hierarchy
   .flow-screen-stack:first-of-type
+  .flow-visual-hierarchy-section-line,
+.flow-capture-group-visual-hierarchy
+  .flow-screen-stack-step-3
+  .flow-visual-hierarchy-section-lines,
+.flow-capture-group-visual-hierarchy
+  .flow-screen-stack-step-3
   .flow-visual-hierarchy-section-line {
   width: 24px;
 }
 
 .flow-capture-group-visual-hierarchy
   .flow-screen-stack:first-of-type
+  .flow-visual-hierarchy-section-label,
+.flow-capture-group-visual-hierarchy
+  .flow-screen-stack-step-3
   .flow-visual-hierarchy-section-label {
   font-size: 10px;
 }
@@ -4221,11 +4263,19 @@ section.project-hero {
 }
 
 .flow-visual-hierarchy-row-label-1 {
-  top: -18px;
+  top: calc(-26px - var(--flow-visual-hierarchy-row-label-stack-gap));
 }
 
 .flow-visual-hierarchy-row-label-2 {
-  top: calc(var(--flow-visual-hierarchy-scaled-row-height) + 540px);
+  top: calc(
+    var(--flow-visual-hierarchy-scaled-row-height) + 375px
+  );
+}
+
+.flow-visual-hierarchy-row-label-3 {
+  top: calc(
+    var(--flow-visual-hierarchy-scaled-row-height) * 2 + 400px
+  );
 }
 
 .flow-capture-group-full-row

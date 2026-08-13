@@ -167,6 +167,13 @@ const visualHierarchyStepThreeLineCallouts: VisualHierarchySectionLineCallout[] 
   { label: "SHOPPING CART", top: "90.87%" },
 ];
 
+const visualHierarchyStepFiveLineCallouts: VisualHierarchySectionLineCallout[] = [
+  { label: "TOOLBAR", top: "6%" },
+  { label: "NAV BAR", top: "18%" },
+  { label: "MAIN CONTENT", top: "63%" },
+  { label: "SHOPPING CART", top: "86%" },
+];
+
 const visualHierarchySupportingElementsBraceStacks: VisualHierarchyBraceStack[] =
   [
     {
@@ -230,6 +237,8 @@ const visualHierarchySteps = [
   "Step 1d",
   "Step 3",
   "Step 4",
+  "Step 5",
+  "Step 6",
 ];
 const colorsAndThemingSwatchGroups: Record<string, FlowSwatchGroup> = {
   "Step 1": {
@@ -764,6 +773,7 @@ function PlaceholderScreen({
   imageAlt,
   imageSrc,
   imageStyle,
+  imageUnoptimized,
   label,
   overlayStyle,
   overlayLines,
@@ -771,6 +781,7 @@ function PlaceholderScreen({
   braceTipTop = visualHierarchyBraceTipTop,
   extraBraceStacks = [],
   sectionLineCallouts = visualHierarchySectionLineCallouts,
+  showScreenLabel = true,
   showVisualHierarchySectionLines,
   step,
   style,
@@ -782,6 +793,7 @@ function PlaceholderScreen({
   imageAlt?: string;
   imageSrc?: string;
   imageStyle?: CSSProperties;
+  imageUnoptimized?: boolean;
   label: "Small" | "Large";
   overlayStyle?: CSSProperties;
   overlayLines?: string[];
@@ -789,6 +801,7 @@ function PlaceholderScreen({
   braceTipTop?: string;
   extraBraceStacks?: VisualHierarchyBraceStack[];
   sectionLineCallouts?: VisualHierarchySectionLineCallout[];
+  showScreenLabel?: boolean;
   showVisualHierarchySectionLines?: boolean;
   step: string;
   style?: CSSProperties;
@@ -942,6 +955,7 @@ function PlaceholderScreen({
           sizes="(max-width: 720px) calc(min(84vw, 292px) + 12px), 318px"
           style={imageStyle}
           src={imageSrc}
+          unoptimized={imageUnoptimized}
         />
       ) : (
         <span>Screenshot pending</span>
@@ -956,7 +970,7 @@ function PlaceholderScreen({
       className={screenClassName}
       style={style}
     >
-      {usesVisualHierarchyFramePair ? null : (
+      {usesVisualHierarchyFramePair || !showScreenLabel ? null : (
         <span className="flow-screen-label">{label}</span>
       )}
       {usesVisualHierarchyFramePair ? (
@@ -1813,14 +1827,19 @@ export default function ProductFlowSwitcher({
                           const isClippedFocalStep = step === "Step 1b";
                           const isPhotoOnlyFocalStep = step === "Step 1c";
                           const isCheeseboardOnlyFocalStep = step === "Step 1d";
+                          const isStepFourHomeScreenStep = step === "Step 4";
+                          const isStepFiveMosaicStep = step === "Step 5";
+                          const isShoppingOverlayStep = step === "Step 6";
+                          const usesStepFourHomeScreenTreatment =
+                            isStepFourHomeScreenStep || isStepFiveMosaicStep;
                           const isHomeScreenStep =
-                            step === "Step 3" || step === "Step 4";
+                            step === "Step 3" ||
+                            usesStepFourHomeScreenTreatment;
                           const isViewingAreaStep =
                             isStartupScreenStep || step === "Step 3";
                           const isFocalPointStep = step === "Step 2";
                           const isBracedStep =
                             isViewingAreaStep || isFocalPointStep;
-                          const isMutedHomeScreenStep = step === "Step 4";
 
                           return (
                             <PlaceholderScreen
@@ -1837,12 +1856,14 @@ export default function ProductFlowSwitcher({
                               extraBraceStacks={
                                 isFocalPointStep
                                   ? visualHierarchySupportingElementsBraceStacks
-                                  : isMutedHomeScreenStep
+                                  : usesStepFourHomeScreenTreatment
                                     ? visualHierarchyStepFourBraceStacks
                                   : undefined
                               }
                               sectionLineCallouts={
-                                isHomeScreenStep
+                                isStepFiveMosaicStep
+                                  ? visualHierarchyStepFiveLineCallouts
+                                  : isHomeScreenStep
                                   ? visualHierarchyStepThreeLineCallouts
                                   : isStartupScreenStep
                                     ? visualHierarchyViewingAreaLineCallouts
@@ -1851,20 +1872,25 @@ export default function ProductFlowSwitcher({
                               className="flow-visual-hierarchy-frame"
                               imageAlt={
                                 isHomeScreenStep
-                                    ? "Alla Vostra home screen"
+                                  ? "Alla Vostra home screen"
+                                  : isShoppingOverlayStep
+                                    ? "Alla Vostra Piccola products overlay"
+                                  : isCheeseboardOnlyFocalStep
+                                    ? "Alla Vostra cheeseboard product image"
                                   : isStartupScreenStep ||
                                       isClippedFocalStep ||
                                       isPhotoOnlyFocalStep ||
-                                      isCheeseboardOnlyFocalStep ||
                                       isFocalPointStep
                                     ? "Alla Vostra startup screen"
                                     : undefined
                               }
                               imageSrc={
                                 isHomeScreenStep
-                                  ? isMutedHomeScreenStep
-                                    ? "/images/alla-vostra-home-framed-toolbar-nav-muted-no-island.png"
-                                    : "/images/alla-vostra-home-framed-no-island.png"
+                                  ? isStepFourHomeScreenStep
+                                    ? "/images/alla-vostra-home-toolbar-bottom-transparent-no-frame-cropped.png"
+                                    : isStepFiveMosaicStep
+                                      ? "/images/alla-vostra-home-mosaic-transparent-after-polygons.png"
+                                      : "/images/alla-vostra-home-framed-no-island.png"
                                   : isStartupScreenStep
                                     ? "/images/alla-vostra-hero-startup-framed-no-island.png"
                                   : isClippedFocalStep
@@ -1872,10 +1898,16 @@ export default function ProductFlowSwitcher({
                                   : isPhotoOnlyFocalStep
                                     ? "/images/alla-vostra-hero-startup-focal-photo-only-no-frame.png"
                                   : isCheeseboardOnlyFocalStep
-                                    ? "/images/alla-vostra-hero-startup-focal-cheeseboard-only-no-frame.png"
+                                    ? "/images/alla-vostra/cheeseboard_products_clean.png"
+                                    : isShoppingOverlayStep
+                                      ? "/images/products_overlay_piccola_large.png"
                                     : isFocalPointStep
                                     ? "/images/alla-vostra-hero-startup-framed-lower-muted-no-island.png"
                                     : undefined
+                              }
+                              imageUnoptimized={
+                                isCheeseboardOnlyFocalStep ||
+                                usesStepFourHomeScreenTreatment
                               }
                               frameStyle={
                                 isClippedFocalStep ||
@@ -1885,7 +1917,7 @@ export default function ProductFlowSwitcher({
                                       aspectRatio: isPhotoOnlyFocalStep ||
                                         isCheeseboardOnlyFocalStep
                                         ? isCheeseboardOnlyFocalStep
-                                          ? "1 / 1"
+                                          ? "405 / 250"
                                           : "1182 / 961"
                                         : "1182 / 1508",
                                       background: "transparent",
@@ -1895,7 +1927,11 @@ export default function ProductFlowSwitcher({
                                     }
                                   : isBracedStep || isHomeScreenStep
                                   ? {
-                                      aspectRatio: "1290 / 2661",
+                                      aspectRatio: isStepFiveMosaicStep
+                                        ? "1440 / 1280"
+                                        : usesStepFourHomeScreenTreatment
+                                          ? "1440 / 2713"
+                                          : "1290 / 2661",
                                       background: "transparent",
                                       border: 0,
                                       borderRadius: 0,
@@ -1908,7 +1944,8 @@ export default function ProductFlowSwitcher({
                                 isClippedFocalStep ||
                                 isPhotoOnlyFocalStep ||
                                 isCheeseboardOnlyFocalStep ||
-                                isHomeScreenStep
+                                isHomeScreenStep ||
+                                isShoppingOverlayStep
                                   ? "Large"
                                   : "Small"
                               }
@@ -1920,15 +1957,19 @@ export default function ProductFlowSwitcher({
                                     : undefined
                               }
                               overlayStyle={
-                                isBracedStep || isMutedHomeScreenStep
+                                isBracedStep ||
+                                usesStepFourHomeScreenTreatment
                                   ? visualHierarchyFocalPointAnnotationStyle
                                   : undefined
                               }
                               step={step}
+                              showScreenLabel={!isShoppingOverlayStep}
                               showVisualHierarchySectionLines={isHomeScreenStep}
                               style={{
                                 width:
-                                  isBracedStep ||
+                                  isShoppingOverlayStep
+                                    ? "min(100%, 318px)"
+                                    : isBracedStep ||
                                   isClippedFocalStep ||
                                   isPhotoOnlyFocalStep ||
                                   isCheeseboardOnlyFocalStep ||
@@ -1960,7 +2001,7 @@ export default function ProductFlowSwitcher({
               }
               rowLabels={
                 section.title === "Visual Hierarchy"
-                  ? ["PRE-SCROLLING", "ON-SCROLLING"]
+                  ? ["PRE-SCROLLING", "ON-SCROLLING", "DURING SHOPPING"]
                   : undefined
               }
               sectionLabel="Category"
@@ -1995,7 +2036,7 @@ export default function ProductFlowSwitcher({
               }
               title={section.title}
               visibleStepLimit={
-                section.title === "Visual Hierarchy" ? 7 : undefined
+                section.title === "Visual Hierarchy" ? 9 : undefined
               }
             />
           ))}
