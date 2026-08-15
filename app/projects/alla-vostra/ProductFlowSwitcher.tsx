@@ -173,6 +173,22 @@ const visualHierarchyStepFiveLineCallouts: VisualHierarchySectionLineCallout[] =
   { label: "MAIN CONTENT", top: "63%" },
   { label: "SHOPPING CART", top: "86%" },
 ];
+const visualHierarchyCreamFadeBackground =
+  "linear-gradient(180deg, rgba(255, 252, 242, 0.1) 0%, rgba(255, 252, 242, 1) 25%, rgba(255, 252, 242, 1) 75%, rgba(255, 252, 242, 0.1) 100%)";
+const visualHierarchyImageFadeMask =
+  "linear-gradient(180deg, transparent 0%, black 25%, black 75%, transparent 100%)";
+const visualHierarchySecondaryCreamFadeBackground =
+  "linear-gradient(180deg, rgba(255, 252, 242, 0.1) 0%, rgba(255, 252, 242, 1) 25%, rgba(255, 252, 242, 1) 92%, rgba(255, 252, 242, 0.1) 100%)";
+const visualHierarchySecondaryImageFadeMask =
+  "linear-gradient(180deg, transparent 0%, black 25%, black 92%, transparent 100%)";
+const visualHierarchyTertiaryCreamFadeBackground =
+  "linear-gradient(180deg, rgba(255, 252, 242, 0.1) 0%, rgba(255, 252, 242, 1) 25%, rgba(255, 252, 242, 1) 82%, rgba(255, 252, 242, 0.1) 100%)";
+const visualHierarchyTertiaryImageFadeMask =
+  "linear-gradient(180deg, transparent 0%, black 25%, black 82%, transparent 100%)";
+const visualHierarchyQuaternaryCreamFadeBackground =
+  "radial-gradient(ellipse 184px 106px at 50% 50%, rgba(255, 252, 242, 1) 0%, rgba(255, 252, 242, 1) 20%, rgba(255, 252, 242, 0.97) 30%, rgba(255, 252, 242, 0.82) 44%, rgba(255, 252, 242, 0.6) 60%, rgba(255, 252, 242, 0.34) 78%, transparent 100%)";
+const visualHierarchyQuaternaryImageFadeMask: CSSProperties["maskImage"] =
+  undefined;
 
 const visualHierarchySupportingElementsBraceStacks: VisualHierarchyBraceStack[] =
   [
@@ -791,6 +807,7 @@ function PlaceholderScreen({
   imageStyle,
   imageUnoptimized,
   label,
+  protectedImageOverlay,
   overlayStyle,
   overlayLines,
   bracePath = visualHierarchyBracePath,
@@ -801,6 +818,7 @@ function PlaceholderScreen({
   showVisualHierarchySectionLines,
   step,
   style,
+  useComposedScreenshotPreview,
   useVisualHierarchyFramePair,
   visualHierarchyBraceTone,
 }: {
@@ -811,6 +829,14 @@ function PlaceholderScreen({
   imageStyle?: CSSProperties;
   imageUnoptimized?: boolean;
   label: "Small" | "Large";
+  protectedImageOverlay?: {
+    alt: string;
+    imageStyle?: CSSProperties;
+    sizes?: string;
+    src: string;
+    style: CSSProperties;
+    unoptimized?: boolean;
+  };
   overlayStyle?: CSSProperties;
   overlayLines?: string[];
   bracePath?: string;
@@ -821,6 +847,7 @@ function PlaceholderScreen({
   showVisualHierarchySectionLines?: boolean;
   step: string;
   style?: CSSProperties;
+  useComposedScreenshotPreview?: boolean;
   useVisualHierarchyFramePair?: boolean;
   visualHierarchyBraceTone?: VisualHierarchyBraceTone;
 }) {
@@ -961,8 +988,17 @@ function PlaceholderScreen({
       ))}
     </span>
     ) : null;
+  const useProtectedImageComposition = Boolean(protectedImageOverlay);
   const frameElement = (
-    <div className={frameClassName} style={frameStyle}>
+    <div
+      className={frameClassName}
+      data-screenshot-preview-composition={
+        useComposedScreenshotPreview && !useProtectedImageComposition
+          ? true
+          : undefined
+      }
+      style={frameStyle}
+    >
       {imageSrc ? (
         <Image
           alt={imageAlt ?? `${step} ${label} screenshot`}
@@ -976,8 +1012,61 @@ function PlaceholderScreen({
       ) : (
         <span>Screenshot pending</span>
       )}
+      {protectedImageOverlay ? (
+        <span
+          aria-hidden="true"
+          className="flow-protected-image-cutout"
+          style={
+            {
+              ...protectedImageOverlay.style,
+              background: "#fffcf2",
+              display: "block",
+              maskPosition: "center center",
+              maskRepeat: "no-repeat",
+              maskSize: "contain",
+              pointerEvents: "none",
+              position: "absolute",
+              WebkitMaskImage: `url(${protectedImageOverlay.src})`,
+              WebkitMaskPosition: "center center",
+              WebkitMaskRepeat: "no-repeat",
+              WebkitMaskSize: "contain",
+              maskImage: `url(${protectedImageOverlay.src})`,
+              zIndex: 2,
+            } as CSSProperties
+          }
+        />
+      ) : null}
       {visualHierarchyBraceTone ? null : annotationElement}
     </div>
+  );
+  const composedFrameElement = protectedImageOverlay ? (
+    <div
+      className="flow-protected-image-composition"
+      data-screenshot-preview-composition={
+        useComposedScreenshotPreview ? true : undefined
+      }
+    >
+      {frameElement}
+      <span
+        aria-hidden="true"
+        className="flow-protected-image-overlay"
+        style={protectedImageOverlay.style}
+      >
+        <Image
+          alt={protectedImageOverlay.alt}
+          fill
+          sizes={
+            protectedImageOverlay.sizes ??
+            "(max-width: 720px) calc(min(84vw, 292px) * 0.45), 144px"
+          }
+          src={protectedImageOverlay.src}
+          style={protectedImageOverlay.imageStyle}
+          unoptimized={protectedImageOverlay.unoptimized}
+        />
+      </span>
+    </div>
+  ) : (
+    frameElement
   );
 
   return (
@@ -991,7 +1080,7 @@ function PlaceholderScreen({
       )}
       {usesVisualHierarchyFramePair ? (
         <div className="flow-visual-hierarchy-frame-pair">
-          {frameElement}
+          {composedFrameElement}
           {visualHierarchyBraceTone ? (
             <svg
               aria-hidden="true"
@@ -1844,8 +1933,30 @@ export default function ProductFlowSwitcher({
                           const isClippedFocalStep = step === "Step 1b";
                           const isPhotoOnlyFocalStep = step === "Step 1c";
                           const isCheeseboardOnlyFocalStep = step === "Step 1d";
+                          const isPreScrollingFadeStep =
+                            isClippedFocalStep ||
+                            isPhotoOnlyFocalStep ||
+                            isCheeseboardOnlyFocalStep;
+                          const preScrollingFadeBackground =
+                            isClippedFocalStep
+                              ? visualHierarchySecondaryCreamFadeBackground
+                              : isPhotoOnlyFocalStep
+                                ? visualHierarchyTertiaryCreamFadeBackground
+                                : isCheeseboardOnlyFocalStep
+                                  ? visualHierarchyQuaternaryCreamFadeBackground
+                                  : visualHierarchyCreamFadeBackground;
+                          const preScrollingImageFadeMask =
+                            isClippedFocalStep
+                              ? visualHierarchySecondaryImageFadeMask
+                              : isPhotoOnlyFocalStep
+                                ? visualHierarchyTertiaryImageFadeMask
+                                : isCheeseboardOnlyFocalStep
+                                  ? visualHierarchyQuaternaryImageFadeMask
+                                  : visualHierarchyImageFadeMask;
                           const isStepFourHomeScreenStep = step === "Step 4";
                           const isStepFiveMosaicStep = step === "Step 5";
+                          const usesFadingComposition =
+                            isPreScrollingFadeStep || isStepFiveMosaicStep;
                           const isShoppingOverlayStep = step === "Step 6";
                           const isShoppingOverlayIsolatedStep =
                             step === "Step 6b";
@@ -1926,7 +2037,7 @@ export default function ProductFlowSwitcher({
                                   ? isStepFourHomeScreenStep
                                     ? "/images/alla-vostra-home-toolbar-bottom-transparent-no-frame-cropped.png"
                                     : isStepFiveMosaicStep
-                                      ? "/images/alla-vostra-home-mosaic-transparent-after-polygons.png"
+                                      ? "/images/alla-vostra/taste111_mos9_bright_soft_mockup_tile_blend_both_mockup.png"
                                       : "/images/alla-vostra-home-framed-no-island.png"
                                   : isStartupScreenStep
                                     ? "/images/alla-vostra-hero-startup-framed-no-island.png"
@@ -1944,6 +2055,42 @@ export default function ProductFlowSwitcher({
                                         : "/images/products_overlay_piccola_framed_no_island.png"
                                   : isFocalPointStep
                                     ? "/images/alla-vostra-hero-startup-framed-lower-muted-no-island.png"
+                                    : undefined
+                              }
+                              imageStyle={
+                                isCheeseboardOnlyFocalStep
+                                  ? {
+                                      objectPosition: "center center",
+                                      transform: "scale(0.61)",
+                                      transformOrigin: "center center",
+                                    }
+                                  : undefined
+                              }
+                              protectedImageOverlay={
+                                isClippedFocalStep
+                                  ? {
+                                      alt: "",
+                                      src: "/images/alla-vostra/cheeseboard_products_clean.png",
+                                      style: {
+                                        aspectRatio: "405 / 250",
+                                        left: "28.26%",
+                                        top: "78.25%",
+                                        width: "44.84%",
+                                      },
+                                      unoptimized: true,
+                                    }
+                                  : isPhotoOnlyFocalStep
+                                    ? {
+                                        alt: "",
+                                        src: "/images/alla-vostra/cheeseboard_products_clean.png",
+                                        style: {
+                                          aspectRatio: "405 / 250",
+                                          left: "29.02%",
+                                          top: "66.6%",
+                                          width: "43.99%",
+                                        },
+                                        unoptimized: true,
+                                      }
                                     : undefined
                               }
                               imageUnoptimized={
@@ -1966,38 +2113,59 @@ export default function ProductFlowSwitcher({
                                         : isPhotoOnlyFocalStep ||
                                         isCheeseboardOnlyFocalStep
                                         ? isCheeseboardOnlyFocalStep
-                                          ? "405 / 250"
+                                          ? "408 / 393"
                                           : "1182 / 961"
                                         : "1182 / 1508",
-                                      background: "transparent",
+                                      background: isPreScrollingFadeStep
+                                        ? preScrollingFadeBackground
+                                        : "transparent",
                                       border: 0,
                                       borderRadius: 0,
                                       boxShadow: "none",
+                                      maskImage: isPreScrollingFadeStep
+                                        ? preScrollingImageFadeMask
+                                        : undefined,
+                                      WebkitMaskImage: isPreScrollingFadeStep
+                                        ? preScrollingImageFadeMask
+                                        : undefined,
                                       marginInline:
                                         isShoppingOverlaySmallColumnStep
                                           ? "auto"
                                           : undefined,
+                                      marginLeft: isCheeseboardOnlyFocalStep
+                                        ? "calc(var(--flow-visual-hierarchy-brace-width) + var(--flow-visual-hierarchy-brace-gap) - 45px)"
+                                        : undefined,
                                       maxWidth:
                                         isShoppingOverlaySmallColumnStep
                                           ? "100%"
                                           : undefined,
-                                      width: isShoppingOverlaySmallColumnStep
-                                        ? "318px"
-                                        : undefined,
+                                      width: isCheeseboardOnlyFocalStep
+                                        ? "408px"
+                                        : isShoppingOverlaySmallColumnStep
+                                          ? "318px"
+                                          : undefined,
                                     }
                                   : isBracedStep ||
                                       isHomeScreenStep ||
                                       isTutorialPlaceholderStep
                                   ? {
                                       aspectRatio: isStepFiveMosaicStep
-                                        ? "1440 / 1280"
+                                        ? "853 / 1280"
                                         : usesStepFourHomeScreenTreatment
                                           ? "1440 / 2713"
                                           : "1290 / 2661",
-                                      background: "transparent",
+                                      background: isStepFiveMosaicStep
+                                        ? visualHierarchyCreamFadeBackground
+                                        : "transparent",
                                       border: 0,
                                       borderRadius: 0,
                                       boxShadow: "none",
+                                      maskImage: isStepFiveMosaicStep
+                                        ? visualHierarchyImageFadeMask
+                                        : undefined,
+                                      WebkitMaskImage: isStepFiveMosaicStep
+                                        ? visualHierarchyImageFadeMask
+                                        : undefined,
                                       marginInline: isTutorialPlaceholderStep
                                         ? "auto"
                                         : undefined,
@@ -2054,6 +2222,9 @@ export default function ProductFlowSwitcher({
                                   ? "min(100%, 444px)"
                                   : "min(100%, 228px)",
                               }}
+                              useComposedScreenshotPreview={
+                                usesFadingComposition
+                              }
                               useVisualHierarchyFramePair={
                                 isClippedFocalStep ||
                                 isPhotoOnlyFocalStep ||

@@ -3923,6 +3923,50 @@ section.project-hero {
   width: 318px;
 }
 
+.flow-visual-hierarchy-frame.flow-screen
+  .flow-visual-hierarchy-frame-pair
+  > .flow-protected-image-composition {
+  cursor: zoom-in;
+  margin-left: calc(
+    var(--flow-visual-hierarchy-brace-width) +
+      var(--flow-visual-hierarchy-brace-gap)
+  );
+  margin-right: 0;
+  max-width: none;
+  position: relative;
+  width: 318px;
+}
+
+.flow-protected-image-composition > .flow-image-frame {
+  width: 100%;
+}
+
+.flow-protected-image-cutout {
+  background: #fffcf2;
+  display: block;
+  mask-position: center center;
+  mask-repeat: no-repeat;
+  mask-size: contain;
+  pointer-events: none;
+  position: absolute;
+  -webkit-mask-position: center center;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+  z-index: 2;
+}
+
+.flow-protected-image-overlay {
+  display: block;
+  pointer-events: none;
+  position: absolute;
+  z-index: 3;
+}
+
+.flow-protected-image-overlay img {
+  object-fit: contain;
+  object-position: center center;
+}
+
 .flow-visual-hierarchy-brace {
   bottom: 0;
   display: block;

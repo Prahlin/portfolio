@@ -10,6 +10,7 @@ const PREVIEW_SELECTOR =
 const PREVIEW_RADIUS_SELECTOR =
   ".flow-image-frame, .av-device-screen, .phone-screen.has-image, .tablet-screen";
 const PREVIEW_SOURCE_SELECTOR = "[data-screenshot-preview-src]";
+const PREVIEW_COMPOSITION_SELECTOR = "[data-screenshot-preview-composition]";
 const PREVIEW_SCOPE_SELECTOR = "[data-screenshot-preview-scope]";
 const PREVIEW_GROUP_SELECTOR = ".flow-screen";
 const PREVIEW_GROUP_LABEL_SELECTOR = ".flow-screen-label";
@@ -247,6 +248,14 @@ function getPreviewTarget(
 ): PreviewTarget | null {
   if (!(target instanceof Element)) {
     return null;
+  }
+
+  const compositionTarget = target.closest<HTMLElement>(
+    PREVIEW_COMPOSITION_SELECTOR,
+  );
+
+  if (compositionTarget && isPreviewElementVisible(compositionTarget, point)) {
+    return compositionTarget;
   }
 
   const groupTarget = getPreviewGroupTarget(target, point);
