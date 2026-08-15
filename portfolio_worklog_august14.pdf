@@ -1,0 +1,988 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+2 0 obj
+<< /Length 6079 >>
+stream
+BT
+/F1 10 Tf
+1 0 0 1 54 738.00 Tm
+(Prahlin Portfolio Work Log - August 14, 2026) Tj
+/F1 10 Tf
+1 0 0 1 54 725.00 Tm
+(Compiled summary for Friday, August 14, 2026 - focus: continuing the Prahl.dev Portfolio Alla) Tj
+/F1 10 Tf
+1 0 0 1 54 712.00 Tm
+(Vostra UI Foundations Visual Hierarchy section after the August 12 Part 2 Tutorial,) Tj
+/F1 10 Tf
+1 0 0 1 54 699.00 Tm
+(focus-label, and During Shopping pass, running the customary project reader and local Next.js) Tj
+/F1 10 Tf
+1 0 0 1 54 686.00 Tm
+(server, importing the Alla Vostra MOS9 bright soft mockup tile blend image into the Portfolio) Tj
+/F1 10 Tf
+1 0 0 1 54 673.00 Tm
+(public image tree, replacing the On-Scrolling tertiary focus mosaic with that imported mockup,) Tj
+/F1 10 Tf
+1 0 0 1 54 660.00 Tm
+(building cream fade and opacity treatments for the On-Scrolling and Pre-Scrolling detail) Tj
+/F1 10 Tf
+1 0 0 1 54 647.00 Tm
+(frames, extending the same fade-in language to Pre-Scrolling secondary, tertiary, and) Tj
+/F1 10 Tf
+1 0 0 1 54 634.00 Tm
+(quaternary focus frames, protecting the cheeseboard product asset from the surrounding opacity) Tj
+/F1 10 Tf
+1 0 0 1 54 621.00 Tm
+(treatment, correcting duplicate cheeseboard artifacts with cutout and overlay handling,) Tj
+/F1 10 Tf
+1 0 0 1 54 608.00 Tm
+(converting the quaternary focus treatment into an oblong cream field with widened side zones,) Tj
+/F1 10 Tf
+1 0 0 1 54 595.00 Tm
+(updating screenshot-hover magnification so composed frame effects survive hover and tap) Tj
+/F1 10 Tf
+1 0 0 1 54 582.00 Tm
+(preview, clearing stale development caches repeatedly during visual iteration, validating) Tj
+/F1 10 Tf
+1 0 0 1 54 569.00 Tm
+(TypeScript and browser-rendered frame geometry, refreshing the Portfolio project snapshot,) Tj
+/F1 10 Tf
+1 0 0 1 54 556.00 Tm
+(reviewing all prior Portfolio PDF worklogs, and generating the August 14 Portfolio PDF worklog.) Tj
+/F1 10 Tf
+1 0 0 1 54 543.00 Tm
+(Generated in continuity with the established Prahlin Portfolio daily worklog cadence: compact) Tj
+/F1 10 Tf
+1 0 0 1 54 530.00 Tm
+(opening summary, source-material section, baseline section, goal list, work-completed sections,) Tj
+/F1 10 Tf
+1 0 0 1 54 517.00 Tm
+(validation section, files-touched list, follow-up context, and output-artifact close.) Tj
+/F1 10 Tf
+1 0 0 1 54 504.00 Tm
+(This artifact intentionally covers Prahlin/portfolio work performed after) Tj
+/F1 10 Tf
+1 0 0 1 54 491.00 Tm
+(portfolio_worklog_august12_part2.pdf and after the August 12 Part 2 documentation state. The) Tj
+/F1 10 Tf
+1 0 0 1 54 478.00 Tm
+(primary source commit reviewed for this record is 374ce86 on main, matching origin/main before) Tj
+/F1 10 Tf
+1 0 0 1 54 465.00 Tm
+(this PDF was generated. That commit contains the Visual Hierarchy focus-blend source and asset) Tj
+/F1 10 Tf
+1 0 0 1 54 452.00 Tm
+(work described here, including the imported MOS9 mockup, protected cheeseboard composition) Tj
+/F1 10 Tf
+1 0 0 1 54 439.00 Tm
+(support, composed screenshot-preview support, and tutorial capture assets. A small local source) Tj
+/F1 10 Tf
+1 0 0 1 54 426.00 Tm
+(delta remained after that commit: the Visual Hierarchy title map no longer explicitly labels) Tj
+/F1 10 Tf
+1 0 0 1 54 413.00 Tm
+(Step 0 as PRIMARY FOCUS, and portfolio_PROJECT_SNAPSHOT.txt was refreshed again by the) Tj
+/F1 10 Tf
+1 0 0 1 54 400.00 Tm
+(customary reader immediately before this PDF was generated. No Hostinger production deployment) Tj
+/F1 10 Tf
+1 0 0 1 54 387.00 Tm
+(command was run during this worklog-generation pass; the user specifically kept the work local) Tj
+/F1 10 Tf
+1 0 0 1 54 374.00 Tm
+(at http://127.0.0.1:3000 while visual refinement continued.) Tj
+/F1 10 Tf
+1 0 0 1 54 361.00 Tm
+() Tj
+/F1 10 Tf
+1 0 0 1 54 348.00 Tm
+(Source Materials Reviewed) Tj
+/F1 10 Tf
+1 0 0 1 54 335.00 Tm
+(- Ran ./read_project.sh from /Users/prahlin/gh/portfolio and regenerated) Tj
+/F1 10 Tf
+1 0 0 1 54 322.00 Tm
+(  portfolio_PROJECT_SNAPSHOT.txt before writing this worklog, preserving the project convention) Tj
+/F1 10 Tf
+1 0 0 1 54 309.00 Tm
+(  that Codex refreshes the current source snapshot before continuing Portfolio documentation) Tj
+/F1 10 Tf
+1 0 0 1 54 296.00 Tm
+(  work.) Tj
+/F1 10 Tf
+1 0 0 1 54 283.00 Tm
+(- Reviewed the refreshed portfolio_PROJECT_SNAPSHOT.txt, including project notes, source tree,) Tj
+/F1 10 Tf
+1 0 0 1 54 270.00 Tm
+(  public image inventories, PDF worklog inventory, package and deployment configuration,) Tj
+/F1 10 Tf
+1 0 0 1 54 257.00 Tm
+(  current git context, recent commits, and the standing instruction to ask for a commit message) Tj
+/F1 10 Tf
+1 0 0 1 54 244.00 Tm
+(  before committing or pushing.) Tj
+/F1 10 Tf
+1 0 0 1 54 231.00 Tm
+(- Reviewed every pre-existing Portfolio root-level worklog PDF: portfolio_worklog_july11.pdf,) Tj
+/F1 10 Tf
+1 0 0 1 54 218.00 Tm
+(  portfolio_worklog_july14.pdf, portfolio_worklog_july15_part1.pdf,) Tj
+/F1 10 Tf
+1 0 0 1 54 205.00 Tm
+(  portfolio_worklog_july15_part2.pdf, portfolio_worklog_july16.pdf,) Tj
+/F1 10 Tf
+1 0 0 1 54 192.00 Tm
+(  portfolio_worklog_july19.pdf, portfolio_worklog_july20.pdf, portfolio_worklog_july21.pdf,) Tj
+/F1 10 Tf
+1 0 0 1 54 179.00 Tm
+(  portfolio_worklog_july22.pdf, portfolio_worklog_july23.pdf, portfolio_worklog_july24.pdf,) Tj
+/F1 10 Tf
+1 0 0 1 54 166.00 Tm
+(  portfolio_worklog_july25.pdf, portfolio_worklog_july29.pdf, portfolio_worklog_july30.pdf,) Tj
+/F1 10 Tf
+1 0 0 1 54 153.00 Tm
+(  portfolio_worklog_july31.pdf, portfolio_worklog_august1_part1.pdf,) Tj
+/F1 10 Tf
+1 0 0 1 54 140.00 Tm
+(  portfolio_worklog_august1_part2.pdf, portfolio_worklog_august1_part3.pdf,) Tj
+/F1 10 Tf
+1 0 0 1 54 127.00 Tm
+(  portfolio_worklog_august3.pdf, portfolio_worklog_august4.pdf, portfolio_worklog_august5.pdf,) Tj
+/F1 10 Tf
+1 0 0 1 54 114.00 Tm
+(  portfolio_worklog_august6.pdf, portfolio_worklog_august10_part1.pdf,) Tj
+/F1 10 Tf
+1 0 0 1 54 101.00 Tm
+(  portfolio_worklog_august10_part2.pdf, portfolio_worklog_august11.pdf,) Tj
+/F1 10 Tf
+1 0 0 1 54 88.00 Tm
+(  portfolio_worklog_august12_part1.pdf, and portfolio_worklog_august12_part2.pdf.) Tj
+/F1 9 Tf
+1 0 0 1 54 36.00 Tm
+(Prahlin Portfolio Work Log - August 14, 2026 Page 1) Tj
+ET
+endstream
+endobj
+3 0 obj
+<< /Type /Page /Parent 14 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R >> >> /Contents 2 0 R >>
+endobj
+4 0 obj
+<< /Length 5634 >>
+stream
+BT
+/F1 10 Tf
+1 0 0 1 54 738.00 Tm
+(- Extracted text from all twenty-seven existing Portfolio PDFs with pdftotext and checked) Tj
+/F1 10 Tf
+1 0 0 1 54 725.00 Tm
+(  recent metadata with pdfinfo to preserve title cadence, one-day filename style,) Tj
+/F1 10 Tf
+1 0 0 1 54 712.00 Tm
+(  opening-summary density, section order, bullet-heavy technical voice, validation language,) Tj
+/F1 10 Tf
+1 0 0 1 54 699.00 Tm
+(  files-touched lists, follow-up context, output-artifact close, root-level filename style,) Tj
+/F1 10 Tf
+1 0 0 1 54 686.00 Tm
+(  letter-size pages, PDF 1.4 output, Codex author/creator/producer metadata, and) Tj
+/F1 10 Tf
+1 0 0 1 54 673.00 Tm
+(  Helvetica-style base-font convention.) Tj
+/F1 10 Tf
+1 0 0 1 54 660.00 Tm
+(- Used portfolio_worklog_august12_part2.pdf as the closest structural baseline because it) Tj
+/F1 10 Tf
+1 0 0 1 54 647.00 Tm
+(  documented the immediately preceding Visual Hierarchy Tutorial row, Step 6b/6c variants,) Tj
+/F1 10 Tf
+1 0 0 1 54 634.00 Tm
+(  focus-label rename, local cache-clearing pattern, browser-measurement workflow, and) Tj
+/F1 10 Tf
+1 0 0 1 54 621.00 Tm
+(  PDF-generation language.) Tj
+/F1 10 Tf
+1 0 0 1 54 608.00 Tm
+(- Reviewed git history and state through git log, git show --stat, git show --name-status, git) Tj
+/F1 10 Tf
+1 0 0 1 54 595.00 Tm
+(  status, git branch -vv, git diff --stat, source-specific diffs, file searches, image metadata) Tj
+/F1 10 Tf
+1 0 0 1 54 582.00 Tm
+(  checks, npm validation, and local route checks. HEAD and origin/main resolved to 374ce86) Tj
+/F1 10 Tf
+1 0 0 1 54 569.00 Tm
+(  before this PDF was generated.) Tj
+/F1 10 Tf
+1 0 0 1 54 556.00 Tm
+(- Reviewed app/projects/alla-vostra/ProductFlowSwitcher.tsx, app/ScreenshotPreviewLayer.tsx,) Tj
+/F1 10 Tf
+1 0 0 1 54 543.00 Tm
+(  app/globals.css, portfolio_PROJECT_SNAPSHOT.txt,) Tj
+/F1 10 Tf
+1 0 0 1 54 530.00 Tm
+(  public/images/alla-vostra/taste111_mos9_bright_soft_mockup_tile_blend_both_mockup.png, the) Tj
+/F1 10 Tf
+1 0 0 1 54 517.00 Tm
+(  Alla Vostra tutorial capture assets added under public/images/alla-vostra/tutorial,) Tj
+/F1 10 Tf
+1 0 0 1 54 504.00 Tm
+(  root-level tutorial_screen_large.png and tutorial_screen_small.png, package scripts, and the) Tj
+/F1 10 Tf
+1 0 0 1 54 491.00 Tm
+(  local /projects/alla-vostra route.) Tj
+/F1 10 Tf
+1 0 0 1 54 478.00 Tm
+() Tj
+/F1 10 Tf
+1 0 0 1 54 465.00 Tm
+(Baseline Status Before August 14 Work) Tj
+/F1 10 Tf
+1 0 0 1 54 452.00 Tm
+(- August 12 Part 2 had left the Visual Hierarchy section with four conceptual rows: TUTORIAL,) Tj
+/F1 10 Tf
+1 0 0 1 54 439.00 Tm
+(  PRE-SCROLLING, ON-SCROLLING, and DURING SHOPPING. The section already used semantic focus) Tj
+/F1 10 Tf
+1 0 0 1 54 426.00 Tm
+(  labels, Step 0 through Step 6c, and deterministic two-column placement for primary and) Tj
+/F1 10 Tf
+1 0 0 1 54 413.00 Tm
+(  secondary/tertiary/quaternary examples.) Tj
+/F1 10 Tf
+1 0 0 1 54 400.00 Tm
+(- The On-Scrolling tertiary focus frame still used the older cropped mosaic transparent asset) Tj
+/F1 10 Tf
+1 0 0 1 54 387.00 Tm
+(  from the Step 5 work. The user wanted that image replaced by) Tj
+/F1 10 Tf
+1 0 0 1 54 374.00 Tm
+(  taste111_mos9_bright_soft_mockup_tile_blend_both_mockup from the Alla Vostra repository and) Tj
+/F1 10 Tf
+1 0 0 1 54 361.00 Tm
+(  blended into the dark Portfolio grid with the project cream color.) Tj
+/F1 10 Tf
+1 0 0 1 54 348.00 Tm
+(- The first cream blend pass used simple top and bottom opacity stops, but visual review showed) Tj
+/F1 10 Tf
+1 0 0 1 54 335.00 Tm
+(  the effect was either too subtle, too abrupt, reversed in places, or missing during) Tj
+/F1 10 Tf
+1 0 0 1 54 322.00 Tm
+(  screenshot magnification.) Tj
+/F1 10 Tf
+1 0 0 1 54 309.00 Tm
+(- Pre-Scrolling secondary, tertiary, and quaternary focus frames still showed detail imagery) Tj
+/F1 10 Tf
+1 0 0 1 54 296.00 Tm
+(  directly. The user wanted those frames to fade into view relative to the primary) Tj
+/F1 10 Tf
+1 0 0 1 54 283.00 Tm
+(  Pre-Scrolling frame, without changing the primary frame's full-viewing-area role.) Tj
+/F1 10 Tf
+1 0 0 1 54 270.00 Tm
+(- Secondary and tertiary focus frames contained the cheeseboard as part of the baked) Tj
+/F1 10 Tf
+1 0 0 1 54 257.00 Tm
+(  screenshot/photo source. Protecting the cheeseboard from the opacity treatment by simply) Tj
+/F1 10 Tf
+1 0 0 1 54 244.00 Tm
+(  overlaying a crisp product image caused a duplicated or stacked board until the underlying) Tj
+/F1 10 Tf
+1 0 0 1 54 231.00 Tm
+(  baked version was cut out.) Tj
+/F1 10 Tf
+1 0 0 1 54 218.00 Tm
+(- Quaternary focus initially used a small cheeseboard-only product image. The user wanted it to) Tj
+/F1 10 Tf
+1 0 0 1 54 205.00 Tm
+(  keep the same conceptual fade language but with enough top, bottom, left, and right breathing) Tj
+/F1 10 Tf
+1 0 0 1 54 192.00 Tm
+(  room for the cream transition to resolve naturally instead of being clipped by a rectangular) Tj
+/F1 10 Tf
+1 0 0 1 54 179.00 Tm
+(  frame boundary.) Tj
+/F1 10 Tf
+1 0 0 1 54 166.00 Tm
+(- Screenshot hover/tap preview was still image-centric. Composed frame effects such as CSS) Tj
+/F1 10 Tf
+1 0 0 1 54 153.00 Tm
+(  background gradients, masks, cutouts, and overlaid protected product imagery could disappear) Tj
+/F1 10 Tf
+1 0 0 1 54 140.00 Tm
+(  in magnified preview unless the preview system cloned the composed element rather than only) Tj
+/F1 10 Tf
+1 0 0 1 54 127.00 Tm
+(  the nested image.) Tj
+/F1 10 Tf
+1 0 0 1 54 114.00 Tm
+() Tj
+/F1 10 Tf
+1 0 0 1 54 101.00 Tm
+(Goals for August 14) Tj
+/F1 10 Tf
+1 0 0 1 54 88.00 Tm
+(- Import the requested MOS9 bright soft mockup tile blend image from the Alla Vostra repository) Tj
+/F1 9 Tf
+1 0 0 1 54 36.00 Tm
+(Prahlin Portfolio Work Log - August 14, 2026 Page 2) Tj
+ET
+endstream
+endobj
+5 0 obj
+<< /Type /Page /Parent 14 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R >> >> /Contents 4 0 R >>
+endobj
+6 0 obj
+<< /Length 5623 >>
+stream
+BT
+/F1 10 Tf
+1 0 0 1 54 738.00 Tm
+(  into the Portfolio public image tree and use it for the On-Scrolling tertiary focus frame.) Tj
+/F1 10 Tf
+1 0 0 1 54 725.00 Tm
+(- Establish a reusable cream fade treatment using the pre-existing Alla Vostra cream color) Tj
+/F1 10 Tf
+1 0 0 1 54 712.00 Tm
+(  while iterating the opacity stops to satisfy user review.) Tj
+/F1 10 Tf
+1 0 0 1 54 699.00 Tm
+(- Apply similar fade-in logic to Pre-Scrolling secondary, tertiary, and quaternary focus frames) Tj
+/F1 10 Tf
+1 0 0 1 54 686.00 Tm
+(  while leaving the primary Pre-Scrolling frame unchanged.) Tj
+/F1 10 Tf
+1 0 0 1 54 673.00 Tm
+(- Protect the cheeseboard product image in secondary and tertiary focus frames from opacity) Tj
+/F1 10 Tf
+1 0 0 1 54 660.00 Tm
+(  effects without leaving duplicate baked imagery underneath.) Tj
+/F1 10 Tf
+1 0 0 1 54 647.00 Tm
+(- Refine quaternary focus into a wider, landscape-oblong cream field with enough horizontal and) Tj
+/F1 10 Tf
+1 0 0 1 54 634.00 Tm
+(  vertical side zones that the gradient can fade out naturally before reaching the frame edge.) Tj
+/F1 10 Tf
+1 0 0 1 54 621.00 Tm
+(- Update screenshot-preview magnification so composed visual hierarchy frames retain their) Tj
+/F1 10 Tf
+1 0 0 1 54 608.00 Tm
+(  cream backgrounds, masks, cutouts, overlays, object positioning, and image transforms during) Tj
+/F1 10 Tf
+1 0 0 1 54 595.00 Tm
+(  hover and tap preview.) Tj
+/F1 10 Tf
+1 0 0 1 54 582.00 Tm
+(- Clear development caches whenever local source and browser output disagreed, keep the dev) Tj
+/F1 10 Tf
+1 0 0 1 54 569.00 Tm
+(  server available at http://127.0.0.1:3000, run TypeScript/browser verification, refresh the) Tj
+/F1 10 Tf
+1 0 0 1 54 556.00 Tm
+(  project snapshot, and produce the August 14 PDF worklog.) Tj
+/F1 10 Tf
+1 0 0 1 54 543.00 Tm
+() Tj
+/F1 10 Tf
+1 0 0 1 54 530.00 Tm
+(Work Completed - Context, Local Server, and Cache Handling) Tj
+/F1 10 Tf
+1 0 0 1 54 517.00 Tm
+(- Began the August 14 work by running the Portfolio project reader, reviewing the current) Tj
+/F1 10 Tf
+1 0 0 1 54 504.00 Tm
+(  snapshot and all PDF worklogs, and restarting the local Next.js development server at) Tj
+/F1 10 Tf
+1 0 0 1 54 491.00 Tm
+(  http://127.0.0.1:3000 so the user could inspect the Alla Vostra page in the browser.) Tj
+/F1 10 Tf
+1 0 0 1 54 478.00 Tm
+(- Used the UI Foundations tab on /projects/alla-vostra for browser validation because the Alla) Tj
+/F1 10 Tf
+1 0 0 1 54 465.00 Tm
+(  Vostra page defaults to UX Product Flow and the Visual Hierarchy section is only visible) Tj
+/F1 10 Tf
+1 0 0 1 54 452.00 Tm
+(  after switching views.) Tj
+/F1 10 Tf
+1 0 0 1 54 439.00 Tm
+(- Cleared development caches multiple times by moving .next aside into timestamped) Tj
+/F1 10 Tf
+1 0 0 1 54 426.00 Tm
+(  .next.cleared-* folders when Turbopack or Next image optimization served stale CSS/image) Tj
+/F1 10 Tf
+1 0 0 1 54 413.00 Tm
+(  output after rapid asset and JSX changes.) Tj
+/F1 10 Tf
+1 0 0 1 54 400.00 Tm
+(- Restarted the dev server after cache clearing and confirmed it continued listening on) Tj
+/F1 10 Tf
+1 0 0 1 54 387.00 Tm
+(  127.0.0.1:3000 throughout the visual pass.) Tj
+/F1 10 Tf
+1 0 0 1 54 374.00 Tm
+(- Used Playwright repeatedly to switch to UI Foundations, scroll the Visual Hierarchy group) Tj
+/F1 10 Tf
+1 0 0 1 54 361.00 Tm
+(  into view, wait for images to load and decode, inspect computed CSS for individual frames,) Tj
+/F1 10 Tf
+1 0 0 1 54 348.00 Tm
+(  capture full-section screenshots, capture tight crops for affected focus frames, and verify) Tj
+/F1 10 Tf
+1 0 0 1 54 335.00 Tm
+(  that hover preview cloned the correct composed element.) Tj
+/F1 10 Tf
+1 0 0 1 54 322.00 Tm
+() Tj
+/F1 10 Tf
+1 0 0 1 54 309.00 Tm
+(Work Completed - On-Scrolling Tertiary Focus Replacement and Cream Fade) Tj
+/F1 10 Tf
+1 0 0 1 54 296.00 Tm
+(- Imported) Tj
+/F1 10 Tf
+1 0 0 1 54 283.00 Tm
+(  /Users/prahlin/gh/alla_vostra/mob/taste111_mos9_bright_soft_mockup_tile_blend_both_mockup.png) Tj
+/F1 10 Tf
+1 0 0 1 54 270.00 Tm
+(  into public/images/alla-vostra/taste111_mos9_bright_soft_mockup_tile_blend_both_mockup.png,) Tj
+/F1 10 Tf
+1 0 0 1 54 257.00 Tm
+(  preserving the 853 x 1280 transparent PNG asset.) Tj
+/F1 10 Tf
+1 0 0 1 54 244.00 Tm
+(- Rewired Visual Hierarchy Step 5, the On-Scrolling tertiary focus frame, from the older) Tj
+/F1 10 Tf
+1 0 0 1 54 231.00 Tm
+(  alla-vostra-home-mosaic-transparent-after-polygons.png asset to the imported MOS9 bright soft) Tj
+/F1 10 Tf
+1 0 0 1 54 218.00 Tm
+(  mockup tile blend image.) Tj
+/F1 10 Tf
+1 0 0 1 54 205.00 Tm
+(- Updated the Step 5 frame aspect ratio from 1440 / 1280 to 853 / 1280 so the browser framed) Tj
+/F1 10 Tf
+1 0 0 1 54 192.00 Tm
+(  the imported asset at its natural proportions.) Tj
+/F1 10 Tf
+1 0 0 1 54 179.00 Tm
+(- Added a cream background gradient using the established Alla Vostra cream color #fffcf2,) Tj
+/F1 10 Tf
+1 0 0 1 54 166.00 Tm
+(  first using broad center opacity and then iterating the fade stops based on user review.) Tj
+/F1 10 Tf
+1 0 0 1 54 153.00 Tm
+(- Refined the shared Step 5 fade treatment to keep 10 percent cream opacity at the top and) Tj
+/F1 10 Tf
+1 0 0 1 54 140.00 Tm
+(  bottom, reach full cream opacity by the upper-middle region, remain full through the) Tj
+/F1 10 Tf
+1 0 0 1 54 127.00 Tm
+(  lower-middle region, and reduce back toward the edge.) Tj
+/F1 10 Tf
+1 0 0 1 54 114.00 Tm
+(- Added a whole-frame opacity mask so the picture and the cream background could fade together) Tj
+/F1 10 Tf
+1 0 0 1 54 101.00 Tm
+(  at the top and bottom, rather than only fading the background behind the image.) Tj
+/F1 10 Tf
+1 0 0 1 54 88.00 Tm
+() Tj
+/F1 9 Tf
+1 0 0 1 54 36.00 Tm
+(Prahlin Portfolio Work Log - August 14, 2026 Page 3) Tj
+ET
+endstream
+endobj
+7 0 obj
+<< /Type /Page /Parent 14 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R >> >> /Contents 6 0 R >>
+endobj
+8 0 obj
+<< /Length 5662 >>
+stream
+BT
+/F1 10 Tf
+1 0 0 1 54 738.00 Tm
+(Work Completed - Pre-Scrolling Secondary, Tertiary, and Quaternary Fade Variants) Tj
+/F1 10 Tf
+1 0 0 1 54 725.00 Tm
+(- Applied the same overall fade language to the Pre-Scrolling right-column focus frames while) Tj
+/F1 10 Tf
+1 0 0 1 54 712.00 Tm
+(  intentionally leaving Step 1 PRIMARY FOCUS unchanged as the full original viewing area.) Tj
+/F1 10 Tf
+1 0 0 1 54 699.00 Tm
+(- Added per-frame logic for Step 1b SECONDARY FOCUS, Step 1c TERTIARY FOCUS, and Step 1d) Tj
+/F1 10 Tf
+1 0 0 1 54 686.00 Tm
+(  QUATERNARY FOCUS so each could use a different fade profile without destabilizing the rest of) Tj
+/F1 10 Tf
+1 0 0 1 54 673.00 Tm
+(  the Visual Hierarchy sequence.) Tj
+/F1 10 Tf
+1 0 0 1 54 660.00 Tm
+(- Made secondary focus ramp more aggressively from bottom to top, using a 92 percent lower) Tj
+/F1 10 Tf
+1 0 0 1 54 647.00 Tm
+(  cutoff so the bottom fade reaches full opacity much faster than the earlier shared 75 percent) Tj
+/F1 10 Tf
+1 0 0 1 54 634.00 Tm
+(  treatment.) Tj
+/F1 10 Tf
+1 0 0 1 54 621.00 Tm
+(- Made tertiary focus only slightly more aggressive, using an 82 percent lower cutoff so the) Tj
+/F1 10 Tf
+1 0 0 1 54 608.00 Tm
+(  photo crop retains a gentler fade than secondary but still clears the lower edge more) Tj
+/F1 10 Tf
+1 0 0 1 54 595.00 Tm
+(  decisively.) Tj
+/F1 10 Tf
+1 0 0 1 54 582.00 Tm
+(- Reworked quaternary focus through several iterations: first a taller three-zone frame, then a) Tj
+/F1 10 Tf
+1 0 0 1 54 569.00 Tm
+(  half-zone frame, then a softened multi-stop vertical fade, then a radial oval, then a) Tj
+/F1 10 Tf
+1 0 0 1 54 556.00 Tm
+(  landscape-oblong cream field with explicit side-zone breathing room.) Tj
+/F1 10 Tf
+1 0 0 1 54 543.00 Tm
+(- Changed the quaternary frame from a full-frame vertical mask to a transparent radial cream) Tj
+/F1 10 Tf
+1 0 0 1 54 530.00 Tm
+(  background so the cream field itself could fade out instead of being clipped by a rectangular) Tj
+/F1 10 Tf
+1 0 0 1 54 517.00 Tm
+(  mask.) Tj
+/F1 10 Tf
+1 0 0 1 54 504.00 Tm
+(- Preserved the accepted oblong cream look while widening the quaternary frame canvas and) Tj
+/F1 10 Tf
+1 0 0 1 54 491.00 Tm
+(  scaling the cheeseboard inside it, allowing the cream gradient to reach full transparency) Tj
+/F1 10 Tf
+1 0 0 1 54 478.00 Tm
+(  before touching the left or right frame edges.) Tj
+/F1 10 Tf
+1 0 0 1 54 465.00 Tm
+() Tj
+/F1 10 Tf
+1 0 0 1 54 452.00 Tm
+(Work Completed - Protected Cheeseboard Composition) Tj
+/F1 10 Tf
+1 0 0 1 54 439.00 Tm
+(- Extended PlaceholderScreen with a protectedImageOverlay option so a clean image layer can be) Tj
+/F1 10 Tf
+1 0 0 1 54 426.00 Tm
+(  positioned above a faded screenshot frame while the underlying screenshot still receives its) Tj
+/F1 10 Tf
+1 0 0 1 54 413.00 Tm
+(  cream background and opacity treatment.) Tj
+/F1 10 Tf
+1 0 0 1 54 400.00 Tm
+(- Added flow-protected-image-composition, flow-protected-image-cutout, and) Tj
+/F1 10 Tf
+1 0 0 1 54 387.00 Tm
+(  flow-protected-image-overlay support in app/globals.css so protected product layers can share) Tj
+/F1 10 Tf
+1 0 0 1 54 374.00 Tm
+(  the same frame footprint and hover cursor as the regular screenshot frame.) Tj
+/F1 10 Tf
+1 0 0 1 54 361.00 Tm
+(- Positioned the clean cheeseboard product PNG over the baked cheeseboard location in Step 1b) Tj
+/F1 10 Tf
+1 0 0 1 54 348.00 Tm
+(  and Step 1c using percent-based left, top, width, and 405 / 250 aspect-ratio values derived) Tj
+/F1 10 Tf
+1 0 0 1 54 335.00 Tm
+(  from the source screenshot geometry.) Tj
+/F1 10 Tf
+1 0 0 1 54 322.00 Tm
+(- Added a matching cutout layer underneath the protected overlay, using the cheeseboard PNG) Tj
+/F1 10 Tf
+1 0 0 1 54 309.00 Tm
+(  itself as a CSS mask filled with #fffcf2. This punched out the baked cheeseboard from the) Tj
+/F1 10 Tf
+1 0 0 1 54 296.00 Tm
+(  original secondary/tertiary screenshot area before the clean protected board was drawn above) Tj
+/F1 10 Tf
+1 0 0 1 54 283.00 Tm
+(  it.) Tj
+/F1 10 Tf
+1 0 0 1 54 270.00 Tm
+(- Fixed the duplicate-board artifact reported by the user after the first overlay attempt,) Tj
+/F1 10 Tf
+1 0 0 1 54 257.00 Tm
+(  where the new crisp cheeseboard appeared on top of the old faded baked-in cheeseboard.) Tj
+/F1 10 Tf
+1 0 0 1 54 244.00 Tm
+(- Kept the secondary and tertiary photo/header/nav regions subject to their opacity blends) Tj
+/F1 10 Tf
+1 0 0 1 54 231.00 Tm
+(  while keeping only the cheeseboard product asset crisp and protected.) Tj
+/F1 10 Tf
+1 0 0 1 54 218.00 Tm
+() Tj
+/F1 10 Tf
+1 0 0 1 54 205.00 Tm
+(Work Completed - Screenshot Preview Composition Support) Tj
+/F1 10 Tf
+1 0 0 1 54 192.00 Tm
+(- Added a data-screenshot-preview-composition selector to app/ScreenshotPreviewLayer.tsx so the) Tj
+/F1 10 Tf
+1 0 0 1 54 179.00 Tm
+(  preview system can prefer a composed frame element before falling back to image-only or) Tj
+/F1 10 Tf
+1 0 0 1 54 166.00 Tm
+(  group-level preview targets.) Tj
+/F1 10 Tf
+1 0 0 1 54 153.00 Tm
+(- Marked Step 5 and the Pre-Scrolling faded/protected frames as composed screenshot preview) Tj
+/F1 10 Tf
+1 0 0 1 54 140.00 Tm
+(  targets so hover and tap magnification clone the actual visual composition, including CSS) Tj
+/F1 10 Tf
+1 0 0 1 54 127.00 Tm
+(  background gradients, masks, protected cutouts, overlay images, and image transforms.) Tj
+/F1 10 Tf
+1 0 0 1 54 114.00 Tm
+(- Verified through Playwright that Step 1b and Step 1c hover previews clone the composition) Tj
+/F1 10 Tf
+1 0 0 1 54 101.00 Tm
+(  with both the cutout and protected overlay present.) Tj
+/F1 10 Tf
+1 0 0 1 54 88.00 Tm
+(- Verified that Step 1d hover preview preserves the wider oblong cream field, no mask, centered) Tj
+/F1 9 Tf
+1 0 0 1 54 36.00 Tm
+(Prahlin Portfolio Work Log - August 14, 2026 Page 4) Tj
+ET
+endstream
+endobj
+9 0 obj
+<< /Type /Page /Parent 14 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R >> >> /Contents 8 0 R >>
+endobj
+10 0 obj
+<< /Length 5539 >>
+stream
+BT
+/F1 10 Tf
+1 0 0 1 54 738.00 Tm
+(  product image, and current transform scale.) Tj
+/F1 10 Tf
+1 0 0 1 54 725.00 Tm
+(- Retained existing preview behavior for ordinary images and group previews by inserting the) Tj
+/F1 10 Tf
+1 0 0 1 54 712.00 Tm
+(  composed-target detection ahead of the older preview target selection logic without removing) Tj
+/F1 10 Tf
+1 0 0 1 54 699.00 Tm
+(  the existing pathways.) Tj
+/F1 10 Tf
+1 0 0 1 54 686.00 Tm
+() Tj
+/F1 10 Tf
+1 0 0 1 54 673.00 Tm
+(Work Completed - Tutorial Assets, Snapshot, and Commit Context) Tj
+/F1 10 Tf
+1 0 0 1 54 660.00 Tm
+(- The August 14 source commit also added multiple Alla Vostra tutorial capture assets under) Tj
+/F1 10 Tf
+1 0 0 1 54 647.00 Tm
+(  public/images/alla-vostra/tutorial, including timestamped large tutorial captures,) Tj
+/F1 10 Tf
+1 0 0 1 54 634.00 Tm
+(  timestamped small tutorial step captures, canonical tutorial_screen_large.png and) Tj
+/F1 10 Tf
+1 0 0 1 54 621.00 Tm
+(  tutorial_screen_small.png files, and tutorial_screen_small_step_01.png through) Tj
+/F1 10 Tf
+1 0 0 1 54 608.00 Tm
+(  tutorial_screen_small_step_05.png.) Tj
+/F1 10 Tf
+1 0 0 1 54 595.00 Tm
+(- Added root-level public/images/tutorial_screen_large.png and) Tj
+/F1 10 Tf
+1 0 0 1 54 582.00 Tm
+(  public/images/tutorial_screen_small.png alongside the nested Alla Vostra tutorial assets.) Tj
+/F1 10 Tf
+1 0 0 1 54 569.00 Tm
+(- Refreshed portfolio_PROJECT_SNAPSHOT.txt during the source commit and again immediately) Tj
+/F1 10 Tf
+1 0 0 1 54 556.00 Tm
+(  before generating this August 14 PDF. The later refresh records the current source tree,) Tj
+/F1 10 Tf
+1 0 0 1 54 543.00 Tm
+(  newly cleared .next cache directories, latest git status, and current worklog inventory.) Tj
+/F1 10 Tf
+1 0 0 1 54 530.00 Tm
+(- Recommended the user-requested commit message in one-header plus hyphen-line format. The) Tj
+/F1 10 Tf
+1 0 0 1 54 517.00 Tm
+(  source work was then committed as 374ce86, Refined Alla Vostra visual hierarchy focus blends,) Tj
+/F1 10 Tf
+1 0 0 1 54 504.00 Tm
+(  with app/ScreenshotPreviewLayer.tsx, app/globals.css,) Tj
+/F1 10 Tf
+1 0 0 1 54 491.00 Tm
+(  app/projects/alla-vostra/ProductFlowSwitcher.tsx, the snapshot, the imported MOS9 image, and) Tj
+/F1 10 Tf
+1 0 0 1 54 478.00 Tm
+(  tutorial assets included.) Tj
+/F1 10 Tf
+1 0 0 1 54 465.00 Tm
+(- After that commit, a final local ProductFlowSwitcher.tsx delta removed the explicit Step 0) Tj
+/F1 10 Tf
+1 0 0 1 54 452.00 Tm
+(  PRIMARY FOCUS mapping from visualHierarchyStepTitles, leaving the Tutorial row's Step 0 title) Tj
+/F1 10 Tf
+1 0 0 1 54 439.00 Tm
+(  behavior to the default step label while the committed focus-blend changes remain otherwise) Tj
+/F1 10 Tf
+1 0 0 1 54 426.00 Tm
+(  intact.) Tj
+/F1 10 Tf
+1 0 0 1 54 413.00 Tm
+() Tj
+/F1 10 Tf
+1 0 0 1 54 400.00 Tm
+(Validation Summary) Tj
+/F1 10 Tf
+1 0 0 1 54 387.00 Tm
+(- npm run check passed repeatedly during the August 14 source pass and during this August 14) Tj
+/F1 10 Tf
+1 0 0 1 54 374.00 Tm
+(  PDF-generation pass, confirming TypeScript succeeded with tsc --noEmit.) Tj
+/F1 10 Tf
+1 0 0 1 54 361.00 Tm
+(- Playwright confirmed the Alla Vostra route could be opened locally, the UI Foundations tab) Tj
+/F1 10 Tf
+1 0 0 1 54 348.00 Tm
+(  could be selected, and the Visual Hierarchy group exposed the Pre-Scrolling, On-Scrolling,) Tj
+/F1 10 Tf
+1 0 0 1 54 335.00 Tm
+(  and During Shopping stacks for measurement and screenshot capture.) Tj
+/F1 10 Tf
+1 0 0 1 54 322.00 Tm
+(- Browser computed-style probes confirmed Step 1 primary focus stayed untreated, Step 1b/1c/1d) Tj
+/F1 10 Tf
+1 0 0 1 54 309.00 Tm
+(  and Step 5 carried the intended background/mask/composition settings, and later probes) Tj
+/F1 10 Tf
+1 0 0 1 54 296.00 Tm
+(  confirmed Step 1d no longer used a full-frame mask after the oblong side-zone refinement.) Tj
+/F1 10 Tf
+1 0 0 1 54 283.00 Tm
+(- Tight screenshot crops verified the secondary and tertiary frames no longer showed duplicated) Tj
+/F1 10 Tf
+1 0 0 1 54 270.00 Tm
+(  cheeseboards after the cutout layer was added underneath the protected overlay.) Tj
+/F1 10 Tf
+1 0 0 1 54 257.00 Tm
+(- Tight screenshot crops verified the quaternary frame evolved from a hard rectangular band) Tj
+/F1 10 Tf
+1 0 0 1 54 244.00 Tm
+(  into an oblong cream field, then into a wider side-zone composition where the gradient) Tj
+/F1 10 Tf
+1 0 0 1 54 231.00 Tm
+(  cleared the left and right frame bounds.) Tj
+/F1 10 Tf
+1 0 0 1 54 218.00 Tm
+(- Hover-preview probes verified secondary and tertiary clone the protected composition with) Tj
+/F1 10 Tf
+1 0 0 1 54 205.00 Tm
+(  overlay/cutout layers and quaternary clone preserves the oblong cream background and image) Tj
+/F1 10 Tf
+1 0 0 1 54 192.00 Tm
+(  transform.) Tj
+/F1 10 Tf
+1 0 0 1 54 179.00 Tm
+(- Development cache clears and server restarts confirmed stale .next output was removed before) Tj
+/F1 10 Tf
+1 0 0 1 54 166.00 Tm
+(  several browser checks. The server was left live at http://127.0.0.1:3000 after the final) Tj
+/F1 10 Tf
+1 0 0 1 54 153.00 Tm
+(  cache clear.) Tj
+/F1 10 Tf
+1 0 0 1 54 140.00 Tm
+() Tj
+/F1 10 Tf
+1 0 0 1 54 127.00 Tm
+(Files Touched and Artifacts) Tj
+/F1 10 Tf
+1 0 0 1 54 114.00 Tm
+(- app/projects/alla-vostra/ProductFlowSwitcher.tsx: added fade constants, per-frame Visual) Tj
+/F1 10 Tf
+1 0 0 1 54 101.00 Tm
+(  Hierarchy treatment logic, imported MOS9 Step 5 source, protected cheeseboard overlay/cutout) Tj
+/F1 10 Tf
+1 0 0 1 54 88.00 Tm
+(  support, quaternary oblong side-zone sizing, Step 5 ratio correction, image-unoptimized) Tj
+/F1 9 Tf
+1 0 0 1 54 36.00 Tm
+(Prahlin Portfolio Work Log - August 14, 2026 Page 5) Tj
+ET
+endstream
+endobj
+11 0 obj
+<< /Type /Page /Parent 14 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R >> >> /Contents 10 0 R >>
+endobj
+12 0 obj
+<< /Length 3977 >>
+stream
+BT
+/F1 10 Tf
+1 0 0 1 54 738.00 Tm
+(  routing, composed preview flags, and the later local Step 0 title-map adjustment.) Tj
+/F1 10 Tf
+1 0 0 1 54 725.00 Tm
+(- app/ScreenshotPreviewLayer.tsx: added composed screenshot preview target detection so) Tj
+/F1 10 Tf
+1 0 0 1 54 712.00 Tm
+(  hover/tap preview can clone complete frame compositions instead of only nested images.) Tj
+/F1 10 Tf
+1 0 0 1 54 699.00 Tm
+(- app/globals.css: added protected-image composition, cutout, and overlay styles for the Visual) Tj
+/F1 10 Tf
+1 0 0 1 54 686.00 Tm
+(  Hierarchy frame pair system.) Tj
+/F1 10 Tf
+1 0 0 1 54 673.00 Tm
+(- portfolio_PROJECT_SNAPSHOT.txt: refreshed to document the current project tree, git state,) Tj
+/F1 10 Tf
+1 0 0 1 54 660.00 Tm
+(  worklog inventory, added assets, and local cache-clearing artifacts.) Tj
+/F1 10 Tf
+1 0 0 1 54 647.00 Tm
+(- public/images/alla-vostra/taste111_mos9_bright_soft_mockup_tile_blend_both_mockup.png:) Tj
+/F1 10 Tf
+1 0 0 1 54 634.00 Tm
+(  imported from the Alla Vostra repository and used as the On-Scrolling tertiary focus frame.) Tj
+/F1 10 Tf
+1 0 0 1 54 621.00 Tm
+(- public/images/alla-vostra/tutorial/* and public/images/tutorial_screen_large.png /) Tj
+/F1 10 Tf
+1 0 0 1 54 608.00 Tm
+(  public/images/tutorial_screen_small.png: added tutorial capture assets that now live in the) Tj
+/F1 10 Tf
+1 0 0 1 54 595.00 Tm
+(  project image inventory.) Tj
+/F1 10 Tf
+1 0 0 1 54 582.00 Tm
+(- portfolio_worklog_august14.pdf: generated as the new root-level PDF worklog artifact for this) Tj
+/F1 10 Tf
+1 0 0 1 54 569.00 Tm
+(  August 14 Portfolio session.) Tj
+/F1 10 Tf
+1 0 0 1 54 556.00 Tm
+() Tj
+/F1 10 Tf
+1 0 0 1 54 543.00 Tm
+(Follow-Up Context) Tj
+/F1 10 Tf
+1 0 0 1 54 530.00 Tm
+(- The latest committed source state is 374ce86 on main and origin/main. The only local source) Tj
+/F1 10 Tf
+1 0 0 1 54 517.00 Tm
+(  delta after that commit at PDF-generation time is the Step 0 title-map removal in) Tj
+/F1 10 Tf
+1 0 0 1 54 504.00 Tm
+(  ProductFlowSwitcher.tsx plus the refreshed project snapshot and this new PDF artifact.) Tj
+/F1 10 Tf
+1 0 0 1 54 491.00 Tm
+(- The current quaternary focus treatment intentionally preserves the accepted cream gradient) Tj
+/F1 10 Tf
+1 0 0 1 54 478.00 Tm
+(  look and opacity while widening the frame's horizontal canvas so the gradient fades to) Tj
+/F1 10 Tf
+1 0 0 1 54 465.00 Tm
+(  transparency before reaching an invisible side wall.) Tj
+/F1 10 Tf
+1 0 0 1 54 452.00 Tm
+(- The secondary and tertiary protected cheeseboard treatment depends on keeping the cutout) Tj
+/F1 10 Tf
+1 0 0 1 54 439.00 Tm
+(  layer and overlay layer geometrically synchronized. If those source images are replaced) Tj
+/F1 10 Tf
+1 0 0 1 54 426.00 Tm
+(  later, the percent coordinates should be remeasured rather than reused blindly.) Tj
+/F1 10 Tf
+1 0 0 1 54 413.00 Tm
+(- No production deployment was performed. The work remains local unless the user explicitly) Tj
+/F1 10 Tf
+1 0 0 1 54 400.00 Tm
+(  requests commit, push, deploy, publish, or Hostinger synchronization.) Tj
+/F1 10 Tf
+1 0 0 1 54 387.00 Tm
+() Tj
+/F1 10 Tf
+1 0 0 1 54 374.00 Tm
+(Output Artifact) Tj
+/F1 10 Tf
+1 0 0 1 54 361.00 Tm
+(- Created portfolio_worklog_august14.pdf at the root of /Users/prahlin/gh/portfolio using the) Tj
+/F1 10 Tf
+1 0 0 1 54 348.00 Tm
+(  same root-level filename pattern as the prior Portfolio PDFs.) Tj
+/F1 10 Tf
+1 0 0 1 54 335.00 Tm
+(- The PDF was generated after reading the complete existing Portfolio worklog set, refreshing) Tj
+/F1 10 Tf
+1 0 0 1 54 322.00 Tm
+(  the project snapshot, and checking the latest source and validation state.) Tj
+/F1 10 Tf
+1 0 0 1 54 309.00 Tm
+(- The document records the August 14 Alla Vostra Visual Hierarchy blending,) Tj
+/F1 10 Tf
+1 0 0 1 54 296.00 Tm
+(  protected-cheeseboard, screenshot-preview, asset-import, cache-clearing, and validation work) Tj
+/F1 10 Tf
+1 0 0 1 54 283.00 Tm
+(  in the established Prahlin Portfolio worklog format.) Tj
+/F1 9 Tf
+1 0 0 1 54 36.00 Tm
+(Prahlin Portfolio Work Log - August 14, 2026 Page 6) Tj
+ET
+endstream
+endobj
+13 0 obj
+<< /Type /Page /Parent 14 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R >> >> /Contents 12 0 R >>
+endobj
+14 0 obj
+<< /Type /Pages /Kids [ 3 0 R 5 0 R 7 0 R 9 0 R 11 0 R 13 0 R ] /Count 6 >>
+endobj
+15 0 obj
+<< /Type /Catalog /Pages 14 0 R >>
+endobj
+16 0 obj
+<< /Title (Prahlin Portfolio Work Log - August 14, 2026) /Subject (Portfolio website development worklog) /Author (Codex) /Creator (Codex standard-library PDF generator) /Producer (Codex standard-library PDF generator) /CreationDate (D:20260814214217-04'00') /ModDate (D:20260814214217-04'00') >>
+endobj
+xref
+0 17
+0000000000 65535 f 
+0000000009 00000 n 
+0000000079 00000 n 
+0000006210 00000 n 
+0000006337 00000 n 
+0000012023 00000 n 
+0000012150 00000 n 
+0000017825 00000 n 
+0000017952 00000 n 
+0000023666 00000 n 
+0000023793 00000 n 
+0000029385 00000 n 
+0000029514 00000 n 
+0000033544 00000 n 
+0000033673 00000 n 
+0000033765 00000 n 
+0000033816 00000 n 
+trailer
+<< /Size 17 /Root 15 0 R /Info 16 0 R >>
+startxref
+34129
+%%EOF

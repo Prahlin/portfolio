@@ -260,7 +260,6 @@ const visualHierarchySteps = [
   "Step 6c",
 ];
 const visualHierarchyStepTitles: Record<string, string> = {
-  "Step 0": "PRIMARY FOCUS",
   "Step 1": "PRIMARY FOCUS",
   "Step 1b": "SECONDARY FOCUS",
   "Step 1c": "TERTIARY FOCUS",
