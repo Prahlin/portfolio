@@ -3534,8 +3534,7 @@ section.project-hero {
 }
 
 .flow-diagram-rail-confirmation span {
-  font-size: 10.5px;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.12em;
 }
 
 .flow-diagram-node {
@@ -3551,13 +3550,16 @@ section.project-hero {
   font-weight: 850;
   height: var(--flow-box-height);
   justify-content: center;
-  left: var(--flow-box-left);
+  left: var(--flow-box-center-left);
   line-height: 1.12;
-  overflow-wrap: anywhere;
+  min-width: max-content;
+  overflow-wrap: normal;
   padding: 6px 7px;
   position: absolute;
   text-align: center;
   top: var(--flow-box-top);
+  transform: translateX(-50%);
+  white-space: nowrap;
   width: var(--flow-box-width);
   z-index: 2;
 }
@@ -4413,16 +4415,16 @@ section.project-hero {
 .flow-visual-hierarchy-row-label-3 {
   top: calc(
     var(--flow-visual-hierarchy-tutorial-offset) +
-      var(--flow-visual-hierarchy-scaled-row-height) + 375px +
-      var(--flow-visual-hierarchy-section-offset)
+      var(--flow-visual-hierarchy-scaled-row-height) +
+      var(--flow-visual-hierarchy-section-offset) + 14px
   );
 }
 
 .flow-visual-hierarchy-row-label-4 {
   top: calc(
     var(--flow-visual-hierarchy-tutorial-offset) +
-      var(--flow-visual-hierarchy-scaled-row-height) * 2 + 400px +
-      var(--flow-visual-hierarchy-section-offset) * 2
+      var(--flow-visual-hierarchy-scaled-row-height) * 2 +
+      var(--flow-visual-hierarchy-section-offset) * 2 + 39px
   );
 }
 

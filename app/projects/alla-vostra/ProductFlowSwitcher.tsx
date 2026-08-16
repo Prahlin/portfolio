@@ -63,6 +63,7 @@ type ProductFlowArrowStyle = CSSProperties & {
 };
 
 type ProductFlowBoxStyle = CSSProperties & {
+  "--flow-box-center-left": string;
   "--flow-box-height": string;
   "--flow-box-left": string;
   "--flow-box-opacity"?: number;
@@ -249,7 +250,6 @@ const visualHierarchySteps = [
   "Step 0",
   "Step 1",
   "Step 1b",
-  "Step 2",
   "Step 1c",
   "Step 1d",
   "Step 3",
@@ -259,18 +259,25 @@ const visualHierarchySteps = [
   "Step 6b",
   "Step 6c",
 ];
-const visualHierarchyStepTitles: Record<string, string> = {
-  "Step 1": "PRIMARY FOCUS",
-  "Step 1b": "SECONDARY FOCUS",
-  "Step 1c": "TERTIARY FOCUS",
-  "Step 1d": "QUATERNARY FOCUS",
-  "Step 3": "PRIMARY FOCUS",
-  "Step 4": "SECONDARY FOCUS",
-  "Step 5": "TERTIARY FOCUS",
-  "Step 6": "PRIMARY FOCUS",
-  "Step 6b": "SECONDARY FOCUS",
-  "Step 6c": "TERTIARY FOCUS",
-};
+const visualHierarchyFocusTitles = [
+  "PRIMARY FOCUS",
+  "SECONDARY FOCUS",
+  "TERTIARY FOCUS",
+  "QUATERNARY FOCUS",
+] as const;
+const visualHierarchyFocusRows = [
+  ["Step 1", "Step 1b", "Step 1c", "Step 1d"],
+  ["Step 3", "Step 4", "Step 5"],
+  ["Step 6", "Step 6b", "Step 6c"],
+] as const;
+const visualHierarchyStepTitles: Record<string, string> = Object.fromEntries(
+  visualHierarchyFocusRows.flatMap((steps) =>
+    steps.map((step, index) => [
+      step,
+      visualHierarchyFocusTitles[index] ?? step,
+    ]),
+  ),
+);
 const colorsAndThemingSwatchGroups: Record<string, FlowSwatchGroup> = {
   "Step 1": {
     swatches: [
@@ -522,7 +529,7 @@ const uiBlueprintSections = [
   { stage: "04", title: "Controls & Inputs" },
   { stage: "05", title: "Visual Hierarchy" },
 ];
-const flowCoordinateFrame = { height: 1648, width: 862, x: 102, y: 270 };
+const flowCoordinateFrame = { height: 1648, width: 807.2, x: 122.8, y: 270 };
 const flowPanelRect: ProductFlowRect = {
   height: flowCoordinateFrame.height,
   width: flowCoordinateFrame.width,
@@ -530,69 +537,60 @@ const flowPanelRect: ProductFlowRect = {
   y: flowCoordinateFrame.y,
 };
 const productFlowRails: ProductFlowBox[] = [
-  { height: 210, title: "Tutorial", width: 86.4, x: 122.8, y: 314 },
-  { height: 210, title: "Browse", width: 86.4, x: 122.8, y: 546 },
-  { height: 210, opacity: 0.86, title: "Shop", width: 86.4, x: 122.8, y: 778 },
-  { height: 210, opacity: 0.76, title: "Cart", width: 86.4, x: 122.8, y: 1010 },
-  { height: 210, opacity: 0.66, title: "Checkout", width: 86.4, x: 122.8, y: 1242 },
-  { height: 210, opacity: 0.56, title: "Payment", width: 86.4, x: 122.8, y: 1474 },
-  { height: 210, opacity: 0.48, title: "Confirmation", width: 86.4, x: 122.8, y: 1706 },
+  { height: 252.7, title: "Tutorial", width: 86.4, x: 122.8, y: 281 },
+  { height: 252.7, title: "Browse", width: 86.4, x: 122.8, y: 555.7 },
+  { height: 252.7, opacity: 0.86, title: "Shop", width: 86.4, x: 122.8, y: 830.3 },
+  { height: 252.7, opacity: 0.76, title: "Cart", width: 86.4, x: 122.8, y: 1105 },
+  { height: 252.7, opacity: 0.66, title: "CHECKOUT", width: 86.4, x: 122.8, y: 1379.7 },
+  { height: 252.7, opacity: 0.48, title: "Confirmation", width: 86.4, x: 122.8, y: 1654.3 },
 ];
 const productFlowNodes: ProductFlowBox[] = [
-  { height: 84, title: "Step 1", width: 122.5, x: 276.8, y: 322 },
-  { height: 84, title: "Step 2", width: 125.2, x: 492.4, y: 322 },
-  { height: 84, title: "Step 3", width: 125.8, x: 709.1, y: 322 },
-  { height: 84, title: "Step 4", width: 126.3, x: 600.4, y: 430 },
-  { height: 84, title: "Step 5", width: 125.8, x: 383.6, y: 430 },
-  { height: 84, title: "Home", width: 119.8, x: 225.1, y: 609 },
-  { height: 84, title: "Products", width: 154.7, x: 388.6, y: 609 },
-  { height: 84, title: "About Us", width: 155.3, x: 574.4, y: 609 },
-  { height: 84, title: "Contact", width: 142.8, x: 762.6, y: 609 },
-  { height: 84, title: "Shop", width: 112, x: 511, y: 841 },
-  { height: 84, title: "Tutorial", width: 139.7, x: 271.1, y: 1073 },
-  { height: 84, title: "Selection", width: 157.8, x: 502.1, y: 1073 },
-  { height: 84, title: "Cart", width: 103.8, x: 769.1, y: 1073 },
-  { height: 84, title: "Contact", width: 142.8, x: 244.6, y: 1305 },
-  { height: 84, title: "Address", width: 146.4, x: 473.8, y: 1305 },
-  { height: 84, title: "Date & Time", width: 184.9, x: 705.6, y: 1305 },
-  { height: 84, title: "Payment Method", width: 238.9, x: 226, y: 1537 },
-  { height: 84, title: "Details Input", width: 192.9, x: 500, y: 1537 },
-  { height: 84, title: "Confirmation\nPrompt", width: 198.8, x: 740, y: 1537 },
-  { height: 84, title: "Thank You\nOrder Confirmed", width: 237.7, x: 448.2, y: 1769 },
+  { height: 84, title: "Step 1", width: 122.5, x: 276.8, y: 322.2 },
+  { height: 84, title: "Step 2", width: 125.2, x: 492.4, y: 322.2 },
+  { height: 84, title: "Step 3", width: 125.8, x: 709.1, y: 322.2 },
+  { height: 84, title: "Step 4", width: 126.3, x: 600.4, y: 430.5 },
+  { height: 84, title: "Step 5", width: 125.8, x: 383.6, y: 430.5 },
+  { height: 84, title: "Home", width: 119.8, x: 318.1, y: 583.2 },
+  { height: 84, title: "Products", width: 154.7, x: 403.7, y: 715.8 },
+  { height: 84, title: "About Us", width: 155.3, x: 506.4, y: 583.2 },
+  { height: 84, title: "Contact", width: 142.8, x: 615.6, y: 715.8 },
+  { height: 84, title: "SHOP", width: 112, x: 511, y: 904 },
+  { height: 84, title: "Tutorial", width: 139.7, x: 271.1, y: 1178.7 },
+  { height: 84, title: "Shop", width: 157.8, x: 502.1, y: 1178.7 },
+  { height: 84, title: "Cart", width: 103.8, x: 769.1, y: 1178.7 },
+  { height: 84, title: "Contact", width: 142.8, x: 244.6, y: 1411.1 },
+  { height: 84, title: "Address", width: 146.4, x: 473.8, y: 1411.1 },
+  { height: 84, title: "Date & Time", width: 184.9, x: 705.6, y: 1411.1 },
+  { height: 84, title: "Payment", width: 238.9, x: 447.6, y: 1525.6 },
+  { height: 84, title: "Order Confimed", width: 237.7, x: 448.2, y: 1738.7 },
 ];
 const productFlowConnectors: ProductFlowConnector[] = [
-  { d: "M399.3 364H486.4" },
-  { d: "M617.6 364H703.1" },
-  { d: "M772 406V472H732.6" },
-  { d: "M600.4 472H515.4" },
-  { d: "M446.5 514V544H285V603" },
-  { d: "M285 693V883H511" },
-  { d: "M466 693V816H545V835" },
-  { d: "M652 693V816H589V835" },
-  { d: "M834 693V883H623" },
-  { d: "M285 609V589", kind: "arrow-body" },
-  { d: "M466 609V589", kind: "arrow-body" },
-  { d: "M652 609V589", kind: "arrow-body" },
-  { d: "M834 609V589", kind: "arrow-body" },
-  { d: "M567 925V1008", kind: "arrow-body" },
-  { d: "M567 1008H341V1067" },
-  { d: "M567 1008H581V1067" },
-  { d: "M567 1008H821V1067" },
-  { d: "M410.8 1115H496.1" },
-  { d: "M659.9 1115H763.1" },
-  { d: "M821 1157V1240H316V1302" },
-  { d: "M387.4 1347H467.8" },
-  { d: "M620.2 1347H699.6" },
-  { d: "M798 1389V1496H345.5V1531" },
-  { d: "M464.9 1579H494" },
-  { d: "M692.9 1579H734" },
-  { d: "M839.4 1621V1685H567V1763" },
-  { d: "M204 544H930", kind: "hairline" },
-  { d: "M204 776H930", kind: "hairline" },
-  { d: "M204 1008H930", kind: "hairline" },
-  { d: "M204 1240H930", kind: "hairline" },
-  { d: "M204 1472H930", kind: "hairline" },
-  { d: "M204 1704H930", kind: "hairline" },
+  { d: "M399.3 364.2H486.4" },
+  { d: "M617.6 364.2H703.1" },
+  { d: "M772 406.2V472.5H732.6" },
+  { d: "M600.4 472.5H515.4" },
+  { d: "M446.5 514.5V544.7H378V577.2" },
+  { d: "M378 667.2V946H511" },
+  { d: "M481 799.8V866.7H545V898" },
+  { d: "M584 667.2V866.7H589V898" },
+  { d: "M687 799.8V946H623" },
+  { d: "M378 583.2V551.8", kind: "arrow-body" },
+  { d: "M567 988V1094", kind: "arrow-body" },
+  { d: "M567 1094H341V1172.7" },
+  { d: "M567 1094H581V1172.7" },
+  { d: "M567 1094H821V1172.7" },
+  { d: "M410.8 1220.7H496.1" },
+  { d: "M659.9 1220.7H763.1" },
+  { d: "M821 1262.7V1368.7H316V1408.1" },
+  { d: "M387.4 1453.1H467.8" },
+  { d: "M620.2 1453.1H699.6" },
+  { d: "M798 1495.1V1513.9H567V1519.6" },
+  { d: "M567 1609.6V1732.7" },
+  { d: "M204 544.7H930", kind: "hairline" },
+  { d: "M204 819.3H930", kind: "hairline" },
+  { d: "M204 1094H930", kind: "hairline" },
+  { d: "M204 1368.7H930", kind: "hairline" },
+  { d: "M204 1643.3H930", kind: "hairline" },
 ];
 const narrowFlowQuery = "(max-width: 720px)";
 
@@ -606,6 +604,7 @@ function getFlowYPercent(y: number) {
 
 function getFlowBoxStyle(box: ProductFlowRect): ProductFlowBoxStyle {
   return {
+    "--flow-box-center-left": `${getFlowXPercent(box.x + box.width / 2)}%`,
     "--flow-box-height": `${(box.height / flowCoordinateFrame.height) * 100}%`,
     "--flow-box-left": `${getFlowXPercent(box.x)}%`,
     "--flow-box-opacity": box.opacity ?? 1,
@@ -1626,9 +1625,11 @@ function PlaceholderStage({
 export default function ProductFlowSwitcher({
   launchScreen,
   screenshotGroups,
+  tutorialStacks,
 }: {
   launchScreen: FlowScreen;
   screenshotGroups: ScreenshotGroup[];
+  tutorialStacks: FlowScreenStack[];
 }) {
   const [activeView, setActiveView] = useState<FlowView>("ux");
   const [productFlowScrollRequestId, setProductFlowScrollRequestId] =
@@ -2034,7 +2035,7 @@ export default function ProductFlowSwitcher({
                                   ? "/images/alla-vostra-empty-framed-no-island.png"
                                   : isHomeScreenStep
                                   ? isStepFourHomeScreenStep
-                                    ? "/images/alla-vostra-home-toolbar-bottom-transparent-no-frame-cropped.png"
+                                    ? "/images/alla-vostra-home-framed-no-island.png"
                                     : isStepFiveMosaicStep
                                       ? "/images/alla-vostra/taste111_mos9_bright_soft_mockup_tile_blend_both_mockup.png"
                                       : "/images/alla-vostra-home-framed-no-island.png"
@@ -2297,11 +2298,21 @@ export default function ProductFlowSwitcher({
         </div>
       ) : (
         <div className="flow-capture-groups">
-          <PlaceholderStage
-            copy="This tutorial stage will outline the guided first-use walkthrough."
-            stage="0"
-            title="Tutorial"
-          />
+          <div className="flow-capture-group">
+            <div className="flow-group-header">
+              <span>Stage 0</span>
+              <h3>Tutorial</h3>
+              <p>This tutorial stage will outline the guided first-use walkthrough.</p>
+            </div>
+
+            <ExpandableFlowStacks
+              collapsedLabel="Show More"
+              expandedLabel="Show Less"
+              initialStackCount={2}
+              narrowInitialStackCount={1}
+              stacks={tutorialStacks}
+            />
+          </div>
 
           {screenshotGroups.map((group, index) => (
             <div className="flow-capture-group" key={group.title}>

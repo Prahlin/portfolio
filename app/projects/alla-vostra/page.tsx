@@ -362,6 +362,104 @@ const launchScreen: FlowScreen = {
   caption: "Launch screen establishing brand tone and first-use polish.",
 };
 
+const tutorialStacks: FlowScreenStack[] = [
+  {
+    title: "Browse Grazingboards",
+    screens: [
+      {
+        aspect: "standard",
+        label: "Small",
+        title: "Tutorial Browse Grazingboards Small",
+        src: "/images/alla-vostra/tutorial/tutorial_screen_small_step_01.png",
+        caption: "Android Small tutorial browse walkthrough.",
+      },
+      {
+        aspect: "tall",
+        label: "Large",
+        title: "Tutorial Browse Grazingboards Large",
+        src: "/images/alla-vostra/tutorial/tutorial_screen_large_step_01.png",
+        caption: "Android Large tutorial browse walkthrough.",
+      },
+    ],
+  },
+  {
+    title: "Pick Your Quantity",
+    screens: [
+      {
+        aspect: "standard",
+        label: "Small",
+        title: "Tutorial Pick Quantity Small",
+        src: "/images/alla-vostra/tutorial/tutorial_screen_small_step_02.png",
+        caption: "Android Small tutorial quantity selection.",
+      },
+      {
+        aspect: "tall",
+        label: "Large",
+        title: "Tutorial Pick Quantity Large",
+        src: "/images/alla-vostra/tutorial/tutorial_screen_large_step_02.png",
+        caption: "Android Large tutorial quantity selection.",
+      },
+    ],
+  },
+  {
+    title: "Add To Cart",
+    screens: [
+      {
+        aspect: "standard",
+        label: "Small",
+        title: "Tutorial Add To Cart Small",
+        src: "/images/alla-vostra/tutorial/tutorial_screen_small_step_03.png",
+        caption: "Android Small tutorial add-to-cart moment.",
+      },
+      {
+        aspect: "tall",
+        label: "Large",
+        title: "Tutorial Add To Cart Large",
+        src: "/images/alla-vostra/tutorial/tutorial_screen_large_step_03.png",
+        caption: "Android Large tutorial add-to-cart moment.",
+      },
+    ],
+  },
+  {
+    title: "Complete Checkout",
+    screens: [
+      {
+        aspect: "standard",
+        label: "Small",
+        title: "Tutorial Complete Checkout Small",
+        src: "/images/alla-vostra/tutorial/tutorial_screen_small_step_04.png",
+        caption: "Android Small tutorial checkout prompt.",
+      },
+      {
+        aspect: "tall",
+        label: "Large",
+        title: "Tutorial Complete Checkout Large",
+        src: "/images/alla-vostra/tutorial/tutorial_screen_large_step_04.png",
+        caption: "Android Large tutorial checkout prompt.",
+      },
+    ],
+  },
+  {
+    title: "Delivery On Its Way",
+    screens: [
+      {
+        aspect: "standard",
+        label: "Small",
+        title: "Tutorial Delivery Small",
+        src: "/images/alla-vostra/tutorial/tutorial_screen_small_step_05.png",
+        caption: "Android Small tutorial completion state.",
+      },
+      {
+        aspect: "tall",
+        label: "Large",
+        title: "Tutorial Delivery Large",
+        src: "/images/alla-vostra/tutorial/tutorial_screen_large_step_05.png",
+        caption: "Android Large tutorial completion state.",
+      },
+    ],
+  },
+];
+
 const screenshotGroups: {
   copy: string;
   stacks: FlowScreenStack[];
@@ -447,6 +545,12 @@ const screenshotGroups: {
           },
         ],
       },
+    ],
+  },
+  {
+    title: "SHOP",
+    copy: "The shop entry screen bridges browse intent into item selection across Android Small and Large.",
+    stacks: [
       {
         title: "Shop Screen",
         screens: [
@@ -472,6 +576,25 @@ const screenshotGroups: {
     title: "Cart",
     copy: "Cart states were treated as part of the purchase path, with empty and filled moments both needing clear feedback.",
     stacks: [
+      {
+        title: "Products Overlay",
+        screens: [
+          {
+            aspect: "standard",
+            label: "Small",
+            title: "Products Overlay Small",
+            src: "/images/products_overlay_piccola_small.png",
+            caption: "Android Small products overlay during item selection.",
+          },
+          {
+            aspect: "tall",
+            label: "Large",
+            title: "Products Overlay Large",
+            src: "/images/products_overlay_piccola_large.png",
+            caption: "Android Large products overlay for selection QA.",
+          },
+        ],
+      },
       {
         title: "Empty Cart Overlay",
         screens: [
@@ -517,6 +640,25 @@ const screenshotGroups: {
     copy: "Checkout details break the purchase path into focused, readable steps instead of one overloaded form.",
     stacks: [
       {
+        title: "Contact Input Overlay",
+        screens: [
+          {
+            aspect: "standard",
+            label: "Small",
+            title: "Contact Small",
+            src: "/images/contact_overlay_small.png",
+            caption: "Android Small contact information step.",
+          },
+          {
+            aspect: "tall",
+            label: "Large",
+            title: "Contact Large",
+            src: "/images/contact_overlay_large.png",
+            caption: "Android Large contact step for field rhythm checks.",
+          },
+        ],
+      },
+      {
         title: "Address Input Overlay",
         screens: [
           {
@@ -554,31 +696,6 @@ const screenshotGroups: {
           },
         ],
       },
-      {
-        title: "Contact Input Overlay",
-        screens: [
-          {
-            aspect: "standard",
-            label: "Small",
-            title: "Contact Small",
-            src: "/images/contact_overlay_small.png",
-            caption: "Android Small contact information step.",
-          },
-          {
-            aspect: "tall",
-            label: "Large",
-            title: "Contact Large",
-            src: "/images/contact_overlay_large.png",
-            caption: "Android Large contact step for field rhythm checks.",
-          },
-        ],
-      },
-    ],
-  },
-  {
-    title: "Payment",
-    copy: "Payment screens keep the final handoff explicit so users can review the moment and complete checkout with confidence.",
-    stacks: [
       {
         title: "Payment Method Overlay",
         screens: [
@@ -1072,6 +1189,7 @@ export default function AllaVostraCaseStudy() {
           <ProductFlowSwitcher
             launchScreen={launchScreen}
             screenshotGroups={screenshotGroups}
+            tutorialStacks={tutorialStacks}
           />
         </div>
       </section>

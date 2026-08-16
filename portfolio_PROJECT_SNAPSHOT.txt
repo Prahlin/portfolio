@@ -1,5 +1,5 @@
 Portfolio Next.js PROJECT SNAPSHOT
-Generated: Fri Aug 14 21:29:38 EDT 2026
+Generated: Fri Aug 14 21:50:36 EDT 2026
 Project directory: /Users/prahlin/gh/portfolio
 
 IMPORTANT INSTRUCTIONS FOR CHATGPT & CODEX:
@@ -15107,6 +15107,7 @@ PROJECT FILE TREE
 /Users/prahlin/gh/portfolio/portfolio_worklog_august11.pdf
 /Users/prahlin/gh/portfolio/portfolio_worklog_august12_part1.pdf
 /Users/prahlin/gh/portfolio/portfolio_worklog_august12_part2.pdf
+/Users/prahlin/gh/portfolio/portfolio_worklog_august14.pdf
 /Users/prahlin/gh/portfolio/portfolio_worklog_august1_part1.pdf
 /Users/prahlin/gh/portfolio/portfolio_worklog_august1_part2.pdf
 /Users/prahlin/gh/portfolio/portfolio_worklog_august1_part3.pdf
@@ -25429,11 +25430,11 @@ main
 
 Status:
 ## main...origin/main
- M app/projects/alla-vostra/ProductFlowSwitcher.tsx
  M portfolio_PROJECT_SNAPSHOT.txt
 
 Recent commits:
-374ce86 (HEAD -> main, origin/main) Refined Alla Vostra visual hierarchy focus blends
+b95ad48 (HEAD -> main, origin/main) Generated the latest customary session pdf worklog for the relevant project, dated August 14, 2026.
+374ce86 Refined Alla Vostra visual hierarchy focus blends
 e559fc1 Generated the latest customary session pdf worklog for the relevant project, dated August 12 (Part 2), 2026.
 529c8b2 Added Alla Vostra visual hierarchy tutorial and focus variants
 da37f3c Generated the latest customary session pdf worklog for the relevant project, dated August 12 (Part 1), 2026.
@@ -25442,7 +25443,6 @@ ac6d438 Generated the latest customary session pdf worklog for the relevant proj
 06c8cb4 Refined Alla Vostra visual hierarchy stacks - Added Step 1b, Step 1c, and Step 1d to the Visual Hierarchy sequence. - Created transparent, no-frame focal screenshots for the new pre-scrolling stack variants. - Cropped Step 1d into a true square cheeseboard-only asset with the photo area removed. - Reused cheeseboard_products.png for the cheeseboard source asset. - Scaled Step 1 to match the larger stack width used by Fonts and Original Hero. - Limited the Visual Hierarchy grid to two stacks per row. - Evenly positioned Step 1b, Step 1c, and Step 1d alongside the Step 1 device frame. - Matched visual hierarchy step label sizing and doubled the PRE-SCROLLING / ON-SCROLLING headers.
 f8be376 Generated August 10 Part 2 Portfolio worklog
 6de20a9 Refined Alla Vostra Visual Hierarchy stacks
-00085d2 Generated the latest customary session pdf worklog for the relevant project, dated August 10 (Part 1), 2026.
 
 Remotes:
 origin	https://github.com/Prahlin/portfolio.git (fetch)
@@ -25623,6 +25623,7 @@ portfolio_worklog_august10_part2.pdf | 34914 bytes | modified 2026-08-11 00:52:0
 portfolio_worklog_august11.pdf | 40524 bytes | modified 2026-08-11 23:55:47
 portfolio_worklog_august12_part1.pdf | 30476 bytes | modified 2026-08-12 22:27:26
 portfolio_worklog_august12_part2.pdf | 40229 bytes | modified 2026-08-13 00:07:13
+portfolio_worklog_august14.pdf | 34550 bytes | modified 2026-08-14 21:42:17
 portfolio_worklog_august1_part1.pdf | 36347 bytes | modified 2026-08-01 14:29:45
 portfolio_worklog_august1_part2.pdf | 30905 bytes | modified 2026-08-01 19:16:37
 portfolio_worklog_august1_part3.pdf | 28004 bytes | modified 2026-08-01 20:38:07
