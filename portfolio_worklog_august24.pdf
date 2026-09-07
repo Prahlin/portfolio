@@ -1,0 +1,465 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+2 0 obj
+<< /Length 6205 >>
+stream
+BT /F1 10 Tf 54.00 742.00 Td (Prahlin Portfolio Work Log - August 24, 2026) Tj ET
+BT /F1 10 Tf 54.00 730.00 Td (Compiled summary for Monday, August 24, 2026 - focus: continuing the Prahl.dev Portfolio) Tj ET
+BT /F1 10 Tf 54.00 718.00 Td (Alla Vostra project-page refinement after the August 16 UX Product Flow and UI hierarchy) Tj ET
+BT /F1 10 Tf 54.00 706.00 Td (pass, verifying the United States Eastern date, reviewing all prior Portfolio PDF) Tj ET
+BT /F1 10 Tf 54.00 694.00 Td (worklogs, running the customary project reader, removing the UI Foundations Visual) Tj ET
+BT /F1 10 Tf 54.00 682.00 Td (Hierarchy Tutorial subsection and its empty-frame asset, rebuilding the Pre-Scrolling) Tj ET
+BT /F1 10 Tf 54.00 670.00 Td (Visual Hierarchy presentation around primary, secondary, tertiary, and quaternary) Tj ET
+BT /F1 10 Tf 54.00 658.00 Td (stacks, tuning vertical Viewing Area and Focal Point braces, adding white-line and) Tj ET
+BT /F1 10 Tf 54.00 646.00 Td (green-eyebrow callouts for app header, nav bar, hero, product image, main content, and) Tj ET
+BT /F1 10 Tf 54.00 634.00 Td (shopping cart regions, preserving narrow and portrait annotations, validating hover/tap) Tj ET
+BT /F1 10 Tf 54.00 622.00 Td (magnification and static export behavior, checking the Hostinger GitHub Actions run) Tj ET
+BT /F1 10 Tf 54.00 610.00 Td (state, refreshing the Portfolio project snapshot, and generating the August 24 Portfolio) Tj ET
+BT /F1 10 Tf 54.00 598.00 Td (PDF worklog.) Tj ET
+BT /F1 10 Tf 54.00 586.00 Td (Generated in continuity with the established Prahlin Portfolio daily worklog cadence:) Tj ET
+BT /F1 10 Tf 54.00 574.00 Td (compact opening summary, source-material section, baseline section, goal list,) Tj ET
+BT /F1 10 Tf 54.00 562.00 Td (work-completed sections, validation section, files-touched list, follow-up context, and) Tj ET
+BT /F1 10 Tf 54.00 550.00 Td (output-artifact close.) Tj ET
+BT /F1 10 Tf 54.00 538.00 Td (This artifact intentionally covers Prahlin/portfolio work performed after) Tj ET
+BT /F1 10 Tf 54.00 526.00 Td (portfolio_worklog_august16.pdf and after the August 16 documentation state. The source) Tj ET
+BT /F1 10 Tf 54.00 514.00 Td (commit reviewed for this record is c8a0a0080db246a6f5fddfa6c765c9adad364758 on main,) Tj ET
+BT /F1 10 Tf 54.00 502.00 Td (matching origin/main before this PDF was generated. That commit contains the Alla Vostra) Tj ET
+BT /F1 10 Tf 54.00 490.00 Td (UI Foundations Visual Hierarchy source and asset changes described here. The GitHub) Tj ET
+BT /F1 10 Tf 54.00 478.00 Td (Actions Hostinger static-export workflow run for that push was checked and failed before) Tj ET
+BT /F1 10 Tf 54.00 466.00 Td (the build job started because the account was locked due to a billing issue; local) Tj ET
+BT /F1 10 Tf 54.00 454.00 Td (TypeScript and static-export validation both passed. The only local source delta before) Tj ET
+BT /F1 10 Tf 54.00 442.00 Td (this PDF was generated was the refreshed portfolio_PROJECT_SNAPSHOT.txt documentation) Tj ET
+BT /F1 10 Tf 54.00 430.00 Td (snapshot.) Tj ET
+BT /F1 10 Tf 54.00 418.00 Td () Tj ET
+BT /F1 10 Tf 54.00 406.00 Td (Source Materials Reviewed) Tj ET
+BT /F1 10 Tf 54.00 394.00 Td (- Verified the United States Eastern date with TZ=America/New_York date, which reported) Tj ET
+BT /F1 10 Tf 54.00 382.00 Td (  Monday, August 24, 2026 at 11:19 PM EDT during the worklog pass. The user then) Tj ET
+BT /F1 10 Tf 54.00 370.00 Td (  confirmed that the worklog should use August 24 rather than the UTC date already) Tj ET
+BT /F1 10 Tf 54.00 358.00 Td (  visible in response headers.) Tj ET
+BT /F1 10 Tf 54.00 346.00 Td (- Ran ./read_project.sh from /Users/prahlin/gh/portfolio and regenerated) Tj ET
+BT /F1 10 Tf 54.00 334.00 Td (  portfolio_PROJECT_SNAPSHOT.txt before writing this worklog, preserving the project) Tj ET
+BT /F1 10 Tf 54.00 322.00 Td (  convention that Codex refreshes the current source snapshot before continuing) Tj ET
+BT /F1 10 Tf 54.00 310.00 Td (  Portfolio documentation work.) Tj ET
+BT /F1 10 Tf 54.00 298.00 Td (- Reviewed the refreshed portfolio_PROJECT_SNAPSHOT.txt, including project notes, source) Tj ET
+BT /F1 10 Tf 54.00 286.00 Td (  tree, public image inventories, PDF worklog inventory, package and deployment) Tj ET
+BT /F1 10 Tf 54.00 274.00 Td (  configuration, current git context, recent commits, ignored generated paths, and the) Tj ET
+BT /F1 10 Tf 54.00 262.00 Td (  standing instruction to ask for a commit message before committing or pushing.) Tj ET
+BT /F1 10 Tf 54.00 250.00 Td (- Reviewed every pre-existing Portfolio root-level worklog PDF:) Tj ET
+BT /F1 10 Tf 54.00 238.00 Td (  portfolio_worklog_july11.pdf, portfolio_worklog_july14.pdf,) Tj ET
+BT /F1 10 Tf 54.00 226.00 Td (  portfolio_worklog_july15_part1.pdf, portfolio_worklog_july15_part2.pdf,) Tj ET
+BT /F1 10 Tf 54.00 214.00 Td (  portfolio_worklog_july16.pdf, portfolio_worklog_july19.pdf,) Tj ET
+BT /F1 10 Tf 54.00 202.00 Td (  portfolio_worklog_july20.pdf, portfolio_worklog_july21.pdf,) Tj ET
+BT /F1 10 Tf 54.00 190.00 Td (  portfolio_worklog_july22.pdf, portfolio_worklog_july23.pdf,) Tj ET
+BT /F1 10 Tf 54.00 178.00 Td (  portfolio_worklog_july24.pdf, portfolio_worklog_july25.pdf,) Tj ET
+BT /F1 10 Tf 54.00 166.00 Td (  portfolio_worklog_july29.pdf, portfolio_worklog_july30.pdf,) Tj ET
+BT /F1 10 Tf 54.00 154.00 Td (  portfolio_worklog_july31.pdf, portfolio_worklog_august1_part1.pdf,) Tj ET
+BT /F1 10 Tf 54.00 142.00 Td (  portfolio_worklog_august1_part2.pdf, portfolio_worklog_august1_part3.pdf,) Tj ET
+BT /F1 10 Tf 54.00 130.00 Td (  portfolio_worklog_august3.pdf, portfolio_worklog_august4.pdf,) Tj ET
+BT /F1 10 Tf 54.00 118.00 Td (  portfolio_worklog_august5.pdf, portfolio_worklog_august6.pdf,) Tj ET
+BT /F1 10 Tf 54.00 106.00 Td (  portfolio_worklog_august10_part1.pdf, portfolio_worklog_august10_part2.pdf,) Tj ET
+BT /F1 10 Tf 54.00 94.00 Td (  portfolio_worklog_august11.pdf, portfolio_worklog_august12_part1.pdf,) Tj ET
+BT /F1 10 Tf 54.00 82.00 Td (  portfolio_worklog_august12_part2.pdf, portfolio_worklog_august14.pdf, and) Tj ET
+BT /F1 10 Tf 54.00 70.00 Td (  portfolio_worklog_august16.pdf.) Tj ET
+BT /F1 9 Tf 195.84 32.00 Td (Prahlin Portfolio Work Log - August 24, 2026 Page 1) Tj ET
+endstream
+endobj
+3 0 obj
+<< /Type /Page /Parent 16 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R >> >> /Contents 2 0 R >>
+endobj
+4 0 obj
+<< /Length 6246 >>
+stream
+BT /F1 10 Tf 54.00 742.00 Td (- Extracted text from all twenty-nine existing Portfolio PDFs with pdftotext to preserve) Tj ET
+BT /F1 10 Tf 54.00 730.00 Td (  title cadence, same-day part naming, opening-summary density, section order,) Tj ET
+BT /F1 10 Tf 54.00 718.00 Td (  bullet-heavy technical voice, validation language, files-touched lists, follow-up) Tj ET
+BT /F1 10 Tf 54.00 706.00 Td (  context, output-artifact close, and root-level filename style.) Tj ET
+BT /F1 10 Tf 54.00 694.00 Td (- Checked recent PDF metadata with pdfinfo and pdffonts. The mature Portfolio artifacts) Tj ET
+BT /F1 10 Tf 54.00 682.00 Td (  use letter-size pages, PDF 1.4 output, Helvetica Type 1 text, Codex) Tj ET
+BT /F1 10 Tf 54.00 670.00 Td (  author/creator/producer metadata, no custom metadata stream, and root-level filenames) Tj ET
+BT /F1 10 Tf 54.00 658.00 Td (  in the portfolio_worklog_monthday pattern.) Tj ET
+BT /F1 10 Tf 54.00 646.00 Td (- Used portfolio_worklog_august16.pdf as the closest chronological baseline, with) Tj ET
+BT /F1 10 Tf 54.00 634.00 Td (  portfolio_worklog_august14.pdf and portfolio_worklog_august12_part2.pdf as the closest) Tj ET
+BT /F1 10 Tf 54.00 622.00 Td (  Visual Hierarchy structural references because they documented the prior tutorial row,) Tj ET
+BT /F1 10 Tf 54.00 610.00 Td (  focus variants, cream fades, cache-clearing pattern, browser measurement workflow, and) Tj ET
+BT /F1 10 Tf 54.00 598.00 Td (  documentation language.) Tj ET
+BT /F1 10 Tf 54.00 586.00 Td (- Reviewed git history and state through git log, git show --stat, git show) Tj ET
+BT /F1 10 Tf 54.00 574.00 Td (  --name-status, git branch -vv, git status, git diff --stat, the refreshed snapshot,) Tj ET
+BT /F1 10 Tf 54.00 562.00 Td (  package scripts, npm validation output, local route checks, and GitHub Actions run) Tj ET
+BT /F1 10 Tf 54.00 550.00 Td (  history. HEAD and origin/main resolved to c8a0a00 before this PDF was generated.) Tj ET
+BT /F1 10 Tf 54.00 538.00 Td (- Reviewed app/projects/alla-vostra/ProductFlowSwitcher.tsx, app/globals.css,) Tj ET
+BT /F1 10 Tf 54.00 526.00 Td (  portfolio_PROJECT_SNAPSHOT.txt, the removed) Tj ET
+BT /F1 10 Tf 54.00 514.00 Td (  public/images/alla-vostra-empty-framed-no-island.png asset path, the local) Tj ET
+BT /F1 10 Tf 54.00 502.00 Td (  /projects/alla-vostra route, and the current root-level Portfolio PDF inventory.) Tj ET
+BT /F1 10 Tf 54.00 490.00 Td () Tj ET
+BT /F1 10 Tf 54.00 478.00 Td (Baseline Status Before August 24 Work) Tj ET
+BT /F1 10 Tf 54.00 466.00 Td (- August 16 left the Portfolio project with the Alla Vostra UX Product Flow diagram and) Tj ET
+BT /F1 10 Tf 54.00 454.00 Td (  screenshot-flow sections reorganized around Tutorial, Browse, SHOP, Cart, Checkout,) Tj ET
+BT /F1 10 Tf 54.00 442.00 Td (  and Confirmation, plus Visual Hierarchy Step 2 removed from UI Foundations.) Tj ET
+BT /F1 10 Tf 54.00 430.00 Td (- The UI Foundations Visual Hierarchy section still carried the earlier Tutorial) Tj ET
+BT /F1 10 Tf 54.00 418.00 Td (  subsection context from the August 12 and August 14 passes, including a blank) Tj ET
+BT /F1 10 Tf 54.00 406.00 Td (  empty-frame asset that no longer matched the desired Pre-Scrolling hierarchy story.) Tj ET
+BT /F1 10 Tf 54.00 394.00 Td (- The Pre-Scrolling Visual Hierarchy row had primary, secondary, tertiary, and) Tj ET
+BT /F1 10 Tf 54.00 382.00 Td (  quaternary imagery, but the user wanted the Tutorial subsection removed completely and) Tj ET
+BT /F1 10 Tf 54.00 370.00 Td (  wanted the remaining Pre-Scrolling layout treated as the active refinement area.) Tj ET
+BT /F1 10 Tf 54.00 358.00 Td (- The primary Viewing Area annotation, braces, white section lines, and green eyebrow) Tj ET
+BT /F1 10 Tf 54.00 346.00 Td (  callouts needed repeated spacing, orientation, centering, and clipping adjustments so) Tj ET
+BT /F1 10 Tf 54.00 334.00 Td (  the labels read vertically while still tracking the real phone/screenshot geometry.) Tj ET
+BT /F1 10 Tf 54.00 322.00 Td (- The secondary, tertiary, and quaternary stacks needed to keep their wide) Tj ET
+BT /F1 10 Tf 54.00 310.00 Td (  two-column-per-row aspect ratio scale in narrow and portrait windows, rather than) Tj ET
+BT /F1 10 Tf 54.00 298.00 Td (  collapsing into square-ish or clipped preview behavior.) Tj ET
+BT /F1 10 Tf 54.00 286.00 Td (- The secondary and tertiary captions, quaternary image placement, sibling stack) Tj ET
+BT /F1 10 Tf 54.00 274.00 Td (  spacing, and focal-point labels needed visual hierarchy cleanup after the user removed) Tj ET
+BT /F1 10 Tf 54.00 262.00 Td (  the word FOCUS from the stack headers.) Tj ET
+BT /F1 10 Tf 54.00 250.00 Td (- Narrow and portrait modes needed to retain the annotation system for review, show one) Tj ET
+BT /F1 10 Tf 54.00 238.00 Td (  device-frame or screenshot stack column per row, and preserve enough left/right) Tj ET
+BT /F1 10 Tf 54.00 226.00 Td (  breathing room for braces and green callouts without forcing equal page margins.) Tj ET
+BT /F1 10 Tf 54.00 214.00 Td (- The local development server and cache state needed active management because rapid) Tj ET
+BT /F1 10 Tf 54.00 202.00 Td (  Visual Hierarchy CSS/JSX changes could appear stale until .next output was cleared and) Tj ET
+BT /F1 10 Tf 54.00 190.00 Td (  the dev server was restarted.) Tj ET
+BT /F1 10 Tf 54.00 178.00 Td () Tj ET
+BT /F1 10 Tf 54.00 166.00 Td (Goals for August 24) Tj ET
+BT /F1 10 Tf 54.00 154.00 Td (- Remove the Visual Hierarchy Tutorial subsection and its unused blank tutorial asset) Tj ET
+BT /F1 10 Tf 54.00 142.00 Td (  completely from the Alla Vostra Portfolio page.) Tj ET
+BT /F1 10 Tf 54.00 130.00 Td (- Rebuild the Pre-Scrolling subsection around the four sibling stacks: PRIMARY,) Tj ET
+BT /F1 10 Tf 54.00 118.00 Td (  SECONDARY, TERTIARY, and QUATERNARY, without the previous FOCUS suffix in the visible) Tj ET
+BT /F1 10 Tf 54.00 106.00 Td (  headers.) Tj ET
+BT /F1 10 Tf 54.00 94.00 Td (- Make Viewing Area and Focal Point read vertically, keep those labels centered against) Tj ET
+BT /F1 10 Tf 54.00 82.00 Td (  their respective braces, and prevent text or brace strokes from clipping into each) Tj ET
+BT /F1 10 Tf 54.00 70.00 Td (  other.) Tj ET
+BT /F1 9 Tf 195.84 32.00 Td (Prahlin Portfolio Work Log - August 24, 2026 Page 2) Tj ET
+endstream
+endobj
+5 0 obj
+<< /Type /Page /Parent 16 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R >> >> /Contents 4 0 R >>
+endobj
+6 0 obj
+<< /Length 6023 >>
+stream
+BT /F1 10 Tf 54.00 742.00 Td (- Add and tune white-line plus green-eyebrow callouts for app header, nav bar, hero,) Tj ET
+BT /F1 10 Tf 54.00 730.00 Td (  product image, main content, and shopping cart regions, including line-wrapped) Tj ET
+BT /F1 10 Tf 54.00 718.00 Td (  two-word labels and adjusted line spacing.) Tj ET
+BT /F1 10 Tf 54.00 706.00 Td (- Preserve stack imagery aspect ratios and screenshot-preview magnification in narrow) Tj ET
+BT /F1 10 Tf 54.00 694.00 Td (  and portrait layouts, especially for the secondary and tertiary protected compositions) Tj ET
+BT /F1 10 Tf 54.00 682.00 Td (  and the quaternary product image.) Tj ET
+BT /F1 10 Tf 54.00 670.00 Td (- Align the primary stack with its secondary, tertiary, and quaternary siblings, then) Tj ET
+BT /F1 10 Tf 54.00 658.00 Td (  tune vertical gaps so the four-stack sequence reads cleanly in portrait review.) Tj ET
+BT /F1 10 Tf 54.00 646.00 Td (- Add focal-point braces and vertical Focal Point labels beside the secondary, tertiary,) Tj ET
+BT /F1 10 Tf 54.00 634.00 Td (  and quaternary Pre-Scrolling stacks, matching the Viewing Area brace thickness and) Tj ET
+BT /F1 10 Tf 54.00 622.00 Td (  typography while accommodating different visual heights.) Tj ET
+BT /F1 10 Tf 54.00 610.00 Td (- Keep the work local until the user requested otherwise, clear development caches when) Tj ET
+BT /F1 10 Tf 54.00 598.00 Td (  requested, validate with TypeScript, Playwright, local route checks, and static) Tj ET
+BT /F1 10 Tf 54.00 586.00 Td (  export, refresh the snapshot, and produce the August 24 PDF worklog.) Tj ET
+BT /F1 10 Tf 54.00 574.00 Td () Tj ET
+BT /F1 10 Tf 54.00 562.00 Td (Work Completed - Tutorial Removal and Pre-Scrolling Structure) Tj ET
+BT /F1 10 Tf 54.00 550.00 Td (- Removed the Tutorial subsection from the UI Foundations Visual Hierarchy sequence and) Tj ET
+BT /F1 10 Tf 54.00 538.00 Td (  row-label set so the section now begins with PRE-SCROLLING instead of showing an empty) Tj ET
+BT /F1 10 Tf 54.00 526.00 Td (  Tutorial primary stack.) Tj ET
+BT /F1 10 Tf 54.00 514.00 Td (- Deleted public/images/alla-vostra-empty-framed-no-island.png, the blank Tutorial frame) Tj ET
+BT /F1 10 Tf 54.00 502.00 Td (  asset that had been introduced for the earlier Visual Hierarchy Tutorial placeholder) Tj ET
+BT /F1 10 Tf 54.00 490.00 Td (  row.) Tj ET
+BT /F1 10 Tf 54.00 478.00 Td (- Removed the Tutorial-specific source wiring from ProductFlowSwitcher so the deleted) Tj ET
+BT /F1 10 Tf 54.00 466.00 Td (  asset is no longer referenced by the Visual Hierarchy renderer.) Tj ET
+BT /F1 10 Tf 54.00 454.00 Td (- Simplified the Visual Hierarchy focus title copy from PRIMARY FOCUS, SECONDARY FOCUS,) Tj ET
+BT /F1 10 Tf 54.00 442.00 Td (  TERTIARY FOCUS, and QUATERNARY FOCUS to PRIMARY, SECONDARY, TERTIARY, and QUATERNARY) Tj ET
+BT /F1 10 Tf 54.00 430.00 Td (  while preserving horizontal centering.) Tj ET
+BT /F1 10 Tf 54.00 418.00 Td (- Removed requested Pre-Scrolling captions, including Step 1 Large screenshot and Step) Tj ET
+BT /F1 10 Tf 54.00 406.00 Td (  1d Large screenshot, and later removed secondary and tertiary stack captions so the) Tj ET
+BT /F1 10 Tf 54.00 394.00 Td (  visual hierarchy reads through the stack headers and annotations instead of redundant) Tj ET
+BT /F1 10 Tf 54.00 382.00 Td (  figcaptions.) Tj ET
+BT /F1 10 Tf 54.00 370.00 Td (- Preserved the underlying Step ids and CSS class hooks, including Step 1, Step 1b, Step) Tj ET
+BT /F1 10 Tf 54.00 358.00 Td (  1c, and Step 1d, so the visual labels could change without destabilizing deterministic) Tj ET
+BT /F1 10 Tf 54.00 346.00 Td (  layout selectors.) Tj ET
+BT /F1 10 Tf 54.00 334.00 Td (- Reworked the row-order assumptions after removing Tutorial so PRE-SCROLLING,) Tj ET
+BT /F1 10 Tf 54.00 322.00 Td (  ON-SCROLLING, and DURING SHOPPING headers continue to occupy the intended visual) Tj ET
+BT /F1 10 Tf 54.00 310.00 Td (  sequence.) Tj ET
+BT /F1 10 Tf 54.00 298.00 Td () Tj ET
+BT /F1 10 Tf 54.00 286.00 Td (Work Completed - Primary Viewing Area and Section Callouts) Tj ET
+BT /F1 10 Tf 54.00 274.00 Td (- Changed the primary Pre-Scrolling Viewing Area annotation into a single non-wrapping) Tj ET
+BT /F1 10 Tf 54.00 262.00 Td (  vertical label that reads like the focal labels rather than line-wrapping Viewing and) Tj ET
+BT /F1 10 Tf 54.00 250.00 Td (  Area separately.) Tj ET
+BT /F1 10 Tf 54.00 238.00 Td (- Tuned the Viewing Area text and brace cluster so the label-to-brace gap and) Tj ET
+BT /F1 10 Tf 54.00 226.00 Td (  brace-to-device-frame gap match the focal-point stack rhythm in narrow, portrait, and) Tj ET
+BT /F1 10 Tf 54.00 214.00 Td (  desktop measurements.) Tj ET
+BT /F1 10 Tf 54.00 202.00 Td (- Added PRODUCT IMAGE to the primary callout set alongside APP HEADER, NAV BAR, HERO,) Tj ET
+BT /F1 10 Tf 54.00 190.00 Td (  MAIN CONTENT, and SHOPPING CART so the cheeseboard/product region is named) Tj ET
+BT /F1 10 Tf 54.00 178.00 Td (  consistently across all four Pre-Scrolling stacks.) Tj ET
+BT /F1 10 Tf 54.00 166.00 Td (- Converted the green eyebrow headers beside the primary device-frame/screenshot stack) Tj ET
+BT /F1 10 Tf 54.00 154.00 Td (  into vertical labels, centered them on their white line markers, and kept two-word) Tj ET
+BT /F1 10 Tf 54.00 142.00 Td (  labels line-wrapped rather than cramped horizontally.) Tj ET
+BT /F1 10 Tf 54.00 130.00 Td (- Reduced and then retuned kerning for APP HEADER and NAV BAR after the user called out) Tj ET
+BT /F1 10 Tf 54.00 118.00 Td (  crowding beside the device-frame/screenshot stack.) Tj ET
+BT /F1 10 Tf 54.00 106.00 Td (- Increased spacing between image edges, white line markers, and green eyebrow labels) Tj ET
+BT /F1 10 Tf 54.00 94.00 Td (  after the initial larger-eyebrow pass felt cramped, then adjusted two-line label) Tj ET
+BT /F1 10 Tf 54.00 82.00 Td (  leading so APP HEADER, NAV BAR, PRODUCT IMAGE, MAIN CONTENT, and SHOPPING CART) Tj ET
+BT /F1 10 Tf 54.00 70.00 Td (  remained readable.) Tj ET
+BT /F1 9 Tf 195.84 32.00 Td (Prahlin Portfolio Work Log - August 24, 2026 Page 3) Tj ET
+endstream
+endobj
+7 0 obj
+<< /Type /Page /Parent 16 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R >> >> /Contents 6 0 R >>
+endobj
+8 0 obj
+<< /Length 5939 >>
+stream
+BT /F1 10 Tf 54.00 742.00 Td (- Retained the primary braces, green eyebrow headers, and white line callouts in narrow) Tj ET
+BT /F1 10 Tf 54.00 730.00 Td (  and portrait modes so the user could evaluate the annotation system directly on small) Tj ET
+BT /F1 10 Tf 54.00 718.00 Td (  windows.) Tj ET
+BT /F1 10 Tf 54.00 706.00 Td () Tj ET
+BT /F1 10 Tf 54.00 694.00 Td (Work Completed - Secondary, Tertiary, and Quaternary Stack Treatments) Tj ET
+BT /F1 10 Tf 54.00 682.00 Td (- Recentered all visible image/color assets under the PRIMARY, SECONDARY, TERTIARY, and) Tj ET
+BT /F1 10 Tf 54.00 670.00 Td (  QUATERNARY headers in narrow and portrait views while allowing the brace/text) Tj ET
+BT /F1 10 Tf 54.00 658.00 Td (  annotation assets to use unequal page-edge margins when necessary.) Tj ET
+BT /F1 10 Tf 54.00 646.00 Td (- Horizontally aligned the primary stack with its secondary, tertiary, and quaternary) Tj ET
+BT /F1 10 Tf 54.00 634.00 Td (  siblings after the first portrait pass left the primary device frame visually offset) Tj ET
+BT /F1 10 Tf 54.00 622.00 Td (  from the smaller stack column.) Tj ET
+BT /F1 10 Tf 54.00 610.00 Td (- Scaled the secondary, tertiary, and quaternary visible assets upward so their combined) Tj ET
+BT /F1 10 Tf 54.00 598.00 Td (  treatment filled the vertical region established by the primary) Tj ET
+BT /F1 10 Tf 54.00 586.00 Td (  device-frame/screenshot stack while maintaining the accepted vertical gaps between the) Tj ET
+BT /F1 10 Tf 54.00 574.00 Td (  three smaller stacks.) Tj ET
+BT /F1 10 Tf 54.00 562.00 Td (- Preserved the wide two-columns-per-row aspect-ratio scale for the secondary, tertiary,) Tj ET
+BT /F1 10 Tf 54.00 550.00 Td (  and quaternary imagery during portfolio/narrow windows, preventing portrait mode from) Tj ET
+BT /F1 10 Tf 54.00 538.00 Td (  square-ifying the detail imagery.) Tj ET
+BT /F1 10 Tf 54.00 526.00 Td (- Maintained hover and tap magnification for composed screenshot stacks without clipping) Tj ET
+BT /F1 10 Tf 54.00 514.00 Td (  the secondary and tertiary images or losing their protected image/fade presentation.) Tj ET
+BT /F1 10 Tf 54.00 502.00 Td (- Moved the quaternary product image closer to the QUATERNARY header until its spacing) Tj ET
+BT /F1 10 Tf 54.00 490.00 Td (  matched the secondary and tertiary stack rhythm.) Tj ET
+BT /F1 10 Tf 54.00 478.00 Td (- Moved the quaternary PRODUCT IMAGE white line and green eyebrow closer in portrait and) Tj ET
+BT /F1 10 Tf 54.00 466.00 Td (  narrow modes so its spacing matched the established landscape/wide-mode placement.) Tj ET
+BT /F1 10 Tf 54.00 454.00 Td (- Doubled the vertical space between the four Pre-Scrolling sibling stacks in) Tj ET
+BT /F1 10 Tf 54.00 442.00 Td (  portfolio/narrow views after the first one-column flow felt too compressed.) Tj ET
+BT /F1 10 Tf 54.00 430.00 Td () Tj ET
+BT /F1 10 Tf 54.00 418.00 Td (Work Completed - White Lines, Green Eyebrows, and Label Placement) Tj ET
+BT /F1 10 Tf 54.00 406.00 Td (- Added APP HEADER, NAV BAR, HERO, and PRODUCT IMAGE callouts to the secondary stack at) Tj ET
+BT /F1 10 Tf 54.00 394.00 Td (  vertical positions matching the visual regions of the clipped screenshot.) Tj ET
+BT /F1 10 Tf 54.00 382.00 Td (- Added HERO and PRODUCT IMAGE callouts to the tertiary stack at positions matching its) Tj ET
+BT /F1 10 Tf 54.00 370.00 Td (  photo/product crop.) Tj ET
+BT /F1 10 Tf 54.00 358.00 Td (- Added PRODUCT IMAGE callout treatment to the quaternary stack and tuned the white line) Tj ET
+BT /F1 10 Tf 54.00 346.00 Td (  and green text so the marker sits level with the cheeseboard image instead of drifting) Tj ET
+BT /F1 10 Tf 54.00 334.00 Td (  relative to the cream field.) Tj ET
+BT /F1 10 Tf 54.00 322.00 Td (- Introduced left/right side support for Visual Hierarchy section line callouts so) Tj ET
+BT /F1 10 Tf 54.00 310.00 Td (  labels could move to the side that avoided clipping while preserving the line-to-image) Tj ET
+BT /F1 10 Tf 54.00 298.00 Td (  geometry.) Tj ET
+BT /F1 10 Tf 54.00 286.00 Td (- Revisited the secondary NAV BAR callout after an initial side/orientation experiment) Tj ET
+BT /F1 10 Tf 54.00 274.00 Td (  and restored its placement with the same close spacing as the other secondary) Tj ET
+BT /F1 10 Tf 54.00 262.00 Td (  callouts.) Tj ET
+BT /F1 10 Tf 54.00 250.00 Td (- Line-wrapped every two-word green eyebrow, increased the eyebrow sizes, then reduced) Tj ET
+BT /F1 10 Tf 54.00 238.00 Td (  them by 20 percent after the result felt too large, preserving improved line spacing) Tj ET
+BT /F1 10 Tf 54.00 226.00 Td (  for the two-row labels.) Tj ET
+BT /F1 10 Tf 54.00 214.00 Td (- Balanced the distance between images and white lines with the distance between white) Tj ET
+BT /F1 10 Tf 54.00 202.00 Td (  lines and green labels, responding to the user review that the first pass was cramped) Tj ET
+BT /F1 10 Tf 54.00 190.00 Td (  and uneven.) Tj ET
+BT /F1 10 Tf 54.00 178.00 Td (- Kept white and green annotation assets from clipping into their brackets, braces, or) Tj ET
+BT /F1 10 Tf 54.00 166.00 Td (  line markers while preserving horizontal centering from the labels own rotated point) Tj ET
+BT /F1 10 Tf 54.00 154.00 Td (  of view.) Tj ET
+BT /F1 10 Tf 54.00 142.00 Td () Tj ET
+BT /F1 10 Tf 54.00 130.00 Td (Work Completed - Focal Point Braces and Annotation System) Tj ET
+BT /F1 10 Tf 54.00 118.00 Td (- Added focal-point brace stacks to the left of secondary, tertiary, and quaternary) Tj ET
+BT /F1 10 Tf 54.00 106.00 Td (  Pre-Scrolling examples, choosing full-height or compressed brace paths according to) Tj ET
+BT /F1 10 Tf 54.00 94.00 Td (  each image treatments vertical height.) Tj ET
+BT /F1 10 Tf 54.00 82.00 Td (- Added per-brace annotation styling so Focal Point could read vertically like Viewing) Tj ET
+BT /F1 10 Tf 54.00 70.00 Td (  Area while still using the shared external annotation rendering pathway.) Tj ET
+BT /F1 9 Tf 195.84 32.00 Td (Prahlin Portfolio Work Log - August 24, 2026 Page 4) Tj ET
+endstream
+endobj
+9 0 obj
+<< /Type /Page /Parent 16 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R >> >> /Contents 8 0 R >>
+endobj
+10 0 obj
+<< /Length 5999 >>
+stream
+BT /F1 10 Tf 54.00 742.00 Td (- Increased the focal-point brace outline and inner stroke widths to visually match the) Tj ET
+BT /F1 10 Tf 54.00 730.00 Td (  Viewing Area brace after accounting for the half-scale rendering of secondary,) Tj ET
+BT /F1 10 Tf 54.00 718.00 Td (  tertiary, and quaternary stacks.) Tj ET
+BT /F1 10 Tf 54.00 706.00 Td (- Matched the rendered Focal Point text size to the Viewing Area text size and kept both) Tj ET
+BT /F1 10 Tf 54.00 694.00 Td (  labels on a vertical reading axis.) Tj ET
+BT /F1 10 Tf 54.00 682.00 Td (- Repositioned the quaternary focal brace and Focal Point text horizontally so they) Tj ET
+BT /F1 10 Tf 54.00 670.00 Td (  share the same left-side lane as secondary and tertiary instead of sitting too far) Tj ET
+BT /F1 10 Tf 54.00 658.00 Td (  left due to the wider quaternary image canvas.) Tj ET
+BT /F1 10 Tf 54.00 646.00 Td (- Nudged the quaternary focal brace and Focal Point text downward so the brace center) Tj ET
+BT /F1 10 Tf 54.00 634.00 Td (  aligns with the cream radial gradient center rather than the broader image-frame) Tj ET
+BT /F1 10 Tf 54.00 622.00 Td (  center.) Tj ET
+BT /F1 10 Tf 54.00 610.00 Td (- Preserved the brace path shape, vector-effect non-scaling stroke behavior, and stroke) Tj ET
+BT /F1 10 Tf 54.00 598.00 Td (  outline structure while changing only offsets, widths, and path translation values) Tj ET
+BT /F1 10 Tf 54.00 586.00 Td (  needed for visual alignment.) Tj ET
+BT /F1 10 Tf 54.00 574.00 Td () Tj ET
+BT /F1 10 Tf 54.00 562.00 Td (Work Completed - Responsive Layout, Cache Handling, and Commit Context) Tj ET
+BT /F1 10 Tf 54.00 550.00 Td (- Updated narrow and portrait Visual Hierarchy layout behavior so device-frame and) Tj ET
+BT /F1 10 Tf 54.00 538.00 Td (  screenshot stacks render as one stack column per row while keeping the right-column) Tj ET
+BT /F1 10 Tf 54.00 526.00 Td (  aspect-scale treatment for secondary, tertiary, and quaternary imagery.) Tj ET
+BT /F1 10 Tf 54.00 514.00 Td (- Kept the local Next.js development server available at http://127.0.0.1:3000 for user) Tj ET
+BT /F1 10 Tf 54.00 502.00 Td (  review throughout the local visual pass.) Tj ET
+BT /F1 10 Tf 54.00 490.00 Td (- Cleared stale development output when requested by moving .next aside rather than) Tj ET
+BT /F1 10 Tf 54.00 478.00 Td (  deleting it outright, restarted the portfolio-dev screen session, stopped the stale) Tj ET
+BT /F1 10 Tf 54.00 466.00 Td (  old Next process, and confirmed the refreshed server responded on port 3000.) Tj ET
+BT /F1 10 Tf 54.00 454.00 Td (- Used Playwright to switch to UI Foundations, scroll to the Visual Hierarchy group,) Tj ET
+BT /F1 10 Tf 54.00 442.00 Td (  capture focused screenshots, inspect computed transforms, measure label and brace) Tj ET
+BT /F1 10 Tf 54.00 430.00 Td (  bounding boxes, check line/label spacing, and verify no horizontal overflow at narrow) Tj ET
+BT /F1 10 Tf 54.00 418.00 Td (  widths.) Tj ET
+BT /F1 10 Tf 54.00 406.00 Td (- Recommended the user-requested commit message in one header followed by hyphen-points.) Tj ET
+BT /F1 10 Tf 54.00 394.00 Td (  The source state reviewed for this worklog is now committed and pushed as c8a0a00,) Tj ET
+BT /F1 10 Tf 54.00 382.00 Td (  Refined Alla Vostra visual hierarchy flow.) Tj ET
+BT /F1 10 Tf 54.00 370.00 Td (- Checked the GitHub Actions run triggered by c8a0a00. The Build static export for) Tj ET
+BT /F1 10 Tf 54.00 358.00 Td (  Hostinger workflow failed before job start with the annotation that the account is) Tj ET
+BT /F1 10 Tf 54.00 346.00 Td (  locked due to a billing issue, so no successful Hostinger deployment was confirmed) Tj ET
+BT /F1 10 Tf 54.00 334.00 Td (  from that run.) Tj ET
+BT /F1 10 Tf 54.00 322.00 Td (- Ran ./read_project.sh again for this August 24 worklog-generation pass, updating) Tj ET
+BT /F1 10 Tf 54.00 310.00 Td (  portfolio_PROJECT_SNAPSHOT.txt to the current project tree, git context, PDF) Tj ET
+BT /F1 10 Tf 54.00 298.00 Td (  inventory, source state, and local documentation status.) Tj ET
+BT /F1 10 Tf 54.00 286.00 Td () Tj ET
+BT /F1 10 Tf 54.00 274.00 Td (Validation Summary) Tj ET
+BT /F1 10 Tf 54.00 262.00 Td (- npm run check passed during the August 24 source pass and again during the) Tj ET
+BT /F1 10 Tf 54.00 250.00 Td (  worklog-generation pass, confirming TypeScript succeeded with tsc --noEmit.) Tj ET
+BT /F1 10 Tf 54.00 238.00 Td (- npm run build:static passed locally during the worklog-generation pass, with Next.js) Tj ET
+BT /F1 10 Tf 54.00 226.00 Td (  16.2.10 compiling successfully and prerendering /, /articles, /projects/alla-vostra,) Tj ET
+BT /F1 10 Tf 54.00 214.00 Td (  and /projects/cinerific as static routes.) Tj ET
+BT /F1 10 Tf 54.00 202.00 Td (- curl -I http://127.0.0.1:3000/projects/alla-vostra returned HTTP 200 OK while the) Tj ET
+BT /F1 10 Tf 54.00 190.00 Td (  local dev server was running on port 3000.) Tj ET
+BT /F1 10 Tf 54.00 178.00 Td (- Playwright measurements at 360px, 430px, and desktop widths confirmed no horizontal) Tj ET
+BT /F1 10 Tf 54.00 166.00 Td (  overflow after the Pre-Scrolling annotation system was retained in narrow and portrait) Tj ET
+BT /F1 10 Tf 54.00 154.00 Td (  modes.) Tj ET
+BT /F1 10 Tf 54.00 142.00 Td (- Browser measurements confirmed Focal Point labels rendered with the same vertical) Tj ET
+BT /F1 10 Tf 54.00 130.00 Td (  transform direction as Viewing Area and matched the same visible text height after the) Tj ET
+BT /F1 10 Tf 54.00 118.00 Td (  small-stack zoom was accounted for.) Tj ET
+BT /F1 10 Tf 54.00 106.00 Td (- Browser measurements confirmed secondary, tertiary, and quaternary focal brace strokes) Tj ET
+BT /F1 10 Tf 54.00 94.00 Td (  visually matched the Viewing Area brace thickness despite the small stacks being) Tj ET
+BT /F1 10 Tf 54.00 82.00 Td (  rendered at half-scale.) Tj ET
+BT /F1 10 Tf 54.00 70.00 Td (- Browser measurements confirmed the quaternary Focal Point label and brace moved into) Tj ET
+BT /F1 9 Tf 195.84 32.00 Td (Prahlin Portfolio Work Log - August 24, 2026 Page 5) Tj ET
+endstream
+endobj
+11 0 obj
+<< /Type /Page /Parent 16 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R >> >> /Contents 10 0 R >>
+endobj
+12 0 obj
+<< /Length 6214 >>
+stream
+BT /F1 10 Tf 54.00 742.00 Td (  the same horizontal lane as the secondary and tertiary focal markers, with) Tj ET
+BT /F1 10 Tf 54.00 730.00 Td (  near-matching label-to-brace gaps.) Tj ET
+BT /F1 10 Tf 54.00 718.00 Td (- Browser measurements confirmed the quaternary focal brace centerline was aligned to) Tj ET
+BT /F1 10 Tf 54.00 706.00 Td (  the cream radial gradient center after the downward nudge.) Tj ET
+BT /F1 10 Tf 54.00 694.00 Td (- Browser measurements confirmed the primary Viewing Area brace cluster used focal-style) Tj ET
+BT /F1 10 Tf 54.00 682.00 Td (  spacing, with label-to-brace and brace-to-device-frame gaps matching the smaller focal) Tj ET
+BT /F1 10 Tf 54.00 670.00 Td (  stacks within small visual tolerances.) Tj ET
+BT /F1 10 Tf 54.00 658.00 Td (- Playwright screenshots confirmed the primary, secondary, tertiary, and quaternary) Tj ET
+BT /F1 10 Tf 54.00 646.00 Td (  Pre-Scrolling stack sequence remained readable in portrait review with vertical) Tj ET
+BT /F1 10 Tf 54.00 634.00 Td (  annotations, green eyebrow callouts, white line markers, and doubled sibling gaps.) Tj ET
+BT /F1 10 Tf 54.00 622.00 Td (- gh run list and gh run view confirmed the c8a0a00 Hostinger workflow run existed but) Tj ET
+BT /F1 10 Tf 54.00 610.00 Td (  failed before the job started due to the billing-lock account annotation. This was) Tj ET
+BT /F1 10 Tf 54.00 598.00 Td (  treated as an external CI/account issue rather than a local build failure because npm) Tj ET
+BT /F1 10 Tf 54.00 586.00 Td (  run build:static passed locally.) Tj ET
+BT /F1 10 Tf 54.00 574.00 Td () Tj ET
+BT /F1 10 Tf 54.00 562.00 Td (Files Touched and Artifacts) Tj ET
+BT /F1 10 Tf 54.00 550.00 Td (- app/projects/alla-vostra/ProductFlowSwitcher.tsx: removed the Visual Hierarchy) Tj ET
+BT /F1 10 Tf 54.00 538.00 Td (  Tutorial Step 0 behavior, added side-aware section callout support, added) Tj ET
+BT /F1 10 Tf 54.00 526.00 Td (  Pre-Scrolling secondary/tertiary/quaternary callout data, added PRODUCT IMAGE labels,) Tj ET
+BT /F1 10 Tf 54.00 514.00 Td (  added per-stack focal brace data and vertical annotation styling, changed Viewing Area) Tj ET
+BT /F1 10 Tf 54.00 502.00 Td (  to a single non-wrapping vertical label, hid requested captions, and kept the Visual) Tj ET
+BT /F1 10 Tf 54.00 490.00 Td (  Hierarchy visible step limit tied to the active step list.) Tj ET
+BT /F1 10 Tf 54.00 478.00 Td (- app/globals.css: rebuilt Visual Hierarchy responsive placement after Tutorial removal,) Tj ET
+BT /F1 10 Tf 54.00 466.00 Td (  preserved one-stack-per-row narrow behavior, tuned) Tj ET
+BT /F1 10 Tf 54.00 454.00 Td (  primary/secondary/tertiary/quaternary stack dimensions, centered visible assets, added) Tj ET
+BT /F1 10 Tf 54.00 442.00 Td (  vertical callout styling, adjusted eyebrow sizing and leading, matched Viewing Area) Tj ET
+BT /F1 10 Tf 54.00 430.00 Td (  and Focal Point brace/text spacing, matched focal brace thickness to the primary) Tj ET
+BT /F1 10 Tf 54.00 418.00 Td (  brace, aligned quaternary focal placement, and retained annotations in portrait) Tj ET
+BT /F1 10 Tf 54.00 406.00 Td (  review.) Tj ET
+BT /F1 10 Tf 54.00 394.00 Td (- public/images/alla-vostra-empty-framed-no-island.png: deleted the unused blank Visual) Tj ET
+BT /F1 10 Tf 54.00 382.00 Td (  Hierarchy Tutorial frame asset after the Tutorial subsection was removed.) Tj ET
+BT /F1 10 Tf 54.00 370.00 Td (- portfolio_PROJECT_SNAPSHOT.txt: refreshed by read_project.sh to document the current) Tj ET
+BT /F1 10 Tf 54.00 358.00 Td (  project tree, git state, worklog inventory, generated/cache ignore policy, public) Tj ET
+BT /F1 10 Tf 54.00 346.00 Td (  asset inventory, validation context, and documentation pass.) Tj ET
+BT /F1 10 Tf 54.00 334.00 Td (- portfolio_worklog_august24.pdf: generated as the new root-level PDF worklog artifact) Tj ET
+BT /F1 10 Tf 54.00 322.00 Td (  for this August 24 Portfolio session.) Tj ET
+BT /F1 10 Tf 54.00 310.00 Td () Tj ET
+BT /F1 10 Tf 54.00 298.00 Td (Follow-Up Context) Tj ET
+BT /F1 10 Tf 54.00 286.00 Td (- The latest committed source state before this PDF was generated is c8a0a00 on main and) Tj ET
+BT /F1 10 Tf 54.00 274.00 Td (  origin/main, titled Refined Alla Vostra visual hierarchy flow.) Tj ET
+BT /F1 10 Tf 54.00 262.00 Td (- The only local changes after the documentation refresh and PDF-generation pass should) Tj ET
+BT /F1 10 Tf 54.00 250.00 Td (  be portfolio_PROJECT_SNAPSHOT.txt and portfolio_worklog_august24.pdf. Generated .next) Tj ET
+BT /F1 10 Tf 54.00 238.00 Td (  and out output remained local build/dev artifacts and were not intended source) Tj ET
+BT /F1 10 Tf 54.00 226.00 Td (  changes.) Tj ET
+BT /F1 10 Tf 54.00 214.00 Td (- The UI Foundations Visual Hierarchy section now begins with PRE-SCROLLING and no) Tj ET
+BT /F1 10 Tf 54.00 202.00 Td (  longer includes the Tutorial subsection or blank tutorial frame asset.) Tj ET
+BT /F1 10 Tf 54.00 190.00 Td (- Future Pre-Scrolling edits should preserve the current four-stack taxonomy: PRIMARY,) Tj ET
+BT /F1 10 Tf 54.00 178.00 Td (  SECONDARY, TERTIARY, and QUATERNARY, with PRODUCT IMAGE used as the product-region) Tj ET
+BT /F1 10 Tf 54.00 166.00 Td (  label across all four stacks.) Tj ET
+BT /F1 10 Tf 54.00 154.00 Td (- Future changes to secondary and tertiary focal imagery should remeasure the protected) Tj ET
+BT /F1 10 Tf 54.00 142.00 Td (  composition and hover-preview behavior before changing masks, fade stops, or width) Tj ET
+BT /F1 10 Tf 54.00 130.00 Td (  assumptions, because the current no-clipping behavior depends on those proportions.) Tj ET
+BT /F1 10 Tf 54.00 118.00 Td (- Future changes to quaternary should distinguish between the full image-frame center) Tj ET
+BT /F1 10 Tf 54.00 106.00 Td (  and the cream radial gradient center. The focal brace now intentionally tracks the) Tj ET
+BT /F1 10 Tf 54.00 94.00 Td (  cream field center rather than the broader transparent image canvas.) Tj ET
+BT /F1 10 Tf 54.00 82.00 Td (- The local server remains the safest visual review surface for this page at) Tj ET
+BT /F1 10 Tf 54.00 70.00 Td (  http://127.0.0.1:3000, with the UI Foundations tab selected before inspecting Visual) Tj ET
+BT /F1 9 Tf 195.84 32.00 Td (Prahlin Portfolio Work Log - August 24, 2026 Page 6) Tj ET
+endstream
+endobj
+13 0 obj
+<< /Type /Page /Parent 16 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R >> >> /Contents 12 0 R >>
+endobj
+14 0 obj
+<< /Length 2059 >>
+stream
+BT /F1 10 Tf 54.00 742.00 Td (  Hierarchy DOM or screenshots.) Tj ET
+BT /F1 10 Tf 54.00 730.00 Td (- The GitHub Actions Hostinger static-export workflow is currently blocked by a) Tj ET
+BT /F1 10 Tf 54.00 718.00 Td (  billing-lock issue. A later deployment-verification pass should recheck Actions after) Tj ET
+BT /F1 10 Tf 54.00 706.00 Td (  that account state is resolved.) Tj ET
+BT /F1 10 Tf 54.00 694.00 Td (- No additional commit was made during this worklog-generation pass after the user asked) Tj ET
+BT /F1 10 Tf 54.00 682.00 Td (  for the August 24 PDF. The project convention remains to ask the user for a commit) Tj ET
+BT /F1 10 Tf 54.00 670.00 Td (  message before committing or pushing documentation artifacts.) Tj ET
+BT /F1 10 Tf 54.00 658.00 Td () Tj ET
+BT /F1 10 Tf 54.00 646.00 Td (Output Artifact) Tj ET
+BT /F1 10 Tf 54.00 634.00 Td (- Generated: /Users/prahlin/gh/portfolio/portfolio_worklog_august24.pdf) Tj ET
+BT /F1 10 Tf 54.00 622.00 Td (- Companion sync file: /Users/prahlin/gh/portfolio/portfolio_PROJECT_SNAPSHOT.txt) Tj ET
+BT /F1 10 Tf 54.00 610.00 Td (- Source state reviewed: c8a0a0080db246a6f5fddfa6c765c9adad364758 on main and) Tj ET
+BT /F1 10 Tf 54.00 598.00 Td (  origin/main.) Tj ET
+BT /F1 10 Tf 54.00 586.00 Td (- Naming follows the existing root-level Portfolio convention:) Tj ET
+BT /F1 10 Tf 54.00 574.00 Td (  portfolio_worklog_august24.pdf. No Part suffix was used because no earlier August 24) Tj ET
+BT /F1 10 Tf 54.00 562.00 Td (  Portfolio worklog PDF existed.) Tj ET
+BT /F1 10 Tf 54.00 550.00 Td (- The document records the August 24 Alla Vostra Visual Hierarchy tutorial-removal,) Tj ET
+BT /F1 10 Tf 54.00 538.00 Td (  Pre-Scrolling stack, responsive annotation, white-line/green-eyebrow, focal-brace,) Tj ET
+BT /F1 10 Tf 54.00 526.00 Td (  cache-clearing, validation, workflow-status, snapshot-refresh, and documentation work) Tj ET
+BT /F1 10 Tf 54.00 514.00 Td (  in the established Prahlin Portfolio worklog format.) Tj ET
+BT /F1 9 Tf 195.84 32.00 Td (Prahlin Portfolio Work Log - August 24, 2026 Page 7) Tj ET
+endstream
+endobj
+15 0 obj
+<< /Type /Page /Parent 16 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R >> >> /Contents 14 0 R >>
+endobj
+16 0 obj
+<< /Type /Pages /Kids [3 0 R 5 0 R 7 0 R 9 0 R 11 0 R 13 0 R 15 0 R] /Count 7 >>
+endobj
+17 0 obj
+<< /Type /Catalog /Pages 16 0 R >>
+endobj
+18 0 obj
+<< /Title (Prahlin Portfolio Work Log - August 24, 2026) /Subject (Portfolio website development worklog) /Author (Codex) /Creator (Codex standard-library PDF generator) /Producer (Codex standard-library PDF generator) /CreationDate (D:20260824232300-04'00') /ModDate (D:20260824232300-04'00') >>
+endobj
+xref
+0 19
+0000000000 65535 f 
+0000000015 00000 n 
+0000000112 00000 n 
+0000006368 00000 n 
+0000006495 00000 n 
+0000012792 00000 n 
+0000012919 00000 n 
+0000018993 00000 n 
+0000019120 00000 n 
+0000025110 00000 n 
+0000025237 00000 n 
+0000031288 00000 n 
+0000031417 00000 n 
+0000037683 00000 n 
+0000037812 00000 n 
+0000039923 00000 n 
+0000040052 00000 n 
+0000040149 00000 n 
+0000040200 00000 n 
+trailer
+<< /Size 19 /Root 17 0 R /Info 18 0 R >>
+startxref
+40513
+%%EOF
