@@ -4307,14 +4307,14 @@ section.project-hero {
   grid-column: 2 / 3;
   grid-row: 5 / 6;
   position: relative;
-  top: calc(var(--flow-visual-hierarchy-section-offset) * 3);
+  top: calc(var(--flow-visual-hierarchy-section-offset) * 3 - 3px);
 }
 
 .flow-capture-group-visual-hierarchy .flow-screen-stack-step-5 {
   grid-column: 2 / 3;
   grid-row: 6 / 7;
   position: relative;
-  top: calc(var(--flow-visual-hierarchy-section-offset) * 3);
+  top: calc(var(--flow-visual-hierarchy-section-offset) * 3 - 85px);
 }
 
 .flow-capture-group-visual-hierarchy .flow-screen-stack-step-6 {
@@ -4439,6 +4439,12 @@ section.project-hero {
   .flow-visual-hierarchy-frame-pair,
 .flow-capture-group-visual-hierarchy
   .flow-screen-stack-step-1d
+  .flow-visual-hierarchy-frame-pair,
+.flow-capture-group-visual-hierarchy
+  .flow-screen-stack-step-4
+  .flow-visual-hierarchy-frame-pair,
+.flow-capture-group-visual-hierarchy
+  .flow-screen-stack-step-5
   .flow-visual-hierarchy-frame-pair {
   --flow-visual-hierarchy-brace-gap: 24px;
   --flow-visual-hierarchy-brace-width: 64px;
@@ -4456,10 +4462,40 @@ section.project-hero {
 }
 
 .flow-capture-group-visual-hierarchy
+  .flow-screen-stack-step-4
+  .flow-visual-hierarchy-brace,
+.flow-capture-group-visual-hierarchy
+  .flow-screen-stack-step-5
+  .flow-visual-hierarchy-brace {
+  bottom: auto;
+  height: calc(100% * 1.08);
+  top: -4%;
+  transform: none;
+}
+
+.flow-capture-group-visual-hierarchy
+  .flow-screen-stack-step-5
+  .flow-visual-hierarchy-brace {
+  top: calc(-4% - 12px);
+}
+
+.flow-capture-group-visual-hierarchy
+  .flow-screen-stack-step-4
+  .flow-visual-hierarchy-brace {
+  transform: translateY(30px);
+}
+
+.flow-capture-group-visual-hierarchy
   .flow-screen-stack-step-1b
   .flow-visual-hierarchy-frame-pair,
 .flow-capture-group-visual-hierarchy
   .flow-screen-stack-step-1c
+  .flow-visual-hierarchy-frame-pair,
+.flow-capture-group-visual-hierarchy
+  .flow-screen-stack-step-4
+  .flow-visual-hierarchy-frame-pair,
+.flow-capture-group-visual-hierarchy
+  .flow-screen-stack-step-5
   .flow-visual-hierarchy-frame-pair {
   width: 318px;
 }
@@ -4484,6 +4520,14 @@ section.project-hero {
 .flow-capture-group-visual-hierarchy
   .flow-screen-stack-step-1d
   .flow-visual-hierarchy-frame-pair
+  > .flow-image-frame,
+.flow-capture-group-visual-hierarchy
+  .flow-screen-stack-step-4
+  .flow-visual-hierarchy-frame-pair
+  > .flow-image-frame,
+.flow-capture-group-visual-hierarchy
+  .flow-screen-stack-step-5
+  .flow-visual-hierarchy-frame-pair
   > .flow-image-frame {
   margin-left: 0 !important;
   max-width: none;
@@ -4496,7 +4540,15 @@ section.project-hero {
 .flow-capture-group-visual-hierarchy
   .flow-screen-stack-step-1c
   .flow-visual-hierarchy-frame-pair
-  > .flow-protected-image-composition {
+  > .flow-protected-image-composition,
+.flow-capture-group-visual-hierarchy
+  .flow-screen-stack-step-4
+  .flow-visual-hierarchy-frame-pair
+  > .flow-image-frame,
+.flow-capture-group-visual-hierarchy
+  .flow-screen-stack-step-5
+  .flow-visual-hierarchy-frame-pair
+  > .flow-image-frame {
   width: 318px;
 }
 
@@ -4536,6 +4588,12 @@ section.project-hero {
   .flow-visual-hierarchy-brace,
 .flow-capture-group-visual-hierarchy
   .flow-screen-stack-step-1c
+  .flow-visual-hierarchy-brace,
+.flow-capture-group-visual-hierarchy
+  .flow-screen-stack-step-4
+  .flow-visual-hierarchy-brace,
+.flow-capture-group-visual-hierarchy
+  .flow-screen-stack-step-5
   .flow-visual-hierarchy-brace {
   left: calc(
     (var(--flow-visual-hierarchy-brace-width) +
@@ -4551,6 +4609,12 @@ section.project-hero {
   .flow-visual-hierarchy-brace-outline,
 .flow-capture-group-visual-hierarchy
   .flow-screen-stack-step-1d
+  .flow-visual-hierarchy-brace-outline,
+.flow-capture-group-visual-hierarchy
+  .flow-screen-stack-step-4
+  .flow-visual-hierarchy-brace-outline,
+.flow-capture-group-visual-hierarchy
+  .flow-screen-stack-step-5
   .flow-visual-hierarchy-brace-outline {
   stroke-width: 9.6px;
 }
@@ -4563,6 +4627,12 @@ section.project-hero {
   .flow-visual-hierarchy-brace-line,
 .flow-capture-group-visual-hierarchy
   .flow-screen-stack-step-1d
+  .flow-visual-hierarchy-brace-line,
+.flow-capture-group-visual-hierarchy
+  .flow-screen-stack-step-4
+  .flow-visual-hierarchy-brace-line,
+.flow-capture-group-visual-hierarchy
+  .flow-screen-stack-step-5
   .flow-visual-hierarchy-brace-line {
   stroke-width: 4.6px;
 }
@@ -4575,6 +4645,12 @@ section.project-hero {
   .flow-visual-hierarchy-external-annotation,
 .flow-capture-group-visual-hierarchy
   .flow-screen-stack-step-1d
+  .flow-visual-hierarchy-external-annotation,
+.flow-capture-group-visual-hierarchy
+  .flow-screen-stack-step-4
+  .flow-visual-hierarchy-external-annotation,
+.flow-capture-group-visual-hierarchy
+  .flow-screen-stack-step-5
   .flow-visual-hierarchy-external-annotation {
   font-size: 56px !important;
   line-height: 1.06;
@@ -4621,6 +4697,12 @@ section.project-hero {
   .flow-visual-hierarchy-section-lines-right,
 .flow-capture-group-visual-hierarchy
   .flow-screen-stack-step-1d
+  .flow-visual-hierarchy-section-lines-right,
+.flow-capture-group-visual-hierarchy
+  .flow-screen-stack-step-4
+  .flow-visual-hierarchy-section-lines-right,
+.flow-capture-group-visual-hierarchy
+  .flow-screen-stack-step-5
   .flow-visual-hierarchy-section-lines-right {
   left: calc(
     100% + var(--flow-visual-hierarchy-focal-scale-outset) +
@@ -4814,10 +4896,41 @@ section.project-hero {
   .flow-visual-hierarchy-external-annotation {
   font-size: 56px !important;
   line-height: 1.06;
-  right: calc(100% - 110px) !important;
+  right: calc(100% - 22px) !important;
   transform: translateY(-50%) rotate(-90deg) !important;
   transform-origin: center center;
   white-space: nowrap;
+}
+
+.flow-capture-group-visual-hierarchy .flow-screen-stack-step-4 h4,
+.flow-capture-group-visual-hierarchy .flow-screen-stack-step-5 h4 {
+  transform: translateX(0) !important;
+}
+
+.flow-capture-group-visual-hierarchy .flow-screen-stack-step-4 h4 {
+  margin-bottom: 6px;
+}
+
+.flow-capture-group-visual-hierarchy
+  .flow-screen-stack-step-4
+  .flow-visual-hierarchy-frame-pair {
+  transform: translateY(-18px);
+}
+
+.flow-capture-group-visual-hierarchy
+  .flow-screen-stack-step-4
+  .flow-visual-hierarchy-external-annotation {
+  top: calc(50% + 30px) !important;
+}
+
+.flow-capture-group-visual-hierarchy .flow-screen-stack-step-5 h4 {
+  margin-bottom: 12px;
+}
+
+.flow-capture-group-visual-hierarchy
+  .flow-screen-stack-step-5
+  .flow-visual-hierarchy-external-annotation {
+  top: calc(54.53% - 12px) !important;
 }
 
 .flow-capture-group-visual-hierarchy
@@ -5055,7 +5168,11 @@ section.project-hero {
 .flow-capture-group-full-row.flow-capture-group-visual-hierarchy
   .flow-screen-stack-step-1c,
 .flow-capture-group-full-row.flow-capture-group-visual-hierarchy
-  .flow-screen-stack-step-1d {
+  .flow-screen-stack-step-1d,
+.flow-capture-group-full-row.flow-capture-group-visual-hierarchy
+  .flow-screen-stack-step-4,
+.flow-capture-group-full-row.flow-capture-group-visual-hierarchy
+  .flow-screen-stack-step-5 {
   --flow-visual-hierarchy-title-offset: 0px;
 }
 
@@ -6163,6 +6280,38 @@ section.project-hero {
     );
     max-width: none;
     width: 318px;
+  }
+
+  .flow-capture-group-visual-hierarchy
+    .flow-screen-stack-step-4
+    .flow-visual-hierarchy-frame-pair
+    > .flow-image-frame,
+  .flow-capture-group-visual-hierarchy
+    .flow-screen-stack-step-5
+    .flow-visual-hierarchy-frame-pair
+    > .flow-image-frame {
+    margin-left: calc(
+      var(--flow-visual-hierarchy-brace-width) +
+        var(--flow-visual-hierarchy-brace-gap)
+    ) !important;
+  }
+
+  .flow-capture-group-visual-hierarchy
+    .flow-screen-stack-step-4
+    .flow-visual-hierarchy-brace,
+  .flow-capture-group-visual-hierarchy
+    .flow-screen-stack-step-5
+    .flow-visual-hierarchy-brace {
+    left: 0;
+  }
+
+  .flow-capture-group-visual-hierarchy
+    .flow-screen-stack-step-4
+    .flow-visual-hierarchy-external-annotation,
+  .flow-capture-group-visual-hierarchy
+    .flow-screen-stack-step-5
+    .flow-visual-hierarchy-external-annotation {
+    right: calc(100% - 110px) !important;
   }
 
   .flow-capture-group-visual-hierarchy

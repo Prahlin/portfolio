@@ -187,15 +187,22 @@ const visualHierarchyStepThreeLineCallouts: VisualHierarchySectionLineCallout[] 
   { label: "SHOPPING CART", top: "90.87%" },
 ];
 
+const visualHierarchyStepFourLineCallouts: VisualHierarchySectionLineCallout[] = [
+  { label: "MAIN CONTENT", top: "49.92%" },
+  { label: "SHOPPING CART", top: "90.87%" },
+];
+
 const visualHierarchyStepFiveLineCallouts: VisualHierarchySectionLineCallout[] = [
-  { label: "NAV BAR", top: "18%" },
-  { label: "MAIN CONTENT", top: "63%" },
-  { label: "SHOPPING CART", top: "86%" },
+  { label: "MAIN CONTENT", top: "50%" },
 ];
 const visualHierarchyCreamFadeBackground =
   "linear-gradient(180deg, rgba(255, 252, 242, 0.1) 0%, rgba(255, 252, 242, 1) 25%, rgba(255, 252, 242, 1) 75%, rgba(255, 252, 242, 0.1) 100%)";
 const visualHierarchyImageFadeMask =
   "linear-gradient(180deg, transparent 0%, black 25%, black 75%, transparent 100%)";
+const visualHierarchyStepFourCreamFadeBackground =
+  "linear-gradient(180deg, rgba(255, 252, 242, 0.02) 0%, rgba(255, 252, 242, 0.02) 5.5%, rgba(255, 252, 242, 0.28) 8.5%, rgba(255, 252, 242, 1) 10.5%, rgba(255, 252, 242, 1) 97.6%, rgba(255, 252, 242, 0.1) 100%)";
+const visualHierarchyStepFourImageFadeMask =
+  "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 5.5%, rgba(0, 0, 0, 0.28) 8.5%, rgb(0, 0, 0) 10.5%, rgb(0, 0, 0) 97.6%, rgba(0, 0, 0, 0) 100%)";
 const visualHierarchySecondaryCreamFadeBackground =
   "linear-gradient(180deg, rgba(255, 252, 242, 0.1) 0%, rgba(255, 252, 242, 1) 25%, rgba(255, 252, 242, 1) 92%, rgba(255, 252, 242, 0.1) 100%)";
 const visualHierarchySecondaryImageFadeMask =
@@ -210,6 +217,15 @@ const visualHierarchyQuaternaryImageFadeMask: CSSProperties["maskImage"] =
   undefined;
 
 const visualHierarchyStepFourBraceStacks: VisualHierarchyBraceStack[] = [
+  {
+    bracePath: visualHierarchyBracePath,
+    braceTipTop: visualHierarchyBraceTipTop,
+    overlayLines: ["Focal Point"],
+    tone: "light",
+  },
+];
+
+const visualHierarchyStepFiveBraceStacks: VisualHierarchyBraceStack[] = [
   {
     bracePath: visualHierarchyNinetyBracePath,
     braceTipTop: visualHierarchyNinetyBraceTipTop,
@@ -2040,7 +2056,9 @@ export default function ProductFlowSwitcher({
                           const isStepFourHomeScreenStep = step === "Step 4";
                           const isStepFiveMosaicStep = step === "Step 5";
                           const usesFadingComposition =
-                            isPreScrollingFadeStep || isStepFiveMosaicStep;
+                            isPreScrollingFadeStep ||
+                            isStepFourHomeScreenStep ||
+                            isStepFiveMosaicStep;
                           const isShoppingOverlayStep = step === "Step 6";
                           const isShoppingOverlayIsolatedStep =
                             step === "Step 6b";
@@ -2088,8 +2106,10 @@ export default function ProductFlowSwitcher({
                               extraBraceStacks={
                                 isFocalPointStep
                                   ? undefined
-                                  : usesStepFourHomeScreenTreatment
+                                  : isStepFourHomeScreenStep
                                     ? visualHierarchyStepFourBraceStacks
+                                  : isStepFiveMosaicStep
+                                    ? visualHierarchyStepFiveBraceStacks
                                   : isPreScrollingFadeStep
                                     ? visualHierarchyPreScrollingFocalBraceStacks[
                                         step
@@ -2099,6 +2119,8 @@ export default function ProductFlowSwitcher({
                               sectionLineCallouts={
                                 isStepFiveMosaicStep
                                   ? visualHierarchyStepFiveLineCallouts
+                                  : isStepFourHomeScreenStep
+                                    ? visualHierarchyStepFourLineCallouts
                                   : isClippedFocalStep
                                     ? visualHierarchySecondaryLineCallouts
                                   : isPhotoOnlyFocalStep
@@ -2251,18 +2273,24 @@ export default function ProductFlowSwitcher({
                                             ? "1182 / 2559"
                                             : "1440 / 2713"
                                           : "1290 / 2661",
-                                      background: isStepFiveMosaicStep
-                                        ? visualHierarchyCreamFadeBackground
-                                        : "transparent",
+                                      background: isStepFourHomeScreenStep
+                                        ? visualHierarchyStepFourCreamFadeBackground
+                                        : isStepFiveMosaicStep
+                                          ? visualHierarchyCreamFadeBackground
+                                          : "transparent",
                                       border: 0,
                                       borderRadius: 0,
                                       boxShadow: "none",
-                                      maskImage: isStepFiveMosaicStep
-                                        ? visualHierarchyImageFadeMask
-                                        : undefined,
-                                      WebkitMaskImage: isStepFiveMosaicStep
-                                        ? visualHierarchyImageFadeMask
-                                        : undefined,
+                                      maskImage: isStepFourHomeScreenStep
+                                        ? visualHierarchyStepFourImageFadeMask
+                                        : isStepFiveMosaicStep
+                                          ? visualHierarchyImageFadeMask
+                                          : undefined,
+                                      WebkitMaskImage: isStepFourHomeScreenStep
+                                        ? visualHierarchyStepFourImageFadeMask
+                                        : isStepFiveMosaicStep
+                                          ? visualHierarchyImageFadeMask
+                                          : undefined,
                                     }
                                   : undefined
                               }
