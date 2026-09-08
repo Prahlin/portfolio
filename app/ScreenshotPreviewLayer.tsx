@@ -12,6 +12,7 @@ const PREVIEW_RADIUS_SELECTOR =
 const PREVIEW_SOURCE_SELECTOR = "[data-screenshot-preview-src]";
 const PREVIEW_COMPOSITION_SELECTOR = "[data-screenshot-preview-composition]";
 const PREVIEW_SCOPE_SELECTOR = "[data-screenshot-preview-scope]";
+const PREVIEW_STACK_SELECTOR = ".flow-screen-stack";
 const PREVIEW_GROUP_SELECTOR = ".flow-screen";
 const PREVIEW_GROUP_LABEL_SELECTOR = ".flow-screen-label";
 const CLIPPING_OVERFLOW_VALUES = new Set(["auto", "clip", "hidden", "scroll"]);
@@ -456,24 +457,50 @@ function buildPreview(target: PreviewTarget): ScreenshotPreview | null {
 export function ScreenshotPreviewLayer() {
   const activeTargetRef = useRef<PreviewTarget | null>(null);
   const activePointerIdRef = useRef<number | null>(null);
+  const activeStackRef = useRef<HTMLElement | null>(null);
   const elementPreviewHostRef = useRef<HTMLDivElement | null>(null);
   const [preview, setPreview] = useState<ScreenshotPreview | null>(null);
 
   useEffect(() => {
+    function clearActiveStack() {
+      activeStackRef.current?.removeAttribute("data-screenshot-preview-active");
+      activeStackRef.current = null;
+    }
+
+    function setActiveStack(target: PreviewTarget) {
+      const stack = target.closest<HTMLElement>(PREVIEW_STACK_SELECTOR);
+
+      if (activeStackRef.current === stack) {
+        return;
+      }
+
+      clearActiveStack();
+
+      if (!stack || !stack.closest(PREVIEW_SCOPE_SELECTOR)) {
+        return;
+      }
+
+      stack.setAttribute("data-screenshot-preview-active", "true");
+      activeStackRef.current = stack;
+    }
+
     function showPreview(target: PreviewTarget) {
       const nextPreview = buildPreview(target);
 
       if (!nextPreview) {
+        hidePreview();
         return;
       }
 
       activeTargetRef.current = target;
+      setActiveStack(target);
       setPreview(nextPreview);
     }
 
     function hidePreview() {
       activeTargetRef.current = null;
       activePointerIdRef.current = null;
+      clearActiveStack();
       setPreview(null);
     }
 
@@ -606,6 +633,7 @@ export function ScreenshotPreviewLayer() {
       window.removeEventListener("blur", hidePreview);
       window.removeEventListener("resize", hidePreview);
       window.removeEventListener("scroll", handleScroll, true);
+      clearActiveStack();
     };
   }, []);
 

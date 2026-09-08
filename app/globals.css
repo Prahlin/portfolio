@@ -106,6 +106,12 @@ img[data-screenshot-preview],
   display: none !important;
 }
 
+.flow-screen-stack[data-screenshot-preview-active] > h4,
+.screenshot-preview-element-clone h4 {
+  opacity: 0 !important;
+  visibility: hidden !important;
+}
+
 .site-shell {
   width: min(1180px, calc(100% - 36px));
   margin: 0 auto;
@@ -3130,11 +3136,11 @@ section.project-hero {
 }
 
 .overview-play-store-shot-wide {
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 1536 / 1080;
 }
 
 .overview-play-store-shot img {
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .overview-play-store-shot figcaption {
@@ -4193,6 +4199,7 @@ section.project-hero {
   --flow-visual-hierarchy-section-offset: calc(
     26px + var(--flow-visual-hierarchy-section-break-gap)
   );
+  --flow-visual-hierarchy-main-header-gap-offset: 48px;
 
   gap: 24px 34px;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -4322,14 +4329,14 @@ section.project-hero {
   grid-column: 2 / 3;
   grid-row: 7 / 8;
   position: relative;
-  top: calc(var(--flow-visual-hierarchy-section-offset) * 5);
+  top: calc(var(--flow-visual-hierarchy-section-offset) * 5 - 74px);
 }
 
 .flow-capture-group-visual-hierarchy .flow-screen-stack-step-6c {
   grid-column: 2 / 3;
   grid-row: 8 / 9;
   position: relative;
-  top: calc(var(--flow-visual-hierarchy-section-offset) * 5);
+  top: calc(var(--flow-visual-hierarchy-section-offset) * 5 - 117px);
 }
 
 .flow-capture-group-visual-hierarchy
@@ -4355,18 +4362,18 @@ section.project-hero {
   .flow-visual-hierarchy-frame-pair,
 .flow-capture-group-visual-hierarchy
   .flow-screen-stack-step-1c
-  .flow-visual-hierarchy-frame-pair,
-.flow-capture-group-visual-hierarchy
-  .flow-screen-stack-step-3
-  .flow-visual-hierarchy-frame-pair,
-.flow-capture-group-visual-hierarchy
-  .flow-screen-stack-step-6
   .flow-visual-hierarchy-frame-pair {
   --flow-visual-hierarchy-tip-frame-gap: 6px;
 }
 
 .flow-capture-group-visual-hierarchy
   .flow-screen-stack-step-1
+  .flow-visual-hierarchy-frame-pair,
+.flow-capture-group-visual-hierarchy
+  .flow-screen-stack-step-3
+  .flow-visual-hierarchy-frame-pair,
+.flow-capture-group-visual-hierarchy
+  .flow-screen-stack-step-6
   .flow-visual-hierarchy-frame-pair {
   --flow-visual-hierarchy-tip-frame-gap: 10px;
   --flow-visual-hierarchy-viewing-brace-shift: 31px;
@@ -4375,6 +4382,12 @@ section.project-hero {
 
 .flow-capture-group-visual-hierarchy
   .flow-screen-stack-step-1
+  .flow-visual-hierarchy-brace,
+.flow-capture-group-visual-hierarchy
+  .flow-screen-stack-step-3
+  .flow-visual-hierarchy-brace,
+.flow-capture-group-visual-hierarchy
+  .flow-screen-stack-step-6
   .flow-visual-hierarchy-brace {
   left: var(--flow-visual-hierarchy-viewing-brace-shift);
 }
@@ -4434,6 +4447,15 @@ section.project-hero {
 }
 
 .flow-capture-group-visual-hierarchy
+  .flow-screen-stack-step-4
+  .flow-visual-hierarchy-frame-pair,
+.flow-capture-group-visual-hierarchy
+  .flow-screen-stack-step-5
+  .flow-visual-hierarchy-frame-pair {
+  --flow-visual-hierarchy-tip-frame-gap: 20px;
+}
+
+.flow-capture-group-visual-hierarchy
   .flow-screen-stack-step-1b
   .flow-visual-hierarchy-frame-pair,
 .flow-capture-group-visual-hierarchy
@@ -4446,6 +4468,7 @@ section.project-hero {
   .flow-screen-stack-step-1d
   .flow-visual-hierarchy-frame-pair {
   --flow-visual-hierarchy-focal-scale-outset: 16.9px;
+  --flow-visual-hierarchy-callout-align-offset: 48.7px;
   --flow-visual-hierarchy-quaternary-focal-align-offset: 45px;
   width: 408px;
 }
@@ -4601,7 +4624,8 @@ section.project-hero {
   .flow-visual-hierarchy-section-lines-right {
   left: calc(
     100% + var(--flow-visual-hierarchy-focal-scale-outset) +
-      var(--flow-visual-hierarchy-tip-frame-gap)
+      var(--flow-visual-hierarchy-tip-frame-gap) -
+      var(--flow-visual-hierarchy-callout-align-offset, 0px)
   );
 }
 
@@ -4629,6 +4653,12 @@ section.project-hero {
   .flow-visual-hierarchy-section-line,
 .flow-capture-group-visual-hierarchy
   .flow-screen-stack-step-1d
+  .flow-visual-hierarchy-section-line,
+.flow-capture-group-visual-hierarchy
+  .flow-screen-stack-step-4
+  .flow-visual-hierarchy-section-line,
+.flow-capture-group-visual-hierarchy
+  .flow-screen-stack-step-5
   .flow-visual-hierarchy-section-line {
   height: 9.6px;
   width: 48px;
@@ -4642,6 +4672,12 @@ section.project-hero {
   .flow-visual-hierarchy-section-line::after,
 .flow-capture-group-visual-hierarchy
   .flow-screen-stack-step-1d
+  .flow-visual-hierarchy-section-line::after,
+.flow-capture-group-visual-hierarchy
+  .flow-screen-stack-step-4
+  .flow-visual-hierarchy-section-line::after,
+.flow-capture-group-visual-hierarchy
+  .flow-screen-stack-step-5
   .flow-visual-hierarchy-section-line::after {
   height: 4.6px;
 }
@@ -4660,6 +4696,12 @@ section.project-hero {
 
 .flow-capture-group-visual-hierarchy
   .flow-screen-stack-step-1
+  .flow-visual-hierarchy-external-annotation,
+.flow-capture-group-visual-hierarchy
+  .flow-screen-stack-step-3
+  .flow-visual-hierarchy-external-annotation,
+.flow-capture-group-visual-hierarchy
+  .flow-screen-stack-step-6
   .flow-visual-hierarchy-external-annotation {
   right: calc(
     100% - 70px - var(--flow-visual-hierarchy-viewing-label-shift)
@@ -4670,6 +4712,14 @@ section.project-hero {
 
 .flow-capture-group-visual-hierarchy
   .flow-screen-stack-step-1
+  .flow-visual-hierarchy-external-annotation
+  > span,
+.flow-capture-group-visual-hierarchy
+  .flow-screen-stack-step-3
+  .flow-visual-hierarchy-external-annotation
+  > span,
+.flow-capture-group-visual-hierarchy
+  .flow-screen-stack-step-6
   .flow-visual-hierarchy-external-annotation
   > span {
   display: inline;
@@ -4694,6 +4744,28 @@ section.project-hero {
 }
 
 .flow-capture-group-visual-hierarchy
+  .flow-screen-stack-step-3
+  .flow-visual-hierarchy-section-label,
+.flow-capture-group-visual-hierarchy
+  .flow-screen-stack-step-6
+  .flow-visual-hierarchy-section-label {
+  left: calc(100% + 16px);
+  letter-spacing: 0.1em;
+  top: 50%;
+  transform: translateY(-50%) rotate(90deg) translateX(-50%);
+  transform-origin: left center;
+}
+
+.flow-capture-group-visual-hierarchy
+  .flow-screen-stack-step-3
+  .flow-visual-hierarchy-section-label-wrapped,
+.flow-capture-group-visual-hierarchy
+  .flow-screen-stack-step-6
+  .flow-visual-hierarchy-section-label-wrapped {
+  left: calc(100% + 23px);
+}
+
+.flow-capture-group-visual-hierarchy
   .flow-screen-stack-step-1b
   .flow-visual-hierarchy-section-label,
 .flow-capture-group-visual-hierarchy
@@ -4701,6 +4773,12 @@ section.project-hero {
   .flow-visual-hierarchy-section-label,
 .flow-capture-group-visual-hierarchy
   .flow-screen-stack-step-1d
+  .flow-visual-hierarchy-section-label,
+.flow-capture-group-visual-hierarchy
+  .flow-screen-stack-step-4
+  .flow-visual-hierarchy-section-label,
+.flow-capture-group-visual-hierarchy
+  .flow-screen-stack-step-5
   .flow-visual-hierarchy-section-label {
   font-size: 19.2px;
   left: calc(100% + 32px);
@@ -4718,8 +4796,40 @@ section.project-hero {
   .flow-visual-hierarchy-section-label-wrapped,
 .flow-capture-group-visual-hierarchy
   .flow-screen-stack-step-1d
+  .flow-visual-hierarchy-section-label-wrapped,
+.flow-capture-group-visual-hierarchy
+  .flow-screen-stack-step-4
+  .flow-visual-hierarchy-section-label-wrapped,
+.flow-capture-group-visual-hierarchy
+  .flow-screen-stack-step-5
   .flow-visual-hierarchy-section-label-wrapped {
   left: calc(100% + 45px);
+}
+
+.flow-capture-group-visual-hierarchy
+  .flow-screen-stack-step-4
+  .flow-visual-hierarchy-external-annotation,
+.flow-capture-group-visual-hierarchy
+  .flow-screen-stack-step-5
+  .flow-visual-hierarchy-external-annotation {
+  font-size: 56px !important;
+  line-height: 1.06;
+  right: calc(100% - 110px) !important;
+  transform: translateY(-50%) rotate(-90deg) !important;
+  transform-origin: center center;
+  white-space: nowrap;
+}
+
+.flow-capture-group-visual-hierarchy
+  .flow-screen-stack-step-4
+  .flow-visual-hierarchy-external-annotation
+  > span,
+.flow-capture-group-visual-hierarchy
+  .flow-screen-stack-step-5
+  .flow-visual-hierarchy-external-annotation
+  > span {
+  display: inline;
+  white-space: nowrap;
 }
 
 .flow-capture-group-visual-hierarchy
@@ -4800,14 +4910,16 @@ section.project-hero {
 .flow-visual-hierarchy-row-label-2 {
   top: calc(
     var(--flow-visual-hierarchy-scaled-row-height) +
-      var(--flow-visual-hierarchy-section-offset) + 14px
+      var(--flow-visual-hierarchy-section-offset) + 14px -
+      var(--flow-visual-hierarchy-main-header-gap-offset)
   );
 }
 
 .flow-visual-hierarchy-row-label-3 {
   top: calc(
     var(--flow-visual-hierarchy-scaled-row-height) * 2 +
-      var(--flow-visual-hierarchy-section-offset) * 2 + 39px
+      var(--flow-visual-hierarchy-section-offset) * 2 + 39px -
+      var(--flow-visual-hierarchy-main-header-gap-offset)
   );
 }
 
@@ -4935,7 +5047,16 @@ section.project-hero {
 .flow-capture-group-full-row
   .flow-screen-stack:has(.flow-visual-hierarchy-frame-pair)
   h4 {
-  transform: translateX(57px);
+  transform: translateX(var(--flow-visual-hierarchy-title-offset, 57px));
+}
+
+.flow-capture-group-full-row.flow-capture-group-visual-hierarchy
+  .flow-screen-stack-step-1b,
+.flow-capture-group-full-row.flow-capture-group-visual-hierarchy
+  .flow-screen-stack-step-1c,
+.flow-capture-group-full-row.flow-capture-group-visual-hierarchy
+  .flow-screen-stack-step-1d {
+  --flow-visual-hierarchy-title-offset: 0px;
 }
 
 .flow-group-header {
@@ -6005,6 +6126,12 @@ section.project-hero {
 
   .flow-capture-group-visual-hierarchy
     .flow-screen-stack-step-1
+    .flow-visual-hierarchy-frame-pair,
+  .flow-capture-group-visual-hierarchy
+    .flow-screen-stack-step-3
+    .flow-visual-hierarchy-frame-pair,
+  .flow-capture-group-visual-hierarchy
+    .flow-screen-stack-step-6
     .flow-visual-hierarchy-frame-pair {
     --flow-visual-hierarchy-viewing-brace-shift: 4px;
     --flow-visual-hierarchy-viewing-label-shift: 1px;
@@ -6123,7 +6250,8 @@ section.project-hero {
     .flow-visual-hierarchy-section-lines-right {
     left: calc(
       100% + var(--flow-visual-hierarchy-focal-scale-outset) +
-        var(--flow-visual-hierarchy-tip-frame-gap) - 45px
+        var(--flow-visual-hierarchy-tip-frame-gap) -
+        var(--flow-visual-hierarchy-callout-align-offset, 0px)
     );
   }
 
@@ -6205,6 +6333,12 @@ section.project-hero {
 @media (max-width: 390px) {
   .flow-capture-group-visual-hierarchy
     .flow-screen-stack-step-1
+    .flow-visual-hierarchy-frame-pair,
+  .flow-capture-group-visual-hierarchy
+    .flow-screen-stack-step-3
+    .flow-visual-hierarchy-frame-pair,
+  .flow-capture-group-visual-hierarchy
+    .flow-screen-stack-step-6
     .flow-visual-hierarchy-frame-pair {
     --flow-visual-hierarchy-viewing-brace-shift: 8px;
     --flow-visual-hierarchy-viewing-label-shift: 11px;

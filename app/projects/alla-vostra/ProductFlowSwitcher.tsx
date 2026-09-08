@@ -137,17 +137,11 @@ const visualHierarchyBracePath =
 const visualHierarchyCompressedBracePath =
   "M57 34 C31 35 25 58 25 104 L25 143 C25 167 18 179 12 187 L3 197 L12 207 C18 215 25 227 25 251 L25 290 C25 336 31 359 57 360";
 
-const visualHierarchyTenBracePath =
-  "M57 34 C31 34.1 25 36.3 25 41 L25 58.5 C25 62.1 18 63.9 12 65.1 C8.8 65.7 8.8 67.5 12 68.1 C18 69.3 25 71.1 25 74.7 L25 92.2 C25 96.9 31 99.1 57 99.2";
-
 const visualHierarchyNinetyBracePath =
   "M57 34 C31 35 25 58 25 104 L25 273.4 C25 297.4 18 309.4 12 317.4 L3 327.4 L12 337.4 C18 345.4 25 357.4 25 381.4 L25 550.8 C25 596.8 31 619.8 57 620.8";
 
 const visualHierarchyBraceTipTop = "50%";
 const visualHierarchyCompressedBraceTipTop = "27.36%";
-const visualHierarchySupportingElementsBraceTipTop = "72.64%";
-const visualHierarchyCompressedBracePathOffsetY = 326;
-const visualHierarchyTenBraceTipTop = "9.25%";
 const visualHierarchyNinetyBraceTipTop = "54.53%";
 const visualHierarchyNinetyBracePathOffsetY = 65.2;
 const visualHierarchyPreScrollingFocalBraceTipTop = "54.15%";
@@ -188,14 +182,12 @@ const visualHierarchyQuaternaryLineCallouts: VisualHierarchySectionLineCallout[]
 ];
 
 const visualHierarchyStepThreeLineCallouts: VisualHierarchySectionLineCallout[] = [
-  { label: "TOOLBAR", top: "2.87%" },
   { label: "NAV BAR", top: "7.76%" },
   { label: "MAIN CONTENT", top: "49.92%" },
   { label: "SHOPPING CART", top: "90.87%" },
 ];
 
 const visualHierarchyStepFiveLineCallouts: VisualHierarchySectionLineCallout[] = [
-  { label: "TOOLBAR", top: "6%" },
   { label: "NAV BAR", top: "18%" },
   { label: "MAIN CONTENT", top: "63%" },
   { label: "SHOPPING CART", top: "86%" },
@@ -213,31 +205,15 @@ const visualHierarchyTertiaryCreamFadeBackground =
 const visualHierarchyTertiaryImageFadeMask =
   "linear-gradient(180deg, transparent 0%, black 25%, black 82%, transparent 100%)";
 const visualHierarchyQuaternaryCreamFadeBackground =
-  "radial-gradient(ellipse 184px 106px at 50% 31%, rgba(255, 252, 242, 1) 0%, rgba(255, 252, 242, 1) 20%, rgba(255, 252, 242, 0.97) 30%, rgba(255, 252, 242, 0.82) 44%, rgba(255, 252, 242, 0.6) 60%, rgba(255, 252, 242, 0.34) 78%, transparent 100%)";
+  "radial-gradient(ellipse 45.1% 27% at 50% 31%, rgba(255, 252, 242, 1) 0%, rgba(255, 252, 242, 1) 20%, rgba(255, 252, 242, 0.97) 30%, rgba(255, 252, 242, 0.82) 44%, rgba(255, 252, 242, 0.6) 60%, rgba(255, 252, 242, 0.34) 78%, transparent 100%)";
 const visualHierarchyQuaternaryImageFadeMask: CSSProperties["maskImage"] =
   undefined;
 
-const visualHierarchySupportingElementsBraceStacks: VisualHierarchyBraceStack[] =
-  [
-    {
-      bracePath: visualHierarchyCompressedBracePath,
-      braceTipTop: visualHierarchySupportingElementsBraceTipTop,
-      overlayLines: ["Supporting", "Elements"],
-      pathOffsetY: visualHierarchyCompressedBracePathOffsetY,
-    },
-  ];
-
 const visualHierarchyStepFourBraceStacks: VisualHierarchyBraceStack[] = [
-  {
-    bracePath: visualHierarchyTenBracePath,
-    braceTipTop: visualHierarchyTenBraceTipTop,
-    overlayLines: ["Supporting", "Elements"],
-    tone: "light",
-  },
   {
     bracePath: visualHierarchyNinetyBracePath,
     braceTipTop: visualHierarchyNinetyBraceTipTop,
-    overlayLines: ["Focal", "Point"],
+    overlayLines: ["Focal Point"],
     pathOffsetY: visualHierarchyNinetyBracePathOffsetY,
     tone: "light",
   },
@@ -2111,7 +2087,7 @@ export default function ProductFlowSwitcher({
                               }
                               extraBraceStacks={
                                 isFocalPointStep
-                                  ? visualHierarchySupportingElementsBraceStacks
+                                  ? undefined
                                   : usesStepFourHomeScreenTreatment
                                     ? visualHierarchyStepFourBraceStacks
                                   : isPreScrollingFadeStep
@@ -2157,7 +2133,7 @@ export default function ProductFlowSwitcher({
                               imageSrc={
                                 isHomeScreenStep
                                   ? isStepFourHomeScreenStep
-                                    ? "/images/alla-vostra-home-framed-no-island.png"
+                                    ? "/images/alla-vostra-home-primary-crop-no-device-frame.png"
                                     : isStepFiveMosaicStep
                                       ? "/images/alla-vostra/taste111_mos9_bright_soft_mockup_tile_blend_both_mockup.png"
                                       : "/images/alla-vostra-home-framed-no-island.png"
@@ -2263,7 +2239,7 @@ export default function ProductFlowSwitcher({
                                       width: isCheeseboardOnlyFocalStep
                                         ? "408px"
                                         : isShoppingOverlaySmallColumnStep
-                                          ? "318px"
+                                          ? "344px"
                                           : undefined,
                                     }
                                   : isBracedStep || isHomeScreenStep
@@ -2271,7 +2247,9 @@ export default function ProductFlowSwitcher({
                                       aspectRatio: isStepFiveMosaicStep
                                         ? "853 / 1280"
                                         : usesStepFourHomeScreenTreatment
-                                          ? "1440 / 2713"
+                                          ? isStepFourHomeScreenStep
+                                            ? "1182 / 2559"
+                                            : "1440 / 2713"
                                           : "1290 / 2661",
                                       background: isStepFiveMosaicStep
                                         ? visualHierarchyCreamFadeBackground
@@ -2302,7 +2280,7 @@ export default function ProductFlowSwitcher({
                                 isViewingAreaStep
                                   ? ["Viewing Area"]
                                   : isFocalPointStep
-                                    ? ["Focal", "Point"]
+                                    ? ["Focal Point"]
                                     : undefined
                               }
                               overlayStyle={

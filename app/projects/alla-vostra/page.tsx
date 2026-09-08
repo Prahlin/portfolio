@@ -41,22 +41,22 @@ const playStoreScreenshots = [
   {
     alt: "Alla Vostra Play Store feature graphic",
     aspect: "feature",
-    src: "/images/alla-vostra/play-store/playstore1.png",
+    src: "/images/alla-vostra/play-store/feature-graphic-upload-clean-1024x500.png",
   },
   {
     alt: "Alla Vostra Play Store screenshot 2",
     aspect: "wide",
-    src: "/images/alla-vostra/play-store/playstore2.png",
+    src: "/images/alla-vostra/play-store/playstore2_trim-lr10.png",
   },
   {
     alt: "Alla Vostra Play Store screenshot 4",
     aspect: "wide",
-    src: "/images/alla-vostra/play-store/playstore4.png",
+    src: "/images/alla-vostra/play-store/playstore4_trim-lr10.png",
   },
   {
     alt: "Alla Vostra Play Store screenshot 5",
     aspect: "wide",
-    src: "/images/alla-vostra/play-store/playstore5.png",
+    src: "/images/alla-vostra/play-store/playstore5_trim-lr10.png",
   },
 ] as const;
 
