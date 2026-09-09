@@ -1,0 +1,454 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [ 6 0 R 8 0 R 10 0 R 12 0 R 14 0 R 16 0 R 18 0 R ] /Count 7 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+5 0 obj
+<< /Length 6631 >>
+stream
+BT /F2 14.00 Tf 1 0 0 1 54.00 754.00 Tm (Prahlin Portfolio Work Log - September 8, 2026 \(Part 2\)) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 737.00 Tm (Compiled summary for Tuesday, September 8, 2026 - Part 2 - focus: continuing the) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 725.00 Tm (Prahl.dev Portfolio Alla Vostra UI Foundations Visual Hierarchy work after the earlier) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 713.00 Tm (September 8 On-Scrolling fade and brace record, re-verifying the United States Eastern) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 701.00 Tm (date, re-running the project reader, studying the refreshed snapshot and every) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 689.00 Tm (pre-existing Portfolio PDF worklog, refining the During Shopping Secondary and) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 677.00 Tm (Tertiary stacks, adding and renaming product-overlay callout pins, matching pin line) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 665.00 Tm (weight and green rotated headers across Primary, Secondary, and Tertiary, aligning) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 653.00 Tm (Pre-Scrolling, On-Scrolling, and During Shopping row geometry against primary) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 641.00 Tm (device-frame edges, adding grouped Visual Hierarchy Show More / Show Less behavior for) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 629.00 Tm (wide and portrait layouts, validating TypeScript and browser-rendered behavior,) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 617.00 Tm (recommending the commit message, documenting the committed source state at 61a318a,) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 605.00 Tm (pushing the official Hostinger static export fallback to prahl.dev through) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 593.00 Tm (hostinger-deploy commit 0bf918d, refreshing the Portfolio project snapshot, and) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 581.00 Tm (generating the September 8 Part 2 Portfolio PDF worklog.) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 565.00 Tm (Generated in continuity with the established Prahlin Portfolio daily worklog cadence:) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 553.00 Tm (compact opening summary, source-material section, baseline section, goal list,) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 541.00 Tm (work-completed sections, validation section, files-touched list, follow-up context,) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 529.00 Tm (and output-artifact close.) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 513.00 Tm (This artifact intentionally covers Prahlin/portfolio work performed after) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 501.00 Tm (portfolio_worklog_september8.pdf and after the September 8 Part 1 documentation state.) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 489.00 Tm (The source state reviewed for this record is 61a318ae14aca5d438a838188660a35004690eae) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 477.00 Tm (on main, matching origin/main after the Visual Hierarchy source commit titled Refined) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 465.00 Tm (Alla Vostra visual hierarchy expansion and callouts. The official public deployment) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 453.00 Tm (path was attempted through the existing GitHub Actions Hostinger workflow, which) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 441.00 Tm (failed quickly as in prior records, so the current static export was built locally and) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 429.00 Tm (force-pushed to origin/hostinger-deploy as 0bf918d79c1775ef950948b72e0370a509bea980.) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 417.00 Tm (Live prahl.dev verification returned HTTP 200 and the deployed Alla Vostra page) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 405.00 Tm (referenced the new build ID 4mEv3JXgzQ5LdSDwpuzsP. The local documentation deltas) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 393.00 Tm (created by this pass are the refreshed portfolio_PROJECT_SNAPSHOT.txt file and this) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 381.00 Tm (Part 2 PDF worklog.) Tj ET
+BT /F2 11.20 Tf 1 0 0 1 54.00 354.00 Tm (Source Materials Reviewed) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 341.00 Tm (- Verified the United States Eastern date with TZ=America/New_York date, which) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 329.00 Tm (  reported Tuesday, September 8, 2026 at about 10:44 PM EDT during this worklog pass.) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 317.00 Tm (  A UTC-04:00 time check confirmed the same Eastern calendar date. The session) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 305.00 Tm (  therefore uses September 8, 2026, even though UTC had already crossed into September) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 293.00 Tm (  9.) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 278.00 Tm (- Applied the user clarification that an additional worklog on the same Eastern date) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 266.00 Tm (  should be called Part 2, producing portfolio_worklog_september8_part2.pdf while) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 254.00 Tm (  leaving the existing un-suffixed September 8 PDF in place.) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 239.00 Tm (- Ran ./read_project.sh from /Users/prahlin/gh/portfolio and regenerated) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 227.00 Tm (  portfolio_PROJECT_SNAPSHOT.txt before writing this worklog, preserving the project) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 215.00 Tm (  convention that Codex refreshes the current source snapshot before continuing) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 203.00 Tm (  Portfolio documentation work.) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 188.00 Tm (- Reviewed the refreshed portfolio_PROJECT_SNAPSHOT.txt, including project notes,) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 176.00 Tm (  current source tree, line-numbered source dumps, public image inventory, PDF worklog) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 164.00 Tm (  inventory, deployment archive context, package and deployment configuration, git) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 152.00 Tm (  context, recent commits, generated/cache ignore policy, and the standing commit/push) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 140.00 Tm (  conventions.) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 125.00 Tm (- Reviewed every pre-existing Portfolio root-level worklog PDF:) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 113.00 Tm (  portfolio_worklog_july11.pdf, portfolio_worklog_july14.pdf,) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 101.00 Tm (  portfolio_worklog_july15_part1.pdf, portfolio_worklog_july15_part2.pdf,) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 89.00 Tm (  portfolio_worklog_july16.pdf, portfolio_worklog_july19.pdf,) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 77.00 Tm (  portfolio_worklog_july20.pdf, portfolio_worklog_july21.pdf,) Tj ET
+BT /F1 8.80 Tf 1 0 0 1 180.51 34.00 Tm (Prahlin Portfolio Work Log - September 8, 2026 \(Part 2\) Page 1) Tj ET
+endstream
+endobj
+6 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 5 0 R >>
+endobj
+7 0 obj
+<< /Length 6666 >>
+stream
+BT /F1 10.00 Tf 1 0 0 1 54.00 754.00 Tm (  portfolio_worklog_july22.pdf, portfolio_worklog_july23.pdf,) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 742.00 Tm (  portfolio_worklog_july24.pdf, portfolio_worklog_july25.pdf,) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 730.00 Tm (  portfolio_worklog_july29.pdf, portfolio_worklog_july30.pdf,) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 718.00 Tm (  portfolio_worklog_july31.pdf, portfolio_worklog_august1_part1.pdf,) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 706.00 Tm (  portfolio_worklog_august1_part2.pdf, portfolio_worklog_august1_part3.pdf,) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 694.00 Tm (  portfolio_worklog_august3.pdf, portfolio_worklog_august4.pdf,) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 682.00 Tm (  portfolio_worklog_august5.pdf, portfolio_worklog_august6.pdf,) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 670.00 Tm (  portfolio_worklog_august10_part1.pdf, portfolio_worklog_august10_part2.pdf,) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 658.00 Tm (  portfolio_worklog_august11.pdf, portfolio_worklog_august12_part1.pdf,) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 646.00 Tm (  portfolio_worklog_august12_part2.pdf, portfolio_worklog_august14.pdf,) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 634.00 Tm (  portfolio_worklog_august16.pdf, portfolio_worklog_august24.pdf,) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 622.00 Tm (  portfolio_worklog_september7.pdf, and portfolio_worklog_september8.pdf.) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 607.00 Tm (- Extracted text from all thirty-two existing Portfolio PDFs with pdftotext and) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 595.00 Tm (  checked recent metadata with pdfinfo and pdffonts to preserve title cadence, daily) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 583.00 Tm (  and same-day part naming, opening-summary density, section order, compact) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 571.00 Tm (  bullet-heavy technical voice, validation language, files-touched lists, follow-up) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 559.00 Tm (  context, output-artifact close, root-level filename style, letter-size pages, PDF) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 547.00 Tm (  1.4 output, Helvetica Type 1 text, and Codex author/creator/producer metadata.) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 532.00 Tm (- Used portfolio_worklog_september8.pdf as the closest same-day baseline because it) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 520.00 Tm (  documented the immediately preceding Visual Hierarchy fade, brace, callout,) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 508.00 Tm (  responsive spacing, TypeScript, static-export, and Playwright measurement pass.) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 493.00 Tm (- Reviewed git history and deployment state through git status, git log, git show) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 481.00 Tm (  --stat, git show --name-status, git ls-remote origin main hostinger-deploy, gh run) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 469.00 Tm (  list for the Hostinger static-export workflow, package scripts, local validation) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 457.00 Tm (  output, and live prahl.dev curl checks.) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 442.00 Tm (- Reviewed app/projects/alla-vostra/ProductFlowSwitcher.tsx, app/globals.css,) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 430.00 Tm (  portfolio_PROJECT_SNAPSHOT.txt, the Alla Vostra Visual Hierarchy image assets,) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 418.00 Tm (  package.json scripts, .github/workflows/hostinger-static-export.yml, DEPLOYMENT.md,) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 406.00 Tm (  and the generated out/ static-export payload.) Tj ET
+BT /F2 11.20 Tf 1 0 0 1 54.00 380.00 Tm (Baseline Status Before September 8 Part 2 Work) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 367.00 Tm (- The earlier September 8 PDF had already captured the On-Scrolling Secondary fade,) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 355.00 Tm (  Step 4 and Step 5 brace matching, unwanted callout pruning, Tertiary MAIN CONTENT) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 343.00 Tm (  centering, one-column side-lane protection, local cache clearing, and validation) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 331.00 Tm (  around commit 9162c6b.) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 316.00 Tm (- The During Shopping row still needed to inherit the same Visual Hierarchy annotation) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 304.00 Tm (  language as Pre-Scrolling and On-Scrolling: focal braces, Focal Point headers, white) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 292.00 Tm (  callout lines, and rotated green labels that read as one consistent system rather) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 280.00 Tm (  than a later add-on.) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 265.00 Tm (- The During Shopping Secondary and Tertiary stacks were visually too large and then) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 253.00 Tm (  too close together, so the row needed repeated scale and vertical-distribution) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 241.00 Tm (  passes against the Primary products-overlay device frame.) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 226.00 Tm (- Primary During Shopping had incomplete or imprecise callout labels around the) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 214.00 Tm (  hero/product imagery, product navigation, action controls, and screen navigation.) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 202.00 Tm (  The user wanted exact vertical pin placement and label wording that avoided awkward) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 190.00 Tm (  TOP/NAV and BOTTOM/NAV line breaks.) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 175.00 Tm (- The Secondary and Tertiary During Shopping stacks needed their own callout pin sets,) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 163.00 Tm (  but the smaller stack scale made it easy to accidentally shrink lines and green) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 151.00 Tm (  labels. The accepted direction was to keep primary-like line thickness and label) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 139.00 Tm (  sizing while abbreviating copy where necessary.) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 124.00 Tm (- The Pre-Scrolling, On-Scrolling, and During Shopping right-column stack positions) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 112.00 Tm (  needed a shared rule: Secondary top aligned with the Primary device-frame top, the) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 100.00 Tm (  lowest featured stack bottom aligned with the Primary device-frame bottom, and) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 88.00 Tm (  intermediate stacks held in the true vertical middle when present.) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 73.00 Tm (- The Visual Hierarchy section still displayed all ten stacks immediately. Unlike the) Tj ET
+BT /F1 8.80 Tf 1 0 0 1 180.51 34.00 Tm (Prahlin Portfolio Work Log - September 8, 2026 \(Part 2\) Page 2) Tj ET
+endstream
+endobj
+8 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 7 0 R >>
+endobj
+9 0 obj
+<< /Length 6257 >>
+stream
+BT /F1 10.00 Tf 1 0 0 1 54.00 754.00 Tm (  other UI Foundations sections, it had no initial collapsed state, so the page) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 742.00 Tm (  presented too much content before the user chose to expand it.) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 727.00 Tm (- The existing reusable PlaceholderStage Show More renderer was built around a simple) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 715.00 Tm (  sequence of screenshots, but Visual Hierarchy relies on row labels and step-specific) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 703.00 Tm (  CSS classes. A direct visibleStepLimit change would have hidden content while) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 691.00 Tm (  breaking custom grid placement and expanded-row labeling.) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 676.00 Tm (- The public deployment source remained GitHub main plus a Hostinger static-export) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 664.00 Tm (  branch. Prior worklogs documented that the GitHub Actions workflow could fail) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 652.00 Tm (  quickly even when local TypeScript and static export passed, so the manual out/ to) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 640.00 Tm (  hostinger-deploy fallback remained the known official escape hatch.) Tj ET
+BT /F2 11.20 Tf 1 0 0 1 54.00 614.00 Tm (Goals for September 8 Part 2) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 601.00 Tm (- Verify the active United States Eastern date and produce the same-day Part 2 PDF) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 589.00 Tm (  using the established root-level naming convention.) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 574.00 Tm (- Study the existing snapshot and all prior PDF worklogs before writing the new) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 562.00 Tm (  documentation artifact.) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 547.00 Tm (- Scale the During Shopping Secondary and Tertiary stacks down in two five-percent) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 535.00 Tm (  passes while keeping the stacks separated and unclipped.) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 520.00 Tm (- Distribute During Shopping Secondary and Tertiary vertically against the Primary) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 508.00 Tm (  device frame, first with wider spacing and then with edge-aligned top and bottom) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 496.00 Tm (  logic.) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 481.00 Tm (- Copy the accepted Focal Point headers and braces from On-Scrolling onto During) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 469.00 Tm (  Shopping Secondary and Tertiary, then tune brace height and vertical placement) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 457.00 Tm (  without changing contour or stroke character.) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 442.00 Tm (- Add, rename, wrap, and vertically place the During Shopping callout pins for product) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 430.00 Tm (  image, product navigation, action controls, and screen navigation across Primary,) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 418.00 Tm (  Secondary, and Tertiary where those features are actually visible.) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 403.00 Tm (- Match Secondary pin line thickness, length, green-header scale, and 90-degree label) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 391.00 Tm (  rotation to the Primary pin system rather than shrinking the annotations to fit.) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 376.00 Tm (- Apply the same primary-frame edge-alignment logic to On-Scrolling and Pre-Scrolling) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 364.00 Tm (  right-column stacks, leaving the Pre-Scrolling Tertiary stack centered between) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 352.00 Tm (  Secondary and Quaternary.) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 337.00 Tm (- Make Visual Hierarchy initially show only PRE-SCROLLING in wide and portrait modes,) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 325.00 Tm (  with Show More revealing ON-SCROLLING and DURING SHOPPING and Show Less collapsing) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 313.00 Tm (  back to the first row.) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 298.00 Tm (- Validate the resulting local and deployed behavior through TypeScript, browser) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 286.00 Tm (  measurements, static export, remote branch checks, and prahl.dev live-response) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 274.00 Tm (  checks.) Tj ET
+BT /F2 11.20 Tf 1 0 0 1 54.00 248.00 Tm (Work Completed - During Shopping Stack Scale, Braces, and Row Positioning) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 235.00 Tm (- Reduced the During Shopping Secondary and Tertiary image-frame widths twice by five) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 223.00 Tm (  percent, settling those stacks at a smaller 310.5px source image width while) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 211.00 Tm (  preserving their surrounding Visual Hierarchy frame-pair treatment.) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 196.00 Tm (- Kept the two small During Shopping stacks visually separated and unclipped after) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 184.00 Tm (  scale reduction by retuning their top offsets instead of allowing the right column) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 172.00 Tm (  to compress into a crowded cluster.) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 157.00 Tm (- Copied the On-Scrolling Secondary and Tertiary Focal Point brace/header model onto) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 145.00 Tm (  the During Shopping Secondary and Tertiary stacks so the right column reads with the) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 133.00 Tm (  same white brace and vertical Focal Point language.) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 118.00 Tm (- Nudged the During Shopping Secondary brace upward in several small increments while) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 106.00 Tm (  keeping its thickness, curvature, and shape consistent with the accepted Visual) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 94.00 Tm (  Hierarchy brace system.) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 79.00 Tm (- Increased the During Shopping Tertiary brace height in two passes, then nudged it) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 67.00 Tm (  upward so the taller brace still frames the relevant product-overlay content without) Tj ET
+BT /F1 8.80 Tf 1 0 0 1 180.51 34.00 Tm (Prahlin Portfolio Work Log - September 8, 2026 \(Part 2\) Page 3) Tj ET
+endstream
+endobj
+10 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 9 0 R >>
+endobj
+11 0 obj
+<< /Length 6164 >>
+stream
+BT /F1 10.00 Tf 1 0 0 1 54.00 754.00 Tm (  clipping at the image edge.) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 739.00 Tm (- Moved the corresponding Focal Point headers with the brace changes so brace and) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 727.00 Tm (  label placement stayed together instead of drifting independently.) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 712.00 Tm (- Centered the During Shopping Secondary and Tertiary stack headers horizontally over) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 700.00 Tm (  their respective images to match the accepted On-Scrolling and Pre-Scrolling header) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 688.00 Tm (  behavior.) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 673.00 Tm (- Aligned the During Shopping Secondary stack top edge with the Primary device-frame) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 661.00 Tm (  top and aligned the Tertiary image bottom with the Primary device-frame bottom,) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 649.00 Tm (  preserving the larger vertical breathing room requested by the user.) Tj ET
+BT /F2 11.20 Tf 1 0 0 1 54.00 623.00 Tm (Work Completed - During Shopping Pins and Green Headers) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 610.00 Tm (- Added a Product Image pin on the During Shopping Primary stack and placed it at the) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 598.00 Tm (  vertical midpoint of the Piccola product image inside the screenshot.) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 583.00 Tm (- Moved the Primary product navigation pin to the exact vertical center of the Sei) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 571.00 Tm (  Perfetto / Piccola / Buon Natale nav bar and renamed the callout to PRODUCT NAV.) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 556.00 Tm (- Added a Primary screen navigation pin at the vertical center of the bottom) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 544.00 Tm (  cart/navigation region and renamed the callout to SCREEN NAV.) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 529.00 Tm (- Added an ACTION CONTROLS pin centered on the green ADD button, with the label) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 517.00 Tm (  wrapping after ACTION in the established green rotated header style.) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 502.00 Tm (- Adjusted earlier TOP NAV BAR and BOTTOM NAV BAR wording through the requested wrap) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 490.00 Tm (  and rename sequence, ending on PRODUCT NAV and SCREEN NAV for Primary.) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 475.00 Tm (- Copied the accepted Primary callout concept into the During Shopping Secondary stack) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 463.00 Tm (  with correct vertical placement for SHOP BTN, PROD NAV, PROD IMG, ACT CONT, and) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 451.00 Tm (  SCREEN NAV.) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 436.00 Tm (- Renamed the Secondary labels to short forms so they could keep the same visual) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 424.00 Tm (  scale: SHOP BTN, PROD NAV, PROD IMG, ACT CONT, and SCREEN NAV, each wrapped after) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 412.00 Tm (  the first word where applicable.) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 397.00 Tm (- Ensured the Secondary green headers rotated 90 degrees like the Primary labels and) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 385.00 Tm (  restored line thickness, line length, and header size so the annotation system did) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 373.00 Tm (  not become miniature.) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 358.00 Tm (- Nudged SHOP BTN higher and PROD NAV lower in the Secondary stack to avoid clipping) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 346.00 Tm (  while maintaining the accepted primary-like pin geometry.) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 331.00 Tm (- Copied the exact Secondary pin system onto Tertiary where applicable, omitting SHOP) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 319.00 Tm (  BTN and SCREEN NAV because those features are not present in the Tertiary image,) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 307.00 Tm (  then nudged PROD NAV down to the true product-nav vertical center.) Tj ET
+BT /F2 11.20 Tf 1 0 0 1 54.00 281.00 Tm (Work Completed - Cross-Row Alignment and Visual Hierarchy Collapse) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 268.00 Tm (- Applied the primary-frame edge-alignment rule to the On-Scrolling row so Secondary) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 256.00 Tm (  aligned to the Primary frame top and Tertiary aligned to the Primary frame bottom) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 244.00 Tm (  after expansion into the new grouped layout.) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 229.00 Tm (- Applied the same logic to Pre-Scrolling Secondary and Quaternary while keeping the) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 217.00 Tm (  Pre-Scrolling Tertiary stack exactly centered between those two right-column stacks.) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 202.00 Tm (- Added Visual Hierarchy row-label data for PRE-SCROLLING, ON-SCROLLING, and DURING) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 190.00 Tm (  SHOPPING and grouped those labels with the corresponding step arrays in) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 178.00 Tm (  ProductFlowSwitcher.) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 163.00 Tm (- Extended PlaceholderStage with rowGroups and visibleRowLimit support so Visual) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 151.00 Tm (  Hierarchy can collapse by row rather than by a raw screenshot count.) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 136.00 Tm (- Extracted shared step-stack rendering inside PlaceholderStage so expanded extra rows) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 124.00 Tm (  retain their flow-screen-stack-step-* classes and continue receiving the Visual) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 112.00 Tm (  Hierarchy CSS rules they depend on.) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 97.00 Tm (- Rendered grouped Visual Hierarchy rows as separate flow-capture-grid-row-group) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 85.00 Tm (  containers, preserving row labels in the expanded area instead of leaving) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 73.00 Tm (  ON-SCROLLING and DURING SHOPPING as unlabeled hidden stacks.) Tj ET
+BT /F1 8.80 Tf 1 0 0 1 180.51 34.00 Tm (Prahlin Portfolio Work Log - September 8, 2026 \(Part 2\) Page 4) Tj ET
+endstream
+endobj
+12 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 11 0 R >>
+endobj
+13 0 obj
+<< /Length 6064 >>
+stream
+BT /F1 10.00 Tf 1 0 0 1 54.00 754.00 Tm (- Set Visual Hierarchy to visibleRowLimit 1 so both landscape/wide and narrow/portrait) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 742.00 Tm (  modes initially show only the PRE-SCROLLING row followed by the existing Show More) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 730.00 Tm (  button.) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 715.00 Tm (- Added CSS row-group rebasing so ON-SCROLLING and DURING SHOPPING keep their custom) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 703.00 Tm (  desktop geometry when moved into the expandable area, including zoom-aware top) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 691.00 Tm (  offsets for secondary and tertiary stacks.) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 676.00 Tm (- Added late portrait overrides so each grouped row starts with its own label and the) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 664.00 Tm (  Primary, Secondary, and Tertiary/Quaternary stacks flow beneath it rather than) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 652.00 Tm (  inheriting the old all-rows-in-one-grid row numbers.) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 637.00 Tm (- Confirmed Show Less collapses the extra rows back to zero height while leaving) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 625.00 Tm (  PRE-SCROLLING visible as the initial Visual Hierarchy content.) Tj ET
+BT /F2 11.20 Tf 1 0 0 1 54.00 599.00 Tm (Work Completed - Commit, Deployment, and Public Verification) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 586.00 Tm (- Provided the requested commit-message recommendation with one header and hyphen-led) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 574.00 Tm (  change points covering Visual Hierarchy row grouping, collapse behavior, During) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 562.00 Tm (  Shopping stack tuning, pins, alignment, validation, and snapshot refresh.) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 547.00 Tm (- Documented the committed source state at 61a318a, Refined Alla Vostra visual) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 535.00 Tm (  hierarchy expansion and callouts, with app/globals.css,) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 523.00 Tm (  app/projects/alla-vostra/ProductFlowSwitcher.tsx, and portfolio_PROJECT_SNAPSHOT.txt) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 511.00 Tm (  as the committed file set.) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 496.00 Tm (- Checked GitHub Actions and confirmed the latest Build static export for Hostinger) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 484.00 Tm (  run for 61a318a completed as a quick failure, matching the prior remote workflow) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 472.00 Tm (  blockage pattern rather than a local build failure.) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 457.00 Tm (- Ran npm run build:static locally with NEXT_OUTPUT=export next build and confirmed) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 445.00 Tm (  the static export completed successfully, generating the expected six static routes:) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 433.00 Tm (  /, /_not-found, /articles, /projects/alla-vostra, and /projects/cinerific.) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 418.00 Tm (- Restored next-env.d.ts after static export temporarily flipped the route-types) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 406.00 Tm (  import from the dev-server path to the build path, avoiding unrelated generated-file) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 394.00 Tm (  churn in the source worktree.) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 379.00 Tm (- Removed generated .DS_Store output from out/ before publishing the static payload to) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 367.00 Tm (  the deploy branch.) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 352.00 Tm (- Initialized a temporary git repository inside out/, committed the static export as) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 340.00 Tm (  0bf918d with the message Deploy static export from) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 328.00 Tm (  61a318ae14aca5d438a838188660a35004690eae, and force-pushed origin/hostinger-deploy) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 316.00 Tm (  from 6172ece to 0bf918d.) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 301.00 Tm (- Verified origin/main at 61a318a and origin/hostinger-deploy at 0bf918d after the) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 289.00 Tm (  manual deploy branch push completed.) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 274.00 Tm (- Verified https://prahl.dev returned HTTP 200 from Hostinger with Last-Modified Wed,) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 262.00 Tm (  09 Sep 2026 02:30:08 GMT, which corresponds to Tuesday, September 8, 2026 at) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 250.00 Tm (  10:30:08 PM EDT.) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 235.00 Tm (- Confirmed the live Alla Vostra page references build ID 4mEv3JXgzQ5LdSDwpuzsP and) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 223.00 Tm (  the deployed CSS contains the new Visual Hierarchy row-group, 310.5px image-width,) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 211.00 Tm (  and Step 6c rules.) Tj ET
+BT /F2 11.20 Tf 1 0 0 1 54.00 185.00 Tm (Validation Summary) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 172.00 Tm (- npm run check passed with tsc --noEmit after the Visual Hierarchy row-group and CSS) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 160.00 Tm (  changes.) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 145.00 Tm (- Local Playwright with the system Chrome channel verified the collapsed Visual) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 133.00 Tm (  Hierarchy state in a 1440px wide viewport: only PRE-SCROLLING was visible before) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 121.00 Tm (  expansion, the button read Show More, and the hidden extra area had zero height and) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 109.00 Tm (  opacity 0.) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 94.00 Tm (- Local Playwright verified expanded wide mode: the button changed to Show Less,) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 82.00 Tm (  ON-SCROLLING and DURING SHOPPING row labels appeared in the expanded area,) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 70.00 Tm (  On-Scrolling Secondary top matched the Primary frame top, On-Scrolling Tertiary) Tj ET
+BT /F1 8.80 Tf 1 0 0 1 180.51 34.00 Tm (Prahlin Portfolio Work Log - September 8, 2026 \(Part 2\) Page 5) Tj ET
+endstream
+endobj
+14 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 13 0 R >>
+endobj
+15 0 obj
+<< /Length 6163 >>
+stream
+BT /F1 10.00 Tf 1 0 0 1 54.00 754.00 Tm (  bottom was within a fraction of a pixel of the Primary frame bottom, and During) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 742.00 Tm (  Shopping top/bottom alignment remained correct.) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 727.00 Tm (- Local Playwright verified portrait mode at 390px wide: PRE-SCROLLING was the only) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 715.00 Tm (  visible initial row, Show More expanded to ON-SCROLLING and DURING SHOPPING, and) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 703.00 Tm (  Show Less collapsed the extra content back to zero height.) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 688.00 Tm (- Local screenshot checks were captured for collapsed and expanded Visual Hierarchy) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 676.00 Tm (  states in wide and portrait layouts to sanity-check spacing, labeling, and clipping) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 664.00 Tm (  behavior.) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 649.00 Tm (- npm run build:static passed after the final source changes and produced the static) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 637.00 Tm (  export used for the official Hostinger deploy branch update.) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 622.00 Tm (- git status was clean after restoring next-env.d.ts and before the refreshed project) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 610.00 Tm (  snapshot was generated for this worklog pass.) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 595.00 Tm (- curl -I -L https://prahl.dev returned HTTP 200 with Hostinger response headers after) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 583.00 Tm (  the manual deploy branch push.) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 568.00 Tm (- curl checks against the live Alla Vostra page and deployed CSS confirmed the new) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 556.00 Tm (  build ID and Visual Hierarchy CSS rules were present on prahl.dev.) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 541.00 Tm (- pdfinfo and pdftotext were used before generation to compare the established worklog) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 529.00 Tm (  metadata and extracted-text conventions, and will be used again after writing this) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 517.00 Tm (  Part 2 artifact.) Tj ET
+BT /F2 11.20 Tf 1 0 0 1 54.00 491.00 Tm (Files Touched and Artifacts) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 478.00 Tm (- app/projects/alla-vostra/ProductFlowSwitcher.tsx: added explicit Visual Hierarchy) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 466.00 Tm (  labelLines support, During Shopping primary/secondary/tertiary line-callout sets,) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 454.00 Tm (  Visual Hierarchy row labels and row groups, grouped PlaceholderStage rendering,) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 442.00 Tm (  visibleRowLimit support, shared step-stack rendering, preserved expanded step) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 430.00 Tm (  classes, shopping-overlay brace/callout routing, and Visual Hierarchy row-collapse) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 418.00 Tm (  wiring.) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 403.00 Tm (- app/globals.css: scaled During Shopping secondary/tertiary image frames, tuned Step) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 391.00 Tm (  6b/6c top offsets, copied and adjusted Focal Point brace/header geometry, restored) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 379.00 Tm (  full-size line and green-header treatment on small shopping stacks, centered stack) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 367.00 Tm (  headers, added row-group CSS, rebased expanded ON-SCROLLING and DURING SHOPPING) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 355.00 Tm (  geometry, and added portrait row-group overrides.) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 340.00 Tm (- portfolio_PROJECT_SNAPSHOT.txt: refreshed by read_project.sh before this Part 2 PDF) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 328.00 Tm (  generation pass so the snapshot records the current tree, recent commits, public) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 316.00 Tm (  assets, deployment notes, PDF inventory, and post-deployment context.) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 301.00 Tm (- out/: regenerated by npm run build:static as the local static-export payload for the) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 289.00 Tm (  manual Hostinger deploy fallback; handled as a generated deployment artifact rather) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 277.00 Tm (  than a source-tree change.) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 262.00 Tm (- out/.git: created temporarily to commit and push the static export branch, resulting) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 250.00 Tm (  in hostinger-deploy commit 0bf918d on origin.) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 235.00 Tm (- next-env.d.ts: temporarily changed by static export and restored to the committed) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 223.00 Tm (  dev-server route import before the source-tree status was checked.) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 208.00 Tm (- portfolio_worklog_september8_part2.pdf: generated as this same-day Part 2 root-level) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 196.00 Tm (  Portfolio PDF worklog artifact following the established naming, style, metadata,) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 184.00 Tm (  and structure conventions.) Tj ET
+BT /F2 11.20 Tf 1 0 0 1 54.00 158.00 Tm (Follow-Up Context) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 145.00 Tm (- The Visual Hierarchy section now behaves like the other UI Foundations sections: it) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 133.00 Tm (  initially shows the first stack group and lets the user expand more detail only when) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 121.00 Tm (  wanted.) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 106.00 Tm (- Future Visual Hierarchy stack edits should preserve the grouped-row model so row) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 94.00 Tm (  labels, step-specific classes, braces, pins, and custom CSS offsets remain connected) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 82.00 Tm (  in both collapsed and expanded states.) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 67.00 Tm (- Future During Shopping pin changes should preserve the accepted abbreviation set on) Tj ET
+BT /F1 8.80 Tf 1 0 0 1 180.51 34.00 Tm (Prahlin Portfolio Work Log - September 8, 2026 \(Part 2\) Page 6) Tj ET
+endstream
+endobj
+16 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 15 0 R >>
+endobj
+17 0 obj
+<< /Length 3921 >>
+stream
+BT /F1 10.00 Tf 1 0 0 1 54.00 754.00 Tm (  small stacks and the primary-like line/header scale, especially because shrinking) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 742.00 Tm (  labels was explicitly rejected during this pass.) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 727.00 Tm (- Future Pre-Scrolling and On-Scrolling placement work should preserve the current) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 715.00 Tm (  edge-alignment rule against the primary device frame and keep the Pre-Scrolling) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 703.00 Tm (  Tertiary stack centered between Secondary and Quaternary.) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 688.00 Tm (- The Alla Vostra page still defaults to UX Product Flow, so browser scripts must) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 676.00 Tm (  activate UI Foundations before searching for the Visual Hierarchy DOM.) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 661.00 Tm (- The Hostinger GitHub Actions static-export workflow is still failing quickly. Local) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 649.00 Tm (  static export succeeds, and the official public update was completed through the) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 637.00 Tm (  manual hostinger-deploy branch fallback.) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 622.00 Tm (- Hostinger can produce redirect or query-string noise during automated live checks;) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 610.00 Tm (  canonical trailing-slash HTML and deployed CSS checks confirmed the current public) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 598.00 Tm (  payload after the push.) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 583.00 Tm (- The public site at prahl.dev is currently tied to origin/hostinger-deploy commit) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 571.00 Tm (  0bf918d, generated from source commit 61a318a.) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 556.00 Tm (- As usual, future source, PDF, or snapshot commits should wait for the user to ask) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 544.00 Tm (  for a commit message or explicitly request a commit/push cycle.) Tj ET
+BT /F2 11.20 Tf 1 0 0 1 54.00 518.00 Tm (Output Artifact) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 505.00 Tm (- Generated: /Users/prahlin/gh/portfolio/portfolio_worklog_september8_part2.pdf) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 490.00 Tm (- Companion sync file: /Users/prahlin/gh/portfolio/portfolio_PROJECT_SNAPSHOT.txt) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 475.00 Tm (- Source state reviewed: 61a318ae14aca5d438a838188660a35004690eae on main and) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 463.00 Tm (  origin/main.) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 448.00 Tm (- Official deploy state reviewed: 0bf918d79c1775ef950948b72e0370a509bea980 on) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 436.00 Tm (  origin/hostinger-deploy, serving prahl.dev after the manual static-export fallback.) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 421.00 Tm (- Naming follows the user-confirmed same-date convention:) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 409.00 Tm (  portfolio_worklog_september8_part2.pdf. The existing) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 397.00 Tm (  portfolio_worklog_september8.pdf remains the earlier same-day worklog and was not) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 385.00 Tm (  renamed.) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 370.00 Tm (- The document records the September 8 Part 2 Alla Vostra Visual Hierarchy During) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 358.00 Tm (  Shopping scale, brace, pin, label, and alignment work; cross-row stack distribution;) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 346.00 Tm (  grouped Show More / Show Less behavior; local and static-export validation; official) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 334.00 Tm (  prahl.dev deployment; refreshed snapshot; and documentation work in the established) Tj ET
+BT /F1 10.00 Tf 1 0 0 1 54.00 322.00 Tm (  Prahlin Portfolio worklog format.) Tj ET
+BT /F1 8.80 Tf 1 0 0 1 180.51 34.00 Tm (Prahlin Portfolio Work Log - September 8, 2026 \(Part 2\) Page 7) Tj ET
+endstream
+endobj
+18 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 17 0 R >>
+endobj
+19 0 obj
+<< /Title (Prahlin Portfolio Work Log - September 8, 2026 \(Part 2\)) /Subject (Portfolio website development worklog) /Author (Codex) /Creator (Codex standard-library PDF generator) /Producer (Codex standard-library PDF generator) /CreationDate (D:20260908224459-04'00') /ModDate (D:20260908224459-04'00') >>
+endobj
+xref
+0 20
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000158 00000 n 
+0000000228 00000 n 
+0000000303 00000 n 
+0000006986 00000 n 
+0000007122 00000 n 
+0000013840 00000 n 
+0000013976 00000 n 
+0000020285 00000 n 
+0000020422 00000 n 
+0000026639 00000 n 
+0000026777 00000 n 
+0000032894 00000 n 
+0000033032 00000 n 
+0000039248 00000 n 
+0000039386 00000 n 
+0000043360 00000 n 
+0000043498 00000 n 
+trailer
+<< /Size 20 /Root 1 0 R /Info 19 0 R >>
+startxref
+43824
+%%EOF

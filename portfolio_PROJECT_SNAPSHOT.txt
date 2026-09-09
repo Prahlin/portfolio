@@ -1,5 +1,5 @@
 Portfolio Next.js PROJECT SNAPSHOT
-Generated: Tue Sep  8 20:06:19 EDT 2026
+Generated: Tue Sep  8 22:41:04 EDT 2026
 Project directory: /Users/prahlin/gh/portfolio
 
 IMPORTANT INSTRUCTIONS FOR CHATGPT & CODEX:
@@ -10502,2417 +10502,2700 @@ FILE: app/globals.css
   4082	
   4083	.flow-visual-hierarchy-section-label-word {
   4084	  display: block;
-  4085	}
-  4086	
-  4087	.flow-visual-hierarchy-section-lines-left .flow-visual-hierarchy-section-label {
-  4088	  left: auto;
-  4089	  right: calc(100% + var(--flow-visual-hierarchy-tip-frame-gap));
-  4090	  transform: translateY(-50%) rotate(-90deg) translateX(50%);
-  4091	  transform-origin: right center;
-  4092	}
-  4093	
-  4094	.flow-visual-hierarchy-section-line::after {
-  4095	  background: #ffffff;
-  4096	  border-radius: inherit;
-  4097	  content: "";
-  4098	  height: 2.3px;
-  4099	  inset: 50% 0 auto;
-  4100	  position: absolute;
-  4101	  transform: translateY(-50%);
-  4102	}
-  4103	
-  4104	.flow-screen-swatch .flow-screen-label {
-  4105	  align-items: center;
-  4106	  display: flex;
-  4107	  height: 2.3em;
-  4108	  justify-content: center;
-  4109	  letter-spacing: 0.04em;
-  4110	  line-height: 1.15;
-  4111	  min-height: 0;
-  4112	  overflow-wrap: normal;
-  4113	  text-wrap: balance;
-  4114	}
-  4115	
-  4116	.flow-screen figcaption {
-  4117	  color: var(--muted);
-  4118	  font-size: 13px;
-  4119	  font-weight: 700;
-  4120	  line-height: 1.45;
-  4121	  margin: 14px auto 0;
-  4122	  max-width: var(--flow-phone-width, 330px);
-  4123	}
-  4124	
-  4125	.flow-screen-label {
-  4126	  color: var(--green);
-  4127	  display: block;
-  4128	  font-size: 10px;
-  4129	  font-weight: 850;
-  4130	  letter-spacing: 0.12em;
-  4131	  margin: 0 0 8px;
-  4132	  text-align: center;
-  4133	  text-transform: uppercase;
-  4134	}
-  4135	
-  4136	.flow-support {
-  4137	  display: grid;
-  4138	  gap: 18px;
-  4139	  grid-template-columns: repeat(3, minmax(0, 1fr));
-  4140	}
-  4141	
-  4142	.flow-section-intro {
-  4143	  display: grid;
-  4144	  gap: 18px;
-  4145	}
-  4146	
-  4147	.flow-section-intro > p {
-  4148	  border-left: 1px solid var(--line-strong);
-  4149	  color: #b8c9bf;
-  4150	  line-height: 1.65;
-  4151	  margin: 0;
-  4152	  max-width: 560px;
-  4153	  padding-left: 22px;
-  4154	}
-  4155	
-  4156	.flow-checkout-note {
-  4157	  align-content: center;
-  4158	  min-height: 260px;
-  4159	  padding: 22px;
-  4160	}
-  4161	
-  4162	.flow-capture-groups {
-  4163	  display: grid;
-  4164	  gap: 48px;
-  4165	  margin-top: 54px;
-  4166	}
-  4167	
-  4168	.flow-capture-group {
-  4169	  border-top: 1px solid var(--line);
-  4170	  display: grid;
-  4171	  gap: 24px;
-  4172	  grid-template-columns: minmax(220px, 0.34fr) minmax(0, 1fr);
-  4173	  padding-top: 30px;
-  4174	}
-  4175	
-  4176	.flow-capture-group-full-row {
-  4177	  grid-template-columns: 1fr;
-  4178	}
-  4179	
-  4180	.flow-capture-group-full-row > .flow-group-header,
-  4181	.flow-capture-group-full-row > .flow-capture-body {
-  4182	  grid-column: 1 / -1;
-  4183	}
-  4184	
-  4185	.flow-capture-group-full-row > .flow-group-header {
-  4186	  max-width: 560px;
-  4187	}
-  4188	
-  4189	.flow-capture-group-full-row .flow-capture-grid {
-  4190	  grid-template-columns: 1fr;
-  4191	}
-  4192	
-  4193	.flow-capture-group-visual-hierarchy .flow-capture-grid {
-  4194	  --flow-visual-hierarchy-scaled-row-height: 720px;
-  4195	  --flow-visual-hierarchy-row-label-stack-gap: 24px;
-  4196	  --flow-visual-hierarchy-section-break-gap: calc(
-  4197	    var(--flow-visual-hierarchy-row-label-stack-gap) * 2
-  4198	  );
-  4199	  --flow-visual-hierarchy-section-offset: calc(
-  4200	    26px + var(--flow-visual-hierarchy-section-break-gap)
-  4201	  );
-  4202	  --flow-visual-hierarchy-main-header-gap-offset: 48px;
-  4203	
-  4204	  gap: 24px 34px;
-  4205	  grid-template-columns: repeat(2, minmax(0, 1fr));
-  4206	  justify-items: center;
-  4207	  overflow: visible;
-  4208	  padding-bottom: calc(var(--flow-visual-hierarchy-section-offset) * 2);
-  4209	  padding-top: 50px;
-  4210	  position: relative;
-  4211	}
-  4212	
-  4213	.flow-capture-group-visual-hierarchy .flow-screen-stack {
-  4214	  justify-self: center;
-  4215	  zoom: 0.5;
-  4216	}
-  4217	
-  4218	.flow-capture-group-visual-hierarchy .flow-screen-stack-step-1,
-  4219	.flow-capture-group-visual-hierarchy .flow-screen-stack-step-3,
-  4220	.flow-capture-group-visual-hierarchy .flow-screen-stack-step-6 {
-  4221	  zoom: 1;
-  4222	}
-  4223	
-  4224	.flow-capture-group-visual-hierarchy .flow-screen-stack h4 {
-  4225	  font-size: 30px;
-  4226	  margin-bottom: 28px;
-  4227	}
-  4228	
-  4229	.flow-capture-group-visual-hierarchy
-  4230	  .flow-screen-stack-step-1
-  4231	  h4,
-  4232	.flow-capture-group-visual-hierarchy
-  4233	  .flow-screen-stack-step-3
-  4234	  h4,
-  4235	.flow-capture-group-visual-hierarchy
-  4236	  .flow-screen-stack-step-6
-  4237	  h4 {
-  4238	  font-size: 15px;
-  4239	  margin-bottom: 14px;
-  4240	}
-  4241	
-  4242	.flow-capture-group-visual-hierarchy .flow-screen-stack-step-1 {
-  4243	  grid-column: 1 / 2;
-  4244	  grid-row: 1 / 4;
-  4245	  position: relative;
-  4246	  top: 0;
-  4247	}
-  4248	
-  4249	.flow-capture-group-visual-hierarchy .flow-screen-stack-step-1b {
-  4250	  grid-column: 2 / 3;
-  4251	  grid-row: 1 / 2;
-  4252	  position: relative;
-  4253	  top: var(--flow-visual-hierarchy-section-offset);
-  4254	}
-  4255	
-  4256	.flow-capture-group-visual-hierarchy .flow-screen-stack-step-2 {
-  4257	  grid-column: 1 / 2;
-  4258	  grid-row: 4 / 5;
-  4259	  position: relative;
-  4260	  top: var(--flow-visual-hierarchy-section-offset);
-  4261	}
-  4262	
-  4263	.flow-capture-group-visual-hierarchy .flow-screen-stack-step-1c {
-  4264	  grid-column: 2 / 3;
-  4265	  grid-row: 2 / 3;
-  4266	  margin-top: 13px;
-  4267	  position: relative;
-  4268	  top: calc(var(--flow-visual-hierarchy-section-offset) + 28px);
-  4269	}
-  4270	
-  4271	.flow-capture-group-visual-hierarchy .flow-screen-stack-step-1d {
-  4272	  grid-column: 2 / 3;
-  4273	  grid-row: 3 / 4;
-  4274	  margin-top: 14px;
-  4275	  position: relative;
-  4276	  top: calc(var(--flow-visual-hierarchy-section-offset) + 44px);
-  4277	}
-  4278	
-  4279	.flow-capture-group-visual-hierarchy
-  4280	  .flow-screen-stack-step-1b
-  4281	  .flow-visual-hierarchy-frame-pair
-  4282	  > .flow-protected-image-composition,
-  4283	.flow-capture-group-visual-hierarchy
-  4284	  .flow-screen-stack-step-1c
-  4285	  .flow-visual-hierarchy-frame-pair
-  4286	  > .flow-protected-image-composition,
-  4287	.flow-capture-group-visual-hierarchy
-  4288	  .flow-screen-stack-step-1d
-  4289	  .flow-visual-hierarchy-frame-pair
-  4290	  > .flow-image-frame {
-  4291	  transform: scale(1.083);
-  4292	  transform-origin: top center;
-  4293	}
-  4294	
-  4295	.flow-capture-group-visual-hierarchy .flow-screen-stack-step-1d h4 {
-  4296	  margin-bottom: 12px;
-  4297	}
-  4298	
-  4299	.flow-capture-group-visual-hierarchy .flow-screen-stack-step-3 {
-  4300	  grid-column: 1 / 2;
-  4301	  grid-row: 5 / 7;
-  4302	  position: relative;
-  4303	  top: var(--flow-visual-hierarchy-section-offset);
-  4304	}
-  4305	
-  4306	.flow-capture-group-visual-hierarchy .flow-screen-stack-step-4 {
-  4307	  grid-column: 2 / 3;
-  4308	  grid-row: 5 / 6;
-  4309	  position: relative;
-  4310	  top: calc(var(--flow-visual-hierarchy-section-offset) * 3 - 3px);
-  4311	}
-  4312	
-  4313	.flow-capture-group-visual-hierarchy .flow-screen-stack-step-5 {
-  4314	  grid-column: 2 / 3;
-  4315	  grid-row: 6 / 7;
-  4316	  position: relative;
-  4317	  top: calc(var(--flow-visual-hierarchy-section-offset) * 3 - 85px);
-  4318	}
-  4319	
-  4320	.flow-capture-group-visual-hierarchy .flow-screen-stack-step-6 {
-  4321	  grid-column: 1 / 2;
-  4322	  grid-row: 7 / 9;
-  4323	  position: relative;
-  4324	  top: calc(var(--flow-visual-hierarchy-section-offset) * 2);
-  4325	  width: 432px;
-  4326	}
-  4327	
-  4328	.flow-capture-group-visual-hierarchy .flow-screen-stack-step-6b {
-  4329	  grid-column: 2 / 3;
-  4330	  grid-row: 7 / 8;
-  4331	  position: relative;
-  4332	  top: calc(var(--flow-visual-hierarchy-section-offset) * 5 - 74px);
-  4333	}
-  4334	
-  4335	.flow-capture-group-visual-hierarchy .flow-screen-stack-step-6c {
-  4336	  grid-column: 2 / 3;
-  4337	  grid-row: 8 / 9;
-  4338	  position: relative;
-  4339	  top: calc(var(--flow-visual-hierarchy-section-offset) * 5 - 117px);
-  4340	}
-  4341	
-  4342	.flow-capture-group-visual-hierarchy
-  4343	  .flow-screen-stack-step-6b
-  4344	  .flow-screen,
-  4345	.flow-capture-group-visual-hierarchy
-  4346	  .flow-screen-stack-step-6c
-  4347	  .flow-screen {
-  4348	  width: 432px !important;
-  4349	}
-  4350	
-  4351	.flow-capture-group-visual-hierarchy
-  4352	  .flow-screen-stack-step-6
-  4353	  .flow-screen {
-  4354	  width: min(100%, 444px) !important;
-  4355	}
-  4356	
-  4357	.flow-capture-group-visual-hierarchy
-  4358	  .flow-screen-stack-step-1
-  4359	  .flow-visual-hierarchy-frame-pair,
-  4360	.flow-capture-group-visual-hierarchy
-  4361	  .flow-screen-stack-step-1b
-  4362	  .flow-visual-hierarchy-frame-pair,
-  4363	.flow-capture-group-visual-hierarchy
-  4364	  .flow-screen-stack-step-1c
-  4365	  .flow-visual-hierarchy-frame-pair {
-  4366	  --flow-visual-hierarchy-tip-frame-gap: 6px;
-  4367	}
-  4368	
-  4369	.flow-capture-group-visual-hierarchy
-  4370	  .flow-screen-stack-step-1
-  4371	  .flow-visual-hierarchy-frame-pair,
-  4372	.flow-capture-group-visual-hierarchy
-  4373	  .flow-screen-stack-step-3
-  4374	  .flow-visual-hierarchy-frame-pair,
+  4085	  white-space: nowrap;
+  4086	}
+  4087	
+  4088	.flow-visual-hierarchy-section-lines-left .flow-visual-hierarchy-section-label {
+  4089	  left: auto;
+  4090	  right: calc(100% + var(--flow-visual-hierarchy-tip-frame-gap));
+  4091	  transform: translateY(-50%) rotate(-90deg) translateX(50%);
+  4092	  transform-origin: right center;
+  4093	}
+  4094	
+  4095	.flow-visual-hierarchy-section-line::after {
+  4096	  background: #ffffff;
+  4097	  border-radius: inherit;
+  4098	  content: "";
+  4099	  height: 2.3px;
+  4100	  inset: 50% 0 auto;
+  4101	  position: absolute;
+  4102	  transform: translateY(-50%);
+  4103	}
+  4104	
+  4105	.flow-screen-swatch .flow-screen-label {
+  4106	  align-items: center;
+  4107	  display: flex;
+  4108	  height: 2.3em;
+  4109	  justify-content: center;
+  4110	  letter-spacing: 0.04em;
+  4111	  line-height: 1.15;
+  4112	  min-height: 0;
+  4113	  overflow-wrap: normal;
+  4114	  text-wrap: balance;
+  4115	}
+  4116	
+  4117	.flow-screen figcaption {
+  4118	  color: var(--muted);
+  4119	  font-size: 13px;
+  4120	  font-weight: 700;
+  4121	  line-height: 1.45;
+  4122	  margin: 14px auto 0;
+  4123	  max-width: var(--flow-phone-width, 330px);
+  4124	}
+  4125	
+  4126	.flow-screen-label {
+  4127	  color: var(--green);
+  4128	  display: block;
+  4129	  font-size: 10px;
+  4130	  font-weight: 850;
+  4131	  letter-spacing: 0.12em;
+  4132	  margin: 0 0 8px;
+  4133	  text-align: center;
+  4134	  text-transform: uppercase;
+  4135	}
+  4136	
+  4137	.flow-support {
+  4138	  display: grid;
+  4139	  gap: 18px;
+  4140	  grid-template-columns: repeat(3, minmax(0, 1fr));
+  4141	}
+  4142	
+  4143	.flow-section-intro {
+  4144	  display: grid;
+  4145	  gap: 18px;
+  4146	}
+  4147	
+  4148	.flow-section-intro > p {
+  4149	  border-left: 1px solid var(--line-strong);
+  4150	  color: #b8c9bf;
+  4151	  line-height: 1.65;
+  4152	  margin: 0;
+  4153	  max-width: 560px;
+  4154	  padding-left: 22px;
+  4155	}
+  4156	
+  4157	.flow-checkout-note {
+  4158	  align-content: center;
+  4159	  min-height: 260px;
+  4160	  padding: 22px;
+  4161	}
+  4162	
+  4163	.flow-capture-groups {
+  4164	  display: grid;
+  4165	  gap: 48px;
+  4166	  margin-top: 54px;
+  4167	}
+  4168	
+  4169	.flow-capture-group {
+  4170	  border-top: 1px solid var(--line);
+  4171	  display: grid;
+  4172	  gap: 24px;
+  4173	  grid-template-columns: minmax(220px, 0.34fr) minmax(0, 1fr);
+  4174	  padding-top: 30px;
+  4175	}
+  4176	
+  4177	.flow-capture-group-full-row {
+  4178	  grid-template-columns: 1fr;
+  4179	}
+  4180	
+  4181	.flow-capture-group-full-row > .flow-group-header,
+  4182	.flow-capture-group-full-row > .flow-capture-body {
+  4183	  grid-column: 1 / -1;
+  4184	}
+  4185	
+  4186	.flow-capture-group-full-row > .flow-group-header {
+  4187	  max-width: 560px;
+  4188	}
+  4189	
+  4190	.flow-capture-group-full-row .flow-capture-grid {
+  4191	  grid-template-columns: 1fr;
+  4192	}
+  4193	
+  4194	.flow-capture-group-visual-hierarchy .flow-capture-grid {
+  4195	  --flow-visual-hierarchy-scaled-row-height: 720px;
+  4196	  --flow-visual-hierarchy-row-label-stack-gap: 24px;
+  4197	  --flow-visual-hierarchy-section-break-gap: calc(
+  4198	    var(--flow-visual-hierarchy-row-label-stack-gap) * 2
+  4199	  );
+  4200	  --flow-visual-hierarchy-section-offset: calc(
+  4201	    26px + var(--flow-visual-hierarchy-section-break-gap)
+  4202	  );
+  4203	  --flow-visual-hierarchy-main-header-gap-offset: 48px;
+  4204	
+  4205	  gap: 24px 34px;
+  4206	  grid-template-columns: repeat(2, minmax(0, 1fr));
+  4207	  justify-items: center;
+  4208	  overflow: visible;
+  4209	  padding-bottom: calc(var(--flow-visual-hierarchy-section-offset) * 2);
+  4210	  padding-top: 50px;
+  4211	  position: relative;
+  4212	}
+  4213	
+  4214	.flow-capture-group-visual-hierarchy .flow-screen-stack {
+  4215	  justify-self: center;
+  4216	  zoom: 0.5;
+  4217	}
+  4218	
+  4219	.flow-capture-group-visual-hierarchy .flow-screen-stack-step-1,
+  4220	.flow-capture-group-visual-hierarchy .flow-screen-stack-step-3,
+  4221	.flow-capture-group-visual-hierarchy .flow-screen-stack-step-6 {
+  4222	  zoom: 1;
+  4223	}
+  4224	
+  4225	.flow-capture-group-visual-hierarchy .flow-screen-stack h4 {
+  4226	  font-size: 30px;
+  4227	  margin-bottom: 28px;
+  4228	}
+  4229	
+  4230	.flow-capture-group-visual-hierarchy
+  4231	  .flow-screen-stack-step-1
+  4232	  h4,
+  4233	.flow-capture-group-visual-hierarchy
+  4234	  .flow-screen-stack-step-3
+  4235	  h4,
+  4236	.flow-capture-group-visual-hierarchy
+  4237	  .flow-screen-stack-step-6
+  4238	  h4 {
+  4239	  font-size: 15px;
+  4240	  margin-bottom: 14px;
+  4241	}
+  4242	
+  4243	.flow-capture-group-visual-hierarchy .flow-screen-stack-step-1 {
+  4244	  grid-column: 1 / 2;
+  4245	  grid-row: 1 / 4;
+  4246	  position: relative;
+  4247	  top: 0;
+  4248	}
+  4249	
+  4250	.flow-capture-group-visual-hierarchy .flow-screen-stack-step-1b {
+  4251	  grid-column: 2 / 3;
+  4252	  grid-row: 1 / 2;
+  4253	  position: relative;
+  4254	  top: 0;
+  4255	}
+  4256	
+  4257	.flow-capture-group-visual-hierarchy .flow-screen-stack-step-2 {
+  4258	  grid-column: 1 / 2;
+  4259	  grid-row: 4 / 5;
+  4260	  position: relative;
+  4261	  top: var(--flow-visual-hierarchy-section-offset);
+  4262	}
+  4263	
+  4264	.flow-capture-group-visual-hierarchy .flow-screen-stack-step-1c {
+  4265	  grid-column: 2 / 3;
+  4266	  grid-row: 2 / 3;
+  4267	  margin-top: 13px;
+  4268	  position: relative;
+  4269	  top: calc(var(--flow-visual-hierarchy-section-offset) - 86.5px);
+  4270	}
+  4271	
+  4272	.flow-capture-group-visual-hierarchy .flow-screen-stack-step-1d {
+  4273	  grid-column: 2 / 3;
+  4274	  grid-row: 3 / 4;
+  4275	  margin-top: 14px;
+  4276	  position: relative;
+  4277	  top: calc(var(--flow-visual-hierarchy-section-offset) - 100px);
+  4278	}
+  4279	
+  4280	.flow-capture-group-visual-hierarchy
+  4281	  .flow-screen-stack-step-1b
+  4282	  .flow-visual-hierarchy-frame-pair
+  4283	  > .flow-protected-image-composition,
+  4284	.flow-capture-group-visual-hierarchy
+  4285	  .flow-screen-stack-step-1c
+  4286	  .flow-visual-hierarchy-frame-pair
+  4287	  > .flow-protected-image-composition,
+  4288	.flow-capture-group-visual-hierarchy
+  4289	  .flow-screen-stack-step-1d
+  4290	  .flow-visual-hierarchy-frame-pair
+  4291	  > .flow-image-frame {
+  4292	  transform: scale(1.083);
+  4293	  transform-origin: top center;
+  4294	}
+  4295	
+  4296	.flow-capture-group-visual-hierarchy .flow-screen-stack-step-1d h4 {
+  4297	  margin-bottom: 12px;
+  4298	}
+  4299	
+  4300	.flow-capture-group-visual-hierarchy .flow-screen-stack-step-3 {
+  4301	  grid-column: 1 / 2;
+  4302	  grid-row: 5 / 7;
+  4303	  position: relative;
+  4304	  top: var(--flow-visual-hierarchy-section-offset);
+  4305	}
+  4306	
+  4307	.flow-capture-group-visual-hierarchy .flow-screen-stack-step-4 {
+  4308	  grid-column: 2 / 3;
+  4309	  grid-row: 5 / 6;
+  4310	  position: relative;
+  4311	  top: calc(var(--flow-visual-hierarchy-section-offset) * 3 - 34px);
+  4312	}
+  4313	
+  4314	.flow-capture-group-visual-hierarchy .flow-screen-stack-step-5 {
+  4315	  grid-column: 2 / 3;
+  4316	  grid-row: 6 / 7;
+  4317	  position: relative;
+  4318	  top: calc(var(--flow-visual-hierarchy-section-offset) * 3 - 71px);
+  4319	}
+  4320	
+  4321	.flow-capture-group-visual-hierarchy .flow-screen-stack-step-6 {
+  4322	  grid-column: 1 / 2;
+  4323	  grid-row: 7 / 9;
+  4324	  position: relative;
+  4325	  top: calc(var(--flow-visual-hierarchy-section-offset) * 2);
+  4326	  width: 432px;
+  4327	}
+  4328	
+  4329	.flow-capture-group-visual-hierarchy .flow-screen-stack-step-6b {
+  4330	  grid-column: 2 / 3;
+  4331	  grid-row: 7 / 8;
+  4332	  position: relative;
+  4333	  top: calc(var(--flow-visual-hierarchy-section-offset) * 5 - 74px);
+  4334	}
+  4335	
+  4336	.flow-capture-group-visual-hierarchy .flow-screen-stack-step-6c {
+  4337	  grid-column: 2 / 3;
+  4338	  grid-row: 8 / 9;
+  4339	  position: relative;
+  4340	  top: calc(var(--flow-visual-hierarchy-section-offset) * 5 - 57px);
+  4341	}
+  4342	
+  4343	.flow-capture-group-visual-hierarchy
+  4344	  .flow-screen-stack-step-6b
+  4345	  .flow-screen,
+  4346	.flow-capture-group-visual-hierarchy
+  4347	  .flow-screen-stack-step-6c
+  4348	  .flow-screen {
+  4349	  width: 432px !important;
+  4350	}
+  4351	
+  4352	.flow-capture-group-visual-hierarchy
+  4353	  .flow-screen-stack-step-6b
+  4354	  .flow-image-frame,
+  4355	.flow-capture-group-visual-hierarchy
+  4356	  .flow-screen-stack-step-6c
+  4357	  .flow-image-frame {
+  4358	  width: min(100%, 310.5px) !important;
+  4359	}
+  4360	
+  4361	.flow-capture-group-visual-hierarchy
+  4362	  .flow-screen-stack-step-6b
+  4363	  .flow-visual-hierarchy-frame-pair,
+  4364	.flow-capture-group-visual-hierarchy
+  4365	  .flow-screen-stack-step-6c
+  4366	  .flow-visual-hierarchy-frame-pair {
+  4367	  --flow-visual-hierarchy-brace-gap: 24px;
+  4368	  --flow-visual-hierarchy-brace-width: 64px;
+  4369	  --flow-visual-hierarchy-focal-scale-outset: 13.2px;
+  4370	  --flow-visual-hierarchy-tip-frame-gap: 20px;
+  4371	
+  4372	  width: 318px;
+  4373	}
+  4374	
   4375	.flow-capture-group-visual-hierarchy
-  4376	  .flow-screen-stack-step-6
-  4377	  .flow-visual-hierarchy-frame-pair {
-  4378	  --flow-visual-hierarchy-tip-frame-gap: 10px;
-  4379	  --flow-visual-hierarchy-viewing-brace-shift: 31px;
-  4380	  --flow-visual-hierarchy-viewing-label-shift: 44px;
-  4381	}
-  4382	
-  4383	.flow-capture-group-visual-hierarchy
-  4384	  .flow-screen-stack-step-1
-  4385	  .flow-visual-hierarchy-brace,
-  4386	.flow-capture-group-visual-hierarchy
-  4387	  .flow-screen-stack-step-3
-  4388	  .flow-visual-hierarchy-brace,
-  4389	.flow-capture-group-visual-hierarchy
-  4390	  .flow-screen-stack-step-6
-  4391	  .flow-visual-hierarchy-brace {
-  4392	  left: var(--flow-visual-hierarchy-viewing-brace-shift);
-  4393	}
-  4394	
-  4395	.flow-capture-group-visual-hierarchy
-  4396	  .flow-screen-stack-step-1
-  4397	  .flow-visual-hierarchy-external-annotation,
-  4398	.flow-capture-group-visual-hierarchy
-  4399	  .flow-screen-stack-step-3
-  4400	  .flow-visual-hierarchy-external-annotation,
-  4401	.flow-capture-group-visual-hierarchy
-  4402	  .flow-screen-stack-step-6
-  4403	  .flow-visual-hierarchy-external-annotation {
-  4404	  font-size: 28px !important;
-  4405	}
-  4406	
-  4407	.flow-capture-group-visual-hierarchy
-  4408	  .flow-screen-stack-step-1
-  4409	  .flow-visual-hierarchy-section-lines,
-  4410	.flow-capture-group-visual-hierarchy
-  4411	  .flow-screen-stack-step-1
-  4412	  .flow-visual-hierarchy-section-line,
-  4413	.flow-capture-group-visual-hierarchy
-  4414	  .flow-screen-stack-step-1b
-  4415	  .flow-visual-hierarchy-section-line,
+  4376	  .flow-screen-stack-step-6b
+  4377	  .flow-visual-hierarchy-frame-pair
+  4378	  > .flow-image-frame,
+  4379	.flow-capture-group-visual-hierarchy
+  4380	  .flow-screen-stack-step-6c
+  4381	  .flow-visual-hierarchy-frame-pair
+  4382	  > .flow-image-frame {
+  4383	  margin-left: 0 !important;
+  4384	  max-width: none;
+  4385	}
+  4386	
+  4387	.flow-capture-group-visual-hierarchy
+  4388	  .flow-screen-stack-step-6b
+  4389	  .flow-visual-hierarchy-brace,
+  4390	.flow-capture-group-visual-hierarchy
+  4391	  .flow-screen-stack-step-6c
+  4392	  .flow-visual-hierarchy-brace {
+  4393	  bottom: auto;
+  4394	  height: calc(100% * 1.08);
+  4395	  left: calc(
+  4396	    (var(--flow-visual-hierarchy-brace-width) +
+  4397	          var(--flow-visual-hierarchy-brace-gap)) * -1
+  4398	  );
+  4399	  top: -4%;
+  4400	  transform: none;
+  4401	}
+  4402	
+  4403	.flow-capture-group-visual-hierarchy
+  4404	  .flow-screen-stack-step-6b
+  4405	  .flow-visual-hierarchy-brace {
+  4406	  transform: translateY(12px);
+  4407	}
+  4408	
+  4409	.flow-capture-group-visual-hierarchy
+  4410	  .flow-screen-stack-step-6c
+  4411	  .flow-visual-hierarchy-brace {
+  4412	  height: calc(100% * 1.16);
+  4413	  top: calc(-8% - 16px);
+  4414	}
+  4415	
   4416	.flow-capture-group-visual-hierarchy
-  4417	  .flow-screen-stack-step-1c
-  4418	  .flow-visual-hierarchy-section-line,
+  4417	  .flow-screen-stack-step-6b
+  4418	  .flow-visual-hierarchy-brace-outline,
   4419	.flow-capture-group-visual-hierarchy
-  4420	  .flow-screen-stack-step-3
-  4421	  .flow-visual-hierarchy-section-lines,
-  4422	.flow-capture-group-visual-hierarchy
-  4423	  .flow-screen-stack-step-3
-  4424	  .flow-visual-hierarchy-section-line,
+  4420	  .flow-screen-stack-step-6c
+  4421	  .flow-visual-hierarchy-brace-outline {
+  4422	  stroke-width: 9.6px;
+  4423	}
+  4424	
   4425	.flow-capture-group-visual-hierarchy
-  4426	  .flow-screen-stack-step-6
-  4427	  .flow-visual-hierarchy-section-lines,
+  4426	  .flow-screen-stack-step-6b
+  4427	  .flow-visual-hierarchy-brace-line,
   4428	.flow-capture-group-visual-hierarchy
-  4429	  .flow-screen-stack-step-6
-  4430	  .flow-visual-hierarchy-section-line {
-  4431	  width: 24px;
+  4429	  .flow-screen-stack-step-6c
+  4430	  .flow-visual-hierarchy-brace-line {
+  4431	  stroke-width: 4.6px;
   4432	}
   4433	
   4434	.flow-capture-group-visual-hierarchy
-  4435	  .flow-screen-stack-step-1b
-  4436	  .flow-visual-hierarchy-frame-pair,
+  4435	  .flow-screen-stack-step-6b
+  4436	  .flow-visual-hierarchy-external-annotation,
   4437	.flow-capture-group-visual-hierarchy
-  4438	  .flow-screen-stack-step-1c
-  4439	  .flow-visual-hierarchy-frame-pair,
-  4440	.flow-capture-group-visual-hierarchy
-  4441	  .flow-screen-stack-step-1d
-  4442	  .flow-visual-hierarchy-frame-pair,
-  4443	.flow-capture-group-visual-hierarchy
-  4444	  .flow-screen-stack-step-4
-  4445	  .flow-visual-hierarchy-frame-pair,
-  4446	.flow-capture-group-visual-hierarchy
-  4447	  .flow-screen-stack-step-5
-  4448	  .flow-visual-hierarchy-frame-pair {
-  4449	  --flow-visual-hierarchy-brace-gap: 24px;
-  4450	  --flow-visual-hierarchy-brace-width: 64px;
-  4451	  --flow-visual-hierarchy-focal-scale-outset: 13.2px;
-  4452	  --flow-visual-hierarchy-tip-frame-gap: 20px;
-  4453	}
-  4454	
-  4455	.flow-capture-group-visual-hierarchy
-  4456	  .flow-screen-stack-step-4
-  4457	  .flow-visual-hierarchy-frame-pair,
-  4458	.flow-capture-group-visual-hierarchy
-  4459	  .flow-screen-stack-step-5
-  4460	  .flow-visual-hierarchy-frame-pair {
-  4461	  --flow-visual-hierarchy-tip-frame-gap: 20px;
-  4462	}
-  4463	
+  4438	  .flow-screen-stack-step-6c
+  4439	  .flow-visual-hierarchy-external-annotation {
+  4440	  font-size: 56px !important;
+  4441	  line-height: 1.06;
+  4442	  right: calc(100% - 22px) !important;
+  4443	  transform: translateY(-50%) rotate(-90deg) !important;
+  4444	  transform-origin: center center;
+  4445	  white-space: nowrap;
+  4446	}
+  4447	
+  4448	.flow-capture-group-visual-hierarchy
+  4449	  .flow-screen-stack-step-6b
+  4450	  .flow-visual-hierarchy-external-annotation {
+  4451	  top: calc(50% + 12px) !important;
+  4452	}
+  4453	
+  4454	.flow-capture-group-visual-hierarchy
+  4455	  .flow-screen-stack-step-6c
+  4456	  .flow-visual-hierarchy-external-annotation {
+  4457	  top: calc(54.53% - 16px) !important;
+  4458	}
+  4459	
+  4460	.flow-capture-group-visual-hierarchy
+  4461	  .flow-screen-stack-step-6b
+  4462	  .flow-visual-hierarchy-external-annotation
+  4463	  > span,
   4464	.flow-capture-group-visual-hierarchy
-  4465	  .flow-screen-stack-step-4
-  4466	  .flow-visual-hierarchy-brace,
-  4467	.flow-capture-group-visual-hierarchy
-  4468	  .flow-screen-stack-step-5
-  4469	  .flow-visual-hierarchy-brace {
-  4470	  bottom: auto;
-  4471	  height: calc(100% * 1.08);
-  4472	  top: -4%;
-  4473	  transform: none;
-  4474	}
-  4475	
-  4476	.flow-capture-group-visual-hierarchy
-  4477	  .flow-screen-stack-step-5
-  4478	  .flow-visual-hierarchy-brace {
-  4479	  top: calc(-4% - 12px);
-  4480	}
-  4481	
-  4482	.flow-capture-group-visual-hierarchy
-  4483	  .flow-screen-stack-step-4
-  4484	  .flow-visual-hierarchy-brace {
-  4485	  transform: translateY(30px);
-  4486	}
-  4487	
-  4488	.flow-capture-group-visual-hierarchy
-  4489	  .flow-screen-stack-step-1b
-  4490	  .flow-visual-hierarchy-frame-pair,
-  4491	.flow-capture-group-visual-hierarchy
-  4492	  .flow-screen-stack-step-1c
-  4493	  .flow-visual-hierarchy-frame-pair,
-  4494	.flow-capture-group-visual-hierarchy
-  4495	  .flow-screen-stack-step-4
-  4496	  .flow-visual-hierarchy-frame-pair,
-  4497	.flow-capture-group-visual-hierarchy
-  4498	  .flow-screen-stack-step-5
-  4499	  .flow-visual-hierarchy-frame-pair {
-  4500	  width: 318px;
-  4501	}
-  4502	
-  4503	.flow-capture-group-visual-hierarchy
-  4504	  .flow-screen-stack-step-1d
-  4505	  .flow-visual-hierarchy-frame-pair {
-  4506	  --flow-visual-hierarchy-focal-scale-outset: 16.9px;
-  4507	  --flow-visual-hierarchy-callout-align-offset: 48.7px;
-  4508	  --flow-visual-hierarchy-quaternary-focal-align-offset: 45px;
-  4509	  width: 408px;
-  4510	}
-  4511	
-  4512	.flow-capture-group-visual-hierarchy
-  4513	  .flow-screen-stack-step-1b
-  4514	  .flow-visual-hierarchy-frame-pair
-  4515	  > .flow-protected-image-composition,
+  4465	  .flow-screen-stack-step-6c
+  4466	  .flow-visual-hierarchy-external-annotation
+  4467	  > span {
+  4468	  display: inline;
+  4469	  white-space: nowrap;
+  4470	}
+  4471	
+  4472	.flow-capture-group-visual-hierarchy
+  4473	  .flow-screen-stack-step-6
+  4474	  .flow-screen {
+  4475	  width: min(100%, 444px) !important;
+  4476	}
+  4477	
+  4478	.flow-capture-group-visual-hierarchy
+  4479	  .flow-screen-stack-step-1
+  4480	  .flow-visual-hierarchy-frame-pair,
+  4481	.flow-capture-group-visual-hierarchy
+  4482	  .flow-screen-stack-step-1b
+  4483	  .flow-visual-hierarchy-frame-pair,
+  4484	.flow-capture-group-visual-hierarchy
+  4485	  .flow-screen-stack-step-1c
+  4486	  .flow-visual-hierarchy-frame-pair {
+  4487	  --flow-visual-hierarchy-tip-frame-gap: 6px;
+  4488	}
+  4489	
+  4490	.flow-capture-group-visual-hierarchy
+  4491	  .flow-screen-stack-step-1
+  4492	  .flow-visual-hierarchy-frame-pair,
+  4493	.flow-capture-group-visual-hierarchy
+  4494	  .flow-screen-stack-step-3
+  4495	  .flow-visual-hierarchy-frame-pair,
+  4496	.flow-capture-group-visual-hierarchy
+  4497	  .flow-screen-stack-step-6
+  4498	  .flow-visual-hierarchy-frame-pair {
+  4499	  --flow-visual-hierarchy-tip-frame-gap: 10px;
+  4500	  --flow-visual-hierarchy-viewing-brace-shift: 31px;
+  4501	  --flow-visual-hierarchy-viewing-label-shift: 44px;
+  4502	}
+  4503	
+  4504	.flow-capture-group-visual-hierarchy
+  4505	  .flow-screen-stack-step-1
+  4506	  .flow-visual-hierarchy-brace,
+  4507	.flow-capture-group-visual-hierarchy
+  4508	  .flow-screen-stack-step-3
+  4509	  .flow-visual-hierarchy-brace,
+  4510	.flow-capture-group-visual-hierarchy
+  4511	  .flow-screen-stack-step-6
+  4512	  .flow-visual-hierarchy-brace {
+  4513	  left: var(--flow-visual-hierarchy-viewing-brace-shift);
+  4514	}
+  4515	
   4516	.flow-capture-group-visual-hierarchy
-  4517	  .flow-screen-stack-step-1c
-  4518	  .flow-visual-hierarchy-frame-pair
-  4519	  > .flow-protected-image-composition,
-  4520	.flow-capture-group-visual-hierarchy
-  4521	  .flow-screen-stack-step-1d
-  4522	  .flow-visual-hierarchy-frame-pair
-  4523	  > .flow-image-frame,
-  4524	.flow-capture-group-visual-hierarchy
-  4525	  .flow-screen-stack-step-4
-  4526	  .flow-visual-hierarchy-frame-pair
-  4527	  > .flow-image-frame,
+  4517	  .flow-screen-stack-step-1
+  4518	  .flow-visual-hierarchy-external-annotation,
+  4519	.flow-capture-group-visual-hierarchy
+  4520	  .flow-screen-stack-step-3
+  4521	  .flow-visual-hierarchy-external-annotation,
+  4522	.flow-capture-group-visual-hierarchy
+  4523	  .flow-screen-stack-step-6
+  4524	  .flow-visual-hierarchy-external-annotation {
+  4525	  font-size: 28px !important;
+  4526	}
+  4527	
   4528	.flow-capture-group-visual-hierarchy
-  4529	  .flow-screen-stack-step-5
-  4530	  .flow-visual-hierarchy-frame-pair
-  4531	  > .flow-image-frame {
-  4532	  margin-left: 0 !important;
-  4533	  max-width: none;
-  4534	}
-  4535	
-  4536	.flow-capture-group-visual-hierarchy
-  4537	  .flow-screen-stack-step-1b
-  4538	  .flow-visual-hierarchy-frame-pair
-  4539	  > .flow-protected-image-composition,
+  4529	  .flow-screen-stack-step-1
+  4530	  .flow-visual-hierarchy-section-lines,
+  4531	.flow-capture-group-visual-hierarchy
+  4532	  .flow-screen-stack-step-1
+  4533	  .flow-visual-hierarchy-section-line,
+  4534	.flow-capture-group-visual-hierarchy
+  4535	  .flow-screen-stack-step-1b
+  4536	  .flow-visual-hierarchy-section-line,
+  4537	.flow-capture-group-visual-hierarchy
+  4538	  .flow-screen-stack-step-1c
+  4539	  .flow-visual-hierarchy-section-line,
   4540	.flow-capture-group-visual-hierarchy
-  4541	  .flow-screen-stack-step-1c
-  4542	  .flow-visual-hierarchy-frame-pair
-  4543	  > .flow-protected-image-composition,
-  4544	.flow-capture-group-visual-hierarchy
-  4545	  .flow-screen-stack-step-4
-  4546	  .flow-visual-hierarchy-frame-pair
-  4547	  > .flow-image-frame,
-  4548	.flow-capture-group-visual-hierarchy
-  4549	  .flow-screen-stack-step-5
-  4550	  .flow-visual-hierarchy-frame-pair
-  4551	  > .flow-image-frame {
-  4552	  width: 318px;
+  4541	  .flow-screen-stack-step-3
+  4542	  .flow-visual-hierarchy-section-lines,
+  4543	.flow-capture-group-visual-hierarchy
+  4544	  .flow-screen-stack-step-3
+  4545	  .flow-visual-hierarchy-section-line,
+  4546	.flow-capture-group-visual-hierarchy
+  4547	  .flow-screen-stack-step-6
+  4548	  .flow-visual-hierarchy-section-lines,
+  4549	.flow-capture-group-visual-hierarchy
+  4550	  .flow-screen-stack-step-6
+  4551	  .flow-visual-hierarchy-section-line {
+  4552	  width: 24px;
   4553	}
   4554	
   4555	.flow-capture-group-visual-hierarchy
-  4556	  .flow-screen-stack-step-1d
-  4557	  .flow-visual-hierarchy-frame-pair
-  4558	  > .flow-image-frame {
-  4559	  width: 408px;
-  4560	}
-  4561	
-  4562	.flow-capture-group-visual-hierarchy
-  4563	  .flow-screen-stack-step-1b
-  4564	  .flow-visual-hierarchy-brace,
-  4565	.flow-capture-group-visual-hierarchy
-  4566	  .flow-screen-stack-step-1c
-  4567	  .flow-visual-hierarchy-brace,
-  4568	.flow-capture-group-visual-hierarchy
-  4569	  .flow-screen-stack-step-1d
-  4570	  .flow-visual-hierarchy-brace {
-  4571	  height: calc(100% * 1.083);
-  4572	}
-  4573	
-  4574	.flow-capture-group-visual-hierarchy
-  4575	  .flow-screen-stack-step-1d
-  4576	  .flow-visual-hierarchy-brace {
-  4577	  left: calc(
-  4578	    (
-  4579	        var(--flow-visual-hierarchy-brace-width) +
-  4580	          var(--flow-visual-hierarchy-brace-gap) -
-  4581	          var(--flow-visual-hierarchy-quaternary-focal-align-offset)
-  4582	      ) * -1
-  4583	  );
-  4584	}
-  4585	
-  4586	.flow-capture-group-visual-hierarchy
-  4587	  .flow-screen-stack-step-1b
-  4588	  .flow-visual-hierarchy-brace,
-  4589	.flow-capture-group-visual-hierarchy
-  4590	  .flow-screen-stack-step-1c
-  4591	  .flow-visual-hierarchy-brace,
-  4592	.flow-capture-group-visual-hierarchy
-  4593	  .flow-screen-stack-step-4
-  4594	  .flow-visual-hierarchy-brace,
-  4595	.flow-capture-group-visual-hierarchy
-  4596	  .flow-screen-stack-step-5
-  4597	  .flow-visual-hierarchy-brace {
-  4598	  left: calc(
-  4599	    (var(--flow-visual-hierarchy-brace-width) +
-  4600	          var(--flow-visual-hierarchy-brace-gap)) * -1
-  4601	  );
-  4602	}
-  4603	
-  4604	.flow-capture-group-visual-hierarchy
-  4605	  .flow-screen-stack-step-1b
-  4606	  .flow-visual-hierarchy-brace-outline,
-  4607	.flow-capture-group-visual-hierarchy
-  4608	  .flow-screen-stack-step-1c
-  4609	  .flow-visual-hierarchy-brace-outline,
-  4610	.flow-capture-group-visual-hierarchy
-  4611	  .flow-screen-stack-step-1d
-  4612	  .flow-visual-hierarchy-brace-outline,
-  4613	.flow-capture-group-visual-hierarchy
-  4614	  .flow-screen-stack-step-4
-  4615	  .flow-visual-hierarchy-brace-outline,
-  4616	.flow-capture-group-visual-hierarchy
-  4617	  .flow-screen-stack-step-5
-  4618	  .flow-visual-hierarchy-brace-outline {
-  4619	  stroke-width: 9.6px;
-  4620	}
-  4621	
-  4622	.flow-capture-group-visual-hierarchy
-  4623	  .flow-screen-stack-step-1b
-  4624	  .flow-visual-hierarchy-brace-line,
-  4625	.flow-capture-group-visual-hierarchy
-  4626	  .flow-screen-stack-step-1c
-  4627	  .flow-visual-hierarchy-brace-line,
-  4628	.flow-capture-group-visual-hierarchy
-  4629	  .flow-screen-stack-step-1d
-  4630	  .flow-visual-hierarchy-brace-line,
-  4631	.flow-capture-group-visual-hierarchy
-  4632	  .flow-screen-stack-step-4
-  4633	  .flow-visual-hierarchy-brace-line,
-  4634	.flow-capture-group-visual-hierarchy
-  4635	  .flow-screen-stack-step-5
-  4636	  .flow-visual-hierarchy-brace-line {
-  4637	  stroke-width: 4.6px;
-  4638	}
-  4639	
-  4640	.flow-capture-group-visual-hierarchy
-  4641	  .flow-screen-stack-step-1b
-  4642	  .flow-visual-hierarchy-external-annotation,
-  4643	.flow-capture-group-visual-hierarchy
-  4644	  .flow-screen-stack-step-1c
-  4645	  .flow-visual-hierarchy-external-annotation,
-  4646	.flow-capture-group-visual-hierarchy
-  4647	  .flow-screen-stack-step-1d
-  4648	  .flow-visual-hierarchy-external-annotation,
+  4556	  .flow-screen-stack-step-1b
+  4557	  .flow-visual-hierarchy-frame-pair,
+  4558	.flow-capture-group-visual-hierarchy
+  4559	  .flow-screen-stack-step-1c
+  4560	  .flow-visual-hierarchy-frame-pair,
+  4561	.flow-capture-group-visual-hierarchy
+  4562	  .flow-screen-stack-step-1d
+  4563	  .flow-visual-hierarchy-frame-pair,
+  4564	.flow-capture-group-visual-hierarchy
+  4565	  .flow-screen-stack-step-4
+  4566	  .flow-visual-hierarchy-frame-pair,
+  4567	.flow-capture-group-visual-hierarchy
+  4568	  .flow-screen-stack-step-5
+  4569	  .flow-visual-hierarchy-frame-pair {
+  4570	  --flow-visual-hierarchy-brace-gap: 24px;
+  4571	  --flow-visual-hierarchy-brace-width: 64px;
+  4572	  --flow-visual-hierarchy-focal-scale-outset: 13.2px;
+  4573	  --flow-visual-hierarchy-tip-frame-gap: 20px;
+  4574	}
+  4575	
+  4576	.flow-capture-group-visual-hierarchy
+  4577	  .flow-screen-stack-step-4
+  4578	  .flow-visual-hierarchy-frame-pair,
+  4579	.flow-capture-group-visual-hierarchy
+  4580	  .flow-screen-stack-step-5
+  4581	  .flow-visual-hierarchy-frame-pair {
+  4582	  --flow-visual-hierarchy-tip-frame-gap: 20px;
+  4583	}
+  4584	
+  4585	.flow-capture-group-visual-hierarchy
+  4586	  .flow-screen-stack-step-4
+  4587	  .flow-visual-hierarchy-brace,
+  4588	.flow-capture-group-visual-hierarchy
+  4589	  .flow-screen-stack-step-5
+  4590	  .flow-visual-hierarchy-brace {
+  4591	  bottom: auto;
+  4592	  height: calc(100% * 1.08);
+  4593	  top: -4%;
+  4594	  transform: none;
+  4595	}
+  4596	
+  4597	.flow-capture-group-visual-hierarchy
+  4598	  .flow-screen-stack-step-5
+  4599	  .flow-visual-hierarchy-brace {
+  4600	  top: calc(-4% - 12px);
+  4601	}
+  4602	
+  4603	.flow-capture-group-visual-hierarchy
+  4604	  .flow-screen-stack-step-4
+  4605	  .flow-visual-hierarchy-brace {
+  4606	  transform: translateY(30px);
+  4607	}
+  4608	
+  4609	.flow-capture-group-visual-hierarchy
+  4610	  .flow-screen-stack-step-1b
+  4611	  .flow-visual-hierarchy-frame-pair,
+  4612	.flow-capture-group-visual-hierarchy
+  4613	  .flow-screen-stack-step-1c
+  4614	  .flow-visual-hierarchy-frame-pair,
+  4615	.flow-capture-group-visual-hierarchy
+  4616	  .flow-screen-stack-step-4
+  4617	  .flow-visual-hierarchy-frame-pair,
+  4618	.flow-capture-group-visual-hierarchy
+  4619	  .flow-screen-stack-step-5
+  4620	  .flow-visual-hierarchy-frame-pair {
+  4621	  width: 318px;
+  4622	}
+  4623	
+  4624	.flow-capture-group-visual-hierarchy
+  4625	  .flow-screen-stack-step-1d
+  4626	  .flow-visual-hierarchy-frame-pair {
+  4627	  --flow-visual-hierarchy-focal-scale-outset: 16.9px;
+  4628	  --flow-visual-hierarchy-callout-align-offset: 48.7px;
+  4629	  --flow-visual-hierarchy-quaternary-focal-align-offset: 45px;
+  4630	  width: 408px;
+  4631	}
+  4632	
+  4633	.flow-capture-group-visual-hierarchy
+  4634	  .flow-screen-stack-step-1b
+  4635	  .flow-visual-hierarchy-frame-pair
+  4636	  > .flow-protected-image-composition,
+  4637	.flow-capture-group-visual-hierarchy
+  4638	  .flow-screen-stack-step-1c
+  4639	  .flow-visual-hierarchy-frame-pair
+  4640	  > .flow-protected-image-composition,
+  4641	.flow-capture-group-visual-hierarchy
+  4642	  .flow-screen-stack-step-1d
+  4643	  .flow-visual-hierarchy-frame-pair
+  4644	  > .flow-image-frame,
+  4645	.flow-capture-group-visual-hierarchy
+  4646	  .flow-screen-stack-step-4
+  4647	  .flow-visual-hierarchy-frame-pair
+  4648	  > .flow-image-frame,
   4649	.flow-capture-group-visual-hierarchy
-  4650	  .flow-screen-stack-step-4
-  4651	  .flow-visual-hierarchy-external-annotation,
-  4652	.flow-capture-group-visual-hierarchy
-  4653	  .flow-screen-stack-step-5
-  4654	  .flow-visual-hierarchy-external-annotation {
-  4655	  font-size: 56px !important;
-  4656	  line-height: 1.06;
-  4657	  right: calc(
-  4658	    100% + var(--flow-visual-hierarchy-brace-width) +
-  4659	      var(--flow-visual-hierarchy-brace-gap) - 110px
-  4660	  ) !important;
-  4661	  transform: translateY(-50%) rotate(-90deg) !important;
-  4662	  transform-origin: center center;
-  4663	  white-space: nowrap;
-  4664	}
-  4665	
-  4666	.flow-capture-group-visual-hierarchy
-  4667	  .flow-screen-stack-step-1d
-  4668	  .flow-visual-hierarchy-external-annotation {
-  4669	  right: calc(
-  4670	    100% + var(--flow-visual-hierarchy-brace-width) +
-  4671	      var(--flow-visual-hierarchy-brace-gap) -
-  4672	      var(--flow-visual-hierarchy-quaternary-focal-align-offset) - 110px
-  4673	  ) !important;
+  4650	  .flow-screen-stack-step-5
+  4651	  .flow-visual-hierarchy-frame-pair
+  4652	  > .flow-image-frame {
+  4653	  margin-left: 0 !important;
+  4654	  max-width: none;
+  4655	}
+  4656	
+  4657	.flow-capture-group-visual-hierarchy
+  4658	  .flow-screen-stack-step-1b
+  4659	  .flow-visual-hierarchy-frame-pair
+  4660	  > .flow-protected-image-composition,
+  4661	.flow-capture-group-visual-hierarchy
+  4662	  .flow-screen-stack-step-1c
+  4663	  .flow-visual-hierarchy-frame-pair
+  4664	  > .flow-protected-image-composition,
+  4665	.flow-capture-group-visual-hierarchy
+  4666	  .flow-screen-stack-step-4
+  4667	  .flow-visual-hierarchy-frame-pair
+  4668	  > .flow-image-frame,
+  4669	.flow-capture-group-visual-hierarchy
+  4670	  .flow-screen-stack-step-5
+  4671	  .flow-visual-hierarchy-frame-pair
+  4672	  > .flow-image-frame {
+  4673	  width: 318px;
   4674	}
   4675	
   4676	.flow-capture-group-visual-hierarchy
-  4677	  .flow-screen-stack-step-1b
-  4678	  .flow-visual-hierarchy-external-annotation
-  4679	  > span,
-  4680	.flow-capture-group-visual-hierarchy
-  4681	  .flow-screen-stack-step-1c
-  4682	  .flow-visual-hierarchy-external-annotation
-  4683	  > span,
-  4684	.flow-capture-group-visual-hierarchy
-  4685	  .flow-screen-stack-step-1d
-  4686	  .flow-visual-hierarchy-external-annotation
-  4687	  > span {
-  4688	  display: inline;
-  4689	  white-space: nowrap;
-  4690	}
-  4691	
-  4692	.flow-capture-group-visual-hierarchy
-  4693	  .flow-screen-stack-step-1b
-  4694	  .flow-visual-hierarchy-section-lines-right,
+  4677	  .flow-screen-stack-step-1d
+  4678	  .flow-visual-hierarchy-frame-pair
+  4679	  > .flow-image-frame {
+  4680	  width: 408px;
+  4681	}
+  4682	
+  4683	.flow-capture-group-visual-hierarchy
+  4684	  .flow-screen-stack-step-1b
+  4685	  .flow-visual-hierarchy-brace,
+  4686	.flow-capture-group-visual-hierarchy
+  4687	  .flow-screen-stack-step-1c
+  4688	  .flow-visual-hierarchy-brace,
+  4689	.flow-capture-group-visual-hierarchy
+  4690	  .flow-screen-stack-step-1d
+  4691	  .flow-visual-hierarchy-brace {
+  4692	  height: calc(100% * 1.083);
+  4693	}
+  4694	
   4695	.flow-capture-group-visual-hierarchy
-  4696	  .flow-screen-stack-step-1c
-  4697	  .flow-visual-hierarchy-section-lines-right,
-  4698	.flow-capture-group-visual-hierarchy
-  4699	  .flow-screen-stack-step-1d
-  4700	  .flow-visual-hierarchy-section-lines-right,
-  4701	.flow-capture-group-visual-hierarchy
-  4702	  .flow-screen-stack-step-4
-  4703	  .flow-visual-hierarchy-section-lines-right,
-  4704	.flow-capture-group-visual-hierarchy
-  4705	  .flow-screen-stack-step-5
-  4706	  .flow-visual-hierarchy-section-lines-right {
-  4707	  left: calc(
-  4708	    100% + var(--flow-visual-hierarchy-focal-scale-outset) +
-  4709	      var(--flow-visual-hierarchy-tip-frame-gap) -
-  4710	      var(--flow-visual-hierarchy-callout-align-offset, 0px)
-  4711	  );
-  4712	}
-  4713	
-  4714	.flow-capture-group-visual-hierarchy
-  4715	  .flow-screen-stack-step-1b
-  4716	  .flow-visual-hierarchy-section-lines-left,
-  4717	.flow-capture-group-visual-hierarchy
-  4718	  .flow-screen-stack-step-1c
-  4719	  .flow-visual-hierarchy-section-lines-left,
-  4720	.flow-capture-group-visual-hierarchy
-  4721	  .flow-screen-stack-step-1d
-  4722	  .flow-visual-hierarchy-section-lines-left {
-  4723	  left: auto;
-  4724	  right: calc(
-  4725	    100% + var(--flow-visual-hierarchy-focal-scale-outset) +
-  4726	      var(--flow-visual-hierarchy-tip-frame-gap)
-  4727	  );
-  4728	}
-  4729	
-  4730	.flow-capture-group-visual-hierarchy
-  4731	  .flow-screen-stack-step-1b
-  4732	  .flow-visual-hierarchy-section-line,
-  4733	.flow-capture-group-visual-hierarchy
-  4734	  .flow-screen-stack-step-1c
-  4735	  .flow-visual-hierarchy-section-line,
-  4736	.flow-capture-group-visual-hierarchy
-  4737	  .flow-screen-stack-step-1d
-  4738	  .flow-visual-hierarchy-section-line,
-  4739	.flow-capture-group-visual-hierarchy
-  4740	  .flow-screen-stack-step-4
-  4741	  .flow-visual-hierarchy-section-line,
-  4742	.flow-capture-group-visual-hierarchy
-  4743	  .flow-screen-stack-step-5
-  4744	  .flow-visual-hierarchy-section-line {
-  4745	  height: 9.6px;
-  4746	  width: 48px;
-  4747	}
-  4748	
+  4696	  .flow-screen-stack-step-1d
+  4697	  .flow-visual-hierarchy-brace {
+  4698	  left: calc(
+  4699	    (
+  4700	        var(--flow-visual-hierarchy-brace-width) +
+  4701	          var(--flow-visual-hierarchy-brace-gap) -
+  4702	          var(--flow-visual-hierarchy-quaternary-focal-align-offset)
+  4703	      ) * -1
+  4704	  );
+  4705	}
+  4706	
+  4707	.flow-capture-group-visual-hierarchy
+  4708	  .flow-screen-stack-step-1b
+  4709	  .flow-visual-hierarchy-brace,
+  4710	.flow-capture-group-visual-hierarchy
+  4711	  .flow-screen-stack-step-1c
+  4712	  .flow-visual-hierarchy-brace,
+  4713	.flow-capture-group-visual-hierarchy
+  4714	  .flow-screen-stack-step-4
+  4715	  .flow-visual-hierarchy-brace,
+  4716	.flow-capture-group-visual-hierarchy
+  4717	  .flow-screen-stack-step-5
+  4718	  .flow-visual-hierarchy-brace {
+  4719	  left: calc(
+  4720	    (var(--flow-visual-hierarchy-brace-width) +
+  4721	          var(--flow-visual-hierarchy-brace-gap)) * -1
+  4722	  );
+  4723	}
+  4724	
+  4725	.flow-capture-group-visual-hierarchy
+  4726	  .flow-screen-stack-step-1b
+  4727	  .flow-visual-hierarchy-brace-outline,
+  4728	.flow-capture-group-visual-hierarchy
+  4729	  .flow-screen-stack-step-1c
+  4730	  .flow-visual-hierarchy-brace-outline,
+  4731	.flow-capture-group-visual-hierarchy
+  4732	  .flow-screen-stack-step-1d
+  4733	  .flow-visual-hierarchy-brace-outline,
+  4734	.flow-capture-group-visual-hierarchy
+  4735	  .flow-screen-stack-step-4
+  4736	  .flow-visual-hierarchy-brace-outline,
+  4737	.flow-capture-group-visual-hierarchy
+  4738	  .flow-screen-stack-step-5
+  4739	  .flow-visual-hierarchy-brace-outline {
+  4740	  stroke-width: 9.6px;
+  4741	}
+  4742	
+  4743	.flow-capture-group-visual-hierarchy
+  4744	  .flow-screen-stack-step-1b
+  4745	  .flow-visual-hierarchy-brace-line,
+  4746	.flow-capture-group-visual-hierarchy
+  4747	  .flow-screen-stack-step-1c
+  4748	  .flow-visual-hierarchy-brace-line,
   4749	.flow-capture-group-visual-hierarchy
-  4750	  .flow-screen-stack-step-1b
-  4751	  .flow-visual-hierarchy-section-line::after,
+  4750	  .flow-screen-stack-step-1d
+  4751	  .flow-visual-hierarchy-brace-line,
   4752	.flow-capture-group-visual-hierarchy
-  4753	  .flow-screen-stack-step-1c
-  4754	  .flow-visual-hierarchy-section-line::after,
+  4753	  .flow-screen-stack-step-4
+  4754	  .flow-visual-hierarchy-brace-line,
   4755	.flow-capture-group-visual-hierarchy
-  4756	  .flow-screen-stack-step-1d
-  4757	  .flow-visual-hierarchy-section-line::after,
-  4758	.flow-capture-group-visual-hierarchy
-  4759	  .flow-screen-stack-step-4
-  4760	  .flow-visual-hierarchy-section-line::after,
+  4756	  .flow-screen-stack-step-5
+  4757	  .flow-visual-hierarchy-brace-line {
+  4758	  stroke-width: 4.6px;
+  4759	}
+  4760	
   4761	.flow-capture-group-visual-hierarchy
-  4762	  .flow-screen-stack-step-5
-  4763	  .flow-visual-hierarchy-section-line::after {
-  4764	  height: 4.6px;
-  4765	}
-  4766	
+  4762	  .flow-screen-stack-step-1b
+  4763	  .flow-visual-hierarchy-external-annotation,
+  4764	.flow-capture-group-visual-hierarchy
+  4765	  .flow-screen-stack-step-1c
+  4766	  .flow-visual-hierarchy-external-annotation,
   4767	.flow-capture-group-visual-hierarchy
-  4768	  .flow-screen-stack-step-1
-  4769	  .flow-visual-hierarchy-section-label,
+  4768	  .flow-screen-stack-step-1d
+  4769	  .flow-visual-hierarchy-external-annotation,
   4770	.flow-capture-group-visual-hierarchy
-  4771	  .flow-screen-stack-step-3
-  4772	  .flow-visual-hierarchy-section-label,
+  4771	  .flow-screen-stack-step-4
+  4772	  .flow-visual-hierarchy-external-annotation,
   4773	.flow-capture-group-visual-hierarchy
-  4774	  .flow-screen-stack-step-6
-  4775	  .flow-visual-hierarchy-section-label {
-  4776	  font-size: 10px;
-  4777	}
-  4778	
-  4779	.flow-capture-group-visual-hierarchy
-  4780	  .flow-screen-stack-step-1
-  4781	  .flow-visual-hierarchy-external-annotation,
-  4782	.flow-capture-group-visual-hierarchy
-  4783	  .flow-screen-stack-step-3
-  4784	  .flow-visual-hierarchy-external-annotation,
-  4785	.flow-capture-group-visual-hierarchy
-  4786	  .flow-screen-stack-step-6
-  4787	  .flow-visual-hierarchy-external-annotation {
-  4788	  right: calc(
-  4789	    100% - 70px - var(--flow-visual-hierarchy-viewing-label-shift)
-  4790	  ) !important;
-  4791	  transform: translateY(-50%) rotate(-90deg) !important;
-  4792	  transform-origin: center center;
-  4793	}
-  4794	
-  4795	.flow-capture-group-visual-hierarchy
-  4796	  .flow-screen-stack-step-1
-  4797	  .flow-visual-hierarchy-external-annotation
-  4798	  > span,
-  4799	.flow-capture-group-visual-hierarchy
-  4800	  .flow-screen-stack-step-3
-  4801	  .flow-visual-hierarchy-external-annotation
-  4802	  > span,
-  4803	.flow-capture-group-visual-hierarchy
-  4804	  .flow-screen-stack-step-6
-  4805	  .flow-visual-hierarchy-external-annotation
-  4806	  > span {
-  4807	  display: inline;
-  4808	  white-space: nowrap;
-  4809	}
-  4810	
-  4811	.flow-capture-group-visual-hierarchy
-  4812	  .flow-screen-stack-step-1
-  4813	  .flow-visual-hierarchy-section-label {
-  4814	  font-size: 9.6px;
-  4815	  left: calc(100% + 16px);
-  4816	  letter-spacing: 0.1em;
-  4817	  top: 50%;
-  4818	  transform: translateY(-50%) rotate(90deg) translateX(-50%);
-  4819	  transform-origin: left center;
-  4820	}
-  4821	
+  4774	  .flow-screen-stack-step-5
+  4775	  .flow-visual-hierarchy-external-annotation {
+  4776	  font-size: 56px !important;
+  4777	  line-height: 1.06;
+  4778	  right: calc(
+  4779	    100% + var(--flow-visual-hierarchy-brace-width) +
+  4780	      var(--flow-visual-hierarchy-brace-gap) - 110px
+  4781	  ) !important;
+  4782	  transform: translateY(-50%) rotate(-90deg) !important;
+  4783	  transform-origin: center center;
+  4784	  white-space: nowrap;
+  4785	}
+  4786	
+  4787	.flow-capture-group-visual-hierarchy
+  4788	  .flow-screen-stack-step-1d
+  4789	  .flow-visual-hierarchy-external-annotation {
+  4790	  right: calc(
+  4791	    100% + var(--flow-visual-hierarchy-brace-width) +
+  4792	      var(--flow-visual-hierarchy-brace-gap) -
+  4793	      var(--flow-visual-hierarchy-quaternary-focal-align-offset) - 110px
+  4794	  ) !important;
+  4795	}
+  4796	
+  4797	.flow-capture-group-visual-hierarchy
+  4798	  .flow-screen-stack-step-1b
+  4799	  .flow-visual-hierarchy-external-annotation
+  4800	  > span,
+  4801	.flow-capture-group-visual-hierarchy
+  4802	  .flow-screen-stack-step-1c
+  4803	  .flow-visual-hierarchy-external-annotation
+  4804	  > span,
+  4805	.flow-capture-group-visual-hierarchy
+  4806	  .flow-screen-stack-step-1d
+  4807	  .flow-visual-hierarchy-external-annotation
+  4808	  > span {
+  4809	  display: inline;
+  4810	  white-space: nowrap;
+  4811	}
+  4812	
+  4813	.flow-capture-group-visual-hierarchy
+  4814	  .flow-screen-stack-step-1b
+  4815	  .flow-visual-hierarchy-section-lines-right,
+  4816	.flow-capture-group-visual-hierarchy
+  4817	  .flow-screen-stack-step-1c
+  4818	  .flow-visual-hierarchy-section-lines-right,
+  4819	.flow-capture-group-visual-hierarchy
+  4820	  .flow-screen-stack-step-1d
+  4821	  .flow-visual-hierarchy-section-lines-right,
   4822	.flow-capture-group-visual-hierarchy
-  4823	  .flow-screen-stack-step-1
-  4824	  .flow-visual-hierarchy-section-label-wrapped {
-  4825	  left: calc(100% + 23px);
-  4826	}
-  4827	
-  4828	.flow-capture-group-visual-hierarchy
-  4829	  .flow-screen-stack-step-3
-  4830	  .flow-visual-hierarchy-section-label,
-  4831	.flow-capture-group-visual-hierarchy
-  4832	  .flow-screen-stack-step-6
-  4833	  .flow-visual-hierarchy-section-label {
-  4834	  left: calc(100% + 16px);
-  4835	  letter-spacing: 0.1em;
-  4836	  top: 50%;
-  4837	  transform: translateY(-50%) rotate(90deg) translateX(-50%);
-  4838	  transform-origin: left center;
-  4839	}
-  4840	
+  4823	  .flow-screen-stack-step-4
+  4824	  .flow-visual-hierarchy-section-lines-right,
+  4825	.flow-capture-group-visual-hierarchy
+  4826	  .flow-screen-stack-step-5
+  4827	  .flow-visual-hierarchy-section-lines-right {
+  4828	  left: calc(
+  4829	    100% + var(--flow-visual-hierarchy-focal-scale-outset) +
+  4830	      var(--flow-visual-hierarchy-tip-frame-gap) -
+  4831	      var(--flow-visual-hierarchy-callout-align-offset, 0px)
+  4832	  );
+  4833	}
+  4834	
+  4835	.flow-capture-group-visual-hierarchy
+  4836	  .flow-screen-stack-step-1b
+  4837	  .flow-visual-hierarchy-section-lines-left,
+  4838	.flow-capture-group-visual-hierarchy
+  4839	  .flow-screen-stack-step-1c
+  4840	  .flow-visual-hierarchy-section-lines-left,
   4841	.flow-capture-group-visual-hierarchy
-  4842	  .flow-screen-stack-step-3
-  4843	  .flow-visual-hierarchy-section-label-wrapped,
-  4844	.flow-capture-group-visual-hierarchy
-  4845	  .flow-screen-stack-step-6
-  4846	  .flow-visual-hierarchy-section-label-wrapped {
-  4847	  left: calc(100% + 23px);
-  4848	}
-  4849	
-  4850	.flow-capture-group-visual-hierarchy
-  4851	  .flow-screen-stack-step-1b
-  4852	  .flow-visual-hierarchy-section-label,
-  4853	.flow-capture-group-visual-hierarchy
-  4854	  .flow-screen-stack-step-1c
-  4855	  .flow-visual-hierarchy-section-label,
-  4856	.flow-capture-group-visual-hierarchy
-  4857	  .flow-screen-stack-step-1d
-  4858	  .flow-visual-hierarchy-section-label,
-  4859	.flow-capture-group-visual-hierarchy
-  4860	  .flow-screen-stack-step-4
-  4861	  .flow-visual-hierarchy-section-label,
-  4862	.flow-capture-group-visual-hierarchy
-  4863	  .flow-screen-stack-step-5
-  4864	  .flow-visual-hierarchy-section-label {
-  4865	  font-size: 19.2px;
-  4866	  left: calc(100% + 32px);
-  4867	  letter-spacing: 0.1em;
-  4868	  top: 50%;
-  4869	  transform: translateY(-50%) rotate(90deg) translateX(-50%);
-  4870	  transform-origin: left center;
-  4871	}
-  4872	
+  4842	  .flow-screen-stack-step-1d
+  4843	  .flow-visual-hierarchy-section-lines-left {
+  4844	  left: auto;
+  4845	  right: calc(
+  4846	    100% + var(--flow-visual-hierarchy-focal-scale-outset) +
+  4847	      var(--flow-visual-hierarchy-tip-frame-gap)
+  4848	  );
+  4849	}
+  4850	
+  4851	.flow-capture-group-visual-hierarchy
+  4852	  .flow-screen-stack-step-1b
+  4853	  .flow-visual-hierarchy-section-line,
+  4854	.flow-capture-group-visual-hierarchy
+  4855	  .flow-screen-stack-step-1c
+  4856	  .flow-visual-hierarchy-section-line,
+  4857	.flow-capture-group-visual-hierarchy
+  4858	  .flow-screen-stack-step-1d
+  4859	  .flow-visual-hierarchy-section-line,
+  4860	.flow-capture-group-visual-hierarchy
+  4861	  .flow-screen-stack-step-4
+  4862	  .flow-visual-hierarchy-section-line,
+  4863	.flow-capture-group-visual-hierarchy
+  4864	  .flow-screen-stack-step-5
+  4865	  .flow-visual-hierarchy-section-line {
+  4866	  height: 9.6px;
+  4867	  width: 48px;
+  4868	}
+  4869	
+  4870	.flow-capture-group-visual-hierarchy
+  4871	  .flow-screen-stack-step-1b
+  4872	  .flow-visual-hierarchy-section-line::after,
   4873	.flow-capture-group-visual-hierarchy
-  4874	  .flow-screen-stack-step-1b
-  4875	  .flow-visual-hierarchy-section-label-wrapped,
+  4874	  .flow-screen-stack-step-1c
+  4875	  .flow-visual-hierarchy-section-line::after,
   4876	.flow-capture-group-visual-hierarchy
-  4877	  .flow-screen-stack-step-1c
-  4878	  .flow-visual-hierarchy-section-label-wrapped,
+  4877	  .flow-screen-stack-step-1d
+  4878	  .flow-visual-hierarchy-section-line::after,
   4879	.flow-capture-group-visual-hierarchy
-  4880	  .flow-screen-stack-step-1d
-  4881	  .flow-visual-hierarchy-section-label-wrapped,
+  4880	  .flow-screen-stack-step-4
+  4881	  .flow-visual-hierarchy-section-line::after,
   4882	.flow-capture-group-visual-hierarchy
-  4883	  .flow-screen-stack-step-4
-  4884	  .flow-visual-hierarchy-section-label-wrapped,
-  4885	.flow-capture-group-visual-hierarchy
-  4886	  .flow-screen-stack-step-5
-  4887	  .flow-visual-hierarchy-section-label-wrapped {
-  4888	  left: calc(100% + 45px);
-  4889	}
-  4890	
+  4883	  .flow-screen-stack-step-5
+  4884	  .flow-visual-hierarchy-section-line::after {
+  4885	  height: 4.6px;
+  4886	}
+  4887	
+  4888	.flow-capture-group-visual-hierarchy
+  4889	  .flow-screen-stack-step-1
+  4890	  .flow-visual-hierarchy-section-label,
   4891	.flow-capture-group-visual-hierarchy
-  4892	  .flow-screen-stack-step-4
-  4893	  .flow-visual-hierarchy-external-annotation,
+  4892	  .flow-screen-stack-step-3
+  4893	  .flow-visual-hierarchy-section-label,
   4894	.flow-capture-group-visual-hierarchy
-  4895	  .flow-screen-stack-step-5
-  4896	  .flow-visual-hierarchy-external-annotation {
-  4897	  font-size: 56px !important;
-  4898	  line-height: 1.06;
-  4899	  right: calc(100% - 22px) !important;
-  4900	  transform: translateY(-50%) rotate(-90deg) !important;
-  4901	  transform-origin: center center;
-  4902	  white-space: nowrap;
-  4903	}
-  4904	
-  4905	.flow-capture-group-visual-hierarchy .flow-screen-stack-step-4 h4,
-  4906	.flow-capture-group-visual-hierarchy .flow-screen-stack-step-5 h4 {
-  4907	  transform: translateX(0) !important;
-  4908	}
-  4909	
-  4910	.flow-capture-group-visual-hierarchy .flow-screen-stack-step-4 h4 {
-  4911	  margin-bottom: 6px;
-  4912	}
-  4913	
-  4914	.flow-capture-group-visual-hierarchy
-  4915	  .flow-screen-stack-step-4
-  4916	  .flow-visual-hierarchy-frame-pair {
-  4917	  transform: translateY(-18px);
-  4918	}
-  4919	
+  4895	  .flow-screen-stack-step-6
+  4896	  .flow-visual-hierarchy-section-label {
+  4897	  font-size: 10px;
+  4898	}
+  4899	
+  4900	.flow-capture-group-visual-hierarchy
+  4901	  .flow-screen-stack-step-1
+  4902	  .flow-visual-hierarchy-external-annotation,
+  4903	.flow-capture-group-visual-hierarchy
+  4904	  .flow-screen-stack-step-3
+  4905	  .flow-visual-hierarchy-external-annotation,
+  4906	.flow-capture-group-visual-hierarchy
+  4907	  .flow-screen-stack-step-6
+  4908	  .flow-visual-hierarchy-external-annotation {
+  4909	  right: calc(
+  4910	    100% - 70px - var(--flow-visual-hierarchy-viewing-label-shift)
+  4911	  ) !important;
+  4912	  transform: translateY(-50%) rotate(-90deg) !important;
+  4913	  transform-origin: center center;
+  4914	}
+  4915	
+  4916	.flow-capture-group-visual-hierarchy
+  4917	  .flow-screen-stack-step-1
+  4918	  .flow-visual-hierarchy-external-annotation
+  4919	  > span,
   4920	.flow-capture-group-visual-hierarchy
-  4921	  .flow-screen-stack-step-4
-  4922	  .flow-visual-hierarchy-external-annotation {
-  4923	  top: calc(50% + 30px) !important;
-  4924	}
-  4925	
-  4926	.flow-capture-group-visual-hierarchy .flow-screen-stack-step-5 h4 {
-  4927	  margin-bottom: 12px;
-  4928	}
-  4929	
-  4930	.flow-capture-group-visual-hierarchy
-  4931	  .flow-screen-stack-step-5
-  4932	  .flow-visual-hierarchy-external-annotation {
-  4933	  top: calc(54.53% - 12px) !important;
-  4934	}
-  4935	
-  4936	.flow-capture-group-visual-hierarchy
-  4937	  .flow-screen-stack-step-4
-  4938	  .flow-visual-hierarchy-external-annotation
-  4939	  > span,
-  4940	.flow-capture-group-visual-hierarchy
-  4941	  .flow-screen-stack-step-5
-  4942	  .flow-visual-hierarchy-external-annotation
-  4943	  > span {
-  4944	  display: inline;
-  4945	  white-space: nowrap;
-  4946	}
-  4947	
-  4948	.flow-capture-group-visual-hierarchy
-  4949	  .flow-screen-stack-step-1b
-  4950	  .flow-visual-hierarchy-section-lines-left
+  4921	  .flow-screen-stack-step-3
+  4922	  .flow-visual-hierarchy-external-annotation
+  4923	  > span,
+  4924	.flow-capture-group-visual-hierarchy
+  4925	  .flow-screen-stack-step-6
+  4926	  .flow-visual-hierarchy-external-annotation
+  4927	  > span {
+  4928	  display: inline;
+  4929	  white-space: nowrap;
+  4930	}
+  4931	
+  4932	.flow-capture-group-visual-hierarchy
+  4933	  .flow-screen-stack-step-1
+  4934	  .flow-visual-hierarchy-section-label {
+  4935	  font-size: 9.6px;
+  4936	  left: calc(100% + 16px);
+  4937	  letter-spacing: 0.1em;
+  4938	  top: 50%;
+  4939	  transform: translateY(-50%) rotate(90deg) translateX(-50%);
+  4940	  transform-origin: left center;
+  4941	}
+  4942	
+  4943	.flow-capture-group-visual-hierarchy
+  4944	  .flow-screen-stack-step-1
+  4945	  .flow-visual-hierarchy-section-label-wrapped {
+  4946	  left: calc(100% + 23px);
+  4947	}
+  4948	
+  4949	.flow-capture-group-visual-hierarchy
+  4950	  .flow-screen-stack-step-3
   4951	  .flow-visual-hierarchy-section-label,
   4952	.flow-capture-group-visual-hierarchy
-  4953	  .flow-screen-stack-step-1c
-  4954	  .flow-visual-hierarchy-section-lines-left
-  4955	  .flow-visual-hierarchy-section-label,
-  4956	.flow-capture-group-visual-hierarchy
-  4957	  .flow-screen-stack-step-1d
-  4958	  .flow-visual-hierarchy-section-lines-left
-  4959	  .flow-visual-hierarchy-section-label {
-  4960	  left: auto;
-  4961	  right: calc(100% + 32px);
-  4962	  transform: translateY(-50%) rotate(-90deg) translateX(50%);
-  4963	  transform-origin: right center;
-  4964	}
-  4965	
-  4966	.flow-capture-group-visual-hierarchy
-  4967	  .flow-screen-stack-step-1b
-  4968	  .flow-visual-hierarchy-section-lines-left
-  4969	  .flow-visual-hierarchy-section-label-wrapped,
-  4970	.flow-capture-group-visual-hierarchy
-  4971	  .flow-screen-stack-step-1c
-  4972	  .flow-visual-hierarchy-section-lines-left
-  4973	  .flow-visual-hierarchy-section-label-wrapped,
+  4953	  .flow-screen-stack-step-6
+  4954	  .flow-visual-hierarchy-section-label {
+  4955	  left: calc(100% + 16px);
+  4956	  letter-spacing: 0.1em;
+  4957	  top: 50%;
+  4958	  transform: translateY(-50%) rotate(90deg) translateX(-50%);
+  4959	  transform-origin: left center;
+  4960	}
+  4961	
+  4962	.flow-capture-group-visual-hierarchy
+  4963	  .flow-screen-stack-step-3
+  4964	  .flow-visual-hierarchy-section-label-wrapped,
+  4965	.flow-capture-group-visual-hierarchy
+  4966	  .flow-screen-stack-step-6
+  4967	  .flow-visual-hierarchy-section-label-wrapped {
+  4968	  left: calc(100% + 23px);
+  4969	}
+  4970	
+  4971	.flow-capture-group-visual-hierarchy
+  4972	  .flow-screen-stack-step-6b
+  4973	  .flow-visual-hierarchy-section-lines,
   4974	.flow-capture-group-visual-hierarchy
-  4975	  .flow-screen-stack-step-1d
-  4976	  .flow-visual-hierarchy-section-lines-left
-  4977	  .flow-visual-hierarchy-section-label-wrapped {
-  4978	  left: auto;
-  4979	  right: calc(100% + 45px);
-  4980	}
-  4981	
-  4982	.flow-capture-group-visual-hierarchy
-  4983	  .flow-screen-stack-step-1
-  4984	  .flow-visual-hierarchy-section-line:nth-child(1)
-  4985	  .flow-visual-hierarchy-section-label,
+  4975	  .flow-screen-stack-step-6c
+  4976	  .flow-visual-hierarchy-section-lines {
+  4977	  left: calc(
+  4978	    100% + var(--flow-visual-hierarchy-tip-frame-gap) - 7.5px
+  4979	  );
+  4980	  width: 48px;
+  4981	}
+  4982	
+  4983	.flow-capture-group-visual-hierarchy
+  4984	  .flow-screen-stack-step-6b
+  4985	  .flow-visual-hierarchy-section-line,
   4986	.flow-capture-group-visual-hierarchy
-  4987	  .flow-screen-stack-step-1
-  4988	  .flow-visual-hierarchy-section-line:nth-child(2)
-  4989	  .flow-visual-hierarchy-section-label,
-  4990	.flow-capture-group-visual-hierarchy
-  4991	  .flow-screen-stack-step-1b
-  4992	  .flow-visual-hierarchy-section-line:nth-child(1)
-  4993	  .flow-visual-hierarchy-section-label,
-  4994	.flow-capture-group-visual-hierarchy
-  4995	  .flow-screen-stack-step-1b
-  4996	  .flow-visual-hierarchy-section-line:nth-child(2)
-  4997	  .flow-visual-hierarchy-section-label {
-  4998	  letter-spacing: 0.02em;
-  4999	}
-  5000	
-  5001	.flow-visual-hierarchy-row-label {
-  5002	  color: #ffffff;
-  5003	  font-size: 26px;
-  5004	  font-weight: 850;
-  5005	  grid-column: 1 / -1;
-  5006	  grid-row: 1 / -1;
-  5007	  left: 50%;
-  5008	  letter-spacing: 0.08em;
-  5009	  line-height: 1;
-  5010	  pointer-events: none;
-  5011	  position: absolute;
-  5012	  text-align: center;
-  5013	  text-transform: uppercase;
-  5014	  transform: translateX(-50%);
-  5015	  white-space: nowrap;
-  5016	  z-index: 5;
-  5017	}
-  5018	
-  5019	.flow-visual-hierarchy-row-label-1 {
-  5020	  top: calc(-26px - var(--flow-visual-hierarchy-row-label-stack-gap));
-  5021	}
-  5022	
-  5023	.flow-visual-hierarchy-row-label-2 {
-  5024	  top: calc(
-  5025	    var(--flow-visual-hierarchy-scaled-row-height) +
-  5026	      var(--flow-visual-hierarchy-section-offset) + 14px -
-  5027	      var(--flow-visual-hierarchy-main-header-gap-offset)
-  5028	  );
-  5029	}
-  5030	
-  5031	.flow-visual-hierarchy-row-label-3 {
-  5032	  top: calc(
-  5033	    var(--flow-visual-hierarchy-scaled-row-height) * 2 +
-  5034	      var(--flow-visual-hierarchy-section-offset) * 2 + 39px -
-  5035	      var(--flow-visual-hierarchy-main-header-gap-offset)
-  5036	  );
-  5037	}
-  5038	
-  5039	@media (max-width: 980px), (orientation: portrait) {
-  5040	  .flow-capture-group-visual-hierarchy .flow-capture-grid {
-  5041	    gap: 24px;
-  5042	    grid-template-columns: minmax(0, 1fr);
-  5043	    justify-items: center;
-  5044	    padding-bottom: 0;
-  5045	    padding-top: 0;
-  5046	  }
+  4987	  .flow-screen-stack-step-6c
+  4988	  .flow-visual-hierarchy-section-line {
+  4989	  height: 9.6px;
+  4990	  width: 48px;
+  4991	}
+  4992	
+  4993	.flow-capture-group-visual-hierarchy
+  4994	  .flow-screen-stack-step-6b
+  4995	  .flow-visual-hierarchy-section-line::after,
+  4996	.flow-capture-group-visual-hierarchy
+  4997	  .flow-screen-stack-step-6c
+  4998	  .flow-visual-hierarchy-section-line::after {
+  4999	  height: 4.6px;
+  5000	}
+  5001	
+  5002	.flow-capture-group-visual-hierarchy
+  5003	  .flow-screen-stack-step-6b
+  5004	  .flow-visual-hierarchy-section-label,
+  5005	.flow-capture-group-visual-hierarchy
+  5006	  .flow-screen-stack-step-6c
+  5007	  .flow-visual-hierarchy-section-label {
+  5008	  font-size: 20px;
+  5009	  left: calc(100% + 32px);
+  5010	  letter-spacing: 0.1em;
+  5011	  top: 50%;
+  5012	  transform: translateY(-50%) rotate(90deg) translateX(-50%);
+  5013	  transform-origin: left center;
+  5014	}
+  5015	
+  5016	.flow-capture-group-visual-hierarchy
+  5017	  .flow-screen-stack-step-6b
+  5018	  .flow-visual-hierarchy-section-label-wrapped,
+  5019	.flow-capture-group-visual-hierarchy
+  5020	  .flow-screen-stack-step-6c
+  5021	  .flow-visual-hierarchy-section-label-wrapped {
+  5022	  left: calc(100% + 46px);
+  5023	}
+  5024	
+  5025	.flow-capture-group-visual-hierarchy
+  5026	  .flow-screen-stack-step-1b
+  5027	  .flow-visual-hierarchy-section-label,
+  5028	.flow-capture-group-visual-hierarchy
+  5029	  .flow-screen-stack-step-1c
+  5030	  .flow-visual-hierarchy-section-label,
+  5031	.flow-capture-group-visual-hierarchy
+  5032	  .flow-screen-stack-step-1d
+  5033	  .flow-visual-hierarchy-section-label,
+  5034	.flow-capture-group-visual-hierarchy
+  5035	  .flow-screen-stack-step-4
+  5036	  .flow-visual-hierarchy-section-label,
+  5037	.flow-capture-group-visual-hierarchy
+  5038	  .flow-screen-stack-step-5
+  5039	  .flow-visual-hierarchy-section-label {
+  5040	  font-size: 19.2px;
+  5041	  left: calc(100% + 32px);
+  5042	  letter-spacing: 0.1em;
+  5043	  top: 50%;
+  5044	  transform: translateY(-50%) rotate(90deg) translateX(-50%);
+  5045	  transform-origin: left center;
+  5046	}
   5047	
-  5048	  .flow-capture-group-visual-hierarchy .flow-screen-stack {
-  5049	    grid-column: 1 / -1;
-  5050	    margin-top: 0;
-  5051	    max-width: 100%;
-  5052	    position: relative;
-  5053	    top: auto;
-  5054	    width: min(100%, 432px);
-  5055	  }
-  5056	
-  5057	  .flow-visual-hierarchy-row-label {
-  5058	    grid-column: 1 / -1;
-  5059	    left: auto;
-  5060	    margin-top: var(--flow-visual-hierarchy-row-label-stack-gap);
-  5061	    position: static;
-  5062	    transform: none;
-  5063	  }
-  5064	
-  5065	  .flow-visual-hierarchy-row-label-1 {
-  5066	    grid-row: 1;
-  5067	    margin-top: 0;
-  5068	    top: auto;
-  5069	  }
-  5070	
-  5071	  .flow-capture-group-visual-hierarchy .flow-screen-stack-step-1 {
-  5072	    grid-row: 2;
-  5073	  }
-  5074	
-  5075	  .flow-capture-group-visual-hierarchy .flow-screen-stack-step-1b {
-  5076	    grid-row: 3;
-  5077	  }
-  5078	
-  5079	  .flow-capture-group-visual-hierarchy .flow-screen-stack-step-1c {
-  5080	    grid-row: 4;
-  5081	  }
-  5082	
-  5083	  .flow-capture-group-visual-hierarchy .flow-screen-stack-step-1d {
-  5084	    grid-row: 5;
-  5085	  }
-  5086	
-  5087	  .flow-visual-hierarchy-row-label-2 {
-  5088	    grid-row: 6;
-  5089	    top: auto;
-  5090	  }
-  5091	
-  5092	  .flow-visual-hierarchy-row-label-3 {
-  5093	    grid-row: 10;
-  5094	    top: auto;
-  5095	  }
-  5096	
-  5097	  .flow-capture-group-visual-hierarchy .flow-screen-stack-step-3 {
-  5098	    grid-row: 7;
-  5099	  }
+  5048	.flow-capture-group-visual-hierarchy
+  5049	  .flow-screen-stack-step-1b
+  5050	  .flow-visual-hierarchy-section-label-wrapped,
+  5051	.flow-capture-group-visual-hierarchy
+  5052	  .flow-screen-stack-step-1c
+  5053	  .flow-visual-hierarchy-section-label-wrapped,
+  5054	.flow-capture-group-visual-hierarchy
+  5055	  .flow-screen-stack-step-1d
+  5056	  .flow-visual-hierarchy-section-label-wrapped,
+  5057	.flow-capture-group-visual-hierarchy
+  5058	  .flow-screen-stack-step-4
+  5059	  .flow-visual-hierarchy-section-label-wrapped,
+  5060	.flow-capture-group-visual-hierarchy
+  5061	  .flow-screen-stack-step-5
+  5062	  .flow-visual-hierarchy-section-label-wrapped {
+  5063	  left: calc(100% + 45px);
+  5064	}
+  5065	
+  5066	.flow-capture-group-visual-hierarchy
+  5067	  .flow-screen-stack-step-4
+  5068	  .flow-visual-hierarchy-external-annotation,
+  5069	.flow-capture-group-visual-hierarchy
+  5070	  .flow-screen-stack-step-5
+  5071	  .flow-visual-hierarchy-external-annotation {
+  5072	  font-size: 56px !important;
+  5073	  line-height: 1.06;
+  5074	  right: calc(100% - 22px) !important;
+  5075	  transform: translateY(-50%) rotate(-90deg) !important;
+  5076	  transform-origin: center center;
+  5077	  white-space: nowrap;
+  5078	}
+  5079	
+  5080	.flow-capture-group-visual-hierarchy .flow-screen-stack-step-4 h4,
+  5081	.flow-capture-group-visual-hierarchy .flow-screen-stack-step-5 h4 {
+  5082	  transform: translateX(0) !important;
+  5083	}
+  5084	
+  5085	.flow-capture-group-visual-hierarchy .flow-screen-stack-step-4 h4 {
+  5086	  margin-bottom: 6px;
+  5087	}
+  5088	
+  5089	.flow-capture-group-visual-hierarchy
+  5090	  .flow-screen-stack-step-4
+  5091	  .flow-visual-hierarchy-frame-pair {
+  5092	  transform: translateY(-18px);
+  5093	}
+  5094	
+  5095	.flow-capture-group-visual-hierarchy
+  5096	  .flow-screen-stack-step-4
+  5097	  .flow-visual-hierarchy-external-annotation {
+  5098	  top: calc(50% + 30px) !important;
+  5099	}
   5100	
-  5101	  .flow-capture-group-visual-hierarchy .flow-screen-stack-step-4 {
-  5102	    grid-row: 8;
-  5103	  }
+  5101	.flow-capture-group-visual-hierarchy .flow-screen-stack-step-5 h4 {
+  5102	  margin-bottom: 12px;
+  5103	}
   5104	
-  5105	  .flow-capture-group-visual-hierarchy .flow-screen-stack-step-5 {
-  5106	    grid-row: 9;
-  5107	  }
-  5108	
-  5109	  .flow-capture-group-visual-hierarchy .flow-screen-stack-step-6 {
-  5110	    grid-row: 11;
-  5111	  }
-  5112	
-  5113	  .flow-capture-group-visual-hierarchy .flow-screen-stack-step-6b {
-  5114	    grid-row: 12;
-  5115	  }
-  5116	
-  5117	  .flow-capture-group-visual-hierarchy .flow-screen-stack-step-6c {
-  5118	    grid-row: 13;
-  5119	  }
-  5120	}
-  5121	
-  5122	@media (max-width: 720px) {
-  5123	  .flow-capture-group-visual-hierarchy .flow-visual-hierarchy-frame-pair {
-  5124	    --flow-visual-hierarchy-brace-gap: 8px;
-  5125	    --flow-visual-hierarchy-brace-width: 56px;
-  5126	    --flow-visual-hierarchy-tip-frame-gap: 4px;
-  5127	
-  5128	    width: min(342px, calc(100vw - 92px));
-  5129	  }
-  5130	
-  5131	  .flow-visual-hierarchy-frame.flow-screen
-  5132	    .flow-visual-hierarchy-frame-pair
-  5133	    > .flow-image-frame,
-  5134	  .flow-visual-hierarchy-frame.flow-screen
-  5135	    .flow-visual-hierarchy-frame-pair
-  5136	    > .flow-protected-image-composition {
-  5137	    margin-left: calc(
-  5138	      var(--flow-visual-hierarchy-brace-width) +
-  5139	        var(--flow-visual-hierarchy-brace-gap)
-  5140	    );
-  5141	    margin-right: 0;
-  5142	    width: calc(
-  5143	      100% - var(--flow-visual-hierarchy-brace-width) -
-  5144	        var(--flow-visual-hierarchy-brace-gap)
-  5145	    );
-  5146	  }
-  5147	
-  5148	  .flow-capture-group-visual-hierarchy
-  5149	    .flow-visual-hierarchy-external-annotation {
-  5150	    font-size: 22px !important;
-  5151	  }
-  5152	
-  5153	  .flow-capture-group-full-row
-  5154	    .flow-screen-stack:has(.flow-visual-hierarchy-frame-pair)
-  5155	    h4 {
-  5156	    transform: none !important;
-  5157	  }
-  5158	}
-  5159	
-  5160	.flow-capture-group-full-row
-  5161	  .flow-screen-stack:has(.flow-visual-hierarchy-frame-pair)
-  5162	  h4 {
-  5163	  transform: translateX(var(--flow-visual-hierarchy-title-offset, 57px));
-  5164	}
-  5165	
-  5166	.flow-capture-group-full-row.flow-capture-group-visual-hierarchy
-  5167	  .flow-screen-stack-step-1b,
-  5168	.flow-capture-group-full-row.flow-capture-group-visual-hierarchy
-  5169	  .flow-screen-stack-step-1c,
-  5170	.flow-capture-group-full-row.flow-capture-group-visual-hierarchy
-  5171	  .flow-screen-stack-step-1d,
-  5172	.flow-capture-group-full-row.flow-capture-group-visual-hierarchy
-  5173	  .flow-screen-stack-step-4,
-  5174	.flow-capture-group-full-row.flow-capture-group-visual-hierarchy
-  5175	  .flow-screen-stack-step-5 {
-  5176	  --flow-visual-hierarchy-title-offset: 0px;
-  5177	}
-  5178	
-  5179	.flow-group-header {
-  5180	  max-width: 360px;
-  5181	}
-  5182	
-  5183	.flow-group-header span {
-  5184	  color: var(--green);
-  5185	  display: block;
-  5186	  font-size: 12px;
-  5187	  font-weight: 850;
-  5188	  letter-spacing: 0.1em;
-  5189	  line-height: 1;
-  5190	  margin-bottom: 14px;
-  5191	  text-transform: uppercase;
+  5105	.flow-capture-group-visual-hierarchy
+  5106	  .flow-screen-stack-step-5
+  5107	  .flow-visual-hierarchy-external-annotation {
+  5108	  top: calc(54.53% - 12px) !important;
+  5109	}
+  5110	
+  5111	.flow-capture-group-visual-hierarchy
+  5112	  .flow-screen-stack-step-4
+  5113	  .flow-visual-hierarchy-external-annotation
+  5114	  > span,
+  5115	.flow-capture-group-visual-hierarchy
+  5116	  .flow-screen-stack-step-5
+  5117	  .flow-visual-hierarchy-external-annotation
+  5118	  > span {
+  5119	  display: inline;
+  5120	  white-space: nowrap;
+  5121	}
+  5122	
+  5123	.flow-capture-group-visual-hierarchy
+  5124	  .flow-screen-stack-step-1b
+  5125	  .flow-visual-hierarchy-section-lines-left
+  5126	  .flow-visual-hierarchy-section-label,
+  5127	.flow-capture-group-visual-hierarchy
+  5128	  .flow-screen-stack-step-1c
+  5129	  .flow-visual-hierarchy-section-lines-left
+  5130	  .flow-visual-hierarchy-section-label,
+  5131	.flow-capture-group-visual-hierarchy
+  5132	  .flow-screen-stack-step-1d
+  5133	  .flow-visual-hierarchy-section-lines-left
+  5134	  .flow-visual-hierarchy-section-label {
+  5135	  left: auto;
+  5136	  right: calc(100% + 32px);
+  5137	  transform: translateY(-50%) rotate(-90deg) translateX(50%);
+  5138	  transform-origin: right center;
+  5139	}
+  5140	
+  5141	.flow-capture-group-visual-hierarchy
+  5142	  .flow-screen-stack-step-1b
+  5143	  .flow-visual-hierarchy-section-lines-left
+  5144	  .flow-visual-hierarchy-section-label-wrapped,
+  5145	.flow-capture-group-visual-hierarchy
+  5146	  .flow-screen-stack-step-1c
+  5147	  .flow-visual-hierarchy-section-lines-left
+  5148	  .flow-visual-hierarchy-section-label-wrapped,
+  5149	.flow-capture-group-visual-hierarchy
+  5150	  .flow-screen-stack-step-1d
+  5151	  .flow-visual-hierarchy-section-lines-left
+  5152	  .flow-visual-hierarchy-section-label-wrapped {
+  5153	  left: auto;
+  5154	  right: calc(100% + 45px);
+  5155	}
+  5156	
+  5157	.flow-capture-group-visual-hierarchy
+  5158	  .flow-screen-stack-step-1
+  5159	  .flow-visual-hierarchy-section-line:nth-child(1)
+  5160	  .flow-visual-hierarchy-section-label,
+  5161	.flow-capture-group-visual-hierarchy
+  5162	  .flow-screen-stack-step-1
+  5163	  .flow-visual-hierarchy-section-line:nth-child(2)
+  5164	  .flow-visual-hierarchy-section-label,
+  5165	.flow-capture-group-visual-hierarchy
+  5166	  .flow-screen-stack-step-1b
+  5167	  .flow-visual-hierarchy-section-line:nth-child(1)
+  5168	  .flow-visual-hierarchy-section-label,
+  5169	.flow-capture-group-visual-hierarchy
+  5170	  .flow-screen-stack-step-1b
+  5171	  .flow-visual-hierarchy-section-line:nth-child(2)
+  5172	  .flow-visual-hierarchy-section-label {
+  5173	  letter-spacing: 0.02em;
+  5174	}
+  5175	
+  5176	.flow-visual-hierarchy-row-label {
+  5177	  color: #ffffff;
+  5178	  font-size: 26px;
+  5179	  font-weight: 850;
+  5180	  grid-column: 1 / -1;
+  5181	  grid-row: 1 / -1;
+  5182	  left: 50%;
+  5183	  letter-spacing: 0.08em;
+  5184	  line-height: 1;
+  5185	  pointer-events: none;
+  5186	  position: absolute;
+  5187	  text-align: center;
+  5188	  text-transform: uppercase;
+  5189	  transform: translateX(-50%);
+  5190	  white-space: nowrap;
+  5191	  z-index: 5;
   5192	}
   5193	
-  5194	.flow-group-header h3 {
-  5195	  font-size: 34px;
-  5196	  line-height: 1;
-  5197	  margin-bottom: 14px;
-  5198	}
-  5199	
-  5200	.flow-group-header p {
-  5201	  color: #b8c9bf;
-  5202	  line-height: 1.6;
-  5203	  margin-bottom: 0;
+  5194	.flow-visual-hierarchy-row-label-1 {
+  5195	  top: calc(-26px - var(--flow-visual-hierarchy-row-label-stack-gap));
+  5196	}
+  5197	
+  5198	.flow-visual-hierarchy-row-label-2 {
+  5199	  top: calc(
+  5200	    var(--flow-visual-hierarchy-scaled-row-height) +
+  5201	      var(--flow-visual-hierarchy-section-offset) + 14px -
+  5202	      var(--flow-visual-hierarchy-main-header-gap-offset)
+  5203	  );
   5204	}
   5205	
-  5206	.flow-capture-grid {
-  5207	  align-items: start;
-  5208	  display: grid;
-  5209	  gap: 34px;
-  5210	  grid-template-columns: repeat(auto-fit, minmax(285px, 1fr));
-  5211	}
-  5212	
-  5213	.flow-screen-stack {
-  5214	  min-width: 0;
-  5215	}
-  5216	
-  5217	.flow-screen-stack h4 {
-  5218	  color: var(--text);
-  5219	  font-size: 15px;
-  5220	  font-weight: 850;
-  5221	  letter-spacing: 0;
-  5222	  line-height: 1.2;
-  5223	  margin: 0 0 14px;
-  5224	  text-align: center;
-  5225	}
-  5226	
-  5227	.flow-screen-stack-captures {
-  5228	  align-items: start;
-  5229	  display: flex;
-  5230	  gap: 14px;
-  5231	  justify-content: center;
+  5206	.flow-visual-hierarchy-row-label-3 {
+  5207	  top: calc(
+  5208	    var(--flow-visual-hierarchy-scaled-row-height) * 2 +
+  5209	      var(--flow-visual-hierarchy-section-offset) * 2 + 39px -
+  5210	      var(--flow-visual-hierarchy-main-header-gap-offset)
+  5211	  );
+  5212	}
+  5213	
+  5214	.flow-capture-group-visual-hierarchy .flow-capture-grid-row-group {
+  5215	  padding-bottom: 0;
+  5216	}
+  5217	
+  5218	.flow-capture-group-visual-hierarchy
+  5219	  .flow-browse-extra
+  5220	  .flow-capture-grid-row-group
+  5221	  + .flow-capture-grid-row-group {
+  5222	  margin-top: calc(
+  5223	    var(--flow-visual-hierarchy-section-offset) +
+  5224	      var(--flow-visual-hierarchy-row-label-stack-gap)
+  5225	  );
+  5226	}
+  5227	
+  5228	.flow-capture-group-visual-hierarchy
+  5229	  .flow-capture-grid-row-group
+  5230	  .flow-visual-hierarchy-row-label {
+  5231	  top: calc(-26px - var(--flow-visual-hierarchy-row-label-stack-gap));
   5232	}
   5233	
-  5234	.cinerific-case .flow-image-frame,
-  5235	.cinerific-case .flow-screen-standard .flow-image-frame,
-  5236	.cinerific-case .flow-screen-tall .flow-image-frame {
-  5237	  aspect-ratio: 16 / 9;
-  5238	  background: linear-gradient(145deg, #0c120f, #000);
-  5239	  border-radius: var(--capture-frame-radius-standard);
-  5240	}
-  5241	
-  5242	.cinerific-case .flow-image-frame::before {
-  5243	  background:
-  5244	    linear-gradient(rgba(67, 255, 146, 0.04) 1px, transparent 1px),
-  5245	    linear-gradient(90deg, rgba(67, 255, 146, 0.04) 1px, transparent 1px),
-  5246	    #020403;
-  5247	  background-size: 14px 14px;
-  5248	  border: 1px solid rgba(198, 255, 217, 0.16);
-  5249	  border-radius: 5px;
-  5250	  content: "";
-  5251	  inset: 10px 14px;
-  5252	  position: absolute;
+  5234	.flow-capture-group-visual-hierarchy
+  5235	  .flow-capture-grid-row-group-2
+  5236	  .flow-screen-stack-step-3 {
+  5237	  grid-row: 1 / 3;
+  5238	  top: 0;
+  5239	}
+  5240	
+  5241	.flow-capture-group-visual-hierarchy
+  5242	  .flow-capture-grid-row-group-2
+  5243	  .flow-screen-stack-step-4 {
+  5244	  grid-row: 1 / 2;
+  5245	  top: calc(var(--flow-visual-hierarchy-section-offset) - 34px);
+  5246	}
+  5247	
+  5248	.flow-capture-group-visual-hierarchy
+  5249	  .flow-capture-grid-row-group-2
+  5250	  .flow-screen-stack-step-5 {
+  5251	  grid-row: 2 / 3;
+  5252	  top: 3px;
   5253	}
   5254	
-  5255	.cinerific-case .flow-image-frame::after {
-  5256	  background: #1d2923;
-  5257	  border: 1px solid rgba(198, 255, 217, 0.24);
-  5258	  border-radius: 999px;
-  5259	  content: "";
-  5260	  height: 4px;
-  5261	  left: 5px;
-  5262	  position: absolute;
-  5263	  top: 50%;
-  5264	  transform: translateY(-50%);
-  5265	  width: 4px;
-  5266	}
-  5267	
-  5268	.flow-browse-toggle-row {
-  5269	  display: flex;
-  5270	  justify-content: center;
-  5271	  margin-top: 26px;
-  5272	}
-  5273	
-  5274	.flow-browse-toggle {
-  5275	  cursor: pointer;
-  5276	  font-family: inherit;
-  5277	}
-  5278	
-  5279	.alla-vostra-case .flow-browse-toggle {
-  5280	  inline-size: calc((152px * 2) + 14px);
-  5281	  max-inline-size: 100%;
-  5282	}
-  5283	
-  5284	.flow-browse-toggle svg {
-  5285	  flex: 0 0 auto;
-  5286	}
-  5287	
-  5288	.flow-browse-extra {
-  5289	  max-height: 0;
-  5290	  opacity: 0;
-  5291	  overflow: hidden;
-  5292	  pointer-events: none;
-  5293	  transform: translateY(-8px);
-  5294	  transition: max-height 320ms ease, opacity 220ms ease, transform 220ms ease,
-  5295	    margin-top 220ms ease;
-  5296	}
-  5297	
-  5298	.flow-browse-extra.is-open {
-  5299	  margin-top: 34px;
-  5300	  max-height: 5200px;
-  5301	  opacity: 1;
-  5302	  pointer-events: auto;
-  5303	  transform: translateY(0);
-  5304	}
-  5305	
-  5306	.architecture-map {
-  5307	  display: grid;
-  5308	  gap: 12px;
-  5309	  grid-template-columns: repeat(5, minmax(0, 1fr));
-  5310	}
+  5255	.flow-capture-group-visual-hierarchy
+  5256	  .flow-capture-grid-row-group-3
+  5257	  .flow-screen-stack-step-6 {
+  5258	  grid-row: 1 / 3;
+  5259	  top: 0;
+  5260	}
+  5261	
+  5262	.flow-capture-group-visual-hierarchy
+  5263	  .flow-capture-grid-row-group-3
+  5264	  .flow-screen-stack-step-6b {
+  5265	  grid-row: 1 / 2;
+  5266	  top: 0;
+  5267	}
+  5268	
+  5269	.flow-capture-group-visual-hierarchy
+  5270	  .flow-capture-grid-row-group-3
+  5271	  .flow-screen-stack-step-6c {
+  5272	  grid-row: 2 / 3;
+  5273	  top: 17px;
+  5274	}
+  5275	
+  5276	@media (max-width: 980px), (orientation: portrait) {
+  5277	  .flow-capture-group-visual-hierarchy .flow-capture-grid {
+  5278	    gap: 24px;
+  5279	    grid-template-columns: minmax(0, 1fr);
+  5280	    justify-items: center;
+  5281	    padding-bottom: 0;
+  5282	    padding-top: 0;
+  5283	  }
+  5284	
+  5285	  .flow-capture-group-visual-hierarchy .flow-screen-stack {
+  5286	    grid-column: 1 / -1;
+  5287	    margin-top: 0;
+  5288	    max-width: 100%;
+  5289	    position: relative;
+  5290	    top: auto;
+  5291	    width: min(100%, 432px);
+  5292	  }
+  5293	
+  5294	  .flow-visual-hierarchy-row-label {
+  5295	    grid-column: 1 / -1;
+  5296	    left: auto;
+  5297	    margin-top: var(--flow-visual-hierarchy-row-label-stack-gap);
+  5298	    position: static;
+  5299	    transform: none;
+  5300	  }
+  5301	
+  5302	  .flow-visual-hierarchy-row-label-1 {
+  5303	    grid-row: 1;
+  5304	    margin-top: 0;
+  5305	    top: auto;
+  5306	  }
+  5307	
+  5308	  .flow-capture-group-visual-hierarchy .flow-screen-stack-step-1 {
+  5309	    grid-row: 2;
+  5310	  }
   5311	
-  5312	.architecture-node {
-  5313	  min-height: 178px;
-  5314	  padding: 18px;
-  5315	}
-  5316	
-  5317	.architecture-node span {
-  5318	  color: var(--green);
-  5319	  display: block;
-  5320	  font-size: 13px;
-  5321	  font-weight: 900;
-  5322	  margin-bottom: 18px;
-  5323	}
-  5324	
-  5325	.architecture-node strong {
-  5326	  color: var(--text);
-  5327	  display: block;
-  5328	  font-size: 16px;
-  5329	  line-height: 1.25;
-  5330	  margin-bottom: 12px;
-  5331	}
-  5332	
-  5333	.architecture-node p {
-  5334	  font-size: 13px;
-  5335	}
-  5336	
-  5337	.architecture-copy {
-  5338	  margin: 26px 0 0;
-  5339	}
-  5340	
-  5341	.readiness-copy {
-  5342	  margin-bottom: 24px;
-  5343	}
-  5344	
-  5345	.readiness-list,
-  5346	.proof-points {
-  5347	  display: flex;
-  5348	  flex-wrap: wrap;
-  5349	  gap: 10px;
-  5350	}
-  5351	
-  5352	.project-timeline {
-  5353	  display: grid;
-  5354	  gap: 14px;
-  5355	}
-  5356	
-  5357	.project-timeline-item {
-  5358	  display: grid;
-  5359	  gap: 22px;
-  5360	  grid-template-columns: 56px 1fr;
-  5361	  padding: 22px;
-  5362	}
-  5363	
-  5364	.project-timeline-item > span {
-  5365	  color: var(--green);
-  5366	  font-size: 18px;
-  5367	  font-weight: 900;
-  5368	}
-  5369	
-  5370	.project-timeline-item h3 {
-  5371	  font-size: 20px;
-  5372	  line-height: 1.2;
-  5373	  margin-bottom: 10px;
-  5374	}
-  5375	
-  5376	.stack-matrix {
-  5377	  display: grid;
-  5378	  gap: 14px;
-  5379	  grid-template-columns: repeat(5, minmax(0, 1fr));
-  5380	  margin-top: 34px;
-  5381	}
-  5382	
-  5383	.stack-group {
-  5384	  padding: 20px;
-  5385	}
-  5386	
-  5387	.stack-group h3 {
-  5388	  font-size: 11px;
-  5389	}
-  5390	
-  5391	.stack-group div {
-  5392	  display: grid;
-  5393	  gap: 8px;
-  5394	}
-  5395	
-  5396	.stack-group span {
-  5397	  color: #d8ffe4;
-  5398	  font-size: 14px;
-  5399	  font-weight: 750;
-  5400	  line-height: 1.35;
+  5312	  .flow-capture-group-visual-hierarchy .flow-screen-stack-step-1b {
+  5313	    grid-row: 3;
+  5314	  }
+  5315	
+  5316	  .flow-capture-group-visual-hierarchy .flow-screen-stack-step-1c {
+  5317	    grid-row: 4;
+  5318	  }
+  5319	
+  5320	  .flow-capture-group-visual-hierarchy .flow-screen-stack-step-1d {
+  5321	    grid-row: 5;
+  5322	  }
+  5323	
+  5324	  .flow-visual-hierarchy-row-label-2 {
+  5325	    grid-row: 6;
+  5326	    top: auto;
+  5327	  }
+  5328	
+  5329	  .flow-visual-hierarchy-row-label-3 {
+  5330	    grid-row: 10;
+  5331	    top: auto;
+  5332	  }
+  5333	
+  5334	  .flow-capture-group-visual-hierarchy .flow-screen-stack-step-3 {
+  5335	    grid-row: 7;
+  5336	  }
+  5337	
+  5338	  .flow-capture-group-visual-hierarchy .flow-screen-stack-step-4 {
+  5339	    grid-row: 8;
+  5340	  }
+  5341	
+  5342	  .flow-capture-group-visual-hierarchy .flow-screen-stack-step-5 {
+  5343	    grid-row: 9;
+  5344	  }
+  5345	
+  5346	  .flow-capture-group-visual-hierarchy .flow-screen-stack-step-6 {
+  5347	    grid-row: 11;
+  5348	  }
+  5349	
+  5350	  .flow-capture-group-visual-hierarchy .flow-screen-stack-step-6b {
+  5351	    grid-row: 12;
+  5352	  }
+  5353	
+  5354	  .flow-capture-group-visual-hierarchy .flow-screen-stack-step-6c {
+  5355	    grid-row: 13;
+  5356	  }
+  5357	}
+  5358	
+  5359	@media (max-width: 720px) {
+  5360	  .flow-capture-group-visual-hierarchy .flow-visual-hierarchy-frame-pair {
+  5361	    --flow-visual-hierarchy-brace-gap: 8px;
+  5362	    --flow-visual-hierarchy-brace-width: 56px;
+  5363	    --flow-visual-hierarchy-tip-frame-gap: 4px;
+  5364	
+  5365	    width: min(342px, calc(100vw - 92px));
+  5366	  }
+  5367	
+  5368	  .flow-visual-hierarchy-frame.flow-screen
+  5369	    .flow-visual-hierarchy-frame-pair
+  5370	    > .flow-image-frame,
+  5371	  .flow-visual-hierarchy-frame.flow-screen
+  5372	    .flow-visual-hierarchy-frame-pair
+  5373	    > .flow-protected-image-composition {
+  5374	    margin-left: calc(
+  5375	      var(--flow-visual-hierarchy-brace-width) +
+  5376	        var(--flow-visual-hierarchy-brace-gap)
+  5377	    );
+  5378	    margin-right: 0;
+  5379	    width: calc(
+  5380	      100% - var(--flow-visual-hierarchy-brace-width) -
+  5381	        var(--flow-visual-hierarchy-brace-gap)
+  5382	    );
+  5383	  }
+  5384	
+  5385	  .flow-capture-group-visual-hierarchy
+  5386	    .flow-visual-hierarchy-external-annotation {
+  5387	    font-size: 22px !important;
+  5388	  }
+  5389	
+  5390	  .flow-capture-group-full-row
+  5391	    .flow-screen-stack:has(.flow-visual-hierarchy-frame-pair)
+  5392	    h4 {
+  5393	    transform: none !important;
+  5394	  }
+  5395	}
+  5396	
+  5397	.flow-capture-group-full-row
+  5398	  .flow-screen-stack:has(.flow-visual-hierarchy-frame-pair)
+  5399	  h4 {
+  5400	  transform: translateX(var(--flow-visual-hierarchy-title-offset, 57px));
   5401	}
   5402	
-  5403	.proof-points {
-  5404	  margin-top: 34px;
-  5405	}
-  5406	
-  5407	.closing-panel {
-  5408	  align-items: center;
-  5409	  background: linear-gradient(180deg, rgba(13, 31, 22, 0.88), rgba(5, 13, 9, 0.88));
-  5410	  border: 1px solid var(--line);
-  5411	  border-radius: 8px;
-  5412	  display: grid;
-  5413	  gap: 34px;
-  5414	  grid-template-columns: minmax(0, 1fr) auto;
-  5415	  padding: 34px;
-  5416	}
-  5417	
-  5418	.closing-panel h2 {
-  5419	  font-size: clamp(30px, 4vw, 50px);
-  5420	  margin-bottom: 18px;
-  5421	  max-width: 720px;
-  5422	}
-  5423	
-  5424	.closing-panel p {
-  5425	  max-width: 760px;
-  5426	}
-  5427	
-  5428	.closing-actions {
-  5429	  display: flex;
-  5430	  flex-direction: column;
-  5431	  gap: 12px;
-  5432	  min-width: 190px;
-  5433	}
-  5434	
-  5435	@media (max-width: 980px) {
-  5436	  .product-flow-nav {
-  5437	    --product-flow-nav-font-size: clamp(40px, 5.7vw, 56px);
-  5438	  }
-  5439	
-  5440	  .hero-copy {
-  5441	    --hero-proof-stack-width: min(606px, 100%);
-  5442	    --hero-action-stack-width: var(--hero-proof-stack-width);
-  5443	    --hero-text-stack-width: var(--hero-action-stack-width);
-  5444	  }
-  5445	
-  5446	  .nav-bar {
-  5447	    --nav-bar-inline-padding: 16px;
-  5448	    --nav-bar-height: clamp(36px, calc(23.61px + 3.87vw), 48px);
-  5449	    --nav-link-bottom-separator-gap: 8px;
-  5450	    --nav-link-separator-gap: 6px;
-  5451	    --nav-link-top-separator-gap: 6px;
-  5452	    align-items: center;
-  5453	    display: block;
-  5454	    height: var(--nav-bar-two-row-height);
-  5455	    row-gap: 7.5px;
-  5456	    padding: 0 var(--nav-bar-inline-padding);
-  5457	  }
-  5458	
-  5459	  .nav-bar nav {
-  5460	    display: grid;
-  5461	    grid-template-rows: repeat(2, var(--nav-bar-height));
-  5462	    height: 100%;
-  5463	    row-gap: var(--nav-bar-two-row-gap);
-  5464	    width: 100%;
-  5465	  }
-  5466	
-  5467	  .nav-link-row {
-  5468	    display: flex;
-  5469	    flex-wrap: nowrap;
-  5470	    gap: var(--nav-link-separator-gap);
-  5471	    justify-content: space-between;
-  5472	    min-width: 0;
-  5473	    width: 100%;
-  5474	  }
-  5475	
-  5476	  .nav-link-row-top {
-  5477	    align-items: center;
-  5478	    column-gap: var(--nav-brand-gap);
-  5479	    display: flex;
-  5480	    height: var(--nav-bar-height);
-  5481	    justify-content: flex-start;
-  5482	    width: 100%;
-  5483	  }
-  5484	
-  5485	  .nav-top-distribution {
-  5486	    align-items: center;
-  5487	    display: grid;
-  5488	    flex: 1 1 auto;
-  5489	    grid-template-columns: repeat(2, minmax(0, 1fr));
-  5490	    justify-items: center;
-  5491	    min-width: 0;
-  5492	    position: relative;
-  5493	  }
-  5494	
-  5495	  .nav-top-distribution > .nav-top-link-primary {
-  5496	    grid-column: 1;
-  5497	    min-width: max-content;
-  5498	  }
-  5499	
-  5500	  .nav-top-distribution > .nav-top-link-secondary {
-  5501	    grid-column: 2;
-  5502	    min-width: max-content;
-  5503	  }
-  5504	
-  5505	  .nav-top-distribution > .nav-separator-top-center {
-  5506	    left: 50%;
-  5507	    position: absolute;
-  5508	    transform: translateX(-50%);
-  5509	  }
-  5510	
-  5511	  .nav-link-row-bottom {
-  5512	    align-items: center;
-  5513	    column-gap: var(--nav-link-bottom-separator-gap);
-  5514	    display: flex;
-  5515	    height: var(--nav-bar-height);
-  5516	    justify-content: space-evenly;
-  5517	    width: 100%;
-  5518	  }
-  5519	
-  5520	  .nav-separator.nav-separator-row-leading {
-  5521	    display: none;
-  5522	  }
-  5523	
-  5524	  .nav-bar nav a,
-  5525	  .nav-bar nav .nav-text {
-  5526	    flex: 1 1 0;
-  5527	    min-width: 0;
-  5528	    padding-left: 10px;
-  5529	    padding-right: 10px;
-  5530	    text-align: center;
-  5531	  }
-  5532	
-  5533	  .nav-bar nav .nav-link-row > a,
-  5534	  .nav-bar nav .nav-link-row > .nav-text {
-  5535	    flex: 0 0 auto;
-  5536	    justify-self: center;
-  5537	  }
-  5538	
-  5539	  .nav-bar nav .nav-link-row-top > .nav-brand-link {
-  5540	    display: inline-flex;
-  5541	    gap: var(--nav-brand-gap);
-  5542	    grid-column: 1;
-  5543	    height: var(--nav-bar-height);
-  5544	    margin-block: calc(var(--nav-card-border-width) * -1);
-  5545	    margin-right: 0;
-  5546	    min-width: max-content;
-  5547	    padding: 0 calc(var(--nav-brand-gap) + var(--nav-brand-card-bleed)) 0
-  5548	      var(--nav-brand-card-bleed);
-  5549	    justify-self: start;
-  5550	  }
-  5551	
-  5552	  .nav-bar nav .nav-link-row-top > .nav-brand-link .nav-brand-mark {
-  5553	    align-self: center;
-  5554	    flex: none;
-  5555	    height: 34px;
-  5556	    justify-self: center;
-  5557	    max-height: 34px;
-  5558	    max-width: 34px;
-  5559	    min-height: 34px;
-  5560	    min-width: 34px;
-  5561	    width: 34px;
-  5562	  }
-  5563	
-  5564	  .nav-bar nav .nav-link-row-top > .nav-brand-link .nav-brand-name {
-  5565	    align-self: center;
-  5566	    display: inline-flex;
-  5567	    justify-content: center;
-  5568	    line-height: 1;
-  5569	    text-align: center;
-  5570	  }
-  5571	
-  5572	  .nav-bar nav .nav-link-row-bottom > a,
-  5573	  .nav-bar nav .nav-link-row-bottom > .nav-text {
-  5574	    padding-bottom: 3.75px;
-  5575	    padding-top: 0;
-  5576	  }
-  5577	
-  5578	  .project-nav nav {
-  5579	    grid-template-columns: repeat(3, minmax(0, 1fr));
-  5580	  }
-  5581	
-  5582	  .hero-grid,
-  5583	  .worklog-layout,
-  5584	  .project-hero-grid,
-  5585	  .project-section-grid,
-  5586	  .readiness-layout {
-  5587	    grid-template-columns: 1fr;
-  5588	  }
-  5589	
-  5590	  .overview-section-grid {
-  5591	    grid-template-areas:
-  5592	      "heading"
-  5593	      "screens"
-  5594	      "copy";
-  5595	    grid-template-columns: 1fr;
-  5596	  }
-  5597	
-  5598	  .av-showcase {
-  5599	    min-height: 610px;
-  5600	  }
-  5601	
-  5602	  .av-device-main {
-  5603	    left: 32%;
-  5604	    right: auto;
-  5605	  }
-  5606	
-  5607	  .av-device-browse {
-  5608	    right: 6%;
-  5609	  }
-  5610	
-  5611	  .av-device-confirm {
-  5612	    left: 4%;
-  5613	  }
-  5614	
-  5615	  .hero-visual {
-  5616	    min-height: auto;
-  5617	  }
-  5618	
-  5619	  .phone-stage {
-  5620	    height: 710px;
-  5621	    margin-top: 30px;
-  5622	  }
-  5623	
-  5624	  .phone-shell-commerce {
-  5625	    left: 4%;
-  5626	  }
-  5627	
-  5628	  .phone-shell-finance {
-  5629	    left: 42%;
-  5630	  }
-  5631	
-  5632	  .tablet-shell {
-  5633	    left: 9%;
-  5634	    top: 374px;
-  5635	    width: var(--tablet-shell-fitted-width);
-  5636	  }
-  5637	
-  5638	  .case-grid,
-  5639	  .capability-grid,
-  5640	  .feature-grid,
-  5641	  .decision-grid,
-  5642	  .architecture-map {
-  5643	    grid-template-columns: repeat(2, minmax(0, 1fr));
-  5644	  }
-  5645	
-  5646	  .ownership-grid,
-  5647	  .stack-matrix {
-  5648	    grid-template-columns: repeat(3, minmax(0, 1fr));
-  5649	  }
+  5403	.flow-capture-group-full-row.flow-capture-group-visual-hierarchy
+  5404	  .flow-screen-stack-step-1b,
+  5405	.flow-capture-group-full-row.flow-capture-group-visual-hierarchy
+  5406	  .flow-screen-stack-step-1c,
+  5407	.flow-capture-group-full-row.flow-capture-group-visual-hierarchy
+  5408	  .flow-screen-stack-step-1d,
+  5409	.flow-capture-group-full-row.flow-capture-group-visual-hierarchy
+  5410	  .flow-screen-stack-step-4,
+  5411	.flow-capture-group-full-row.flow-capture-group-visual-hierarchy
+  5412	  .flow-screen-stack-step-5 {
+  5413	  --flow-visual-hierarchy-title-offset: 0px;
+  5414	}
+  5415	
+  5416	.flow-capture-group-full-row.flow-capture-group-visual-hierarchy
+  5417	  .flow-screen-stack-step-6b,
+  5418	.flow-capture-group-full-row.flow-capture-group-visual-hierarchy
+  5419	  .flow-screen-stack-step-6c {
+  5420	  --flow-visual-hierarchy-title-offset: -3.75px;
+  5421	}
+  5422	
+  5423	.flow-group-header {
+  5424	  max-width: 360px;
+  5425	}
+  5426	
+  5427	.flow-group-header span {
+  5428	  color: var(--green);
+  5429	  display: block;
+  5430	  font-size: 12px;
+  5431	  font-weight: 850;
+  5432	  letter-spacing: 0.1em;
+  5433	  line-height: 1;
+  5434	  margin-bottom: 14px;
+  5435	  text-transform: uppercase;
+  5436	}
+  5437	
+  5438	.flow-group-header h3 {
+  5439	  font-size: 34px;
+  5440	  line-height: 1;
+  5441	  margin-bottom: 14px;
+  5442	}
+  5443	
+  5444	.flow-group-header p {
+  5445	  color: #b8c9bf;
+  5446	  line-height: 1.6;
+  5447	  margin-bottom: 0;
+  5448	}
+  5449	
+  5450	.flow-capture-grid {
+  5451	  align-items: start;
+  5452	  display: grid;
+  5453	  gap: 34px;
+  5454	  grid-template-columns: repeat(auto-fit, minmax(285px, 1fr));
+  5455	}
+  5456	
+  5457	.flow-screen-stack {
+  5458	  min-width: 0;
+  5459	}
+  5460	
+  5461	.flow-screen-stack h4 {
+  5462	  color: var(--text);
+  5463	  font-size: 15px;
+  5464	  font-weight: 850;
+  5465	  letter-spacing: 0;
+  5466	  line-height: 1.2;
+  5467	  margin: 0 0 14px;
+  5468	  text-align: center;
+  5469	}
+  5470	
+  5471	.flow-screen-stack-captures {
+  5472	  align-items: start;
+  5473	  display: flex;
+  5474	  gap: 14px;
+  5475	  justify-content: center;
+  5476	}
+  5477	
+  5478	.cinerific-case .flow-image-frame,
+  5479	.cinerific-case .flow-screen-standard .flow-image-frame,
+  5480	.cinerific-case .flow-screen-tall .flow-image-frame {
+  5481	  aspect-ratio: 16 / 9;
+  5482	  background: linear-gradient(145deg, #0c120f, #000);
+  5483	  border-radius: var(--capture-frame-radius-standard);
+  5484	}
+  5485	
+  5486	.cinerific-case .flow-image-frame::before {
+  5487	  background:
+  5488	    linear-gradient(rgba(67, 255, 146, 0.04) 1px, transparent 1px),
+  5489	    linear-gradient(90deg, rgba(67, 255, 146, 0.04) 1px, transparent 1px),
+  5490	    #020403;
+  5491	  background-size: 14px 14px;
+  5492	  border: 1px solid rgba(198, 255, 217, 0.16);
+  5493	  border-radius: 5px;
+  5494	  content: "";
+  5495	  inset: 10px 14px;
+  5496	  position: absolute;
+  5497	}
+  5498	
+  5499	.cinerific-case .flow-image-frame::after {
+  5500	  background: #1d2923;
+  5501	  border: 1px solid rgba(198, 255, 217, 0.24);
+  5502	  border-radius: 999px;
+  5503	  content: "";
+  5504	  height: 4px;
+  5505	  left: 5px;
+  5506	  position: absolute;
+  5507	  top: 50%;
+  5508	  transform: translateY(-50%);
+  5509	  width: 4px;
+  5510	}
+  5511	
+  5512	.flow-browse-toggle-row {
+  5513	  display: flex;
+  5514	  justify-content: center;
+  5515	  margin-top: 26px;
+  5516	}
+  5517	
+  5518	.flow-browse-toggle {
+  5519	  cursor: pointer;
+  5520	  font-family: inherit;
+  5521	}
+  5522	
+  5523	.alla-vostra-case .flow-browse-toggle {
+  5524	  inline-size: calc((152px * 2) + 14px);
+  5525	  max-inline-size: 100%;
+  5526	}
+  5527	
+  5528	.flow-browse-toggle svg {
+  5529	  flex: 0 0 auto;
+  5530	}
+  5531	
+  5532	.flow-browse-extra {
+  5533	  max-height: 0;
+  5534	  opacity: 0;
+  5535	  overflow: hidden;
+  5536	  pointer-events: none;
+  5537	  transform: translateY(-8px);
+  5538	  transition: max-height 320ms ease, opacity 220ms ease, transform 220ms ease,
+  5539	    margin-top 220ms ease;
+  5540	}
+  5541	
+  5542	.flow-browse-extra.is-open {
+  5543	  margin-top: 34px;
+  5544	  max-height: 5200px;
+  5545	  opacity: 1;
+  5546	  pointer-events: auto;
+  5547	  transform: translateY(0);
+  5548	}
+  5549	
+  5550	.architecture-map {
+  5551	  display: grid;
+  5552	  gap: 12px;
+  5553	  grid-template-columns: repeat(5, minmax(0, 1fr));
+  5554	}
+  5555	
+  5556	.architecture-node {
+  5557	  min-height: 178px;
+  5558	  padding: 18px;
+  5559	}
+  5560	
+  5561	.architecture-node span {
+  5562	  color: var(--green);
+  5563	  display: block;
+  5564	  font-size: 13px;
+  5565	  font-weight: 900;
+  5566	  margin-bottom: 18px;
+  5567	}
+  5568	
+  5569	.architecture-node strong {
+  5570	  color: var(--text);
+  5571	  display: block;
+  5572	  font-size: 16px;
+  5573	  line-height: 1.25;
+  5574	  margin-bottom: 12px;
+  5575	}
+  5576	
+  5577	.architecture-node p {
+  5578	  font-size: 13px;
+  5579	}
+  5580	
+  5581	.architecture-copy {
+  5582	  margin: 26px 0 0;
+  5583	}
+  5584	
+  5585	.readiness-copy {
+  5586	  margin-bottom: 24px;
+  5587	}
+  5588	
+  5589	.readiness-list,
+  5590	.proof-points {
+  5591	  display: flex;
+  5592	  flex-wrap: wrap;
+  5593	  gap: 10px;
+  5594	}
+  5595	
+  5596	.project-timeline {
+  5597	  display: grid;
+  5598	  gap: 14px;
+  5599	}
+  5600	
+  5601	.project-timeline-item {
+  5602	  display: grid;
+  5603	  gap: 22px;
+  5604	  grid-template-columns: 56px 1fr;
+  5605	  padding: 22px;
+  5606	}
+  5607	
+  5608	.project-timeline-item > span {
+  5609	  color: var(--green);
+  5610	  font-size: 18px;
+  5611	  font-weight: 900;
+  5612	}
+  5613	
+  5614	.project-timeline-item h3 {
+  5615	  font-size: 20px;
+  5616	  line-height: 1.2;
+  5617	  margin-bottom: 10px;
+  5618	}
+  5619	
+  5620	.stack-matrix {
+  5621	  display: grid;
+  5622	  gap: 14px;
+  5623	  grid-template-columns: repeat(5, minmax(0, 1fr));
+  5624	  margin-top: 34px;
+  5625	}
+  5626	
+  5627	.stack-group {
+  5628	  padding: 20px;
+  5629	}
+  5630	
+  5631	.stack-group h3 {
+  5632	  font-size: 11px;
+  5633	}
+  5634	
+  5635	.stack-group div {
+  5636	  display: grid;
+  5637	  gap: 8px;
+  5638	}
+  5639	
+  5640	.stack-group span {
+  5641	  color: #d8ffe4;
+  5642	  font-size: 14px;
+  5643	  font-weight: 750;
+  5644	  line-height: 1.35;
+  5645	}
+  5646	
+  5647	.proof-points {
+  5648	  margin-top: 34px;
+  5649	}
   5650	
-  5651	  .flow-layout {
-  5652	    --flow-chart-width: var(--flow-phone-width);
-  5653	    grid-template-columns: 1fr;
-  5654	  }
-  5655	
-  5656	  .flow-capture-group {
-  5657	    grid-template-columns: 1fr;
-  5658	  }
-  5659	}
-  5660	
-  5661	@media (max-width: 980px) and (orientation: portrait) {
-  5662	  .flow-chart-mockup {
-  5663	    justify-self: center;
-  5664	    margin-inline: auto;
-  5665	  }
+  5651	.closing-panel {
+  5652	  align-items: center;
+  5653	  background: linear-gradient(180deg, rgba(13, 31, 22, 0.88), rgba(5, 13, 9, 0.88));
+  5654	  border: 1px solid var(--line);
+  5655	  border-radius: 8px;
+  5656	  display: grid;
+  5657	  gap: 34px;
+  5658	  grid-template-columns: minmax(0, 1fr) auto;
+  5659	  padding: 34px;
+  5660	}
+  5661	
+  5662	.closing-panel h2 {
+  5663	  font-size: clamp(30px, 4vw, 50px);
+  5664	  margin-bottom: 18px;
+  5665	  max-width: 720px;
   5666	}
   5667	
-  5668	@media (max-width: 720px) {
-  5669	  .site-shell {
-  5670	    width: min(100% - 24px, 1180px);
-  5671	  }
-  5672	
-  5673	  .nav-bar {
-  5674	    --nav-bar-inline-padding: 14px;
-  5675	    --nav-link-bottom-separator-gap: 5px;
-  5676	    --nav-link-separator-gap: 4px;
-  5677	    --nav-link-top-separator-gap: 3px;
-  5678	    max-width: calc(100vw - 24px);
-  5679	    overflow: hidden;
-  5680	    padding: 0 var(--nav-bar-inline-padding);
-  5681	  }
-  5682	
-  5683	  .nav-bar nav {
-  5684	    max-width: 100%;
-  5685	  }
-  5686	
-  5687	  .project-nav nav {
-  5688	    width: 100%;
-  5689	  }
-  5690	
-  5691	  .project-page .site-shell {
-  5692	    max-width: calc(100vw - 24px);
-  5693	    width: calc(100vw - 24px);
-  5694	  }
-  5695	
-  5696	  .project-nav {
-  5697	    max-width: calc(100vw - 24px);
-  5698	    width: calc(100vw - 24px);
-  5699	  }
-  5700	
-  5701	  .project-nav nav a {
-  5702	    font-size: 11px;
-  5703	  }
-  5704	
-  5705	  .nav-bar nav a,
-  5706	  .nav-bar nav .nav-text {
-  5707	    font-size: 15px;
-  5708	    padding-left: 2px;
-  5709	    padding-right: 2px;
-  5710	  }
-  5711	
-  5712	  .nav-separator {
-  5713	    font-size: 15px;
-  5714	  }
-  5715	
-  5716	  .hero {
-  5717	    padding-top: 24px;
+  5668	.closing-panel p {
+  5669	  max-width: 760px;
+  5670	}
+  5671	
+  5672	.closing-actions {
+  5673	  display: flex;
+  5674	  flex-direction: column;
+  5675	  gap: 12px;
+  5676	  min-width: 190px;
+  5677	}
+  5678	
+  5679	@media (max-width: 980px) {
+  5680	  .product-flow-nav {
+  5681	    --product-flow-nav-font-size: clamp(40px, 5.7vw, 56px);
+  5682	  }
+  5683	
+  5684	  .hero-copy {
+  5685	    --hero-proof-stack-width: min(606px, 100%);
+  5686	    --hero-action-stack-width: var(--hero-proof-stack-width);
+  5687	    --hero-text-stack-width: var(--hero-action-stack-width);
+  5688	  }
+  5689	
+  5690	  .nav-bar {
+  5691	    --nav-bar-inline-padding: 16px;
+  5692	    --nav-bar-height: clamp(36px, calc(23.61px + 3.87vw), 48px);
+  5693	    --nav-link-bottom-separator-gap: 8px;
+  5694	    --nav-link-separator-gap: 6px;
+  5695	    --nav-link-top-separator-gap: 6px;
+  5696	    align-items: center;
+  5697	    display: block;
+  5698	    height: var(--nav-bar-two-row-height);
+  5699	    row-gap: 7.5px;
+  5700	    padding: 0 var(--nav-bar-inline-padding);
+  5701	  }
+  5702	
+  5703	  .nav-bar nav {
+  5704	    display: grid;
+  5705	    grid-template-rows: repeat(2, var(--nav-bar-height));
+  5706	    height: 100%;
+  5707	    row-gap: var(--nav-bar-two-row-gap);
+  5708	    width: 100%;
+  5709	  }
+  5710	
+  5711	  .nav-link-row {
+  5712	    display: flex;
+  5713	    flex-wrap: nowrap;
+  5714	    gap: var(--nav-link-separator-gap);
+  5715	    justify-content: space-between;
+  5716	    min-width: 0;
+  5717	    width: 100%;
   5718	  }
   5719	
-  5720	  section.project-hero {
-  5721	    padding-top: 12px;
-  5722	  }
-  5723	
-  5724	  .project-nav {
-  5725	    margin-bottom: 48px;
-  5726	  }
-  5727	
-  5728	  .hero-grid {
-  5729	    gap: 30px;
-  5730	    padding-top: 16px;
-  5731	  }
-  5732	
-  5733	  h1 {
-  5734	    font-size: clamp(42px, 15vw, 64px);
-  5735	  }
-  5736	
-  5737	  .hero-visual {
-  5738	    min-height: auto;
-  5739	  }
-  5740	
-  5741	  .phone-stage {
-  5742	    height: 626px;
-  5743	    margin-top: 18px;
-  5744	  }
-  5745	
-  5746	  .profile-orbit {
-  5747	    right: 0;
-  5748	  }
-  5749	
-  5750	  .profile-photo {
-  5751	    height: 165px;
-  5752	    width: 165px;
+  5720	  .nav-link-row-top {
+  5721	    align-items: center;
+  5722	    column-gap: var(--nav-brand-gap);
+  5723	    display: flex;
+  5724	    height: var(--nav-bar-height);
+  5725	    justify-content: flex-start;
+  5726	    width: 100%;
+  5727	  }
+  5728	
+  5729	  .nav-top-distribution {
+  5730	    align-items: center;
+  5731	    display: grid;
+  5732	    flex: 1 1 auto;
+  5733	    grid-template-columns: repeat(2, minmax(0, 1fr));
+  5734	    justify-items: center;
+  5735	    min-width: 0;
+  5736	    position: relative;
+  5737	  }
+  5738	
+  5739	  .nav-top-distribution > .nav-top-link-primary {
+  5740	    grid-column: 1;
+  5741	    min-width: max-content;
+  5742	  }
+  5743	
+  5744	  .nav-top-distribution > .nav-top-link-secondary {
+  5745	    grid-column: 2;
+  5746	    min-width: max-content;
+  5747	  }
+  5748	
+  5749	  .nav-top-distribution > .nav-separator-top-center {
+  5750	    left: 50%;
+  5751	    position: absolute;
+  5752	    transform: translateX(-50%);
   5753	  }
   5754	
-  5755	  .phone-shell {
-  5756	    height: 420px;
-  5757	    width: 206px;
-  5758	  }
-  5759	
-  5760	  .phone-shell-commerce {
-  5761	    left: -2px;
-  5762	    top: 72px;
-  5763	  }
-  5764	
-  5765	  .phone-shell-finance {
-  5766	    left: auto;
-  5767	    right: -8px;
-  5768	    top: 124px;
-  5769	  }
-  5770	
-  5771	  .tablet-shell {
-  5772	    --tablet-shell-fitted-width: 223px;
-  5773	    height: 150px;
-  5774	    left: 14px;
-  5775	    top: 342px;
-  5776	  }
-  5777	
-  5778	  .stats-strip-item {
-  5779	    min-height: 104px;
-  5780	    padding: 14px 8px;
+  5755	  .nav-link-row-bottom {
+  5756	    align-items: center;
+  5757	    column-gap: var(--nav-link-bottom-separator-gap);
+  5758	    display: flex;
+  5759	    height: var(--nav-bar-height);
+  5760	    justify-content: space-evenly;
+  5761	    width: 100%;
+  5762	  }
+  5763	
+  5764	  .nav-separator.nav-separator-row-leading {
+  5765	    display: none;
+  5766	  }
+  5767	
+  5768	  .nav-bar nav a,
+  5769	  .nav-bar nav .nav-text {
+  5770	    flex: 1 1 0;
+  5771	    min-width: 0;
+  5772	    padding-left: 10px;
+  5773	    padding-right: 10px;
+  5774	    text-align: center;
+  5775	  }
+  5776	
+  5777	  .nav-bar nav .nav-link-row > a,
+  5778	  .nav-bar nav .nav-link-row > .nav-text {
+  5779	    flex: 0 0 auto;
+  5780	    justify-self: center;
   5781	  }
   5782	
-  5783	  .stack-section .capability-grid {
-  5784	    grid-template-columns: repeat(2, minmax(0, 1fr));
-  5785	  }
-  5786	
-  5787	  .case-card {
-  5788	    min-height: auto;
-  5789	  }
-  5790	
-  5791	  .contact-panel {
-  5792	    align-items: flex-start;
-  5793	    flex-direction: column;
+  5783	  .nav-bar nav .nav-link-row-top > .nav-brand-link {
+  5784	    display: inline-flex;
+  5785	    gap: var(--nav-brand-gap);
+  5786	    grid-column: 1;
+  5787	    height: var(--nav-bar-height);
+  5788	    margin-block: calc(var(--nav-card-border-width) * -1);
+  5789	    margin-right: 0;
+  5790	    min-width: max-content;
+  5791	    padding: 0 calc(var(--nav-brand-gap) + var(--nav-brand-card-bleed)) 0
+  5792	      var(--nav-brand-card-bleed);
+  5793	    justify-self: start;
   5794	  }
   5795	
-  5796	  .project-page section:not(.project-hero) {
-  5797	    padding: 58px 0;
-  5798	  }
-  5799	
-  5800	  .overview-section-grid {
-  5801	    --overview-play-store-width: 100%;
-  5802	  }
-  5803	
-  5804	  .project-hero-grid {
-  5805	    gap: 34px;
+  5796	  .nav-bar nav .nav-link-row-top > .nav-brand-link .nav-brand-mark {
+  5797	    align-self: center;
+  5798	    flex: none;
+  5799	    height: 34px;
+  5800	    justify-self: center;
+  5801	    max-height: 34px;
+  5802	    max-width: 34px;
+  5803	    min-height: 34px;
+  5804	    min-width: 34px;
+  5805	    width: 34px;
   5806	  }
   5807	
-  5808	  .project-back-link {
-  5809	    margin-bottom: 24px;
-  5810	  }
-  5811	
-  5812	  .project-copy-panel {
-  5813	    border-left: 0;
-  5814	    padding-left: 0;
-  5815	  }
-  5816	
-  5817	  .project-hero-text,
-  5818	  .project-copy-panel p,
-  5819	  .architecture-copy,
-  5820	  .readiness-copy,
-  5821	  .closing-panel p {
-  5822	    font-size: 16px;
-  5823	  }
-  5824	
-  5825	  .project-subtitle,
-  5826	  .project-hero-text,
-  5827	  .project-meta-row {
-  5828	    max-width: 100%;
-  5829	    overflow-wrap: anywhere;
-  5830	  }
-  5831	
-  5832	  .project-meta-row span {
-  5833	    flex: 0 1 auto;
-  5834	    white-space: normal;
-  5835	  }
-  5836	
-  5837	  .av-showcase {
-  5838	    min-height: auto;
-  5839	    padding: 0 0 18px;
+  5808	  .nav-bar nav .nav-link-row-top > .nav-brand-link .nav-brand-name {
+  5809	    align-self: center;
+  5810	    display: inline-flex;
+  5811	    justify-content: center;
+  5812	    line-height: 1;
+  5813	    text-align: center;
+  5814	  }
+  5815	
+  5816	  .nav-bar nav .nav-link-row-bottom > a,
+  5817	  .nav-bar nav .nav-link-row-bottom > .nav-text {
+  5818	    padding-bottom: 3.75px;
+  5819	    padding-top: 0;
+  5820	  }
+  5821	
+  5822	  .project-nav nav {
+  5823	    grid-template-columns: repeat(3, minmax(0, 1fr));
+  5824	  }
+  5825	
+  5826	  .hero-grid,
+  5827	  .worklog-layout,
+  5828	  .project-hero-grid,
+  5829	  .project-section-grid,
+  5830	  .readiness-layout {
+  5831	    grid-template-columns: 1fr;
+  5832	  }
+  5833	
+  5834	  .overview-section-grid {
+  5835	    grid-template-areas:
+  5836	      "heading"
+  5837	      "screens"
+  5838	      "copy";
+  5839	    grid-template-columns: 1fr;
   5840	  }
   5841	
-  5842	  .av-showcase::before {
-  5843	    inset: 20px 0 84px;
+  5842	  .av-showcase {
+  5843	    min-height: 610px;
   5844	  }
   5845	
-  5846	  .av-device {
-  5847	    position: relative;
-  5848	  }
-  5849	
-  5850	  .av-device-main {
-  5851	    height: auto;
-  5852	    left: auto;
-  5853	    margin: 0 auto;
-  5854	    max-width: 292px;
-  5855	    right: auto;
-  5856	    top: auto;
-  5857	    transform: rotate(-4deg);
-  5858	    width: 72vw;
-  5859	  }
-  5860	
-  5861	  .av-device-browse,
-  5862	  .av-device-confirm {
-  5863	    display: none;
-  5864	  }
-  5865	
-  5866	  .av-showcase-proof {
-  5867	    margin: -18px auto 0;
-  5868	    max-width: min(292px, calc(100vw - 48px));
-  5869	    position: relative;
-  5870	    right: auto;
-  5871	  }
-  5872	
-  5873	  .av-showcase-proof-row {
-  5874	    align-items: stretch;
-  5875	    bottom: auto;
-  5876	    flex-direction: column;
-  5877	    margin: -18px auto 0;
-  5878	    max-width: min(292px, calc(100vw - 48px));
-  5879	    position: relative;
-  5880	    left: auto;
-  5881	    right: auto;
-  5882	  }
-  5883	
-  5884	  .av-showcase-proof-row .av-showcase-proof {
-  5885	    margin: 0;
-  5886	    max-width: none;
-  5887	    width: max-content;
+  5846	  .av-device-main {
+  5847	    left: 32%;
+  5848	    right: auto;
+  5849	  }
+  5850	
+  5851	  .av-device-browse {
+  5852	    right: 6%;
+  5853	  }
+  5854	
+  5855	  .av-device-confirm {
+  5856	    left: 4%;
+  5857	  }
+  5858	
+  5859	  .hero-visual {
+  5860	    min-height: auto;
+  5861	  }
+  5862	
+  5863	  .phone-stage {
+  5864	    height: 710px;
+  5865	    margin-top: 30px;
+  5866	  }
+  5867	
+  5868	  .phone-shell-commerce {
+  5869	    left: 4%;
+  5870	  }
+  5871	
+  5872	  .phone-shell-finance {
+  5873	    left: 42%;
+  5874	  }
+  5875	
+  5876	  .tablet-shell {
+  5877	    left: 9%;
+  5878	    top: 374px;
+  5879	    width: var(--tablet-shell-fitted-width);
+  5880	  }
+  5881	
+  5882	  .case-grid,
+  5883	  .capability-grid,
+  5884	  .feature-grid,
+  5885	  .decision-grid,
+  5886	  .architecture-map {
+  5887	    grid-template-columns: repeat(2, minmax(0, 1fr));
   5888	  }
   5889	
-  5890	  .alla-vostra-case .av-showcase {
-  5891	    --av-mobile-device-width: min(62vw, 262px);
-  5892	    align-items: center;
-  5893	    display: flex;
-  5894	    justify-content: center;
-  5895	    min-height: clamp(560px, 126vw, 635px);
-  5896	    overflow: visible;
-  5897	    padding: 8px 0 18px;
+  5890	  .ownership-grid,
+  5891	  .stack-matrix {
+  5892	    grid-template-columns: repeat(3, minmax(0, 1fr));
+  5893	  }
+  5894	
+  5895	  .flow-layout {
+  5896	    --flow-chart-width: var(--flow-phone-width);
+  5897	    grid-template-columns: 1fr;
   5898	  }
   5899	
-  5900	  .alla-vostra-case .av-showcase::before {
-  5901	    inset: 0 0 38px;
+  5900	  .flow-capture-group {
+  5901	    grid-template-columns: 1fr;
   5902	  }
-  5903	
-  5904	  .alla-vostra-case .av-device-main {
-  5905	    margin: 0;
-  5906	    max-width: 262px;
-  5907	    transform-origin: center top;
-  5908	    width: var(--av-mobile-device-width);
+  5903	}
+  5904	
+  5905	@media (max-width: 980px) and (orientation: portrait) {
+  5906	  .flow-chart-mockup {
+  5907	    justify-self: center;
+  5908	    margin-inline: auto;
   5909	  }
-  5910	
-  5911	  .alla-vostra-case .av-showcase-proof-row {
-  5912	    --av-platform-list-row-gap: var(--av-proof-row-gap);
-  5913	    --av-proof-column-gap: clamp(4px, calc(25vw - 86px), 14px);
-  5914	    --av-proof-content-margin-top: 8px;
-  5915	    --av-proof-row-gap: 3px;
-  5916	    --av-proof-top-row-height: 22.7px;
-  5917	    --av-proof-bottom-row-height: 31px;
-  5918	    --av-skill-item-gap: clamp(3px, 1vw, 5px);
-  5919	    --av-skill-grid-row-gap: var(--av-proof-row-gap);
-  5920	    --av-skill-grid-y-offset: 0px;
-  5921	
-  5922	    align-items: stretch;
-  5923	    bottom: clamp(2px, 1vw, 8px);
-  5924	    display: grid;
-  5925	    gap: clamp(6px, 2.5vw, 10px);
-  5926	    grid-auto-rows: 1fr;
-  5927	    grid-template-columns: repeat(2, minmax(0, 1fr));
-  5928	    justify-content: space-between;
-  5929	    left: clamp(4px, 2.4vw, 20px);
-  5930	    margin: 0;
-  5931	    max-width: none;
-  5932	    position: absolute;
-  5933	    right: clamp(4px, 2.4vw, 20px);
-  5934	    top: auto;
-  5935	    width: auto;
-  5936	  }
-  5937	
-  5938	  .alla-vostra-case .av-showcase-proof-row .av-showcase-proof {
-  5939	    align-self: stretch;
-  5940	    display: flex;
-  5941	    flex-direction: column;
-  5942	    max-width: none;
-  5943	    padding: 10px clamp(8px, 2.5vw, 12px);
-  5944	    width: auto;
-  5945	  }
-  5946	
-  5947	  .alla-vostra-case .av-showcase-proof-row .av-showcase-proof:first-child {
-  5948	    justify-self: stretch;
-  5949	  }
-  5950	
-  5951	  .alla-vostra-case .av-showcase-proof-row .av-showcase-proof:last-child {
-  5952	    justify-self: stretch;
-  5953	  }
-  5954	
-  5955	  .alla-vostra-case .av-showcase-proof strong {
-  5956	    font-size: clamp(20px, 6vw, 30px);
-  5957	  }
-  5958	
-  5959	  .alla-vostra-case .av-showcase-proof span {
-  5960	    font-size: clamp(12px, 3.2vw, 15px);
-  5961	    line-height: 1.32;
+  5910	}
+  5911	
+  5912	@media (max-width: 720px) {
+  5913	  .site-shell {
+  5914	    width: min(100% - 24px, 1180px);
+  5915	  }
+  5916	
+  5917	  .nav-bar {
+  5918	    --nav-bar-inline-padding: 14px;
+  5919	    --nav-link-bottom-separator-gap: 5px;
+  5920	    --nav-link-separator-gap: 4px;
+  5921	    --nav-link-top-separator-gap: 3px;
+  5922	    max-width: calc(100vw - 24px);
+  5923	    overflow: hidden;
+  5924	    padding: 0 var(--nav-bar-inline-padding);
+  5925	  }
+  5926	
+  5927	  .nav-bar nav {
+  5928	    max-width: 100%;
+  5929	  }
+  5930	
+  5931	  .project-nav nav {
+  5932	    width: 100%;
+  5933	  }
+  5934	
+  5935	  .project-page .site-shell {
+  5936	    max-width: calc(100vw - 24px);
+  5937	    width: calc(100vw - 24px);
+  5938	  }
+  5939	
+  5940	  .project-nav {
+  5941	    max-width: calc(100vw - 24px);
+  5942	    width: calc(100vw - 24px);
+  5943	  }
+  5944	
+  5945	  .project-nav nav a {
+  5946	    font-size: 11px;
+  5947	  }
+  5948	
+  5949	  .nav-bar nav a,
+  5950	  .nav-bar nav .nav-text {
+  5951	    font-size: 15px;
+  5952	    padding-left: 2px;
+  5953	    padding-right: 2px;
+  5954	  }
+  5955	
+  5956	  .nav-separator {
+  5957	    font-size: 15px;
+  5958	  }
+  5959	
+  5960	  .hero {
+  5961	    padding-top: 24px;
   5962	  }
   5963	
-  5964	  .alla-vostra-case .av-showcase-proof .av-showcase-skill-grid,
-  5965	  .alla-vostra-case .av-showcase-proof .av-showcase-platform-list {
-  5966	    grid-template-rows: var(--av-proof-top-row-height) var(--av-proof-bottom-row-height);
-  5967	  }
-  5968	
-  5969	  .alla-vostra-case .stats-strip {
-  5970	    border-top: 1px solid var(--line);
-  5971	    gap: 1px;
-  5972	    grid-template-columns: repeat(4, minmax(0, 1fr));
-  5973	    margin: 26px 0 0;
-  5974	    width: 100%;
+  5964	  section.project-hero {
+  5965	    padding-top: 12px;
+  5966	  }
+  5967	
+  5968	  .project-nav {
+  5969	    margin-bottom: 48px;
+  5970	  }
+  5971	
+  5972	  .hero-grid {
+  5973	    gap: 30px;
+  5974	    padding-top: 16px;
   5975	  }
   5976	
-  5977	  .alla-vostra-case .stats-strip-item {
-  5978	    background: rgba(255, 255, 255, 0.025);
-  5979	    min-height: 178px;
-  5980	    padding: 14px 8px;
-  5981	  }
-  5982	
-  5983	  .alla-vostra-case .stats-strip strong {
-  5984	    font-size: clamp(30px, 8vw, 44px);
-  5985	  }
-  5986	
-  5987	  .alla-vostra-case .stats-strip-label,
-  5988	  .alla-vostra-case .stats-strip-measure {
-  5989	    font-size: clamp(12px, 3.2vw, 16px);
-  5990	    line-height: 1.16;
-  5991	  }
-  5992	
-  5993	  .project-card-grid,
-  5994	  .ownership-grid,
-  5995	  .feature-grid,
-  5996	  .decision-grid,
-  5997	  .architecture-map,
-  5998	  .stack-matrix {
-  5999	    grid-template-columns: 1fr;
-  6000	  }
-  6001	
-  6002	  .flow-segments {
-  6003	    grid-template-columns: repeat(2, minmax(0, 1fr));
-  6004	  }
-  6005	
-  6006	  .flow-support {
-  6007	    grid-template-columns: 1fr;
-  6008	  }
-  6009	
-  6010	  .flow-checkout-note {
-  6011	    min-height: auto;
-  6012	  }
-  6013	
-  6014	  .flow-section-intro > p {
-  6015	    border-left: 0;
-  6016	    padding-left: 0;
-  6017	  }
-  6018	
-  6019	  .product-flow-nav {
-  6020	    --product-flow-nav-font-size: clamp(15px, 5vw, 28px);
-  6021	    --product-flow-nav-height: clamp(58px, 14vw, 72px);
-  6022	
-  6023	    grid-template-columns: repeat(2, minmax(0, 1fr));
-  6024	  }
-  6025	
-  6026	  .product-flow-nav .button {
-  6027	    padding: 8px clamp(6px, 2vw, 12px) 10px;
-  6028	  }
-  6029	
-  6030	  .product-flow-nav .button:first-child {
-  6031	    border-radius: 8px 0 0 8px;
-  6032	  }
-  6033	
-  6034	  .product-flow-nav .button:last-child {
-  6035	    border-radius: 0 8px 8px 0;
-  6036	  }
-  6037	
-  6038	  .flow-capture-groups {
-  6039	    gap: 40px;
-  6040	    margin-top: 44px;
-  6041	  }
-  6042	
-  6043	  .flow-capture-group {
-  6044	    padding-top: 24px;
-  6045	  }
-  6046	
-  6047	  .flow-capture-grid {
-  6048	    gap: 28px;
-  6049	    grid-template-columns: 1fr;
+  5977	  h1 {
+  5978	    font-size: clamp(42px, 15vw, 64px);
+  5979	  }
+  5980	
+  5981	  .hero-visual {
+  5982	    min-height: auto;
+  5983	  }
+  5984	
+  5985	  .phone-stage {
+  5986	    height: 626px;
+  5987	    margin-top: 18px;
+  5988	  }
+  5989	
+  5990	  .profile-orbit {
+  5991	    right: 0;
+  5992	  }
+  5993	
+  5994	  .profile-photo {
+  5995	    height: 165px;
+  5996	    width: 165px;
+  5997	  }
+  5998	
+  5999	  .phone-shell {
+  6000	    height: 420px;
+  6001	    width: 206px;
+  6002	  }
+  6003	
+  6004	  .phone-shell-commerce {
+  6005	    left: -2px;
+  6006	    top: 72px;
+  6007	  }
+  6008	
+  6009	  .phone-shell-finance {
+  6010	    left: auto;
+  6011	    right: -8px;
+  6012	    top: 124px;
+  6013	  }
+  6014	
+  6015	  .tablet-shell {
+  6016	    --tablet-shell-fitted-width: 223px;
+  6017	    height: 150px;
+  6018	    left: 14px;
+  6019	    top: 342px;
+  6020	  }
+  6021	
+  6022	  .stats-strip-item {
+  6023	    min-height: 104px;
+  6024	    padding: 14px 8px;
+  6025	  }
+  6026	
+  6027	  .stack-section .capability-grid {
+  6028	    grid-template-columns: repeat(2, minmax(0, 1fr));
+  6029	  }
+  6030	
+  6031	  .case-card {
+  6032	    min-height: auto;
+  6033	  }
+  6034	
+  6035	  .contact-panel {
+  6036	    align-items: flex-start;
+  6037	    flex-direction: column;
+  6038	  }
+  6039	
+  6040	  .project-page section:not(.project-hero) {
+  6041	    padding: 58px 0;
+  6042	  }
+  6043	
+  6044	  .overview-section-grid {
+  6045	    --overview-play-store-width: 100%;
+  6046	  }
+  6047	
+  6048	  .project-hero-grid {
+  6049	    gap: 34px;
   6050	  }
   6051	
-  6052	  .flow-screen-compact {
-  6053	    width: min(42vw, 146px);
+  6052	  .project-back-link {
+  6053	    margin-bottom: 24px;
   6054	  }
   6055	
-  6056	  .flow-screen-stack-captures {
-  6057	    gap: 12px;
-  6058	  }
-  6059	
-  6060	  .alla-vostra-case .flow-browse-toggle {
-  6061	    inline-size: calc((min(42vw, 146px) * 2) + 12px);
-  6062	  }
-  6063	
-  6064	  .flow-original-art-grid {
-  6065	    gap: 12px;
-  6066	    grid-template-columns: repeat(2, minmax(0, min(42vw, 146px)));
+  6056	  .project-copy-panel {
+  6057	    border-left: 0;
+  6058	    padding-left: 0;
+  6059	  }
+  6060	
+  6061	  .project-hero-text,
+  6062	  .project-copy-panel p,
+  6063	  .architecture-copy,
+  6064	  .readiness-copy,
+  6065	  .closing-panel p {
+  6066	    font-size: 16px;
   6067	  }
   6068	
-  6069	  .flow-original-photo-grid {
-  6070	    gap: 12px;
-  6071	    grid-template-columns: repeat(2, minmax(0, min(42vw, 146px)));
-  6072	  }
-  6073	
-  6074	  .flow-hero-composition-grid {
-  6075	    gap: 12px;
-  6076	    grid-template-columns: minmax(0, calc(min(84vw, 292px) + 12px));
-  6077	  }
-  6078	
-  6079	  .flow-hero-composition-screen {
-  6080	    width: 100%;
-  6081	  }
-  6082	
-  6083	  .flow-sticky-icon-grid {
-  6084	    gap: 12px;
-  6085	    grid-template-columns: repeat(2, minmax(0, min(42vw, 146px)));
-  6086	  }
-  6087	
-  6088	  .flow-action-asset-grid {
-  6089	    gap: 12px;
-  6090	    grid-template-columns: repeat(2, minmax(0, min(42vw, 146px)));
-  6091	  }
-  6092	
-  6093	  .flow-screen:not(.flow-screen-main) .flow-image-frame {
-  6094	    margin: 0 auto;
-  6095	    max-width: 230px;
-  6096	  }
-  6097	
-  6098	  .flow-screen.flow-hero-composition-screen .flow-image-frame {
-  6099	    max-width: none;
-  6100	  }
-  6101	
-  6102	  .closing-panel {
-  6103	    grid-template-columns: 1fr;
-  6104	    padding: 28px;
-  6105	  }
-  6106	
-  6107	  .closing-actions {
-  6108	    width: 100%;
-  6109	  }
-  6110	}
-  6111	
-  6112	@media (max-width: 720px) {
-  6113	  .project-page.alla-vostra-case .stats-strip-item {
-  6114	    min-height: 178px;
+  6069	  .project-subtitle,
+  6070	  .project-hero-text,
+  6071	  .project-meta-row {
+  6072	    max-width: 100%;
+  6073	    overflow-wrap: anywhere;
+  6074	  }
+  6075	
+  6076	  .project-meta-row span {
+  6077	    flex: 0 1 auto;
+  6078	    white-space: normal;
+  6079	  }
+  6080	
+  6081	  .av-showcase {
+  6082	    min-height: auto;
+  6083	    padding: 0 0 18px;
+  6084	  }
+  6085	
+  6086	  .av-showcase::before {
+  6087	    inset: 20px 0 84px;
+  6088	  }
+  6089	
+  6090	  .av-device {
+  6091	    position: relative;
+  6092	  }
+  6093	
+  6094	  .av-device-main {
+  6095	    height: auto;
+  6096	    left: auto;
+  6097	    margin: 0 auto;
+  6098	    max-width: 292px;
+  6099	    right: auto;
+  6100	    top: auto;
+  6101	    transform: rotate(-4deg);
+  6102	    width: 72vw;
+  6103	  }
+  6104	
+  6105	  .av-device-browse,
+  6106	  .av-device-confirm {
+  6107	    display: none;
+  6108	  }
+  6109	
+  6110	  .av-showcase-proof {
+  6111	    margin: -18px auto 0;
+  6112	    max-width: min(292px, calc(100vw - 48px));
+  6113	    position: relative;
+  6114	    right: auto;
   6115	  }
-  6116	}
-  6117	
-  6118	@media (max-width: 630px) {
-  6119	  .case-grid {
-  6120	    grid-template-columns: 1fr;
-  6121	  }
-  6122	
-  6123	  .case-grid-featured .case-card-project-title-name,
-  6124	  .case-grid-featured .case-card-title-underline {
-  6125	    overflow-wrap: normal;
-  6126	    white-space: nowrap;
-  6127	  }
-  6128	
-  6129	  .case-grid > .uiux-principle-card-expanded {
-  6130	    grid-column: auto;
-  6131	  }
-  6132	
-  6133	  .case-grid > .uiux-principle-card-expanded .uiux-principle-long-copy {
-  6134	    column-count: auto;
-  6135	    display: grid;
-  6136	  }
-  6137	}
-  6138	
-  6139	@media (max-width: 430px) {
-  6140	  .nav-bar {
-  6141	    --nav-brand-gap: 8px;
-  6142	    --nav-link-bottom-separator-gap: 3px;
-  6143	    --nav-link-separator-gap: 2px;
-  6144	    --nav-link-top-separator-gap: 2px;
-  6145	  }
-  6146	
-  6147	  .nav-brand-name {
-  6148	    font-size: 22px;
-  6149	  }
-  6150	
-  6151	  .nav-bar nav a,
-  6152	  .nav-bar nav .nav-text,
-  6153	  .nav-separator {
-  6154	    font-size: 14px;
-  6155	  }
-  6156	}
-  6157	
-  6158	@media (max-width: 380px) {
-  6159	  .nav-bar {
-  6160	    --nav-bar-inline-padding: 12px;
-  6161	    --nav-link-bottom-separator-gap: 2px;
-  6162	    --nav-link-separator-gap: 1px;
-  6163	    --nav-link-top-separator-gap: 1px;
-  6164	  }
+  6116	
+  6117	  .av-showcase-proof-row {
+  6118	    align-items: stretch;
+  6119	    bottom: auto;
+  6120	    flex-direction: column;
+  6121	    margin: -18px auto 0;
+  6122	    max-width: min(292px, calc(100vw - 48px));
+  6123	    position: relative;
+  6124	    left: auto;
+  6125	    right: auto;
+  6126	  }
+  6127	
+  6128	  .av-showcase-proof-row .av-showcase-proof {
+  6129	    margin: 0;
+  6130	    max-width: none;
+  6131	    width: max-content;
+  6132	  }
+  6133	
+  6134	  .alla-vostra-case .av-showcase {
+  6135	    --av-mobile-device-width: min(62vw, 262px);
+  6136	    align-items: center;
+  6137	    display: flex;
+  6138	    justify-content: center;
+  6139	    min-height: clamp(560px, 126vw, 635px);
+  6140	    overflow: visible;
+  6141	    padding: 8px 0 18px;
+  6142	  }
+  6143	
+  6144	  .alla-vostra-case .av-showcase::before {
+  6145	    inset: 0 0 38px;
+  6146	  }
+  6147	
+  6148	  .alla-vostra-case .av-device-main {
+  6149	    margin: 0;
+  6150	    max-width: 262px;
+  6151	    transform-origin: center top;
+  6152	    width: var(--av-mobile-device-width);
+  6153	  }
+  6154	
+  6155	  .alla-vostra-case .av-showcase-proof-row {
+  6156	    --av-platform-list-row-gap: var(--av-proof-row-gap);
+  6157	    --av-proof-column-gap: clamp(4px, calc(25vw - 86px), 14px);
+  6158	    --av-proof-content-margin-top: 8px;
+  6159	    --av-proof-row-gap: 3px;
+  6160	    --av-proof-top-row-height: 22.7px;
+  6161	    --av-proof-bottom-row-height: 31px;
+  6162	    --av-skill-item-gap: clamp(3px, 1vw, 5px);
+  6163	    --av-skill-grid-row-gap: var(--av-proof-row-gap);
+  6164	    --av-skill-grid-y-offset: 0px;
   6165	
-  6166	  .nav-bar nav a,
-  6167	  .nav-bar nav .nav-text {
-  6168	    font-size: 13.5px;
-  6169	    padding-left: 0;
-  6170	    padding-right: 0;
-  6171	  }
-  6172	
-  6173	  .nav-separator {
-  6174	    font-size: 13.5px;
-  6175	  }
-  6176	}
-  6177	
-  6178	@media (max-width: 340px) {
-  6179	  .alla-vostra-case .av-showcase-proof-row {
-  6180	    --av-proof-column-gap: 3px;
-  6181	    --av-skill-item-gap: 2.5px;
-  6182	
-  6183	    gap: 6px;
-  6184	    left: 4px;
-  6185	    right: 4px;
-  6186	  }
-  6187	
-  6188	  .alla-vostra-case .av-showcase-proof-row .av-showcase-proof {
-  6189	    padding-inline: 6px;
-  6190	  }
-  6191	
-  6192	  .nav-bar nav a,
-  6193	  .nav-bar nav .nav-text {
-  6194	    font-size: 13px;
-  6195	  }
-  6196	
-  6197	  .nav-separator {
-  6198	    font-size: 13px;
-  6199	  }
-  6200	}
-  6201	
-  6202	@media (max-width: 980px), (orientation: portrait) {
-  6203	  .flow-capture-group-full-row.flow-capture-group-visual-hierarchy
-  6204	    .flow-screen-stack:has(.flow-visual-hierarchy-frame-pair)
-  6205	    h4 {
-  6206	    transform: none !important;
-  6207	  }
-  6208	
-  6209	  .flow-capture-group-visual-hierarchy .flow-screen-stack-step-1b,
-  6210	  .flow-capture-group-visual-hierarchy .flow-screen-stack-step-1c,
-  6211	  .flow-capture-group-visual-hierarchy .flow-screen-stack-step-1d {
-  6212	    margin-top: 48px;
-  6213	  }
-  6214	
-  6215	  .flow-capture-group-visual-hierarchy
-  6216	    .flow-screen-stack-step-1
-  6217	    .flow-visual-hierarchy-frame-pair,
-  6218	  .flow-capture-group-visual-hierarchy
-  6219	    .flow-screen-stack-step-3
-  6220	    .flow-visual-hierarchy-frame-pair,
-  6221	  .flow-capture-group-visual-hierarchy
-  6222	    .flow-screen-stack-step-4
-  6223	    .flow-visual-hierarchy-frame-pair,
-  6224	  .flow-capture-group-visual-hierarchy
-  6225	    .flow-screen-stack-step-5
-  6226	    .flow-visual-hierarchy-frame-pair,
-  6227	  .flow-capture-group-visual-hierarchy
-  6228	    .flow-screen-stack-step-6
-  6229	    .flow-visual-hierarchy-frame-pair {
-  6230	    --flow-visual-hierarchy-centered-frame-width: 318px;
-  6231	
-  6232	    left: 50%;
-  6233	    margin-inline: 0;
-  6234	    transform: translateX(-50%);
-  6235	    width: calc(
-  6236	      var(--flow-visual-hierarchy-centered-frame-width) +
-  6237	        var(--flow-visual-hierarchy-brace-width) +
-  6238	        var(--flow-visual-hierarchy-brace-gap) +
-  6239	        var(--flow-visual-hierarchy-brace-width) +
-  6240	        var(--flow-visual-hierarchy-brace-gap)
-  6241	    );
-  6242	  }
-  6243	
-  6244	  .flow-capture-group-visual-hierarchy
-  6245	    .flow-screen-stack-step-1
-  6246	    .flow-visual-hierarchy-frame-pair,
-  6247	  .flow-capture-group-visual-hierarchy
-  6248	    .flow-screen-stack-step-3
-  6249	    .flow-visual-hierarchy-frame-pair,
-  6250	  .flow-capture-group-visual-hierarchy
-  6251	    .flow-screen-stack-step-6
-  6252	    .flow-visual-hierarchy-frame-pair {
-  6253	    --flow-visual-hierarchy-viewing-brace-shift: 4px;
-  6254	    --flow-visual-hierarchy-viewing-label-shift: 1px;
-  6255	  }
-  6256	
-  6257	  .flow-capture-group-visual-hierarchy
-  6258	    .flow-screen-stack-step-1
-  6259	    .flow-visual-hierarchy-frame-pair
-  6260	    > .flow-image-frame,
-  6261	  .flow-capture-group-visual-hierarchy
-  6262	    .flow-screen-stack-step-3
-  6263	    .flow-visual-hierarchy-frame-pair
-  6264	    > .flow-image-frame,
-  6265	  .flow-capture-group-visual-hierarchy
-  6266	    .flow-screen-stack-step-4
-  6267	    .flow-visual-hierarchy-frame-pair
-  6268	    > .flow-image-frame,
-  6269	  .flow-capture-group-visual-hierarchy
-  6270	    .flow-screen-stack-step-5
-  6271	    .flow-visual-hierarchy-frame-pair
-  6272	    > .flow-image-frame,
-  6273	  .flow-capture-group-visual-hierarchy
-  6274	    .flow-screen-stack-step-6
-  6275	    .flow-visual-hierarchy-frame-pair
-  6276	    > .flow-image-frame {
-  6277	    margin-left: calc(
-  6278	      var(--flow-visual-hierarchy-brace-width) +
-  6279	        var(--flow-visual-hierarchy-brace-gap)
-  6280	    );
-  6281	    max-width: none;
-  6282	    width: 318px;
-  6283	  }
-  6284	
-  6285	  .flow-capture-group-visual-hierarchy
-  6286	    .flow-screen-stack-step-4
-  6287	    .flow-visual-hierarchy-frame-pair
-  6288	    > .flow-image-frame,
-  6289	  .flow-capture-group-visual-hierarchy
-  6290	    .flow-screen-stack-step-5
-  6291	    .flow-visual-hierarchy-frame-pair
-  6292	    > .flow-image-frame {
-  6293	    margin-left: calc(
-  6294	      var(--flow-visual-hierarchy-brace-width) +
-  6295	        var(--flow-visual-hierarchy-brace-gap)
-  6296	    ) !important;
-  6297	  }
-  6298	
-  6299	  .flow-capture-group-visual-hierarchy
-  6300	    .flow-screen-stack-step-4
-  6301	    .flow-visual-hierarchy-brace,
-  6302	  .flow-capture-group-visual-hierarchy
-  6303	    .flow-screen-stack-step-5
-  6304	    .flow-visual-hierarchy-brace {
-  6305	    left: 0;
+  6166	    align-items: stretch;
+  6167	    bottom: clamp(2px, 1vw, 8px);
+  6168	    display: grid;
+  6169	    gap: clamp(6px, 2.5vw, 10px);
+  6170	    grid-auto-rows: 1fr;
+  6171	    grid-template-columns: repeat(2, minmax(0, 1fr));
+  6172	    justify-content: space-between;
+  6173	    left: clamp(4px, 2.4vw, 20px);
+  6174	    margin: 0;
+  6175	    max-width: none;
+  6176	    position: absolute;
+  6177	    right: clamp(4px, 2.4vw, 20px);
+  6178	    top: auto;
+  6179	    width: auto;
+  6180	  }
+  6181	
+  6182	  .alla-vostra-case .av-showcase-proof-row .av-showcase-proof {
+  6183	    align-self: stretch;
+  6184	    display: flex;
+  6185	    flex-direction: column;
+  6186	    max-width: none;
+  6187	    padding: 10px clamp(8px, 2.5vw, 12px);
+  6188	    width: auto;
+  6189	  }
+  6190	
+  6191	  .alla-vostra-case .av-showcase-proof-row .av-showcase-proof:first-child {
+  6192	    justify-self: stretch;
+  6193	  }
+  6194	
+  6195	  .alla-vostra-case .av-showcase-proof-row .av-showcase-proof:last-child {
+  6196	    justify-self: stretch;
+  6197	  }
+  6198	
+  6199	  .alla-vostra-case .av-showcase-proof strong {
+  6200	    font-size: clamp(20px, 6vw, 30px);
+  6201	  }
+  6202	
+  6203	  .alla-vostra-case .av-showcase-proof span {
+  6204	    font-size: clamp(12px, 3.2vw, 15px);
+  6205	    line-height: 1.32;
+  6206	  }
+  6207	
+  6208	  .alla-vostra-case .av-showcase-proof .av-showcase-skill-grid,
+  6209	  .alla-vostra-case .av-showcase-proof .av-showcase-platform-list {
+  6210	    grid-template-rows: var(--av-proof-top-row-height) var(--av-proof-bottom-row-height);
+  6211	  }
+  6212	
+  6213	  .alla-vostra-case .stats-strip {
+  6214	    border-top: 1px solid var(--line);
+  6215	    gap: 1px;
+  6216	    grid-template-columns: repeat(4, minmax(0, 1fr));
+  6217	    margin: 26px 0 0;
+  6218	    width: 100%;
+  6219	  }
+  6220	
+  6221	  .alla-vostra-case .stats-strip-item {
+  6222	    background: rgba(255, 255, 255, 0.025);
+  6223	    min-height: 178px;
+  6224	    padding: 14px 8px;
+  6225	  }
+  6226	
+  6227	  .alla-vostra-case .stats-strip strong {
+  6228	    font-size: clamp(30px, 8vw, 44px);
+  6229	  }
+  6230	
+  6231	  .alla-vostra-case .stats-strip-label,
+  6232	  .alla-vostra-case .stats-strip-measure {
+  6233	    font-size: clamp(12px, 3.2vw, 16px);
+  6234	    line-height: 1.16;
+  6235	  }
+  6236	
+  6237	  .project-card-grid,
+  6238	  .ownership-grid,
+  6239	  .feature-grid,
+  6240	  .decision-grid,
+  6241	  .architecture-map,
+  6242	  .stack-matrix {
+  6243	    grid-template-columns: 1fr;
+  6244	  }
+  6245	
+  6246	  .flow-segments {
+  6247	    grid-template-columns: repeat(2, minmax(0, 1fr));
+  6248	  }
+  6249	
+  6250	  .flow-support {
+  6251	    grid-template-columns: 1fr;
+  6252	  }
+  6253	
+  6254	  .flow-checkout-note {
+  6255	    min-height: auto;
+  6256	  }
+  6257	
+  6258	  .flow-section-intro > p {
+  6259	    border-left: 0;
+  6260	    padding-left: 0;
+  6261	  }
+  6262	
+  6263	  .product-flow-nav {
+  6264	    --product-flow-nav-font-size: clamp(15px, 5vw, 28px);
+  6265	    --product-flow-nav-height: clamp(58px, 14vw, 72px);
+  6266	
+  6267	    grid-template-columns: repeat(2, minmax(0, 1fr));
+  6268	  }
+  6269	
+  6270	  .product-flow-nav .button {
+  6271	    padding: 8px clamp(6px, 2vw, 12px) 10px;
+  6272	  }
+  6273	
+  6274	  .product-flow-nav .button:first-child {
+  6275	    border-radius: 8px 0 0 8px;
+  6276	  }
+  6277	
+  6278	  .product-flow-nav .button:last-child {
+  6279	    border-radius: 0 8px 8px 0;
+  6280	  }
+  6281	
+  6282	  .flow-capture-groups {
+  6283	    gap: 40px;
+  6284	    margin-top: 44px;
+  6285	  }
+  6286	
+  6287	  .flow-capture-group {
+  6288	    padding-top: 24px;
+  6289	  }
+  6290	
+  6291	  .flow-capture-grid {
+  6292	    gap: 28px;
+  6293	    grid-template-columns: 1fr;
+  6294	  }
+  6295	
+  6296	  .flow-screen-compact {
+  6297	    width: min(42vw, 146px);
+  6298	  }
+  6299	
+  6300	  .flow-screen-stack-captures {
+  6301	    gap: 12px;
+  6302	  }
+  6303	
+  6304	  .alla-vostra-case .flow-browse-toggle {
+  6305	    inline-size: calc((min(42vw, 146px) * 2) + 12px);
   6306	  }
   6307	
-  6308	  .flow-capture-group-visual-hierarchy
-  6309	    .flow-screen-stack-step-4
-  6310	    .flow-visual-hierarchy-external-annotation,
-  6311	  .flow-capture-group-visual-hierarchy
-  6312	    .flow-screen-stack-step-5
-  6313	    .flow-visual-hierarchy-external-annotation {
-  6314	    right: calc(100% - 110px) !important;
-  6315	  }
-  6316	
-  6317	  .flow-capture-group-visual-hierarchy
-  6318	    .flow-screen-stack-step-1
-  6319	    .flow-visual-hierarchy-section-lines,
-  6320	  .flow-capture-group-visual-hierarchy
-  6321	    .flow-screen-stack-step-3
-  6322	    .flow-visual-hierarchy-section-lines,
-  6323	  .flow-capture-group-visual-hierarchy
-  6324	    .flow-screen-stack-step-4
-  6325	    .flow-visual-hierarchy-section-lines,
-  6326	  .flow-capture-group-visual-hierarchy
-  6327	    .flow-screen-stack-step-5
-  6328	    .flow-visual-hierarchy-section-lines,
-  6329	  .flow-capture-group-visual-hierarchy
-  6330	    .flow-screen-stack-step-6
-  6331	    .flow-visual-hierarchy-section-lines {
-  6332	    left: calc(
-  6333	      var(--flow-visual-hierarchy-brace-width) +
-  6334	        var(--flow-visual-hierarchy-brace-gap) +
-  6335	        var(--flow-visual-hierarchy-centered-frame-width) +
-  6336	        var(--flow-visual-hierarchy-tip-frame-gap)
-  6337	    );
-  6338	  }
-  6339	
-  6340	  .flow-capture-group-visual-hierarchy
-  6341	    .flow-screen-stack-step-1b
-  6342	    .flow-visual-hierarchy-frame-pair,
-  6343	  .flow-capture-group-visual-hierarchy
-  6344	    .flow-screen-stack-step-1c
-  6345	    .flow-visual-hierarchy-frame-pair {
-  6346	    width: 318px;
-  6347	  }
-  6348	
-  6349	  .flow-capture-group-visual-hierarchy
-  6350	    .flow-screen-stack-step-1d
-  6351	    .flow-visual-hierarchy-frame-pair {
-  6352	    width: 408px;
+  6308	  .flow-original-art-grid {
+  6309	    gap: 12px;
+  6310	    grid-template-columns: repeat(2, minmax(0, min(42vw, 146px)));
+  6311	  }
+  6312	
+  6313	  .flow-original-photo-grid {
+  6314	    gap: 12px;
+  6315	    grid-template-columns: repeat(2, minmax(0, min(42vw, 146px)));
+  6316	  }
+  6317	
+  6318	  .flow-hero-composition-grid {
+  6319	    gap: 12px;
+  6320	    grid-template-columns: minmax(0, calc(min(84vw, 292px) + 12px));
+  6321	  }
+  6322	
+  6323	  .flow-hero-composition-screen {
+  6324	    width: 100%;
+  6325	  }
+  6326	
+  6327	  .flow-sticky-icon-grid {
+  6328	    gap: 12px;
+  6329	    grid-template-columns: repeat(2, minmax(0, min(42vw, 146px)));
+  6330	  }
+  6331	
+  6332	  .flow-action-asset-grid {
+  6333	    gap: 12px;
+  6334	    grid-template-columns: repeat(2, minmax(0, min(42vw, 146px)));
+  6335	  }
+  6336	
+  6337	  .flow-screen:not(.flow-screen-main) .flow-image-frame {
+  6338	    margin: 0 auto;
+  6339	    max-width: 230px;
+  6340	  }
+  6341	
+  6342	  .flow-screen.flow-hero-composition-screen .flow-image-frame {
+  6343	    max-width: none;
+  6344	  }
+  6345	
+  6346	  .closing-panel {
+  6347	    grid-template-columns: 1fr;
+  6348	    padding: 28px;
+  6349	  }
+  6350	
+  6351	  .closing-actions {
+  6352	    width: 100%;
   6353	  }
-  6354	
-  6355	  .flow-capture-group-visual-hierarchy
-  6356	    .flow-screen-stack-step-1b
-  6357	    .flow-visual-hierarchy-frame-pair
-  6358	    > .flow-protected-image-composition,
-  6359	  .flow-capture-group-visual-hierarchy
-  6360	    .flow-screen-stack-step-1c
-  6361	    .flow-visual-hierarchy-frame-pair
-  6362	    > .flow-protected-image-composition,
-  6363	  .flow-capture-group-visual-hierarchy
-  6364	    .flow-screen-stack-step-1d
-  6365	    .flow-visual-hierarchy-frame-pair
-  6366	    > .flow-image-frame {
-  6367	    margin-left: 0 !important;
-  6368	    max-width: none;
-  6369	  }
-  6370	
-  6371	  .flow-capture-group-visual-hierarchy .flow-screen-stack-step-1c {
-  6372	    top: 8px;
-  6373	  }
-  6374	
-  6375	  .flow-capture-group-visual-hierarchy .flow-screen-stack-step-1d {
-  6376	    top: 12px;
-  6377	  }
-  6378	
-  6379	  .flow-capture-group-visual-hierarchy
-  6380	    .flow-screen-stack-step-1b
-  6381	    .flow-visual-hierarchy-frame-pair
-  6382	    > .flow-protected-image-composition,
-  6383	  .flow-capture-group-visual-hierarchy
-  6384	    .flow-screen-stack-step-1c
-  6385	    .flow-visual-hierarchy-frame-pair
-  6386	    > .flow-protected-image-composition {
-  6387	    width: 318px;
-  6388	  }
-  6389	
-  6390	  .flow-capture-group-visual-hierarchy
-  6391	    .flow-screen-stack-step-1d
-  6392	    .flow-visual-hierarchy-frame-pair
-  6393	    > .flow-image-frame {
-  6394	    width: 408px;
-  6395	  }
-  6396	
-  6397	  .flow-capture-group-visual-hierarchy
-  6398	    .flow-screen-stack-step-1d
-  6399	    .flow-visual-hierarchy-section-lines-right {
-  6400	    left: calc(
-  6401	      100% + var(--flow-visual-hierarchy-focal-scale-outset) +
-  6402	        var(--flow-visual-hierarchy-tip-frame-gap) -
-  6403	        var(--flow-visual-hierarchy-callout-align-offset, 0px)
-  6404	    );
-  6405	  }
-  6406	
-  6407	  .flow-capture-group-visual-hierarchy
-  6408	    .flow-screen-stack-step-1b
-  6409	    .flow-protected-image-composition
-  6410	    > .flow-image-frame,
-  6411	  .flow-capture-group-visual-hierarchy
-  6412	    .flow-screen-stack-step-1c
-  6413	    .flow-protected-image-composition
-  6414	    > .flow-image-frame {
-  6415	    max-width: none;
-  6416	  }
-  6417	}
-  6418	
-  6419	@media (max-width: 720px) {
-  6420	  .flow-capture-group-visual-hierarchy
-  6421	    .flow-screen-stack-step-1b
-  6422	    .flow-visual-hierarchy-frame-pair,
-  6423	  .flow-capture-group-visual-hierarchy
-  6424	    .flow-screen-stack-step-1c
-  6425	    .flow-visual-hierarchy-frame-pair {
-  6426	    --flow-visual-hierarchy-tip-frame-gap: 20px;
-  6427	  }
-  6428	
-  6429	  .flow-capture-group-visual-hierarchy
-  6430	    .flow-screen-stack-step-1
-  6431	    .flow-visual-hierarchy-frame-pair,
-  6432	  .flow-capture-group-visual-hierarchy
-  6433	    .flow-screen-stack-step-3
-  6434	    .flow-visual-hierarchy-frame-pair,
-  6435	  .flow-capture-group-visual-hierarchy
-  6436	    .flow-screen-stack-step-4
-  6437	    .flow-visual-hierarchy-frame-pair,
-  6438	  .flow-capture-group-visual-hierarchy
-  6439	    .flow-screen-stack-step-5
-  6440	    .flow-visual-hierarchy-frame-pair,
-  6441	  .flow-capture-group-visual-hierarchy
-  6442	    .flow-screen-stack-step-6
-  6443	    .flow-visual-hierarchy-frame-pair {
-  6444	    --flow-visual-hierarchy-centered-frame-width: min(
-  6445	      278px,
-  6446	      calc(100vw - 156px)
-  6447	    );
-  6448	
-  6449	    width: calc(
-  6450	      var(--flow-visual-hierarchy-centered-frame-width) +
-  6451	        var(--flow-visual-hierarchy-brace-width) +
-  6452	        var(--flow-visual-hierarchy-brace-gap) +
-  6453	        var(--flow-visual-hierarchy-brace-width) +
-  6454	        var(--flow-visual-hierarchy-brace-gap)
-  6455	    );
-  6456	  }
-  6457	
-  6458	  .flow-capture-group-visual-hierarchy
-  6459	    .flow-screen-stack-step-1
-  6460	    .flow-visual-hierarchy-frame-pair
-  6461	    > .flow-image-frame,
+  6354	}
+  6355	
+  6356	@media (max-width: 720px) {
+  6357	  .project-page.alla-vostra-case .stats-strip-item {
+  6358	    min-height: 178px;
+  6359	  }
+  6360	}
+  6361	
+  6362	@media (max-width: 630px) {
+  6363	  .case-grid {
+  6364	    grid-template-columns: 1fr;
+  6365	  }
+  6366	
+  6367	  .case-grid-featured .case-card-project-title-name,
+  6368	  .case-grid-featured .case-card-title-underline {
+  6369	    overflow-wrap: normal;
+  6370	    white-space: nowrap;
+  6371	  }
+  6372	
+  6373	  .case-grid > .uiux-principle-card-expanded {
+  6374	    grid-column: auto;
+  6375	  }
+  6376	
+  6377	  .case-grid > .uiux-principle-card-expanded .uiux-principle-long-copy {
+  6378	    column-count: auto;
+  6379	    display: grid;
+  6380	  }
+  6381	}
+  6382	
+  6383	@media (max-width: 430px) {
+  6384	  .nav-bar {
+  6385	    --nav-brand-gap: 8px;
+  6386	    --nav-link-bottom-separator-gap: 3px;
+  6387	    --nav-link-separator-gap: 2px;
+  6388	    --nav-link-top-separator-gap: 2px;
+  6389	  }
+  6390	
+  6391	  .nav-brand-name {
+  6392	    font-size: 22px;
+  6393	  }
+  6394	
+  6395	  .nav-bar nav a,
+  6396	  .nav-bar nav .nav-text,
+  6397	  .nav-separator {
+  6398	    font-size: 14px;
+  6399	  }
+  6400	}
+  6401	
+  6402	@media (max-width: 380px) {
+  6403	  .nav-bar {
+  6404	    --nav-bar-inline-padding: 12px;
+  6405	    --nav-link-bottom-separator-gap: 2px;
+  6406	    --nav-link-separator-gap: 1px;
+  6407	    --nav-link-top-separator-gap: 1px;
+  6408	  }
+  6409	
+  6410	  .nav-bar nav a,
+  6411	  .nav-bar nav .nav-text {
+  6412	    font-size: 13.5px;
+  6413	    padding-left: 0;
+  6414	    padding-right: 0;
+  6415	  }
+  6416	
+  6417	  .nav-separator {
+  6418	    font-size: 13.5px;
+  6419	  }
+  6420	}
+  6421	
+  6422	@media (max-width: 340px) {
+  6423	  .alla-vostra-case .av-showcase-proof-row {
+  6424	    --av-proof-column-gap: 3px;
+  6425	    --av-skill-item-gap: 2.5px;
+  6426	
+  6427	    gap: 6px;
+  6428	    left: 4px;
+  6429	    right: 4px;
+  6430	  }
+  6431	
+  6432	  .alla-vostra-case .av-showcase-proof-row .av-showcase-proof {
+  6433	    padding-inline: 6px;
+  6434	  }
+  6435	
+  6436	  .nav-bar nav a,
+  6437	  .nav-bar nav .nav-text {
+  6438	    font-size: 13px;
+  6439	  }
+  6440	
+  6441	  .nav-separator {
+  6442	    font-size: 13px;
+  6443	  }
+  6444	}
+  6445	
+  6446	@media (max-width: 980px), (orientation: portrait) {
+  6447	  .flow-capture-group-full-row.flow-capture-group-visual-hierarchy
+  6448	    .flow-screen-stack:has(.flow-visual-hierarchy-frame-pair)
+  6449	    h4 {
+  6450	    transform: none !important;
+  6451	  }
+  6452	
+  6453	  .flow-capture-group-visual-hierarchy .flow-screen-stack-step-1b,
+  6454	  .flow-capture-group-visual-hierarchy .flow-screen-stack-step-1c,
+  6455	  .flow-capture-group-visual-hierarchy .flow-screen-stack-step-1d {
+  6456	    margin-top: 48px;
+  6457	  }
+  6458	
+  6459	  .flow-capture-group-visual-hierarchy
+  6460	    .flow-screen-stack-step-1
+  6461	    .flow-visual-hierarchy-frame-pair,
   6462	  .flow-capture-group-visual-hierarchy
   6463	    .flow-screen-stack-step-3
-  6464	    .flow-visual-hierarchy-frame-pair
-  6465	    > .flow-image-frame,
-  6466	  .flow-capture-group-visual-hierarchy
-  6467	    .flow-screen-stack-step-4
-  6468	    .flow-visual-hierarchy-frame-pair
-  6469	    > .flow-image-frame,
-  6470	  .flow-capture-group-visual-hierarchy
-  6471	    .flow-screen-stack-step-5
-  6472	    .flow-visual-hierarchy-frame-pair
-  6473	    > .flow-image-frame,
-  6474	  .flow-capture-group-visual-hierarchy
-  6475	    .flow-screen-stack-step-6
-  6476	    .flow-visual-hierarchy-frame-pair
-  6477	    > .flow-image-frame {
-  6478	    width: var(--flow-visual-hierarchy-centered-frame-width);
-  6479	  }
-  6480	}
-  6481	
-  6482	@media (max-width: 390px) {
-  6483	  .flow-capture-group-visual-hierarchy
-  6484	    .flow-screen-stack-step-1
-  6485	    .flow-visual-hierarchy-frame-pair,
-  6486	  .flow-capture-group-visual-hierarchy
-  6487	    .flow-screen-stack-step-3
-  6488	    .flow-visual-hierarchy-frame-pair,
-  6489	  .flow-capture-group-visual-hierarchy
-  6490	    .flow-screen-stack-step-6
-  6491	    .flow-visual-hierarchy-frame-pair {
-  6492	    --flow-visual-hierarchy-viewing-brace-shift: 8px;
-  6493	    --flow-visual-hierarchy-viewing-label-shift: 11px;
-  6494	  }
-  6495	}
+  6464	    .flow-visual-hierarchy-frame-pair,
+  6465	  .flow-capture-group-visual-hierarchy
+  6466	    .flow-screen-stack-step-4
+  6467	    .flow-visual-hierarchy-frame-pair,
+  6468	  .flow-capture-group-visual-hierarchy
+  6469	    .flow-screen-stack-step-5
+  6470	    .flow-visual-hierarchy-frame-pair,
+  6471	  .flow-capture-group-visual-hierarchy
+  6472	    .flow-screen-stack-step-6
+  6473	    .flow-visual-hierarchy-frame-pair {
+  6474	    --flow-visual-hierarchy-centered-frame-width: 318px;
+  6475	
+  6476	    left: 50%;
+  6477	    margin-inline: 0;
+  6478	    transform: translateX(-50%);
+  6479	    width: calc(
+  6480	      var(--flow-visual-hierarchy-centered-frame-width) +
+  6481	        var(--flow-visual-hierarchy-brace-width) +
+  6482	        var(--flow-visual-hierarchy-brace-gap) +
+  6483	        var(--flow-visual-hierarchy-brace-width) +
+  6484	        var(--flow-visual-hierarchy-brace-gap)
+  6485	    );
+  6486	  }
+  6487	
+  6488	  .flow-capture-group-visual-hierarchy
+  6489	    .flow-screen-stack-step-1
+  6490	    .flow-visual-hierarchy-frame-pair,
+  6491	  .flow-capture-group-visual-hierarchy
+  6492	    .flow-screen-stack-step-3
+  6493	    .flow-visual-hierarchy-frame-pair,
+  6494	  .flow-capture-group-visual-hierarchy
+  6495	    .flow-screen-stack-step-6
+  6496	    .flow-visual-hierarchy-frame-pair {
+  6497	    --flow-visual-hierarchy-viewing-brace-shift: 4px;
+  6498	    --flow-visual-hierarchy-viewing-label-shift: 1px;
+  6499	  }
+  6500	
+  6501	  .flow-capture-group-visual-hierarchy
+  6502	    .flow-screen-stack-step-1
+  6503	    .flow-visual-hierarchy-frame-pair
+  6504	    > .flow-image-frame,
+  6505	  .flow-capture-group-visual-hierarchy
+  6506	    .flow-screen-stack-step-3
+  6507	    .flow-visual-hierarchy-frame-pair
+  6508	    > .flow-image-frame,
+  6509	  .flow-capture-group-visual-hierarchy
+  6510	    .flow-screen-stack-step-4
+  6511	    .flow-visual-hierarchy-frame-pair
+  6512	    > .flow-image-frame,
+  6513	  .flow-capture-group-visual-hierarchy
+  6514	    .flow-screen-stack-step-5
+  6515	    .flow-visual-hierarchy-frame-pair
+  6516	    > .flow-image-frame,
+  6517	  .flow-capture-group-visual-hierarchy
+  6518	    .flow-screen-stack-step-6
+  6519	    .flow-visual-hierarchy-frame-pair
+  6520	    > .flow-image-frame {
+  6521	    margin-left: calc(
+  6522	      var(--flow-visual-hierarchy-brace-width) +
+  6523	        var(--flow-visual-hierarchy-brace-gap)
+  6524	    );
+  6525	    max-width: none;
+  6526	    width: 318px;
+  6527	  }
+  6528	
+  6529	  .flow-capture-group-visual-hierarchy
+  6530	    .flow-screen-stack-step-4
+  6531	    .flow-visual-hierarchy-frame-pair
+  6532	    > .flow-image-frame,
+  6533	  .flow-capture-group-visual-hierarchy
+  6534	    .flow-screen-stack-step-5
+  6535	    .flow-visual-hierarchy-frame-pair
+  6536	    > .flow-image-frame {
+  6537	    margin-left: calc(
+  6538	      var(--flow-visual-hierarchy-brace-width) +
+  6539	        var(--flow-visual-hierarchy-brace-gap)
+  6540	    ) !important;
+  6541	  }
+  6542	
+  6543	  .flow-capture-group-visual-hierarchy
+  6544	    .flow-screen-stack-step-4
+  6545	    .flow-visual-hierarchy-brace,
+  6546	  .flow-capture-group-visual-hierarchy
+  6547	    .flow-screen-stack-step-5
+  6548	    .flow-visual-hierarchy-brace {
+  6549	    left: 0;
+  6550	  }
+  6551	
+  6552	  .flow-capture-group-visual-hierarchy
+  6553	    .flow-screen-stack-step-4
+  6554	    .flow-visual-hierarchy-external-annotation,
+  6555	  .flow-capture-group-visual-hierarchy
+  6556	    .flow-screen-stack-step-5
+  6557	    .flow-visual-hierarchy-external-annotation {
+  6558	    right: calc(100% - 110px) !important;
+  6559	  }
+  6560	
+  6561	  .flow-capture-group-visual-hierarchy
+  6562	    .flow-screen-stack-step-1
+  6563	    .flow-visual-hierarchy-section-lines,
+  6564	  .flow-capture-group-visual-hierarchy
+  6565	    .flow-screen-stack-step-3
+  6566	    .flow-visual-hierarchy-section-lines,
+  6567	  .flow-capture-group-visual-hierarchy
+  6568	    .flow-screen-stack-step-4
+  6569	    .flow-visual-hierarchy-section-lines,
+  6570	  .flow-capture-group-visual-hierarchy
+  6571	    .flow-screen-stack-step-5
+  6572	    .flow-visual-hierarchy-section-lines,
+  6573	  .flow-capture-group-visual-hierarchy
+  6574	    .flow-screen-stack-step-6
+  6575	    .flow-visual-hierarchy-section-lines {
+  6576	    left: calc(
+  6577	      var(--flow-visual-hierarchy-brace-width) +
+  6578	        var(--flow-visual-hierarchy-brace-gap) +
+  6579	        var(--flow-visual-hierarchy-centered-frame-width) +
+  6580	        var(--flow-visual-hierarchy-tip-frame-gap)
+  6581	    );
+  6582	  }
+  6583	
+  6584	  .flow-capture-group-visual-hierarchy
+  6585	    .flow-screen-stack-step-1b
+  6586	    .flow-visual-hierarchy-frame-pair,
+  6587	  .flow-capture-group-visual-hierarchy
+  6588	    .flow-screen-stack-step-1c
+  6589	    .flow-visual-hierarchy-frame-pair {
+  6590	    width: 318px;
+  6591	  }
+  6592	
+  6593	  .flow-capture-group-visual-hierarchy
+  6594	    .flow-screen-stack-step-1d
+  6595	    .flow-visual-hierarchy-frame-pair {
+  6596	    width: 408px;
+  6597	  }
+  6598	
+  6599	  .flow-capture-group-visual-hierarchy
+  6600	    .flow-screen-stack-step-1b
+  6601	    .flow-visual-hierarchy-frame-pair
+  6602	    > .flow-protected-image-composition,
+  6603	  .flow-capture-group-visual-hierarchy
+  6604	    .flow-screen-stack-step-1c
+  6605	    .flow-visual-hierarchy-frame-pair
+  6606	    > .flow-protected-image-composition,
+  6607	  .flow-capture-group-visual-hierarchy
+  6608	    .flow-screen-stack-step-1d
+  6609	    .flow-visual-hierarchy-frame-pair
+  6610	    > .flow-image-frame {
+  6611	    margin-left: 0 !important;
+  6612	    max-width: none;
+  6613	  }
+  6614	
+  6615	  .flow-capture-group-visual-hierarchy .flow-screen-stack-step-1c {
+  6616	    top: 8px;
+  6617	  }
+  6618	
+  6619	  .flow-capture-group-visual-hierarchy .flow-screen-stack-step-1d {
+  6620	    top: 12px;
+  6621	  }
+  6622	
+  6623	  .flow-capture-group-visual-hierarchy
+  6624	    .flow-screen-stack-step-1b
+  6625	    .flow-visual-hierarchy-frame-pair
+  6626	    > .flow-protected-image-composition,
+  6627	  .flow-capture-group-visual-hierarchy
+  6628	    .flow-screen-stack-step-1c
+  6629	    .flow-visual-hierarchy-frame-pair
+  6630	    > .flow-protected-image-composition {
+  6631	    width: 318px;
+  6632	  }
+  6633	
+  6634	  .flow-capture-group-visual-hierarchy
+  6635	    .flow-screen-stack-step-1d
+  6636	    .flow-visual-hierarchy-frame-pair
+  6637	    > .flow-image-frame {
+  6638	    width: 408px;
+  6639	  }
+  6640	
+  6641	  .flow-capture-group-visual-hierarchy
+  6642	    .flow-screen-stack-step-1d
+  6643	    .flow-visual-hierarchy-section-lines-right {
+  6644	    left: calc(
+  6645	      100% + var(--flow-visual-hierarchy-focal-scale-outset) +
+  6646	        var(--flow-visual-hierarchy-tip-frame-gap) -
+  6647	        var(--flow-visual-hierarchy-callout-align-offset, 0px)
+  6648	    );
+  6649	  }
+  6650	
+  6651	  .flow-capture-group-visual-hierarchy
+  6652	    .flow-screen-stack-step-1b
+  6653	    .flow-protected-image-composition
+  6654	    > .flow-image-frame,
+  6655	  .flow-capture-group-visual-hierarchy
+  6656	    .flow-screen-stack-step-1c
+  6657	    .flow-protected-image-composition
+  6658	    > .flow-image-frame {
+  6659	    max-width: none;
+  6660	  }
+  6661	}
+  6662	
+  6663	@media (max-width: 720px) {
+  6664	  .flow-capture-group-visual-hierarchy
+  6665	    .flow-screen-stack-step-1b
+  6666	    .flow-visual-hierarchy-frame-pair,
+  6667	  .flow-capture-group-visual-hierarchy
+  6668	    .flow-screen-stack-step-1c
+  6669	    .flow-visual-hierarchy-frame-pair {
+  6670	    --flow-visual-hierarchy-tip-frame-gap: 20px;
+  6671	  }
+  6672	
+  6673	  .flow-capture-group-visual-hierarchy
+  6674	    .flow-screen-stack-step-1
+  6675	    .flow-visual-hierarchy-frame-pair,
+  6676	  .flow-capture-group-visual-hierarchy
+  6677	    .flow-screen-stack-step-3
+  6678	    .flow-visual-hierarchy-frame-pair,
+  6679	  .flow-capture-group-visual-hierarchy
+  6680	    .flow-screen-stack-step-4
+  6681	    .flow-visual-hierarchy-frame-pair,
+  6682	  .flow-capture-group-visual-hierarchy
+  6683	    .flow-screen-stack-step-5
+  6684	    .flow-visual-hierarchy-frame-pair,
+  6685	  .flow-capture-group-visual-hierarchy
+  6686	    .flow-screen-stack-step-6
+  6687	    .flow-visual-hierarchy-frame-pair {
+  6688	    --flow-visual-hierarchy-centered-frame-width: min(
+  6689	      278px,
+  6690	      calc(100vw - 156px)
+  6691	    );
+  6692	
+  6693	    width: calc(
+  6694	      var(--flow-visual-hierarchy-centered-frame-width) +
+  6695	        var(--flow-visual-hierarchy-brace-width) +
+  6696	        var(--flow-visual-hierarchy-brace-gap) +
+  6697	        var(--flow-visual-hierarchy-brace-width) +
+  6698	        var(--flow-visual-hierarchy-brace-gap)
+  6699	    );
+  6700	  }
+  6701	
+  6702	  .flow-capture-group-visual-hierarchy
+  6703	    .flow-screen-stack-step-1
+  6704	    .flow-visual-hierarchy-frame-pair
+  6705	    > .flow-image-frame,
+  6706	  .flow-capture-group-visual-hierarchy
+  6707	    .flow-screen-stack-step-3
+  6708	    .flow-visual-hierarchy-frame-pair
+  6709	    > .flow-image-frame,
+  6710	  .flow-capture-group-visual-hierarchy
+  6711	    .flow-screen-stack-step-4
+  6712	    .flow-visual-hierarchy-frame-pair
+  6713	    > .flow-image-frame,
+  6714	  .flow-capture-group-visual-hierarchy
+  6715	    .flow-screen-stack-step-5
+  6716	    .flow-visual-hierarchy-frame-pair
+  6717	    > .flow-image-frame,
+  6718	  .flow-capture-group-visual-hierarchy
+  6719	    .flow-screen-stack-step-6
+  6720	    .flow-visual-hierarchy-frame-pair
+  6721	    > .flow-image-frame {
+  6722	    width: var(--flow-visual-hierarchy-centered-frame-width);
+  6723	  }
+  6724	}
+  6725	
+  6726	@media (max-width: 390px) {
+  6727	  .flow-capture-group-visual-hierarchy
+  6728	    .flow-screen-stack-step-1
+  6729	    .flow-visual-hierarchy-frame-pair,
+  6730	  .flow-capture-group-visual-hierarchy
+  6731	    .flow-screen-stack-step-3
+  6732	    .flow-visual-hierarchy-frame-pair,
+  6733	  .flow-capture-group-visual-hierarchy
+  6734	    .flow-screen-stack-step-6
+  6735	    .flow-visual-hierarchy-frame-pair {
+  6736	    --flow-visual-hierarchy-viewing-brace-shift: 8px;
+  6737	    --flow-visual-hierarchy-viewing-label-shift: 11px;
+  6738	  }
+  6739	}
+  6740	
+  6741	@media (max-width: 980px), (orientation: portrait) {
+  6742	  .flow-capture-group-visual-hierarchy
+  6743	    .flow-capture-grid-row-group
+  6744	    .flow-visual-hierarchy-row-label {
+  6745	    grid-row: 1;
+  6746	    margin-top: 0;
+  6747	  }
+  6748	
+  6749	  .flow-capture-group-visual-hierarchy
+  6750	    .flow-capture-grid-row-group-2
+  6751	    .flow-screen-stack-step-3,
+  6752	  .flow-capture-group-visual-hierarchy
+  6753	    .flow-capture-grid-row-group-3
+  6754	    .flow-screen-stack-step-6 {
+  6755	    grid-row: 2;
+  6756	    top: auto;
+  6757	  }
+  6758	
+  6759	  .flow-capture-group-visual-hierarchy
+  6760	    .flow-capture-grid-row-group-2
+  6761	    .flow-screen-stack-step-4,
+  6762	  .flow-capture-group-visual-hierarchy
+  6763	    .flow-capture-grid-row-group-3
+  6764	    .flow-screen-stack-step-6b {
+  6765	    grid-row: 3;
+  6766	    top: auto;
+  6767	  }
+  6768	
+  6769	  .flow-capture-group-visual-hierarchy
+  6770	    .flow-capture-grid-row-group-2
+  6771	    .flow-screen-stack-step-5,
+  6772	  .flow-capture-group-visual-hierarchy
+  6773	    .flow-capture-grid-row-group-3
+  6774	    .flow-screen-stack-step-6c {
+  6775	    grid-row: 4;
+  6776	    top: auto;
+  6777	  }
+  6778	}
 
 
 ============================================================
@@ -15931,7 +16214,8 @@ Status:
  M portfolio_PROJECT_SNAPSHOT.txt
 
 Recent commits:
-c4b06cf (HEAD -> main, origin/main) Generated the latest customary session pdf worklog for the relevant project, dated September 8, 2026.
+61a318a (HEAD -> main, origin/main) Refined Alla Vostra visual hierarchy expansion and callouts
+c4b06cf Generated the latest customary session pdf worklog for the relevant project, dated September 8, 2026.
 9162c6b Refined Alla Vostra visual hierarchy scrolling states
 02a8457 Generated the latest customary session pdf worklog for the relevant project, dated September 7, 2026.
 6628705 Refined portfolio hero presentation
@@ -15940,7 +16224,6 @@ c8a0a00 Refined Alla Vostra visual hierarchy flow
 fc7d093 Generated the latest customary session pdf worklog for the relevant project, dated August 16, 2026.
 2edd9ed Refined Alla Vostra UX flow and UI hierarchy
 b95ad48 Generated the latest customary session pdf worklog for the relevant project, dated August 14, 2026.
-374ce86 Refined Alla Vostra visual hierarchy focus blends
 
 Remotes:
 origin	https://github.com/Prahlin/portfolio.git (fetch)
