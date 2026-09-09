@@ -118,6 +118,7 @@ type ProductFlowNavStyle = CSSProperties & {
 type VisualHierarchyBraceTone = "dark" | "light";
 type VisualHierarchySectionLineCallout = {
   label: string;
+  labelLines?: string[];
   side?: "left" | "right";
   top: string;
 };
@@ -195,6 +196,54 @@ const visualHierarchyStepFourLineCallouts: VisualHierarchySectionLineCallout[] =
 const visualHierarchyStepFiveLineCallouts: VisualHierarchySectionLineCallout[] = [
   { label: "MAIN CONTENT", top: "50%" },
 ];
+
+const visualHierarchyShoppingOverlayLineCallouts: VisualHierarchySectionLineCallout[] = [
+  { label: "APP HEADER", top: "7.65%" },
+  {
+    label: "PRODUCT NAV",
+    labelLines: ["PRODUCT", "NAV"],
+    top: "20.35%",
+  },
+  { label: "PRODUCT IMAGE", top: "47.78%" },
+  {
+    label: "ACTION CONTROLS",
+    labelLines: ["ACTION", "CONTROLS"],
+    top: "68.06%",
+  },
+  {
+    label: "SCREEN NAV",
+    labelLines: ["SCREEN", "NAV"],
+    top: "90.32%",
+  },
+];
+
+const visualHierarchyShoppingOverlaySecondaryLineCallouts: VisualHierarchySectionLineCallout[] =
+  [
+    { label: "SHOP BTN", labelLines: ["SHOP", "BTN"], top: "2.85%" },
+    { label: "PROD NAV", labelLines: ["PROD", "NAV"], top: "16.25%" },
+    { label: "PROD IMG", labelLines: ["PROD", "IMG"], top: "46.59%" },
+    {
+      label: "ACT CONT",
+      labelLines: ["ACT", "CONT"],
+      top: "69.58%",
+    },
+    {
+      label: "SCREEN NAV",
+      labelLines: ["SCREEN", "NAV"],
+      top: "96.52%",
+    },
+  ];
+
+const visualHierarchyShoppingOverlayTertiaryLineCallouts: VisualHierarchySectionLineCallout[] =
+  [
+    { label: "PROD NAV", labelLines: ["PROD", "NAV"], top: "7.30%" },
+    { label: "PROD IMG", labelLines: ["PROD", "IMG"], top: "45.27%" },
+    {
+      label: "ACT CONT",
+      labelLines: ["ACT", "CONT"],
+      top: "74.63%",
+    },
+  ];
 const visualHierarchyCreamFadeBackground =
   "linear-gradient(180deg, rgba(255, 252, 242, 0.1) 0%, rgba(255, 252, 242, 1) 25%, rgba(255, 252, 242, 1) 75%, rgba(255, 252, 242, 0.1) 100%)";
 const visualHierarchyImageFadeMask =
@@ -321,6 +370,17 @@ const visualHierarchyFocusRows = [
   ["Step 3", "Step 4", "Step 5"],
   ["Step 6", "Step 6b", "Step 6c"],
 ] as const;
+const visualHierarchyRowLabels = [
+  "PRE-SCROLLING",
+  "ON-SCROLLING",
+  "DURING SHOPPING",
+] as const;
+const visualHierarchyRowGroups = visualHierarchyFocusRows.map(
+  (steps, index) => ({
+    label: visualHierarchyRowLabels[index] ?? "",
+    steps,
+  }),
+);
 const visualHierarchyStepTitles: Record<string, string> = Object.fromEntries(
   visualHierarchyFocusRows.flatMap((steps) =>
     steps.map((step, index) => [
@@ -1035,8 +1095,8 @@ function PlaceholderScreen({
         className={`flow-visual-hierarchy-section-lines flow-visual-hierarchy-section-lines-${side}`}
       >
         {callouts.map((callout) => {
-          const labelWords = callout.label.split(" ");
-          const shouldWrapLabel = labelWords.length === 2;
+          const labelLines = callout.labelLines ?? callout.label.split(" ");
+          const shouldWrapLabel = labelLines.length > 1;
 
           return (
             <span
@@ -1057,12 +1117,12 @@ function PlaceholderScreen({
                   .join(" ")}
               >
                 {shouldWrapLabel
-                  ? labelWords.map((word) => (
+                  ? labelLines.map((line) => (
                       <span
                         className="flow-visual-hierarchy-section-label-word"
-                        key={word}
+                        key={line}
                       >
-                        {word}
+                        {line}
                       </span>
                     ))
                   : callout.label}
@@ -1556,18 +1616,25 @@ function OriginalPhotographyScreens() {
   );
 }
 
+type PlaceholderStageRowGroup = {
+  label: string;
+  steps: readonly string[];
+};
+
 function PlaceholderStage({
   className,
   copy,
   renderExpandedStepScreens,
   renderStepScreens,
   rowLabels = [],
+  rowGroups,
   sectionLabel = "Stage",
   stage,
   style,
   steps = placeholderSteps,
   stepTitles = {},
   title,
+  visibleRowLimit,
   visibleStepLimit,
 }: {
   className?: string;
@@ -1575,23 +1642,36 @@ function PlaceholderStage({
   renderExpandedStepScreens?: (step: string) => ReactNode;
   renderStepScreens?: (step: string, isExpanded: boolean) => ReactNode;
   rowLabels?: string[];
+  rowGroups?: readonly PlaceholderStageRowGroup[];
   sectionLabel?: "Category" | "Stage";
   stage: string;
   style?: CSSProperties;
   steps?: string[];
   stepTitles?: Record<string, string>;
   title: string;
+  visibleRowLimit?: number;
   visibleStepLimit?: number;
 }) {
   const [isExpanded, setIsExpanded] = useState(false);
   const isNarrowFlowLayout = useIsNarrowFlowLayout();
   const placeholderScreenshotsId = useId();
-  const visibleStepCount = visibleStepLimit ?? (isNarrowFlowLayout ? 1 : 2);
-  const visibleSteps = steps.slice(0, visibleStepCount);
-  const extraSteps = steps.slice(visibleStepCount);
+  const groupedVisibleRowCount = rowGroups
+    ? Math.min(visibleRowLimit ?? rowGroups.length, rowGroups.length)
+    : 0;
+  const visibleRowGroups = rowGroups?.slice(0, groupedVisibleRowCount) ?? [];
+  const extraRowGroups = rowGroups?.slice(groupedVisibleRowCount) ?? [];
+  const defaultVisibleStepCount =
+    visibleStepLimit ?? (isNarrowFlowLayout ? 1 : 2);
+  const visibleSteps = rowGroups
+    ? visibleRowGroups.flatMap((rowGroup) => [...rowGroup.steps])
+    : steps.slice(0, defaultVisibleStepCount);
+  const extraSteps = rowGroups
+    ? extraRowGroups.flatMap((rowGroup) => [...rowGroup.steps])
+    : steps.slice(defaultVisibleStepCount);
   const [firstExtraStep, ...remainingExtraSteps] = extraSteps;
-  const expandedVisibleStepScreens = renderExpandedStepScreens
-    ? visibleSteps.reduce<Array<{ screens: ReactNode; step: string }>>(
+  const expandedVisibleStepScreens: Array<{ screens: ReactNode; step: string }> =
+    !rowGroups && renderExpandedStepScreens
+      ? visibleSteps.reduce<Array<{ screens: ReactNode; step: string }>>(
         (items, step) => {
           const screens = renderExpandedStepScreens(step);
 
@@ -1603,7 +1683,47 @@ function PlaceholderStage({
         },
         [],
       )
-    : [];
+      : [];
+
+  const getStepSlug = (step: string) => step.toLowerCase().replace(/\s+/g, "-");
+  const renderStepStack = (step: string, expandedScreens: boolean) => (
+    <div
+      className={`flow-screen-stack flow-screen-stack-${getStepSlug(step)}`}
+      key={step}
+    >
+      <h4>{stepTitles[step] ?? step}</h4>
+      <div className="flow-screen-stack-captures">
+        {renderStepScreens?.(step, expandedScreens) ?? (
+          <>
+            <PlaceholderScreen label="Small" step={step} />
+            <PlaceholderScreen label="Large" step={step} />
+          </>
+        )}
+      </div>
+    </div>
+  );
+  const renderRowGroupGrid = (
+    rowGroup: PlaceholderStageRowGroup,
+    rowIndex: number,
+    expandedScreens: boolean,
+    keyPrefix: string,
+  ) => (
+    <div
+      className={`flow-capture-grid flow-capture-grid-row-group flow-capture-grid-row-group-${
+        rowIndex + 1
+      }`}
+      key={`${keyPrefix}-${rowGroup.label}`}
+    >
+      <span
+        className={`flow-visual-hierarchy-row-label flow-visual-hierarchy-row-label-${
+          rowIndex + 1
+        }`}
+      >
+        {rowGroup.label}
+      </span>
+      {rowGroup.steps.map((step) => renderStepStack(step, expandedScreens))}
+    </div>
+  );
 
   return (
     <div
@@ -1621,36 +1741,25 @@ function PlaceholderStage({
       </div>
 
       <div className="flow-capture-body">
-        <div className="flow-capture-grid">
-          {rowLabels.map((label, index) => (
-            <span
-              className={`flow-visual-hierarchy-row-label flow-visual-hierarchy-row-label-${
-                index + 1
-              }`}
-              key={label}
-            >
-              {label}
-            </span>
-          ))}
-          {visibleSteps.map((step) => (
-            <div
-              className={`flow-screen-stack flow-screen-stack-${step
-                .toLowerCase()
-                .replace(/\s+/g, "-")}`}
-              key={step}
-            >
-              <h4>{stepTitles[step] ?? step}</h4>
-              <div className="flow-screen-stack-captures">
-                {renderStepScreens?.(step, false) ?? (
-                  <>
-                    <PlaceholderScreen label="Small" step={step} />
-                    <PlaceholderScreen label="Large" step={step} />
-                  </>
-                )}
-              </div>
-            </div>
-          ))}
-        </div>
+        {rowGroups ? (
+          visibleRowGroups.map((rowGroup, index) =>
+            renderRowGroupGrid(rowGroup, index, false, "visible"),
+          )
+        ) : (
+          <div className="flow-capture-grid">
+            {rowLabels.map((label, index) => (
+              <span
+                className={`flow-visual-hierarchy-row-label flow-visual-hierarchy-row-label-${
+                  index + 1
+                }`}
+                key={label}
+              >
+                {label}
+              </span>
+            ))}
+            {visibleSteps.map((step) => renderStepStack(step, false))}
+          </div>
+        )}
 
         {extraSteps.length > 0 ? (
           <div className="flow-browse-toggle-row">
@@ -1677,45 +1786,36 @@ function PlaceholderStage({
             className={`flow-browse-extra${isExpanded ? " is-open" : ""}`}
             id={placeholderScreenshotsId}
           >
-            <div className="flow-capture-grid">
-              {firstExtraStep ? (
-                <div className="flow-screen-stack" key={firstExtraStep}>
-                  <h4>{stepTitles[firstExtraStep] ?? firstExtraStep}</h4>
-                  <div className="flow-screen-stack-captures">
-                    {renderStepScreens?.(firstExtraStep, isExpanded) ?? (
-                      <>
-                        <PlaceholderScreen label="Small" step={firstExtraStep} />
-                        <PlaceholderScreen label="Large" step={firstExtraStep} />
-                      </>
-                    )}
+            {rowGroups ? (
+              extraRowGroups.map((rowGroup, index) =>
+                renderRowGroupGrid(
+                  rowGroup,
+                  groupedVisibleRowCount + index,
+                  isExpanded,
+                  "extra",
+                ),
+              )
+            ) : (
+              <div className="flow-capture-grid">
+                {firstExtraStep
+                  ? renderStepStack(firstExtraStep, isExpanded)
+                  : null}
+                {expandedVisibleStepScreens.map(({ screens, step }) => (
+                  <div
+                    className={`flow-screen-stack flow-screen-stack-expanded-${getStepSlug(
+                      step,
+                    )}`}
+                    key={`expanded-${step}`}
+                  >
+                    <h4>{stepTitles[step] ?? step}</h4>
+                    <div className="flow-screen-stack-captures">{screens}</div>
                   </div>
-                </div>
-              ) : null}
-              {expandedVisibleStepScreens.map(({ screens, step }) => (
-                <div
-                  className={`flow-screen-stack flow-screen-stack-expanded-${step
-                    .toLowerCase()
-                    .replace(/\s+/g, "-")}`}
-                  key={`expanded-${step}`}
-                >
-                  <h4>{stepTitles[step] ?? step}</h4>
-                  <div className="flow-screen-stack-captures">{screens}</div>
-                </div>
-              ))}
-              {remainingExtraSteps.map((step) => (
-                <div className="flow-screen-stack" key={step}>
-                  <h4>{stepTitles[step] ?? step}</h4>
-                  <div className="flow-screen-stack-captures">
-                    {renderStepScreens?.(step, isExpanded) ?? (
-                      <>
-                        <PlaceholderScreen label="Small" step={step} />
-                        <PlaceholderScreen label="Large" step={step} />
-                      </>
-                    )}
-                  </div>
-                </div>
-              ))}
-            </div>
+                ))}
+                {remainingExtraSteps.map((step) =>
+                  renderStepStack(step, isExpanded),
+                )}
+              </div>
+            )}
           </div>
         ) : null}
       </div>
@@ -2106,9 +2206,11 @@ export default function ProductFlowSwitcher({
                               extraBraceStacks={
                                 isFocalPointStep
                                   ? undefined
-                                  : isStepFourHomeScreenStep
+                                  : isStepFourHomeScreenStep ||
+                                    isShoppingOverlayIsolatedStep
                                     ? visualHierarchyStepFourBraceStacks
-                                  : isStepFiveMosaicStep
+                                  : isStepFiveMosaicStep ||
+                                      isShoppingOverlayOnlyStep
                                     ? visualHierarchyStepFiveBraceStacks
                                   : isPreScrollingFadeStep
                                     ? visualHierarchyPreScrollingFocalBraceStacks[
@@ -2127,6 +2229,12 @@ export default function ProductFlowSwitcher({
                                     ? visualHierarchyTertiaryLineCallouts
                                   : isCheeseboardOnlyFocalStep
                                     ? visualHierarchyQuaternaryLineCallouts
+                                  : isShoppingOverlayIsolatedStep
+                                    ? visualHierarchyShoppingOverlaySecondaryLineCallouts
+                                  : isShoppingOverlayOnlyStep
+                                    ? visualHierarchyShoppingOverlayTertiaryLineCallouts
+                                  : isShoppingOverlayStep
+                                    ? visualHierarchyShoppingOverlayLineCallouts
                                   : isHomeScreenStep
                                   ? visualHierarchyStepThreeLineCallouts
                                   : isStartupScreenStep
@@ -2314,6 +2422,7 @@ export default function ProductFlowSwitcher({
                               overlayStyle={
                                 isBracedStep ||
                                 usesStepFourHomeScreenTreatment ||
+                                isShoppingOverlaySmallColumnStep ||
                                 isPreScrollingFadeStep
                                   ? visualHierarchyFocalPointAnnotationStyle
                                   : undefined
@@ -2325,6 +2434,8 @@ export default function ProductFlowSwitcher({
                                 isClippedFocalStep ||
                                 isPhotoOnlyFocalStep ||
                                 isCheeseboardOnlyFocalStep ||
+                                isShoppingOverlayIsolatedStep ||
+                                isShoppingOverlayOnlyStep ||
                                 isHomeScreenStep
                               }
                               style={{
@@ -2346,7 +2457,8 @@ export default function ProductFlowSwitcher({
                                 isClippedFocalStep ||
                                 isPhotoOnlyFocalStep ||
                                 isCheeseboardOnlyFocalStep ||
-                                isHomeScreenStep
+                                isHomeScreenStep ||
+                                isShoppingOverlaySmallColumnStep
                               }
                               visualHierarchyBraceTone={
                                 isBracedStep ? "light" : undefined
@@ -2364,9 +2476,9 @@ export default function ProductFlowSwitcher({
                       ) : undefined
                       : undefined
               }
-              rowLabels={
+              rowGroups={
                 section.title === "Visual Hierarchy"
-                  ? ["PRE-SCROLLING", "ON-SCROLLING", "DURING SHOPPING"]
+                  ? visualHierarchyRowGroups
                   : undefined
               }
               sectionLabel="Category"
@@ -2402,10 +2514,8 @@ export default function ProductFlowSwitcher({
                     : undefined
               }
               title={section.title}
-              visibleStepLimit={
-                section.title === "Visual Hierarchy"
-                  ? visualHierarchySteps.length
-                  : undefined
+              visibleRowLimit={
+                section.title === "Visual Hierarchy" ? 1 : undefined
               }
             />
           ))}
