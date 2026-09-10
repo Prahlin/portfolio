@@ -24,6 +24,7 @@ type ExpandableFlowStacksProps = {
   expandedLabel: string;
   initialStackCount: number;
   narrowInitialStackCount?: number;
+  showCaptions?: boolean;
   stacks: FlowScreenStack[];
 };
 
@@ -47,7 +48,13 @@ function useIsNarrowFlowLayout() {
   return isNarrowFlowLayout;
 }
 
-function FlowStack({ stack }: { stack: FlowScreenStack }) {
+function FlowStack({
+  showCaptions,
+  stack,
+}: {
+  showCaptions: boolean;
+  stack: FlowScreenStack;
+}) {
   return (
     <div className="flow-screen-stack">
       <h4>{stack.title}</h4>
@@ -67,7 +74,7 @@ function FlowStack({ stack }: { stack: FlowScreenStack }) {
                 src={screen.src}
               />
             </div>
-            <figcaption>{screen.caption}</figcaption>
+            {showCaptions ? <figcaption>{screen.caption}</figcaption> : null}
           </figure>
         ))}
       </div>
@@ -80,6 +87,7 @@ export default function ExpandableFlowStacks({
   expandedLabel,
   initialStackCount,
   narrowInitialStackCount,
+  showCaptions = true,
   stacks,
 }: ExpandableFlowStacksProps) {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -96,7 +104,11 @@ export default function ExpandableFlowStacks({
     <>
       <div className="flow-capture-grid">
         {visibleStacks.map((stack) => (
-          <FlowStack key={stack.title} stack={stack} />
+          <FlowStack
+            key={stack.title}
+            showCaptions={showCaptions}
+            stack={stack}
+          />
         ))}
       </div>
 
@@ -126,7 +138,11 @@ export default function ExpandableFlowStacks({
           >
             <div className="flow-capture-grid">
               {extraStacks.map((stack) => (
-                <FlowStack key={stack.title} stack={stack} />
+                <FlowStack
+                  key={stack.title}
+                  showCaptions={showCaptions}
+                  stack={stack}
+                />
               ))}
             </div>
           </div>

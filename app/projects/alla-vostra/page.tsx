@@ -10,14 +10,14 @@ import ProductFlowSwitcher from "./ProductFlowSwitcher";
 export const metadata: Metadata = {
   title: "Alla Vostra | Full Stack Mobile Commerce Case Study",
   description:
-    "Alla Vostra case study covering React Native, Expo, Stripe, Postmark, Node.js serverless routes, Android QA, EAS builds, and Play Store preparation.",
+    "Alla Vostra case study covering Expo 54, React Native, Stripe, PayPal, Google Pay, Apple Pay, Postmark, Vercel serverless commerce routes, EAS builds, and Play Store release preparation.",
 };
 
 const metadataItems = [
-  "React Native / Expo",
-  "Stripe payments",
-  "Node.js backend",
-  "Android QA + release prep",
+  "React Native / Expo 54",
+  "Stripe + PayPal checkout",
+  "Serverless commerce backend",
+  "EAS / Play Store release",
 ];
 
 const playStoreUrl =
@@ -31,7 +31,7 @@ const proofStats = [
     value: "400",
   },
   { label: "Real-Time Project Worklogs", value: "200" },
-  { label: "Store Front Releases", value: "2" },
+  { label: "Storefront Releases", value: "2" },
   { label: "Website", value: "1" },
 ];
 
@@ -292,50 +292,50 @@ function ProjectGitHubMark() {
 const ownershipItems = [
   {
     title: "Mobile Frontend",
-    copy: "React Native and Expo-based interface development, screen composition, navigation flow, and responsive mobile polish.",
+    copy: "React Native, Expo 54, and Expo Router implementation for the native ordering app, screen composition, navigation flow, and responsive mobile polish.",
   },
   {
     title: "Backend / Server Logic",
-    copy: "Node.js serverless routes and application logic supporting checkout-related flows and environment-aware deployment behavior.",
+    copy: "Node.js and Vercel serverless commerce routes for payment sheet creation, PayPal orders, Stripe webhooks, contact messages, and server-owned order validation.",
   },
   {
     title: "Payments",
-    copy: "Stripe integration for secure payment handling and purchase confirmation paths.",
+    copy: "Stripe card checkout, Google Pay, Apple Pay, and PayPal redirect/capture flows with platform-specific availability checks.",
   },
   {
     title: "Messaging",
-    copy: "Postmark-powered confirmation and transactional email workflow support.",
+    copy: "Postmark-powered order confirmations after verified payment events plus backend-routed contact form messages with safe reply handling.",
   },
   {
     title: "QA and Release",
-    copy: "Android emulator testing across multiple device classes, EAS build preparation, and Play Store readiness work.",
+    copy: "Android emulator testing, EAS development/preview/playTest/production profiles, native dev-client setup, TestFlight configuration, and Play Store readiness work.",
   },
 ];
 
 const featureItems = [
   {
-    title: "Product Browsing",
-    copy: "Structured item presentation and flow into selection and ordering.",
+    title: "Board Ordering",
+    copy: "Customers browse curated grazing boards, adjust quantities, and move selections into a real checkout path.",
   },
   {
-    title: "Checkout Experience",
-    copy: "A purchase path designed around clarity, payment readiness, and reduced friction.",
+    title: "Local Delivery Flow",
+    copy: "Recipient details, contact info, delivery date/time, and Florida service-area checks keep ordering tied to fulfillment.",
   },
   {
-    title: "Payment Confirmation State",
-    copy: "User-facing confirmation moments tied to real transaction outcomes.",
+    title: "Multi-Payment Checkout",
+    copy: "Card, Google Pay, Apple Pay, and PayPal options are selected from the same checkout experience.",
   },
   {
-    title: "Transactional Email Support",
-    copy: "Post-purchase messaging that extends the product beyond the in-app flow.",
+    title: "Trusted Order Totals",
+    copy: "The server owns catalog prices, delivery fees, tax, quantity limits, and delivery validation before payment begins.",
   },
   {
-    title: "Mobile-First Responsiveness",
-    copy: "Careful attention to layout behavior across Android device sizes and testing environments.",
+    title: "Order and Inquiry Messaging",
+    copy: "Purchase confirmations and contact form inquiries route through backend Postmark workflows.",
   },
   {
-    title: "Release Pipeline Awareness",
-    copy: "Implementation shaped by what was needed to move toward production-ready Android delivery.",
+    title: "Release-Ready Native App",
+    copy: "Versioned Android builds, store assets, native env flags, and EAS profiles support testing through release.",
   },
 ];
 
@@ -784,79 +784,125 @@ const screenshotGroups: {
 
 const architectureNodes = [
   {
-    title: "React Native / Expo app",
-    copy: "Mobile UI, screen flow, and ordering experience.",
+    title: "Native App Shell",
+    copy: "React Native 0.81, React 19, Expo 54, Expo Router 6, native navigation handling, and bundled app assets.",
   },
   {
-    title: "Serverless backend routes",
-    copy: "Node.js logic for payment-connected and environment-aware flows.",
+    title: "Commerce Backend",
+    copy: "Vercel serverless routes for health checks, Stripe payment sheets, PayPal order creation/capture, webhooks, and contact messages.",
   },
   {
-    title: "Stripe",
-    copy: "Secure payment handling and transaction outcome coordination.",
+    title: "Order Authority",
+    copy: "Backend pricing, tax, delivery fee, quantity, contact, delivery, and Florida service-area validation before payment creation.",
   },
   {
-    title: "Postmark",
-    copy: "Transactional confirmation messaging after purchase events.",
+    title: "Payment Orchestration",
+    copy: "Stripe PaymentIntents cover cards, Google Pay, and Apple Pay; PayPal uses server-created orders and app deep-link return handling.",
   },
   {
-    title: "Android QA / EAS builds",
-    copy: "Device testing, build preparation, and Play Store readiness work.",
+    title: "Messaging and Release",
+    copy: "Postmark handles confirmations and contact inquiries while EAS profiles support native testing, Play Store packaging, and TestFlight configuration.",
+  },
+];
+
+const architectureFlowSteps = [
+  {
+    title: "Mobile App",
+    copy: "React Native ordering UI",
+  },
+  {
+    title: "Vercel API",
+    copy: "Validated commerce routes",
+  },
+  {
+    title: "Payment Rails",
+    copy: "Stripe, wallets, PayPal",
+  },
+  {
+    title: "Messaging",
+    copy: "Postmark confirmations",
+  },
+  {
+    title: "Store Builds",
+    copy: "EAS, Play Store, TestFlight",
   },
 ];
 
 const decisionItems = [
   {
-    title: "Payment Flow Coordination",
-    copy: "Integrating checkout in a way that felt seamless in the mobile UI while staying aligned with secure server-side handling. The flow needed to keep users oriented without exposing implementation complexity.",
+    title: "Server-Owned Commerce Rules",
+    copy: "The app sends order intent, while the backend owns product prices, delivery fee, tax, quantity limits, and Florida-only delivery validation before any payment is created.",
   },
   {
-    title: "Cross-Device Android QA",
-    copy: "Verifying the experience across Android emulator sizes and release-oriented testing conditions. Layout decisions were checked against practical device behavior, not just a single ideal preview.",
+    title: "Multi-Rail Payment Boundaries",
+    copy: "Stripe card, Google Pay, Apple Pay, and PayPal each have distinct platform and configuration requirements, so the app validates the selected rail before starting checkout.",
   },
   {
-    title: "End-to-End Purchase Clarity",
-    copy: "Making the transition from browsing to checkout to confirmation feel coherent and trustworthy for the user. The app experience needed clear states before, during, and after payment.",
+    title: "Backend-Only Messaging Secrets",
+    copy: "Postmark delivery is handled through server routes and payment webhooks, keeping email credentials out of the mobile runtime.",
+  },
+  {
+    title: "Native Build Separation",
+    copy: "Development builds can disable Apple Pay entitlement requirements, while preview, playTest, TestFlight, and production profiles keep release paths explicit.",
+  },
+  {
+    title: "Release-Oriented QA",
+    copy: "Android layout, payment readiness, store assets, app versioning, and production bundle behavior were checked against practical release conditions.",
   },
 ];
 
 const readinessItems = [
-  "Android small / standard / large emulator QA",
-  "EAS build preparation",
-  "Payment flow verification",
-  "Post-purchase confirmation coverage",
-  "Play Store preparation",
+  "Android v1.0.3",
+  "Multi-Size Android QA",
+  "EAS Build Profiles",
+  "TestFlight Config",
+  "Stripe Live + Webhooks",
+  "Native Wallet Checks",
+  "PayPal Sandbox/Live",
+  "Postmark Messaging",
+  "Play Store AAB",
 ];
 
 const timelineItems = [
   {
     title: "Responsive Prototype to Mobile Architecture",
-    copy: "The project moved from an interface direction into a React Native and Expo Router structure built for real mobile ordering paths.",
+    copy: "The project moved from an interface direction into a React Native, Expo 54, and Expo Router structure built for real mobile ordering paths.",
   },
   {
-    title: "Secure Stripe Flow, Google Pay / PayPal Considerations, and Postmark Confirmations",
-    copy: "Checkout work centered on payment readiness, server-side coordination, and confirmation messaging beyond the in-app screen.",
+    title: "Server-Owned Checkout Logic",
+    copy: "Backend work established validated order totals, Stripe payment sheets, delivery constraints, webhook confirmation paths, and safe messaging boundaries.",
   },
   {
-    title: "Android QA and Release-Ready EAS Build Preparation",
-    copy: "Testing and build work focused on Android device classes, release behavior, and the practical path toward Play Store preparation.",
+    title: "Multi-Payment Expansion",
+    copy: "Checkout grew beyond card payments into Google Pay, Apple Pay, and PayPal, with native/runtime checks for each path.",
+  },
+  {
+    title: "Native Testing and Store Builds",
+    copy: "EAS profiles, Android versioning, Play Store bundle preparation, TestFlight configuration, and free-account iOS development testing were separated into explicit build paths.",
   },
 ];
 
 const stackGroups = [
-  { title: "Frontend", items: ["React Native", "Expo", "Expo Router"] },
-  { title: "Web / Supporting Stack", items: ["Next.js", "Tailwind CSS"] },
-  { title: "Backend", items: ["Node.js", "Vercel serverless routes"] },
-  { title: "Integrations", items: ["Stripe", "Postmark"] },
-  { title: "Release / QA", items: ["Android Studio", "EAS"] },
-];
-
-const proofItems = [
-  "333 commits",
-  "Full stack mobile implementation",
-  "Payment integration",
-  "Android QA and release prep",
-  "Transactional messaging support",
+  {
+    title: "App",
+    items: ["React Native 0.81.5", "React 19.1", "Expo 54", "Expo Router 6"],
+  },
+  {
+    title: "Commerce API",
+    items: ["Node.js", "Vercel Routes", "Server Totals", "Stripe Webhooks"],
+  },
+  {
+    title: "Payments",
+    items: ["Stripe RN 0.50.3", "PaymentIntents", "Wallet Pay", "PayPal REST"],
+  },
+  {
+    title: "Messaging",
+    items: ["Postmark", "Order Emails", "Contact Routing"],
+  },
+  {
+    title: "Release / QA",
+    items: ["EAS Profiles", "Android Studio", "Play Store AAB", "TestFlight"],
+  },
 ];
 
 function SectionHeading({
@@ -931,9 +977,9 @@ export default function AllaVostraCaseStudy() {
                 Flagship full stack mobile commerce app
               </p>
               <p className="project-hero-text">
-                Alla Vostra is a mobile commerce project focused on polished
-                ordering flows, secure payment handling, transactional
-                confirmations, and release-ready Android delivery.
+                Alla Vostra is a native commerce system focused on polished
+                ordering, multi-payment checkout, server-validated order logic,
+                transactional messaging, and production-minded store delivery.
               </p>
 
               <div className="project-meta-row" aria-label="Project metadata">
@@ -1122,16 +1168,17 @@ export default function AllaVostraCaseStudy() {
           </div>
           <div className="project-copy-panel overview-copy-panel">
             <p>
-              Alla Vostra was built as a full stack mobile ordering experience
-              where the product quality had to hold up across interface design,
-              payment handling, confirmation flows, and Android release
-              preparation.
+              Alla Vostra turns a boutique grazing-board menu into a native
+              ordering product: customers choose boards, enter delivery and
+              contact details, pay through the best available payment rail, and
+              receive confirmation through backend messaging.
             </p>
             <p>
               My role covered the app experience end to end: mobile UI
               implementation, front-end architecture, backend-connected purchase
-              flows, transactional messaging, emulator and device QA, and
-              release-focused iteration.
+              flows, server-owned order validation, PayPal and Stripe
+              coordination, transactional messaging, emulator and device QA,
+              native build setup, and release-focused iteration.
             </p>
             <div
               aria-label="Alla Vostra Play Store screenshots"
@@ -1194,13 +1241,33 @@ export default function AllaVostraCaseStudy() {
         </div>
       </section>
 
-      <section>
+      <section id="stack">
         <div className="site-shell project-section-grid">
           <SectionHeading
             kicker="Architecture"
-            title="Technical Architecture"
+            title="Architecture and Stack"
           />
-          <div>
+          <div className="architecture-stack-content">
+            <div
+              className="architecture-flow"
+              aria-label="Alla Vostra system flow"
+            >
+              {architectureFlowSteps.map((step, index) => (
+                <div className="architecture-flow-step" key={step.title}>
+                  <div>
+                    <span>{step.title}</span>
+                    <p>{step.copy}</p>
+                  </div>
+                  {index < architectureFlowSteps.length - 1 ? (
+                    <ArrowRight
+                      aria-hidden
+                      className="architecture-flow-arrow"
+                      size={18}
+                    />
+                  ) : null}
+                </div>
+              ))}
+            </div>
             <div
               className="architecture-map"
               aria-label="Alla Vostra technical architecture"
@@ -1214,48 +1281,24 @@ export default function AllaVostraCaseStudy() {
               ))}
             </div>
             <p className="architecture-copy">
-              The project was implemented as a mobile-first client experience
-              backed by server-side logic for payment-connected flows and
-              transactional messaging. The architecture balanced front-end polish
-              with practical production concerns such as payment reliability,
-              environment setup, testing coverage, and release preparation.
+              The project was implemented as an Expo mobile client backed by
+              serverless commerce routes. The app owns the interaction layer,
+              while the backend owns pricing, delivery rules, payment creation,
+              webhooks, PayPal capture, and Postmark messaging. That split kept
+              secrets out of the app and made checkout behavior easier to test
+              across native build targets.
             </p>
-          </div>
-        </div>
-      </section>
 
-      <section>
-        <div className="site-shell">
-          <SectionHeading
-            kicker="Engineering"
-            title="Engineering Decisions"
-          />
-          <div className="project-card-grid decision-grid">
-            {decisionItems.map((item) => (
-              <article className="project-card" key={item.title}>
-                <span>{item.title}</span>
-                <p>{item.copy}</p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <div className="site-shell readiness-layout">
-          <SectionHeading
-            kicker="Release"
-            title="Testing and Release Readiness"
-          />
-          <div>
-            <p className="readiness-copy">
-              Alla Vostra was not treated as a static concept piece. The work
-              included Android-focused QA, iteration across multiple emulator
-              sizes, and build preparation aimed at real release conditions.
-            </p>
-            <div className="readiness-list">
-              {readinessItems.map((item) => (
-                <span key={item}>{item}</span>
+            <div className="stack-matrix">
+              {stackGroups.map((group) => (
+                <div className="stack-group" key={group.title}>
+                  <h3>{group.title}</h3>
+                  <div>
+                    {group.items.map((item) => (
+                      <span key={item}>{item}</span>
+                    ))}
+                  </div>
+                </div>
               ))}
             </div>
           </div>
@@ -1264,46 +1307,50 @@ export default function AllaVostraCaseStudy() {
 
       <section>
         <div className="site-shell project-section-grid">
-          <SectionHeading kicker="Timeline" title="Build Timeline" />
-          <div className="project-timeline">
-            {timelineItems.map((item, index) => (
-              <article className="project-timeline-item" key={item.title}>
-                <span>{String(index + 1).padStart(2, "0")}</span>
-                <div>
-                  <h3>{item.title}</h3>
+          <SectionHeading kicker="Execution" title="Build Execution" />
+          <div className="build-execution-stack">
+            <div
+              aria-label="Alla Vostra engineering decisions"
+              className="project-card-grid decision-grid"
+            >
+              {decisionItems.map((item) => (
+                <article className="project-card" key={item.title}>
+                  <span>{item.title}</span>
                   <p>{item.copy}</p>
-                </div>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
+                </article>
+              ))}
+            </div>
 
-      <section id="stack">
-        <div className="site-shell">
-          <SectionHeading kicker="Stack" title="Stack" />
-          <div className="stack-matrix">
-            {stackGroups.map((group) => (
-              <div className="stack-group" key={group.title}>
-                <h3>{group.title}</h3>
-                <div>
-                  {group.items.map((item) => (
-                    <span key={item}>{item}</span>
-                  ))}
-                </div>
+            <div aria-label="Alla Vostra release readiness">
+              <h3 className="build-execution-subtitle">Release Readiness</h3>
+              <p className="readiness-copy">
+                Alla Vostra was not treated as a static concept piece. The work
+                included Android-focused QA, app version 1.0.3 packaging,
+                production AAB preparation, native dev-client testing, TestFlight
+                configuration, and build profiles aimed at real release
+                conditions.
+              </p>
+              <div className="readiness-list">
+                {readinessItems.map((item) => (
+                  <span key={item}>{item}</span>
+                ))}
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
+            </div>
 
-      <section>
-        <div className="site-shell">
-          <SectionHeading kicker="Proof" title="Build Proof" />
-          <div className="proof-points">
-            {proofItems.map((item) => (
-              <span key={item}>{item}</span>
-            ))}
+            <div aria-label="Alla Vostra build timeline">
+              <h3 className="build-execution-subtitle">Timeline</h3>
+              <div className="project-timeline">
+                {timelineItems.map((item, index) => (
+                  <article className="project-timeline-item" key={item.title}>
+                    <span>{String(index + 1).padStart(2, "0")}</span>
+                    <div>
+                      <h3>{item.title}</h3>
+                      <p>{item.copy}</p>
+                    </div>
+                  </article>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -1315,9 +1362,9 @@ export default function AllaVostraCaseStudy() {
             <h2>Interested in this kind of build?</h2>
             <p>
               This project reflects the kind of work I want to keep doing:
-              polished mobile interfaces, real backend-connected flows, careful
-              release prep, and product decisions that hold up outside of
-              mockups.
+              polished mobile interfaces, server-owned commerce logic,
+              multi-payment integrations, careful release prep, and product
+              decisions that hold up outside of mockups.
             </p>
           </div>
           <div className="closing-actions">

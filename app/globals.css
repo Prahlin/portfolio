@@ -1628,6 +1628,13 @@ h3 {
   min-height: 178px;
 }
 
+.alla-vostra-case .stats-strip strong {
+  font-size: clamp(30px, calc(6vw + 8px), 66px);
+  max-width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
 .stats-strip strong {
   color: var(--green);
   display: block;
@@ -5565,7 +5572,46 @@ section.project-hero {
 .architecture-map {
   display: grid;
   gap: 12px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.architecture-flow {
+  display: grid;
+  gap: 10px;
   grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.architecture-flow-step {
+  align-items: center;
+  background: rgba(67, 255, 146, 0.055);
+  border: 1px solid rgba(67, 255, 146, 0.24);
+  border-radius: 8px;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: minmax(0, 1fr) auto;
+  min-height: 104px;
+  min-width: 0;
+  padding: 16px;
+}
+
+.architecture-flow-step span {
+  color: var(--text);
+  display: block;
+  font-size: 14px;
+  font-weight: 850;
+  line-height: 1.2;
+}
+
+.architecture-flow-step p {
+  color: #b8c9bf;
+  font-size: 12px;
+  line-height: 1.45;
+  margin: 8px 0 0;
+}
+
+.architecture-flow-arrow {
+  color: var(--green);
+  opacity: 0.72;
 }
 
 .architecture-node {
@@ -5597,6 +5643,42 @@ section.project-hero {
   margin: 26px 0 0;
 }
 
+.architecture-stack-content,
+.build-execution-stack {
+  min-width: 0;
+}
+
+.architecture-stack-content {
+  display: grid;
+  gap: clamp(46px, 5vw, 72px);
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.architecture-stack-content .architecture-copy,
+.architecture-stack-content .stack-matrix {
+  margin: 0;
+}
+
+.build-execution-stack {
+  display: grid;
+  gap: clamp(54px, 6vw, 84px);
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.build-execution-stack .project-card-grid {
+  margin-top: 0;
+}
+
+.build-execution-subtitle {
+  color: var(--green);
+  font-size: 13px;
+  font-weight: 850;
+  letter-spacing: 0.1em;
+  line-height: 1.2;
+  margin: 0 0 24px;
+  text-transform: uppercase;
+}
+
 .readiness-copy {
   margin-bottom: 24px;
 }
@@ -5606,6 +5688,11 @@ section.project-hero {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+}
+
+.readiness-list span {
+  overflow-wrap: anywhere;
+  white-space: normal;
 }
 
 .project-timeline {
@@ -5635,7 +5722,7 @@ section.project-hero {
 .stack-matrix {
   display: grid;
   gap: 14px;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   margin-top: 34px;
 }
 
@@ -5657,6 +5744,18 @@ section.project-hero {
   font-size: 14px;
   font-weight: 750;
   line-height: 1.35;
+}
+
+.alla-vostra-case #stack .architecture-map {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.alla-vostra-case #stack .architecture-node:last-child {
+  grid-column: 1 / -1;
+}
+
+.alla-vostra-case #stack .stack-matrix {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .proof-points {
@@ -5899,6 +5998,10 @@ section.project-hero {
   .feature-grid,
   .decision-grid,
   .architecture-map {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .architecture-flow {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -6240,7 +6343,7 @@ section.project-hero {
   }
 
   .alla-vostra-case .stats-strip strong {
-    font-size: clamp(30px, 8vw, 44px);
+    font-size: clamp(30px, calc(6vw + 8px), 66px);
   }
 
   .alla-vostra-case .stats-strip-label,
@@ -6253,8 +6356,23 @@ section.project-hero {
   .ownership-grid,
   .feature-grid,
   .decision-grid,
+  .architecture-flow,
   .architecture-map,
   .stack-matrix {
+    grid-template-columns: 1fr;
+  }
+
+  .architecture-flow-step {
+    grid-template-columns: minmax(0, 1fr) auto;
+    min-height: auto;
+  }
+
+  .architecture-flow-arrow {
+    transform: rotate(90deg);
+  }
+
+  .alla-vostra-case #stack .architecture-map,
+  .alla-vostra-case #stack .stack-matrix {
     grid-template-columns: 1fr;
   }
 

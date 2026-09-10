@@ -1858,8 +1858,9 @@ export default function ProductFlowSwitcher({
   useEffect(() => {
     const nav = productFlowNavRef.current;
     const navWrap = productFlowNavWrapRef.current;
+    const productFlowSection = navWrap?.closest<HTMLElement>("#product-flow");
 
-    if (!nav || !navWrap) {
+    if (!nav || !navWrap || !productFlowSection) {
       return undefined;
     }
 
@@ -1868,7 +1869,12 @@ export default function ProductFlowSwitcher({
     const setPinnedFromAnchor = () => {
       const navWrapRect = navWrap.getBoundingClientRect();
       const anchorTop = navWrapRect.top + window.scrollY;
-      const shouldPin = window.scrollY >= anchorTop;
+      const sectionBottom =
+        productFlowSection.getBoundingClientRect().bottom + window.scrollY;
+      const navTop = Number.parseFloat(window.getComputedStyle(nav).top) || 0;
+      const pinnedNavBottom = window.scrollY + navTop + nav.offsetHeight;
+      const shouldPin =
+        window.scrollY >= anchorTop && pinnedNavBottom < sectionBottom;
 
       setIsProductFlowNavPinned((isPinned) =>
         isPinned === shouldPin ? isPinned : shouldPin,
@@ -2526,7 +2532,7 @@ export default function ProductFlowSwitcher({
         <div className="flow-capture-groups">
           <div className="flow-capture-group">
             <div className="flow-group-header">
-              <span>Stage 0</span>
+              <span>Stage 01</span>
               <h3>Tutorial</h3>
               <p>This tutorial stage will outline the guided first-use walkthrough.</p>
             </div>
@@ -2536,6 +2542,7 @@ export default function ProductFlowSwitcher({
               expandedLabel="Show Less"
               initialStackCount={2}
               narrowInitialStackCount={1}
+              showCaptions={false}
               stacks={tutorialStacks}
             />
           </div>
@@ -2543,7 +2550,7 @@ export default function ProductFlowSwitcher({
           {screenshotGroups.map((group, index) => (
             <div className="flow-capture-group" key={group.title}>
               <div className="flow-group-header">
-                <span>Stage {String(index + 1).padStart(2, "0")}</span>
+                <span>Stage {String(index + 2).padStart(2, "0")}</span>
                 <h3>{group.title}</h3>
                 <p>{group.copy}</p>
               </div>
@@ -2553,6 +2560,7 @@ export default function ProductFlowSwitcher({
                 expandedLabel="Show Less"
                 initialStackCount={2}
                 narrowInitialStackCount={1}
+                showCaptions={false}
                 stacks={group.stacks}
               />
             </div>
