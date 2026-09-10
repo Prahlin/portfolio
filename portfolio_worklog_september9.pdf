@@ -1,0 +1,1013 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [6 0 R 8 0 R 10 0 R 12 0 R 14 0 R 16 0 R 18 0 R] /Count 7 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+5 0 obj
+<< /Length 4790 >>
+stream
+BT
+/F2 14 Tf
+1 0 0 1 54 738.00 Tm
+(Prahlin Portfolio Work Log - September 9, 2026) Tj
+/F1 10 Tf
+1 0 0 1 54 715.00 Tm
+(Compiled summary for Wednesday, September 9, 2026 - focus: continuing the Prahl.dev Portfolio) Tj
+/F1 10 Tf
+1 0 0 1 54 702.00 Tm
+(Alla Vostra project-page refinement after the September 8 Part 2 Visual Hierarchy expansion and) Tj
+/F1 10 Tf
+1 0 0 1 54 689.00 Tm
+(deployment record, verifying the United States Eastern date, refreshing the Portfolio project) Tj
+/F1 10 Tf
+1 0 0 1 54 676.00 Tm
+(snapshot, studying every pre-existing Portfolio PDF worklog, tightening narrow portrait Primary) Tj
+/F1 10 Tf
+1 0 0 1 54 663.00 Tm
+(stack spacing, moving the Viewing Area label clear of its brace, removing gray captions from UI) Tj
+/F1 10 Tf
+1 0 0 1 54 650.00 Tm
+(Foundations and UX Product Flow image groups, building UI Foundations / UX Product Flow nav) Tj
+/F1 10 Tf
+1 0 0 1 54 637.00 Tm
+(mockups, implementing and iterating the two-tab section switcher treatment, renaming UI) Tj
+/F1 10 Tf
+1 0 0 1 54 624.00 Tm
+(Foundations category eyebrows, renumbering UX Product Flow stages, removing the Build Proof) Tj
+/F1 10 Tf
+1 0 0 1 54 611.00 Tm
+(section, regrouping technical case-study sections, studying the current Alla Vostra app) Tj
+/F1 10 Tf
+1 0 0 1 54 598.00 Tm
+(repository for changed and added capabilities, updating the page around the current native) Tj
+/F1 10 Tf
+1 0 0 1 54 585.00 Tm
+(commerce architecture, adding a compact architecture flow, simplifying the stack presentation,) Tj
+/F1 10 Tf
+1 0 0 1 54 572.00 Tm
+(validating TypeScript and browser-rendered mobile/desktop behavior, recording the committed) Tj
+/F1 10 Tf
+1 0 0 1 54 559.00 Tm
+(source state at ae7ce4b, refreshing the Portfolio project snapshot, and generating the September) Tj
+/F1 10 Tf
+1 0 0 1 54 546.00 Tm
+(9 Portfolio PDF worklog.) Tj
+/F1 10 Tf
+1 0 0 1 54 526.00 Tm
+(Generated in continuity with the established Prahlin Portfolio daily worklog cadence: compact) Tj
+/F1 10 Tf
+1 0 0 1 54 513.00 Tm
+(opening summary, source-material section, baseline section, goal list, work-completed sections,) Tj
+/F1 10 Tf
+1 0 0 1 54 500.00 Tm
+(validation section, files-touched list, follow-up context, and output-artifact close.) Tj
+/F1 10 Tf
+1 0 0 1 54 480.00 Tm
+(This artifact intentionally covers Prahlin/portfolio work performed after) Tj
+/F1 10 Tf
+1 0 0 1 54 467.00 Tm
+(portfolio_worklog_september8_part2.pdf and after the September 8 Part 2 documentation state. The) Tj
+/F1 10 Tf
+1 0 0 1 54 454.00 Tm
+(source state reviewed for this record is ae7ce4bf358fa59f66ee686545e085d288e9ad0f on main,) Tj
+/F1 10 Tf
+1 0 0 1 54 441.00 Tm
+(matching origin/main after the source commit titled Refreshed Alla Vostra case study around) Tj
+/F1 10 Tf
+1 0 0 1 54 428.00 Tm
+(current app build. The September 9 source work is represented by commits) Tj
+/F1 10 Tf
+1 0 0 1 54 415.00 Tm
+(993c75d87646eb3fca1d321a0814368cbf53fe66 and ae7ce4bf358fa59f66ee686545e085d288e9ad0f. No new) Tj
+/F1 10 Tf
+1 0 0 1 54 402.00 Tm
+(deployment, Hostinger synchronization, source commit, or public publish was performed during) Tj
+/F1 10 Tf
+1 0 0 1 54 389.00 Tm
+(this worklog-generation pass. The local documentation deltas created by this pass are the) Tj
+/F1 10 Tf
+1 0 0 1 54 376.00 Tm
+(refreshed portfolio_PROJECT_SNAPSHOT.txt file and this September 9 PDF worklog.) Tj
+/F2 12 Tf
+1 0 0 1 54 348.00 Tm
+(Source Materials Reviewed) Tj
+/F1 10 Tf
+1 0 0 1 54 330.00 Tm
+(- Verified the United States Eastern date with TZ=America/New_York date immediately before) Tj
+/F1 10 Tf
+1 0 0 1 54 317.00 Tm
+(  generation, which reported Wednesday, September 9, 2026 at 10:44 PM EDT. A UTC-04:00 time) Tj
+/F1 10 Tf
+1 0 0 1 54 304.00 Tm
+(  check during the same pass confirmed the same Eastern calendar date. The session therefore) Tj
+/F1 10 Tf
+1 0 0 1 54 291.00 Tm
+(  uses September 9, 2026.) Tj
+/F1 10 Tf
+1 0 0 1 54 276.00 Tm
+(- Ran ./read_project.sh from /Users/prahlin/gh/portfolio and regenerated) Tj
+/F1 10 Tf
+1 0 0 1 54 263.00 Tm
+(  portfolio_PROJECT_SNAPSHOT.txt before writing this worklog, preserving the project) Tj
+/F1 10 Tf
+1 0 0 1 54 250.00 Tm
+(  convention that Codex refreshes the current source snapshot before continuing Portfolio) Tj
+/F1 10 Tf
+1 0 0 1 54 237.00 Tm
+(  documentation work.) Tj
+/F1 10 Tf
+1 0 0 1 54 222.00 Tm
+(- Reviewed the refreshed portfolio_PROJECT_SNAPSHOT.txt, including project notes, source) Tj
+/F1 10 Tf
+1 0 0 1 54 209.00 Tm
+(  tree, public image and PDF inventories, package and deployment configuration, current git) Tj
+/F1 10 Tf
+1 0 0 1 54 196.00 Tm
+(  context, generated/cache ignore policy, and the standing instruction to ask for a commit) Tj
+/F1 10 Tf
+1 0 0 1 54 183.00 Tm
+(  message before committing or pushing.) Tj
+/F1 9 Tf
+1 0 0 1 196.29 30.00 Tm
+(Prahlin Portfolio Work Log - September 9, 2026 Page 1) Tj
+ET
+endstream
+endobj
+6 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 5 0 R >>
+endobj
+7 0 obj
+<< /Length 5604 >>
+stream
+BT
+/F1 10 Tf
+1 0 0 1 54 738.00 Tm
+(- Reviewed every pre-existing Portfolio root-level worklog PDF:) Tj
+/F1 10 Tf
+1 0 0 1 54 725.00 Tm
+(  portfolio_worklog_july11.pdf, portfolio_worklog_july14.pdf,) Tj
+/F1 10 Tf
+1 0 0 1 54 712.00 Tm
+(  portfolio_worklog_july15_part1.pdf, portfolio_worklog_july15_part2.pdf,) Tj
+/F1 10 Tf
+1 0 0 1 54 699.00 Tm
+(  portfolio_worklog_july16.pdf, portfolio_worklog_july19.pdf, portfolio_worklog_july20.pdf,) Tj
+/F1 10 Tf
+1 0 0 1 54 686.00 Tm
+(  portfolio_worklog_july21.pdf, portfolio_worklog_july22.pdf, portfolio_worklog_july23.pdf,) Tj
+/F1 10 Tf
+1 0 0 1 54 673.00 Tm
+(  portfolio_worklog_july24.pdf, portfolio_worklog_july25.pdf, portfolio_worklog_july29.pdf,) Tj
+/F1 10 Tf
+1 0 0 1 54 660.00 Tm
+(  portfolio_worklog_july30.pdf, portfolio_worklog_july31.pdf,) Tj
+/F1 10 Tf
+1 0 0 1 54 647.00 Tm
+(  portfolio_worklog_august1_part1.pdf, portfolio_worklog_august1_part2.pdf,) Tj
+/F1 10 Tf
+1 0 0 1 54 634.00 Tm
+(  portfolio_worklog_august1_part3.pdf, portfolio_worklog_august3.pdf,) Tj
+/F1 10 Tf
+1 0 0 1 54 621.00 Tm
+(  portfolio_worklog_august4.pdf, portfolio_worklog_august5.pdf,) Tj
+/F1 10 Tf
+1 0 0 1 54 608.00 Tm
+(  portfolio_worklog_august6.pdf, portfolio_worklog_august10_part1.pdf,) Tj
+/F1 10 Tf
+1 0 0 1 54 595.00 Tm
+(  portfolio_worklog_august10_part2.pdf, portfolio_worklog_august11.pdf,) Tj
+/F1 10 Tf
+1 0 0 1 54 582.00 Tm
+(  portfolio_worklog_august12_part1.pdf, portfolio_worklog_august12_part2.pdf,) Tj
+/F1 10 Tf
+1 0 0 1 54 569.00 Tm
+(  portfolio_worklog_august14.pdf, portfolio_worklog_august16.pdf,) Tj
+/F1 10 Tf
+1 0 0 1 54 556.00 Tm
+(  portfolio_worklog_august24.pdf, portfolio_worklog_september7.pdf,) Tj
+/F1 10 Tf
+1 0 0 1 54 543.00 Tm
+(  portfolio_worklog_september8.pdf, portfolio_worklog_september8_part2.pdf.) Tj
+/F1 10 Tf
+1 0 0 1 54 528.00 Tm
+(- Extracted text from all thirty-three existing Portfolio PDFs with pdftotext and checked) Tj
+/F1 10 Tf
+1 0 0 1 54 515.00 Tm
+(  recent metadata with pdfinfo and pdffonts to preserve title cadence, daily and same-day) Tj
+/F1 10 Tf
+1 0 0 1 54 502.00 Tm
+(  part naming, opening-summary density, section order, compact bullet-heavy technical voice,) Tj
+/F1 10 Tf
+1 0 0 1 54 489.00 Tm
+(  validation language, files-touched lists, follow-up context, output-artifact close,) Tj
+/F1 10 Tf
+1 0 0 1 54 476.00 Tm
+(  root-level filename style, letter-size pages, PDF 1.4 output, Helvetica Type 1 text, and) Tj
+/F1 10 Tf
+1 0 0 1 54 463.00 Tm
+(  Codex author/creator/producer metadata.) Tj
+/F1 10 Tf
+1 0 0 1 54 448.00 Tm
+(- Used portfolio_worklog_september8_part2.pdf as the closest chronological and structural) Tj
+/F1 10 Tf
+1 0 0 1 54 435.00 Tm
+(  baseline because it documented the immediately preceding Visual Hierarchy grouped) Tj
+/F1 10 Tf
+1 0 0 1 54 422.00 Tm
+(  expansion, During Shopping callout work, static-export fallback, Hostinger branch update,) Tj
+/F1 10 Tf
+1 0 0 1 54 409.00 Tm
+(  and September 8 Part 2 documentation state.) Tj
+/F1 10 Tf
+1 0 0 1 54 394.00 Tm
+(- Reviewed git history and state through git log, git show --stat, git status --short) Tj
+/F1 10 Tf
+1 0 0 1 54 381.00 Tm
+(  --branch, git diff --stat, git diff --name-status, package scripts, local validation) Tj
+/F1 10 Tf
+1 0 0 1 54 368.00 Tm
+(  output, local route checks, and the current root-level Portfolio PDF inventory.) Tj
+/F1 10 Tf
+1 0 0 1 54 353.00 Tm
+(- Reviewed the September 9 source commits: 993c75d Refined Alla Vostra UI foundations) Tj
+/F1 10 Tf
+1 0 0 1 54 340.00 Tm
+(  hierarchy and navigation, and ae7ce4b Refreshed Alla Vostra case study around current app) Tj
+/F1 10 Tf
+1 0 0 1 54 327.00 Tm
+(  build.) Tj
+/F1 10 Tf
+1 0 0 1 54 312.00 Tm
+(- Reviewed the relevant Portfolio source files and ancillary assets:) Tj
+/F1 10 Tf
+1 0 0 1 54 299.00 Tm
+(  app/projects/alla-vostra/page.tsx, app/projects/alla-vostra/ProductFlowSwitcher.tsx,) Tj
+/F1 10 Tf
+1 0 0 1 54 286.00 Tm
+(  app/projects/alla-vostra/ExpandableFlowStacks.tsx,) Tj
+/F1 10 Tf
+1 0 0 1 54 273.00 Tm
+(  app/projects/alla-vostra/HeroProofBottomAligner.tsx, app/globals.css,) Tj
+/F1 10 Tf
+1 0 0 1 54 260.00 Tm
+(  mockups/ui-flow-nav-alternatives.png, package.json, read_project.sh, and the local) Tj
+/F1 10 Tf
+1 0 0 1 54 247.00 Tm
+(  /projects/alla-vostra route.) Tj
+/F1 10 Tf
+1 0 0 1 54 232.00 Tm
+(- Cross-checked the current Alla Vostra app repository at /Users/prahlin/gh/alla_vostra,) Tj
+/F1 10 Tf
+1 0 0 1 54 219.00 Tm
+(  including mob/package.json, mob/app.json, mob/app.config.js, mob/eas.json,) Tj
+/F1 10 Tf
+1 0 0 1 54 206.00 Tm
+(  mob/app/_layout.js, mob/app/shop.js, mob/app/contact.js, mob/utils/stripePayments.js,) Tj
+/F1 10 Tf
+1 0 0 1 54 193.00 Tm
+(  mob/utils/stripeNative.js, mob/utils/paypalPayments.js, mob/utils/contactMessages.js,) Tj
+/F1 10 Tf
+1 0 0 1 54 180.00 Tm
+(  server/README.md, server/lib/orders.js, server/api/payment-sheet.js,) Tj
+/F1 10 Tf
+1 0 0 1 54 167.00 Tm
+(  server/api/paypal-create-order.js, server/api/paypal-capture-order.js,) Tj
+/F1 10 Tf
+1 0 0 1 54 154.00 Tm
+(  server/api/contact-message.js, and the current app/web project snapshots.) Tj
+/F2 12 Tf
+1 0 0 1 54 131.00 Tm
+(Baseline Status Before September 9 Work) Tj
+/F1 10 Tf
+1 0 0 1 54 113.00 Tm
+(- September 8 Part 2 left the Alla Vostra Visual Hierarchy section with grouped) Tj
+/F1 10 Tf
+1 0 0 1 54 100.00 Tm
+(  Pre-Scrolling, On-Scrolling, and During Shopping rows, expanded focal braces,) Tj
+/F1 10 Tf
+1 0 0 1 54 87.00 Tm
+(  product-overlay callout pins, row-level Show More / Show Less behavior, and a deployed) Tj
+/F1 10 Tf
+1 0 0 1 54 74.00 Tm
+(  Hostinger static-export fallback.) Tj
+/F1 9 Tf
+1 0 0 1 196.29 30.00 Tm
+(Prahlin Portfolio Work Log - September 9, 2026 Page 2) Tj
+ET
+endstream
+endobj
+8 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 7 0 R >>
+endobj
+9 0 obj
+<< /Length 5435 >>
+stream
+BT
+/F1 10 Tf
+1 0 0 1 54 738.00 Tm
+(- The Primary Visual Hierarchy stacks in narrow portrait views still had more horizontal) Tj
+/F1 10 Tf
+1 0 0 1 54 725.00 Tm
+(  space than the user wanted between brace/device, device/white-line, and) Tj
+/F1 10 Tf
+1 0 0 1 54 712.00 Tm
+(  white-line/green-header asset pairs. The accepted requirement was to halve those gaps) Tj
+/F1 10 Tf
+1 0 0 1 54 699.00 Tm
+(  while keeping the primary stacks centered and avoiding clipping on narrow smartphone) Tj
+/F1 10 Tf
+1 0 0 1 54 686.00 Tm
+(  portrait views.) Tj
+/F1 10 Tf
+1 0 0 1 54 671.00 Tm
+(- The Viewing Area label clipped its brace after the spacing reduction, then needed two) Tj
+/F1 10 Tf
+1 0 0 1 54 658.00 Tm
+(  incremental left nudges totaling seven pixels while remaining visually attached to the) Tj
+/F1 10 Tf
+1 0 0 1 54 645.00 Tm
+(  brace system.) Tj
+/F1 10 Tf
+1 0 0 1 54 630.00 Tm
+(- UI Foundations still carried gray caption text beneath images in Categories 00 through 04) Tj
+/F1 10 Tf
+1 0 0 1 54 617.00 Tm
+(  even after the user decided those captions weakened the screen. Category 05 was) Tj
+/F1 10 Tf
+1 0 0 1 54 604.00 Tm
+(  intentionally excluded from the removal request.) Tj
+/F1 10 Tf
+1 0 0 1 54 589.00 Tm
+(- UX Product Flow stages 00 through 05 still showed gray captions beneath their stage images) Tj
+/F1 10 Tf
+1 0 0 1 54 576.00 Tm
+(  and used stage numbering that the user wanted bumped forward to Stage 01 through Stage 06.) Tj
+/F1 10 Tf
+1 0 0 1 54 561.00 Tm
+(- The UI Foundations / UX Product Flow two-button nav needed a calmer active/inactive) Tj
+/F1 10 Tf
+1 0 0 1 54 548.00 Tm
+(  hierarchy. Early active green stroke and inactive white surface treatments made the nav) Tj
+/F1 10 Tf
+1 0 0 1 54 535.00 Tm
+(  feel heavier than the section content, especially over the dark grid-pattern page) Tj
+/F1 10 Tf
+1 0 0 1 54 522.00 Tm
+(  background.) Tj
+/F1 10 Tf
+1 0 0 1 54 507.00 Tm
+(- The nav appeared while scrolling down to the section but could linger past the bottom of) Tj
+/F1 10 Tf
+1 0 0 1 54 494.00 Tm
+(  the product-flow region. The accepted behavior was to keep it scoped to the section:) Tj
+/F1 10 Tf
+1 0 0 1 54 481.00 Tm
+(  visible while the product-flow block is active, absent once the bottom is passed, and) Tj
+/F1 10 Tf
+1 0 0 1 54 468.00 Tm
+(  visible again when upward scrolling returns to the block.) Tj
+/F1 10 Tf
+1 0 0 1 54 453.00 Tm
+(- The Alla Vostra case-study back half had become cluttered with separate Scope, Core) Tj
+/F1 10 Tf
+1 0 0 1 54 440.00 Tm
+(  Features, Technical Architecture, Engineering Decisions, Testing and Release Readiness,) Tj
+/F1 10 Tf
+1 0 0 1 54 427.00 Tm
+(  Build Timeline, Stack, and Build Proof sections. Some information overlapped, especially) Tj
+/F1 10 Tf
+1 0 0 1 54 414.00 Tm
+(  Build Proof versus hero proof stats and stack/release content.) Tj
+/F1 10 Tf
+1 0 0 1 54 399.00 Tm
+(- After the current Alla Vostra app repository audit, the project page under-described the) Tj
+/F1 10 Tf
+1 0 0 1 54 386.00 Tm
+(  latest build. It still read mostly as a Stripe and Android release-prep story, while the) Tj
+/F1 10 Tf
+1 0 0 1 54 373.00 Tm
+(  app had grown into a native commerce system with Stripe card checkout, Google Pay, Apple) Tj
+/F1 10 Tf
+1 0 0 1 54 360.00 Tm
+(  Pay, PayPal, server-side order authority, contact routing, Postmark messaging, EAS) Tj
+/F1 10 Tf
+1 0 0 1 54 347.00 Tm
+(  profiles, TestFlight config, and Android versioned release preparation.) Tj
+/F2 12 Tf
+1 0 0 1 54 324.00 Tm
+(Goals for September 9) Tj
+/F1 10 Tf
+1 0 0 1 54 306.00 Tm
+(- Verify the active United States Eastern date and produce the next root-level Portfolio PDF) Tj
+/F1 10 Tf
+1 0 0 1 54 293.00 Tm
+(  worklog using the established naming convention.) Tj
+/F1 10 Tf
+1 0 0 1 54 278.00 Tm
+(- Refresh and review the Portfolio project snapshot before writing the PDF, then preserve) Tj
+/F1 10 Tf
+1 0 0 1 54 265.00 Tm
+(  the same worklog structure, metadata, and PDF style used by the mature Portfolio records.) Tj
+/F1 10 Tf
+1 0 0 1 54 250.00 Tm
+(- Tighten the Primary Visual Hierarchy horizontal asset gaps across Pre-Scrolling,) Tj
+/F1 10 Tf
+1 0 0 1 54 237.00 Tm
+(  On-Scrolling, and During Shopping in narrow portrait views without de-centering the) Tj
+/F1 10 Tf
+1 0 0 1 54 224.00 Tm
+(  primary stacks or clipping the annotation lanes.) Tj
+/F1 10 Tf
+1 0 0 1 54 209.00 Tm
+(- Remove unwanted gray captions from UI Foundations Categories 00 through 04 and UX Product) Tj
+/F1 10 Tf
+1 0 0 1 54 196.00 Tm
+(  Flow stages while preserving the specifically excluded Category 05 captions.) Tj
+/F1 10 Tf
+1 0 0 1 54 181.00 Tm
+(- Generate and apply a calmer UI Foundations / UX Product Flow nav treatment that clearly) Tj
+/F1 10 Tf
+1 0 0 1 54 168.00 Tm
+(  marks the active section without overwhelming the inactive option.) Tj
+/F1 10 Tf
+1 0 0 1 54 153.00 Tm
+(- Scope the product-flow nav sticky behavior to the actual UI Foundations / UX Product Flow) Tj
+/F1 10 Tf
+1 0 0 1 54 140.00 Tm
+(  region so it drops away after the section is passed and returns when the user scrolls back) Tj
+/F1 10 Tf
+1 0 0 1 54 127.00 Tm
+(  into it.) Tj
+/F1 10 Tf
+1 0 0 1 54 112.00 Tm
+(- Remove the redundant Build Proof section and simplify the technical case-study back half) Tj
+/F1 10 Tf
+1 0 0 1 54 99.00 Tm
+(  by merging architecture with stack, and engineering decisions with release readiness and) Tj
+/F1 10 Tf
+1 0 0 1 54 86.00 Tm
+(  timeline.) Tj
+/F1 9 Tf
+1 0 0 1 196.29 30.00 Tm
+(Prahlin Portfolio Work Log - September 9, 2026 Page 3) Tj
+ET
+endstream
+endobj
+10 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 9 0 R >>
+endobj
+11 0 obj
+<< /Length 5322 >>
+stream
+BT
+/F1 10 Tf
+1 0 0 1 54 738.00 Tm
+(- Study the current Alla Vostra application and backend repos, then update the project page) Tj
+/F1 10 Tf
+1 0 0 1 54 725.00 Tm
+(  so non-flow sections reflect current stack, architecture, payment rails, backend) Tj
+/F1 10 Tf
+1 0 0 1 54 712.00 Tm
+(  validation, messaging, contact routing, native testing, and release preparation.) Tj
+/F1 10 Tf
+1 0 0 1 54 697.00 Tm
+(- Validate the final page with TypeScript, local route checks, Playwright desktop/mobile) Tj
+/F1 10 Tf
+1 0 0 1 54 684.00 Tm
+(  layout checks, and diff/status review before generating the PDF worklog.) Tj
+/F2 12 Tf
+1 0 0 1 54 661.00 Tm
+(Work Completed - Visual Hierarchy, Captions, and Flow Navigation) Tj
+/F1 10 Tf
+1 0 0 1 54 643.00 Tm
+(- Halved the horizontal gaps between the Pre-Scrolling Primary brace and device frame,) Tj
+/F1 10 Tf
+1 0 0 1 54 630.00 Tm
+(  device frame and white lines, and white lines and green headers, then extrapolated those) Tj
+/F1 10 Tf
+1 0 0 1 54 617.00 Tm
+(  spacing values across the On-Scrolling and During Shopping Primary stacks for narrow) Tj
+/F1 10 Tf
+1 0 0 1 54 604.00 Tm
+(  portrait views.) Tj
+/F1 10 Tf
+1 0 0 1 54 589.00 Tm
+(- Kept the Primary stacks horizontally centered after reducing the asset-pair gaps,) Tj
+/F1 10 Tf
+1 0 0 1 54 576.00 Tm
+(  preserving the centered composition while making the annotation lanes fit more comfortably) Tj
+/F1 10 Tf
+1 0 0 1 54 563.00 Tm
+(  on narrow smartphone layouts.) Tj
+/F1 10 Tf
+1 0 0 1 54 548.00 Tm
+(- Moved the Viewing Area text with the brace repositioning, then nudged the label left by) Tj
+/F1 10 Tf
+1 0 0 1 54 535.00 Tm
+(  five pixels and two more pixels after user review so it no longer clipped into the brace.) Tj
+/F1 10 Tf
+1 0 0 1 54 520.00 Tm
+(- Removed grayish image captions from the UI Foundations screen between Category 00 and) Tj
+/F1 10 Tf
+1 0 0 1 54 507.00 Tm
+(  Category 04, including examples such as visibility-state notes and font-sample captions,) Tj
+/F1 10 Tf
+1 0 0 1 54 494.00 Tm
+(  while leaving Category 05 untouched.) Tj
+/F1 10 Tf
+1 0 0 1 54 479.00 Tm
+(- Added showCaptions support to ExpandableFlowStacks and used it to remove gray captions) Tj
+/F1 10 Tf
+1 0 0 1 54 466.00 Tm
+(  from UX Product Flow stages without deleting the underlying screen metadata.) Tj
+/F1 10 Tf
+1 0 0 1 54 451.00 Tm
+(- Bumped UX Product Flow stage labels forward from Stage 00 through Stage 05 to Stage 01) Tj
+/F1 10 Tf
+1 0 0 1 54 438.00 Tm
+(  through Stage 06.) Tj
+/F1 10 Tf
+1 0 0 1 54 423.00 Tm
+(- Renamed the green eyebrow headers for UI Foundations Category 00 through Category 05 to UI) Tj
+/F1 10 Tf
+1 0 0 1 54 410.00 Tm
+(  FOUNDATIONS so the UI Foundations screen reads consistently across its subsections.) Tj
+/F1 10 Tf
+1 0 0 1 54 395.00 Tm
+(- Created three mockups of alternative UI Foundations / UX Product Flow two-button nav) Tj
+/F1 10 Tf
+1 0 0 1 54 382.00 Tm
+(  treatments and committed mockups/ui-flow-nav-alternatives.png as the visual reference) Tj
+/F1 10 Tf
+1 0 0 1 54 369.00 Tm
+(  artifact.) Tj
+/F1 10 Tf
+1 0 0 1 54 354.00 Tm
+(- Implemented the preferred nav treatment, matched the active green styling to the) Tj
+/F1 10 Tf
+1 0 0 1 54 341.00 Tm
+(  established eyebrow color, made the inactive tab transparent so the page grid shows) Tj
+/F1 10 Tf
+1 0 0 1 54 328.00 Tm
+(  through, and removed the active eyebrow-colored stroke after user review.) Tj
+/F1 10 Tf
+1 0 0 1 54 313.00 Tm
+(- Updated ProductFlowSwitcher sticky logic so the nav is section-scoped: it appears while) Tj
+/F1 10 Tf
+1 0 0 1 54 300.00 Tm
+(  the product-flow section is active, leaves once the section bottom is passed, and) Tj
+/F1 10 Tf
+1 0 0 1 54 287.00 Tm
+(  reappears when upward scrolling returns to the section.) Tj
+/F2 12 Tf
+1 0 0 1 54 264.00 Tm
+(Work Completed - Section Pruning, Proof Scaling, and Technical Reorganization) Tj
+/F1 10 Tf
+1 0 0 1 54 246.00 Tm
+(- Removed the standalone Build Proof section after the user chose to reduce repeated proof) Tj
+/F1 10 Tf
+1 0 0 1 54 233.00 Tm
+(  content in the lower half of the Alla Vostra page.) Tj
+/F1 10 Tf
+1 0 0 1 54 218.00 Tm
+(- Merged Technical Architecture and Stack into Architecture and Stack, preserving the source) Tj
+/F1 10 Tf
+1 0 0 1 54 205.00 Tm
+(  data arrays in a reversible content-driven shape while reducing section count.) Tj
+/F1 10 Tf
+1 0 0 1 54 190.00 Tm
+(- Merged Engineering Decisions, Testing and Release Readiness, and Build Timeline into Build) Tj
+/F1 10 Tf
+1 0 0 1 54 177.00 Tm
+(  Execution, then restored breathing room between the new subsections after the first) Tj
+/F1 10 Tf
+1 0 0 1 54 164.00 Tm
+(  combined layout felt too compressed.) Tj
+/F1 10 Tf
+1 0 0 1 54 149.00 Tm
+(- Adjusted the hero proof-stat number scaling so green values continue growing with wider) Tj
+/F1 10 Tf
+1 0 0 1 54 136.00 Tm
+(  viewports and fit their columns when the hero shifts from one visible phone frame to three) Tj
+/F1 10 Tf
+1 0 0 1 54 123.00 Tm
+(  device frames.) Tj
+/F1 10 Tf
+1 0 0 1 54 108.00 Tm
+(- Shortened long Release Readiness chips into scan-friendly labels such as Android v1.0.3,) Tj
+/F1 10 Tf
+1 0 0 1 54 95.00 Tm
+(  EAS Build Profiles, Stripe Live + Webhooks, Native Wallet Checks, PayPal Sandbox/Live,) Tj
+/F1 10 Tf
+1 0 0 1 54 82.00 Tm
+(  Postmark Messaging, and Play Store AAB.) Tj
+/F1 9 Tf
+1 0 0 1 196.29 30.00 Tm
+(Prahlin Portfolio Work Log - September 9, 2026 Page 4) Tj
+ET
+endstream
+endobj
+12 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 11 0 R >>
+endobj
+13 0 obj
+<< /Length 5227 >>
+stream
+BT
+/F1 10 Tf
+1 0 0 1 54 738.00 Tm
+(- Renamed Store Front Releases to Storefront Releases, keeping the proof label sharper and) Tj
+/F1 10 Tf
+1 0 0 1 54 725.00 Tm
+(  more conventional without changing the underlying count.) Tj
+/F1 10 Tf
+1 0 0 1 54 710.00 Tm
+(- Added CSS containment and wrapping safeguards for the longer technical chips and combined) Tj
+/F1 10 Tf
+1 0 0 1 54 697.00 Tm
+(  grid wrappers so the updated technical content does not create horizontal overflow on) Tj
+/F1 10 Tf
+1 0 0 1 54 684.00 Tm
+(  phone-width layouts.) Tj
+/F2 12 Tf
+1 0 0 1 54 661.00 Tm
+(Work Completed - Current App Repo Audit and Case Study Refresh) Tj
+/F1 10 Tf
+1 0 0 1 54 643.00 Tm
+(- Studied the current Alla Vostra app repo after the user noted significant changes since) Tj
+/F1 10 Tf
+1 0 0 1 54 630.00 Tm
+(  the page was initially generated, focusing on removed, changed, and newly added features,) Tj
+/F1 10 Tf
+1 0 0 1 54 617.00 Tm
+(  stack, architecture, and functionality.) Tj
+/F1 10 Tf
+1 0 0 1 54 602.00 Tm
+(- Confirmed the current mobile stack in mob/package.json and app config: Expo 54, React) Tj
+/F1 10 Tf
+1 0 0 1 54 589.00 Tm
+(  Native 0.81.5, React 19.1, Expo Router 6, Stripe React Native 0.50.3, Expo Dev Client,) Tj
+/F1 10 Tf
+1 0 0 1 54 576.00 Tm
+(  Reanimated 4, Worklets, Safe Area Context, Expo Linking, Expo Navigation Bar, and related) Tj
+/F1 10 Tf
+1 0 0 1 54 563.00 Tm
+(  native support packages.) Tj
+/F1 10 Tf
+1 0 0 1 54 548.00 Tm
+(- Confirmed current native release configuration in mob/app.json, mob/app.config.js, and) Tj
+/F1 10 Tf
+1 0 0 1 54 535.00 Tm
+(  mob/eas.json, including Android package com.allavostra.app, version 1.0.3, versionCode 4,) Tj
+/F1 10 Tf
+1 0 0 1 54 522.00 Tm
+(  Play Store AAB profiles, TestFlight configuration, development-client setup, and) Tj
+/F1 10 Tf
+1 0 0 1 54 509.00 Tm
+(  free-account Apple Pay entitlement disable flags for dev builds.) Tj
+/F1 10 Tf
+1 0 0 1 54 494.00 Tm
+(- Confirmed backend routes and responsibilities in server/README.md and server/api files:) Tj
+/F1 10 Tf
+1 0 0 1 54 481.00 Tm
+(  health checks, Stripe payment sheet creation, PayPal order create/capture, Stripe webhook) Tj
+/F1 10 Tf
+1 0 0 1 54 468.00 Tm
+(  handling, contact-message delivery, Postmark confirmations, environment variables, and) Tj
+/F1 10 Tf
+1 0 0 1 54 455.00 Tm
+(  server-owned pricing.) Tj
+/F1 10 Tf
+1 0 0 1 54 440.00 Tm
+(- Confirmed server-side commerce authority in server/lib/orders.js: catalog prices, delivery) Tj
+/F1 10 Tf
+1 0 0 1 54 427.00 Tm
+(  fee, tax calculation, quantity validation, contact and delivery payload sanitization, and) Tj
+/F1 10 Tf
+1 0 0 1 54 414.00 Tm
+(  Florida-only delivery acceptance.) Tj
+/F1 10 Tf
+1 0 0 1 54 399.00 Tm
+(- Confirmed mobile checkout behavior in mob/app/shop.js and payment utilities: card entry,) Tj
+/F1 10 Tf
+1 0 0 1 54 386.00 Tm
+(  Google Pay, Apple Pay, PayPal redirect/capture, selected-payment validation, platform) Tj
+/F1 10 Tf
+1 0 0 1 54 373.00 Tm
+(  availability checks, Expo Go native-payment guardrails, billing details, order payload) Tj
+/F1 10 Tf
+1 0 0 1 54 360.00 Tm
+(  creation, and order confirmation state.) Tj
+/F1 10 Tf
+1 0 0 1 54 345.00 Tm
+(- Confirmed the Contact screen and contact-message utility now support a real customer) Tj
+/F1 10 Tf
+1 0 0 1 54 332.00 Tm
+(  inquiry path through the backend and Postmark rather than static contact-only copy.) Tj
+/F1 10 Tf
+1 0 0 1 54 317.00 Tm
+(- Updated Alla Vostra project-page metadata, overview, scope, ownership, core features,) Tj
+/F1 10 Tf
+1 0 0 1 54 304.00 Tm
+(  architecture, stack, engineering decisions, release readiness, timeline, and closing copy) Tj
+/F1 10 Tf
+1 0 0 1 54 291.00 Tm
+(  to match the current native commerce system.) Tj
+/F1 10 Tf
+1 0 0 1 54 276.00 Tm
+(- Added a compact Architecture Flow row showing Mobile App -> Vercel API -> Payment Rails ->) Tj
+/F1 10 Tf
+1 0 0 1 54 263.00 Tm
+(  Messaging -> Store Builds, giving the technical section a clearer system story before the) Tj
+/F1 10 Tf
+1 0 0 1 54 250.00 Tm
+(  supporting architecture cards.) Tj
+/F1 10 Tf
+1 0 0 1 54 235.00 Tm
+(- Simplified the detailed architecture and stack presentation into five architecture cards) Tj
+/F1 10 Tf
+1 0 0 1 54 222.00 Tm
+(  and five stack groups, reducing dependency-inventory noise while retaining the strongest) Tj
+/F1 10 Tf
+1 0 0 1 54 209.00 Tm
+(  full-stack proof points.) Tj
+/F1 10 Tf
+1 0 0 1 54 194.00 Tm
+(- Left the hero platform proof unchanged after the user explicitly asked to skip the) Tj
+/F1 10 Tf
+1 0 0 1 54 181.00 Tm
+(  platform-overclaim recommendation for this pass.) Tj
+/F2 12 Tf
+1 0 0 1 54 158.00 Tm
+(Validation and Review) Tj
+/F1 10 Tf
+1 0 0 1 54 140.00 Tm
+(- Ran npm run check after the technical content updates, caption changes, flow navigation) Tj
+/F1 10 Tf
+1 0 0 1 54 127.00 Tm
+(  updates, and final architecture-flow pass; TypeScript completed successfully with tsc) Tj
+/F1 10 Tf
+1 0 0 1 54 114.00 Tm
+(  --noEmit.) Tj
+/F1 10 Tf
+1 0 0 1 54 99.00 Tm
+(- Checked the local Alla Vostra project route with curl -I and confirmed HTTP 200 responses) Tj
+/F1 10 Tf
+1 0 0 1 54 86.00 Tm
+(  from http://127.0.0.1:3000/projects/alla-vostra during the validation passes.) Tj
+/F1 9 Tf
+1 0 0 1 196.29 30.00 Tm
+(Prahlin Portfolio Work Log - September 9, 2026 Page 5) Tj
+ET
+endstream
+endobj
+14 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 13 0 R >>
+endobj
+15 0 obj
+<< /Length 5102 >>
+stream
+BT
+/F1 10 Tf
+1 0 0 1 54 738.00 Tm
+(- Used Playwright against the local Next.js site at desktop and phone viewports to inspect) Tj
+/F1 10 Tf
+1 0 0 1 54 725.00 Tm
+(  console errors, page title, body scroll width, architecture-flow count, architecture-node) Tj
+/F1 10 Tf
+1 0 0 1 54 712.00 Tm
+(  count, stack-group count, and element bounds.) Tj
+/F1 10 Tf
+1 0 0 1 54 697.00 Tm
+(- Confirmed the final Playwright desktop and phone passes reported no console errors, no) Tj
+/F1 10 Tf
+1 0 0 1 54 684.00 Tm
+(  body-level horizontal overflow, no out-of-bounds) Tj
+/F1 10 Tf
+1 0 0 1 54 671.00 Tm
+(  metadata/readiness/stack/architecture/card elements, five architecture flow steps, five) Tj
+/F1 10 Tf
+1 0 0 1 54 658.00 Tm
+(  architecture nodes, and five stack groups.) Tj
+/F1 10 Tf
+1 0 0 1 54 643.00 Tm
+(- Restarted the local Next.js development server after a stale port-3000 Next process was) Tj
+/F1 10 Tf
+1 0 0 1 54 630.00 Tm
+(  found, then confirmed the clean detached portfolio-dev session returned the Alla Vostra) Tj
+/F1 10 Tf
+1 0 0 1 54 617.00 Tm
+(  route successfully.) Tj
+/F1 10 Tf
+1 0 0 1 54 602.00 Tm
+(- Captured temporary architecture screenshots for desktop and phone inspection during the) Tj
+/F1 10 Tf
+1 0 0 1 54 589.00 Tm
+(  hierarchy pass, used them to detect overly skinny desktop technical cards, then removed) Tj
+/F1 10 Tf
+1 0 0 1 54 576.00 Tm
+(  the temporary PNGs from the worktree before closing validation.) Tj
+/F1 10 Tf
+1 0 0 1 54 561.00 Tm
+(- Used rg checks to confirm older stale phrases such as Stripe payments, Node.js backend,) Tj
+/F1 10 Tf
+1 0 0 1 54 548.00 Tm
+(  Android QA + release prep, Technical Architecture, Build Proof, 333 commits, and old Core) Tj
+/F1 10 Tf
+1 0 0 1 54 535.00 Tm
+(  Feature titles were removed from app/projects/alla-vostra/page.tsx.) Tj
+/F1 10 Tf
+1 0 0 1 54 520.00 Tm
+(- Reviewed git diff and git status before this PDF generation. The source changes were) Tj
+/F1 10 Tf
+1 0 0 1 54 507.00 Tm
+(  already committed to main and origin/main at ae7ce4b, and the only local pre-PDF delta was) Tj
+/F1 10 Tf
+1 0 0 1 54 494.00 Tm
+(  the refreshed portfolio_PROJECT_SNAPSHOT.txt file.) Tj
+/F2 12 Tf
+1 0 0 1 54 471.00 Tm
+(Files Touched and Artifacts) Tj
+/F1 10 Tf
+1 0 0 1 54 453.00 Tm
+(- app/projects/alla-vostra/page.tsx - updated hero metadata, overview copy, scope and) Tj
+/F1 10 Tf
+1 0 0 1 54 440.00 Tm
+(  ownership cards, Core Features, architecture data, architecture-flow rendering, decision) Tj
+/F1 10 Tf
+1 0 0 1 54 427.00 Tm
+(  items, release readiness chips, timeline items, stack groups, Build Proof removal, stage) Tj
+/F1 10 Tf
+1 0 0 1 54 414.00 Tm
+(  numbering, caption flags, and closing copy.) Tj
+/F1 10 Tf
+1 0 0 1 54 399.00 Tm
+(- app/projects/alla-vostra/ProductFlowSwitcher.tsx - refined UI Foundations / UX Product) Tj
+/F1 10 Tf
+1 0 0 1 54 386.00 Tm
+(  Flow nav styling behavior, section-scoped sticky behavior, Primary Visual Hierarchy) Tj
+/F1 10 Tf
+1 0 0 1 54 373.00 Tm
+(  spacing, category eyebrow naming, UX stage numbering, and caption suppression wiring.) Tj
+/F1 10 Tf
+1 0 0 1 54 358.00 Tm
+(- app/projects/alla-vostra/ExpandableFlowStacks.tsx - added showCaptions support so) Tj
+/F1 10 Tf
+1 0 0 1 54 345.00 Tm
+(  product-flow screen captions can be hidden without stripping screen data.) Tj
+/F1 10 Tf
+1 0 0 1 54 330.00 Tm
+(- app/globals.css - added responsive proof-stat scaling, transparent/inactive nav and) Tj
+/F1 10 Tf
+1 0 0 1 54 317.00 Tm
+(  active-tab refinements, Visual Hierarchy spacing guards, combined-section spacing,) Tj
+/F1 10 Tf
+1 0 0 1 54 304.00 Tm
+(  architecture-flow styles, scoped architecture/stack column rules, mobile overflow) Tj
+/F1 10 Tf
+1 0 0 1 54 291.00 Tm
+(  protection, and readiness-chip wrapping.) Tj
+/F1 10 Tf
+1 0 0 1 54 276.00 Tm
+(- mockups/ui-flow-nav-alternatives.png - added the requested three-option nav mockup) Tj
+/F1 10 Tf
+1 0 0 1 54 263.00 Tm
+(  reference for the UI Foundations / UX Product Flow switcher.) Tj
+/F1 10 Tf
+1 0 0 1 54 248.00 Tm
+(- portfolio_PROJECT_SNAPSHOT.txt - regenerated with ./read_project.sh during the) Tj
+/F1 10 Tf
+1 0 0 1 54 235.00 Tm
+(  documentation pass so the repository snapshot reflects the current Portfolio workspace) Tj
+/F1 10 Tf
+1 0 0 1 54 222.00 Tm
+(  state.) Tj
+/F1 10 Tf
+1 0 0 1 54 207.00 Tm
+(- portfolio_worklog_september9.pdf - added this latest September 9, 2026 Portfolio worklog) Tj
+/F1 10 Tf
+1 0 0 1 54 194.00 Tm
+(  artifact.) Tj
+/F2 12 Tf
+1 0 0 1 54 171.00 Tm
+(Follow-Up Context) Tj
+/F1 10 Tf
+1 0 0 1 54 153.00 Tm
+(- The current source work has been committed in 993c75d and ae7ce4b, making the recent UI) Tj
+/F1 10 Tf
+1 0 0 1 54 140.00 Tm
+(  Foundations navigation changes and broader Alla Vostra technical-story refresh easy to) Tj
+/F1 10 Tf
+1 0 0 1 54 127.00 Tm
+(  inspect or reverse by commit if the user asks.) Tj
+/F1 10 Tf
+1 0 0 1 54 112.00 Tm
+(- The local dev server is available again through the detached portfolio-dev session on port) Tj
+/F1 10 Tf
+1 0 0 1 54 99.00 Tm
+(  3000 after cleaning up the stale Next process encountered during validation.) Tj
+/F1 9 Tf
+1 0 0 1 196.29 30.00 Tm
+(Prahlin Portfolio Work Log - September 9, 2026 Page 6) Tj
+ET
+endstream
+endobj
+16 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 15 0 R >>
+endobj
+17 0 obj
+<< /Length 1753 >>
+stream
+BT
+/F1 10 Tf
+1 0 0 1 54 738.00 Tm
+(- The Build Proof removal, section merging, stack simplification, and architecture-flow) Tj
+/F1 10 Tf
+1 0 0 1 54 725.00 Tm
+(  addition were intentionally kept content/layout-scoped so they can be reverted without) Tj
+/F1 10 Tf
+1 0 0 1 54 712.00 Tm
+(  touching unrelated portfolio pages.) Tj
+/F1 10 Tf
+1 0 0 1 54 697.00 Tm
+(- The hero platform proof was intentionally not changed in this pass, per the user direction) Tj
+/F1 10 Tf
+1 0 0 1 54 684.00 Tm
+(  to apply all portfolio best-practice recommendations except the platform-overclaim item.) Tj
+/F1 10 Tf
+1 0 0 1 54 669.00 Tm
+(- A possible next review pass would be to decide whether the Architecture and Stack section) Tj
+/F1 10 Tf
+1 0 0 1 54 656.00 Tm
+(  should gain a visual diagram or remain text-only, now that the compact flow row carries) Tj
+/F1 10 Tf
+1 0 0 1 54 643.00 Tm
+(  the system story without adding another screenshot-heavy section.) Tj
+/F2 12 Tf
+1 0 0 1 54 620.00 Tm
+(Output Artifact) Tj
+/F1 10 Tf
+1 0 0 1 54 602.00 Tm
+(- Created portfolio_worklog_september9.pdf at the repository root using the verified United) Tj
+/F1 10 Tf
+1 0 0 1 54 589.00 Tm
+(  States Eastern date, root-level naming convention, established Portfolio worklog) Tj
+/F1 10 Tf
+1 0 0 1 54 576.00 Tm
+(  structure, letter-size PDF pages, Helvetica Type 1 fonts, and Codex) Tj
+/F1 10 Tf
+1 0 0 1 54 563.00 Tm
+(  author/creator/producer metadata.) Tj
+/F1 10 Tf
+1 0 0 1 54 548.00 Tm
+(- This worklog closes the September 9 documentation pass. No source commit, push,) Tj
+/F1 10 Tf
+1 0 0 1 54 535.00 Tm
+(  deployment, or Hostinger synchronization was performed as part of generating the PDF.) Tj
+/F1 9 Tf
+1 0 0 1 196.29 30.00 Tm
+(Prahlin Portfolio Work Log - September 9, 2026 Page 7) Tj
+ET
+endstream
+endobj
+18 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 17 0 R >>
+endobj
+19 0 obj
+<< /Title (Prahlin Portfolio Work Log - September 9, 2026) /Subject (Portfolio website development worklog) /Author (Codex) /Creator (Codex standard-library PDF generator) /Producer (Codex standard-library PDF generator) /CreationDate (D:20260909224431-04'00') /ModDate (D:20260909224431-04'00') >>
+endobj
+xref
+0 20
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000156 00000 n 
+0000000226 00000 n 
+0000000301 00000 n 
+0000005143 00000 n 
+0000005279 00000 n 
+0000010935 00000 n 
+0000011071 00000 n 
+0000016558 00000 n 
+0000016695 00000 n 
+0000022070 00000 n 
+0000022208 00000 n 
+0000027488 00000 n 
+0000027626 00000 n 
+0000032781 00000 n 
+0000032919 00000 n 
+0000034725 00000 n 
+0000034863 00000 n 
+trailer
+<< /Size 20 /Root 1 0 R /Info 19 0 R >>
+startxref
+35178
+%%EOF
