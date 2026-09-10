@@ -1300,7 +1300,6 @@ function ColorSwatchScreen({
       >
         <span>{swatch.hex}</span>
       </div>
-      <figcaption>{`${swatch.hex} recurring ${tone} shade.`}</figcaption>
     </figure>
   );
 }
@@ -1323,7 +1322,6 @@ function FontSampleScreen({
       <div className="flow-image-frame flow-placeholder-frame flow-font-frame">
         <span className={sample.className}>{sample.text}</span>
       </div>
-      <figcaption>{`${sample.name} font sample.`}</figcaption>
     </figure>
   );
 }
@@ -1344,7 +1342,6 @@ function OriginalArtScreen({ sample }: { sample: FlowArtSample }) {
           src={sample.src}
         />
       </div>
-      <figcaption>{`${sample.name} original art.`}</figcaption>
     </figure>
   );
 }
@@ -1391,10 +1388,6 @@ function OriginalPhotographyScreen({ sample }: { sample: FlowArtSample }) {
           src={sample.src}
         />
       </div>
-      <figcaption
-        aria-hidden
-        className="flow-original-photo-caption-spacer"
-      />
     </figure>
   );
 }
@@ -1434,7 +1427,6 @@ function HeroCompositionScreen() {
           width={405}
         />
       </div>
-      <figcaption>Hero app header composition.</figcaption>
     </figure>
   );
 }
@@ -1546,7 +1538,6 @@ function StickyButtonIconScreen({
         <div aria-hidden className="flow-sticky-button-shadow" />
         <StickyButtonIcon kind={sample.kind} />
       </div>
-      <figcaption>{`${sample.name} sticky button icon.`}</figcaption>
     </figure>
   );
 }
@@ -1580,7 +1571,6 @@ function ActionButtonAssetScreen({ sample }: { sample: FlowActionSample }) {
           src={getTransparentActionAssetSrc(sample.src)}
         />
       </div>
-      <figcaption>{sample.caption}</figcaption>
     </figure>
   );
 }
@@ -1624,6 +1614,7 @@ type PlaceholderStageRowGroup = {
 function PlaceholderStage({
   className,
   copy,
+  eyebrowLabel,
   renderExpandedStepScreens,
   renderStepScreens,
   rowLabels = [],
@@ -1639,6 +1630,7 @@ function PlaceholderStage({
 }: {
   className?: string;
   copy: string;
+  eyebrowLabel?: string;
   renderExpandedStepScreens?: (step: string) => ReactNode;
   renderStepScreens?: (step: string, isExpanded: boolean) => ReactNode;
   rowLabels?: string[];
@@ -1669,6 +1661,7 @@ function PlaceholderStage({
     ? extraRowGroups.flatMap((rowGroup) => [...rowGroup.steps])
     : steps.slice(defaultVisibleStepCount);
   const [firstExtraStep, ...remainingExtraSteps] = extraSteps;
+  const shouldShowFallbackCaptions = title === "Visual Hierarchy";
   const expandedVisibleStepScreens: Array<{ screens: ReactNode; step: string }> =
     !rowGroups && renderExpandedStepScreens
       ? visibleSteps.reduce<Array<{ screens: ReactNode; step: string }>>(
@@ -1695,8 +1688,16 @@ function PlaceholderStage({
       <div className="flow-screen-stack-captures">
         {renderStepScreens?.(step, expandedScreens) ?? (
           <>
-            <PlaceholderScreen label="Small" step={step} />
-            <PlaceholderScreen label="Large" step={step} />
+            <PlaceholderScreen
+              label="Small"
+              showCaption={shouldShowFallbackCaptions}
+              step={step}
+            />
+            <PlaceholderScreen
+              label="Large"
+              showCaption={shouldShowFallbackCaptions}
+              step={step}
+            />
           </>
         )}
       </div>
@@ -1734,7 +1735,7 @@ function PlaceholderStage({
     >
       <div className="flow-group-header">
         <span>
-          {sectionLabel} {stage}
+          {eyebrowLabel ?? `${sectionLabel} ${stage}`}
         </span>
         <h3>{title}</h3>
         <p>{copy}</p>
@@ -2060,6 +2061,7 @@ export default function ProductFlowSwitcher({
                   : undefined
               }
               copy={`This UI Foundations category will outline the ${section.title} system.`}
+              eyebrowLabel="UI FOUNDATIONS"
               key={section.stage}
               style={
                 section.title === "Visual Hierarchy"
