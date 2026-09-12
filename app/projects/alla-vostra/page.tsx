@@ -18,8 +18,8 @@ const metadataItems = [
   "Expo 54",
   "Stripe + PayPal",
   "Serverless API",
-  "Play Store Prep",
-  "App Store Prep",
+  "Play Store",
+  "App Store",
   "EAS Builds",
   "Postmark",
   "Google Pay",
@@ -85,7 +85,19 @@ const playStoreScreenshots = [
 ] as const;
 
 const featuredPlayStoreScreenshot = playStoreScreenshots[0];
-const supportingPlayStoreScreenshots = playStoreScreenshots.slice(1);
+const playStoreTrapezoidScreenshot = {
+  alt: "Alla Vostra Play Store screenshot with a framed mosaic-style product image",
+  aspect: "wide",
+  src: "/images/alla-vostra/play-store/playstore3_trim-lr10.png",
+} as const;
+const googlePlayReleaseTopScreenshots = [
+  playStoreScreenshots[1],
+  playStoreScreenshots[2],
+] as const;
+const appStoreReleaseBottomScreenshots = [
+  playStoreTrapezoidScreenshot,
+  playStoreScreenshots[3],
+] as const;
 
 const fullStackSkillGridStyle: CSSProperties = {
   marginTop: "var(--av-proof-content-margin-top, var(--av-skill-grid-margin-top, 8px))",
@@ -1195,14 +1207,10 @@ export default function AllaVostraCaseStudy() {
               Alla Vostra turns a boutique grazing-board menu into a native
               ordering product: customers choose boards, enter delivery and
               contact details, pay through the best available payment rail, and
-              receive confirmation through backend messaging.
-            </p>
-            <p>
-              My role covered the app experience end to end: original UI/UX
-              design creation & implementation, front-end architecture,
-              backend-connected purchase flows, server-owned order validation,
-              PayPal and Stripe coordination, transactional messaging, emulator
-              and device QA, native build setup, and release-focused iteration.
+              receive confirmation through backend messaging. In addition,
+              customers can access in-depth info about product offerings, learn
+              about the brand&apos;s philosophy, and contact the business owner
+              directly.
             </p>
           </div>
           <div className="overview-store-releases">
@@ -1210,6 +1218,25 @@ export default function AllaVostraCaseStudy() {
               <div className="overview-store-facts-heading">
                 <h3>App Store release</h3>
                 <span>Listing in preparation</span>
+              </div>
+              <div
+                aria-label="Alla Vostra Play Store screenshots for App Store release"
+                className="overview-play-store-supporting-row overview-play-store-supporting-row-top"
+              >
+                {googlePlayReleaseTopScreenshots.map((screenshot) => (
+                  <figure
+                    className={`overview-play-store-shot overview-play-store-shot-${screenshot.aspect} overview-play-store-shot-supporting`}
+                    key={screenshot.src}
+                  >
+                    <Image
+                      alt={screenshot.alt}
+                      fill
+                      sizes="(max-width: 720px) calc((100vw - 40px) / 2), 274px"
+                      src={screenshot.src}
+                    />
+                    <figcaption>{screenshot.alt}</figcaption>
+                  </figure>
+                ))}
               </div>
               <dl
                 aria-label="App Store placeholder release details"
@@ -1231,6 +1258,25 @@ export default function AllaVostraCaseStudy() {
                   <ArrowRight aria-hidden size={14} strokeWidth={2.25} />
                 </a>
               </div>
+              <div
+                aria-label="Alla Vostra Play Store screenshots"
+                className="overview-play-store-supporting-row overview-play-store-supporting-row-top"
+              >
+                {appStoreReleaseBottomScreenshots.map((screenshot) => (
+                  <figure
+                    className={`overview-play-store-shot overview-play-store-shot-${screenshot.aspect} overview-play-store-shot-supporting`}
+                    key={screenshot.src}
+                  >
+                    <Image
+                      alt={screenshot.alt}
+                      fill
+                      sizes="(max-width: 720px) calc((100vw - 40px) / 2), 274px"
+                      src={screenshot.src}
+                    />
+                    <figcaption>{screenshot.alt}</figcaption>
+                  </figure>
+                ))}
+              </div>
               <dl
                 aria-label="Google Play release details"
                 className="overview-store-facts"
@@ -1244,24 +1290,28 @@ export default function AllaVostraCaseStudy() {
               </dl>
             </div>
           </div>
-          <div
-            aria-label="Alla Vostra Play Store screenshots"
-            className="overview-play-store-supporting-row"
-          >
-            {supportingPlayStoreScreenshots.map((screenshot, index) => (
-              <figure
-                className={`overview-play-store-shot overview-play-store-shot-${screenshot.aspect} overview-play-store-shot-supporting`}
-                key={screenshot.src}
-              >
-                <Image
-                  alt={screenshot.alt}
-                  fill
-                  sizes="(max-width: 720px) calc((100vw - 40px) / 3), 388px"
-                  src={screenshot.src}
-                />
-                <figcaption>{`Play Store ${index + 2}`}</figcaption>
-              </figure>
-            ))}
+        </div>
+      </section>
+
+      <section id="interactive-demo">
+        <div className="site-shell interactive-demo-layout">
+          <SectionHeading kicker="Interactive Demo" title="Interactive Demo" />
+          <div className="interactive-demo-content">
+            <figure
+              aria-label="Alla Vostra interactive demo placeholder"
+              className="interactive-demo-device"
+            >
+              <Image
+                alt="Alla Vostra app demo placeholder device frame"
+                fill
+                sizes="(max-width: 720px) 68vw, 360px"
+                src="/images/alla-vostra-hero-startup-framed.png"
+              />
+            </figure>
+            <p>
+              A short autoplay walkthrough will show the app in motion, from
+              browsing products to reviewing checkout.
+            </p>
           </div>
         </div>
       </section>

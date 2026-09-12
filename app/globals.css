@@ -2561,7 +2561,7 @@ section.project-hero {
 }
 
 .project-page .project-play-store-button {
-  background: #ea4335;
+  background: #ffffff;
   border: 1px solid #000;
   color: #fff;
   overflow: hidden;
@@ -3091,8 +3091,7 @@ section.project-hero {
   grid-template-areas:
     "heading heading"
     "screens copy"
-    "releases releases"
-    "promos promos";
+    "releases releases";
 }
 
 .overview-heading-slot {
@@ -3202,6 +3201,10 @@ section.project-hero {
   padding-left: 28px;
 }
 
+.overview-store-release .overview-store-facts {
+  margin-top: 16px;
+}
+
 .overview-play-store-strip {
   align-items: start;
   display: block;
@@ -3214,10 +3217,10 @@ section.project-hero {
 .overview-play-store-supporting-row {
   --overview-play-store-gap: 8px;
   align-items: start;
-  display: flex;
+  display: grid;
   gap: var(--overview-play-store-gap);
-  grid-area: promos;
-  margin-top: 0;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin: 11px 0 0;
   max-width: 100%;
   overflow: visible;
   width: 100%;
@@ -3239,10 +3242,13 @@ section.project-hero {
   width: var(--overview-play-store-width);
 }
 
+.overview-play-store-shot-feature-hd {
+  aspect-ratio: 16 / 9;
+  width: var(--overview-play-store-width);
+}
+
 .overview-play-store-shot-supporting {
-  width: calc(
-    (100% - (2 * var(--overview-play-store-gap))) / 3
-  );
+  width: 100%;
 }
 
 .overview-play-store-shot-wide {
@@ -3255,6 +3261,48 @@ section.project-hero {
 
 .overview-play-store-shot figcaption {
   display: none;
+}
+
+.interactive-demo-layout {
+  display: grid;
+  gap: 34px;
+  justify-items: stretch;
+}
+
+.interactive-demo-layout > .section-heading {
+  justify-self: start;
+  width: 100%;
+}
+
+.interactive-demo-content {
+  display: grid;
+  gap: 22px;
+  justify-items: center;
+  width: 100%;
+}
+
+.interactive-demo-device {
+  aspect-ratio: 1290 / 2661;
+  margin: 0;
+  max-width: 360px;
+  position: relative;
+  width: min(68vw, 360px);
+}
+
+.interactive-demo-device img {
+  filter:
+    drop-shadow(0 34px 58px rgba(0, 0, 0, 0.5))
+    drop-shadow(0 0 32px rgba(0, 191, 99, 0.08));
+  object-fit: contain;
+}
+
+.interactive-demo-content p {
+  color: var(--text-soft);
+  font-size: clamp(17px, 1.6vw, 21px);
+  line-height: 1.55;
+  margin: 0;
+  max-width: 680px;
+  text-align: center;
 }
 
 .project-card-grid {
@@ -6092,8 +6140,7 @@ section.project-hero {
       "heading"
       "screens"
       "copy"
-      "releases"
-      "promos";
+      "releases";
     grid-template-columns: 1fr;
   }
 
