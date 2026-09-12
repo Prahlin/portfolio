@@ -12,6 +12,7 @@ const PREVIEW_RADIUS_SELECTOR =
 const PREVIEW_SOURCE_SELECTOR = "[data-screenshot-preview-src]";
 const PREVIEW_COMPOSITION_SELECTOR = "[data-screenshot-preview-composition]";
 const PREVIEW_SCOPE_SELECTOR = "[data-screenshot-preview-scope]";
+const PREVIEW_VISUAL_ONLY_SELECTOR = "[data-screenshot-preview-visual-only]";
 const PREVIEW_STACK_SELECTOR = ".flow-screen-stack";
 const PREVIEW_GROUP_SELECTOR = ".flow-screen";
 const PREVIEW_GROUP_LABEL_SELECTOR = ".flow-screen-label";
@@ -251,6 +252,19 @@ function getPreviewTarget(
     return null;
   }
 
+  const visualOnlyScope = target.closest<HTMLElement>(
+    PREVIEW_VISUAL_ONLY_SELECTOR,
+  );
+  const visualOnlyFrame = target.closest<HTMLElement>(
+    PREVIEW_RADIUS_SELECTOR,
+  );
+
+  if (visualOnlyScope) {
+    return visualOnlyFrame && isPreviewElementVisible(visualOnlyFrame, point)
+      ? visualOnlyFrame
+      : null;
+  }
+
   const compositionTarget = target.closest<HTMLElement>(
     PREVIEW_COMPOSITION_SELECTOR,
   );
@@ -457,31 +471,39 @@ function buildPreview(target: PreviewTarget): ScreenshotPreview | null {
 export function ScreenshotPreviewLayer() {
   const activeTargetRef = useRef<PreviewTarget | null>(null);
   const activePointerIdRef = useRef<number | null>(null);
-  const activeStackRef = useRef<HTMLElement | null>(null);
+  const activeHeaderRef = useRef<HTMLElement | null>(null);
   const elementPreviewHostRef = useRef<HTMLDivElement | null>(null);
   const [preview, setPreview] = useState<ScreenshotPreview | null>(null);
 
   useEffect(() => {
-    function clearActiveStack() {
-      activeStackRef.current?.removeAttribute("data-screenshot-preview-active");
-      activeStackRef.current = null;
+    function clearActiveHeader() {
+      activeHeaderRef.current?.removeAttribute(
+        "data-screenshot-preview-header-active",
+      );
+      activeHeaderRef.current = null;
     }
 
-    function setActiveStack(target: PreviewTarget) {
+    function setActiveHeader(target: PreviewTarget) {
+      const group = target.closest<HTMLElement>(PREVIEW_GROUP_SELECTOR);
+      const groupLabel = group?.querySelector<HTMLElement>(
+        PREVIEW_GROUP_LABEL_SELECTOR,
+      );
       const stack = target.closest<HTMLElement>(PREVIEW_STACK_SELECTOR);
+      const stackHeader = stack?.querySelector<HTMLElement>(":scope > h4");
+      const header = groupLabel ?? stackHeader ?? null;
 
-      if (activeStackRef.current === stack) {
+      if (activeHeaderRef.current === header) {
         return;
       }
 
-      clearActiveStack();
+      clearActiveHeader();
 
-      if (!stack || !stack.closest(PREVIEW_SCOPE_SELECTOR)) {
+      if (!header || !header.closest(PREVIEW_SCOPE_SELECTOR)) {
         return;
       }
 
-      stack.setAttribute("data-screenshot-preview-active", "true");
-      activeStackRef.current = stack;
+      header.setAttribute("data-screenshot-preview-header-active", "true");
+      activeHeaderRef.current = header;
     }
 
     function showPreview(target: PreviewTarget) {
@@ -493,14 +515,14 @@ export function ScreenshotPreviewLayer() {
       }
 
       activeTargetRef.current = target;
-      setActiveStack(target);
+      setActiveHeader(target);
       setPreview(nextPreview);
     }
 
     function hidePreview() {
       activeTargetRef.current = null;
       activePointerIdRef.current = null;
-      clearActiveStack();
+      clearActiveHeader();
       setPreview(null);
     }
 
@@ -633,7 +655,7 @@ export function ScreenshotPreviewLayer() {
       window.removeEventListener("blur", hidePreview);
       window.removeEventListener("resize", hidePreview);
       window.removeEventListener("scroll", handleScroll, true);
-      clearActiveStack();
+      clearActiveHeader();
     };
   }, []);
 

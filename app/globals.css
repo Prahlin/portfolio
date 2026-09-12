@@ -76,6 +76,10 @@ img[data-screenshot-preview],
   user-select: none;
 }
 
+[data-screenshot-preview-visual-only] .flow-screen-label {
+  cursor: default;
+}
+
 .screenshot-preview-layer {
   inset: 0;
   pointer-events: none;
@@ -106,8 +110,7 @@ img[data-screenshot-preview],
   display: none !important;
 }
 
-.flow-screen-stack[data-screenshot-preview-active] > h4,
-.screenshot-preview-element-clone h4 {
+[data-screenshot-preview-header-active] {
   opacity: 0 !important;
   visibility: hidden !important;
 }
@@ -3081,13 +3084,15 @@ section.project-hero {
 }
 
 .overview-section-grid {
-  --overview-play-store-width: 480px;
+  --overview-play-store-width: 100%;
   align-items: start;
   gap: 28px 44px;
-  grid-template-columns: var(--overview-play-store-width) minmax(360px, 1fr);
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
   grid-template-areas:
-    "heading ."
-    "screens copy";
+    "heading heading"
+    "screens copy"
+    "releases releases"
+    "promos promos";
 }
 
 .overview-heading-slot {
@@ -3096,8 +3101,105 @@ section.project-hero {
 
 .overview-copy-panel {
   align-self: start;
+  border-left: 0;
   grid-area: copy;
   min-width: 0;
+  padding-left: 0;
+}
+
+.overview-store-facts-heading {
+  align-items: baseline;
+  display: flex;
+  gap: 16px;
+  justify-content: space-between;
+}
+
+.overview-store-facts-heading h3 {
+  color: #f3fff8;
+  font-size: 16px;
+  line-height: 1.25;
+  margin: 0;
+}
+
+.overview-store-facts-heading a,
+.overview-store-facts-heading span {
+  align-items: center;
+  color: var(--green);
+  display: inline-flex;
+  flex: 0 0 auto;
+  font-size: 12px;
+  font-weight: 800;
+  gap: 5px;
+  line-height: 1.25;
+  transition: color 160ms ease;
+}
+
+.overview-store-facts-heading span {
+  color: var(--muted);
+}
+
+.overview-store-facts-heading a:hover {
+  color: var(--mint);
+}
+
+.overview-store-facts {
+  border-bottom: 1px solid var(--line-strong);
+  border-top: 1px solid var(--line-strong);
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin: 11px 0 0;
+}
+
+.overview-store-facts > div {
+  min-width: 0;
+  padding: 13px 12px 14px;
+}
+
+.overview-store-facts > div:not(:nth-child(3n + 1)) {
+  border-left: 1px solid var(--line);
+}
+
+.overview-store-facts > div:nth-child(n + 4) {
+  border-top: 1px solid var(--line);
+}
+
+.overview-store-facts dt {
+  color: var(--green);
+  font-size: 10px;
+  font-weight: 850;
+  line-height: 1.3;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+
+.overview-store-facts dd {
+  color: #f3fff8;
+  font-size: 14px;
+  font-weight: 750;
+  line-height: 1.35;
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+.overview-store-releases {
+  display: grid;
+  gap: 0;
+  grid-area: releases;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  min-width: 0;
+}
+
+.overview-store-release {
+  min-width: 0;
+}
+
+.overview-store-release:first-child {
+  padding-right: 28px;
+}
+
+.overview-store-release-google {
+  border-left: 1px solid var(--line-strong);
+  padding-left: 28px;
 }
 
 .overview-play-store-strip {
@@ -3114,7 +3216,8 @@ section.project-hero {
   align-items: start;
   display: flex;
   gap: var(--overview-play-store-gap);
-  margin-top: 24px;
+  grid-area: promos;
+  margin-top: 0;
   max-width: 100%;
   overflow: visible;
   width: 100%;
@@ -3281,16 +3384,43 @@ section.project-hero {
 }
 
 .product-flow-nav .button-secondary {
-  --product-flow-inactive-fill: transparent;
   --product-flow-nav-text-rgb: 198, 255, 217;
-  --product-flow-nav-text-alpha: 0.58;
+  --product-flow-nav-text-alpha: 0.7;
   --product-flow-nav-text-shadow: none;
   --product-flow-nav-text-stroke-alpha: 0;
   --product-flow-nav-text-stroke-width: 0;
-  background: var(--product-flow-inactive-fill);
-  border-color: transparent;
-  box-shadow: none;
+  background:
+    radial-gradient(
+      150px 54px at 62% 24%,
+      rgba(255, 255, 255, 0.04),
+      transparent 66%
+    ),
+    radial-gradient(
+      118px 42px at 86% 72%,
+      rgba(255, 255, 255, 0.032),
+      transparent 68%
+    ),
+    linear-gradient(
+      110deg,
+      transparent 0 22%,
+      rgba(255, 255, 255, 0.055) 32%,
+      transparent 45% 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(236, 255, 244, 0.07),
+      rgba(100, 255, 179, 0.0275) 48%,
+      rgba(6, 30, 18, 0.05)
+    ),
+    rgba(201, 255, 221, 0.0175);
+  backdrop-filter: blur(5.5px) saturate(1.225);
+  border-color: rgba(216, 255, 229, 0.12);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.17),
+    inset 0 -1px 0 rgba(87, 255, 166, 0.045),
+    0 0 0 1px rgba(7, 24, 14, 0.025);
   font-weight: 720;
+  -webkit-backdrop-filter: blur(5.5px) saturate(1.225);
 }
 
 .product-flow-nav .button[aria-pressed="true"] {
@@ -3301,11 +3431,23 @@ section.project-hero {
   --product-flow-nav-text-shadow: 0 1px 0 rgba(0, 0, 0, 0.28);
   --product-flow-nav-text-stroke-alpha: 0;
   --product-flow-nav-text-stroke-width: 0;
-  background: linear-gradient(
-    180deg,
-    var(--product-flow-active-fill-start),
-    var(--product-flow-active-fill-end)
-  );
+  background:
+    radial-gradient(
+      180px 62px at 68% 18%,
+      rgba(255, 255, 255, 0.045),
+      transparent 68%
+    ),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.055), transparent 34%),
+    linear-gradient(
+      180deg,
+      var(--product-flow-active-fill-start),
+      var(--product-flow-active-fill-end)
+    );
+  border-color: rgba(216, 255, 229, 0.16);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.18),
+    inset 0 -1px 0 rgba(87, 255, 166, 0.075),
+    0 0 0 1px rgba(3, 20, 11, 0.1);
   font-weight: 790;
 }
 
@@ -4519,8 +4661,8 @@ section.project-hero {
   .flow-screen-stack-step-6
   .flow-visual-hierarchy-frame-pair {
   --flow-visual-hierarchy-tip-frame-gap: 10px;
-  --flow-visual-hierarchy-viewing-brace-shift: 31px;
-  --flow-visual-hierarchy-viewing-label-shift: 44px;
+  --flow-visual-hierarchy-viewing-brace-shift: 36px;
+  --flow-visual-hierarchy-viewing-label-shift: 49px;
 }
 
 .flow-capture-group-visual-hierarchy
@@ -5949,8 +6091,31 @@ section.project-hero {
     grid-template-areas:
       "heading"
       "screens"
-      "copy";
+      "copy"
+      "releases"
+      "promos";
     grid-template-columns: 1fr;
+  }
+
+  .overview-store-releases {
+    gap: 0;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .overview-store-facts {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .overview-store-facts > div:not(:nth-child(3n + 1)) {
+    border-left: 0;
+  }
+
+  .overview-store-facts > div:nth-child(2n) {
+    border-left: 1px solid var(--line);
+  }
+
+  .overview-store-facts > div:nth-child(n + 3) {
+    border-top: 1px solid var(--line);
   }
 
   .av-showcase {
@@ -6161,6 +6326,36 @@ section.project-hero {
 
   .overview-section-grid {
     --overview-play-store-width: 100%;
+  }
+
+  .overview-store-facts {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .overview-store-releases {
+    gap: 28px;
+    grid-template-columns: 1fr;
+  }
+
+  .overview-store-release:first-child {
+    padding-right: 0;
+  }
+
+  .overview-store-release-google {
+    border-left: 0;
+    padding-left: 0;
+  }
+
+  .overview-store-facts > div:not(:nth-child(3n + 1)) {
+    border-left: 0;
+  }
+
+  .overview-store-facts > div:nth-child(2n) {
+    border-left: 1px solid var(--line);
+  }
+
+  .overview-store-facts > div:nth-child(n + 3) {
+    border-top: 1px solid var(--line);
   }
 
   .project-hero-grid {
@@ -6627,8 +6822,8 @@ section.project-hero {
   .flow-capture-group-visual-hierarchy
     .flow-screen-stack-step-6
     .flow-visual-hierarchy-frame-pair {
-    --flow-visual-hierarchy-viewing-brace-shift: 4px;
-    --flow-visual-hierarchy-viewing-label-shift: 1px;
+    --flow-visual-hierarchy-viewing-brace-shift: 9px;
+    --flow-visual-hierarchy-viewing-label-shift: 6px;
   }
 
   .flow-capture-group-visual-hierarchy
@@ -6814,8 +7009,8 @@ section.project-hero {
     .flow-visual-hierarchy-frame-pair {
     --flow-visual-hierarchy-brace-gap: 4px;
     --flow-visual-hierarchy-tip-frame-gap: 5px;
-    --flow-visual-hierarchy-viewing-brace-shift: 9px;
-    --flow-visual-hierarchy-viewing-label-shift: 20px;
+    --flow-visual-hierarchy-viewing-brace-shift: 14px;
+    --flow-visual-hierarchy-viewing-label-shift: 25px;
   }
 
   .flow-capture-group-visual-hierarchy
@@ -6919,8 +7114,8 @@ section.project-hero {
   .flow-capture-group-visual-hierarchy
     .flow-screen-stack-step-6
     .flow-visual-hierarchy-frame-pair {
-    --flow-visual-hierarchy-viewing-brace-shift: 9px;
-    --flow-visual-hierarchy-viewing-label-shift: 20px;
+    --flow-visual-hierarchy-viewing-brace-shift: 14px;
+    --flow-visual-hierarchy-viewing-label-shift: 25px;
   }
 }
 

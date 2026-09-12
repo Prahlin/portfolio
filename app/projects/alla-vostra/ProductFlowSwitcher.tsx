@@ -633,12 +633,41 @@ const controlsAndInputsSamplesByStep: Record<string, FlowActionSample[]> = {
   ],
 };
 const uiBlueprintSections = [
-  { stage: "00", title: "Colors & Theming" },
-  { stage: "01", title: "Typography & Spacing" },
-  { stage: "02", title: "Iconography & Imagery" },
-  { stage: "03", title: "Navigations" },
-  { stage: "04", title: "Controls & Inputs" },
-  { stage: "05", title: "Visual Hierarchy" },
+  {
+    copy: "Cream, citrus, and earthy tones shape an artisanal identity.",
+    stage: "00",
+    title: "Colors & Theming",
+  },
+  {
+    copy:
+      "Expressive typography and measured spacing create a clear reading rhythm.",
+    stage: "01",
+    title: "Typography & Spacing",
+  },
+  {
+    copy:
+      "Original photography, artwork, and icons create a cohesive visual language.",
+    stage: "02",
+    title: "Iconography & Imagery",
+  },
+  {
+    copy:
+      "Purposeful navigation keeps customers oriented without interrupting discovery.",
+    stage: "03",
+    title: "Navigations",
+  },
+  {
+    copy:
+      "State-aware controls make adding, editing, and checking out feel immediate.",
+    stage: "04",
+    title: "Controls & Inputs",
+  },
+  {
+    copy:
+      "Deliberate focal points guide attention throughout the shopping journey.",
+    stage: "05",
+    title: "Visual Hierarchy",
+  },
 ];
 const flowCoordinateFrame = { height: 1648, width: 807.2, x: 122.8, y: 270 };
 const flowPanelRect: ProductFlowRect = {
@@ -1615,6 +1644,7 @@ function PlaceholderStage({
   className,
   copy,
   eyebrowLabel,
+  previewVisualOnly = false,
   renderExpandedStepScreens,
   renderStepScreens,
   rowLabels = [],
@@ -1631,6 +1661,7 @@ function PlaceholderStage({
   className?: string;
   copy: string;
   eyebrowLabel?: string;
+  previewVisualOnly?: boolean;
   renderExpandedStepScreens?: (step: string) => ReactNode;
   renderStepScreens?: (step: string, isExpanded: boolean) => ReactNode;
   rowLabels?: string[];
@@ -1731,6 +1762,7 @@ function PlaceholderStage({
       className={["flow-capture-group", className]
         .filter(Boolean)
         .join(" ")}
+      data-screenshot-preview-visual-only={previewVisualOnly || undefined}
       style={style}
     >
       <div className="flow-group-header">
@@ -2066,9 +2098,10 @@ export default function ProductFlowSwitcher({
                   ? "flow-capture-group-full-row flow-capture-group-visual-hierarchy"
                   : undefined
               }
-              copy={`This UI Foundations category will outline the ${section.title} system.`}
+              copy={section.copy}
               eyebrowLabel="UI FOUNDATIONS"
               key={section.stage}
+              previewVisualOnly={section.title !== "Visual Hierarchy"}
               style={
                 section.title === "Visual Hierarchy"
                   ? { gridTemplateColumns: "1fr" }

@@ -14,16 +14,40 @@ export const metadata: Metadata = {
 };
 
 const metadataItems = [
-  "React Native / Expo 54",
-  "Stripe + PayPal checkout",
-  "Serverless commerce backend",
-  "EAS / Play Store release",
+  "React Native",
+  "Expo 54",
+  "Stripe + PayPal",
+  "Serverless API",
+  "Play Store Prep",
+  "App Store Prep",
+  "EAS Builds",
+  "Postmark",
+  "Google Pay",
+  "Apple Pay",
 ];
 
 const playStoreUrl =
   "https://play.google.com/store/apps/details?id=com.allavostra.app&showAllReviews=true";
 const appStoreUrl = "https://apps.apple.com/us/search?term=Alla%20Vostra";
 const appStoreBlue = "#0D96F6";
+
+const playStoreFacts = [
+  { label: "Version", value: "1.0.3" },
+  { label: "Released", value: "Aug 24, 2026" },
+  { label: "Store bundle", value: "85.1 MB" },
+  { label: "Play download", value: "Device-specific" },
+  { label: "Requires", value: "Android 7.0+" },
+  { label: "Category", value: "Food & Drink" },
+] as const;
+
+const appStoreFacts = [
+  { label: "Version", value: "TBD" },
+  { label: "Released", value: "Pending" },
+  { label: "Store bundle", value: "TBD" },
+  { label: "App download", value: "TBD" },
+  { label: "Requires", value: "iOS TBD" },
+  { label: "Category", value: "Food & Drink" },
+] as const;
 
 const proofStats = [
   {
@@ -977,9 +1001,9 @@ export default function AllaVostraCaseStudy() {
                 Flagship full stack mobile commerce app
               </p>
               <p className="project-hero-text">
-                Alla Vostra is a native commerce system focused on polished
-                ordering, multi-payment checkout, server-validated order logic,
-                transactional messaging, and production-minded store delivery.
+                Alla Vostra unifies product browsing, multi-rail checkout,
+                delivery validation, and customer confirmations in a cohesive
+                native experience built for real-world release.
               </p>
 
               <div className="project-meta-row" aria-label="Project metadata">
@@ -1174,31 +1198,70 @@ export default function AllaVostraCaseStudy() {
               receive confirmation through backend messaging.
             </p>
             <p>
-              My role covered the app experience end to end: mobile UI
-              implementation, front-end architecture, backend-connected purchase
-              flows, server-owned order validation, PayPal and Stripe
-              coordination, transactional messaging, emulator and device QA,
-              native build setup, and release-focused iteration.
+              My role covered the app experience end to end: original UI/UX
+              design creation & implementation, front-end architecture,
+              backend-connected purchase flows, server-owned order validation,
+              PayPal and Stripe coordination, transactional messaging, emulator
+              and device QA, native build setup, and release-focused iteration.
             </p>
-            <div
-              aria-label="Alla Vostra Play Store screenshots"
-              className="overview-play-store-supporting-row"
-            >
-              {supportingPlayStoreScreenshots.map((screenshot, index) => (
-                <figure
-                  className={`overview-play-store-shot overview-play-store-shot-${screenshot.aspect} overview-play-store-shot-supporting`}
-                  key={screenshot.src}
-                >
-                  <Image
-                    alt={screenshot.alt}
-                    fill
-                    sizes="155px"
-                    src={screenshot.src}
-                  />
-                  <figcaption>{`Play Store ${index + 2}`}</figcaption>
-                </figure>
-              ))}
+          </div>
+          <div className="overview-store-releases">
+            <div className="overview-store-release">
+              <div className="overview-store-facts-heading">
+                <h3>App Store release</h3>
+                <span>Listing in preparation</span>
+              </div>
+              <dl
+                aria-label="App Store placeholder release details"
+                className="overview-store-facts"
+              >
+                {appStoreFacts.map((fact) => (
+                  <div key={fact.label}>
+                    <dt>{fact.label}</dt>
+                    <dd>{fact.value}</dd>
+                  </div>
+                ))}
+              </dl>
             </div>
+            <div className="overview-store-release overview-store-release-google">
+              <div className="overview-store-facts-heading">
+                <h3>Google Play release</h3>
+                <a href={playStoreUrl} rel="noreferrer" target="_blank">
+                  Official listing
+                  <ArrowRight aria-hidden size={14} strokeWidth={2.25} />
+                </a>
+              </div>
+              <dl
+                aria-label="Google Play release details"
+                className="overview-store-facts"
+              >
+                {playStoreFacts.map((fact) => (
+                  <div key={fact.label}>
+                    <dt>{fact.label}</dt>
+                    <dd>{fact.value}</dd>
+                  </div>
+                ))}
+              </dl>
+            </div>
+          </div>
+          <div
+            aria-label="Alla Vostra Play Store screenshots"
+            className="overview-play-store-supporting-row"
+          >
+            {supportingPlayStoreScreenshots.map((screenshot, index) => (
+              <figure
+                className={`overview-play-store-shot overview-play-store-shot-${screenshot.aspect} overview-play-store-shot-supporting`}
+                key={screenshot.src}
+              >
+                <Image
+                  alt={screenshot.alt}
+                  fill
+                  sizes="(max-width: 720px) calc((100vw - 40px) / 3), 388px"
+                  src={screenshot.src}
+                />
+                <figcaption>{`Play Store ${index + 2}`}</figcaption>
+              </figure>
+            ))}
           </div>
         </div>
       </section>
