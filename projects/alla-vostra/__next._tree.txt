@@ -1,5 +1,5 @@
-:HL["/_next/static/chunks/08zxyojb1ss4f.css","style"]
+:HL["/_next/static/chunks/2e0jyskp-mmuk.css","style"]
 :HL["/images/app-store-mark.svg","image"]
 :HL["/images/google-play-official-triangle.png","image"]
 :HL["/images/android-robot-head.svg","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"projects","param":null,"prefetchHints":0,"slots":{"children":{"name":"alla-vostra","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"EKqob8A-7Z2s-codC1xsK"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"projects","param":null,"prefetchHints":0,"slots":{"children":{"name":"alla-vostra","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"P8rxItj3tptQtc39YAaK5"}
