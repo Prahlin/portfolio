@@ -1,0 +1,381 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [6 0 R 8 0 R 10 0 R 12 0 R 14 0 R 16 0 R] /Count 6 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+5 0 obj
+<< /Length 6431 >>
+stream
+BT /F2 15.5 Tf 1 0 0 1 54 742 Tm (Prahlin Portfolio Work Log - September 11, 2026) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 716 Tm (Compiled summary for Friday, September 11, 2026 - focus: continuing the Prahl.dev Portfolio Alla Vostra) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 703 Tm (project-page refinement after the September 9 case-study architecture and section-reorganization pass,) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 690 Tm (verifying the United States Eastern date, running the local Next.js site, studying the refreshed project) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 677 Tm (snapshot and every pre-existing Portfolio PDF worklog, moving Visual Hierarchy Viewing Area annotations) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 664 Tm (closer to their Primary device frames without changing stack centering, designing and implementing glass) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 651 Tm (treatments for the UI Foundations / UX Product Flow switcher, replacing generic UI Foundations) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 638 Tm (descriptions, standardizing screenshot magnification and nearest-header hiding, shortening and expanding) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 625 Tm (hero technology chips, refining case-study summary and ownership copy, researching the official Alla) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 612 Tm (Vostra Google Play listing and current production Android bundle, adding paired Google Play and App Store) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 599 Tm (release grids, rebuilding the Overview composition around a 67/33 feature-image and narrative split,) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 586 Tm (centering the release grids at 50/50, extending the three supporting promo images across the full section) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 573 Tm (width, validating TypeScript and browser-rendered desktop/mobile geometry, recording the committed) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 560 Tm (source state at d2cd710, refreshing the Portfolio project snapshot, and generating the September 11) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 547 Tm (Portfolio PDF worklog.) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 527 Tm (Generated in continuity with the established Prahlin Portfolio daily worklog cadence: compact opening) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 514 Tm (summary, source-material section, baseline section, goal list, work-completed sections, validation section,) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 501 Tm (files-touched list, follow-up context, and output-artifact close.) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 481 Tm (This artifact intentionally covers Prahlin/portfolio work performed after portfolio_worklog_september9.pdf) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 468 Tm (and after the September 9 documentation state. The source state reviewed for this record is) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 455 Tm (d2cd71027145c732e332c9d3f69878b81adab2d5 on main, matching origin/main after the source commit) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 442 Tm (titled Refined Alla Vostra project page interactions, content, and release overview. No new Hostinger) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 429 Tm (deployment, static-export branch update, production publish, or application-repository commit was) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 416 Tm (performed during this record. The local documentation delta created before this PDF was the refreshed) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 403 Tm (portfolio_PROJECT_SNAPSHOT.txt file; this PDF is the new September 11 root-level documentation) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 390 Tm (artifact.) Tj ET
+BT /F2 13.5 Tf 1 0 0 1 54 363 Tm (Source Materials Reviewed) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 343 Tm (- Verified the United States Eastern date with TZ=America/New_York date immediately before generation,) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 330 Tm (  which reported Friday, September 11, 2026 at approximately 8:54 PM EDT with UTC offset -0400. The) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 317 Tm (  worklog therefore uses September 11, 2026 rather than the September 12 UTC date visible in some) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 304 Tm (  remote response headers.) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 291 Tm (- Ran ./read_project.sh from /Users/prahlin/gh/portfolio and regenerated) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 278 Tm (  portfolio_PROJECT_SNAPSHOT.txt before writing this worklog, preserving the project convention that) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 265 Tm (  Codex refreshes the current source snapshot before continuing Portfolio documentation work.) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 252 Tm (- Reviewed the refreshed portfolio_PROJECT_SNAPSHOT.txt, including project notes, source tree, public) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 239 Tm (  image and font inventories, worklog inventory, package and deployment configuration, git state, recent) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 226 Tm (  commits, current source dumps, and the standing instruction to ask for a commit message before) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 213 Tm (  committing or pushing.) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 200 Tm (- Extracted and studied all thirty-four pre-existing root-level Portfolio PDF worklogs with pdftotext: the) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 187 Tm (  July 11, 14, 15 Part 1, 15 Part 2, 16, 19, 20, 21, 22, 23, 24, 25, 29, 30, and 31 records; the August 1) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 174 Tm (  Parts 1-3, August 3, 4, 5, 6, 10 Parts 1-2, 11, 12 Parts 1-2, 14, 16, and 24 records; and the September 7,) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 161 Tm (  September 8, September 8 Part 2, and September 9 records.) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 148 Tm (- Compared all prior PDFs for naming, title cadence, page dimensions, opening-summary density, section) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 135 Tm (  order, bullet-heavy technical voice, validation language, files-touched treatment, follow-up continuity, and) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 122 Tm (  output-artifact closure. The mature records consistently use a single non-part filename for the first) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 109 Tm (  worklog on a date and add part suffixes only for later same-day artifacts.) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 96 Tm (- Checked pdfinfo and pdffonts across the archive and used portfolio_worklog_september9.pdf as the) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 83 Tm (  closest chronological and structural baseline. The accepted output convention is US Letter at 612 x 792) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 70 Tm (  points, PDF 1.4, Helvetica and Helvetica-Bold Type 1 fonts, and Codex author/creator/producer metadata.) Tj ET
+BT /F1 8.5 Tf 1 0 0 1 202.16 30 Tm (Prahlin Portfolio Work Log - September 11, 2026 Page 1) Tj ET
+endstream
+endobj
+6 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 5 0 R >>
+endobj
+7 0 obj
+<< /Length 6409 >>
+stream
+BT /F1 10 Tf 1 0 0 1 54 742 Tm (- Reviewed git history and synchronization state through git log, git show --stat, git show --name-status, git) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 729 Tm (  status --short --branch, git rev-parse, git branch -vv, and git ls-remote. Confirmed main and origin/main) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 716 Tm (  both point to d2cd710 and that the source worktree was clean before the snapshot refresh.) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 703 Tm (- Reviewed the complete d2cd710 source commit and its commit message, including four modified) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 690 Tm (  application files, the refreshed snapshot, and twelve newly tracked glass-treatment mockup PNGs. The) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 677 Tm (  commit contains 394 insertions and 79 deletions across seventeen files.) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 664 Tm (- Reviewed the relevant source files directly: app/ScreenshotPreviewLayer.tsx, app/globals.css,) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 651 Tm (  app/projects/alla-vostra/ProductFlowSwitcher.tsx, app/projects/alla-vostra/page.tsx, package.json,) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 638 Tm (  read_project.sh, and the current /projects/alla-vostra route.) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 625 Tm (- Reviewed the official Google Play listing for package com.allavostra.app and the authenticated production) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 612 Tm (  Expo Application Services build record for version 1.0.3 / Android build version 4. Used the exact) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 599 Tm (  production AAB artifact headers to distinguish the 85,134,187-byte store bundle from Google Play's) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 586 Tm (  device-optimized download size.) Tj ET
+BT /F2 13.5 Tf 1 0 0 1 54 566 Tm (Baseline Status Before September 11 Work) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 546 Tm (- The September 9 source and worklog state had reorganized the Alla Vostra case study around the current) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 533 Tm (  native commerce architecture, introduced a calmer UI Foundations / UX Product Flow switcher, removed) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 520 Tm (  redundant lower-page sections, and documented the current app and backend capabilities.) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 507 Tm (- The Visual Hierarchy Primary stacks across PRE-SCROLLING, ON-SCROLLING, and DURING) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 494 Tm (  SHOPPING were centered correctly, but the Viewing Area text and brace still sat slightly farther from the) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 481 Tm (  adjacent device frame or screenshot than requested.) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 468 Tm (- The UI Foundations / UX Product Flow switcher had the correct active/inactive hierarchy but used a flat) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 455 Tm (  transparent inactive treatment. The user wanted to explore see-through glass and water effects before) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 442 Tm (  selecting a restrained 0.5-opacity direction.) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 429 Tm (- UI Foundations Categories 00 through 05 still used placeholder-style description text. Categories 00) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 416 Tm (  through 04 also needed to match Visual Hierarchy magnification behavior, with the important correction) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 403 Tm (  that the nearest contextual header should disappear rather than always hiding the white stack heading.) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 390 Tm (- The hero metadata chips used long compound labels that collapsed to one chip per row in super-narrow) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 377 Tm (  windows. The project summary and role copy also underplayed the original design work and the broader) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 364 Tm (  multi-rail commerce experience.) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 351 Tm (- The Overview section presented Play Store imagery and narrative copy but did not expose release) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 338 Tm (  metadata such as app version, release date, Android requirement, bundle size, or store category. It also) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 325 Tm (  had no corresponding App Store preparation grid.) Tj ET
+BT /F2 13.5 Tf 1 0 0 1 54 305 Tm (Goals for September 11) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 285 Tm (- Verify the active United States Eastern date, study all prior Portfolio worklogs, refresh the project) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 272 Tm (  snapshot, and produce the next root-level PDF using the established non-part filename and document) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 259 Tm (  style.) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 246 Tm (- Move Viewing Area text and brace annotations five pixels closer to every Primary Visual Hierarchy frame) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 233 Tm (  while preserving the centering rules for the Primary stacks as complete compositions.) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 220 Tm (- Explore multiple inactive and active glass treatments through visual mockups, implement the selected) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 207 Tm (  0.5-opacity inactive effect, soften its brightest highlight, and give the active dark-green state a cohesive) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 194 Tm (  but restrained glass finish.) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 181 Tm (- Replace all six UI Foundations section descriptions with short, section-specific copy chosen by the user) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 168 Tm (  and align screenshot magnification behavior across Colors & Theming through Controls & Inputs.) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 155 Tm (- Make magnification hide the nearest relevant green eyebrow or white stack header according to local) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 142 Tm (  hierarchy, without changing preview geometry or requiring category-specific event handlers.) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 129 Tm (- Shorten hero chips for narrow layouts, add missing store-preparation and platform-service signals, refine) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 116 Tm (  the hero summary, and explicitly credit original UI/UX design creation and implementation in the Overview) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 103 Tm (  role description.) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 90 Tm (- Research current official Google Play release information, communicate the distinction between store) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 77 Tm (  bundle and device-specific download size, and integrate factual release details into Overview without) Tj ET
+BT /F1 8.5 Tf 1 0 0 1 202.16 30 Tm (Prahlin Portfolio Work Log - September 11, 2026 Page 2) Tj ET
+endstream
+endobj
+8 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 7 0 R >>
+endobj
+9 0 obj
+<< /Length 5772 >>
+stream
+BT /F1 10 Tf 1 0 0 1 54 742 Tm (  overstating unpublished App Store data.) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 729 Tm (- Recompose Overview so the feature image and narrative use a 67/33 top-row split, the App Store and) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 716 Tm (  Google Play grids remain centered at 50/50 below, and the three promo images span the full content width) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 703 Tm (  without a neighboring divider.) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 690 Tm (- Validate the final experience with TypeScript, local route checks, desktop/tablet/mobile Playwright) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 677 Tm (  screenshots, width and overflow measurements, source-diff checks, and clean repository synchronization) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 664 Tm (  review.) Tj ET
+BT /F2 13.5 Tf 1 0 0 1 54 644 Tm (Work Completed - Visual Hierarchy Annotation Positioning) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 624 Tm (- Adjusted the shared Visual Hierarchy Viewing Area brace and label shift variables by five pixels for the) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 611 Tm (  PRE-SCROLLING, ON-SCROLLING, and DURING SHOPPING Primary stacks.) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 598 Tm (- Applied the same five-pixel proximity change at the wide, portrait, and narrow responsive override points) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 585 Tm (  so the annotation remains consistently closer to the adjacent frame instead of snapping back at a) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 572 Tm (  breakpoint.) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 559 Tm (- Left the Primary stack centering properties untouched. The change altered only the local annotation) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 546 Tm (  offsets, preserving the accepted device, brace, white-line, and green-eyebrow composition as a centered) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 533 Tm (  whole.) Tj ET
+BT /F2 13.5 Tf 1 0 0 1 54 513 Tm (Work Completed - Product Flow Glass Treatments and Mockups) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 493 Tm (- Generated three initial side-by-side mockups for the inactive transparent switcher state: Subtle Glass,) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 480 Tm (  Water Ripple, and Frosted Aqua. Each study preserved the current active treatment beside it for direct) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 467 Tm (  comparison.) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 454 Tm (- Generated three opacity variants of the selected first direction at 0.1, 0.5, and 1.0 strength, then) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 441 Tm (  implemented the chosen 0.5 treatment in the live UI.) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 428 Tm (- Reduced the distracting primary white highlight by approximately fifty percent and added two softer) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 415 Tm (  highlight zones, keeping the inactive button translucent while giving the surface more distributed glass) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 402 Tm (  depth.) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 389 Tm (- Generated three active dark-green glass mockups - Solid Rim, Soft Glass, and Water Sheen - juxtaposed) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 376 Tm (  against the latest inactive treatment, then implemented the accepted active treatment.) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 363 Tm (- Built the final CSS with layered radial and linear highlights, subtle border color, inset light and dark edges,) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 350 Tm (  controlled saturation and blur, and restrained shadows. The active and inactive states now share one) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 337 Tm (  material language without competing with the section content.) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 324 Tm (- Tracked twelve PNG study assets in mockups/: three initial inactive variants, three opacity exports, three) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 311 Tm (  active variants, and three combined comparison boards documenting the decision sequence.) Tj ET
+BT /F2 13.5 Tf 1 0 0 1 54 291 Tm (Work Completed - UI Foundations Copy and Magnification) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 271 Tm (- Inspected the gray descriptions beneath all six UI Foundations headings, recommended three replacement) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 258 Tm (  descriptions per category, and implemented the user's selected option sequence 3, 1, 1, 3, 1, and 2.) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 245 Tm (- Added tailored copy for Colors & Theming, Typography & Spacing, Iconography & Imagery, Navigations,) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 232 Tm (  Controls & Inputs, and Visual Hierarchy instead of generating a generic category-title sentence at render) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 219 Tm (  time.) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 206 Tm (- Extended PlaceholderStage with previewVisualOnly support and marked Categories 00 through 04 so) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 193 Tm (  screenshot magnification targets the visible image frame while preserving the local surrounding layout.) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 180 Tm (- Refactored ScreenshotPreviewLayer from stack-level active state to nearest-header active state. The) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 167 Tm (  preview now searches the selected image group for a green flow-screen label first and falls back to the) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 154 Tm (  direct white stack h4 when no closer eyebrow exists.) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 141 Tm (- Replaced the previous broad stack selector with data-screenshot-preview-header-active, so only the) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 128 Tm (  contextually nearest header becomes invisible during hover or tap-and-hold magnification.) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 115 Tm (- Preserved Visual Hierarchy behavior because its image groups use white stack headers, while correcting) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 102 Tm (  Categories 00 through 04 to hide their closer green UI FOUNDATIONS eyebrow labels.) Tj ET
+BT /F1 8.5 Tf 1 0 0 1 202.16 30 Tm (Prahlin Portfolio Work Log - September 11, 2026 Page 3) Tj ET
+endstream
+endobj
+10 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 9 0 R >>
+endobj
+11 0 obj
+<< /Length 6100 >>
+stream
+BT /F2 13.5 Tf 1 0 0 1 54 735 Tm (Work Completed - Hero Metadata and Case-Study Copy) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 715 Tm (- Split four long compound hero chips into compact technology and release labels, then expanded the final) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 702 Tm (  set to React Native, Expo 54, Stripe + PayPal, Serverless API, Play Store Prep, App Store Prep, EAS) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 689 Tm (  Builds, Postmark, Google Pay, and Apple Pay.) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 676 Tm (- Ordered the chip set so super-narrow 320px, 360px, and 390px layouts rarely leave a single chip stranded) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 663 Tm (  on a row while retaining the most important stack, payment, messaging, and release signals.) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 650 Tm (- Replaced the hero description with concise copy presenting Alla Vostra as a cohesive native experience) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 637 Tm (  spanning product browsing, multi-rail checkout, delivery validation, customer confirmations, and real-world) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 624 Tm (  release.) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 611 Tm (- Changed the Overview responsibility phrase from mobile UI implementation to original UI/UX design) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 598 Tm (  creation & implementation, accurately reflecting design authorship as well as front-end delivery.) Tj ET
+BT /F2 13.5 Tf 1 0 0 1 54 578 Tm (Work Completed - Store Research and Overview Release Grids) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 558 Tm (- Visited the official Google Play listing for Alla Vostra Grazing Boards and confirmed package) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 545 Tm (  com.allavostra.app, version 1.0.3, release/update date August 24, 2026, Android 7.0 and up requirement,) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 532 Tm (  Food & Drink category, Everyone content rating, and Prahlin publisher identity.) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 519 Tm (- Confirmed the listing's current release notes cover improved display behavior for newer devices, tablets,) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 506 Tm (  and foldables; refined layout polish and checkout readiness; and updated production PayPal and Stripe) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 493 Tm (  payment support.) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 480 Tm (- Located the exact current production EAS store build for app version 1.0.3 and build version 4, then) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 467 Tm (  measured its AAB artifact at 85,134,187 bytes, displayed as 85.1 MB in the case study.) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 454 Tm (- Documented Play download as device-specific because Google Play generates optimized downloads from) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 441 Tm (  the Android App Bundle according to processor architecture, screen density, language, and required) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 428 Tm (  resources. The label describes varying download size, not limited smartphone compatibility.) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 415 Tm (- Added a compact Google Play release definition grid with Version, Released, Store bundle, Play download,) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 402 Tm (  Requires, and Category fields plus an Official listing link.) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 389 Tm (- Added an exact visual counterpart for App Store preparation to the left of Google Play, using clearly) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 376 Tm (  provisional TBD, Pending, and iOS TBD values so temporary content cannot be mistaken for a published) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 363 Tm (  Apple listing.) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 350 Tm (- Centered the paired release area as two equal 50/50 grids. Placed the shared center divider exactly on the) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 337 Tm (  page midpoint and applied equal inner spacing to both release columns.) Tj ET
+BT /F2 13.5 Tf 1 0 0 1 54 317 Tm (Work Completed - Overview Composition and Responsive Layout) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 297 Tm (- Iterated the Overview composition from the original image-left/copy-right arrangement through a full-width) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 284 Tm (  vertical study, then settled on a desktop 67/33 top-row split that gives the Play Store feature image) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 271 Tm (  two-thirds of the available row and the narrative one-third.) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 258 Tm (- Kept the Overview heading full-width above the split and removed the old copy-panel left border and) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 245 Tm (  padding so the narrower narrative receives its complete one-third allocation.) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 232 Tm (- Moved the three supporting Play Store promo screenshots outside the narrative panel, removed the) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 219 Tm (  divider that had appeared beside them, and expanded the row from the left shell edge to the right shell) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 206 Tm (  edge.) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 193 Tm (- Updated responsive image size hints for the larger supporting screenshots and preserved their stable) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 180 Tm (  three-across aspect-ratio layout on desktop and narrow mobile screens.) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 167 Tm (- Kept the release grids paired through desktop and intermediate widths, switched their internal facts from) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 154 Tm (  three columns to two where needed, and stacked App Store above Google Play on phone-width layouts.) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 141 Tm (- Preserved the final content order as Overview heading, 67/33 feature image and narrative, centered 50/50) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 128 Tm (  store-release grids, and the full-width three-image promo strip.) Tj ET
+BT /F2 13.5 Tf 1 0 0 1 54 108 Tm (Work Completed - Cache Handling, Validation, and Commit Context) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 88 Tm (- Cleared generated Next.js cache output and restarted the local development server when Turbopack) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 75 Tm (  served updated markup with stale compiled CSS. Moved generated .next output into timestamped /tmp) Tj ET
+BT /F1 8.5 Tf 1 0 0 1 202.16 30 Tm (Prahlin Portfolio Work Log - September 11, 2026 Page 4) Tj ET
+endstream
+endobj
+12 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 11 0 R >>
+endobj
+13 0 obj
+<< /Length 6071 >>
+stream
+BT /F1 10 Tf 1 0 0 1 54 742 Tm (  locations rather than touching source files.) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 729 Tm (- Kept the local Next.js route available at http://127.0.0.1:3000/projects/alla-vostra throughout final) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 716 Tm (  review and restarted it cleanly after cache refreshes.) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 703 Tm (- Provided the requested commit-message recommendation with one past-tense header and nine literal) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 690 Tm (  hyphen-led lines covering interaction, mockup, copy, magnification, annotation, hero, release, Overview,) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 677 Tm (  and snapshot work.) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 664 Tm (- Recorded the resulting source commit d2cd710, Refined Alla Vostra project page interactions, content,) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 651 Tm (  and release overview. Confirmed the commit includes all application changes, all twelve mockup assets,) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 638 Tm (  and the refreshed snapshot state.) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 625 Tm (- Confirmed main and origin/main match at d2cd710. No commit or push was performed by the) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 612 Tm (  worklog-generation pass itself, preserving the project's explicit commit-message approval convention.) Tj ET
+BT /F2 13.5 Tf 1 0 0 1 54 592 Tm (Validation Summary) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 572 Tm (- Ran npm run check after the interaction, copy, hero, release-grid, and final Overview layout changes;) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 559 Tm (  TypeScript completed successfully with tsc --noEmit.) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 546 Tm (- Ran git diff --check during the source work and confirmed no whitespace errors in the final application) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 533 Tm (  changes.) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 520 Tm (- Used Playwright against the local Alla Vostra route at 1440px desktop, 800px intermediate, 360px) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 507 Tm (  mobile, and 320px narrow viewports. Captured section screenshots and inspected the rendered) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 494 Tm (  composition after each material layout transition.) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 481 Tm (- Measured the final desktop top row at approximately 757px for the feature image and 379px for the) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 468 Tm (  narrative after the existing 44px gap, matching the requested two-thirds / one-third allocation.) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 455 Tm (- Measured both release grids at 590px on the 1180px desktop shell, with their split axis at the exact) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 442 Tm (  720px viewport midpoint. Confirmed the release area and supporting promo row both span the complete) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 429 Tm (  1180px content width.) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 416 Tm (- Confirmed the three supporting promo images render at equal widths across the full row and no longer) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 403 Tm (  inherit or sit beside the Overview copy divider.) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 390 Tm (- Confirmed the 360px and 320px passes reported zero document-level horizontal overflow; feature image,) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 377 Tm (  narrative, release grids, and promo strip all matched their mobile shell widths.) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 364 Tm (- Verified the glass controls, release facts, external listing link, responsive dividers, text wrapping, and) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 351 Tm (  screenshot-preview header behavior through local browser inspection.) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 338 Tm (- Reviewed final git history and synchronization state after source commit d2cd710. The worktree was) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 325 Tm (  clean before read_project.sh refreshed portfolio_PROJECT_SNAPSHOT.txt for this documentation pass.) Tj ET
+BT /F2 13.5 Tf 1 0 0 1 54 305 Tm (Files Touched and Artifacts) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 285 Tm (- app/ScreenshotPreviewLayer.tsx - added visual-only preview targeting and replaced broad stack-level) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 272 Tm (  header hiding with nearest contextual header selection and cleanup.) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 259 Tm (- app/projects/alla-vostra/ProductFlowSwitcher.tsx - added the six accepted UI Foundations descriptions,) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 246 Tm (  previewVisualOnly support, and category wiring for corrected magnification behavior.) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 233 Tm (- app/projects/alla-vostra/page.tsx - shortened and expanded hero chips, refined hero and role copy, added) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 220 Tm (  Google Play facts and provisional App Store facts, linked the official Play listing, and reorganized the) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 207 Tm (  Overview release and promo markup.) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 194 Tm (- app/globals.css - implemented active/inactive glass surfaces, moved Viewing Area annotations five pixels) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 181 Tm (  closer across responsive modes, added release-grid styling, created the final 67/33 Overview split,) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 168 Tm (  centered the 50/50 release pair, and expanded promo imagery full width.) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 155 Tm (- mockups/01-subtle-glass.png, 02-water-ripple.png, and 03-frosted-aqua.png - recorded the initial inactive) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 142 Tm (  switcher material directions.) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 129 Tm (- mockups/v1-opacity-010.png, v1-opacity-050.png, and v1-opacity-100.png - recorded the selected glass) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 116 Tm (  direction at three requested opacity strengths.) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 103 Tm (- mockups/active-01-solid-rim.png, active-02-soft-glass.png, and active-03-water-sheen.png - recorded) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 90 Tm (  three active dark-green glass studies beside the accepted inactive treatment.) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 77 Tm (- mockups/alla-vostra-toggle-glass-water-mockups.png,) Tj ET
+BT /F1 8.5 Tf 1 0 0 1 202.16 30 Tm (Prahlin Portfolio Work Log - September 11, 2026 Page 5) Tj ET
+endstream
+endobj
+14 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 13 0 R >>
+endobj
+15 0 obj
+<< /Length 5003 >>
+stream
+BT /F1 10 Tf 1 0 0 1 54 742 Tm (  alla-vostra-toggle-subtle-glass-opacity-mockups.png, and alla-vostra-toggle-active-glass-mockups.png -) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 729 Tm (  preserved the combined comparison boards used during selection.) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 716 Tm (- portfolio_PROJECT_SNAPSHOT.txt - refreshed through read_project.sh before this PDF generation so) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 703 Tm (  the snapshot captures the current tree, d2cd710 source state, PDF inventory, source dumps, and standing) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 690 Tm (  project instructions.) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 677 Tm (- portfolio_worklog_september11.pdf - generated as this session's root-level dated documentation artifact.) Tj ET
+BT /F2 13.5 Tf 1 0 0 1 54 657 Tm (Follow-Up Context) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 637 Tm (- The final Overview desktop structure intentionally uses a 67/33 feature-image and narrative split above) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 624 Tm (  two centered 50/50 release grids. Future top-row ratio changes should not accidentally transfer into the) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 611 Tm (  equal release-grid columns.) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 598 Tm (- The App Store grid is explicitly provisional. Replace TBD, Pending, and iOS TBD values only after an) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 585 Tm (  official listing or verified production build provides publishable facts.) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 572 Tm (- The Google Play 85.1 MB value is the production Android AAB upload bundle, not a universal user) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 559 Tm (  download. Keep Play download labeled as device-specific or varies by device unless a specific device) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 546 Tm (  configuration is being measured.) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 533 Tm (- UI Foundations Categories 00 through 04 intentionally use visual-only magnification and hide the nearest) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 520 Tm (  green eyebrow. Visual Hierarchy continues to hide its white stack heading because that is the nearest) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 507 Tm (  available header in those groups.) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 494 Tm (- The switcher glass treatment is deliberately restrained. Future highlight edits should preserve the) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 481 Tm (  softened primary white spot and distributed secondary highlights rather than returning to one dominant) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 468 Tm (  bright glare.) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 455 Tm (- Turbopack served stale compiled CSS during rapid iteration even after source updates. If browser output) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 442 Tm (  again omits newly added selectors, move the generated .next directory to /tmp and restart the local server) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 429 Tm (  before changing valid source rules.) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 416 Tm (- No Hostinger deployment or hostinger-deploy branch update was performed for d2cd710 during this) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 403 Tm (  record. The remote hostinger-deploy branch remains at 1373349 until a later explicit deployment request.) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 390 Tm (- As with all prior Portfolio work, future source, snapshot, PDF, commit, push, deployment, or publish) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 377 Tm (  actions should remain scoped to the user's direct request, and commit/push work should first obtain the) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 364 Tm (  desired commit message.) Tj ET
+BT /F2 13.5 Tf 1 0 0 1 54 344 Tm (Output Artifact) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 324 Tm (- Generated: /Users/prahlin/gh/portfolio/portfolio_worklog_september11.pdf) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 311 Tm (- Companion sync file: /Users/prahlin/gh/portfolio/portfolio_PROJECT_SNAPSHOT.txt) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 298 Tm (- Source state reviewed: d2cd71027145c732e332c9d3f69878b81adab2d5 on main and origin/main.) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 285 Tm (- Naming follows the established root-level Portfolio convention: portfolio_worklog_september11.pdf. No) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 272 Tm (  Part suffix was used because no earlier September 11 Portfolio worklog PDF existed.) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 259 Tm (- The document records the September 11 Alla Vostra annotation, glass-control, UI Foundations copy,) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 246 Tm (  screenshot-preview, hero metadata, official Play Store research, release-grid, Overview composition,) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 233 Tm (  responsive validation, cache, commit, snapshot, and documentation work in the established Prahlin) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 220 Tm (  Portfolio worklog format.) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 207 Tm (- This worklog closes the September 11 documentation pass. No source commit, push, deployment, or) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 194 Tm (  Hostinger synchronization was performed as part of generating the PDF.) Tj ET
+BT /F1 8.5 Tf 1 0 0 1 202.16 30 Tm (Prahlin Portfolio Work Log - September 11, 2026 Page 6) Tj ET
+endstream
+endobj
+16 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 15 0 R >>
+endobj
+17 0 obj
+<< /Title (Prahlin Portfolio Work Log - September 11, 2026) /Subject (Portfolio website development worklog) /Author (Codex) /Creator (Codex standard-library PDF generator) /Producer (Codex standard-library PDF generator) /CreationDate (D:20260911210009-04'00') /ModDate (D:20260911210009-04'00') >>
+endobj
+xref
+0 18
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000155 00000 n 
+0000000225 00000 n 
+0000000300 00000 n 
+0000006782 00000 n 
+0000006918 00000 n 
+0000013378 00000 n 
+0000013514 00000 n 
+0000019337 00000 n 
+0000019474 00000 n 
+0000025626 00000 n 
+0000025764 00000 n 
+0000031887 00000 n 
+0000032025 00000 n 
+0000037080 00000 n 
+0000037218 00000 n 
+trailer
+<< /Size 18 /Root 1 0 R /Info 17 0 R >>
+startxref
+37534
+%%EOF
