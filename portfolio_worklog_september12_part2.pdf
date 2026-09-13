@@ -1,0 +1,297 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [5 0 R 7 0 R 9 0 R 11 0 R 13 0 R] /Count 5 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+5 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 6 0 R >>
+endobj
+6 0 obj
+<< /Length 6436 >>
+stream
+BT /F1 16 Tf 0 g 1 0 0 1 54 742 Tm (Prahlin Portfolio Work Log - September 12, 2026 \(Part 2\)) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 54 720 Tm (Compiled summary for Saturday, September 12, 2026 - Part 2 - focus: continuing the Prahl.dev Portfolio) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 54 706 Tm (refinement after the September 12 Part 1 Overview-media and Interactive Demo pass, reviewing the refreshed) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 54 692 Tm (project snapshot and every pre-existing Portfolio PDF worklog, standardizing all six Alla Vostra UX Product Flow) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 54 678 Tm (eyebrows, replacing device-oriented stage captions with concise product-journey descriptions, enlarging the) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 54 664 Tm (Martin Prahl profile name tag while preserving its centered relationship to the portrait, removing the invisible) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 54 650 Tm (Articles navigation link without deleting the Articles route, preserving exact navbar geometry through an empty) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 54 636 Tm (responsive layout slot, matching the landing-page proof-stat typography and resizing behavior to the Alla Vostra) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 54 622 Tm (counterpart, clearing stale local development cache, validating routes, TypeScript, responsive browser geometry,) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 54 608 Tm (and text clipping, documenting committed source state b5c85aa, refreshing the Portfolio project snapshot, and) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 54 594 Tm (generating the September 12 Part 2 Portfolio PDF worklog.) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 54 573 Tm (Generated in continuity with the established Prahlin Portfolio daily worklog cadence: compact opening summary,) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 54 559 Tm (source-material section, baseline section, goal list, work-completed sections, validation section, files-touched list,) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 54 545 Tm (follow-up context, and output-artifact close.) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 54 524 Tm (This artifact intentionally covers Prahlin/portfolio work performed after portfolio_worklog_september12_part1.pdf) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 54 510 Tm (and after the September 12 Part 1 documentation state. The source state reviewed for this record is) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 54 496 Tm (b5c85aa45a709900b14eadc506865a6889321abb on main, titled Refined landing-page presentation and Alla) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 54 482 Tm (Vostra UX flow. No public deployment, Hostinger deploy-branch work, remote synchronization, production) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 54 468 Tm (publish, or external source inspection was performed during this record. The local documentation delta created) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 54 454 Tm (before this PDF was the refreshed portfolio_PROJECT_SNAPSHOT.txt file; this PDF is the new September 12) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 54 440 Tm (Part 2 root-level documentation artifact.) Tj ET
+BT /F1 12.5 Tf 0 g 1 0 0 1 54 414 Tm (Source Materials Reviewed) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 54 395 Tm (- Verified the United States Eastern date with TZ=America/New_York date during the documentation pass, which) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 61 381 Tm (reported Saturday, September 12, 2026 shortly before midnight EDT with UTC offset -0400. The worklog) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 61 367 Tm (therefore uses September 12, 2026 and the requested Part 2 suffix.) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 54 353 Tm (- Ran ./read_project.sh from /Users/prahlin/gh/portfolio and regenerated portfolio_PROJECT_SNAPSHOT.txt) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 61 339 Tm (before writing this worklog, preserving the Portfolio convention that the current source snapshot is refreshed) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 61 325 Tm (before session documentation.) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 54 311 Tm (- Reviewed the refreshed portfolio_PROJECT_SNAPSHOT.txt for the current source tree, image and PDF) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 61 297 Tm (inventories, package scripts, git context, generated-cache policy, route structure, source dumps, deployment) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 61 283 Tm (workflow notes, and standing instruction to ask for a commit message before committing or pushing.) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 54 269 Tm (- Extracted and studied all thirty-six pre-existing root-level Portfolio PDF worklogs with pdftotext: the July 11, 14,) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 61 255 Tm (15 Part 1, 15 Part 2, 16, 19, 20, 21, 22, 23, 24, 25, 29, 30, and 31 records; the August 1 Parts 1-3, August 3, 4,) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 61 241 Tm (5, 6, 10 Parts 1-2, 11, 12 Parts 1-2, 14, 16, and 24 records; and the September 7, September 8, September 8) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 61 227 Tm (Part 2, September 9, September 11, and September 12 Part 1 records.) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 54 213 Tm (- Compared the complete series for title cadence, root-level filename conventions, same-day part suffixes,) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 61 199 Tm (opening-summary density, section order, technical bullet style, validation language, files-touched treatment,) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 61 185 Tm (follow-up continuity, and output-artifact closure. Mature records generally run five to seven US Letter pages and) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 61 171 Tm (roughly 2,400 to 3,300 words.) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 54 157 Tm (- Checked pdfinfo and pdffonts on the latest September 12 Part 1 baseline. The accepted output convention) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 61 143 Tm (remains 612 x 792 point US Letter pages, PDF 1.4, Helvetica and Helvetica-Bold Type 1 fonts, an unencrypted) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 61 129 Tm (document, and Codex author, creator, and producer metadata.) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 54 115 Tm (- Reviewed commit b5c85aa through git show, git log, git status, and the complete fd743d3..b5c85aa source diff) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 61 101 Tm (across app/PortfolioSections.tsx, app/globals.css, app/projects/alla-vostra/ProductFlowSwitcher.tsx,) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 61 87 Tm (app/projects/alla-vostra/page.tsx, and portfolio_PROJECT_SNAPSHOT.txt.) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 54 73 Tm (- Kept the documentation pass local-only under the reinforced Portfolio workflow rule: no public pulls, no) Tj ET
+BT /F1 7.5 Tf 0 g 1 0 0 1 54 21 Tm (Prahlin Portfolio Work Log - September 12, 2026 \(Part 2\) Page 1) Tj ET
+endstream
+endobj
+7 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 8 0 R >>
+endobj
+8 0 obj
+<< /Length 6359 >>
+stream
+BT /F1 10 Tf 0 g 1 0 0 1 61 780 Tm (Hostinger inspection, no deploy-branch work, no remote synchronization, no push, and no production publish) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 61 766 Tm (unless explicitly requested.) Tj ET
+BT /F1 12.5 Tf 0 g 1 0 0 1 54 747 Tm (Baseline Status Before September 12 Part 2 Work) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 54 728 Tm (- The September 12 Part 1 state had reorganized the Alla Vostra Overview around paired App Store and Google) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 61 714 Tm (Play media stacks, tightened the Overview narrative, restored the preferred feature image, shortened release) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 61 700 Tm (chips, added an Interactive Demo placeholder, and changed the hero Google Play button to a white surface.) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 54 686 Tm (- Alla Vostra UX Product Flow still labeled its six screenshot groups as Stage 01 through Stage 06, even though) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 61 672 Tm (the surrounding switcher and section title already used UX Product Flow language.) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 54 658 Tm (- The Tutorial caption remained a future-tense placeholder, while Browse and SHOP explicitly mentioned Android) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 61 644 Tm (Small and Large and the remaining group captions used longer implementation-oriented wording.) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 54 630 Tm (- The landing-page Martin Prahl tag used its original 12px text and badge scale beneath the circular profile) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 61 616 Tm (photograph.) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 54 602 Tm (- The main navigation retained a real /articles anchor made invisible with opacity: 0. Although visually hidden, it) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 61 588 Tm (remained a focusable navigation target and still exposed Articles semantics in the navbar.) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 54 574 Tm (- The Articles page itself remained a valid repository route and needed to stay intact even after its hidden) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 61 560 Tm (top-navigation entry was removed.) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 54 546 Tm (- The landing-page proof values used a fixed 34px font while the Alla Vostra proof values used a 30px-to-66px) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 61 532 Tm (responsive clamp with overflow protection; their narrow-screen labels also followed different responsive sizing) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 61 518 Tm (rules.) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 54 504 Tm (- A local Next.js development server was already part of the session workflow, but stale Turbopack output again) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 61 490 Tm (required an explicit generated-cache reset before final browser verification.) Tj ET
+BT /F1 12.5 Tf 0 g 1 0 0 1 54 471 Tm (Goals for September 12 Part 2) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 54 452 Tm (- Replace Stage 01 through Stage 06 with one consistent UX Product Flow eyebrow across all six Alla Vostra) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 61 438 Tm (screenshot groups.) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 54 424 Tm (- Rewrite each gray group caption as one concise sentence focused on the customer journey, with no Android,) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 61 410 Tm (Small, or Large language in those section descriptions.) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 54 396 Tm (- Increase the Martin Prahl profile tag by exactly 20 percent while keeping it centered beneath the profile photo at) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 61 382 Tm (desktop and narrow viewports.) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 54 368 Tm (- Remove Articles completely from the navigation without deleting the Articles page and without changing the) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 61 354 Tm (order, alignment, or placement of any visible navbar element at any responsive breakpoint.) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 54 340 Tm (- Give the landing-page 3yrs, 1.0k, 0.1k, and 8 proof stack the exact font sizing, scaling, overflow, and) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 61 326 Tm (label-resizing behavior used by the Alla Vostra proof stack.) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 54 312 Tm (- Clear local development cache safely, restart the local server, and validate the final experience with TypeScript,) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 61 298 Tm (route checks, computed-style comparisons, responsive geometry probes, and desktop/mobile screenshots.) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 54 284 Tm (- Preserve all unrelated page content, routes, assets, navigation labels, spacing, project-card systems, and) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 61 270 Tm (deployment state while documenting the final committed source accurately.) Tj ET
+BT /F1 12.5 Tf 0 g 1 0 0 1 54 251 Tm (Work Completed - Alla Vostra UX Product Flow Language) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 54 232 Tm (- Changed the Tutorial group eyebrow from Stage 01 to UX Product Flow and changed the generated Stage 02) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 61 218 Tm (through Stage 06 labels to the same UX Product Flow text.) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 54 204 Tm (- Removed the now-unused screenshotGroups map index after stage numbers no longer depended on) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 61 190 Tm (String\(index + 2\).padStart\(2, "0"\).) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 54 176 Tm (- Replaced the Tutorial placeholder with: A guided walkthrough introduces the core experience before ordering) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 61 162 Tm (begins.) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 54 148 Tm (- Rewrote Browse to explain that customers explore product selection and brand philosophy and can contact the) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 61 134 Tm (business owner directly with questions or comments.) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 54 120 Tm (- Rewrote SHOP to describe focused product discovery and selection, and rewrote Cart to emphasize clear empty) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 61 106 Tm (and filled states for reviewing selections.) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 54 92 Tm (- Rewrote Checkout around focused contact, delivery, and payment steps, and rewrote Confirmation around a) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 61 78 Tm (clear success state that completes the journey and confirms the order.) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 54 64 Tm (- Kept all screenshot stacks, image sources, Show More and Show Less controls, group ordering, preview) Tj ET
+BT /F1 7.5 Tf 0 g 1 0 0 1 54 21 Tm (Prahlin Portfolio Work Log - September 12, 2026 \(Part 2\) Page 2) Tj ET
+endstream
+endobj
+9 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 10 0 R >>
+endobj
+10 0 obj
+<< /Length 6559 >>
+stream
+BT /F1 10 Tf 0 g 1 0 0 1 61 780 Tm (behavior, and surrounding UI Foundations switcher behavior unchanged.) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 54 766 Tm (- Confirmed that the six gray section descriptions no longer mention Android, Small, or Large while leaving) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 61 752 Tm (size-specific screenshot metadata and internal asset naming untouched.) Tj ET
+BT /F1 12.5 Tf 0 g 1 0 0 1 54 733 Tm (Work Completed - Landing-Page Profile and Navigation) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 54 714 Tm (- Scaled the Martin Prahl profile tag to 1.2 with a center-top transform origin, producing the requested 20 percent) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 61 700 Tm (increase without changing the portrait dimensions or profile-orbit positioning.) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 54 686 Tm (- Preserved horizontal centering through the existing profile-orbit flex alignment and kept the tag's top edge) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 61 672 Tm (anchored beneath the portrait so visual growth extends downward rather than collapsing the established photo) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 61 658 Tm (gap.) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 54 644 Tm (- Removed the real /articles anchor from getNavItems and introduced a generic non-interactive spacer path in) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 61 630 Tm (NavLinkItem so no invisible link remains in keyboard or accessibility navigation.) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 54 616 Tm (- Removed the Articles label from the navbar entirely and rendered the structural slot as an empty aria-hidden) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 61 602 Tm (span with pointer events disabled.) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 54 588 Tm (- Measured the prior invisible link's exact outer dimensions before removal and carried those dimensions into the) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 61 574 Tm (empty slot for desktop, 980px, 720px, 430px, 380px, and 340px breakpoints.) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 54 560 Tm (- Locked the empty slot with matched width, minimum width, and height values, including subpixel corrections, so) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 61 546 Tm (Stack and every remaining visible link retained the former coordinates in one-row and two-row navbar layouts.) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 54 532 Tm (- Confirmed through live DOM checks that navbar text no longer contains Articles, no a[href="/articles"] element) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 61 518 Tm (remains, and the empty slot is hidden from assistive technology.) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 54 504 Tm (- Kept app/articles/page.tsx, Articles content, the /articles route, visible nav order, separators, brand card,) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 61 490 Tm (responsive row split, and every other navbar label unchanged.) Tj ET
+BT /F1 12.5 Tf 0 g 1 0 0 1 54 471 Tm (Work Completed - Shared Proof-Stat Typography) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 54 452 Tm (- Moved the Alla Vostra proof-value typography into the shared .stats-strip strong rule because ProofStats has) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 61 438 Tm (exactly two consumers and both now require identical resizing behavior.) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 54 424 Tm (- Changed proof values from a fixed 34px size to clamp\(30px, calc\(6vw + 8px\), 66px\), matching the Alla Vostra) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 61 410 Tm (minimum, viewport response, and maximum.) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 54 396 Tm (- Applied the same max-width: 100%, overflow: hidden, and white-space: nowrap protections to both proof stacks) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 61 382 Tm (so larger values remain bounded by their cells.) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 54 368 Tm (- Moved the narrow-screen label and hidden measurement text to shared rules using clamp\(12px, 3.2vw, 16px\)) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 61 354 Tm (with 1.16 line height, preserving ProofStats line-fit calculations.) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 54 340 Tm (- Retained the component's ResizeObserver, document-font readiness check, one-, two-, and three-line label) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 61 326 Tm (modes, screen-reader labels, and content-width measurement logic.) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 54 312 Tm (- Kept the landing-page proof card grid, card height, padding, borders, spacing, values, captions, and placement) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 61 298 Tm (unchanged; only font size and resizing properties were unified.) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 54 284 Tm (- Verified matching computed typography at 1440px, 980px, 720px, 390px, and 320px, including 66px desktop) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 61 270 Tm (values, 51.2px values at 720px, 31.4px values at 390px, and the 30px minimum at 320px.) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 54 256 Tm (- Confirmed that both proof stacks reported identical value font size, line height, maximum width, overflow,) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 61 242 Tm (white-space, label font size, and label line height, with no card-level clipping at any tested width.) Tj ET
+BT /F1 12.5 Tf 0 g 1 0 0 1 54 223 Tm (Work Completed - Local Cache, Validation, and Commit Context) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 54 204 Tm (- Booted the local Next.js 16.2.10 Turbopack server at http://localhost:3000 and verified the landing page and Alla) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 61 190 Tm (Vostra project page through the local browser workflow.) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 54 176 Tm (- Cleared the requested development cache by stopping the server, confirming the generated .next directory at) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 61 162 Tm (approximately 129 MB, moving it safely to /tmp/portfolio-next-cache.m5Wbmn/.next, and restarting the dev) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 61 148 Tm (server for a clean compile.) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 54 134 Tm (- Used a recoverable move because the execution environment rejected direct recursive deletion; no project) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 61 120 Tm (source or user-authored artifact was removed.) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 54 106 Tm (- Ran repeated Playwright geometry probes while replacing the Articles anchor, including checks at 1920px,) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 61 92 Tm (1440px, 981px, 980px, 720px, 430px, 390px, 380px, 340px, and 320px.) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 54 78 Tm (- Rendered desktop and full-page mobile screenshots to inspect the enlarged profile tag, navbar stability, and final) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 61 64 Tm (landing-page proof typography without adding repository screenshot artifacts.) Tj ET
+BT /F1 7.5 Tf 0 g 1 0 0 1 54 21 Tm (Prahlin Portfolio Work Log - September 12, 2026 \(Part 2\) Page 3) Tj ET
+endstream
+endobj
+11 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 12 0 R >>
+endobj
+12 0 obj
+<< /Length 6373 >>
+stream
+BT /F1 10 Tf 0 g 1 0 0 1 54 780 Tm (- Provided the requested past-tense commit message with one header and hyphen-prefixed points covering) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 61 766 Tm (navigation, profile identity, proof typography, Alla Vostra flow language, and snapshot context.) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 54 752 Tm (- Recorded committed source state b5c85aa45a709900b14eadc506865a6889321abb, authored locally as) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 61 738 Tm (Refined landing-page presentation and Alla Vostra UX flow.) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 54 724 Tm (- Performed no source commit, push, Hostinger action, deploy-branch synchronization, production publication, or) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 61 710 Tm (remote inspection as part of generating this Part 2 documentation artifact.) Tj ET
+BT /F1 12.5 Tf 0 g 1 0 0 1 54 691 Tm (Validation Summary) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 54 672 Tm (- Ran npm run check after the Alla Vostra copy changes, profile-tag scaling, navbar restructuring, and proof-stat) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 61 658 Tm (unification; TypeScript completed successfully with tsc --noEmit.) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 54 644 Tm (- Ran git diff --check throughout the implementation and final documentation review; application source carried no) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 61 630 Tm (whitespace errors before commit b5c85aa.) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 54 616 Tm (- Verified http://localhost:3000 and http://localhost:3000/projects/alla-vostra returned HTTP 200 from the local) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 61 602 Tm (Next.js server after the clean-cache restart.) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 54 588 Tm (- Verified http://localhost:3000/articles returned HTTP 200 after the navbar entry was removed, confirming the) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 61 574 Tm (repository page and route remained intact.) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 54 560 Tm (- Confirmed the final navbar contained neither Articles text nor an /articles anchor and retained the measured) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 61 546 Tm (legacy slot geometry at desktop, tablet, and narrow mobile breakpoints.) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 54 532 Tm (- Confirmed the Martin Prahl tag remained centered under the profile photo in desktop and full-page 390px visual) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 61 518 Tm (captures without incoherent overlap.) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 54 504 Tm (- Compared landing-page and Alla Vostra proof computed styles side by side at five viewport widths and) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 61 490 Tm (confirmed exact matches with no horizontal content clipping down to 320px.) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 54 476 Tm (- Reviewed git status after commit b5c85aa and before the documentation refresh; the source work was clean.) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 61 462 Tm (Running read_project.sh then modified only portfolio_PROJECT_SNAPSHOT.txt before this new PDF was) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 61 448 Tm (written.) Tj ET
+BT /F1 12.5 Tf 0 g 1 0 0 1 54 429 Tm (Files Touched and Artifacts) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 54 410 Tm (- app/PortfolioSections.tsx - removed the Articles navigation item and link behavior, added a generic) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 61 396 Tm (empty-spacer nav item path, and preserved the rest of the shared main-navigation rendering.) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 54 382 Tm (- app/globals.css - replaced the hidden Articles-link rule with breakpoint-matched empty-slot dimensions, scaled) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 61 368 Tm (the Martin Prahl tag by 20 percent, and unified proof value and label resizing rules across the landing and Alla) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 61 354 Tm (Vostra pages.) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 54 340 Tm (- app/projects/alla-vostra/ProductFlowSwitcher.tsx - renamed all six stage eyebrows to UX Product Flow, replaced) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 61 326 Tm (the Tutorial description, and removed the obsolete generated-stage index.) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 54 312 Tm (- app/projects/alla-vostra/page.tsx - replaced the Browse, SHOP, Cart, Checkout, and Confirmation gray captions) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 61 298 Tm (with concise customer-journey descriptions.) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 54 284 Tm (- portfolio_PROJECT_SNAPSHOT.txt - refreshed through ./read_project.sh so the snapshot records committed) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 61 270 Tm (source b5c85aa, the latest source dumps, and the current PDF inventory before Part 2 generation.) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 54 256 Tm (- portfolio_worklog_september12_part2.pdf - generated as this new root-level dated Part 2 Portfolio) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 61 242 Tm (documentation artifact.) Tj ET
+BT /F1 12.5 Tf 0 g 1 0 0 1 54 223 Tm (Follow-Up Context) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 54 204 Tm (- The Articles page remains in the repository and available at /articles, but the main navbar intentionally exposes) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 61 190 Tm (no Articles text, link, focus target, or accessibility label.) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 54 176 Tm (- The empty nav layout slot is intentional. It preserves the exact placement of Stack and all later nav items;) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 61 162 Tm (removing that structural slot would reflow the desktop row and mobile top-row distribution.) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 54 148 Tm (- Future navbar breakpoint changes should preserve or deliberately recalculate the slot dimensions rather than) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 61 134 Tm (reintroducing hidden text or an invisible focusable anchor.) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 54 120 Tm (- The landing-page and Alla Vostra proof stacks now share one typography source of truth. Future changes to) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 61 106 Tm (.stats-strip strong or the narrow-screen label rules will affect both pages by design.) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 54 92 Tm (- The landing proof grid retains its shorter card dimensions and spacing while sharing only Alla Vostra's font and) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 61 78 Tm (resizing behavior, matching the user's requested scope.) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 54 64 Tm (- The six UX Product Flow eyebrows and concise captions are accepted section-level language; size-specific) Tj ET
+BT /F1 7.5 Tf 0 g 1 0 0 1 54 21 Tm (Prahlin Portfolio Work Log - September 12, 2026 \(Part 2\) Page 4) Tj ET
+endstream
+endobj
+13 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 14 0 R >>
+endobj
+14 0 obj
+<< /Length 2163 >>
+stream
+BT /F1 10 Tf 0 g 1 0 0 1 61 780 Tm (screenshot titles, labels, captions, and filenames still exist internally for capture organization.) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 54 766 Tm (- The old local .next cache remains recoverable at /tmp/portfolio-next-cache.m5Wbmn/.next. A future cache reset) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 61 752 Tm (can use the same stop, move, restart pattern if direct deletion remains blocked.) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 54 738 Tm (- The local-only Portfolio rule remains active: do not pull public state, inspect Hostinger or deploy branches, push,) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 61 724 Tm (synchronize, or publish unless the user explicitly requests it.) Tj ET
+BT /F1 12.5 Tf 0 g 1 0 0 1 54 705 Tm (Output Artifact) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 54 686 Tm (- Generated: /Users/prahlin/gh/portfolio/portfolio_worklog_september12_part2.pdf) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 54 672 Tm (- Companion sync file: /Users/prahlin/gh/portfolio/portfolio_PROJECT_SNAPSHOT.txt) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 54 658 Tm (- Source state reviewed: b5c85aa45a709900b14eadc506865a6889321abb on main.) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 54 644 Tm (- Naming follows the established same-day convention: portfolio_worklog_september12_part2.pdf.) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 54 630 Tm (- The document records the September 12 Part 2 Alla Vostra UX Product Flow language pass, landing-page) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 61 616 Tm (profile and navigation refinement, shared proof-stat typography, local cache clearing, responsive verification,) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 61 602 Tm (committed source context, refreshed snapshot, and documentation work in the established Prahlin Portfolio) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 61 588 Tm (format.) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 54 574 Tm (- This worklog closes the September 12 Part 2 documentation pass. No source commit, push, deployment, public) Tj ET
+BT /F1 10 Tf 0 g 1 0 0 1 61 560 Tm (publish, Hostinger synchronization, or remote inspection was performed as part of generating the PDF.) Tj ET
+BT /F1 7.5 Tf 0 g 1 0 0 1 54 21 Tm (Prahlin Portfolio Work Log - September 12, 2026 \(Part 2\) Page 5) Tj ET
+endstream
+endobj
+15 0 obj
+<< /Title (Prahlin Portfolio Work Log - September 12, 2026 \(Part 2\)) /Subject (Portfolio website development worklog) /Author (Codex) /Creator (Codex standard-library PDF generator) /Producer (Codex standard-library PDF generator) /CreationDate (D:20260912235332-04'00') /ModDate (D:20260912235332-04'00') >>
+endobj
+xref
+0 16
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000147 00000 n 
+0000000217 00000 n 
+0000000292 00000 n 
+0000000428 00000 n 
+0000006915 00000 n 
+0000007051 00000 n 
+0000013461 00000 n 
+0000013598 00000 n 
+0000020209 00000 n 
+0000020347 00000 n 
+0000026772 00000 n 
+0000026910 00000 n 
+0000029125 00000 n 
+trailer
+<< /Size 16 /Root 1 0 R /Info 15 0 R >>
+startxref
+29452
+%%EOF
