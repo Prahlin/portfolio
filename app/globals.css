@@ -334,8 +334,11 @@ img[data-screenshot-preview],
   color: var(--text);
 }
 
-.nav-bar nav a[href="/articles"] {
-  opacity: 0;
+.nav-bar nav .nav-layout-spacer {
+  height: 40.5px;
+  min-width: 81.454px;
+  pointer-events: none;
+  width: 81.454px;
 }
 
 .hero-grid {
@@ -1110,6 +1113,8 @@ h3 {
   max-width: 138px;
   padding: 7px 11px;
   text-align: center;
+  transform: scale(1.2);
+  transform-origin: center top;
 }
 
 .phone-stage {
@@ -1631,19 +1636,15 @@ h3 {
   min-height: 178px;
 }
 
-.alla-vostra-case .stats-strip strong {
-  font-size: clamp(30px, calc(6vw + 8px), 66px);
-  max-width: 100%;
-  overflow: hidden;
-  white-space: nowrap;
-}
-
 .stats-strip strong {
   color: var(--green);
   display: block;
-  font-size: 34px;
+  font-size: clamp(30px, calc(6vw + 8px), 66px);
   font-weight: 900;
   line-height: 1;
+  max-width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .stats-strip-label,
@@ -6078,6 +6079,12 @@ section.project-hero {
     text-align: center;
   }
 
+  .nav-bar nav .nav-layout-spacer {
+    height: 40.5px;
+    min-width: 77.454px;
+    width: 77.454px;
+  }
+
   .nav-bar nav .nav-link-row > a,
   .nav-bar nav .nav-link-row > .nav-text {
     flex: 0 0 auto;
@@ -6281,6 +6288,12 @@ section.project-hero {
     font-size: 15px;
     padding-left: 2px;
     padding-right: 2px;
+  }
+
+  .nav-bar nav .nav-layout-spacer {
+    height: 37.5px;
+    min-width: 55.859375px;
+    width: 55.859375px;
   }
 
   .nav-separator {
@@ -6584,12 +6597,8 @@ section.project-hero {
     padding: 14px 8px;
   }
 
-  .alla-vostra-case .stats-strip strong {
-    font-size: clamp(30px, calc(6vw + 8px), 66px);
-  }
-
-  .alla-vostra-case .stats-strip-label,
-  .alla-vostra-case .stats-strip-measure {
+  .stats-strip-label,
+  .stats-strip-measure {
     font-size: clamp(12px, 3.2vw, 16px);
     line-height: 1.16;
   }
@@ -6772,6 +6781,12 @@ section.project-hero {
   .nav-separator {
     font-size: 14px;
   }
+
+  .nav-bar nav .nav-layout-spacer {
+    height: 36px;
+    min-width: 52.954px;
+    width: 52.954px;
+  }
 }
 
 @media (max-width: 380px) {
@@ -6787,6 +6802,12 @@ section.project-hero {
     font-size: 13.5px;
     padding-left: 0;
     padding-right: 0;
+  }
+
+  .nav-bar nav .nav-layout-spacer {
+    height: 35.25px;
+    min-width: 47.46875px;
+    width: 47.46875px;
   }
 
   .nav-separator {
@@ -6811,6 +6832,12 @@ section.project-hero {
   .nav-bar nav a,
   .nav-bar nav .nav-text {
     font-size: 13px;
+  }
+
+  .nav-bar nav .nav-layout-spacer {
+    height: 34.5px;
+    min-width: 45.96875px;
+    width: 45.96875px;
   }
 
   .nav-separator {

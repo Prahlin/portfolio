@@ -503,7 +503,7 @@ const screenshotGroups: {
 }[] = [
   {
     title: "Browse",
-    copy: "The browsing surfaces keep the brand, product catalog, company story, inquiry path, and shop entry consistent across Android Small and Large.",
+    copy: "Customers explore product selection, the brand philosophy, and have the option to contact the business owner directly with questions or comments.",
     stacks: [
       {
         title: "Home Screen",
@@ -585,7 +585,7 @@ const screenshotGroups: {
   },
   {
     title: "SHOP",
-    copy: "The shop entry screen bridges browse intent into item selection across Android Small and Large.",
+    copy: "The shop turns browsing intent into focused product discovery and selection.",
     stacks: [
       {
         title: "Shop Screen",
@@ -610,7 +610,7 @@ const screenshotGroups: {
   },
   {
     title: "Cart",
-    copy: "Cart states were treated as part of the purchase path, with empty and filled moments both needing clear feedback.",
+    copy: "Clear empty and filled states help customers review their selections.",
     stacks: [
       {
         title: "Products Overlay",
@@ -673,7 +673,7 @@ const screenshotGroups: {
   },
   {
     title: "Checkout",
-    copy: "Checkout details break the purchase path into focused, readable steps instead of one overloaded form.",
+    copy: "Contact, delivery, and payment details unfold through focused steps.",
     stacks: [
       {
         title: "Contact Input Overlay",
@@ -774,7 +774,7 @@ const screenshotGroups: {
   },
   {
     title: "Confirmation",
-    copy: "The final state closes the loop with a clear success moment tied to the real checkout outcome.",
+    copy: "A clear success state completes the journey and confirms the order.",
     stacks: [
       {
         title: "Order Confirmation Overlay",

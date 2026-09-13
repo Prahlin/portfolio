@@ -2565,9 +2565,9 @@ export default function ProductFlowSwitcher({
         <div className="flow-capture-groups">
           <div className="flow-capture-group">
             <div className="flow-group-header">
-              <span>Stage 01</span>
+              <span>UX Product Flow</span>
               <h3>Tutorial</h3>
-              <p>This tutorial stage will outline the guided first-use walkthrough.</p>
+              <p>A guided walkthrough introduces the core experience before ordering begins.</p>
             </div>
 
             <ExpandableFlowStacks
@@ -2580,10 +2580,10 @@ export default function ProductFlowSwitcher({
             />
           </div>
 
-          {screenshotGroups.map((group, index) => (
+          {screenshotGroups.map((group) => (
             <div className="flow-capture-group" key={group.title}>
               <div className="flow-group-header">
-                <span>Stage {String(index + 2).padStart(2, "0")}</span>
+                <span>UX Product Flow</span>
                 <h3>{group.title}</h3>
                 <p>{group.copy}</p>
               </div>

@@ -14,6 +14,7 @@ type NavItem = {
   href?: string;
   isActive?: boolean;
   isBrand?: boolean;
+  isSpacer?: boolean;
   label: string;
 };
 
@@ -1098,7 +1099,7 @@ function getNavItems(context: NavContext): NavItem[] {
 
   return [
     { href: context === "home" ? "#top" : "/", isBrand: true, label: "Prahl.dev" },
-    { href: "/articles", isActive: context === "articles", label: "Articles" },
+    { isSpacer: true, label: "" },
     { href: homeHash("stack"), label: "Stack" },
     { href: "#case-studies", label: "Case Studies" },
     { href: homeHash("worklog"), label: "Worklog" },
@@ -1151,6 +1152,15 @@ function NavLinkItem({
         <span className="nav-brand-mark">P</span>
         <strong className="nav-brand-name">{item.label}</strong>
       </a>
+    );
+  }
+
+  if (item.isSpacer) {
+    return (
+      <span
+        aria-hidden="true"
+        className={`nav-text nav-layout-spacer${linkClassName ? ` ${linkClassName}` : ""}`}
+      />
     );
   }
 
