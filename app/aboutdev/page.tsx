@@ -45,12 +45,17 @@ const principles = [
   {
     tone: "green",
     title: "Vision",
-    text: "Without imagination, there is no prototype, and without a prototype, well... There is no product.",
+    text: "Without imagination, there is no working prototype, and without a working prototype, well... There is no front-end, back-end, or final build.",
+  },
+  {
+    tone: "blue",
+    title: "Modernness",
+    text: "When it comes to creating a truly progressive & forward-thinking product, nothing - and I mean nothing - should be off the table.",
   },
   {
     tone: "cyan",
-    title: "Interconnectedness",
-    text: "Breaking down barriers between art and science, design and code, isn't some far-flung pipedream; It's the lifeblood of everything I do.",
+    title: "Inter-connectedness",
+    text: "Breaking down barriers between art and science, design and code, isn't some arbitrary nicety; It's the guiding principle behind everything I do.",
   },
   {
     tone: "amber",
@@ -58,18 +63,8 @@ const principles = [
     text: "Albert Einstein once said, \"If you can't explain it simply, you don't understand it well enough.\" I do everything to make sure my products echo this sentiment.",
   },
   {
-    tone: "rose",
-    title: "Readiness",
-    text: "In 2027, it is only fair to expect a developer to provide an all-in-one solution from start to finish. That's why I'm a one-stop shop for full-stack development.",
-  },
-  {
-    tone: "green",
-    title: "Modernness",
-    text: "When it comes to creating a truly progressive & forward-thinking product, nothing - and I mean nothing - should be off the table.",
-  },
-  {
-    tone: "cyan",
-    title: "Cohesiveness",
+    tone: "violet",
+    title: "Cohesion",
     text: "A software application isn't stronger than its weakest points; That's why I treat them as crucial points in need of immediate attention, not as afterthoughts",
   },
 ];
@@ -186,6 +181,15 @@ export default function AboutDevPage() {
                 <p>{principle.text}</p>
               </article>
             ))}
+            <div className="aboutdev-principles-star" aria-hidden="true">
+              <svg
+                className="aboutdev-principles-star-svg"
+                focusable="false"
+                viewBox="0 0 100 100"
+              >
+                <polygon points="50 2 61 35 96 35 68 57 79 90 50 70 21 90 32 57 4 35 39 35" />
+              </svg>
+            </div>
           </div>
         </div>
       </section>
