@@ -1,0 +1,856 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>About Dev Page Mockups</title>
+    <style>
+      :root {
+        --bg: #030705;
+        --panel: rgba(8, 21, 14, 0.82);
+        --panel-strong: rgba(13, 31, 21, 0.94);
+        --line: rgba(172, 255, 206, 0.28);
+        --line-strong: rgba(172, 255, 206, 0.58);
+        --green: #55f08e;
+        --green-soft: #c6ffd9;
+        --white: #f4fff7;
+        --muted: #9cb5a6;
+        --cyan: #79d7ff;
+        --amber: #ffd479;
+        --rose: #ff8aaa;
+        --violet: #b9a4ff;
+        --shadow: 0 24px 80px rgba(0, 0, 0, 0.42);
+        color-scheme: dark;
+        font-family:
+          Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          sans-serif;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background:
+          radial-gradient(circle at 15% 0%, rgba(85, 240, 142, 0.14), transparent 34%),
+          radial-gradient(circle at 85% 8%, rgba(121, 215, 255, 0.09), transparent 34%),
+          #010402;
+        color: var(--white);
+      }
+
+      .board {
+        display: grid;
+        gap: 48px;
+        padding: 48px;
+      }
+
+      .mockup {
+        position: relative;
+        width: 1440px;
+        min-height: 1680px;
+        overflow: hidden;
+        border: 1px solid rgba(172, 255, 206, 0.3);
+        border-radius: 0;
+        background:
+          linear-gradient(rgba(85, 240, 142, 0.045) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(85, 240, 142, 0.045) 1px, transparent 1px),
+          radial-gradient(circle at 20% 0%, rgba(85, 240, 142, 0.18), transparent 36%),
+          radial-gradient(circle at 100% 18%, rgba(121, 215, 255, 0.12), transparent 30%),
+          var(--bg);
+        background-size: 38px 38px, 38px 38px, auto, auto, auto;
+        box-shadow: var(--shadow);
+      }
+
+      .shell {
+        width: min(1180px, calc(100% - 96px));
+        margin: 0 auto;
+      }
+
+      .topbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 76px;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        font-weight: 900;
+        letter-spacing: 0;
+      }
+
+      .brand-mark {
+        display: grid;
+        width: 38px;
+        height: 38px;
+        place-items: center;
+        border: 1px solid var(--line-strong);
+        background: #06140c;
+        color: var(--green);
+      }
+
+      .nav {
+        display: flex;
+        gap: 22px;
+        color: var(--muted);
+        font-size: 13px;
+        font-weight: 800;
+        text-transform: uppercase;
+      }
+
+      .nav span.active {
+        color: var(--green);
+      }
+
+      .eyebrow {
+        color: var(--green);
+        font-size: 12px;
+        font-weight: 900;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+      }
+
+      h1,
+      h2,
+      h3,
+      p {
+        margin: 0;
+      }
+
+      h1 {
+        max-width: 980px;
+        margin-top: 20px;
+        font-size: 82px;
+        line-height: 0.94;
+        letter-spacing: 0;
+      }
+
+      h2 {
+        font-size: 34px;
+        line-height: 1.05;
+        letter-spacing: 0;
+      }
+
+      h3 {
+        font-size: 20px;
+        line-height: 1.1;
+        letter-spacing: 0;
+      }
+
+      p {
+        color: #c2d2c8;
+        font-size: 16px;
+        line-height: 1.58;
+      }
+
+      .hero {
+        position: relative;
+        padding: 72px 0 54px;
+      }
+
+      .hero-copy {
+        position: relative;
+        z-index: 2;
+      }
+
+      .hero-lede {
+        max-width: 770px;
+        margin-top: 24px;
+        color: #d7f0df;
+        font-size: 20px;
+        line-height: 1.5;
+      }
+
+      .portrait {
+        position: absolute;
+        right: 130px;
+        top: 72px;
+        width: 270px;
+        height: 270px;
+        overflow: hidden;
+        border: 1px solid rgba(172, 255, 206, 0.42);
+        border-radius: 999px;
+        opacity: 0.5;
+        filter: saturate(0.92) contrast(1.1);
+      }
+
+      .portrait img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .pill-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 28px;
+      }
+
+      .pill {
+        border: 1px solid rgba(172, 255, 206, 0.28);
+        background: rgba(9, 24, 16, 0.72);
+        color: var(--green-soft);
+        padding: 9px 12px;
+        font-size: 12px;
+        font-weight: 900;
+        text-transform: uppercase;
+      }
+
+      .metrics {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 12px;
+        margin-top: 34px;
+      }
+
+      .metric,
+      .card,
+      .tile,
+      .timeline-item,
+      .matrix-cell {
+        border: 1px solid var(--line);
+        background: var(--panel);
+      }
+
+      .metric {
+        min-height: 104px;
+        padding: 18px;
+      }
+
+      .metric strong {
+        display: block;
+        color: var(--green);
+        font-size: 40px;
+        line-height: 1;
+      }
+
+      .metric span {
+        display: block;
+        margin-top: 10px;
+        color: var(--muted);
+        font-size: 12px;
+        font-weight: 900;
+        text-transform: uppercase;
+      }
+
+      .section {
+        padding: 44px 0;
+      }
+
+      .section-head {
+        display: flex;
+        align-items: end;
+        justify-content: space-between;
+        gap: 36px;
+        margin-bottom: 24px;
+      }
+
+      .section-head p {
+        max-width: 520px;
+      }
+
+      .grid-2 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+      }
+
+      .grid-3 {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+      }
+
+      .grid-4 {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 14px;
+      }
+
+      .card,
+      .tile,
+      .matrix-cell {
+        padding: 22px;
+      }
+
+      .card h3,
+      .tile h3,
+      .matrix-cell h3 {
+        color: var(--white);
+      }
+
+      .card p,
+      .tile p,
+      .matrix-cell p {
+        margin-top: 12px;
+        font-size: 14px;
+      }
+
+      .accent-green {
+        color: var(--green);
+      }
+
+      .accent-cyan {
+        color: var(--cyan);
+      }
+
+      .accent-amber {
+        color: var(--amber);
+      }
+
+      .accent-rose {
+        color: var(--rose);
+      }
+
+      .system-flow {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 10px;
+      }
+
+      .node {
+        min-height: 118px;
+        border: 1px solid var(--line);
+        background: rgba(4, 12, 8, 0.8);
+        padding: 16px;
+      }
+
+      .node strong {
+        display: block;
+        color: var(--green);
+        font-size: 14px;
+        text-transform: uppercase;
+      }
+
+      .node span {
+        display: block;
+        margin-top: 10px;
+        color: #cad9cf;
+        font-size: 13px;
+        line-height: 1.45;
+      }
+
+      .cta-strip {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 30px;
+        margin-top: 24px;
+        border: 1px solid rgba(172, 255, 206, 0.38);
+        background: rgba(85, 240, 142, 0.08);
+        padding: 24px;
+      }
+
+      .cta-strip p {
+        max-width: 640px;
+      }
+
+      .button-row {
+        display: flex;
+        gap: 12px;
+      }
+
+      .button {
+        display: inline-grid;
+        min-width: 126px;
+        height: 44px;
+        place-items: center;
+        border: 1px solid var(--line-strong);
+        background: var(--green);
+        color: #031007;
+        font-size: 12px;
+        font-weight: 950;
+        text-transform: uppercase;
+      }
+
+      .button.secondary {
+        background: transparent;
+        color: var(--green-soft);
+      }
+
+      .mockup-2 {
+        background:
+          linear-gradient(rgba(121, 215, 255, 0.04) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(85, 240, 142, 0.04) 1px, transparent 1px),
+          linear-gradient(180deg, rgba(6, 18, 12, 0.92), rgba(2, 6, 4, 0.98)),
+          var(--bg);
+        background-size: 44px 44px, 44px 44px, auto, auto;
+      }
+
+      .story-hero {
+        min-height: 520px;
+        padding-top: 78px;
+        background:
+          linear-gradient(90deg, rgba(3, 7, 5, 0.82) 0%, rgba(3, 7, 5, 0.58) 58%, rgba(3, 7, 5, 0.92) 100%),
+          url("../public/images/martin2.jpg") right 110px top 60px / 420px auto no-repeat;
+      }
+
+      .story-hero h1 {
+        max-width: 850px;
+      }
+
+      .timeline {
+        position: relative;
+        display: grid;
+        gap: 14px;
+      }
+
+      .timeline::before {
+        content: "";
+        position: absolute;
+        left: 22px;
+        top: 12px;
+        bottom: 12px;
+        width: 1px;
+        background: var(--line-strong);
+      }
+
+      .timeline-item {
+        position: relative;
+        display: grid;
+        grid-template-columns: 70px 1fr 240px;
+        gap: 20px;
+        align-items: start;
+        min-height: 118px;
+        padding: 22px;
+      }
+
+      .timeline-index {
+        position: relative;
+        z-index: 1;
+        display: grid;
+        width: 44px;
+        height: 44px;
+        place-items: center;
+        border: 1px solid var(--line-strong);
+        background: #041009;
+        color: var(--green);
+        font-weight: 950;
+      }
+
+      .timeline-proof {
+        color: var(--cyan);
+        font-size: 13px;
+        font-weight: 900;
+        line-height: 1.4;
+        text-transform: uppercase;
+      }
+
+      .quote-band {
+        display: grid;
+        grid-template-columns: 1.2fr 0.8fr;
+        gap: 16px;
+      }
+
+      .quote {
+        border-left: 3px solid var(--green);
+        background: rgba(85, 240, 142, 0.08);
+        padding: 26px;
+        font-size: 28px;
+        font-weight: 850;
+        line-height: 1.18;
+      }
+
+      .mockup-3 {
+        min-height: 1600px;
+        background:
+          linear-gradient(rgba(255, 212, 121, 0.035) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(85, 240, 142, 0.04) 1px, transparent 1px),
+          radial-gradient(circle at 50% 0%, rgba(255, 212, 121, 0.12), transparent 34%),
+          #020604;
+        background-size: 32px 32px, 32px 32px, auto, auto;
+      }
+
+      .dashboard-hero {
+        display: grid;
+        grid-template-columns: 1fr 420px;
+        gap: 24px;
+        padding: 64px 0 30px;
+      }
+
+      .control-panel {
+        border: 1px solid rgba(255, 212, 121, 0.34);
+        background: rgba(25, 18, 8, 0.42);
+        padding: 22px;
+      }
+
+      .status-list {
+        display: grid;
+        gap: 10px;
+        margin-top: 18px;
+      }
+
+      .status-list div {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        padding-bottom: 10px;
+        color: var(--muted);
+        font-size: 13px;
+        font-weight: 800;
+        text-transform: uppercase;
+      }
+
+      .status-list strong {
+        color: var(--amber);
+      }
+
+      .matrix {
+        display: grid;
+        grid-template-columns: 0.9fr repeat(4, 1fr);
+        border: 1px solid var(--line);
+      }
+
+      .matrix-cell {
+        min-height: 104px;
+        border-width: 0 1px 1px 0;
+        border-color: var(--line);
+      }
+
+      .matrix-cell.header {
+        background: rgba(85, 240, 142, 0.1);
+        color: var(--green);
+        font-size: 12px;
+        font-weight: 950;
+        text-transform: uppercase;
+      }
+
+      .matrix-cell.role {
+        background: rgba(255, 212, 121, 0.08);
+        color: var(--amber);
+        font-weight: 950;
+        text-transform: uppercase;
+      }
+
+      .matrix-cell p {
+        margin: 0;
+        color: #cfddd4;
+      }
+
+      .scope-map {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+      }
+
+      .scope-map .tile {
+        min-height: 156px;
+      }
+
+      .footer-note {
+        padding: 34px 0 54px;
+        color: var(--muted);
+        font-size: 12px;
+        font-weight: 900;
+        text-align: center;
+        text-transform: uppercase;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="board">
+      <section class="mockup mockup-1" data-mockup="1">
+        <div class="shell">
+          <header class="topbar">
+            <div class="brand"><span class="brand-mark">P</span><span>Prahl.dev</span></div>
+            <nav class="nav"><span>Work</span><span class="active">About</span><span>Stack</span><span>Contact</span></nav>
+          </header>
+          <section class="hero">
+            <div class="portrait"><img src="../public/images/martin3.jpg" alt="" /></div>
+            <div class="hero-copy">
+              <div class="eyebrow">Option 01 / Systems Proof</div>
+              <h1>Martin Prahl builds product systems from interface to release.</h1>
+              <p class="hero-lede">
+                A proof-first About page that frames the developer as a full-stack product builder:
+                mobile UI, backend rails, release pipelines, and the taste to make it all feel intentional.
+              </p>
+              <div class="pill-row">
+                <span class="pill">React Native</span>
+                <span class="pill">Next.js</span>
+                <span class="pill">Node APIs</span>
+                <span class="pill">Kotlin</span>
+                <span class="pill">Payments</span>
+                <span class="pill">Store Release</span>
+              </div>
+            </div>
+            <div class="metrics">
+              <div class="metric"><strong>1.0k</strong><span>quality commits</span></div>
+              <div class="metric"><strong>0.1k</strong><span>project worklogs</span></div>
+              <div class="metric"><strong>8</strong><span>shipped apps and sites</span></div>
+              <div class="metric"><strong>3yrs</strong><span>full-stack mastery</span></div>
+            </div>
+          </section>
+
+          <section class="section">
+            <div class="section-head">
+              <div>
+                <div class="eyebrow">Delivery Loop</div>
+                <h2>One person who can carry the whole product surface.</h2>
+              </div>
+              <p>
+                This layout works best when the About page should prove capability quickly and
+                send recruiters or clients into case studies with confidence.
+              </p>
+            </div>
+            <div class="system-flow">
+              <div class="node"><strong>01 Strategy</strong><span>Clarify user, risk, platform, store, and business constraints.</span></div>
+              <div class="node"><strong>02 Interface</strong><span>Design flows, hierarchy, motion, assets, and responsive states.</span></div>
+              <div class="node"><strong>03 App Build</strong><span>Implement mobile and web experiences with production structure.</span></div>
+              <div class="node"><strong>04 Backend</strong><span>Own APIs, validation, payments, email, webhooks, and data contracts.</span></div>
+              <div class="node"><strong>05 Release</strong><span>Prepare EAS builds, static export, app-store assets, QA, and handoff.</span></div>
+            </div>
+          </section>
+
+          <section class="section">
+            <div class="section-head">
+              <div>
+                <div class="eyebrow">Full-Stack Range</div>
+                <h2>Capability grouped by what a product actually needs.</h2>
+              </div>
+            </div>
+            <div class="grid-4">
+              <div class="card"><h3 class="accent-green">Product Frontends</h3><p>React Native, Expo Router, Kotlin Compose, Next.js, accessible component systems, animation, and responsive layout.</p></div>
+              <div class="card"><h3 class="accent-cyan">Service Backends</h3><p>Serverless API routes, order authority, validation, payment orchestration, contact routing, and production env setup.</p></div>
+              <div class="card"><h3 class="accent-amber">Release Systems</h3><p>EAS profiles, Play Store assets, TestFlight prep, static export deployments, build reproducibility, and QA checklists.</p></div>
+              <div class="card"><h3 class="accent-rose">Proof Habits</h3><p>Daily logs, screenshots, commit history, measured browser checks, and visible reasoning that make the work inspectable.</p></div>
+            </div>
+          </section>
+
+          <section class="section">
+            <div class="section-head">
+              <div>
+                <div class="eyebrow">Architecture I Can Own</div>
+                <h2>Readable systems, not just feature lists.</h2>
+              </div>
+            </div>
+            <div class="grid-2">
+              <div class="card">
+                <h3>Commerce App Spine</h3>
+                <p>Mobile app -> serverless API -> payment rails -> messaging -> release builds. A concise map helps non-technical visitors see end-to-end ownership.</p>
+              </div>
+              <div class="card">
+                <h3>Quality Gate Stack</h3>
+                <p>TypeScript checks, viewport probes, route checks, screenshot review, app-store metadata checks, and worklog evidence before handoff.</p>
+              </div>
+            </div>
+            <div class="cta-strip">
+              <div>
+                <div class="eyebrow">Best CTA</div>
+                <p>Point visitors toward case studies, then offer a direct contact path for full-stack mobile or web product work.</p>
+              </div>
+              <div class="button-row"><span class="button">View Work</span><span class="button secondary">Contact</span></div>
+            </div>
+          </section>
+        </div>
+        <div class="footer-note">About Dev mockup 01 / Proof-first technical credibility</div>
+      </section>
+
+      <section class="mockup mockup-2" data-mockup="2">
+        <div class="shell">
+          <header class="topbar">
+            <div class="brand"><span class="brand-mark">P</span><span>Prahl.dev</span></div>
+            <nav class="nav"><span>Case Studies</span><span class="active">About</span><span>Worklog</span><span>Resume</span></nav>
+          </header>
+        </div>
+        <section class="story-hero">
+          <div class="shell">
+            <div class="eyebrow">Option 02 / Builder Story</div>
+            <h1>The throughline is ownership: design taste, engineering depth, and finished software.</h1>
+            <p class="hero-lede">
+              A narrative About page that makes the developer memorable. It shows how Martin thinks,
+              why the work looks the way it does, and how small decisions become shipped products.
+            </p>
+            <div class="pill-row">
+              <span class="pill">Design Systems</span>
+              <span class="pill">Native Commerce</span>
+              <span class="pill">API Contracts</span>
+              <span class="pill">Release Notes</span>
+              <span class="pill">Documentation</span>
+            </div>
+          </div>
+        </section>
+
+        <div class="shell">
+          <section class="section">
+            <div class="section-head">
+              <div>
+                <div class="eyebrow">How I Got Here</div>
+                <h2>A timeline built around proof, not biography filler.</h2>
+              </div>
+              <p>
+                This option is more personal and editorial. It still keeps the content practical:
+                every story beat ties back to a skill, artifact, or production outcome.
+              </p>
+            </div>
+            <div class="timeline">
+              <div class="timeline-item">
+                <span class="timeline-index">01</span>
+                <div><h3>Started with product interfaces.</h3><p>Learned to treat layout, hierarchy, and responsive behavior as engineering problems, not decoration.</p></div>
+                <div class="timeline-proof">Evidence: UI/UX philosophy, visual hierarchy studies, shipped mobile screens.</div>
+              </div>
+              <div class="timeline-item">
+                <span class="timeline-index">02</span>
+                <div><h3>Moved into native mobile delivery.</h3><p>Built Android and React Native products with real state, routing, animation, payments, and release constraints.</p></div>
+                <div class="timeline-proof">Evidence: Alla Vostra, Cinerific, Credit King.</div>
+              </div>
+              <div class="timeline-item">
+                <span class="timeline-index">03</span>
+                <div><h3>Closed the backend gap.</h3><p>Added server-owned validation, API routes, contact messages, payment rail orchestration, and production env structure.</p></div>
+                <div class="timeline-proof">Evidence: Vercel API, Stripe, PayPal, Postmark.</div>
+              </div>
+              <div class="timeline-item">
+                <span class="timeline-index">04</span>
+                <div><h3>Turned process into an artifact.</h3><p>Worklogs, screenshots, diffs, QA notes, and release records make the work inspectable after the code ships.</p></div>
+                <div class="timeline-proof">Evidence: 100+ logs across active projects.</div>
+              </div>
+            </div>
+          </section>
+
+          <section class="section quote-band">
+            <div class="quote">I care about the moment where a product stops being a demo and starts behaving like something a real person can trust.</div>
+            <div class="card">
+              <div class="eyebrow">Working Style</div>
+              <h3>Precise, visual, and persistent.</h3>
+              <p>I like tight feedback loops, measured changes, explicit tradeoffs, and interfaces that are rich without becoming noisy.</p>
+            </div>
+          </section>
+
+          <section class="section">
+            <div class="section-head">
+              <div>
+                <div class="eyebrow">Principles</div>
+                <h2>The beliefs that shape the code.</h2>
+              </div>
+            </div>
+            <div class="grid-3">
+              <div class="tile"><h3 class="accent-green">Interface clarity is a backend concern.</h3><p>If validation, pricing, and state are vague, the UI eventually tells on the system.</p></div>
+              <div class="tile"><h3 class="accent-cyan">Documentation is part of delivery.</h3><p>Logs, release notes, and screenshots make future decisions cheaper and safer.</p></div>
+              <div class="tile"><h3 class="accent-amber">Taste should survive constraints.</h3><p>Small screens, store rules, and payment SDKs still deserve polish and rhythm.</p></div>
+              <div class="tile"><h3 class="accent-rose">Ship the inspectable version.</h3><p>Strong portfolios make the hard parts visible: failures, revisions, QA, and rationale.</p></div>
+              <div class="tile"><h3 class="accent-green">Work from user paths outward.</h3><p>Start with what the user is trying to do, then build the system that supports it.</p></div>
+              <div class="tile"><h3 class="accent-cyan">Keep the stack honest.</h3><p>Use proven tools where reliability matters and custom work where the product needs it.</p></div>
+            </div>
+          </section>
+        </div>
+        <div class="footer-note">About Dev mockup 02 / Narrative and memorable positioning</div>
+      </section>
+
+      <section class="mockup mockup-3" data-mockup="3">
+        <div class="shell">
+          <header class="topbar">
+            <div class="brand"><span class="brand-mark">P</span><span>Prahl.dev</span></div>
+            <nav class="nav"><span>Systems</span><span class="active">About</span><span>Services</span><span>Contact</span></nav>
+          </header>
+
+          <section class="dashboard-hero">
+            <div>
+              <div class="eyebrow">Option 03 / Operating Manual</div>
+              <h1>How to work with Martin Prahl.</h1>
+              <p class="hero-lede">
+                A dashboard-like About page for clients or hiring teams who want clarity fast:
+                scope, collaboration style, handoff habits, technical range, and proof markers.
+              </p>
+              <div class="pill-row">
+                <span class="pill">Owns Ambiguity</span>
+                <span class="pill">Designs Systems</span>
+                <span class="pill">Builds Front to Back</span>
+                <span class="pill">Documents Decisions</span>
+              </div>
+            </div>
+            <aside class="control-panel">
+              <div class="eyebrow">Availability Signal</div>
+              <h3>Best fit: product teams, founders, and mobile-first builds.</h3>
+              <div class="status-list">
+                <div><span>Primary mode</span><strong>Full-stack build</strong></div>
+                <div><span>Preferred surface</span><strong>Mobile + web</strong></div>
+                <div><span>Proof style</span><strong>Commits + logs</strong></div>
+                <div><span>Handoff</span><strong>Docs + release notes</strong></div>
+              </div>
+            </aside>
+          </section>
+
+          <section class="section">
+            <div class="section-head">
+              <div>
+                <div class="eyebrow">Engagement Modes</div>
+                <h2>Clear packages without pretending software is one-size-fits-all.</h2>
+              </div>
+              <p>
+                This concept is the most practical and conversion-oriented. It tells people
+                exactly how the developer can plug into a real project.
+              </p>
+            </div>
+            <div class="scope-map">
+              <div class="tile"><h3 class="accent-green">Prototype to Production</h3><p>Turn a validated idea into a coherent mobile or web product with frontend, backend, QA, and release prep.</p></div>
+              <div class="tile"><h3 class="accent-cyan">Rescue and Refine</h3><p>Audit an existing product, fix brittle flows, improve responsive behavior, clean architecture, and ship safer updates.</p></div>
+              <div class="tile"><h3 class="accent-amber">Release Readiness</h3><p>Prepare app-store assets, EAS profiles, static export, payment checks, route validation, and launch documentation.</p></div>
+              <div class="tile"><h3 class="accent-rose">Design-System Buildout</h3><p>Document color, typography, controls, navigation, visual hierarchy, and reusable UI rules from real product screens.</p></div>
+            </div>
+          </section>
+
+          <section class="section">
+            <div class="section-head">
+              <div>
+                <div class="eyebrow">Capability Matrix</div>
+                <h2>What gets handled at each layer.</h2>
+              </div>
+            </div>
+            <div class="matrix">
+              <div class="matrix-cell header">Layer</div>
+              <div class="matrix-cell header">Design</div>
+              <div class="matrix-cell header">Frontend</div>
+              <div class="matrix-cell header">Backend</div>
+              <div class="matrix-cell header">Release</div>
+
+              <div class="matrix-cell role">Mobile Apps</div>
+              <div class="matrix-cell"><p>Flows, hierarchy, original assets, state visibility.</p></div>
+              <div class="matrix-cell"><p>React Native, Expo Router, Kotlin Compose.</p></div>
+              <div class="matrix-cell"><p>Payment sheets, order payloads, contact APIs.</p></div>
+              <div class="matrix-cell"><p>EAS, Play Store, TestFlight preparation.</p></div>
+
+              <div class="matrix-cell role">Web Apps</div>
+              <div class="matrix-cell"><p>Responsive shells, editorial structure, proof sections.</p></div>
+              <div class="matrix-cell"><p>Next.js, TypeScript, static export, motion.</p></div>
+              <div class="matrix-cell"><p>Serverless routes, env separation, validation.</p></div>
+              <div class="matrix-cell"><p>Hostinger, Vercel, branch deploys, checks.</p></div>
+
+              <div class="matrix-cell role">Product Ops</div>
+              <div class="matrix-cell"><p>Store graphics, release copy, review surfaces.</p></div>
+              <div class="matrix-cell"><p>Instrumented UI states and previewable flows.</p></div>
+              <div class="matrix-cell"><p>Postmark, Stripe, PayPal, webhooks.</p></div>
+              <div class="matrix-cell"><p>Worklogs, QA notes, handoff documentation.</p></div>
+            </div>
+          </section>
+
+          <section class="section">
+            <div class="section-head">
+              <div>
+                <div class="eyebrow">Collaboration Contract</div>
+                <h2>What a teammate or client can expect.</h2>
+              </div>
+            </div>
+            <div class="grid-3">
+              <div class="card"><h3>Fast orientation</h3><p>Read the repo, identify constraints, map the user path, and avoid breaking accepted visual systems.</p></div>
+              <div class="card"><h3>Visible progress</h3><p>Show the work through diffs, screenshots, validations, and precise notes instead of vague status updates.</p></div>
+              <div class="card"><h3>Scoped judgment</h3><p>Fix the requested surface, flag risky ideas, and save larger redesigns for explicit decisions.</p></div>
+            </div>
+            <div class="cta-strip">
+              <div>
+                <div class="eyebrow">End State</div>
+                <p>A page like this makes the developer feel easy to hire because the working relationship is as clear as the technical skill.</p>
+              </div>
+              <div class="button-row"><span class="button">Start</span><span class="button secondary">Resume</span></div>
+            </div>
+          </section>
+        </div>
+        <div class="footer-note">About Dev mockup 03 / Practical operating manual</div>
+      </section>
+    </main>
+  </body>
+</html>

@@ -8,7 +8,7 @@ import {
   ProjectDeviceStack,
 } from "./ProjectCarouselButton";
 
-type NavContext = "articles" | "home";
+type NavContext = "aboutdev" | "articles" | "home";
 
 type NavItem = {
   href?: string;
@@ -53,8 +53,8 @@ const caseStudies: CaseStudy[] = [
       "and motion foundations for streaming identity.",
     ],
     tags: ["Kotlin", "Compose", "Gradle", "Android", "Figma", "Animation"],
-    stat: "62 commits",
-    worklogStat: "18 worklogs",
+    stat: "66 commits",
+    worklogStat: "20 worklogs",
     screenshots: [
       {
         alt: "Cinerific promo tablet frame",
@@ -77,8 +77,8 @@ const caseStudies: CaseStudy[] = [
       "EAS builds, and release-ready mobile polish.",
     ],
     tags: ["React Native", "Expo", "Stripe", "Postmark", "Node.js", "EAS"],
-    stat: "353 commits",
-    worklogStat: "51 worklogs",
+    stat: "384 commits",
+    worklogStat: "65 worklogs",
     screenshots: [
       {
         alt: "Alla Vostra startup screen",
@@ -120,8 +120,8 @@ const caseStudies: CaseStudy[] = [
       "custom assets, and static export deployment.",
     ],
     tags: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Motion", "Lucide"],
-    stat: "73 commits",
-    worklogStat: "20 worklogs",
+    stat: "110 commits",
+    worklogStat: "37 worklogs",
     screenshots: [
       {
         alt: "Prahl.dev portfolio website landscape hero screenshot",
@@ -1096,14 +1096,20 @@ const caseTitleDeviceGap = {
 
 function getNavItems(context: NavContext): NavItem[] {
   const homeHash = (id: string) => (context === "home" ? `#${id}` : `/#${id}`);
+  const caseStudiesHref =
+    context === "articles" ? "#case-studies" : homeHash("case-studies");
 
   return [
     { href: context === "home" ? "#top" : "/", isBrand: true, label: "Prahl.dev" },
     { isSpacer: true, label: "" },
     { href: homeHash("stack"), label: "Stack" },
-    { href: "#case-studies", label: "Case Studies" },
+    { href: caseStudiesHref, label: "Case Studies" },
     { href: homeHash("worklog"), label: "Worklog" },
-    { label: "About Dev" },
+    {
+      href: context === "aboutdev" ? "#top" : "/aboutdev",
+      isActive: context === "aboutdev",
+      label: "About Dev",
+    },
     { href: homeHash("contact"), label: "Contact" },
   ];
 }

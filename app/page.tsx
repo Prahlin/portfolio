@@ -445,14 +445,20 @@ export default function Home() {
 
             <div className="hero-visual" aria-label="Portfolio preview">
               <div className="profile-orbit">
-                <Image
-                  alt="Martin Prahl profile photo"
-                  src="/images/martin3.jpg"
-                  width={220}
-                  height={220}
-                  priority
-                  className="profile-photo"
-                />
+                <a
+                  aria-label="Open About Dev page"
+                  className="profile-photo-link"
+                  href="/aboutdev"
+                >
+                  <Image
+                    alt="Martin Prahl profile photo"
+                    src="/images/martin3.jpg"
+                    width={220}
+                    height={220}
+                    priority
+                    className="profile-photo"
+                  />
+                </a>
                 <span>Martin Prahl</span>
               </div>
 
