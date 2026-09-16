@@ -349,18 +349,27 @@ function PlatformIconSlot({
 }
 
 function PlatformLabelDivider({
+  className,
   gridColumn,
   gridRow,
   kind,
 }: {
+  className?: string;
   gridColumn?: number;
   gridRow?: number | string;
   kind: "grid" | "item";
 }) {
+  const dividerClassName = [
+    `case-card-title-platform-divider case-card-title-platform-${kind}-divider`,
+    className,
+  ]
+    .filter(Boolean)
+    .join(" ");
+
   return (
     <span
       aria-hidden="true"
-      className={`case-card-title-platform-divider case-card-title-platform-${kind}-divider`}
+      className={dividerClassName}
       style={
         gridColumn && gridRow
           ? {
@@ -394,19 +403,32 @@ function PlatformLabelSlots({
 function PlatformColumnDividers({
   columnCount,
   gridRow,
+  partial,
+  startIndex = 0,
 }: {
   columnCount: number;
   gridRow: number | string;
+  partial?: boolean;
+  startIndex?: number;
 }) {
-  return Array.from({ length: Math.max(0, columnCount - 1) }).map(
-    (_, index) => (
-      <PlatformLabelDivider
-        gridColumn={getPlatformDividerGridColumn(index)}
-        gridRow={gridRow}
-        key={`divider-${index}`}
-        kind="item"
-      />
-    ),
+  return Array.from({ length: Math.max(0, columnCount - 1 - startIndex) }).map(
+    (_, index) => {
+      const dividerIndex = startIndex + index;
+
+      return (
+        <PlatformLabelDivider
+          className={
+            partial
+              ? "case-card-title-platform-partial-divider"
+              : undefined
+          }
+          gridColumn={getPlatformDividerGridColumn(dividerIndex)}
+          gridRow={gridRow}
+          key={`divider-${gridRow}-${dividerIndex}`}
+          kind="item"
+        />
+      );
+    },
   );
 }
 
@@ -493,6 +515,7 @@ export function ProjectDeviceStack({
   color,
   hasTablet,
   hasWeb,
+  deviceLabels,
   mobilePlatforms,
   responsiveAssetGap,
   showPlatformLabels,
@@ -500,6 +523,7 @@ export function ProjectDeviceStack({
 }: {
   assetGap?: string;
   color: string;
+  deviceLabels?: string[];
   hasTablet?: boolean;
   hasWeb?: boolean;
   mobilePlatforms: MobilePlatform[];
@@ -516,6 +540,7 @@ export function ProjectDeviceStack({
     color,
   };
   const stackGap = measuredAssetGap ?? assetGap;
+  const deviceLabelKey = deviceLabels?.join(",") ?? "";
 
   useLayoutEffect(() => {
     if (!responsiveAssetGap) {
@@ -694,7 +719,14 @@ export function ProjectDeviceStack({
       resizeObserver?.disconnect();
       window.removeEventListener("resize", updateRowDivider);
     };
-  }, [hasTablet, hasWeb, mobilePlatformKey, showPlatformLabels, stackGap]);
+  }, [
+    deviceLabelKey,
+    hasTablet,
+    hasWeb,
+    mobilePlatformKey,
+    showPlatformLabels,
+    stackGap,
+  ]);
 
   if (stackGap) {
     stackStyle["--project-device-stack-gap"] = stackGap;
@@ -727,15 +759,21 @@ export function ProjectDeviceStack({
     const platformLabels = platforms.map((platform) =>
       platform === "web" ? "WEB" : platform === "android" ? "AND" : "IOS",
     );
-    const factorDeviceLabels = factorDevices.map((device) =>
-      device === "phone" ? "PHONE" : "TABLET",
-    );
+    const factorDeviceLabels =
+      deviceLabels ??
+      factorDevices.map((device) =>
+        device === "phone" ? "PHONE" : "TABLET",
+      );
     const labelColumnCount = Math.max(
       platformLabels.length,
       factorDeviceLabels.length,
       1,
     );
     const dividerGridRow = factorDeviceLabels.length > 0 ? "1 / 3" : 1;
+    const spanningItemDividerCount =
+      factorDeviceLabels.length > platformLabels.length
+        ? platformLabels.length
+        : Math.max(0, platformLabels.length - 1);
     const platformListStyle = {
       ...stackStyle,
       gridTemplateColumns: getPlatformListGridTemplate(labelColumnCount),
@@ -757,15 +795,21 @@ export function ProjectDeviceStack({
         />
         <PlatformLabelSlots labels={platformLabels} row={1} />
         <PlatformColumnDividers
-          columnCount={labelColumnCount}
+          columnCount={spanningItemDividerCount + 1}
           gridRow={dividerGridRow}
         />
-        {factorDevices.length > 0 ? (
+        {factorDeviceLabels.length > 0 ? (
           <>
             <span className="case-card-title-platform-heading case-card-title-platform-heading-factor">
               DEVICE
             </span>
             <PlatformLabelSlots labels={factorDeviceLabels} row={2} />
+            <PlatformColumnDividers
+              columnCount={factorDeviceLabels.length}
+              gridRow={2}
+              partial
+              startIndex={spanningItemDividerCount}
+            />
             <span
               aria-hidden="true"
               className="case-card-title-platform-row-divider"

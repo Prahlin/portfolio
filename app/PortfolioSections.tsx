@@ -81,16 +81,11 @@ const caseStudies: CaseStudy[] = [
     worklogStat: "65 worklogs",
     screenshots: [
       {
-        alt: "Alla Vostra startup screen",
-        src: "/images/startup_screen_small.png",
-      },
-      {
-        alt: "Alla Vostra products screen",
-        src: "/images/products_screen_small.png",
-      },
-      {
-        alt: "Alla Vostra confirmation screen",
-        src: "/images/confirmed_overlay_small.png",
+        alt: "Alla Vostra Play Store feature graphic",
+        height: 500,
+        orientation: "landscape",
+        src: "/images/alla-vostra/play-store/feature-graphic-upload-clean-1024x500.png",
+        width: 1024,
       },
     ],
   },
@@ -1322,6 +1317,7 @@ function CaseStudyTitle({
             <ProjectDeviceStack
               assetGap="0.42em"
               color="#ffb866"
+              deviceLabels={["PHONE", "TABLET", "DESK"]}
               hasWeb
               mobilePlatforms={[]}
               responsiveAssetGap={caseTitleDeviceGap}
@@ -1352,6 +1348,7 @@ function CaseStudyTitle({
             <ProjectDeviceStack
               assetGap="0.42em"
               color="#ffb866"
+              deviceLabels={["PHONE", "TABLET", "DESK"]}
               hasWeb
               mobilePlatforms={[]}
               responsiveAssetGap={caseTitleDeviceGap}
