@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 70 720" fill="none">
+  <path
+    d="M57 34 C31 35 25 58 25 104 L25 143 C25 167 18 179 12 187 L3 197 L12 207 C18 215 25 227 25 251 L25 290 C25 336 31 359 57 360"
+    stroke="#111111"
+    stroke-linecap="round"
+    stroke-linejoin="miter"
+    stroke-miterlimit="12"
+    stroke-width="4.8"
+    vector-effect="non-scaling-stroke"
+  />
+  <path
+    d="M57 34 C31 35 25 58 25 104 L25 143 C25 167 18 179 12 187 L3 197 L12 207 C18 215 25 227 25 251 L25 290 C25 336 31 359 57 360"
+    stroke="#ffffff"
+    stroke-linecap="round"
+    stroke-linejoin="miter"
+    stroke-miterlimit="12"
+    stroke-width="2.3"
+    vector-effect="non-scaling-stroke"
+  />
+</svg>
