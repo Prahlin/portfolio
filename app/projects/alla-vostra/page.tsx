@@ -3,6 +3,7 @@ import Image from "next/image";
 import type { CSSProperties } from "react";
 import { ArrowLeft, ArrowRight, Mail } from "lucide-react";
 
+import { MainNavBar } from "../../PortfolioSections";
 import { ProofStats } from "../../ProofStats";
 import HeroProofBottomAligner from "./HeroProofBottomAligner";
 import ProductFlowSwitcher from "./ProductFlowSwitcher";
@@ -24,6 +25,17 @@ const metadataItems = [
   "Postmark",
   "Google Pay",
   "Apple Pay",
+];
+
+const allaVostraNavItems = [
+  { href: "/", isBrand: true, label: "Prahl.dev" },
+  { href: "#overview", label: "Overview" },
+  { href: "#interactive-demo", label: "Demo" },
+  { href: "#scope", label: "Scope" },
+  { href: "#core-features", label: "Product" },
+  { href: "#product-flow", label: "UI / UX" },
+  { href: "#stack", label: "Stack" },
+  { href: "#contact", label: "Contact" },
 ];
 
 const playStoreUrl =
@@ -97,6 +109,10 @@ const googlePlayReleaseTopScreenshots = [
 const appStoreReleaseBottomScreenshots = [
   playStoreTrapezoidScreenshot,
   playStoreScreenshots[3],
+] as const;
+const overviewPromoScreenshots = [
+  ...googlePlayReleaseTopScreenshots,
+  ...appStoreReleaseBottomScreenshots,
 ] as const;
 
 const fullStackSkillGridStyle: CSSProperties = {
@@ -988,18 +1004,12 @@ export default function AllaVostraCaseStudy() {
     <main className="project-page alla-vostra-case">
       <section className="project-hero" id="top">
         <div className="site-shell">
-          <header className="nav-bar project-nav">
-            <a className="brand" href="/" aria-label="Prahl.dev home">
-              <span>P</span>
-              <strong>Prahl.dev</strong>
-            </a>
-
-            <nav aria-label="Alla Vostra case study navigation">
-              <a href="#overview">Overview</a>
-              <a href="#product-flow">Flow</a>
-              <a href="#contact">Contact</a>
-            </nav>
-          </header>
+          <div className="project-nav-frame">
+            <MainNavBar
+              ariaLabel="Alla Vostra case study navigation"
+              items={allaVostraNavItems}
+            />
+          </div>
 
           <div className="project-hero-grid">
             <div className="project-hero-copy">
@@ -1219,25 +1229,6 @@ export default function AllaVostraCaseStudy() {
                 <h3>App Store release</h3>
                 <span>Listing in preparation</span>
               </div>
-              <div
-                aria-label="Alla Vostra Play Store screenshots for App Store release"
-                className="overview-play-store-supporting-row overview-play-store-supporting-row-top"
-              >
-                {googlePlayReleaseTopScreenshots.map((screenshot) => (
-                  <figure
-                    className={`overview-play-store-shot overview-play-store-shot-${screenshot.aspect} overview-play-store-shot-supporting`}
-                    key={screenshot.src}
-                  >
-                    <Image
-                      alt={screenshot.alt}
-                      fill
-                      sizes="(max-width: 720px) calc((100vw - 40px) / 2), 274px"
-                      src={screenshot.src}
-                    />
-                    <figcaption>{screenshot.alt}</figcaption>
-                  </figure>
-                ))}
-              </div>
               <dl
                 aria-label="App Store placeholder release details"
                 className="overview-store-facts"
@@ -1250,6 +1241,25 @@ export default function AllaVostraCaseStudy() {
                 ))}
               </dl>
             </div>
+            <div
+              aria-label="Alla Vostra promo screenshots"
+              className="overview-play-store-supporting-row overview-promo-strip"
+            >
+              {overviewPromoScreenshots.map((screenshot) => (
+                <figure
+                  className={`overview-play-store-shot overview-play-store-shot-${screenshot.aspect} overview-play-store-shot-supporting`}
+                  key={screenshot.src}
+                >
+                  <Image
+                    alt={screenshot.alt}
+                    fill
+                    sizes="(max-width: 720px) calc((100vw - 60px) / 4), 274px"
+                    src={screenshot.src}
+                  />
+                  <figcaption>{screenshot.alt}</figcaption>
+                </figure>
+              ))}
+            </div>
             <div className="overview-store-release overview-store-release-google">
               <div className="overview-store-facts-heading">
                 <h3>Google Play release</h3>
@@ -1257,25 +1267,6 @@ export default function AllaVostraCaseStudy() {
                   Official listing
                   <ArrowRight aria-hidden size={14} strokeWidth={2.25} />
                 </a>
-              </div>
-              <div
-                aria-label="Alla Vostra Play Store screenshots"
-                className="overview-play-store-supporting-row overview-play-store-supporting-row-top"
-              >
-                {appStoreReleaseBottomScreenshots.map((screenshot) => (
-                  <figure
-                    className={`overview-play-store-shot overview-play-store-shot-${screenshot.aspect} overview-play-store-shot-supporting`}
-                    key={screenshot.src}
-                  >
-                    <Image
-                      alt={screenshot.alt}
-                      fill
-                      sizes="(max-width: 720px) calc((100vw - 40px) / 2), 274px"
-                      src={screenshot.src}
-                    />
-                    <figcaption>{screenshot.alt}</figcaption>
-                  </figure>
-                ))}
               </div>
               <dl
                 aria-label="Google Play release details"
@@ -1330,7 +1321,7 @@ export default function AllaVostraCaseStudy() {
         </div>
       </section>
 
-      <section>
+      <section id="core-features">
         <div className="site-shell">
           <SectionHeading kicker="Product" title="Core Features" />
           <div className="project-card-grid feature-grid">

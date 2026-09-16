@@ -1253,14 +1253,22 @@ function NavTopLinkRow({ items }: { items: NavItem[] }) {
   );
 }
 
-export function MainNavBar({ context = "home" }: { context?: NavContext }) {
-  const navItems = getNavItems(context);
+export function MainNavBar({
+  ariaLabel = "Main navigation",
+  context = "home",
+  items,
+}: {
+  ariaLabel?: string;
+  context?: NavContext;
+  items?: NavItem[];
+}) {
+  const navItems = items ?? getNavItems(context);
   const navTopRowItems = navItems.slice(0, navRowSplitIndex);
   const navBottomRowItems = navItems.slice(navRowSplitIndex);
 
   return (
     <header className="nav-bar">
-      <nav aria-label="Main navigation">
+      <nav aria-label={ariaLabel}>
         <NavTopLinkRow items={navTopRowItems} />
         <NavLinkRow
           className="nav-link-row-bottom"

@@ -1888,6 +1888,30 @@ export default function ProductFlowSwitcher({
   };
 
   useEffect(() => {
+    const syncViewFromHash = () => {
+      const hashView: FlowView | null =
+        window.location.hash === "#ui-foundations"
+          ? "ui"
+          : window.location.hash === "#ux-product-flow"
+            ? "ux"
+            : null;
+
+      if (!hashView) {
+        return;
+      }
+
+      switchProductFlowView(hashView);
+    };
+
+    syncViewFromHash();
+    window.addEventListener("hashchange", syncViewFromHash);
+
+    return () => {
+      window.removeEventListener("hashchange", syncViewFromHash);
+    };
+  }, []);
+
+  useEffect(() => {
     const nav = productFlowNavRef.current;
     const navWrap = productFlowNavWrapRef.current;
     const productFlowSection = navWrap?.closest<HTMLElement>("#product-flow");
