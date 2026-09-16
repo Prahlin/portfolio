@@ -1,0 +1,339 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [6 0 R 8 0 R 10 0 R 12 0 R 14 0 R 16 0 R] /Count 6 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+5 0 obj
+<< /Length 5609 >>
+stream
+BT /F2 14.0 Tf 54.0 742.0 Td (Prahlin Portfolio Work Log - September 16, 2026 \(Part 1\)) Tj ET
+BT /F1 10.2 Tf 54.0 716.0 Td (Compiled summary for Wednesday, September 16, 2026 - Part 1 - focus: continuing the Prahl.dev) Tj ET
+BT /F1 10.2 Tf 54.0 702.8 Td (Portfolio work after the September 15 documentation state, verifying the United States Eastern date,) Tj ET
+BT /F1 10.2 Tf 54.0 689.6 Td (refreshing the project snapshot, extracting and studying all thirty-eight pre-existing Portfolio PDF) Tj ET
+BT /F1 10.2 Tf 54.0 676.4 Td (worklogs, refining landing-page hero device hover behavior, updating Featured Case Studies card) Tj ET
+BT /F1 10.2 Tf 54.0 663.2 Td (imagery and platform/device divider geometry, aligning the Alla Vostra project-page navigation to the) Tj ET
+BT /F1 10.2 Tf 54.0 650.0 Td (landing-page navbar, adding ordered actionable section links for Demo, Product, and UI / UX,) Tj ET
+BT /F1 10.2 Tf 54.0 636.8 Td (preserving responsive navbar margins and two-row behavior, removing row-leading dividers at narrow) Tj ET
+BT /F1 10.2 Tf 54.0 623.6 Td (widths, centering the single Alla Vostra hero device in narrow and portrait layouts, reorganizing the) Tj ET
+BT /F1 10.2 Tf 54.0 610.4 Td (Overview promo screenshots into one horizontal row with responsive placement, validating TypeScript) Tj ET
+BT /F1 10.2 Tf 54.0 597.2 Td (and Next.js build health, restoring the Next.js dev route reference after the build, documenting) Tj ET
+BT /F1 10.2 Tf 54.0 584.0 Td (committed source state 439d885, and generating the September 16 Part 1 Portfolio PDF worklog.) Tj ET
+BT /F1 10.2 Tf 54.0 564.8 Td (Generated in continuity with the established Prahlin Portfolio daily worklog cadence: compact opening) Tj ET
+BT /F1 10.2 Tf 54.0 551.6 Td (summary, source-material section, baseline section, goal list, work-completed sections, validation) Tj ET
+BT /F1 10.2 Tf 54.0 538.4 Td (section, files-touched list, follow-up context, and output-artifact close.) Tj ET
+BT /F1 10.2 Tf 54.0 519.2 Td (This artifact intentionally covers Prahlin/portfolio work performed after) Tj ET
+BT /F1 10.2 Tf 54.0 506.0 Td (portfolio_worklog_september15.pdf and after the September 15 documentation state. The source state) Tj ET
+BT /F1 10.2 Tf 54.0 492.8 Td (reviewed for this record is 439d885039e2a4a3ecaeeb4c87b32c2c166041ca on main, matching origin/main) Tj ET
+BT /F1 10.2 Tf 54.0 479.6 Td (before this PDF was generated, titled Aligned Alla Vostra navigation and overview presentation. The) Tj ET
+BT /F1 10.2 Tf 54.0 466.4 Td (September 16 source work in scope is represented by commits c5814cc Refined landing hero and case) Tj ET
+BT /F1 10.2 Tf 54.0 453.2 Td (study cards and 439d885 Aligned Alla Vostra navigation and overview presentation. No Hostinger) Tj ET
+BT /F1 10.2 Tf 54.0 440.0 Td (deploy-branch work, production publish, source commit, push, or public deployment was performed during) Tj ET
+BT /F1 10.2 Tf 54.0 426.8 Td (this PDF-generation pass. The local documentation delta created before this PDF was the refreshed) Tj ET
+BT /F1 10.2 Tf 54.0 413.6 Td (portfolio_PROJECT_SNAPSHOT.txt file; this PDF is the new September 16 Part 1 root-level documentation) Tj ET
+BT /F1 10.2 Tf 54.0 400.4 Td (artifact requested by the user.) Tj ET
+BT /F2 12.0 Tf 54.0 375.2 Td (Source Materials Reviewed) Tj ET
+BT /F1 10.2 Tf 54.0 356.2 Td (- Verified the United States Eastern date with TZ=America/New_York date from) Tj ET
+BT /F1 10.2 Tf 54.0 343.0 Td (  /Users/prahlin/gh/portfolio, which reported Wednesday, September 16, 2026 at 7:13 AM EDT with UTC) Tj ET
+BT /F1 10.2 Tf 54.0 329.8 Td (  offset -0400. The worklog therefore uses September 16, 2026 and the requested Part 1 suffix.) Tj ET
+BT /F1 10.2 Tf 54.0 310.6 Td (- Ran ./read_project.sh from /Users/prahlin/gh/portfolio and regenerated) Tj ET
+BT /F1 10.2 Tf 54.0 297.4 Td (  portfolio_PROJECT_SNAPSHOT.txt before writing this worklog, preserving the Portfolio convention) Tj ET
+BT /F1 10.2 Tf 54.0 284.2 Td (  that the current source snapshot is refreshed before session documentation.) Tj ET
+BT /F1 10.2 Tf 54.0 265.0 Td (- Reviewed the refreshed portfolio_PROJECT_SNAPSHOT.txt for the current source tree, public image) Tj ET
+BT /F1 10.2 Tf 54.0 251.8 Td (  and PDF inventories, package scripts, git context, route structure, generated-cache policy, source) Tj ET
+BT /F1 10.2 Tf 54.0 238.6 Td (  dumps, and standing local workflow notes.) Tj ET
+BT /F1 10.2 Tf 54.0 219.4 Td (- Extracted and studied all thirty-eight pre-existing root-level Portfolio PDF worklogs with) Tj ET
+BT /F1 10.2 Tf 54.0 206.2 Td (  pdftotext: the July 11, 14, 15 Part 1, 15 Part 2, 16, 19, 20, 21, 22, 23, 24, 25, 29, 30, and 31) Tj ET
+BT /F1 10.2 Tf 54.0 193.0 Td (  records; the August 1 Parts 1-3, August 3, 4, 5, 6, 10 Parts 1-2, 11, 12 Parts 1-2, 14, 16, and 24) Tj ET
+BT /F1 10.2 Tf 54.0 179.8 Td (  records; and the September 7, September 8, September 8 Part 2, September 9, September 11,) Tj ET
+BT /F1 10.2 Tf 54.0 166.6 Td (  September 12 Part 1, September 12 Part 2, and September 15 records.) Tj ET
+BT /F1 10.2 Tf 54.0 147.4 Td (- Compared the complete PDF series for title cadence, root-level filename conventions, same-day part) Tj ET
+BT /F1 10.2 Tf 54.0 134.2 Td (  suffixes, opening-summary density, source-material language, baseline and goal framing,) Tj ET
+BT /F1 10.2 Tf 54.0 121.0 Td (  bullet-heavy technical voice, validation wording, files-touched treatment, follow-up continuity,) Tj ET
+BT /F1 10.2 Tf 54.0 107.8 Td (  and output-artifact closure.) Tj ET
+BT /F1 9.0 Tf 169.9 32.0 Td (Prahlin Portfolio Work Log - September 16, 2026 \(Part 1\) Page 1) Tj ET
+endstream
+endobj
+6 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 5 0 R >>
+endobj
+7 0 obj
+<< /Length 5232 >>
+stream
+BT /F1 10.2 Tf 54.0 742.0 Td (- Checked pdfinfo and pdffonts on the latest September 15 and September 12 Part 2 baselines. The) Tj ET
+BT /F1 10.2 Tf 54.0 728.8 Td (  accepted output convention remains US Letter at 612 x 792 points, PDF 1.4, Helvetica and) Tj ET
+BT /F1 10.2 Tf 54.0 715.6 Td (  Helvetica-Bold Type 1 fonts, unencrypted output, and Codex author, creator, and producer metadata.) Tj ET
+BT /F1 10.2 Tf 54.0 696.4 Td (- Reviewed git history and current state through git log, git show --stat, git show --name-status,) Tj ET
+BT /F1 10.2 Tf 54.0 683.2 Td (  git status --short --branch, git rev-parse HEAD, git branch -vv, and current validation output.) Tj ET
+BT /F1 10.2 Tf 54.0 670.0 Td (  Confirmed main points at 439d885 and tracks origin/main before this documentation artifact was) Tj ET
+BT /F1 10.2 Tf 54.0 656.8 Td (  generated.) Tj ET
+BT /F1 10.2 Tf 54.0 637.6 Td (- Reviewed the September 16 source commits in scope: c5814cc Refined landing hero and case study) Tj ET
+BT /F1 10.2 Tf 54.0 624.4 Td (  cards, and 439d885 Aligned Alla Vostra navigation and overview presentation.) Tj ET
+BT /F1 10.2 Tf 54.0 605.2 Td (- Reviewed the implementation files carrying the September 16 work: app/PortfolioSections.tsx,) Tj ET
+BT /F1 10.2 Tf 54.0 592.0 Td (  app/ProjectCarouselButton.tsx, app/globals.css, app/projects/alla-vostra/page.tsx,) Tj ET
+BT /F1 10.2 Tf 54.0 578.8 Td (  app/projects/alla-vostra/ProductFlowSwitcher.tsx, next-env.d.ts, and the refreshed project) Tj ET
+BT /F1 10.2 Tf 54.0 565.6 Td (  snapshot.) Tj ET
+BT /F2 12.0 Tf 54.0 540.4 Td (Baseline Status Before September 16 Work) Tj ET
+BT /F1 10.2 Tf 54.0 521.4 Td (- The September 15 state had introduced the About Dev route, landing profile navigation, fixed About) Tj ET
+BT /F1 10.2 Tf 54.0 508.2 Td (  Dev profile-bubble sizing, My Core Beliefs circular formation, updated Featured Case Studies) Tj ET
+BT /F1 10.2 Tf 54.0 495.0 Td (  quantities, and measured platform/device dividers on case-study cards.) Tj ET
+BT /F1 10.2 Tf 54.0 475.8 Td (- The landing hero device frames still needed the same light-up and slight-magnification behavior as) Tj ET
+BT /F1 10.2 Tf 54.0 462.6 Td (  the profile photo bubble when users hovered or focused the phone and tablet previews.) Tj ET
+BT /F1 10.2 Tf 54.0 443.4 Td (- The Alla Vostra Featured Case Studies card still showed three separate screenshots instead of the) Tj ET
+BT /F1 10.2 Tf 54.0 430.2 Td (  main Overview feature image from the Alla Vostra project page.) Tj ET
+BT /F1 10.2 Tf 54.0 411.0 Td (- The case-study card platform/device grid needed more exact visual parity: horizontal divider) Tj ET
+BT /F1 10.2 Tf 54.0 397.8 Td (  thickness and breathing room needed to match the vertical dividers, the Prahl.dev card needed a) Tj ET
+BT /F1 10.2 Tf 54.0 384.6 Td (  DEVICE row with PHONE, TABLET, and DESK labels, and stray vertical dividers or empty line segments) Tj ET
+BT /F1 10.2 Tf 54.0 371.4 Td (  needed to be removed.) Tj ET
+BT /F1 10.2 Tf 54.0 352.2 Td (- The Alla Vostra project page still used its older local project nav instead of the landing-page) Tj ET
+BT /F1 10.2 Tf 54.0 339.0 Td (  MainNavBar composition, and its section links did not yet reflect the accepted Overview, Demo,) Tj ET
+BT /F1 10.2 Tf 54.0 325.8 Td (  Scope, Product, UI / UX, Stack, and Contact top-to-bottom order.) Tj ET
+BT /F1 10.2 Tf 54.0 306.6 Td (- During narrower views, the expanded Alla Vostra navbar could become cramped, risk a three-row link) Tj ET
+BT /F1 10.2 Tf 54.0 293.4 Td (  layout, or expose separator characters at the start of a wrapped row. The nav also needed to) Tj ET
+BT /F1 10.2 Tf 54.0 280.2 Td (  preserve landing-page-like top spacing and left/right margins while the viewport stretched.) Tj ET
+BT /F1 10.2 Tf 54.0 261.0 Td (- In narrow and portrait Alla Vostra hero layouts, the single visible hero device was slightly right) Tj ET
+BT /F1 10.2 Tf 54.0 247.8 Td (  of center because the rotated device used a top-centered transform origin.) Tj ET
+BT /F1 10.2 Tf 54.0 228.6 Td (- The Overview section still split its four smaller promo screenshots into two pairs inside the) Tj ET
+BT /F1 10.2 Tf 54.0 215.4 Td (  release grids. The requested layout was one running horizontal strip: below both release grids) Tj ET
+BT /F1 10.2 Tf 54.0 202.2 Td (  when the release grids sit two per row, and between App Store and Google Play when the release) Tj ET
+BT /F1 10.2 Tf 54.0 189.0 Td (  grids stack one per row.) Tj ET
+BT /F2 12.0 Tf 54.0 163.8 Td (Goals for September 16 Part 1) Tj ET
+BT /F1 10.2 Tf 54.0 144.8 Td (- Make the landing hero phone and tablet frames light up and magnify slightly on hover or keyboard) Tj ET
+BT /F1 10.2 Tf 54.0 131.6 Td (  focus in the same spirit as the existing profile-photo bubble interaction.) Tj ET
+BT /F1 10.2 Tf 54.0 112.4 Td (- Replace the Alla Vostra case-study card screenshot set with the main Overview feature image, and) Tj ET
+BT /F1 10.2 Tf 54.0 99.2 Td (  align all case-study card platform/device grids around matching horizontal and vertical divider) Tj ET
+BT /F1 10.2 Tf 54.0 86.0 Td (  weights, spacing, labels, and empty-line behavior.) Tj ET
+BT /F1 9.0 Tf 169.9 32.0 Td (Prahlin Portfolio Work Log - September 16, 2026 \(Part 1\) Page 2) Tj ET
+endstream
+endobj
+8 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 7 0 R >>
+endobj
+9 0 obj
+<< /Length 5065 >>
+stream
+BT /F1 10.2 Tf 54.0 742.0 Td (- Reuse the shared landing-page MainNavBar on the Alla Vostra project page while preserving the) Tj ET
+BT /F1 10.2 Tf 54.0 728.8 Td (  page-specific link names, order, anchors, responsive two-row behavior, top spacing, and protected) Tj ET
+BT /F1 10.2 Tf 54.0 715.6 Td (  viewport margins.) Tj ET
+BT /F1 10.2 Tf 54.0 696.4 Td (- Rename and consolidate project-page nav items into Demo, Product, and UI / UX, add actionable Core) Tj ET
+BT /F1 10.2 Tf 54.0 683.2 Td (  Features/Product behavior, and keep legacy UI Foundations and UX Product Flow hashes synchronized) Tj ET
+BT /F1 10.2 Tf 54.0 670.0 Td (  to the correct tab view.) Tj ET
+BT /F1 10.2 Tf 54.0 650.8 Td (- Prevent nav dividers from appearing as the left-most visible character in any responsive row,) Tj ET
+BT /F1 10.2 Tf 54.0 637.6 Td (  especially when Scope begins the lower row in the two-row layout.) Tj ET
+BT /F1 10.2 Tf 54.0 618.4 Td (- Center the single visible Alla Vostra hero device and screenshot in narrow and portrait layouts) Tj ET
+BT /F1 10.2 Tf 54.0 605.2 Td (  without introducing horizontal overflow.) Tj ET
+BT /F1 10.2 Tf 54.0 586.0 Td (- Move the four smaller Overview promo screenshots into one non-wrapping horizontal row, placing) Tj ET
+BT /F1 10.2 Tf 54.0 572.8 Td (  that row below both release grids for the two-grids-per-row layout and between the App Store and) Tj ET
+BT /F1 10.2 Tf 54.0 559.6 Td (  Google Play grids for the one-grid-per-row layout.) Tj ET
+BT /F1 10.2 Tf 54.0 540.4 Td (- Validate TypeScript, production build output, route generation, responsive browser geometry where) Tj ET
+BT /F1 10.2 Tf 54.0 527.2 Td (  layout precision matters, and Next.js generated route-import cleanup before producing the PDF.) Tj ET
+BT /F2 12.0 Tf 54.0 502.0 Td (Work Completed - Landing Hero and Case Study Cards) Tj ET
+BT /F1 10.2 Tf 54.0 483.0 Td (- Added light-up hover and focus-visible behavior to the landing hero phone and tablet shells by) Tj ET
+BT /F1 10.2 Tf 54.0 469.8 Td (  sharing the profile-bubble style language: a slight upward shift, a 1.02 scale factor,) Tj ET
+BT /F1 10.2 Tf 54.0 456.6 Td (  brighter/saturated rendering, and green-tinted drop-shadow emphasis.) Tj ET
+BT /F1 10.2 Tf 54.0 437.4 Td (- Kept the interaction scoped to the device shells themselves so the existing hero composition,) Tj ET
+BT /F1 10.2 Tf 54.0 424.2 Td (  profile orbit, device depth ordering, and landing copy layout remain intact.) Tj ET
+BT /F1 10.2 Tf 54.0 405.0 Td (- Swapped the Alla Vostra case-study card media from a three-screenshot strip to the main Overview) Tj ET
+BT /F1 10.2 Tf 54.0 391.8 Td (  feature image, matching the user's request for the card to show the primary Overview photo rather) Tj ET
+BT /F1 10.2 Tf 54.0 378.6 Td (  than multiple smaller frames.) Tj ET
+BT /F1 10.2 Tf 54.0 359.4 Td (- Adjusted case-study card divider treatment so horizontal divider thickness visually matches the) Tj ET
+BT /F1 10.2 Tf 54.0 346.2 Td (  vertical dividers and gains a little additional vertical space above and below it.) Tj ET
+BT /F1 10.2 Tf 54.0 327.0 Td (- Added DEVICE support to the Prahl.dev case-study card and populated it with PHONE, TABLET, and) Tj ET
+BT /F1 10.2 Tf 54.0 313.8 Td (  DESK labels, using DESK after the user clarified that COMP should read as DESK.) Tj ET
+BT /F1 10.2 Tf 54.0 294.6 Td (- Restored and tuned the Prahl.dev horizontal divider after review so the card mirrors the) Tj ET
+BT /F1 10.2 Tf 54.0 281.4 Td (  platform/device grid language used by the other project cards.) Tj ET
+BT /F1 10.2 Tf 54.0 262.2 Td (- Removed the unwanted vertical divider segment that rose above the TABLET/DESK horizontal divider,) Tj ET
+BT /F1 10.2 Tf 54.0 249.0 Td (  while preserving the intended divider structure around labeled platform/device cells.) Tj ET
+BT /F1 10.2 Tf 54.0 229.8 Td (- Standardized vertical spacing above and below the DEVICE/PLATFORM grid, first matching Prahl.dev) Tj ET
+BT /F1 10.2 Tf 54.0 216.6 Td (  to the accepted values and then matching the other three cards to that same spacing system.) Tj ET
+BT /F1 10.2 Tf 54.0 197.4 Td (- Closed the empty vertical gap between the DESK vertical divider and the Prahl.dev horizontal) Tj ET
+BT /F1 10.2 Tf 54.0 184.2 Td (  divider so the divider grid reads as one continuous, intentional structure.) Tj ET
+BT /F2 12.0 Tf 54.0 159.0 Td (Work Completed - Alla Vostra Navigation) Tj ET
+BT /F1 10.2 Tf 54.0 140.0 Td (- Extended MainNavBar so it accepts a custom aria-label and item list while preserving the existing) Tj ET
+BT /F1 10.2 Tf 54.0 126.8 Td (  context-based home/about behavior for other pages.) Tj ET
+BT /F1 10.2 Tf 54.0 107.6 Td (- Replaced the Alla Vostra project page's older local nav markup with the shared MainNavBar wrapped) Tj ET
+BT /F1 10.2 Tf 54.0 94.4 Td (  in project-nav-frame, bringing the page navigation into visual alignment with the landing-page nav) Tj ET
+BT /F1 10.2 Tf 54.0 81.2 Td (  while keeping page-specific links.) Tj ET
+BT /F1 9.0 Tf 169.9 32.0 Td (Prahlin Portfolio Work Log - September 16, 2026 \(Part 1\) Page 3) Tj ET
+endstream
+endobj
+10 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 9 0 R >>
+endobj
+11 0 obj
+<< /Length 4813 >>
+stream
+BT /F1 10.2 Tf 54.0 742.0 Td (- Built the Alla Vostra nav item list as Prahl.dev, Overview, Demo, Scope, Product, UI / UX, Stack,) Tj ET
+BT /F1 10.2 Tf 54.0 728.8 Td (  and Contact, matching the project page's top-to-bottom section order and the final user-approved) Tj ET
+BT /F1 10.2 Tf 54.0 715.6 Td (  label names.) Tj ET
+BT /F1 10.2 Tf 54.0 696.4 Td (- Renamed the earlier Flow, Interactive Demo, Core Features, and UI Foundations / UX Product Flow) Tj ET
+BT /F1 10.2 Tf 54.0 683.2 Td (  language into the accepted Demo, Product, and UI / UX navbar copy.) Tj ET
+BT /F1 10.2 Tf 54.0 664.0 Td (- Added id='core-features' to the Core Features/Product section so the Product nav link scrolls to) Tj ET
+BT /F1 10.2 Tf 54.0 650.8 Td (  the correct section instead of being a non-actionable label.) Tj ET
+BT /F1 10.2 Tf 54.0 631.6 Td (- Kept UI / UX anchored to the product-flow section and added hash synchronization in) Tj ET
+BT /F1 10.2 Tf 54.0 618.4 Td (  ProductFlowSwitcher so legacy #ui-foundations and #ux-product-flow deep links still select the) Tj ET
+BT /F1 10.2 Tf 54.0 605.2 Td (  correct UI or UX view.) Tj ET
+BT /F1 10.2 Tf 54.0 586.0 Td (- Removed the leftmost divider before Overview in the Alla Vostra nav while preserving the rest of) Tj ET
+BT /F1 10.2 Tf 54.0 572.8 Td (  the divider system and preventing divider removal during narrow responsive stretching.) Tj ET
+BT /F1 10.2 Tf 54.0 553.6 Td (- Added Alla Vostra-specific responsive nav CSS to keep the page in a two-row layout before it) Tj ET
+BT /F1 10.2 Tf 54.0 540.4 Td (  becomes cramped, allow more than one project-section link in the top row, and avoid a three-row) Tj ET
+BT /F1 10.2 Tf 54.0 527.2 Td (  link stack.) Tj ET
+BT /F1 10.2 Tf 54.0 508.0 Td (- Protected the nav's left and right margins and top-edge spacing during viewport stretching,) Tj ET
+BT /F1 10.2 Tf 54.0 494.8 Td (  matching the landing-page shell behavior instead of letting the project nav hug the screen edge.) Tj ET
+BT /F1 10.2 Tf 54.0 475.6 Td (- Hid the row-leading separator in every two-row breakpoint, including the very narrow override that) Tj ET
+BT /F1 10.2 Tf 54.0 462.4 Td (  re-enabled internal separators, so Scope is the leftmost visible item when the lower row starts.) Tj ET
+BT /F2 12.0 Tf 54.0 437.2 Td (Work Completed - Alla Vostra Hero and Overview) Tj ET
+BT /F1 10.2 Tf 54.0 418.2 Td (- Matched the vertical space above the <- Case Studies link in the Alla Vostra hero to the space) Tj ET
+BT /F1 10.2 Tf 54.0 405.0 Td (  below it so the back-link rhythm reads balanced against the hero title block.) Tj ET
+BT /F1 10.2 Tf 54.0 385.8 Td (- Re-centered the lone Alla Vostra hero device in narrow and portrait layouts by rotating the mobile) Tj ET
+BT /F1 10.2 Tf 54.0 372.6 Td (  hero device around its own center instead of the top edge, eliminating the measured rightward) Tj ET
+BT /F1 10.2 Tf 54.0 359.4 Td (  drift in the screenshot's visual bounds.) Tj ET
+BT /F1 10.2 Tf 54.0 340.2 Td (- Confirmed the single-device layout centers cleanly from 720px down to 320px wide, with no) Tj ET
+BT /F1 10.2 Tf 54.0 327.0 Td (  horizontal overflow and with the side devices intentionally hidden in the narrow hero composition.) Tj ET
+BT /F1 10.2 Tf 54.0 307.8 Td (- Combined the four smaller Overview promo screenshots into overviewPromoScreenshots so the section) Tj ET
+BT /F1 10.2 Tf 54.0 294.6 Td (  renders a single source-driven promo strip rather than two duplicate per-release image pairs.) Tj ET
+BT /F1 10.2 Tf 54.0 275.4 Td (- Placed the promo strip between the App Store and Google Play release blocks in the DOM, then used) Tj ET
+BT /F1 10.2 Tf 54.0 262.2 Td (  grid placement to make it span below both release grids when the release area uses two columns.) Tj ET
+BT /F1 10.2 Tf 54.0 243.0 Td (- Added stacked-layout rules for phone-width and portrait tablet views so the same one-row promo) Tj ET
+BT /F1 10.2 Tf 54.0 229.8 Td (  strip appears between the App Store and Google Play release grids when the releases become one) Tj ET
+BT /F1 10.2 Tf 54.0 216.6 Td (  grid per row.) Tj ET
+BT /F1 10.2 Tf 54.0 197.4 Td (- Forced the overview promo strip to repeat\(4, minmax\(0, 1fr\)\) at all tested widths, keeping all) Tj ET
+BT /F1 10.2 Tf 54.0 184.2 Td (  four images in one running horizontal row rather than wrapping into two rows.) Tj ET
+BT /F1 10.2 Tf 54.0 165.0 Td (- Updated the image size hint for the four-up promo row so the browser can choose appropriately) Tj ET
+BT /F1 10.2 Tf 54.0 151.8 Td (  sized assets when the row compresses on phone-width screens.) Tj ET
+BT /F2 12.0 Tf 54.0 126.6 Td (Validation Summary) Tj ET
+BT /F1 10.2 Tf 54.0 107.6 Td (- npm run check passed during this documentation pass with tsc --noEmit.) Tj ET
+BT /F1 9.0 Tf 169.9 32.0 Td (Prahlin Portfolio Work Log - September 16, 2026 \(Part 1\) Page 4) Tj ET
+endstream
+endobj
+12 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 11 0 R >>
+endobj
+13 0 obj
+<< /Length 4612 >>
+stream
+BT /F1 10.2 Tf 54.0 742.0 Td (- npm run build passed during this documentation pass with Next.js 16.2.10, Turbopack compilation,) Tj ET
+BT /F1 10.2 Tf 54.0 728.8 Td (  TypeScript, page-data collection, and seven static app routes generated successfully.) Tj ET
+BT /F1 10.2 Tf 54.0 709.6 Td (- The build route list included /, /_not-found, /aboutdev, /articles, /projects/alla-vostra, and) Tj ET
+BT /F1 10.2 Tf 54.0 696.4 Td (  /projects/cinerific.) Tj ET
+BT /F1 10.2 Tf 54.0 677.2 Td (- Restored next-env.d.ts from the generated production route reference back to import) Tj ET
+BT /F1 10.2 Tf 54.0 664.0 Td (  "./.next/dev/types/routes.d.ts" after npm run build rewrote it.) Tj ET
+BT /F1 10.2 Tf 54.0 644.8 Td (- Browser measurements during the source session confirmed the Alla Vostra nav lower row begins with) Tj ET
+BT /F1 10.2 Tf 54.0 631.6 Td (  Scope and hides the row-leading separator across 1180, 1100, 980, 720, 600, 560, 430, 380, 340,) Tj ET
+BT /F1 10.2 Tf 54.0 618.4 Td (  and 320px widths.) Tj ET
+BT /F1 10.2 Tf 54.0 599.2 Td (- Browser measurements during the source session confirmed the Alla Vostra single hero device and) Tj ET
+BT /F1 10.2 Tf 54.0 586.0 Td (  screenshot centerline matched the showcase center at 720, 600, 560, 430, 390, 360, 340, and 320px) Tj ET
+BT /F1 10.2 Tf 54.0 572.8 Td (  widths, with zero horizontal overflow.) Tj ET
+BT /F1 10.2 Tf 54.0 553.6 Td (- Browser measurements during the source session confirmed the Overview promo strip contains four) Tj ET
+BT /F1 10.2 Tf 54.0 540.4 Td (  figures sharing one top coordinate, below both release grids in two-column mode and between the) Tj ET
+BT /F1 10.2 Tf 54.0 527.2 Td (  release grids in portrait or phone stacked mode.) Tj ET
+BT /F1 10.2 Tf 54.0 508.0 Td (- Reviewed git status after validation. Before PDF generation, next-env.d.ts had no remaining diff) Tj ET
+BT /F1 10.2 Tf 54.0 494.8 Td (  and the only tracked delta was the refreshed portfolio_PROJECT_SNAPSHOT.txt file.) Tj ET
+BT /F2 12.0 Tf 54.0 469.6 Td (Files Touched and Artifacts) Tj ET
+BT /F1 10.2 Tf 54.0 450.6 Td (- app/PortfolioSections.tsx - added custom MainNavBar item and aria-label support, updated Alla) Tj ET
+BT /F1 10.2 Tf 54.0 437.4 Td (  Vostra card media behavior, and preserved shared nav row rendering for the landing page and) Tj ET
+BT /F1 10.2 Tf 54.0 424.2 Td (  project pages.) Tj ET
+BT /F1 10.2 Tf 54.0 405.0 Td (- app/ProjectCarouselButton.tsx - refined case-study platform/device grid rendering, divider) Tj ET
+BT /F1 10.2 Tf 54.0 391.8 Td (  measurement, Prahl.dev DEVICE labels, and empty-divider behavior.) Tj ET
+BT /F1 10.2 Tf 54.0 372.6 Td (- app/globals.css - added landing device hover lighting, case-card divider/spacing polish, Alla) Tj ET
+BT /F1 10.2 Tf 54.0 359.4 Td (  Vostra nav frame and responsive nav rules, protected project nav margins, hero-device centering,) Tj ET
+BT /F1 10.2 Tf 54.0 346.2 Td (  and overview promo-strip placement.) Tj ET
+BT /F1 10.2 Tf 54.0 327.0 Td (- app/projects/alla-vostra/page.tsx - replaced the local project nav with MainNavBar, defined the) Tj ET
+BT /F1 10.2 Tf 54.0 313.8 Td (  page-specific nav links, added the Core Features/Product anchor, and consolidated four promo) Tj ET
+BT /F1 10.2 Tf 54.0 300.6 Td (  screenshots into one Overview strip.) Tj ET
+BT /F1 10.2 Tf 54.0 281.4 Td (- app/projects/alla-vostra/ProductFlowSwitcher.tsx - added hash synchronization for legacy UI) Tj ET
+BT /F1 10.2 Tf 54.0 268.2 Td (  Foundations and UX Product Flow deep links.) Tj ET
+BT /F1 10.2 Tf 54.0 249.0 Td (- next-env.d.ts - temporarily changed by npm run build and restored to the repository's dev route) Tj ET
+BT /F1 10.2 Tf 54.0 235.8 Td (  import convention before PDF generation.) Tj ET
+BT /F1 10.2 Tf 54.0 216.6 Td (- portfolio_PROJECT_SNAPSHOT.txt - refreshed through ./read_project.sh for this September 16 Part 1) Tj ET
+BT /F1 10.2 Tf 54.0 203.4 Td (  documentation pass.) Tj ET
+BT /F1 10.2 Tf 54.0 184.2 Td (- portfolio_worklog_september16_part1.pdf - generated as this new root-level dated Portfolio) Tj ET
+BT /F1 10.2 Tf 54.0 171.0 Td (  documentation artifact.) Tj ET
+BT /F2 12.0 Tf 54.0 145.8 Td (Follow-Up Context) Tj ET
+BT /F1 10.2 Tf 54.0 126.8 Td (- The Alla Vostra project nav now intentionally uses the shared landing-page nav component. Future) Tj ET
+BT /F1 10.2 Tf 54.0 113.6 Td (  nav edits should preserve the custom item list, page-section order, aria-label, two-row responsive) Tj ET
+BT /F1 10.2 Tf 54.0 100.4 Td (  behavior, and hidden row-leading separator.) Tj ET
+BT /F1 9.0 Tf 169.9 32.0 Td (Prahlin Portfolio Work Log - September 16, 2026 \(Part 1\) Page 5) Tj ET
+endstream
+endobj
+14 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 13 0 R >>
+endobj
+15 0 obj
+<< /Length 3754 >>
+stream
+BT /F1 10.2 Tf 54.0 742.0 Td (- The accepted Alla Vostra nav labels are Overview, Demo, Scope, Product, UI / UX, Stack, and) Tj ET
+BT /F1 10.2 Tf 54.0 728.8 Td (  Contact. UI / UX intentionally points to the combined product-flow section rather than separate) Tj ET
+BT /F1 10.2 Tf 54.0 715.6 Td (  top-nav links for UI Foundations and UX Product Flow.) Tj ET
+BT /F1 10.2 Tf 54.0 696.4 Td (- Legacy #ui-foundations and #ux-product-flow hashes still matter for deep links;) Tj ET
+BT /F1 10.2 Tf 54.0 683.2 Td (  ProductFlowSwitcher now maps those hashes to the corresponding view.) Tj ET
+BT /F1 10.2 Tf 54.0 664.0 Td (- The landing hero device hover treatment is intentionally aligned with the profile-photo bubble:) Tj ET
+BT /F1 10.2 Tf 54.0 650.8 Td (  small scale, slight lift, and green glow without changing the wider hero composition.) Tj ET
+BT /F1 10.2 Tf 54.0 631.6 Td (- The Prahl.dev case-study card now includes PHONE, TABLET, and DESK under DEVICE. Do not revert) Tj ET
+BT /F1 10.2 Tf 54.0 618.4 Td (  DESK back to COMP unless the user explicitly asks.) Tj ET
+BT /F1 10.2 Tf 54.0 599.2 Td (- The Overview promo screenshots are intentionally one row at every responsive mode. In) Tj ET
+BT /F1 10.2 Tf 54.0 586.0 Td (  two-release-column mode the strip spans below both grids; in portrait or phone stacked mode it) Tj ET
+BT /F1 10.2 Tf 54.0 572.8 Td (  sits between App Store and Google Play.) Tj ET
+BT /F1 10.2 Tf 54.0 553.6 Td (- The single Alla Vostra hero device is centered through transform-origin: center center in the) Tj ET
+BT /F1 10.2 Tf 54.0 540.4 Td (  narrow device rule. Future rotation or origin changes should be checked against the measured) Tj ET
+BT /F1 10.2 Tf 54.0 527.2 Td (  visual center, not only the unrotated layout box.) Tj ET
+BT /F1 10.2 Tf 54.0 508.0 Td (- The project remains on the established Portfolio workflow: local implementation and verification) Tj ET
+BT /F1 10.2 Tf 54.0 494.8 Td (  first, with public deployment or Hostinger synchronization only when the user explicitly asks for) Tj ET
+BT /F1 10.2 Tf 54.0 481.6 Td (  it.) Tj ET
+BT /F2 12.0 Tf 54.0 456.4 Td (Output Artifact) Tj ET
+BT /F1 10.2 Tf 54.0 437.4 Td (- Generated: /Users/prahlin/gh/portfolio/portfolio_worklog_september16_part1.pdf) Tj ET
+BT /F1 10.2 Tf 54.0 418.2 Td (- Companion sync file: /Users/prahlin/gh/portfolio/portfolio_PROJECT_SNAPSHOT.txt) Tj ET
+BT /F1 10.2 Tf 54.0 399.0 Td (- Source state reviewed: 439d885039e2a4a3ecaeeb4c87b32c2c166041ca on main, matching origin/main) Tj ET
+BT /F1 10.2 Tf 54.0 385.8 Td (  before PDF generation.) Tj ET
+BT /F1 10.2 Tf 54.0 366.6 Td (- Naming follows the user's requested same-day part convention:) Tj ET
+BT /F1 10.2 Tf 54.0 353.4 Td (  portfolio_worklog_september16_part1.pdf, even though no earlier September 16 Portfolio PDF existed) Tj ET
+BT /F1 10.2 Tf 54.0 340.2 Td (  before this artifact.) Tj ET
+BT /F1 10.2 Tf 54.0 321.0 Td (- The document records the landing hero and case-study-card refinements, Alla Vostra navigation) Tj ET
+BT /F1 10.2 Tf 54.0 307.8 Td (  alignment, responsive divider behavior, single-device hero centering, Overview promo-strip) Tj ET
+BT /F1 10.2 Tf 54.0 294.6 Td (  reorganization, validation, committed source context, refreshed snapshot, and documentation work) Tj ET
+BT /F1 10.2 Tf 54.0 281.4 Td (  in the established Prahlin Portfolio format.) Tj ET
+BT /F1 10.2 Tf 54.0 262.2 Td (- This worklog closes the September 16 Part 1 documentation pass. No source commit, push,) Tj ET
+BT /F1 10.2 Tf 54.0 249.0 Td (  deployment, public publish, or Hostinger synchronization was performed as part of generating the) Tj ET
+BT /F1 10.2 Tf 54.0 235.8 Td (  PDF.) Tj ET
+BT /F1 9.0 Tf 169.9 32.0 Td (Prahlin Portfolio Work Log - September 16, 2026 \(Part 1\) Page 6) Tj ET
+endstream
+endobj
+16 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 15 0 R >>
+endobj
+17 0 obj
+<< /Title (Prahlin Portfolio Work Log - September 16, 2026 \(Part 1\)) /Subject (Portfolio website development worklog) /Author (Codex) /Creator (Codex standard-library PDF generator) /Producer (Codex standard-library PDF generator) /CreationDate (D:20260916071718-04'00') /ModDate (D:20260916071718-04'00') >>
+endobj
+xref
+0 18
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000155 00000 n 
+0000000252 00000 n 
+0000000354 00000 n 
+0000006015 00000 n 
+0000006151 00000 n 
+0000011435 00000 n 
+0000011571 00000 n 
+0000016688 00000 n 
+0000016825 00000 n 
+0000021691 00000 n 
+0000021829 00000 n 
+0000026494 00000 n 
+0000026632 00000 n 
+0000030439 00000 n 
+0000030577 00000 n 
+trailer
+<< /Size 18 /Root 1 0 R /Info 17 0 R >>
+startxref
+30904
+%%EOF
