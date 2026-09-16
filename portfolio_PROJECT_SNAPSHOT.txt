@@ -1,5 +1,5 @@
 Portfolio Next.js PROJECT SNAPSHOT
-Generated: Tue Sep 15 22:41:17 EDT 2026
+Generated: Tue Sep 15 22:51:17 EDT 2026
 Project directory: /Users/prahlin/gh/portfolio
 
 IMPORTANT INSTRUCTIONS FOR CHATGPT & CODEX:
@@ -23946,13 +23946,11 @@ main
 
 Status:
 ## main...origin/main
- M app/ProjectCarouselButton.tsx
- M app/globals.css
- M app/page.tsx
  M portfolio_PROJECT_SNAPSHOT.txt
 
 Recent commits:
-9708a3b (HEAD -> main, origin/main, origin/HEAD) Refined About Dev core beliefs presentation
+076def6 (HEAD -> main, origin/main, origin/HEAD) Refined landing case study proof details
+9708a3b Refined About Dev core beliefs presentation
 06c9cea Added About Dev page and portfolio proof updates
 bf7c133 Generated the latest customary session pdf worklog for the relevant project, dated September 12 (Part 2), 2026.
 b5c85aa Refined landing-page presentation and Alla Vostra UX flow
@@ -23961,7 +23959,6 @@ fd743d3 Generated the latest customary session pdf worklog for the relevant proj
 707ee0f Generated the latest customary session pdf worklog for the relevant project, dated September 11, 2026.
 d2cd710 Refined Alla Vostra project page interactions, content, and release overview
 579a537 Generated the latest customary session pdf worklog for the relevant project, dated September 9, 2026.
-ae7ce4b Refreshed Alla Vostra case study around current app build
 
 Remotes:
 origin	https://github.com/Prahlin/portfolio.git (fetch)

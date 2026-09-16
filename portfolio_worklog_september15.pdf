@@ -1,0 +1,389 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [ 6 0 R 8 0 R 10 0 R 12 0 R 14 0 R 16 0 R ] /Count 6 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+5 0 obj
+<< /Length 6948 >>
+stream
+BT /F2 11.40 Tf 1 0 0 1 54.00 742.00 Tm (Prahlin Portfolio Work Log - September 15, 2026) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 725.60 Tm (Compiled summary for Tuesday, September 15, 2026 - focus: continuing the Prahl.dev Portfolio work after) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 713.45 Tm (the September 12 Part 2 documentation state, verifying the United States Eastern date, refreshing the) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 701.30 Tm (current project snapshot, extracting and studying all thirty-seven pre-existing Portfolio PDF worklogs,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 689.15 Tm (designing three About Dev page mockups, implementing the selected Builder Story direction at /aboutdev,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 677.00 Tm (wiring the landing-page profile photo to the new route, preserving local-only delivery expectations) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 664.85 Tm (during the page work, resizing and centering the About Dev profile bubble through wide, restacked,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 652.70 Tm (narrow, and portrait views, matching the page navigation gap to the rest of the site, replacing draft) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 640.55 Tm (belief-card language with the requested My Core Beliefs copy, transforming the belief system from) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 628.40 Tm (rectangular cards into a circular proof-card formation with a transparent stroke-only center star,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 616.25 Tm (updating Featured Case Studies commit and worklog quantities, adding measured horizontal dividers) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 604.10 Tm (between the PLATFORM and DEVICE rows on project cards, raising the landing proof worklog stat to 0.2k,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 591.95 Tm (clearing local development cache during the responsive tuning pass, validating TypeScript and static) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 579.80 Tm (export health, restoring the Next.js dev route reference after the static build, documenting committed) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 567.65 Tm (source state 076def6, and generating the September 15 Portfolio PDF worklog.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 547.60 Tm (Generated in continuity with the established Prahlin Portfolio daily worklog cadence: compact opening) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 535.45 Tm (summary, source-material section, baseline section, goal list, work-completed sections, validation) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 523.30 Tm (section, files-touched list, follow-up context, and output-artifact close.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 503.25 Tm (This artifact intentionally covers Prahlin/portfolio work performed after) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 491.10 Tm (portfolio_worklog_september12_part2.pdf and after the September 12 Part 2 documentation state. The) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 478.95 Tm (source state reviewed for this record is 076def6c932e852b6372c5043a302790aacf536a on main, matching) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 466.80 Tm (origin/main before this PDF was generated, titled Refined landing case study proof details. The latest) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 454.65 Tm (source commits in scope are 06c9cea Added About Dev page and portfolio proof updates, 9708a3b Refined) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 442.50 Tm (About Dev core beliefs presentation, and 076def6 Refined landing case study proof details. No Hostinger) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 430.35 Tm (deploy-branch work, production publish, or source commit/push was performed during this PDF-generation) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 418.20 Tm (pass. The local documentation delta created before this PDF was the refreshed) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 406.05 Tm (portfolio_PROJECT_SNAPSHOT.txt file; this PDF is the new September 15 root-level documentation artifact.) Tj ET
+BT /F2 10.20 Tf 1 0 0 1 54.00 382.97 Tm (Source Materials Reviewed) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 367.78 Tm (- Verified the United States Eastern date with TZ=America/New_York date from) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 355.63 Tm (  /Users/prahlin/gh/portfolio, which reported Tuesday, September 15, 2026 at 10:49 PM EDT with UTC) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 343.48 Tm (  offset -0400. The worklog therefore uses September 15, 2026, even though repository and external) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 331.33 Tm (  systems may already be near or past the UTC date boundary.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 316.75 Tm (- Ran ./read_project.sh from /Users/prahlin/gh/portfolio and regenerated portfolio_PROJECT_SNAPSHOT.txt) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 304.60 Tm (  before writing this worklog, preserving the Portfolio convention that the current source snapshot is) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 292.45 Tm (  refreshed before session documentation.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 277.87 Tm (- Reviewed the refreshed portfolio_PROJECT_SNAPSHOT.txt for the current source tree, public image and) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 265.72 Tm (  PDF inventories, package scripts, git context, recent commits, generated-cache policy, route) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 253.57 Tm (  structure, source dumps, and standing local workflow notes.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 238.99 Tm (- Extracted and studied all thirty-seven pre-existing root-level Portfolio PDF worklogs with pdftotext:) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 226.84 Tm (  the July 11, 14, 15 Part 1, 15 Part 2, 16, 19, 20, 21, 22, 23, 24, 25, 29, 30, and 31 records; the) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 214.69 Tm (  August 1 Parts 1-3, August 3, 4, 5, 6, 10 Parts 1-2, 11, 12 Parts 1-2, 14, 16, and 24 records; and the) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 202.54 Tm (  September 7, September 8, September 8 Part 2, September 9, September 11, September 12 Part 1, and) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 190.39 Tm (  September 12 Part 2 records.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 175.81 Tm (- Compared the complete PDF series for title cadence, root-level filename conventions, same-day part) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 163.66 Tm (  suffixes, opening-summary density, source-material language, baseline and goal framing, bullet-heavy) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 151.51 Tm (  technical voice, validation wording, files-touched treatment, follow-up continuity, and) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 139.36 Tm (  output-artifact closure.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 124.78 Tm (- Checked pdfinfo and pdffonts on the latest September 12 Part 2 baseline. The accepted output) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 112.63 Tm (  convention remains US Letter at 612 x 792 points, PDF 1.4, Helvetica and Helvetica-Bold Type 1 fonts,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 100.48 Tm (  an unencrypted document, and Codex author, creator, and producer metadata.) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 293.00 28.00 Tm (Prahlin Portfolio Work Log - September 15, 2026 Page 1) Tj ET
+endstream
+endobj
+6 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 5 0 R >>
+endobj
+7 0 obj
+<< /Length 6492 >>
+stream
+BT /F1 9.15 Tf 1 0 0 1 54.00 742.00 Tm (- Reviewed the September 15 commit history through git log, git show --stat, git show --name-status, git) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 729.85 Tm (  status, git rev-parse, and git branch -vv. Confirmed main points at 076def6 and tracks origin/main) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 717.70 Tm (  before this documentation artifact was generated.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 703.12 Tm (- Reviewed the current implementation files that carry the September 15 work: app/aboutdev/page.tsx,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 690.97 Tm (  app/PortfolioSections.tsx, app/ProjectCarouselButton.tsx, app/page.tsx, app/globals.css, the About Dev) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 678.82 Tm (  mockup assets under mockups/, and the refreshed project snapshot.) Tj ET
+BT /F2 10.20 Tf 1 0 0 1 54.00 661.20 Tm (Baseline Status Before September 15 Work) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 646.02 Tm (- The September 12 Part 2 state had removed Articles from the visible navbar while preserving the route,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 633.87 Tm (  unified landing and Alla Vostra proof-stat typography, refined Alla Vostra UX Product Flow language,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 621.72 Tm (  and enlarged the landing-page Martin Prahl tag.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 607.14 Tm (- The portfolio did not yet have an About Dev route. The landing-page profile portrait remained a visual) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 594.99 Tm (  identity element rather than a direct navigation affordance, and the main nav did not have About Dev) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 582.84 Tm (  active-state behavior.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 568.26 Tm (- The user wanted three mockups for an About Dev page suitable for a full-stack developer, then selected) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 556.11 Tm (  the Builder Story direction for implementation under the file and route name aboutdev.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 541.53 Tm (- The first About Dev build needed repeated profile-bubble tuning. The original page portrait was too) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 529.38 Tm (  large, the available image set did not include a transparent-background cutout, and the final) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 517.23 Tm (  direction was to use the same circular landing portrait bubble and name-tag relationship instead of a) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 505.08 Tm (  new image treatment.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 490.50 Tm (- During narrow and portrait restacking, the profile bubble was snapping smaller than intended and) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 478.35 Tm (  needed to stay at the same 282px rendered size while staying horizontally centered under the hero) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 466.20 Tm (  copy.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 451.62 Tm (- The top navigation on About Dev initially sat too close to the viewport edge compared with other) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 439.47 Tm (  pages, so the page needed the same persistent small vertical gap above the nav.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 424.89 Tm (- The initial Core Beliefs section used rectangular cards and draft software-principle language. The) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 412.74 Tm (  user supplied exact replacement copy, renamed headings, reordered the cards, removed the Readiness) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 400.59 Tm (  card, and then requested circular proof cards arranged around a star centerpiece.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 386.01 Tm (- The landing Featured Case Studies cards already showed platform and device labels, but there was no) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 373.86 Tm (  horizontal divider between PLATFORM and DEVICE, and the card proof stats and landing proof-stack) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 361.71 Tm (  worklog count needed final updates.) Tj ET
+BT /F2 10.20 Tf 1 0 0 1 54.00 344.09 Tm (Goals for September 15) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 328.90 Tm (- Create three visual mockups for a full-stack developer About Dev page and implement the selected 02) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 316.75 Tm (  Builder Story direction at /aboutdev.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 302.17 Tm (- Wire click and tap on the landing-page profile photo so it navigates to the new About Dev page while) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 290.02 Tm (  preserving the existing portrait, tag, hover, and focus identity treatment.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 275.44 Tm (- Keep the work local during the page implementation unless explicitly told otherwise, including no) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 263.29 Tm (  production publish from this session.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 248.71 Tm (- Match the About Dev profile bubble to the round landing portrait treatment, scale it to the accepted) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 236.56 Tm (  fixed size, keep the name tag proportional, prevent narrow-viewport shrinking, and center it during) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 224.41 Tm (  restacked hero layouts.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 209.83 Tm (- Bring the About Dev navbar spacing into line with the other pages by keeping a small vertical gap) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 197.68 Tm (  above the top nav rather than snapping the nav to the viewport edge.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 183.10 Tm (- Replace draft Core Beliefs language with the user supplied headings and exact text snippets, then) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 170.95 Tm (  rework the section into five circular cards around a black-and-green stroke-only star for wide and) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 158.80 Tm (  medium-wide layouts.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 144.22 Tm (- On really narrow views, switch the Core Beliefs formation to one circular card at a time, horizontally) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 132.07 Tm (  centered, with the decorative star hidden only in that narrow fallback.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 117.49 Tm (- Update Featured Case Studies card quantities, raise the landing worklog proof stat to 0.2k, and add a) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 105.34 Tm (  thin measured horizontal divider between PLATFORM and DEVICE rows that extends symmetrically across) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 93.19 Tm (  the right-side platform/device column area.) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 293.00 28.00 Tm (Prahlin Portfolio Work Log - September 15, 2026 Page 2) Tj ET
+endstream
+endobj
+8 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 7 0 R >>
+endobj
+9 0 obj
+<< /Length 6310 >>
+stream
+BT /F1 9.15 Tf 1 0 0 1 54.00 742.00 Tm (- Clear local development cache when requested, verify responsive behavior in browser where layout) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 729.85 Tm (  precision matters, run TypeScript and static-export checks, restore generated Next.js route metadata,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 717.70 Tm (  refresh the snapshot, and document the final committed source accurately.) Tj ET
+BT /F2 10.20 Tf 1 0 0 1 54.00 700.08 Tm (Work Completed - About Dev Mockups and Route) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 684.90 Tm (- Created a three-option About Dev mockup board covering Systems Proof, Builder Story, and Operating) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 672.75 Tm (  Manual directions, then preserved the selected Builder Story option as the implementation reference.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 658.17 Tm (- Added app/aboutdev/page.tsx with route metadata, a hero narrative, proof chips, a profile figure, an) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 646.02 Tm (  evidence-based timeline, a working-style quote band, My Core Beliefs, and a case-study/contact CTA) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 633.87 Tm (  block.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 619.29 Tm (- Built the page around full-stack developer proof instead of biography filler: design systems, native) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 607.14 Tm (  commerce, API contracts, release notes, documentation, shipped mobile products, payment rails, and) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 594.99 Tm (  inspectable process artifacts.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 580.41 Tm (- Imported the shared MainNavBar with context="aboutdev" so the About Dev page uses the same navigation) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 568.26 Tm (  component as the rest of the portfolio while marking the About Dev item as the active local context.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 553.68 Tm (- Wired the landing hero profile photo in app/page.tsx to href="/aboutdev" with an accessible) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 541.53 Tm (  aria-label, preserving the visible portrait and Martin Prahl name tag while turning the image into a) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 529.38 Tm (  real click/tap target.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 514.80 Tm (- Added hover and focus-visible styling for the profile photo link in app/globals.css so the new) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 502.65 Tm (  interaction has keyboard-visible affordance without changing the accepted landing-page portrait) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 490.50 Tm (  composition.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 475.92 Tm (- Kept About Dev as a local route during implementation. The page was added to the source tree and later) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 463.77 Tm (  validated through the static route list, but no production deployment or Hostinger publish was) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 451.62 Tm (  performed by the PDF-generation pass.) Tj ET
+BT /F2 10.20 Tf 1 0 0 1 54.00 434.00 Tm (Work Completed - Profile Bubble, Nav, and Responsive Layout) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 418.81 Tm (- Replaced the first About Dev profile treatment with the exact round portrait image bubble language) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 406.66 Tm (  used on the landing page, using /images/martin3.jpg and the same circular profile-photo class lineage.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 392.08 Tm (- Confirmed there was no transparent-background profile cutout in the active image set during the) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 379.93 Tm (  profile-image review, then followed the user direction to use the landing portrait bubble replica) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 367.78 Tm (  instead.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 353.20 Tm (- Reduced the earlier oversized About Dev portrait and settled the page profile bubble at a fixed 282px) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 341.05 Tm (  square, with the photo explicitly held at 282px by 282px and max-width disabled so narrow viewports) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 328.90 Tm (  cannot shrink it unexpectedly.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 314.32 Tm (- Added the Martin Prahl tag under the About Dev portrait and scaled the tag with the same) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 302.17 Tm (  name-tag-to-bubble relationship used by the landing hero, including the dark translucent badge, mint) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 290.02 Tm (  text, rounded 8px corners, and centered text alignment.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 275.44 Tm (- Kept the bubble unchanged during wide widths and applied restacked positioning only when the hero) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 263.29 Tm (  becomes one column, so the portrait moves under the hero text without disturbing the accepted wide) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 251.14 Tm (  composition.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 236.56 Tm (- Centered the bubble horizontally in restacked portrait and narrow layouts and used the final narrow) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 224.41 Tm (  override to preserve the 282px bubble size even at very narrow aspect ratios.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 209.83 Tm (- Adjusted the restacked vertical placement so the portrait sits between the top proof-chip stack and) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 197.68 Tm (  the bottom of the darker hero overlay gradient, matching the user intent for the hero after the layout) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 185.53 Tm (  collapses.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 170.95 Tm (- Added page-level top padding for .aboutdev-page so the top navigation keeps a small vertical gap above) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 158.80 Tm (  it, matching the look of the other pages instead of snapping to the viewport top edge.) Tj ET
+BT /F2 10.20 Tf 1 0 0 1 54.00 141.18 Tm (Work Completed - Core Beliefs Circular Formation) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 126.00 Tm (- Changed the section heading from the mockup label to My Core Beliefs and replaced the draft cards with) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 113.85 Tm (  the five user-approved concepts: Vision, Modernness, Inter-connectedness, User-friendliness, and) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 101.70 Tm (  Cohesion.) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 293.00 28.00 Tm (Prahlin Portfolio Work Log - September 15, 2026 Page 3) Tj ET
+endstream
+endobj
+10 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 9 0 R >>
+endobj
+11 0 obj
+<< /Length 6539 >>
+stream
+BT /F1 9.15 Tf 1 0 0 1 54.00 742.00 Tm (- Removed the Readiness card completely, including the one-stop-shop 2027 copy, leaving five belief) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 729.85 Tm (  cards instead of six.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 715.27 Tm (- Implemented the final Vision text: Without imagination, there is no working prototype, and without a) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 703.12 Tm (  working prototype, well... There is no front-end, back-end, or final build.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 688.54 Tm (- Implemented the final Inter-connectedness text: Breaking down barriers between art and science, design) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 676.39 Tm (  and code, isn't some arbitrary nicety; It's the guiding principle behind everything I do.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 661.81 Tm (- Implemented the User-friendliness, Cohesion, and Modernness text supplied during the copy pass,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 649.66 Tm (  preserving the requested capitalization, punctuation, and emphasis style as source content.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 635.08 Tm (- Reordered the cards to Vision, Modernness, Inter-connectedness, User-friendliness, and Cohesion, then) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 622.93 Tm (  gave Modernness and Cohesion distinct accent colors so the five-circle system does not read as) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 610.78 Tm (  repeated variants of one heading color.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 596.20 Tm (- Created the circular proof-card mockup and the star-center mockup under mockups/ before) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 584.05 Tm (  implementation, using those approved visual studies to restore the symmetric formation the user) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 571.90 Tm (  preferred.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 557.32 Tm (- Replaced the rectangular grid with a positioned circular formation: one circle at top center, two on) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 545.17 Tm (  the upper sides, two on the lower sides, and a centered star in the open middle.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 530.59 Tm (- Converted the center star to a purely visual element with no text, removed the brighter inner star,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 518.44 Tm (  removed fill completely, and reduced the green stroke width through the requested half and additional) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 506.29 Tm (  25 percent passes.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 491.71 Tm (- Matched the belief-card heading and description font sizes to the existing About Dev card language,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 479.56 Tm (  including the working-style card scale used by Precise, visual, and persistent.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 464.98 Tm (- Set Inter-connectedness to wrap like User-friendliness and corrected horizontal text centering inside) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 452.83 Tm (  the circle during resizing by keeping the heading width content-based and centered with margin-inline) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 440.68 Tm (  auto.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 426.10 Tm (- Kept the circular star formation intact across wide and medium-wide windows, allowing the formation to) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 413.95 Tm (  resize as one system instead of splitting into separate wide and medium layouts.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 399.37 Tm (- Limited the one-by-one vertical fallback to the extreme narrow breakpoint, where the five circles) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 387.22 Tm (  stack vertically and the decorative star is hidden. The star remains present for wide and medium-wide) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 375.07 Tm (  formations.) Tj ET
+BT /F2 10.20 Tf 1 0 0 1 54.00 357.45 Tm (Work Completed - Landing Case Study Proof Details) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 342.27 Tm (- Updated the Featured Case Studies header quantities from the remote-repository reference pass, leaving) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 330.12 Tm (  the current card values as Cinerific 66 commits and 20 worklogs, Alla Vostra 384 commits and 65) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 317.97 Tm (  worklogs, Credit King 82 commits and 0 worklogs, and Prahl.dev 110 commits and 37 worklogs.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 303.39 Tm (- Updated the landing hero proof stat from 0.1k Real-Time Project Worklogs to 0.2k Real-Time Project) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 291.24 Tm (  Worklogs in app/page.tsx.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 276.66 Tm (- Added a dedicated measured row-divider element to ProjectDeviceStack when platform labels and device) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 264.51 Tm (  labels are both present. The web-only portfolio card omits the divider because it has no DEVICE row.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 249.93 Tm (- Measured PLATFORM and DEVICE heading rectangles and all platform/device vertical divider centers with) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 237.78 Tm (  getBoundingClientRect inside a useLayoutEffect, then wrote CSS custom properties for divider left,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 225.63 Tm (  top, and width.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 211.05 Tm (- Placed the divider at the exact vertical midpoint between the PLATFORM and DEVICE row centers, as) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 198.90 Tm (  requested, instead of approximating it with fixed CSS percentages.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 184.32 Tm (- Set the line to begin at the horizontal center of the DEVICE heading and extend rightward through the) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 172.17 Tm (  platform/device column space, with matching overhang past the rightmost vertical divider and the) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 160.02 Tm (  leftmost divider.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 145.44 Tm (- Doubled the vertical breathing room around the divider by increasing the platform-label list row gap) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 133.29 Tm (  to 12px, which separated PLATFORM and DEVICE while keeping the new hairline visually distinct.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 118.71 Tm (- Matched the Cinerific line length to Alla Vostra and Credit King by basing the right overhang on the) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 106.56 Tm (  measured difference between the DEVICE center and the leftmost vertical divider, producing symmetric) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 94.41 Tm (  extension on both sides.) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 293.00 28.00 Tm (Prahlin Portfolio Work Log - September 15, 2026 Page 4) Tj ET
+endstream
+endobj
+12 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 11 0 R >>
+endobj
+13 0 obj
+<< /Length 6201 >>
+stream
+BT /F1 9.15 Tf 1 0 0 1 54.00 742.00 Tm (- Styled the divider as a thinner-than-existing card line: a 1px mint-green line visually compressed) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 729.85 Tm (  with scaleY\(0.65\), subtle glow, pointer-events disabled, and opacity gated by) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 717.70 Tm (  data-platform-row-divider-ready.) Tj ET
+BT /F2 10.20 Tf 1 0 0 1 54.00 700.08 Tm (Work Completed - Cache, Validation, and Commit Context) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 684.90 Tm (- Cleared generated local development cache during the responsive profile and card-divider session,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 672.75 Tm (  including .next cache paths, then continued with local-only verification rather than public) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 660.60 Tm (  deployment.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 646.02 Tm (- Used browser-driven checks during the implementation pass to inspect About Dev profile sizing,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 633.87 Tm (  restacked portrait centering, circular belief formation behavior, star centering, and the Featured) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 621.72 Tm (  Case Studies divider geometry.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 607.14 Tm (- Verified the case-card divider overhang behavior across Cinerific, Alla Vostra, and Credit King at) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 594.99 Tm (  wide, medium, and phone widths, including matching left and right overhangs for the visible) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 582.84 Tm (  platform/device line.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 568.26 Tm (- Provided multiple requested commit-message drafts during the source session and captured the final) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 556.11 Tm (  work in the three September 15 commits now present on main.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 541.53 Tm (- Ran npm run check during this documentation pass; TypeScript completed successfully with tsc --noEmit.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 526.95 Tm (- Ran npm run build:static during this documentation pass; Next.js 16.2.10 compiled, type-checked,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 514.80 Tm (  collected page data, and generated seven static pages successfully.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 500.22 Tm (- Confirmed the static export route list included /, /aboutdev, /articles, /projects/alla-vostra, and) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 488.07 Tm (  /projects/cinerific, proving the new About Dev route participates in the static build.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 473.49 Tm (- Restored next-env.d.ts from the generated static-build route reference back to the repository) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 461.34 Tm (  convention import "./.next/dev/types/routes.d.ts" after npm run build:static rewrote it.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 446.76 Tm (- Reviewed git status after validation. Before PDF generation, the only tracked delta was the refreshed) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 434.61 Tm (  portfolio_PROJECT_SNAPSHOT.txt file; next-env.d.ts had no remaining diff.) Tj ET
+BT /F2 10.20 Tf 1 0 0 1 54.00 416.99 Tm (Validation Summary) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 401.80 Tm (- npm run check passed with tsc --noEmit.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 387.22 Tm (- npm run build:static passed with NEXT_OUTPUT=export next build and generated all expected static) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 375.07 Tm (  routes, including the new /aboutdev page.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 360.49 Tm (- The static-build side effect in next-env.d.ts was corrected before the PDF was generated, leaving the) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 348.34 Tm (  dev-route import restored and no tracked next-env.d.ts diff.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 333.76 Tm (- The About Dev source now renders a single-page route with hero, profile bubble, timeline,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 321.61 Tm (  working-style card, circular core beliefs, and CTA sections, all using the shared site shell and nav) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 309.46 Tm (  component.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 294.88 Tm (- The Core Beliefs formation keeps the center star for wide and medium-wide layouts, switches to) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 282.73 Tm (  centered one-by-one circles only at the very narrow breakpoint, and hides the decorative star only in) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 270.58 Tm (  that narrow fallback.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 256.00 Tm (- The landing profile photo now exposes a real /aboutdev link with accessible labeling and visible) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 243.85 Tm (  hover/focus treatment while retaining the landing portrait and Martin Prahl tag composition.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 229.27 Tm (- The Featured Case Studies platform/device divider is calculated from live DOM geometry, so the line) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 217.12 Tm (  stays aligned to the actual PLATFORM and DEVICE rows and to the right-side vertical divider system) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 204.97 Tm (  across responsive widths.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 190.39 Tm (- portfolio_PROJECT_SNAPSHOT.txt was regenerated before this PDF so the companion source snapshot) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 178.24 Tm (  records current source state, recent commit history, and the pre-existing PDF worklog inventory.) Tj ET
+BT /F2 10.20 Tf 1 0 0 1 54.00 160.62 Tm (Files Touched and Artifacts) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 145.44 Tm (- app/aboutdev/page.tsx - added the About Dev route and later refined its profile bubble, timeline,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 133.29 Tm (  working-style copy, My Core Beliefs content, circular-card data, and CTA structure.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 118.71 Tm (- app/globals.css - added About Dev layout, profile bubble, navigation gap, timeline, quote card, CTA,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 106.56 Tm (  circular principles formation, narrow stacked fallback, landing profile-link affordances, and) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 94.41 Tm (  case-card divider styling.) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 293.00 28.00 Tm (Prahlin Portfolio Work Log - September 15, 2026 Page 5) Tj ET
+endstream
+endobj
+14 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 13 0 R >>
+endobj
+15 0 obj
+<< /Length 5938 >>
+stream
+BT /F1 9.15 Tf 1 0 0 1 54.00 742.00 Tm (- app/PortfolioSections.tsx - added About Dev nav behavior and updated Featured Case Studies commit and) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 729.85 Tm (  worklog quantities.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 715.27 Tm (- app/page.tsx - wired the landing profile image to /aboutdev and updated the Real-Time Project Worklogs) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 703.12 Tm (  proof value to 0.2k.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 688.54 Tm (- app/ProjectCarouselButton.tsx - added measured platform/device row-divider logic for case-study card) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 676.39 Tm (  platform-label stacks.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 661.81 Tm (- mockups/about-dev-page-mockups.html and the About Dev option PNG files - documented the three) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 649.66 Tm (  candidate About Dev directions and the selected Builder Story visual exploration.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 635.08 Tm (- mockups/about-dev-core-beliefs-circular-mockup.html/png and) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 622.93 Tm (  mockups/about-dev-core-beliefs-star-mockup.html/png - documented the approved circular belief-card and) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 610.78 Tm (  star-center studies before implementation.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 596.20 Tm (- portfolio_PROJECT_SNAPSHOT.txt - refreshed through ./read_project.sh for this documentation pass after) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 584.05 Tm (  the September 15 source commits.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 569.47 Tm (- portfolio_worklog_september15.pdf - generated as this new root-level dated Portfolio documentation) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 557.32 Tm (  artifact.) Tj ET
+BT /F2 10.20 Tf 1 0 0 1 54.00 539.70 Tm (Follow-Up Context) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 524.52 Tm (- The About Dev page is now a real route at /aboutdev, and the landing profile photo intentionally opens) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 512.37 Tm (  it. Future edits to profile-photo behavior should preserve the image link, aria-label, hover state,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 500.22 Tm (  and focus-visible state.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 485.64 Tm (- The About Dev profile bubble intentionally stays fixed at 282px in narrow and portrait restacking.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 473.49 Tm (  Avoid max-width or percentage overrides that let the portrait shrink below the accepted size.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 458.91 Tm (- The Core Beliefs star has no fill and no text by design. It is a decorative centerpiece only, with the) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 446.76 Tm (  five circular cards carrying all copy.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 432.18 Tm (- The narrow Core Beliefs fallback is intentionally reserved for the very narrow breakpoint. Medium-wide) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 420.03 Tm (  windows should continue to show the same star formation resized as one visual system.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 405.45 Tm (- The current belief-card labels are Vision, Modernness, Inter-connectedness, User-friendliness, and) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 393.30 Tm (  Cohesion. Readiness was intentionally removed and should not be restored without a new user request.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 378.72 Tm (- The Featured Case Studies horizontal divider depends on runtime measurement of headings and vertical) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 366.57 Tm (  dividers. Future markup changes to the platform/device grid should keep) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 354.42 Tm (  data-platform-row-divider-ready and the CSS custom property contract in mind.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 339.84 Tm (- The landing worklog proof now reads 0.2k Real-Time Project Worklogs. Future proof-stat changes should) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 327.69 Tm (  consider both visible text and any responsive sizing behavior shared through ProofStats.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 313.11 Tm (- The project remains on the established Portfolio workflow: local implementation and verification) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 300.96 Tm (  first, with public deployment or Hostinger synchronization only when the user explicitly asks for it.) Tj ET
+BT /F2 10.20 Tf 1 0 0 1 54.00 283.34 Tm (Output Artifact) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 268.15 Tm (- Generated: /Users/prahlin/gh/portfolio/portfolio_worklog_september15.pdf) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 253.57 Tm (- Companion sync file: /Users/prahlin/gh/portfolio/portfolio_PROJECT_SNAPSHOT.txt) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 238.99 Tm (- Source state reviewed: 076def6c932e852b6372c5043a302790aacf536a on main.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 224.41 Tm (- Naming follows the established first-worklog-on-date convention: portfolio_worklog_september15.pdf. No) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 212.26 Tm (  Part suffix was used because no earlier September 15 Portfolio worklog PDF existed.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 197.68 Tm (- The document records the About Dev mockup and implementation pass, landing profile navigation,) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 185.53 Tm (  responsive profile-bubble refinements, My Core Beliefs circular formation, Featured Case Studies stats) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 173.38 Tm (  and divider work, local cache clearing, validation, committed source context, refreshed snapshot, and) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 161.23 Tm (  documentation work in the established Prahlin Portfolio format.) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 146.65 Tm (- This worklog closes the September 15 documentation pass. No source commit, push, deployment, public) Tj ET
+BT /F1 9.15 Tf 1 0 0 1 54.00 134.50 Tm (  publish, or Hostinger synchronization was performed as part of generating the PDF.) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 293.00 28.00 Tm (Prahlin Portfolio Work Log - September 15, 2026 Page 6) Tj ET
+endstream
+endobj
+16 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 15 0 R >>
+endobj
+17 0 obj
+<< /Title (Prahlin Portfolio Work Log - September 15, 2026) /Subject (Portfolio website development worklog) /Author (Codex) /Creator (Codex standard-library PDF generator) /Producer (Codex standard-library PDF generator) /CreationDate (D:20260915225522-04'00') /ModDate (D:20260915225522-04'00') >>
+endobj
+xref
+0 18
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000151 00000 n 
+0000000221 00000 n 
+0000000296 00000 n 
+0000007295 00000 n 
+0000007431 00000 n 
+0000013974 00000 n 
+0000014110 00000 n 
+0000020471 00000 n 
+0000020608 00000 n 
+0000027199 00000 n 
+0000027337 00000 n 
+0000033590 00000 n 
+0000033728 00000 n 
+0000039718 00000 n 
+0000039856 00000 n 
+trailer
+<< /Size 18 /Root 1 0 R /Info 17 0 R >>
+startxref
+40172
+%%EOF
