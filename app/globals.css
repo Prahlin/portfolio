@@ -2081,9 +2081,39 @@ section:not(.hero) {
   grid-template-columns: max-content 1px max-content;
   justify-content: start;
   paint-order: normal;
-  row-gap: 6px;
+  position: relative;
+  row-gap: 12px;
   text-shadow: none;
   width: 100%;
+}
+
+.case-card-title-platform-row-divider {
+  background: rgba(198, 255, 217, 0.92);
+  box-shadow: 0 0 5px rgba(198, 255, 217, 0.28);
+  display: block;
+  height: 1px;
+  left: var(--case-platform-row-divider-left, 0);
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  top: var(--case-platform-row-divider-top, 50%);
+  transform: translateY(-50%) scaleY(0.65);
+  transform-origin: left center;
+  transition: opacity 120ms ease;
+  width: var(--case-platform-row-divider-width, 0);
+  z-index: 1;
+}
+
+.case-card-title-platform-list[data-platform-row-divider-ready]
+  .case-card-title-platform-row-divider {
+  opacity: 1;
+}
+
+.case-card-title-platform-heading,
+.case-card-title-platform-slot,
+.case-card-title-platform-divider {
+  position: relative;
+  z-index: 2;
 }
 
 .case-card-title-platform-heading-platform {

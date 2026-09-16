@@ -39,7 +39,7 @@ const proofStats = [
     value: "3yrs",
   },
   { label: "Quality GitHub Commits", value: "1.0k" },
-  { label: "Real-Time Project Worklogs", value: "0.1k" },
+  { label: "Real-Time Project Worklogs", value: "0.2k" },
   { label: "Shipped Mob/Web Products", value: "8" },
 ];
 

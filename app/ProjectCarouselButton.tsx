@@ -322,15 +322,19 @@ function PlatformIconSlot({
   gridColumn,
   gridRow,
   label,
+  slotIndex,
 }: {
   gridColumn?: number;
   gridRow?: number;
   label: string;
+  slotIndex?: number;
 }) {
   return (
     <span
       className="case-card-title-platform-slot"
+      data-platform-index={slotIndex}
       data-platform-label={label}
+      data-platform-row={gridRow}
       style={
         gridColumn && gridRow
           ? {
@@ -382,6 +386,7 @@ function PlatformLabelSlots({
       gridRow={row}
       key={`${row}-${label}`}
       label={label}
+      slotIndex={index}
     />
   ));
 }
@@ -504,6 +509,7 @@ export function ProjectDeviceStack({
 }) {
   const stackRef = useRef<HTMLSpanElement>(null);
   const [measuredAssetGap, setMeasuredAssetGap] = useState<string | null>(null);
+  const mobilePlatformKey = mobilePlatforms.join(",");
   const stackStyle: CSSProperties & {
     "--project-device-stack-gap"?: string;
   } = {
@@ -579,6 +585,117 @@ export function ProjectDeviceStack({
     responsiveAssetGap?.wideLanePx,
   ]);
 
+  useLayoutEffect(() => {
+    if (!showPlatformLabels) {
+      return;
+    }
+
+    const stack = stackRef.current;
+    const rowDivider = stack?.querySelector<HTMLElement>(
+      ".case-card-title-platform-row-divider",
+    );
+
+    if (!stack || !rowDivider) {
+      return;
+    }
+
+    let frame = 0;
+    const updateRowDivider = () => {
+      if (frame) {
+        window.cancelAnimationFrame(frame);
+      }
+
+      frame = window.requestAnimationFrame(() => {
+        const platformHeading = stack.querySelector<HTMLElement>(
+          ".case-card-title-platform-heading-platform",
+        );
+        const deviceHeading = stack.querySelector<HTMLElement>(
+          ".case-card-title-platform-heading-factor",
+        );
+        const verticalDividers = Array.from(
+          stack.querySelectorAll<HTMLElement>(
+            ".case-card-title-platform-divider",
+          ),
+        );
+
+        if (
+          !platformHeading ||
+          !deviceHeading ||
+          verticalDividers.length === 0
+        ) {
+          stack.removeAttribute("data-platform-row-divider-ready");
+          return;
+        }
+
+        const stackRect = stack.getBoundingClientRect();
+        const platformRect = platformHeading.getBoundingClientRect();
+        const deviceRect = deviceHeading.getBoundingClientRect();
+        const dividerRects = verticalDividers.map((divider) =>
+          divider.getBoundingClientRect(),
+        );
+        const leftmostDividerCenter = Math.min(
+          ...dividerRects.map((rect) => rect.left + rect.width / 2),
+        );
+        const rightmostDividerCenter = Math.max(
+          ...dividerRects.map((rect) => rect.left + rect.width / 2),
+        );
+        const dividerStartCenter = deviceRect.left + deviceRect.width / 2;
+        const dividerOverhang = Math.max(
+          0,
+          leftmostDividerCenter - dividerStartCenter,
+        );
+        const dividerEndCenter = rightmostDividerCenter + dividerOverhang;
+        const dividerStart = dividerStartCenter - stackRect.left;
+        const dividerEnd = dividerEndCenter - stackRect.left;
+        const dividerTop =
+          (platformRect.top +
+            platformRect.height / 2 +
+            deviceRect.top +
+            deviceRect.height / 2) /
+            2 -
+          stackRect.top;
+        const dividerWidth = Math.max(0, dividerEnd - dividerStart);
+
+        rowDivider.style.setProperty(
+          "--case-platform-row-divider-left",
+          `${dividerStart.toFixed(2)}px`,
+        );
+        rowDivider.style.setProperty(
+          "--case-platform-row-divider-top",
+          `${dividerTop.toFixed(2)}px`,
+        );
+        rowDivider.style.setProperty(
+          "--case-platform-row-divider-width",
+          `${dividerWidth.toFixed(2)}px`,
+        );
+        stack.toggleAttribute(
+          "data-platform-row-divider-ready",
+          dividerWidth > 0,
+        );
+      });
+    };
+
+    updateRowDivider();
+    document.fonts?.ready.then(updateRowDivider);
+
+    const resizeObserver =
+      typeof ResizeObserver === "undefined"
+        ? null
+        : new ResizeObserver(updateRowDivider);
+
+    resizeObserver?.observe(stack);
+    window.addEventListener("resize", updateRowDivider);
+
+    return () => {
+      if (frame) {
+        window.cancelAnimationFrame(frame);
+      }
+
+      resizeObserver?.disconnect();
+      window.removeEventListener("resize", updateRowDivider);
+    };
+  }, [hasTablet, hasWeb, mobilePlatformKey, showPlatformLabels, stackGap]);
+
   if (stackGap) {
     stackStyle["--project-device-stack-gap"] = stackGap;
   }
@@ -649,6 +766,10 @@ export function ProjectDeviceStack({
               DEVICE
             </span>
             <PlatformLabelSlots labels={factorDeviceLabels} row={2} />
+            <span
+              aria-hidden="true"
+              className="case-card-title-platform-row-divider"
+            />
           </>
         ) : null}
       </span>
