@@ -1,0 +1,1255 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [5 0 R 7 0 R 9 0 R 11 0 R 13 0 R 15 0 R] /Count 6 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+5 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 6 0 R >>
+endobj
+6 0 obj
+<< /Length 5637 >>
+stream
+BT
+/F2 13 Tf
+48 745 Td
+(Prahlin Portfolio Work Log - September 21, 2026) Tj
+ET
+BT
+/F1 9 Tf
+48 722 Td
+(Compiled summary for Monday, September 21, 2026 - focus: continuing the Prahl.dev Portfolio work after the) Tj
+ET
+BT
+/F1 9 Tf
+48 711.0 Td
+(September 16 Part 1 documentation state, verifying the United States Eastern date, refreshing the project) Tj
+ET
+BT
+/F1 9 Tf
+48 700.0 Td
+(snapshot, extracting and studying all thirty-nine pre-existing Portfolio PDF worklogs, refining the About) Tj
+ET
+BT
+/F1 9 Tf
+48 689.0 Td
+(Dev hero narrative and quote composition, transforming the How I Got Here timeline into a practical My Work) Tj
+ET
+BT
+/F1 9 Tf
+48 678.0 Td
+(Methodology sequence, rewriting the research, planning, workflow, and learning copy, adding selective inline) Tj
+ET
+BT
+/F1 9 Tf
+48 667.0 Td
+(emphasis and true multi-paragraph timeline support, correcting About Dev hero typography and) Tj
+ET
+BT
+/F1 9 Tf
+48 656.0 Td
+(navbar-to-content spacing across desktop and mobile, preserving the page-specific profile nametag, clearing) Tj
+ET
+BT
+/F1 9 Tf
+48 645.0 Td
+(and rebuilding the local Next.js development cache, validating TypeScript and static production output,) Tj
+ET
+BT
+/F1 9 Tf
+48 634.0 Td
+(restoring the Next.js dev route reference after the build, documenting committed source state 64cb140, and) Tj
+ET
+BT
+/F1 9 Tf
+48 623.0 Td
+(generating the September 21 Portfolio PDF worklog.) Tj
+ET
+BT
+/F1 9 Tf
+48 601.0 Td
+(Generated in continuity with the established Prahlin Portfolio daily worklog cadence: compact opening) Tj
+ET
+BT
+/F1 9 Tf
+48 590.0 Td
+(summary, source-material section, baseline section, goal list, work-completed sections, validation section,) Tj
+ET
+BT
+/F1 9 Tf
+48 579.0 Td
+(files-touched list, follow-up context, and output-artifact close.) Tj
+ET
+BT
+/F1 9 Tf
+48 557.0 Td
+(This artifact intentionally covers Prahlin/portfolio work performed after) Tj
+ET
+BT
+/F1 9 Tf
+48 546.0 Td
+(portfolio_worklog_september16_part1.pdf and after the September 16 Part 1 documentation state. The source) Tj
+ET
+BT
+/F1 9 Tf
+48 535.0 Td
+(state reviewed for this record is 64cb140e446673cf7904ca52c77a763d99b12bf0 on main, matching origin/main) Tj
+ET
+BT
+/F1 9 Tf
+48 524.0 Td
+(before this PDF was generated, titled Refined the About Dev narrative and methodology. The September 21) Tj
+ET
+BT
+/F1 9 Tf
+48 513.0 Td
+(source work in scope is represented by that commit. No Hostinger deploy-branch work, production publish, or) Tj
+ET
+BT
+/F1 9 Tf
+48 502.0 Td
+(public deployment was performed during this documentation pass. The only tracked delta before PDF generation) Tj
+ET
+BT
+/F1 9 Tf
+48 491.0 Td
+(was the refreshed portfolio_PROJECT_SNAPSHOT.txt file; this PDF is the new September 21 root-level) Tj
+ET
+BT
+/F1 9 Tf
+48 480.0 Td
+(documentation artifact requested by the user.) Tj
+ET
+BT
+/F2 11 Tf
+48 458.0 Td
+(Source Materials Reviewed) Tj
+ET
+BT
+/F1 9 Tf
+48 431.0 Td
+(- Verified the United States Eastern date with TZ=America/New_York date from /Users/prahlin/gh/portfolio.) Tj
+ET
+BT
+/F1 9 Tf
+48 420.0 Td
+(  It reported Monday, September 21, 2026 at 10:42 PM EDT with UTC offset -0400; a second verification at) Tj
+ET
+BT
+/F1 9 Tf
+48 409.0 Td
+(  10:44 PM EDT confirmed the same date and offset. The worklog therefore uses September 21, 2026 even) Tj
+ET
+BT
+/F1 9 Tf
+48 398.0 Td
+(  though systems operating in UTC were already on September 22.) Tj
+ET
+BT
+/F1 9 Tf
+48 376.0 Td
+(- Ran ./read_project.sh from /Users/prahlin/gh/portfolio and regenerated portfolio_PROJECT_SNAPSHOT.txt) Tj
+ET
+BT
+/F1 9 Tf
+48 365.0 Td
+(  before writing this worklog, preserving the Portfolio convention that the current source snapshot is) Tj
+ET
+BT
+/F1 9 Tf
+48 354.0 Td
+(  refreshed before session documentation.) Tj
+ET
+BT
+/F1 9 Tf
+48 332.0 Td
+(- Reviewed the refreshed portfolio_PROJECT_SNAPSHOT.txt for the current source tree, route and component) Tj
+ET
+BT
+/F1 9 Tf
+48 321.0 Td
+(  structure, public image inventory, PDF worklog inventory, package scripts, deployment configuration,) Tj
+ET
+BT
+/F1 9 Tf
+48 310.0 Td
+(  git context, generated-cache policy, and standing workflow notes.) Tj
+ET
+BT
+/F1 9 Tf
+48 288.0 Td
+(- Extracted and studied all thirty-nine pre-existing root-level Portfolio PDF worklogs with pdftotext:) Tj
+ET
+BT
+/F1 9 Tf
+48 277.0 Td
+(  the July 11, 14, 15 Part 1, 15 Part 2, 16, 19, 20, 21, 22, 23, 24, 25, 29, 30, and 31 records; the) Tj
+ET
+BT
+/F1 9 Tf
+48 266.0 Td
+(  August 1 Parts 1-3, August 3, 4, 5, 6, 10 Parts 1-2, 11, 12 Parts 1-2, 14, 16, and 24 records; and the) Tj
+ET
+BT
+/F1 9 Tf
+48 255.0 Td
+(  September 7, September 8, September 8 Part 2, September 9, September 11, September 12 Part 1, September) Tj
+ET
+BT
+/F1 9 Tf
+48 244.0 Td
+(  12 Part 2, September 15, and September 16 Part 1 records.) Tj
+ET
+BT
+/F1 9 Tf
+48 222.0 Td
+(- Compared the complete PDF series for title cadence, root-level filename conventions, same-day part) Tj
+ET
+BT
+/F1 9 Tf
+48 211.0 Td
+(  suffixes, opening-summary density, source-material language, baseline and goal framing, bullet-heavy) Tj
+ET
+BT
+/F1 9 Tf
+48 200.0 Td
+(  technical voice, validation wording, files-touched treatment, follow-up continuity, and output-artifact) Tj
+ET
+BT
+/F1 9 Tf
+48 189.0 Td
+(  closure.) Tj
+ET
+BT
+/F1 9 Tf
+48 167.0 Td
+(- Checked pdfinfo and pdffonts against the September 16 Part 1, September 15, and September 12 Part 2) Tj
+ET
+BT
+/F1 9 Tf
+48 156.0 Td
+(  baselines. The accepted output convention remains US Letter at 612 x 792 points, PDF 1.4, Helvetica and) Tj
+ET
+BT
+/F1 9 Tf
+48 145.0 Td
+(  Helvetica-Bold Type 1 fonts, an unencrypted document, and Codex author, creator, and producer metadata.) Tj
+ET
+BT
+/F1 8 Tf
+198.0 25 Td
+(Prahlin Portfolio Work Log - September 21, 2026 Page 1) Tj
+ET
+endstream
+endobj
+7 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 8 0 R >>
+endobj
+8 0 obj
+<< /Length 4489 >>
+stream
+BT
+/F2 8 Tf
+48 745 Td
+(Prahlin Portfolio Work Log - September 21, 2026) Tj
+ET
+BT
+/F1 9 Tf
+48 726 Td
+(- Reviewed current git state through git status, git log, git show, git diff, git rev-parse, and git) Tj
+ET
+BT
+/F1 9 Tf
+48 715.0 Td
+(  branch tracking. Confirmed main points at 64cb140, matches origin/main, and carries the complete About) Tj
+ET
+BT
+/F1 9 Tf
+48 704.0 Td
+(  Dev source refinement documented here.) Tj
+ET
+BT
+/F1 9 Tf
+48 682.0 Td
+(- Reviewed commit 64cb140 in full, including its 48 additions and 15 deletions in app/aboutdev/page.tsx,) Tj
+ET
+BT
+/F1 9 Tf
+48 671.0 Td
+(  27 additions and 8 deletions in app/globals.css, and snapshot context updates included in the commit.) Tj
+ET
+BT
+/F1 9 Tf
+48 649.0 Td
+(- Reviewed the live About Dev source and responsive CSS, including the shared MainNavBar, profile bubble,) Tj
+ET
+BT
+/F1 9 Tf
+48 638.0 Td
+(  hero copy, methodology timeline data, paragraph renderer, quote band, and narrow breakpoint rules.) Tj
+ET
+BT
+/F2 11 Tf
+48 616.0 Td
+(Baseline Status Before September 21 Work) Tj
+ET
+BT
+/F1 9 Tf
+48 589.0 Td
+(- The September 16 Part 1 state had aligned the Alla Vostra navigation with the shared MainNavBar,) Tj
+ET
+BT
+/F1 9 Tf
+48 578.0 Td
+(  refined landing-page device interactions and case-study proof grids, centered the narrow Alla Vostra) Tj
+ET
+BT
+/F1 9 Tf
+48 556.0 Td
+( hero device, and reorganized Overview promo screenshots into one responsive row.) Tj
+ET
+BT
+/F1 9 Tf
+48 534.0 Td
+(- The About Dev route already existed with a Builder Story structure, shared navigation, circular profile) Tj
+ET
+BT
+/F1 9 Tf
+48 523.0 Td
+(  bubble, evidence-based timeline, working-style quote band, My Core Beliefs formation, and) Tj
+ET
+BT
+/F1 9 Tf
+48 512.0 Td
+(  project/contact continuation.) Tj
+ET
+BT
+/F1 9 Tf
+48 490.0 Td
+(- The original About Dev hero headline read The throughline is ownership: design taste, engineering) Tj
+ET
+BT
+/F1 9 Tf
+48 479.0 Td
+(  depth, and finished software. Its timeline still used biography-like stage labels such as Started with) Tj
+ET
+BT
+/F1 9 Tf
+48 468.0 Td
+(  product interfaces, Moved into native mobile delivery, Closed the backend gap, and Turned process into) Tj
+ET
+BT
+/F1 9 Tf
+48 457.0 Td
+(  an artifact.) Tj
+ET
+BT
+/F1 9 Tf
+48 435.0 Td
+(- The How I Got Here section still described itself as a timeline built around proof, not biography) Tj
+ET
+BT
+/F1 9 Tf
+48 424.0 Td
+(  filler, while the user wanted the section to communicate a repeatable professional work methodology.) Tj
+ET
+BT
+/F1 9 Tf
+48 402.0 Td
+(- Timeline descriptions were plain strings rendered through one paragraph element, so the Project) Tj
+ET
+BT
+/F1 9 Tf
+48 391.0 Td
+(  Planning step could not express a true second paragraph without extending the data and rendering model.) Tj
+ET
+BT
+/F1 9 Tf
+48 369.0 Td
+(- About Dev inherited a broad section:not\(.hero\) padding rule that overrode the page's intended hero) Tj
+ET
+BT
+/F1 9 Tf
+48 358.0 Td
+(  spacing. Browser measurements exposed a 156px navbar-to-eyebrow gap on desktop and a 118px gap on) Tj
+ET
+BT
+/F1 9 Tf
+48 347.0 Td
+(  mobile before correction.) Tj
+ET
+BT
+/F1 9 Tf
+48 325.0 Td
+(- The local Next.js development cache needed a clean reset during the iterative copy and spacing pass,) Tj
+ET
+BT
+/F1 9 Tf
+48 314.0 Td
+(  while the dev route itself needed to remain available for immediate browser review.) Tj
+ET
+BT
+/F2 11 Tf
+48 292.0 Td
+(Goals for September 21) Tj
+ET
+BT
+/F1 9 Tf
+48 265.0 Td
+(- Reframe the About Dev hero around a concise product-creation point of view while preserving the page's) Tj
+ET
+BT
+/F1 9 Tf
+48 254.0 Td
+(  existing profile imagery, navigation, proof chips, supporting lede, and visual identity.) Tj
+ET
+BT
+/F1 9 Tf
+48 232.0 Td
+(- Move the ownership statement into the quote band so the original positioning language remains visible) Tj
+ET
+BT
+/F1 9 Tf
+48 221.0 Td
+(  rather than being discarded.) Tj
+ET
+BT
+/F1 9 Tf
+48 199.0 Td
+(- Rename How I Got Here's central heading to My Work Methodology and turn all four timeline stages into) Tj
+ET
+BT
+/F1 9 Tf
+48 188.0 Td
+(  clear working phases: Industry & Product Research, Project Planning, Scaffolding the Workflow, and) Tj
+ET
+BT
+/F1 9 Tf
+48 177.0 Td
+(  Learning-As-I-Go.) Tj
+ET
+BT
+/F1 9 Tf
+48 155.0 Td
+(- Replace generic timeline descriptions with user-directed copy about market differences, technical) Tj
+ET
+BT
+/F1 9 Tf
+48 144.0 Td
+(  planning choices, disciplined project records, and learning through ongoing diff review.) Tj
+ET
+BT
+/F1 8 Tf
+198.0 25 Td
+(Prahlin Portfolio Work Log - September 21, 2026 Page 2) Tj
+ET
+endstream
+endobj
+9 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 10 0 R >>
+endobj
+10 0 obj
+<< /Length 4130 >>
+stream
+BT
+/F2 8 Tf
+48 745 Td
+(Prahlin Portfolio Work Log - September 21, 2026) Tj
+ET
+BT
+/F1 9 Tf
+48 726 Td
+(- Support selective bold, underline, and italic emphasis in timeline copy without changing the broader) Tj
+ET
+BT
+/F1 9 Tf
+48 715.0 Td
+(  timeline card system.) Tj
+ET
+BT
+/F1 9 Tf
+48 693.0 Td
+(- Give Project Planning two actual paragraph elements with visible paragraph spacing rather than) Tj
+ET
+BT
+/F1 9 Tf
+48 682.0 Td
+(  simulating the break with a line wrap.) Tj
+ET
+BT
+/F1 9 Tf
+48 660.0 Td
+(- Correct the About Dev hero's navbar-to-content rhythm across desktop and mobile, then tune the final) Tj
+ET
+BT
+/F1 9 Tf
+48 649.0 Td
+(  top gap to the user-approved value.) Tj
+ET
+BT
+/F1 9 Tf
+48 627.0 Td
+(- Match the hero quotation's responsive scale to the final requested relationship with the page's other) Tj
+ET
+BT
+/F1 9 Tf
+48 616.0 Td
+(  white section headings.) Tj
+ET
+BT
+/F1 9 Tf
+48 594.0 Td
+(- Keep the Martin Prahl nametag under the profile bubble and remove the temporary attribution from the) Tj
+ET
+BT
+/F1 9 Tf
+48 583.0 Td
+(  hero quotation.) Tj
+ET
+BT
+/F1 9 Tf
+48 561.0 Td
+(- Clear the local development cache, keep the local route running, verify responsive browser geometry,) Tj
+ET
+BT
+/F1 9 Tf
+48 550.0 Td
+(  run TypeScript and production build checks, restore generated route metadata, and document final) Tj
+ET
+BT
+/F1 9 Tf
+48 539.0 Td
+(  committed state.) Tj
+ET
+BT
+/F2 11 Tf
+48 517.0 Td
+(Work Completed - Hero Narrative and Quote Composition) Tj
+ET
+BT
+/F1 9 Tf
+48 490.0 Td
+(- Replaced the original ownership hero headline with the final italic product-creation quotation:) Tj
+ET
+BT
+/F1 9 Tf
+48 479.0 Td
+(  Zillions of people have a brilliant idea. Few know how to funnel it into a world-changing, must-have) Tj
+ET
+BT
+/F1 9 Tf
+48 468.0 Td
+(  product.) Tj
+ET
+BT
+/F1 9 Tf
+48 446.0 Td
+(- Iterated the quotation through the requested wording passes, including the transitions from brilliant) Tj
+ET
+BT
+/F1 9 Tf
+48 435.0 Td
+(  ideas to a brilliant idea, from vague pipedream language to a direct funnel metaphor, and from) Tj
+ET
+BT
+/F1 9 Tf
+48 424.0 Td
+(  one-of-a-kind to world-changing.) Tj
+ET
+BT
+/F1 9 Tf
+48 402.0 Td
+(- Removed the Martin Prahl attribution from the hero after briefly testing it on a separate right-aligned) Tj
+ET
+BT
+/F1 9 Tf
+48 391.0 Td
+(  row, while restoring and preserving the Martin Prahl nametag beneath the profile bubble.) Tj
+ET
+BT
+/F1 9 Tf
+48 369.0 Td
+(- Moved The throughline is ownership: design taste, engineering depth, and finished software into the) Tj
+ET
+BT
+/F1 9 Tf
+48 358.0 Td
+(  green quote panel and retained italic quotation styling there.) Tj
+ET
+BT
+/F1 9 Tf
+48 336.0 Td
+(- Tuned the hero heading repeatedly during review, then settled on clamp\(48px, 6vw, 78px\), exactly) Tj
+ET
+BT
+/F1 9 Tf
+48 325.0 Td
+(  one-and-a-half times the clamp\(32px, 4vw, 52px\) scale used by My Work Methodology and the other white) Tj
+ET
+BT
+/F1 9 Tf
+48 314.0 Td
+(  section headers.) Tj
+ET
+BT
+/F1 9 Tf
+48 292.0 Td
+(- Kept the existing About Dev lede, proof chips, portrait asset, circular photo treatment, and) Tj
+ET
+BT
+/F1 9 Tf
+48 281.0 Td
+(  page-specific shared navbar behavior intact around the new headline.) Tj
+ET
+BT
+/F2 11 Tf
+48 259.0 Td
+(Work Completed - My Work Methodology) Tj
+ET
+BT
+/F1 9 Tf
+48 232.0 Td
+(- Renamed the timeline's principal heading from A timeline built around proof, not biography filler to My) Tj
+ET
+BT
+/F1 9 Tf
+48 221.0 Td
+(  Work Methodology while preserving the green How I Got Here eyebrow.) Tj
+ET
+BT
+/F1 9 Tf
+48 199.0 Td
+(- Renamed Step 01 to Industry & Product Research and rewrote its paragraph around the distinction between) Tj
+ET
+BT
+/F1 9 Tf
+48 188.0 Td
+(  Banking customers and Video Streamers, and between Global users and American users.) Tj
+ET
+BT
+/F1 9 Tf
+48 166.0 Td
+(- Added deliberate inline emphasis to Step 01: both uses of not are italicized; Industry & Product) Tj
+ET
+BT
+/F1 9 Tf
+48 155.0 Td
+(  Research is bold and underlined; practical is underlined; and UI/UX, Front-End, Back-End, Build &) Tj
+ET
+BT
+/F1 9 Tf
+48 144.0 Td
+(  Release is italicized and capitalized.) Tj
+ET
+BT
+/F1 8 Tf
+198.0 25 Td
+(Prahlin Portfolio Work Log - September 21, 2026 Page 3) Tj
+ET
+endstream
+endobj
+11 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 12 0 R >>
+endobj
+12 0 obj
+<< /Length 4340 >>
+stream
+BT
+/F2 8 Tf
+48 745 Td
+(Prahlin Portfolio Work Log - September 21, 2026) Tj
+ET
+BT
+/F1 9 Tf
+48 726 Td
+(- Preserved comprehensive and theoretical as regular text after the user removed earlier italics and) Tj
+ET
+BT
+/F1 9 Tf
+48 715.0 Td
+(  underline treatments from those words.) Tj
+ET
+BT
+/F1 9 Tf
+48 693.0 Td
+(- Renamed Step 02 to Project Planning and replaced the earlier native-mobile delivery summary with) Tj
+ET
+BT
+/F1 9 Tf
+48 682.0 Td
+(  product-shaping questions covering Cross-platform versus Platform-specific, Web version versus) Tj
+ET
+BT
+/F1 9 Tf
+48 671.0 Td
+(  App-only, and UI-focused versus Back-end heavy.) Tj
+ET
+BT
+/F1 9 Tf
+48 649.0 Td
+(- Added a second Project Planning paragraph stating that the work helps make difficult decisions about) Tj
+ET
+BT
+/F1 9 Tf
+48 638.0 Td
+(  the client's unique product.) Tj
+ET
+BT
+/F1 9 Tf
+48 616.0 Td
+(- Extended timeline rendering so a step can provide a string or an array of paragraph strings. Array) Tj
+ET
+BT
+/F1 9 Tf
+48 605.0 Td
+(  entries now render as separate p elements instead of a br-only visual row.) Tj
+ET
+BT
+/F1 9 Tf
+48 583.0 Td
+(- Added a 1.55em adjacent-paragraph margin under aboutdev-timeline-copy so the second Project Planning) Tj
+ET
+BT
+/F1 9 Tf
+48 572.0 Td
+(  paragraph reads as a true paragraph break.) Tj
+ET
+BT
+/F1 9 Tf
+48 550.0 Td
+(- Renamed Step 03 to Scaffolding the Workflow and replaced its backend-gap description with a workflow) Tj
+ET
+BT
+/F1 9 Tf
+48 539.0 Td
+(  explanation covering read-project briefings, organized commits, real-time snapshots, and end-of-day) Tj
+ET
+BT
+/F1 9 Tf
+48 528.0 Td
+(  worklogs.) Tj
+ET
+BT
+/F1 9 Tf
+48 506.0 Td
+(- Bolded read-project, commit changes, snapshots, and worklogs inside Step 03 so the repeatable) Tj
+ET
+BT
+/F1 9 Tf
+48 495.0 Td
+(  documentation tools remain scannable.) Tj
+ET
+BT
+/F1 9 Tf
+48 473.0 Td
+(- Renamed Step 04 to Learning-As-I-Go and replaced the artifact-focused sentence with a statement about) Tj
+ET
+BT
+/F1 9 Tf
+48 462.0 Td
+(  studying and analyzing diffs while the project grows so every coding change remains understood in real) Tj
+ET
+BT
+/F1 9 Tf
+48 451.0 Td
+(  time.) Tj
+ET
+BT
+/F1 9 Tf
+48 429.0 Td
+(- Preserved each timeline card's existing evidence label, index numbering, card geometry, responsive grid) Tj
+ET
+BT
+/F1 9 Tf
+48 418.0 Td
+(  behavior, and proof column while changing the narrative model inside the cards.) Tj
+ET
+BT
+/F2 11 Tf
+48 396.0 Td
+(Work Completed - Responsive Spacing and Local Workflow) Tj
+ET
+BT
+/F1 9 Tf
+48 369.0 Td
+(- Identified that section:not\(.hero\) carried greater effective specificity than the original) Tj
+ET
+BT
+/F1 9 Tf
+48 358.0 Td
+(  .aboutdev-hero rule, causing the About Dev hero to inherit 88px of section padding instead of its) Tj
+ET
+BT
+/F1 9 Tf
+48 347.0 Td
+(  intended page-specific top spacing.) Tj
+ET
+BT
+/F1 9 Tf
+48 325.0 Td
+(- Changed the hero selector to section.aboutdev-hero so the page-specific padding wins without changing) Tj
+ET
+BT
+/F1 9 Tf
+48 314.0 Td
+(  section spacing elsewhere in the portfolio.) Tj
+ET
+BT
+/F1 9 Tf
+48 292.0 Td
+(- Removed 68px of desktop hero-grid top padding, the 42px restacked override, and the 30px narrow) Tj
+ET
+BT
+/F1 9 Tf
+48 281.0 Td
+(  override, preventing multiple layers of vertical offset from accumulating below the navbar.) Tj
+ET
+BT
+/F1 9 Tf
+48 259.0 Td
+(- Measured the original navbar-to-green About Dev eyebrow gap at 156px on a 1440px desktop viewport and) Tj
+ET
+BT
+/F1 9 Tf
+48 248.0 Td
+(  118px on a 390px mobile viewport.) Tj
+ET
+BT
+/F1 9 Tf
+48 226.0 Td
+(- First normalized the rendered gap to 24px on both desktop and mobile, matching Alla Vostra's) Tj
+ET
+BT
+/F1 9 Tf
+48 215.0 Td
+(  established rhythm and closely tracking the landing page's 16px gap.) Tj
+ET
+BT
+/F1 9 Tf
+48 193.0 Td
+(- Increased the final user-approved navbar-to-eyebrow gap by 100 percent, producing a verified 48px gap) Tj
+ET
+BT
+/F1 9 Tf
+48 182.0 Td
+(  on both 1440px desktop and 390px mobile viewports.) Tj
+ET
+BT
+/F1 9 Tf
+48 160.0 Td
+(- Cleared the .next development cache after stopping the active dev process. Because direct recursive) Tj
+ET
+BT
+/F1 9 Tf
+48 149.0 Td
+(  deletion was restricted by the execution environment, moved the cache into a dedicated temporary) Tj
+ET
+BT
+/F1 9 Tf
+48 138.0 Td
+(  directory and restarted Next.js from a clean local cache.) Tj
+ET
+BT
+/F1 8 Tf
+198.0 25 Td
+(Prahlin Portfolio Work Log - September 21, 2026 Page 4) Tj
+ET
+endstream
+endobj
+13 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 14 0 R >>
+endobj
+14 0 obj
+<< /Length 3825 >>
+stream
+BT
+/F2 8 Tf
+48 745 Td
+(Prahlin Portfolio Work Log - September 21, 2026) Tj
+ET
+BT
+/F1 9 Tf
+48 726 Td
+(- Restarted the local Next.js 16.2.10 Turbopack server at http://127.0.0.1:3000 and confirmed /aboutdev) Tj
+ET
+BT
+/F1 9 Tf
+48 715.0 Td
+(  returned HTTP 200 after the clean rebuild.) Tj
+ET
+BT
+/F2 11 Tf
+48 693.0 Td
+(Validation Summary) Tj
+ET
+BT
+/F1 9 Tf
+48 666.0 Td
+(- npm run check passed repeatedly throughout the copy, JSX emphasis, paragraph-rendering, and responsive) Tj
+ET
+BT
+/F1 9 Tf
+48 655.0 Td
+(  CSS edits with tsc --noEmit.) Tj
+ET
+BT
+/F1 9 Tf
+48 633.0 Td
+(- npm run build passed during this documentation pass with Next.js 16.2.10, successful Turbopack) Tj
+ET
+BT
+/F1 9 Tf
+48 622.0 Td
+(  compilation, completed TypeScript validation, page-data collection, and seven static app routes) Tj
+ET
+BT
+/F1 9 Tf
+48 611.0 Td
+(  generated.) Tj
+ET
+BT
+/F1 9 Tf
+48 589.0 Td
+(- The production route list included /, /_not-found, /aboutdev, /articles, /projects/alla-vostra, and) Tj
+ET
+BT
+/F1 9 Tf
+48 567.0 Td
+( /projects/cinerific.) Tj
+ET
+BT
+/F1 9 Tf
+48 545.0 Td
+(- Restored next-env.d.ts from the generated production route reference back to import) Tj
+ET
+BT
+/F1 9 Tf
+48 534.0 Td
+(  ./.next/dev/types/routes.d.ts after npm run build rewrote it.) Tj
+ET
+BT
+/F1 9 Tf
+48 512.0 Td
+(- Browser geometry checks with Playwright measured the landing navbar-to-first-content gap at 16px, the) Tj
+ET
+BT
+/F1 9 Tf
+48 501.0 Td
+(  Alla Vostra gap at approximately 24-30px, and the pre-fix About Dev gaps at 156px desktop and 118px) Tj
+ET
+BT
+/F1 9 Tf
+48 490.0 Td
+(  mobile.) Tj
+ET
+BT
+/F1 9 Tf
+48 468.0 Td
+(- Follow-up browser checks confirmed the final About Dev navbar-to-eyebrow gap is 48px at both 1440 x 900) Tj
+ET
+BT
+/F1 9 Tf
+48 457.0 Td
+(  and 390 x 844 viewports.) Tj
+ET
+BT
+/F1 9 Tf
+48 435.0 Td
+(- Confirmed the running local About Dev route returned HTTP 200 after source changes, cache clearing, and) Tj
+ET
+BT
+/F1 9 Tf
+48 424.0 Td
+(  production validation.) Tj
+ET
+BT
+/F1 9 Tf
+48 402.0 Td
+(- Reviewed final git state before PDF generation. main points at 64cb140 and tracks origin/main;) Tj
+ET
+BT
+/F1 9 Tf
+48 391.0 Td
+(  next-env.d.ts has no remaining diff; the refreshed portfolio_PROJECT_SNAPSHOT.txt is the only pre-PDF) Tj
+ET
+BT
+/F1 9 Tf
+48 380.0 Td
+(  tracked documentation delta.) Tj
+ET
+BT
+/F2 11 Tf
+48 358.0 Td
+(Files Touched and Artifacts) Tj
+ET
+BT
+/F1 9 Tf
+48 331.0 Td
+(- app/aboutdev/page.tsx - replaced and relocated hero/quote copy, renamed the methodology section and all) Tj
+ET
+BT
+/F1 9 Tf
+48 320.0 Td
+(  four steps, introduced richly formatted timeline content, added multi-paragraph Project Planning data,) Tj
+ET
+BT
+/F1 9 Tf
+48 309.0 Td
+(  updated the timeline renderer, and preserved the profile nametag.) Tj
+ET
+BT
+/F1 9 Tf
+48 287.0 Td
+(- app/globals.css - corrected About Dev hero selector specificity, removed stacked top-padding layers,) Tj
+ET
+BT
+/F1 9 Tf
+48 276.0 Td
+(  established the final 48px navbar-to-eyebrow gap, scaled the hero quotation, and added visible spacing) Tj
+ET
+BT
+/F1 9 Tf
+48 265.0 Td
+(  between adjacent timeline paragraphs.) Tj
+ET
+BT
+/F1 9 Tf
+48 243.0 Td
+(- next-env.d.ts - temporarily changed by npm run build and restored to the repository's dev route import) Tj
+ET
+BT
+/F1 9 Tf
+48 232.0 Td
+(  convention before PDF generation.) Tj
+ET
+BT
+/F1 9 Tf
+48 210.0 Td
+(- portfolio_PROJECT_SNAPSHOT.txt - refreshed through ./read_project.sh for the September 21 documentation) Tj
+ET
+BT
+/F1 9 Tf
+48 199.0 Td
+(  pass and updated with current source, git, and worklog inventory context.) Tj
+ET
+BT
+/F1 9 Tf
+48 177.0 Td
+(- portfolio_worklog_september21.pdf - generated as this new root-level dated Portfolio documentation) Tj
+ET
+BT
+/F1 9 Tf
+48 166.0 Td
+(  artifact.) Tj
+ET
+BT
+/F2 11 Tf
+48 144.0 Td
+(Follow-Up Context) Tj
+ET
+BT
+/F1 8 Tf
+198.0 25 Td
+(Prahlin Portfolio Work Log - September 21, 2026 Page 5) Tj
+ET
+endstream
+endobj
+15 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 16 0 R >>
+endobj
+16 0 obj
+<< /Length 3363 >>
+stream
+BT
+/F2 8 Tf
+48 745 Td
+(Prahlin Portfolio Work Log - September 21, 2026) Tj
+ET
+BT
+/F1 9 Tf
+48 726 Td
+(- The final hero quotation intentionally has no author attribution; Martin Prahl remains identified) Tj
+ET
+BT
+/F1 9 Tf
+48 715.0 Td
+(  through the nametag under the profile bubble.) Tj
+ET
+BT
+/F1 9 Tf
+48 693.0 Td
+(- The ownership statement intentionally lives in the green quote band. Future hero-copy changes should) Tj
+ET
+BT
+/F1 9 Tf
+48 682.0 Td
+(  not silently remove that supporting positioning line.) Tj
+ET
+BT
+/F1 9 Tf
+48 660.0 Td
+(- Hero quotation typography intentionally uses clamp\(48px, 6vw, 78px\), a 1.5x relationship to the page's) Tj
+ET
+BT
+/F1 9 Tf
+48 649.0 Td
+(  clamp\(32px, 4vw, 52px\) white section-header scale.) Tj
+ET
+BT
+/F1 9 Tf
+48 627.0 Td
+(- The final navbar-to-green-eyebrow gap is intentionally 48px on desktop and mobile after the user) Tj
+ET
+BT
+/F1 9 Tf
+48 616.0 Td
+(  requested a 100 percent increase from the normalized 24px gap.) Tj
+ET
+BT
+/F1 9 Tf
+48 594.0 Td
+(- Project Planning intentionally uses an array of strings so it renders two semantic paragraphs. Keep) Tj
+ET
+BT
+/F1 9 Tf
+48 583.0 Td
+(  aboutdev-timeline-copy on the content wrapper and preserve the adjacent-paragraph spacing if that copy) Tj
+ET
+BT
+/F1 9 Tf
+48 572.0 Td
+(  evolves.) Tj
+ET
+BT
+/F1 9 Tf
+48 550.0 Td
+(- Step 01 emphasis is content-specific and intentional: not is italicized, Industry & Product Research is) Tj
+ET
+BT
+/F1 9 Tf
+48 539.0 Td
+(  bold and underlined, practical is underlined, and the implementation-discipline list is italicized.) Tj
+ET
+BT
+/F1 9 Tf
+48 517.0 Td
+(- Step 03's bold read-project, commit changes, snapshots, and worklogs terms are intentional anchors for) Tj
+ET
+BT
+/F1 9 Tf
+48 506.0 Td
+(  the Portfolio's documented operating method.) Tj
+ET
+BT
+/F1 9 Tf
+48 484.0 Td
+(- The local server remains available at http://127.0.0.1:3000. The project remains local-first; no) Tj
+ET
+BT
+/F1 9 Tf
+48 473.0 Td
+(  Hostinger sync, deploy-branch update, or public deployment should occur unless explicitly requested.) Tj
+ET
+BT
+/F1 9 Tf
+48 451.0 Td
+(- The current source is committed at 64cb140 and matches origin/main. This PDF and the refreshed snapshot) Tj
+ET
+BT
+/F1 9 Tf
+48 440.0 Td
+(  are documentation artifacts created after that source commit.) Tj
+ET
+BT
+/F2 11 Tf
+48 418.0 Td
+(Output Artifact) Tj
+ET
+BT
+/F1 9 Tf
+48 391.0 Td
+(- Created /Users/prahlin/gh/portfolio/portfolio_worklog_september21.pdf.) Tj
+ET
+BT
+/F1 9 Tf
+48 369.0 Td
+(- Used the established filename because this is the first Portfolio worklog for September 21, 2026; no) Tj
+ET
+BT
+/F1 9 Tf
+48 358.0 Td
+(  Part suffix was needed.) Tj
+ET
+BT
+/F1 9 Tf
+48 336.0 Td
+(- Produced a US Letter, PDF 1.4, unencrypted document using Helvetica and Helvetica-Bold with Codex) Tj
+ET
+BT
+/F1 9 Tf
+48 325.0 Td
+(  title, subject, author, creator, and producer metadata.) Tj
+ET
+BT
+/F1 9 Tf
+48 303.0 Td
+(- Preserved the established dense technical narrative, section ordering, repeated page footer, and) Tj
+ET
+BT
+/F1 9 Tf
+48 292.0 Td
+(  end-of-document continuity notes used by the recent Portfolio worklog series.) Tj
+ET
+BT
+/F1 9 Tf
+48 270.0 Td
+(- No commit, push, deploy, Hostinger synchronization, or production publish was performed as part of) Tj
+ET
+BT
+/F1 9 Tf
+48 259.0 Td
+(  generating this PDF artifact.) Tj
+ET
+BT
+/F1 8 Tf
+198.0 25 Td
+(Prahlin Portfolio Work Log - September 21, 2026 Page 6) Tj
+ET
+endstream
+endobj
+17 0 obj
+<< /Title (Prahlin Portfolio Work Log - September 21, 2026) /Subject (Portfolio website development worklog) /Author (Codex) /Creator (Codex standard-library PDF generator) /Producer (Codex standard-library PDF generator) /CreationDate (D:20260921225206-04'00') /ModDate (D:20260921225206-04'00') >>
+endobj
+xref
+0 18
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000154 00000 n 
+0000000251 00000 n 
+0000000353 00000 n 
+0000000489 00000 n 
+0000006177 00000 n 
+0000006313 00000 n 
+0000010853 00000 n 
+0000010990 00000 n 
+0000015172 00000 n 
+0000015310 00000 n 
+0000019702 00000 n 
+0000019840 00000 n 
+0000023717 00000 n 
+0000023855 00000 n 
+0000027270 00000 n 
+trailer
+<< /Size 18 /Root 1 0 R /Info 17 0 R >>
+startxref
+27586
+%%EOF
