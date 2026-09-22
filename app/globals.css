@@ -2524,14 +2524,14 @@ section:not(.hero) {
   max-width: 100%;
 }
 
-.aboutdev-hero {
+section.aboutdev-hero {
   background:
     linear-gradient(90deg, rgba(3, 7, 5, 0.84) 0%, rgba(3, 7, 5, 0.58) 56%, rgba(3, 7, 5, 0.96) 100%),
     linear-gradient(rgba(121, 215, 255, 0.035) 1px, transparent 1px),
     linear-gradient(90deg, rgba(67, 255, 146, 0.035) 1px, transparent 1px);
   background-size: auto, 44px 44px, 44px 44px;
   overflow: hidden;
-  padding: 24px 0 70px;
+  padding: 48px 0 70px;
 }
 
 .aboutdev-hero-grid {
@@ -2540,7 +2540,7 @@ section:not(.hero) {
   gap: 56px;
   grid-template-columns: minmax(0, 1fr) minmax(282px, 282px);
   min-height: 620px;
-  padding-top: 68px;
+  padding-top: 0;
 }
 
 .aboutdev-hero-copy {
@@ -2558,9 +2558,18 @@ section:not(.hero) {
 }
 
 .aboutdev-hero h1 {
-  font-size: clamp(46px, 6.6vw, 82px);
+  font-size: clamp(48px, 6vw, 78px);
   line-height: 0.94;
   max-width: 870px;
+}
+
+.aboutdev-hero-attribution {
+  display: block;
+  font-size: 0.4em;
+  line-height: 1.2;
+  margin-top: 0.5em;
+  text-align: right;
+  width: 100%;
 }
 
 .aboutdev-lede {
@@ -2706,6 +2715,10 @@ section:not(.hero) {
   line-height: 1.55;
 }
 
+.aboutdev-timeline-copy p + p {
+  margin-top: 1.55em;
+}
+
 .aboutdev-timeline-proof {
   color: #79d7ff;
   font-size: 13px;
@@ -2729,6 +2742,12 @@ section:not(.hero) {
   line-height: 1.16;
   margin-top: 0;
   padding: 30px;
+}
+
+.aboutdev-quote-band blockquote cite {
+  display: block;
+  text-align: right;
+  width: 100%;
 }
 
 .aboutdev-card,
@@ -6941,7 +6960,7 @@ section.project-hero {
     gap: 34px;
     grid-template-columns: minmax(0, 1fr);
     min-height: 0;
-    padding-top: 42px;
+    padding-top: 0;
   }
 
   .aboutdev-hero h1 {
@@ -7126,12 +7145,12 @@ section.project-hero {
     flex-direction: column;
   }
 
-  .aboutdev-hero {
+  section.aboutdev-hero {
     padding-bottom: 58px;
   }
 
   .aboutdev-hero-grid {
-    padding-top: 30px;
+    padding-top: 0;
   }
 
   .aboutdev-section {
@@ -7639,7 +7658,7 @@ section.project-hero {
   }
 
   .aboutdev-hero h1 {
-    font-size: clamp(40px, 12vw, 50px);
+    font-size: clamp(48px, 6vw, 78px);
   }
 
   .aboutdev-profile-bubble {

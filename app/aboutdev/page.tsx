@@ -21,23 +21,46 @@ const timelineItems = [
   {
     evidence:
       "Evidence: UI/UX philosophy, visual hierarchy studies, shipped mobile screens.",
-    title: "Started with product interfaces.",
-    text: "Learned to treat layout, hierarchy, and responsive behavior as engineering problems, not decoration.",
+    title: "Industry & Product Research",
+    text: (
+      <>
+        Banking customers are <em>not</em> Video Streamers, Global users{" "}
+        <em>not</em> American ones. That's why I
+        conduct{" "}
+        comprehensive, theoretical{" "}
+        <strong><u>Industry & Product Research</u></strong> before the{" "}
+        <u>practical</u> work of{" "}
+        <em>UI/UX, Front-End, Back-End, Build & Release</em> planning
+        even begins.
+      </>
+    ),
   },
   {
     evidence: "Evidence: Alla Vostra, Cinerific, Credit King.",
-    title: "Moved into native mobile delivery.",
-    text: "Built Android and React Native products with real state, routing, animation, payments, and release constraints.",
+    title: "Project Planning",
+    text: [
+      "Cross-platform or Platform-specific? Web version or App-only? UI-focused or Back-end heavy?",
+      "I help make the difficult decisions about your unique product.",
+    ],
   },
   {
     evidence: "Evidence: Vercel API, Stripe, PayPal, Postmark.",
-    title: "Closed the backend gap.",
-    text: "Added server-owned validation, API routes, contact messages, payment rail orchestration, and production env structure.",
+    title: "Scaffolding the Workflow",
+    text: (
+      <>
+        Although the nitty-gritty of every project is different, some
+        systematization is paramount; that's why I always, without exception,
+        begin every session with <strong>read-project</strong> briefings,{" "}
+        <strong>commit changes</strong> in an organized manner, track real-time{" "}
+        <strong>snapshots</strong> of project changes, and generate end-of-day{" "}
+        <strong>worklogs</strong> at all times.
+      </>
+    ),
   },
   {
     evidence: "Evidence: 100+ logs across active projects.",
-    title: "Turned process into an artifact.",
-    text: "Worklogs, screenshots, diffs, QA notes, and release records make the work inspectable after the code ships.",
+    title: "Learning-As-I-Go",
+    text: "Creation without learning is useless. By studying & analyzing diffs while the project is growing, I ensure that I'm in the loop, and deeply comprehend, every coding change made to the project in real time.",
   },
 ];
 
@@ -81,8 +104,10 @@ export default function AboutDevPage() {
           <div className="aboutdev-hero-copy">
             <p className="aboutdev-eyebrow">About Dev</p>
             <h1>
-              The throughline is ownership: design taste, engineering depth,
-              and finished software.
+              <em>
+                &ldquo;Zillions of people have a brilliant idea. Few know how to
+                funnel it into a world-changing, must-have product.&rdquo;
+              </em>
             </h1>
             <p className="aboutdev-lede">
               I build full-stack product experiences where the interface,
@@ -119,7 +144,7 @@ export default function AboutDevPage() {
           <div className="aboutdev-section-head">
             <div>
               <p className="aboutdev-eyebrow">How I Got Here</p>
-              <h2>A timeline built around proof, not biography filler.</h2>
+              <h2>My Work Methodology</h2>
             </div>
             <p>
               This page is personal, but it stays practical. Every story beat
@@ -133,9 +158,15 @@ export default function AboutDevPage() {
                 <span className="aboutdev-timeline-index">
                   {String(index + 1).padStart(2, "0")}
                 </span>
-                <div>
+                <div className="aboutdev-timeline-copy">
                   <h3>{item.title}</h3>
-                  <p>{item.text}</p>
+                  {Array.isArray(item.text) ? (
+                    item.text.map((paragraph) => (
+                      <p key={paragraph}>{paragraph}</p>
+                    ))
+                  ) : (
+                    <p>{item.text}</p>
+                  )}
                 </div>
                 <p className="aboutdev-timeline-proof">{item.evidence}</p>
               </article>
@@ -147,8 +178,10 @@ export default function AboutDevPage() {
       <section className="aboutdev-section">
         <div className="site-shell aboutdev-quote-band">
           <blockquote>
-            I care about the moment where a product stops being a demo and
-            starts behaving like something a real person can trust.
+            <em>
+              &ldquo;The throughline is ownership: design taste, engineering depth,
+              and finished software.&rdquo;
+            </em>
           </blockquote>
           <article className="aboutdev-card">
             <p className="aboutdev-eyebrow">Working Style</p>
