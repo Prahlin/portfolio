@@ -1,0 +1,323 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+2 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+3 0 obj
+<< /Type /Pages /Kids [6 0 R 8 0 R 10 0 R 12 0 R 14 0 R] /Count 5 >>
+endobj
+4 0 obj
+<< /Type /Catalog /Pages 3 0 R >>
+endobj
+5 0 obj
+<< /Length 7196 >>
+stream
+BT /F2 14.0 Tf 1 0 0 1 54 752.0 Tm (Prahlin Portfolio Work Log - September 27, 2026) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 730.0 Tm (Compiled summary for Sunday, September 27, 2026 - focus: continuing the Prahl.dev Portfolio Cinerific project) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 718.6 Tm (page after the September 26 Product Flow switcher and diagram pass, verifying the United States Eastern date,) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 707.2 Tm (running the customary project reader, extracting and studying all forty-one pre-existing Portfolio PDF worklogs,) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 695.8 Tm (using the Alla Vostra project page as the accepted UI Foundations reference, adding the Cinerific promotional) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 684.4 Tm (image and full UI Foundations section structure, aligning UX Product Flow names and eyebrows with the Cinerific) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 673.0 Tm (diagram, assembling Cinerific-specific color, typography, spacing, logo, avatar, title-card, and animation) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 661.6 Tm (assets, iterating portrait and landscape sizing by visible artwork bounds, adding Show More / Show Less) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 650.2 Tm (behavior, building a layered perpetual loading spinner with pause-and-resume control, investigating a supplied) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 638.8 Tm (Figma component, reverting the unsuccessful high-resolution spinner treatment, clearing the development cache,) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 627.4 Tm (validating the final implementation, documenting committed source state 52051bd, refreshing the Portfolio) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 616.0 Tm (project snapshot, and generating the September 27 Portfolio PDF worklog.) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 598.8 Tm (Generated in continuity with the established Prahlin Portfolio daily worklog cadence: compact opening summary,) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 587.4 Tm (source-material section, baseline section, goal list, work-completed sections, validation section, files-touched) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 576.0 Tm (list, follow-up context, and output-artifact close.) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 558.8 Tm (This artifact intentionally covers Prahlin/portfolio work performed after portfolio_worklog_september26.pdf and) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 547.4 Tm (after the September 26 documentation state. The source state reviewed for this record is) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 536.0 Tm (52051bd039745ea74452e19d1b34b952bd463def on main, matching origin/main, titled Built out the Cinerific UI) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 524.6 Tm (foundations showcase. The commit contains 903 insertions and 23 deletions across seventeen files, including) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 513.2 Tm (Cinerific page and switcher source, shared styling, one font, and twelve new UI Foundations image assets. No) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 501.8 Tm (Hostinger deploy-branch work or production deployment was performed during this record. The local documentation) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 490.4 Tm (delta created after the source commit is the refreshed portfolio_PROJECT_SNAPSHOT.txt file and this September 27) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 479.0 Tm (root-level PDF worklog.) Tj ET
+BT /F2 11.0 Tf 1 0 0 1 54 456.8 Tm (Source Materials Reviewed) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 440.8 Tm (- Verified the United States Eastern date with TZ=America/New_York date from /Users/prahlin/gh/portfolio. It) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 429.4 Tm (  reported Sunday, September 27, 2026 at approximately 4:40 PM EDT with UTC offset -0400, so the worklog uses) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 418.0 Tm (  September 27 rather than relying on a UTC calendar date.) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 404.8 Tm (- Ran ./read_project.sh and regenerated portfolio_PROJECT_SNAPSHOT.txt before composing this record,) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 393.4 Tm (  preserving the Portfolio convention that the current tree, assets, configuration, PDF inventory, Git) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 382.0 Tm (  context, and standing workflow instructions are refreshed for session documentation.) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 368.8 Tm (- Extracted and studied all forty-one pre-existing root-level Portfolio worklog PDFs with pdftotext: fifteen) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 357.4 Tm (  July records, fifteen August records, and eleven September records through) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 346.0 Tm (  portfolio_worklog_september26.pdf. The series contained 241 PDF pages and approximately 112,663 extracted) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 334.6 Tm (  words before this artifact.) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 321.4 Tm (- Compared the complete series for title cadence, root-level filename conventions, same-day part suffixes,) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 310.0 Tm (  opening-summary density, source-material language, baseline and goal framing, bullet-heavy technical voice,) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 298.6 Tm (  validation wording, files-touched treatment, follow-up continuity, and output-artifact closure.) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 285.4 Tm (- Used portfolio_worklog_september26.pdf as the closest chronological and subject baseline. The August and) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 274.0 Tm (  September Alla Vostra records supplied the most relevant history for UI Foundations stacks, responsive) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 262.6 Tm (  capture grids, Show More / Show Less behavior, visual asset sizing, and cache-sensitive browser review.) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 249.4 Tm (- Checked pdfinfo and pdffonts on the latest baseline. The mature output convention remains US Letter at 612) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 238.0 Tm (  x 792 points, PDF 1.4, Helvetica and Helvetica-Bold Type 1 fonts, no encryption, Codex) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 226.6 Tm (  author/creator/producer metadata, and a repeated page footer.) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 213.4 Tm (- Reviewed commit 52051bd through git show, git log, git status, branch tracking, and the complete) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 202.0 Tm (  changed-file set. Confirmed main and origin/main resolve to the same commit after the source work was) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 190.6 Tm (  committed.) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 177.4 Tm (- Reviewed app/projects/cinerific/ProductFlowSwitcher.tsx, app/projects/cinerific/page.tsx, app/globals.css,) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 166.0 Tm (  the Cinerific UI Foundations font and image directories, and the corresponding Alla Vostra project-page) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 154.6 Tm (  structures used as the design and interaction reference.) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 141.4 Tm (- Reviewed the Cinerific application repository during the asset-selection pass and used its current logos,) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 130.0 Tm (  avatar bubbles, title-card variants, and spinner layers rather than inventing replacements unrelated to the) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 118.6 Tm (  app.) Tj ET
+BT /F2 11.0 Tf 1 0 0 1 54 96.4 Tm (Baseline Status Before September 27 Work) Tj ET
+BT /F1 7.5 Tf 1 0 0 1 54 27 Tm (Prahlin Portfolio Work Log - September 27, 2026) Tj ET
+BT /F1 7.5 Tf 1 0 0 1 523 27 Tm (Page 1) Tj ET
+endstream
+endobj
+6 0 obj
+<< /Type /Page /Parent 3 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> /Contents 5 0 R >>
+endobj
+7 0 obj
+<< /Length 7113 >>
+stream
+BT /F1 8.7 Tf 1 0 0 1 54 752.0 Tm (- The September 26 pass had established the Cinerific UI Foundations / UX Product Flow switcher,) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 740.6 Tm (  section-bounded sticky behavior, hash-aware selection, and a responsive DOM diagram. UX Product Flow was) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 729.2 Tm (  complete enough for review, while UI Foundations intentionally contained only its heading.) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 716.0 Tm (- The accepted Alla Vostra page already demonstrated the desired foundation-section anatomy: green eyebrow) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 704.6 Tm (  labels, white section headings, square cards, compact asset stacks, responsive two-column arrangements, and) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 693.2 Tm (  conditional Show More / Show Less controls.) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 680.0 Tm (- Cinerific had real brand colors, fonts, logos, avatars, title cards, and loading artwork in its application) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 668.6 Tm (  repository, but none of those materials had been assembled into the Portfolio case-study page.) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 655.4 Tm (- The existing Cinerific screenshot groups still carried older commerce-oriented section names and numbered) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 644.0 Tm (  stage eyebrows that no longer matched the Welcome, Preview, Browse Selection, Favorites, and Settings rails) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 632.6 Tm (  in the new UX diagram.) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 619.4 Tm (- The user required the visual widths to be judged by the visible artwork rather than raw file dimensions) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 608.0 Tm (  because the logo and spinner source images contained uneven transparent padding.) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 594.8 Tm (- The development server was susceptible to stale Turbopack output during repeated source and asset) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 583.4 Tm (  replacement, making explicit cache clears part of reliable visual verification.) Tj ET
+BT /F2 11.0 Tf 1 0 0 1 54 561.2 Tm (Goals for September 27) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 545.2 Tm (- Populate the Cinerific UI Foundations view with a real project image and the same section hierarchy, visual) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 533.8 Tm (  language, and expansion behavior already accepted on the Alla Vostra page.) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 520.6 Tm (- Align all UX Product Flow group eyebrows and section names with the diagram while retaining the existing) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 509.2 Tm (  screenshot collections and their responsive behavior.) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 496.0 Tm (- Present Cinerific-specific colors, hexadecimal values, fonts, spacing scales, logos, avatars, title cards,) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 484.6 Tm (  and animation assets without importing Alla Vostra content into the Cinerific identity system.) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 471.4 Tm (- Match square-card proportions, standalone centered rows, visible artwork widths, image rounding, responsive) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 460.0 Tm (  stack widths, and Show More / Show Less placement across portrait, medium landscape, and widest landscape) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 448.6 Tm (  layouts.) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 435.4 Tm (- Build a perpetually rotating Cinerific loading spinner with an accessible control that pauses in place and) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 424.0 Tm (  resumes from the exact stopped phase.) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 410.8 Tm (- Investigate the supplied Figma component when the initial spinner layers appeared visually weak, but) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 399.4 Tm (  preserve the previously accepted implementation if the attempted replacement reduced quality.) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 386.2 Tm (- Run TypeScript, asset, route, browser-state, and cache-reset checks; preserve the current committed state;) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 374.8 Tm (  refresh the project snapshot; and document the result in the established PDF format.) Tj ET
+BT /F2 11.0 Tf 1 0 0 1 54 352.6 Tm (Work Completed - UI Foundations and UX Product Flow Structure) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 336.6 Tm (- Added the Cinerific promotional image directly below the white UI Foundations heading, using the existing) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 325.2 Tm (  landing-page artwork inside a bordered, rounded, shadowed feature frame.) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 312.0 Tm (- Added UI Foundations sections for Colors & Theming, Typography & Spacing, Iconography & Imagery,) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 300.6 Tm (  Animations, Navigations, Controls & Inputs, and Visual Hierarchy. Each section uses the consistent green UI) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 289.2 Tm (  FOUNDATIONS eyebrow and white heading treatment established by Alla Vostra.) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 276.0 Tm (- Added reusable foundation card, stack, and expandable-group components inside ProductFlowSwitcher.tsx so) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 264.6 Tm (  the page can render Cinerific-specific content while preserving the shared Portfolio capture vocabulary.) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 251.4 Tm (- Added responsive Show More / Show Less controls with chevron states, matching the accepted width,) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 240.0 Tm (  placement, and reveal behavior. Narrow layouts initially expose one group while wider layouts expose two) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 228.6 Tm (  before offering the additional material.) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 215.4 Tm (- Renamed the UX Product Flow screenshot sections from Browse, Cart, Customer Details, Payment, and) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 204.0 Tm (  Confirmation to Welcome, Preview, Browse Selection, Favorites, and Settings.) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 190.8 Tm (- Replaced numbered Stage eyebrows with UX PRODUCT FLOW throughout the screenshot groups and standardized) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 179.4 Tm (  their expansion labels to Show More and Show Less.) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 166.2 Tm (- Kept Welcome and Browse Selection at the existing two-stack collapsed threshold while preserving the) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 154.8 Tm (  remaining groups' complete initial presentation.) Tj ET
+BT /F2 11.0 Tf 1 0 0 1 54 132.6 Tm (Work Completed - Colors, Fonts, and Spacing) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 116.6 Tm (- Built square color cards for Primaries, Accents, and Neutrals using the Cinerific palette: Aubergine) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 105.2 Tm (  #23001F, Electric Violet #600878, Focus Lavender #C86BE0, Marquee Gold #FFC91B, Cinema Black #080007, and) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 93.8 Tm (  Projector Silver #E7E7E7.) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 80.6 Tm (- Centered the two-card Neutrals stack as a standalone row, matching the Alla Vostra section's handling of a) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 69.2 Tm (  single remaining color group rather than leaving it aligned to one side of a multi-column grid.) Tj ET
+BT /F1 7.5 Tf 1 0 0 1 54 27 Tm (Prahlin Portfolio Work Log - September 27, 2026) Tj ET
+BT /F1 7.5 Tf 1 0 0 1 523 27 Tm (Page 2) Tj ET
+endstream
+endobj
+8 0 obj
+<< /Type /Page /Parent 3 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> /Contents 7 0 R >>
+endobj
+9 0 obj
+<< /Length 7102 >>
+stream
+BT /F1 8.7 Tf 1 0 0 1 54 752.0 Tm (- Added the Cinerific Manrope variable font under public/fonts/cinerific and registered it through a) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 740.6 Tm (  dedicated @font-face rule with weights 200 through 900.) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 727.4 Tm (- Named the typography group Fonts and reduced it to the two identity-relevant samples requested by the user:) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 716.0 Tm (  Manrope for the application interface and Broadway for the avatar-name and logo treatment.) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 702.8 Tm (- Replaced the temporary logo sample inside the Broadway square with a dedicated Broadway word artwork,) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 691.4 Tm (  labeled the sample Broadway, and removed the earlier Logo + Avatar Names and App UI / 200-900 descriptions.) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 678.2 Tm (- Added square Component Spacing and Layout Spacing samples with the app-derived scales 8, 14, 20, and 24 dp) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 666.8 Tm (  plus 34, 50, 72, and 80 dp, using Cinerific violet-to-lavender bars on its dark visual surface.) Tj ET
+BT /F2 11.0 Tf 1 0 0 1 54 644.6 Tm (Work Completed - Logos, Avatars, and Title Cards) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 628.6 Tm (- Added a Logo stack under Iconography & Imagery using separate with-googly-eyes and without-googly-eyes) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 617.2 Tm (  presentations. Removed the temporary purple card backgrounds so each transparent logo appears directly on) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 605.8 Tm (  the page grid.) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 592.6 Tm (- Reordered the logo variants to the accepted left-to-right arrangement and enlarged both by visible artwork) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 581.2 Tm (  bounds rather than by their 1400 x 1000 source canvases. A 149 percent internal artwork width, negative) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 569.8 Tm (  side margins, and a small horizontal correction compensate for uneven transparent space.) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 556.6 Tm (- Added the four newest Cinerific avatar bubbles as a compact two-by-two grid: Steve labeled BOY, Janny) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 545.2 Tm (  labeled GIRL, Martin labeled GENDER NEUTRAL, and the neutral guest profile labeled GUEST.) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 532.0 Tm (- Swapped the requested gender-label positions while retaining the avatar-image identities and arranged the) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 520.6 Tm (  complete avatar group at the same collective width as the surrounding foundation stacks.) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 507.4 Tm (- Added a Title Cards stack with the two One Last Breath assets from the Cinerific repository: the 700 x 526,) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 496.0 Tm (  350:263 card used DURING NAVIGATION and the 1194 x 834, 199:139 artwork used IN HERO.) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 482.8 Tm (- Matched the navigation card's rounded corners to its in-app presentation and retained the edge-to-edge hero) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 471.4 Tm (  treatment for the wider hero asset.) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 458.2 Tm (- Added all twelve final Cinerific UI Foundations image assets to the Portfolio repository: four avatars, two) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 446.8 Tm (  logo layers, two title cards, one Broadway word sample, and three spinner layers.) Tj ET
+BT /F2 11.0 Tf 1 0 0 1 54 424.6 Tm (Work Completed - Responsive Width and Expansion Refinement) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 408.6 Tm (- Iterated the Logo, Avatars, and Title Cards stacks across phone portrait, medium landscape, and widest) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 397.2 Tm (  landscape layouts until they aligned visually with the Colors & Theming and Typography & Spacing stacks.) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 384.0 Tm (- Standardized the desktop reference width at 318px for each individual logo presentation, the collective) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 372.6 Tm (  two-by-two avatar grid, each individual title card, and the loading-spinner demonstration.) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 359.4 Tm (- Used a portrait formula based on two min\(42vw, 146px\) columns plus a 12px gap so the logo, avatar,) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 348.0 Tm (  title-card, and spinner groups resolve to the same narrow-screen width without overflowing 320px and 390px) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 336.6 Tm (  viewports.) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 323.4 Tm (- Preserved 152px avatar cards with a 14px desktop gap and reduced those values responsively for phones,) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 312.0 Tm (  allowing the collective avatar width to remain the comparison target for the other media stacks.) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 298.8 Tm (- Corrected the widest-landscape logo presentation separately from medium landscape, then rebalanced portrait) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 287.4 Tm (  after those changes so desktop improvements did not narrow or enlarge the phone treatment unexpectedly.) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 274.2 Tm (- Judged alignment from the visible logo and spinner edges rather than trusting canvas dimensions, directly) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 262.8 Tm (  addressing the source files' larger transparent gap on one side.) Tj ET
+BT /F2 11.0 Tf 1 0 0 1 54 240.6 Tm (Work Completed - Animation Spinner and Figma Rollback) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 224.6 Tm (- Added Animations as a new UI Foundations category and created a Loading Spinner stack using the three) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 213.2 Tm (  corrected Cinerific application layers: red star, central wheel, and mini star.) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 200.0 Tm (- Implemented perpetual linear rotation using the app-derived relative timing: 2800ms and 720 degrees for the) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 188.6 Tm (  red star, 4179ms and 720 degrees for the wheel, and 4242ms and 360 degrees for the mini star.) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 175.4 Tm (- Scaled the composite spinner by visible artwork bounds to match the 318px foundation width instead of) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 164.0 Tm (  treating the transparent 416 x 422 source canvases as the visible edge.) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 150.8 Tm (- Added an accessible circular pause control below the spinner. Pausing applies animation-play-state: paused) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 139.4 Tm (  to every layer, swaps the icon and aria-label to Resume loading spinner, and resumes from the preserved) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 128.0 Tm (  animation phase rather than restarting.) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 114.8 Tm (- Investigated the original multi-frame Figma component supplied at node 319:6227 after the first extracted) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 103.4 Tm (  spinner appeared visually rough. Attempted higher-resolution replacement layers and smoothing changes, then) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 92.0 Tm (  reverted all post-link changes when the result did not meet the user's visual standard.) Tj ET
+BT /F1 7.5 Tf 1 0 0 1 54 27 Tm (Prahlin Portfolio Work Log - September 27, 2026) Tj ET
+BT /F1 7.5 Tf 1 0 0 1 523 27 Tm (Page 3) Tj ET
+endstream
+endobj
+10 0 obj
+<< /Type /Page /Parent 3 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> /Contents 9 0 R >>
+endobj
+11 0 obj
+<< /Length 6721 >>
+stream
+BT /F1 8.7 Tf 1 0 0 1 54 752.0 Tm (- Restored the original application-derived PNG layers, pre-Figma timing, scale, and pause behavior; removed) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 740.6 Tm (  the attempted high-resolution repository assets; and retained only a recoverable temporary archive outside) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 729.2 Tm (  the project tree during the rollback.) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 716.0 Tm (- Cleared the generated .next cache after the asset reversal, restarted the development server, and confirmed) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 704.6 Tm (  the restored spinner files returned HTTP 200 instead of stale image-cache responses.) Tj ET
+BT /F2 11.0 Tf 1 0 0 1 54 682.4 Tm (Validation Summary) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 666.4 Tm (- npm run check passed with tsc --noEmit after the final implementation and again during the documentation) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 655.0 Tm (  pass.) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 641.8 Tm (- Confirmed commit 52051bd contains 903 insertions and 23 deletions across seventeen files, including the) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 630.4 Tm (  Manrope font and twelve Cinerific UI Foundations images.) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 617.2 Tm (- Confirmed main and origin/main match at 52051bd. The only local change before this PDF was the customary) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 605.8 Tm (  refreshed portfolio_PROJECT_SNAPSHOT.txt generated for documentation.) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 592.6 Tm (- Verified the Cinerific project route returned HTTP 200 from the restarted local Next.js server after the) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 581.2 Tm (  cache reset.) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 568.0 Tm (- Confirmed the three restored spinner sources returned HTTP 200 individually and that no high-resolution) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 556.6 Tm (  Figma-derived spinner references or assets remained in the repository.) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 543.4 Tm (- Browser automation confirmed the spinner pause state remained stable over time and changed its accessible) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 532.0 Tm (  control label to Resume loading spinner. The restored Next Image URLs resolve to the red-star, wheel, and) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 520.6 Tm (  mini-star PNG assets.) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 507.4 Tm (- Verified the final UI structure contains consistent UI FOUNDATIONS and UX PRODUCT FLOW eyebrows, the) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 496.0 Tm (  requested section names, and Show More / Show Less controls where additional asset groups exist.) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 482.8 Tm (- Verified source image dimensions for the four avatars at 1270 x 1270, logo layers at 1400 x 1000, spinner) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 471.4 Tm (  layers at 416 x 422, title cards at 700 x 526 and 1194 x 834, and the Broadway word artwork at 460 x 40.) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 458.2 Tm (- The refreshed snapshot contains generated source excerpts with trailing whitespace, so git diff --check) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 446.8 Tm (  reports those snapshot lines even though the application source check passed. This is a property of the) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 435.4 Tm (  customary snapshot generator output, not a TypeScript or runtime failure.) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 422.2 Tm (- No static export, GitHub Actions dispatch, Hostinger synchronization, deploy-branch update, or production) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 410.8 Tm (  publish was performed during this session.) Tj ET
+BT /F2 11.0 Tf 1 0 0 1 54 388.6 Tm (Files Touched and Artifacts) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 372.6 Tm (- app/projects/cinerific/ProductFlowSwitcher.tsx - added the UI Foundations data, responsive asset) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 361.2 Tm (  components, expandable groups, spinner behavior, promotional image integration, and revised UX Product Flow) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 349.8 Tm (  labels.) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 336.6 Tm (- app/projects/cinerific/page.tsx - renamed the five screenshot groups, replaced numbered stage eyebrows,) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 325.2 Tm (  standardized expansion labels, and preserved the existing responsive capture content.) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 312.0 Tm (- app/globals.css - registered Cinerific Manrope and added Cinerific-specific square-card, stack, logo,) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 300.6 Tm (  avatar, title-card, spacing, spinner, portrait, landscape, and expansion-control styling.) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 287.4 Tm (- public/fonts/cinerific/manrope.ttf - added the variable application typeface used by the Cinerific) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 276.0 Tm (  foundation samples.) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 262.8 Tm (- public/images/cinerific/ui-foundations/ - added the final avatar, Broadway, spinner, logo, and One Last) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 251.4 Tm (  Breath title-card assets used by the project page.) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 238.2 Tm (- portfolio_PROJECT_SNAPSHOT.txt - refreshed through ./read_project.sh for the September 27 documentation) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 226.8 Tm (  pass so it records the committed UI Foundations source, asset inventory, worklog inventory, and current Git) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 215.4 Tm (  context.) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 202.2 Tm (- portfolio_worklog_september27.pdf - generated as this new root-level dated Portfolio documentation) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 190.8 Tm (  artifact.) Tj ET
+BT /F2 11.0 Tf 1 0 0 1 54 168.6 Tm (Follow-Up Context) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 152.6 Tm (- Navigations, Controls & Inputs, and Visual Hierarchy now have correctly styled UI Foundations section) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 141.2 Tm (  headers but remain ready for later Cinerific-specific asset collections.) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 128.0 Tm (- The loading spinner currently uses the corrected application-derived PNG layers restored after the Figma) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 116.6 Tm (  experiment. If the user edits the component directly in Figma, future replacement assets should preserve) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 105.2 Tm (  the accepted visible width, independent rotation timing, and pause-in-place behavior.) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 92.0 Tm (- Logo and spinner sizing intentionally compensates for transparent source padding. Future asset replacements) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 80.6 Tm (  should be evaluated by visible artwork edges before removing the width, margin, translation, or scale) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 69.2 Tm (  corrections.) Tj ET
+BT /F1 7.5 Tf 1 0 0 1 54 27 Tm (Prahlin Portfolio Work Log - September 27, 2026) Tj ET
+BT /F1 7.5 Tf 1 0 0 1 523 27 Tm (Page 4) Tj ET
+endstream
+endobj
+12 0 obj
+<< /Type /Page /Parent 3 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> /Contents 11 0 R >>
+endobj
+13 0 obj
+<< /Length 2593 >>
+stream
+BT /F1 8.7 Tf 1 0 0 1 54 752.0 Tm (- The logo, collective avatar grid, individual title cards, and spinner demonstration share the 318px desktop) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 740.6 Tm (  target and the same narrow portrait formula. Future responsive changes should verify all four as a set.) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 727.4 Tm (- The UX screenshot-group names now mirror the diagram rails. Future screenshot copy can be rewritten around) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 716.0 Tm (  the Cinerific media experience without reverting the accepted Welcome, Preview, Browse Selection,) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 704.6 Tm (  Favorites, and Settings taxonomy.) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 691.4 Tm (- The current source is committed at 52051bd and matches origin/main. This PDF and the refreshed snapshot are) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 680.0 Tm (  documentation artifacts created after that source commit.) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 666.8 Tm (- As with prior Portfolio work, ask for the commit message before committing or pushing the refreshed) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 655.4 Tm (  snapshot or this PDF unless the user explicitly supplies the message and requests the operation.) Tj ET
+BT /F2 11.0 Tf 1 0 0 1 54 633.2 Tm (Output Artifact) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 617.2 Tm (- Created /Users/prahlin/gh/portfolio/portfolio_worklog_september27.pdf.) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 604.0 Tm (- Used the established filename because this is the first Portfolio worklog for September 27, 2026; no Part) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 592.6 Tm (  suffix was needed.) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 579.4 Tm (- Produced a US Letter, PDF 1.4, unencrypted document using Helvetica and Helvetica-Bold with Codex title,) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 568.0 Tm (  subject, author, creator, and producer metadata.) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 554.8 Tm (- Preserved the established dense technical narrative, section ordering, repeated page footer, and) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 543.4 Tm (  end-of-document continuity notes used by the recent Portfolio worklog series.) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 530.2 Tm (- Source state reviewed: 52051bd039745ea74452e19d1b34b952bd463def on main and origin/main.) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 517.0 Tm (- No source commit, push, deploy, Hostinger synchronization, or production publish was performed as part of) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 54 505.6 Tm (  generating this PDF artifact.) Tj ET
+BT /F1 7.5 Tf 1 0 0 1 54 27 Tm (Prahlin Portfolio Work Log - September 27, 2026) Tj ET
+BT /F1 7.5 Tf 1 0 0 1 523 27 Tm (Page 5) Tj ET
+endstream
+endobj
+14 0 obj
+<< /Type /Page /Parent 3 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> /Contents 13 0 R >>
+endobj
+15 0 obj
+<< /Title (Prahlin Portfolio Work Log - September 27, 2026) /Subject (Portfolio website development worklog) /Author (Codex) /Creator (Codex standard-library PDF generator) /Producer (Codex standard-library PDF generator) /CreationDate (D:20260927164254-04'00') /ModDate (D:20260927164254-04'00') >>
+endobj
+xref
+0 16
+0000000000 65535 f 
+0000000015 00000 n 
+0000000112 00000 n 
+0000000214 00000 n 
+0000000298 00000 n 
+0000000347 00000 n 
+0000007594 00000 n 
+0000007730 00000 n 
+0000014894 00000 n 
+0000015030 00000 n 
+0000022183 00000 n 
+0000022320 00000 n 
+0000029093 00000 n 
+0000029231 00000 n 
+0000031876 00000 n 
+0000032014 00000 n 
+trailer
+<< /Size 16 /Root 4 0 R /Info 15 0 R >>
+startxref
+32330
+%%EOF
