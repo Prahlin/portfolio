@@ -4315,6 +4315,20 @@ section.project-hero {
   --flow-table-height: calc(var(--flow-chart-static-width) * 1.9129930394);
 }
 
+.cinerific-flow-chart-table-mockup {
+  --flow-table-height: calc(var(--flow-chart-static-width) * 1.9129930394);
+}
+
+.cinerific-flow-chart-table-mockup .flow-diagram-rail span {
+  font-size: 15px;
+}
+
+.cinerific-flow-chart-table-mockup .flow-diagram-node {
+  font-size: clamp(8px, 1.25vw, 12px);
+  min-width: 0;
+  white-space: normal;
+}
+
 .flow-table-frame {
   background: #020604;
   border: 1px solid rgba(198, 255, 217, 0.08);

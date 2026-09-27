@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { ArrowLeft, ArrowRight, Braces, Mail } from "lucide-react";
 
 import ExpandableFlowStacks from "./ExpandableFlowStacks";
+import ProductFlowSwitcher from "./ProductFlowSwitcher";
 
 export const metadata: Metadata = {
   title: "Cinerific | Full Stack Mobile Commerce Case Study",
@@ -126,23 +127,6 @@ type FlowScreen = {
 type FlowScreenStack = {
   screens: FlowScreen[];
   title: string;
-};
-
-const flowSegments = [
-  "Launch",
-  "Browse",
-  "Cart",
-  "Details",
-  "Payment",
-  "Confirmation",
-];
-
-const launchScreen: FlowScreen = {
-  aspect: "tall",
-  label: "Large",
-  title: "Startup Screen",
-  src: "/images/startup_screen_large.png",
-  caption: "Launch screen establishing brand tone and first-use polish.",
 };
 
 const screenshotGroups: {
@@ -731,65 +715,32 @@ export default function CinerificCaseStudy() {
 
       <section id="product-flow">
         <div className="site-shell">
-          <SectionHeading kicker="Product Flow" title="Product Flow" />
-          <div className="flow-segments" aria-label="Cinerific flow stages">
-            {flowSegments.map((segment) => (
-              <span key={segment}>{segment}</span>
-            ))}
-          </div>
+          <ProductFlowSwitcher>
+            <div className="flow-capture-groups">
+              {screenshotGroups.map((group, index) => (
+                <div className="flow-capture-group" key={group.title}>
+                  <div className="flow-group-header">
+                    <span>Stage {String(index + 2).padStart(2, "0")}</span>
+                    <h3>{group.title}</h3>
+                    <p>{group.copy}</p>
+                  </div>
 
-          <div className="flow-layout">
-            <figure
-              className={`flow-screen flow-screen-main flow-screen-${launchScreen.aspect}`}
-            >
-              <div
-                aria-label={launchScreen.title}
-                className="flow-image-frame"
-                role="img"
-              />
-              <figcaption>{launchScreen.caption}</figcaption>
-            </figure>
-
-            <div className="flow-section-intro">
-              <div className="flow-checkout-note">
-                <span>Flow System</span>
-                <p>
-                  The ordering path was built as a connected sequence, from
-                  first impression to product selection, cart review, checkout
-                  details, payment, and confirmation.
-                </p>
-              </div>
-              <p>
-                Android Small and Large captures show how the same purchase
-                flow holds across device classes, from browsing to payment.
-              </p>
-            </div>
-          </div>
-
-          <div className="flow-capture-groups">
-            {screenshotGroups.map((group, index) => (
-              <div className="flow-capture-group" key={group.title}>
-                <div className="flow-group-header">
-                  <span>Stage {String(index + 2).padStart(2, "0")}</span>
-                  <h3>{group.title}</h3>
-                  <p>{group.copy}</p>
+                  <ExpandableFlowStacks
+                    collapsedLabel={`More ${group.title} Screens`}
+                    expandedLabel={`Hide ${group.title} Screens`}
+                    initialStackCount={
+                      group.title === "Browse" ||
+                      group.title === "Customer Details"
+                        ? 2
+                        : group.stacks.length
+                    }
+                    mobilePortraitInitialStackCount={1}
+                    stacks={group.stacks}
+                  />
                 </div>
-
-                <ExpandableFlowStacks
-                  collapsedLabel={`More ${group.title} Screens`}
-                  expandedLabel={`Hide ${group.title} Screens`}
-                  initialStackCount={
-                    group.title === "Browse" ||
-                    group.title === "Customer Details"
-                      ? 2
-                      : group.stacks.length
-                  }
-                  mobilePortraitInitialStackCount={1}
-                  stacks={group.stacks}
-                />
-              </div>
-            ))}
-          </div>
+              ))}
+            </div>
+          </ProductFlowSwitcher>
         </div>
       </section>
 
