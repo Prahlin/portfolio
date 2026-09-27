@@ -1,7 +1,9 @@
 "use client";
 
+import Image from "next/image";
+import { ChevronDown, ChevronUp, Pause, Play } from "lucide-react";
 import type { CSSProperties, ReactNode } from "react";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useId, useRef, useState } from "react";
 
 type FlowView = "ui" | "ux";
 
@@ -33,6 +35,37 @@ type FlowDividerStyle = CSSProperties & {
   "--flow-connector-left": string;
   "--flow-connector-length": string;
   "--flow-connector-top": string;
+};
+
+type FoundationSwatch = {
+  hex: string;
+  name: string;
+  text: string;
+};
+
+type FoundationColorGroup = {
+  swatches: [FoundationSwatch, FoundationSwatch];
+  title: string;
+};
+
+type FoundationTypeSample = {
+  artwork?: {
+    alt: string;
+  };
+  label: string;
+  sample: string;
+  weight: number;
+};
+
+type FoundationSpacingSample = {
+  label: string;
+  tokens: readonly number[];
+};
+
+type FoundationAssetGroup = {
+  cards: ReactNode;
+  className?: string;
+  title: string;
 };
 
 const flowCoordinateFrame = { height: 1648, width: 807.2, x: 122.8, y: 270 };
@@ -82,6 +115,113 @@ const flowRails: FlowBox[] = [
 ];
 
 const flowDividerYPositions = [544.7, 819.3, 1368.7, 1643.3];
+
+const uiFoundationSections = [
+  {
+    copy:
+      "A cinematic dark palette pairs aubergine depth with silver clarity and vivid focus accents.",
+    title: "Colors & Theming",
+  },
+  {
+    copy:
+      "Manrope creates a consistent voice across display moments, navigation, metadata, and controls.",
+    title: "Typography & Spacing",
+  },
+  {
+    copy:
+      "The marquee-inspired identity shifts between a clean wordmark and a playful googly-eyed character.",
+    title: "Iconography & Imagery",
+  },
+  { title: "Animations" },
+  { title: "Navigations" },
+  { title: "Controls & Inputs" },
+  { title: "Visual Hierarchy" },
+];
+
+const cinerificColorGroups: FoundationColorGroup[] = [
+  {
+    swatches: [
+      { hex: "#23001F", name: "Aubergine", text: "#E7E7E7" },
+      { hex: "#600878", name: "Electric Violet", text: "#FFFFFF" },
+    ],
+    title: "Primaries",
+  },
+  {
+    swatches: [
+      { hex: "#C86BE0", name: "Focus Lavender", text: "#080007" },
+      { hex: "#FFC91B", name: "Marquee Gold", text: "#080007" },
+    ],
+    title: "Accents",
+  },
+  {
+    swatches: [
+      { hex: "#080007", name: "Cinema Black", text: "#E7E7E7" },
+      { hex: "#E7E7E7", name: "Projector Silver", text: "#1F1F1F" },
+    ],
+    title: "Neutrals",
+  },
+];
+
+const cinerificTypeSamples: FoundationTypeSample[] = [
+  {
+    label: "Manrope",
+    sample: "Manrope",
+    weight: 800,
+  },
+  {
+    artwork: {
+      alt: "Broadway rendered in the Broadway typeface",
+    },
+    label: "Broadway",
+    sample: "",
+    weight: 400,
+  },
+];
+
+const cinerificSpacingSamples: FoundationSpacingSample[] = [
+  { label: "Component", tokens: [8, 14, 20, 24] },
+  { label: "Layout", tokens: [34, 50, 72, 80] },
+];
+
+const cinerificAvatarSamples = [
+  {
+    label: "Boy",
+    name: "Steve",
+    src: "/images/cinerific/ui-foundations/avatar-steve.png",
+  },
+  {
+    label: "Girl",
+    name: "Janny",
+    src: "/images/cinerific/ui-foundations/avatar-janny.png",
+  },
+  {
+    label: "Gender Neutral",
+    name: "Martin",
+    src: "/images/cinerific/ui-foundations/avatar-martin.png",
+  },
+  {
+    label: "Guest",
+    name: "Guest",
+    src: "/images/cinerific/ui-foundations/avatar-guest.png",
+  },
+];
+
+const cinerificTitleCardSamples = [
+  {
+    height: 526,
+    label: "During Navigation",
+    presentation: "card" as const,
+    src: "/images/cinerific/ui-foundations/one-last-breath-700x526.webp",
+    width: 700,
+  },
+  {
+    height: 834,
+    label: "In Hero",
+    presentation: "hero" as const,
+    src: "/images/cinerific/ui-foundations/one-last-breath-1194x834.webp",
+    width: 1194,
+  },
+];
 
 const browseSelectionNodeLayout = [
   { title: "Genre", width: 180, x: 350, y: -196 },
@@ -198,6 +338,354 @@ function ProductFlowDiagram() {
       </div>
     </figure>
   );
+}
+
+function FoundationSwatchCard({ swatch }: { swatch: FoundationSwatch }) {
+  return (
+    <figure className="flow-screen flow-screen-compact flow-screen-swatch cinerific-foundation-card">
+      <span className="flow-screen-label">{swatch.name}</span>
+      <div
+        className="flow-image-frame cinerific-color-swatch"
+        style={{ background: swatch.hex, color: swatch.text }}
+      >
+        <span>{swatch.hex}</span>
+      </div>
+    </figure>
+  );
+}
+
+function FoundationTypeCard({ sample }: { sample: FoundationTypeSample }) {
+  return (
+    <figure className="flow-screen flow-screen-compact flow-screen-swatch cinerific-foundation-card">
+      <span className="flow-screen-label">{sample.label}</span>
+      <div className="flow-image-frame cinerific-type-sample">
+        {sample.artwork ? (
+          <span
+            aria-label={sample.artwork.alt}
+            className="cinerific-broadway-word"
+            role="img"
+          />
+        ) : (
+          <strong style={{ fontWeight: sample.weight }}>{sample.sample}</strong>
+        )}
+      </div>
+    </figure>
+  );
+}
+
+function FoundationSpacingCard({
+  sample,
+}: {
+  sample: FoundationSpacingSample;
+}) {
+  return (
+    <figure className="flow-screen flow-screen-compact flow-screen-swatch cinerific-foundation-card">
+      <span className="flow-screen-label">{sample.label} Spacing</span>
+      <div className="flow-image-frame cinerific-spacing-sample">
+        {sample.tokens.map((token) => (
+          <div className="cinerific-spacing-token" key={token}>
+            <span
+              aria-hidden
+              style={{ width: `${Math.max(18, token * 0.82)}%` }}
+            />
+            <small>{token} dp</small>
+          </div>
+        ))}
+      </div>
+    </figure>
+  );
+}
+
+function FoundationLogoCard({ withEyes }: { withEyes: boolean }) {
+  const label = withEyes ? "With Googly Eyes" : "Without Googly Eyes";
+
+  return (
+    <figure className="flow-screen flow-screen-compact flow-screen-swatch cinerific-foundation-card cinerific-logo-card">
+      <span className="flow-screen-label">{label}</span>
+      <div
+        aria-label={`Cinerific logo ${label.toLowerCase()}`}
+        className="flow-image-frame cinerific-logo-sample"
+        role="img"
+      >
+        <Image
+          alt=""
+          className="cinerific-logo-layer"
+          fill
+          sizes="(orientation: portrait) 100vw, 318px"
+          src="/images/cinerific/ui-foundations/logo-simple.png"
+        />
+        {withEyes ? (
+          <Image
+            alt=""
+            className="cinerific-logo-layer"
+            fill
+            sizes="(orientation: portrait) 100vw, 318px"
+            src="/images/cinerific/ui-foundations/logo-eyes.png"
+          />
+        ) : null}
+      </div>
+    </figure>
+  );
+}
+
+function FoundationAvatar({
+  label,
+  name,
+  src,
+}: {
+  label: string;
+  name: string;
+  src: string;
+}) {
+  return (
+    <figure className="flow-screen cinerific-avatar-card">
+      <span className="flow-screen-label">{label}</span>
+      <Image
+        alt={`${name} Cinerific profile avatar`}
+        className="cinerific-avatar-image"
+        height={1270}
+        sizes="(orientation: portrait) 50vw, 152px"
+        src={src}
+        width={1270}
+      />
+    </figure>
+  );
+}
+
+function FoundationTitleCard({
+  height,
+  label,
+  presentation,
+  src,
+  width,
+}: {
+  height: number;
+  label: string;
+  presentation: "card" | "hero";
+  src: string;
+  width: number;
+}) {
+  return (
+    <figure className="flow-screen cinerific-title-card">
+      <span className="flow-screen-label">{label}</span>
+      <Image
+        alt={`One Last Breath title card, ${label}`}
+        className={`cinerific-title-card-image cinerific-title-card-image-${presentation}`}
+        height={height}
+        sizes="(orientation: portrait) 100vw, 318px"
+        src={src}
+        width={width}
+      />
+    </figure>
+  );
+}
+
+function FoundationLoadingSpinner() {
+  const [isPaused, setIsPaused] = useState(false);
+
+  return (
+    <div className="cinerific-loading-spinner-demo">
+      <div
+        aria-label="Cinerific loading spinner"
+        className={`cinerific-loading-spinner${isPaused ? " is-paused" : ""}`}
+        role="img"
+      >
+        <Image
+          alt=""
+          className="cinerific-loading-spinner-layer cinerific-loading-spinner-red-star"
+          fill
+          sizes="(max-width: 720px) calc((min(42vw, 146px) * 2) + 12px), 318px"
+          src="/images/cinerific/ui-foundations/loading-spinner-red-star.png"
+        />
+        <Image
+          alt=""
+          className="cinerific-loading-spinner-layer cinerific-loading-spinner-wheel"
+          fill
+          sizes="(max-width: 720px) calc((min(42vw, 146px) * 2) + 12px), 318px"
+          src="/images/cinerific/ui-foundations/loading-spinner-wheel.png"
+        />
+        <Image
+          alt=""
+          className="cinerific-loading-spinner-layer cinerific-loading-spinner-mini-star"
+          fill
+          sizes="(max-width: 720px) calc((min(42vw, 146px) * 2) + 12px), 318px"
+          src="/images/cinerific/ui-foundations/loading-spinner-mini-star.png"
+        />
+      </div>
+      <button
+        aria-label={isPaused ? "Resume loading spinner" : "Pause loading spinner"}
+        aria-pressed={isPaused}
+        className="cinerific-loading-spinner-toggle"
+        onClick={() => setIsPaused((current) => !current)}
+        type="button"
+      >
+        {isPaused ? (
+          <Play aria-hidden fill="currentColor" size={20} />
+        ) : (
+          <Pause aria-hidden fill="currentColor" size={20} />
+        )}
+      </button>
+    </div>
+  );
+}
+
+function useIsNarrowFoundationLayout() {
+  const [isNarrow, setIsNarrow] = useState(false);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(max-width: 720px)");
+    const handleChange = () => setIsNarrow(mediaQuery.matches);
+
+    handleChange();
+    mediaQuery.addEventListener("change", handleChange);
+
+    return () => mediaQuery.removeEventListener("change", handleChange);
+  }, []);
+
+  return isNarrow;
+}
+
+function ExpandableFoundationGroups({
+  groups,
+}: {
+  groups: FoundationAssetGroup[];
+}) {
+  const [isExpanded, setIsExpanded] = useState(false);
+  const isNarrow = useIsNarrowFoundationLayout();
+  const extraGroupsId = useId();
+  const visibleGroupCount = isNarrow ? 1 : 2;
+  const visibleGroups = groups.slice(0, visibleGroupCount);
+  const extraGroups = groups.slice(visibleGroupCount);
+  const renderGroup = (group: FoundationAssetGroup) => (
+    <div
+      className={["flow-screen-stack", group.className]
+        .filter(Boolean)
+        .join(" ")}
+      key={group.title}
+    >
+      <h4>{group.title}</h4>
+      <div className="flow-screen-stack-captures">{group.cards}</div>
+    </div>
+  );
+
+  return (
+    <>
+      <div className="flow-capture-grid">{visibleGroups.map(renderGroup)}</div>
+      {extraGroups.length > 0 ? (
+        <>
+          <div className="flow-browse-toggle-row">
+            <button
+              aria-controls={extraGroupsId}
+              aria-expanded={isExpanded}
+              className="button button-secondary flow-browse-toggle"
+              onClick={() => setIsExpanded((current) => !current)}
+              type="button"
+            >
+              {isExpanded ? (
+                <ChevronUp aria-hidden size={18} />
+              ) : (
+                <ChevronDown aria-hidden size={18} />
+              )}
+              {isExpanded ? "Show Less" : "Show More"}
+            </button>
+          </div>
+          <div
+            aria-hidden={!isExpanded}
+            className={`flow-browse-extra${isExpanded ? " is-open" : ""}`}
+            id={extraGroupsId}
+          >
+            <div className="flow-capture-grid">
+              {extraGroups.map(renderGroup)}
+            </div>
+          </div>
+        </>
+      ) : null}
+    </>
+  );
+}
+
+function CinerificFoundationAssets({ title }: { title: string }) {
+  if (title === "Colors & Theming") {
+    return (
+      <ExpandableFoundationGroups
+        groups={cinerificColorGroups.map((group) => ({
+          cards: group.swatches.map((swatch) => (
+            <FoundationSwatchCard key={swatch.hex} swatch={swatch} />
+          )),
+          title: group.title,
+        }))}
+      />
+    );
+  }
+
+  if (title === "Typography & Spacing") {
+    return (
+      <ExpandableFoundationGroups
+        groups={[
+          {
+            cards: cinerificTypeSamples.map((sample) => (
+              <FoundationTypeCard key={sample.label} sample={sample} />
+            )),
+            title: "Fonts",
+          },
+          {
+            cards: cinerificSpacingSamples.map((sample) => (
+              <FoundationSpacingCard key={sample.label} sample={sample} />
+            )),
+            title: "Spacing Scale",
+          },
+        ]}
+      />
+    );
+  }
+
+  if (title === "Iconography & Imagery") {
+    return (
+      <ExpandableFoundationGroups
+        groups={[
+          {
+            cards: (
+              <>
+                <FoundationLogoCard withEyes />
+                <FoundationLogoCard withEyes={false} />
+              </>
+            ),
+            className: "cinerific-foundation-stack-full",
+            title: "Logo",
+          },
+          {
+            cards: cinerificAvatarSamples.map((avatar) => (
+              <FoundationAvatar key={avatar.name} {...avatar} />
+            )),
+            className: "cinerific-foundation-stack-full",
+            title: "Avatars",
+          },
+          {
+            cards: cinerificTitleCardSamples.map((titleCard) => (
+              <FoundationTitleCard key={titleCard.label} {...titleCard} />
+            )),
+            className: "cinerific-foundation-stack-full",
+            title: "Title Cards",
+          },
+        ]}
+      />
+    );
+  }
+
+  if (title === "Animations") {
+    return (
+      <ExpandableFoundationGroups
+        groups={[
+          {
+            cards: <FoundationLoadingSpinner />,
+            title: "Loading Spinner",
+          },
+        ]}
+      />
+    );
+  }
+
+  return null;
 }
 
 export default function ProductFlowSwitcher({
@@ -407,15 +895,55 @@ export default function ProductFlowSwitcher({
 
       <div ref={viewStartRef}>
         {isUiFoundations ? (
-          <div className="section-heading" id="ui-foundations">
-            <p>UI Foundations</p>
-            <h2>UI Foundations</h2>
-          </div>
+          <>
+            <div className="section-heading">
+              <p>UI Foundations</p>
+              <h2>UI Foundations</h2>
+            </div>
+
+            <div
+              className="flow-layout flow-layout-single"
+              id="ui-foundations"
+            >
+              <figure className="flow-primary-visual cinerific-ui-foundations-feature">
+                <Image
+                  alt="Cinerific interface preview"
+                  height={625}
+                  priority
+                  sizes="(max-width: 720px) calc(100vw - 48px), 760px"
+                  src="/images/cinerific_promo.png"
+                  width={1000}
+                />
+              </figure>
+            </div>
+
+            <div className="flow-capture-groups">
+              {uiFoundationSections.map((section) => (
+                <section
+                  className="flow-capture-group"
+                  id={`ui-foundations-${section.title
+                    .toLowerCase()
+                    .replaceAll(" & ", "-")
+                    .replaceAll(" ", "-")}`}
+                  key={section.title}
+                >
+                  <div className="flow-group-header">
+                    <span>UI Foundations</span>
+                    <h3>{section.title}</h3>
+                    {section.copy ? <p>{section.copy}</p> : null}
+                  </div>
+                  <div className="flow-capture-body">
+                    <CinerificFoundationAssets title={section.title} />
+                  </div>
+                </section>
+              ))}
+            </div>
+          </>
         ) : (
           <div id="ux-product-flow">
             <div className="section-heading">
-              <p>Product Flow</p>
-              <h2>Product Flow</h2>
+              <p>UX Product Flow</p>
+              <h2>UX Product Flow</h2>
             </div>
             <div className="flow-layout flow-layout-single">
               <ProductFlowDiagram />

@@ -135,7 +135,7 @@ const screenshotGroups: {
   title: string;
 }[] = [
   {
-    title: "Browse",
+    title: "Welcome",
     copy: "The browsing surfaces keep the brand, product catalog, company story, inquiry path, and shop entry consistent across Android Small and Large.",
     stacks: [
       {
@@ -236,7 +236,7 @@ const screenshotGroups: {
     ],
   },
   {
-    title: "Cart",
+    title: "Preview",
     copy: "Cart states were treated as part of the purchase path, with empty and filled moments both needing clear feedback.",
     stacks: [
       {
@@ -280,7 +280,7 @@ const screenshotGroups: {
     ],
   },
   {
-    title: "Customer Details",
+    title: "Browse Selection",
     copy: "Checkout details break the purchase path into focused, readable steps instead of one overloaded form.",
     stacks: [
       {
@@ -343,7 +343,7 @@ const screenshotGroups: {
     ],
   },
   {
-    title: "Payment",
+    title: "Favorites",
     copy: "Payment screens keep the final handoff explicit so users can review the moment and complete checkout with confidence.",
     stacks: [
       {
@@ -387,7 +387,7 @@ const screenshotGroups: {
     ],
   },
   {
-    title: "Confirmation",
+    title: "Settings",
     copy: "The final state closes the loop with a clear success moment tied to the real checkout outcome.",
     stacks: [
       {
@@ -717,20 +717,20 @@ export default function CinerificCaseStudy() {
         <div className="site-shell">
           <ProductFlowSwitcher>
             <div className="flow-capture-groups">
-              {screenshotGroups.map((group, index) => (
+              {screenshotGroups.map((group) => (
                 <div className="flow-capture-group" key={group.title}>
                   <div className="flow-group-header">
-                    <span>Stage {String(index + 2).padStart(2, "0")}</span>
+                    <span>UX Product Flow</span>
                     <h3>{group.title}</h3>
                     <p>{group.copy}</p>
                   </div>
 
                   <ExpandableFlowStacks
-                    collapsedLabel={`More ${group.title} Screens`}
-                    expandedLabel={`Hide ${group.title} Screens`}
+                    collapsedLabel="Show More"
+                    expandedLabel="Show Less"
                     initialStackCount={
-                      group.title === "Browse" ||
-                      group.title === "Customer Details"
+                      group.title === "Welcome" ||
+                      group.title === "Browse Selection"
                         ? 2
                         : group.stacks.length
                     }

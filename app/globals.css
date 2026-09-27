@@ -16,6 +16,14 @@
   src: url("/fonts/alla-vostra/tt_fors_trial_variable.ttf") format("truetype");
 }
 
+@font-face {
+  font-display: swap;
+  font-family: "Cinerific Manrope";
+  font-style: normal;
+  font-weight: 200 900;
+  src: url("/fonts/cinerific/manrope.ttf") format("truetype");
+}
+
 :root {
   color-scheme: dark;
   --bg: #030705;
@@ -4329,6 +4337,22 @@ section.project-hero {
   white-space: normal;
 }
 
+.cinerific-ui-foundations-feature {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: 0 30px 72px rgba(0, 0, 0, 0.45);
+  margin: 0;
+  max-width: 760px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.cinerific-ui-foundations-feature img {
+  display: block;
+  height: auto;
+  width: 100%;
+}
+
 .flow-table-frame {
   background: #020604;
   border: 1px solid rgba(198, 255, 217, 0.08);
@@ -6454,6 +6478,321 @@ section.project-hero {
   width: 4px;
 }
 
+.cinerific-case .cinerific-foundation-card .flow-image-frame {
+  aspect-ratio: 1 / 1;
+  border: 1px solid rgba(231, 231, 231, 0.2);
+  border-radius: var(--capture-frame-radius-standard);
+  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.42);
+  font-family: "Cinerific Manrope", Manrope, Inter, ui-sans-serif, system-ui,
+    sans-serif;
+}
+
+.cinerific-case .cinerific-foundation-card .flow-image-frame::before,
+.cinerific-case .cinerific-foundation-card .flow-image-frame::after {
+  content: none;
+}
+
+.cinerific-color-swatch {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.cinerific-color-swatch > span {
+  color: inherit;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+}
+
+.cinerific-case .cinerific-foundation-card .cinerific-type-sample {
+  align-items: center;
+  background: linear-gradient(145deg, #600878, #23001f 58%, #080007);
+  color: #e7e7e7;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 14px;
+  text-align: center;
+}
+
+.cinerific-type-sample strong {
+  font-size: 23px;
+  letter-spacing: 0;
+  line-height: 1;
+}
+
+.cinerific-broadway-word {
+  background: #e7e7e7;
+  display: block;
+  height: 30px;
+  mask: url("/images/cinerific/ui-foundations/broadway-word.png") left center /
+    340px auto no-repeat;
+  width: 124px;
+}
+
+.cinerific-case .cinerific-foundation-card .cinerific-logo-sample {
+  aspect-ratio: 1400 / 1000;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  margin-left: -24.5%;
+  margin-right: -24.5%;
+  max-width: none;
+  overflow: visible;
+  transform: translateX(2.4%);
+  width: 149%;
+}
+
+.cinerific-case .flow-screen-compact.cinerific-logo-card {
+  width: min(100%, 318px);
+}
+
+.flow-screen-stack-captures:has(.cinerific-logo-card) {
+  flex-wrap: wrap;
+  gap: 28px;
+}
+
+.cinerific-logo-layer {
+  object-fit: contain;
+}
+
+.cinerific-foundation-stack-full {
+  grid-column: 1 / -1;
+}
+
+.flow-screen-stack-captures:has(.cinerific-avatar-card) {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(2, minmax(0, 152px));
+  margin-inline: auto;
+  width: min(100%, 318px);
+}
+
+.cinerific-avatar-card {
+  margin: 0;
+  width: min(100%, 152px);
+}
+
+.cinerific-avatar-image {
+  display: block;
+  height: auto;
+  width: 100%;
+}
+
+.flow-screen-stack-captures:has(.cinerific-title-card) {
+  align-items: start;
+  flex-wrap: wrap;
+  gap: 28px;
+}
+
+.cinerific-title-card {
+  margin: 0;
+  width: min(100%, 318px);
+}
+
+.cinerific-title-card-image {
+  border: 1px solid rgba(231, 231, 231, 0.2);
+  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.42);
+  display: block;
+  height: auto;
+  width: 100%;
+}
+
+.cinerific-title-card-image-card {
+  border-radius: 22px;
+}
+
+.cinerific-title-card-image-hero {
+  border-radius: 0;
+}
+
+.cinerific-loading-spinner-demo {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: min(100%, 318px);
+}
+
+.cinerific-loading-spinner {
+  aspect-ratio: 416 / 422;
+  position: relative;
+  width: 100%;
+}
+
+.cinerific-loading-spinner-layer {
+  object-fit: fill;
+  transform-origin: center;
+}
+
+.cinerific-loading-spinner.is-paused .cinerific-loading-spinner-layer {
+  animation-play-state: paused;
+}
+
+.cinerific-loading-spinner-toggle {
+  align-items: center;
+  background: rgba(8, 0, 7, 0.78);
+  border: 1px solid rgba(67, 255, 146, 0.52);
+  border-radius: 50%;
+  color: #e7e7e7;
+  cursor: pointer;
+  display: inline-flex;
+  height: 48px;
+  justify-content: center;
+  padding: 0;
+  transition:
+    background-color 160ms ease,
+    border-color 160ms ease,
+    color 160ms ease,
+    transform 160ms ease;
+  width: 48px;
+}
+
+.cinerific-loading-spinner-toggle:hover,
+.cinerific-loading-spinner-toggle:focus-visible {
+  background: rgba(67, 255, 146, 0.14);
+  border-color: #43ff92;
+  color: #43ff92;
+}
+
+.cinerific-loading-spinner-toggle:active {
+  transform: scale(0.94);
+}
+
+.cinerific-loading-spinner-toggle:focus-visible {
+  outline: 2px solid #43ff92;
+  outline-offset: 3px;
+}
+
+.cinerific-loading-spinner-red-star {
+  animation: cinerific-spinner-red-star 2800ms linear infinite;
+}
+
+.cinerific-loading-spinner-wheel {
+  animation: cinerific-spinner-wheel 4179ms linear infinite;
+}
+
+.cinerific-loading-spinner-mini-star {
+  animation: cinerific-spinner-mini-star 4242ms linear infinite;
+}
+
+@keyframes cinerific-spinner-red-star {
+  from {
+    transform: scale(1.68) rotate(0deg);
+  }
+
+  to {
+    transform: scale(1.68) rotate(720deg);
+  }
+}
+
+@keyframes cinerific-spinner-wheel {
+  from {
+    transform: scale(1.68) rotate(0deg);
+  }
+
+  to {
+    transform: scale(1.68) rotate(720deg);
+  }
+}
+
+@keyframes cinerific-spinner-mini-star {
+  from {
+    transform: scale(1.68) rotate(0deg);
+  }
+
+  to {
+    transform: scale(1.68) rotate(360deg);
+  }
+}
+
+@media (orientation: portrait) {
+  .cinerific-case .flow-screen-compact.cinerific-logo-card {
+    width: min(100%, 318px);
+  }
+
+  .flow-screen-stack-captures:has(.cinerific-avatar-card) {
+    gap: 14px;
+    grid-template-columns: repeat(2, minmax(0, 152px));
+    margin-inline: auto;
+    width: min(100%, 318px);
+  }
+
+  .cinerific-avatar-card {
+    width: min(100%, 152px);
+  }
+
+  .cinerific-title-card {
+    width: min(100%, 318px);
+  }
+}
+
+@media (max-width: 720px) and (orientation: portrait) {
+  .cinerific-case .flow-screen-compact.cinerific-logo-card,
+  .cinerific-title-card {
+    width: calc((min(42vw, 146px) * 2) + 12px);
+  }
+
+  .cinerific-case
+    .flow-screen.cinerific-logo-card
+    .cinerific-logo-sample {
+    margin-left: -24.5%;
+    margin-right: -24.5%;
+    max-width: none;
+    width: 149%;
+  }
+
+  .flow-screen-stack-captures:has(.cinerific-avatar-card) {
+    gap: 12px;
+    grid-template-columns: repeat(2, minmax(0, min(42vw, 146px)));
+    width: calc((min(42vw, 146px) * 2) + 12px);
+  }
+
+  .cinerific-avatar-card {
+    width: min(42vw, 146px);
+  }
+
+  .cinerific-loading-spinner-demo {
+    width: calc((min(42vw, 146px) * 2) + 12px);
+  }
+}
+
+.cinerific-case .cinerific-foundation-card .cinerific-spacing-sample {
+  align-content: center;
+  background: linear-gradient(145deg, #1f1f1f, #080007);
+  display: grid;
+  gap: 10px;
+  padding: 16px;
+}
+
+.cinerific-spacing-token {
+  align-items: center;
+  display: grid;
+  gap: 8px;
+  grid-template-columns: minmax(0, 1fr) 34px;
+}
+
+.cinerific-spacing-token > span {
+  background: linear-gradient(90deg, #600878, #c86be0);
+  border-radius: 999px;
+  display: block;
+  height: 6px;
+  justify-self: start;
+  min-width: 18%;
+  padding: 0;
+}
+
+.cinerific-spacing-token small {
+  color: #e7e7e7;
+  font-family: "Cinerific Manrope", Manrope, Inter, ui-sans-serif, system-ui,
+    sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
 .flow-browse-toggle-row {
   display: flex;
   justify-content: center;
@@ -6465,9 +6804,19 @@ section.project-hero {
   font-family: inherit;
 }
 
-.alla-vostra-case .flow-browse-toggle {
+.alla-vostra-case .flow-browse-toggle,
+.cinerific-case .flow-browse-toggle {
   inline-size: calc((152px * 2) + 14px);
   max-inline-size: 100%;
+}
+
+@media (min-width: 721px) {
+  .cinerific-case
+    #ui-foundations-colors-theming
+    .flow-browse-extra
+    .flow-capture-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .flow-browse-toggle svg {
@@ -7502,7 +7851,8 @@ section.project-hero {
     gap: 12px;
   }
 
-  .alla-vostra-case .flow-browse-toggle {
+  .alla-vostra-case .flow-browse-toggle,
+  .cinerific-case .flow-browse-toggle {
     inline-size: calc((min(42vw, 146px) * 2) + 12px);
   }
 
