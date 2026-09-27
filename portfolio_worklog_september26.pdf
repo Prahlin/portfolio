@@ -1,0 +1,334 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+2 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+3 0 obj
+<< /Type /Pages /Kids [5 0 R 7 0 R 9 0 R 11 0 R 13 0 R] /Count 5 >>
+endobj
+4 0 obj
+<< /Length 6810 >>
+stream
+q
+BT /F2 17.00 Tf 1 0 0 1 48.00 742.00 Tm (Prahlin Portfolio Work Log - September 26, 2026) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 48.00 711.00 Tm (Compiled summary for Saturday, September 26, 2026 - focus: continuing the Prahl.dev Portfolio after the) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 48.00 699.75 Tm (September 21 About Dev methodology pass, verifying the United States Eastern date, running the customary) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 48.00 688.50 Tm (project reader, extracting and studying all forty pre-existing Portfolio PDF worklogs, booting the local) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 48.00 677.25 Tm (Next.js site, bringing the established Alla Vostra UI Foundations / UX Product Flow switcher language into) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 48.00 666.00 Tm (the Cinerific project page, creating a Cinerific-specific client-side switcher, preserving the existing) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 48.00 654.75 Tm (Cinerific screenshots and media assets, rebuilding the Cinerific UX overview as a responsive DOM-based flow) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 48.00 643.50 Tm (diagram, iterating its section taxonomy and screen-node layout, validating sticky behavior and responsive) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 48.00 632.25 Tm (geometry, documenting committed source state 0bc5100, refreshing the Portfolio project snapshot, and) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 48.00 621.00 Tm (generating the September 26 Portfolio PDF worklog.) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 48.00 604.75 Tm (Generated in continuity with the established Prahlin Portfolio daily worklog cadence: compact opening) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 48.00 593.50 Tm (summary, source-material section, baseline section, goal list, work-completed sections, validation section,) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 48.00 582.25 Tm (files-touched list, follow-up context, and output-artifact close.) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 48.00 566.00 Tm (This artifact intentionally covers Prahlin/portfolio work performed after portfolio_worklog_september21.pdf) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 48.00 554.75 Tm (and after the September 21 documentation state. The source state reviewed for this record is) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 48.00 543.50 Tm (0bc51006b002650537408ec7d0321fc67c145e56 on main, matching origin/main, titled Refined the Cinerific) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 48.00 532.25 Tm (product-flow navigation and diagram. The source commit contains app/globals.css,) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 48.00 521.00 Tm (app/projects/cinerific/ProductFlowSwitcher.tsx, app/projects/cinerific/page.tsx, and) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 48.00 509.75 Tm (portfolio_PROJECT_SNAPSHOT.txt. No Hostinger deploy-branch work or production deployment was performed) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 48.00 498.50 Tm (during this PDF-generation pass. The local documentation deltas created after the source commit are the) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 48.00 487.25 Tm (refreshed portfolio_PROJECT_SNAPSHOT.txt file and this September 26 root-level PDF worklog.) Tj ET
+BT /F2 12.00 Tf 1 0 0 1 48.00 465.00 Tm (Source Materials Reviewed) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 48.00 450.00 Tm (- Verified the United States Eastern date with TZ=America/New_York date from /Users/prahlin/gh/portfolio.) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 58.00 438.75 Tm (It reported Saturday, September 26, 2026 at 10:18 PM EDT with UTC offset -0400, so the worklog uses) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 58.00 427.50 Tm (September 26 rather than the UTC calendar date.) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 48.00 411.25 Tm (- Ran ./read_project.sh and regenerated portfolio_PROJECT_SNAPSHOT.txt before composing this record,) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 58.00 400.00 Tm (preserving the Portfolio convention that the current tree, configuration, assets, PDF inventory, Git) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 58.00 388.75 Tm (context, and standing workflow instructions are refreshed for session documentation.) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 48.00 372.50 Tm (- Extracted and studied all forty pre-existing root-level Portfolio worklog PDFs with pdftotext: fifteen) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 58.00 361.25 Tm (July records, fifteen August records, and ten September records through) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 58.00 350.00 Tm (portfolio_worklog_september21.pdf. The review covered 236 PDF pages and approximately 110,002 extracted) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 58.00 338.75 Tm (words.) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 48.00 322.50 Tm (- Compared the complete series for title cadence, root-level filename conventions, same-day part) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 58.00 311.25 Tm (suffixes, opening-summary density, source-material language, baseline and goal framing, bullet-heavy) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 58.00 300.00 Tm (technical voice, validation wording, files-touched treatment, follow-up continuity, and output-artifact) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 58.00 288.75 Tm (closure.) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 48.00 272.50 Tm (- Used portfolio_worklog_september21.pdf as the closest chronological and metadata baseline, while the) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 58.00 261.25 Tm (August 3, August 16, September 8 Part 2, September 9, and September 11 records supplied the closest) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 58.00 250.00 Tm (history for Product Flow switchers, diagram geometry, sticky behavior, responsive validation, and) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 58.00 238.75 Tm (local-cache handling.) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 48.00 222.50 Tm (- Checked pdfinfo and pdffonts on the September 21 baseline. The mature output convention remains US) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 58.00 211.25 Tm (Letter at 612 x 792 points, PDF 1.4, Helvetica and Helvetica-Bold Type 1 fonts, no encryption, Codex) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 58.00 200.00 Tm (author/creator/producer metadata, and a repeated page footer.) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 48.00 183.75 Tm (- Reviewed commit 0bc5100 through git show, git log, git status, branch tracking, and the complete) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 58.00 172.50 Tm (changed-file set. Confirmed main and origin/main both resolve to the same commit and the source) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 58.00 161.25 Tm (worktree was clean before the customary snapshot refresh.) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 48.00 145.00 Tm (- Reviewed the active Cinerific implementation in app/projects/cinerific/page.tsx and) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 58.00 133.75 Tm (app/projects/cinerific/ProductFlowSwitcher.tsx, the shared Product Flow treatment in app/globals.css,) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 58.00 122.50 Tm (and the Alla Vostra switcher implementation used as the visual and behavioral reference.) Tj ET
+BT /F2 12.00 Tf 1 0 0 1 48.00 100.25 Tm (Baseline Status Before September 26 Work) Tj ET
+BT /F1 8.00 Tf 1 0 0 1 48.00 24.00 Tm (Prahlin Portfolio Work Log - September 26, 2026) Tj ET
+BT /F1 8.00 Tf 1 0 0 1 538.80 24.00 Tm (Page 1) Tj ET
+Q
+endstream
+endobj
+5 0 obj
+<< /Type /Page /Parent 3 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> /Contents 4 0 R >>
+endobj
+6 0 obj
+<< /Length 6362 >>
+stream
+q
+BT /F1 9.25 Tf 1 0 0 1 48.00 742.00 Tm (- The Cinerific project route already existed as a detailed mobile-commerce case-study page with a hero,) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 58.00 730.75 Tm (Overview, Scope and Ownership, Core Features, Product Flow, technical architecture, engineering) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 58.00 719.50 Tm (decisions, release-readiness content, stack, proof, and closing contact surfaces.) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 48.00 703.25 Tm (- Its Product Flow section still used a static six-item stage strip labeled Launch, Browse, Cart,) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 58.00 692.00 Tm (Details, Payment, and Confirmation, followed by an empty launch-frame treatment, explanatory copy, and) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 58.00 680.75 Tm (the existing expandable screenshot groups.) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 48.00 664.50 Tm (- Cinerific had no UI Foundations / UX Product Flow switcher. The equivalent Alla Vostra section already) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 58.00 653.25 Tm (had an accepted two-tab glass navigation surface, active/inactive states, fixed-on-scroll behavior) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 58.00 642.00 Tm (scoped to the Product Flow region, hash-aware view selection, and responsive sizing.) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 48.00 625.75 Tm (- The user wanted the switcher shell and behavior transferred first without changing any Cinerific image) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 58.00 614.50 Tm (asset, screenshot source, or existing expandable screenshot group. UI Foundations was intentionally) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 58.00 603.25 Tm (reserved as an empty state for later work.) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 48.00 587.00 Tm (- The Cinerific UX overview did not yet have the dark grid, green vertical section rails, hairline) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 58.00 575.75 Tm (separators, coordinate-driven screen nodes, or responsive diagram vocabulary already established on the) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 58.00 564.50 Tm (Alla Vostra page.) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 48.00 548.25 Tm (- The local Next.js development workflow remained sensitive to stale Turbopack CSS after) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 58.00 537.00 Tm (production/static builds, so generated .next output needed recoverable cache moves and clean server) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 58.00 525.75 Tm (restarts during visual verification.) Tj ET
+BT /F2 12.00 Tf 1 0 0 1 48.00 503.50 Tm (Goals for September 26) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 48.00 488.50 Tm (- Add the Alla Vostra UI Foundations / UX Product Flow navigation look and interaction model to the) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 58.00 477.25 Tm (Cinerific Product Flow section while preserving Cinerific-specific content boundaries.) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 48.00 461.00 Tm (- Keep UX Product Flow as the default view, retain every existing Cinerific screenshot group beneath the) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 58.00 449.75 Tm (new overview, and expose an intentionally empty UI Foundations view with no imported or invented) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 58.00 438.50 Tm (assets.) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 48.00 422.25 Tm (- Preserve the shared glass surfaces, active/inactive button hierarchy, responsive typography,) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 58.00 411.00 Tm (safe-area-aware pinned placement, section-bounded sticky behavior, hash selection, and smooth) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 58.00 399.75 Tm (reduced-motion-aware scroll correction.) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 48.00 383.50 Tm (- Replace the old Cinerific stage strip and launch placeholder with a DOM-based UX diagram that uses the) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 58.00 372.25 Tm (accepted Alla Vostra grid, panel, green rails, dark nodes, separators, and coordinate system.) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 48.00 356.00 Tm (- Iterate the diagram taxonomy to the accepted final section sequence: Welcome, Preview, Browse) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 58.00 344.75 Tm (Selection, Favorites, and Settings, with Browse Selection occupying approximately two standard section) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 58.00 333.50 Tm (heights.) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 48.00 317.25 Tm (- Populate Welcome, Preview, and Browse Selection with the requested screen names and controls while) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 58.00 306.00 Tm (leaving Favorites and Settings available for later node definition.) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 48.00 289.75 Tm (- Keep diagram labels, boxes, rows, and spacing legible without clipping, collision, or document-level) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 58.00 278.50 Tm (overflow at desktop, tablet, phone, and 320px narrow widths.) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 48.00 262.25 Tm (- Run TypeScript, browser geometry, local route, and static-export checks, preserve repository route) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 58.00 251.00 Tm (metadata after build side effects, refresh the snapshot, and document the committed result in the) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 58.00 239.75 Tm (established PDF format.) Tj ET
+BT /F2 12.00 Tf 1 0 0 1 48.00 217.50 Tm (Work Completed - Cinerific Product Flow Switcher) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 48.00 202.50 Tm (- Added app/projects/cinerific/ProductFlowSwitcher.tsx as a dedicated client component and wrapped the) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 58.00 191.25 Tm (existing Cinerific flow-capture groups from app/projects/cinerific/page.tsx without changing their) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 58.00 180.00 Tm (screenshot data, image paths, ordering, or expansion controls.) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 48.00 163.75 Tm (- Reused the global product-flow-nav class system so Cinerific inherits the same restrained glass) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 58.00 152.50 Tm (material, two-column tab geometry, active dark-green state, translucent inactive state, borders,) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 58.00 141.25 Tm (highlights, typography, and phone-width resizing as Alla Vostra.) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 48.00 125.00 Tm (- Set UX Product Flow as the initial view and added an empty UI Foundations state containing only its) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 58.00 113.75 Tm (section heading. No Cinerific visual asset was added, replaced, recolored, or removed for the empty) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 58.00 102.50 Tm (state.) Tj ET
+BT /F1 8.00 Tf 1 0 0 1 48.00 24.00 Tm (Prahlin Portfolio Work Log - September 26, 2026) Tj ET
+BT /F1 8.00 Tf 1 0 0 1 538.80 24.00 Tm (Page 2) Tj ET
+Q
+endstream
+endobj
+7 0 obj
+<< /Type /Page /Parent 3 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> /Contents 6 0 R >>
+endobj
+8 0 obj
+<< /Length 6479 >>
+stream
+q
+BT /F1 9.25 Tf 1 0 0 1 48.00 742.00 Tm (- Added hash-aware initialization and hashchange handling for #ui-foundations and #ux-product-flow so) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 58.00 730.75 Tm (direct navigation can select the appropriate Cinerific view.) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 48.00 714.50 Tm (- Implemented measured pinned behavior with ResizeObserver and CSS custom properties for fixed left) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 58.00 703.25 Tm (position, fixed width, and measured height, keeping the tab bar aligned with the site shell rather than) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 58.00 692.00 Tm (the viewport edge.) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 48.00 675.75 Tm (- Scoped the sticky state to #product-flow. The navigation pins after its anchor reaches the viewport and) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 58.00 664.50 Tm (returns to normal flow before its bottom would pass the Product Flow section boundary.) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 48.00 648.25 Tm (- Added post-switch scroll correction that accounts for the navigation height, runs after the new view) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 58.00 637.00 Tm (renders, repeats once after layout settles, uses smooth motion by default, and respects) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 58.00 625.75 Tm (prefers-reduced-motion.) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 48.00 609.50 Tm (- Removed the obsolete flowSegments array and launchScreen placeholder from the Cinerific page after the) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 58.00 598.25 Tm (new diagram replaced the old six-stage strip and launch/introduction layout.) Tj ET
+BT /F2 12.00 Tf 1 0 0 1 48.00 576.00 Tm (Work Completed - Responsive UX Product Flow Diagram) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 48.00 561.00 Tm (- Built the Cinerific diagram with the same coordinate-driven DOM approach as Alla Vostra: a dark green) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 58.00 549.75 Tm (grid plane, translucent panel layer, vertical green rails, horizontal hairline dividers, dark outlined) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 58.00 538.50 Tm (nodes, and percentage-based geometry derived from one coordinate frame.) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 48.00 522.25 Tm (- Added Cinerific-specific CSS for the diagram canvas height while retaining the shared flow-table frame,) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 58.00 511.00 Tm (background, rail, divider, and node styling. The diagram remains aligned with the existing) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 58.00 499.75 Tm (single-column Product Flow presentation.) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 48.00 483.50 Tm (- Removed the initially considered Tutorial/Intro, Checkout, Confirmation, and Navigate rails as the flow) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 58.00 472.25 Tm (taxonomy evolved, then shifted all surviving sections upward so the diagram contains no abandoned blank) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 58.00 461.00 Tm (row.) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 48.00 444.75 Tm (- Settled the final green rail sequence on Welcome, Preview, Browse Selection, Favorites, and Settings.) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 58.00 433.50 Tm (Increased Cinerific rail-label typography by exactly twenty-five percent, from the shared 12px) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 58.00 422.25 Tm (treatment to 15px, without changing rail dimensions or coordinates.) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 48.00 406.00 Tm (- Merged the temporary Movies and Shows rails into one Browse Selection rail and preserved approximately) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 58.00 394.75 Tm (their combined vertical height. Removed the internal divider between those former sections while) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 58.00 383.50 Tm (retaining the surrounding section separators.) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 48.00 367.25 Tm (- Kept Favorites and Settings as empty diagram sections for later flow definition instead of inventing) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 58.00 356.00 Tm (screen names or reusing unrelated Cinerific content.) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 48.00 339.75 Tm (- Made dark-node typography responsive with a scoped clamp, removed minimum-content width pressure, and) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 58.00 328.50 Tm (allowed safe text wrapping on narrow screens without altering the global Alla Vostra node treatment.) Tj ET
+BT /F2 12.00 Tf 1 0 0 1 48.00 306.25 Tm (Work Completed - Screen Nodes and Browse Selection Taxonomy) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 48.00 291.25 Tm (- Built the final Welcome screen-node group with Hero, Create My Account, Sign In, and Forgot Username,) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 58.00 280.00 Tm (replacing the earlier Splash wording with Hero while preserving the two-row arrangement.) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 48.00 263.75 Tm (- Added one centered Home node to Preview, keeping the green Preview rail separate from the screen name) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 58.00 252.50 Tm (shown within that section.) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 48.00 236.25 Tm (- Added a top Browse Selection control row with Genre and Order, shortening the earlier Genre View and) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 58.00 225.00 Tm (Order View labels without changing their box sizes or placement.) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 48.00 208.75 Tm (- Added the final selection rows as ALL, Action, Comedy, and Thriller on the first genre row, followed by) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 58.00 197.50 Tm (Horror, Drama, Doc, and Romance on the second. Documentary was shortened to Doc, Romance moved to the) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 58.00 186.25 Tm (bottom row, and ALL was added immediately before Action.) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 48.00 170.00 Tm (- Doubled the vertical gap between the Genre/Order row and the first genre row while keeping the) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 58.00 158.75 Tm (established lower-row gap. Recentered the complete three-row group inside the tall Browse Selection) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 58.00 147.50 Tm (section after each spacing change.) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 48.00 131.25 Tm (- Balanced both four-box genre rows horizontally and used one coordinate definition for the complete) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 58.00 120.00 Tm (Browse Selection group, preventing divergent desktop and phone layouts.) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 48.00 103.75 Tm (- Changed node keys to include vertical coordinates so repeated screen labels can remain stable if future) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 58.00 92.50 Tm (sections reuse a name without causing React key collisions.) Tj ET
+BT /F1 8.00 Tf 1 0 0 1 48.00 24.00 Tm (Prahlin Portfolio Work Log - September 26, 2026) Tj ET
+BT /F1 8.00 Tf 1 0 0 1 538.80 24.00 Tm (Page 3) Tj ET
+Q
+endstream
+endobj
+9 0 obj
+<< /Type /Page /Parent 3 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> /Contents 8 0 R >>
+endobj
+10 0 obj
+<< /Length 6317 >>
+stream
+q
+BT /F1 9.25 Tf 1 0 0 1 48.00 742.00 Tm (- Preserved the existing expandable Cinerific screenshot groups below the diagram. Their captions, stage) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 58.00 730.75 Tm (labels, collapse thresholds, Small/Large metadata, and image assets remain available exactly where they) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 58.00 719.50 Tm (were before this pass.) Tj ET
+BT /F2 12.00 Tf 1 0 0 1 48.00 697.25 Tm (Work Completed - Local Cache, Validation, and Commit Context) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 48.00 682.25 Tm (- Kept the local Next.js 16.2.10 Turbopack server available at http://127.0.0.1:3000 and repeatedly) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 58.00 671.00 Tm (checked /projects/cinerific during the navigation, diagram, label, and spacing passes.) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 48.00 654.75 Tm (- Cleared stale generated CSS state after static builds by stopping the dev server, moving .next into) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 58.00 643.50 Tm (timestamped /tmp/portfolio-next-cache.* directories, and restarting from a clean cache. No) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 58.00 632.25 Tm (user-authored source or asset was deleted.) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 48.00 616.00 Tm (- Ran browser-driven checks with the installed Chrome channel because the standalone Playwright Chromium) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 58.00 604.75 Tm (bundle was not present. Used the same local route and real computed layout rather than relying only on) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 58.00 593.50 Tm (source inspection.) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 48.00 577.25 Tm (- Recommended the final past-tense commit message with one header and three hyphen-led change points,) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 58.00 566.00 Tm (then reviewed committed source 0bc5100 carrying the Cinerific switcher, diagram, styling, page) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 58.00 554.75 Tm (integration, and refreshed snapshot.) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 48.00 538.50 Tm (- Confirmed the source commit contains 474 insertions and 78 deletions across four files, including the) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 58.00 527.25 Tm (new 429-line ProductFlowSwitcher client component.) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 48.00 511.00 Tm (- Confirmed main and origin/main match at 0bc5100 before this documentation pass. No source commit, push,) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 58.00 499.75 Tm (Hostinger operation, or public deployment was performed while generating this PDF.) Tj ET
+BT /F2 12.00 Tf 1 0 0 1 48.00 477.50 Tm (Validation Summary) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 48.00 462.50 Tm (- npm run check passed repeatedly with tsc --noEmit after the switcher integration, diagram construction,) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 58.00 451.25 Tm (taxonomy changes, node additions, label changes, and final spacing pass.) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 48.00 435.00 Tm (- npm run build:static passed with NEXT_OUTPUT=export next build, successfully compiling, type-checking,) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 58.00 423.75 Tm (collecting page data, and generating all seven static pages. The route list included /, /aboutdev,) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 58.00 412.50 Tm (/articles, /projects/alla-vostra, and /projects/cinerific.) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 48.00 396.25 Tm (- Restored next-env.d.ts from the production .next/types route reference to the repository's) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 58.00 385.00 Tm (.next/dev/types/routes.d.ts convention after each static build changed the generated import.) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 48.00 368.75 Tm (- Verified the Cinerific route returned HTTP 200 from the local server after implementation, cache) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 58.00 357.50 Tm (resets, and static-export validation.) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 48.00 341.25 Tm (- Verified the switcher at 1440px and 390px: UX Product Flow was selected by default, UI Foundations) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 58.00 330.00 Tm (switched to an asset-free empty state, UX restored the existing content, and both buttons reported the) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 58.00 318.75 Tm (correct aria-pressed state.) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 48.00 302.50 Tm (- Verified sticky behavior by scrolling inside Product Flow and then beyond it: the navigation used fixed) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 58.00 291.25 Tm (positioning while inside the section and returned to static positioning after the section boundary.) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 48.00 275.00 Tm (- Verified the final diagram at 1440px, 390px, and 320px. The page reported zero document-level) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 58.00 263.75 Tm (horizontal overflow, no node overlap, no clipped node content, no clipped rail labels, and stable) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 58.00 252.50 Tm (section dividers.) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 48.00 236.25 Tm (- Measured the doubled Browse Selection spacing in the rendered browser. The) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 58.00 225.00 Tm (Genre/Order-to-first-genre-row gap was approximately 53.6px, while the lower genre-row gap remained) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 58.00 213.75 Tm (approximately 26.8px.) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 48.00 197.50 Tm (- Confirmed the final rails are Welcome, Preview, Browse Selection, Favorites, and Settings; the final) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 58.00 186.25 Tm (populated nodes are Hero, Create My Account, Sign In, Forgot Username, Home, Genre, Order, ALL, Action,) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 58.00 175.00 Tm (Comedy, Thriller, Horror, Drama, Doc, and Romance.) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 48.00 158.75 Tm (- Ran git diff --check during the source work and found no whitespace errors. Confirmed no public image) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 58.00 147.50 Tm (or Cinerific screenshot asset appeared in the committed changed-file set.) Tj ET
+BT /F2 12.00 Tf 1 0 0 1 48.00 125.25 Tm (Files Touched and Artifacts) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 48.00 110.25 Tm (- app/projects/cinerific/ProductFlowSwitcher.tsx - added the Cinerific client-side view switcher, hash) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 58.00 99.00 Tm (synchronization, section-bounded sticky measurements, scroll correction, diagram coordinate system,) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 58.00 87.75 Tm (final rails, dividers, and screen nodes.) Tj ET
+BT /F1 8.00 Tf 1 0 0 1 48.00 24.00 Tm (Prahlin Portfolio Work Log - September 26, 2026) Tj ET
+BT /F1 8.00 Tf 1 0 0 1 538.80 24.00 Tm (Page 4) Tj ET
+Q
+endstream
+endobj
+11 0 obj
+<< /Type /Page /Parent 3 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> /Contents 10 0 R >>
+endobj
+12 0 obj
+<< /Length 4904 >>
+stream
+q
+BT /F1 9.25 Tf 1 0 0 1 48.00 742.00 Tm (- app/projects/cinerific/page.tsx - imported the switcher, wrapped the existing expandable screenshot) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 58.00 730.75 Tm (groups, and removed the superseded static flow-stage strip and launch placeholder data.) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 48.00 714.50 Tm (- app/globals.css - added Cinerific diagram canvas sizing, the twenty-five-percent rail-label increase,) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 58.00 703.25 Tm (and scoped responsive node text rules for narrow layouts.) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 48.00 687.00 Tm (- portfolio_PROJECT_SNAPSHOT.txt - refreshed through ./read_project.sh for the September 26 documentation) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 58.00 675.75 Tm (pass so it records the current project tree, source commit, PDF inventory, and Git context.) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 48.00 659.50 Tm (- portfolio_worklog_september26.pdf - generated as this new root-level dated Portfolio documentation) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 58.00 648.25 Tm (artifact. No Cinerific PNG, JPG, SVG, or screenshot asset was modified.) Tj ET
+BT /F2 12.00 Tf 1 0 0 1 48.00 626.00 Tm (Follow-Up Context) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 48.00 611.00 Tm (- UI Foundations is intentionally empty. Future work can populate it without changing the accepted) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 58.00 599.75 Tm (switcher, sticky behavior, hashes, or preserved UX screenshot groups.) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 48.00 583.50 Tm (- Favorites and Settings are intentionally empty green sections in the diagram. Add dark screen nodes) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 58.00 572.25 Tm (only when their real Cinerific screens and naming are defined.) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 48.00 556.00 Tm (- Browse Selection intentionally spans roughly two standard rail heights. Its three node rows are) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 58.00 544.75 Tm (centered as one group, with a doubled first gap and the original lower gap.) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 48.00 528.50 Tm (- The Cinerific node font override is scoped. Future global Alla Vostra diagram changes should not remove) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 58.00 517.25 Tm (the narrow-layout wrapping and minimum-width safeguards required by the Cinerific labels.) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 48.00 501.00 Tm (- The existing screenshot groups remain below the new diagram even where their legacy stage language is) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 58.00 489.75 Tm (broader than the overview taxonomy. Future content edits should distinguish diagram navigation from) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 58.00 478.50 Tm (screenshot-capture organization.) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 48.00 462.25 Tm (- If the local preview serves old CSS after another production build, stop the dev server, move .next to) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 58.00 451.00 Tm (a recoverable /tmp directory, and restart before modifying valid source styles.) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 48.00 434.75 Tm (- The current source is committed at 0bc5100 and matches origin/main. This PDF and the refreshed snapshot) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 58.00 423.50 Tm (are documentation artifacts created after that source commit.) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 48.00 407.25 Tm (- As with prior Portfolio work, ask for the commit message before committing or pushing the refreshed) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 58.00 396.00 Tm (snapshot or this PDF unless the user explicitly supplies the message and requests the operation.) Tj ET
+BT /F2 12.00 Tf 1 0 0 1 48.00 373.75 Tm (Output Artifact) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 48.00 358.75 Tm (- Created /Users/prahlin/gh/portfolio/portfolio_worklog_september26.pdf.) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 48.00 342.50 Tm (- Used the established filename because this is the first Portfolio worklog for September 26, 2026; no) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 58.00 331.25 Tm (Part suffix was needed.) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 48.00 315.00 Tm (- Produced a US Letter, PDF 1.4, unencrypted document using Helvetica and Helvetica-Bold with Codex) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 58.00 303.75 Tm (title, subject, author, creator, and producer metadata.) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 48.00 287.50 Tm (- Preserved the established dense technical narrative, section ordering, repeated page footer, and) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 58.00 276.25 Tm (end-of-document continuity notes used by the recent Portfolio worklog series.) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 48.00 260.00 Tm (- Source state reviewed: 0bc51006b002650537408ec7d0321fc67c145e56 on main and origin/main.) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 48.00 243.75 Tm (- No source commit, push, deploy, Hostinger synchronization, or production publish was performed as part) Tj ET
+BT /F1 9.25 Tf 1 0 0 1 58.00 232.50 Tm (of generating this PDF artifact.) Tj ET
+BT /F1 8.00 Tf 1 0 0 1 48.00 24.00 Tm (Prahlin Portfolio Work Log - September 26, 2026) Tj ET
+BT /F1 8.00 Tf 1 0 0 1 538.80 24.00 Tm (Page 5) Tj ET
+Q
+endstream
+endobj
+13 0 obj
+<< /Type /Page /Parent 3 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> /Contents 12 0 R >>
+endobj
+14 0 obj
+<< /Type /Catalog /Pages 3 0 R >>
+endobj
+15 0 obj
+<< /Title (Prahlin Portfolio Work Log - September 26, 2026) /Subject (Portfolio website development worklog) /Author (Codex) /Creator (Codex standard-library PDF generator) /Producer (Codex standard-library PDF generator) /CreationDate (D:20260926222125-04'00') /ModDate (D:20260926222125-04'00') >>
+endobj
+xref
+0 16
+0000000000 65535 f 
+0000000015 00000 n 
+0000000112 00000 n 
+0000000214 00000 n 
+0000000297 00000 n 
+0000007159 00000 n 
+0000007295 00000 n 
+0000013709 00000 n 
+0000013845 00000 n 
+0000020376 00000 n 
+0000020512 00000 n 
+0000026882 00000 n 
+0000027020 00000 n 
+0000031977 00000 n 
+0000032115 00000 n 
+0000032165 00000 n 
+trailer
+<< /Size 16 /Root 14 0 R /Info 15 0 R >>
+startxref
+32481
+%%EOF
