@@ -1082,6 +1082,7 @@ h3 {
 @media (min-width: 981px) {
   .hero-visual {
     --hero-visual-layout-height: 738px;
+    --hero-visual-center-offset: -30px;
     align-self: start;
     margin-top: max(
       0px,
@@ -1099,6 +1100,111 @@ h3 {
   right: 18px;
   top: 0;
   z-index: 3;
+}
+
+.profile-orbit-wide {
+  display: none;
+}
+
+.hero-bridge-quote {
+  display: none;
+}
+
+.hero-bridge-quote span {
+  align-self: center;
+  display: block;
+  transform-origin: center center;
+  width: max-content;
+}
+
+.hero-bridge-quote span:first-child {
+  transform: scaleX(1.146);
+}
+
+.hero-bridge-quote span:last-child {
+  transform: scaleX(1.029);
+}
+
+@media (min-width: 981px) {
+  .hero-eyebrow {
+    anchor-name: --hero-eyebrow;
+  }
+
+  .profile-orbit-wide {
+    anchor-name: --hero-profile;
+    display: flex;
+    position-anchor: --hero-eyebrow;
+    right: 38px;
+    top: calc(50% - 375.5px);
+    transform: translateY(calc(-50% + 55px)) scale(0.9);
+    transform-origin: center center;
+  }
+
+  .profile-orbit-wide .profile-photo-link {
+    anchor-name: --hero-profile-photo-wide;
+  }
+
+  .hero-bridge-quote-wide {
+    color: var(--muted);
+    display: flex;
+    flex-direction: column;
+    font-size: clamp(21px, 1.95vw, 30px);
+    font-style: italic;
+    font-weight: 600;
+    left: calc(
+      anchor(--hero-eyebrow left) + min(369px, 34.45vw) + 10px
+    );
+    line-height: 1.35;
+    margin: 0;
+    position: absolute;
+    right: anchor(--hero-profile left);
+    text-align: center;
+    top: anchor(--hero-profile-photo-wide center);
+    transform: translateY(-50%);
+    z-index: 3;
+  }
+
+  .hero-bridge-quote-wide span {
+    white-space: nowrap;
+  }
+
+  @supports (top: anchor(center)) {
+    .profile-orbit-wide {
+      top: anchor(center);
+    }
+  }
+
+  .profile-orbit-compact {
+    display: none;
+  }
+}
+
+@media (max-width: 980px) {
+  .profile-orbit-compact .profile-photo-link {
+    anchor-name: --hero-profile-photo-compact;
+  }
+
+  .hero-bridge-quote-compact {
+    color: var(--muted);
+    display: flex;
+    flex-direction: column;
+    font-size: clamp(12px, 4.05vw, 24px);
+    font-style: italic;
+    font-weight: 600;
+    left: 0;
+    line-height: 1.35;
+    margin: 0;
+    position: absolute;
+    right: anchor(--hero-profile-photo-compact left);
+    text-align: center;
+    top: anchor(--hero-profile-photo-compact center);
+    transform: translateY(-50%);
+    z-index: 3;
+  }
+
+  .hero-bridge-quote-compact span {
+    white-space: nowrap;
+  }
 }
 
 .profile-photo {

@@ -187,6 +187,38 @@ function ResumeDownloadMark() {
   );
 }
 
+function ProfileOrbit({ className }: { className: string }) {
+  return (
+    <div className={`profile-orbit ${className}`}>
+      <a
+        aria-label="Open About Dev page"
+        className="profile-photo-link"
+        href="/aboutdev"
+      >
+        <Image
+          alt="Martin Prahl profile photo"
+          src="/images/martin3.jpg"
+          width={220}
+          height={220}
+          priority
+          className="profile-photo"
+        />
+      </a>
+      <span>Martin Prahl</span>
+    </div>
+  );
+}
+
+function HeroBridgeQuote({ className }: { className: string }) {
+  return (
+    <p className={`hero-bridge-quote ${className}`}>
+      <span>&ldquo;Everyone&apos;s got a brilliant</span>
+      <span>idea. Few know how to funnel</span>
+      <span>it into a must-have product.&rdquo;</span>
+    </p>
+  );
+}
+
 const worklogItems = [
   {
     label: "WORK STATION",
@@ -646,24 +678,12 @@ export default function Home() {
               </div>
             </div>
 
+            <ProfileOrbit className="profile-orbit-wide" />
+            <HeroBridgeQuote className="hero-bridge-quote-wide" />
+
             <div className="hero-visual" aria-label="Portfolio preview">
-              <div className="profile-orbit">
-                <a
-                  aria-label="Open About Dev page"
-                  className="profile-photo-link"
-                  href="/aboutdev"
-                >
-                  <Image
-                    alt="Martin Prahl profile photo"
-                    src="/images/martin3.jpg"
-                    width={220}
-                    height={220}
-                    priority
-                    className="profile-photo"
-                  />
-                </a>
-                <span>Martin Prahl</span>
-              </div>
+              <ProfileOrbit className="profile-orbit-compact" />
+              <HeroBridgeQuote className="hero-bridge-quote-compact" />
 
               <div className="phone-stage">
                 <TabletPreview />
