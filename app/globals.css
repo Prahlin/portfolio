@@ -2496,6 +2496,15 @@ section:not(.hero) {
   grid-template-columns: minmax(0, 0.9fr) minmax(320px, 1.1fr);
 }
 
+.worklog-layout > .section-heading {
+  left: calc(100% + 42px);
+  padding-top: 8px;
+  position: relative;
+  text-align: center;
+  transform: translateX(-50%);
+  width: max-content;
+}
+
 .timeline {
   border-left: 1px solid var(--line-strong);
 }
@@ -2508,6 +2517,33 @@ section:not(.hero) {
   row-gap: 16px;
 }
 
+.worklog-layout .timeline-item:first-child {
+  margin-bottom: -80.4px;
+  padding-top: 137px;
+}
+
+.worklog-layout .timeline-item:first-child > .workspace-eyebrow > .workspace-eyebrow-label,
+.worklog-layout .timeline-item:first-child > p {
+  transform: translateY(-80.4px);
+}
+
+.worklog-layout .timeline-item:first-child > .workspace-eyebrow > svg {
+  height: 50.4px;
+  transform: translateX(-100.4px);
+  width: 50.4px;
+}
+
+.worklog-layout .timeline-item:nth-child(2) {
+  margin-bottom: -78px;
+  padding-top: 32px;
+}
+
+.worklog-layout .timeline-item:nth-child(2) > .workspace-eyebrow > .workspace-eyebrow-label,
+.worklog-layout .timeline-item:nth-child(2) > p {
+  position: relative;
+  top: -78px;
+}
+
 .timeline-item > span {
   color: var(--green);
   font-weight: 900;
@@ -2517,10 +2553,14 @@ section:not(.hero) {
 
 .timeline-item .workspace-eyebrow > svg {
   display: block;
-  height: 30px;
+  height: 48px;
   margin-bottom: 30px;
   stroke-width: 2;
-  width: 30px;
+  width: 48px;
+}
+
+.timeline-item:not(.timeline-item-software) > .workspace-eyebrow > svg {
+  transform: translateX(-98px);
 }
 
 .timeline-item .workspace-eyebrow-label {
@@ -2531,6 +2571,11 @@ section:not(.hero) {
 .timeline-item > p {
   grid-column: 2;
   grid-row: 2;
+}
+
+.timeline-item:not(.timeline-item-software) > p {
+  left: -113px;
+  position: relative;
 }
 
 .timeline-item .workspace-device-list {
@@ -2547,6 +2592,10 @@ section:not(.hero) {
   display: block;
 }
 
+.timeline-item:not(.timeline-item-software) > p .workspace-device-list {
+  padding-left: 0;
+}
+
 .timeline-item strong {
   color: var(--text);
   font-size: 21px;
@@ -2556,25 +2605,145 @@ section:not(.hero) {
   font-size: 24px;
 }
 
+.worklog-layout .timeline-item:first-child .workspace-device-secondary-group > strong {
+  font-size: 24px;
+}
+
 .timeline-item-software strong {
   font-size: 24px;
 }
 
 .timeline-item-software {
+  margin-top: 18px;
+  padding-bottom: 79px;
   position: relative;
+}
+
+.timeline-item-software > .workspace-eyebrow {
+  text-align: right;
+  transform: translateX(calc(-81.8182% - 62px)) translateY(129px);
+}
+
+.timeline-item-software > .workspace-eyebrow > svg {
+  height: 50.4px;
+  margin-left: auto;
+  transform: translateX(100.4px);
+  width: 50.4px;
+}
+
+.timeline-item-software > .workspace-eyebrow > .workspace-eyebrow-label {
+  left: 100%;
+  position: relative;
+  text-align: right;
+  top: -80.4px;
+  transform: translateX(-100%);
+  width: max-content;
+}
+
+.timeline-item-software > p {
+  left: calc(-81.8182% - 163.1818px);
+  position: relative;
+  text-align: right;
+  top: 51px;
+  width: 81.8182%;
+}
+
+.timeline-item-software > p .workspace-device-list {
+  padding-right: 0;
+}
+
+.workspace-software-subeyebrow {
+  color: var(--green);
+  display: block;
+  font-size: 16px;
+  font-weight: 900;
+  left: 100%;
+  line-height: 24px;
+  margin-top: 60px;
+  position: relative;
+  text-align: right;
+  transform: translateX(-100%);
+  white-space: nowrap;
+  width: max-content;
+}
+
+.workspace-coding-software-group {
+  display: block;
+  left: calc(100% + 50px);
+  position: relative;
+  text-align: left;
+  width: 100%;
+}
+
+.workspace-coding-software-icon {
+  color: var(--green);
+  height: 48px;
+  left: -98px;
+  position: absolute;
+  stroke-width: 2;
+  top: 0;
+  width: 48px;
+}
+
+.workspace-coding-software-group .workspace-software-subeyebrow {
+  left: auto;
+  position: static;
+  text-align: left;
+  transform: none;
+}
+
+.timeline-item-software > p .workspace-coding-software-group .workspace-device-list {
+  padding-left: 0;
 }
 
 .workspace-workflow-heading {
   color: var(--text);
-  left: calc(-81.8182% - 42px);
+  left: -1px;
   margin: 0;
   position: absolute;
-  top: 31px;
-  width: 81.8182%;
+  text-align: center;
+  top: 8px;
+  transform: translateX(-50%);
+  width: max-content;
 }
 
 .workspace-workflow-heading > p {
   color: var(--green);
+}
+
+.worklog-layout > .section-heading > h2,
+.workspace-workflow-heading > h2 {
+  isolation: isolate;
+  position: relative;
+}
+
+@media (min-width: 981px) {
+  .worklog-layout > .section-heading > h2,
+  .workspace-workflow-heading > h2 {
+    font-size: 84px;
+    line-height: 84px;
+  }
+}
+
+.worklog-layout > .section-heading > h2::before,
+.workspace-workflow-heading > h2::before {
+  background: #020403;
+  content: "";
+  left: 50%;
+  position: absolute;
+  transform: translateX(-50%);
+  width: 3px;
+  z-index: -1;
+}
+
+.worklog-layout > .section-heading > h2::before {
+  bottom: -15px;
+  top: -8px;
+}
+
+.workspace-workflow-heading > h2::before {
+  bottom: -15px;
+  top: -18px;
 }
 
 .timeline-item .workspace-device-secondary-group {
@@ -7163,11 +7332,119 @@ section.project-hero {
 }
 
 @media (max-width: 980px) {
+  .worklog-layout .timeline-item:first-child {
+    margin-bottom: 0;
+    padding-top: 8px;
+  }
+
+  .worklog-layout .timeline-item:first-child > .workspace-eyebrow > .workspace-eyebrow-label,
+  .worklog-layout .timeline-item:first-child > p {
+    transform: none;
+  }
+
+  .worklog-layout .timeline-item:first-child > .workspace-eyebrow > svg {
+    transform: none;
+  }
+
+  .worklog-layout .timeline-item:nth-child(2) {
+    margin-bottom: 0;
+    padding-top: 8px;
+  }
+
+  .worklog-layout .timeline-item:nth-child(2) > .workspace-eyebrow > .workspace-eyebrow-label,
+  .worklog-layout .timeline-item:nth-child(2) > p {
+    position: static;
+    top: auto;
+  }
+
+  .worklog-layout > .section-heading {
+    left: auto;
+    padding-top: 0;
+    position: static;
+    text-align: left;
+    transform: none;
+    width: auto;
+  }
+
   .workspace-workflow-heading {
     grid-column: 1 / -1;
     grid-row: 1;
     position: static;
+    text-align: left;
+    transform: none;
     width: 100%;
+  }
+
+  .worklog-layout > .section-heading > h2::before,
+  .workspace-workflow-heading > h2::before {
+    display: none;
+  }
+
+  .timeline-item-software > .workspace-eyebrow,
+  .timeline-item-software > p {
+    text-align: left;
+    transform: none;
+  }
+
+  .timeline-item:not(.timeline-item-software) > p {
+    left: auto;
+    position: static;
+  }
+
+  .timeline-item:not(.timeline-item-software) > p .workspace-device-list {
+    padding-left: 24px;
+  }
+
+  .timeline-item-software {
+    margin-top: 0;
+    padding-bottom: 28px;
+  }
+
+  .timeline-item-software > .workspace-eyebrow > svg {
+    margin-left: 0;
+    transform: none;
+  }
+
+  .timeline-item:not(.timeline-item-software) > .workspace-eyebrow > svg {
+    transform: none;
+  }
+
+  .timeline-item-software > .workspace-eyebrow > .workspace-eyebrow-label {
+    left: auto;
+    position: static;
+    transform: none;
+    width: auto;
+  }
+
+  .timeline-item-software > p {
+    left: auto;
+    position: static;
+    top: auto;
+    width: auto;
+  }
+
+  .timeline-item-software > p .workspace-device-list {
+    padding-right: 0;
+  }
+
+  .workspace-coding-software-group {
+    left: auto;
+    position: static;
+    width: auto;
+  }
+
+  .workspace-coding-software-icon {
+    display: block;
+    margin: 30px 0;
+    position: static;
+  }
+
+  .workspace-coding-software-group .workspace-software-subeyebrow {
+    margin-top: 0;
+  }
+
+  .timeline-item-software > p .workspace-coding-software-group .workspace-device-list {
+    padding-left: 24px;
   }
 
   .timeline-item-software > .workspace-eyebrow {
@@ -8095,6 +8372,14 @@ section.project-hero {
   .timeline-item {
     column-gap: 24px;
     grid-template-columns: 50px minmax(0, 1fr);
+  }
+
+  .timeline-item:not(.timeline-item-software) > p .workspace-device-list {
+    padding-left: 16px;
+  }
+
+  .timeline-item-software > p .workspace-coding-software-group .workspace-device-list {
+    padding-left: 16px;
   }
 
   .timeline-item .workspace-device-list {

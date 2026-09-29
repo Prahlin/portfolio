@@ -7,6 +7,7 @@ import {
   Mail,
   MailCheck,
   MonitorSmartphone,
+  Palette,
   Play,
   Smartphone,
   Store,
@@ -188,7 +189,7 @@ function ResumeDownloadMark() {
 
 const worklogItems = [
   {
-    label: "WORKSTATION",
+    label: "WORK STATION",
     icon: <MonitorSmartphone aria-hidden />,
     text: (
       <>
@@ -245,8 +246,8 @@ const worklogItems = [
     ),
   },
   {
-    label: "SOFTWARE",
-    icon: <Braces aria-hidden />,
+    label: "DESIGN SOFTWARE",
+    icon: <Palette aria-hidden />,
     text: (
       <>
         <strong>Development Environments</strong>
@@ -275,22 +276,30 @@ const worklogItems = [
             <span>Media Encoder</span>
           </span>
         </span>
-        <span className="workspace-device-secondary-group">
-          <strong>Testing &amp; Debugging</strong>
-          <span className="workspace-device-list">
-            <span>Expo Go</span>
-            <span>Android Emulator / AVD</span>
-            <span>iOS Simulator</span>
-            <span>ADB</span>
-            <span>Postman</span>
+        <span className="workspace-coding-software-group">
+          <Braces aria-hidden className="workspace-coding-software-icon" />
+          <span className="workspace-software-subeyebrow">
+            CODING
+            <br />
+            SOFTWARE
           </span>
-        </span>
-        <span className="workspace-device-secondary-group">
-          <strong>Workflow Platforms</strong>
-          <span className="workspace-device-list">
-            <span>GitHub</span>
-            <span>Jira</span>
-            <span>ServiceNow</span>
+          <span className="workspace-device-secondary-group">
+            <strong>Testing &amp; Debugging</strong>
+            <span className="workspace-device-list">
+              <span>Expo Go</span>
+              <span>Android Emulator / AVD</span>
+              <span>iOS Simulator</span>
+              <span>ADB</span>
+              <span>Postman</span>
+            </span>
+          </span>
+          <span className="workspace-device-secondary-group">
+            <strong>Workflow Platforms</strong>
+            <span className="workspace-device-list">
+              <span>GitHub</span>
+              <span>Jira</span>
+              <span>ServiceNow</span>
+            </span>
           </span>
         </span>
       </>
@@ -711,23 +720,19 @@ export default function Home() {
 
       <section className="worklog-section" id="worklog">
         <div className="site-shell worklog-layout">
-          <SectionHeading
-            kicker="HOW I'M SET UP"
-            title="My Workspace"
-          />
+          <SectionHeading title="My Work Space" />
           <div className="timeline">
             {worklogItems.map((item) => (
               <div
                 key={item.label}
                 className={`timeline-item${
-                  item.label === "SOFTWARE"
+                  item.label === "DESIGN SOFTWARE"
                     ? " timeline-item-software"
                     : ""
                 }`}
               >
-                {item.label === "SOFTWARE" ? (
+                {item.label === "DESIGN SOFTWARE" ? (
                   <div className="section-heading workspace-workflow-heading">
-                    <p>HOW I WORK</p>
                     <h2>My Work Tools</h2>
                   </div>
                 ) : null}
@@ -746,39 +751,6 @@ export default function Home() {
                 <p>{item.text}</p>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="aboutdev-section aboutdev-principles-section">
-        <div className="site-shell">
-          <div className="aboutdev-section-head aboutdev-principles-head">
-            <div>
-              <p className="aboutdev-eyebrow">The Values I Represent</p>
-              <h2>My Core Beliefs</h2>
-            </div>
-          </div>
-
-          <div className="aboutdev-principles-grid">
-            {principles.map((principle) => (
-              <article
-                className="aboutdev-principle"
-                data-tone={principle.tone}
-                key={principle.title}
-              >
-                <h3>{principle.title}</h3>
-                <p>{principle.text}</p>
-              </article>
-            ))}
-            <div className="aboutdev-principles-star" aria-hidden="true">
-              <svg
-                className="aboutdev-principles-star-svg"
-                focusable="false"
-                viewBox="0 0 100 100"
-              >
-                <polygon points="50 2 61 35 96 35 68 57 79 90 50 70 21 90 32 57 4 35 39 35" />
-              </svg>
-            </div>
           </div>
         </div>
       </section>
@@ -815,6 +787,39 @@ export default function Home() {
                 <p className="aboutdev-timeline-proof">{item.evidence}</p>
               </article>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="aboutdev-section aboutdev-principles-section">
+        <div className="site-shell">
+          <div className="aboutdev-section-head aboutdev-principles-head">
+            <div>
+              <p className="aboutdev-eyebrow">The Values I Represent</p>
+              <h2>My Core Beliefs</h2>
+            </div>
+          </div>
+
+          <div className="aboutdev-principles-grid">
+            {principles.map((principle) => (
+              <article
+                className="aboutdev-principle"
+                data-tone={principle.tone}
+                key={principle.title}
+              >
+                <h3>{principle.title}</h3>
+                <p>{principle.text}</p>
+              </article>
+            ))}
+            <div className="aboutdev-principles-star" aria-hidden="true">
+              <svg
+                className="aboutdev-principles-star-svg"
+                focusable="false"
+                viewBox="0 0 100 100"
+              >
+                <polygon points="50 2 61 35 96 35 68 57 79 90 50 70 21 90 32 57 4 35 39 35" />
+              </svg>
+            </div>
           </div>
         </div>
       </section>

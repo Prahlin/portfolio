@@ -1114,13 +1114,13 @@ export function SectionHeading({
   subtitle,
   title,
 }: {
-  kicker: string;
+  kicker?: string;
   subtitle?: string;
   title: string;
 }) {
   return (
     <div className="section-heading">
-      <p>{kicker}</p>
+      {kicker ? <p>{kicker}</p> : null}
       {subtitle ? (
         <h2>
           <span className="section-heading-title-line">{title}</span>
