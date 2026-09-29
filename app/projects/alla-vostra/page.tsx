@@ -1081,6 +1081,8 @@ export default function AllaVostraCaseStudy() {
                 <a
                   className="button button-primary project-contact-button"
                   href="mailto:martin@prahlproductions.com"
+                  rel="noreferrer"
+                  target="_blank"
                 >
                   <span className="project-contact-icon-mark" aria-hidden="true">
                     <Mail className="project-contact-icon-stroke" size={36} />

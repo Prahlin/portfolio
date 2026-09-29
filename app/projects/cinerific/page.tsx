@@ -599,7 +599,7 @@ export default function CinerificCaseStudy() {
                   <a
                     aria-label="Open Cinerific Figma file"
                     className="button button-primary project-figma-button"
-                    href="https://www.figma.com/"
+                    href="https://www.figma.com/proto/qbpfngwBirp0WoOHSqw1TN/Cinerific?node-id=0-1&t=bTB8MTHXk17AP5PF-1"
                     rel="noreferrer"
                     target="_blank"
                   >
@@ -628,6 +628,8 @@ export default function CinerificCaseStudy() {
                 <a
                   className="button button-primary project-contact-button"
                   href="mailto:martin@prahlproductions.com"
+                  rel="noreferrer"
+                  target="_blank"
                 >
                   <span className="project-contact-icon-mark" aria-hidden="true">
                     <Mail className="project-contact-icon-stroke" size={36} />

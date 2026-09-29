@@ -187,9 +187,190 @@ function ResumeDownloadMark() {
 }
 
 const worklogItems = [
-  "From responsive website prototype to Expo Router mobile architecture",
-  "Secure Stripe card flow, Google Pay, PayPal, and Postmark confirmations",
-  "Android Small, Standard, and Large emulator QA with release-ready EAS builds",
+  {
+    label: "WORKSTATION",
+    icon: <MonitorSmartphone aria-hidden />,
+    text: (
+      <>
+        <strong>Laptop</strong>
+        <span className="workspace-device-list">
+          <span>Macbook Air 15.2&quot; M4 16GB SSD</span>
+        </span>
+        <span className="workspace-device-secondary-group">
+          <strong>External Monitor</strong>
+          <span className="workspace-device-list">
+            <span>CMV 14&quot;</span>
+          </span>
+        </span>
+      </>
+    ),
+  },
+  {
+    label: "QA DEVICES",
+    icon: <Smartphone aria-hidden />,
+    text: (
+      <>
+        <strong>Android</strong>
+        <span className="workspace-qa-device-groups">
+          <strong>Smartphones</strong>
+          <span className="workspace-device-list">
+            <span>Samsung Galaxy A3 (Small)</span>
+            <span>Samsung Galaxy S21 FE (Standard)</span>
+            <span>Samsung Galaxy S20 Ultra (Large)</span>
+          </span>
+          <span className="workspace-device-secondary-group">
+            <strong>Tablets</strong>
+            <span className="workspace-device-list">
+              <span>Galaxy Tab A (Standard)</span>
+            </span>
+          </span>
+        </span>
+        <span className="workspace-qa-platform-group">
+          <strong>iOS</strong>
+          <span className="workspace-qa-device-groups">
+            <strong>Smartphones</strong>
+            <span className="workspace-device-list">
+              <span>iPhone 14 (Standard)</span>
+              <span>iPhone 12 Pro Max (Large)</span>
+            </span>
+            <span className="workspace-device-secondary-group">
+              <strong>Tablets</strong>
+              <span className="workspace-device-list">
+                <span>iPad Air 14 (Standard)</span>
+              </span>
+            </span>
+          </span>
+        </span>
+      </>
+    ),
+  },
+  {
+    label: "SOFTWARE",
+    icon: <Braces aria-hidden />,
+    text: (
+      <>
+        <strong>Development Environments</strong>
+        <span className="workspace-device-list">
+          <span>VS Code</span>
+          <span>Android Studio</span>
+          <span>Xcode</span>
+          <span>PyCharm</span>
+        </span>
+        <span className="workspace-device-secondary-group">
+          <strong>AI-Assisted Development</strong>
+          <span className="workspace-device-list">
+            <span>Codex</span>
+            <span>Claude</span>
+            <span>ChatGPT</span>
+            <span>GitHub Copilot</span>
+          </span>
+        </span>
+        <span className="workspace-device-secondary-group">
+          <strong>Design &amp; Motion</strong>
+          <span className="workspace-device-list">
+            <span>Figma</span>
+            <span>Photoshop</span>
+            <span>Illustrator</span>
+            <span>After Effects</span>
+            <span>Media Encoder</span>
+          </span>
+        </span>
+        <span className="workspace-device-secondary-group">
+          <strong>Testing &amp; Debugging</strong>
+          <span className="workspace-device-list">
+            <span>Expo Go</span>
+            <span>Android Emulator / AVD</span>
+            <span>iOS Simulator</span>
+            <span>ADB</span>
+            <span>Postman</span>
+          </span>
+        </span>
+        <span className="workspace-device-secondary-group">
+          <strong>Workflow Platforms</strong>
+          <span className="workspace-device-list">
+            <span>GitHub</span>
+            <span>Jira</span>
+            <span>ServiceNow</span>
+          </span>
+        </span>
+      </>
+    ),
+  },
+];
+
+const timelineItems = [
+  {
+    evidence:
+      "Evidence: UI/UX philosophy, visual hierarchy studies, shipped mobile screens.",
+    title: "Industry & Product Research",
+    text: (
+      <>
+        Banking customers are <em>not</em> Video Streamers, Global users{" "}
+        <em>not</em> American ones. That&apos;s why I conduct{" "}
+        comprehensive, theoretical{" "}
+        <strong>
+          <u>Industry & Product Research</u>
+        </strong>{" "}
+        before the <u>practical</u> work of{" "}
+        <em>UI/UX, Front-End, Back-End, Build & Release</em> planning even begins.
+      </>
+    ),
+  },
+  {
+    evidence: "Evidence: Alla Vostra, Cinerific, Credit King.",
+    title: "Project Planning",
+    text: [
+      "Cross-platform or Platform-specific? Web version or App-only? UI-focused or Back-end heavy?",
+      "I help make the difficult decisions about your unique product.",
+    ],
+  },
+  {
+    evidence: "Evidence: Vercel API, Stripe, PayPal, Postmark.",
+    title: "Scaffolding the Workflow",
+    text: (
+      <>
+        Although the nitty-gritty of every project is different, some
+        systematization is paramount; that&apos;s why I always, without exception,
+        begin every session with <strong>read-project</strong> briefings,{" "}
+        <strong>commit changes</strong> in an organized manner, track real-time{" "}
+        <strong>snapshots</strong> of project changes, and generate end-of-day{" "}
+        <strong>worklogs</strong> at all times.
+      </>
+    ),
+  },
+  {
+    evidence: "Evidence: 100+ logs across active projects.",
+    title: "Learning-As-I-Go",
+    text: "Creation without learning is useless. By studying & analyzing diffs while the project is growing, I ensure that I'm in the loop, and deeply comprehend, every coding change made to the project in real time.",
+  },
+];
+
+const principles = [
+  {
+    tone: "green",
+    title: "Vision",
+    text: "No imagination means no prototype. No prototype means no build.",
+  },
+  {
+    tone: "blue",
+    title: "Modernness",
+    text: "When creating a unique product, absolutely nothing should be off the table.",
+  },
+  {
+    tone: "cyan",
+    title: "Inter-connectivity",
+    text: "Just like art is science and science is art, design & code should be one.",
+  },
+  {
+    tone: "amber",
+    title: "User-friendliness",
+    text: 'As Einstein said, "If you can\'t explain it simply, you don\'t really know it."',
+  },
+  {
+    tone: "violet",
+    title: "Cohesion",
+    text: "Let's be real; a product is never stronger than its weakest point.",
+  },
 ];
 
 function PhonePreview({
@@ -262,15 +443,19 @@ function PhonePreview({
 
 function TabletPreview() {
   return (
-    <div className="tablet-shell tablet-shell-capture" aria-hidden="true">
+    <a
+      aria-label="Open Cinerific case study"
+      className="tablet-shell tablet-shell-capture tablet-shell-link"
+      href="/projects/cinerific"
+    >
       <Image
-        alt=""
+        alt="Cinerific app preview"
         className="tablet-framed-image"
         fill
         sizes="456px"
         src="/images/cinerific-hero-tablet-tab-s7-uniform.png"
       />
-    </div>
+    </a>
   );
 }
 
@@ -527,15 +712,108 @@ export default function Home() {
       <section className="worklog-section" id="worklog">
         <div className="site-shell worklog-layout">
           <SectionHeading
-            kicker="Worklog"
-            title="A documented build history, not just final screenshots"
+            kicker="HOW I'M SET UP"
+            title="My Workspace"
           />
           <div className="timeline">
-            {worklogItems.map((item, index) => (
-              <div key={item} className="timeline-item">
-                <span>{String(index + 1).padStart(2, "0")}</span>
-                <p>{item}</p>
+            {worklogItems.map((item) => (
+              <div
+                key={item.label}
+                className={`timeline-item${
+                  item.label === "SOFTWARE"
+                    ? " timeline-item-software"
+                    : ""
+                }`}
+              >
+                {item.label === "SOFTWARE" ? (
+                  <div className="section-heading workspace-workflow-heading">
+                    <p>HOW I WORK</p>
+                    <h2>My Work Tools</h2>
+                  </div>
+                ) : null}
+                <span className="workspace-eyebrow">
+                  {item.icon}
+                  <span className="workspace-eyebrow-label">
+                    {item.label.split(" ")[0]}
+                    {item.label.includes(" ") ? (
+                      <>
+                        <br />
+                        {item.label.split(" ").slice(1).join(" ")}
+                      </>
+                    ) : null}
+                  </span>
+                </span>
+                <p>{item.text}</p>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="aboutdev-section aboutdev-principles-section">
+        <div className="site-shell">
+          <div className="aboutdev-section-head aboutdev-principles-head">
+            <div>
+              <p className="aboutdev-eyebrow">The Values I Represent</p>
+              <h2>My Core Beliefs</h2>
+            </div>
+          </div>
+
+          <div className="aboutdev-principles-grid">
+            {principles.map((principle) => (
+              <article
+                className="aboutdev-principle"
+                data-tone={principle.tone}
+                key={principle.title}
+              >
+                <h3>{principle.title}</h3>
+                <p>{principle.text}</p>
+              </article>
+            ))}
+            <div className="aboutdev-principles-star" aria-hidden="true">
+              <svg
+                className="aboutdev-principles-star-svg"
+                focusable="false"
+                viewBox="0 0 100 100"
+              >
+                <polygon points="50 2 61 35 96 35 68 57 79 90 50 70 21 90 32 57 4 35 39 35" />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="aboutdev-section aboutdev-story-section">
+        <div className="site-shell">
+          <div className="aboutdev-section-head">
+            <div>
+              <p className="aboutdev-eyebrow">The Way I Work</p>
+              <h2>My Workflow</h2>
+            </div>
+            <p>
+              This page is personal, but it stays practical. Every story beat
+              ties back to a skill, artifact, or production outcome.
+            </p>
+          </div>
+
+          <div className="aboutdev-timeline">
+            {timelineItems.map((item, index) => (
+              <article className="aboutdev-timeline-item" key={item.title}>
+                <span className="aboutdev-timeline-index">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+                <div className="aboutdev-timeline-copy">
+                  <h3>{item.title}</h3>
+                  {Array.isArray(item.text) ? (
+                    item.text.map((paragraph) => (
+                      <p key={paragraph}>{paragraph}</p>
+                    ))
+                  ) : (
+                    <p>{item.text}</p>
+                  )}
+                </div>
+                <p className="aboutdev-timeline-proof">{item.evidence}</p>
+              </article>
             ))}
           </div>
         </div>

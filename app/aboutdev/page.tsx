@@ -68,27 +68,27 @@ const principles = [
   {
     tone: "green",
     title: "Vision",
-    text: "Without imagination, there is no working prototype, and without a working prototype, well... There is no front-end, back-end, or final build.",
+    text: "No imagination means no prototype. No prototype means no build.",
   },
   {
     tone: "blue",
     title: "Modernness",
-    text: "When it comes to creating a truly progressive & forward-thinking product, nothing - and I mean nothing - should be off the table.",
+    text: "When creating a unique product, absolutely nothing should be off the table.",
   },
   {
     tone: "cyan",
-    title: "Inter-connectedness",
-    text: "Breaking down barriers between art and science, design and code, isn't some arbitrary nicety; It's the guiding principle behind everything I do.",
+    title: "Inter-connectivity",
+    text: "Just like art is science and science is art, design & code should be one.",
   },
   {
     tone: "amber",
     title: "User-friendliness",
-    text: "Albert Einstein once said, \"If you can't explain it simply, you don't understand it well enough.\" I do everything to make sure my products echo this sentiment.",
+    text: "As Einstein said, \"If you can't explain it simply, you don't really know it.\"",
   },
   {
     tone: "violet",
     title: "Cohesion",
-    text: "A software application isn't stronger than its weakest points; That's why I treat them as crucial points in need of immediate attention, not as afterthoughts",
+    text: "Let's be real; a product is never stronger than its weakest point.",
   },
 ];
 
@@ -143,8 +143,8 @@ export default function AboutDevPage() {
         <div className="site-shell">
           <div className="aboutdev-section-head">
             <div>
-              <p className="aboutdev-eyebrow">How I Got Here</p>
-              <h2>My Work Methodology</h2>
+              <p className="aboutdev-eyebrow">The Way I Work</p>
+              <h2>My Workflow</h2>
             </div>
             <p>
               This page is personal, but it stays practical. Every story beat
@@ -198,7 +198,7 @@ export default function AboutDevPage() {
         <div className="site-shell">
           <div className="aboutdev-section-head aboutdev-principles-head">
             <div>
-              <p className="aboutdev-eyebrow">Principles</p>
+              <p className="aboutdev-eyebrow">The Values I Represent</p>
               <h2>My Core Beliefs</h2>
             </div>
           </div>

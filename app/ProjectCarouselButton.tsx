@@ -1130,6 +1130,8 @@ export function ProjectCarouselButton() {
         className="button button-primary carousel-button"
         href={activeProject.href}
         ref={projectButtonRef}
+        rel="noreferrer"
+        target="_blank"
       >
         <span className="carousel-button-window" aria-live="polite">
           <span className="carousel-button-label" key={activeProject.href}>
