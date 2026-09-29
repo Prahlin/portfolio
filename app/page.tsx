@@ -311,7 +311,7 @@ const timelineItems = [
   {
     evidence:
       "Evidence: UI/UX philosophy, visual hierarchy studies, shipped mobile screens.",
-    title: "Industry & Product Research",
+    title: "Research",
     text: (
       <>
         Banking customers are <em>not</em> Video Streamers, Global users{" "}
@@ -327,7 +327,7 @@ const timelineItems = [
   },
   {
     evidence: "Evidence: Alla Vostra, Cinerific, Credit King.",
-    title: "Project Planning",
+    title: "Plan",
     text: [
       "Cross-platform or Platform-specific? Web version or App-only? UI-focused or Back-end heavy?",
       "I help make the difficult decisions about your unique product.",
@@ -335,7 +335,7 @@ const timelineItems = [
   },
   {
     evidence: "Evidence: Vercel API, Stripe, PayPal, Postmark.",
-    title: "Scaffolding the Workflow",
+    title: "Scaffold",
     text: (
       <>
         Although the nitty-gritty of every project is different, some
@@ -349,8 +349,23 @@ const timelineItems = [
   },
   {
     evidence: "Evidence: 100+ logs across active projects.",
-    title: "Learning-As-I-Go",
+    title: "Analyze",
     text: "Creation without learning is useless. By studying & analyzing diffs while the project is growing, I ensure that I'm in the loop, and deeply comprehend, every coding change made to the project in real time.",
+  },
+  {
+    evidence: "",
+    title: "Testing",
+    text: "",
+  },
+  {
+    evidence: "",
+    title: "Building",
+    text: "",
+  },
+  {
+    evidence: "",
+    title: "Release",
+    text: "",
   },
 ];
 
@@ -775,7 +790,9 @@ export default function Home() {
                   {String(index + 1).padStart(2, "0")}
                 </span>
                 <div className="aboutdev-timeline-copy">
-                  <h3>{item.title}</h3>
+                  <h3>
+                    <span className="aboutdev-timeline-title">{item.title}</span>
+                  </h3>
                   {Array.isArray(item.text) ? (
                     item.text.map((paragraph) => (
                       <p key={paragraph}>{paragraph}</p>
