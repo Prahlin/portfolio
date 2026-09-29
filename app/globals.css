@@ -2533,6 +2533,20 @@ section:not(.hero) {
   width: 50.4px;
 }
 
+.worklog-layout
+  .timeline-item:first-child
+  > .workspace-eyebrow
+  > .workspace-eyebrow-label {
+  left: 0;
+  text-align: left;
+}
+
+.worklog-layout .timeline-item:first-child > p {
+  left: -113px;
+  text-align: left;
+  width: auto;
+}
+
 .worklog-layout .timeline-item:nth-child(2) {
   margin-bottom: -78px;
   padding-top: 32px;
@@ -2560,7 +2574,15 @@ section:not(.hero) {
 }
 
 .timeline-item:not(.timeline-item-software) > .workspace-eyebrow > svg {
-  transform: translateX(-98px);
+  transform: none;
+}
+
+.timeline-item:not(.timeline-item-software)
+  > .workspace-eyebrow
+  > .workspace-eyebrow-label {
+  left: -115px;
+  position: relative;
+  text-align: right;
 }
 
 .timeline-item .workspace-eyebrow-label {
@@ -2574,8 +2596,10 @@ section:not(.hero) {
 }
 
 .timeline-item:not(.timeline-item-software) > p {
-  left: -113px;
+  left: calc(-81.8182% - 163.1818px);
   position: relative;
+  text-align: right;
+  width: 81.8182%;
 }
 
 .timeline-item .workspace-device-list {
@@ -2590,6 +2614,10 @@ section:not(.hero) {
 
 .timeline-item .workspace-device-list > span {
   display: block;
+}
+
+.timeline-item .workspace-device-list > .workspace-device-list-break {
+  margin-top: 12px;
 }
 
 .timeline-item:not(.timeline-item-software) > p .workspace-device-list {
@@ -2620,30 +2648,30 @@ section:not(.hero) {
 }
 
 .timeline-item-software > .workspace-eyebrow {
-  text-align: right;
-  transform: translateX(calc(-81.8182% - 62px)) translateY(129px);
+  text-align: left;
+  transform: translateY(129px);
 }
 
 .timeline-item-software > .workspace-eyebrow > svg {
   height: 50.4px;
   margin-left: auto;
-  transform: translateX(100.4px);
+  transform: translateX(-115px);
   width: 50.4px;
 }
 
 .timeline-item-software > .workspace-eyebrow > .workspace-eyebrow-label {
-  left: 100%;
+  left: auto;
   position: relative;
-  text-align: right;
+  text-align: left;
   top: -80.4px;
-  transform: translateX(-100%);
+  transform: none;
   width: max-content;
 }
 
 .timeline-item-software > p {
-  left: calc(-81.8182% - 163.1818px);
+  left: -113.1818px;
   position: relative;
-  text-align: right;
+  text-align: left;
   top: 51px;
   width: 81.8182%;
 }
@@ -2669,16 +2697,16 @@ section:not(.hero) {
 
 .workspace-coding-software-group {
   display: block;
-  left: calc(100% + 50px);
+  left: calc(-100% - 50px);
   position: relative;
-  text-align: left;
+  text-align: right;
   width: 100%;
 }
 
 .workspace-coding-software-icon {
   color: var(--green);
   height: 48px;
-  left: -98px;
+  left: calc(100% + 50px);
   position: absolute;
   stroke-width: 2;
   top: 0;
@@ -2687,8 +2715,9 @@ section:not(.hero) {
 
 .workspace-coding-software-group .workspace-software-subeyebrow {
   left: auto;
+  margin-left: auto;
   position: static;
-  text-align: left;
+  text-align: right;
   transform: none;
 }
 
@@ -7507,6 +7536,15 @@ section.project-hero {
   .timeline-item:not(.timeline-item-software) > p {
     left: auto;
     position: static;
+    text-align: left;
+    width: auto;
+  }
+
+  .timeline-item:not(.timeline-item-software)
+    > .workspace-eyebrow
+    > .workspace-eyebrow-label {
+    left: auto;
+    text-align: left;
   }
 
   .timeline-item:not(.timeline-item-software) > p .workspace-device-list {
@@ -7548,6 +7586,7 @@ section.project-hero {
   .workspace-coding-software-group {
     left: auto;
     position: static;
+    text-align: left;
     width: auto;
   }
 
@@ -7558,7 +7597,9 @@ section.project-hero {
   }
 
   .workspace-coding-software-group .workspace-software-subeyebrow {
+    margin-left: 0;
     margin-top: 0;
+    text-align: left;
   }
 
   .timeline-item-software > p .workspace-coding-software-group .workspace-device-list {

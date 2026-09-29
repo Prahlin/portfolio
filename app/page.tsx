@@ -213,31 +213,25 @@ const worklogItems = [
       <>
         <strong>Android</strong>
         <span className="workspace-qa-device-groups">
-          <strong>Smartphones</strong>
+          <strong>Smartphones / Tablets</strong>
           <span className="workspace-device-list">
             <span>Samsung Galaxy A3 (Small)</span>
             <span>Samsung Galaxy S21 FE (Standard)</span>
             <span>Samsung Galaxy S20 Ultra (Large)</span>
-          </span>
-          <span className="workspace-device-secondary-group">
-            <strong>Tablets</strong>
-            <span className="workspace-device-list">
-              <span>Galaxy Tab A (Standard)</span>
+            <span className="workspace-device-list-break">
+              Galaxy Tab A (Standard)
             </span>
           </span>
         </span>
         <span className="workspace-qa-platform-group">
           <strong>iOS</strong>
           <span className="workspace-qa-device-groups">
-            <strong>Smartphones</strong>
+            <strong>Smartphones / Tablets</strong>
             <span className="workspace-device-list">
               <span>iPhone 14 (Standard)</span>
               <span>iPhone 12 Pro Max (Large)</span>
-            </span>
-            <span className="workspace-device-secondary-group">
-              <strong>Tablets</strong>
-              <span className="workspace-device-list">
-                <span>iPad Air 14 (Standard)</span>
+              <span className="workspace-device-list-break">
+                iPad Air 14 (Standard)
               </span>
             </span>
           </span>
