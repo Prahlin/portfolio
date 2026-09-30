@@ -3438,14 +3438,21 @@ section.aboutdev-hero {
   max-width: 100%;
   overflow: visible;
   position: relative;
-  isolation: isolate;
   width: var(--aboutdev-formation-width);
 }
 
 .aboutdev-principle {
   --principle-accent: var(--green);
+  --principle-center-angle: 180deg;
   align-content: center;
   aspect-ratio: 1;
+  background: linear-gradient(
+    var(--principle-center-angle),
+    rgba(13, 31, 22, 0.92) 0%,
+    rgba(10, 25, 17, 0.84) 42%,
+    rgba(7, 18, 12, 0.6) 72%,
+    rgba(5, 13, 9, 0.26) 100%
+  );
   border-color: color-mix(in srgb, var(--principle-accent) 42%, transparent);
   border-radius: 999px;
   box-shadow:
@@ -3465,26 +3472,31 @@ section.aboutdev-hero {
 }
 
 .aboutdev-principle:nth-of-type(1) {
+  --principle-center-angle: 180deg;
   left: 50%;
   top: 12.53%;
 }
 
 .aboutdev-principle:nth-of-type(2) {
+  --principle-center-angle: 259.5deg;
   left: 81.32%;
   top: 38.43%;
 }
 
 .aboutdev-principle:nth-of-type(3) {
+  --principle-center-angle: 328deg;
   left: 69.35%;
   top: 80.31%;
 }
 
 .aboutdev-principle:nth-of-type(4) {
+  --principle-center-angle: 32deg;
   left: 30.65%;
   top: 80.31%;
 }
 
 .aboutdev-principle:nth-of-type(5) {
+  --principle-center-angle: 100.5deg;
   left: 18.68%;
   top: 38.43%;
 }
@@ -3537,6 +3549,7 @@ section.aboutdev-hero {
   display: grid;
   height: auto;
   left: 50%;
+  mix-blend-mode: screen;
   place-items: center;
   pointer-events: none;
   position: absolute;
