@@ -402,7 +402,7 @@ const principles = [
     text: "No imagination means no prototype. No prototype means no build.",
   },
   {
-    tone: "blue",
+    tone: "rose",
     title: "Modernness",
     text: "When creating a unique product, absolutely nothing should be off the table.",
   },
@@ -843,13 +843,13 @@ export default function Home() {
               </article>
             ))}
             <div className="aboutdev-principles-star" aria-hidden="true">
-              <svg
-                className="aboutdev-principles-star-svg"
-                focusable="false"
-                viewBox="0 0 100 100"
-              >
-                <polygon points="50 2 61 35 96 35 68 57 79 90 50 70 21 90 32 57 4 35 39 35" />
-              </svg>
+              <Image
+                alt=""
+                className="aboutdev-principles-star-image"
+                height={1956}
+                src="/images/aboutdev/beliefs-star4.png"
+                width={2012}
+              />
             </div>
           </div>
         </div>

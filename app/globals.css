@@ -3320,6 +3320,7 @@ section.aboutdev-hero {
   max-width: 100%;
   overflow: visible;
   position: relative;
+  isolation: isolate;
   width: var(--aboutdev-formation-width);
 }
 
@@ -3342,6 +3343,7 @@ section.aboutdev-hero {
   text-align: center;
   transform: translate(-50%, -50%);
   width: 30.303%;
+  z-index: 1;
 }
 
 .aboutdev-principle:nth-of-type(1) {
@@ -3393,7 +3395,7 @@ section.aboutdev-hero {
 }
 
 .aboutdev-principle[data-tone="rose"] {
-  --principle-accent: #ff8aaa;
+  --principle-accent: #ff5733;
 }
 
 .aboutdev-principle[data-tone="violet"] {
@@ -3420,25 +3422,17 @@ section.aboutdev-hero {
   place-items: center;
   pointer-events: none;
   position: absolute;
-  top: 50%;
+  top: 45%;
   transform: translate(-50%, -50%);
-  width: 28.889%;
+  width: 60.668%;
+  z-index: 0;
 }
 
-.aboutdev-principles-star-svg {
-  color: rgba(85, 240, 142, 0.9);
-  filter: drop-shadow(0 0 20px rgba(85, 240, 142, 0.2))
-    drop-shadow(0 28px 72px rgba(0, 0, 0, 0.48));
+.aboutdev-principles-star-image {
+  display: block;
   height: auto;
+  object-fit: contain;
   width: 100%;
-}
-
-.aboutdev-principles-star-svg polygon {
-  fill: none;
-  stroke: currentColor;
-  stroke-linejoin: round;
-  stroke-width: 1.05;
-  vector-effect: non-scaling-stroke;
 }
 
 .aboutdev-cta-section {
