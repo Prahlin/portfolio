@@ -395,6 +395,37 @@ const timelineItems = [
   },
 ];
 
+const timelineHeaderImages = [
+  {
+    alt: "Developer researching an app on a laptop and smartphone",
+    src: "/images/aboutdev/workflow-research-strip.jpg",
+  },
+  {
+    alt: "Developers planning an app interface on a whiteboard",
+    src: "/images/aboutdev/workflow-plan-strip.jpg",
+  },
+  {
+    alt: "Close-up of software code used to scaffold an application",
+    src: "/images/aboutdev/workflow-scaffold-strip.jpg",
+  },
+  {
+    alt: "Analytics dashboard used to study product data",
+    src: "/images/aboutdev/workflow-analyze-strip.jpg",
+  },
+  {
+    alt: "Engineer testing a connected mobile device prototype",
+    src: "/images/aboutdev/workflow-testing-strip.jpg",
+  },
+  {
+    alt: "Software engineer building an application",
+    src: "/images/aboutdev/workflow-building-strip.jpg",
+  },
+  {
+    alt: "Stylish smartphone framed by colorful bokeh lights",
+    src: "/images/aboutdev/workflow-release-strip.jpg",
+  },
+];
+
 const principles = [
   {
     tone: "green",
@@ -803,6 +834,19 @@ export default function Home() {
                 <span className="aboutdev-timeline-index">
                   {String(index + 1).padStart(2, "0")}
                 </span>
+                <div
+                  className="aboutdev-timeline-images aboutdev-timeline-images--full-width"
+                  aria-label={`${item.title} workflow reference`}
+                >
+                  <div className="aboutdev-timeline-image">
+                    <Image
+                      alt={timelineHeaderImages[index].alt}
+                      fill
+                      sizes="100vw"
+                      src={timelineHeaderImages[index].src}
+                    />
+                  </div>
+                </div>
                 <div className="aboutdev-timeline-copy">
                   <h3>
                     <span className="aboutdev-timeline-title">{item.title}</span>
