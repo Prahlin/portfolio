@@ -53,8 +53,8 @@ const caseStudies: CaseStudy[] = [
       "and motion foundations for streaming identity.",
     ],
     tags: ["Kotlin", "Compose", "Gradle", "Android", "Figma", "Animation"],
-    stat: "66 commits",
-    worklogStat: "20 worklogs",
+    stat: "101 commits",
+    worklogStat: "29 worklogs",
     screenshots: [
       {
         alt: "Cinerific promo tablet frame",
@@ -77,8 +77,8 @@ const caseStudies: CaseStudy[] = [
       "EAS builds, and release-ready mobile polish.",
     ],
     tags: ["React Native", "Expo", "Stripe", "Postmark", "Node.js", "EAS"],
-    stat: "384 commits",
-    worklogStat: "65 worklogs",
+    stat: "393 commits",
+    worklogStat: "69 worklogs",
     screenshots: [
       {
         alt: "Alla Vostra Play Store feature graphic",
@@ -115,8 +115,8 @@ const caseStudies: CaseStudy[] = [
       "custom assets, and static export deployment.",
     ],
     tags: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Motion", "Lucide"],
-    stat: "110 commits",
-    worklogStat: "37 worklogs",
+    stat: "133 commits",
+    worklogStat: "44 worklogs",
     screenshots: [
       {
         alt: "Prahl.dev portfolio website landscape hero screenshot",
