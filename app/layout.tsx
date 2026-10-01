@@ -1,6 +1,14 @@
 import type { Metadata, Viewport } from "next";
+import { EB_Garamond } from "next/font/google";
 import { ScreenshotPreviewLayer } from "./ScreenshotPreviewLayer";
 import "./globals.css";
+
+const ebGaramond = EB_Garamond({
+  subsets: ["latin"],
+  style: "italic",
+  variable: "--font-eb-garamond",
+  weight: "500",
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL(
@@ -29,7 +37,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
+      <body className={ebGaramond.variable}>
         {children}
         <ScreenshotPreviewLayer />
       </body>

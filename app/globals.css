@@ -350,6 +350,8 @@ img[data-screenshot-preview],
 }
 
 .hero-grid {
+  --hero-headline-font-size: clamp(47px, 7vw, 91px);
+  --hero-quote-font-size: clamp(16px, 2.38vw, 31px);
   --hero-grid-min-height: calc(100vh - 140px);
   align-items: center;
   display: grid;
@@ -359,6 +361,10 @@ img[data-screenshot-preview],
   padding: 16px 0 28px;
   position: relative;
   z-index: 2;
+}
+
+.hero-copy h1 {
+  font-size: var(--hero-headline-font-size);
 }
 
 .hero-copy {
@@ -1107,22 +1113,44 @@ h3 {
 }
 
 .hero-bridge-quote {
+  --hero-quote-curve-protrusion: clamp(5px, 0.6vw, 9px);
   display: none;
+  font-family: var(--font-eb-garamond), Georgia, "Times New Roman", serif;
+  grid-template-columns: minmax(0, 80fr) max-content minmax(0, 20fr);
 }
 
-.hero-bridge-quote span {
-  align-self: center;
+.hero-bridge-quote > span {
   display: block;
+  grid-column: 2;
+  justify-self: center;
   transform-origin: center center;
   width: max-content;
 }
 
-.hero-bridge-quote span:first-child {
-  transform: scaleX(1.146);
+.hero-bridge-quote > span:first-child {
+  transform: translateX(var(--hero-quote-curve-protrusion));
 }
 
-.hero-bridge-quote span:last-child {
-  transform: scaleX(1.029);
+.hero-bridge-quote > span:last-child {
+  transform: translateX(var(--hero-quote-curve-protrusion));
+}
+
+.hero-bridge-quote .hero-quote-mark {
+  display: inline-block;
+  font-size: 3em;
+  line-height: 0;
+  width: auto;
+}
+
+.hero-quote-mark-opening {
+  margin-right: 0.02em;
+  transform: translate(-18px, 16px);
+  vertical-align: -0.16em;
+}
+
+.hero-quote-mark-closing {
+  margin-left: 0.02em;
+  vertical-align: -0.5em;
 }
 
 @media (min-width: 981px) {
@@ -1145,22 +1173,21 @@ h3 {
   }
 
   .hero-bridge-quote-wide {
-    color: var(--muted);
-    display: flex;
-    flex-direction: column;
-    font-size: clamp(21px, 1.95vw, 30px);
+    color: var(--text);
+    display: grid;
+    font-size: var(--hero-quote-font-size);
     font-style: italic;
-    font-weight: 600;
+    font-weight: 500;
     left: calc(
       anchor(--hero-eyebrow left) + min(369px, 34.45vw) + 10px
     );
-    line-height: 1.35;
+    line-height: 1.2;
     margin: 0;
     position: absolute;
     right: anchor(--hero-profile left);
     text-align: center;
     top: anchor(--hero-profile-photo-wide center);
-    transform: translateY(-50%);
+    transform: translateY(calc(-50% - 6px));
     z-index: 3;
   }
 
@@ -1185,20 +1212,19 @@ h3 {
   }
 
   .hero-bridge-quote-compact {
-    color: var(--muted);
-    display: flex;
-    flex-direction: column;
-    font-size: clamp(12px, 4.05vw, 24px);
+    color: var(--text);
+    display: grid;
+    font-size: var(--hero-quote-font-size);
     font-style: italic;
-    font-weight: 600;
+    font-weight: 500;
     left: 0;
-    line-height: 1.35;
+    line-height: 1.23;
     margin: 0;
     position: absolute;
     right: anchor(--hero-profile-photo-compact left);
     text-align: center;
     top: anchor(--hero-profile-photo-compact center);
-    transform: translateY(-50%);
+    transform: translateY(calc(-50% - 6px));
     z-index: 3;
   }
 
@@ -8223,6 +8249,8 @@ section.project-hero {
   }
 
   .hero-grid {
+    --hero-headline-font-size: clamp(42px, 15vw, 64px);
+    --hero-quote-font-size: clamp(14.28px, 5.1vw, 21.76px);
     gap: 30px;
     padding-top: 16px;
   }
@@ -8755,6 +8783,24 @@ section.project-hero {
     font-size: 16px;
     line-height: 1.24;
     max-width: min(240px, calc(var(--aboutdev-principle-size) - 54px));
+  }
+}
+
+@media (max-width: 980px) and (orientation: portrait) {
+  .hero .phone-stage {
+    transform: translateY(60px);
+  }
+}
+
+@media (min-width: 721px) and (max-width: 980px) and (orientation: portrait) {
+  .hero-grid {
+    --hero-quote-font-size: 23px;
+  }
+}
+
+@media (max-width: 720px) and (orientation: portrait) {
+  .hero .phone-stage {
+    transform: translateY(65px);
   }
 }
 

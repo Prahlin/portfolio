@@ -212,9 +212,15 @@ function ProfileOrbit({ className }: { className: string }) {
 function HeroBridgeQuote({ className }: { className: string }) {
   return (
     <p className={`hero-bridge-quote ${className}`}>
-      <span>&ldquo;Everyone&apos;s got a brilliant</span>
-      <span>idea. Few know how to funnel</span>
-      <span>it into a must-have product.&rdquo;</span>
+      <span>
+        <span className="hero-quote-mark hero-quote-mark-opening">&ldquo;</span>
+        Everyone&apos;s got a brilliant
+      </span>
+      <span>idea; Few know how to funnel</span>
+      <span>
+        it into a must-have product.
+        <span className="hero-quote-mark hero-quote-mark-closing">&rdquo;</span>
+      </span>
     </p>
   );
 }
