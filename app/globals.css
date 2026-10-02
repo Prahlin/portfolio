@@ -7339,6 +7339,592 @@ section.project-hero {
   outline-offset: 3px;
 }
 
+.cinerific-bottom-nav-demo {
+  font-family: "Cinerific Manrope", Manrope, Inter, ui-sans-serif, system-ui,
+    sans-serif;
+  margin-inline: auto;
+  width: min(100%, 318px);
+}
+
+.cinerific-bottom-nav-demo-phone {
+  width: min(100%, 318px);
+}
+
+.cinerific-bottom-nav-bar {
+  aspect-ratio: 360 / 92;
+  background:
+    linear-gradient(180deg, rgba(7, 0, 5, 0.2), rgba(36, 0, 31, 0.18), rgba(5, 0, 3, 0.24)),
+    url("/images/cinerific/ui-foundations/navigation/bottom-nav-chrome.png") center / 100% 100% no-repeat,
+    linear-gradient(180deg, #070005, #24001f, #050003);
+  border: 1px solid rgba(231, 231, 231, 0.14);
+  box-shadow: 0 24px 58px rgba(0, 0, 0, 0.5);
+  container-type: inline-size;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  overflow: hidden;
+  width: 100%;
+}
+
+.cinerific-bottom-nav-item {
+  align-items: center;
+  appearance: none;
+  background: transparent;
+  border: 0;
+  color: #9a9a9a;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  font: inherit;
+  justify-content: center;
+  min-width: 0;
+  opacity: 0.58;
+  padding: 4% 0 2%;
+  transition:
+    color 160ms ease,
+    opacity 160ms ease,
+    transform 160ms ease;
+}
+
+.cinerific-bottom-nav-item:hover,
+.cinerific-bottom-nav-item:focus-visible {
+  opacity: 0.82;
+}
+
+.cinerific-bottom-nav-item:active {
+  transform: scale(0.96);
+}
+
+.cinerific-bottom-nav-item:focus-visible {
+  outline: 2px solid #c86be0;
+  outline-offset: -4px;
+}
+
+.cinerific-bottom-nav-item.is-selected {
+  color: #e7e7e7;
+  opacity: 1;
+}
+
+.cinerific-bottom-nav-icon-slot {
+  align-items: end;
+  display: flex;
+  height: 43%;
+  justify-content: center;
+  width: 54%;
+}
+
+.cinerific-bottom-nav-icon {
+  aspect-ratio: 1;
+  background: currentColor;
+  display: block;
+  height: 100%;
+  mask-image: var(--cinerific-nav-icon);
+  mask-position: center;
+  mask-repeat: no-repeat;
+  mask-size: contain;
+  width: var(--cinerific-nav-icon-width);
+  -webkit-mask-image: var(--cinerific-nav-icon);
+  -webkit-mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+}
+
+.cinerific-bottom-nav-label {
+  font-size: calc(12 / 720 * 100cqw);
+  font-weight: 400;
+  line-height: 1.5;
+  margin-top: 5%;
+  white-space: nowrap;
+}
+
+.cinerific-bottom-nav-item.is-selected .cinerific-bottom-nav-label {
+  font-weight: 500;
+}
+
+.cinerific-bottom-nav-bar-phone {
+  align-items: center;
+  aspect-ratio: 360 / 67.068;
+  border: 0;
+  box-shadow:
+    inset 0 0 0 1px rgba(231, 231, 231, 0.14),
+    0 24px 58px rgba(0, 0, 0, 0.5);
+  container-type: inline-size;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.cinerific-bottom-nav-bar-phone .cinerific-bottom-nav-item {
+  align-self: center;
+  height: calc(52.488 / 360 * 100cqw);
+  justify-self: center;
+  padding: 0;
+  width: calc(52.488 / 360 * 100cqw);
+}
+
+.cinerific-bottom-nav-bar-phone .cinerific-bottom-nav-icon-slot {
+  height: calc(28.431 / 360 * 100cqw);
+  width: calc(28.431 / 360 * 100cqw);
+}
+
+.cinerific-bottom-nav-bar-phone .cinerific-bottom-nav-icon {
+  aspect-ratio: auto;
+  flex: none;
+  mask-size: 100% 100%;
+  -webkit-mask-size: 100% 100%;
+}
+
+.cinerific-bottom-nav-bar-phone
+  .cinerific-bottom-nav-item:nth-child(1)
+  .cinerific-bottom-nav-icon {
+  height: calc(25.515 / 360 * 100cqw);
+  width: calc(28.431 / 360 * 100cqw);
+}
+
+.cinerific-bottom-nav-bar-phone
+  .cinerific-bottom-nav-item:nth-child(2)
+  .cinerific-bottom-nav-icon {
+  height: calc(15.309 / 360 * 100cqw);
+  transform: translateY(calc(-5.103 / 360 * 100cqw)) scale(1.21);
+  width: calc(25.515 / 360 * 100cqw);
+}
+
+.cinerific-bottom-nav-bar-phone
+  .cinerific-bottom-nav-item:nth-child(3)
+  .cinerific-bottom-nav-icon {
+  height: calc(15.309 / 360 * 100cqw);
+  transform: translateY(calc(-5.103 / 360 * 100cqw)) scale(1.21);
+  width: calc(28.431 / 360 * 100cqw);
+}
+
+.cinerific-bottom-nav-bar-phone
+  .cinerific-bottom-nav-item:nth-child(4)
+  .cinerific-bottom-nav-icon {
+  height: calc(21.87 / 360 * 100cqw);
+  transform: translateY(calc(-1.823 / 360 * 100cqw)) scale(1.21);
+  width: calc(23.328 / 360 * 100cqw);
+}
+
+.cinerific-bottom-nav-bar-phone
+  .cinerific-bottom-nav-item:nth-child(5)
+  .cinerific-bottom-nav-icon {
+  height: calc(24.057 / 360 * 100cqw);
+  width: calc(24.057 / 360 * 100cqw);
+}
+
+.cinerific-bottom-nav-bar-phone .cinerific-bottom-nav-label {
+  font-size: calc(8.748 / 360 * 100cqw);
+  line-height: 1.5;
+  margin-top: 0;
+  transform: translateY(calc(5.468 / 360 * 100cqw));
+}
+
+.cinerific-vertical-nav-demo {
+  flex: none;
+  font-family: "Cinerific Manrope", Manrope, Inter, ui-sans-serif, system-ui,
+    sans-serif;
+  margin-inline: auto;
+}
+
+.cinerific-vertical-nav-pair {
+  align-items: start;
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-inline: auto;
+  width: min(100%, 318px);
+}
+
+.cinerific-vertical-nav-variant {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  height: 624px;
+  margin: 0;
+  min-width: 0;
+  overflow: visible;
+}
+
+.cinerific-vertical-nav-variant figcaption {
+  color: #b8c9bf;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.cinerific-vertical-nav-demo-tablet {
+  height: 834px;
+  transform: scale(0.719424);
+  transform-origin: top center;
+  width: 115px;
+}
+
+.cinerific-vertical-nav-demo-phone {
+  height: 360px;
+  transform: scale(1.666667);
+  transform-origin: top center;
+  width: calc(360px * 115 / 834);
+}
+
+.cinerific-vertical-nav-rail {
+  background:
+    linear-gradient(180deg, rgba(7, 0, 5, 0.2), rgba(36, 0, 31, 0.18), rgba(5, 0, 3, 0.24)),
+    url("/images/cinerific/ui-foundations/navigation/bottom-nav-chrome.png") center / 100% 100% no-repeat,
+    linear-gradient(180deg, #070005, #24001f, #050003);
+  box-shadow:
+    inset 0 0 0 1px rgba(231, 231, 231, 0.14),
+    0 24px 58px rgba(0, 0, 0, 0.5);
+  container-type: inline-size;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.cinerific-vertical-nav-item {
+  align-items: center;
+  appearance: none;
+  background: transparent;
+  border: 0;
+  color: #9a9a9a;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  font: inherit;
+  height: calc(66 / 115 * 100cqw);
+  left: 0;
+  opacity: 0.58;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  transition:
+    color 160ms ease,
+    opacity 160ms ease,
+    transform 160ms ease;
+  width: 100%;
+}
+
+.cinerific-vertical-nav-item:hover,
+.cinerific-vertical-nav-item:focus-visible {
+  opacity: 0.82;
+}
+
+.cinerific-vertical-nav-item:active {
+  transform: scale(0.96);
+}
+
+.cinerific-vertical-nav-item:focus-visible {
+  outline: 2px solid #c86be0;
+  outline-offset: -2px;
+}
+
+.cinerific-vertical-nav-item.is-selected {
+  color: #e7e7e7;
+  opacity: 1;
+}
+
+.cinerific-vertical-nav-item-0 {
+  height: calc(96.25 / 115 * 100cqw);
+  top: calc(30.5 / 115 * 100cqw);
+}
+
+.cinerific-vertical-nav-item-1 {
+  top: calc(112.5 / 115 * 100cqw);
+}
+
+.cinerific-vertical-nav-item-2 {
+  top: calc(186.5 / 115 * 100cqw);
+}
+
+.cinerific-vertical-nav-item-3 {
+  top: calc(262.5 / 115 * 100cqw);
+}
+
+.cinerific-vertical-nav-item-4 {
+  bottom: calc((3.5 / 115 * 100cqw) + 15px);
+  top: auto;
+}
+
+.cinerific-vertical-nav-icon-slot {
+  align-items: center;
+  display: flex;
+  flex: none;
+  height: var(--cinerific-vertical-icon-box);
+  justify-content: center;
+  width: var(--cinerific-vertical-icon-box);
+}
+
+.cinerific-vertical-nav-icon {
+  background: currentColor;
+  display: block;
+  height: var(--cinerific-vertical-icon-height);
+  mask-image: var(--cinerific-vertical-icon);
+  mask-position: center;
+  mask-repeat: no-repeat;
+  mask-size: 100% 100%;
+  width: var(--cinerific-vertical-icon-width);
+  -webkit-mask-image: var(--cinerific-vertical-icon);
+  -webkit-mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%;
+}
+
+.cinerific-vertical-nav-label {
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 15px;
+  white-space: nowrap;
+}
+
+.cinerific-vertical-nav-item.is-selected .cinerific-vertical-nav-label {
+  font-weight: 500;
+}
+
+.cinerific-genre-nav-demo {
+  aspect-ratio: 160.464 / 77.913;
+  container-type: inline-size;
+  margin-inline: auto;
+  position: relative;
+  width: min(100%, 318px);
+}
+
+.cinerific-genre-chip {
+  align-items: center;
+  appearance: none;
+  background: rgba(48, 48, 48, 0.5);
+  border: calc(1.805 / 160.464 * 100cqw) solid rgba(231, 231, 231, 0.5);
+  border-radius: 7.296%;
+  color: #8a828c;
+  cursor: pointer;
+  display: flex;
+  font-family: "Cinerific Manrope", Manrope, Inter, ui-sans-serif, system-ui,
+    sans-serif;
+  font-size: calc(12.223 / 160.464 * 100cqw);
+  font-weight: 900;
+  height: calc(37.101 / 77.913 * 100%);
+  justify-content: center;
+  left: 0;
+  line-height: 1;
+  min-width: 0;
+  padding: 0;
+  position: absolute;
+  top: calc(0.93 / 77.913 * 100%);
+  transition:
+    background-color 150ms ease,
+    border-color 150ms ease,
+    color 150ms ease,
+    transform 150ms ease;
+  width: calc(37.101 / 160.464 * 100%);
+}
+
+.cinerific-genre-chip:nth-child(4n + 2) {
+  left: calc(41.121 / 160.464 * 100%);
+}
+
+.cinerific-genre-chip:nth-child(4n + 3) {
+  left: calc(82.242 / 160.464 * 100%);
+}
+
+.cinerific-genre-chip:nth-child(4n + 4) {
+  left: calc(123.363 / 160.464 * 100%);
+}
+
+.cinerific-genre-chip:nth-child(n + 5) {
+  top: calc((77.913 - 37.101) / 77.913 * 100%);
+}
+
+.cinerific-genre-chip:hover,
+.cinerific-genre-chip:focus-visible {
+  border-color: rgba(231, 231, 231, 0.82);
+  color: #e7e7e7;
+}
+
+.cinerific-genre-chip:active {
+  transform: scale(0.95);
+}
+
+.cinerific-genre-chip:focus-visible {
+  outline: 2px solid #c86be0;
+  outline-offset: 3px;
+}
+
+.cinerific-genre-chip.is-selected {
+  background: #e7e7e7;
+  border-color: transparent;
+  color: #2a2a2a;
+}
+
+.cinerific-all-genres-glyph {
+  aspect-ratio: 1;
+  border: calc(1.855 / 160.464 * 100cqw) solid currentColor;
+  border-radius: 3.126%;
+  display: grid;
+  gap: calc(1.8 / 160.464 * 100cqw);
+  grid-template-columns: repeat(3, calc(3.9 / 160.464 * 100cqw));
+  grid-template-rows: repeat(3, calc(3.9 / 160.464 * 100cqw));
+  place-content: center;
+  width: calc(29.681 / 160.464 * 100cqw);
+}
+
+.cinerific-all-genres-glyph > span {
+  background: currentColor;
+  border-radius: calc(1 / 160.464 * 100cqw);
+}
+
+.cinerific-view-mode-demo {
+  aspect-ratio: 190 / 58;
+  container-type: inline-size;
+  margin-inline: auto;
+  position: relative;
+  width: min(100%, 334px);
+}
+
+.cinerific-view-mode-button {
+  align-items: center;
+  appearance: none;
+  background: rgba(30, 30, 30, 0.13);
+  border: calc(3.462 / 190 * 100cqw) solid rgba(231, 231, 231, 0.42);
+  border-radius: 12.659%;
+  color: #8a828c;
+  cursor: pointer;
+  display: flex;
+  height: calc(54.692 / 58 * 100%);
+  justify-content: center;
+  left: calc(4.654 / 190 * 100%);
+  min-width: 0;
+  padding: 0;
+  position: absolute;
+  top: calc(3.46 / 58 * 100%);
+  transition:
+    background-color 150ms ease,
+    border-color 150ms ease,
+    color 150ms ease,
+    transform 150ms ease;
+  width: calc(54.692 / 190 * 100%);
+}
+
+.cinerific-view-mode-button:nth-child(2) {
+  left: calc(67.654 / 190 * 100%);
+}
+
+.cinerific-view-mode-button:nth-child(3) {
+  left: calc(130.654 / 190 * 100%);
+}
+
+.cinerific-view-mode-button:hover,
+.cinerific-view-mode-button:focus-visible {
+  border-color: rgba(231, 231, 231, 0.76);
+  color: #e7e7e7;
+}
+
+.cinerific-view-mode-button:active {
+  transform: scale(0.95);
+}
+
+.cinerific-view-mode-button:focus-visible {
+  outline: 2px solid #c86be0;
+  outline-offset: 3px;
+}
+
+.cinerific-view-mode-button.is-selected {
+  background: #e7e7e7;
+  border-color: transparent;
+  color: #2a2a2a;
+}
+
+.cinerific-view-mode-selected-frame {
+  border: calc(3.462 / 190 * 100cqw) solid currentColor;
+  border-radius: 1.753%;
+  height: calc(39.462 / 190 * 100cqw);
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: calc(39.462 / 190 * 100cqw);
+}
+
+.cinerific-view-mode-glyph {
+  color: currentColor;
+  display: grid;
+  position: relative;
+  z-index: 1;
+}
+
+.cinerific-view-mode-glyph i,
+.cinerific-view-mode-glyph b {
+  background: currentColor;
+  border-radius: calc(1 / 190 * 100cqw);
+  display: block;
+}
+
+.cinerific-view-mode-collage-large {
+  gap: calc(6.8 / 190 * 100cqw);
+  grid-template-columns: repeat(2, calc(8 / 190 * 100cqw));
+  grid-template-rows: repeat(2, calc(8 / 190 * 100cqw));
+}
+
+.cinerific-view-mode-collage-large i {
+  height: calc(8 / 190 * 100cqw);
+  width: calc(8 / 190 * 100cqw);
+}
+
+.cinerific-view-mode-collage-small {
+  gap: calc(4 / 190 * 100cqw);
+  grid-template-columns: repeat(3, calc(7 / 190 * 100cqw));
+  grid-template-rows: repeat(3, calc(7 / 190 * 100cqw));
+}
+
+.cinerific-view-mode-collage-small i {
+  height: calc(7 / 190 * 100cqw);
+  width: calc(7 / 190 * 100cqw);
+}
+
+.cinerific-view-mode-list {
+  gap: calc(7 / 190 * 100cqw);
+  grid-template-rows: repeat(3, calc(6 / 190 * 100cqw));
+}
+
+.cinerific-view-mode-list > span {
+  align-items: center;
+  display: flex;
+  gap: calc(5 / 190 * 100cqw);
+}
+
+.cinerific-view-mode-list i {
+  height: calc(6 / 190 * 100cqw);
+  width: calc(6 / 190 * 100cqw);
+}
+
+.cinerific-view-mode-list b {
+  height: calc(4 / 190 * 100cqw);
+  width: calc(24 / 190 * 100cqw);
+}
+
+.cinerific-view-mode-button.is-selected
+  .cinerific-view-mode-glyph:not(.cinerific-view-mode-collage-large) {
+  transform: scale(0.9);
+}
+
+.cinerific-view-mode-button.is-selected .cinerific-view-mode-list b {
+  width: calc(18 / 190 * 100cqw);
+}
+
+@media (max-width: 720px) {
+  .cinerific-bottom-nav-demo,
+  .cinerific-vertical-nav-pair {
+    width: min(100%, calc((min(42vw, 146px) * 2) + 12px));
+  }
+
+  .cinerific-genre-nav-demo {
+    width: min(100%, calc((min(42vw, 146px) * 2) + 12px));
+  }
+
+  .cinerific-view-mode-demo {
+    width: min(100%, calc((min(42vw, 146px) * 2) + 28px));
+  }
+}
+
 .cinerific-loading-spinner-red-star {
   animation: cinerific-spinner-red-star 2800ms linear infinite;
 }

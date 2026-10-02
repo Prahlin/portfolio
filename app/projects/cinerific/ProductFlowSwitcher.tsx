@@ -68,6 +68,11 @@ type FoundationAssetGroup = {
   title: string;
 };
 
+type CinerificNavIconStyle = CSSProperties & {
+  "--cinerific-nav-icon": string;
+  "--cinerific-nav-icon-width": string;
+};
+
 const flowCoordinateFrame = { height: 1648, width: 807.2, x: 122.8, y: 270 };
 
 const flowPanel: FlowBox = {
@@ -222,6 +227,89 @@ const cinerificTitleCardSamples = [
     width: 1194,
   },
 ];
+
+const cinerificBottomNavigationItems = [
+  {
+    icon: "/images/cinerific/ui-foundations/navigation/nav-home.png",
+    iconWidth: "54.2%",
+    label: "HOME",
+  },
+  {
+    icon: "/images/cinerific/ui-foundations/navigation/nav-movies.png",
+    iconWidth: "58.8%",
+    label: "MOVIES",
+  },
+  {
+    icon: "/images/cinerific/ui-foundations/navigation/nav-shows.png",
+    iconWidth: "65.5%",
+    label: "SHOWS",
+  },
+  {
+    icon: "/images/cinerific/ui-foundations/navigation/nav-favorites.png",
+    iconWidth: "53.8%",
+    label: "FAVORITES",
+  },
+  {
+    icon: "/images/cinerific/ui-foundations/navigation/nav-settings.png",
+    iconWidth: "45.8%",
+    label: "SETTINGS",
+  },
+] as const;
+
+const cinerificVerticalNavigationItems = [
+  {
+    icon: "/images/cinerific/ui-foundations/navigation/nav-home.png",
+    iconBoxSize: 39,
+    iconHeight: 35,
+    iconWidth: 39,
+    label: "HOME",
+  },
+  {
+    icon: "/images/cinerific/ui-foundations/navigation/nav-movies.png",
+    iconBoxSize: 36,
+    iconHeight: 21,
+    iconWidth: 35,
+    label: "MOVIES",
+  },
+  {
+    icon: "/images/cinerific/ui-foundations/navigation/nav-shows.png",
+    iconBoxSize: 38,
+    iconHeight: 21,
+    iconWidth: 39,
+    label: "SHOWS",
+  },
+  {
+    icon: "/images/cinerific/ui-foundations/navigation/nav-favorites.png",
+    iconBoxSize: 36,
+    iconHeight: 30,
+    iconWidth: 32,
+    label: "FAVORITES",
+  },
+  {
+    icon: "/images/cinerific/ui-foundations/navigation/nav-settings.png",
+    iconBoxSize: 38,
+    iconHeight: 33,
+    iconWidth: 33,
+    label: "SETTINGS",
+  },
+] as const;
+
+const cinerificGenreNavigationItems = [
+  { compactLabel: "ALL", label: "All" },
+  { compactLabel: "ACT", label: "Action" },
+  { compactLabel: "COM", label: "Comedy" },
+  { compactLabel: "CRI", label: "Crime" },
+  { compactLabel: "DOC", label: "Documentary" },
+  { compactLabel: "DRA", label: "Drama" },
+  { compactLabel: "HOR", label: "Horror" },
+  { compactLabel: "THR", label: "Thriller" },
+] as const;
+
+const cinerificViewModes = [
+  { label: "Large collage", mode: "collage-large" },
+  { label: "Small collage", mode: "collage-small" },
+  { label: "List", mode: "list" },
+] as const;
 
 const browseSelectionNodeLayout = [
   { title: "Genre", width: 180, x: 350, y: -196 },
@@ -529,6 +617,221 @@ function FoundationLoadingSpinner() {
   );
 }
 
+function FoundationBottomNavigation({
+  variant = "tablet",
+}: {
+  variant?: "phone" | "tablet";
+}) {
+  const [selectedItem, setSelectedItem] = useState("HOME");
+  const isPhone = variant === "phone";
+
+  return (
+    <div
+      className={`cinerific-bottom-nav-demo cinerific-bottom-nav-demo-${variant}`}
+    >
+      <div
+        aria-label={`Cinerific ${variant} portrait bottom navigation`}
+        className={`cinerific-bottom-nav-bar${
+          isPhone ? " cinerific-bottom-nav-bar-phone" : ""
+        }`}
+        role="navigation"
+      >
+        {cinerificBottomNavigationItems.map((item) => {
+          const isSelected = selectedItem === item.label;
+          const iconStyle: CinerificNavIconStyle = {
+            "--cinerific-nav-icon": `url(${item.icon})`,
+            "--cinerific-nav-icon-width": item.iconWidth,
+          };
+
+          return (
+            <button
+              aria-current={isSelected ? "page" : undefined}
+              className={`cinerific-bottom-nav-item${
+                isSelected ? " is-selected" : ""
+              }`}
+              key={item.label}
+              onClick={() => setSelectedItem(item.label)}
+              type="button"
+            >
+              <span className="cinerific-bottom-nav-icon-slot" aria-hidden>
+                <span
+                  className="cinerific-bottom-nav-icon"
+                  style={iconStyle}
+                />
+              </span>
+              <span className="cinerific-bottom-nav-label">{item.label}</span>
+            </button>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
+
+function FoundationVerticalNavigation({
+  variant,
+}: {
+  variant: "phone" | "tablet";
+}) {
+  const [selectedItem, setSelectedItem] = useState("HOME");
+
+  return (
+    <div
+      className={`cinerific-vertical-nav-demo cinerific-vertical-nav-demo-${variant}`}
+    >
+      <nav
+        aria-label={`Cinerific expanded ${variant} vertical navigation`}
+        className="cinerific-vertical-nav-rail"
+      >
+        {cinerificVerticalNavigationItems.map((item, index) => {
+          const isSelected = selectedItem === item.label;
+          const iconStyle = {
+            "--cinerific-vertical-icon": `url(${item.icon})`,
+            "--cinerific-vertical-icon-box": `${(item.iconBoxSize / 115) * 100}cqw`,
+            "--cinerific-vertical-icon-height": `${(item.iconHeight / 115) * 100}cqw`,
+            "--cinerific-vertical-icon-width": `${(item.iconWidth / 115) * 100}cqw`,
+          } as CSSProperties;
+
+          return (
+            <button
+              aria-current={isSelected ? "page" : undefined}
+              className={`cinerific-vertical-nav-item cinerific-vertical-nav-item-${index}${
+                isSelected ? " is-selected" : ""
+              }`}
+              key={item.label}
+              onClick={() => setSelectedItem(item.label)}
+              type="button"
+            >
+              <span
+                className="cinerific-vertical-nav-icon-slot"
+                style={iconStyle}
+              >
+                <span className="cinerific-vertical-nav-icon" aria-hidden />
+              </span>
+              <span className="cinerific-vertical-nav-label">{item.label}</span>
+            </button>
+          );
+        })}
+      </nav>
+    </div>
+  );
+}
+
+function FoundationVerticalNavigationPair() {
+  return (
+    <div className="cinerific-vertical-nav-pair">
+      <figure className="cinerific-vertical-nav-variant">
+        <figcaption>Tablet</figcaption>
+        <FoundationVerticalNavigation variant="tablet" />
+      </figure>
+      <figure className="cinerific-vertical-nav-variant">
+        <figcaption>Phone</figcaption>
+        <FoundationVerticalNavigation variant="phone" />
+      </figure>
+    </div>
+  );
+}
+
+function FoundationGenreNavigation() {
+  const [selectedGenre, setSelectedGenre] = useState("All");
+
+  return (
+    <div
+      aria-label="Cinerific movie genre navigation"
+      className="cinerific-genre-nav-demo"
+      role="group"
+    >
+      {cinerificGenreNavigationItems.map((genre) => {
+        const isSelected = selectedGenre === genre.label;
+
+        return (
+          <button
+            aria-label={genre.label}
+            aria-pressed={isSelected}
+            className={`cinerific-genre-chip${
+              isSelected ? " is-selected" : ""
+            }`}
+            key={genre.label}
+            onClick={() => setSelectedGenre(genre.label)}
+            type="button"
+          >
+            {genre.label === "All" ? (
+              <span className="cinerific-all-genres-glyph" aria-hidden>
+                {Array.from({ length: 9 }, (_, index) => (
+                  <span key={index} />
+                ))}
+              </span>
+            ) : (
+              genre.compactLabel
+            )}
+          </button>
+        );
+      })}
+    </div>
+  );
+}
+
+function CinerificViewModeGlyph({ mode }: { mode: string }) {
+  if (mode === "list") {
+    return (
+      <span className="cinerific-view-mode-glyph cinerific-view-mode-list">
+        {Array.from({ length: 3 }, (_, index) => (
+          <span key={index}>
+            <i />
+            <b />
+          </span>
+        ))}
+      </span>
+    );
+  }
+
+  const cellCount = mode === "collage-large" ? 4 : 9;
+
+  return (
+    <span
+      className={`cinerific-view-mode-glyph cinerific-view-mode-${mode}`}
+    >
+      {Array.from({ length: cellCount }, (_, index) => (
+        <i key={index} />
+      ))}
+    </span>
+  );
+}
+
+function FoundationViewModeControl() {
+  const [selectedMode, setSelectedMode] = useState("collage-large");
+
+  return (
+    <div
+      aria-label="Cinerific movie view-mode control"
+      className="cinerific-view-mode-demo"
+      role="group"
+    >
+      {cinerificViewModes.map((viewMode) => {
+        const isSelected = selectedMode === viewMode.mode;
+
+        return (
+          <button
+            aria-label={viewMode.label}
+            aria-pressed={isSelected}
+            className={`cinerific-view-mode-button${
+              isSelected ? " is-selected" : ""
+            }`}
+            key={viewMode.mode}
+            onClick={() => setSelectedMode(viewMode.mode)}
+            type="button"
+          >
+            {isSelected ? (
+              <span className="cinerific-view-mode-selected-frame" aria-hidden />
+            ) : null}
+            <CinerificViewModeGlyph mode={viewMode.mode} />
+          </button>
+        );
+      })}
+    </div>
+  );
+}
+
 function useIsNarrowFoundationLayout() {
   const [isNarrow, setIsNarrow] = useState(false);
 
@@ -679,6 +982,49 @@ function CinerificFoundationAssets({ title }: { title: string }) {
           {
             cards: <FoundationLoadingSpinner />,
             title: "Loading Spinner",
+          },
+        ]}
+      />
+    );
+  }
+
+  if (title === "Navigations") {
+    return (
+      <ExpandableFoundationGroups
+        groups={[
+          {
+            cards: <FoundationBottomNavigation />,
+            className: "cinerific-foundation-stack-full",
+            title: "Tablet Bottom Navigation",
+          },
+          {
+            cards: <FoundationBottomNavigation variant="phone" />,
+            className: "cinerific-foundation-stack-full",
+            title: "Phone Bottom Navigation",
+          },
+          {
+            cards: <FoundationVerticalNavigationPair />,
+            className: "cinerific-foundation-stack-full",
+            title: "Vertical Navigation — Expanded",
+          },
+        ]}
+      />
+    );
+  }
+
+  if (title === "Controls & Inputs") {
+    return (
+      <ExpandableFoundationGroups
+        groups={[
+          {
+            cards: <FoundationGenreNavigation />,
+            className: "cinerific-foundation-stack-full",
+            title: "Genre Navigation",
+          },
+          {
+            cards: <FoundationViewModeControl />,
+            className: "cinerific-foundation-stack-full",
+            title: "View Mode",
           },
         ]}
       />
