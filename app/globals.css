@@ -350,8 +350,12 @@ img[data-screenshot-preview],
 }
 
 .hero-grid {
-  --hero-headline-font-size: clamp(47px, 7vw, 91px);
-  --hero-quote-font-size: clamp(16px, 2.38vw, 31px);
+  --hero-headline-font-size: clamp(47px, calc(10.2vw - 31.4px), 91px);
+  --hero-quote-font-size: clamp(
+    16.8px,
+    calc(3.654vw - 11.2875px),
+    32.55px
+  );
   --hero-grid-min-height: calc(100vh - 140px);
   align-items: center;
   display: grid;
@@ -1127,12 +1131,16 @@ h3 {
   width: max-content;
 }
 
-.hero-bridge-quote > span:first-child {
+.hero-quote-line-opening {
   transform: translateX(var(--hero-quote-curve-protrusion));
 }
 
-.hero-bridge-quote > span:last-child {
+.hero-quote-line-closing {
   transform: translateX(var(--hero-quote-curve-protrusion));
+}
+
+.hero-bridge-quote > .hero-quote-line-narrow {
+  display: none;
 }
 
 .hero-bridge-quote .hero-quote-mark {
@@ -8836,7 +8844,7 @@ section.project-hero {
 
   .hero-grid {
     --hero-headline-font-size: clamp(42px, 15vw, 64px);
-    --hero-quote-font-size: clamp(14.28px, 5.1vw, 21.76px);
+    --hero-quote-font-size: clamp(14.994px, 5.355vw, 22.848px);
     gap: 30px;
     padding-top: 16px;
   }
@@ -9380,13 +9388,13 @@ section.project-hero {
 
 @media (min-width: 721px) and (max-width: 980px) and (orientation: portrait) {
   .hero-grid {
-    --hero-quote-font-size: 23px;
+    --hero-quote-font-size: 24.15px;
   }
 }
 
 @media (max-width: 720px) and (orientation: portrait) {
   .hero .phone-stage {
-    transform: translateY(65px);
+    transform: translateY(116.58px);
   }
 }
 
@@ -9499,6 +9507,27 @@ section.project-hero {
   .aboutdev-cta-actions,
   .aboutdev-cta-actions .button {
     width: 100%;
+  }
+}
+
+@media (max-width: 720px) {
+  .hero-grid {
+    --hero-quote-font-size: 31.745px;
+  }
+
+  .hero-bridge-quote-compact {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    left: -5.5556%;
+  }
+
+  .hero-bridge-quote-compact .hero-quote-line-standard {
+    display: none;
+  }
+
+  .hero-bridge-quote-compact .hero-quote-line-narrow {
+    display: block;
   }
 }
 
