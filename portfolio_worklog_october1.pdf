@@ -1,0 +1,394 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [6 0 R 8 0 R 10 0 R 12 0 R 14 0 R] /Count 5 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+5 0 obj
+<< /Length 7428 >>
+stream
+BT /F1 16.00 Tf 60.00 720.00 Td (Prahlin Portfolio Work Log - October 1, 2026) Tj ET
+BT /F1 8.60 Tf 60.00 691.00 Td (Compiled summary for Thursday, October 1, 2026 - focus: continuing the Prahl.dev Portfolio after the September 29 Part 2 Core) Tj ET
+BT /F1 8.60 Tf 60.00 680.40 Td (Beliefs, workflow-imagery, and proof-count record, verifying the United States Eastern date, running the customary project) Tj ET
+BT /F1 8.60 Tf 60.00 669.80 Td (reader, extracting and studying all forty-five pre-existing Portfolio PDF worklogs, preserving the local Next.js preview, refining) Tj ET
+BT /F1 8.60 Tf 60.00 659.20 Td (the landing hero product quote with EB Garamond italic typography and responsive headline-linked scaling, tuning its copy, quotation) Tj ET
+BT /F1 8.60 Tf 60.00 648.60 Td (marks, line spacing, curve-aware row protrusion, color, and placement, lowering the portrait device stack without disturbing the) Tj ET
+BT /F1 8.60 Tf 60.00 638.00 Td (protected proof regions, inspecting the Cinerific Android repository read-only, importing its chrome and navigation icons, adding) Tj ET
+BT /F1 8.60 Tf 60.00 627.40 Td (source-matched tablet and phone bottom navigation, building expanded HOME-active vertical navigation rails, recreating the Movies) Tj ET
+BT /F1 8.60 Tf 60.00 616.80 Td (genre and view-mode controls with interactive selected states, normalizing the showcase widths and comparison scales,) Tj ET
+BT /F1 8.60 Tf 60.00 606.20 Td (validating TypeScript and browser-rendered geometry, documenting committed source state ab25f85, refreshing the Portfolio) Tj ET
+BT /F1 8.60 Tf 60.00 595.60 Td (project snapshot, and generating the October 1 Portfolio PDF worklog.) Tj ET
+BT /F1 8.60 Tf 60.00 578.00 Td (Generated in continuity with the established Prahlin Portfolio daily worklog cadence: compact opening summary, source-material) Tj ET
+BT /F1 8.60 Tf 60.00 567.40 Td (section, baseline section, goal list, work-completed sections, validation section, files-touched list, follow-up context, and) Tj ET
+BT /F1 8.60 Tf 60.00 556.80 Td (output-artifact close.) Tj ET
+BT /F1 8.60 Tf 60.00 539.20 Td (This artifact intentionally covers Prahlin/portfolio work performed after portfolio_worklog_september29_part2.pdf and its) Tj ET
+BT /F1 8.60 Tf 60.00 528.60 Td (documentation commit d4df015. The source work is represented by commits eabfb7c and ab25f85 on main, matching origin/main) Tj ET
+BT /F1 8.60 Tf 60.00 518.00 Td (before this PDF was generated. Together they changed the landing route, shared layout and styling, the Cinerific) Tj ET
+BT /F1 8.60 Tf 60.00 507.40 Td (ProductFlowSwitcher, project navigation assets, and committed design-validation imagery. No Hostinger deploy-branch work,) Tj ET
+BT /F1 8.60 Tf 60.00 496.80 Td (static production publish, GitHub Actions dispatch, or public deployment was performed during this record. The documentation) Tj ET
+BT /F1 8.60 Tf 60.00 486.20 Td (deltas created by this generation pass are the refreshed portfolio_PROJECT_SNAPSHOT.txt file and this root-level October 1 PDF) Tj ET
+BT /F1 8.60 Tf 60.00 475.60 Td (worklog.) Tj ET
+BT /F1 12.70 Tf 60.00 452.00 Td (Source Materials Reviewed) Tj ET
+BT /F1 8.60 Tf 60.00 434.00 Td (-) Tj ET
+BT /F1 8.60 Tf 70.00 434.00 Td (Verified the United States Eastern date through an independent UTC-04:00 time check, which reported October 1, 2026 at 8:15) Tj ET
+BT /F1 8.60 Tf 70.00 423.40 Td (PM. October 1 remains within Eastern Daylight Time, so this record uses Thursday, October 1, 2026 rather than relying on a) Tj ET
+BT /F1 8.60 Tf 70.00 412.80 Td (host or UTC calendar date.) Tj ET
+BT /F1 8.60 Tf 60.00 398.20 Td (-) Tj ET
+BT /F1 8.60 Tf 70.00 398.20 Td (Ran ./read_project.sh from /Users/prahlin/gh/portfolio and regenerated portfolio_PROJECT_SNAPSHOT.txt before composing) Tj ET
+BT /F1 8.60 Tf 70.00 387.60 Td (this record, preserving the established source, asset, configuration, Git, PDF-inventory, and workflow-context capture) Tj ET
+BT /F1 8.60 Tf 70.00 377.00 Td (practice.) Tj ET
+BT /F1 8.60 Tf 60.00 362.40 Td (-) Tj ET
+BT /F1 8.60 Tf 70.00 362.40 Td (Extracted and studied all forty-five pre-existing root-level Portfolio PDF worklogs with pdftotext: fifteen July records,) Tj ET
+BT /F1 8.60 Tf 70.00 351.80 Td (fifteen August records, and fifteen September records through portfolio_worklog_september29_part2.pdf. Before this) Tj ET
+BT /F1 8.60 Tf 70.00 341.20 Td (artifact, the series contained 262 PDF pages and approximately 125,083 extracted words.) Tj ET
+BT /F1 8.60 Tf 60.00 326.60 Td (-) Tj ET
+BT /F1 8.60 Tf 70.00 326.60 Td (Compared the complete record set for filename cadence, same-day Part suffix behavior, title construction, opening-summary) Tj ET
+BT /F1 8.60 Tf 70.00 316.00 Td (density, source and baseline framing, technical bullet voice, validation language, files-touched treatment, follow-up continuity,) Tj ET
+BT /F1 8.60 Tf 70.00 305.40 Td (dated page footers, and output-artifact closure.) Tj ET
+BT /F1 8.60 Tf 60.00 290.80 Td (-) Tj ET
+BT /F1 8.60 Tf 70.00 290.80 Td (Used September 29 Part 2 as the direct chronological baseline, September 29 Part 1 for the landing hero quote and device-stack) Tj ET
+BT /F1 8.60 Tf 70.00 280.20 Td (origin, September 27 for the first complete Cinerific UI Foundations system, September 26 for the Cinerific switcher and flow) Tj ET
+BT /F1 8.60 Tf 70.00 269.60 Td (diagram, and the August 3 through August 14 records for the mature UI Foundations grouping and responsive) Tj ET
+BT /F1 8.60 Tf 70.00 259.00 Td (asset-presentation conventions.) Tj ET
+BT /F1 8.60 Tf 60.00 244.40 Td (-) Tj ET
+BT /F1 8.60 Tf 70.00 244.40 Td (Checked pdfinfo, pdffonts, and a rasterized first-page reference against the mature series. The established artifact remains) Tj ET
+BT /F1 8.60 Tf 70.00 233.80 Td (US Letter at 612 x 792 points, PDF 1.4, Helvetica and Helvetica-Bold, no encryption, Codex metadata, dense black-on-white) Tj ET
+BT /F1 8.60 Tf 70.00 223.20 Td (technical copy, and a repeated dated page footer.) Tj ET
+BT /F1 8.60 Tf 60.00 208.60 Td (-) Tj ET
+BT /F1 8.60 Tf 70.00 208.60 Td (Reviewed commits eabfb7c and ab25f85 through git log, git show, commit bodies, file statistics, branch tracking, and the) Tj ET
+BT /F1 8.60 Tf 70.00 198.00 Td (refreshed snapshot. Confirmed main and origin/main resolve to ab25f85, titled Added interactive Cinerific UI foundation) Tj ET
+BT /F1 8.60 Tf 70.00 187.40 Td (controls.) Tj ET
+BT /F1 8.60 Tf 60.00 172.80 Td (-) Tj ET
+BT /F1 8.60 Tf 70.00 172.80 Td (Reviewed app/layout.tsx, app/page.tsx, app/globals.css, app/projects/cinerific/ProductFlowSwitcher.tsx, the copied Cinerific) Tj ET
+BT /F1 8.60 Tf 70.00 162.20 Td (navigation assets, all committed quote mockups and validation screenshots, and the current local routes carrying the October 1) Tj ET
+BT /F1 8.60 Tf 70.00 151.60 Td (work.) Tj ET
+BT /F1 8.60 Tf 60.00 137.00 Td (-) Tj ET
+BT /F1 8.60 Tf 70.00 137.00 Td (Inspected /Users/prahlin/gh/cinerific read-only for the current Compose implementations in CinerificRightSideNavBar.kt,) Tj ET
+BT /F1 8.60 Tf 70.00 126.40 Td (CinerificViewportGenreNav.kt, CinerificViewportModeNav.kt, CinerificViewportNavBar.kt, CinerificViewportNavShared.kt, and) Tj ET
+BT /F1 8.60 Tf 70.00 115.80 Td (CinerificChrome.kt. The pre-existing CinerificIntroView.kt modification remained untouched.) Tj ET
+BT /F1 7.20 Tf 54.00 24.00 Td (Prahlin Portfolio Work Log - October 1, 2026) Tj ET
+BT /F1 7.20 Tf 537.34 24.00 Td (Page 1) Tj ET
+endstream
+endobj
+6 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 5 0 R >>
+endobj
+7 0 obj
+<< /Length 7646 >>
+stream
+BT /F1 12.70 Tf 60.00 714.00 Td (Baseline Status Before October 1 Work) Tj ET
+BT /F1 8.60 Tf 60.00 696.00 Td (-) Tj ET
+BT /F1 8.60 Tf 70.00 696.00 Td (The September 29 Part 2 state had finalized the five-bubble Core Beliefs composition, the seven-stage image-backed workflow,) Tj ET
+BT /F1 8.60 Tf 70.00 685.40 Td (and remote project proof counts, but the landing hero quote still used the earlier sans-serif treatment, muted color, stretched) Tj ET
+BT /F1 8.60 Tf 70.00 674.80 Td (rows, smaller quotation marks, and preliminary placement.) Tj ET
+BT /F1 8.60 Tf 60.00 660.20 Td (-) Tj ET
+BT /F1 8.60 Tf 70.00 660.20 Td (The quote copy used a period between idea and Few, and its row widths were forced with horizontal scaling. That approach) Tj ET
+BT /F1 8.60 Tf 70.00 649.60 Td (created uneven perceived kerning and did not follow the circular profile portrait as naturally as intended.) Tj ET
+BT /F1 8.60 Tf 60.00 635.00 Td (-) Tj ET
+BT /F1 8.60 Tf 70.00 635.00 Td (Portrait hero modes still held the three-device composition too high inside the available lower space. Any correction needed to) Tj ET
+BT /F1 8.60 Tf 70.00 624.40 Td (leave the Vercel/EAS/Stripe/Postmark/GGL Play/App Store proof panel and the 3yrs/1.0k/0.2k/8 stats strip undisturbed.) Tj ET
+BT /F1 8.60 Tf 60.00 609.80 Td (-) Tj ET
+BT /F1 8.60 Tf 70.00 609.80 Td (The Cinerific UI Foundations page already contained colors, typography, spacing, logos, avatars, title cards, and an animated) Tj ET
+BT /F1 8.60 Tf 70.00 599.20 Td (loading spinner, while Navigations and Controls & Inputs still lacked the actual app navigation and Movies-screen controls.) Tj ET
+BT /F1 8.60 Tf 60.00 584.60 Td (-) Tj ET
+BT /F1 8.60 Tf 70.00 584.60 Td (The sibling Cinerific repository contained the authoritative Android Compose geometry and raster icon assets. It also contained) Tj ET
+BT /F1 8.60 Tf 70.00 574.00 Td (an unrelated local modification in CinerificIntroView.kt that had to be preserved without edits.) Tj ET
+BT /F1 12.70 Tf 60.00 553.40 Td (Goals for October 1) Tj ET
+BT /F1 8.60 Tf 60.00 535.40 Td (-) Tj ET
+BT /F1 8.60 Tf 70.00 535.40 Td (Replace the quote's informal or overly playful font exploration with a professional, classic, easily legible Garamond direction and) Tj ET
+BT /F1 8.60 Tf 70.00 524.80 Td (implement the accepted version directly on the landing page.) Tj ET
+BT /F1 8.60 Tf 60.00 510.20 Td (-) Tj ET
+BT /F1 8.60 Tf 70.00 510.20 Td (Synchronize quote scaling with the main Full-Stack React Native / Kotlin Developer headline, refine the exact three-row copy,) Tj ET
+BT /F1 8.60 Tf 70.00 499.60 Td (equalize natural letter spacing, enlarge and independently position the opening and closing quotation marks, and follow the) Tj ET
+BT /F1 8.60 Tf 70.00 489.00 Td (portrait curve without distorting glyphs.) Tj ET
+BT /F1 8.60 Tf 60.00 474.40 Td (-) Tj ET
+BT /F1 8.60 Tf 70.00 474.40 Td (Lower the portrait device composition through the two narrowest portrait modes while protecting the proof-panel and) Tj ET
+BT /F1 8.60 Tf 70.00 463.80 Td (stat-strip spacing requested by the user.) Tj ET
+BT /F1 8.60 Tf 60.00 449.20 Td (-) Tj ET
+BT /F1 8.60 Tf 70.00 449.20 Td (Bring the current Cinerific navigation and Movies controls into the Cinerific project page from read-only source inspection,) Tj ET
+BT /F1 8.60 Tf 70.00 438.60 Td (place each item under the correct UI Foundations category, and preserve real product dimensions, selected states, icon) Tj ET
+BT /F1 8.60 Tf 70.00 428.00 Td (alignment, and responsive behavior.) Tj ET
+BT /F1 8.60 Tf 60.00 413.40 Td (-) Tj ET
+BT /F1 8.60 Tf 70.00 413.40 Td (Present tablet and phone bottom navigation, genre selection, view-mode selection, and expanded vertical rails at consistent) Tj ET
+BT /F1 8.60 Tf 70.00 402.80 Td (foundation widths and comparison scales, then verify interaction and layout across desktop and narrow viewports.) Tj ET
+BT /F1 12.70 Tf 60.00 382.20 Td (Work Completed - Landing Hero Quote Typography and Copy) Tj ET
+BT /F1 8.60 Tf 60.00 364.20 Td (-) Tj ET
+BT /F1 8.60 Tf 70.00 364.20 Td (Generated six visual font mockups covering Caveat, Kalam, Patrick Hand, EB Garamond, Cormorant Garamond, and Libre) Tj ET
+BT /F1 8.60 Tf 70.00 353.60 Td (Baskerville. After the handwriting candidates were rejected as too childish or unprofessional, the classic serif options) Tj ET
+BT /F1 8.60 Tf 70.00 343.00 Td (established the accepted direction and EB Garamond was selected.) Tj ET
+BT /F1 8.60 Tf 60.00 328.40 Td (-) Tj ET
+BT /F1 8.60 Tf 70.00 328.40 Td (Added the italic 500-weight EB Garamond face through next/font/google in app/layout.tsx and exposed it as --font-eb-garamond) Tj ET
+BT /F1 8.60 Tf 70.00 317.80 Td (on the document body, keeping the font scoped through a reusable CSS variable rather than introducing a route-specific) Tj ET
+BT /F1 8.60 Tf 70.00 307.20 Td (external stylesheet.) Tj ET
+BT /F1 8.60 Tf 60.00 292.60 Td (-) Tj ET
+BT /F1 8.60 Tf 70.00 292.60 Td (Rewrote the quote to: Everyone's got a brilliant idea; Few know how to funnel it into a must-have product. The semicolon and) Tj ET
+BT /F1 8.60 Tf 70.00 282.00 Td (requested capitalization are represented in the final three-row DOM structure.) Tj ET
+BT /F1 8.60 Tf 60.00 267.40 Td (-) Tj ET
+BT /F1 8.60 Tf 70.00 267.40 Td (Changed the quote from the muted palette to the same --text white used by the landing headline, set the italic weight to 500,) Tj ET
+BT /F1 8.60 Tf 70.00 256.80 Td (and tuned the accepted line-height separately for wide and compact presentations.) Tj ET
+BT /F1 8.60 Tf 60.00 242.20 Td (-) Tj ET
+BT /F1 8.60 Tf 70.00 242.20 Td (Introduced shared --hero-headline-font-size and --hero-quote-font-size variables so the quote resizes in concert with the main) Tj ET
+BT /F1 8.60 Tf 70.00 231.60 Td (headline. Added a dedicated 23px second-narrowest portrait value and narrower clamp values for mobile portrait modes.) Tj ET
+BT /F1 12.70 Tf 60.00 211.00 Td (Work Completed - Quote Geometry and Portrait Composition) Tj ET
+BT /F1 8.60 Tf 60.00 193.00 Td (-) Tj ET
+BT /F1 8.60 Tf 70.00 193.00 Td (Replaced row-specific scaleX stretching with natural max-content rows inside an 80/20 three-column grid. This preserved equal) Tj ET
+BT /F1 8.60 Tf 70.00 182.40 Td (kerning across all three lines while placing eighty percent of the available horizontal space to the quote's left and twenty) Tj ET
+BT /F1 8.60 Tf 70.00 171.80 Td (percent to its right.) Tj ET
+BT /F1 8.60 Tf 60.00 157.20 Td (-) Tj ET
+BT /F1 8.60 Tf 70.00 157.20 Td (Added a shared responsive curve protrusion and shifted the first and third rows slightly right, allowing the three-line block to) Tj ET
+BT /F1 8.60 Tf 70.00 146.60 Td (echo the adjacent profile bubble without changing the center row or forcing artificial letter spacing.) Tj ET
+BT /F1 8.60 Tf 60.00 132.00 Td (-) Tj ET
+BT /F1 8.60 Tf 70.00 132.00 Td (Separated both quotation marks into independently styled inline spans, enlarged them to three times the surrounding type,) Tj ET
+BT /F1 8.60 Tf 70.00 121.40 Td (lowered the closing mark beneath product to prevent clipping, and moved the opening mark substantially left and down for the) Tj ET
+BT /F1 8.60 Tf 70.00 110.80 Td (requested symmetry.) Tj ET
+BT /F1 8.60 Tf 60.00 96.20 Td (-) Tj ET
+BT /F1 8.60 Tf 70.00 96.20 Td (Moved the full quote slightly down after the earlier upward pass and increased line spacing again. The final wide and compact) Tj ET
+BT /F1 8.60 Tf 70.00 85.60 Td (variants share the same typographic system while retaining route-specific anchoring to the profile-photo center.) Tj ET
+BT /F1 7.20 Tf 54.00 24.00 Td (Prahlin Portfolio Work Log - October 1, 2026) Tj ET
+BT /F1 7.20 Tf 537.34 24.00 Td (Page 2) Tj ET
+endstream
+endobj
+8 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 7 0 R >>
+endobj
+9 0 obj
+<< /Length 7610 >>
+stream
+BT /F1 8.60 Tf 60.00 720.00 Td (-) Tj ET
+BT /F1 8.60 Tf 70.00 720.00 Td (Lowered the portrait phone/tablet composition with isolated transforms: 60px for the second-narrowest portrait range and) Tj ET
+BT /F1 8.60 Tf 70.00 709.40 Td (65px for the narrowest portrait range. The proof-service panel and the four metric stacks were deliberately left in place.) Tj ET
+BT /F1 8.60 Tf 60.00 694.80 Td (-) Tj ET
+BT /F1 8.60 Tf 70.00 694.80 Td (Kept the quote from shrinking in the second-narrowest portrait range by assigning the accepted 23px size, preserving the) Tj ET
+BT /F1 8.60 Tf 70.00 684.20 Td (stronger Pic 1 treatment rather than the undersized Pic 2 behavior supplied during review.) Tj ET
+BT /F1 12.70 Tf 60.00 663.60 Td (Work Completed - Cinerific Source Review and Asset Transfer) Tj ET
+BT /F1 8.60 Tf 60.00 645.60 Td (-) Tj ET
+BT /F1 8.60 Tf 70.00 645.60 Td (Read the current Cinerific Compose navigation and viewport-control code without writing to the sibling repository. Rechecked) Tj ET
+BT /F1 8.60 Tf 70.00 635.00 Td (Cinerific status repeatedly; the only visible source change remained the user's pre-existing CinerificIntroView.kt modification.) Tj ET
+BT /F1 8.60 Tf 60.00 620.40 Td (-) Tj ET
+BT /F1 8.60 Tf 70.00 620.40 Td (Copied the current chrome fill plus Home, Movies, Shows, Favorites, and Settings raster icons into) Tj ET
+BT /F1 8.60 Tf 70.00 609.80 Td (public/images/cinerific/ui-foundations/navigation. The source files remained in place and unchanged.) Tj ET
+BT /F1 8.60 Tf 60.00 595.20 Td (-) Tj ET
+BT /F1 8.60 Tf 70.00 595.20 Td (Translated Compose measurements rather than approximating from screenshots. The implementation carries the product's) Tj ET
+BT /F1 8.60 Tf 70.00 584.60 Td (selected silver, inactive gray, aubergine chrome, opacity, border, icon-box, line-height, featured-icon scale, and responsive) Tj ET
+BT /F1 8.60 Tf 70.00 574.00 Td (coordinate relationships into browser-native controls.) Tj ET
+BT /F1 8.60 Tf 60.00 559.40 Td (-) Tj ET
+BT /F1 8.60 Tf 70.00 559.40 Td (Added semantic navigation and grouped-button labels, aria-current or aria-pressed state, keyboard-focus outlines, pointer) Tj ET
+BT /F1 8.60 Tf 70.00 548.80 Td (feedback, and independent React state so the foundation examples remain demonstrable rather than static artwork.) Tj ET
+BT /F1 12.70 Tf 60.00 528.20 Td (Work Completed - Bottom Navigation Variants) Tj ET
+BT /F1 8.60 Tf 60.00 510.20 Td (-) Tj ET
+BT /F1 8.60 Tf 70.00 510.20 Td (Added separate Tablet Bottom Navigation and Phone Bottom Navigation examples under UI Foundations / Navigations. Both) Tj ET
+BT /F1 8.60 Tf 70.00 499.60 Td (contain the five current destinations and begin with HOME selected at full opacity while inactive destinations use the product's) Tj ET
+BT /F1 8.60 Tf 70.00 489.00 Td (reduced opacity.) Tj ET
+BT /F1 8.60 Tf 60.00 474.40 Td (-) Tj ET
+BT /F1 8.60 Tf 70.00 474.40 Td (Preserved the existing tablet interpretation while rebuilding the phone variant from CinerificRightSideNavBar.kt: 360 x 67.068) Tj ET
+BT /F1 8.60 Tf 70.00 463.80 Td (content proportions, a 52.488dp item box, a 28.431dp icon slot, code-derived icon widths and heights, a 1.21 featured scale for) Tj ET
+BT /F1 8.60 Tf 70.00 453.20 Td (Movies, Shows, and Favorites, and the correct per-icon vertical offsets.) Tj ET
+BT /F1 8.60 Tf 60.00 438.60 Td (-) Tj ET
+BT /F1 8.60 Tf 70.00 438.60 Td (Replaced equal grid-column placement in the phone example with the source Row's SpaceEvenly distribution. Browser checks) Tj ET
+BT /F1 8.60 Tf 70.00 428.00 Td (confirmed destination centers near 42.5, 111.25, 180, 248.75, and 317.5 at the 360px reference width, matching the Compose) Tj ET
+BT /F1 8.60 Tf 70.00 417.40 Td (arrangement.) Tj ET
+BT /F1 8.60 Tf 60.00 402.80 Td (-) Tj ET
+BT /F1 8.60 Tf 70.00 402.80 Td (Aligned all phone labels to one baseline while allowing each icon's real bottom relationship to vary according to its source) Tj ET
+BT /F1 8.60 Tf 70.00 392.20 Td (dimensions and feature scaling. The resulting icon-to-label distances now follow the Android layout rather than a common) Tj ET
+BT /F1 8.60 Tf 70.00 381.60 Td (masked square.) Tj ET
+BT /F1 8.60 Tf 60.00 367.00 Td (-) Tj ET
+BT /F1 8.60 Tf 70.00 367.00 Td (Normalized both bottom-bar examples to the established Manrope/Broadway font-stack width: 318px on desktop, 304px at a) Tj ET
+BT /F1 8.60 Tf 70.00 356.40 Td (390px viewport, and approximately 297.6px at a 340px viewport. Internal geometry scales with each responsive width.) Tj ET
+BT /F1 12.70 Tf 60.00 335.80 Td (Work Completed - Genre and View-Mode Controls) Tj ET
+BT /F1 8.60 Tf 60.00 317.80 Td (-) Tj ET
+BT /F1 8.60 Tf 70.00 317.80 Td (Added Genre Navigation and View Mode to UI Foundations / Controls & Inputs after correcting the initial category placement.) Tj ET
+BT /F1 8.60 Tf 70.00 307.20 Td (Navigations now contains navigation systems; the two Movies-screen selectors sit together under their actual control role.) Tj ET
+BT /F1 8.60 Tf 60.00 292.60 Td (-) Tj ET
+BT /F1 8.60 Tf 70.00 292.60 Td (Recreated the eight square genre chips for All, Action, Comedy, Crime, Documentary, Drama, Horror, and Thriller. The All chip) Tj ET
+BT /F1 8.60 Tf 70.00 282.00 Td (uses the exact framed 3 x 3 cell glyph; the seven text chips use the compact ACT, COM, CRI, DOC, DRA, HOR, and THR labels.) Tj ET
+BT /F1 8.60 Tf 60.00 267.40 Td (-) Tj ET
+BT /F1 8.60 Tf 70.00 267.40 Td (Matched the genre group's 160.464 x 77.913 source coordinate system, 37.101 square chips, 2.707 corner radius, 1.805 stroke,) Tj ET
+BT /F1 8.60 Tf 70.00 256.80 Td (29.681 All glyph, 3.9 cells, 1.8 gaps, selected fill, inactive panel color, and responsive Manrope sizing.) Tj ET
+BT /F1 8.60 Tf 60.00 242.20 Td (-) Tj ET
+BT /F1 8.60 Tf 70.00 242.20 Td (Recreated the Large Collage, Small Collage, and List view-mode buttons from the 190 x 58 source group. The 54.692 square) Tj ET
+BT /F1 8.60 Tf 70.00 231.60 Td (buttons, 39.462 selected inset frame, cell dimensions, gaps, list dots and bars, inactive borders, and selected compact-glyph) Tj ET
+BT /F1 8.60 Tf 70.00 221.00 Td (scaling follow CinerificViewportModeNav.kt.) Tj ET
+BT /F1 8.60 Tf 60.00 206.40 Td (-) Tj ET
+BT /F1 8.60 Tf 70.00 206.40 Td (Corrected the initially undersized nested glyphs by moving from arbitrary pixel values to source-coordinate ratios. Browser) Tj ET
+BT /F1 8.60 Tf 70.00 195.80 Td (measurements confirmed square parent controls and expected scaled dimensions for the All glyph, 2 x 2 cells, 3 x 3 cells, list) Tj ET
+BT /F1 8.60 Tf 70.00 185.20 Td (dots, list bars, and selected inset frame.) Tj ET
+BT /F1 8.60 Tf 60.00 170.60 Td (-) Tj ET
+BT /F1 8.60 Tf 70.00 170.60 Td (Set the genre stack to the default 318px foundation width and enlarged/recentered the View Mode canvas until its visible) Tj ET
+BT /F1 8.60 Tf 70.00 160.00 Td (first-to-last button span matched the genre stack. Narrow-width rules continue to track the responsive two-card typography) Tj ET
+BT /F1 8.60 Tf 70.00 149.40 Td (width.) Tj ET
+BT /F1 12.70 Tf 60.00 128.80 Td (Work Completed - Expanded Vertical Navigation Rails) Tj ET
+BT /F1 8.60 Tf 60.00 110.80 Td (-) Tj ET
+BT /F1 8.60 Tf 70.00 110.80 Td (Added tablet and phone landscape vertical-rail examples from the expanded branch of CinerificRightSideNavBar.kt. Both render) Tj ET
+BT /F1 8.60 Tf 70.00 100.20 Td (the entire purplish chrome rail, begin with HOME active, keep inactive destinations at 0.58 opacity, and anchor Settings) Tj ET
+BT /F1 8.60 Tf 70.00 89.60 Td (independently at the bottom.) Tj ET
+BT /F1 7.20 Tf 54.00 24.00 Td (Prahlin Portfolio Work Log - October 1, 2026) Tj ET
+BT /F1 7.20 Tf 537.34 24.00 Td (Page 3) Tj ET
+endstream
+endobj
+10 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 9 0 R >>
+endobj
+11 0 obj
+<< /Length 7581 >>
+stream
+BT /F1 8.60 Tf 60.00 720.00 Td (-) Tj ET
+BT /F1 8.60 Tf 70.00 720.00 Td (Mapped the source rail constants for the 115dp width, top toggle geometry, 75dp icon-center cadence, per-destination icon) Tj ET
+BT /F1 8.60 Tf 70.00 709.40 Td (boxes, fixed 10sp labels, and bottom edge gap. The phone version retains the current code's intentionally fixed label sizing) Tj ET
+BT /F1 8.60 Tf 70.00 698.80 Td (relative to its smaller rail.) Tj ET
+BT /F1 8.60 Tf 60.00 684.20 Td (-) Tj ET
+BT /F1 8.60 Tf 70.00 684.20 Td (Derived the tablet reference from the 1194 x 834 stage and the phone reference from the connected 780 x 360dp landscape) Tj ET
+BT /F1 8.60 Tf 70.00 673.60 Td (profile. Before presentation normalization, these resolved to 115 x 834 and approximately 49.6 x 360 respectively.) Tj ET
+BT /F1 8.60 Tf 60.00 659.00 Td (-) Tj ET
+BT /F1 8.60 Tf 70.00 659.00 Td (Combined the variants into one side-by-side 318px comparison with equal columns and explicit Tablet and Phone captions instead) Tj ET
+BT /F1 8.60 Tf 70.00 648.40 Td (of placing them in separate vertically ordered foundation groups.) Tj ET
+BT /F1 8.60 Tf 60.00 633.80 Td (-) Tj ET
+BT /F1 8.60 Tf 70.00 633.80 Td (Applied uniform presentation transforms so the tablet rail scales down and the phone rail scales up to the same 600px displayed) Tj ET
+BT /F1 8.60 Tf 70.00 623.20 Td (height. The transform preserves each source rendering's internal relationships, including the phone's fixed-label behavior, while) Tj ET
+BT /F1 8.60 Tf 70.00 612.60 Td (making vertical comparison immediate.) Tj ET
+BT /F1 12.70 Tf 60.00 592.00 Td (Work Completed - Cache Handling and Local Continuity) Tj ET
+BT /F1 8.60 Tf 60.00 574.00 Td (-) Tj ET
+BT /F1 8.60 Tf 70.00 574.00 Td (Cleared and rebuilt generated .next state when Turbopack repeatedly served pre-change CSS despite successful component hot) Tj ET
+BT /F1 8.60 Tf 70.00 563.40 Td (reloads. Each rebuild was followed by computed-style checks rather than relying only on source-file inspection.) Tj ET
+BT /F1 8.60 Tf 60.00 548.80 Td (-) Tj ET
+BT /F1 8.60 Tf 70.00 548.80 Td (Removed only the temporary generated Next.js cache copies created during those refreshes after the workspace volume) Tj ET
+BT /F1 8.60 Tf 70.00 538.20 Td (became nearly full. No source files, copied product assets, worklogs, or user data were deleted.) Tj ET
+BT /F1 8.60 Tf 60.00 523.60 Td (-) Tj ET
+BT /F1 8.60 Tf 70.00 523.60 Td (Kept the local Next.js preview available at http://localhost:3000 and repeatedly checked /projects/cinerific for HTTP 200) Tj ET
+BT /F1 8.60 Tf 70.00 513.00 Td (responses. No production deployment or remote repository mutation was introduced.) Tj ET
+BT /F1 12.70 Tf 60.00 492.40 Td (Committed Source Sequence) Tj ET
+BT /F1 8.60 Tf 60.00 474.40 Td (-) Tj ET
+BT /F1 8.60 Tf 70.00 474.40 Td (eabfb7c - Refined Landing Hero Quote and Portrait Layout. Added EB Garamond italic, revised quote markup and copy,) Tj ET
+BT /F1 8.60 Tf 70.00 463.80 Td (synchronized responsive quote/headline scaling, refined quotation-mark geometry and natural row spacing, and moved the) Tj ET
+BT /F1 8.60 Tf 70.00 453.20 Td (portrait device stage downward while protecting proof content.) Tj ET
+BT /F1 8.60 Tf 60.00 438.60 Td (-) Tj ET
+BT /F1 8.60 Tf 70.00 438.60 Td (ab25f85 - Added interactive Cinerific UI foundation controls. Added the copied navigation assets, interactive bottom bars, genre) Tj ET
+BT /F1 8.60 Tf 70.00 428.00 Td (and view-mode controls, expanded vertical rails, source-measured responsive styling, and the committed validation captures) Tj ET
+BT /F1 8.60 Tf 70.00 417.40 Td (accumulated during implementation.) Tj ET
+BT /F1 8.60 Tf 60.00 402.80 Td (-) Tj ET
+BT /F1 8.60 Tf 70.00 402.80 Td (The two commits form one coherent presentation pass: the landing hero received its accepted typographic quote treatment and) Tj ET
+BT /F1 8.60 Tf 70.00 392.20 Td (portrait balance, while the Cinerific case study gained real interactive product controls in the previously incomplete foundation) Tj ET
+BT /F1 8.60 Tf 70.00 381.60 Td (categories.) Tj ET
+BT /F1 12.70 Tf 60.00 361.00 Td (Validation Summary) Tj ET
+BT /F1 8.60 Tf 60.00 343.00 Td (-) Tj ET
+BT /F1 8.60 Tf 70.00 343.00 Td (Ran npm run check repeatedly after the React and CSS additions; TypeScript completed successfully with no emitted files.) Tj ET
+BT /F1 8.60 Tf 60.00 328.40 Td (-) Tj ET
+BT /F1 8.60 Tf 70.00 328.40 Td (Loaded /projects/cinerific through the local Next.js server and confirmed HTTP 200 after clean-cache restarts. The landing) Tj ET
+BT /F1 8.60 Tf 70.00 317.80 Td (and Cinerific routes remained locally available throughout the final checks.) Tj ET
+BT /F1 8.60 Tf 60.00 303.20 Td (-) Tj ET
+BT /F1 8.60 Tf 70.00 303.20 Td (Used Playwright with the installed Chrome binary to verify five destinations in each bottom bar, eight genre buttons, three) Tj ET
+BT /F1 8.60 Tf 70.00 292.60 Td (view-mode buttons, independent selected-state changes, HOME-active rail state, semantic aria attributes, and the correct UI) Tj ET
+BT /F1 8.60 Tf 70.00 282.00 Td (Foundations category placement.) Tj ET
+BT /F1 8.60 Tf 60.00 267.40 Td (-) Tj ET
+BT /F1 8.60 Tf 70.00 267.40 Td (Measured the Manrope/Broadway visual pair and the navigation/control groups at 1440px, 390px, and 340px viewports.) Tj ET
+BT /F1 8.60 Tf 70.00 256.80 Td (Confirmed the intended 318px, 304px, and approximately 297.6px responsive widths where applicable.) Tj ET
+BT /F1 8.60 Tf 60.00 242.20 Td (-) Tj ET
+BT /F1 8.60 Tf 70.00 242.20 Td (Verified genre and view-mode parents remained square, measured source-scaled nested glyphs, checked the phone SpaceEvenly) Tj ET
+BT /F1 8.60 Tf 70.00 231.60 Td (item centers and shared label baseline, and confirmed both vertical rails resolve to the final equal 600px displayed height.) Tj ET
+BT /F1 8.60 Tf 60.00 217.00 Td (-) Tj ET
+BT /F1 8.60 Tf 70.00 217.00 Td (Captured committed and local validation images for bottom, phone, genre, view-mode, full-foundation, responsive-width, and) Tj ET
+BT /F1 8.60 Tf 70.00 206.40 Td (vertical-rail states. Visual review was paired with computed dimensions so stale CSS or misleading screenshot scaling could not) Tj ET
+BT /F1 8.60 Tf 70.00 195.80 Td (pass unnoticed.) Tj ET
+BT /F1 8.60 Tf 60.00 181.20 Td (-) Tj ET
+BT /F1 8.60 Tf 70.00 181.20 Td (Rechecked /Users/prahlin/gh/cinerific status after source inspection. The repository was not modified by this work; its) Tj ET
+BT /F1 8.60 Tf 70.00 170.60 Td (existing app/src/main/java/com/prahlin/cinerific/ui/CinerificIntroView.kt change remained the only reported local delta.) Tj ET
+BT /F1 12.70 Tf 60.00 150.00 Td (Files Touched and Artifacts) Tj ET
+BT /F1 8.60 Tf 60.00 132.00 Td (-) Tj ET
+BT /F1 8.60 Tf 70.00 132.00 Td (app/layout.tsx - registered italic EB Garamond through next/font/google and exposed the font variable on the root body.) Tj ET
+BT /F1 8.60 Tf 60.00 117.40 Td (-) Tj ET
+BT /F1 8.60 Tf 70.00 117.40 Td (app/page.tsx - updated the landing quote copy and split the opening and closing quotation marks into independent spans.) Tj ET
+BT /F1 8.60 Tf 60.00 102.80 Td (-) Tj ET
+BT /F1 8.60 Tf 70.00 102.80 Td (app/globals.css - added quote typography and responsive hero positioning, portrait device offsets, bottom-navigation variants,) Tj ET
+BT /F1 8.60 Tf 70.00 92.20 Td (exact phone icon alignment, genre and view-mode geometry, expanded vertical rails, equal-height comparison transforms, and) Tj ET
+BT /F1 8.60 Tf 70.00 81.60 Td (responsive foundation widths.) Tj ET
+BT /F1 7.20 Tf 54.00 24.00 Td (Prahlin Portfolio Work Log - October 1, 2026) Tj ET
+BT /F1 7.20 Tf 537.34 24.00 Td (Page 4) Tj ET
+endstream
+endobj
+12 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 11 0 R >>
+endobj
+13 0 obj
+<< /Length 4508 >>
+stream
+BT /F1 8.60 Tf 60.00 720.00 Td (-) Tj ET
+BT /F1 8.60 Tf 70.00 720.00 Td (app/projects/cinerific/ProductFlowSwitcher.tsx - added navigation/control datasets, interactive foundation components,) Tj ET
+BT /F1 8.60 Tf 70.00 709.40 Td (corrected Navigations versus Controls & Inputs grouping, and the paired tablet/phone vertical-rail presentation.) Tj ET
+BT /F1 8.60 Tf 60.00 694.80 Td (-) Tj ET
+BT /F1 8.60 Tf 70.00 694.80 Td (public/images/cinerific/ui-foundations/navigation - added bottom-nav-chrome.png plus the Home, Movies, Shows, Favorites, and) Tj ET
+BT /F1 8.60 Tf 70.00 684.20 Td (Settings icon assets copied from the read-only Cinerific source tree.) Tj ET
+BT /F1 8.60 Tf 60.00 669.60 Td (-) Tj ET
+BT /F1 8.60 Tf 70.00 669.60 Td (.codex/mockups/quote-fonts and .codex/validation - retained the committed font-comparison mockups and the) Tj ET
+BT /F1 8.60 Tf 70.00 659.00 Td (browser-validation captures used to review the accepted quote, controls, bottom bars, and vertical rails.) Tj ET
+BT /F1 8.60 Tf 60.00 644.40 Td (-) Tj ET
+BT /F1 8.60 Tf 70.00 644.40 Td (portfolio_PROJECT_SNAPSHOT.txt - regenerated the customary current project snapshot for this documentation pass.) Tj ET
+BT /F1 8.60 Tf 60.00 629.80 Td (-) Tj ET
+BT /F1 8.60 Tf 70.00 629.80 Td (portfolio_worklog_october1.pdf - created this first October Portfolio worklog at the repository root using the established) Tj ET
+BT /F1 8.60 Tf 70.00 619.20 Td (no-Part filename because no earlier October 1 PDF existed.) Tj ET
+BT /F1 12.70 Tf 60.00 598.60 Td (Follow-Up Context) Tj ET
+BT /F1 8.60 Tf 60.00 580.60 Td (-) Tj ET
+BT /F1 8.60 Tf 70.00 580.60 Td (The landing hero now carries the accepted EB Garamond quote, punctuation, white color, three-line wrapping, enlarged marks,) Tj ET
+BT /F1 8.60 Tf 70.00 570.00 Td (curve-aware row offsets, and protected portrait composition. Future changes should preserve the headline-linked sizing) Tj ET
+BT /F1 8.60 Tf 70.00 559.40 Td (variables and avoid reintroducing scaleX-based row fitting.) Tj ET
+BT /F1 8.60 Tf 60.00 544.80 Td (-) Tj ET
+BT /F1 8.60 Tf 70.00 544.80 Td (Cinerific Navigations now contains tablet and phone bottom bars plus the expanded paired vertical rails. Controls & Inputs) Tj ET
+BT /F1 8.60 Tf 70.00 534.20 Td (contains Genre Navigation and View Mode. Future foundation additions should keep this semantic split.) Tj ET
+BT /F1 8.60 Tf 60.00 519.60 Td (-) Tj ET
+BT /F1 8.60 Tf 70.00 519.60 Td (The browser implementations intentionally derive geometry from the current Compose constants. If the Android source) Tj ET
+BT /F1 8.60 Tf 70.00 509.00 Td (changes, update the copied assets and source ratios together rather than retuning from screenshots alone.) Tj ET
+BT /F1 8.60 Tf 60.00 494.40 Td (-) Tj ET
+BT /F1 8.60 Tf 70.00 494.40 Td (The local Cinerific repository remains outside the Portfolio write scope. Preserve the unrelated CinerificIntroView.kt) Tj ET
+BT /F1 8.60 Tf 70.00 483.80 Td (modification during any future read-only asset or measurement pass.) Tj ET
+BT /F1 8.60 Tf 60.00 469.20 Td (-) Tj ET
+BT /F1 8.60 Tf 70.00 469.20 Td (The local server remains the working preview. No public deployment was requested or performed in this record; any later) Tj ET
+BT /F1 8.60 Tf 70.00 458.60 Td (publish should be treated as a separate authorized operation and documented independently.) Tj ET
+BT /F1 12.70 Tf 60.00 438.00 Td (Output Artifact) Tj ET
+BT /F1 8.60 Tf 60.00 420.00 Td (-) Tj ET
+BT /F1 8.60 Tf 70.00 420.00 Td (Created portfolio_worklog_october1.pdf at the Portfolio repository root as the latest daily worklog for Thursday, October 1,) Tj ET
+BT /F1 8.60 Tf 70.00 409.40 Td (2026, following the established month-name, non-zero-padded day, and no-Part first-record naming convention.) Tj ET
+BT /F1 8.60 Tf 60.00 394.80 Td (-) Tj ET
+BT /F1 8.60 Tf 70.00 394.80 Td (The PDF uses the established US Letter page size, Helvetica/Helvetica-Bold typography, compact technical prose, repeated) Tj ET
+BT /F1 8.60 Tf 70.00 384.20 Td (dated footer, Codex metadata, and PDF 1.4 output profile.) Tj ET
+BT /F1 8.60 Tf 60.00 369.60 Td (-) Tj ET
+BT /F1 8.60 Tf 70.00 369.60 Td (This record closes the October 1 landing-hero and Cinerific UI Foundations session at committed source state ab25f85, with) Tj ET
+BT /F1 8.60 Tf 70.00 359.00 Td (main aligned to origin/main before the snapshot and worklog documentation artifacts were generated.) Tj ET
+BT /F1 7.20 Tf 54.00 24.00 Td (Prahlin Portfolio Work Log - October 1, 2026) Tj ET
+BT /F1 7.20 Tf 537.34 24.00 Td (Page 5) Tj ET
+endstream
+endobj
+14 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 13 0 R >>
+endobj
+15 0 obj
+<< /Title (Prahlin Portfolio Work Log - October 1, 2026) /Subject (October 1, 2026 Prahlin Portfolio landing hero and Cinerific UI Foundations work) /Author (Codex) /Creator (Codex) /Producer (Codex) /CreationDate (D:20261001202114-04'00') /ModDate (D:20261001202114-04'00') >>
+endobj
+xref
+0 16
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000148 00000 n 
+0000000245 00000 n 
+0000000347 00000 n 
+0000007826 00000 n 
+0000007962 00000 n 
+0000015659 00000 n 
+0000015795 00000 n 
+0000023456 00000 n 
+0000023593 00000 n 
+0000031226 00000 n 
+0000031364 00000 n 
+0000035924 00000 n 
+0000036062 00000 n 
+trailer
+<< /Size 16 /Root 1 0 R /Info 15 0 R >>
+startxref
+36356
+%%EOF
