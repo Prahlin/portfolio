@@ -1093,18 +1093,21 @@ function getNavItems(context: NavContext): NavItem[] {
   const homeHash = (id: string) => (context === "home" ? `#${id}` : `/#${id}`);
   const caseStudiesHref =
     context === "articles" ? "#case-studies" : homeHash("case-studies");
+  const uiuxHref = context === "articles" ? "#case-studies" : "/articles";
 
   return [
     { href: context === "home" ? "#top" : "/", isBrand: true, label: "Prahl.dev" },
     { isSpacer: true, label: "" },
-    { href: homeHash("stack"), label: "Stack" },
-    { href: caseStudiesHref, label: "Case Studies" },
-    { href: homeHash("worklog"), label: "Worklog" },
+    { href: caseStudiesHref, label: "Cases" },
     {
-      href: context === "aboutdev" ? "#top" : "/aboutdev",
-      isActive: context === "aboutdev",
-      label: "About Dev",
+      href: uiuxHref,
+      isActive: context === "articles",
+      label: "UI/UX",
     },
+    { href: homeHash("stack"), label: "Stack" },
+    { href: homeHash("worklog"), label: "Space" },
+    { href: homeHash("workflow"), label: "Flow" },
+    { href: homeHash("values"), label: "Values" },
     { href: homeHash("contact"), label: "Contact" },
   ];
 }

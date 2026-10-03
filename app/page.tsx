@@ -937,7 +937,10 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="aboutdev-section aboutdev-story-section">
+      <section
+        className="aboutdev-section aboutdev-story-section"
+        id="workflow"
+      >
         <div className="site-shell">
           <div className="aboutdev-section-head">
             <div>
@@ -988,7 +991,10 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="aboutdev-section aboutdev-principles-section">
+      <section
+        className="aboutdev-section aboutdev-principles-section"
+        id="values"
+      >
         <div className="site-shell">
           <div className="aboutdev-section-head aboutdev-principles-head">
             <div>

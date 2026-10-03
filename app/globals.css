@@ -310,7 +310,12 @@ img[data-screenshot-preview],
 }
 
 .nav-bar nav a {
+  text-transform: uppercase;
   transition: background 160ms ease, color 160ms ease;
+}
+
+.nav-bar nav .nav-brand-link {
+  text-transform: none;
 }
 
 .nav-bar nav .brand {
