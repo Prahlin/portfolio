@@ -38,7 +38,7 @@ type CaseStudy = {
   worklogStat: string;
 };
 
-const navRowSplitIndex = 3;
+const defaultNavRowSplitIndex = 3;
 
 const caseStudies: CaseStudy[] = [
   {
@@ -1102,12 +1102,12 @@ function getNavItems(context: NavContext): NavItem[] {
     {
       href: uiuxHref,
       isActive: context === "articles",
-      label: "UI/UX",
+      label: "UI / UX",
     },
     { href: homeHash("stack"), label: "Stack" },
-    { href: homeHash("worklog"), label: "Space" },
     { href: homeHash("workflow"), label: "Flow" },
     { href: homeHash("values"), label: "Values" },
+    { href: homeHash("worklog"), label: "Space" },
     { href: homeHash("contact"), label: "Contact" },
   ];
 }
@@ -1231,26 +1231,47 @@ function NavLinkRow({
 
 function NavTopLinkRow({ items }: { items: NavItem[] }) {
   const navTopBrandItem = items[0];
-  const navTopLinkItems = items.slice(1);
+  const navTopLayoutSpacer = items.slice(1).find((item) => item.isSpacer);
+  const navTopLinkItems = items.slice(1).filter((item) => !item.isSpacer);
 
   return (
     <span className="nav-link-row nav-link-row-top">
       <NavLinkItem item={navTopBrandItem} />
       <span className="nav-top-distribution">
-        <NavLinkItem
-          className="nav-top-link-primary"
-          item={navTopLinkItems[0]}
-        />
-        <span
-          className="nav-separator nav-separator-top-center"
-          aria-hidden="true"
-        >
-          |
-        </span>
-        <NavLinkItem
-          className="nav-top-link-secondary"
-          item={navTopLinkItems[1]}
-        />
+        {navTopLayoutSpacer ? (
+          <>
+            <NavLinkItem
+              className="nav-top-layout-spacer"
+              item={navTopLayoutSpacer}
+            />
+            <span
+              className="nav-separator nav-separator-top-spacer"
+              aria-hidden="true"
+            >
+              |
+            </span>
+          </>
+        ) : null}
+        {navTopLinkItems[0] ? (
+          <NavLinkItem
+            className="nav-top-link-primary"
+            item={navTopLinkItems[0]}
+          />
+        ) : null}
+        {navTopLinkItems[1] ? (
+          <>
+            <span
+              className="nav-separator nav-separator-top-center"
+              aria-hidden="true"
+            >
+              |
+            </span>
+            <NavLinkItem
+              className="nav-top-link-secondary"
+              item={navTopLinkItems[1]}
+            />
+          </>
+        ) : null}
       </span>
     </span>
   );
@@ -1266,6 +1287,9 @@ export function MainNavBar({
   items?: NavItem[];
 }) {
   const navItems = items ?? getNavItems(context);
+  const navRowSplitIndex = navItems[1]?.isSpacer
+    ? defaultNavRowSplitIndex + 1
+    : defaultNavRowSplitIndex;
   const navTopRowItems = navItems.slice(0, navRowSplitIndex);
   const navBottomRowItems = navItems.slice(navRowSplitIndex);
 

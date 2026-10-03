@@ -850,93 +850,6 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="worklog-section" id="worklog">
-        <div className="site-shell worklog-layout">
-          {[
-            {
-              className: "workspace-panel-space",
-              title: "Work Space",
-              items: worklogItems.slice(0, 3),
-            },
-            {
-              className: "workspace-panel-tools",
-              title: "Work Tools",
-              items: worklogItems.slice(3),
-            },
-          ].map((panel) => (
-            <div
-              className={`workspace-panel ${panel.className}`}
-              key={panel.title}
-            >
-              <SectionHeading title={panel.title} />
-              <div className="timeline">
-                {panel.items.map((item) => (
-                  <div
-                    key={item.label}
-                    className={`timeline-item${
-                      panel.className === "workspace-panel-tools"
-                        ? " timeline-item-software"
-                        : ""
-                    }${
-                      item.label === "PERIPHERALS"
-                        ? " timeline-item-peripherals"
-                        : ""
-                    }${
-                      item.label === "QA DEVS" ? " timeline-item-qa" : ""
-                    }`}
-                  >
-                    <span className="workspace-eyebrow">
-                      {item.icon}
-                      <span
-                        aria-label={item.label}
-                        className="workspace-eyebrow-label"
-                      >
-                        <span
-                          aria-hidden="true"
-                          className="workspace-eyebrow-label-top"
-                        >
-                          {item.label === "PERIPHERALS"
-                            ? "PERI-"
-                            : item.label.split(" ")[0]}
-                          {item.label.includes(" ") ||
-                          item.label === "PERIPHERALS" ? (
-                            <span className="workspace-eyebrow-label-bottom">
-                              {item.label === "PERIPHERALS"
-                                ? "PHERALS"
-                                : item.label.split(" ").slice(1).join(" ")}
-                            </span>
-                          ) : null}
-                        </span>
-                        {item.label.includes(" ") ||
-                        item.label === "PERIPHERALS" ? (
-                          <span className="workspace-eyebrow-label-sr">
-                            {item.label === "PERIPHERALS"
-                              ? "PHERALS"
-                              : item.label.split(" ").slice(1).join(" ")}
-                          </span>
-                        ) : null}
-                      </span>
-                    </span>
-                    <p>{item.text}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          ))}
-          <span className="workspace-heading-arrow" aria-hidden="true">
-            {["left", "center", "right"].map((position) => (
-              <Image
-                alt=""
-                height={36}
-                key={position}
-                src="/images/carousel-arrow.svg"
-                width={48}
-              />
-            ))}
-          </span>
-        </div>
-      </section>
-
       <section
         className="aboutdev-section aboutdev-story-section"
         id="workflow"
@@ -1024,6 +937,93 @@ export default function Home() {
               />
             </div>
           </div>
+        </div>
+      </section>
+
+      <section className="worklog-section" id="worklog">
+        <div className="site-shell worklog-layout">
+          {[
+            {
+              className: "workspace-panel-space",
+              title: "Work Space",
+              items: worklogItems.slice(0, 3),
+            },
+            {
+              className: "workspace-panel-tools",
+              title: "Work Tools",
+              items: worklogItems.slice(3),
+            },
+          ].map((panel) => (
+            <div
+              className={`workspace-panel ${panel.className}`}
+              key={panel.title}
+            >
+              <SectionHeading title={panel.title} />
+              <div className="timeline">
+                {panel.items.map((item) => (
+                  <div
+                    key={item.label}
+                    className={`timeline-item${
+                      panel.className === "workspace-panel-tools"
+                        ? " timeline-item-software"
+                        : ""
+                    }${
+                      item.label === "PERIPHERALS"
+                        ? " timeline-item-peripherals"
+                        : ""
+                    }${
+                      item.label === "QA DEVS" ? " timeline-item-qa" : ""
+                    }`}
+                  >
+                    <span className="workspace-eyebrow">
+                      {item.icon}
+                      <span
+                        aria-label={item.label}
+                        className="workspace-eyebrow-label"
+                      >
+                        <span
+                          aria-hidden="true"
+                          className="workspace-eyebrow-label-top"
+                        >
+                          {item.label === "PERIPHERALS"
+                            ? "PERI-"
+                            : item.label.split(" ")[0]}
+                          {item.label.includes(" ") ||
+                          item.label === "PERIPHERALS" ? (
+                            <span className="workspace-eyebrow-label-bottom">
+                              {item.label === "PERIPHERALS"
+                                ? "PHERALS"
+                                : item.label.split(" ").slice(1).join(" ")}
+                            </span>
+                          ) : null}
+                        </span>
+                        {item.label.includes(" ") ||
+                        item.label === "PERIPHERALS" ? (
+                          <span className="workspace-eyebrow-label-sr">
+                            {item.label === "PERIPHERALS"
+                              ? "PHERALS"
+                              : item.label.split(" ").slice(1).join(" ")}
+                          </span>
+                        ) : null}
+                      </span>
+                    </span>
+                    <p>{item.text}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
+          <span className="workspace-heading-arrow" aria-hidden="true">
+            {["left", "center", "right"].map((position) => (
+              <Image
+                alt=""
+                height={36}
+                key={position}
+                src="/images/carousel-arrow.svg"
+                width={48}
+              />
+            ))}
+          </span>
         </div>
       </section>
 

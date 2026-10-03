@@ -1,5 +1,5 @@
 Portfolio Next.js PROJECT SNAPSHOT
-Generated: Fri Oct  2 22:02:50 EDT 2026
+Generated: Fri Oct  2 22:43:26 EDT 2026
 Project directory: /Users/prahlin/gh/portfolio
 
 IMPORTANT INSTRUCTIONS FOR CHATGPT & CODEX:
@@ -11405,1531 +11405,1536 @@ FILE: app/globals.css
   8690	    position: relative;
   8691	  }
   8692	
-  8693	  .nav-top-distribution > .nav-top-link-primary {
-  8694	    grid-column: 1;
-  8695	    min-width: max-content;
+  8693	  .nav-bar nav .nav-top-distribution > .nav-top-layout-spacer,
+  8694	  .nav-bar nav .nav-top-distribution > .nav-separator-top-spacer {
+  8695	    display: none;
   8696	  }
   8697	
-  8698	  .nav-top-distribution > .nav-top-link-secondary {
-  8699	    grid-column: 2;
+  8698	  .nav-top-distribution > .nav-top-link-primary {
+  8699	    grid-column: 1;
   8700	    min-width: max-content;
   8701	  }
   8702	
-  8703	  .nav-top-distribution > .nav-separator-top-center {
-  8704	    left: 50%;
-  8705	    position: absolute;
-  8706	    transform: translateX(-50%);
-  8707	  }
-  8708	
-  8709	  .nav-link-row-bottom {
-  8710	    align-items: center;
-  8711	    column-gap: var(--nav-link-bottom-separator-gap);
-  8712	    display: flex;
-  8713	    height: var(--nav-bar-height);
-  8714	    justify-content: space-evenly;
-  8715	    width: 100%;
-  8716	  }
-  8717	
-  8718	  .nav-separator.nav-separator-row-leading {
-  8719	    display: none;
-  8720	  }
-  8721	
-  8722	  .nav-bar nav a,
-  8723	  .nav-bar nav .nav-text {
-  8724	    flex: 1 1 0;
-  8725	    min-width: 0;
-  8726	    padding-left: 10px;
-  8727	    padding-right: 10px;
-  8728	    text-align: center;
-  8729	  }
-  8730	
-  8731	  .nav-bar nav .nav-layout-spacer {
-  8732	    height: 40.5px;
-  8733	    min-width: 77.454px;
-  8734	    width: 77.454px;
-  8735	  }
-  8736	
-  8737	  .nav-bar nav .nav-link-row > a,
-  8738	  .nav-bar nav .nav-link-row > .nav-text {
-  8739	    flex: 0 0 auto;
-  8740	    justify-self: center;
-  8741	  }
-  8742	
-  8743	  .nav-bar nav .nav-link-row-top > .nav-brand-link {
-  8744	    display: inline-flex;
-  8745	    gap: var(--nav-brand-gap);
-  8746	    grid-column: 1;
-  8747	    height: var(--nav-bar-height);
-  8748	    margin-block: calc(var(--nav-card-border-width) * -1);
-  8749	    margin-right: 0;
-  8750	    min-width: max-content;
-  8751	    padding: 0 calc(var(--nav-brand-gap) + var(--nav-brand-card-bleed)) 0
-  8752	      var(--nav-brand-card-bleed);
-  8753	    justify-self: start;
-  8754	  }
-  8755	
-  8756	  .nav-bar nav .nav-link-row-top > .nav-brand-link .nav-brand-mark {
-  8757	    align-self: center;
-  8758	    flex: none;
-  8759	    height: 34px;
-  8760	    justify-self: center;
-  8761	    max-height: 34px;
-  8762	    max-width: 34px;
-  8763	    min-height: 34px;
-  8764	    min-width: 34px;
-  8765	    width: 34px;
-  8766	  }
-  8767	
-  8768	  .nav-bar nav .nav-link-row-top > .nav-brand-link .nav-brand-name {
-  8769	    align-self: center;
-  8770	    display: inline-flex;
-  8771	    justify-content: center;
-  8772	    line-height: 1;
-  8773	    text-align: center;
-  8774	  }
-  8775	
-  8776	  .nav-bar nav .nav-link-row-bottom > a,
-  8777	  .nav-bar nav .nav-link-row-bottom > .nav-text {
-  8778	    padding-bottom: 3.75px;
-  8779	    padding-top: 0;
-  8780	  }
-  8781	
-  8782	  .project-nav nav {
-  8783	    grid-template-columns: repeat(3, minmax(0, 1fr));
-  8784	  }
-  8785	
-  8786	  .hero-grid,
-  8787	  .worklog-layout,
-  8788	  .project-hero-grid,
-  8789	  .project-section-grid,
-  8790	  .readiness-layout {
-  8791	    grid-template-columns: 1fr;
-  8792	  }
-  8793	
-  8794	  .overview-section-grid {
-  8795	    grid-template-areas:
-  8796	      "heading"
-  8797	      "screens"
-  8798	      "copy"
-  8799	      "releases";
-  8800	    grid-template-columns: 1fr;
-  8801	  }
-  8802	
-  8803	  .overview-store-releases {
-  8804	    gap: 0;
-  8805	    grid-template-columns: repeat(2, minmax(0, 1fr));
+  8703	  .nav-top-distribution > .nav-top-link-secondary {
+  8704	    grid-column: 2;
+  8705	    min-width: max-content;
+  8706	  }
+  8707	
+  8708	  .nav-top-distribution > .nav-separator-top-center {
+  8709	    left: 50%;
+  8710	    position: absolute;
+  8711	    transform: translateX(-50%);
+  8712	  }
+  8713	
+  8714	  .nav-link-row-bottom {
+  8715	    align-items: center;
+  8716	    column-gap: var(--nav-link-bottom-separator-gap);
+  8717	    display: flex;
+  8718	    height: var(--nav-bar-height);
+  8719	    justify-content: space-evenly;
+  8720	    width: 100%;
+  8721	  }
+  8722	
+  8723	  .nav-separator.nav-separator-row-leading {
+  8724	    display: none;
+  8725	  }
+  8726	
+  8727	  .nav-bar nav a,
+  8728	  .nav-bar nav .nav-text {
+  8729	    flex: 1 1 0;
+  8730	    min-width: 0;
+  8731	    padding-left: 10px;
+  8732	    padding-right: 10px;
+  8733	    text-align: center;
+  8734	  }
+  8735	
+  8736	  .nav-bar nav .nav-layout-spacer {
+  8737	    height: 40.5px;
+  8738	    min-width: 77.454px;
+  8739	    width: 77.454px;
+  8740	  }
+  8741	
+  8742	  .nav-bar nav .nav-link-row > a,
+  8743	  .nav-bar nav .nav-link-row > .nav-text {
+  8744	    flex: 0 0 auto;
+  8745	    justify-self: center;
+  8746	  }
+  8747	
+  8748	  .nav-bar nav .nav-link-row-top > .nav-brand-link {
+  8749	    display: inline-flex;
+  8750	    gap: var(--nav-brand-gap);
+  8751	    grid-column: 1;
+  8752	    height: var(--nav-bar-height);
+  8753	    margin-block: calc(var(--nav-card-border-width) * -1);
+  8754	    margin-right: 0;
+  8755	    min-width: max-content;
+  8756	    padding: 0 calc(var(--nav-brand-gap) + var(--nav-brand-card-bleed)) 0
+  8757	      var(--nav-brand-card-bleed);
+  8758	    justify-self: start;
+  8759	  }
+  8760	
+  8761	  .nav-bar nav .nav-link-row-top > .nav-brand-link .nav-brand-mark {
+  8762	    align-self: center;
+  8763	    flex: none;
+  8764	    height: 34px;
+  8765	    justify-self: center;
+  8766	    max-height: 34px;
+  8767	    max-width: 34px;
+  8768	    min-height: 34px;
+  8769	    min-width: 34px;
+  8770	    width: 34px;
+  8771	  }
+  8772	
+  8773	  .nav-bar nav .nav-link-row-top > .nav-brand-link .nav-brand-name {
+  8774	    align-self: center;
+  8775	    display: inline-flex;
+  8776	    justify-content: center;
+  8777	    line-height: 1;
+  8778	    text-align: center;
+  8779	  }
+  8780	
+  8781	  .nav-bar nav .nav-link-row-bottom > a,
+  8782	  .nav-bar nav .nav-link-row-bottom > .nav-text {
+  8783	    padding-bottom: 3.75px;
+  8784	    padding-top: 0;
+  8785	  }
+  8786	
+  8787	  .project-nav nav {
+  8788	    grid-template-columns: repeat(3, minmax(0, 1fr));
+  8789	  }
+  8790	
+  8791	  .hero-grid,
+  8792	  .worklog-layout,
+  8793	  .project-hero-grid,
+  8794	  .project-section-grid,
+  8795	  .readiness-layout {
+  8796	    grid-template-columns: 1fr;
+  8797	  }
+  8798	
+  8799	  .overview-section-grid {
+  8800	    grid-template-areas:
+  8801	      "heading"
+  8802	      "screens"
+  8803	      "copy"
+  8804	      "releases";
+  8805	    grid-template-columns: 1fr;
   8806	  }
   8807	
-  8808	  .overview-store-facts {
-  8809	    grid-template-columns: repeat(2, minmax(0, 1fr));
-  8810	  }
-  8811	
-  8812	  .overview-store-facts > div:not(:nth-child(3n + 1)) {
-  8813	    border-left: 0;
-  8814	  }
-  8815	
-  8816	  .overview-store-facts > div:nth-child(2n) {
-  8817	    border-left: 1px solid var(--line);
-  8818	  }
-  8819	
-  8820	  .overview-store-facts > div:nth-child(n + 3) {
-  8821	    border-top: 1px solid var(--line);
-  8822	  }
-  8823	
-  8824	  .av-showcase {
-  8825	    min-height: 610px;
-  8826	  }
-  8827	
-  8828	  .av-device-main {
-  8829	    left: 32%;
-  8830	    right: auto;
+  8808	  .overview-store-releases {
+  8809	    gap: 0;
+  8810	    grid-template-columns: repeat(2, minmax(0, 1fr));
+  8811	  }
+  8812	
+  8813	  .overview-store-facts {
+  8814	    grid-template-columns: repeat(2, minmax(0, 1fr));
+  8815	  }
+  8816	
+  8817	  .overview-store-facts > div:not(:nth-child(3n + 1)) {
+  8818	    border-left: 0;
+  8819	  }
+  8820	
+  8821	  .overview-store-facts > div:nth-child(2n) {
+  8822	    border-left: 1px solid var(--line);
+  8823	  }
+  8824	
+  8825	  .overview-store-facts > div:nth-child(n + 3) {
+  8826	    border-top: 1px solid var(--line);
+  8827	  }
+  8828	
+  8829	  .av-showcase {
+  8830	    min-height: 610px;
   8831	  }
   8832	
-  8833	  .av-device-browse {
-  8834	    right: 6%;
-  8835	  }
-  8836	
-  8837	  .av-device-confirm {
-  8838	    left: 4%;
-  8839	  }
-  8840	
-  8841	  .hero-visual {
-  8842	    min-height: auto;
-  8843	  }
-  8844	
-  8845	  .phone-stage {
-  8846	    height: 710px;
-  8847	    margin-top: 30px;
+  8833	  .av-device-main {
+  8834	    left: 32%;
+  8835	    right: auto;
+  8836	  }
+  8837	
+  8838	  .av-device-browse {
+  8839	    right: 6%;
+  8840	  }
+  8841	
+  8842	  .av-device-confirm {
+  8843	    left: 4%;
+  8844	  }
+  8845	
+  8846	  .hero-visual {
+  8847	    min-height: auto;
   8848	  }
   8849	
-  8850	  .phone-shell-commerce {
-  8851	    left: 4%;
-  8852	  }
-  8853	
-  8854	  .phone-shell-finance {
-  8855	    left: 42%;
-  8856	  }
-  8857	
-  8858	  .tablet-shell {
-  8859	    left: 9%;
-  8860	    top: 374px;
-  8861	    width: var(--tablet-shell-fitted-width);
-  8862	  }
-  8863	
-  8864	  .case-grid,
-  8865	  .capability-grid,
-  8866	  .feature-grid,
-  8867	  .decision-grid,
-  8868	  .architecture-map {
-  8869	    grid-template-columns: repeat(2, minmax(0, 1fr));
-  8870	  }
-  8871	
-  8872	  .architecture-flow {
-  8873	    grid-template-columns: repeat(2, minmax(0, 1fr));
-  8874	  }
-  8875	
-  8876	  .ownership-grid,
-  8877	  .stack-matrix {
-  8878	    grid-template-columns: repeat(3, minmax(0, 1fr));
+  8850	  .phone-stage {
+  8851	    height: 710px;
+  8852	    margin-top: 30px;
+  8853	  }
+  8854	
+  8855	  .phone-shell-commerce {
+  8856	    left: 4%;
+  8857	  }
+  8858	
+  8859	  .phone-shell-finance {
+  8860	    left: 42%;
+  8861	  }
+  8862	
+  8863	  .tablet-shell {
+  8864	    left: 9%;
+  8865	    top: 374px;
+  8866	    width: var(--tablet-shell-fitted-width);
+  8867	  }
+  8868	
+  8869	  .case-grid,
+  8870	  .capability-grid,
+  8871	  .feature-grid,
+  8872	  .decision-grid,
+  8873	  .architecture-map {
+  8874	    grid-template-columns: repeat(2, minmax(0, 1fr));
+  8875	  }
+  8876	
+  8877	  .architecture-flow {
+  8878	    grid-template-columns: repeat(2, minmax(0, 1fr));
   8879	  }
   8880	
-  8881	  .flow-layout {
-  8882	    --flow-chart-width: var(--flow-phone-width);
-  8883	    grid-template-columns: 1fr;
+  8881	  .ownership-grid,
+  8882	  .stack-matrix {
+  8883	    grid-template-columns: repeat(3, minmax(0, 1fr));
   8884	  }
   8885	
-  8886	  .flow-capture-group {
-  8887	    grid-template-columns: 1fr;
-  8888	  }
-  8889	
-  8890	  .aboutdev-hero-grid {
-  8891	    gap: 34px;
-  8892	    grid-template-columns: minmax(0, 1fr);
-  8893	    min-height: 0;
-  8894	    padding-top: 0;
-  8895	  }
-  8896	
-  8897	  .aboutdev-hero h1 {
-  8898	    max-width: 780px;
-  8899	  }
-  8900	
-  8901	  .aboutdev-profile-bubble {
-  8902	    justify-self: center;
-  8903	    transform: translateY(27px);
-  8904	    width: 282px;
-  8905	  }
-  8906	
-  8907	  .aboutdev-section-head,
-  8908	  .aboutdev-quote-band {
-  8909	    grid-template-columns: minmax(0, 1fr);
+  8886	  .flow-layout {
+  8887	    --flow-chart-width: var(--flow-phone-width);
+  8888	    grid-template-columns: 1fr;
+  8889	  }
+  8890	
+  8891	  .flow-capture-group {
+  8892	    grid-template-columns: 1fr;
+  8893	  }
+  8894	
+  8895	  .aboutdev-hero-grid {
+  8896	    gap: 34px;
+  8897	    grid-template-columns: minmax(0, 1fr);
+  8898	    min-height: 0;
+  8899	    padding-top: 0;
+  8900	  }
+  8901	
+  8902	  .aboutdev-hero h1 {
+  8903	    max-width: 780px;
+  8904	  }
+  8905	
+  8906	  .aboutdev-profile-bubble {
+  8907	    justify-self: center;
+  8908	    transform: translateY(27px);
+  8909	    width: 282px;
   8910	  }
   8911	
-  8912	  .aboutdev-section-head > p {
-  8913	    max-width: 720px;
-  8914	  }
-  8915	
-  8916	  .aboutdev-cta {
-  8917	    align-items: stretch;
-  8918	    flex-direction: column;
+  8912	  .aboutdev-section-head,
+  8913	  .aboutdev-quote-band {
+  8914	    grid-template-columns: minmax(0, 1fr);
+  8915	  }
+  8916	
+  8917	  .aboutdev-section-head > p {
+  8918	    max-width: 720px;
   8919	  }
   8920	
-  8921	  .aboutdev-cta-actions {
-  8922	    flex-wrap: wrap;
-  8923	  }
-  8924	}
+  8921	  .aboutdev-cta {
+  8922	    align-items: stretch;
+  8923	    flex-direction: column;
+  8924	  }
   8925	
-  8926	@media (max-width: 980px) and (orientation: portrait) {
-  8927	  .flow-chart-mockup {
-  8928	    justify-self: center;
-  8929	    margin-inline: auto;
-  8930	  }
-  8931	}
-  8932	
-  8933	@media (max-width: 720px) {
-  8934	  .site-shell {
-  8935	    width: min(100% - 24px, 1180px);
-  8936	  }
+  8926	  .aboutdev-cta-actions {
+  8927	    flex-wrap: wrap;
+  8928	  }
+  8929	}
+  8930	
+  8931	@media (max-width: 980px) and (orientation: portrait) {
+  8932	  .flow-chart-mockup {
+  8933	    justify-self: center;
+  8934	    margin-inline: auto;
+  8935	  }
+  8936	}
   8937	
-  8938	  .nav-bar {
-  8939	    --nav-bar-inline-padding: 14px;
-  8940	    --nav-link-bottom-separator-gap: 5px;
-  8941	    --nav-link-separator-gap: 4px;
-  8942	    --nav-link-top-separator-gap: 3px;
-  8943	    max-width: calc(100vw - 24px);
-  8944	    overflow: hidden;
-  8945	    padding: 0 var(--nav-bar-inline-padding);
-  8946	  }
-  8947	
-  8948	  .nav-bar nav {
-  8949	    max-width: 100%;
-  8950	  }
-  8951	
-  8952	  .project-nav nav {
-  8953	    width: 100%;
-  8954	  }
-  8955	
-  8956	  .project-page .site-shell {
-  8957	    max-width: 1180px;
-  8958	    width: min(100% - 24px, 1180px);
+  8938	@media (max-width: 720px) {
+  8939	  .site-shell {
+  8940	    width: min(100% - 24px, 1180px);
+  8941	  }
+  8942	
+  8943	  .nav-bar {
+  8944	    --nav-bar-inline-padding: 14px;
+  8945	    --nav-link-bottom-separator-gap: 5px;
+  8946	    --nav-link-separator-gap: 4px;
+  8947	    --nav-link-top-separator-gap: 3px;
+  8948	    max-width: calc(100vw - 24px);
+  8949	    overflow: hidden;
+  8950	    padding: 0 var(--nav-bar-inline-padding);
+  8951	  }
+  8952	
+  8953	  .nav-bar nav {
+  8954	    max-width: 100%;
+  8955	  }
+  8956	
+  8957	  .project-nav nav {
+  8958	    width: 100%;
   8959	  }
   8960	
-  8961	  .project-nav {
-  8962	    max-width: 100%;
-  8963	    width: 100%;
+  8961	  .project-page .site-shell {
+  8962	    max-width: 1180px;
+  8963	    width: min(100% - 24px, 1180px);
   8964	  }
   8965	
-  8966	  .project-nav nav a {
-  8967	    font-size: 11px;
-  8968	  }
-  8969	
-  8970	  .nav-bar nav a,
-  8971	  .nav-bar nav .nav-text {
-  8972	    font-size: 15px;
-  8973	    padding-left: 2px;
-  8974	    padding-right: 2px;
-  8975	  }
-  8976	
-  8977	  .nav-bar nav .nav-layout-spacer {
-  8978	    height: 37.5px;
-  8979	    min-width: 55.859375px;
-  8980	    width: 55.859375px;
-  8981	  }
-  8982	
-  8983	  .nav-separator {
-  8984	    font-size: 15px;
-  8985	  }
-  8986	
-  8987	  .hero {
-  8988	    padding-top: 24px;
-  8989	  }
-  8990	
-  8991	  section.project-hero {
-  8992	    padding-top: 24px;
-  8993	  }
-  8994	
-  8995	  .project-nav {
-  8996	    margin-bottom: 48px;
-  8997	  }
-  8998	
-  8999	  .project-nav-frame {
-  9000	    margin-bottom: 48px;
-  9001	  }
-  9002	
-  9003	  .alla-vostra-case .project-nav-frame {
-  9004	    margin-bottom: 24px;
-  9005	  }
-  9006	
-  9007	  .alla-vostra-case .project-nav-frame .nav-separator-top-center {
-  9008	    display: inline-flex;
-  9009	  }
-  9010	
-  9011	  .hero-grid {
-  9012	    --hero-headline-font-size: clamp(42px, 15vw, 64px);
-  9013	    --hero-quote-font-size: clamp(14.994px, 5.355vw, 22.848px);
-  9014	    gap: 30px;
-  9015	    padding-top: 16px;
-  9016	  }
-  9017	
-  9018	  h1 {
-  9019	    font-size: clamp(42px, 15vw, 64px);
-  9020	  }
-  9021	
-  9022	  .hero-visual {
-  9023	    min-height: auto;
-  9024	  }
-  9025	
-  9026	  .phone-stage {
-  9027	    height: 626px;
-  9028	    margin-top: 18px;
+  8966	  .project-nav {
+  8967	    max-width: 100%;
+  8968	    width: 100%;
+  8969	  }
+  8970	
+  8971	  .project-nav nav a {
+  8972	    font-size: 11px;
+  8973	  }
+  8974	
+  8975	  .nav-bar nav a,
+  8976	  .nav-bar nav .nav-text {
+  8977	    font-size: 15px;
+  8978	    padding-left: 2px;
+  8979	    padding-right: 2px;
+  8980	  }
+  8981	
+  8982	  .nav-bar nav .nav-layout-spacer {
+  8983	    height: 37.5px;
+  8984	    min-width: 55.859375px;
+  8985	    width: 55.859375px;
+  8986	  }
+  8987	
+  8988	  .nav-separator {
+  8989	    font-size: 15px;
+  8990	  }
+  8991	
+  8992	  .hero {
+  8993	    padding-top: 24px;
+  8994	  }
+  8995	
+  8996	  section.project-hero {
+  8997	    padding-top: 24px;
+  8998	  }
+  8999	
+  9000	  .project-nav {
+  9001	    margin-bottom: 48px;
+  9002	  }
+  9003	
+  9004	  .project-nav-frame {
+  9005	    margin-bottom: 48px;
+  9006	  }
+  9007	
+  9008	  .alla-vostra-case .project-nav-frame {
+  9009	    margin-bottom: 24px;
+  9010	  }
+  9011	
+  9012	  .alla-vostra-case .project-nav-frame .nav-separator-top-center {
+  9013	    display: inline-flex;
+  9014	  }
+  9015	
+  9016	  .hero-grid {
+  9017	    --hero-headline-font-size: clamp(42px, 15vw, 64px);
+  9018	    --hero-quote-font-size: clamp(14.994px, 5.355vw, 22.848px);
+  9019	    gap: 30px;
+  9020	    padding-top: 16px;
+  9021	  }
+  9022	
+  9023	  h1 {
+  9024	    font-size: clamp(42px, 15vw, 64px);
+  9025	  }
+  9026	
+  9027	  .hero-visual {
+  9028	    min-height: auto;
   9029	  }
   9030	
-  9031	  .profile-orbit {
-  9032	    right: 0;
-  9033	  }
-  9034	
-  9035	  .profile-photo {
-  9036	    height: 165px;
-  9037	    width: 165px;
+  9031	  .phone-stage {
+  9032	    height: 626px;
+  9033	    margin-top: 18px;
+  9034	  }
+  9035	
+  9036	  .profile-orbit {
+  9037	    right: 0;
   9038	  }
   9039	
-  9040	  .phone-shell {
-  9041	    height: 420px;
-  9042	    width: 206px;
+  9040	  .profile-photo {
+  9041	    height: 165px;
+  9042	    width: 165px;
   9043	  }
   9044	
-  9045	  .phone-shell-commerce {
-  9046	    left: -2px;
-  9047	    top: 72px;
+  9045	  .phone-shell {
+  9046	    height: 420px;
+  9047	    width: 206px;
   9048	  }
   9049	
-  9050	  .phone-shell-finance {
-  9051	    left: auto;
-  9052	    right: -8px;
-  9053	    top: 124px;
-  9054	  }
-  9055	
-  9056	  .tablet-shell {
-  9057	    --tablet-shell-fitted-width: 223px;
-  9058	    height: 150px;
-  9059	    left: 14px;
-  9060	    top: 342px;
-  9061	  }
-  9062	
-  9063	  .stats-strip-item {
-  9064	    min-height: 104px;
-  9065	    padding: 14px 8px;
+  9050	  .phone-shell-commerce {
+  9051	    left: -2px;
+  9052	    top: 72px;
+  9053	  }
+  9054	
+  9055	  .phone-shell-finance {
+  9056	    left: auto;
+  9057	    right: -8px;
+  9058	    top: 124px;
+  9059	  }
+  9060	
+  9061	  .tablet-shell {
+  9062	    --tablet-shell-fitted-width: 223px;
+  9063	    height: 150px;
+  9064	    left: 14px;
+  9065	    top: 342px;
   9066	  }
   9067	
-  9068	  .stack-section .capability-grid {
-  9069	    grid-template-columns: repeat(2, minmax(0, 1fr));
-  9070	  }
-  9071	
-  9072	  .case-card {
-  9073	    min-height: auto;
-  9074	  }
-  9075	
-  9076	  .contact-panel {
-  9077	    align-items: flex-start;
-  9078	    flex-direction: column;
+  9068	  .stats-strip-item {
+  9069	    min-height: 104px;
+  9070	    padding: 14px 8px;
+  9071	  }
+  9072	
+  9073	  .stack-section .capability-grid {
+  9074	    grid-template-columns: repeat(2, minmax(0, 1fr));
+  9075	  }
+  9076	
+  9077	  .case-card {
+  9078	    min-height: auto;
   9079	  }
   9080	
-  9081	  section.aboutdev-hero {
-  9082	    padding-bottom: 58px;
-  9083	  }
-  9084	
-  9085	  .aboutdev-hero-grid {
-  9086	    padding-top: 0;
-  9087	  }
-  9088	
-  9089	  .aboutdev-section {
-  9090	    padding: 58px 0;
-  9091	  }
-  9092	
-  9093	  .aboutdev-story-section {
-  9094	    padding-top: 66px;
-  9095	  }
-  9096	
-  9097	  .aboutdev-section-head {
-  9098	    gap: 18px;
-  9099	  }
-  9100	
-  9101	  .aboutdev-timeline-item {
-  9102	    grid-template-columns: 54px minmax(0, 1fr);
-  9103	  }
-  9104	
-  9105	  .aboutdev-timeline-proof {
-  9106	    grid-column: 2;
-  9107	  }
-  9108	
-  9109	  .project-page section:not(.project-hero) {
-  9110	    padding: 58px 0;
-  9111	  }
-  9112	
-  9113	  .overview-section-grid {
-  9114	    --overview-play-store-width: 100%;
-  9115	  }
-  9116	
-  9117	  .overview-store-facts {
-  9118	    grid-template-columns: repeat(2, minmax(0, 1fr));
-  9119	  }
-  9120	
-  9121	  .overview-store-releases {
-  9122	    gap: 28px;
-  9123	    grid-template-columns: 1fr;
+  9081	  .contact-panel {
+  9082	    align-items: flex-start;
+  9083	    flex-direction: column;
+  9084	  }
+  9085	
+  9086	  section.aboutdev-hero {
+  9087	    padding-bottom: 58px;
+  9088	  }
+  9089	
+  9090	  .aboutdev-hero-grid {
+  9091	    padding-top: 0;
+  9092	  }
+  9093	
+  9094	  .aboutdev-section {
+  9095	    padding: 58px 0;
+  9096	  }
+  9097	
+  9098	  .aboutdev-story-section {
+  9099	    padding-top: 66px;
+  9100	  }
+  9101	
+  9102	  .aboutdev-section-head {
+  9103	    gap: 18px;
+  9104	  }
+  9105	
+  9106	  .aboutdev-timeline-item {
+  9107	    grid-template-columns: 54px minmax(0, 1fr);
+  9108	  }
+  9109	
+  9110	  .aboutdev-timeline-proof {
+  9111	    grid-column: 2;
+  9112	  }
+  9113	
+  9114	  .project-page section:not(.project-hero) {
+  9115	    padding: 58px 0;
+  9116	  }
+  9117	
+  9118	  .overview-section-grid {
+  9119	    --overview-play-store-width: 100%;
+  9120	  }
+  9121	
+  9122	  .overview-store-facts {
+  9123	    grid-template-columns: repeat(2, minmax(0, 1fr));
   9124	  }
   9125	
-  9126	  .overview-store-release:first-child {
-  9127	    grid-column: 1;
-  9128	    grid-row: auto;
-  9129	    padding-right: 0;
-  9130	  }
-  9131	
-  9132	  .overview-promo-strip {
-  9133	    grid-column: 1;
-  9134	    grid-row: auto;
-  9135	    margin-top: 0;
-  9136	  }
-  9137	
-  9138	  .overview-store-release-google {
-  9139	    border-left: 0;
-  9140	    grid-column: 1;
-  9141	    grid-row: auto;
-  9142	    padding-left: 0;
-  9143	  }
-  9144	
-  9145	  .overview-store-facts > div:not(:nth-child(3n + 1)) {
-  9146	    border-left: 0;
-  9147	  }
-  9148	
-  9149	  .overview-store-facts > div:nth-child(2n) {
-  9150	    border-left: 1px solid var(--line);
-  9151	  }
-  9152	
-  9153	  .overview-store-facts > div:nth-child(n + 3) {
-  9154	    border-top: 1px solid var(--line);
-  9155	  }
-  9156	
-  9157	  .project-hero-grid {
-  9158	    gap: 34px;
-  9159	  }
-  9160	
-  9161	  .project-back-link {
-  9162	    margin-bottom: 24px;
-  9163	  }
-  9164	
-  9165	  .project-copy-panel {
-  9166	    border-left: 0;
-  9167	    padding-left: 0;
+  9126	  .overview-store-releases {
+  9127	    gap: 28px;
+  9128	    grid-template-columns: 1fr;
+  9129	  }
+  9130	
+  9131	  .overview-store-release:first-child {
+  9132	    grid-column: 1;
+  9133	    grid-row: auto;
+  9134	    padding-right: 0;
+  9135	  }
+  9136	
+  9137	  .overview-promo-strip {
+  9138	    grid-column: 1;
+  9139	    grid-row: auto;
+  9140	    margin-top: 0;
+  9141	  }
+  9142	
+  9143	  .overview-store-release-google {
+  9144	    border-left: 0;
+  9145	    grid-column: 1;
+  9146	    grid-row: auto;
+  9147	    padding-left: 0;
+  9148	  }
+  9149	
+  9150	  .overview-store-facts > div:not(:nth-child(3n + 1)) {
+  9151	    border-left: 0;
+  9152	  }
+  9153	
+  9154	  .overview-store-facts > div:nth-child(2n) {
+  9155	    border-left: 1px solid var(--line);
+  9156	  }
+  9157	
+  9158	  .overview-store-facts > div:nth-child(n + 3) {
+  9159	    border-top: 1px solid var(--line);
+  9160	  }
+  9161	
+  9162	  .project-hero-grid {
+  9163	    gap: 34px;
+  9164	  }
+  9165	
+  9166	  .project-back-link {
+  9167	    margin-bottom: 24px;
   9168	  }
   9169	
-  9170	  .project-hero-text,
-  9171	  .project-copy-panel p,
-  9172	  .architecture-copy,
-  9173	  .readiness-copy,
-  9174	  .closing-panel p {
-  9175	    font-size: 16px;
-  9176	  }
-  9177	
-  9178	  .project-subtitle,
-  9179	  .project-hero-text,
-  9180	  .project-meta-row {
-  9181	    max-width: 100%;
-  9182	    overflow-wrap: anywhere;
-  9183	  }
-  9184	
-  9185	  .project-meta-row span {
-  9186	    flex: 0 1 auto;
-  9187	    white-space: normal;
+  9170	  .project-copy-panel {
+  9171	    border-left: 0;
+  9172	    padding-left: 0;
+  9173	  }
+  9174	
+  9175	  .project-hero-text,
+  9176	  .project-copy-panel p,
+  9177	  .architecture-copy,
+  9178	  .readiness-copy,
+  9179	  .closing-panel p {
+  9180	    font-size: 16px;
+  9181	  }
+  9182	
+  9183	  .project-subtitle,
+  9184	  .project-hero-text,
+  9185	  .project-meta-row {
+  9186	    max-width: 100%;
+  9187	    overflow-wrap: anywhere;
   9188	  }
   9189	
-  9190	  .av-showcase {
-  9191	    min-height: auto;
-  9192	    padding: 0 0 18px;
+  9190	  .project-meta-row span {
+  9191	    flex: 0 1 auto;
+  9192	    white-space: normal;
   9193	  }
   9194	
-  9195	  .av-showcase::before {
-  9196	    inset: 20px 0 84px;
-  9197	  }
-  9198	
-  9199	  .av-device {
-  9200	    position: relative;
-  9201	  }
-  9202	
-  9203	  .av-device-main {
-  9204	    height: auto;
-  9205	    left: auto;
-  9206	    margin: 0 auto;
-  9207	    max-width: 292px;
-  9208	    right: auto;
-  9209	    top: auto;
-  9210	    transform: rotate(-4deg);
-  9211	    width: 72vw;
-  9212	  }
-  9213	
-  9214	  .av-device-browse,
-  9215	  .av-device-confirm {
-  9216	    display: none;
+  9195	  .av-showcase {
+  9196	    min-height: auto;
+  9197	    padding: 0 0 18px;
+  9198	  }
+  9199	
+  9200	  .av-showcase::before {
+  9201	    inset: 20px 0 84px;
+  9202	  }
+  9203	
+  9204	  .av-device {
+  9205	    position: relative;
+  9206	  }
+  9207	
+  9208	  .av-device-main {
+  9209	    height: auto;
+  9210	    left: auto;
+  9211	    margin: 0 auto;
+  9212	    max-width: 292px;
+  9213	    right: auto;
+  9214	    top: auto;
+  9215	    transform: rotate(-4deg);
+  9216	    width: 72vw;
   9217	  }
   9218	
-  9219	  .av-showcase-proof {
-  9220	    margin: -18px auto 0;
-  9221	    max-width: min(292px, calc(100vw - 48px));
-  9222	    position: relative;
-  9223	    right: auto;
-  9224	  }
-  9225	
-  9226	  .av-showcase-proof-row {
-  9227	    align-items: stretch;
-  9228	    bottom: auto;
-  9229	    flex-direction: column;
-  9230	    margin: -18px auto 0;
-  9231	    max-width: min(292px, calc(100vw - 48px));
-  9232	    position: relative;
-  9233	    left: auto;
-  9234	    right: auto;
-  9235	  }
-  9236	
-  9237	  .av-showcase-proof-row .av-showcase-proof {
-  9238	    margin: 0;
-  9239	    max-width: none;
-  9240	    width: max-content;
-  9241	  }
-  9242	
-  9243	  .alla-vostra-case .av-showcase {
-  9244	    --av-mobile-device-width: min(62vw, 262px);
-  9245	    align-items: center;
-  9246	    display: flex;
-  9247	    justify-content: center;
-  9248	    min-height: clamp(560px, 126vw, 635px);
-  9249	    overflow: visible;
-  9250	    padding: 8px 0 18px;
-  9251	  }
-  9252	
-  9253	  .alla-vostra-case .av-showcase::before {
-  9254	    inset: 0 0 38px;
-  9255	  }
-  9256	
-  9257	  .alla-vostra-case .av-device-main {
-  9258	    margin: 0;
-  9259	    max-width: 262px;
-  9260	    transform-origin: center center;
-  9261	    width: var(--av-mobile-device-width);
-  9262	  }
-  9263	
-  9264	  .alla-vostra-case .av-showcase-proof-row {
-  9265	    --av-platform-list-row-gap: var(--av-proof-row-gap);
-  9266	    --av-proof-column-gap: clamp(4px, calc(25vw - 86px), 14px);
-  9267	    --av-proof-content-margin-top: 8px;
-  9268	    --av-proof-row-gap: 3px;
-  9269	    --av-proof-top-row-height: 22.7px;
-  9270	    --av-proof-bottom-row-height: 31px;
-  9271	    --av-skill-item-gap: clamp(3px, 1vw, 5px);
-  9272	    --av-skill-grid-row-gap: var(--av-proof-row-gap);
-  9273	    --av-skill-grid-y-offset: 0px;
-  9274	
-  9275	    align-items: stretch;
-  9276	    bottom: clamp(2px, 1vw, 8px);
-  9277	    display: grid;
-  9278	    gap: clamp(6px, 2.5vw, 10px);
-  9279	    grid-auto-rows: 1fr;
-  9280	    grid-template-columns: repeat(2, minmax(0, 1fr));
-  9281	    justify-content: space-between;
-  9282	    left: clamp(4px, 2.4vw, 20px);
-  9283	    margin: 0;
-  9284	    max-width: none;
-  9285	    position: absolute;
-  9286	    right: clamp(4px, 2.4vw, 20px);
-  9287	    top: auto;
-  9288	    width: auto;
-  9289	  }
-  9290	
-  9291	  .alla-vostra-case .av-showcase-proof-row .av-showcase-proof {
-  9292	    align-self: stretch;
-  9293	    display: flex;
-  9294	    flex-direction: column;
-  9295	    max-width: none;
-  9296	    padding: 10px clamp(8px, 2.5vw, 12px);
-  9297	    width: auto;
-  9298	  }
-  9299	
-  9300	  .alla-vostra-case .av-showcase-proof-row .av-showcase-proof:first-child {
-  9301	    justify-self: stretch;
-  9302	  }
-  9303	
-  9304	  .alla-vostra-case .av-showcase-proof-row .av-showcase-proof:last-child {
-  9305	    justify-self: stretch;
-  9306	  }
-  9307	
-  9308	  .alla-vostra-case .av-showcase-proof strong {
-  9309	    font-size: clamp(20px, 6vw, 30px);
-  9310	  }
-  9311	
-  9312	  .alla-vostra-case .av-showcase-proof span {
-  9313	    font-size: clamp(12px, 3.2vw, 15px);
-  9314	    line-height: 1.32;
+  9219	  .av-device-browse,
+  9220	  .av-device-confirm {
+  9221	    display: none;
+  9222	  }
+  9223	
+  9224	  .av-showcase-proof {
+  9225	    margin: -18px auto 0;
+  9226	    max-width: min(292px, calc(100vw - 48px));
+  9227	    position: relative;
+  9228	    right: auto;
+  9229	  }
+  9230	
+  9231	  .av-showcase-proof-row {
+  9232	    align-items: stretch;
+  9233	    bottom: auto;
+  9234	    flex-direction: column;
+  9235	    margin: -18px auto 0;
+  9236	    max-width: min(292px, calc(100vw - 48px));
+  9237	    position: relative;
+  9238	    left: auto;
+  9239	    right: auto;
+  9240	  }
+  9241	
+  9242	  .av-showcase-proof-row .av-showcase-proof {
+  9243	    margin: 0;
+  9244	    max-width: none;
+  9245	    width: max-content;
+  9246	  }
+  9247	
+  9248	  .alla-vostra-case .av-showcase {
+  9249	    --av-mobile-device-width: min(62vw, 262px);
+  9250	    align-items: center;
+  9251	    display: flex;
+  9252	    justify-content: center;
+  9253	    min-height: clamp(560px, 126vw, 635px);
+  9254	    overflow: visible;
+  9255	    padding: 8px 0 18px;
+  9256	  }
+  9257	
+  9258	  .alla-vostra-case .av-showcase::before {
+  9259	    inset: 0 0 38px;
+  9260	  }
+  9261	
+  9262	  .alla-vostra-case .av-device-main {
+  9263	    margin: 0;
+  9264	    max-width: 262px;
+  9265	    transform-origin: center center;
+  9266	    width: var(--av-mobile-device-width);
+  9267	  }
+  9268	
+  9269	  .alla-vostra-case .av-showcase-proof-row {
+  9270	    --av-platform-list-row-gap: var(--av-proof-row-gap);
+  9271	    --av-proof-column-gap: clamp(4px, calc(25vw - 86px), 14px);
+  9272	    --av-proof-content-margin-top: 8px;
+  9273	    --av-proof-row-gap: 3px;
+  9274	    --av-proof-top-row-height: 22.7px;
+  9275	    --av-proof-bottom-row-height: 31px;
+  9276	    --av-skill-item-gap: clamp(3px, 1vw, 5px);
+  9277	    --av-skill-grid-row-gap: var(--av-proof-row-gap);
+  9278	    --av-skill-grid-y-offset: 0px;
+  9279	
+  9280	    align-items: stretch;
+  9281	    bottom: clamp(2px, 1vw, 8px);
+  9282	    display: grid;
+  9283	    gap: clamp(6px, 2.5vw, 10px);
+  9284	    grid-auto-rows: 1fr;
+  9285	    grid-template-columns: repeat(2, minmax(0, 1fr));
+  9286	    justify-content: space-between;
+  9287	    left: clamp(4px, 2.4vw, 20px);
+  9288	    margin: 0;
+  9289	    max-width: none;
+  9290	    position: absolute;
+  9291	    right: clamp(4px, 2.4vw, 20px);
+  9292	    top: auto;
+  9293	    width: auto;
+  9294	  }
+  9295	
+  9296	  .alla-vostra-case .av-showcase-proof-row .av-showcase-proof {
+  9297	    align-self: stretch;
+  9298	    display: flex;
+  9299	    flex-direction: column;
+  9300	    max-width: none;
+  9301	    padding: 10px clamp(8px, 2.5vw, 12px);
+  9302	    width: auto;
+  9303	  }
+  9304	
+  9305	  .alla-vostra-case .av-showcase-proof-row .av-showcase-proof:first-child {
+  9306	    justify-self: stretch;
+  9307	  }
+  9308	
+  9309	  .alla-vostra-case .av-showcase-proof-row .av-showcase-proof:last-child {
+  9310	    justify-self: stretch;
+  9311	  }
+  9312	
+  9313	  .alla-vostra-case .av-showcase-proof strong {
+  9314	    font-size: clamp(20px, 6vw, 30px);
   9315	  }
   9316	
-  9317	  .alla-vostra-case .av-showcase-proof .av-showcase-skill-grid,
-  9318	  .alla-vostra-case .av-showcase-proof .av-showcase-platform-list {
-  9319	    grid-template-rows: var(--av-proof-top-row-height) var(--av-proof-bottom-row-height);
+  9317	  .alla-vostra-case .av-showcase-proof span {
+  9318	    font-size: clamp(12px, 3.2vw, 15px);
+  9319	    line-height: 1.32;
   9320	  }
   9321	
-  9322	  .alla-vostra-case .stats-strip {
-  9323	    border-top: 1px solid var(--line);
-  9324	    gap: 1px;
-  9325	    grid-template-columns: repeat(4, minmax(0, 1fr));
-  9326	    margin: 26px 0 0;
-  9327	    width: 100%;
-  9328	  }
-  9329	
-  9330	  .alla-vostra-case .stats-strip-item {
-  9331	    background: rgba(255, 255, 255, 0.025);
-  9332	    min-height: 178px;
-  9333	    padding: 14px 8px;
-  9334	  }
-  9335	
-  9336	  .stats-strip-label,
-  9337	  .stats-strip-measure {
-  9338	    font-size: clamp(12px, 3.2vw, 16px);
-  9339	    line-height: 1.16;
-  9340	  }
-  9341	
-  9342	  .project-card-grid,
-  9343	  .ownership-grid,
-  9344	  .feature-grid,
-  9345	  .decision-grid,
-  9346	  .architecture-flow,
-  9347	  .architecture-map,
-  9348	  .stack-matrix {
-  9349	    grid-template-columns: 1fr;
-  9350	  }
-  9351	
-  9352	  .architecture-flow-step {
-  9353	    grid-template-columns: minmax(0, 1fr) auto;
-  9354	    min-height: auto;
+  9322	  .alla-vostra-case .av-showcase-proof .av-showcase-skill-grid,
+  9323	  .alla-vostra-case .av-showcase-proof .av-showcase-platform-list {
+  9324	    grid-template-rows: var(--av-proof-top-row-height) var(--av-proof-bottom-row-height);
+  9325	  }
+  9326	
+  9327	  .alla-vostra-case .stats-strip {
+  9328	    border-top: 1px solid var(--line);
+  9329	    gap: 1px;
+  9330	    grid-template-columns: repeat(4, minmax(0, 1fr));
+  9331	    margin: 26px 0 0;
+  9332	    width: 100%;
+  9333	  }
+  9334	
+  9335	  .alla-vostra-case .stats-strip-item {
+  9336	    background: rgba(255, 255, 255, 0.025);
+  9337	    min-height: 178px;
+  9338	    padding: 14px 8px;
+  9339	  }
+  9340	
+  9341	  .stats-strip-label,
+  9342	  .stats-strip-measure {
+  9343	    font-size: clamp(12px, 3.2vw, 16px);
+  9344	    line-height: 1.16;
+  9345	  }
+  9346	
+  9347	  .project-card-grid,
+  9348	  .ownership-grid,
+  9349	  .feature-grid,
+  9350	  .decision-grid,
+  9351	  .architecture-flow,
+  9352	  .architecture-map,
+  9353	  .stack-matrix {
+  9354	    grid-template-columns: 1fr;
   9355	  }
   9356	
-  9357	  .architecture-flow-arrow {
-  9358	    transform: rotate(90deg);
-  9359	  }
-  9360	
-  9361	  .alla-vostra-case #stack .architecture-map,
-  9362	  .alla-vostra-case #stack .stack-matrix {
-  9363	    grid-template-columns: 1fr;
+  9357	  .architecture-flow-step {
+  9358	    grid-template-columns: minmax(0, 1fr) auto;
+  9359	    min-height: auto;
+  9360	  }
+  9361	
+  9362	  .architecture-flow-arrow {
+  9363	    transform: rotate(90deg);
   9364	  }
   9365	
-  9366	  .flow-segments {
-  9367	    grid-template-columns: repeat(2, minmax(0, 1fr));
-  9368	  }
-  9369	
-  9370	  .flow-support {
-  9371	    grid-template-columns: 1fr;
-  9372	  }
-  9373	
-  9374	  .flow-checkout-note {
-  9375	    min-height: auto;
-  9376	  }
-  9377	
-  9378	  .flow-section-intro > p {
-  9379	    border-left: 0;
-  9380	    padding-left: 0;
+  9366	  .alla-vostra-case #stack .architecture-map,
+  9367	  .alla-vostra-case #stack .stack-matrix {
+  9368	    grid-template-columns: 1fr;
+  9369	  }
+  9370	
+  9371	  .flow-segments {
+  9372	    grid-template-columns: repeat(2, minmax(0, 1fr));
+  9373	  }
+  9374	
+  9375	  .flow-support {
+  9376	    grid-template-columns: 1fr;
+  9377	  }
+  9378	
+  9379	  .flow-checkout-note {
+  9380	    min-height: auto;
   9381	  }
   9382	
-  9383	  .product-flow-nav {
-  9384	    --product-flow-nav-font-size: clamp(15px, 5vw, 28px);
-  9385	    --product-flow-nav-height: clamp(58px, 14vw, 72px);
-  9386	
-  9387	    grid-template-columns: repeat(2, minmax(0, 1fr));
-  9388	  }
-  9389	
-  9390	  .product-flow-nav .button {
-  9391	    padding: 8px clamp(6px, 2vw, 12px) 10px;
-  9392	  }
-  9393	
-  9394	  .product-flow-nav .button:first-child {
-  9395	    border-radius: 8px 0 0 8px;
-  9396	  }
-  9397	
-  9398	  .product-flow-nav .button:last-child {
-  9399	    border-radius: 0 8px 8px 0;
-  9400	  }
-  9401	
-  9402	  .flow-capture-groups {
-  9403	    gap: 40px;
-  9404	    margin-top: 44px;
+  9383	  .flow-section-intro > p {
+  9384	    border-left: 0;
+  9385	    padding-left: 0;
+  9386	  }
+  9387	
+  9388	  .product-flow-nav {
+  9389	    --product-flow-nav-font-size: clamp(15px, 5vw, 28px);
+  9390	    --product-flow-nav-height: clamp(58px, 14vw, 72px);
+  9391	
+  9392	    grid-template-columns: repeat(2, minmax(0, 1fr));
+  9393	  }
+  9394	
+  9395	  .product-flow-nav .button {
+  9396	    padding: 8px clamp(6px, 2vw, 12px) 10px;
+  9397	  }
+  9398	
+  9399	  .product-flow-nav .button:first-child {
+  9400	    border-radius: 8px 0 0 8px;
+  9401	  }
+  9402	
+  9403	  .product-flow-nav .button:last-child {
+  9404	    border-radius: 0 8px 8px 0;
   9405	  }
   9406	
-  9407	  .flow-capture-group {
-  9408	    padding-top: 24px;
-  9409	  }
-  9410	
-  9411	  .flow-capture-grid {
-  9412	    gap: 28px;
-  9413	    grid-template-columns: 1fr;
+  9407	  .flow-capture-groups {
+  9408	    gap: 40px;
+  9409	    margin-top: 44px;
+  9410	  }
+  9411	
+  9412	  .flow-capture-group {
+  9413	    padding-top: 24px;
   9414	  }
   9415	
-  9416	  .flow-screen-compact {
-  9417	    width: min(42vw, 146px);
-  9418	  }
-  9419	
-  9420	  .flow-screen-stack-captures {
-  9421	    gap: 12px;
-  9422	  }
-  9423	
-  9424	  .alla-vostra-case .flow-browse-toggle,
-  9425	  .cinerific-case .flow-browse-toggle {
-  9426	    inline-size: calc((min(42vw, 146px) * 2) + 12px);
+  9416	  .flow-capture-grid {
+  9417	    gap: 28px;
+  9418	    grid-template-columns: 1fr;
+  9419	  }
+  9420	
+  9421	  .flow-screen-compact {
+  9422	    width: min(42vw, 146px);
+  9423	  }
+  9424	
+  9425	  .flow-screen-stack-captures {
+  9426	    gap: 12px;
   9427	  }
   9428	
-  9429	  .flow-original-art-grid {
-  9430	    gap: 12px;
-  9431	    grid-template-columns: repeat(2, minmax(0, min(42vw, 146px)));
+  9429	  .alla-vostra-case .flow-browse-toggle,
+  9430	  .cinerific-case .flow-browse-toggle {
+  9431	    inline-size: calc((min(42vw, 146px) * 2) + 12px);
   9432	  }
   9433	
-  9434	  .flow-original-photo-grid {
+  9434	  .flow-original-art-grid {
   9435	    gap: 12px;
   9436	    grid-template-columns: repeat(2, minmax(0, min(42vw, 146px)));
   9437	  }
   9438	
-  9439	  .flow-hero-composition-grid {
+  9439	  .flow-original-photo-grid {
   9440	    gap: 12px;
-  9441	    grid-template-columns: minmax(0, calc(min(84vw, 292px) + 12px));
+  9441	    grid-template-columns: repeat(2, minmax(0, min(42vw, 146px)));
   9442	  }
   9443	
-  9444	  .flow-hero-composition-screen {
-  9445	    width: 100%;
-  9446	  }
-  9447	
-  9448	  .flow-sticky-icon-grid {
-  9449	    gap: 12px;
-  9450	    grid-template-columns: repeat(2, minmax(0, min(42vw, 146px)));
+  9444	  .flow-hero-composition-grid {
+  9445	    gap: 12px;
+  9446	    grid-template-columns: minmax(0, calc(min(84vw, 292px) + 12px));
+  9447	  }
+  9448	
+  9449	  .flow-hero-composition-screen {
+  9450	    width: 100%;
   9451	  }
   9452	
-  9453	  .flow-action-asset-grid {
+  9453	  .flow-sticky-icon-grid {
   9454	    gap: 12px;
   9455	    grid-template-columns: repeat(2, minmax(0, min(42vw, 146px)));
   9456	  }
   9457	
-  9458	  .flow-screen:not(.flow-screen-main) .flow-image-frame {
-  9459	    margin: 0 auto;
-  9460	    max-width: 230px;
+  9458	  .flow-action-asset-grid {
+  9459	    gap: 12px;
+  9460	    grid-template-columns: repeat(2, minmax(0, min(42vw, 146px)));
   9461	  }
   9462	
-  9463	  .flow-screen.flow-hero-composition-screen .flow-image-frame {
-  9464	    max-width: none;
-  9465	  }
-  9466	
-  9467	  .closing-panel {
-  9468	    grid-template-columns: 1fr;
-  9469	    padding: 28px;
+  9463	  .flow-screen:not(.flow-screen-main) .flow-image-frame {
+  9464	    margin: 0 auto;
+  9465	    max-width: 230px;
+  9466	  }
+  9467	
+  9468	  .flow-screen.flow-hero-composition-screen .flow-image-frame {
+  9469	    max-width: none;
   9470	  }
   9471	
-  9472	  .closing-actions {
-  9473	    width: 100%;
-  9474	  }
-  9475	}
+  9472	  .closing-panel {
+  9473	    grid-template-columns: 1fr;
+  9474	    padding: 28px;
+  9475	  }
   9476	
-  9477	@media (max-width: 980px) and (orientation: portrait) {
-  9478	  .overview-store-releases {
-  9479	    gap: 28px;
-  9480	    grid-template-columns: 1fr;
-  9481	  }
-  9482	
-  9483	  .overview-store-release:first-child {
-  9484	    grid-column: 1;
-  9485	    grid-row: auto;
-  9486	    padding-right: 0;
-  9487	  }
-  9488	
-  9489	  .overview-promo-strip {
-  9490	    grid-column: 1;
-  9491	    grid-row: auto;
-  9492	    margin-top: 0;
-  9493	  }
-  9494	
-  9495	  .overview-store-release-google {
-  9496	    border-left: 0;
-  9497	    grid-column: 1;
-  9498	    grid-row: auto;
-  9499	    padding-left: 0;
-  9500	  }
-  9501	}
-  9502	
-  9503	@media (max-width: 720px) {
-  9504	  .project-page.alla-vostra-case .stats-strip-item {
-  9505	    min-height: 178px;
-  9506	  }
-  9507	}
-  9508	
-  9509	@media (max-width: 560px), (max-aspect-ratio: 3 / 5) {
-  9510	  .aboutdev-principles-grid {
-  9511	    --aboutdev-principle-size: min(300px, calc(100vw - 48px));
-  9512	    align-items: center;
-  9513	    aspect-ratio: auto;
-  9514	    display: flex;
-  9515	    flex-direction: column;
-  9516	    flex-wrap: nowrap;
-  9517	    gap: 18px;
-  9518	    margin: 0 auto;
-  9519	    max-width: var(--aboutdev-principle-size);
-  9520	    width: var(--aboutdev-principle-size);
-  9521	  }
-  9522	
-  9523	  .aboutdev-principles-star {
-  9524	    display: none;
-  9525	  }
-  9526	
-  9527	  .aboutdev-principle {
-  9528	    height: var(--aboutdev-principle-size);
-  9529	    left: auto;
-  9530	    padding: 24px;
-  9531	    position: static;
-  9532	    top: auto;
-  9533	    transform: none;
-  9534	    width: var(--aboutdev-principle-size);
-  9535	  }
-  9536	
-  9537	  .aboutdev-principle h3 {
-  9538	    font-size: 25px;
-  9539	    margin-bottom: 9px;
+  9477	  .closing-actions {
+  9478	    width: 100%;
+  9479	  }
+  9480	}
+  9481	
+  9482	@media (max-width: 980px) and (orientation: portrait) {
+  9483	  .overview-store-releases {
+  9484	    gap: 28px;
+  9485	    grid-template-columns: 1fr;
+  9486	  }
+  9487	
+  9488	  .overview-store-release:first-child {
+  9489	    grid-column: 1;
+  9490	    grid-row: auto;
+  9491	    padding-right: 0;
+  9492	  }
+  9493	
+  9494	  .overview-promo-strip {
+  9495	    grid-column: 1;
+  9496	    grid-row: auto;
+  9497	    margin-top: 0;
+  9498	  }
+  9499	
+  9500	  .overview-store-release-google {
+  9501	    border-left: 0;
+  9502	    grid-column: 1;
+  9503	    grid-row: auto;
+  9504	    padding-left: 0;
+  9505	  }
+  9506	}
+  9507	
+  9508	@media (max-width: 720px) {
+  9509	  .project-page.alla-vostra-case .stats-strip-item {
+  9510	    min-height: 178px;
+  9511	  }
+  9512	}
+  9513	
+  9514	@media (max-width: 560px), (max-aspect-ratio: 3 / 5) {
+  9515	  .aboutdev-principles-grid {
+  9516	    --aboutdev-principle-size: min(300px, calc(100vw - 48px));
+  9517	    align-items: center;
+  9518	    aspect-ratio: auto;
+  9519	    display: flex;
+  9520	    flex-direction: column;
+  9521	    flex-wrap: nowrap;
+  9522	    gap: 18px;
+  9523	    margin: 0 auto;
+  9524	    max-width: var(--aboutdev-principle-size);
+  9525	    width: var(--aboutdev-principle-size);
+  9526	  }
+  9527	
+  9528	  .aboutdev-principles-star {
+  9529	    display: none;
+  9530	  }
+  9531	
+  9532	  .aboutdev-principle {
+  9533	    height: var(--aboutdev-principle-size);
+  9534	    left: auto;
+  9535	    padding: 24px;
+  9536	    position: static;
+  9537	    top: auto;
+  9538	    transform: none;
+  9539	    width: var(--aboutdev-principle-size);
   9540	  }
   9541	
-  9542	  .aboutdev-principle p {
-  9543	    font-size: 16px;
-  9544	    line-height: 1.24;
-  9545	    max-width: min(240px, calc(var(--aboutdev-principle-size) - 54px));
-  9546	  }
-  9547	}
-  9548	
-  9549	@media (max-width: 980px) and (orientation: portrait) {
-  9550	  .hero .phone-stage {
-  9551	    transform: translateY(60px);
-  9552	  }
-  9553	}
-  9554	
-  9555	@media (min-width: 721px) and (max-width: 980px) and (orientation: portrait) {
-  9556	  .hero-grid {
-  9557	    --hero-quote-font-size: 24.15px;
-  9558	  }
-  9559	}
-  9560	
-  9561	@media (max-width: 720px) and (orientation: portrait) {
-  9562	  .hero .phone-stage {
-  9563	    transform: translateY(116.58px);
-  9564	  }
-  9565	}
-  9566	
-  9567	@media (max-width: 630px) {
-  9568	  .timeline {
-  9569	    --workspace-eyebrow-column-width: 50px;
-  9570	  }
+  9542	  .aboutdev-principle h3 {
+  9543	    font-size: 25px;
+  9544	    margin-bottom: 9px;
+  9545	  }
+  9546	
+  9547	  .aboutdev-principle p {
+  9548	    font-size: 16px;
+  9549	    line-height: 1.24;
+  9550	    max-width: min(240px, calc(var(--aboutdev-principle-size) - 54px));
+  9551	  }
+  9552	}
+  9553	
+  9554	@media (max-width: 980px) and (orientation: portrait) {
+  9555	  .hero .phone-stage {
+  9556	    transform: translateY(60px);
+  9557	  }
+  9558	}
+  9559	
+  9560	@media (min-width: 721px) and (max-width: 980px) and (orientation: portrait) {
+  9561	  .hero-grid {
+  9562	    --hero-quote-font-size: 24.15px;
+  9563	  }
+  9564	}
+  9565	
+  9566	@media (max-width: 720px) and (orientation: portrait) {
+  9567	  .hero .phone-stage {
+  9568	    transform: translateY(116.58px);
+  9569	  }
+  9570	}
   9571	
-  9572	  .timeline-item {
-  9573	    column-gap: calc(var(--workspace-rail-gutter) * 2);
-  9574	    grid-template-columns: var(--workspace-eyebrow-column-width) minmax(0, 1fr);
+  9572	@media (max-width: 630px) {
+  9573	  .timeline {
+  9574	    --workspace-eyebrow-column-width: 50px;
   9575	  }
   9576	
-  9577	  .timeline-item:not(.timeline-item-software) > p .workspace-device-list {
-  9578	    padding-left: 0;
-  9579	  }
-  9580	
-  9581	  .timeline-item-software > p .workspace-coding-software-group .workspace-device-list {
-  9582	    padding-left: 0;
-  9583	  }
-  9584	
-  9585	  .timeline-item .workspace-device-list {
-  9586	    padding-left: 0;
-  9587	  }
-  9588	
-  9589	  .timeline-item .workspace-qa-device-groups {
-  9590	    padding-left: 0;
-  9591	  }
-  9592	
-  9593	  .case-grid {
-  9594	    grid-template-columns: 1fr;
-  9595	  }
-  9596	
-  9597	  .case-grid-featured .case-card-project-title-name,
-  9598	  .case-grid-featured .case-card-title-underline {
-  9599	    overflow-wrap: normal;
-  9600	    white-space: nowrap;
-  9601	  }
-  9602	
-  9603	  .case-grid > .uiux-principle-card-expanded {
-  9604	    grid-column: auto;
-  9605	  }
-  9606	
-  9607	  .case-grid > .uiux-principle-card-expanded .uiux-principle-long-copy {
-  9608	    column-count: auto;
-  9609	    display: grid;
+  9577	  .timeline-item {
+  9578	    column-gap: calc(var(--workspace-rail-gutter) * 2);
+  9579	    grid-template-columns: var(--workspace-eyebrow-column-width) minmax(0, 1fr);
+  9580	  }
+  9581	
+  9582	  .timeline-item:not(.timeline-item-software) > p .workspace-device-list {
+  9583	    padding-left: 0;
+  9584	  }
+  9585	
+  9586	  .timeline-item-software > p .workspace-coding-software-group .workspace-device-list {
+  9587	    padding-left: 0;
+  9588	  }
+  9589	
+  9590	  .timeline-item .workspace-device-list {
+  9591	    padding-left: 0;
+  9592	  }
+  9593	
+  9594	  .timeline-item .workspace-qa-device-groups {
+  9595	    padding-left: 0;
+  9596	  }
+  9597	
+  9598	  .case-grid {
+  9599	    grid-template-columns: 1fr;
+  9600	  }
+  9601	
+  9602	  .case-grid-featured .case-card-project-title-name,
+  9603	  .case-grid-featured .case-card-title-underline {
+  9604	    overflow-wrap: normal;
+  9605	    white-space: nowrap;
+  9606	  }
+  9607	
+  9608	  .case-grid > .uiux-principle-card-expanded {
+  9609	    grid-column: auto;
   9610	  }
-  9611	}
-  9612	
-  9613	@media (max-width: 430px) {
-  9614	  .nav-bar {
-  9615	    --nav-brand-gap: 8px;
-  9616	    --nav-link-bottom-separator-gap: 3px;
-  9617	    --nav-link-separator-gap: 2px;
-  9618	    --nav-link-top-separator-gap: 2px;
-  9619	  }
-  9620	
-  9621	  .nav-brand-name {
-  9622	    font-size: 22px;
-  9623	  }
-  9624	
-  9625	  .nav-bar nav a,
-  9626	  .nav-bar nav .nav-text,
-  9627	  .nav-separator {
-  9628	    font-size: 14px;
-  9629	  }
-  9630	
-  9631	  .nav-bar nav .nav-layout-spacer {
-  9632	    height: 36px;
-  9633	    min-width: 52.954px;
-  9634	    width: 52.954px;
-  9635	  }
-  9636	
-  9637	  .aboutdev-hero h1 {
-  9638	    font-size: clamp(48px, 6vw, 78px);
-  9639	  }
-  9640	
-  9641	  .aboutdev-profile-bubble {
-  9642	    width: 282px;
-  9643	  }
-  9644	
-  9645	  .aboutdev-profile-photo.profile-photo {
-  9646	    height: 282px;
-  9647	    max-width: none;
-  9648	    width: 282px;
-  9649	  }
-  9650	
-  9651	  .aboutdev-chip-row span {
-  9652	    font-size: 11px;
-  9653	    padding: 10px 11px;
+  9611	
+  9612	  .case-grid > .uiux-principle-card-expanded .uiux-principle-long-copy {
+  9613	    column-count: auto;
+  9614	    display: grid;
+  9615	  }
+  9616	}
+  9617	
+  9618	@media (max-width: 430px) {
+  9619	  .nav-bar {
+  9620	    --nav-brand-gap: 8px;
+  9621	    --nav-link-bottom-separator-gap: 3px;
+  9622	    --nav-link-separator-gap: 2px;
+  9623	    --nav-link-top-separator-gap: 2px;
+  9624	  }
+  9625	
+  9626	  .nav-brand-name {
+  9627	    font-size: 22px;
+  9628	  }
+  9629	
+  9630	  .nav-bar nav a,
+  9631	  .nav-bar nav .nav-text,
+  9632	  .nav-separator {
+  9633	    font-size: 14px;
+  9634	  }
+  9635	
+  9636	  .nav-bar nav .nav-layout-spacer {
+  9637	    height: 36px;
+  9638	    min-width: 52.954px;
+  9639	    width: 52.954px;
+  9640	  }
+  9641	
+  9642	  .aboutdev-hero h1 {
+  9643	    font-size: clamp(48px, 6vw, 78px);
+  9644	  }
+  9645	
+  9646	  .aboutdev-profile-bubble {
+  9647	    width: 282px;
+  9648	  }
+  9649	
+  9650	  .aboutdev-profile-photo.profile-photo {
+  9651	    height: 282px;
+  9652	    max-width: none;
+  9653	    width: 282px;
   9654	  }
   9655	
-  9656	  .aboutdev-timeline::before {
-  9657	    left: 18px;
-  9658	  }
-  9659	
-  9660	  .aboutdev-timeline-item {
-  9661	    gap: 14px;
-  9662	    grid-template-columns: minmax(0, 1fr);
-  9663	    padding: 20px;
-  9664	  }
-  9665	
-  9666	  .aboutdev-timeline-proof {
-  9667	    grid-column: auto;
-  9668	  }
-  9669	
-  9670	  .aboutdev-quote-band blockquote,
-  9671	  .aboutdev-card,
-  9672	  .aboutdev-principle,
-  9673	  .aboutdev-cta {
-  9674	    padding: 22px;
-  9675	  }
-  9676	
-  9677	  .aboutdev-cta-actions,
-  9678	  .aboutdev-cta-actions .button {
-  9679	    width: 100%;
+  9656	  .aboutdev-chip-row span {
+  9657	    font-size: 11px;
+  9658	    padding: 10px 11px;
+  9659	  }
+  9660	
+  9661	  .aboutdev-timeline::before {
+  9662	    left: 18px;
+  9663	  }
+  9664	
+  9665	  .aboutdev-timeline-item {
+  9666	    gap: 14px;
+  9667	    grid-template-columns: minmax(0, 1fr);
+  9668	    padding: 20px;
+  9669	  }
+  9670	
+  9671	  .aboutdev-timeline-proof {
+  9672	    grid-column: auto;
+  9673	  }
+  9674	
+  9675	  .aboutdev-quote-band blockquote,
+  9676	  .aboutdev-card,
+  9677	  .aboutdev-principle,
+  9678	  .aboutdev-cta {
+  9679	    padding: 22px;
   9680	  }
-  9681	}
-  9682	
-  9683	@media (max-width: 720px) {
-  9684	  .hero-grid {
-  9685	    --hero-quote-font-size: 31.745px;
-  9686	  }
+  9681	
+  9682	  .aboutdev-cta-actions,
+  9683	  .aboutdev-cta-actions .button {
+  9684	    width: 100%;
+  9685	  }
+  9686	}
   9687	
-  9688	  .hero-bridge-quote-compact {
-  9689	    align-items: center;
-  9690	    display: flex;
-  9691	    flex-direction: column;
-  9692	    left: -5.5556%;
-  9693	  }
-  9694	
-  9695	  .hero-bridge-quote-compact .hero-quote-line-standard {
-  9696	    display: none;
-  9697	  }
-  9698	
-  9699	  .hero-bridge-quote-compact .hero-quote-line-narrow {
-  9700	    display: block;
-  9701	  }
-  9702	}
+  9688	@media (max-width: 720px) {
+  9689	  .hero-grid {
+  9690	    --hero-quote-font-size: 31.745px;
+  9691	  }
+  9692	
+  9693	  .hero-bridge-quote-compact {
+  9694	    align-items: center;
+  9695	    display: flex;
+  9696	    flex-direction: column;
+  9697	    left: -5.5556%;
+  9698	  }
+  9699	
+  9700	  .hero-bridge-quote-compact .hero-quote-line-standard {
+  9701	    display: none;
+  9702	  }
   9703	
-  9704	@media (max-width: 380px) {
-  9705	  .nav-bar {
-  9706	    --nav-bar-inline-padding: 12px;
-  9707	    --nav-link-bottom-separator-gap: 2px;
-  9708	    --nav-link-separator-gap: 1px;
-  9709	    --nav-link-top-separator-gap: 1px;
-  9710	  }
-  9711	
-  9712	  .nav-bar nav a,
-  9713	  .nav-bar nav .nav-text {
-  9714	    font-size: 13.5px;
-  9715	    padding-left: 0;
-  9716	    padding-right: 0;
-  9717	  }
-  9718	
-  9719	  .nav-bar nav .nav-layout-spacer {
-  9720	    height: 35.25px;
-  9721	    min-width: 47.46875px;
-  9722	    width: 47.46875px;
-  9723	  }
-  9724	
-  9725	  .nav-separator {
-  9726	    font-size: 13.5px;
-  9727	  }
-  9728	}
+  9704	  .hero-bridge-quote-compact .hero-quote-line-narrow {
+  9705	    display: block;
+  9706	  }
+  9707	}
+  9708	
+  9709	@media (max-width: 380px) {
+  9710	  .nav-bar {
+  9711	    --nav-bar-inline-padding: 12px;
+  9712	    --nav-link-bottom-separator-gap: 2px;
+  9713	    --nav-link-separator-gap: 1px;
+  9714	    --nav-link-top-separator-gap: 1px;
+  9715	  }
+  9716	
+  9717	  .nav-bar nav a,
+  9718	  .nav-bar nav .nav-text {
+  9719	    font-size: 13.5px;
+  9720	    padding-left: 0;
+  9721	    padding-right: 0;
+  9722	  }
+  9723	
+  9724	  .nav-bar nav .nav-layout-spacer {
+  9725	    height: 35.25px;
+  9726	    min-width: 47.46875px;
+  9727	    width: 47.46875px;
+  9728	  }
   9729	
-  9730	@media (max-width: 340px) {
-  9731	  .alla-vostra-case .av-showcase-proof-row {
-  9732	    --av-proof-column-gap: 3px;
-  9733	    --av-skill-item-gap: 2.5px;
+  9730	  .nav-separator {
+  9731	    font-size: 13.5px;
+  9732	  }
+  9733	}
   9734	
-  9735	    gap: 6px;
-  9736	    left: 4px;
-  9737	    right: 4px;
-  9738	  }
+  9735	@media (max-width: 340px) {
+  9736	  .alla-vostra-case .av-showcase-proof-row {
+  9737	    --av-proof-column-gap: 3px;
+  9738	    --av-skill-item-gap: 2.5px;
   9739	
-  9740	  .alla-vostra-case .av-showcase-proof-row .av-showcase-proof {
-  9741	    padding-inline: 6px;
-  9742	  }
-  9743	
-  9744	  .nav-bar nav a,
-  9745	  .nav-bar nav .nav-text {
-  9746	    font-size: 13px;
+  9740	    gap: 6px;
+  9741	    left: 4px;
+  9742	    right: 4px;
+  9743	  }
+  9744	
+  9745	  .alla-vostra-case .av-showcase-proof-row .av-showcase-proof {
+  9746	    padding-inline: 6px;
   9747	  }
   9748	
-  9749	  .nav-bar nav .nav-layout-spacer {
-  9750	    height: 34.5px;
-  9751	    min-width: 45.96875px;
-  9752	    width: 45.96875px;
-  9753	  }
-  9754	
-  9755	  .nav-separator {
-  9756	    font-size: 13px;
-  9757	  }
-  9758	}
+  9749	  .nav-bar nav a,
+  9750	  .nav-bar nav .nav-text {
+  9751	    font-size: 13px;
+  9752	  }
+  9753	
+  9754	  .nav-bar nav .nav-layout-spacer {
+  9755	    height: 34.5px;
+  9756	    min-width: 45.96875px;
+  9757	    width: 45.96875px;
+  9758	  }
   9759	
-  9760	@media (max-width: 560px) {
-  9761	  .alla-vostra-case .project-nav-frame .nav-bar {
-  9762	    height: auto;
-  9763	    min-height: var(--nav-bar-two-row-height);
-  9764	  }
-  9765	
-  9766	  .alla-vostra-case .project-nav-frame .nav-bar nav {
-  9767	    grid-template-rows: minmax(var(--nav-bar-height), auto) var(--nav-bar-height);
-  9768	    height: auto;
+  9760	  .nav-separator {
+  9761	    font-size: 13px;
+  9762	  }
+  9763	}
+  9764	
+  9765	@media (max-width: 560px) {
+  9766	  .alla-vostra-case .project-nav-frame .nav-bar {
+  9767	    height: auto;
+  9768	    min-height: var(--nav-bar-two-row-height);
   9769	  }
   9770	
-  9771	  .alla-vostra-case .project-nav-frame .nav-link-row-top {
-  9772	    height: auto;
-  9773	    min-height: var(--nav-bar-height);
+  9771	  .alla-vostra-case .project-nav-frame .nav-bar nav {
+  9772	    grid-template-rows: minmax(var(--nav-bar-height), auto) var(--nav-bar-height);
+  9773	    height: auto;
   9774	  }
   9775	
-  9776	  .alla-vostra-case
-  9777	    .project-nav-frame
-  9778	    .nav-top-distribution
-  9779	    > .nav-top-link-primary,
-  9780	  .alla-vostra-case
-  9781	    .project-nav-frame
-  9782	    .nav-top-distribution
-  9783	    > .nav-top-link-secondary {
-  9784	    align-items: center;
-  9785	    display: inline-flex;
-  9786	    justify-content: center;
-  9787	    line-height: 1.05;
-  9788	    min-width: 0;
-  9789	    white-space: normal;
-  9790	    width: 100%;
-  9791	  }
-  9792	
-  9793	  .alla-vostra-case .project-nav-frame .nav-link-row-bottom {
-  9794	    column-gap: var(--nav-link-bottom-separator-gap);
-  9795	    display: flex;
-  9796	    flex-wrap: nowrap;
-  9797	    height: var(--nav-bar-height);
-  9798	    justify-content: space-evenly;
-  9799	  }
-  9800	
-  9801	  .alla-vostra-case
-  9802	    .project-nav-frame
-  9803	    .nav-link-row-bottom
-  9804	    .nav-separator {
-  9805	    display: inline-flex;
-  9806	  }
-  9807	
-  9808	  .alla-vostra-case
-  9809	    .project-nav-frame
-  9810	    .nav-link-row-bottom
-  9811	    .nav-separator.nav-separator-row-leading {
-  9812	    display: none;
-  9813	  }
-  9814	
-  9815	  .alla-vostra-case
-  9816	    .project-nav-frame
-  9817	    .nav-bar
-  9818	    nav
-  9819	    .nav-link-row-bottom
-  9820	    > a {
-  9821	    align-items: center;
-  9822	    display: inline-flex;
-  9823	    justify-content: center;
-  9824	    line-height: 1;
-  9825	    min-height: 0;
-  9826	    padding: 0;
-  9827	    white-space: nowrap;
-  9828	    width: auto;
-  9829	  }
-  9830	}
-  9831	
-  9832	@media (max-width: 980px), (orientation: portrait) {
-  9833	  .flow-capture-group-full-row.flow-capture-group-visual-hierarchy
-  9834	    .flow-screen-stack:has(.flow-visual-hierarchy-frame-pair)
-  9835	    h4 {
-  9836	    transform: none !important;
-  9837	  }
-  9838	
-  9839	  .flow-capture-group-visual-hierarchy .flow-screen-stack-step-1b,
-  9840	  .flow-capture-group-visual-hierarchy .flow-screen-stack-step-1c,
-  9841	  .flow-capture-group-visual-hierarchy .flow-screen-stack-step-1d {
-  9842	    margin-top: 48px;
-  9843	  }
-  9844	
-  9845	  .flow-capture-group-visual-hierarchy
-  9846	    .flow-screen-stack-step-1
-  9847	    .flow-visual-hierarchy-frame-pair,
-  9848	  .flow-capture-group-visual-hierarchy
-  9849	    .flow-screen-stack-step-3
-  9850	    .flow-visual-hierarchy-frame-pair,
-  9851	  .flow-capture-group-visual-hierarchy
-  9852	    .flow-screen-stack-step-4
-  9853	    .flow-visual-hierarchy-frame-pair,
-  9854	  .flow-capture-group-visual-hierarchy
-  9855	    .flow-screen-stack-step-5
-  9856	    .flow-visual-hierarchy-frame-pair,
-  9857	  .flow-capture-group-visual-hierarchy
-  9858	    .flow-screen-stack-step-6
-  9859	    .flow-visual-hierarchy-frame-pair {
-  9860	    --flow-visual-hierarchy-centered-frame-width: 318px;
-  9861	
-  9862	    left: 50%;
-  9863	    margin-inline: 0;
-  9864	    transform: translateX(-50%);
-  9865	    width: calc(
-  9866	      var(--flow-visual-hierarchy-centered-frame-width) +
-  9867	        var(--flow-visual-hierarchy-brace-width) +
-  9868	        var(--flow-visual-hierarchy-brace-gap) +
-  9869	        var(--flow-visual-hierarchy-brace-width) +
-  9870	        var(--flow-visual-hierarchy-brace-gap)
-  9871	    );
-  9872	  }
-  9873	
-  9874	  .flow-capture-group-visual-hierarchy
-  9875	    .flow-screen-stack-step-1
-  9876	    .flow-visual-hierarchy-frame-pair,
-  9877	  .flow-capture-group-visual-hierarchy
-  9878	    .flow-screen-stack-step-3
-  9879	    .flow-visual-hierarchy-frame-pair,
-  9880	  .flow-capture-group-visual-hierarchy
-  9881	    .flow-screen-stack-step-6
-  9882	    .flow-visual-hierarchy-frame-pair {
-  9883	    --flow-visual-hierarchy-viewing-brace-shift: 9px;
-  9884	    --flow-visual-hierarchy-viewing-label-shift: 6px;
-  9885	  }
-  9886	
-  9887	  .flow-capture-group-visual-hierarchy
-  9888	    .flow-screen-stack-step-1
-  9889	    .flow-visual-hierarchy-frame-pair
-  9890	    > .flow-image-frame,
-  9891	  .flow-capture-group-visual-hierarchy
-  9892	    .flow-screen-stack-step-3
-  9893	    .flow-visual-hierarchy-frame-pair
-  9894	    > .flow-image-frame,
-  9895	  .flow-capture-group-visual-hierarchy
-  9896	    .flow-screen-stack-step-4
-  9897	    .flow-visual-hierarchy-frame-pair
-  9898	    > .flow-image-frame,
-  9899	  .flow-capture-group-visual-hierarchy
-  9900	    .flow-screen-stack-step-5
-  9901	    .flow-visual-hierarchy-frame-pair
-  9902	    > .flow-image-frame,
-  9903	  .flow-capture-group-visual-hierarchy
-  9904	    .flow-screen-stack-step-6
-  9905	    .flow-visual-hierarchy-frame-pair
-  9906	    > .flow-image-frame {
-  9907	    margin-left: calc(
-  9908	      var(--flow-visual-hierarchy-brace-width) +
-  9909	        var(--flow-visual-hierarchy-brace-gap)
-  9910	    );
-  9911	    max-width: none;
-  9912	    width: 318px;
-  9913	  }
-  9914	
-  9915	  .flow-capture-group-visual-hierarchy
-  9916	    .flow-screen-stack-step-4
-  9917	    .flow-visual-hierarchy-frame-pair
-  9918	    > .flow-image-frame,
-  9919	  .flow-capture-group-visual-hierarchy
-  9920	    .flow-screen-stack-step-5
-  9921	    .flow-visual-hierarchy-frame-pair
-  9922	    > .flow-image-frame {
-  9923	    margin-left: calc(
-  9924	      var(--flow-visual-hierarchy-brace-width) +
-  9925	        var(--flow-visual-hierarchy-brace-gap)
-  9926	    ) !important;
-  9927	  }
-  9928	
-  9929	  .flow-capture-group-visual-hierarchy
-  9930	    .flow-screen-stack-step-4
-  9931	    .flow-visual-hierarchy-brace,
-  9932	  .flow-capture-group-visual-hierarchy
-  9933	    .flow-screen-stack-step-5
-  9934	    .flow-visual-hierarchy-brace {
-  9935	    left: 0;
-  9936	  }
-  9937	
-  9938	  .flow-capture-group-visual-hierarchy
-  9939	    .flow-screen-stack-step-4
-  9940	    .flow-visual-hierarchy-external-annotation,
-  9941	  .flow-capture-group-visual-hierarchy
-  9942	    .flow-screen-stack-step-5
-  9943	    .flow-visual-hierarchy-external-annotation {
-  9944	    right: calc(100% - 110px) !important;
-  9945	  }
-  9946	
-  9947	  .flow-capture-group-visual-hierarchy
-  9948	    .flow-screen-stack-step-1
-  9949	    .flow-visual-hierarchy-section-lines,
-  9950	  .flow-capture-group-visual-hierarchy
-  9951	    .flow-screen-stack-step-3
-  9952	    .flow-visual-hierarchy-section-lines,
-  9953	  .flow-capture-group-visual-hierarchy
-  9954	    .flow-screen-stack-step-4
-  9955	    .flow-visual-hierarchy-section-lines,
-  9956	  .flow-capture-group-visual-hierarchy
-  9957	    .flow-screen-stack-step-5
-  9958	    .flow-visual-hierarchy-section-lines,
-  9959	  .flow-capture-group-visual-hierarchy
-  9960	    .flow-screen-stack-step-6
-  9961	    .flow-visual-hierarchy-section-lines {
-  9962	    left: calc(
-  9963	      var(--flow-visual-hierarchy-brace-width) +
-  9964	        var(--flow-visual-hierarchy-brace-gap) +
-  9965	        var(--flow-visual-hierarchy-centered-frame-width) +
-  9966	        var(--flow-visual-hierarchy-tip-frame-gap)
-  9967	    );
-  9968	  }
-  9969	
-  9970	  .flow-capture-group-visual-hierarchy
-  9971	    .flow-screen-stack-step-1b
-  9972	    .flow-visual-hierarchy-frame-pair,
-  9973	  .flow-capture-group-visual-hierarchy
-  9974	    .flow-screen-stack-step-1c
-  9975	    .flow-visual-hierarchy-frame-pair {
-  9976	    width: 318px;
-  9977	  }
-  9978	
-  9979	  .flow-capture-group-visual-hierarchy
-  9980	    .flow-screen-stack-step-1d
-  9981	    .flow-visual-hierarchy-frame-pair {
-  9982	    width: 408px;
-  9983	  }
-  9984	
-  9985	  .flow-capture-group-visual-hierarchy
-  9986	    .flow-screen-stack-step-1b
-  9987	    .flow-visual-hierarchy-frame-pair
-  9988	    > .flow-protected-image-composition,
-  9989	  .flow-capture-group-visual-hierarchy
-  9990	    .flow-screen-stack-step-1c
-  9991	    .flow-visual-hierarchy-frame-pair
-  9992	    > .flow-protected-image-composition,
-  9993	  .flow-capture-group-visual-hierarchy
-  9994	    .flow-screen-stack-step-1d
-  9995	    .flow-visual-hierarchy-frame-pair
-  9996	    > .flow-image-frame {
-  9997	    margin-left: 0 !important;
-  9998	    max-width: none;
-  9999	  }
- 10000	
- 10001	  .flow-capture-group-visual-hierarchy .flow-screen-stack-step-1c {
- 10002	    top: 8px;
- 10003	  }
- 10004	
- 10005	  .flow-capture-group-visual-hierarchy .flow-screen-stack-step-1d {
- 10006	    top: 12px;
- 10007	  }
- 10008	
- 10009	  .flow-capture-group-visual-hierarchy
- 10010	    .flow-screen-stack-step-1b
- 10011	    .flow-visual-hierarchy-frame-pair
- 10012	    > .flow-protected-image-composition,
- 10013	  .flow-capture-group-visual-hierarchy
- 10014	    .flow-screen-stack-step-1c
- 10015	    .flow-visual-hierarchy-frame-pair
- 10016	    > .flow-protected-image-composition {
- 10017	    width: 318px;
- 10018	  }
- 10019	
- 10020	  .flow-capture-group-visual-hierarchy
- 10021	    .flow-screen-stack-step-1d
- 10022	    .flow-visual-hierarchy-frame-pair
- 10023	    > .flow-image-frame {
- 10024	    width: 408px;
- 10025	  }
- 10026	
- 10027	  .flow-capture-group-visual-hierarchy
- 10028	    .flow-screen-stack-step-1d
- 10029	    .flow-visual-hierarchy-section-lines-right {
- 10030	    left: calc(
- 10031	      100% + var(--flow-visual-hierarchy-focal-scale-outset) +
- 10032	        var(--flow-visual-hierarchy-tip-frame-gap) -
- 10033	        var(--flow-visual-hierarchy-callout-align-offset, 0px)
- 10034	    );
- 10035	  }
- 10036	
- 10037	  .flow-capture-group-visual-hierarchy
- 10038	    .flow-screen-stack-step-1b
- 10039	    .flow-protected-image-composition
- 10040	    > .flow-image-frame,
- 10041	  .flow-capture-group-visual-hierarchy
- 10042	    .flow-screen-stack-step-1c
- 10043	    .flow-protected-image-composition
- 10044	    > .flow-image-frame {
- 10045	    max-width: none;
- 10046	  }
- 10047	}
- 10048	
- 10049	@media (max-width: 720px) {
- 10050	  .flow-capture-group-visual-hierarchy
- 10051	    .flow-screen-stack-step-1b
- 10052	    .flow-visual-hierarchy-frame-pair,
- 10053	  .flow-capture-group-visual-hierarchy
- 10054	    .flow-screen-stack-step-1c
- 10055	    .flow-visual-hierarchy-frame-pair {
- 10056	    --flow-visual-hierarchy-tip-frame-gap: 20px;
- 10057	  }
- 10058	
- 10059	  .flow-capture-group-visual-hierarchy
- 10060	    .flow-screen-stack-step-1
- 10061	    .flow-visual-hierarchy-frame-pair,
- 10062	  .flow-capture-group-visual-hierarchy
- 10063	    .flow-screen-stack-step-3
- 10064	    .flow-visual-hierarchy-frame-pair,
- 10065	  .flow-capture-group-visual-hierarchy
- 10066	    .flow-screen-stack-step-6
- 10067	    .flow-visual-hierarchy-frame-pair {
- 10068	    --flow-visual-hierarchy-brace-gap: 4px;
- 10069	    --flow-visual-hierarchy-tip-frame-gap: 5px;
- 10070	    --flow-visual-hierarchy-viewing-brace-shift: 14px;
- 10071	    --flow-visual-hierarchy-viewing-label-shift: 25px;
- 10072	  }
- 10073	
- 10074	  .flow-capture-group-visual-hierarchy
- 10075	    .flow-screen-stack-step-1
- 10076	    .flow-visual-hierarchy-section-label,
- 10077	  .flow-capture-group-visual-hierarchy
- 10078	    .flow-screen-stack-step-3
- 10079	    .flow-visual-hierarchy-section-label,
- 10080	  .flow-capture-group-visual-hierarchy
- 10081	    .flow-screen-stack-step-6
- 10082	    .flow-visual-hierarchy-section-label {
- 10083	    left: calc(100% + 11px);
- 10084	  }
- 10085	
- 10086	  .flow-capture-group-visual-hierarchy
- 10087	    .flow-screen-stack-step-1
- 10088	    .flow-visual-hierarchy-section-label-wrapped,
- 10089	  .flow-capture-group-visual-hierarchy
- 10090	    .flow-screen-stack-step-3
- 10091	    .flow-visual-hierarchy-section-label-wrapped,
- 10092	  .flow-capture-group-visual-hierarchy
- 10093	    .flow-screen-stack-step-6
- 10094	    .flow-visual-hierarchy-section-label-wrapped {
- 10095	    left: calc(100% + 17px);
- 10096	  }
- 10097	
- 10098	  .flow-capture-group-visual-hierarchy
- 10099	    .flow-screen-stack-step-1
- 10100	    .flow-visual-hierarchy-external-annotation,
- 10101	  .flow-capture-group-visual-hierarchy
- 10102	    .flow-screen-stack-step-3
- 10103	    .flow-visual-hierarchy-external-annotation,
- 10104	  .flow-capture-group-visual-hierarchy
- 10105	    .flow-screen-stack-step-6
- 10106	    .flow-visual-hierarchy-external-annotation {
- 10107	    right: calc(
- 10108	      100% - 70px - var(--flow-visual-hierarchy-viewing-label-shift) + 7px
- 10109	    ) !important;
- 10110	  }
- 10111	
- 10112	  .flow-capture-group-visual-hierarchy
- 10113	    .flow-screen-stack-step-1
- 10114	    .flow-visual-hierarchy-frame-pair,
- 10115	  .flow-capture-group-visual-hierarchy
- 10116	    .flow-screen-stack-step-3
- 10117	    .flow-visual-hierarchy-frame-pair,
- 10118	  .flow-capture-group-visual-hierarchy
- 10119	    .flow-screen-stack-step-4
- 10120	    .flow-visual-hierarchy-frame-pair,
- 10121	  .flow-capture-group-visual-hierarchy
- 10122	    .flow-screen-stack-step-5
- 10123	    .flow-visual-hierarchy-frame-pair,
- 10124	  .flow-capture-group-visual-hierarchy
- 10125	    .flow-screen-stack-step-6
- 10126	    .flow-visual-hierarchy-frame-pair {
- 10127	    --flow-visual-hierarchy-centered-frame-width: min(
- 10128	      278px,
- 10129	      calc(100vw - 156px)
- 10130	    );
- 10131	
- 10132	    width: calc(
- 10133	      var(--flow-visual-hierarchy-centered-frame-width) +
- 10134	        var(--flow-visual-hierarchy-brace-width) +
- 10135	        var(--flow-visual-hierarchy-brace-gap) +
- 10136	        var(--flow-visual-hierarchy-brace-width) +
- 10137	        var(--flow-visual-hierarchy-brace-gap)
- 10138	    );
- 10139	  }
- 10140	
- 10141	  .flow-capture-group-visual-hierarchy
- 10142	    .flow-screen-stack-step-1
- 10143	    .flow-visual-hierarchy-frame-pair
- 10144	    > .flow-image-frame,
- 10145	  .flow-capture-group-visual-hierarchy
- 10146	    .flow-screen-stack-step-3
- 10147	    .flow-visual-hierarchy-frame-pair
- 10148	    > .flow-image-frame,
- 10149	  .flow-capture-group-visual-hierarchy
- 10150	    .flow-screen-stack-step-4
- 10151	    .flow-visual-hierarchy-frame-pair
- 10152	    > .flow-image-frame,
- 10153	  .flow-capture-group-visual-hierarchy
- 10154	    .flow-screen-stack-step-5
- 10155	    .flow-visual-hierarchy-frame-pair
- 10156	    > .flow-image-frame,
- 10157	  .flow-capture-group-visual-hierarchy
- 10158	    .flow-screen-stack-step-6
- 10159	    .flow-visual-hierarchy-frame-pair
- 10160	    > .flow-image-frame {
- 10161	    width: var(--flow-visual-hierarchy-centered-frame-width);
- 10162	  }
- 10163	}
- 10164	
- 10165	@media (max-width: 390px) {
- 10166	  .flow-capture-group-visual-hierarchy
- 10167	    .flow-screen-stack-step-1
- 10168	    .flow-visual-hierarchy-frame-pair,
- 10169	  .flow-capture-group-visual-hierarchy
- 10170	    .flow-screen-stack-step-3
- 10171	    .flow-visual-hierarchy-frame-pair,
- 10172	  .flow-capture-group-visual-hierarchy
- 10173	    .flow-screen-stack-step-6
- 10174	    .flow-visual-hierarchy-frame-pair {
- 10175	    --flow-visual-hierarchy-viewing-brace-shift: 14px;
- 10176	    --flow-visual-hierarchy-viewing-label-shift: 25px;
- 10177	  }
- 10178	}
- 10179	
- 10180	@media (max-width: 980px), (orientation: portrait) {
- 10181	  .flow-capture-group-visual-hierarchy
- 10182	    .flow-capture-grid-row-group
- 10183	    .flow-visual-hierarchy-row-label {
- 10184	    grid-row: 1;
- 10185	    margin-top: 0;
- 10186	  }
- 10187	
- 10188	  .flow-capture-group-visual-hierarchy
- 10189	    .flow-capture-grid-row-group-2
- 10190	    .flow-screen-stack-step-3,
- 10191	  .flow-capture-group-visual-hierarchy
- 10192	    .flow-capture-grid-row-group-3
- 10193	    .flow-screen-stack-step-6 {
- 10194	    grid-row: 2;
- 10195	    top: auto;
- 10196	  }
- 10197	
- 10198	  .flow-capture-group-visual-hierarchy
- 10199	    .flow-capture-grid-row-group-2
- 10200	    .flow-screen-stack-step-4,
- 10201	  .flow-capture-group-visual-hierarchy
- 10202	    .flow-capture-grid-row-group-3
- 10203	    .flow-screen-stack-step-6b {
- 10204	    grid-row: 3;
- 10205	    top: auto;
- 10206	  }
- 10207	
- 10208	  .flow-capture-group-visual-hierarchy
- 10209	    .flow-capture-grid-row-group-2
- 10210	    .flow-screen-stack-step-5,
- 10211	  .flow-capture-group-visual-hierarchy
- 10212	    .flow-capture-grid-row-group-3
- 10213	    .flow-screen-stack-step-6c {
- 10214	    grid-row: 4;
- 10215	    top: auto;
- 10216	  }
- 10217	}
+  9776	  .alla-vostra-case .project-nav-frame .nav-link-row-top {
+  9777	    height: auto;
+  9778	    min-height: var(--nav-bar-height);
+  9779	  }
+  9780	
+  9781	  .alla-vostra-case
+  9782	    .project-nav-frame
+  9783	    .nav-top-distribution
+  9784	    > .nav-top-link-primary,
+  9785	  .alla-vostra-case
+  9786	    .project-nav-frame
+  9787	    .nav-top-distribution
+  9788	    > .nav-top-link-secondary {
+  9789	    align-items: center;
+  9790	    display: inline-flex;
+  9791	    justify-content: center;
+  9792	    line-height: 1.05;
+  9793	    min-width: 0;
+  9794	    white-space: normal;
+  9795	    width: 100%;
+  9796	  }
+  9797	
+  9798	  .alla-vostra-case .project-nav-frame .nav-link-row-bottom {
+  9799	    column-gap: var(--nav-link-bottom-separator-gap);
+  9800	    display: flex;
+  9801	    flex-wrap: nowrap;
+  9802	    height: var(--nav-bar-height);
+  9803	    justify-content: space-evenly;
+  9804	  }
+  9805	
+  9806	  .alla-vostra-case
+  9807	    .project-nav-frame
+  9808	    .nav-link-row-bottom
+  9809	    .nav-separator {
+  9810	    display: inline-flex;
+  9811	  }
+  9812	
+  9813	  .alla-vostra-case
+  9814	    .project-nav-frame
+  9815	    .nav-link-row-bottom
+  9816	    .nav-separator.nav-separator-row-leading {
+  9817	    display: none;
+  9818	  }
+  9819	
+  9820	  .alla-vostra-case
+  9821	    .project-nav-frame
+  9822	    .nav-bar
+  9823	    nav
+  9824	    .nav-link-row-bottom
+  9825	    > a {
+  9826	    align-items: center;
+  9827	    display: inline-flex;
+  9828	    justify-content: center;
+  9829	    line-height: 1;
+  9830	    min-height: 0;
+  9831	    padding: 0;
+  9832	    white-space: nowrap;
+  9833	    width: auto;
+  9834	  }
+  9835	}
+  9836	
+  9837	@media (max-width: 980px), (orientation: portrait) {
+  9838	  .flow-capture-group-full-row.flow-capture-group-visual-hierarchy
+  9839	    .flow-screen-stack:has(.flow-visual-hierarchy-frame-pair)
+  9840	    h4 {
+  9841	    transform: none !important;
+  9842	  }
+  9843	
+  9844	  .flow-capture-group-visual-hierarchy .flow-screen-stack-step-1b,
+  9845	  .flow-capture-group-visual-hierarchy .flow-screen-stack-step-1c,
+  9846	  .flow-capture-group-visual-hierarchy .flow-screen-stack-step-1d {
+  9847	    margin-top: 48px;
+  9848	  }
+  9849	
+  9850	  .flow-capture-group-visual-hierarchy
+  9851	    .flow-screen-stack-step-1
+  9852	    .flow-visual-hierarchy-frame-pair,
+  9853	  .flow-capture-group-visual-hierarchy
+  9854	    .flow-screen-stack-step-3
+  9855	    .flow-visual-hierarchy-frame-pair,
+  9856	  .flow-capture-group-visual-hierarchy
+  9857	    .flow-screen-stack-step-4
+  9858	    .flow-visual-hierarchy-frame-pair,
+  9859	  .flow-capture-group-visual-hierarchy
+  9860	    .flow-screen-stack-step-5
+  9861	    .flow-visual-hierarchy-frame-pair,
+  9862	  .flow-capture-group-visual-hierarchy
+  9863	    .flow-screen-stack-step-6
+  9864	    .flow-visual-hierarchy-frame-pair {
+  9865	    --flow-visual-hierarchy-centered-frame-width: 318px;
+  9866	
+  9867	    left: 50%;
+  9868	    margin-inline: 0;
+  9869	    transform: translateX(-50%);
+  9870	    width: calc(
+  9871	      var(--flow-visual-hierarchy-centered-frame-width) +
+  9872	        var(--flow-visual-hierarchy-brace-width) +
+  9873	        var(--flow-visual-hierarchy-brace-gap) +
+  9874	        var(--flow-visual-hierarchy-brace-width) +
+  9875	        var(--flow-visual-hierarchy-brace-gap)
+  9876	    );
+  9877	  }
+  9878	
+  9879	  .flow-capture-group-visual-hierarchy
+  9880	    .flow-screen-stack-step-1
+  9881	    .flow-visual-hierarchy-frame-pair,
+  9882	  .flow-capture-group-visual-hierarchy
+  9883	    .flow-screen-stack-step-3
+  9884	    .flow-visual-hierarchy-frame-pair,
+  9885	  .flow-capture-group-visual-hierarchy
+  9886	    .flow-screen-stack-step-6
+  9887	    .flow-visual-hierarchy-frame-pair {
+  9888	    --flow-visual-hierarchy-viewing-brace-shift: 9px;
+  9889	    --flow-visual-hierarchy-viewing-label-shift: 6px;
+  9890	  }
+  9891	
+  9892	  .flow-capture-group-visual-hierarchy
+  9893	    .flow-screen-stack-step-1
+  9894	    .flow-visual-hierarchy-frame-pair
+  9895	    > .flow-image-frame,
+  9896	  .flow-capture-group-visual-hierarchy
+  9897	    .flow-screen-stack-step-3
+  9898	    .flow-visual-hierarchy-frame-pair
+  9899	    > .flow-image-frame,
+  9900	  .flow-capture-group-visual-hierarchy
+  9901	    .flow-screen-stack-step-4
+  9902	    .flow-visual-hierarchy-frame-pair
+  9903	    > .flow-image-frame,
+  9904	  .flow-capture-group-visual-hierarchy
+  9905	    .flow-screen-stack-step-5
+  9906	    .flow-visual-hierarchy-frame-pair
+  9907	    > .flow-image-frame,
+  9908	  .flow-capture-group-visual-hierarchy
+  9909	    .flow-screen-stack-step-6
+  9910	    .flow-visual-hierarchy-frame-pair
+  9911	    > .flow-image-frame {
+  9912	    margin-left: calc(
+  9913	      var(--flow-visual-hierarchy-brace-width) +
+  9914	        var(--flow-visual-hierarchy-brace-gap)
+  9915	    );
+  9916	    max-width: none;
+  9917	    width: 318px;
+  9918	  }
+  9919	
+  9920	  .flow-capture-group-visual-hierarchy
+  9921	    .flow-screen-stack-step-4
+  9922	    .flow-visual-hierarchy-frame-pair
+  9923	    > .flow-image-frame,
+  9924	  .flow-capture-group-visual-hierarchy
+  9925	    .flow-screen-stack-step-5
+  9926	    .flow-visual-hierarchy-frame-pair
+  9927	    > .flow-image-frame {
+  9928	    margin-left: calc(
+  9929	      var(--flow-visual-hierarchy-brace-width) +
+  9930	        var(--flow-visual-hierarchy-brace-gap)
+  9931	    ) !important;
+  9932	  }
+  9933	
+  9934	  .flow-capture-group-visual-hierarchy
+  9935	    .flow-screen-stack-step-4
+  9936	    .flow-visual-hierarchy-brace,
+  9937	  .flow-capture-group-visual-hierarchy
+  9938	    .flow-screen-stack-step-5
+  9939	    .flow-visual-hierarchy-brace {
+  9940	    left: 0;
+  9941	  }
+  9942	
+  9943	  .flow-capture-group-visual-hierarchy
+  9944	    .flow-screen-stack-step-4
+  9945	    .flow-visual-hierarchy-external-annotation,
+  9946	  .flow-capture-group-visual-hierarchy
+  9947	    .flow-screen-stack-step-5
+  9948	    .flow-visual-hierarchy-external-annotation {
+  9949	    right: calc(100% - 110px) !important;
+  9950	  }
+  9951	
+  9952	  .flow-capture-group-visual-hierarchy
+  9953	    .flow-screen-stack-step-1
+  9954	    .flow-visual-hierarchy-section-lines,
+  9955	  .flow-capture-group-visual-hierarchy
+  9956	    .flow-screen-stack-step-3
+  9957	    .flow-visual-hierarchy-section-lines,
+  9958	  .flow-capture-group-visual-hierarchy
+  9959	    .flow-screen-stack-step-4
+  9960	    .flow-visual-hierarchy-section-lines,
+  9961	  .flow-capture-group-visual-hierarchy
+  9962	    .flow-screen-stack-step-5
+  9963	    .flow-visual-hierarchy-section-lines,
+  9964	  .flow-capture-group-visual-hierarchy
+  9965	    .flow-screen-stack-step-6
+  9966	    .flow-visual-hierarchy-section-lines {
+  9967	    left: calc(
+  9968	      var(--flow-visual-hierarchy-brace-width) +
+  9969	        var(--flow-visual-hierarchy-brace-gap) +
+  9970	        var(--flow-visual-hierarchy-centered-frame-width) +
+  9971	        var(--flow-visual-hierarchy-tip-frame-gap)
+  9972	    );
+  9973	  }
+  9974	
+  9975	  .flow-capture-group-visual-hierarchy
+  9976	    .flow-screen-stack-step-1b
+  9977	    .flow-visual-hierarchy-frame-pair,
+  9978	  .flow-capture-group-visual-hierarchy
+  9979	    .flow-screen-stack-step-1c
+  9980	    .flow-visual-hierarchy-frame-pair {
+  9981	    width: 318px;
+  9982	  }
+  9983	
+  9984	  .flow-capture-group-visual-hierarchy
+  9985	    .flow-screen-stack-step-1d
+  9986	    .flow-visual-hierarchy-frame-pair {
+  9987	    width: 408px;
+  9988	  }
+  9989	
+  9990	  .flow-capture-group-visual-hierarchy
+  9991	    .flow-screen-stack-step-1b
+  9992	    .flow-visual-hierarchy-frame-pair
+  9993	    > .flow-protected-image-composition,
+  9994	  .flow-capture-group-visual-hierarchy
+  9995	    .flow-screen-stack-step-1c
+  9996	    .flow-visual-hierarchy-frame-pair
+  9997	    > .flow-protected-image-composition,
+  9998	  .flow-capture-group-visual-hierarchy
+  9999	    .flow-screen-stack-step-1d
+ 10000	    .flow-visual-hierarchy-frame-pair
+ 10001	    > .flow-image-frame {
+ 10002	    margin-left: 0 !important;
+ 10003	    max-width: none;
+ 10004	  }
+ 10005	
+ 10006	  .flow-capture-group-visual-hierarchy .flow-screen-stack-step-1c {
+ 10007	    top: 8px;
+ 10008	  }
+ 10009	
+ 10010	  .flow-capture-group-visual-hierarchy .flow-screen-stack-step-1d {
+ 10011	    top: 12px;
+ 10012	  }
+ 10013	
+ 10014	  .flow-capture-group-visual-hierarchy
+ 10015	    .flow-screen-stack-step-1b
+ 10016	    .flow-visual-hierarchy-frame-pair
+ 10017	    > .flow-protected-image-composition,
+ 10018	  .flow-capture-group-visual-hierarchy
+ 10019	    .flow-screen-stack-step-1c
+ 10020	    .flow-visual-hierarchy-frame-pair
+ 10021	    > .flow-protected-image-composition {
+ 10022	    width: 318px;
+ 10023	  }
+ 10024	
+ 10025	  .flow-capture-group-visual-hierarchy
+ 10026	    .flow-screen-stack-step-1d
+ 10027	    .flow-visual-hierarchy-frame-pair
+ 10028	    > .flow-image-frame {
+ 10029	    width: 408px;
+ 10030	  }
+ 10031	
+ 10032	  .flow-capture-group-visual-hierarchy
+ 10033	    .flow-screen-stack-step-1d
+ 10034	    .flow-visual-hierarchy-section-lines-right {
+ 10035	    left: calc(
+ 10036	      100% + var(--flow-visual-hierarchy-focal-scale-outset) +
+ 10037	        var(--flow-visual-hierarchy-tip-frame-gap) -
+ 10038	        var(--flow-visual-hierarchy-callout-align-offset, 0px)
+ 10039	    );
+ 10040	  }
+ 10041	
+ 10042	  .flow-capture-group-visual-hierarchy
+ 10043	    .flow-screen-stack-step-1b
+ 10044	    .flow-protected-image-composition
+ 10045	    > .flow-image-frame,
+ 10046	  .flow-capture-group-visual-hierarchy
+ 10047	    .flow-screen-stack-step-1c
+ 10048	    .flow-protected-image-composition
+ 10049	    > .flow-image-frame {
+ 10050	    max-width: none;
+ 10051	  }
+ 10052	}
+ 10053	
+ 10054	@media (max-width: 720px) {
+ 10055	  .flow-capture-group-visual-hierarchy
+ 10056	    .flow-screen-stack-step-1b
+ 10057	    .flow-visual-hierarchy-frame-pair,
+ 10058	  .flow-capture-group-visual-hierarchy
+ 10059	    .flow-screen-stack-step-1c
+ 10060	    .flow-visual-hierarchy-frame-pair {
+ 10061	    --flow-visual-hierarchy-tip-frame-gap: 20px;
+ 10062	  }
+ 10063	
+ 10064	  .flow-capture-group-visual-hierarchy
+ 10065	    .flow-screen-stack-step-1
+ 10066	    .flow-visual-hierarchy-frame-pair,
+ 10067	  .flow-capture-group-visual-hierarchy
+ 10068	    .flow-screen-stack-step-3
+ 10069	    .flow-visual-hierarchy-frame-pair,
+ 10070	  .flow-capture-group-visual-hierarchy
+ 10071	    .flow-screen-stack-step-6
+ 10072	    .flow-visual-hierarchy-frame-pair {
+ 10073	    --flow-visual-hierarchy-brace-gap: 4px;
+ 10074	    --flow-visual-hierarchy-tip-frame-gap: 5px;
+ 10075	    --flow-visual-hierarchy-viewing-brace-shift: 14px;
+ 10076	    --flow-visual-hierarchy-viewing-label-shift: 25px;
+ 10077	  }
+ 10078	
+ 10079	  .flow-capture-group-visual-hierarchy
+ 10080	    .flow-screen-stack-step-1
+ 10081	    .flow-visual-hierarchy-section-label,
+ 10082	  .flow-capture-group-visual-hierarchy
+ 10083	    .flow-screen-stack-step-3
+ 10084	    .flow-visual-hierarchy-section-label,
+ 10085	  .flow-capture-group-visual-hierarchy
+ 10086	    .flow-screen-stack-step-6
+ 10087	    .flow-visual-hierarchy-section-label {
+ 10088	    left: calc(100% + 11px);
+ 10089	  }
+ 10090	
+ 10091	  .flow-capture-group-visual-hierarchy
+ 10092	    .flow-screen-stack-step-1
+ 10093	    .flow-visual-hierarchy-section-label-wrapped,
+ 10094	  .flow-capture-group-visual-hierarchy
+ 10095	    .flow-screen-stack-step-3
+ 10096	    .flow-visual-hierarchy-section-label-wrapped,
+ 10097	  .flow-capture-group-visual-hierarchy
+ 10098	    .flow-screen-stack-step-6
+ 10099	    .flow-visual-hierarchy-section-label-wrapped {
+ 10100	    left: calc(100% + 17px);
+ 10101	  }
+ 10102	
+ 10103	  .flow-capture-group-visual-hierarchy
+ 10104	    .flow-screen-stack-step-1
+ 10105	    .flow-visual-hierarchy-external-annotation,
+ 10106	  .flow-capture-group-visual-hierarchy
+ 10107	    .flow-screen-stack-step-3
+ 10108	    .flow-visual-hierarchy-external-annotation,
+ 10109	  .flow-capture-group-visual-hierarchy
+ 10110	    .flow-screen-stack-step-6
+ 10111	    .flow-visual-hierarchy-external-annotation {
+ 10112	    right: calc(
+ 10113	      100% - 70px - var(--flow-visual-hierarchy-viewing-label-shift) + 7px
+ 10114	    ) !important;
+ 10115	  }
+ 10116	
+ 10117	  .flow-capture-group-visual-hierarchy
+ 10118	    .flow-screen-stack-step-1
+ 10119	    .flow-visual-hierarchy-frame-pair,
+ 10120	  .flow-capture-group-visual-hierarchy
+ 10121	    .flow-screen-stack-step-3
+ 10122	    .flow-visual-hierarchy-frame-pair,
+ 10123	  .flow-capture-group-visual-hierarchy
+ 10124	    .flow-screen-stack-step-4
+ 10125	    .flow-visual-hierarchy-frame-pair,
+ 10126	  .flow-capture-group-visual-hierarchy
+ 10127	    .flow-screen-stack-step-5
+ 10128	    .flow-visual-hierarchy-frame-pair,
+ 10129	  .flow-capture-group-visual-hierarchy
+ 10130	    .flow-screen-stack-step-6
+ 10131	    .flow-visual-hierarchy-frame-pair {
+ 10132	    --flow-visual-hierarchy-centered-frame-width: min(
+ 10133	      278px,
+ 10134	      calc(100vw - 156px)
+ 10135	    );
+ 10136	
+ 10137	    width: calc(
+ 10138	      var(--flow-visual-hierarchy-centered-frame-width) +
+ 10139	        var(--flow-visual-hierarchy-brace-width) +
+ 10140	        var(--flow-visual-hierarchy-brace-gap) +
+ 10141	        var(--flow-visual-hierarchy-brace-width) +
+ 10142	        var(--flow-visual-hierarchy-brace-gap)
+ 10143	    );
+ 10144	  }
+ 10145	
+ 10146	  .flow-capture-group-visual-hierarchy
+ 10147	    .flow-screen-stack-step-1
+ 10148	    .flow-visual-hierarchy-frame-pair
+ 10149	    > .flow-image-frame,
+ 10150	  .flow-capture-group-visual-hierarchy
+ 10151	    .flow-screen-stack-step-3
+ 10152	    .flow-visual-hierarchy-frame-pair
+ 10153	    > .flow-image-frame,
+ 10154	  .flow-capture-group-visual-hierarchy
+ 10155	    .flow-screen-stack-step-4
+ 10156	    .flow-visual-hierarchy-frame-pair
+ 10157	    > .flow-image-frame,
+ 10158	  .flow-capture-group-visual-hierarchy
+ 10159	    .flow-screen-stack-step-5
+ 10160	    .flow-visual-hierarchy-frame-pair
+ 10161	    > .flow-image-frame,
+ 10162	  .flow-capture-group-visual-hierarchy
+ 10163	    .flow-screen-stack-step-6
+ 10164	    .flow-visual-hierarchy-frame-pair
+ 10165	    > .flow-image-frame {
+ 10166	    width: var(--flow-visual-hierarchy-centered-frame-width);
+ 10167	  }
+ 10168	}
+ 10169	
+ 10170	@media (max-width: 390px) {
+ 10171	  .flow-capture-group-visual-hierarchy
+ 10172	    .flow-screen-stack-step-1
+ 10173	    .flow-visual-hierarchy-frame-pair,
+ 10174	  .flow-capture-group-visual-hierarchy
+ 10175	    .flow-screen-stack-step-3
+ 10176	    .flow-visual-hierarchy-frame-pair,
+ 10177	  .flow-capture-group-visual-hierarchy
+ 10178	    .flow-screen-stack-step-6
+ 10179	    .flow-visual-hierarchy-frame-pair {
+ 10180	    --flow-visual-hierarchy-viewing-brace-shift: 14px;
+ 10181	    --flow-visual-hierarchy-viewing-label-shift: 25px;
+ 10182	  }
+ 10183	}
+ 10184	
+ 10185	@media (max-width: 980px), (orientation: portrait) {
+ 10186	  .flow-capture-group-visual-hierarchy
+ 10187	    .flow-capture-grid-row-group
+ 10188	    .flow-visual-hierarchy-row-label {
+ 10189	    grid-row: 1;
+ 10190	    margin-top: 0;
+ 10191	  }
+ 10192	
+ 10193	  .flow-capture-group-visual-hierarchy
+ 10194	    .flow-capture-grid-row-group-2
+ 10195	    .flow-screen-stack-step-3,
+ 10196	  .flow-capture-group-visual-hierarchy
+ 10197	    .flow-capture-grid-row-group-3
+ 10198	    .flow-screen-stack-step-6 {
+ 10199	    grid-row: 2;
+ 10200	    top: auto;
+ 10201	  }
+ 10202	
+ 10203	  .flow-capture-group-visual-hierarchy
+ 10204	    .flow-capture-grid-row-group-2
+ 10205	    .flow-screen-stack-step-4,
+ 10206	  .flow-capture-group-visual-hierarchy
+ 10207	    .flow-capture-grid-row-group-3
+ 10208	    .flow-screen-stack-step-6b {
+ 10209	    grid-row: 3;
+ 10210	    top: auto;
+ 10211	  }
+ 10212	
+ 10213	  .flow-capture-group-visual-hierarchy
+ 10214	    .flow-capture-grid-row-group-2
+ 10215	    .flow-screen-stack-step-5,
+ 10216	  .flow-capture-group-visual-hierarchy
+ 10217	    .flow-capture-grid-row-group-3
+ 10218	    .flow-screen-stack-step-6c {
+ 10219	    grid-row: 4;
+ 10220	    top: auto;
+ 10221	  }
+ 10222	}
 
 
 ============================================================
@@ -15947,11 +15952,13 @@ main
 
 Status:
 ## main...origin/main
+ M app/PortfolioSections.tsx
+ M app/globals.css
  M portfolio_PROJECT_SNAPSHOT.txt
- M read_project.sh
 
 Recent commits:
-6cc45e6 (HEAD -> main, origin/main, origin/HEAD) Generated the latest customary session pdf worklog for the relevant project, dated October 2, 2026.
+c9f7168 (HEAD -> main, origin/main, origin/HEAD) Streamlined Project Snapshot Generation
+6cc45e6 Generated the latest customary session pdf worklog for the relevant project, dated October 2, 2026.
 92b8ef3 Refined Landing Navigation and Section Anchors
 e219363 Reworked Work Space and Work Tools Layouts
 8db62e8 Refined Landing Hero Scaling and Narrow-Layout Composition
@@ -15960,7 +15967,6 @@ ab25f85 Added interactive Cinerific UI foundation controls
 eabfb7c Refined Landing Hero Quote and Portrait Layout
 d4df015 Generated the latest customary session pdf worklog for the relevant project, dated September 29 (Part 2), 2026.
 d6af41d Updated featured case study commit and worklog counts
-147b9e8 Refined the My Core Beliefs star composition
 
 Remotes:
 origin	https://github.com/Prahlin/portfolio.git (fetch)
