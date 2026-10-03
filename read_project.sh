@@ -50,6 +50,7 @@ The snapshot intentionally ignores generated/cache/runtime/private files:
 - .git
 - node_modules
 - .next
+- .next.*
 - out
 - dist
 - build
@@ -89,6 +90,24 @@ print_file() {
       nl -ba "$file"
     } >> "$OUTPUT_FILE"
   fi
+}
+
+append_project_tree() {
+  # Use Git's own ignore rules so the snapshot cannot drift from .gitignore.
+  # Include tracked files plus untracked files that Git does not ignore.
+  printf '%s\n' "$PROJECT_DIR" >> "$OUTPUT_FILE"
+
+  git -C "$PROJECT_DIR" ls-files --cached --others --exclude-standard \
+    | sort \
+    | while IFS= read -r relative_file; do
+      case "$relative_file" in
+        .git/*|node_modules/*|.next/*|.next.*/*|out/*|dist/*|build/*|.cache/*|.turbo/*|.npm/*|.pnpm-store/*|.yarn/*|.DS_Store|*/.DS_Store|*_PROJECT_SNAPSHOT.txt|*.zip|.env|.env*.local|next-env.d.ts|*.tsbuildinfo)
+          continue
+          ;;
+      esac
+
+      printf '%s/%s\n' "$PROJECT_DIR" "$relative_file" >> "$OUTPUT_FILE"
+    done
 }
 
 print_inventory_header() {
@@ -143,6 +162,7 @@ print_matching_inventory() {
     ! -path "$PROJECT_DIR/.git/*" \
     ! -path "$PROJECT_DIR/node_modules/*" \
     ! -path "$PROJECT_DIR/.next/*" \
+    ! -path "$PROJECT_DIR/.next.*/*" \
     ! -path "$PROJECT_DIR/out/*" \
     ! -name ".DS_Store" \
     ! -name "*_PROJECT_SNAPSHOT.txt" \
@@ -176,26 +196,7 @@ append_git_context() {
 write_snapshot() {
   write_header
 
-  find "$PROJECT_DIR" \
-    -path "$PROJECT_DIR/.git" -prune -o \
-    -path "$PROJECT_DIR/node_modules" -prune -o \
-    -path "$PROJECT_DIR/.next" -prune -o \
-    -path "$PROJECT_DIR/out" -prune -o \
-    -path "$PROJECT_DIR/dist" -prune -o \
-    -path "$PROJECT_DIR/build" -prune -o \
-    -path "$PROJECT_DIR/.cache" -prune -o \
-    -path "$PROJECT_DIR/.turbo" -prune -o \
-    -path "$PROJECT_DIR/.npm" -prune -o \
-    -path "$PROJECT_DIR/.pnpm-store" -prune -o \
-    -path "$PROJECT_DIR/.yarn" -prune -o \
-    -name ".DS_Store" -prune -o \
-    -name "next-env.d.ts" -prune -o \
-    -name "*.tsbuildinfo" -prune -o \
-    -name "*_PROJECT_SNAPSHOT.txt" -prune -o \
-    -name "*.zip" -prune -o \
-    -name ".env" -prune -o \
-    -name ".env*.local" -prune -o \
-    -print | sort >> "$OUTPUT_FILE"
+  append_project_tree
 
   cat >> "$OUTPUT_FILE" <<EOF
 
@@ -257,6 +258,7 @@ The Portfolio snapshot intentionally excludes generated/cache/runtime/private pa
 - .git
 - node_modules
 - .next
+- .next.*
 - out
 - dist
 - build
