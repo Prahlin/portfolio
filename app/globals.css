@@ -3211,6 +3211,40 @@ section:not(.hero) {
   margin-top: 12px;
 }
 
+.workspace-workstation-details {
+  display: block;
+  margin-top: 8px;
+}
+
+.workspace-workstation-spec-list {
+  border-bottom: 1px solid var(--line);
+  display: block;
+}
+
+.workspace-workstation-spec {
+  align-items: baseline;
+  border-top: 1px solid var(--line);
+  display: grid;
+  gap: 12px;
+  grid-template-columns: minmax(92px, 0.72fr) minmax(0, 1.28fr);
+  padding: 8px 0;
+}
+
+.workspace-workstation-spec-label {
+  color: var(--green);
+  font-size: 11px;
+  font-weight: 850;
+  letter-spacing: 0.06em;
+  line-height: 1.25;
+  text-transform: uppercase;
+}
+
+.workspace-workstation-spec-value {
+  color: var(--text);
+  font-size: 14px;
+  line-height: 1.35;
+}
+
 .timeline-item:not(.timeline-item-software) > p .workspace-device-list {
   padding-left: 0;
 }

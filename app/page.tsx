@@ -320,21 +320,43 @@ function HeroBridgeQuote({ className }: { className: string }) {
   );
 }
 
+const workstationSpecs = [
+  { label: "Model", value: "MacBook Air · 15-inch · 2025" },
+  { label: "Processor", value: "Apple M4 · 10-core CPU (4P + 6E)" },
+  { label: "Graphics", value: "Integrated 10-core GPU · Metal 4" },
+  { label: "Memory", value: "16GB unified memory" },
+  { label: "Internal storage", value: "128GB SSD" },
+  { label: "Built-in display", value: "Liquid Retina · 2880 × 1864" },
+  { label: "Display output", value: "1920 × 1080 at 60Hz" },
+  { label: "Operating system", value: "macOS Tahoe 26.6.2" },
+];
+
 const worklogItems = [
   {
-    label: "WORK STATION",
+    label: "HARD WARE",
     icon: <MonitorSmartphone aria-hidden />,
     text: (
       <>
-        <strong>Laptop</strong>
-        <span className="workspace-device-list">
-          <span>Macbook Air 15.2&quot; M4 16GB SSD</span>
+        <strong>Workstation</strong>
+        <span className="workspace-workstation-details">
+          <span className="workspace-workstation-spec-list">
+            {workstationSpecs.map((spec) => (
+              <span className="workspace-workstation-spec" key={spec.label}>
+                <span className="workspace-workstation-spec-label">
+                  {spec.label}
+                </span>
+                <span className="workspace-workstation-spec-value">
+                  {spec.value}
+                </span>
+              </span>
+            ))}
+          </span>
         </span>
         <span className="workspace-device-secondary-group">
-          <strong>External Monitor</strong>
+          <strong>External Monitors</strong>
           <span className="workspace-device-list">
-            <span>CMV 14&quot;</span>
-            <span>CMV 14&quot;</span>
+            <span>WCV 15.6&quot; · 1080p IPS</span>
+            <span>WCV 15.6&quot; · 1080p IPS</span>
           </span>
         </span>
       </>
