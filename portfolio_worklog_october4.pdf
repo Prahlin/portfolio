@@ -1,0 +1,349 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [6 0 R 8 0 R 10 0 R 12 0 R 14 0 R] /Count 5 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+5 0 obj
+<< /Length 6968 >>
+stream
+BT /F2 15.50 Tf 54.00 744.00 Td (Prahlin Portfolio Work Log - October 4, 2026) Tj ET
+BT /F1 8.40 Tf 54.00 722.00 Td (Compiled summary for Sunday, October 4, 2026 - focus: continuing the Prahl.dev Portfolio after the October 2) Tj ET
+BT /F1 8.40 Tf 54.00 711.20 Td (responsive hero, workspace, and navigation record; independently verifying the United States Eastern date;) Tj ET
+BT /F1 8.40 Tf 54.00 700.40 Td (running the customary project reader; extracting and studying all forty-seven pre-existing Portfolio PDF) Tj ET
+BT /F1 8.40 Tf 54.00 689.60 Td (worklogs; streamlining snapshot generation; reordering landing navigation and content flow; designing and) Tj ET
+BT /F1 8.40 Tf 54.00 678.80 Td (implementing a reusable six-decision UI/UX showcase; refining compact hero quote, profile, and device behavior) Tj ET
+BT /F1 8.40 Tf 54.00 668.00 Td (across portrait, near-square, and compact-landscape breakpoints; expanding the Work Space hardware record with) Tj ET
+BT /F1 8.40 Tf 54.00 657.20 Td (current workstation and dual-monitor specifications; preserving the detached local Next.js preview; validating) Tj ET
+BT /F1 8.40 Tf 54.00 646.40 Td (TypeScript and live routes; documenting committed source state 911f700; refreshing the Portfolio project) Tj ET
+BT /F1 8.40 Tf 54.00 635.60 Td (snapshot; and generating the October 4 Portfolio PDF worklog.) Tj ET
+BT /F1 8.40 Tf 54.00 617.80 Td (Generated in continuity with the established Prahlin Portfolio daily worklog cadence: compact opening summary,) Tj ET
+BT /F1 8.40 Tf 54.00 607.00 Td (source-material section, baseline section, goal list, work-completed sections, committed-source sequence,) Tj ET
+BT /F1 8.40 Tf 54.00 596.20 Td (validation section, files-touched list, follow-up context, and output-artifact close.) Tj ET
+BT /F1 8.40 Tf 54.00 578.40 Td (This artifact intentionally covers Portfolio work performed after portfolio_worklog_october2.pdf and its) Tj ET
+BT /F1 8.40 Tf 54.00 567.60 Td (documentation commit 6cc45e6. The source work is represented by commits c9f7168, 0c4673c, d5de419, c88eafb, and) Tj ET
+BT /F1 8.40 Tf 54.00 556.80 Td (911f700 on main, matching origin/main before this PDF was generated. Together they changed the project snapshot) Tj ET
+BT /F1 8.40 Tf 54.00 546.00 Td (workflow, landing navigation and section order, the landing UI/UX presentation, responsive hero geometry and) Tj ET
+BT /F1 8.40 Tf 54.00 535.20 Td (runtime centering, and the Work Space hardware inventory. No Hostinger deploy-branch work, GitHub Actions) Tj ET
+BT /F1 8.40 Tf 54.00 524.40 Td (dispatch, static production publish, or public deployment was performed during this record. The documentation) Tj ET
+BT /F1 8.40 Tf 54.00 513.60 Td (deltas created by this generation pass are the refreshed portfolio_PROJECT_SNAPSHOT.txt file and this root-level) Tj ET
+BT /F1 8.40 Tf 54.00 502.80 Td (October 4 PDF worklog.) Tj ET
+BT /F2 10.80 Tf 54.00 478.00 Td (Source Materials Reviewed) Tj ET
+BT /F1 8.40 Tf 54.00 462.00 Td (- Verified the United States Eastern date through an independent UTC-04:00 time query, which reported October) Tj ET
+BT /F1 8.40 Tf 64.00 451.20 Td (  4, 2026 at 1:11 AM. October 4 remains within Eastern Daylight Time, so the filename and title use Sunday,) Tj ET
+BT /F1 8.40 Tf 64.00 440.40 Td (  October 4, 2026 rather than relying on the execution host or UTC calendar date.) Tj ET
+BT /F1 8.40 Tf 54.00 426.60 Td (- Ran ./read_project.sh from /Users/prahlin/gh/portfolio and regenerated portfolio_PROJECT_SNAPSHOT.txt before) Tj ET
+BT /F1 8.40 Tf 64.00 415.80 Td (  composing this record, preserving the established source, asset, configuration, Git, PDF-inventory, and) Tj ET
+BT /F1 8.40 Tf 64.00 405.00 Td (  workflow-context capture practice.) Tj ET
+BT /F1 8.40 Tf 54.00 391.20 Td (- Extracted and studied all forty-seven pre-existing root-level Portfolio PDF worklogs with pdftotext and) Tj ET
+BT /F1 8.40 Tf 64.00 380.40 Td (  pdfinfo: fifteen July records, fifteen August records, fifteen September records, and the October 1 and) Tj ET
+BT /F1 8.40 Tf 64.00 369.60 Td (  October 2 records. Before this artifact, the series contained 272 PDF pages, 131,408 extracted words, and) Tj ET
+BT /F1 8.40 Tf 64.00 358.80 Td (  approximately 983,204 extracted characters.) Tj ET
+BT /F1 8.40 Tf 54.00 345.00 Td (- Compared the complete record set for month-name filenames, non-zero-padded day numbers, same-day Part suffix) Tj ET
+BT /F1 8.40 Tf 64.00 334.20 Td (  behavior, title construction, summary density, source and baseline framing, goal lists, technical bullet) Tj ET
+BT /F1 8.40 Tf 64.00 323.40 Td (  voice, validation language, files-touched treatment, follow-up continuity, dated page footers, and) Tj ET
+BT /F1 8.40 Tf 64.00 312.60 Td (  output-artifact closure.) Tj ET
+BT /F1 8.40 Tf 54.00 298.80 Td (- Used October 2 as the direct chronological baseline, October 1 for the current landing-hero quote and) Tj ET
+BT /F1 8.40 Tf 64.00 288.00 Td (  Cinerific UI Foundations context, September 29 Part 2 for workflow and proof composition continuity, and the) Tj ET
+BT /F1 8.40 Tf 64.00 277.20 Td (  mature July-through-September series for document typography, metadata, page geometry, and narrative) Tj ET
+BT /F1 8.40 Tf 64.00 266.40 Td (  cadence.) Tj ET
+BT /F1 8.40 Tf 54.00 252.60 Td (- Checked representative early, middle, and latest files with pdfinfo and pdffonts. The mature convention) Tj ET
+BT /F1 8.40 Tf 64.00 241.80 Td (  remains unencrypted US Letter at 612 x 792 points, PDF 1.4, Helvetica and Helvetica-Bold, dense) Tj ET
+BT /F1 8.40 Tf 64.00 231.00 Td (  black-on-white technical copy, Codex metadata, and a repeated title-and-page footer.) Tj ET
+BT /F1 8.40 Tf 54.00 217.20 Td (- Reviewed the five post-worklog commits through git log, git show, commit bodies, and file statistics.) Tj ET
+BT /F1 8.40 Tf 64.00 206.40 Td (  Confirmed main and origin/main both resolve to 911f7006887287f422118274dc91bef650fbf0a2, titled Expanded) Tj ET
+BT /F1 8.40 Tf 64.00 195.60 Td (  Work Space Hardware Details.) Tj ET
+BT /F1 8.40 Tf 54.00 181.80 Td (- Reviewed app/page.tsx, app/globals.css, app/PortfolioSections.tsx, app/UiUxDecisionShowcase.tsx,) Tj ET
+BT /F1 8.40 Tf 64.00 171.00 Td (  app/ProjectCarouselButton.tsx, read_project.sh, and the refreshed snapshot as the implementation and) Tj ET
+BT /F1 8.40 Tf 64.00 160.20 Td (  documentation surface for this record.) Tj ET
+BT /F2 10.80 Tf 54.00 139.40 Td (Baseline Status Before October 3-4 Work) Tj ET
+BT /F1 8.40 Tf 54.00 123.40 Td (- The October 2 state had improved compact hero scaling, rebuilt Work Space and Work Tools, and expanded) Tj ET
+BT /F1 8.40 Tf 64.00 112.60 Td (  navigation anchors, but the landing page still lacked a dedicated UI/UX section even though UI / UX appeared) Tj ET
+BT /F1 8.40 Tf 64.00 101.80 Td (  high in the shared navigation.) Tj ET
+0.55 w 0.65 G 54 42 m 558 42 l S
+BT /F1 7.5 Tf 54 28 Td (Prahlin Portfolio Work Log - October 4, 2026) Tj ET
+BT /F1 7.5 Tf 520 28 Td (Page 1) Tj ET
+endstream
+endobj
+6 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 5 0 R >>
+endobj
+7 0 obj
+<< /Length 6707 >>
+stream
+BT /F1 8.40 Tf 54.00 744.00 Td (- The landing sequence still placed Work Space before Workflow and Core Beliefs, which no longer matched the) Tj ET
+BT /F1 8.40 Tf 64.00 733.20 Td (  requested navigation order. The snapshot script also scanned more filesystem state than necessary and) Tj ET
+BT /F1 8.40 Tf 64.00 722.40 Td (  retained archived Next.js build output in its inventory.) Tj ET
+BT /F1 8.40 Tf 54.00 708.60 Td (- The hero's narrow device frames did not maintain equal horizontal center spacing with protected outer) Tj ET
+BT /F1 8.40 Tf 64.00 697.80 Td (  gutters across the full 360px-to-720px range. Near-square widths could briefly expose a small three-line) Tj ET
+BT /F1 8.40 Tf 64.00 687.00 Td (  quote between otherwise consistent four-line compact layouts.) Tj ET
+BT /F1 8.40 Tf 54.00 673.20 Td (- The quote/profile group and device group used overlapping absolute geometry in compact layouts. Several) Tj ET
+BT /F1 8.40 Tf 64.00 662.40 Td (  successive corrections were needed to separate the vertical bands, restore intended device positions, then) Tj ET
+BT /F1 8.40 Tf 64.00 651.60 Td (  tighten the perceived silhouette gap rather than relying only on rectangular image bounds.) Tj ET
+BT /F1 8.40 Tf 54.00 637.80 Td (- The 981px-to-1023px compact-landscape state changed chips and proof items into left-side columns while) Tj ET
+BT /F1 8.40 Tf 64.00 627.00 Td (  runtime hero centering counteracted intentional device-stage movement, leaving a large empty corridor above) Tj ET
+BT /F1 8.40 Tf 64.00 616.20 Td (  the stats strip.) Tj ET
+BT /F1 8.40 Tf 54.00 602.40 Td (- Work Space still labeled its primary hardware row WORK STATION / Laptop and summarized the MacBook in one) Tj ET
+BT /F1 8.40 Tf 64.00 591.60 Td (  short line. External displays were listed as two CMV 14-inch units rather than the current pair of) Tj ET
+BT /F1 8.40 Tf 64.00 580.80 Td (  largest-size WCV portable monitors.) Tj ET
+BT /F2 10.80 Tf 54.00 560.00 Td (Goals for October 4) Tj ET
+BT /F1 8.40 Tf 54.00 544.00 Td (- Reduce snapshot noise and generation cost while preserving the complete tracked, non-ignored project record) Tj ET
+BT /F1 8.40 Tf 64.00 533.20 Td (  expected by future sessions.) Tj ET
+BT /F1 8.40 Tf 54.00 519.40 Td (- Align landing content order with navigation order and introduce a distinctive but restrained UI/UX section) Tj ET
+BT /F1 8.40 Tf 64.00 508.60 Td (  high on the page, using reusable data, replaceable screenshots, and editable connector geometry.) Tj ET
+BT /F1 8.40 Tf 54.00 494.80 Td (- Make compact hero behavior continuous: equal device distribution at the narrowest widths, a fixed large) Tj ET
+BT /F1 8.40 Tf 64.00 484.00 Td (  four-line quote whenever the hero images appear below the copy, deliberate quote/profile and device stack) Tj ET
+BT /F1 8.40 Tf 64.00 473.20 Td (  spacing, and no transient small-quote state.) Tj ET
+BT /F1 8.40 Tf 54.00 459.40 Td (- Add a protected compact-landscape device snap when chips and proof content collapse into the left column,) Tj ET
+BT /F1 8.40 Tf 64.00 448.60 Td (  without moving the quote, profile, copy, proof panel, stats strip, or horizontal device coordinates.) Tj ET
+BT /F1 8.40 Tf 54.00 434.80 Td (- Rename and expand the Work Space hardware row into a specifications-only workstation record based on the) Tj ET
+BT /F1 8.40 Tf 64.00 424.00 Td (  current MacBook and dual WCV display setup, while keeping the data and rendering reusable.) Tj ET
+BT /F2 10.80 Tf 54.00 403.20 Td (Work Completed - Snapshot Generation and Content Order) Tj ET
+BT /F1 8.40 Tf 54.00 387.20 Td (- Replaced the snapshot script's broad filesystem tree scan with Git-tracked and non-ignored file discovery.) Tj ET
+BT /F1 8.40 Tf 64.00 376.40 Td (  Reinforced exclusions for .next and archived .next.* directories, generated caches, private material, and) Tj ET
+BT /F1 8.40 Tf 64.00 365.60 Td (  platform-specific noise.) Tj ET
+BT /F1 8.40 Tf 54.00 351.80 Td (- Regenerated the project snapshot after the script change and reduced the recorded file surface substantially) Tj ET
+BT /F1 8.40 Tf 64.00 341.00 Td (  while retaining source, assets, route structure, repository state, worklog inventory, and session guidance) Tj ET
+BT /F1 8.40 Tf 64.00 330.20 Td (  needed for future continuity.) Tj ET
+BT /F1 8.40 Tf 54.00 316.40 Td (- Reordered shared navigation to CASES, UI / UX, STACK, FLOW, VALUES, SPACE, and CONTACT. Preserved the) Tj ET
+BT /F1 8.40 Tf 64.00 305.60 Td (  two-row responsive navigation behavior, brand spacing, project navigation instances, and context-aware home) Tj ET
+BT /F1 8.40 Tf 64.00 294.80 Td (  hash routing.) Tj ET
+BT /F1 8.40 Tf 54.00 281.00 Td (- Moved Work Space and Work Tools below My Workflow and My Core Beliefs so the landing page now follows the) Tj ET
+BT /F1 8.40 Tf 64.00 270.20 Td (  same top-to-bottom story advertised by the navigation. The change reused existing sections rather than) Tj ET
+BT /F1 8.40 Tf 64.00 259.40 Td (  cloning content.) Tj ET
+BT /F2 10.80 Tf 54.00 238.60 Td (Work Completed - Reusable Landing UI/UX Decision Showcase) Tj ET
+BT /F1 8.40 Tf 54.00 222.60 Td (- Added a dedicated landing UI/UX section immediately after Featured Case Studies and before the technology) Tj ET
+BT /F1 8.40 Tf 64.00 211.80 Td (  stack. Updated the shared UI / UX navigation destination from /articles to the new #uiux landing anchor) Tj ET
+BT /F1 8.40 Tf 64.00 201.00 Td (  while preserving article-page behavior.) Tj ET
+BT /F1 8.40 Tf 54.00 187.20 Td (- Created UiUxDecisionShowcase as a reusable component rather than a one-off drawing. Its public inputs) Tj ET
+BT /F1 8.40 Tf 64.00 176.40 Td (  include six decision objects, eyebrow, title, subtitle, screenshot source and alternative text, object-fit) Tj ET
+BT /F1 8.40 Tf 64.00 165.60 Td (  behavior, and object-position behavior.) Tj ET
+BT /F1 8.40 Tf 54.00 151.80 Td (- Defined all six numbered decision blocks in landing-page data so labels and descriptions can be edited) Tj ET
+BT /F1 8.40 Tf 64.00 141.00 Td (  independently. Each decision also owns reusable SVG noodle points, allowing connector direction and shape to) Tj ET
+BT /F1 8.40 Tf 64.00 130.20 Td (  be tuned without rewriting component markup.) Tj ET
+BT /F1 8.40 Tf 54.00 116.40 Td (- Built the central phone as a CSS device frame with a distinct replaceable screenshot layer. The frame,) Tj ET
+BT /F1 8.40 Tf 64.00 105.60 Td (  speaker and camera details remain presentation code, while a future screenshot can be supplied through) Tj ET
+BT /F1 8.40 Tf 64.00 94.80 Td (  screenshotSrc without modifying the component structure.) Tj ET
+0.55 w 0.65 G 54 42 m 558 42 l S
+BT /F1 7.5 Tf 54 28 Td (Prahlin Portfolio Work Log - October 4, 2026) Tj ET
+BT /F1 7.5 Tf 520 28 Td (Page 2) Tj ET
+endstream
+endobj
+8 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 7 0 R >>
+endobj
+9 0 obj
+<< /Length 6631 >>
+stream
+BT /F1 8.40 Tf 54.00 744.00 Td (- Implemented a wide composition with three numbered decisions on each side of the device and connector) Tj ET
+BT /F1 8.40 Tf 64.00 733.20 Td (  noodles leading toward the screen. Implemented a portrait composition with decisions 01-03 above the device) Tj ET
+BT /F1 8.40 Tf 64.00 722.40 Td (  and 04-06 below it, matching the accepted mockup logic.) Tj ET
+BT /F1 8.40 Tf 54.00 708.60 Td (- Kept the section visually related to the portfolio through the existing dark green grid, mint text, fine) Tj ET
+BT /F1 8.40 Tf 64.00 697.80 Td (  borders, rounded cards, and typographic hierarchy while avoiding the stacked-card, tab, and circular-orbit) Tj ET
+BT /F1 8.40 Tf 64.00 687.00 Td (  structures already used elsewhere.) Tj ET
+BT /F2 10.80 Tf 54.00 666.20 Td (Work Completed - Narrow Hero Distribution and Quote Treatment) Tj ET
+BT /F1 8.40 Tf 54.00 650.20 Td (- Replaced edge-stuck narrow-device placement with one responsive horizontal distribution system. Alla Vostra,) Tj ET
+BT /F1 8.40 Tf 64.00 639.40 Td (  Cinerific, and CreditKing now maintain equal center-to-center spacing and approximately 32px outer gutters) Tj ET
+BT /F1 8.40 Tf 64.00 628.60 Td (  across tested 360px, 390px, 430px, 560px, and 720px widths.) Tj ET
+BT /F1 8.40 Tf 54.00 614.80 Td (- Preserved each device's established vertical position while correcting only its horizontal formula. The) Tj ET
+BT /F1 8.40 Tf 64.00 604.00 Td (  outer phones use viewport-aware left and right calculations, while the tablet remains centered through a) Tj ET
+BT /F1 8.40 Tf 64.00 593.20 Td (  calculated left coordinate.) Tj ET
+BT /F1 8.40 Tf 54.00 579.40 Td (- Promoted the 721px-to-980px compact quote to the same fixed 31.745px four-line treatment used by the) Tj ET
+BT /F1 8.40 Tf 64.00 568.60 Td (  narrowest layout. Standard three-line rows are hidden and the existing four semantic narrow rows are shown,) Tj ET
+BT /F1 8.40 Tf 64.00 557.80 Td (  keeping copy and punctuation identical.) Tj ET
+BT /F1 8.40 Tf 54.00 544.00 Td (- Restored the desktop quote's 80fr / text / 20fr horizontal weighting in compact layouts. This biases the) Tj ET
+BT /F1 8.40 Tf 64.00 533.20 Td (  paragraph toward the profile bubble rather than centering it between the device composition's left edge and) Tj ET
+BT /F1 8.40 Tf 64.00 522.40 Td (  the portrait.) Tj ET
+BT /F1 8.40 Tf 54.00 508.60 Td (- Separated quote/profile and device presentation into controlled vertical bands, then visually tightened the) Tj ET
+BT /F1 8.40 Tf 64.00 497.80 Td (  space by moving the upper group down and the lower device group up. Adjustments were based on rendered) Tj ET
+BT /F1 8.40 Tf 64.00 487.00 Td (  silhouettes and protected horizontal boundaries rather than raw image-box values alone.) Tj ET
+BT /F1 8.40 Tf 54.00 473.20 Td (- Removed the near-square small-quote flash by tying the fixed large quote to the single-column hero state,) Tj ET
+BT /F1 8.40 Tf 64.00 462.40 Td (  where images appear below the copy, instead of relying solely on the browser's portrait orientation) Tj ET
+BT /F1 8.40 Tf 64.00 451.60 Td (  classification.) Tj ET
+BT /F1 8.40 Tf 54.00 437.80 Td (- Extended the compact single-column portrait composition through 1040px and moved the full desktop transition) Tj ET
+BT /F1 8.40 Tf 64.00 427.00 Td (  to 1041px. Updated runtime two-column detection to use the same threshold while retaining desktop behavior) Tj ET
+BT /F1 8.40 Tf 64.00 416.20 Td (  for true 981px-and-up landscape layouts.) Tj ET
+BT /F2 10.80 Tf 54.00 395.40 Td (Work Completed - Compact-Landscape Device Snap) Tj ET
+BT /F1 8.40 Tf 54.00 379.40 Td (- Identified 1024px landscape as the proof-layout transition: at 1024px the proof panel uses six columns,) Tj ET
+BT /F1 8.40 Tf 64.00 368.60 Td (  while 1023px and below returns to three columns and confines chips and proof content to the left side of the) Tj ET
+BT /F1 8.40 Tf 64.00 357.80 Td (  two-column hero.) Tj ET
+BT /F1 8.40 Tf 54.00 344.00 Td (- Added a device-stage-only snap for 981px through 1023px landscape. The CSS exposes --hero-device-stage-snap) Tj ET
+BT /F1 8.40 Tf 64.00 333.20 Td (  and translates only .phone-stage by 140 CSS pixels, leaving the quote, profile, hero copy, chips, proof,) Tj ET
+BT /F1 8.40 Tf 64.00 322.40 Td (  stats, and all horizontal positions unchanged.) Tj ET
+BT /F1 8.40 Tf 54.00 308.60 Td (- Updated ProjectCarouselButton's runtime centering calculation to recognize the intentional snap. The) Tj ET
+BT /F1 8.40 Tf 64.00 297.80 Td (  geometry pass subtracts the scaled snap only from device-frame measurements, preventing the parent hero) Tj ET
+BT /F1 8.40 Tf 64.00 287.00 Td (  visual offset from canceling the requested movement.) Tj ET
+BT /F1 8.40 Tf 54.00 273.20 Td (- After clearing stale Next.js output, measured approximately 126 rendered pixels of downward device movement) Tj ET
+BT /F1 8.40 Tf 64.00 262.40 Td (  at the target transition and reduced the visible device-to-stats corridor by roughly 100px without altering) Tj ET
+BT /F1 8.40 Tf 64.00 251.60 Td (  neighboring element coordinates.) Tj ET
+BT /F2 10.80 Tf 54.00 230.80 Td (Work Completed - Work Space Hardware Expansion) Tj ET
+BT /F1 8.40 Tf 54.00 214.80 Td (- Renamed the green eyebrow from WORK STATION to HARD / WARE through the existing two-word label renderer and) Tj ET
+BT /F1 8.40 Tf 64.00 204.00 Td (  renamed the white Laptop heading to Workstation. Accessible labeling continues to expose the complete HARD) Tj ET
+BT /F1 8.40 Tf 64.00 193.20 Td (  WARE text.) Tj ET
+BT /F1 8.40 Tf 54.00 179.40 Td (- Replaced the one-line MacBook summary with a reusable workstationSpecs collection rendered as labeled rows.) Tj ET
+BT /F1 8.40 Tf 64.00 168.60 Td (  The block contains specifications only, with no promotional or explanatory sentences.) Tj ET
+BT /F1 8.40 Tf 54.00 154.80 Td (- Recorded MacBook Air / 15-inch / 2025, Apple M4 with a 10-core CPU split into four performance and six) Tj ET
+BT /F1 8.40 Tf 64.00 144.00 Td (  efficiency cores, integrated 10-core GPU with Metal 4, 16GB unified memory, and the user-specified 128GB) Tj ET
+BT /F1 8.40 Tf 64.00 133.20 Td (  internal SSD.) Tj ET
+BT /F1 8.40 Tf 54.00 119.40 Td (- Added Liquid Retina 2880 x 1864, current 1920 x 1080 at 60Hz display output, and macOS Tahoe 26.6.2.) Tj ET
+BT /F1 8.40 Tf 64.00 108.60 Td (  Deliberately omitted the machine serial number from the public portfolio even though it appeared in the) Tj ET
+BT /F1 8.40 Tf 64.00 97.80 Td (  supplied About This Mac reference.) Tj ET
+0.55 w 0.65 G 54 42 m 558 42 l S
+BT /F1 7.5 Tf 54 28 Td (Prahlin Portfolio Work Log - October 4, 2026) Tj ET
+BT /F1 7.5 Tf 520 28 Td (Page 3) Tj ET
+endstream
+endobj
+10 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 9 0 R >>
+endobj
+11 0 obj
+<< /Length 6641 >>
+stream
+BT /F1 8.40 Tf 54.00 744.00 Td (- Renamed External Monitor to External Monitors and replaced both earlier CMV entries with matching WCV) Tj ET
+BT /F1 8.40 Tf 64.00 733.20 Td (  15.6-inch 1080p IPS displays, reflecting the current dual-monitor setup and the largest WCV portable size) Tj ET
+BT /F1 8.40 Tf 64.00 722.40 Td (  identified for the record.) Tj ET
+BT /F1 8.40 Tf 54.00 708.60 Td (- Added responsive specification-row styling with green uppercase labels, white values, fine separators, and a) Tj ET
+BT /F1 8.40 Tf 64.00 697.80 Td (  two-column grid that wraps cleanly on narrow screens while retaining the established Work Space rail and) Tj ET
+BT /F1 8.40 Tf 64.00 687.00 Td (  typography.) Tj ET
+BT /F2 10.80 Tf 54.00 666.20 Td (Work Completed - Local Preview, Cache Handling, and Documentation) Tj ET
+BT /F1 8.40 Tf 54.00 650.20 Td (- Maintained the local Next.js preview in the detached portfolio-dev screen session at 127.0.0.1:3000.) Tj ET
+BT /F1 8.40 Tf 64.00 639.40 Td (  Restarted it only when compiled CSS or client geometry logic demonstrably remained stale after source edits.) Tj ET
+BT /F1 8.40 Tf 54.00 625.60 Td (- Moved stale .next directories to timestamped /tmp locations before clean restarts instead of deleting broad) Tj ET
+BT /F1 8.40 Tf 64.00 614.80 Td (  paths. Terminated exact orphaned dev-process identifiers when screen sessions exited without their Next.js) Tj ET
+BT /F1 8.40 Tf 64.00 604.00 Td (  children.) Tj ET
+BT /F1 8.40 Tf 54.00 590.20 Td (- Used Playwright with the installed Google Chrome binary to inspect computed styles, rendered bounds,) Tj ET
+BT /F1 8.40 Tf 64.00 579.40 Td (  breakpoint transitions, line visibility, center spacing, outer gutters, stack gaps, and screenshots at) Tj ET
+BT /F1 8.40 Tf 64.00 568.60 Td (  representative desktop, portrait, near-square, and compact-landscape widths.) Tj ET
+BT /F1 8.40 Tf 54.00 554.80 Td (- Refreshed portfolio_PROJECT_SNAPSHOT.txt after the committed application work. The resulting file records) Tj ET
+BT /F1 8.40 Tf 64.00 544.00 Td (  16,894 lines and 563,843 bytes at committed source state 911f700 plus the documentation pass.) Tj ET
+BT /F2 10.80 Tf 54.00 523.20 Td (Committed Source Sequence) Tj ET
+BT /F1 8.40 Tf 54.00 507.20 Td (- c9f7168 - Streamlined Project Snapshot Generation. Replaced broad filesystem scanning with Git-aware) Tj ET
+BT /F1 8.40 Tf 64.00 496.40 Td (  discovery, expanded cache and archive exclusions, and reduced snapshot noise.) Tj ET
+BT /F1 8.40 Tf 54.00 482.60 Td (- 0c4673c - Refined Landing Navigation and Content Flow. Reordered navigation, preserved responsive row) Tj ET
+BT /F1 8.40 Tf 64.00 471.80 Td (  behavior, and moved Work Space below Workflow and Core Beliefs.) Tj ET
+BT /F1 8.40 Tf 54.00 458.00 Td (- d5de419 - Added Reusable Landing UI/UX Decision Showcase. Added the six-decision component, editable) Tj ET
+BT /F1 8.40 Tf 64.00 447.20 Td (  noodles, replaceable screenshot frame, responsive arrangements, landing data, and #uiux navigation target.) Tj ET
+BT /F1 8.40 Tf 54.00 433.40 Td (- c88eafb - Refined Responsive Hero Layout Across Compact Breakpoints. Standardized four-line quote behavior,) Tj ET
+BT /F1 8.40 Tf 64.00 422.60 Td (  extended compact portrait layout, corrected narrow device distribution, tightened vertical stacks, and) Tj ET
+BT /F1 8.40 Tf 64.00 411.80 Td (  aligned runtime centering with targeted breakpoint offsets.) Tj ET
+BT /F1 8.40 Tf 54.00 398.00 Td (- 911f700 - Expanded Work Space Hardware Details. Renamed the hardware row, introduced reusable) Tj ET
+BT /F1 8.40 Tf 64.00 387.20 Td (  specifications, recorded the current MacBook configuration, updated both WCV displays, and styled the) Tj ET
+BT /F1 8.40 Tf 64.00 376.40 Td (  expanded block responsively.) Tj ET
+BT /F2 10.80 Tf 54.00 355.60 Td (Validation Summary) Tj ET
+BT /F1 8.40 Tf 54.00 339.60 Td (- Ran npm run check after the final application changes and during this documentation pass; TypeScript) Tj ET
+BT /F1 8.40 Tf 64.00 328.80 Td (  completed successfully with no emitted files.) Tj ET
+BT /F1 8.40 Tf 54.00 315.00 Td (- Confirmed main and origin/main both resolve to 911f7006887287f422118274dc91bef650fbf0a2 before generating) Tj ET
+BT /F1 8.40 Tf 64.00 304.20 Td (  the PDF. The only pre-PDF working-tree change after the final source commit was the customary refreshed) Tj ET
+BT /F1 8.40 Tf 64.00 293.40 Td (  portfolio_PROJECT_SNAPSHOT.txt.) Tj ET
+BT /F1 8.40 Tf 54.00 279.60 Td (- Loaded / and /articles through the persistent local server and confirmed HTTP 200 responses for both routes.) Tj ET
+BT /F1 8.40 Tf 64.00 268.80 Td (  The preview remained available at http://127.0.0.1:3000.) Tj ET
+BT /F1 8.40 Tf 54.00 255.00 Td (- Verified compact quote font size, row visibility, portrait/near-square continuity, two-column desktop) Tj ET
+BT /F1 8.40 Tf 64.00 244.20 Td (  reentry, and runtime offset removal at the 1040px-to-1041px boundary.) Tj ET
+BT /F1 8.40 Tf 54.00 230.40 Td (- Measured equal narrow-device center spacing and 32px outer gutters across the tested portrait widths.) Tj ET
+BT /F1 8.40 Tf 64.00 219.60 Td (  Verified that compact hero stack changes did not alter protected horizontal placement.) Tj ET
+BT /F1 8.40 Tf 54.00 205.80 Td (- Measured the compact-landscape proof transition at 1024px/1023px, confirmed the 140px CSS stage snap becomes) Tj ET
+BT /F1 8.40 Tf 64.00 195.00 Td (  approximately 126px after hero scaling, and verified quote/profile/proof positions remain stable.) Tj ET
+BT /F1 8.40 Tf 54.00 181.20 Td (- Verified the Work Space block exposes HARD WARE, Workstation, eight structured specification rows, and two) Tj ET
+BT /F1 8.40 Tf 64.00 170.40 Td (  WCV 15.6-inch 1080p IPS entries at desktop, 720px, and 430px viewport widths.) Tj ET
+BT /F2 10.80 Tf 54.00 149.60 Td (Files Touched and Artifacts) Tj ET
+BT /F1 8.40 Tf 54.00 133.60 Td (- read_project.sh - changed snapshot discovery to Git-aware tracked and non-ignored inputs and excluded) Tj ET
+BT /F1 8.40 Tf 64.00 122.80 Td (  archived Next.js build directories.) Tj ET
+BT /F1 8.40 Tf 54.00 109.00 Td (- app/PortfolioSections.tsx - reordered shared navigation behavior and redirected UI / UX to the landing #uiux) Tj ET
+BT /F1 8.40 Tf 64.00 98.20 Td (  section while preserving article-page context.) Tj ET
+BT /F1 8.40 Tf 54.00 84.40 Td (- app/UiUxDecisionShowcase.tsx - added the reusable six-decision showcase, SVG connector rendering,) Tj ET
+BT /F1 8.40 Tf 64.00 73.60 Td (  configurable screenshot layer, and semantic callout structure.) Tj ET
+0.55 w 0.65 G 54 42 m 558 42 l S
+BT /F1 7.5 Tf 54 28 Td (Prahlin Portfolio Work Log - October 4, 2026) Tj ET
+BT /F1 7.5 Tf 520 28 Td (Page 4) Tj ET
+endstream
+endobj
+12 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 11 0 R >>
+endobj
+13 0 obj
+<< /Length 5407 >>
+stream
+BT /F1 8.40 Tf 54.00 744.00 Td (- app/page.tsx - added UI/UX decision data and placement, reordered landing sections, expanded hero quote) Tj ET
+BT /F1 8.40 Tf 64.00 733.20 Td (  markup behavior, and replaced the workstation summary with reusable hardware specs and dual-monitor details.) Tj ET
+BT /F1 8.40 Tf 54.00 719.40 Td (- app/globals.css - added UI/UX showcase styling, narrow device distribution, compact quote and stack rules,) Tj ET
+BT /F1 8.40 Tf 64.00 708.60 Td (  extended portrait behavior, compact-landscape device snapping, and responsive workstation specification) Tj ET
+BT /F1 8.40 Tf 64.00 697.80 Td (  rows.) Tj ET
+BT /F1 8.40 Tf 54.00 684.00 Td (- app/ProjectCarouselButton.tsx - aligned runtime hero mode detection with the 1040px compact threshold and) Tj ET
+BT /F1 8.40 Tf 64.00 673.20 Td (  made centering calculations preserve intentional device-stage snaps.) Tj ET
+BT /F1 8.40 Tf 54.00 659.40 Td (- portfolio_PROJECT_SNAPSHOT.txt - refreshed through ./read_project.sh so the documentation companion records) Tj ET
+BT /F1 8.40 Tf 64.00 648.60 Td (  final committed state 911f700 and all forty-seven earlier worklogs.) Tj ET
+BT /F1 8.40 Tf 54.00 634.80 Td (- portfolio_worklog_october4.pdf - created as the first October 4 Portfolio worklog at the repository root) Tj ET
+BT /F1 8.40 Tf 64.00 624.00 Td (  using the established no-Part filename.) Tj ET
+BT /F2 10.80 Tf 54.00 603.20 Td (Follow-Up Context) Tj ET
+BT /F1 8.40 Tf 54.00 587.20 Td (- The UI/UX section is intentionally data-driven. Future copy edits belong in uiUxDecisions; connector changes) Tj ET
+BT /F1 8.40 Tf 64.00 576.40 Td (  belong in each decision's noodle point list; screenshot replacements should use screenshotSrc,) Tj ET
+BT /F1 8.40 Tf 64.00 565.60 Td (  screenshotFit, and screenshotPosition rather than editing frame markup.) Tj ET
+BT /F1 8.40 Tf 54.00 551.80 Td (- The fixed 31.745px four-line quote belongs only to single-column hero states where the images appear below) Tj ET
+BT /F1 8.40 Tf 64.00 541.00 Td (  the copy. True two-column desktop layouts retain the smaller responsive three-line quote.) Tj ET
+BT /F1 8.40 Tf 54.00 527.20 Td (- The 981px-to-1023px landscape device snap is intentionally isolated to .phone-stage. Its CSS custom property) Tj ET
+BT /F1 8.40 Tf 64.00 516.40 Td (  is consumed by runtime geometry code so future offset changes should keep both layers synchronized.) Tj ET
+BT /F1 8.40 Tf 54.00 502.60 Td (- Narrow device distribution depends on the existing frame widths and rotations. If those assets change,) Tj ET
+BT /F1 8.40 Tf 64.00 491.80 Td (  remeasure visible outer gutters and center spacing before revising the viewport formulas.) Tj ET
+BT /F1 8.40 Tf 54.00 478.00 Td (- Workstation specifications are rendered from workstationSpecs. The 128GB internal capacity is an explicit) Tj ET
+BT /F1 8.40 Tf 64.00 467.20 Td (  user-provided portfolio value; do not silently replace it with a formatted or system-reported capacity.) Tj ET
+BT /F1 8.40 Tf 54.00 453.40 Td (- The serial number remains intentionally absent from public source content. Future hardware updates should) Tj ET
+BT /F1 8.40 Tf 64.00 442.60 Td (  continue to exclude unique machine identifiers, UUIDs, and provisioning identifiers.) Tj ET
+BT /F1 8.40 Tf 54.00 428.80 Td (- The detached portfolio-dev screen session remains the preferred local-preview mechanism. Cache clearing) Tj ET
+BT /F1 8.40 Tf 64.00 418.00 Td (  should be reserved for verified stale compiled output and should preserve old .next directories in /tmp when) Tj ET
+BT /F1 8.40 Tf 64.00 407.20 Td (  practical.) Tj ET
+BT /F1 8.40 Tf 54.00 393.40 Td (- As with prior Portfolio work, ask for the commit message before committing or pushing the refreshed snapshot) Tj ET
+BT /F1 8.40 Tf 64.00 382.60 Td (  or this PDF unless the user explicitly supplies a message and requests the operation.) Tj ET
+BT /F2 10.80 Tf 54.00 361.80 Td (Output Artifact) Tj ET
+BT /F1 8.40 Tf 54.00 345.80 Td (- Created /Users/prahlin/gh/portfolio/portfolio_worklog_october4.pdf as the latest daily worklog for Sunday,) Tj ET
+BT /F1 8.40 Tf 64.00 335.00 Td (  October 4, 2026, following the established month-name, non-zero-padded day, and no-Part first-record naming) Tj ET
+BT /F1 8.40 Tf 64.00 324.20 Td (  convention.) Tj ET
+BT /F1 8.40 Tf 54.00 310.40 Td (- Produced an unencrypted US Letter, PDF 1.4 document using Helvetica and Helvetica-Bold with Codex title,) Tj ET
+BT /F1 8.40 Tf 64.00 299.60 Td (  subject, author, creator, and producer metadata.) Tj ET
+BT /F1 8.40 Tf 54.00 285.80 Td (- Preserved the established dense technical narrative, mature section ordering, repeated dated page footer,) Tj ET
+BT /F1 8.40 Tf 64.00 275.00 Td (  and end-of-document continuity notes used by the recent Portfolio worklog series.) Tj ET
+BT /F1 8.40 Tf 54.00 261.20 Td (- Source state reviewed: 911f7006887287f422118274dc91bef650fbf0a2 on main and origin/main before snapshot and) Tj ET
+BT /F1 8.40 Tf 64.00 250.40 Td (  PDF generation.) Tj ET
+BT /F1 8.40 Tf 54.00 236.60 Td (- No application-source change, source commit, push, deployment, Hostinger synchronization, GitHub Actions) Tj ET
+BT /F1 8.40 Tf 64.00 225.80 Td (  dispatch, or production publish was performed as part of generating this PDF artifact.) Tj ET
+0.55 w 0.65 G 54 42 m 558 42 l S
+BT /F1 7.5 Tf 54 28 Td (Prahlin Portfolio Work Log - October 4, 2026) Tj ET
+BT /F1 7.5 Tf 520 28 Td (Page 5) Tj ET
+endstream
+endobj
+14 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 13 0 R >>
+endobj
+15 0 obj
+<< /Title (Prahlin Portfolio Work Log - October 4, 2026) /Subject (Portfolio development work completed on October 4, 2026) /Author (Codex) /Creator (Codex) /Producer (Codex) /CreationDate (D:20261004011101-04'00') >>
+endobj
+xref
+0 16
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000148 00000 n 
+0000000245 00000 n 
+0000000347 00000 n 
+0000007367 00000 n 
+0000007503 00000 n 
+0000014262 00000 n 
+0000014398 00000 n 
+0000021081 00000 n 
+0000021218 00000 n 
+0000027912 00000 n 
+0000028050 00000 n 
+0000033510 00000 n 
+0000033648 00000 n 
+trailer
+<< /Size 16 /Root 1 0 R /Info 15 0 R >>
+startxref
+33882
+%%EOF
