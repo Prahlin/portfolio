@@ -882,6 +882,7 @@ export function ProjectCarouselButton() {
         const proofPanel = document.querySelector<HTMLElement>(".proof-panel");
         const stackRow = document.querySelector<HTMLElement>(".stack-row");
         const heroVisual = document.querySelector<HTMLElement>(".hero-visual");
+        const phoneStage = document.querySelector<HTMLElement>(".phone-stage");
         const navBar = document.querySelector<HTMLElement>(".nav-bar");
         const profilePhoto =
           document.querySelector<HTMLElement>(".profile-photo");
@@ -911,18 +912,47 @@ export function ProjectCarouselButton() {
 
         if (heroVisual && navBar && stackRow) {
           const isTwoColumnHero = window.matchMedia(
-            "(min-width: 981px)",
+            "(min-width: 1041px), (min-width: 981px) and (orientation: landscape)",
           ).matches;
 
           if (!isTwoColumnHero) {
             heroVisual.style.removeProperty("--hero-visual-center-offset");
           } else {
+            const isCompactLandscapeHero = window.matchMedia(
+              "(min-width: 981px) and (max-width: 1023px) and (orientation: landscape)",
+            ).matches;
+            const heroVisualScale =
+              heroVisual.offsetWidth > 0
+                ? heroVisual.getBoundingClientRect().width / heroVisual.offsetWidth
+                : 1;
+            const deviceStageSnap = isCompactLandscapeHero
+              ? (Number.parseFloat(
+                  window
+                    .getComputedStyle(phoneStage ?? heroVisual)
+                    .getPropertyValue("--hero-device-stage-snap"),
+                ) || 0) * heroVisualScale
+              : 0;
             const visualRects = visualFrameSelectors
-              .map((selector) =>
-                document.querySelector<HTMLElement>(selector),
+              .map((selector) => ({
+                element: document.querySelector<HTMLElement>(selector),
+                selector,
+              }))
+              .filter(
+                (
+                  entry,
+                ): entry is { element: HTMLElement; selector: string } =>
+                  Boolean(entry.element),
               )
-              .filter((element): element is HTMLElement => Boolean(element))
-              .map((element) => element.getBoundingClientRect());
+              .map(({ element, selector }) => {
+                const rect = element.getBoundingClientRect();
+                const snapAdjustment =
+                  selector === ".profile-photo" ? 0 : deviceStageSnap;
+
+                return {
+                  bottom: rect.bottom - snapAdjustment,
+                  top: rect.top - snapAdjustment,
+                };
+              });
 
             if (visualRects.length > 0) {
               const navRect = navBar.getBoundingClientRect();
