@@ -25,6 +25,10 @@ import {
   SectionHeading,
 } from "./PortfolioSections";
 import { ProofStats } from "./ProofStats";
+import {
+  UiUxDecisionShowcase,
+  type UiUxDecision,
+} from "./UiUxDecisionShowcase";
 
 const stackChips = [
   "React Native",
@@ -46,6 +50,81 @@ const proofStats = [
   { label: "Quality GitHub Commits", value: "1.0k" },
   { label: "Real-Time Project Worklogs", value: "0.2k" },
   { label: "Shipped Mob/Web Products", value: "8" },
+];
+
+const uiUxDecisions: readonly UiUxDecision[] = [
+  {
+    description: "Guide attention to what matters most.",
+    number: "01",
+    noodle: [
+      [390, 145],
+      [406, 145],
+      [426, 165],
+      [452, 165],
+    ],
+    side: "left",
+    title: "Clear hierarchy",
+  },
+  {
+    description: "Keep key actions within easy reach.",
+    number: "02",
+    noodle: [
+      [390, 325],
+      [414, 325],
+      [430, 337],
+      [452, 337],
+    ],
+    side: "left",
+    title: "Reachable actions",
+  },
+  {
+    description: "Show a response right away.",
+    number: "03",
+    noodle: [
+      [390, 505],
+      [410, 505],
+      [428, 493],
+      [452, 493],
+    ],
+    side: "left",
+    title: "Immediate feedback",
+  },
+  {
+    description: "Make every action easy to understand.",
+    number: "04",
+    noodle: [
+      [844, 145],
+      [774, 145],
+      [754, 165],
+      [728, 165],
+    ],
+    side: "right",
+    title: "Accessible by default",
+  },
+  {
+    description: "Let familiar behavior build confidence.",
+    number: "05",
+    noodle: [
+      [826, 325],
+      [766, 325],
+      [750, 337],
+      [728, 337],
+    ],
+    side: "right",
+    title: "Consistent patterns",
+  },
+  {
+    description: "Keep the experience clear at every size.",
+    number: "06",
+    noodle: [
+      [830, 505],
+      [770, 505],
+      [752, 493],
+      [728, 493],
+    ],
+    side: "right",
+    title: "Responsive behavior",
+  },
 ];
 
 const resumeButtonColor = "#fff";
@@ -814,6 +893,13 @@ export default function Home() {
       </section>
 
       <FeaturedCaseStudies />
+
+      <UiUxDecisionShowcase
+        decisions={uiUxDecisions}
+        subtitle="Good interfaces are built from small, deliberate choices."
+        title="One Screen. Six Decisions."
+        // Add screenshotSrc="/images/your-screenshot.png" when your image is ready.
+      />
 
       <section className="stack-section" id="stack">
         <div className="site-shell split-section">
