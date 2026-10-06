@@ -94,7 +94,8 @@ const uiUxDecisions: readonly UiUxDecision[] = [
     title: "User-friendly",
   },
   {
-    description: "Immersive.\nIntentional.\nAlways guiding the user.",
+    description:
+      "Let's be real; a product is never stronger than its weakest point.",
     deviceDescription:
       "Less is more, and focal points should have appropriate layers of noticeability.",
     deviceTitle: "STEP-BY-STEP VISIBILITY",
@@ -110,7 +111,7 @@ const uiUxDecisions: readonly UiUxDecision[] = [
     screenshotAlt: "Alla Vostra products screen",
     screenshotSrc: "/images/products_screen_small.png",
     side: "left",
-    title: "Hierarchical",
+    title: "Cohesion",
   },
   {
     description: "Every form factor?\nEvery device type?\nPiece of cake.",
@@ -530,6 +531,7 @@ const timelineItems = [
   {
     evidence:
       "Evidence: UI/UX philosophy, visual hierarchy studies, shipped mobile screens.",
+    points: ["Discuss", "Brainstorm", "Industry Research"],
     title: "Research",
     text: (
       <>
@@ -546,6 +548,7 @@ const timelineItems = [
   },
   {
     evidence: "Evidence: Alla Vostra, Cinerific, Credit King.",
+    points: ["Wireframing", "Mockups", "Scaffold"],
     title: "Plan",
     text: [
       "Cross-platform or Platform-specific? Web version or App-only? UI-focused or Back-end heavy?",
@@ -554,7 +557,8 @@ const timelineItems = [
   },
   {
     evidence: "Evidence: Vercel API, Stripe, PayPal, Postmark.",
-    title: "Scaffold",
+    points: ["Build", "Testing", "Deployment"],
+    title: "Produce",
     text: (
       <>
         Although the nitty-gritty of every project is different, some
@@ -568,23 +572,9 @@ const timelineItems = [
   },
   {
     evidence: "Evidence: 100+ logs across active projects.",
+    points: ["Handoff", "Upkeep"],
     title: "Analyze",
     text: "Creation without learning is useless. By studying & analyzing diffs while the project is growing, I ensure that I'm in the loop, and deeply comprehend, every coding change made to the project in real time.",
-  },
-  {
-    evidence: "",
-    title: "Testing",
-    text: "",
-  },
-  {
-    evidence: "",
-    title: "Building",
-    text: "",
-  },
-  {
-    evidence: "",
-    title: "Release",
-    text: "",
   },
 ];
 
@@ -605,18 +595,6 @@ const timelineHeaderImages = [
     alt: "Analytics dashboard used to study product data",
     src: "/images/aboutdev/workflow-analyze-strip.jpg",
   },
-  {
-    alt: "Engineer testing a connected mobile device prototype",
-    src: "/images/aboutdev/workflow-testing-strip.jpg",
-  },
-  {
-    alt: "Software engineer building an application",
-    src: "/images/aboutdev/workflow-building-strip.jpg",
-  },
-  {
-    alt: "Stylish smartphone framed by colorful bokeh lights",
-    src: "/images/aboutdev/workflow-release-strip.jpg",
-  },
 ];
 
 const principles = [
@@ -627,8 +605,8 @@ const principles = [
   },
   {
     tone: "rose",
-    title: "Modernness",
-    text: "When creating a unique product, absolutely nothing should be off the table.",
+    title: "Integrity",
+    text: "Underpromise and overdeliver - never the other way around.",
   },
   {
     tone: "cyan",
@@ -642,8 +620,8 @@ const principles = [
   },
   {
     tone: "violet",
-    title: "Cohesion",
-    text: "Let's be real; a product is never stronger than its weakest point.",
+    title: "Collaboration",
+    text: "One for all, and all for one.",
   },
 ];
 
@@ -1017,6 +995,18 @@ export default function Home() {
                   <h3>
                     <span className="aboutdev-timeline-title">{item.title}</span>
                   </h3>
+                  {item.points ? (
+                    <ol className="aboutdev-timeline-points">
+                      {item.points.map((point, pointIndex) => (
+                        <li key={point}>
+                          <span aria-hidden>
+                            {String.fromCharCode(65 + pointIndex)}:
+                          </span>{" "}
+                          {point}
+                        </li>
+                      ))}
+                    </ol>
+                  ) : null}
                   {Array.isArray(item.text) ? (
                     item.text.map((paragraph) => (
                       <p key={paragraph}>{paragraph}</p>
