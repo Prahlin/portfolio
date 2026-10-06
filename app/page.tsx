@@ -54,7 +54,10 @@ const proofStats = [
 
 const uiUxDecisions: readonly UiUxDecision[] = [
   {
-    description: "Guide attention to what matters most.",
+    description: "Always sleek.\nAlways streamlined.\nNever sleep-inducing.",
+    deviceDescription:
+      'Stylish, auto-generative design without the bad taste of "cookie-cutter" AI implementation.',
+    deviceTitle: "AI GENERATIVE",
     number: "01",
     noodle: [
       [390, 145],
@@ -62,11 +65,20 @@ const uiUxDecisions: readonly UiUxDecision[] = [
       [426, 165],
       [452, 165],
     ],
+    projectHref: "/projects/alla-vostra",
+    projectLabel: "ALLA VOSTRA",
+    screenshotAlt: "Alla Vostra startup screen",
+    screenshotSrc: "/images/startup_screen_small.png",
     side: "left",
-    title: "Clear hierarchy",
+    title: "Modern",
   },
   {
-    description: "Keep key actions within easy reach.",
+    description:
+      "Instantly legible.\nImmediately understandable.\nQuickly actionable.",
+    deviceDescription:
+      "Users shouldn't have to jump through hoops to navigate, or perform actions.",
+    deviceTitle: "INTUITIVE INTERFACE",
+    deviceVariant: "tablet",
     number: "02",
     noodle: [
       [390, 325],
@@ -74,11 +86,18 @@ const uiUxDecisions: readonly UiUxDecision[] = [
       [430, 337],
       [452, 337],
     ],
+    projectHref: "/projects/cinerific",
+    projectLabel: "CINERIFIC",
+    screenshotAlt: "Cinerific app landscape tablet preview",
+    screenshotSrc: "/images/cinerific-hero-tablet-tab-s7-uniform.png",
     side: "left",
-    title: "Reachable actions",
+    title: "User-friendly",
   },
   {
-    description: "Show a response right away.",
+    description: "Immersive.\nIntentional.\nAlways guiding the user.",
+    deviceDescription:
+      "Less is more, and focal points should have appropriate layers of noticeability.",
+    deviceTitle: "STEP-BY-STEP VISIBILITY",
     number: "03",
     noodle: [
       [390, 505],
@@ -86,11 +105,16 @@ const uiUxDecisions: readonly UiUxDecision[] = [
       [428, 493],
       [452, 493],
     ],
+    projectHref: "/projects/alla-vostra",
+    projectLabel: "ALLA VOSTRA",
+    screenshotAlt: "Alla Vostra products screen",
+    screenshotSrc: "/images/products_screen_small.png",
     side: "left",
-    title: "Immediate feedback",
+    title: "Hierarchical",
   },
   {
-    description: "Make every action easy to understand.",
+    description: "Every form factor?\nEvery device type?\nPiece of cake.",
+    deviceVariant: "tablet",
     number: "04",
     noodle: [
       [844, 145],
@@ -98,11 +122,15 @@ const uiUxDecisions: readonly UiUxDecision[] = [
       [754, 165],
       [728, 165],
     ],
+    projectHref: "/projects/cinerific",
+    projectLabel: "CINERIFIC",
+    screenshotAlt: "Cinerific app landscape tablet preview",
+    screenshotSrc: "/images/cinerific-hero-tablet-tab-s7-uniform.png",
     side: "right",
-    title: "Accessible by default",
+    title: "Responsive",
   },
   {
-    description: "Let familiar behavior build confidence.",
+    description: "Cross-Platform?\nCross-Regional?\nConsider it done.",
     number: "05",
     noodle: [
       [826, 325],
@@ -110,20 +138,12 @@ const uiUxDecisions: readonly UiUxDecision[] = [
       [750, 337],
       [728, 337],
     ],
+    projectHref: "/projects/alla-vostra",
+    projectLabel: "ALLA VOSTRA",
+    screenshotAlt: "Alla Vostra order confirmation screen",
+    screenshotSrc: "/images/confirmed_overlay_small.png",
     side: "right",
-    title: "Consistent patterns",
-  },
-  {
-    description: "Keep the experience clear at every size.",
-    number: "06",
-    noodle: [
-      [830, 505],
-      [770, 505],
-      [752, 493],
-      [728, 493],
-    ],
-    side: "right",
-    title: "Responsive behavior",
+    title: "Scalable",
   },
 ];
 
@@ -918,8 +938,8 @@ export default function Home() {
 
       <UiUxDecisionShowcase
         decisions={uiUxDecisions}
-        subtitle="Good interfaces are built from small, deliberate choices."
-        title="One Screen. Six Decisions."
+        subtitle="Less 'UI' - More 'You-I'"
+        title="UI / UX Philosophy"
         // Add screenshotSrc="/images/your-screenshot.png" when your image is ready.
       />
 
