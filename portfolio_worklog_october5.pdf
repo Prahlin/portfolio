@@ -1,0 +1,362 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [5 0 R 7 0 R 9 0 R 11 0 R 13 0 R] /Count 5 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+5 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 6 0 R >>
+endobj
+6 0 obj
+<< /Length 8495 >>
+stream
+BT /F2 11.00 Tf 1 0 0 1 34.00 760.00 Tm (Prahlin Portfolio Work Log - October 5, 2026) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 740.35 Tm (Compiled summary for Monday, October 5, 2026 - focus: continuing the Prahl.dev Portfolio after the October 4) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 729.70 Tm (responsive hero, Work Space, workflow-imagery, and first reusable UI/UX showcase record; independently verifying) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 719.05 Tm (the United States Eastern date; running the customary project reader; extracting and studying all forty-eight) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 708.40 Tm (pre-existing Portfolio PDF worklogs; rebuilding the landing UI/UX section as a five-decision interactive compact) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 697.75 Tm (experience while protecting its wide composition; connecting each decision to real Alla Vostra or Cinerific) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 687.10 Tm (media and project routes; refining decision copy, typography, device geometry, responsive spacing, and connector) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 676.45 Tm (behavior; consolidating My Workflow from seven entries into four complete phases; adding phase-specific substeps) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 665.80 Tm (and Deep Diffusion image treatment; revising the Core Beliefs language; maintaining the detached local Next.js) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 655.15 Tm (preview; validating TypeScript, live routes, interaction, and responsive geometry; documenting committed source) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 644.50 Tm (states 1c3b63b and 3cdbbc5; refreshing the Portfolio project snapshot; and generating the October 5 Portfolio) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 633.85 Tm (PDF worklog.) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 619.20 Tm (Generated in continuity with the established Prahlin Portfolio daily worklog cadence: compact opening summary,) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 608.55 Tm (source-material section, baseline section, goal list, grouped work-completed sections, committed-source) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 597.90 Tm (sequence, validation section, files-touched list, follow-up context, and output-artifact close.) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 583.25 Tm (This artifact intentionally covers Portfolio work performed after portfolio_worklog_october4.pdf and its) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 572.60 Tm (documentation commit b08e451. The source work is represented by commits 1c3b63b and 3cdbbc5 on main, matching) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 561.95 Tm (origin/main before this PDF was generated. Together they changed the landing-page decision data, reusable UI/UX) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 551.30 Tm (showcase component, global responsive styling, workflow structure, workflow image presentation, and Core Beliefs) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 540.65 Tm (copy. No Hostinger deploy-branch work, GitHub Actions dispatch, static production publish, public deployment, or) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 530.00 Tm (remote service mutation was performed during this record. The documentation deltas created by this generation) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 519.35 Tm (pass are the refreshed portfolio_PROJECT_SNAPSHOT.txt file and this root-level October 5 PDF worklog.) Tj ET
+BT /F2 9.20 Tf 1 0 0 1 34.00 497.70 Tm (Source Materials Reviewed) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 481.85 Tm (- Verified the United States Eastern date through an independent UTC-04:00 time query, which reported October) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 471.20 Tm (  5, 2026 at 11:38 PM. A local America/New_York check immediately before generation reported Monday, October) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 460.55 Tm (  5, 2026 at 11:41 PM EDT. The filename and title therefore use October 5 rather than the execution host's) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 449.90 Tm (  default date or a UTC rollover.) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 436.45 Tm (- Ran ./read_project.sh from /Users/prahlin/gh/portfolio and regenerated portfolio_PROJECT_SNAPSHOT.txt before) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 425.80 Tm (  composing this record, preserving the established source, asset, configuration, Git, PDF-inventory, and) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 415.15 Tm (  workflow-context capture practice.) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 401.70 Tm (- Extracted and studied all forty-eight pre-existing root-level Portfolio PDF worklogs with pdftotext and) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 391.05 Tm (  pdfinfo: fifteen July records, fifteen August records, fifteen September records, and the October 1, October) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 380.40 Tm (  2, and October 4 records. Before this artifact, the series contained 277 PDF pages, 134,370 extracted words,) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 369.75 Tm (  and 1,005,833 extracted characters.) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 356.30 Tm (- Compared the full archive for month-name filenames, non-zero-padded day numbers, same-day Part suffix) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 345.65 Tm (  behavior, title and opening-summary construction, source and baseline framing, goal lists, dense technical) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 335.00 Tm (  bullet voice, validation language, files-touched treatment, continuity notes, artifact closure, and repeated) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 324.35 Tm (  dated page footers.) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 310.90 Tm (- Used October 4 as the direct chronological baseline because it introduced the reusable six-decision UI/UX) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 300.25 Tm (  showcase and documented the seven-stage image-backed workflow. Used October 2 and October 1 for the current) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 289.60 Tm (  landing, Work Space, hero, navigation, and Cinerific UI Foundations context, while retaining the mature) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 278.95 Tm (  July-through-September conventions for document typography and narrative density.) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 265.50 Tm (- Checked all worklog page counts and reviewed representative early, middle, and latest PDF metadata and) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 254.85 Tm (  fonts. The mature artifact convention remains unencrypted US Letter at 612 x 792 points, PDF 1.4, Helvetica) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 244.20 Tm (  and Helvetica-Bold, dense black-on-white technical copy, Codex metadata, and a repeated title-and-page) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 233.55 Tm (  footer.) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 220.10 Tm (- Reviewed commits 1c3b63b and 3cdbbc5 through git log, git show, commit bodies, file statistics, and final) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 209.45 Tm (  source. Confirmed main and origin/main both resolve to 3cdbbc5290f1dc488a7ba8f51c119a8d9627b404 before the) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 198.80 Tm (  documentation pass.) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 185.35 Tm (- Reviewed app/page.tsx, app/UiUxDecisionShowcase.tsx, app/globals.css, the relevant Alla Vostra and Cinerific) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 174.70 Tm (  image assets, the refreshed snapshot, and the live landing and project routes as the implementation surface) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 164.05 Tm (  for this record.) Tj ET
+BT /F2 9.20 Tf 1 0 0 1 34.00 144.80 Tm (Baseline Status Before October 5 Work) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 128.95 Tm (- The October 4 state introduced a reusable six-decision UI/UX section with a wide three-left/three-right) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 118.30 Tm (  composition, editable SVG noodles, and a central generic phone frame. Its compact presentation remained a) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 107.65 Tm (  static arrangement rather than a direct-manipulation selector.) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 94.20 Tm (- Decision copy still used the initial One Screen. Six Decisions framing and earlier labels such as Clear) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 83.55 Tm (  hierarchy, Reachable Actions, Immediate Feedback, Accessible by default, Consistent Patterns, and) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 72.90 Tm (  Responsible Behavior. Decision 06 was still present in both layout systems.) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 59.45 Tm (- The compact layout did not yet provide a persistent five-button rail, a two-times active control,) Tj ET
+BT /F1 7.75 Tf 1 0 0 1 34.00 24.00 Tm (Prahlin Portfolio Work Log - October 5, 2026                                                                 Page 1) Tj ET
+endstream
+endobj
+7 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 8 0 R >>
+endobj
+8 0 obj
+<< /Length 7835 >>
+stream
+BT /F1 8.35 Tf 1 0 0 1 34.00 760.00 Tm (  decision-specific device media, responsive phone-versus-tablet geometry, contextual annotations, or) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 749.35 Tm (  project-route attribution.) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 735.90 Tm (- My Workflow still contained seven entries. Research, Plan, Scaffold, and Analyze carried substantive) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 725.25 Tm (  material, while Testing, Building, and Release remained empty placeholders. Desktop tab positioning was) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 714.60 Tm (  designed around the seven-item mirrored sequence.) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 701.15 Tm (- Workflow header images retained their earlier brightness, contrast, and desaturation filter. No phase-level) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 690.50 Tm (  A/B/C substep labels appeared beneath the stage banners.) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 677.05 Tm (- Core Beliefs still used Modernness and Cohesion in their prior roles, while UI/UX decision 03 used) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 666.40 Tm (  Hierarchical with the three-line immersive and guidance copy.) Tj ET
+BT /F2 9.20 Tf 1 0 0 1 34.00 647.15 Tm (Goals for October 5) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 631.30 Tm (- Reframe the landing UI/UX section around five concise decisions, remove decision 06 completely, and preserve) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 620.65 Tm (  the accepted wide-screen composition while making compact and portrait layouts genuinely interactive.) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 607.20 Tm (- Establish a responsive compact control system in which all five decision numbers remain represented,) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 596.55 Tm (  inactive controls fill their allotted horizontal row, and the focused control is exactly twice an individual) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 585.90 Tm (  bottom control's rendered size.) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 572.45 Tm (- Give each decision real product context through appropriate Alla Vostra phone captures or the existing) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 561.80 Tm (  Cinerific hero tablet, explanatory copy, and direct project links without duplicating project-page assets.) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 548.35 Tm (- Keep compact spacing proportional across device widths, connect the selected bottom control to the active) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 537.70 Tm (  device with the established noodle visual language, and avoid connector clutter between the active and) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 527.05 Tm (  inactive control rows.) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 513.60 Tm (- Reduce My Workflow to four complete stages, spread desktop tabs across the available width, label each) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 502.95 Tm (  stage's operational substeps, and apply the approved Deep Diffusion effect without replacing any underlying) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 492.30 Tm (  image.) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 478.85 Tm (- Refresh principle language so the landing narrative uses Integrity, Collaboration, and Cohesion in their) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 468.20 Tm (  requested contexts, then validate the final source, live routes, interaction states, and responsive) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 457.55 Tm (  presentation.) Tj ET
+BT /F2 9.20 Tf 1 0 0 1 34.00 438.30 Tm (Work Completed - UI/UX Philosophy Structure and Copy) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 422.45 Tm (- Renamed the section from One Screen. Five Decisions to UI / UX Philosophy and replaced its subtitle with) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 411.80 Tm (  Less 'UI' - More 'You-I', retaining the existing section anchor and overall placement between Featured Case) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 401.15 Tm (  Studies and the technology stack.) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 387.70 Tm (- Removed decision 06 from the data and presentation paths. The section now contains five numbered decisions) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 377.05 Tm (  in both wide and compact modes, eliminating the unused sixth control rather than hiding it only at one) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 366.40 Tm (  breakpoint.) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 352.95 Tm (- Consolidated the decision titles into Modern, User-friendly, Cohesion, Responsive, and Scalable. Decision 03) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 342.30 Tm (  was later revised from Hierarchical to Cohesion so the decision taxonomy emphasizes the strength of the full) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 331.65 Tm (  experience rather than hierarchy alone.) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 318.20 Tm (- Rewrote the visible supporting copy with intentional line control where appropriate. Modern uses Always) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 307.55 Tm (  sleek, Always streamlined, and Never sleep-inducing. User-friendly uses Instantly legible, Immediately) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 296.90 Tm (  understandable, and Quickly actionable. Responsive uses Every form factor, Every device type, and Piece of) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 286.25 Tm (  cake. Scalable uses Cross-Platform, Cross-Regional, and Consider it done.) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 272.80 Tm (- Replaced decision 03's earlier immersive three-line copy with: Let's be real; a product is never stronger) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 262.15 Tm (  than its weakest point. The change moved Cohesion into the UI/UX showcase while preserving a distinct) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 251.50 Tm (  Collaboration principle elsewhere.) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 238.05 Tm (- Added a reusable decision-description renderer that respects authored newline boundaries and isolates the) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 227.40 Tm (  final sentence line for italic treatment. This allowed only the requested bottom line of each multi-line) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 216.75 Tm (  statement to carry emphasis rather than italicizing the entire decision block.) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 203.30 Tm (- Matched the compact active title's responsive scale to the section heading and matched the active) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 192.65 Tm (  description to the section subtitle scale, keeping hierarchy consistent as the viewport changes.) Tj ET
+BT /F2 9.20 Tf 1 0 0 1 34.00 173.40 Tm (Work Completed - Compact Decision Selector and Responsive Geometry) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 157.55 Tm (- Rebuilt the compact presentation around React state so decisions 01 through 05 are actionable by tap or) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 146.90 Tm (  click. Selecting any bottom-row control updates the focused number, heading, description, media, device) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 136.25 Tm (  annotation, project label, and connector target without navigating away from the landing page.) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 122.80 Tm (- Kept all five numbered controls permanently visible in the bottom row even when one is active above. This) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 112.15 Tm (  preserves the complete choice set and gives the active decision both a focused presentation and a stable) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 101.50 Tm (  position within the navigation rail.) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 88.05 Tm (- Sized the focused control from the same responsive base measurement as the bottom controls and set it to) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 77.40 Tm (  exactly 2.0 times the individual bottom control's width and height. Live browser measurements at 390px) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 66.75 Tm (  confirmed a rendered 2.00 ratio for every selected state.) Tj ET
+BT /F1 7.75 Tf 1 0 0 1 34.00 24.00 Tm (Prahlin Portfolio Work Log - October 5, 2026                                                                 Page 2) Tj ET
+endstream
+endobj
+9 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 10 0 R >>
+endobj
+10 0 obj
+<< /Length 7932 >>
+stream
+BT /F1 8.35 Tf 1 0 0 1 34.00 758.80 Tm (- Allowed the five bottom controls to expand responsively across the available horizontal space. Their) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 748.15 Tm (  inter-button spacing matches the strip's left and right padding, preventing edge encroachment while avoiding) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 737.50 Tm (  arbitrary unused gaps.) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 724.05 Tm (- Tightened the active-to-bottom-row vertical interval after removing the earlier row-to-row noodles. The) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 713.40 Tm (  remaining device interval is deliberately larger so the control group reads as one cluster before the media) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 702.75 Tm (  begins.) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 689.30 Tm (- Removed all connectors between the focused top control and its matching bottom control. Kept one responsive) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 678.65 Tm (  SVG noodle from the selected bottom control's lower edge to the top-center edge of the active device frame,) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 668.00 Tm (  with dots at both endpoints.) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 654.55 Tm (- Used a layout effect, element references, and ResizeObserver measurement to derive the compact connector) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 643.90 Tm (  from actual rendered bounds. The noodle therefore follows changing control sizes, phone and tablet frames,) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 633.25 Tm (  and viewport widths rather than relying on one fixed coordinate map.) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 619.80 Tm (- Preserved the pre-existing wide composition and its card-to-device connector language outside compact and) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 609.15 Tm (  portrait modes. The interaction-focused rewrite is isolated to the compact panel instead of replacing the) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 598.50 Tm (  established desktop arrangement.) Tj ET
+BT /F2 9.20 Tf 1 0 0 1 34.00 579.25 Tm (Work Completed - Decision Devices, Context, and Project Routing) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 563.40 Tm (- Assigned real Alla Vostra phone captures to decisions 01, 03, and 05: the startup screen, products screen,) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 552.75 Tm (  and confirmed overlay. Each remains inside the existing CSS phone frame and uses project-specific) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 542.10 Tm (  alternative text.) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 528.65 Tm (- Assigned the exact Cinerific hero asset, cinerific-hero-tablet-tab-s7-uniform.png, to decisions 02 and 04.) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 518.00 Tm (  Both use a landscape tablet frame matching the landing hero rather than stretching phone geometry around a) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 507.35 Tm (  landscape capture.) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 493.90 Tm (- Made phone frames occupy exactly fifty percent of the compact device row's horizontal space and aligned them) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 483.25 Tm (  to the right. Their header and description occupy the remaining left-side area and wrap naturally when space) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 472.60 Tm (  becomes narrow.) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 459.15 Tm (- Made tablet frames occupy one hundred percent of the allowed compact device-row width. For tablet decisions,) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 448.50 Tm (  contextual copy moves below the frame rather than competing with the landscape media at its left edge.) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 435.05 Tm (- Added AI GENERATIVE and its cookie-cutter implementation statement to decision 01, INTUITIVE INTERFACE and) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 424.40 Tm (  its navigation statement to decision 02, and STEP-BY-STEP VISIBILITY with its focal-layer statement to) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 413.75 Tm (  decision 03.) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 400.30 Tm (- Added a horizontally centered PROJECT label beneath every active device. Decisions 01, 03, and 05 identify) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 389.65 Tm (  ALLA VOSTRA and link to /projects/alla-vostra; decisions 02 and 04 identify CINERIFIC and link to) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 379.00 Tm (  /projects/cinerific.) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 365.55 Tm (- Styled project names as white actionable text with the established green hover and keyboard-focus treatment,) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 354.90 Tm (  keeping PROJECT as a quieter label while making the destination unmistakable.) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 341.45 Tm (- Reused existing repository assets rather than generating substitute screenshots. The phone and tablet) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 330.80 Tm (  variants, source images, context placement, and project destinations are all data-driven through the) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 320.15 Tm (  decision objects.) Tj ET
+BT /F2 9.20 Tf 1 0 0 1 34.00 300.90 Tm (Work Completed - Workflow Consolidation and Presentation) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 285.05 Tm (- Reduced My Workflow from seven stages to four substantive phases: Research, Plan, Produce, and Analyze.) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 274.40 Tm (  Removed the empty Testing, Building, and Release records and their now-unused header-image mappings.) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 260.95 Tm (- Renamed Scaffold to Produce so the third phase describes the full implementation outcome rather than only) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 250.30 Tm (  the initial project structure. Its existing workflow narrative and source image remain intact.) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 236.85 Tm (- Reworked the timeline selectors from seven-item mirrored nth-child rules to four explicit stage positions.) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 226.20 Tm (  On desktop, the four number-and-title tab pairs span the full row from the left edge through a right-flush) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 215.55 Tm (  Analyze tab without overflow.) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 202.10 Tm (- Updated the timeline's vertical guide span and all relevant first-four selectors to match the shorter data) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 191.45 Tm (  set. Portrait rules continue to collapse the tab offsets appropriately rather than inheriting obsolete) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 180.80 Tm (  fifth-through-seventh positions.) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 167.35 Tm (- Added compact operational labels under every stage banner. Research now contains A: Discuss, B: Brainstorm,) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 156.70 Tm (  C: Industry Research. Plan contains A: Wireframing, B: Mockups, C: Scaffold. Produce contains A: Build, B:) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 146.05 Tm (  Testing, C: Deployment. Analyze contains A: Handoff and B: Upkeep.) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 132.60 Tm (- Rendered the labels from reusable points arrays with generated alphabetic prefixes, semantic ordered-list) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 121.95 Tm (  markup, green prefix color, uppercase white text, responsive wrapping, and consistent spacing before each) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 111.30 Tm (  phase's existing narrative.) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 97.85 Tm (- Applied the selected Deep Diffusion treatment to every workflow image while preserving all four pre-existing) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 87.20 Tm (  files. The CSS uses an 11px Gaussian blur, 0.5 brightness, 1.24 contrast, 1.2 saturation, and 1.15 scale to) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 76.55 Tm (  prevent blurred edges from exposing the frame.) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 63.10 Tm (- Added a green-to-blue 115-degree atmospheric overlay above the blurred media but below the numbered and) Tj ET
+BT /F1 7.75 Tf 1 0 0 1 34.00 24.00 Tm (Prahlin Portfolio Work Log - October 5, 2026                                                                 Page 3) Tj ET
+endstream
+endobj
+11 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 12 0 R >>
+endobj
+12 0 obj
+<< /Length 7430 >>
+stream
+BT /F1 8.35 Tf 1 0 0 1 34.00 760.00 Tm (  titled tabs. This gives Research, Plan, Produce, and Analyze one cohesive treatment without baking effects) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 749.35 Tm (  into or replacing source images.) Tj ET
+BT /F2 9.20 Tf 1 0 0 1 34.00 730.10 Tm (Work Completed - Core Beliefs and Narrative Alignment) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 714.25 Tm (- Replaced Modernness with Integrity and changed its statement to Underpromise and overdeliver - never the) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 703.60 Tm (  other way around. The existing rose tone and circular belief position remain unchanged.) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 690.15 Tm (- Moved the original Cohesion idea into UI/UX decision 03, then renamed the original violet Core Belief to) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 679.50 Tm (  Collaboration with the statement One for all, and all for one.) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 666.05 Tm (- Preserved Vision, Inter-connectivity, and User-friendliness as they were. The five-belief star composition,) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 655.40 Tm (  colors, geometry, and responsive behavior were not otherwise rewritten.) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 641.95 Tm (- Kept the language changes data-local in app/page.tsx, avoiding layout-specific conditionals and preserving) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 631.30 Tm (  the established reusable principle renderer.) Tj ET
+BT /F2 9.20 Tf 1 0 0 1 34.00 612.05 Tm (Work Completed - Local Preview and Documentation Continuity) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 596.20 Tm (- Maintained the local Next.js preview in the detached portfolio-dev screen session at 127.0.0.1:3000) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 585.55 Tm (  throughout the implementation and validation sequence.) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 572.10 Tm (- Cleared generated development cache only when stale compiled styling was confirmed, moving old .next output) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 561.45 Tm (  to temporary storage before clean restarts rather than deleting broad project paths.) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 548.00 Tm (- Built three non-destructive blur previews from the actual Research layout before applying a treatment. The) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 537.35 Tm (  selected Deep Diffusion option was then implemented as CSS across all four workflow images; the temporary) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 526.70 Tm (  preview server and images remained outside tracked project source.) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 513.25 Tm (- Refreshed portfolio_PROJECT_SNAPSHOT.txt after both source commits. The resulting documentation companion) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 502.60 Tm (  records 17,169 lines and 572,503 bytes at final committed application state plus the current worklog) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 491.95 Tm (  inventory.) Tj ET
+BT /F2 9.20 Tf 1 0 0 1 34.00 472.70 Tm (Committed Source Sequence) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 456.85 Tm (- 1c3b63b - Rebuilt the Responsive UI/UX Philosophy Showcase. Reframed the section around five decisions,) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 446.20 Tm (  added the interactive compact selector and measured connector, introduced phone and tablet variants,) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 435.55 Tm (  connected real project media and routes, revised typography and copy, and refreshed the project snapshot.) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 422.10 Tm (- 3cdbbc5 - Refined the Workflow and UI/UX Philosophy Sections. Reduced the workflow to four stages,) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 411.45 Tm (  distributed desktop tabs, added stage substeps, applied Deep Diffusion, renamed Scaffold to Produce, revised) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 400.80 Tm (  Integrity and Collaboration, and replaced the Hierarchical UI/UX decision with Cohesion.) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 387.35 Tm (- The two commits form one coherent landing-page refinement: the first converted the new UI/UX showcase into a) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 376.70 Tm (  responsive product-linked interaction, while the second simplified the surrounding workflow narrative and) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 366.05 Tm (  aligned the site's principle language.) Tj ET
+BT /F2 9.20 Tf 1 0 0 1 34.00 346.80 Tm (Validation Summary) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 330.95 Tm (- Ran npm run check after the final source changes and again during this documentation pass; TypeScript) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 320.30 Tm (  completed successfully with no emitted files.) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 306.85 Tm (- Confirmed main and origin/main both resolve to 3cdbbc5290f1dc488a7ba8f51c119a8d9627b404 before PDF) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 296.20 Tm (  generation. The only working-tree change after the committed application work was the customary refreshed) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 285.55 Tm (  portfolio_PROJECT_SNAPSHOT.txt.) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 272.10 Tm (- Loaded /, /projects/alla-vostra, /projects/cinerific, and /articles through the persistent local server. All) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 261.45 Tm (  four routes returned HTTP 200.) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 248.00 Tm (- Used Playwright with the installed Google Chrome binary at 1440px desktop, 390px portrait, and 760px) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 237.35 Tm (  tablet-portrait viewports. Confirmed five wide decision cards, compact-panel visibility only in the intended) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 226.70 Tm (  modes, four workflow items, and all expected substep groups.) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 213.25 Tm (- Activated all five compact decisions at 390px. Each state reported a 2.00 focused-to-bottom-control size) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 202.60 Tm (  ratio, the intended phone or tablet class, the correct ALLA VOSTRA or CINERIFIC project label, and the) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 191.95 Tm (  correct project href.) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 178.50 Tm (- Confirmed decisions 01, 03, and 05 resolve to phone frames and Alla Vostra, while decisions 02 and 04) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 167.85 Tm (  resolve to landscape tablet frames and Cinerific.) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 154.40 Tm (- Read computed styles for all four workflow images at desktop and portrait widths. Each reported blur\(11px\),) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 143.75 Tm (  brightness\(0.5\), contrast\(1.24\), and saturate\(1.2\), confirming Deep Diffusion was applied consistently) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 133.10 Tm (  rather than only to Research.) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 119.65 Tm (- Earlier browser geometry checks confirmed four desktop workflow tabs span the timeline width with Analyze) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 109.00 Tm (  flush to the right edge and no overflow. Source and runtime checks also confirmed the compact UI/UX panel) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 98.35 Tm (  preserves five bottom choices plus one duplicated focused control.) Tj ET
+BT /F2 9.20 Tf 1 0 0 1 34.00 79.10 Tm (Files Touched and Artifacts) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 63.25 Tm (- app/UiUxDecisionShowcase.tsx - rebuilt compact decision interaction, active-state rendering, multiline) Tj ET
+BT /F1 7.75 Tf 1 0 0 1 34.00 24.00 Tm (Prahlin Portfolio Work Log - October 5, 2026                                                                 Page 4) Tj ET
+endstream
+endobj
+13 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 14 0 R >>
+endobj
+14 0 obj
+<< /Length 5880 >>
+stream
+BT /F1 8.35 Tf 1 0 0 1 34.00 760.00 Tm (  description treatment, phone and tablet frames, contextual copy, project links, and measured) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 749.35 Tm (  bottom-control-to-device connector behavior.) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 735.90 Tm (- app/page.tsx - reduced and rewrote UI/UX decision data, mapped project media and routes, consolidated) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 725.25 Tm (  workflow stages and images, added phase substeps, renamed Produce, and revised Integrity, Collaboration, and) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 714.60 Tm (  Cohesion copy.) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 701.15 Tm (- app/globals.css - added responsive compact selector geometry, active and inactive control sizing, device-row) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 690.50 Tm (  layouts, phone/tablet presentation, project-link styling, connector spacing, four-stage workflow) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 679.85 Tm (  positioning, substep styling, and Deep Diffusion filters and overlay.) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 666.40 Tm (- portfolio_PROJECT_SNAPSHOT.txt - refreshed through ./read_project.sh so the documentation companion records) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 655.75 Tm (  final committed source state 3cdbbc5 and all forty-eight earlier worklogs.) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 642.30 Tm (- portfolio_worklog_october5.pdf - created as the first October 5 Portfolio worklog at the repository root) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 631.65 Tm (  using the established no-Part filename.) Tj ET
+BT /F2 9.20 Tf 1 0 0 1 34.00 612.40 Tm (Follow-Up Context) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 596.55 Tm (- The compact UI/UX selector intentionally renders the active decision twice: once as the two-times focused) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 585.90 Tm (  control and once in the complete five-choice bottom rail. Removing the bottom duplicate would break the) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 575.25 Tm (  requested persistent choice representation.) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 561.80 Tm (- Focused-control geometry derives from the responsive bottom-control size. Future ratio changes should) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 551.15 Tm (  preserve that shared variable rather than introduce independent fixed dimensions.) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 537.70 Tm (- The only compact noodle runs from the selected bottom control to the device frame. Its endpoint is measured) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 527.05 Tm (  from live element bounds, so future changes to row gaps, device variants, or frame widths should be tested) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 516.40 Tm (  at both narrow and tablet portrait sizes.) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 502.95 Tm (- Phone decisions are intentionally right-aligned at fifty percent of the device-row width with context on the) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 492.30 Tm (  left. Tablet decisions intentionally consume the full row and place any context below.) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 478.85 Tm (- Project attribution is data-driven. Alla Vostra belongs to decisions 01, 03, and 05; Cinerific belongs to 02) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 468.20 Tm (  and 04. Their route paths and existing screenshot assets should remain paired unless the content strategy) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 457.55 Tm (  changes.) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 444.10 Tm (- Workflow images retain their individual pre-existing source files. Deep Diffusion is entirely CSS-based;) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 433.45 Tm (  removing the filter and overlay restores the originals without an asset migration.) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 420.00 Tm (- The four workflow phases are the complete intended set. Desktop placement values assume four tab pairs,) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 409.35 Tm (  while compact portrait behavior deliberately resets their horizontal offset.) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 395.90 Tm (- As with prior Portfolio work, ask for the commit message before committing or pushing the refreshed snapshot) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 385.25 Tm (  or this PDF unless the user explicitly supplies a message and requests the operation.) Tj ET
+BT /F2 9.20 Tf 1 0 0 1 34.00 366.00 Tm (Output Artifact) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 350.15 Tm (- Created /Users/prahlin/gh/portfolio/portfolio_worklog_october5.pdf as the latest daily worklog for Monday,) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 339.50 Tm (  October 5, 2026, following the established month-name, non-zero-padded day, and no-Part first-record naming) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 328.85 Tm (  convention.) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 315.40 Tm (- Produced an unencrypted US Letter, PDF 1.4 document using Helvetica and Helvetica-Bold with Codex title,) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 304.75 Tm (  subject, author, creator, and producer metadata.) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 291.30 Tm (- Preserved the established dense technical narrative, mature section ordering, repeated dated page footer,) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 280.65 Tm (  and end-of-document continuity notes used by the recent Portfolio worklog series.) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 267.20 Tm (- Source state reviewed: 3cdbbc5290f1dc488a7ba8f51c119a8d9627b404 on main and origin/main before snapshot and) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 256.55 Tm (  PDF generation.) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 243.10 Tm (- No application-source change, source commit, push, deployment, Hostinger synchronization, GitHub Actions) Tj ET
+BT /F1 8.35 Tf 1 0 0 1 34.00 232.45 Tm (  dispatch, or production publish was performed as part of generating this PDF artifact.) Tj ET
+BT /F1 7.75 Tf 1 0 0 1 34.00 24.00 Tm (Prahlin Portfolio Work Log - October 5, 2026                                                                 Page 5) Tj ET
+endstream
+endobj
+15 0 obj
+<< /Title (Prahlin Portfolio Work Log - October 5, 2026) /Subject (Portfolio development work completed on October 5, 2026) /Author (Codex) /Creator (Codex) /Producer (Codex) /CreationDate (D:20261005234603-04'00') >>
+endobj
+xref
+0 16
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000147 00000 n 
+0000000244 00000 n 
+0000000346 00000 n 
+0000000482 00000 n 
+0000009028 00000 n 
+0000009164 00000 n 
+0000017050 00000 n 
+0000017187 00000 n 
+0000025171 00000 n 
+0000025309 00000 n 
+0000032791 00000 n 
+0000032929 00000 n 
+0000038861 00000 n 
+trailer
+<< /Size 16 /Root 1 0 R /Info 15 0 R >>
+startxref
+39095
+%%EOF
