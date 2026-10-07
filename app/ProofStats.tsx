@@ -75,8 +75,46 @@ export function ProofStats({ stats }: { stats: ProofStat[] }) {
         const statCards = Array.from(
           strip.querySelectorAll<HTMLElement>(".stats-strip-item"),
         );
+
+        statCards.forEach((card) => {
+          const value = card.querySelector<HTMLElement>("strong");
+
+          if (value) {
+            card.style.setProperty(
+              "--stats-value-width",
+              `${value.getBoundingClientRect().width}px`,
+            );
+          }
+        });
+
+        const isSlimPortrait = window.matchMedia(
+          "(max-width: 720px) and (orientation: portrait)",
+        ).matches;
         const targetWidth = Math.min(
-          ...statCards.map((card) => getContentWidth(card)),
+          ...statCards.map((card) => {
+            const contentWidth = getContentWidth(card);
+
+            if (!isSlimPortrait) {
+              return contentWidth;
+            }
+
+            const value = card.querySelector<HTMLElement>("strong");
+
+            if (!value) {
+              return contentWidth;
+            }
+
+            const cardStyles = window.getComputedStyle(card);
+            const cardRect = card.getBoundingClientRect();
+            const valueRect = value.getBoundingClientRect();
+            const paddingRight =
+              Number.parseFloat(cardStyles.paddingRight) || 0;
+
+            return Math.min(
+              contentWidth,
+              cardRect.right - paddingRight - valueRect.left,
+            );
+          }),
         );
 
         if (!Number.isFinite(targetWidth) || targetWidth <= 0) {

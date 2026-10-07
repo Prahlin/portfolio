@@ -10300,12 +10300,65 @@ section.project-hero {
 }
 
 @media (max-width: 720px) and (orientation: portrait) {
-  .hero .phone-stage {
-    transform: translateY(88.58px);
+  .hero-visual {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: -60px;
+    margin-top: -39px;
+  }
+
+  .hero-bridge-quote-compact {
+    grid-template-columns: minmax(0, 1fr) max-content minmax(0, 1fr);
+    left: auto;
+    order: 1;
+    position: relative;
+    right: auto;
+    top: auto;
+    transform: none;
+    width: 100%;
   }
 
   .profile-orbit-compact {
-    transform: translateY(-22px);
+    margin-top: 20px;
+    order: 2;
+    position: relative;
+    right: auto;
+    top: auto;
+    transform: none;
+  }
+
+  .hero .phone-stage {
+    flex: 0 0 auto;
+    height: 560px;
+    margin-top: -17px;
+    order: 3;
+    transform: none;
+    width: 100%;
+  }
+
+  .hero .stats-strip {
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    max-width: none;
+    width: 100vw;
+  }
+
+  .hero .stats-strip-item {
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero .stats-strip-label {
+    align-self: center;
+    text-align: left;
+    width: var(--stats-value-width, auto);
+  }
+
+  .hero .stats-strip-label-line {
+    overflow-wrap: normal;
+    white-space: nowrap;
+    width: max-content;
   }
 
   .hero .phone-shell-commerce {
@@ -10319,6 +10372,20 @@ section.project-hero {
   .hero .phone-shell-finance {
     left: auto;
     right: calc(51.78px - 5.556vw);
+  }
+}
+
+@media (max-width: 380px) and (orientation: portrait) {
+  .hero .stats-strip-item:last-of-type strong,
+  .hero .stats-strip-item:last-of-type .stats-strip-label {
+    transform: translateX(-4px);
+  }
+}
+
+@media (max-width: 350px) and (orientation: portrait) {
+  .hero .stats-strip-item:last-of-type strong,
+  .hero .stats-strip-item:last-of-type .stats-strip-label {
+    transform: translateX(-7px);
   }
 }
 
@@ -10455,6 +10522,13 @@ section.project-hero {
 
   .hero-bridge-quote-compact .hero-quote-line-narrow {
     display: block;
+  }
+}
+
+@media (max-width: 720px) and (orientation: portrait) {
+  .hero-bridge-quote-compact {
+    grid-template-columns: minmax(0, 1fr) max-content minmax(0, 1fr);
+    left: auto;
   }
 }
 
