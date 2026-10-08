@@ -8,12 +8,14 @@ import { useLayoutEffect, useRef, useState } from "react";
 export type UiUxNoodlePoint = readonly [x: number, y: number];
 
 export type UiUxDecision = {
+  compactOnly?: boolean;
   description: string;
   deviceDescription?: string;
   deviceTitle?: string;
-  deviceVariant?: "phone" | "tablet";
+  deviceVariant?: "phone" | "phone-android" | "tablet";
   number: string;
   noodle: readonly UiUxNoodlePoint[];
+  placeholder?: boolean;
   projectHref?: string;
   projectLabel?: string;
   screenshotAlt?: string;
@@ -36,13 +38,24 @@ type UiUxDecisionShowcaseProps = {
 const STAGE_WIDTH = 1180;
 const STAGE_HEIGHT = 650;
 
+type CompactNoodlePath = {
+  endCircleX: number;
+  endCircleY: number;
+  points: string;
+  startCircleX: number;
+  startCircleY: number;
+};
+
 type CompactNoodleGeometry = {
-  deviceCircleX: number;
-  deviceCircleY: number;
-  devicePoints: string;
-  deviceStartCircleX: number;
-  deviceStartCircleY: number;
+  devicePath?: CompactNoodlePath;
   height: number;
+  inactiveButtonRects?: Array<{
+    height: number;
+    width: number;
+    x: number;
+    y: number;
+  }>;
+  selectorPath?: CompactNoodlePath;
   width: number;
 };
 
@@ -77,7 +90,33 @@ function UiUxDecisionDescription({ description }: { description: string }) {
   return (
     <span className="uiux-decision-description">
       {description.split("\n").map((line, index) => (
-        <span key={`${index}-${line}`}>{line}</span>
+        <span key={`${index}-${line}`}>
+          {line.split(/\b(Always|Never)\b/).map((part, partIndex) => {
+            if (part === "Always") {
+              return (
+                <em
+                  className="uiux-description-always"
+                  key={`${part}-${partIndex}`}
+                >
+                  {part}
+                </em>
+              );
+            }
+
+            if (part === "Never") {
+              return (
+                <span
+                  className="uiux-description-never"
+                  key={`${part}-${partIndex}`}
+                >
+                  {part}
+                </span>
+              );
+            }
+
+            return part;
+          })}
+        </span>
       ))}
     </span>
   );
@@ -125,8 +164,14 @@ export function UiUxDeviceFrame({
     );
   }
 
+  const isAndroidPhone = deviceVariant === "phone-android";
+
   return (
-    <figure className="uiux-device-frame">
+    <figure
+      className={`uiux-device-frame${
+        isAndroidPhone ? " uiux-device-frame-android" : ""
+      }`}
+    >
       <div className="uiux-device-screen">
         {screenshotSrc ? (
           <Image
@@ -135,7 +180,10 @@ export function UiUxDeviceFrame({
             fill
             sizes="(max-width: 820px) 66vw, 270px"
             src={screenshotSrc}
-            style={{ objectFit: screenshotFit, objectPosition: screenshotPosition }}
+            style={{
+              objectFit: isAndroidPhone ? "contain" : screenshotFit,
+              objectPosition: screenshotPosition,
+            }}
           />
         ) : (
           <span className="uiux-device-placeholder">
@@ -144,8 +192,12 @@ export function UiUxDeviceFrame({
           </span>
         )}
       </div>
-      <span className="uiux-device-speaker" aria-hidden="true" />
-      <span className="uiux-device-home-indicator" aria-hidden="true" />
+      {!isAndroidPhone ? (
+        <>
+          <span className="uiux-device-speaker" aria-hidden="true" />
+          <span className="uiux-device-home-indicator" aria-hidden="true" />
+        </>
+      ) : null}
     </figure>
   );
 }
@@ -166,50 +218,133 @@ export function UiUxDecisionShowcase({
   const [compactNoodle, setCompactNoodle] =
     useState<CompactNoodleGeometry | null>(null);
   const compactPanelRef = useRef<HTMLDivElement>(null);
-  const activeBottomButtonRef = useRef<HTMLButtonElement>(null);
+  const activeStripButtonRef = useRef<HTMLButtonElement>(null);
+  const titleBridgeRef = useRef<HTMLDivElement>(null);
+  const focusedButtonRef = useRef<HTMLButtonElement>(null);
+  const focusedCopyRef = useRef<HTMLSpanElement>(null);
   const deviceSlotRef = useRef<HTMLDivElement>(null);
-  const leftDecisions = decisions.filter((decision) => decision.side === "left");
-  const rightDecisions = decisions.filter((decision) => decision.side === "right");
+  const stageDecisions = decisions.filter((decision) => !decision.compactOnly);
+  const leftDecisions = stageDecisions.filter(
+    (decision) => decision.side === "left",
+  );
+  const rightDecisions = stageDecisions.filter(
+    (decision) => decision.side === "right",
+  );
   const focusedDecision =
     decisions.find((decision) => decision.number === focusedDecisionNumber) ??
     decisions[0];
 
   useLayoutEffect(() => {
     const panel = compactPanelRef.current;
-    const activeBottomButton = activeBottomButtonRef.current;
+    const activeStripButton = activeStripButtonRef.current;
+    const titleBridge = titleBridgeRef.current;
+    const focusedButton = focusedButtonRef.current;
+    const focusedCopy = focusedCopyRef.current;
     const deviceFrame =
       deviceSlotRef.current?.querySelector<HTMLElement>(".uiux-device-frame");
 
-    if (!panel || !activeBottomButton || !deviceFrame) {
+    if (
+      !panel ||
+      !activeStripButton ||
+      !titleBridge ||
+      !focusedButton ||
+      !focusedCopy
+    ) {
       setCompactNoodle(null);
       return;
     }
 
     const updateNoodle = () => {
+      const isPortrait = window.matchMedia("(orientation: portrait)").matches;
+
+      if (!isPortrait && !deviceFrame) {
+        setCompactNoodle(null);
+        return;
+      }
+
+      const connectorButton = isPortrait
+        ? focusedButton
+        : activeStripButton;
       const panelRect = panel.getBoundingClientRect();
-      const activeBottomRect = activeBottomButton.getBoundingClientRect();
-      const deviceRect = deviceFrame.getBoundingClientRect();
+      const activeStripButtonRect = activeStripButton.getBoundingClientRect();
+      const titleBridgeRect = titleBridge.getBoundingClientRect();
+      const connectorButtonRect = connectorButton.getBoundingClientRect();
+      const focusedButtonRect = focusedButton.getBoundingClientRect();
+      const focusedCopyRect = focusedCopy.getBoundingClientRect();
+      const deviceRect = deviceFrame?.getBoundingClientRect();
 
       if (panelRect.width === 0 || panelRect.height === 0) {
         setCompactNoodle(null);
         return;
       }
 
-      const bottomX =
-        activeBottomRect.left + activeBottomRect.width / 2 - panelRect.left;
-      const deviceStartX = bottomX;
-      const deviceStartY = activeBottomRect.bottom - panelRect.top;
-      const deviceX = deviceRect.left + deviceRect.width / 2 - panelRect.left;
-      const deviceY = deviceRect.top - panelRect.top;
+      const deviceStartX =
+        connectorButtonRect.left +
+        connectorButtonRect.width / 2 -
+        panelRect.left;
+      const deviceStartY = connectorButtonRect.bottom - panelRect.top;
+      const deviceX = deviceRect
+        ? deviceRect.left + deviceRect.width / 2 - panelRect.left
+        : 0;
+      const deviceY = deviceRect ? deviceRect.top - panelRect.top : 0;
       const deviceMiddleY = deviceStartY + (deviceY - deviceStartY) / 2;
+      const selectorStartX =
+        activeStripButtonRect.left +
+        activeStripButtonRect.width / 2 -
+        panelRect.left;
+      const selectorStartY = activeStripButtonRect.bottom - panelRect.top;
+      const selectorEndX =
+        titleBridgeRect.left + titleBridgeRect.width / 2 - panelRect.left;
+      const selectorEndY = titleBridgeRect.top - panelRect.top;
+      const selectorMiddleY =
+        selectorStartY + (selectorEndY - selectorStartY) / 2;
+      const inactiveButtonRects = isPortrait
+        ? Array.from(
+            panel.querySelectorAll<HTMLElement>(
+              ".uiux-compact-decision-strip .uiux-decision-number:not(.is-active)",
+            ),
+          ).map((button) => {
+            const rect = button.getBoundingClientRect();
+
+            return {
+              height: rect.height,
+              width: rect.width,
+              x: rect.left - panelRect.left,
+              y: rect.top - panelRect.top,
+            };
+          })
+        : undefined;
+
+      panel.style.setProperty(
+        "--uiux-focused-number-offset",
+        `${focusedCopyRect.top - focusedButtonRect.top}px`,
+      );
+      panel.style.setProperty(
+        "--uiux-focused-number-height",
+        `${focusedCopyRect.height}px`,
+      );
 
       setCompactNoodle({
-        deviceCircleX: deviceX,
-        deviceCircleY: deviceY,
-        devicePoints: `${deviceStartX},${deviceStartY} ${deviceStartX},${deviceMiddleY} ${deviceX},${deviceMiddleY} ${deviceX},${deviceY}`,
-        deviceStartCircleX: deviceStartX,
-        deviceStartCircleY: deviceStartY,
+        devicePath: isPortrait || !deviceRect
+          ? undefined
+          : {
+              endCircleX: deviceX,
+              endCircleY: deviceY,
+              points: `${deviceStartX},${deviceStartY} ${deviceStartX},${deviceMiddleY} ${deviceX},${deviceMiddleY} ${deviceX},${deviceY}`,
+              startCircleX: deviceStartX,
+              startCircleY: deviceStartY,
+            },
         height: panelRect.height,
+        inactiveButtonRects,
+        selectorPath: isPortrait
+          ? {
+              endCircleX: selectorEndX,
+              endCircleY: selectorEndY,
+              points: `${selectorStartX},${selectorStartY} ${selectorStartX},${selectorMiddleY} ${selectorEndX},${selectorMiddleY} ${selectorEndX},${selectorEndY}`,
+              startCircleX: selectorStartX,
+              startCircleY: selectorStartY,
+            }
+          : undefined,
         width: panelRect.width,
       });
     };
@@ -217,7 +352,13 @@ export function UiUxDecisionShowcase({
     const frame = window.requestAnimationFrame(updateNoodle);
     const observer = new ResizeObserver(updateNoodle);
     observer.observe(panel);
-    observer.observe(deviceFrame);
+    observer.observe(activeStripButton);
+    observer.observe(titleBridge);
+    observer.observe(focusedButton);
+    observer.observe(focusedCopy);
+    if (deviceFrame) {
+      observer.observe(deviceFrame);
+    }
     window.addEventListener("resize", updateNoodle);
 
     return () => {
@@ -243,7 +384,7 @@ export function UiUxDecisionShowcase({
             preserveAspectRatio="none"
             viewBox={`0 0 ${STAGE_WIDTH} ${STAGE_HEIGHT}`}
           >
-            {decisions.map((decision) => (
+            {stageDecisions.map((decision) => (
               <UiUxNoodle decision={decision} key={decision.number} />
             ))}
           </svg>
@@ -257,36 +398,70 @@ export function UiUxDecisionShowcase({
                   preserveAspectRatio="none"
                   viewBox={`0 0 ${compactNoodle.width} ${compactNoodle.height}`}
                 >
-                  <polyline points={compactNoodle.devicePoints} />
-                  <circle
-                    cx={compactNoodle.deviceStartCircleX}
-                    cy={compactNoodle.deviceStartCircleY}
-                    r="4.5"
-                  />
-                  <circle
-                    cx={compactNoodle.deviceCircleX}
-                    cy={compactNoodle.deviceCircleY}
-                    r="4.5"
-                  />
+                  {compactNoodle.inactiveButtonRects?.length ? (
+                    <defs>
+                      <mask
+                        id="uiux-inactive-button-mask"
+                        maskUnits="userSpaceOnUse"
+                      >
+                        <rect
+                          fill="white"
+                          height={compactNoodle.height}
+                          width={compactNoodle.width}
+                        />
+                        {compactNoodle.inactiveButtonRects.map(
+                          (rect, index) => (
+                            <rect
+                              fill="black"
+                              height={rect.height}
+                              key={index}
+                              width={rect.width}
+                              x={rect.x}
+                              y={rect.y}
+                            />
+                          ),
+                        )}
+                      </mask>
+                    </defs>
+                  ) : null}
+                  {compactNoodle.selectorPath ? (
+                    <g
+                      mask={
+                        compactNoodle.inactiveButtonRects?.length
+                          ? "url(#uiux-inactive-button-mask)"
+                          : undefined
+                      }
+                    >
+                      <polyline points={compactNoodle.selectorPath.points} />
+                      <circle
+                        cx={compactNoodle.selectorPath.startCircleX}
+                        cy={compactNoodle.selectorPath.startCircleY}
+                        r="4.5"
+                      />
+                      <circle
+                        cx={compactNoodle.selectorPath.endCircleX}
+                        cy={compactNoodle.selectorPath.endCircleY}
+                        r="4.5"
+                      />
+                    </g>
+                  ) : null}
+                  {compactNoodle.devicePath ? (
+                    <>
+                      <polyline points={compactNoodle.devicePath.points} />
+                      <circle
+                        cx={compactNoodle.devicePath.startCircleX}
+                        cy={compactNoodle.devicePath.startCircleY}
+                        r="4.5"
+                      />
+                      <circle
+                        cx={compactNoodle.devicePath.endCircleX}
+                        cy={compactNoodle.devicePath.endCircleY}
+                        r="4.5"
+                      />
+                    </>
+                  ) : null}
                 </svg>
               ) : null}
-
-              <article className="uiux-compact-focused-card">
-                <button
-                  aria-label={`${focusedDecision.number}. ${focusedDecision.title}: ${focusedDecision.description}`}
-                  aria-pressed="true"
-                  className="uiux-decision-number is-active"
-                  type="button"
-                >
-                  {focusedDecision.number}
-                </button>
-                <span className="uiux-decision-copy">
-                  <strong>{focusedDecision.title}</strong>
-                  <UiUxDecisionDescription
-                    description={focusedDecision.description}
-                  />
-                </span>
-              </article>
 
               <div
                 aria-label="Choose a UI or UX decision"
@@ -295,21 +470,115 @@ export function UiUxDecisionShowcase({
               >
                 {decisions.map((decision) => {
                   const isActive = decision.number === focusedDecision.number;
+                  const buttonLabel = decision.placeholder
+                    ? `${decision.number}. Empty placeholder`
+                    : `${decision.number}. ${decision.title}: ${decision.description}`;
 
                   return (
                   <button
-                    aria-label={`${decision.number}. ${decision.title}: ${decision.description}`}
+                    aria-label={buttonLabel}
                     aria-pressed={isActive}
                     className={`uiux-decision-number${isActive ? " is-active" : ""}`}
                     key={decision.number}
                     onClick={() => setFocusedDecisionNumber(decision.number)}
-                    ref={isActive ? activeBottomButtonRef : undefined}
+                    ref={isActive ? activeStripButtonRef : undefined}
                     type="button"
                   >
                     {decision.number}
                   </button>
                   );
                 })}
+              </div>
+
+              <div className="uiux-compact-title-bridge" ref={titleBridgeRef}>
+                <strong>{focusedDecision.title}</strong>
+              </div>
+
+              <div className="uiux-compact-active-card">
+                <article
+                  className={`uiux-compact-focused-card${
+                    focusedDecision.placeholder ? " is-placeholder" : ""
+                  }`}
+                  data-decision-number={focusedDecision.number}
+                >
+                  <button
+                    aria-label={
+                      focusedDecision.placeholder
+                        ? `${focusedDecision.number}. Empty placeholder`
+                        : `${focusedDecision.number}. ${focusedDecision.title}: ${focusedDecision.description}`
+                    }
+                    aria-pressed="true"
+                    className="uiux-decision-number is-active"
+                  ref={focusedButtonRef}
+                  type="button"
+                >
+                  {!focusedDecision.placeholder ? (
+                    <span className="uiux-focused-number-label">
+                      {Array.from(focusedDecision.number).map((digit, index) => (
+                        <span key={`${focusedDecision.number}-${index}`}>
+                          {digit}
+                        </span>
+                      ))}
+                    </span>
+                  ) : null}
+                </button>
+                  <span className="uiux-decision-copy" ref={focusedCopyRef}>
+                    {!focusedDecision.placeholder ? (
+                      <>
+                        <strong>{focusedDecision.title}</strong>
+                        <UiUxDecisionDescription
+                          description={focusedDecision.description}
+                        />
+                      </>
+                    ) : null}
+                  </span>
+                </article>
+
+                {focusedDecision.placeholder ? (
+                  <div className="uiux-placeholder-body" aria-hidden="true" />
+                ) : (
+                  <div
+                    className={`uiux-device-slot${
+                      focusedDecision.deviceVariant === "tablet"
+                        ? " uiux-device-slot-tablet"
+                        : ""
+                    }`}
+                    ref={deviceSlotRef}
+                  >
+                  {focusedDecision.deviceVariant !== "tablet" ? (
+                    <UiUxDeviceContext decision={focusedDecision} />
+                  ) : null}
+                  <div className="uiux-device-frame-stack">
+                    <UiUxDeviceFrame
+                      deviceVariant={focusedDecision.deviceVariant}
+                      screenshotAlt={
+                        focusedDecision.screenshotAlt ?? screenshotAlt
+                      }
+                      screenshotFit={screenshotFit}
+                      screenshotPosition={screenshotPosition}
+                      screenshotSrc={
+                        focusedDecision.screenshotSrc ?? screenshotSrc
+                      }
+                    />
+                    {focusedDecision.deviceVariant === "tablet" ? (
+                      <UiUxDeviceContext decision={focusedDecision} />
+                    ) : null}
+                    <p className="uiux-device-project-label">
+                      <span>PROJECT:</span>
+                      {focusedDecision.projectHref &&
+                      focusedDecision.projectLabel ? (
+                        <Link
+                          aria-label={`View the ${focusedDecision.projectLabel} project page`}
+                          className="uiux-device-project-link"
+                          href={focusedDecision.projectHref}
+                        >
+                          {focusedDecision.projectLabel}
+                        </Link>
+                      ) : null}
+                    </p>
+                  </div>
+                  </div>
+                )}
               </div>
             </div>
           ) : null}
@@ -318,43 +587,6 @@ export function UiUxDecisionShowcase({
             {leftDecisions.map((decision) => (
               <UiUxDecisionCard decision={decision} key={decision.number} />
             ))}
-          </div>
-
-          <div
-            className={`uiux-device-slot${
-              focusedDecision?.deviceVariant === "tablet"
-                ? " uiux-device-slot-tablet"
-                : ""
-            }`}
-            ref={deviceSlotRef}
-          >
-            {focusedDecision?.deviceVariant !== "tablet" && focusedDecision ? (
-              <UiUxDeviceContext decision={focusedDecision} />
-            ) : null}
-            <div className="uiux-device-frame-stack">
-              <UiUxDeviceFrame
-                deviceVariant={focusedDecision?.deviceVariant}
-                screenshotAlt={focusedDecision?.screenshotAlt ?? screenshotAlt}
-                screenshotFit={screenshotFit}
-                screenshotPosition={screenshotPosition}
-                screenshotSrc={focusedDecision?.screenshotSrc ?? screenshotSrc}
-              />
-              {focusedDecision?.deviceVariant === "tablet" ? (
-                <UiUxDeviceContext decision={focusedDecision} />
-              ) : null}
-              <p className="uiux-device-project-label">
-                <span>PROJECT:</span>
-                {focusedDecision?.projectHref && focusedDecision.projectLabel ? (
-                  <Link
-                    aria-label={`View the ${focusedDecision.projectLabel} project page`}
-                    className="uiux-device-project-link"
-                    href={focusedDecision.projectHref}
-                  >
-                    {focusedDecision.projectLabel}
-                  </Link>
-                ) : null}
-              </p>
-            </div>
           </div>
 
           <div className="uiux-decision-column uiux-decision-column-right">

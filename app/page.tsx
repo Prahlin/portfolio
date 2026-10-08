@@ -54,10 +54,11 @@ const proofStats = [
 
 const uiUxDecisions: readonly UiUxDecision[] = [
   {
-    description: "Always sleek.\nAlways streamlined.\nNever sleep-inducing.",
+    description: "Always sleek.\nAlways streamlined.\nNever\nSleep-inducing.",
     deviceDescription:
-      'Stylish, auto-generative design without the bad taste of "cookie-cutter" AI implementation.',
+      'Stylish image generation without the "cookie-cutter" feel of AI.',
     deviceTitle: "AI GENERATIVE",
+    deviceVariant: "phone-android",
     number: "01",
     noodle: [
       [390, 145],
@@ -74,7 +75,7 @@ const uiUxDecisions: readonly UiUxDecision[] = [
   },
   {
     description:
-      "Instantly legible.\nImmediately understandable.\nQuickly actionable.",
+      "Quickly legible.\nInstantly understandable.\nImmediately\nActionable.",
     deviceDescription:
       "Users shouldn't have to jump through hoops to navigate, or perform actions.",
     deviceTitle: "INTUITIVE INTERFACE",
@@ -94,11 +95,8 @@ const uiUxDecisions: readonly UiUxDecision[] = [
     title: "User-friendly",
   },
   {
-    description:
-      "Let's be real; a product is never stronger than its weakest point.",
-    deviceDescription:
-      "Less is more, and focal points should have appropriate layers of noticeability.",
-    deviceTitle: "STEP-BY-STEP VISIBILITY",
+    description: "Every form factor?\nEvery device type?\nPiece\nof cake.",
+    deviceVariant: "tablet",
     number: "03",
     noodle: [
       [390, 505],
@@ -106,16 +104,20 @@ const uiUxDecisions: readonly UiUxDecision[] = [
       [428, 493],
       [452, 493],
     ],
-    projectHref: "/projects/alla-vostra",
-    projectLabel: "ALLA VOSTRA",
-    screenshotAlt: "Alla Vostra products screen",
-    screenshotSrc: "/images/products_screen_small.png",
+    projectHref: "/projects/cinerific",
+    projectLabel: "CINERIFIC",
+    screenshotAlt: "Cinerific app landscape tablet preview",
+    screenshotSrc: "/images/cinerific-hero-tablet-tab-s7-uniform.png",
     side: "left",
-    title: "Cohesion",
+    title: "Responsive",
   },
   {
-    description: "Every form factor?\nEvery device type?\nPiece of cake.",
-    deviceVariant: "tablet",
+    description:
+      "Let's be real;\nA product is\nNever\nstronger than its weakest point.",
+    deviceDescription:
+      "Less is more, and focal points should have appropriate layers of noticeability.",
+    deviceTitle: "STEP-BY-STEP VISIBILITY",
+    deviceVariant: "phone-android",
     number: "04",
     noodle: [
       [844, 145],
@@ -123,15 +125,16 @@ const uiUxDecisions: readonly UiUxDecision[] = [
       [754, 165],
       [728, 165],
     ],
-    projectHref: "/projects/cinerific",
-    projectLabel: "CINERIFIC",
-    screenshotAlt: "Cinerific app landscape tablet preview",
-    screenshotSrc: "/images/cinerific-hero-tablet-tab-s7-uniform.png",
+    projectHref: "/projects/alla-vostra",
+    projectLabel: "ALLA VOSTRA",
+    screenshotAlt: "Alla Vostra products screen",
+    screenshotSrc: "/images/products_screen_small.png",
     side: "right",
-    title: "Responsive",
+    title: "Cohesive",
   },
   {
-    description: "Cross-Platform?\nCross-Regional?\nConsider it done.",
+    description: "Cross-Platform?\nCross-Regional?\nConsider\nit done.",
+    deviceVariant: "phone-android",
     number: "05",
     noodle: [
       [826, 325],
@@ -145,6 +148,33 @@ const uiUxDecisions: readonly UiUxDecision[] = [
     screenshotSrc: "/images/confirmed_overlay_small.png",
     side: "right",
     title: "Scalable",
+  },
+  {
+    compactOnly: true,
+    description: "",
+    number: "06",
+    noodle: [],
+    placeholder: true,
+    side: "right",
+    title: "",
+  },
+  {
+    compactOnly: true,
+    description: "",
+    number: "07",
+    noodle: [],
+    placeholder: true,
+    side: "right",
+    title: "",
+  },
+  {
+    compactOnly: true,
+    description: "",
+    number: "08",
+    noodle: [],
+    placeholder: true,
+    side: "right",
+    title: "",
   },
 ];
 
