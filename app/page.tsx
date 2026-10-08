@@ -946,7 +946,7 @@ export default function Home() {
 
       <UiUxDecisionShowcase
         decisions={uiUxDecisions}
-        subtitle="Less 'UI' - More 'You-I'"
+        subtitle="Less 'UI' - More 'You-I': The Sacred Principles That Undergird My Every Design"
         title="UI / UX Philosophy"
         // Add screenshotSrc="/images/your-screenshot.png" when your image is ready.
       />

@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ImageIcon } from "lucide-react";
+import { motion, useReducedMotion } from "motion/react";
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
 
 export type UiUxNoodlePoint = readonly [x: number, y: number];
@@ -174,6 +175,57 @@ function UiUxCarouselArrowSurface({
   );
 }
 
+type UiUxCarouselArrowButtonProps = {
+  direction: -1 | 1;
+  isHeld: boolean;
+  onStart: (direction: -1 | 1) => void;
+  onStop: () => void;
+};
+
+function UiUxCarouselArrowButton({
+  direction,
+  isHeld,
+  onStart,
+  onStop,
+}: UiUxCarouselArrowButtonProps) {
+  const isPrevious = direction === -1;
+  const directionName = isPrevious ? "previous" : "next";
+
+  return (
+    <button
+      aria-label={`${isPrevious ? "Previous" : "Next"} UI or UX decision`}
+      className={`uiux-carousel-arrow uiux-carousel-arrow-${directionName}${
+        isHeld ? " is-held" : ""
+      }`}
+      onBlur={onStop}
+      onKeyDown={(event) => {
+        if (
+          !event.repeat &&
+          (event.key === "Enter" || event.key === " ")
+        ) {
+          event.preventDefault();
+          onStart(direction);
+        }
+      }}
+      onKeyUp={(event) => {
+        if (event.key === "Enter" || event.key === " ") {
+          onStop();
+        }
+      }}
+      onPointerCancel={onStop}
+      onPointerDown={(event) => {
+        if (event.button !== 0) return;
+        event.currentTarget.setPointerCapture(event.pointerId);
+        onStart(direction);
+      }}
+      onPointerUp={onStop}
+      type="button"
+    >
+      <UiUxCarouselArrowSurface direction={directionName} />
+    </button>
+  );
+}
+
 function UiUxDecisionCard({ decision }: { decision: UiUxDecision }) {
   return (
     <article className="uiux-decision-card">
@@ -318,50 +370,12 @@ function UiUxCompactDecisionColumn({
   screenshotPosition,
   screenshotSrc,
 }: UiUxCompactDecisionColumnProps) {
-  const columnRef = useRef<HTMLDivElement>(null);
-  const focusedButtonRef = useRef<HTMLButtonElement>(null);
-  const focusedCopyRef = useRef<HTMLSpanElement>(null);
-
-  useLayoutEffect(() => {
-    const column = columnRef.current;
-    const focusedButton = focusedButtonRef.current;
-    const focusedCopy = focusedCopyRef.current;
-
-    if (!column || !focusedButton || !focusedCopy) return;
-
-    const updateNumberPosition = () => {
-      const buttonRect = focusedButton.getBoundingClientRect();
-      const copyRect = focusedCopy.getBoundingClientRect();
-
-      column.style.setProperty(
-        "--uiux-focused-number-offset",
-        `${copyRect.top - buttonRect.top}px`,
-      );
-      column.style.setProperty(
-        "--uiux-focused-number-height",
-        `${copyRect.height}px`,
-      );
-    };
-
-    const frame = window.requestAnimationFrame(updateNumberPosition);
-    const observer = new ResizeObserver(updateNumberPosition);
-    observer.observe(column);
-    observer.observe(focusedButton);
-    observer.observe(focusedCopy);
-
-    return () => {
-      window.cancelAnimationFrame(frame);
-      observer.disconnect();
-    };
-  }, [decision.number]);
-
   return (
     <div
       className={`uiux-compact-decision-column${
         isPrimary ? " is-primary" : " is-adjacent"
       }`}
       data-decision-number={decision.number}
-      ref={columnRef}
     >
       <div className="uiux-compact-title-bridge">
         <strong>{decision.title}</strong>
@@ -382,17 +396,14 @@ function UiUxCompactDecisionColumn({
             }
             aria-pressed={isPrimary}
             className="uiux-decision-number is-active"
-            ref={focusedButtonRef}
             tabIndex={-1}
             type="button"
           >
             <span className="uiux-focused-number-label">
-              {Array.from(decision.number).map((digit, index) => (
-                <span key={`${decision.number}-${index}`}>{digit}</span>
-              ))}
+              <span>{Number.parseInt(decision.number, 10)}</span>
             </span>
           </button>
-          <span className="uiux-decision-copy" ref={focusedCopyRef}>
+          <span className="uiux-decision-copy">
             {!decision.placeholder ? (
               <>
                 <strong>{decision.title}</strong>
@@ -456,6 +467,7 @@ export function UiUxDecisionShowcase({
   subtitle,
   title,
 }: UiUxDecisionShowcaseProps) {
+  const shouldReduceMotion = useReducedMotion();
   const [focusedDecisionNumber, setFocusedDecisionNumber] = useState(
     decisions[0]?.number ?? "",
   );
@@ -506,6 +518,7 @@ export function UiUxDecisionShowcase({
     return {
       decision: decisions[index],
       isPrimary: offset === 0,
+      role: offset < 0 ? "previous" : offset > 0 ? "next" : "active",
     };
   });
 
@@ -807,119 +820,180 @@ export function UiUxDecisionShowcase({
                 </svg>
               ) : null}
 
-              <div
-                aria-label="Choose a UI or UX decision"
-                className="uiux-compact-decision-strip"
-                data-column-count={compactColumnCount}
-                role="group"
-              >
-                <button
-                  aria-label="Previous UI or UX decision"
-                  className={`uiux-carousel-arrow uiux-carousel-arrow-previous${
-                    heldCarouselDirection === -1 ? " is-held" : ""
-                  }`}
-                  onBlur={stopCarouselHold}
-                  onKeyDown={(event) => {
-                    if (
-                      !event.repeat &&
-                      (event.key === "Enter" || event.key === " ")
-                    ) {
-                      event.preventDefault();
-                      startCarouselHold(-1);
-                    }
-                  }}
-                  onKeyUp={(event) => {
-                    if (event.key === "Enter" || event.key === " ") {
-                      stopCarouselHold();
-                    }
-                  }}
-                  onPointerCancel={stopCarouselHold}
-                  onPointerDown={(event) => {
-                    if (event.button !== 0) return;
-                    event.currentTarget.setPointerCapture(event.pointerId);
-                    startCarouselHold(-1);
-                  }}
-                  onPointerUp={stopCarouselHold}
-                  type="button"
-                >
-                  <UiUxCarouselArrowSurface direction="previous" />
-                </button>
-
-                {visibleDecisions.map(({ decision, isPrimary }) =>
-                  isPrimary ? (
-                    <div
-                      aria-label={`Current UI or UX decision ${decision.number}`}
-                      aria-live="polite"
-                      className="uiux-carousel-current uiux-decision-number is-active"
-                      key={decision.number}
-                      ref={activeStripButtonRef}
-                    >
-                      {decision.number}
-                    </div>
-                  ) : (
-                    <button
-                      aria-label={`Show UI or UX decision ${decision.number}`}
-                      className="uiux-carousel-preview uiux-decision-number"
-                      key={decision.number}
-                      onClick={() =>
-                        setFocusedDecisionNumber(decision.number)
-                      }
-                      type="button"
-                    >
-                      {decision.number}
-                    </button>
-                  ),
-                )}
-
-                <button
-                  aria-label="Next UI or UX decision"
-                  className={`uiux-carousel-arrow uiux-carousel-arrow-next${
-                    heldCarouselDirection === 1 ? " is-held" : ""
-                  }`}
-                  onBlur={stopCarouselHold}
-                  onKeyDown={(event) => {
-                    if (
-                      !event.repeat &&
-                      (event.key === "Enter" || event.key === " ")
-                    ) {
-                      event.preventDefault();
-                      startCarouselHold(1);
-                    }
-                  }}
-                  onKeyUp={(event) => {
-                    if (event.key === "Enter" || event.key === " ") {
-                      stopCarouselHold();
-                    }
-                  }}
-                  onPointerCancel={stopCarouselHold}
-                  onPointerDown={(event) => {
-                    if (event.button !== 0) return;
-                    event.currentTarget.setPointerCapture(event.pointerId);
-                    startCarouselHold(1);
-                  }}
-                  onPointerUp={stopCarouselHold}
-                  type="button"
-                >
-                  <UiUxCarouselArrowSurface direction="next" />
-                </button>
-              </div>
-
-              <div
-                className="uiux-compact-columns"
-                data-column-count={compactColumnCount}
-              >
-                {visibleDecisions.map(({ decision, isPrimary }) => (
-                  <UiUxCompactDecisionColumn
-                    decision={decision}
-                    isPrimary={isPrimary}
-                    key={decision.number}
-                    screenshotAlt={screenshotAlt}
-                    screenshotFit={screenshotFit}
-                    screenshotPosition={screenshotPosition}
-                    screenshotSrc={screenshotSrc}
+              {compactColumnCount === 3 ? (
+                <div className="uiux-compact-3d-shell">
+                  <UiUxCarouselArrowButton
+                    direction={-1}
+                    isHeld={heldCarouselDirection === -1}
+                    onStart={startCarouselHold}
+                    onStop={stopCarouselHold}
                   />
-                ))}
-              </div>
+
+                  <div
+                    aria-label="Choose a UI or UX decision"
+                    className="uiux-compact-3d-track"
+                    role="group"
+                  >
+                    {visibleDecisions.map(
+                      ({ decision, isPrimary, role }) => (
+                        <motion.div
+                            animate={
+                              shouldReduceMotion
+                                ? {
+                                    opacity: isPrimary ? 1 : 0.5,
+                                    rotateY: 0,
+                                    scale: 1,
+                                    z: 0,
+                                  }
+                                : {
+                                    opacity: isPrimary ? 1 : 0.5,
+                                    rotateY:
+                                      role === "previous"
+                                        ? -32
+                                        : role === "next"
+                                          ? 32
+                                          : 0,
+                                    scale: isPrimary ? 1 : 0.98,
+                                    z: 0,
+                                  }
+                            }
+                            className={`uiux-compact-3d-stack is-${role}`}
+                            initial={
+                              shouldReduceMotion
+                                ? false
+                                : { opacity: 0 }
+                            }
+                            key={decision.number}
+                            layout={shouldReduceMotion ? false : "position"}
+                            onClickCapture={
+                              isPrimary
+                                ? undefined
+                                : (event) => {
+                                    event.preventDefault();
+                                    event.stopPropagation();
+                                    setFocusedDecisionNumber(decision.number);
+                                  }
+                            }
+                            transition={
+                              shouldReduceMotion
+                                ? { duration: 0 }
+                                : {
+                                    damping: 24,
+                                    mass: 0.85,
+                                    stiffness: 180,
+                                    type: "spring",
+                                  }
+                            }
+                          >
+                            {isPrimary ? (
+                              <div
+                                aria-label={`Current UI or UX decision ${decision.number}`}
+                                aria-live="polite"
+                                className="uiux-carousel-current uiux-decision-number is-active"
+                                ref={activeStripButtonRef}
+                              >
+                                {decision.number}
+                              </div>
+                            ) : (
+                              <button
+                                aria-label={`Show UI or UX decision ${decision.number}`}
+                                className="uiux-carousel-preview uiux-decision-number"
+                                onClick={() =>
+                                  setFocusedDecisionNumber(decision.number)
+                                }
+                                type="button"
+                              >
+                                {decision.number}
+                              </button>
+                            )}
+
+                            <UiUxCompactDecisionColumn
+                              decision={decision}
+                              isPrimary={isPrimary}
+                              screenshotAlt={screenshotAlt}
+                              screenshotFit={screenshotFit}
+                              screenshotPosition={screenshotPosition}
+                              screenshotSrc={screenshotSrc}
+                            />
+                        </motion.div>
+                      ),
+                    )}
+                  </div>
+
+                  <UiUxCarouselArrowButton
+                    direction={1}
+                    isHeld={heldCarouselDirection === 1}
+                    onStart={startCarouselHold}
+                    onStop={stopCarouselHold}
+                  />
+                </div>
+              ) : (
+                <>
+                  <div
+                    aria-label="Choose a UI or UX decision"
+                    className="uiux-compact-decision-strip"
+                    data-column-count={compactColumnCount}
+                    role="group"
+                  >
+                    <UiUxCarouselArrowButton
+                      direction={-1}
+                      isHeld={heldCarouselDirection === -1}
+                      onStart={startCarouselHold}
+                      onStop={stopCarouselHold}
+                    />
+
+                    {visibleDecisions.map(({ decision, isPrimary }) =>
+                      isPrimary ? (
+                        <div
+                          aria-label={`Current UI or UX decision ${decision.number}`}
+                          aria-live="polite"
+                          className="uiux-carousel-current uiux-decision-number is-active"
+                          key={decision.number}
+                          ref={activeStripButtonRef}
+                        >
+                          {decision.number}
+                        </div>
+                      ) : (
+                        <button
+                          aria-label={`Show UI or UX decision ${decision.number}`}
+                          className="uiux-carousel-preview uiux-decision-number"
+                          key={decision.number}
+                          onClick={() =>
+                            setFocusedDecisionNumber(decision.number)
+                          }
+                          type="button"
+                        >
+                          {decision.number}
+                        </button>
+                      ),
+                    )}
+
+                    <UiUxCarouselArrowButton
+                      direction={1}
+                      isHeld={heldCarouselDirection === 1}
+                      onStart={startCarouselHold}
+                      onStop={stopCarouselHold}
+                    />
+                  </div>
+
+                  <div
+                    className="uiux-compact-columns"
+                    data-column-count={compactColumnCount}
+                  >
+                    {visibleDecisions.map(({ decision, isPrimary }) => (
+                      <UiUxCompactDecisionColumn
+                        decision={decision}
+                        isPrimary={isPrimary}
+                        key={decision.number}
+                        screenshotAlt={screenshotAlt}
+                        screenshotFit={screenshotFit}
+                        screenshotPosition={screenshotPosition}
+                        screenshotSrc={screenshotSrc}
+                      />
+                    ))}
+                  </div>
+                </>
+              )}
 
               <div
                 className="uiux-compact-title-bridge uiux-compact-legacy-title"

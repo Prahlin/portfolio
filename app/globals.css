@@ -2711,7 +2711,7 @@ button.uiux-decision-number:focus-visible {
     border-color: var(--line);
     box-shadow: none;
     color: #26503d;
-    font-size: clamp(222.75px, 67.5cqi, 472.5px);
+    font-size: clamp(445.5px, 135cqi, 945px);
     height: 100%;
     inset: 0;
     padding: 0;
@@ -2721,30 +2721,14 @@ button.uiux-decision-number:focus-visible {
   }
 
   .uiux-focused-number-label {
-    --uiux-focused-number-reference-height: 51.8cqi;
-
     align-items: center;
     display: flex;
-    height: var(
-      --uiux-focused-number-height,
-      var(--uiux-focused-number-reference-height)
-    );
-    justify-content: space-evenly;
-    left: 0;
+    height: 100%;
+    inset: 0;
+    justify-content: center;
     overflow: visible;
-    padding: 0 var(--uiux-compact-stage-inline-padding);
+    padding: 0;
     position: absolute;
-    top: calc(
-      var(--uiux-compact-balanced-gap) + 4px +
-        (
-            var(--uiux-focused-number-reference-height) -
-              var(
-                --uiux-focused-number-height,
-                var(--uiux-focused-number-reference-height)
-              )
-          ) /
-          2
-    );
     width: 100%;
   }
 
@@ -3013,6 +2997,159 @@ button.uiux-decision-number:focus-visible {
     background: var(--uiux-inactive-case-surface);
     border-color: var(--line);
     box-shadow: none;
+  }
+}
+
+@media (min-width: 981px) {
+  .uiux-compact-3d-shell {
+    min-width: 0;
+    order: 1;
+    position: relative;
+    width: 100%;
+  }
+
+  .uiux-compact-3d-track {
+    display: grid;
+    gap: calc(var(--uiux-compact-column-gap) * 1.5);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    min-width: 0;
+    pointer-events: none;
+    perspective: 800px;
+    perspective-origin: 50% 42%;
+    position: relative;
+    transform-style: preserve-3d;
+    width: 100%;
+  }
+
+  .uiux-compact-3d-stack {
+    --uiux-3d-top-row-height: 128px;
+    --uiux-3d-number-width: var(--uiux-3d-top-row-height);
+
+    backface-visibility: hidden;
+    display: grid;
+    gap: 0;
+    min-width: 0;
+    pointer-events: auto;
+    position: relative;
+    transform-style: preserve-3d;
+    will-change: transform, opacity;
+  }
+
+  .uiux-compact-3d-stack.is-previous {
+    transform-origin: 100% 50% !important;
+  }
+
+  .uiux-compact-3d-stack.is-active {
+    transform-origin: 50% 50% !important;
+  }
+
+  .uiux-compact-3d-stack.is-next {
+    transform-origin: 0% 50% !important;
+  }
+
+  .uiux-compact-3d-stack:not(.is-active) {
+    cursor: pointer;
+  }
+
+  .uiux-compact-3d-stack > .uiux-decision-number {
+    height: var(--uiux-3d-top-row-height);
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: var(--uiux-3d-number-width);
+    z-index: 2;
+  }
+
+  .uiux-compact-3d-stack.is-active > .uiux-carousel-current {
+    background: var(--uiux-active-surface);
+    border-color: var(--line);
+    box-shadow: none;
+    color: var(--text);
+    font-size: clamp(54px, 8vw, 68px);
+    opacity: 1;
+    width: var(--uiux-3d-number-width);
+  }
+
+  .uiux-compact-3d-stack > .uiux-carousel-preview {
+    aspect-ratio: auto;
+    background: var(--uiux-inactive-case-surface);
+    border-color: var(--line);
+    box-shadow: none;
+    color: var(--text);
+    font-size: clamp(54px, 8vw, 68px);
+    font-weight: 200;
+    opacity: 1;
+    transition: none;
+    width: var(--uiux-3d-number-width);
+  }
+
+  .uiux-compact-3d-stack.is-previous > .uiux-carousel-preview {
+    clip-path: polygon(0 18px, 100% 0, 100% 100%, 0 100%);
+  }
+
+  .uiux-compact-3d-stack.is-next > .uiux-carousel-preview {
+    clip-path: none;
+  }
+
+  .uiux-compact-3d-stack .uiux-compact-decision-column.is-adjacent {
+    opacity: 1;
+  }
+
+  .uiux-compact-3d-stack
+    .uiux-compact-decision-column
+    > .uiux-compact-title-bridge {
+    font-size: clamp(21.6px, 2.16vw, 31.2px);
+    height: var(--uiux-3d-top-row-height);
+    justify-self: end;
+    width: calc(
+      100% - var(--uiux-3d-number-width) - var(--uiux-compact-column-gap)
+    );
+  }
+
+  .uiux-compact-3d-stack .uiux-compact-decision-column {
+    row-gap: var(--uiux-compact-button-gap);
+  }
+
+  .uiux-compact-3d-stack .uiux-compact-active-card {
+    height: calc(165cqi + 170px);
+  }
+
+  .uiux-compact-3d-shell > .uiux-carousel-arrow {
+    background: transparent;
+    height: var(--uiux-compact-button-size);
+    position: absolute;
+    top: calc(
+      (var(--uiux-3d-top-row-height) - var(--uiux-compact-button-size)) / 2
+    );
+    width: var(--uiux-compact-button-size);
+    z-index: 8;
+  }
+
+  .uiux-compact-3d-shell > .uiux-carousel-arrow-previous {
+    left: 0;
+  }
+
+  .uiux-compact-3d-shell > .uiux-carousel-arrow-next {
+    right: 0;
+  }
+
+  .uiux-compact-3d-shell
+    > .uiux-carousel-arrow:is(.is-held, :active)
+    .uiux-carousel-arrow-shape-inactive {
+    opacity: 0;
+  }
+
+  .uiux-compact-3d-shell
+    > .uiux-carousel-arrow:is(.is-held, :active)
+    .uiux-carousel-arrow-shape-active {
+    opacity: 1;
+  }
+
+  .uiux-compact-3d-shell
+    > .uiux-carousel-arrow:is(.is-held, :active)
+    .uiux-carousel-arrow-shape-active
+    .uiux-carousel-arrow-shape-base {
+    stroke: rgba(67, 255, 146, 0.42);
   }
 }
 
