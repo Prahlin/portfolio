@@ -84,7 +84,7 @@ const uiUxDecisions: readonly UiUxDecision[] = [
     ],
     placeholder: true,
     side: "left",
-    title: "Gorgeous",
+    title: "Appealing",
   },
   {
     description: "",
@@ -118,7 +118,7 @@ const uiUxDecisions: readonly UiUxDecision[] = [
     screenshotAlt: "Cinerific app landscape tablet preview",
     screenshotSrc: "/images/cinerific-hero-tablet-tab-s7-uniform.png",
     side: "right",
-    title: "User-friendly",
+    title: "Usable",
   },
   {
     description: "Every form factor?\nEvery device type?\nPiece\nof cake.",
@@ -166,15 +166,6 @@ const uiUxDecisions: readonly UiUxDecision[] = [
     screenshotSrc: "/images/confirmed_overlay_small.png",
     side: "right",
     title: "Adaptable",
-  },
-  {
-    compactOnly: true,
-    description: "",
-    number: "08",
-    noodle: [],
-    placeholder: true,
-    side: "right",
-    title: "Satisfying",
   },
 ];
 
@@ -946,7 +937,7 @@ export default function Home() {
 
       <UiUxDecisionShowcase
         decisions={uiUxDecisions}
-        subtitle="Less 'UI' - More 'You-I': The Sacred Principles That Undergird My Every Design"
+        subtitle="The 7 Sacred Keys to Immaculate UI/UX Design"
         title="UI / UX Philosophy"
         // Add screenshotSrc="/images/your-screenshot.png" when your image is ready.
       />

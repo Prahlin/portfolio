@@ -2310,6 +2310,9 @@ button.uiux-decision-number:focus-visible {
       var(--uiux-compact-button-size) minmax(0, 1fr)
       var(--uiux-compact-button-size);
     grid-template-rows: var(--uiux-compact-button-size);
+    margin-top: calc(
+      var(--uiux-compact-button-size) + var(--uiux-compact-button-gap)
+    );
     order: 2;
     position: relative;
     width: 100%;
@@ -2388,9 +2391,9 @@ button.uiux-decision-number:focus-visible {
   }
 
   .uiux-carousel-arrow-shape-base {
-    stroke: rgba(67, 255, 146, 0.04);
-    stroke-width: 1.5;
-    transition: stroke 120ms ease;
+    stroke: rgba(198, 255, 217, 0.36);
+    stroke-width: 1;
+    transition: stroke 160ms ease;
     vector-effect: non-scaling-stroke;
   }
 
@@ -2674,7 +2677,7 @@ button.uiux-decision-number:focus-visible {
   }
 
   .uiux-compact-decision-column.is-adjacent {
-    opacity: 0.5;
+    opacity: 0.25;
   }
 
   .uiux-compact-decision-column > .uiux-compact-title-bridge {
@@ -2869,7 +2872,31 @@ button.uiux-decision-number:focus-visible {
   .uiux-compact-decision-strip .uiux-carousel-current {
     color: var(--text);
     justify-self: stretch;
+    position: relative;
     width: 100%;
+  }
+
+  .uiux-compact-decision-strip .uiux-carousel-current,
+  .uiux-compact-decision-column.is-primary > .uiux-compact-title-bridge,
+  .uiux-compact-decision-column.is-primary
+    .uiux-compact-focused-card
+    .uiux-decision-number.is-active:not(.uiux-carousel-current) {
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    box-shadow: none;
+  }
+
+  .uiux-carousel-key {
+    bottom: calc(100% + var(--uiux-compact-button-gap) + 1px);
+    color: rgba(25, 70, 50, 0.5);
+    filter: drop-shadow(0 0 14px rgba(25, 70, 50, 0.14));
+    height: calc(100% + 2px);
+    left: 50%;
+    overflow: visible;
+    pointer-events: none;
+    position: absolute;
+    transform: translateX(-50%);
+    width: auto;
   }
 
   .uiux-compact-decision-strip .uiux-carousel-preview {
@@ -2880,7 +2907,7 @@ button.uiux-decision-number:focus-visible {
     font-size: clamp(54px, 8vw, 68px);
     font-weight: 200;
     justify-self: stretch;
-    opacity: 0.5;
+    opacity: 0.25;
     transition: none;
     width: 100%;
   }
@@ -2919,7 +2946,7 @@ button.uiux-decision-number:focus-visible {
     .uiux-carousel-arrow:is(.is-held, :active)
     .uiux-carousel-arrow-shape-active
     .uiux-carousel-arrow-shape-base {
-    stroke: rgba(67, 255, 146, 0.42);
+    stroke: rgba(198, 255, 217, 0.36);
   }
 
   .uiux-compact-title-bridge {
@@ -3002,15 +3029,25 @@ button.uiux-decision-number:focus-visible {
 
 @media (min-width: 981px) {
   .uiux-compact-3d-shell {
+    --uiux-3d-top-row-height: 128px;
+    --uiux-3d-number-width: var(--uiux-3d-top-row-height);
+    --uiux-3d-track-gap: calc(var(--uiux-compact-column-gap) * 1.5);
+    --uiux-3d-arrow-size: clamp(92.928px, 11.616cqi, 139.392px);
+    --uiux-3d-arrow-half-size: clamp(46.464px, 5.808cqi, 69.696px);
+    --uiux-3d-arrow-number-gap: var(--uiux-compact-button-gap);
+
     min-width: 0;
     order: 1;
+    padding-top: calc(
+      var(--uiux-3d-top-row-height) + var(--uiux-compact-button-gap)
+    );
     position: relative;
     width: 100%;
   }
 
   .uiux-compact-3d-track {
     display: grid;
-    gap: calc(var(--uiux-compact-column-gap) * 1.5);
+    gap: var(--uiux-3d-track-gap);
     grid-template-columns: repeat(3, minmax(0, 1fr));
     min-width: 0;
     pointer-events: none;
@@ -3021,13 +3058,16 @@ button.uiux-decision-number:focus-visible {
     width: 100%;
   }
 
-  .uiux-compact-3d-stack {
-    --uiux-3d-top-row-height: 128px;
-    --uiux-3d-number-width: var(--uiux-3d-top-row-height);
+  .uiux-compact-3d-shell > .uiux-carousel-key {
+    bottom: auto;
+    height: var(--uiux-3d-top-row-height);
+    top: 0;
+  }
 
+  .uiux-compact-3d-stack {
     backface-visibility: hidden;
     display: grid;
-    gap: 0;
+    gap: var(--uiux-compact-button-gap);
     min-width: 0;
     pointer-events: auto;
     position: relative;
@@ -3053,16 +3093,16 @@ button.uiux-decision-number:focus-visible {
 
   .uiux-compact-3d-stack > .uiux-decision-number {
     height: var(--uiux-3d-top-row-height);
-    left: 0;
-    position: absolute;
-    top: 0;
+    justify-self: center;
+    position: relative;
     width: var(--uiux-3d-number-width);
     z-index: 2;
   }
 
   .uiux-compact-3d-stack.is-active > .uiux-carousel-current {
     background: var(--uiux-active-surface);
-    border-color: var(--line);
+    border: 1px solid var(--line);
+    border-radius: 8px;
     box-shadow: none;
     color: var(--text);
     font-size: clamp(54px, 8vw, 68px);
@@ -3098,12 +3138,10 @@ button.uiux-decision-number:focus-visible {
   .uiux-compact-3d-stack
     .uiux-compact-decision-column
     > .uiux-compact-title-bridge {
-    font-size: clamp(21.6px, 2.16vw, 31.2px);
+    font-size: clamp(40.5px, 6vw, 51px);
     height: var(--uiux-3d-top-row-height);
-    justify-self: end;
-    width: calc(
-      100% - var(--uiux-3d-number-width) - var(--uiux-compact-column-gap)
-    );
+    justify-self: stretch;
+    width: 100%;
   }
 
   .uiux-compact-3d-stack .uiux-compact-decision-column {
@@ -3115,22 +3153,33 @@ button.uiux-decision-number:focus-visible {
   }
 
   .uiux-compact-3d-shell > .uiux-carousel-arrow {
+    backface-visibility: visible;
     background: transparent;
-    height: var(--uiux-compact-button-size);
+    height: var(--uiux-3d-arrow-size);
+    opacity: 1;
     position: absolute;
     top: calc(
-      (var(--uiux-3d-top-row-height) - var(--uiux-compact-button-size)) / 2
+      var(--uiux-3d-top-row-height) + var(--uiux-compact-button-gap) + 64px -
+        var(--uiux-3d-arrow-half-size)
     );
-    width: var(--uiux-compact-button-size);
+    transform: none !important;
+    transform-style: flat;
+    width: var(--uiux-3d-arrow-size);
     z-index: 8;
   }
 
   .uiux-compact-3d-shell > .uiux-carousel-arrow-previous {
-    left: 0;
+    left: calc(
+      50% - 64px - var(--uiux-3d-arrow-number-gap) -
+        var(--uiux-3d-arrow-size)
+    );
   }
 
   .uiux-compact-3d-shell > .uiux-carousel-arrow-next {
-    right: 0;
+    right: calc(
+      50% - 64px - var(--uiux-3d-arrow-number-gap) -
+        var(--uiux-3d-arrow-size)
+    );
   }
 
   .uiux-compact-3d-shell
@@ -3149,7 +3198,96 @@ button.uiux-decision-number:focus-visible {
     > .uiux-carousel-arrow:is(.is-held, :active)
     .uiux-carousel-arrow-shape-active
     .uiux-carousel-arrow-shape-base {
-    stroke: rgba(67, 255, 146, 0.42);
+    stroke: rgba(198, 255, 217, 0.36);
+  }
+}
+
+.uiux-compact-3d-stack.is-preview-emphasized {
+  opacity: 1 !important;
+}
+
+.uiux-compact-decision-column.is-adjacent.is-preview-emphasized {
+  opacity: 1;
+}
+
+.uiux-compact-decision-strip .uiux-carousel-current,
+.uiux-compact-decision-column.is-primary > .uiux-compact-title-bridge,
+.uiux-compact-decision-column.is-primary
+  .uiux-compact-focused-card
+  .uiux-decision-number.is-active:not(.uiux-carousel-current),
+.uiux-compact-3d-stack.is-active > .uiux-carousel-current,
+.uiux-compact-3d-stack.is-active
+  .uiux-compact-decision-column
+  > .uiux-compact-title-bridge,
+.uiux-compact-3d-stack.is-active
+  .uiux-compact-focused-card
+  .uiux-decision-number.is-active:not(.uiux-carousel-current) {
+  border: 1px solid rgba(198, 255, 217, 0.36);
+  border-radius: 8px;
+  box-shadow: none;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .uiux-compact-decision-panel:has(
+      .uiux-carousel-arrow:hover,
+      .uiux-carousel-current:hover
+    )
+    .uiux-carousel-arrow
+    .uiux-carousel-arrow-shape
+    .uiux-carousel-arrow-shape-base {
+    stroke: rgba(230, 255, 239, 0.78);
+  }
+
+  .uiux-compact-decision-panel:has(
+      .uiux-carousel-arrow:hover,
+      .uiux-carousel-current:hover
+    )
+    .uiux-carousel-current {
+    border-color: rgba(230, 255, 239, 0.78);
+  }
+
+  .uiux-compact-3d-stack > .uiux-decision-number,
+  .uiux-compact-3d-stack .uiux-compact-title-bridge,
+  .uiux-compact-3d-stack
+    .uiux-compact-focused-card
+    .uiux-decision-number.is-active:not(.uiux-carousel-current) {
+    transition: border-color 160ms ease;
+  }
+
+  .uiux-compact-3d-stack:not(.is-active):hover {
+    opacity: 1 !important;
+  }
+
+  .uiux-compact-3d-stack:is(.is-active, .is-previous, .is-next):hover
+    > .uiux-decision-number,
+  .uiux-compact-3d-stack:is(.is-active, .is-previous, .is-next):hover
+    .uiux-compact-title-bridge,
+  .uiux-compact-3d-stack:is(.is-active, .is-previous, .is-next):hover
+    .uiux-compact-focused-card
+    .uiux-decision-number.is-active:not(.uiux-carousel-current) {
+    border-color: rgba(198, 255, 217, 0.36);
+  }
+
+  .uiux-compact-3d-shell:has(> .uiux-carousel-arrow:hover)
+    .uiux-compact-3d-stack.is-active
+    > .uiux-carousel-current,
+  .uiux-compact-3d-shell:has(> .uiux-carousel-arrow:hover)
+    .uiux-compact-3d-stack.is-active
+    .uiux-compact-title-bridge,
+  .uiux-compact-3d-shell:has(> .uiux-carousel-arrow:hover)
+    .uiux-compact-3d-stack.is-active
+    .uiux-compact-focused-card
+    .uiux-decision-number.is-active:not(.uiux-carousel-current) {
+    border-color: rgba(198, 255, 217, 0.36);
+  }
+
+  .uiux-compact-3d-shell:has(
+      > .uiux-carousel-arrow:hover,
+      .uiux-compact-3d-stack.is-active > .uiux-carousel-current:hover
+    )
+    .uiux-compact-3d-stack.is-active
+    > .uiux-carousel-current {
+    border-color: rgba(230, 255, 239, 0.78);
   }
 }
 

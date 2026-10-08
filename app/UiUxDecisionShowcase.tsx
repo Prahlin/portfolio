@@ -39,6 +39,147 @@ type UiUxDecisionShowcaseProps = {
 const STAGE_WIDTH = 1180;
 const STAGE_HEIGHT = 650;
 
+function UiUxActiveKey() {
+  return (
+    <svg
+      aria-hidden="true"
+      className="uiux-carousel-key"
+      viewBox="0 0 200 200"
+    >
+      <defs>
+        <linearGradient
+          gradientUnits="userSpaceOnUse"
+          id="uiux-carousel-key-gradient"
+          x1="0"
+          x2="0"
+          y1="114"
+          y2="200"
+        >
+          <stop offset="0" stopColor="#194632" stopOpacity="0.5" />
+          <stop offset="1" stopColor="#17422f" stopOpacity="0.5" />
+        </linearGradient>
+        <linearGradient
+          gradientUnits="userSpaceOnUse"
+          id="uiux-carousel-key-sheen"
+          x1="0"
+          x2="0"
+          y1="114"
+          y2="200"
+        >
+          <stop offset="0" stopColor="white" stopOpacity="0.0275" />
+          <stop offset="0.34" stopColor="white" stopOpacity="0" />
+        </linearGradient>
+        <radialGradient
+          cx="133"
+          cy="130"
+          gradientUnits="userSpaceOnUse"
+          id="uiux-carousel-key-radial"
+          r="126"
+        >
+          <stop offset="0" stopColor="white" stopOpacity="0.0225" />
+          <stop offset="0.68" stopColor="white" stopOpacity="0" />
+        </radialGradient>
+        <filter
+          filterUnits="userSpaceOnUse"
+          height="300"
+          id="uiux-carousel-key-active-border"
+          width="300"
+          x="-50"
+          y="-50"
+        >
+          <feComponentTransfer in="SourceAlpha" result="solid-alpha">
+            <feFuncA intercept="0" slope="1000" type="linear" />
+          </feComponentTransfer>
+          <feMorphology
+            in="solid-alpha"
+            operator="dilate"
+            radius="1.6"
+            result="expanded-alpha"
+          />
+          <feComposite
+            in="expanded-alpha"
+            in2="solid-alpha"
+            operator="out"
+            result="border-alpha"
+          />
+          <feFlood
+            floodColor="#c6ffd9"
+            floodOpacity="0.36"
+            result="border-color"
+          />
+          <feComposite
+            in="border-color"
+            in2="border-alpha"
+            operator="in"
+            result="border"
+          />
+          <feMerge>
+            <feMergeNode in="border" />
+            <feMergeNode in="SourceGraphic" />
+          </feMerge>
+        </filter>
+        <mask
+          id="uiux-carousel-key-mask"
+          height="280"
+          maskUnits="userSpaceOnUse"
+          width="280"
+          x="-40"
+          y="-40"
+        >
+          <g transform="translate(16 83.5) scale(1.05)">
+              <circle cx="50" cy="70" fill="white" r="34" />
+              <circle cx="29" cy="48" fill="white" r="19" />
+              <path
+                d="M65 55H80V85H65L56 76V64Z"
+                fill="white"
+              />
+              <rect
+              fill="white"
+              height="18"
+              rx="9"
+              width="94"
+              x="65"
+              y="61"
+            />
+            <path
+              d="M104 73H121V98Q121 103 116 103H109Q104 103 104 98ZM126 73H143V106Q143 111 138 111H131Q126 111 126 106ZM148 73H159V94Q159 99 154 99H153Q148 99 148 94Z"
+              fill="white"
+            />
+              <circle cx="50" cy="70" fill="black" r="17" />
+              <circle cx="29" cy="48" fill="black" r="7" />
+          </g>
+        </mask>
+      </defs>
+      <g filter="url(#uiux-carousel-key-active-border)">
+        <rect
+          fill="url(#uiux-carousel-key-gradient)"
+          height="280"
+          mask="url(#uiux-carousel-key-mask)"
+          width="280"
+          x="-40"
+          y="-40"
+        />
+        <rect
+          fill="url(#uiux-carousel-key-sheen)"
+          height="280"
+          mask="url(#uiux-carousel-key-mask)"
+          width="280"
+          x="-40"
+          y="-40"
+        />
+        <rect
+          fill="url(#uiux-carousel-key-radial)"
+          height="280"
+          mask="url(#uiux-carousel-key-mask)"
+          width="280"
+          x="-40"
+          y="-40"
+        />
+      </g>
+    </svg>
+  );
+}
+
 type CompactNoodlePath = {
   endCircleX: number;
   endCircleY: number;
@@ -82,8 +223,8 @@ function UiUxCarouselArrowSurface({
 }) {
   const isPrevious = direction === "previous";
   const path = isPrevious
-    ? "M 94 4 Q 99 4 99 10 L 99 190 Q 99 196 94 196 L 10 110 Q 0 100 10 90 Z"
-    : "M 6 4 Q 1 4 1 10 L 1 190 Q 1 196 6 196 L 90 110 Q 100 100 90 90 Z";
+    ? "M 156 20 C 115 39 70 62 30 86 Q 4 100 30 114 C 70 138 115 161 156 180 Q 176 190 176 166 C 179 122 179 78 176 34 Q 176 10 156 20 Z"
+    : "M 44 20 C 85 39 130 62 170 86 Q 196 100 170 114 C 130 138 85 161 44 180 Q 24 190 24 166 C 21 122 21 78 24 34 Q 24 10 44 20 Z";
   const gradientPrefix = `uiux-carousel-${direction}`;
 
   return (
@@ -91,7 +232,7 @@ function UiUxCarouselArrowSurface({
       aria-hidden="true"
       className="uiux-carousel-arrow-surface"
       preserveAspectRatio="none"
-      viewBox="0 0 100 200"
+      viewBox="0 0 200 200"
     >
       <defs>
         <linearGradient
@@ -359,12 +500,18 @@ type UiUxCompactDecisionColumnProps = Pick<
   "screenshotAlt" | "screenshotFit" | "screenshotPosition" | "screenshotSrc"
 > & {
   decision: UiUxDecision;
+  isEmphasized?: boolean;
   isPrimary: boolean;
+  onPreviewPressEnd?: () => void;
+  onPreviewPressStart?: () => void;
 };
 
 function UiUxCompactDecisionColumn({
   decision,
+  isEmphasized = false,
   isPrimary,
+  onPreviewPressEnd,
+  onPreviewPressStart,
   screenshotAlt,
   screenshotFit,
   screenshotPosition,
@@ -374,8 +521,20 @@ function UiUxCompactDecisionColumn({
     <div
       className={`uiux-compact-decision-column${
         isPrimary ? " is-primary" : " is-adjacent"
-      }`}
+      }${isEmphasized ? " is-preview-emphasized" : ""}`}
       data-decision-number={decision.number}
+      onPointerCancel={isPrimary ? undefined : onPreviewPressEnd}
+      onPointerDown={
+        isPrimary
+          ? undefined
+          : (event) => {
+              if (event.pointerType !== "mouse") {
+                onPreviewPressStart?.();
+              }
+            }
+      }
+      onPointerLeave={isPrimary ? undefined : onPreviewPressEnd}
+      onPointerUp={isPrimary ? undefined : onPreviewPressEnd}
     >
       <div className="uiux-compact-title-bridge">
         <strong>{decision.title}</strong>
@@ -476,6 +635,9 @@ export function UiUxDecisionShowcase({
     useState<CompactNoodleGeometry | null>(null);
   const [heldCarouselDirection, setHeldCarouselDirection] = useState<
     -1 | 1 | null
+  >(null);
+  const [pressedDecisionNumber, setPressedDecisionNumber] = useState<
+    string | null
   >(null);
   const compactPanelRef = useRef<HTMLDivElement>(null);
   const activeStripButtonRef = useRef<HTMLDivElement>(null);
@@ -822,6 +984,8 @@ export function UiUxDecisionShowcase({
 
               {compactColumnCount === 3 ? (
                 <div className="uiux-compact-3d-shell">
+                  <UiUxActiveKey />
+
                   <UiUxCarouselArrowButton
                     direction={-1}
                     isHeld={heldCarouselDirection === -1}
@@ -840,13 +1004,13 @@ export function UiUxDecisionShowcase({
                             animate={
                               shouldReduceMotion
                                 ? {
-                                    opacity: isPrimary ? 1 : 0.5,
+                                    opacity: isPrimary ? 1 : 0.25,
                                     rotateY: 0,
                                     scale: 1,
                                     z: 0,
                                   }
                                 : {
-                                    opacity: isPrimary ? 1 : 0.5,
+                                    opacity: isPrimary ? 1 : 0.25,
                                     rotateY:
                                       role === "previous"
                                         ? -32
@@ -857,7 +1021,11 @@ export function UiUxDecisionShowcase({
                                     z: 0,
                                   }
                             }
-                            className={`uiux-compact-3d-stack is-${role}`}
+                            className={`uiux-compact-3d-stack is-${role}${
+                              pressedDecisionNumber === decision.number
+                                ? " is-preview-emphasized"
+                                : ""
+                            }`}
                             initial={
                               shouldReduceMotion
                                 ? false
@@ -873,6 +1041,20 @@ export function UiUxDecisionShowcase({
                                     event.stopPropagation();
                                     setFocusedDecisionNumber(decision.number);
                                   }
+                            }
+                            onPointerCancel={() =>
+                              setPressedDecisionNumber(null)
+                            }
+                            onPointerDown={(event) => {
+                              if (!isPrimary && event.pointerType !== "mouse") {
+                                setPressedDecisionNumber(decision.number);
+                              }
+                            }}
+                            onPointerLeave={() =>
+                              setPressedDecisionNumber(null)
+                            }
+                            onPointerUp={() =>
+                              setPressedDecisionNumber(null)
                             }
                             transition={
                               shouldReduceMotion
@@ -951,6 +1133,7 @@ export function UiUxDecisionShowcase({
                           key={decision.number}
                           ref={activeStripButtonRef}
                         >
+                          <UiUxActiveKey />
                           {decision.number}
                         </div>
                       ) : (
@@ -983,8 +1166,18 @@ export function UiUxDecisionShowcase({
                     {visibleDecisions.map(({ decision, isPrimary }) => (
                       <UiUxCompactDecisionColumn
                         decision={decision}
+                        isEmphasized={
+                          !isPrimary &&
+                          pressedDecisionNumber === decision.number
+                        }
                         isPrimary={isPrimary}
                         key={decision.number}
+                        onPreviewPressEnd={() =>
+                          setPressedDecisionNumber(null)
+                        }
+                        onPreviewPressStart={() =>
+                          setPressedDecisionNumber(decision.number)
+                        }
                         screenshotAlt={screenshotAlt}
                         screenshotFit={screenshotFit}
                         screenshotPosition={screenshotPosition}
