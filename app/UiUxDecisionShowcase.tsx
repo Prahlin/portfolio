@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ImageIcon } from "lucide-react";
-import { useLayoutEffect, useRef, useState } from "react";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
 
 export type UiUxNoodlePoint = readonly [x: number, y: number];
 
@@ -71,6 +71,106 @@ function UiUxNoodle({ decision }: { decision: UiUxDecision }) {
       <polyline points={decision.noodle.map((point) => point.join(",")).join(" ")} />
       <circle cx={lastPoint[0]} cy={lastPoint[1]} r="4.5" />
     </g>
+  );
+}
+
+function UiUxCarouselArrowSurface({
+  direction,
+}: {
+  direction: "next" | "previous";
+}) {
+  const isPrevious = direction === "previous";
+  const path = isPrevious
+    ? "M 94 4 Q 99 4 99 10 L 99 190 Q 99 196 94 196 L 10 110 Q 0 100 10 90 Z"
+    : "M 6 4 Q 1 4 1 10 L 1 190 Q 1 196 6 196 L 90 110 Q 100 100 90 90 Z";
+  const gradientPrefix = `uiux-carousel-${direction}`;
+
+  return (
+    <svg
+      aria-hidden="true"
+      className="uiux-carousel-arrow-surface"
+      preserveAspectRatio="none"
+      viewBox="0 0 100 200"
+    >
+      <defs>
+        <linearGradient
+          id={`${gradientPrefix}-inactive-base`}
+          x1="0"
+          x2="0"
+          y1="0"
+          y2="1"
+        >
+          <stop offset="0" stopColor="#194632" stopOpacity="0.5" />
+          <stop offset="1" stopColor="#0e2f21" stopOpacity="0.5" />
+        </linearGradient>
+        <linearGradient
+          id={`${gradientPrefix}-active-base`}
+          x1="0"
+          x2="0"
+          y1="0"
+          y2="1"
+        >
+          <stop offset="0" stopColor="#194632" />
+          <stop offset="1" stopColor="#0e2f21" />
+        </linearGradient>
+        <linearGradient
+          id={`${gradientPrefix}-inactive-sheen`}
+          x1="0"
+          x2="0"
+          y1="0"
+          y2="1"
+        >
+          <stop offset="0" stopColor="white" stopOpacity="0.0275" />
+          <stop offset="0.34" stopColor="white" stopOpacity="0" />
+        </linearGradient>
+        <linearGradient
+          id={`${gradientPrefix}-active-sheen`}
+          x1="0"
+          x2="0"
+          y1="0"
+          y2="1"
+        >
+          <stop offset="0" stopColor="white" stopOpacity="0.055" />
+          <stop offset="0.34" stopColor="white" stopOpacity="0" />
+        </linearGradient>
+        <radialGradient
+          id={`${gradientPrefix}-inactive-radial`}
+          cx="0.68"
+          cy="0.18"
+          r="0.8"
+        >
+          <stop offset="0" stopColor="white" stopOpacity="0.0225" />
+          <stop offset="0.68" stopColor="white" stopOpacity="0" />
+        </radialGradient>
+        <radialGradient
+          id={`${gradientPrefix}-active-radial`}
+          cx="0.68"
+          cy="0.18"
+          r="0.8"
+        >
+          <stop offset="0" stopColor="white" stopOpacity="0.045" />
+          <stop offset="0.68" stopColor="white" stopOpacity="0" />
+        </radialGradient>
+      </defs>
+      <g className="uiux-carousel-arrow-shape uiux-carousel-arrow-shape-inactive">
+        <path
+          className="uiux-carousel-arrow-shape-base"
+          d={path}
+          fill={`url(#${gradientPrefix}-inactive-base)`}
+        />
+        <path d={path} fill={`url(#${gradientPrefix}-inactive-sheen)`} />
+        <path d={path} fill={`url(#${gradientPrefix}-inactive-radial)`} />
+      </g>
+      <g className="uiux-carousel-arrow-shape uiux-carousel-arrow-shape-active">
+        <path
+          className="uiux-carousel-arrow-shape-base"
+          d={path}
+          fill={`url(#${gradientPrefix}-active-base)`}
+        />
+        <path d={path} fill={`url(#${gradientPrefix}-active-sheen)`} />
+        <path d={path} fill={`url(#${gradientPrefix}-active-radial)`} />
+      </g>
+    </svg>
   );
 }
 
@@ -202,6 +302,150 @@ export function UiUxDeviceFrame({
   );
 }
 
+type UiUxCompactDecisionColumnProps = Pick<
+  UiUxDecisionShowcaseProps,
+  "screenshotAlt" | "screenshotFit" | "screenshotPosition" | "screenshotSrc"
+> & {
+  decision: UiUxDecision;
+  isPrimary: boolean;
+};
+
+function UiUxCompactDecisionColumn({
+  decision,
+  isPrimary,
+  screenshotAlt,
+  screenshotFit,
+  screenshotPosition,
+  screenshotSrc,
+}: UiUxCompactDecisionColumnProps) {
+  const columnRef = useRef<HTMLDivElement>(null);
+  const focusedButtonRef = useRef<HTMLButtonElement>(null);
+  const focusedCopyRef = useRef<HTMLSpanElement>(null);
+
+  useLayoutEffect(() => {
+    const column = columnRef.current;
+    const focusedButton = focusedButtonRef.current;
+    const focusedCopy = focusedCopyRef.current;
+
+    if (!column || !focusedButton || !focusedCopy) return;
+
+    const updateNumberPosition = () => {
+      const buttonRect = focusedButton.getBoundingClientRect();
+      const copyRect = focusedCopy.getBoundingClientRect();
+
+      column.style.setProperty(
+        "--uiux-focused-number-offset",
+        `${copyRect.top - buttonRect.top}px`,
+      );
+      column.style.setProperty(
+        "--uiux-focused-number-height",
+        `${copyRect.height}px`,
+      );
+    };
+
+    const frame = window.requestAnimationFrame(updateNumberPosition);
+    const observer = new ResizeObserver(updateNumberPosition);
+    observer.observe(column);
+    observer.observe(focusedButton);
+    observer.observe(focusedCopy);
+
+    return () => {
+      window.cancelAnimationFrame(frame);
+      observer.disconnect();
+    };
+  }, [decision.number]);
+
+  return (
+    <div
+      className={`uiux-compact-decision-column${
+        isPrimary ? " is-primary" : " is-adjacent"
+      }`}
+      data-decision-number={decision.number}
+      ref={columnRef}
+    >
+      <div className="uiux-compact-title-bridge">
+        <strong>{decision.title}</strong>
+      </div>
+
+      <div className="uiux-compact-active-card">
+        <article
+          className={`uiux-compact-focused-card${
+            decision.placeholder ? " is-placeholder" : ""
+          }`}
+          data-decision-number={decision.number}
+        >
+          <button
+            aria-label={
+              decision.placeholder
+                ? `${decision.number}. ${decision.title} placeholder`
+                : `${decision.number}. ${decision.title}: ${decision.description}`
+            }
+            aria-pressed={isPrimary}
+            className="uiux-decision-number is-active"
+            ref={focusedButtonRef}
+            tabIndex={-1}
+            type="button"
+          >
+            <span className="uiux-focused-number-label">
+              {Array.from(decision.number).map((digit, index) => (
+                <span key={`${decision.number}-${index}`}>{digit}</span>
+              ))}
+            </span>
+          </button>
+          <span className="uiux-decision-copy" ref={focusedCopyRef}>
+            {!decision.placeholder ? (
+              <>
+                <strong>{decision.title}</strong>
+                <UiUxDecisionDescription description={decision.description} />
+              </>
+            ) : null}
+          </span>
+        </article>
+
+        {decision.placeholder ? (
+          <div className="uiux-placeholder-body" aria-hidden="true" />
+        ) : (
+          <div
+            className={`uiux-device-slot${
+              decision.deviceVariant === "tablet"
+                ? " uiux-device-slot-tablet"
+                : ""
+            }`}
+          >
+            {decision.deviceVariant !== "tablet" ? (
+              <UiUxDeviceContext decision={decision} />
+            ) : null}
+            <div className="uiux-device-frame-stack">
+              <UiUxDeviceFrame
+                deviceVariant={decision.deviceVariant}
+                screenshotAlt={decision.screenshotAlt ?? screenshotAlt}
+                screenshotFit={screenshotFit}
+                screenshotPosition={screenshotPosition}
+                screenshotSrc={decision.screenshotSrc ?? screenshotSrc}
+              />
+              {decision.deviceVariant === "tablet" ? (
+                <UiUxDeviceContext decision={decision} />
+              ) : null}
+              <p className="uiux-device-project-label">
+                <span>PROJECT:</span>
+                {decision.projectHref && decision.projectLabel ? (
+                  <Link
+                    aria-label={`View the ${decision.projectLabel} project page`}
+                    className="uiux-device-project-link"
+                    href={decision.projectHref}
+                  >
+                    {decision.projectLabel}
+                  </Link>
+                ) : null}
+              </p>
+            </div>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}
+
 export function UiUxDecisionShowcase({
   decisions,
   eyebrow = "UI / UX",
@@ -215,14 +459,24 @@ export function UiUxDecisionShowcase({
   const [focusedDecisionNumber, setFocusedDecisionNumber] = useState(
     decisions[0]?.number ?? "",
   );
+  const [compactColumnCount, setCompactColumnCount] = useState<1 | 2 | 3>(1);
   const [compactNoodle, setCompactNoodle] =
     useState<CompactNoodleGeometry | null>(null);
+  const [heldCarouselDirection, setHeldCarouselDirection] = useState<
+    -1 | 1 | null
+  >(null);
   const compactPanelRef = useRef<HTMLDivElement>(null);
-  const activeStripButtonRef = useRef<HTMLButtonElement>(null);
+  const activeStripButtonRef = useRef<HTMLDivElement>(null);
   const titleBridgeRef = useRef<HTMLDivElement>(null);
   const focusedButtonRef = useRef<HTMLButtonElement>(null);
   const focusedCopyRef = useRef<HTMLSpanElement>(null);
   const deviceSlotRef = useRef<HTMLDivElement>(null);
+  const carouselHoldDelayRef = useRef<ReturnType<typeof setTimeout> | null>(
+    null,
+  );
+  const carouselHoldIntervalRef = useRef<ReturnType<
+    typeof setInterval
+  > | null>(null);
   const stageDecisions = decisions.filter((decision) => !decision.compactOnly);
   const leftDecisions = stageDecisions.filter(
     (decision) => decision.side === "left",
@@ -233,6 +487,92 @@ export function UiUxDecisionShowcase({
   const focusedDecision =
     decisions.find((decision) => decision.number === focusedDecisionNumber) ??
     decisions[0];
+  const focusedDecisionIndex = Math.max(
+    0,
+    decisions.findIndex(
+      (decision) => decision.number === focusedDecision?.number,
+    ),
+  );
+  const visibleDecisionOffsets =
+    compactColumnCount === 1
+      ? [0]
+      : compactColumnCount === 2
+        ? [0, 1]
+        : [-1, 0, 1];
+  const visibleDecisions = visibleDecisionOffsets.map((offset) => {
+    const index =
+      (focusedDecisionIndex + offset + decisions.length) % decisions.length;
+
+    return {
+      decision: decisions[index],
+      isPrimary: offset === 0,
+    };
+  });
+
+  const clearCarouselHoldTimers = () => {
+    if (carouselHoldDelayRef.current) {
+      clearTimeout(carouselHoldDelayRef.current);
+      carouselHoldDelayRef.current = null;
+    }
+
+    if (carouselHoldIntervalRef.current) {
+      clearInterval(carouselHoldIntervalRef.current);
+      carouselHoldIntervalRef.current = null;
+    }
+  };
+
+  const moveCarousel = (direction: -1 | 1) => {
+    setFocusedDecisionNumber((currentNumber) => {
+      const currentIndex = decisions.findIndex(
+        (decision) => decision.number === currentNumber,
+      );
+      const normalizedIndex = currentIndex >= 0 ? currentIndex : 0;
+      const nextIndex =
+        (normalizedIndex + direction + decisions.length) % decisions.length;
+
+      return decisions[nextIndex]?.number ?? currentNumber;
+    });
+  };
+
+  const startCarouselHold = (direction: -1 | 1) => {
+    clearCarouselHoldTimers();
+    setHeldCarouselDirection(direction);
+    moveCarousel(direction);
+    carouselHoldDelayRef.current = setTimeout(() => {
+      carouselHoldIntervalRef.current = setInterval(() => {
+        moveCarousel(direction);
+      }, 180);
+    }, 420);
+  };
+
+  const stopCarouselHold = () => {
+    clearCarouselHoldTimers();
+    setHeldCarouselDirection(null);
+  };
+
+  useEffect(
+    () => () => {
+      clearCarouselHoldTimers();
+    },
+    [],
+  );
+
+  useLayoutEffect(() => {
+    const updateColumnCount = () => {
+      if (window.innerWidth <= 630) {
+        setCompactColumnCount(1);
+      } else if (window.innerWidth <= 980) {
+        setCompactColumnCount(2);
+      } else {
+        setCompactColumnCount(3);
+      }
+    };
+
+    updateColumnCount();
+    window.addEventListener("resize", updateColumnCount);
+
+    return () => window.removeEventListener("resize", updateColumnCount);
+  }, []);
 
   useLayoutEffect(() => {
     const panel = compactPanelRef.current;
@@ -390,7 +730,11 @@ export function UiUxDecisionShowcase({
           </svg>
 
           {focusedDecision ? (
-            <div className="uiux-compact-decision-panel" ref={compactPanelRef}>
+            <div
+              className="uiux-compact-decision-panel"
+              data-column-count={compactColumnCount}
+              ref={compactPanelRef}
+            >
               {compactNoodle ? (
                 <svg
                   aria-hidden="true"
@@ -466,35 +810,125 @@ export function UiUxDecisionShowcase({
               <div
                 aria-label="Choose a UI or UX decision"
                 className="uiux-compact-decision-strip"
+                data-column-count={compactColumnCount}
                 role="group"
               >
-                {decisions.map((decision) => {
-                  const isActive = decision.number === focusedDecision.number;
-                  const buttonLabel = decision.placeholder
-                    ? `${decision.number}. Empty placeholder`
-                    : `${decision.number}. ${decision.title}: ${decision.description}`;
+                <button
+                  aria-label="Previous UI or UX decision"
+                  className={`uiux-carousel-arrow uiux-carousel-arrow-previous${
+                    heldCarouselDirection === -1 ? " is-held" : ""
+                  }`}
+                  onBlur={stopCarouselHold}
+                  onKeyDown={(event) => {
+                    if (
+                      !event.repeat &&
+                      (event.key === "Enter" || event.key === " ")
+                    ) {
+                      event.preventDefault();
+                      startCarouselHold(-1);
+                    }
+                  }}
+                  onKeyUp={(event) => {
+                    if (event.key === "Enter" || event.key === " ") {
+                      stopCarouselHold();
+                    }
+                  }}
+                  onPointerCancel={stopCarouselHold}
+                  onPointerDown={(event) => {
+                    if (event.button !== 0) return;
+                    event.currentTarget.setPointerCapture(event.pointerId);
+                    startCarouselHold(-1);
+                  }}
+                  onPointerUp={stopCarouselHold}
+                  type="button"
+                >
+                  <UiUxCarouselArrowSurface direction="previous" />
+                </button>
 
-                  return (
-                  <button
-                    aria-label={buttonLabel}
-                    aria-pressed={isActive}
-                    className={`uiux-decision-number${isActive ? " is-active" : ""}`}
-                    key={decision.number}
-                    onClick={() => setFocusedDecisionNumber(decision.number)}
-                    ref={isActive ? activeStripButtonRef : undefined}
-                    type="button"
-                  >
-                    {decision.number}
-                  </button>
-                  );
-                })}
+                {visibleDecisions.map(({ decision, isPrimary }) =>
+                  isPrimary ? (
+                    <div
+                      aria-label={`Current UI or UX decision ${decision.number}`}
+                      aria-live="polite"
+                      className="uiux-carousel-current uiux-decision-number is-active"
+                      key={decision.number}
+                      ref={activeStripButtonRef}
+                    >
+                      {decision.number}
+                    </div>
+                  ) : (
+                    <button
+                      aria-label={`Show UI or UX decision ${decision.number}`}
+                      className="uiux-carousel-preview uiux-decision-number"
+                      key={decision.number}
+                      onClick={() =>
+                        setFocusedDecisionNumber(decision.number)
+                      }
+                      type="button"
+                    >
+                      {decision.number}
+                    </button>
+                  ),
+                )}
+
+                <button
+                  aria-label="Next UI or UX decision"
+                  className={`uiux-carousel-arrow uiux-carousel-arrow-next${
+                    heldCarouselDirection === 1 ? " is-held" : ""
+                  }`}
+                  onBlur={stopCarouselHold}
+                  onKeyDown={(event) => {
+                    if (
+                      !event.repeat &&
+                      (event.key === "Enter" || event.key === " ")
+                    ) {
+                      event.preventDefault();
+                      startCarouselHold(1);
+                    }
+                  }}
+                  onKeyUp={(event) => {
+                    if (event.key === "Enter" || event.key === " ") {
+                      stopCarouselHold();
+                    }
+                  }}
+                  onPointerCancel={stopCarouselHold}
+                  onPointerDown={(event) => {
+                    if (event.button !== 0) return;
+                    event.currentTarget.setPointerCapture(event.pointerId);
+                    startCarouselHold(1);
+                  }}
+                  onPointerUp={stopCarouselHold}
+                  type="button"
+                >
+                  <UiUxCarouselArrowSurface direction="next" />
+                </button>
               </div>
 
-              <div className="uiux-compact-title-bridge" ref={titleBridgeRef}>
+              <div
+                className="uiux-compact-columns"
+                data-column-count={compactColumnCount}
+              >
+                {visibleDecisions.map(({ decision, isPrimary }) => (
+                  <UiUxCompactDecisionColumn
+                    decision={decision}
+                    isPrimary={isPrimary}
+                    key={decision.number}
+                    screenshotAlt={screenshotAlt}
+                    screenshotFit={screenshotFit}
+                    screenshotPosition={screenshotPosition}
+                    screenshotSrc={screenshotSrc}
+                  />
+                ))}
+              </div>
+
+              <div
+                className="uiux-compact-title-bridge uiux-compact-legacy-title"
+                ref={titleBridgeRef}
+              >
                 <strong>{focusedDecision.title}</strong>
               </div>
 
-              <div className="uiux-compact-active-card">
+              <div className="uiux-compact-active-card uiux-compact-legacy-card">
                 <article
                   className={`uiux-compact-focused-card${
                     focusedDecision.placeholder ? " is-placeholder" : ""
