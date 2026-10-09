@@ -1,0 +1,7 @@
+:HL["/_next/static/chunks/1-6x1rs-6u5l9.css","style"]
+:HL["/_next/static/chunks/0wdj2xw1oog_2.css","style"]
+:HL["/_next/static/media/5e9b6f26705b6820-s.p.04yx1upb4yvu9.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/images/app-store-mark.svg","image"]
+:HL["/images/google-play-official-triangle.png","image"]
+:HL["/images/android-robot-head.svg","image"]
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"projects","param":null,"prefetchHints":0,"slots":{"children":{"name":"alla-vostra","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"3DM7RT9VWJLctvG7_akZP"}
