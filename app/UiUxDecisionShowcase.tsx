@@ -672,7 +672,7 @@ export function UiUxDecisionShowcase({
       ? [0]
       : compactColumnCount === 2
         ? [0, 1]
-        : [-1, 0, 1];
+        : [-2, -1, 0, 1, 2];
   const visibleDecisions = visibleDecisionOffsets.map((offset) => {
     const index =
       (focusedDecisionIndex + offset + decisions.length) % decisions.length;
@@ -680,7 +680,16 @@ export function UiUxDecisionShowcase({
     return {
       decision: decisions[index],
       isPrimary: offset === 0,
-      role: offset < 0 ? "previous" : offset > 0 ? "next" : "active",
+      role:
+        offset === -2
+          ? "previous-outer"
+          : offset === -1
+            ? "previous"
+            : offset === 1
+              ? "next"
+              : offset === 2
+                ? "next-outer"
+                : "active",
     };
   });
 
@@ -1001,24 +1010,54 @@ export function UiUxDecisionShowcase({
                     {visibleDecisions.map(
                       ({ decision, isPrimary, role }) => (
                         <motion.div
+                          className="uiux-compact-3d-cell"
+                          key={decision.number}
+                          layout={shouldReduceMotion ? false : "position"}
+                          layoutDependency={focusedDecisionNumber}
+                          transition={
+                            shouldReduceMotion
+                              ? { duration: 0 }
+                              : {
+                                  damping: 24,
+                                  mass: 0.85,
+                                  stiffness: 180,
+                                  type: "spring",
+                                }
+                          }
+                        >
+                          <motion.div
                             animate={
                               shouldReduceMotion
                                 ? {
                                     opacity: isPrimary ? 1 : 0.25,
                                     rotateY: 0,
-                                    scale: 1,
+                                    scaleX: 0.891,
+                                    scaleY: 0.81,
                                     z: 0,
                                   }
                                 : {
                                     opacity: isPrimary ? 1 : 0.25,
                                     rotateY:
-                                      role === "previous"
-                                        ? -32
-                                        : role === "next"
-                                          ? 32
-                                          : 0,
-                                    scale: isPrimary ? 1 : 0.98,
-                                    z: 0,
+                                      role === "previous-outer"
+                                        ? -49
+                                        : role === "previous"
+                                          ? -36
+                                          : role === "next"
+                                            ? 36
+                                            : role === "next-outer"
+                                              ? 49
+                                              : 0,
+                                    scaleX: isPrimary
+                                      ? 0.891
+                                      : role.endsWith("outer")
+                                        ? 0.78
+                                        : 0.87318,
+                                    scaleY: isPrimary
+                                      ? 0.81
+                                      : role.endsWith("outer")
+                                        ? 0.615
+                                        : 0.7938,
+                                    z: role.endsWith("outer") ? -80 : 0,
                                   }
                             }
                             className={`uiux-compact-3d-stack is-${role}${
@@ -1029,10 +1068,31 @@ export function UiUxDecisionShowcase({
                             initial={
                               shouldReduceMotion
                                 ? false
-                                : { opacity: 0 }
+                                : {
+                                    opacity: 0,
+                                    rotateY:
+                                      role === "previous-outer"
+                                        ? -49
+                                        : role === "previous"
+                                          ? -36
+                                          : role === "next"
+                                            ? 36
+                                            : role === "next-outer"
+                                              ? 49
+                                              : 0,
+                                    scaleX: isPrimary
+                                      ? 0.891
+                                      : role.endsWith("outer")
+                                        ? 0.78
+                                        : 0.87318,
+                                    scaleY: isPrimary
+                                      ? 0.81
+                                      : role.endsWith("outer")
+                                        ? 0.615
+                                        : 0.7938,
+                                    z: role.endsWith("outer") ? -80 : 0,
+                                  }
                             }
-                            key={decision.number}
-                            layout={shouldReduceMotion ? false : "position"}
                             onClickCapture={
                               isPrimary
                                 ? undefined
@@ -1097,6 +1157,7 @@ export function UiUxDecisionShowcase({
                               screenshotPosition={screenshotPosition}
                               screenshotSrc={screenshotSrc}
                             />
+                          </motion.div>
                         </motion.div>
                       ),
                     )}
