@@ -39,6 +39,74 @@ type UiUxDecisionShowcaseProps = {
 const STAGE_WIDTH = 1180;
 const STAGE_HEIGHT = 650;
 
+type DesktopStackRole =
+  | "active"
+  | "next"
+  | "next-outer"
+  | "previous"
+  | "previous-outer"
+  | "rear"
+  | "rear-hidden";
+
+const DESKTOP_STACK_VARIANTS = {
+  active: {
+    opacity: 1,
+    originX: 0.5,
+    rotateY: 0,
+    scaleX: 0.891,
+    scaleY: 0.81,
+    z: 0,
+  },
+  next: {
+    opacity: 0.25,
+    originX: 0,
+    rotateY: 36,
+    scaleX: 0.87318,
+    scaleY: 0.7938,
+    z: 0,
+  },
+  "next-outer": {
+    opacity: 0.02,
+    originX: 0,
+    rotateY: 144,
+    scaleX: 0.3,
+    scaleY: 0.62,
+    z: -240,
+  },
+  previous: {
+    opacity: 0.25,
+    originX: 1,
+    rotateY: -36,
+    scaleX: 0.87318,
+    scaleY: 0.7938,
+    z: 0,
+  },
+  "previous-outer": {
+    opacity: 0.02,
+    originX: 1,
+    rotateY: -144,
+    scaleX: 0.3,
+    scaleY: 0.62,
+    z: -240,
+  },
+  rear: {
+    opacity: 0,
+    originX: 0.5,
+    rotateY: 180,
+    scaleX: 0.55,
+    scaleY: 0.48,
+    z: -480,
+  },
+  "rear-hidden": {
+    opacity: 0,
+    originX: 0.5,
+    rotateY: -180,
+    scaleX: 0.55,
+    scaleY: 0.48,
+    z: -480,
+  },
+} satisfies Record<DesktopStackRole, Record<string, number>>;
+
 function UiUxActiveKey() {
   return (
     <svg
@@ -634,6 +702,7 @@ export function UiUxDecisionShowcase({
   const [compactColumnCount, setCompactColumnCount] = useState<1 | 3>(1);
   const [compactNoodle, setCompactNoodle] =
     useState<CompactNoodleGeometry | null>(null);
+  const [carouselDirection, setCarouselDirection] = useState<-1 | 1>(1);
   const [heldCarouselDirection, setHeldCarouselDirection] = useState<
     -1 | 1 | null
   >(null);
@@ -671,16 +740,20 @@ export function UiUxDecisionShowcase({
   const visibleDecisionOffsets =
     compactColumnCount === 1
       ? [0]
-      : [-2, -1, 0, 1, 2];
+      : carouselDirection === -1
+        ? [-3, -2, -1, 0, 1, 2]
+        : [-2, -1, 0, 1, 2, 3];
+  // Three-stack mode: replace the desktop offsets above with [-1, 0, 1].
+  // Desktop keeps exactly six carousel faces mounted. The seventh decision is
+  // staged off-carousel, then enters through the invisible rear face on the
+  // side selected by the latest navigation direction.
   const visibleDecisions = visibleDecisionOffsets.map((offset) => {
     const index =
       (focusedDecisionIndex + offset + decisions.length) % decisions.length;
-
-    return {
-      decision: decisions[index],
-      isPrimary: offset === 0,
-      role:
-        offset === -2
+    const role: DesktopStackRole =
+      offset === -3
+        ? "rear-hidden"
+        : offset === -2
           ? "previous-outer"
           : offset === -1
             ? "previous"
@@ -688,7 +761,14 @@ export function UiUxDecisionShowcase({
               ? "next"
               : offset === 2
                 ? "next-outer"
-                : "active",
+                : offset === 3
+                  ? "rear"
+                  : "active";
+
+    return {
+      decision: decisions[index],
+      isPrimary: offset === 0,
+      role,
     };
   });
 
@@ -704,7 +784,8 @@ export function UiUxDecisionShowcase({
     }
   };
 
-  const moveCarousel = (direction: -1 | 1) => {
+  const applyCarouselMove = (direction: -1 | 1) => {
+    setCarouselDirection(direction);
     setFocusedDecisionNumber((currentNumber) => {
       const currentIndex = decisions.findIndex(
         (decision) => decision.number === currentNumber,
@@ -715,6 +796,10 @@ export function UiUxDecisionShowcase({
 
       return decisions[nextIndex]?.number ?? currentNumber;
     });
+  };
+
+  const moveCarousel = (direction: -1 | 1) => {
+    applyCarouselMove(direction);
   };
 
   const startCarouselHold = (direction: -1 | 1) => {
@@ -1005,205 +1090,169 @@ export function UiUxDecisionShowcase({
                     role="group"
                   >
                     {visibleDecisions.map(
-                      ({ decision, isPrimary, role }) => (
-                        <motion.div
-                          animate={{
-                            x:
-                              role === "previous-outer"
-                                ? -750.4825
-                                : role === "previous"
-                                  ? -521.1025
-                                  : role === "next"
-                                    ? 521.1025
-                                    : role === "next-outer"
-                                      ? 750.4825
-                                      : 0,
-                            y: role.endsWith("outer") ? 16 : 0,
-                          }}
-                          className="uiux-compact-3d-cell"
-                          initial={false}
-                          key={decision.number}
-                          transition={
-                            shouldReduceMotion
-                              ? { duration: 0 }
-                              : {
-                                  damping: 24,
-                                  mass: 0.85,
-                                  stiffness: 180,
-                                  type: "spring",
-                                }
-                          }
-                        >
+                      ({ decision, isPrimary, role }) => {
+                        const isRearSide = role.endsWith("outer");
+                        const isRearCenter =
+                          role === "rear" || role === "rear-hidden";
+                        const isRear = isRearSide || isRearCenter;
+                        const usesPrimaryLayout = isPrimary || isRearCenter;
+                        const stackTransition = shouldReduceMotion
+                          ? { duration: 0 }
+                          : {
+                              damping: 24,
+                              mass: 0.85,
+                              stiffness: 180,
+                              type: "spring" as const,
+                            };
+                        const stackMotion = DESKTOP_STACK_VARIANTS[role];
+                        return (
                           <motion.div
                             animate={{
-                              width: isPrimary ? 654.4125 : 406.125,
+                              x:
+                                role === "previous-outer"
+                                  ? -808
+                                  : role === "previous"
+                                    ? -521.1025
+                                    : role === "next"
+                                      ? 521.1025
+                                      : role === "next-outer"
+                                        ? 808
+                                        : 0,
+                              y: 0,
                             }}
-                            className="uiux-compact-3d-positioner"
+                            className="uiux-compact-3d-cell"
                             initial={false}
-                            transition={
-                              shouldReduceMotion
-                                ? { duration: 0 }
-                                : {
-                                    damping: 24,
-                                    mass: 0.85,
-                                    stiffness: 180,
-                                    type: "spring",
-                                  }
-                            }
+                            key={decision.number}
+                            transition={stackTransition}
                           >
                             <motion.div
-                            animate={
-                              shouldReduceMotion
-                                ? {
-                                    opacity: isPrimary ? 1 : 0.25,
-                                    originX: 0.5,
-                                    rotateY: 0,
-                                    scaleX: 0.891,
-                                    scaleY: 0.81,
-                                    z: 0,
-                                  }
-                                : {
-                                    opacity: isPrimary ? 1 : 0.25,
-                                    originX:
-                                      role === "previous-outer" ||
-                                      role === "previous"
-                                        ? 1
-                                        : role === "next" ||
-                                            role === "next-outer"
-                                          ? 0
-                                          : 0.5,
-                                    rotateY:
-                                      role === "previous-outer"
-                                        ? -49
-                                        : role === "previous"
-                                          ? -36
-                                          : role === "next"
-                                            ? 36
-                                            : role === "next-outer"
-                                              ? 49
-                                              : 0,
-                                    scaleX: isPrimary
-                                      ? 0.891
-                                      : role.endsWith("outer")
-                                        ? 0.78
-                                        : 0.87318,
-                                    scaleY: isPrimary
-                                      ? 0.81
-                                      : role.endsWith("outer")
-                                        ? 0.65
-                                        : 0.7938,
-                                    z: role.endsWith("outer") ? -80 : 0,
-                                  }
-                            }
-                            className={`uiux-compact-3d-stack is-${role}${
-                              pressedDecisionNumber === decision.number
-                                ? " is-preview-emphasized"
-                                : ""
-                            }`}
-                            initial={
-                              shouldReduceMotion
-                                ? false
-                                : {
-                                    opacity: 0,
-                                    originX:
-                                      role === "previous-outer" ||
-                                      role === "previous"
-                                        ? 1
-                                        : role === "next" ||
-                                            role === "next-outer"
-                                          ? 0
-                                          : 0.5,
-                                    rotateY:
-                                      role === "previous-outer"
-                                        ? -49
-                                        : role === "previous"
-                                          ? -36
-                                          : role === "next"
-                                            ? 36
-                                            : role === "next-outer"
-                                              ? 49
-                                              : 0,
-                                    scaleX: isPrimary
-                                      ? 0.891
-                                      : role.endsWith("outer")
-                                        ? 0.78
-                                        : 0.87318,
-                                    scaleY: isPrimary
-                                      ? 0.81
-                                      : role.endsWith("outer")
-                                        ? 0.65
-                                        : 0.7938,
-                                    z: role.endsWith("outer") ? -80 : 0,
-                                  }
-                            }
-                            onClickCapture={
-                              isPrimary
-                                ? undefined
-                                : (event) => {
-                                    event.preventDefault();
-                                    event.stopPropagation();
-                                    setFocusedDecisionNumber(decision.number);
-                                  }
-                            }
-                            onPointerCancel={() =>
-                              setPressedDecisionNumber(null)
-                            }
-                            onPointerDown={(event) => {
-                              if (!isPrimary && event.pointerType !== "mouse") {
-                                setPressedDecisionNumber(decision.number);
+                              animate={{
+                                width: usesPrimaryLayout ? 654.4125 : 406.125,
+                              }}
+                              className="uiux-compact-3d-positioner"
+                              initial={false}
+                              transition={
+                                shouldReduceMotion
+                                  ? { duration: 0 }
+                                  : stackTransition
                               }
-                            }}
-                            onPointerLeave={() =>
-                              setPressedDecisionNumber(null)
-                            }
-                            onPointerUp={() =>
-                              setPressedDecisionNumber(null)
-                            }
-                            transition={
-                              shouldReduceMotion
-                                ? { duration: 0 }
-                                : {
-                                    damping: 24,
-                                    mass: 0.85,
-                                    stiffness: 180,
-                                    type: "spring",
-                                  }
-                            }
-                          >
-                            {isPrimary ? (
-                              <div
-                                aria-label={`Current UI or UX decision ${decision.number}`}
-                                aria-live="polite"
-                                className="uiux-carousel-current uiux-decision-number is-active"
-                                ref={activeStripButtonRef}
-                              >
-                                {decision.number}
-                              </div>
-                            ) : (
-                              <button
-                                aria-label={`Show UI or UX decision ${decision.number}`}
-                                className="uiux-carousel-preview uiux-decision-number"
-                                onClick={() =>
-                                  setFocusedDecisionNumber(decision.number)
+                            >
+                              <motion.div
+                                animate={role}
+                                className={`uiux-compact-3d-stack is-${role}${
+                                  usesPrimaryLayout
+                                    ? " is-primary-layout"
+                                    : ""
+                                }${
+                                  pressedDecisionNumber === decision.number
+                                    ? " is-preview-emphasized"
+                                    : ""
+                                }`}
+                                aria-hidden={isRear ? true : undefined}
+                                inert={isRear ? true : undefined}
+                                initial={
+                                  shouldReduceMotion
+                                    ? false
+                                    : {
+                                        ...stackMotion,
+                                        opacity: 0,
+                                      }
                                 }
-                                type="button"
+                                onClickCapture={
+                                  isPrimary || isRear
+                                    ? undefined
+                                    : (event) => {
+                                        event.preventDefault();
+                                        event.stopPropagation();
+                                        setCarouselDirection(
+                                          role === "previous" ? -1 : 1,
+                                        );
+                                        setFocusedDecisionNumber(
+                                          decision.number,
+                                        );
+                                      }
+                                }
+                                onPointerCancel={
+                                  isRear
+                                    ? undefined
+                                    : () => setPressedDecisionNumber(null)
+                                }
+                                onPointerDown={
+                                  isRear
+                                    ? undefined
+                                    : (event) => {
+                                        if (
+                                          !isPrimary &&
+                                          event.pointerType !== "mouse"
+                                        ) {
+                                          setPressedDecisionNumber(
+                                            decision.number,
+                                          );
+                                        }
+                                      }
+                                }
+                                onPointerLeave={
+                                  isRear
+                                    ? undefined
+                                    : () => setPressedDecisionNumber(null)
+                                }
+                                onPointerUp={
+                                  isRear
+                                    ? undefined
+                                    : () => setPressedDecisionNumber(null)
+                                }
+                                transition={stackTransition}
+                                variants={DESKTOP_STACK_VARIANTS}
                               >
-                                {decision.number}
-                              </button>
-                            )}
+                                {isPrimary ? (
+                                  <div
+                                    aria-label={`Current UI or UX decision ${decision.number}`}
+                                    aria-live="polite"
+                                    className="uiux-carousel-current uiux-decision-number is-active"
+                                    ref={activeStripButtonRef}
+                                  >
+                                    {decision.number}
+                                  </div>
+                                ) : isRearCenter ? (
+                                  <div
+                                    aria-hidden="true"
+                                    className="uiux-carousel-current uiux-decision-number is-active"
+                                  >
+                                    {decision.number}
+                                  </div>
+                                ) : isRear ? (
+                                  <div
+                                    aria-hidden="true"
+                                    className="uiux-carousel-preview uiux-decision-number"
+                                  >
+                                    {decision.number}
+                                  </div>
+                                ) : (
+                                  <button
+                                    aria-label={`Show UI or UX decision ${decision.number}`}
+                                    className="uiux-carousel-preview uiux-decision-number"
+                                    onClick={() =>
+                                      setFocusedDecisionNumber(decision.number)
+                                    }
+                                    type="button"
+                                  >
+                                    {decision.number}
+                                  </button>
+                                )}
 
-                            <UiUxCompactDecisionColumn
-                              decision={decision}
-                              isPrimary={isPrimary}
-                              screenshotAlt={screenshotAlt}
-                              screenshotFit={screenshotFit}
-                              screenshotPosition={screenshotPosition}
-                              screenshotSrc={screenshotSrc}
-                            />
-                            </motion.div>
+                                <UiUxCompactDecisionColumn
+                                  decision={decision}
+                                  isPrimary={usesPrimaryLayout}
+                                  screenshotAlt={screenshotAlt}
+                                  screenshotFit={screenshotFit}
+                                  screenshotPosition={screenshotPosition}
+                                  screenshotSrc={screenshotSrc}
+                                />
+                              </motion.div>
                           </motion.div>
                         </motion.div>
-                      ),
+                        );
+                      },
                     )}
                   </div>
 

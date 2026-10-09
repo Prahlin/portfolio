@@ -3104,11 +3104,22 @@ button.uiux-decision-number:focus-visible {
     will-change: transform, opacity;
   }
 
+  .uiux-compact-3d-stack:is(
+      .is-previous-outer,
+      .is-next-outer,
+      .is-rear,
+      .is-rear-hidden
+    ) {
+    backface-visibility: visible;
+    cursor: default;
+    pointer-events: none;
+  }
+
   .uiux-compact-3d-stack:is(.is-previous, .is-previous-outer) {
     transform-origin: 100% 50%;
   }
 
-  .uiux-compact-3d-stack.is-active {
+  .uiux-compact-3d-stack:is(.is-active, .is-rear, .is-rear-hidden) {
     transform-origin: 50% 50%;
   }
 
@@ -3116,7 +3127,7 @@ button.uiux-decision-number:focus-visible {
     transform-origin: 0% 50%;
   }
 
-  .uiux-compact-3d-stack:not(.is-active) {
+  .uiux-compact-3d-stack:is(.is-previous, .is-next) {
     cursor: pointer;
   }
 
@@ -3128,7 +3139,7 @@ button.uiux-decision-number:focus-visible {
     z-index: 2;
   }
 
-  .uiux-compact-3d-stack.is-active > .uiux-carousel-current {
+  .uiux-compact-3d-stack.is-primary-layout > .uiux-carousel-current {
     background: var(--uiux-active-surface);
     border: 1px solid var(--line);
     border-radius: 8px;
@@ -3192,30 +3203,30 @@ button.uiux-decision-number:focus-visible {
     transition: transform 420ms cubic-bezier(0.22, 1, 0.36, 1);
   }
 
-  .uiux-compact-3d-stack.is-active
+  .uiux-compact-3d-stack.is-primary-layout
     .uiux-compact-focused-card
     .uiux-decision-copy,
-  .uiux-compact-3d-stack.is-active .uiux-focused-number-label,
-  .uiux-compact-3d-stack.is-active .uiux-device-slot {
+  .uiux-compact-3d-stack.is-primary-layout .uiux-focused-number-label,
+  .uiux-compact-3d-stack.is-primary-layout .uiux-device-slot {
     transform: scale(0.5);
   }
 
-  .uiux-compact-3d-stack.is-active .uiux-compact-active-card {
+  .uiux-compact-3d-stack.is-primary-layout .uiux-compact-active-card {
     gap: calc(var(--uiux-compact-balanced-gap) * 0.5);
     isolation: isolate;
   }
 
-  .uiux-compact-3d-stack.is-active .uiux-compact-focused-card {
+  .uiux-compact-3d-stack.is-primary-layout .uiux-compact-focused-card {
     z-index: auto;
   }
 
-  .uiux-compact-3d-stack.is-active
+  .uiux-compact-3d-stack.is-primary-layout
     .uiux-compact-focused-card
     .uiux-decision-number.is-active:not(.uiux-carousel-current) {
     z-index: 0 !important;
   }
 
-  .uiux-compact-3d-stack.is-active
+  .uiux-compact-3d-stack.is-primary-layout
     .uiux-compact-focused-card
     .uiux-decision-copy {
     inset-inline: 0;
@@ -3226,7 +3237,7 @@ button.uiux-decision-number:focus-visible {
     z-index: 3;
   }
 
-  .uiux-compact-3d-stack.is-active .uiux-device-slot {
+  .uiux-compact-3d-stack.is-primary-layout .uiux-device-slot {
     inset-inline: 0;
     position: absolute;
     top: 290px;
@@ -3345,32 +3356,26 @@ button.uiux-decision-number:focus-visible {
     transition: border-color 160ms ease;
   }
 
-  .uiux-compact-3d-stack:not(.is-active):hover {
+  .uiux-compact-3d-stack:is(.is-previous, .is-next):hover {
     opacity: 0.5 !important;
   }
 
   .uiux-compact-3d-stack:is(
       .is-active,
       .is-previous,
-      .is-previous-outer,
-      .is-next,
-      .is-next-outer
+      .is-next
     ):hover
     > .uiux-decision-number,
   .uiux-compact-3d-stack:is(
       .is-active,
       .is-previous,
-      .is-previous-outer,
-      .is-next,
-      .is-next-outer
+      .is-next
     ):hover
     .uiux-compact-title-bridge,
   .uiux-compact-3d-stack:is(
       .is-active,
       .is-previous,
-      .is-previous-outer,
-      .is-next,
-      .is-next-outer
+      .is-next
     ):hover
     .uiux-compact-focused-card
     .uiux-decision-number.is-active:not(.uiux-carousel-current) {
