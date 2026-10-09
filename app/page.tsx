@@ -118,7 +118,7 @@ const uiUxDecisions: readonly UiUxDecision[] = [
     screenshotAlt: "Cinerific app landscape tablet preview",
     screenshotSrc: "/images/cinerific-hero-tablet-tab-s7-uniform.png",
     side: "right",
-    title: "Usable",
+    title: "User-friendly",
   },
   {
     description: "Every form factor?\nEvery device type?\nPiece\nof cake.",
@@ -937,7 +937,7 @@ export default function Home() {
 
       <UiUxDecisionShowcase
         decisions={uiUxDecisions}
-        subtitle="The 7 Sacred Keys to Immaculate UI/UX Design"
+        subtitle="7 Keys to 'Lock In' the User With Immaculate Design"
         title="UI / UX Philosophy"
         // Add screenshotSrc="/images/your-screenshot.png" when your image is ready.
       />

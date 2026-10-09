@@ -103,6 +103,7 @@ function UiUxActiveKey() {
             result="border-alpha"
           />
           <feFlood
+            className="uiux-carousel-key-border-color"
             floodColor="#c6ffd9"
             floodOpacity="0.36"
             result="border-color"
@@ -1010,10 +1011,22 @@ export function UiUxDecisionShowcase({
                     {visibleDecisions.map(
                       ({ decision, isPrimary, role }) => (
                         <motion.div
+                          animate={{
+                            x:
+                              role === "previous-outer"
+                                ? -750.4825
+                                : role === "previous"
+                                  ? -521.1025
+                                  : role === "next"
+                                    ? 521.1025
+                                    : role === "next-outer"
+                                      ? 750.4825
+                                      : 0,
+                            y: role.endsWith("outer") ? 16 : 0,
+                          }}
                           className="uiux-compact-3d-cell"
+                          initial={false}
                           key={decision.number}
-                          layout={shouldReduceMotion ? false : "position"}
-                          layoutDependency={focusedDecisionNumber}
                           transition={
                             shouldReduceMotion
                               ? { duration: 0 }
@@ -1026,10 +1039,28 @@ export function UiUxDecisionShowcase({
                           }
                         >
                           <motion.div
+                            animate={{
+                              width: isPrimary ? 654.4125 : 406.125,
+                            }}
+                            className="uiux-compact-3d-positioner"
+                            initial={false}
+                            transition={
+                              shouldReduceMotion
+                                ? { duration: 0 }
+                                : {
+                                    damping: 24,
+                                    mass: 0.85,
+                                    stiffness: 180,
+                                    type: "spring",
+                                  }
+                            }
+                          >
+                            <motion.div
                             animate={
                               shouldReduceMotion
                                 ? {
                                     opacity: isPrimary ? 1 : 0.25,
+                                    originX: 0.5,
                                     rotateY: 0,
                                     scaleX: 0.891,
                                     scaleY: 0.81,
@@ -1037,6 +1068,14 @@ export function UiUxDecisionShowcase({
                                   }
                                 : {
                                     opacity: isPrimary ? 1 : 0.25,
+                                    originX:
+                                      role === "previous-outer" ||
+                                      role === "previous"
+                                        ? 1
+                                        : role === "next" ||
+                                            role === "next-outer"
+                                          ? 0
+                                          : 0.5,
                                     rotateY:
                                       role === "previous-outer"
                                         ? -49
@@ -1055,7 +1094,7 @@ export function UiUxDecisionShowcase({
                                     scaleY: isPrimary
                                       ? 0.81
                                       : role.endsWith("outer")
-                                        ? 0.615
+                                        ? 0.65
                                         : 0.7938,
                                     z: role.endsWith("outer") ? -80 : 0,
                                   }
@@ -1070,6 +1109,14 @@ export function UiUxDecisionShowcase({
                                 ? false
                                 : {
                                     opacity: 0,
+                                    originX:
+                                      role === "previous-outer" ||
+                                      role === "previous"
+                                        ? 1
+                                        : role === "next" ||
+                                            role === "next-outer"
+                                          ? 0
+                                          : 0.5,
                                     rotateY:
                                       role === "previous-outer"
                                         ? -49
@@ -1088,7 +1135,7 @@ export function UiUxDecisionShowcase({
                                     scaleY: isPrimary
                                       ? 0.81
                                       : role.endsWith("outer")
-                                        ? 0.615
+                                        ? 0.65
                                         : 0.7938,
                                     z: role.endsWith("outer") ? -80 : 0,
                                   }
@@ -1157,6 +1204,7 @@ export function UiUxDecisionShowcase({
                               screenshotPosition={screenshotPosition}
                               screenshotSrc={screenshotSrc}
                             />
+                            </motion.div>
                           </motion.div>
                         </motion.div>
                       ),

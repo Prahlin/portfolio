@@ -1927,6 +1927,10 @@ section:not(.hero) {
   max-width: 760px;
 }
 
+.uiux-decision-section {
+  overflow: clip;
+}
+
 .uiux-decision-heading > p {
   color: var(--green);
   font-size: 13px;
@@ -2899,6 +2903,14 @@ button.uiux-decision-number:focus-visible {
     width: auto;
   }
 
+  .uiux-carousel-key-border-color {
+    flood-color: #c6ffd9;
+    flood-opacity: 0.36;
+    transition:
+      flood-color 160ms ease,
+      flood-opacity 160ms ease;
+  }
+
   .uiux-compact-decision-strip .uiux-carousel-preview {
     background: var(--uiux-inactive-case-surface);
     border-color: var(--line);
@@ -3035,7 +3047,11 @@ button.uiux-decision-number:focus-visible {
     --uiux-3d-arrow-size: 105.75px;
     --uiux-3d-arrow-half-size: 52.875px;
     --uiux-3d-arrow-number-gap: var(--uiux-compact-button-gap);
-    --uiux-3d-track-expansion: 400px;
+    --uiux-3d-active-cell-width: 641.08px;
+    --uiux-3d-active-stack-width: 654.4125px;
+    --uiux-3d-inactive-cell-width: 320.08px;
+    --uiux-3d-inactive-stack-width: 406.125px;
+    --uiux-3d-track-width: 1957.4px;
 
     justify-self: center;
     margin-inline: 0;
@@ -3047,37 +3063,50 @@ button.uiux-decision-number:focus-visible {
       var(--uiux-3d-top-row-height) + var(--uiux-compact-button-gap)
     );
     position: relative;
+    right: 56.2px;
     width: 1236.4px;
   }
 
   .uiux-compact-3d-track {
     container-type: inline-size;
-    display: grid;
-    gap: var(--uiux-3d-track-gap);
-    grid-template-columns: repeat(5, minmax(0, 1fr));
-    margin-inline: calc(var(--uiux-3d-track-expansion) / -2);
+    display: block;
+    height: 1004.484px;
+    margin-inline: -360.5px;
     min-width: 0;
     pointer-events: none;
-    perspective: 800px;
+    perspective: 1100px;
     perspective-origin: 50% 60%;
     position: relative;
     transform-style: preserve-3d;
-    width: calc(100% + var(--uiux-3d-track-expansion));
+    width: var(--uiux-3d-track-width);
   }
 
   .uiux-compact-3d-cell {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr);
+    display: flex;
+    justify-content: center;
+    left: 50%;
     min-width: 0;
     pointer-events: none;
-    position: relative;
+    position: absolute;
+    top: 0;
     transform-style: preserve-3d;
+    width: 0;
   }
 
   .uiux-compact-3d-shell > .uiux-carousel-key {
     bottom: auto;
     height: var(--uiux-3d-top-row-height);
     top: calc(9.5% - 14.82px);
+  }
+
+  .uiux-compact-3d-positioner {
+    display: grid;
+    flex: none;
+    min-width: 0;
+    pointer-events: none;
+    position: relative;
+    transform-style: preserve-3d;
+    will-change: transform, width;
   }
 
   .uiux-compact-3d-stack {
@@ -3087,46 +3116,21 @@ button.uiux-decision-number:focus-visible {
     min-width: 0;
     pointer-events: auto;
     position: relative;
-    transition: translate 420ms cubic-bezier(0.22, 1, 0.36, 1);
     transform-style: preserve-3d;
-    width: calc(
-      (
-          100cqi - var(--uiux-3d-track-expansion) -
-            var(--uiux-3d-track-gap) - var(--uiux-3d-track-gap)
-        ) / 3
-    );
+    width: 100%;
     will-change: transform, opacity;
   }
 
   .uiux-compact-3d-stack:is(.is-previous, .is-previous-outer) {
-    justify-self: end;
-    transform-origin: 100% 50% !important;
-  }
-
-  .uiux-compact-3d-stack.is-previous {
-    translate: -35px 0;
-  }
-
-  .uiux-compact-3d-stack.is-previous-outer {
-    translate: 69px 16px;
+    transform-origin: 100% 50%;
   }
 
   .uiux-compact-3d-stack.is-active {
-    justify-self: center;
-    transform-origin: 50% 50% !important;
+    transform-origin: 50% 50%;
   }
 
   .uiux-compact-3d-stack:is(.is-next, .is-next-outer) {
-    justify-self: start;
-    transform-origin: 0% 50% !important;
-  }
-
-  .uiux-compact-3d-stack.is-next {
-    translate: 35px 0;
-  }
-
-  .uiux-compact-3d-stack.is-next-outer {
-    translate: -69px 16px;
+    transform-origin: 0% 50%;
   }
 
   .uiux-compact-3d-stack:not(.is-active) {
@@ -3193,7 +3197,59 @@ button.uiux-decision-number:focus-visible {
   }
 
   .uiux-compact-3d-stack .uiux-compact-active-card {
-    height: calc(150cqi + 167.3px - var(--uiux-compact-balanced-gap));
+    height: 692.484px;
+  }
+
+  .uiux-compact-3d-stack
+    .uiux-compact-focused-card
+    .uiux-decision-copy,
+  .uiux-compact-3d-stack .uiux-focused-number-label,
+  .uiux-compact-3d-stack .uiux-device-slot {
+    transform-origin: 50% 50%;
+    transition: transform 420ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .uiux-compact-3d-stack.is-active
+    .uiux-compact-focused-card
+    .uiux-decision-copy,
+  .uiux-compact-3d-stack.is-active .uiux-focused-number-label,
+  .uiux-compact-3d-stack.is-active .uiux-device-slot {
+    transform: scale(0.5);
+  }
+
+  .uiux-compact-3d-stack.is-active .uiux-compact-active-card {
+    gap: calc(var(--uiux-compact-balanced-gap) * 0.5);
+    isolation: isolate;
+  }
+
+  .uiux-compact-3d-stack.is-active .uiux-compact-focused-card {
+    z-index: auto;
+  }
+
+  .uiux-compact-3d-stack.is-active
+    .uiux-compact-focused-card
+    .uiux-decision-number.is-active:not(.uiux-carousel-current) {
+    z-index: 0 !important;
+  }
+
+  .uiux-compact-3d-stack.is-active
+    .uiux-compact-focused-card
+    .uiux-decision-copy {
+    inset-inline: 0;
+    position: absolute;
+    top: 40px;
+    transform-origin: 50% 0;
+    width: 100%;
+    z-index: 3;
+  }
+
+  .uiux-compact-3d-stack.is-active .uiux-device-slot {
+    inset-inline: 0;
+    position: absolute;
+    top: 290px;
+    transform-origin: 50% 0;
+    width: 100%;
+    z-index: 2;
   }
 
   .uiux-compact-3d-shell > .uiux-carousel-arrow {
@@ -3276,6 +3332,10 @@ button.uiux-decision-number:focus-visible {
 }
 
 @media (hover: hover) and (pointer: fine) {
+  .uiux-compact-3d-shell > .uiux-carousel-key {
+    pointer-events: visiblePainted;
+  }
+
   .uiux-compact-decision-panel:has(
       .uiux-carousel-arrow:hover,
       .uiux-carousel-current:hover
@@ -3357,6 +3417,7 @@ button.uiux-decision-number:focus-visible {
   }
 
   .uiux-compact-decision-panel:has(
+      .uiux-carousel-key:hover,
       .uiux-carousel-arrow:hover,
       .uiux-carousel-current:hover,
       .uiux-compact-3d-stack.is-active:hover,
@@ -3368,6 +3429,7 @@ button.uiux-decision-number:focus-visible {
   }
 
   .uiux-compact-decision-panel:has(
+      .uiux-carousel-key:hover,
       .uiux-carousel-arrow:hover,
       .uiux-carousel-current:hover,
       .uiux-compact-3d-stack.is-active:hover,
@@ -3375,6 +3437,7 @@ button.uiux-decision-number:focus-visible {
     )
     .uiux-carousel-current,
   .uiux-compact-decision-panel:has(
+      .uiux-carousel-key:hover,
       .uiux-carousel-arrow:hover,
       .uiux-carousel-current:hover,
       .uiux-compact-3d-stack.is-active:hover,
@@ -3383,6 +3446,7 @@ button.uiux-decision-number:focus-visible {
     .uiux-compact-decision-column.is-primary
     > .uiux-compact-title-bridge,
   .uiux-compact-decision-panel:has(
+      .uiux-carousel-key:hover,
       .uiux-carousel-arrow:hover,
       .uiux-carousel-current:hover,
       .uiux-compact-3d-stack.is-active:hover,
@@ -3392,6 +3456,18 @@ button.uiux-decision-number:focus-visible {
     .uiux-compact-focused-card
     .uiux-decision-number.is-active:not(.uiux-carousel-current) {
     border-color: rgba(230, 255, 239, 0.78);
+  }
+
+  .uiux-compact-decision-panel:has(
+      .uiux-carousel-key:hover,
+      .uiux-carousel-arrow:hover,
+      .uiux-carousel-current:hover,
+      .uiux-compact-3d-stack.is-active:hover,
+      .uiux-compact-decision-column.is-primary:hover
+    )
+    .uiux-carousel-key-border-color {
+    flood-color: #e6ffef;
+    flood-opacity: 0.78;
   }
 }
 
