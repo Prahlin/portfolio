@@ -631,7 +631,7 @@ export function UiUxDecisionShowcase({
   const [focusedDecisionNumber, setFocusedDecisionNumber] = useState(
     decisions[0]?.number ?? "",
   );
-  const [compactColumnCount, setCompactColumnCount] = useState<1 | 2 | 3>(1);
+  const [compactColumnCount, setCompactColumnCount] = useState<1 | 3>(1);
   const [compactNoodle, setCompactNoodle] =
     useState<CompactNoodleGeometry | null>(null);
   const [heldCarouselDirection, setHeldCarouselDirection] = useState<
@@ -671,9 +671,7 @@ export function UiUxDecisionShowcase({
   const visibleDecisionOffsets =
     compactColumnCount === 1
       ? [0]
-      : compactColumnCount === 2
-        ? [0, 1]
-        : [-2, -1, 0, 1, 2];
+      : [-2, -1, 0, 1, 2];
   const visibleDecisions = visibleDecisionOffsets.map((offset) => {
     const index =
       (focusedDecisionIndex + offset + decisions.length) % decisions.length;
@@ -744,10 +742,8 @@ export function UiUxDecisionShowcase({
 
   useLayoutEffect(() => {
     const updateColumnCount = () => {
-      if (window.innerWidth <= 630) {
+      if (window.innerWidth <= 980) {
         setCompactColumnCount(1);
-      } else if (window.innerWidth <= 980) {
-        setCompactColumnCount(2);
       } else {
         setCompactColumnCount(3);
       }

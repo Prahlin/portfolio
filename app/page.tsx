@@ -18,6 +18,7 @@ import {
   Workflow,
 } from "lucide-react";
 import { HeroLede } from "./HeroLede";
+import { CoreBeliefsOrbit } from "./CoreBeliefsOrbit";
 import { ProjectCarouselButton } from "./ProjectCarouselButton";
 import {
   FeaturedCaseStudies,
@@ -631,18 +632,18 @@ const principles = [
   },
   {
     tone: "cyan",
-    title: "Inter-connectivity",
-    text: "Just like art is science and science is art, design & code should be one.",
+    title: "Sustainability",
+    text: "A product that doesn't hold up over time, simply isn't a viable product.",
   },
   {
     tone: "amber",
-    title: "User-friendliness",
-    text: 'As Einstein said, "If you can\'t explain it simply, you don\'t really know it."',
+    title: "Leadership",
+    text: "Making the difficult decisions isn't always fun -- but it's always necessary.",
   },
   {
     tone: "violet",
     title: "Collaboration",
-    text: "One for all, and all for one.",
+    text: "A team is never stronger than its weakest link.",
   },
 ];
 
@@ -1055,27 +1056,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="aboutdev-principles-grid">
-            {principles.map((principle) => (
-              <article
-                className="aboutdev-principle"
-                data-tone={principle.tone}
-                key={principle.title}
-              >
-                <h3>{principle.title}</h3>
-                <p>{principle.text}</p>
-              </article>
-            ))}
-            <div className="aboutdev-principles-star" aria-hidden="true">
-              <Image
-                alt=""
-                className="aboutdev-principles-star-image"
-                height={1956}
-                src="/images/aboutdev/beliefs-star4.png"
-                width={2012}
-              />
-            </div>
-          </div>
+          <CoreBeliefsOrbit principles={principles} />
         </div>
       </section>
 

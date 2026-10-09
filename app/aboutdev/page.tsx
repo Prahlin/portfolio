@@ -77,13 +77,13 @@ const principles = [
   },
   {
     tone: "cyan",
-    title: "Inter-connectivity",
-    text: "Just like art is science and science is art, design & code should be one.",
+    title: "Sustainability",
+    text: "A product that doesn't hold up over time, simply isn't a viable product.",
   },
   {
     tone: "amber",
-    title: "User-friendliness",
-    text: "As Einstein said, \"If you can't explain it simply, you don't really know it.\"",
+    title: "Leadership",
+    text: "Making the difficult decisions isn't always fun -- but it's always necessary.",
   },
   {
     tone: "violet",
