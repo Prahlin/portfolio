@@ -2732,6 +2732,50 @@ button.uiux-decision-number:focus-visible {
     mask-image: linear-gradient(180deg, transparent, #000);
   }
 
+  [data-gradient-tone="vision"] {
+    --uiux-decision-text-color: #ff4fa3;
+  }
+
+  [data-gradient-tone="integrity"] {
+    --uiux-decision-text-color: #00bfea;
+  }
+
+  [data-gradient-tone="sustainability"] {
+    --uiux-decision-text-color: #ff7a1a;
+  }
+
+  [data-gradient-tone="leadership"] {
+    --uiux-decision-text-color: #6c9cff;
+  }
+
+  [data-gradient-tone="collaboration"] {
+    --uiux-decision-text-color: #ffc928;
+  }
+
+  [data-gradient-tone="cohesion"] {
+    --uiux-decision-text-color: #c084fc;
+  }
+
+  [data-gradient-tone="adaptability"] {
+    --uiux-decision-text-color: #78c83a;
+  }
+
+  .uiux-decision-number-text[data-gradient-tone] {
+    -webkit-text-fill-color: currentColor;
+    background: none;
+    color: var(--text);
+  }
+
+  .uiux-compact-title-bridge[data-gradient-tone] > strong {
+    -webkit-text-fill-color: currentColor;
+    background: none;
+    color: var(--uiux-decision-text-color);
+  }
+
+  .uiux-decision-number-text[data-gradient-tone] {
+    display: inline-block;
+  }
+
   .uiux-compact-focused-card .uiux-decision-copy {
     grid-column: 1 / -1;
     justify-items: center;
@@ -2741,12 +2785,14 @@ button.uiux-decision-number:focus-visible {
   }
 
   .uiux-compact-focused-card .uiux-decision-copy > span {
-    font-size: clamp(20px, 7.5cqi, 33px);
+    color: var(--text);
+    font-size: clamp(42px, 5vw, 54px);
   }
 
   .uiux-compact-focused-card .uiux-decision-description {
     display: grid;
     gap: 0.7em;
+    grid-template-columns: minmax(0, 1fr);
     max-width: 100%;
     min-width: 0;
     width: 100%;
@@ -2761,7 +2807,7 @@ button.uiux-decision-number:focus-visible {
     justify-content: center;
     justify-self: stretch;
     min-width: 0;
-    white-space: nowrap;
+    white-space: normal;
     width: 100%;
   }
 
@@ -2771,7 +2817,7 @@ button.uiux-decision-number:focus-visible {
   }
 
   .uiux-compact-focused-card .uiux-decision-description {
-    gap: 0.12em;
+    gap: 0.3em;
   }
 
   .uiux-compact-focused-card
@@ -2792,7 +2838,7 @@ button.uiux-decision-number:focus-visible {
   .uiux-compact-focused-card
     .uiux-decision-description
     > span:first-child {
-    font-size: clamp(20px, 7.5cqi, 33px);
+    font-size: clamp(42px, 5vw, 54px);
     justify-content: flex-start;
   }
 
@@ -2802,24 +2848,30 @@ button.uiux-decision-number:focus-visible {
     font-style: normal;
   }
 
-  .uiux-compact-focused-card[data-decision-number="04"]
+  .uiux-compact-focused-card
     .uiux-decision-description
-    > span:nth-child(2),
-  .uiux-compact-focused-card[data-decision-number="06"]
+    > span:not(:nth-child(3)) {
+    font-size: clamp(46.2px, 5.5vw, 59.4px);
+    line-height: 1.3;
+  }
+
+  .uiux-compact-focused-card
     .uiux-decision-description
-    > span:nth-child(4) {
-    font-size: clamp(19px, 5.7cqi, 25.5px);
-    white-space: nowrap;
+    > span {
+    justify-self: start;
+    margin-left: calc(-50% + 40px);
+    text-align: left;
+    width: calc(200% - 80px);
   }
 
   .uiux-compact-focused-card
     .uiux-decision-description
     > span:nth-child(3) {
-    color: var(--text);
+    color: var(--uiux-decision-text-color);
     font-family:
       Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
       "Segoe UI", sans-serif;
-    font-size: clamp(48px, 16cqi, 100px);
+    font-size: clamp(60px, 20cqi, 125px);
     font-style: normal;
     font-weight: 900;
     letter-spacing: 0;
@@ -2834,7 +2886,7 @@ button.uiux-decision-number:focus-visible {
   .uiux-compact-focused-card[data-decision-number="04"]
     .uiux-decision-description
     > span:nth-child(3) {
-    font-size: clamp(42px, 13cqi, 90px);
+    font-size: clamp(52.5px, 16.25cqi, 112.5px);
   }
 
   .uiux-compact-focused-card
@@ -2876,7 +2928,7 @@ button.uiux-decision-number:focus-visible {
   .uiux-carousel-key {
     bottom: calc(100% + var(--uiux-compact-button-gap) + 1px);
     color: rgba(25, 70, 50, 0.5);
-    filter: drop-shadow(0 0 14px rgba(25, 70, 50, 0.14));
+    filter: drop-shadow(0 0 14px rgba(0, 0, 0, 0.28));
     height: calc(100% + 2px);
     left: 50%;
     overflow: visible;
@@ -2887,8 +2939,8 @@ button.uiux-decision-number:focus-visible {
   }
 
   .uiux-carousel-key-border-color {
-    flood-color: #c6ffd9;
-    flood-opacity: 0.36;
+    flood-color: #020604;
+    flood-opacity: 0.82;
     transition:
       flood-color 160ms ease,
       flood-opacity 160ms ease;
@@ -3400,6 +3452,12 @@ button.uiux-decision-number:focus-visible {
     transform: scale(0.5);
   }
 
+  .uiux-compact-3d-stack:is(.is-previous, .is-next)
+    .uiux-compact-focused-card
+    .uiux-decision-copy {
+    transform: scale(0.51);
+  }
+
   .uiux-compact-3d-stack.is-primary-layout .uiux-compact-active-card {
     gap: calc(var(--uiux-compact-balanced-gap) * 0.5);
     isolation: isolate;
@@ -3427,12 +3485,25 @@ button.uiux-decision-number:focus-visible {
   }
 
   .uiux-compact-3d-stack.is-primary-layout .uiux-device-slot {
-    inset-inline: 0;
+    inset-inline: auto 64px;
     position: absolute;
     top: 290px;
-    transform-origin: 50% 0;
+    transform-origin: 100% 0;
     width: 100%;
     z-index: 2;
+  }
+
+  .uiux-compact-3d-stack.is-primary-layout .uiux-device-context {
+    text-align: right;
+  }
+
+  .uiux-compact-3d-stack.is-primary-layout .uiux-device-frame-stack {
+    justify-items: end;
+  }
+
+  .uiux-compact-3d-stack.is-primary-layout .uiux-device-project-label {
+    justify-content: flex-end;
+    text-align: right;
   }
 
   .uiux-compact-3d-shell > .uiux-carousel-arrow {
@@ -3655,8 +3726,8 @@ button.uiux-decision-number:focus-visible {
       .uiux-compact-decision-column.is-primary:hover
     )
     .uiux-carousel-key-border-color {
-    flood-color: #e6ffef;
-    flood-opacity: 0.78;
+    flood-color: #08130d;
+    flood-opacity: 0.92;
   }
 }
 
@@ -5184,33 +5255,37 @@ section.aboutdev-hero {
 
 .aboutdev-timeline-index {
   align-items: center;
-  background: rgba(8, 21, 14, 0.95);
-  border: 1px solid var(--line);
-  border-bottom: 0;
-  border-radius: 8px 8px 0 0;
+  background: linear-gradient(
+    180deg,
+    rgba(13, 31, 22, 0.88),
+    rgba(5, 13, 9, 0.88)
+  );
+  border: 1px solid rgba(198, 255, 217, 0.36);
+  border-radius: 8px;
   box-sizing: border-box;
-  color: var(--green);
+  color: var(--text);
   display: inline-flex;
-  font-size: var(--workflow-tab-font-size);
-  font-weight: 800;
-  height: var(--workflow-tab-height);
+  font-size: clamp(54px, 8vw, 68px);
+  font-weight: 900;
+  height: 128px;
   justify-content: center;
   left: calc(var(--workflow-pair-left) - 1px);
   position: absolute;
   line-height: 1.04;
   top: calc(-1 * var(--workflow-tab-height) - 1px);
-  width: var(--workflow-index-tab-width);
+  width: 128px;
   z-index: 2;
 }
 
 .aboutdev-timeline-index::after {
-  background: rgba(8, 21, 14, 0.95);
-  bottom: -2px;
-  content: "";
-  height: 3px;
-  left: 0;
-  position: absolute;
-  width: 100%;
+  content: none;
+}
+
+@media (max-width: 640px) {
+  .aboutdev-timeline-index {
+    font-size: var(--workflow-tab-font-size);
+    width: var(--workflow-index-tab-width);
+  }
 }
 
 .aboutdev-timeline-images {
@@ -5232,17 +5307,43 @@ section.aboutdev-hero {
 }
 
 .aboutdev-timeline-images--full-width::after {
-  background: linear-gradient(
-    115deg,
-    rgba(67, 255, 146, 0.22),
-    transparent 42%,
-    rgba(121, 215, 255, 0.16)
+  background: radial-gradient(
+    ellipse 82% 145% at 50% 58%,
+    var(--workflow-image-gradient-core) 0%,
+    var(--workflow-image-gradient-mid) 44%,
+    var(--workflow-image-gradient-edge) 76%,
+    #000 100%
   );
   content: "";
   inset: 0;
+  opacity: 1;
   pointer-events: none;
   position: absolute;
   z-index: 3;
+}
+
+.aboutdev-timeline-item[data-workflow-tone="vision"] {
+  --workflow-image-gradient-core: rgb(20, 41, 26);
+  --workflow-image-gradient-mid: rgb(14, 26, 15);
+  --workflow-image-gradient-edge: rgb(3, 6, 3);
+}
+
+.aboutdev-timeline-item[data-workflow-tone="integrity"] {
+  --workflow-image-gradient-core: rgb(38, 16, 10);
+  --workflow-image-gradient-mid: rgb(32, 14, 9);
+  --workflow-image-gradient-edge: rgb(15, 8, 5);
+}
+
+.aboutdev-timeline-item[data-workflow-tone="sustainability"] {
+  --workflow-image-gradient-core: rgb(13, 27, 37);
+  --workflow-image-gradient-mid: rgb(10, 20, 31);
+  --workflow-image-gradient-edge: rgb(6, 12, 18);
+}
+
+.aboutdev-timeline-item[data-workflow-tone="leadership"] {
+  --workflow-image-gradient-core: rgb(34, 34, 20);
+  --workflow-image-gradient-mid: rgb(25, 22, 11);
+  --workflow-image-gradient-edge: rgb(10, 8, 5);
 }
 
 .aboutdev-timeline-image {
@@ -5311,6 +5412,7 @@ section.aboutdev-hero {
   filter: blur(11px) brightness(0.5) contrast(1.24) saturate(1.2);
   object-fit: cover;
   object-position: center;
+  opacity: 0;
   transform: scale(1.15);
 }
 
@@ -5657,8 +5759,14 @@ section.aboutdev-hero {
   display: block;
 }
 
+.aboutdev-principle[data-tone="green"] {
+  --principle-accent: #82a58d;
+  --principle-title-color: #82a58d;
+}
+
 .aboutdev-principle[data-tone="cyan"] {
-  --principle-accent: #79d7ff;
+  --principle-accent: #628a99;
+  --principle-title-color: #628a99;
 }
 
 .aboutdev-principle[data-tone="blue"] {
@@ -5666,15 +5774,31 @@ section.aboutdev-hero {
 }
 
 .aboutdev-principle[data-tone="amber"] {
-  --principle-accent: #ffd479;
+  --principle-accent: #9b895f;
+  --principle-title-color: #9b895f;
 }
 
 .aboutdev-principle[data-tone="rose"] {
-  --principle-accent: #ff5733;
+  --principle-accent: #aa7968;
+  --principle-title-color: #aa7968;
 }
 
 .aboutdev-principle[data-tone="violet"] {
-  --principle-accent: #c084fc;
+  --principle-accent: #8c8192;
+  --principle-title-color: #8c8192;
+}
+
+.aboutdev-principle:is(
+    [data-tone="green"],
+    [data-tone="rose"],
+    [data-tone="cyan"],
+    [data-tone="amber"],
+    [data-tone="violet"]
+  )
+  .aboutdev-principle-title {
+  -webkit-text-fill-color: currentColor;
+  background: none;
+  color: var(--principle-title-color);
 }
 
 .aboutdev-principle p,

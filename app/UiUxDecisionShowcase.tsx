@@ -39,6 +39,30 @@ type UiUxDecisionShowcaseProps = {
 const STAGE_WIDTH = 1180;
 const STAGE_HEIGHT = 650;
 
+const UIUX_DECISION_GRADIENT_TONES: Record<string, string> = {
+  "01": "vision",
+  "02": "integrity",
+  "03": "sustainability",
+  "04": "leadership",
+  "05": "collaboration",
+  "06": "cohesion",
+  "07": "adaptability",
+};
+
+function getDecisionGradientTone(decisionNumber: string) {
+  return UIUX_DECISION_GRADIENT_TONES[decisionNumber];
+}
+
+const UIUX_KEY_COLORS: Record<string, string> = {
+  vision: "#ff4fa3",
+  integrity: "#00bfea",
+  sustainability: "#ff7a1a",
+  leadership: "#6c9cff",
+  collaboration: "#ffc928",
+  cohesion: "#c084fc",
+  adaptability: "#78c83a",
+};
+
 type DesktopStackRole =
   | "active"
   | "next"
@@ -107,7 +131,11 @@ const DESKTOP_STACK_VARIANTS = {
   },
 } satisfies Record<DesktopStackRole, Record<string, number>>;
 
-function UiUxActiveKey() {
+function UiUxActiveKey({ gradientTone }: { gradientTone?: string }) {
+  const fillColor = gradientTone
+    ? UIUX_KEY_COLORS[gradientTone]
+    : undefined;
+
   return (
     <svg
       aria-hidden="true"
@@ -123,8 +151,8 @@ function UiUxActiveKey() {
           y1="114"
           y2="200"
         >
-          <stop offset="0" stopColor="#194632" stopOpacity="0.5" />
-          <stop offset="1" stopColor="#17422f" stopOpacity="0.5" />
+          <stop offset="0" stopColor="#0d1f16" stopOpacity="0.88" />
+          <stop offset="1" stopColor="#050d09" stopOpacity="0.88" />
         </linearGradient>
         <linearGradient
           gradientUnits="userSpaceOnUse"
@@ -172,8 +200,8 @@ function UiUxActiveKey() {
           />
           <feFlood
             className="uiux-carousel-key-border-color"
-            floodColor="#c6ffd9"
-            floodOpacity="0.36"
+            floodColor="#020604"
+            floodOpacity="0.82"
             result="border-color"
           />
           <feComposite
@@ -221,29 +249,33 @@ function UiUxActiveKey() {
       </defs>
       <g filter="url(#uiux-carousel-key-active-border)">
         <rect
-          fill="url(#uiux-carousel-key-gradient)"
+          fill={fillColor ?? "url(#uiux-carousel-key-gradient)"}
           height="280"
           mask="url(#uiux-carousel-key-mask)"
           width="280"
           x="-40"
           y="-40"
         />
-        <rect
-          fill="url(#uiux-carousel-key-sheen)"
-          height="280"
-          mask="url(#uiux-carousel-key-mask)"
-          width="280"
-          x="-40"
-          y="-40"
-        />
-        <rect
-          fill="url(#uiux-carousel-key-radial)"
-          height="280"
-          mask="url(#uiux-carousel-key-mask)"
-          width="280"
-          x="-40"
-          y="-40"
-        />
+        {!fillColor ? (
+          <>
+            <rect
+              fill="url(#uiux-carousel-key-sheen)"
+              height="280"
+              mask="url(#uiux-carousel-key-mask)"
+              width="280"
+              x="-40"
+              y="-40"
+            />
+            <rect
+              fill="url(#uiux-carousel-key-radial)"
+              height="280"
+              mask="url(#uiux-carousel-key-mask)"
+              width="280"
+              x="-40"
+              y="-40"
+            />
+          </>
+        ) : null}
       </g>
     </svg>
   );
@@ -645,7 +677,10 @@ function UiUxCompactDecisionColumn({
       onPointerLeave={isPrimary ? undefined : onPreviewPressEnd}
       onPointerUp={isPrimary ? undefined : onPreviewPressEnd}
     >
-      <div className="uiux-compact-title-bridge">
+      <div
+        className="uiux-compact-title-bridge"
+        data-gradient-tone={getDecisionGradientTone(decision.number)}
+      >
         <strong>{decision.title}</strong>
       </div>
 
@@ -655,6 +690,7 @@ function UiUxCompactDecisionColumn({
             decision.placeholder ? " is-placeholder" : ""
           }`}
           data-decision-number={decision.number}
+          data-gradient-tone={getDecisionGradientTone(decision.number)}
         >
           <button
             aria-label={
@@ -1145,7 +1181,11 @@ export function UiUxDecisionShowcase({
 
               {compactColumnCount === 3 ? (
                 <div className="uiux-compact-3d-shell">
-                  <UiUxActiveKey />
+                  <UiUxActiveKey
+                    gradientTone={getDecisionGradientTone(
+                      focusedDecision.number,
+                    )}
+                  />
 
                   <UiUxCarouselArrowButton
                     direction={-1}
@@ -1293,21 +1333,42 @@ export function UiUxDecisionShowcase({
                                     className="uiux-carousel-current uiux-decision-number is-active"
                                     ref={activeStripButtonRef}
                                   >
-                                    {decision.number}
+                                    <span
+                                      className="uiux-decision-number-text"
+                                      data-gradient-tone={getDecisionGradientTone(
+                                        decision.number,
+                                      )}
+                                    >
+                                      {decision.number}
+                                    </span>
                                   </div>
                                 ) : isRearCenter ? (
                                   <div
                                     aria-hidden="true"
                                     className="uiux-carousel-current uiux-decision-number is-active"
                                   >
-                                    {decision.number}
+                                    <span
+                                      className="uiux-decision-number-text"
+                                      data-gradient-tone={getDecisionGradientTone(
+                                        decision.number,
+                                      )}
+                                    >
+                                      {decision.number}
+                                    </span>
                                   </div>
                                 ) : isRear ? (
                                   <div
                                     aria-hidden="true"
                                     className="uiux-carousel-preview uiux-decision-number"
                                   >
-                                    {decision.number}
+                                    <span
+                                      className="uiux-decision-number-text"
+                                      data-gradient-tone={getDecisionGradientTone(
+                                        decision.number,
+                                      )}
+                                    >
+                                      {decision.number}
+                                    </span>
                                   </div>
                                 ) : (
                                   <>
@@ -1321,7 +1382,14 @@ export function UiUxDecisionShowcase({
                                       }
                                       type="button"
                                     >
-                                      {decision.number}
+                                      <span
+                                        className="uiux-decision-number-text"
+                                        data-gradient-tone={getDecisionGradientTone(
+                                          decision.number,
+                                        )}
+                                      >
+                                        {decision.number}
+                                      </span>
                                     </button>
 
                                     <div className="uiux-inactive-stack-navigation">
@@ -1390,8 +1458,19 @@ export function UiUxDecisionShowcase({
                           key={decision.number}
                           ref={activeStripButtonRef}
                         >
-                          <UiUxActiveKey />
-                          {decision.number}
+                          <UiUxActiveKey
+                            gradientTone={getDecisionGradientTone(
+                              decision.number,
+                            )}
+                          />
+                          <span
+                            className="uiux-decision-number-text"
+                            data-gradient-tone={getDecisionGradientTone(
+                              decision.number,
+                            )}
+                          >
+                            {decision.number}
+                          </span>
                         </div>
                       ) : (
                         <button
@@ -1403,7 +1482,14 @@ export function UiUxDecisionShowcase({
                           }
                           type="button"
                         >
-                          {decision.number}
+                          <span
+                            className="uiux-decision-number-text"
+                            data-gradient-tone={getDecisionGradientTone(
+                              decision.number,
+                            )}
+                          >
+                            {decision.number}
+                          </span>
                         </button>
                       ),
                     )}
@@ -1447,6 +1533,9 @@ export function UiUxDecisionShowcase({
 
               <div
                 className="uiux-compact-title-bridge uiux-compact-legacy-title"
+                data-gradient-tone={getDecisionGradientTone(
+                  focusedDecision.number,
+                )}
                 ref={titleBridgeRef}
               >
                 <strong>{focusedDecision.title}</strong>

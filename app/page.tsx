@@ -55,7 +55,7 @@ const proofStats = [
 
 const uiUxDecisions: readonly UiUxDecision[] = [
   {
-    description: "Always sleek.\nAlways streamlined.\nNever\nSleep-inducing.",
+    description: "Reliably sleek.\nFully streamlined.\nNever\nBehind.",
     deviceDescription:
       'Stylish image generation without the "cookie-cutter" feel of AI.',
     deviceTitle: "AI GENERATIVE",
@@ -85,7 +85,7 @@ const uiUxDecisions: readonly UiUxDecision[] = [
     ],
     placeholder: true,
     side: "left",
-    title: "Appealing",
+    title: "Eye-Catching",
   },
   {
     description: "",
@@ -102,7 +102,7 @@ const uiUxDecisions: readonly UiUxDecision[] = [
   },
   {
     description:
-      "Quickly legible.\nInstantly understandable.\nImmediately\nActionable.",
+      "Legible.\nPerceptible.\nQuickly\nActionable.",
     deviceDescription:
       "Users shouldn't have to jump through hoops to navigate, or perform actions.",
     deviceTitle: "INTUITIVE INTERFACE",
@@ -122,7 +122,7 @@ const uiUxDecisions: readonly UiUxDecision[] = [
     title: "User-friendly",
   },
   {
-    description: "Every form factor?\nEvery device type?\nPiece\nof cake.",
+    description: "Every form factor.\nEvery device type.\nNo sweat.",
     deviceVariant: "tablet",
     number: "05",
     noodle: [
@@ -166,7 +166,7 @@ const uiUxDecisions: readonly UiUxDecision[] = [
     screenshotAlt: "Alla Vostra order confirmation screen",
     screenshotSrc: "/images/confirmed_overlay_small.png",
     side: "right",
-    title: "Adaptable",
+    title: "Satisfying",
   },
 ];
 
@@ -554,6 +554,7 @@ const timelineItems = [
     evidence:
       "Evidence: UI/UX philosophy, visual hierarchy studies, shipped mobile screens.",
     points: ["Discuss", "Brainstorm", "Industry Research"],
+    tone: "vision",
     title: "Research",
     text: (
       <>
@@ -571,6 +572,7 @@ const timelineItems = [
   {
     evidence: "Evidence: Alla Vostra, Cinerific, Credit King.",
     points: ["Wireframing", "Mockups", "Scaffold"],
+    tone: "integrity",
     title: "Plan",
     text: [
       "Cross-platform or Platform-specific? Web version or App-only? UI-focused or Back-end heavy?",
@@ -580,6 +582,7 @@ const timelineItems = [
   {
     evidence: "Evidence: Vercel API, Stripe, PayPal, Postmark.",
     points: ["Build", "Testing", "Deployment"],
+    tone: "sustainability",
     title: "Produce",
     text: (
       <>
@@ -595,6 +598,7 @@ const timelineItems = [
   {
     evidence: "Evidence: 100+ logs across active projects.",
     points: ["Handoff", "Upkeep"],
+    tone: "leadership",
     title: "Analyze",
     text: "Creation without learning is useless. By studying & analyzing diffs while the project is growing, I ensure that I'm in the loop, and deeply comprehend, every coding change made to the project in real time.",
   },
@@ -996,7 +1000,11 @@ export default function Home() {
 
           <div className="aboutdev-timeline">
             {timelineItems.map((item, index) => (
-              <article className="aboutdev-timeline-item" key={item.title}>
+              <article
+                className="aboutdev-timeline-item"
+                data-workflow-tone={item.tone}
+                key={item.title}
+              >
                 <span className="aboutdev-timeline-index">
                   {String(index + 1).padStart(2, "0")}
                 </span>
