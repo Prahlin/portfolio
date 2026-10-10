@@ -3096,12 +3096,145 @@ button.uiux-decision-number:focus-visible {
     backface-visibility: hidden;
     display: grid;
     gap: var(--uiux-compact-button-gap);
+    isolation: isolate;
     min-width: 0;
     pointer-events: auto;
     position: relative;
     transform-style: preserve-3d;
     width: 100%;
     will-change: transform, opacity;
+  }
+
+  .uiux-compact-3d-stack::before {
+    background: rgba(198, 255, 217, 0.36);
+    border-radius: 999px;
+    content: "";
+    height: 1px;
+    inset-inline: 0;
+    pointer-events: none;
+    position: absolute;
+    top: calc(var(--uiux-3d-top-row-height) * 0.5 - 0.5px);
+    transform: translateZ(-2px);
+    z-index: -1;
+  }
+
+  .uiux-compact-3d-stack:is(.is-previous, .is-active, .is-next)::before {
+    -webkit-mask-image: linear-gradient(
+      to right,
+      #000 0,
+      #000 calc(50% - 199.75px),
+      transparent calc(50% - 199.75px),
+      transparent calc(50% - 64px),
+      #000 calc(50% - 64px),
+      #000 calc(50% + 64px),
+      transparent calc(50% + 64px),
+      transparent calc(50% + 199.75px),
+      #000 calc(50% + 199.75px),
+      #000 100%
+    );
+    mask-image: linear-gradient(
+      to right,
+      #000 0,
+      #000 calc(50% - 199.75px),
+      transparent calc(50% - 199.75px),
+      transparent calc(50% - 64px),
+      #000 calc(50% - 64px),
+      #000 calc(50% + 64px),
+      transparent calc(50% + 64px),
+      transparent calc(50% + 199.75px),
+      #000 calc(50% + 199.75px),
+      #000 100%
+    );
+  }
+
+  .uiux-compact-3d-stack.is-previous::before {
+    background: linear-gradient(
+      to right,
+      rgba(198, 255, 217, 0.029),
+      rgba(198, 255, 217, 0.36)
+    );
+  }
+
+  .uiux-compact-3d-stack.is-active::before {
+    background: linear-gradient(
+      to right,
+      rgba(198, 255, 217, 0.18) 0,
+      rgba(198, 255, 217, 0.36) 200px,
+      rgba(198, 255, 217, 0.36) calc(100% - 200px),
+      rgba(198, 255, 217, 0.18) 100%
+    );
+  }
+
+  .uiux-compact-3d-stack.is-next::before {
+    background: linear-gradient(
+      to right,
+      rgba(198, 255, 217, 0.36),
+      rgba(198, 255, 217, 0.029)
+    );
+  }
+
+  .uiux-compact-3d-stack.is-previous-outer::before {
+    background: linear-gradient(
+      to right,
+      transparent,
+      rgba(198, 255, 217, 0.36)
+    );
+  }
+
+  .uiux-compact-3d-stack.is-next-outer::before {
+    background: linear-gradient(
+      to right,
+      rgba(198, 255, 217, 0.36),
+      transparent
+    );
+  }
+
+  .uiux-carousel-axis-bend {
+    display: none;
+    fill: none;
+    height: 10px;
+    overflow: visible;
+    pointer-events: none;
+    position: absolute;
+    stroke: rgba(198, 255, 217, 0.36);
+    stroke-linecap: round;
+    stroke-width: 1.25px;
+    top: calc(var(--uiux-3d-top-row-height) * 0.5 - 0.5px);
+    transform: translateZ(-2px);
+    width: 33px;
+    z-index: -1;
+  }
+
+  .uiux-compact-3d-stack.is-active > .uiux-carousel-axis-bend {
+    display: block;
+  }
+
+  .uiux-carousel-axis-bend.is-left {
+    -webkit-mask-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.25),
+      rgba(0, 0, 0, 0.5)
+    );
+    mask-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.25),
+      rgba(0, 0, 0, 0.5)
+    );
+    right: 100%;
+  }
+
+  .uiux-carousel-axis-bend.is-right {
+    left: 100%;
+    -webkit-mask-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.25)
+    );
+    mask-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.25)
+    );
   }
 
   .uiux-compact-3d-stack:is(
@@ -3139,6 +3272,51 @@ button.uiux-decision-number:focus-visible {
     z-index: 2;
   }
 
+  .uiux-inactive-stack-navigation {
+    column-gap: var(--uiux-compact-button-gap);
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) var(--uiux-3d-number-width) minmax(
+        0,
+        1fr
+      );
+    height: var(--uiux-3d-top-row-height);
+    inset: 0 0 auto;
+    pointer-events: none;
+    position: absolute;
+    z-index: 3;
+  }
+
+  .uiux-inactive-stack-navigation > .uiux-carousel-arrow {
+    align-self: center;
+    backface-visibility: hidden;
+    height: var(--uiux-3d-arrow-size);
+    pointer-events: auto;
+    transform-style: flat;
+    width: var(--uiux-3d-arrow-size);
+  }
+
+  .uiux-inactive-stack-navigation > .uiux-carousel-arrow-previous {
+    grid-column: 1;
+    justify-self: end;
+  }
+
+  .uiux-inactive-stack-navigation > .uiux-carousel-arrow-next {
+    grid-column: 3;
+    justify-self: start;
+  }
+
+  .uiux-inactive-stack-navigation
+    > .uiux-carousel-arrow:is(.is-held, :active)
+    .uiux-carousel-arrow-shape-inactive {
+    opacity: 0;
+  }
+
+  .uiux-inactive-stack-navigation
+    > .uiux-carousel-arrow:is(.is-held, :active)
+    .uiux-carousel-arrow-shape-active {
+    opacity: 1;
+  }
+
   .uiux-compact-3d-stack.is-primary-layout > .uiux-carousel-current {
     background: var(--uiux-active-surface);
     border: 1px solid var(--line);
@@ -3163,6 +3341,11 @@ button.uiux-decision-number:focus-visible {
     width: var(--uiux-3d-number-width);
   }
 
+  .uiux-compact-3d-stack:is(.is-previous, .is-next)
+    > .uiux-carousel-preview {
+    font-weight: 900;
+  }
+
   .uiux-compact-3d-stack:is(.is-previous, .is-previous-outer)
     > .uiux-carousel-preview {
     clip-path: none;
@@ -3184,6 +3367,12 @@ button.uiux-decision-number:focus-visible {
     height: var(--uiux-3d-top-row-height);
     justify-self: stretch;
     width: 100%;
+  }
+
+  .uiux-compact-3d-stack:is(.is-previous, .is-next)
+    .uiux-compact-decision-column
+    > .uiux-compact-title-bridge {
+    font-weight: 700;
   }
 
   .uiux-compact-3d-stack .uiux-compact-decision-column {
@@ -3331,7 +3520,7 @@ button.uiux-decision-number:focus-visible {
   }
 
   .uiux-compact-decision-panel:has(
-      .uiux-carousel-arrow:hover,
+      .uiux-compact-3d-shell > .uiux-carousel-arrow:hover,
       .uiux-carousel-current:hover
     )
     .uiux-carousel-arrow
@@ -3341,7 +3530,7 @@ button.uiux-decision-number:focus-visible {
   }
 
   .uiux-compact-decision-panel:has(
-      .uiux-carousel-arrow:hover,
+      .uiux-compact-3d-shell > .uiux-carousel-arrow:hover,
       .uiux-carousel-current:hover
     )
     .uiux-carousel-current {
@@ -3382,6 +3571,16 @@ button.uiux-decision-number:focus-visible {
     border-color: rgba(198, 255, 217, 0.36);
   }
 
+  .uiux-compact-3d-stack:is(.is-previous, .is-next):hover
+    > .uiux-decision-number,
+  .uiux-compact-3d-stack:is(.is-previous, .is-next):hover
+    .uiux-compact-title-bridge,
+  .uiux-compact-3d-stack:is(.is-previous, .is-next):hover
+    .uiux-compact-focused-card
+    .uiux-decision-number.is-active:not(.uiux-carousel-current) {
+    border-color: rgba(198, 255, 217, 0.64);
+  }
+
   .uiux-compact-3d-shell:has(> .uiux-carousel-arrow:hover)
     .uiux-compact-3d-stack.is-active
     > .uiux-carousel-current,
@@ -3406,7 +3605,7 @@ button.uiux-decision-number:focus-visible {
 
   .uiux-compact-decision-panel:has(
       .uiux-carousel-key:hover,
-      .uiux-carousel-arrow:hover,
+      .uiux-compact-3d-shell > .uiux-carousel-arrow:hover,
       .uiux-carousel-current:hover,
       .uiux-compact-3d-stack.is-active:hover,
       .uiux-compact-decision-column.is-primary:hover
@@ -3418,7 +3617,7 @@ button.uiux-decision-number:focus-visible {
 
   .uiux-compact-decision-panel:has(
       .uiux-carousel-key:hover,
-      .uiux-carousel-arrow:hover,
+      .uiux-compact-3d-shell > .uiux-carousel-arrow:hover,
       .uiux-carousel-current:hover,
       .uiux-compact-3d-stack.is-active:hover,
       .uiux-compact-decision-column.is-primary:hover
@@ -3426,7 +3625,7 @@ button.uiux-decision-number:focus-visible {
     .uiux-carousel-current,
   .uiux-compact-decision-panel:has(
       .uiux-carousel-key:hover,
-      .uiux-carousel-arrow:hover,
+      .uiux-compact-3d-shell > .uiux-carousel-arrow:hover,
       .uiux-carousel-current:hover,
       .uiux-compact-3d-stack.is-active:hover,
       .uiux-compact-decision-column.is-primary:hover
@@ -3435,7 +3634,7 @@ button.uiux-decision-number:focus-visible {
     > .uiux-compact-title-bridge,
   .uiux-compact-decision-panel:has(
       .uiux-carousel-key:hover,
-      .uiux-carousel-arrow:hover,
+      .uiux-compact-3d-shell > .uiux-carousel-arrow:hover,
       .uiux-carousel-current:hover,
       .uiux-compact-3d-stack.is-active:hover,
       .uiux-compact-decision-column.is-primary:hover
@@ -3448,7 +3647,7 @@ button.uiux-decision-number:focus-visible {
 
   .uiux-compact-decision-panel:has(
       .uiux-carousel-key:hover,
-      .uiux-carousel-arrow:hover,
+      .uiux-compact-3d-shell > .uiux-carousel-arrow:hover,
       .uiux-carousel-current:hover,
       .uiux-compact-3d-stack.is-active:hover,
       .uiux-compact-decision-column.is-primary:hover

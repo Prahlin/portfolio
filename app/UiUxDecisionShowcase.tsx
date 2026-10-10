@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ImageIcon } from "lucide-react";
 import { motion, useReducedMotion } from "motion/react";
-import { useEffect, useLayoutEffect, useRef, useState } from "react";
+import { useEffect, useId, useLayoutEffect, useRef, useState } from "react";
 
 export type UiUxNoodlePoint = readonly [x: number, y: number];
 
@@ -290,11 +290,12 @@ function UiUxCarouselArrowSurface({
 }: {
   direction: "next" | "previous";
 }) {
+  const instanceId = useId().replaceAll(":", "");
   const isPrevious = direction === "previous";
   const path = isPrevious
     ? "M 156 20 C 115 39 70 62 30 86 Q 4 100 30 114 C 70 138 115 161 156 180 Q 176 190 176 166 C 179 122 179 78 176 34 Q 176 10 156 20 Z"
     : "M 44 20 C 85 39 130 62 170 86 Q 196 100 170 114 C 130 138 85 161 44 180 Q 24 190 24 166 C 21 122 21 78 24 34 Q 24 10 44 20 Z";
-  const gradientPrefix = `uiux-carousel-${direction}`;
+  const gradientPrefix = `uiux-carousel-${direction}-${instanceId}`;
 
   return (
     <svg
@@ -385,8 +386,32 @@ function UiUxCarouselArrowSurface({
   );
 }
 
+function UiUxCarouselAxisBends() {
+  return (
+    <>
+      <svg
+        aria-hidden="true"
+        className="uiux-carousel-axis-bend is-left"
+        preserveAspectRatio="none"
+        viewBox="0 0 32 10"
+      >
+        <path d="M 32 1 C 18 1 8 3 0 9" />
+      </svg>
+      <svg
+        aria-hidden="true"
+        className="uiux-carousel-axis-bend is-right"
+        preserveAspectRatio="none"
+        viewBox="0 0 32 10"
+      >
+        <path d="M 0 1 C 14 1 24 3 32 9" />
+      </svg>
+    </>
+  );
+}
+
 type UiUxCarouselArrowButtonProps = {
   direction: -1 | 1;
+  holdEnabled?: boolean;
   isHeld: boolean;
   onStart: (direction: -1 | 1) => void;
   onStop: () => void;
@@ -394,6 +419,7 @@ type UiUxCarouselArrowButtonProps = {
 
 function UiUxCarouselArrowButton({
   direction,
+  holdEnabled = true,
   isHeld,
   onStart,
   onStop,
@@ -408,7 +434,17 @@ function UiUxCarouselArrowButton({
         isHeld ? " is-held" : ""
       }`}
       onBlur={onStop}
+      onClick={
+        holdEnabled
+          ? undefined
+          : () => {
+              onStart(direction);
+              onStop();
+            }
+      }
       onKeyDown={(event) => {
+        if (!holdEnabled) return;
+
         if (
           !event.repeat &&
           (event.key === "Enter" || event.key === " ")
@@ -418,12 +454,16 @@ function UiUxCarouselArrowButton({
         }
       }}
       onKeyUp={(event) => {
+        if (!holdEnabled) return;
+
         if (event.key === "Enter" || event.key === " ") {
           onStop();
         }
       }}
+      onLostPointerCapture={onStop}
       onPointerCancel={onStop}
       onPointerDown={(event) => {
+        if (!holdEnabled) return;
         if (event.button !== 0) return;
         event.currentTarget.setPointerCapture(event.pointerId);
         onStart(direction);
@@ -721,6 +761,8 @@ export function UiUxDecisionShowcase({
   const carouselHoldIntervalRef = useRef<ReturnType<
     typeof setInterval
   > | null>(null);
+  const carouselDirectionRef = useRef<-1 | 1>(1);
+  const carouselDirectionFrameRef = useRef<number | null>(null);
   const stageDecisions = decisions.filter((decision) => !decision.compactOnly);
   const leftDecisions = stageDecisions.filter(
     (decision) => decision.side === "left",
@@ -784,18 +826,41 @@ export function UiUxDecisionShowcase({
     }
   };
 
-  const applyCarouselMove = (direction: -1 | 1) => {
-    setCarouselDirection(direction);
-    setFocusedDecisionNumber((currentNumber) => {
-      const currentIndex = decisions.findIndex(
-        (decision) => decision.number === currentNumber,
-      );
-      const normalizedIndex = currentIndex >= 0 ? currentIndex : 0;
-      const nextIndex =
-        (normalizedIndex + direction + decisions.length) % decisions.length;
+  const stageCarouselAction = (direction: -1 | 1, action: () => void) => {
+    const isDesktopDirectionChange =
+      compactColumnCount === 3 && carouselDirectionRef.current !== direction;
 
-      return decisions[nextIndex]?.number ?? currentNumber;
+    carouselDirectionRef.current = direction;
+    setCarouselDirection(direction);
+
+    if (!isDesktopDirectionChange) {
+      action();
+      return;
+    }
+
+    if (carouselDirectionFrameRef.current !== null) {
+      cancelAnimationFrame(carouselDirectionFrameRef.current);
+    }
+
+    carouselDirectionFrameRef.current = requestAnimationFrame(() => {
+      carouselDirectionFrameRef.current = null;
+      action();
     });
+  };
+
+  const applyCarouselMove = (direction: -1 | 1) => {
+    stageCarouselAction(direction, () =>
+      setFocusedDecisionNumber((currentNumber) => {
+        const currentIndex = decisions.findIndex(
+          (decision) => decision.number === currentNumber,
+        );
+        const normalizedIndex = currentIndex >= 0 ? currentIndex : 0;
+        const nextIndex =
+          (normalizedIndex + direction + decisions.length) % decisions.length;
+
+        return decisions[nextIndex]?.number ?? currentNumber;
+      }),
+    );
   };
 
   const moveCarousel = (direction: -1 | 1) => {
@@ -821,6 +886,11 @@ export function UiUxDecisionShowcase({
   useEffect(
     () => () => {
       clearCarouselHoldTimers();
+
+      if (carouselDirectionFrameRef.current !== null) {
+        cancelAnimationFrame(carouselDirectionFrameRef.current);
+        carouselDirectionFrameRef.current = null;
+      }
     },
     [],
   );
@@ -1162,13 +1232,23 @@ export function UiUxDecisionShowcase({
                                   isPrimary || isRear
                                     ? undefined
                                     : (event) => {
+                                        if (
+                                          event.target instanceof Element &&
+                                          event.target.closest(
+                                            ".uiux-carousel-arrow",
+                                          )
+                                        ) {
+                                          return;
+                                        }
+
                                         event.preventDefault();
                                         event.stopPropagation();
-                                        setCarouselDirection(
+                                        stageCarouselAction(
                                           role === "previous" ? -1 : 1,
-                                        );
-                                        setFocusedDecisionNumber(
-                                          decision.number,
+                                          () =>
+                                            setFocusedDecisionNumber(
+                                              decision.number,
+                                            ),
                                         );
                                       }
                                 }
@@ -1204,6 +1284,8 @@ export function UiUxDecisionShowcase({
                                 transition={stackTransition}
                                 variants={DESKTOP_STACK_VARIANTS}
                               >
+                                <UiUxCarouselAxisBends />
+
                                 {isPrimary ? (
                                   <div
                                     aria-label={`Current UI or UX decision ${decision.number}`}
@@ -1228,16 +1310,37 @@ export function UiUxDecisionShowcase({
                                     {decision.number}
                                   </div>
                                 ) : (
-                                  <button
-                                    aria-label={`Show UI or UX decision ${decision.number}`}
-                                    className="uiux-carousel-preview uiux-decision-number"
-                                    onClick={() =>
-                                      setFocusedDecisionNumber(decision.number)
-                                    }
-                                    type="button"
-                                  >
-                                    {decision.number}
-                                  </button>
+                                  <>
+                                    <button
+                                      aria-label={`Show UI or UX decision ${decision.number}`}
+                                      className="uiux-carousel-preview uiux-decision-number"
+                                      onClick={() =>
+                                        setFocusedDecisionNumber(
+                                          decision.number,
+                                        )
+                                      }
+                                      type="button"
+                                    >
+                                      {decision.number}
+                                    </button>
+
+                                    <div className="uiux-inactive-stack-navigation">
+                                      <UiUxCarouselArrowButton
+                                        direction={-1}
+                                        holdEnabled={false}
+                                        isHeld={false}
+                                        onStart={startCarouselHold}
+                                        onStop={stopCarouselHold}
+                                      />
+                                      <UiUxCarouselArrowButton
+                                        direction={1}
+                                        holdEnabled={false}
+                                        isHeld={false}
+                                        onStart={startCarouselHold}
+                                        onStop={stopCarouselHold}
+                                      />
+                                    </div>
+                                  </>
                                 )}
 
                                 <UiUxCompactDecisionColumn
