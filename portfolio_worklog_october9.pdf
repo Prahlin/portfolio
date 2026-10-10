@@ -1,0 +1,336 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [5 0 R 7 0 R 9 0 R 11 0 R 13 0 R] /Count 5 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+5 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 6 0 R >>
+endobj
+6 0 obj
+<< /Length 8958 >>
+stream
+BT /F1 14.00 Tf 1 0 0 1 54.00 748.00 Tm (Prahlin Portfolio Work Log - October 9, 2026) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 54.00 724.00 Tm (Compiled summary for Friday, October 9, 2026 - focus: continuing the Prahl.dev Portfolio after the October 8 seven-key UI/UX) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 54.00 713.15 Tm (Philosophy and interactive Core Beliefs record; independently verifying the United States Eastern date; running the customary) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 54.00 702.30 Tm (project reader; extracting and studying all fifty-one pre-existing Portfolio PDF worklogs; rebuilding the desktop philosophy carousel) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 54.00 691.45 Tm (as a stable six-face rotation system with mirrored rear staging; correcting repeated left-navigation, direction-reversal, sliding, and) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 54.00 680.60 Tm (horizontal-flip failures; adding local navigation controls to inactive stacks; constructing a perspective-warped horizontal axis with) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 54.00 669.75 Tm (curved joins and control cutouts; isolating active and inactive hover states; eliminating repeated-SVG gradient collisions and triangle) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 54.00 658.90 Tm (artifacts; adding animated condensation-style contrails around Core Beliefs with click-driven highlights and idle pulses; introducing) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 54.00 648.05 Tm (coordinated but section-appropriate accent systems across UI/UX Philosophy, My Core Beliefs, and My Workflow; replacing workflow) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 54.00 637.20 Tm (photography with dark radial color fields; restyling workflow number tabs; refining philosophy copy, hierarchy, spacing, alignment,) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 54.00 626.35 Tm (wrapping, and device placement; validating TypeScript, routes, rendered geometry, six mounted roles, hidden source imagery, and final) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 54.00 615.50 Tm (padding; documenting commits 1048ada, 0234df0, 5fa4018, and 3515aaa; refreshing the Portfolio project snapshot; and generating) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 54.00 604.65 Tm (the October 9 Portfolio PDF worklog.) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 54.00 588.80 Tm (Generated in continuity with the established Prahlin Portfolio daily worklog cadence: compact opening summary, source-material) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 54.00 577.95 Tm (section, baseline section, goal list, grouped work-completed sections, committed-source sequence, validation section, files-touched list,) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 54.00 567.10 Tm (follow-up context, and output-artifact close.) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 54.00 551.25 Tm (This artifact covers Portfolio work performed after portfolio_worklog_october8.pdf and documentation commit ae4fb9e. The) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 54.00 540.40 Tm (application work is represented by four October 9 commits on main, matching origin/main at 3515aaa before this documentation pass.) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 54.00 529.55 Tm (No application-source edit, source commit, push, GitHub Actions dispatch, manual Hostinger synchronization, or production release was) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 54.00 518.70 Tm (performed while generating this PDF. The documentation deltas are the refreshed portfolio_PROJECT_SNAPSHOT.txt file and this) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 54.00 507.85 Tm (root-level October 9 worklog.) Tj ET
+BT /F2 10.50 Tf 1 0 0 1 54.00 489.00 Tm (Source Materials Reviewed) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 54.00 474.00 Tm (- Verified the United States Eastern date through an independent UTC-04:00 time query, which reported October 9, 2026 at 10:48:32) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 61.00 463.15 Tm (PM. October 9 remains within Eastern Daylight Time, so the filename and title use Friday, October 9, 2026 rather than an) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 61.00 452.30 Tm (execution-host or UTC calendar date.) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 54.00 440.05 Tm (- Ran ./read_project.sh from /Users/prahlin/gh/portfolio and regenerated portfolio_PROJECT_SNAPSHOT.txt before composing this) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 61.00 429.20 Tm (record. The refreshed snapshot contains 18,790 lines and 623,143 bytes of source, configuration, asset inventory, Git state, PDF) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 61.00 418.35 Tm (inventory, and workflow context.) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 54.00 406.10 Tm (- Extracted all fifty-one pre-existing root-level Portfolio PDF worklogs with pdftotext and inspected the full archive with pdfinfo.) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 61.00 395.25 Tm (Before this artifact, the series contained 294 PDF pages and 145,433 extracted words spanning July 11 through October 8, with) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 61.00 384.40 Tm (same-day Part suffixes where multiple records were required.) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 54.00 372.15 Tm (- Compared the complete worklog set for filename cadence, title construction, opening-summary density, source and baseline) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 61.00 361.30 Tm (framing, technical bullet voice, validation language, files-touched treatment, follow-up continuity, dated page footers, and) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 61.00 350.45 Tm (output-artifact closure.) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 54.00 338.20 Tm (- Used October 8 as the direct chronological baseline because it documented the earlier five-visible-stack philosophy scene, seven-key) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 61.00 327.35 Tm (controls, widened active card, responsive collapse, and first interactive Core Beliefs orbit. Used October 7 for the original) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 61.00 316.50 Tm (three-stack Motion scene and September 29 Part 2 for the workflow imagery and Core Beliefs composition baseline.) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 54.00 304.25 Tm (- Inspected representative early, middle, and latest PDFs visually and reviewed archive-wide metadata. The mature artifact remains) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 61.00 293.40 Tm (unencrypted US Letter at 612 x 792 points, PDF 1.4, Helvetica and Helvetica-Bold, compact black-on-white technical prose, Codex) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 61.00 282.55 Tm (metadata, and a repeated dated page footer.) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 54.00 270.30 Tm (- Reviewed commits 1048adad455d16f4edbe2166e873e359a026d8f4, 0234df095dc0ee12fdeda4803b215637aeec3a16,) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 61.00 259.45 Tm (5fa401837484f1e777463c748e6eab6527b52854, and 3515aaa21278c0d20c3857592fe31399ee40ea29 through git log, commit) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 61.00 248.60 Tm (bodies, file statistics, and final source.) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 54.00 236.35 Tm (- Reviewed the current implementations in app/UiUxDecisionShowcase.tsx, app/CoreBeliefsOrbit.tsx, app/page.tsx, and) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 61.00 225.50 Tm (app/globals.css, plus the current project snapshot and live landing route.) Tj ET
+BT /F2 10.50 Tf 1 0 0 1 54.00 210.25 Tm (Baseline Status Before October 9 Work) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 54.00 195.25 Tm (- The October 8 carousel presented five visible desktop stacks: one active center, two inner inactive stacks, and two outer inactive) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 61.00 184.40 Tm (stacks. It did not yet model a complete six-sided rotational object with a rear-center face.) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 54.00 172.15 Tm (- Repeated left navigation and direction reversal could still cause a card row to slide, flip horizontally, or rotate through the wrong) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 61.00 161.30 Tm (direction. Width animation and role wrapping remained vulnerable after several consecutive actions.) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 54.00 149.05 Tm (- Inactive stacks did not yet contain their own left and right triangle controls. Hover relationships between center controls, inactive) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 61.00 138.20 Tm (stacks, and repeated SVG arrow definitions could leak visual state or create elongated tips and rotation artifacts.) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 54.00 125.95 Tm (- The horizontal carousel axis did not yet travel through all visible stacks with perspective bends, rounded joins, opacity transitions,) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 61.00 115.10 Tm (and protected gaps around number and triangle controls.) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 54.00 102.85 Tm (- Core Beliefs had interactive star rotation and bubble emphasis, but no condensation-style paths to explain the orbit or provide a) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 61.00 92.00 Tm (quiet invitation when the user had not rotated the formation.) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 54.00 79.75 Tm (- UI/UX Philosophy, My Workflow, and My Core Beliefs still relied on color treatments that were either too close to the surrounding) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 61.00 68.90 Tm (greens, too muted to establish hierarchy, or too broad and rainbow-like for the landing page's dark forest context.) Tj ET
+BT /F1 7.40 Tf 1 0 0 1 54.00 24.00 Tm (Prahlin Portfolio Work Log - October 9, 2026) Tj ET
+BT /F1 7.40 Tf 1 0 0 1 536.41 24.00 Tm (Page 1) Tj ET
+endstream
+endobj
+7 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 8 0 R >>
+endobj
+8 0 obj
+<< /Length 8563 >>
+stream
+BT /F1 8.50 Tf 1 0 0 1 54.00 748.00 Tm (- Philosophy card copy, emphasis lines, device groups, and side-stack text required another hierarchy pass. Several long lines depended) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 61.00 737.15 Tm (on legacy no-wrap exceptions, and the active device group remained too centered inside the wide card.) Tj ET
+BT /F2 10.50 Tf 1 0 0 1 54.00 721.90 Tm (Goals for October 9) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 54.00 706.90 Tm (- Convert the five-visible-stack carousel into a coherent six-face system whose rear faces support rotation logic without competing) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 61.00 696.05 Tm (with the front presentation.) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 54.00 683.80 Tm (- Make left and right navigation behave symmetrically across repeated actions and immediate direction reversals, preserving the) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 61.00 672.95 Tm (accepted rotational motion instead of flipping or sliding.) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 54.00 660.70 Tm (- Give inactive stacks usable arrows and isolated hover feedback while keeping rear stacks noninteractive and visually subordinate.) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 54.00 648.45 Tm (- Draw a continuous perspective-aware carousel axis, keep it behind all controls, and prevent line bleed through translucent triangles) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 61.00 637.60 Tm (and number boxes.) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 54.00 625.35 Tm (- Add subtle Core Beliefs motion trails that remain invisible at rest, highlight during star rotation, and periodically pulse at reduced) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 61.00 614.50 Tm (strength when the formation is idle.) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 54.00 602.25 Tm (- Establish final accent roles for philosophy headers, key fills, and emphasized copy; coordinate supporting color systems in Core) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 61.00 591.40 Tm (Beliefs and Workflow without letting those sections collapse into one identical palette.) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 54.00 579.15 Tm (- Improve philosophy text legibility and composition while protecting large background numerals, device media, project labels,) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 61.00 568.30 Tm (navigation controls, and perspective behavior.) Tj ET
+BT /F2 10.50 Tf 1 0 0 1 54.00 553.05 Tm (Work Completed - Six-Face Carousel Architecture and Motion) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 54.00 538.05 Tm (- Rebuilt desktop role assignment around exactly six mounted stacks: previous outer, previous inner, active, next inner, next outer,) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 61.00 527.20 Tm (and rear center. The rear-center face completes the rotational topology even though it remains visually hidden.) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 54.00 514.95 Tm (- Reinterpreted the outer stacks as mirrored rear-side faces wrapping around the back of the carousel. They preserve the inner) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 61.00 504.10 Tm (stacks' tilt language while using smaller horizontal and vertical scales plus deeper z placement to communicate the vanishing point.) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 54.00 491.85 Tm (- Settled the two rear-side faces at 2 percent opacity and the rear-center face at 0 percent. The rear center exists only to) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 61.00 481.00 Tm (preserve role continuity; it never appears as a competing card behind the forward active stack.) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 54.00 468.75 Tm (- Disabled pointer actions and hover-driven border changes for every rear role. Front-facing active and inner inactive stacks retain) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 61.00 457.90 Tm (their accepted interaction model, while rear geometry remains motion infrastructure only.) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 54.00 445.65 Tm (- Restored the proven role-based spring behavior after experimental fixes made leftward movement worse. The corrected sequence) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 61.00 434.80 Tm (keeps one continuous rotational direction through wraparound rather than allowing a card to interpolate across the row or mirror) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 61.00 423.95 Tm (itself.) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 54.00 411.70 Tm (- Corrected the first left action after rightward navigation by preserving directional intent during reversal. Repeated left actions,) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 61.00 400.85 Tm (repeated right actions, and immediate right-to-left changes now share equivalent transition behavior.) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 54.00 388.60 Tm (- Kept width interpolation on the dedicated positioner while the stack owns rotateY, depth, origin, scale, and opacity. This separation) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 61.00 377.75 Tm (protects the earlier fix that prevents width reflow from becoming a false horizontal flip.) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 54.00 365.50 Tm (- Preserved reduced-motion handling, project-link protection, active/inactive layout distinction, and the existing mobile single-column) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 61.00 354.65 Tm (presentation while changing desktop role topology.) Tj ET
+BT /F2 10.50 Tf 1 0 0 1 54.00 339.40 Tm (Work Completed - Inactive Controls, Axis, and Hover Isolation) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 54.00 324.40 Tm (- Added independent previous and next triangle buttons to both visible inactive stacks. Their actions join the same staged carousel) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 61.00 313.55 Tm (command system without turning the entire rear half into actionable UI.) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 54.00 301.30 Tm (- Matched inactive header and number weight to the active stack while continuing to use opacity, perspective, and surface treatment) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 61.00 290.45 Tm (for hierarchy rather than making inactive typography artificially thin.) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 54.00 278.20 Tm (- Scoped arrow hover feedback to the stack that owns the hovered control. Hovering an inactive triangle now highlights that inactive) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 61.00 267.35 Tm (stack's normal border system without borrowing the center stack's stronger whole-group emphasis.) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 54.00 255.10 Tm (- Prevented hovering the center stack, center key, or center triangles from changing any inactive stack or inactive triangle. Active) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 61.00 244.25 Tm (and inactive hover systems now remain visually independent.) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 54.00 232.00 Tm (- Eliminated repeated SVG identifier collisions by ensuring each arrow instance uses isolated definitions. This removed intermittent) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 61.00 221.15 Tm (gradient reuse, elongated noses, and ghost artifacts during rotation.) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 54.00 208.90 Tm (- Added a horizontal axis beneath the number and triangle row, then split and masked it around number boxes and arrow shapes so) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 61.00 198.05 Tm (translucent controls do not reveal lines through their interiors.) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 54.00 185.80 Tm (- Warped the axis across the six-face scene with straight stack segments, curved edge connectors, and deeper-order rear) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 61.00 174.95 Tm (transitions. The front line bends near its edges to meet inactive segments rather than stopping abruptly.) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 54.00 162.70 Tm (- Tuned line opacity and color before each bend, extended the gradient approach farther into straight segments, softened corner) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 61.00 151.85 Tm (joins, and trimmed triangle-tip intersections by several pixels.) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 54.00 139.60 Tm (- Closed the remaining tiny front-to-inactive gaps while keeping the axis behind every triangle. The final line reads as one continuous) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 61.00 128.75 Tm (object without becoming brighter or thicker at the bend.) Tj ET
+BT /F2 10.50 Tf 1 0 0 1 54.00 113.50 Tm (Work Completed - Core Beliefs Contrails and Idle Guidance) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 54.00 98.50 Tm (- Added ten rounded SVG contrail paths between the five circular bubbles, using paired curves to create a subtle condensation or) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 61.00 87.65 Tm (cartoon-airplane language around the star.) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 54.00 75.40 Tm (- Positioned the trails farther from the star and shaped each curve around the circular bubble stack so paths do not cut through) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 61.00 64.55 Tm (bubble borders or flatten the radial composition.) Tj ET
+BT /F1 7.40 Tf 1 0 0 1 54.00 24.00 Tm (Prahlin Portfolio Work Log - October 9, 2026) Tj ET
+BT /F1 7.40 Tf 1 0 0 1 536.41 24.00 Tm (Page 2) Tj ET
+endstream
+endobj
+9 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 10 0 R >>
+endobj
+10 0 obj
+<< /Length 8382 >>
+stream
+BT /F1 8.50 Tf 1 0 0 1 54.00 748.00 Tm (- Kept contrails at 0 opacity during the resting state. Clicking or tapping a non-top bubble activates the complete trail system in) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 61.00 737.15 Tm (synchronization with the star and orbit rotation.) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 54.00 724.90 Tm (- Added a three-second idle rhythm for users who have not rotated the star. Each pulse reaches approximately half of the full) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 61.00 714.05 Tm (rotation-highlight strength, then returns to transparent without changing selection.) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 54.00 701.80 Tm (- Preserved the brighter rotation color treatment even after lowering resting visibility. The trail system can remain nearly absent) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 61.00 690.95 Tm (during reading while still becoming obvious during action.) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 54.00 678.70 Tm (- Disabled the decorative trail layer for stacked mobile layouts and reduced-motion preferences, protecting the simpler portrait) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 61.00 667.85 Tm (composition and accessibility behavior.) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 54.00 655.60 Tm (- Fixed center-carousel hover leakage in the same commit so the newly active visual effects did not compound unrelated) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 61.00 644.75 Tm (inactive-stack feedback.) Tj ET
+BT /F2 10.50 Tf 1 0 0 1 54.00 629.50 Tm (Work Completed - Philosophy Accent System and Key Treatment) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 54.00 614.50 Tm (- Assigned seven distinct solid accents to the seven philosophy roles: 01 pink #ff4fa3, 02 cyan #00bfea, 03 orange #ff7a1a, 04 blue) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 61.00 603.65 Tm (#6c9cff, 05 yellow #ffc928, 06 violet #c084fc, and 07 lime #78c83a.) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 54.00 591.40 Tm (- Ordered the accents so closely related hues do not sit directly beside one another in the seven-step sequence. The final order) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 61.00 580.55 Tm (remains readable against dark green surfaces while retaining the energetic 1980s/1990s animation and arcade influence requested) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 61.00 569.70 Tm (during exploration.) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 54.00 557.45 Tm (- Applied each accent to the stack header, the solid key filling, and the large underlined emphasis phrase inside populated cards.) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 61.00 546.60 Tm (Selector numerals remain the established off-white #f3fff7 so the top row does not become visually noisy.) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 54.00 534.35 Tm (- Replaced the key's pale outline with a black-green border and retained border-only hover changes. Color belongs to the key body;) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 61.00 523.50 Tm (hover does not introduce a second competing fill or gradient.) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 54.00 511.25 Tm (- Kept the key SVG reusable by passing a tone derived from decision number. The same tone mapping also reaches headers and card) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 61.00 500.40 Tm (content through data attributes and CSS variables.) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 54.00 488.15 Tm (- Preserved 03, 04, 06, and 07 while iterating only the rejected 01, 02, and 05 values. The accepted final pass uses cartoon pink,) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 61.00 477.30 Tm (arcade cyan, and golden yellow without changing the locked orange, blue, violet, or sewer-lime choices.) Tj ET
+BT /F2 10.50 Tf 1 0 0 1 54.00 462.05 Tm (Work Completed - Philosophy Copy, Typography, and Device Composition) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 54.00 447.05 Tm (- Rewrote stack 01 to Reliably sleek. / Fully streamlined. / Never / Behind. Renamed stack 02 from Appealing to Eye-Catching while) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 61.00 436.20 Tm (keeping its placeholder body.) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 54.00 423.95 Tm (- Rewrote stack 04 to Legible. / Perceptible. / Quickly / Actionable. Rewrote stack 05 to Every form factor. / Every device type. / No) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 61.00 413.10 Tm (sweat. and removed its earlier question marks and extra fourth line.) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 54.00 400.85 Tm (- Renamed stack 07 from Adaptable to Satisfying. The final title sequence is Modern, Eye-Catching, Smooth, User-friendly,) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 61.00 390.00 Tm (Responsive, Cohesive, and Satisfying.) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 54.00 377.75 Tm (- Changed all ordinary paragraph lines from muted gray to the same #f3fff7 used in number boxes. Colored third-line emphasis) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 61.00 366.90 Tm (remains independently sized, uppercased, underlined, and mapped to the owning stack.) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 54.00 354.65 Tm (- Increased white copy to a shared responsive 46.2px-to-59.4px pre-transform range, removed older 04 and 06 size exceptions,) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 61.00 343.80 Tm (increased line height to 1.3, and standardized interline gap at 0.3em.) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 54.00 331.55 Tm (- Applied the matched left inset to the complete paragraph rather than only its first two lines. Added an explicit minmax\(0, 1fr\) grid) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 61.00 320.70 Tm (track so 04 no longer lets intrinsic text width expand the paragraph beyond the card.) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 54.00 308.45 Tm (- Scaled side-stack paragraph layers to 0.51 so they visually follow the active stack's 0.5 internal reduction after perspective is) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 61.00 297.60 Tm (applied. The adjustment preserves size relationships without scaling unrelated controls.) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 54.00 285.35 Tm (- Right-anchored each active device-preview group as one unit, including frame, context copy, and project label. The final rendered) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 61.00 274.50 Tm (card-to-slot right inset measured approximately 32.08px at the 1440px validation viewport.) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 54.00 262.25 Tm (- Right-aligned device context and project attribution within that group while preserving frame proportions, large-number depth) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 61.00 251.40 Tm (order, foreground z-index, and established vertical positions.) Tj ET
+BT /F2 10.50 Tf 1 0 0 1 54.00 236.15 Tm (Work Completed - Workflow and Core Beliefs Color Coordination) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 54.00 221.15 Tm (- Restyled the four My Workflow number tabs to use the philosophy number-box language: 128px desktop squares, full borders,) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 61.00 210.30 Tm (off-white heavy numerals, dark layered surfaces, and responsive fallback sizing on small screens.) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 54.00 198.05 Tm (- Temporarily disabled the source workflow photographs by setting the image elements to 0 opacity, leaving the structure and assets) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 61.00 187.20 Tm (intact for a later restoration decision.) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 54.00 174.95 Tm (- Replaced the visible workflow media treatment with four section-specific dark radial fields. Research uses forest green, Plan uses) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 61.00 164.10 Tm (deep red-brown, Produce uses dark blue, and Analyze uses muted gold-olive.) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 54.00 151.85 Tm (- Added workflow tone data to the timeline items so each visual treatment remains explicit and maintainable rather than depending) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 61.00 141.00 Tm (on positional selectors.) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 54.00 128.75 Tm (- Updated My Core Beliefs to a quieter mineral palette appropriate to the landing page: green #82a58d, cyan #628a99, amber #9b895f,) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 61.00 117.90 Tm (rose #aa7968, and violet #8c8192.) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 54.00 105.65 Tm (- Applied each belief tone to its title and supporting accent treatment while preserving bubble structure, orbit motion, selection) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 61.00 94.80 Tm (behavior, star artwork, and contrail animation.) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 54.00 82.55 Tm (- Kept the three section systems related but not identical: Philosophy carries the vivid seven-color focal palette, Workflow uses very) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 61.00 71.70 Tm (dark atmospheric fields, and Core Beliefs uses restrained mineral accents.) Tj ET
+BT /F1 7.40 Tf 1 0 0 1 54.00 24.00 Tm (Prahlin Portfolio Work Log - October 9, 2026) Tj ET
+BT /F1 7.40 Tf 1 0 0 1 536.41 24.00 Tm (Page 3) Tj ET
+endstream
+endobj
+11 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 12 0 R >>
+endobj
+12 0 obj
+<< /Length 8341 >>
+stream
+BT /F2 10.50 Tf 1 0 0 1 54.00 745.00 Tm (Committed Source Sequence) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 54.00 730.00 Tm (- 1048ada - Rebuilt the UI/UX philosophy carousel as a stable six-face experience. Added mirrored rear-side roles, an invisible rear) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 61.00 719.15 Tm (center, directional role continuity, restored spring navigation, and noninteractive rear behavior.) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 54.00 706.90 Tm (- 0234df0 - Refined UI/UX philosophy carousel interactions and depth styling. Added inactive arrows, stabilized direction reversal,) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 61.00 696.05 Tm (introduced the perspective axis and control cutouts, isolated hover states, and removed SVG triangle artifacts.) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 54.00 683.80 Tm (- 5fa4018 - Enhanced Core Beliefs orbit motion and hover isolation. Added rounded double contrails, synchronized rotation highlights,) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 61.00 672.95 Tm (half-strength idle pulses, mobile/reduced-motion protection, and stronger carousel hover separation.) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 54.00 660.70 Tm (- 3515aaa - Refined landing page color systems and UI/UX carousel presentation. Added final philosophy accents, reworked copy and) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 61.00 649.85 Tm (typography, right-aligned device groups, restyled Workflow tabs and media fields, and updated Core Beliefs colors.) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 54.00 637.60 Tm (- Together the four commits move from carousel topology and motion correctness, through control-level depth and interaction polish,) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 61.00 626.75 Tm (into Core Beliefs motion guidance and a coordinated landing-page color and typography pass.) Tj ET
+BT /F2 10.50 Tf 1 0 0 1 54.00 611.50 Tm (Validation Summary) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 54.00 596.50 Tm (- Ran npm run check after refreshing the project snapshot; TypeScript completed successfully with no emitted files.) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 54.00 584.25 Tm (- Confirmed /, /projects/alla-vostra, /projects/cinerific, /aboutdev, and /articles each returned HTTP 200 from the active local) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 61.00 573.40 Tm (Next.js server at 127.0.0.1:3000.) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 54.00 561.15 Tm (- Used Playwright with the installed Google Chrome binary at 1440 x 1100 and confirmed exactly six desktop stack nodes with) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 61.00 550.30 Tm (previous outer, previous, active, next, next outer, and rear roles.) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 54.00 538.05 Tm (- Confirmed the active device group remains inside the card and measured its final right inset at approximately 32.08px.) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 54.00 525.80 Tm (- Confirmed Core Beliefs renders ten contrail paths and that sampled trails report 0 opacity during the resting state before click or) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 61.00 514.95 Tm (idle animation visibility.) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 54.00 502.70 Tm (- Confirmed all four workflow source image elements report 0 opacity while their structural containers remain present. The first) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 61.00 491.85 Tm (workflow number tab measured 128 x 128px with a 68px numeral at the desktop viewport.) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 54.00 479.60 Tm (- Ran source-scoped git diff --check against UiUxDecisionShowcase.tsx, CoreBeliefsOrbit.tsx, page.tsx, and globals.css with no) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 61.00 468.75 Tm (whitespace errors. The generated snapshot preserves numbered blank source lines and therefore remains unsuitable for a) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 61.00 457.90 Tm (repository-wide whitespace signal.) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 54.00 445.65 Tm (- Confirmed main and origin/main both resolve to 3515aaa21278c0d20c3857592fe31399ee40ea29 before worklog generation.) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 54.00 433.40 Tm (- Kept the local Next.js preview running after validation. No production deployment, remote mutation, or external publishing action) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 61.00 422.55 Tm (was taken.) Tj ET
+BT /F2 10.50 Tf 1 0 0 1 54.00 407.30 Tm (Files Touched and Artifacts) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 54.00 392.30 Tm (- app/UiUxDecisionShowcase.tsx - implemented six-face role continuity, rear staging, inactive controls, isolated SVG definitions, tone) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 61.00 381.45 Tm (mapping, solid key fills, and decision-aware content styling.) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 54.00 369.20 Tm (- app/CoreBeliefsOrbit.tsx - added paired orbit contrails, rotation activity state, idle timing, and accessible animation coordination.) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 54.00 356.95 Tm (- app/page.tsx - revised philosophy titles and card copy, added Workflow tone metadata, and retained the final seven-decision order.) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 54.00 344.70 Tm (- app/globals.css - implemented rear perspective, axis geometry and masks, hover isolation, contrail animation, final palettes,) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 61.00 333.85 Tm (paragraph hierarchy, side scaling, device alignment, Workflow tabs, hidden images, and Core Beliefs tones.) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 54.00 321.60 Tm (- portfolio_PROJECT_SNAPSHOT.txt - regenerated through ./read_project.sh to capture commit 3515aaa, current sources, assets,) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 61.00 310.75 Tm (configuration, Git state, and all fifty-one earlier root-level worklogs.) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 54.00 298.50 Tm (- portfolio_worklog_october9.pdf - created as the first October 9 Portfolio worklog at the repository root using the established) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 61.00 287.65 Tm (no-Part filename.) Tj ET
+BT /F2 10.50 Tf 1 0 0 1 54.00 272.40 Tm (Follow-Up Context) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 54.00 257.40 Tm (- Desktop philosophy now depends on exactly six mounted roles. The rear center is intentionally 0 percent opacity and rear sides are) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 61.00 246.55 Tm (intentionally 2 percent; changing visibility can expose mirrored content behind the active face.) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 54.00 234.30 Tm (- Rear stacks are rotation infrastructure, not controls. Preserve their disabled pointer behavior and fixed border treatment unless) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 61.00 223.45 Tm (the interaction model is deliberately expanded.) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 54.00 211.20 Tm (- Direction reversal relies on role continuity plus separated positioner and 3D transforms. Avoid recombining width, x/y motion, and) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 61.00 200.35 Tm (rotateY on one Motion element.) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 54.00 188.10 Tm (- Inactive arrows own local hover feedback. Center-stack hover must not brighten inactive headers, cards, numbers, or triangles.) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 54.00 175.85 Tm (- The carousel axis is segmented and masked around controls. Any change to number width, triangle size, or stack coordinates should) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 61.00 165.00 Tm (be followed by visual checks for tip intrusion, bend thickness, and center gaps.) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 54.00 152.75 Tm (- Philosophy number boxes intentionally remain off-white. Only headers, key bodies, and large underlined emphasis phrases use the) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 61.00 141.90 Tm (seven vivid accent colors.) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 54.00 129.65 Tm (- Paragraph copy uses a widened internal span because the active foreground is scaled to 0.5. The side copy uses 0.51 to compensate) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 61.00 118.80 Tm (for its different perspective; removing either scale will recreate the visible size mismatch.) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 54.00 106.55 Tm (- Device-preview groups are right-anchored with a 64px pre-transform inset, which resolves to approximately 32px in the validated) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 61.00 95.70 Tm (active card. Preserve the transform origin when changing that offset.) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 54.00 83.45 Tm (- Workflow photographs are still present in source but visually disabled. Restoring them requires reconsidering whether the dark) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 61.00 72.60 Tm (radial fields remain overlays or become fallback backgrounds.) Tj ET
+BT /F1 7.40 Tf 1 0 0 1 54.00 24.00 Tm (Prahlin Portfolio Work Log - October 9, 2026) Tj ET
+BT /F1 7.40 Tf 1 0 0 1 536.41 24.00 Tm (Page 4) Tj ET
+endstream
+endobj
+13 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 14 0 R >>
+endobj
+14 0 obj
+<< /Length 2119 >>
+stream
+BT /F1 8.50 Tf 1 0 0 1 54.00 748.00 Tm (- Core Beliefs contrails are transparent at rest, pulse every three seconds while idle, and brighten during rotation. Their mobile and) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 61.00 737.15 Tm (reduced-motion suppression is intentional.) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 54.00 724.90 Tm (- As with prior Portfolio work, ask for a commit message before committing or pushing the refreshed snapshot or this PDF unless) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 61.00 714.05 Tm (the user explicitly requests those operations.) Tj ET
+BT /F2 10.50 Tf 1 0 0 1 54.00 698.80 Tm (Output Artifact) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 54.00 683.80 Tm (- Created /Users/prahlin/gh/portfolio/portfolio_worklog_october9.pdf as the latest daily worklog for Friday, October 9, 2026,) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 61.00 672.95 Tm (following the established month-name, non-zero-padded day, and no-Part first-record naming convention.) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 54.00 660.70 Tm (- Produced an unencrypted US Letter, PDF 1.4 document using Helvetica and Helvetica-Bold with Codex title, subject, author,) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 61.00 649.85 Tm (creator, and producer metadata.) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 54.00 637.60 Tm (- Preserved the mature dense technical narrative, section ordering, black-on-white layout, fixed page margins, and repeated dated) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 61.00 626.75 Tm (page footer used by the recent Portfolio worklog series.) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 54.00 614.50 Tm (- Source state reviewed: 3515aaa21278c0d20c3857592fe31399ee40ea29 on main and origin/main before snapshot and PDF) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 61.00 603.65 Tm (generation.) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 54.00 591.40 Tm (- No application-source change, source commit, push, manual deployment, Hostinger synchronization, GitHub Actions dispatch, or) Tj ET
+BT /F1 8.50 Tf 1 0 0 1 61.00 580.55 Tm (production publish was performed as part of generating this PDF artifact.) Tj ET
+BT /F1 7.40 Tf 1 0 0 1 54.00 24.00 Tm (Prahlin Portfolio Work Log - October 9, 2026) Tj ET
+BT /F1 7.40 Tf 1 0 0 1 536.41 24.00 Tm (Page 5) Tj ET
+endstream
+endobj
+15 0 obj
+<< /Title (Prahlin Portfolio Work Log - October 9, 2026) /Subject (Portfolio development work completed on October 9, 2026) /Author (Codex) /Creator (Codex) /Producer (Codex) /CreationDate (D:20261009224832-04'00') /ModDate (D:20261009224832-04'00') >>
+endobj
+xref
+0 16
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000147 00000 n 
+0000000244 00000 n 
+0000000346 00000 n 
+0000000482 00000 n 
+0000009491 00000 n 
+0000009627 00000 n 
+0000018241 00000 n 
+0000018378 00000 n 
+0000026812 00000 n 
+0000026950 00000 n 
+0000035343 00000 n 
+0000035481 00000 n 
+0000037652 00000 n 
+trailer
+<< /Size 16 /Root 1 0 R /Info 15 0 R >>
+startxref
+37921
+%%EOF
