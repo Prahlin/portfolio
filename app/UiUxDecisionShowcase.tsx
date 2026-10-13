@@ -40,11 +40,11 @@ const STAGE_WIDTH = 1180;
 const STAGE_HEIGHT = 650;
 
 const UIUX_DECISION_GRADIENT_TONES: Record<string, string> = {
-  "01": "vision",
-  "02": "integrity",
-  "03": "sustainability",
-  "04": "leadership",
-  "05": "collaboration",
+  "01": "cohesion",
+  "02": "collaboration",
+  "03": "leadership",
+  "04": "sustainability",
+  "05": "adaptability",
   "06": "cohesion",
   "07": "adaptability",
 };
@@ -62,6 +62,81 @@ const UIUX_KEY_COLORS: Record<string, string> = {
   cohesion: "#c084fc",
   adaptability: "#78c83a",
 };
+
+const UIUX_KEY_GRADIENTS: Record<
+  string,
+  readonly [start: string, middle: string, end: string]
+> = {
+  "01": ["#dd4bfd", "#7a1fdd", "#6816ce"],
+  "02": ["#ffd102", "#e8aa01", "#cb7d00"],
+  "03": ["#01abfd", "#0071f3", "#024dd0"],
+  "04": ["#ffdf02", "#ed5d07", "#cc330f"],
+  "05": ["#33f150", "#099341", "#026946"],
+};
+
+const UIUX_STAR_TIP_COUNT = 5;
+const UIUX_STAR_ROTATION_STEP = 360 / UIUX_STAR_TIP_COUNT;
+const UIUX_STAR_INITIAL_ROTATION = -36;
+const UIUX_STAR_TIP_SEQUENCE = [
+  "purple",
+  "yellow",
+  "blue",
+  "orange",
+  "green",
+] as const;
+
+function UiUxCarouselStar({
+  rotationStep,
+  shouldReduceMotion,
+}: {
+  rotationStep: number;
+  shouldReduceMotion: boolean | null;
+}) {
+  const activeTip =
+    UIUX_STAR_TIP_SEQUENCE[
+      ((rotationStep % UIUX_STAR_TIP_COUNT) + UIUX_STAR_TIP_COUNT) %
+        UIUX_STAR_TIP_COUNT
+    ];
+
+  return (
+    <div aria-hidden="true" className="uiux-carousel-star-frame">
+      <motion.div
+        animate={{
+          rotate:
+            UIUX_STAR_INITIAL_ROTATION +
+            rotationStep * UIUX_STAR_ROTATION_STEP,
+        }}
+        className="uiux-carousel-star"
+        data-active-tip={activeTip}
+        initial={false}
+        transition={
+          shouldReduceMotion
+            ? { duration: 0 }
+            : { damping: 22, mass: 0.75, stiffness: 170, type: "spring" }
+        }
+      >
+        <Image
+          alt=""
+          aria-hidden="true"
+          className="uiux-carousel-star-image uiux-carousel-star-image-muted"
+          height={2048}
+          sizes="58px"
+          src="/images/uiux/philosophy-star-rounded-gradient.png"
+          width={2048}
+        />
+        <Image
+          alt=""
+          aria-hidden="true"
+          className="uiux-carousel-star-image uiux-carousel-star-image-active"
+          height={2048}
+          sizes="58px"
+          src="/images/uiux/philosophy-star-rounded-gradient.png"
+          width={2048}
+        />
+      </motion.div>
+    </div>
+  );
+}
 
 type DesktopStackRole =
   | "active"
@@ -131,7 +206,17 @@ const DESKTOP_STACK_VARIANTS = {
   },
 } satisfies Record<DesktopStackRole, Record<string, number>>;
 
-function UiUxActiveKey({ gradientTone }: { gradientTone?: string }) {
+function UiUxActiveKey({
+  decisionNumber,
+  gradientTone,
+}: {
+  decisionNumber?: string;
+  gradientTone?: string;
+}) {
+  const gradientId = `uiux-carousel-key-color-${useId().replaceAll(":", "")}`;
+  const gradientColors = decisionNumber
+    ? UIUX_KEY_GRADIENTS[decisionNumber]
+    : undefined;
   const fillColor = gradientTone
     ? UIUX_KEY_COLORS[gradientTone]
     : undefined;
@@ -143,6 +228,20 @@ function UiUxActiveKey({ gradientTone }: { gradientTone?: string }) {
       viewBox="0 0 200 200"
     >
       <defs>
+        {gradientColors ? (
+          <linearGradient
+            gradientUnits="userSpaceOnUse"
+            id={gradientId}
+            x1="25"
+            x2="175"
+            y1="30"
+            y2="175"
+          >
+            <stop offset="0" stopColor={gradientColors[0]} />
+            <stop offset="0.52" stopColor={gradientColors[1]} />
+            <stop offset="1" stopColor={gradientColors[2]} />
+          </linearGradient>
+        ) : null}
         <linearGradient
           gradientUnits="userSpaceOnUse"
           id="uiux-carousel-key-gradient"
@@ -249,7 +348,11 @@ function UiUxActiveKey({ gradientTone }: { gradientTone?: string }) {
       </defs>
       <g filter="url(#uiux-carousel-key-active-border)">
         <rect
-          fill={fillColor ?? "url(#uiux-carousel-key-gradient)"}
+          fill={
+            gradientColors
+              ? `url(#${gradientId})`
+              : (fillColor ?? "url(#uiux-carousel-key-gradient)")
+          }
           height="280"
           mask="url(#uiux-carousel-key-mask)"
           width="280"
@@ -779,6 +882,7 @@ export function UiUxDecisionShowcase({
   const [compactNoodle, setCompactNoodle] =
     useState<CompactNoodleGeometry | null>(null);
   const [carouselDirection, setCarouselDirection] = useState<-1 | 1>(1);
+  const [starRotationStep, setStarRotationStep] = useState(0);
   const [heldCarouselDirection, setHeldCarouselDirection] = useState<
     -1 | 1 | null
   >(null);
@@ -885,6 +989,7 @@ export function UiUxDecisionShowcase({
   };
 
   const applyCarouselMove = (direction: -1 | 1) => {
+    setStarRotationStep((currentStep) => currentStep + direction);
     stageCarouselAction(direction, () =>
       setFocusedDecisionNumber((currentNumber) => {
         const currentIndex = decisions.findIndex(
@@ -1181,7 +1286,12 @@ export function UiUxDecisionShowcase({
 
               {compactColumnCount === 3 ? (
                 <div className="uiux-compact-3d-shell">
+                  <UiUxCarouselStar
+                    rotationStep={starRotationStep}
+                    shouldReduceMotion={shouldReduceMotion}
+                  />
                   <UiUxActiveKey
+                    decisionNumber={focusedDecision.number}
                     gradientTone={getDecisionGradientTone(
                       focusedDecision.number,
                     )}
@@ -1283,6 +1393,11 @@ export function UiUxDecisionShowcase({
 
                                         event.preventDefault();
                                         event.stopPropagation();
+                                        setStarRotationStep(
+                                          (currentStep) =>
+                                            currentStep +
+                                            (role === "previous" ? -1 : 1),
+                                        );
                                         stageCarouselAction(
                                           role === "previous" ? -1 : 1,
                                           () =>
@@ -1458,7 +1573,12 @@ export function UiUxDecisionShowcase({
                           key={decision.number}
                           ref={activeStripButtonRef}
                         >
+                          <UiUxCarouselStar
+                            rotationStep={starRotationStep}
+                            shouldReduceMotion={shouldReduceMotion}
+                          />
                           <UiUxActiveKey
+                            decisionNumber={decision.number}
                             gradientTone={getDecisionGradientTone(
                               decision.number,
                             )}

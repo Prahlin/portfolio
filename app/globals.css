@@ -1298,6 +1298,12 @@ h3 {
   transform-origin: center top;
 }
 
+@media (max-width: 980px) {
+  .profile-orbit-compact > span {
+    transform: scale(1.44);
+  }
+}
+
 .phone-stage {
   height: 690px;
   margin-top: 48px;
@@ -2938,6 +2944,70 @@ button.uiux-decision-number:focus-visible {
     width: auto;
   }
 
+  .uiux-carousel-star-frame {
+    align-items: flex-end;
+    aspect-ratio: 1;
+    bottom: calc(
+      200% + var(--uiux-compact-button-gap) + 17px
+    );
+    filter: drop-shadow(0 0 14px rgba(0, 0, 0, 0.3));
+    display: flex;
+    height: calc(100% + 2px);
+    left: 50%;
+    justify-content: center;
+    pointer-events: none;
+    position: absolute;
+    transform: translate(-50%, calc(50% - 17px));
+    width: auto;
+    z-index: 9;
+  }
+
+  .uiux-carousel-star {
+    display: block;
+    height: 45%;
+    overflow: visible;
+    position: relative;
+    transform-origin: 50% 50%;
+    width: 45%;
+  }
+
+  .uiux-carousel-star-image {
+    display: block;
+    height: 100%;
+    object-fit: contain;
+    width: 100%;
+  }
+
+  .uiux-carousel-star-image-muted {
+    opacity: 0.5;
+  }
+
+  .uiux-carousel-star-image-active {
+    clip-path: polygon(50% 50%, 50% 100%, 0 100%, 0 66%);
+    inset: 0;
+    position: absolute;
+  }
+
+  .uiux-carousel-star[data-active-tip="yellow"]
+    .uiux-carousel-star-image-active {
+    clip-path: polygon(50% 50%, 100% 66%, 100% 100%, 50% 100%);
+  }
+
+  .uiux-carousel-star[data-active-tip="blue"]
+    .uiux-carousel-star-image-active {
+    clip-path: polygon(50% 50%, 86% 0, 100% 0, 100% 66%);
+  }
+
+  .uiux-carousel-star[data-active-tip="orange"]
+    .uiux-carousel-star-image-active {
+    clip-path: polygon(50% 50%, 14% 0, 86% 0);
+  }
+
+  .uiux-carousel-star[data-active-tip="green"]
+    .uiux-carousel-star-image-active {
+    clip-path: polygon(50% 50%, 0 66%, 0 0, 14% 0);
+  }
+
   .uiux-carousel-key-border-color {
     flood-color: #020604;
     flood-opacity: 0.82;
@@ -3074,6 +3144,12 @@ button.uiux-decision-number:focus-visible {
   }
 }
 
+@media (max-width: 520px) {
+  .uiux-carousel-star-frame {
+    transform: translate(-50%, calc(50% - 14px));
+  }
+}
+
 @media (min-width: 981px) {
   .uiux-compact-3d-shell {
     --uiux-3d-top-row-height: 128px;
@@ -3132,6 +3208,16 @@ button.uiux-decision-number:focus-visible {
     bottom: auto;
     height: var(--uiux-3d-top-row-height);
     top: calc(9.5% - 14.82px);
+  }
+
+  .uiux-compact-3d-shell > .uiux-carousel-star-frame {
+    bottom: auto;
+    height: var(--uiux-3d-top-row-height);
+    top: calc(
+      9.5% - 14.82px - var(--uiux-3d-top-row-height) - 18px
+    );
+    transform: translate(-50%, calc(50% + 3.2734375px));
+    width: var(--uiux-3d-top-row-height);
   }
 
   .uiux-compact-3d-positioner {
@@ -11164,6 +11250,11 @@ section.project-hero {
     width: 165px;
   }
 
+  .profile-orbit-compact .profile-photo {
+    height: 198px;
+    width: 198px;
+  }
+
   .phone-shell {
     height: 420px;
     width: 206px;
@@ -11714,8 +11805,8 @@ section.project-hero {
   }
 
   .profile-orbit-compact .profile-photo {
-    height: 156px;
-    width: 156px;
+    height: 187.2px;
+    width: 187.2px;
   }
 
   .hero-bridge-quote-compact {
@@ -11767,8 +11858,12 @@ section.project-hero {
   }
 
   .profile-orbit-compact .profile-photo {
-    height: 156px;
-    width: 156px;
+    height: 187.2px;
+    width: 187.2px;
+  }
+
+  .profile-orbit-compact > span {
+    transform: scale(1.44);
   }
 
   .hero-bridge-quote-compact {

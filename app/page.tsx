@@ -75,7 +75,12 @@ const uiUxDecisions: readonly UiUxDecision[] = [
     title: "Modern",
   },
   {
-    description: "",
+    description:
+      "Let's be real;\nA product is\nNever\nstronger than its weakest point.",
+    deviceDescription:
+      "Less is more, and focal points should have appropriate layers of noticeability.",
+    deviceTitle: "STEP-BY-STEP VISIBILITY",
+    deviceVariant: "phone-android",
     number: "02",
     noodle: [
       [390, 325],
@@ -83,12 +88,16 @@ const uiUxDecisions: readonly UiUxDecision[] = [
       [430, 337],
       [452, 337],
     ],
-    placeholder: true,
+    projectHref: "/projects/alla-vostra",
+    projectLabel: "ALLA VOSTRA",
+    screenshotAlt: "Alla Vostra products screen",
+    screenshotSrc: "/images/products_screen_small.png",
     side: "left",
-    title: "Eye-Catching",
+    title: "Cohesive",
   },
   {
-    description: "",
+    description: "Cross-Platform?\nCross-Regional?\nConsider\nit done.",
+    deviceVariant: "phone-android",
     number: "03",
     noodle: [
       [390, 505],
@@ -96,7 +105,10 @@ const uiUxDecisions: readonly UiUxDecision[] = [
       [428, 493],
       [452, 493],
     ],
-    placeholder: true,
+    projectHref: "/projects/alla-vostra",
+    projectLabel: "ALLA VOSTRA",
+    screenshotAlt: "Alla Vostra order confirmation screen",
+    screenshotSrc: "/images/confirmed_overlay_small.png",
     side: "left",
     title: "Smooth",
   },
@@ -137,36 +149,6 @@ const uiUxDecisions: readonly UiUxDecision[] = [
     screenshotSrc: "/images/cinerific-hero-tablet-tab-s7-uniform.png",
     side: "right",
     title: "Responsive",
-  },
-  {
-    compactOnly: true,
-    description:
-      "Let's be real;\nA product is\nNever\nstronger than its weakest point.",
-    deviceDescription:
-      "Less is more, and focal points should have appropriate layers of noticeability.",
-    deviceTitle: "STEP-BY-STEP VISIBILITY",
-    deviceVariant: "phone-android",
-    number: "06",
-    noodle: [],
-    projectHref: "/projects/alla-vostra",
-    projectLabel: "ALLA VOSTRA",
-    screenshotAlt: "Alla Vostra products screen",
-    screenshotSrc: "/images/products_screen_small.png",
-    side: "right",
-    title: "Cohesive",
-  },
-  {
-    compactOnly: true,
-    description: "Cross-Platform?\nCross-Regional?\nConsider\nit done.",
-    deviceVariant: "phone-android",
-    number: "07",
-    noodle: [],
-    projectHref: "/projects/alla-vostra",
-    projectLabel: "ALLA VOSTRA",
-    screenshotAlt: "Alla Vostra order confirmation screen",
-    screenshotSrc: "/images/confirmed_overlay_small.png",
-    side: "right",
-    title: "Satisfying",
   },
 ];
 
@@ -942,7 +924,7 @@ export default function Home() {
 
       <UiUxDecisionShowcase
         decisions={uiUxDecisions}
-        subtitle="7 Keys to 'Lock In' the User With Immaculate Design"
+        subtitle="5 Keys to 'Lock In' the User With Immaculate Design"
         title="UI / UX Philosophy"
         // Add screenshotSrc="/images/your-screenshot.png" when your image is ready.
       />
