@@ -56,7 +56,7 @@ const proofStats = [
 
 const uiUxDecisions: readonly UiUxDecision[] = [
   {
-    description: "Reliably sleek.\nFully streamlined.\nNever\nBehind.",
+    description: "Sleek.\nStreamlined.\nNEVER.\nBehind-the-times.",
     deviceDescription:
       'Stylish image generation without the "cookie-cutter" feel of AI.',
     deviceTitle: "AI GENERATIVE",
@@ -76,8 +76,7 @@ const uiUxDecisions: readonly UiUxDecision[] = [
     title: "Modern",
   },
   {
-    description:
-      "Let's be real;\nA product is\nNever\nstronger than its weakest point.",
+    description: "Consistent.\nInterconnected.\nALWAYS.\nSensible.",
     deviceDescription:
       "Less is more, and focal points should have appropriate layers of noticeability.",
     deviceTitle: "STEP-BY-STEP VISIBILITY",
@@ -114,8 +113,7 @@ const uiUxDecisions: readonly UiUxDecision[] = [
     title: "Smooth",
   },
   {
-    description:
-      "Legible.\nPerceptible.\nQuickly\nActionable.",
+    description: "Intuitive.\nButter-Smooth.\nQUICKLY\nActionable.",
     deviceDescription:
       "Users shouldn't have to jump through hoops to navigate, or perform actions.",
     deviceTitle: "INTUITIVE INTERFACE",
@@ -135,7 +133,8 @@ const uiUxDecisions: readonly UiUxDecision[] = [
     title: "User-friendly",
   },
   {
-    description: "Every form factor.\nEvery device type.\nNo sweat.",
+    description:
+      "Adaptable Between Form Factors.\nScalable Between Device Types.\nNEVER\nCookie Cutter.",
     deviceVariant: "tablet",
     number: "05",
     noodle: [

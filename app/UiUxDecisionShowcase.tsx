@@ -616,7 +616,7 @@ function UiUxDecisionCard({ decision }: { decision: UiUxDecision }) {
     <article className="uiux-decision-card">
       <span className="uiux-decision-number">{decision.number}</span>
       <span className="uiux-decision-copy">
-        <strong>{decision.title}</strong>
+        <strong data-title={decision.title}>{decision.title}</strong>
         <UiUxDecisionDescription description={decision.description} />
       </span>
     </article>
@@ -627,7 +627,7 @@ function UiUxDecisionDescription({ description }: { description: string }) {
   return (
     <span className="uiux-decision-description">
       {description.split("\n").map((line, index) => (
-        <span key={`${index}-${line}`}>
+        <span data-title={line} key={`${index}-${line}`}>
           {line.split(/\b(Always|Never)\b/).map((part, partIndex) => {
             if (part === "Always") {
               return (
@@ -784,7 +784,7 @@ function UiUxCompactDecisionColumn({
         className="uiux-compact-title-bridge"
         data-gradient-tone={getDecisionGradientTone(decision.number)}
       >
-        <strong>{decision.title}</strong>
+        <strong data-title={decision.title}>{decision.title}</strong>
       </div>
 
       <div className="uiux-compact-active-card">
@@ -1663,7 +1663,9 @@ export function UiUxDecisionShowcase({
                 )}
                 ref={titleBridgeRef}
               >
-                <strong>{focusedDecision.title}</strong>
+                <strong data-title={focusedDecision.title}>
+                  {focusedDecision.title}
+                </strong>
               </div>
 
               <div className="uiux-compact-active-card uiux-compact-legacy-card">

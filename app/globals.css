@@ -2748,22 +2748,37 @@ button.uiux-decision-number:focus-visible {
 
   [data-gradient-tone="sustainability"] {
     --uiux-decision-text-color: #ff7a1a;
+    --uiux-title-gradient-core: #ffdf02;
+    --uiux-title-gradient-edge: #cc330f;
+    --uiux-title-gradient-mid: #ed5d07;
   }
 
   [data-gradient-tone="leadership"] {
     --uiux-decision-text-color: #6c9cff;
+    --uiux-title-gradient-core: #01abfd;
+    --uiux-title-gradient-edge: #024dd0;
+    --uiux-title-gradient-mid: #0071f3;
   }
 
   [data-gradient-tone="collaboration"] {
     --uiux-decision-text-color: #ffc928;
+    --uiux-title-gradient-core: #ffd102;
+    --uiux-title-gradient-edge: #cb7d00;
+    --uiux-title-gradient-mid: #e8aa01;
   }
 
   [data-gradient-tone="cohesion"] {
     --uiux-decision-text-color: #c084fc;
+    --uiux-title-gradient-core: #dd4bfd;
+    --uiux-title-gradient-edge: #7622dc;
+    --uiux-title-gradient-mid: #7a1fdd;
   }
 
   [data-gradient-tone="adaptability"] {
     --uiux-decision-text-color: #78c83a;
+    --uiux-title-gradient-core: #33f150;
+    --uiux-title-gradient-edge: #026946;
+    --uiux-title-gradient-mid: #099341;
   }
 
   .uiux-decision-number-text[data-gradient-tone] {
@@ -2773,9 +2788,53 @@ button.uiux-decision-number:focus-visible {
   }
 
   .uiux-compact-title-bridge[data-gradient-tone] > strong {
+    -webkit-text-stroke: 2px #000;
     -webkit-text-fill-color: currentColor;
     background: none;
     color: var(--uiux-decision-text-color);
+    display: inline-block;
+    paint-order: stroke fill;
+    position: relative;
+  }
+
+  .uiux-compact-title-bridge[data-gradient-tone] > strong::after,
+  .uiux-compact-focused-card[data-gradient-tone]
+    .uiux-decision-description
+    > span:nth-child(3)::after {
+    -webkit-background-clip: text;
+    -webkit-mask-image: radial-gradient(
+      ellipse 62% 180% at 50% 50%,
+      #000 0%,
+      rgba(0, 0, 0, 0.88) 24%,
+      rgba(0, 0, 0, 0.55) 56%,
+      rgba(0, 0, 0, 0.25) 76%,
+      rgba(0, 0, 0, 0.08) 90%,
+      transparent 100%
+    );
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 0;
+    background: linear-gradient(
+      135deg,
+      var(--uiux-title-gradient-core) 0%,
+      var(--uiux-title-gradient-mid) 52%,
+      var(--uiux-title-gradient-edge) 100%
+    );
+    background-clip: text;
+    content: attr(data-title);
+    inset: 0;
+    mask-image: radial-gradient(
+      ellipse 62% 180% at 50% 50%,
+      #000 0%,
+      rgba(0, 0, 0, 0.88) 24%,
+      rgba(0, 0, 0, 0.55) 56%,
+      rgba(0, 0, 0, 0.25) 76%,
+      rgba(0, 0, 0, 0.08) 90%,
+      transparent 100%
+    );
+    mask-mode: alpha;
+    paint-order: normal;
+    pointer-events: none;
+    position: absolute;
   }
 
   .uiux-decision-number-text[data-gradient-tone] {
@@ -2873,6 +2932,7 @@ button.uiux-decision-number:focus-visible {
   .uiux-compact-focused-card
     .uiux-decision-description
     > span:nth-child(3) {
+    -webkit-text-stroke: 2px #000;
     color: var(--uiux-decision-text-color);
     font-family:
       Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
@@ -2883,7 +2943,10 @@ button.uiux-decision-number:focus-visible {
     letter-spacing: 0;
     line-height: 0.9;
     padding-bottom: 0.12em;
+    paint-order: stroke fill;
+    position: relative;
     text-decoration: underline;
+    text-decoration-color: var(--uiux-decision-text-color);
     text-decoration-thickness: 0.08em;
     text-underline-offset: 0.12em;
     text-transform: uppercase;
@@ -2903,6 +2966,7 @@ button.uiux-decision-number:focus-visible {
     font: inherit;
     letter-spacing: inherit;
     text-decoration: inherit;
+    text-decoration-color: var(--uiux-decision-text-color);
     text-transform: inherit;
   }
 
