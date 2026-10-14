@@ -882,6 +882,7 @@ export function UiUxDecisionShowcase({
   const [compactNoodle, setCompactNoodle] =
     useState<CompactNoodleGeometry | null>(null);
   const [carouselDirection, setCarouselDirection] = useState<-1 | 1>(1);
+  const [carouselPosition, setCarouselPosition] = useState(0);
   const [starRotationStep, setStarRotationStep] = useState(0);
   const [heldCarouselDirection, setHeldCarouselDirection] = useState<
     -1 | 1 | null
@@ -913,12 +914,6 @@ export function UiUxDecisionShowcase({
   const focusedDecision =
     decisions.find((decision) => decision.number === focusedDecisionNumber) ??
     decisions[0];
-  const focusedDecisionIndex = Math.max(
-    0,
-    decisions.findIndex(
-      (decision) => decision.number === focusedDecision?.number,
-    ),
-  );
   const visibleDecisionOffsets =
     compactColumnCount === 1
       ? [0]
@@ -926,12 +921,13 @@ export function UiUxDecisionShowcase({
         ? [-3, -2, -1, 0, 1, 2]
         : [-2, -1, 0, 1, 2, 3];
   // Three-stack mode: replace the desktop offsets above with [-1, 0, 1].
-  // Desktop keeps exactly six carousel faces mounted. The seventh decision is
-  // staged off-carousel, then enters through the invisible rear face on the
-  // side selected by the latest navigation direction.
+  // Desktop keeps six face instances mounted even though there are five
+  // decisions. Absolute face positions give the repeated rear decision a
+  // unique, stable identity so it can enter from behind in either direction.
   const visibleDecisions = visibleDecisionOffsets.map((offset) => {
+    const facePosition = carouselPosition + offset;
     const index =
-      (focusedDecisionIndex + offset + decisions.length) % decisions.length;
+      ((facePosition % decisions.length) + decisions.length) % decisions.length;
     const role: DesktopStackRole =
       offset === -3
         ? "rear-hidden"
@@ -949,6 +945,7 @@ export function UiUxDecisionShowcase({
 
     return {
       decision: decisions[index],
+      facePosition,
       isPrimary: offset === 0,
       role,
     };
@@ -990,7 +987,8 @@ export function UiUxDecisionShowcase({
 
   const applyCarouselMove = (direction: -1 | 1) => {
     setStarRotationStep((currentStep) => currentStep + direction);
-    stageCarouselAction(direction, () =>
+    stageCarouselAction(direction, () => {
+      setCarouselPosition((currentPosition) => currentPosition + direction);
       setFocusedDecisionNumber((currentNumber) => {
         const currentIndex = decisions.findIndex(
           (decision) => decision.number === currentNumber,
@@ -1000,8 +998,8 @@ export function UiUxDecisionShowcase({
           (normalizedIndex + direction + decisions.length) % decisions.length;
 
         return decisions[nextIndex]?.number ?? currentNumber;
-      }),
-    );
+      });
+    });
   };
 
   const moveCarousel = (direction: -1 | 1) => {
@@ -1310,7 +1308,7 @@ export function UiUxDecisionShowcase({
                     role="group"
                   >
                     {visibleDecisions.map(
-                      ({ decision, isPrimary, role }) => {
+                      ({ decision, facePosition, isPrimary, role }) => {
                         const isRearSide = role.endsWith("outer");
                         const isRearCenter =
                           role === "rear" || role === "rear-hidden";
@@ -1341,8 +1339,9 @@ export function UiUxDecisionShowcase({
                               y: 0,
                             }}
                             className="uiux-compact-3d-cell"
+                            data-face-position={facePosition}
                             initial={false}
-                            key={decision.number}
+                            key={facePosition}
                             transition={stackTransition}
                           >
                             <motion.div
@@ -1400,10 +1399,16 @@ export function UiUxDecisionShowcase({
                                         );
                                         stageCarouselAction(
                                           role === "previous" ? -1 : 1,
-                                          () =>
+                                          () => {
+                                            setCarouselPosition(
+                                              (currentPosition) =>
+                                                currentPosition +
+                                                (role === "previous" ? -1 : 1),
+                                            );
                                             setFocusedDecisionNumber(
                                               decision.number,
-                                            ),
+                                            );
+                                          },
                                         );
                                       }
                                 }
