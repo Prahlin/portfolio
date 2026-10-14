@@ -185,7 +185,6 @@ export function CoreBeliefsOrbit({ principles }: CoreBeliefsOrbitProps) {
     "--beliefs-counter-rotation": `${-rotation}deg`,
     "--beliefs-rotation": `${rotation}deg`,
   };
-
   return (
     <div
       className={`aboutdev-principles-grid${
@@ -229,6 +228,7 @@ export function CoreBeliefsOrbit({ principles }: CoreBeliefsOrbitProps) {
               }
               aria-pressed={isActive}
               className="aboutdev-principle"
+              data-key-gradient={String(index + 1).padStart(2, "0")}
               data-tone={principle.tone}
               disabled={isActive}
               key={principle.title}
@@ -258,9 +258,9 @@ export function CoreBeliefsOrbit({ principles }: CoreBeliefsOrbitProps) {
         <Image
           alt=""
           className="aboutdev-principles-star-image"
-          height={1956}
-          src="/images/aboutdev/beliefs-star4.png"
-          width={2012}
+          height={2048}
+          src="/images/uiux/philosophy-star-rounded-stylish.png"
+          width={2048}
         />
       </div>
     </div>

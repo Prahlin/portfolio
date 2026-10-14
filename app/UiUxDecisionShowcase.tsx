@@ -119,19 +119,19 @@ function UiUxCarouselStar({
           alt=""
           aria-hidden="true"
           className="uiux-carousel-star-image uiux-carousel-star-image-muted"
-          height={2048}
+          height={2052}
           sizes="58px"
-          src="/images/uiux/philosophy-star-rounded-gradient.png"
-          width={2048}
+          src="/images/uiux/philosophy-star-rounded-hollow.png"
+          width={2052}
         />
         <Image
           alt=""
           aria-hidden="true"
           className="uiux-carousel-star-image uiux-carousel-star-image-active"
-          height={2048}
+          height={2052}
           sizes="58px"
-          src="/images/uiux/philosophy-star-rounded-gradient.png"
-          width={2048}
+          src="/images/uiux/philosophy-star-rounded-hollow.png"
+          width={2052}
         />
       </motion.div>
     </div>
