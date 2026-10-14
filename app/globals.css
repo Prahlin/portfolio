@@ -5225,10 +5225,18 @@ section.aboutdev-hero {
 }
 
 .aboutdev-timeline {
-  --workflow-index-tab-width: 10%;
+  --workflow-index-tab-width: clamp(96px, 10%, 128px);
+  --workflow-pair-half-width: 17%;
   --workflow-stack-gap: calc(var(--workflow-tab-height) / 2);
+  --workflow-tab-border: 1px solid rgba(198, 255, 217, 0.36);
+  --workflow-tab-surface: linear-gradient(
+    180deg,
+    rgba(13, 31, 22, 0.88),
+    rgba(5, 13, 9, 0.88)
+  );
   --workflow-tab-gap: 8px;
   --workflow-tab-font-size: clamp(32px, 4vw, 52px);
+  --workflow-name-tab-font-size: clamp(28px, 3.4vw, 44px);
   --workflow-tab-height: 127.5px;
   --workflow-tab-width: 24%;
   display: grid;
@@ -5262,65 +5270,105 @@ section.aboutdev-hero {
   position: relative;
 }
 
-.aboutdev-timeline-item:nth-child(-n + 4) {
+.aboutdev-timeline-item:nth-child(-n + 5) {
   margin-top: var(--workflow-tab-height);
 }
 
-.aboutdev-timeline-item:nth-child(-n + 4) {
+.aboutdev-timeline-item:nth-child(-n + 5) {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
 
 .aboutdev-timeline-item:first-child {
+  --workflow-gradient-center-x: 17%;
+  --workflow-gradient-left-mid: 8.5%;
+  --workflow-gradient-right-mid: 58.5%;
   --workflow-pair-left: 0%;
 }
 
 .aboutdev-timeline-item:nth-child(2) {
-  --workflow-pair-left: 22%;
+  --workflow-gradient-center-x: 33.5%;
+  --workflow-gradient-left-mid: 16.75%;
+  --workflow-gradient-right-mid: 66.75%;
+  --workflow-pair-left: 16.5%;
 }
 
 .aboutdev-timeline-item:nth-child(3) {
-  --workflow-pair-left: 44%;
+  --workflow-gradient-center-x: 50%;
+  --workflow-gradient-left-mid: 25%;
+  --workflow-gradient-right-mid: 75%;
+  --workflow-pair-left: 33%;
 }
 
 .aboutdev-timeline-item:nth-child(4) {
+  --workflow-gradient-center-x: 66.5%;
+  --workflow-gradient-left-mid: 33.25%;
+  --workflow-gradient-right-mid: 83.25%;
+  --workflow-pair-left: 49.5%;
+}
+
+.aboutdev-timeline-item:nth-child(5) {
+  --workflow-gradient-center-x: 83%;
+  --workflow-gradient-left-mid: 41.5%;
+  --workflow-gradient-right-mid: 91.5%;
   --workflow-pair-left: 66%;
 }
 
 @media (max-width: 980px) and (orientation: portrait) {
   .aboutdev-timeline {
     --workflow-index-tab-width: 20%;
+    --workflow-pair-half-width: 30%;
     --workflow-tab-width: 40%;
   }
 
   .aboutdev-timeline-item:first-child {
+    --workflow-gradient-center-x: 30%;
+    --workflow-gradient-left-mid: 15%;
+    --workflow-gradient-right-mid: 65%;
     --workflow-pair-left: 0%;
   }
 
   .aboutdev-timeline-item:nth-child(2) {
-    --workflow-pair-left: 13.333333%;
+    --workflow-gradient-center-x: 40%;
+    --workflow-gradient-left-mid: 20%;
+    --workflow-gradient-right-mid: 70%;
+    --workflow-pair-left: 10%;
   }
 
   .aboutdev-timeline-item:nth-child(3) {
-    --workflow-pair-left: 26.666667%;
+    --workflow-gradient-center-x: 50%;
+    --workflow-gradient-left-mid: 25%;
+    --workflow-gradient-right-mid: 75%;
+    --workflow-pair-left: 20%;
   }
 
   .aboutdev-timeline-item:nth-child(4) {
+    --workflow-gradient-center-x: 60%;
+    --workflow-gradient-left-mid: 30%;
+    --workflow-gradient-right-mid: 80%;
+    --workflow-pair-left: 30%;
+  }
+
+  .aboutdev-timeline-item:nth-child(5) {
+    --workflow-gradient-center-x: 70%;
+    --workflow-gradient-left-mid: 35%;
+    --workflow-gradient-right-mid: 85%;
     --workflow-pair-left: 40%;
   }
 }
 
-.aboutdev-timeline-item:nth-child(-n + 4)
+.aboutdev-timeline-item:nth-child(-n + 5)
   .aboutdev-timeline-copy
   h3 {
   align-items: center;
-  background: rgba(8, 21, 14, 0.95);
-  border: 1px solid var(--line);
+  background: var(--workflow-tab-surface);
+  border: var(--workflow-tab-border);
   border-bottom: 0;
   border-radius: 8px 8px 0 0;
   box-sizing: border-box;
+  color: var(--workflow-tab-title-color);
   display: flex;
-  font-size: var(--workflow-tab-font-size);
+  font-size: var(--workflow-name-tab-font-size);
   font-weight: 800;
   height: var(--workflow-tab-height);
   justify-content: center;
@@ -5330,18 +5378,19 @@ section.aboutdev-hero {
   );
   line-height: 1.04;
   margin: 0;
-  padding: 10px;
+  min-width: calc(var(--workflow-tab-width) - var(--workflow-tab-gap));
+  padding: 16px 48px;
   position: absolute;
   text-align: center;
   top: calc(-1 * var(--workflow-tab-height) - 1px);
-  width: calc(var(--workflow-tab-width) - var(--workflow-tab-gap));
+  width: max-content;
   z-index: 2;
 }
 
-.aboutdev-timeline-item:nth-child(-n + 4)
+.aboutdev-timeline-item:nth-child(-n + 5)
   .aboutdev-timeline-copy
   h3::after {
-  background: rgba(8, 21, 14, 0.95);
+  background: rgba(5, 13, 9, 0.88);
   bottom: -2px;
   content: "";
   height: 3px;
@@ -5350,26 +5399,77 @@ section.aboutdev-hero {
   width: 100%;
 }
 
+.aboutdev-timeline-item:nth-child(-n + 5) .aboutdev-timeline-title {
+  -webkit-text-stroke: 2px #000;
+  color: var(--workflow-tab-title-color);
+  display: inline-block;
+  paint-order: stroke fill;
+  position: relative;
+  text-transform: uppercase;
+}
+
+.aboutdev-timeline-item:nth-child(-n + 5) .aboutdev-timeline-title::after {
+  -webkit-background-clip: text;
+  -webkit-mask-image: radial-gradient(
+    ellipse 62% 180% at 50% 50%,
+    #000 0%,
+    rgba(0, 0, 0, 0.88) 24%,
+    rgba(0, 0, 0, 0.55) 56%,
+    rgba(0, 0, 0, 0.25) 76%,
+    rgba(0, 0, 0, 0.08) 90%,
+    transparent 100%
+  );
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 0;
+  background: linear-gradient(
+    135deg,
+    var(--workflow-image-gradient-core) 0%,
+    var(--workflow-image-gradient-mid) 52%,
+    var(--workflow-tab-gradient-edge, var(--workflow-image-gradient-edge)) 100%
+  );
+  background-clip: text;
+  content: attr(data-title);
+  inset: 0;
+  mask-image: radial-gradient(
+    ellipse 62% 180% at 50% 50%,
+    #000 0%,
+    rgba(0, 0, 0, 0.88) 24%,
+    rgba(0, 0, 0, 0.55) 56%,
+    rgba(0, 0, 0, 0.25) 76%,
+    rgba(0, 0, 0, 0.08) 90%,
+    transparent 100%
+  );
+  mask-mode: alpha;
+  paint-order: normal;
+  pointer-events: none;
+  position: absolute;
+}
+
 @media (max-width: 640px) {
   .aboutdev-timeline {
     --workflow-tab-font-size: clamp(14px, calc(5.625vw - 4px), 32px);
+    --workflow-name-tab-font-size: clamp(12px, calc(4.75vw - 3px), 26px);
   }
 
-  .aboutdev-timeline-item:nth-child(-n + 4)
+  .aboutdev-timeline-item:nth-child(-n + 5)
     .aboutdev-timeline-copy
     h3 {
-    padding-inline: 4px;
+    padding-inline: 16px;
+  }
+}
+
+@media (min-width: 981px),
+  (min-width: 641px) and (orientation: landscape) {
+  .aboutdev-timeline-item:nth-child(5) {
+    --workflow-gradient-center-x: 80.5%;
+    --workflow-pair-left: 63.5%;
   }
 }
 
 .aboutdev-timeline-index {
   align-items: center;
-  background: linear-gradient(
-    180deg,
-    rgba(13, 31, 22, 0.88),
-    rgba(5, 13, 9, 0.88)
-  );
-  border: 1px solid rgba(198, 255, 217, 0.36);
+  background: var(--workflow-tab-surface);
+  border: var(--workflow-tab-border);
   border-radius: 8px;
   box-sizing: border-box;
   color: var(--text);
@@ -5382,7 +5482,7 @@ section.aboutdev-hero {
   position: absolute;
   line-height: 1.04;
   top: calc(-1 * var(--workflow-tab-height) - 1px);
-  width: 128px;
+  width: var(--workflow-index-tab-width);
   z-index: 2;
 }
 
@@ -5393,6 +5493,53 @@ section.aboutdev-hero {
 @media (max-width: 640px) {
   .aboutdev-timeline-index {
     font-size: var(--workflow-tab-font-size);
+    width: var(--workflow-index-tab-width);
+  }
+}
+
+@media (max-width: 640px) and (orientation: landscape) {
+  .aboutdev-timeline {
+    --workflow-index-tab-width: 10%;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 980px) and (orientation: landscape) {
+  .aboutdev-timeline {
+    --workflow-index-tab-width: clamp(90px, 14vw, 128px);
+  }
+
+  .aboutdev-timeline-item:first-child {
+    --workflow-gradient-center-x: 20.5%;
+    --workflow-pair-left: 0%;
+  }
+
+  .aboutdev-timeline-item:nth-child(2) {
+    --workflow-gradient-center-x: 34.5%;
+    --workflow-pair-left: 14%;
+  }
+
+  .aboutdev-timeline-item:nth-child(3) {
+    --workflow-gradient-center-x: 48.5%;
+    --workflow-pair-left: 28%;
+  }
+
+  .aboutdev-timeline-item:nth-child(4) {
+    --workflow-gradient-center-x: 62.5%;
+    --workflow-pair-left: 42%;
+  }
+
+  .aboutdev-timeline-item:nth-child(5) {
+    --workflow-gradient-center-x: 76.5%;
+    --workflow-pair-left: 56%;
+  }
+
+  .aboutdev-timeline-item:nth-child(-n + 5)
+    .aboutdev-timeline-copy
+    h3 {
+    padding-inline: 24px;
+  }
+
+  .aboutdev-timeline-index {
     width: var(--workflow-index-tab-width);
   }
 }
@@ -5416,15 +5563,50 @@ section.aboutdev-hero {
 }
 
 .aboutdev-timeline-images--full-width::after {
-  background: radial-gradient(
-    ellipse 82% 145% at 50% 58%,
-    var(--workflow-image-gradient-core) 0%,
-    var(--workflow-image-gradient-mid) 44%,
-    var(--workflow-image-gradient-edge) 76%,
+  background: linear-gradient(
+    90deg in oklab,
+    #000 0%,
+    color-mix(in oklab, var(--workflow-image-gradient-edge) 45%, #000)
+      calc(var(--workflow-gradient-left-mid) / 2),
+    var(--workflow-image-gradient-mid) var(--workflow-gradient-left-mid),
+    color-mix(
+        in oklab,
+        var(--workflow-image-gradient-mid) 50%,
+        var(--workflow-image-gradient-core)
+      )
+      calc(
+        (var(--workflow-gradient-left-mid) + var(--workflow-gradient-center-x)) /
+          2
+      ),
+    var(--workflow-image-gradient-core) var(--workflow-gradient-center-x),
+    color-mix(
+        in oklab,
+        var(--workflow-image-gradient-core) 50%,
+        var(--workflow-image-gradient-mid)
+      )
+      calc(
+        (var(--workflow-gradient-center-x) + var(--workflow-gradient-right-mid)) /
+          2
+      ),
+    var(--workflow-image-gradient-mid) var(--workflow-gradient-right-mid),
+    color-mix(in oklab, var(--workflow-image-gradient-edge) 45%, #000)
+      calc((var(--workflow-gradient-right-mid) + 100%) / 2),
     #000 100%
   );
   content: "";
   inset: 0;
+  -webkit-mask-image: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(0, 0, 0, 0.33) var(--workflow-gradient-center-x),
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(0, 0, 0, 0.33) var(--workflow-gradient-center-x),
+    transparent 100%
+  );
   opacity: 1;
   pointer-events: none;
   position: absolute;
@@ -5432,27 +5614,249 @@ section.aboutdev-hero {
 }
 
 .aboutdev-timeline-item[data-workflow-tone="vision"] {
-  --workflow-image-gradient-core: rgb(20, 41, 26);
-  --workflow-image-gradient-mid: rgb(14, 26, 15);
-  --workflow-image-gradient-edge: rgb(3, 6, 3);
+  --workflow-image-gradient-core: #dd4bfd;
+  --workflow-image-gradient-mid: #7a1fdd;
+  --workflow-image-gradient-edge: #6816ce;
+  --workflow-tab-gradient-edge: #7622dc;
+  --workflow-star-image: url("/images/aboutdev/workflow-stars/star-purple.png");
+  --workflow-star-cutout-image: url("/images/aboutdev/workflow-stars/star-purple-cutout-mask.png");
+  --workflow-tab-title-color: #c084fc;
 }
 
 .aboutdev-timeline-item[data-workflow-tone="integrity"] {
-  --workflow-image-gradient-core: rgb(38, 16, 10);
-  --workflow-image-gradient-mid: rgb(32, 14, 9);
-  --workflow-image-gradient-edge: rgb(15, 8, 5);
+  --workflow-image-gradient-core: #ffd102;
+  --workflow-image-gradient-mid: #e8aa01;
+  --workflow-image-gradient-edge: #cb7d00;
+  --workflow-star-image: url("/images/aboutdev/workflow-stars/star-yellow.png");
+  --workflow-star-cutout-image: url("/images/aboutdev/workflow-stars/star-yellow-cutout-mask.png");
+  --workflow-tab-title-color: #ffc928;
 }
 
 .aboutdev-timeline-item[data-workflow-tone="sustainability"] {
-  --workflow-image-gradient-core: rgb(13, 27, 37);
-  --workflow-image-gradient-mid: rgb(10, 20, 31);
-  --workflow-image-gradient-edge: rgb(6, 12, 18);
+  --workflow-image-gradient-core: #01abfd;
+  --workflow-image-gradient-mid: #0071f3;
+  --workflow-image-gradient-edge: #024dd0;
+  --workflow-star-image: url("/images/aboutdev/workflow-stars/star-blue.png");
+  --workflow-star-cutout-image: url("/images/aboutdev/workflow-stars/star-blue-cutout-mask.png");
+  --workflow-tab-title-color: #6c9cff;
 }
 
 .aboutdev-timeline-item[data-workflow-tone="leadership"] {
-  --workflow-image-gradient-core: rgb(34, 34, 20);
-  --workflow-image-gradient-mid: rgb(25, 22, 11);
-  --workflow-image-gradient-edge: rgb(10, 8, 5);
+  --workflow-image-gradient-core: #ffdf02;
+  --workflow-image-gradient-mid: #ed5d07;
+  --workflow-image-gradient-edge: #cc330f;
+  --workflow-star-image: url("/images/aboutdev/workflow-stars/star-orange.png");
+  --workflow-star-cutout-image: url("/images/aboutdev/workflow-stars/star-orange-cutout-mask.png");
+  --workflow-tab-title-color: #ff7a1a;
+}
+
+.aboutdev-timeline-item[data-workflow-tone="collaboration"] {
+  --workflow-image-gradient-core: #33f150;
+  --workflow-image-gradient-mid: #099341;
+  --workflow-image-gradient-edge: #026946;
+  --workflow-star-image: url("/images/aboutdev/workflow-stars/star-green.png");
+  --workflow-star-cutout-image: url("/images/aboutdev/workflow-stars/star-green-cutout-mask.png");
+  --workflow-tab-title-color: #78c83a;
+}
+
+.aboutdev-workflow-star-cutouts,
+.aboutdev-workflow-stars {
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  position: absolute;
+}
+
+.aboutdev-workflow-star-cutouts {
+  opacity: 1;
+  z-index: 4;
+}
+
+.aboutdev-workflow-stars {
+  -webkit-mask-image: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(0, 0, 0, 0.33) var(--workflow-gradient-center-x),
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(0, 0, 0, 0.33) var(--workflow-gradient-center-x),
+    transparent 100%
+  );
+  opacity: 0.3;
+  z-index: 5;
+}
+
+.aboutdev-workflow-star {
+  background: var(--workflow-star-image) center / contain no-repeat;
+  filter: drop-shadow(
+    0 0 3px
+      color-mix(
+        in srgb,
+        var(--workflow-image-gradient-core) 28%,
+        transparent
+      )
+  );
+  height: 34px;
+  left: var(--workflow-gradient-center-x);
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(2);
+  width: 34px;
+}
+
+.aboutdev-workflow-star--cutout {
+  background: var(--workflow-star-cutout-image) center / contain no-repeat;
+  filter: none;
+}
+
+.aboutdev-workflow-star:nth-child(1) {
+  left: calc(var(--workflow-gradient-center-x) - var(--workflow-pair-half-width) - 2%);
+  top: 20%;
+}
+
+.aboutdev-workflow-star:nth-child(2) {
+  height: 30px;
+  left: calc(var(--workflow-gradient-center-x) - var(--workflow-pair-half-width) - 3%);
+  top: 74%;
+  width: 30px;
+}
+
+.aboutdev-workflow-star:nth-child(3) {
+  height: 23px;
+  left: calc(var(--workflow-gradient-center-x) - var(--workflow-pair-half-width) - 7%);
+  top: 47%;
+  width: 23px;
+}
+
+.aboutdev-workflow-star:nth-child(4) {
+  left: calc(var(--workflow-gradient-center-x) + var(--workflow-pair-half-width) + 2%);
+  top: 19%;
+}
+
+.aboutdev-workflow-star:nth-child(5) {
+  height: 30px;
+  left: calc(var(--workflow-gradient-center-x) + var(--workflow-pair-half-width) + 3%);
+  top: 75%;
+  width: 30px;
+}
+
+.aboutdev-workflow-star:nth-child(6) {
+  height: 23px;
+  left: calc(var(--workflow-gradient-center-x) + var(--workflow-pair-half-width) + 7%);
+  top: 48%;
+  width: 23px;
+}
+
+.aboutdev-workflow-star:nth-child(7) {
+  height: 16px;
+  left: calc(var(--workflow-gradient-center-x) - var(--workflow-pair-half-width) - 14%);
+  top: 24%;
+  width: 16px;
+}
+
+.aboutdev-workflow-star:nth-child(8) {
+  height: 16px;
+  left: calc(var(--workflow-gradient-center-x) + var(--workflow-pair-half-width) + 14%);
+  top: 78%;
+  width: 16px;
+}
+
+.aboutdev-workflow-star:nth-child(9) {
+  height: 10px;
+  left: calc(var(--workflow-gradient-center-x) - var(--workflow-pair-half-width) - 22%);
+  top: 67%;
+  width: 10px;
+}
+
+.aboutdev-workflow-star:nth-child(10) {
+  height: 10px;
+  left: calc(var(--workflow-gradient-center-x) + var(--workflow-pair-half-width) + 22%);
+  top: 31%;
+  width: 10px;
+}
+
+.aboutdev-workflow-star:nth-child(11) {
+  height: 6px;
+  left: calc(var(--workflow-gradient-center-x) + var(--workflow-pair-half-width) + 31%);
+  top: 62%;
+  width: 6px;
+}
+
+.aboutdev-workflow-star:nth-child(12) {
+  height: 4px;
+  left: calc(var(--workflow-gradient-center-x) - var(--workflow-pair-half-width) - 4%);
+  top: 91%;
+  width: 4px;
+}
+
+.aboutdev-workflow-star:nth-child(13) {
+  height: 4px;
+  left: calc(var(--workflow-gradient-center-x) + var(--workflow-pair-half-width) + 5%);
+  top: 91%;
+  width: 4px;
+}
+
+.aboutdev-workflow-star:nth-child(14) {
+  height: 3px;
+  left: calc(var(--workflow-gradient-center-x) - var(--workflow-pair-half-width) - 10%);
+  top: 82%;
+  width: 3px;
+}
+
+.aboutdev-workflow-star:nth-child(15) {
+  height: 3px;
+  left: calc(var(--workflow-gradient-center-x) + var(--workflow-pair-half-width) + 11%);
+  top: 14%;
+  width: 3px;
+}
+
+.aboutdev-workflow-star:nth-child(16) {
+  height: 2px;
+  left: calc(var(--workflow-gradient-center-x) - var(--workflow-pair-half-width) - 18%);
+  top: 39%;
+  width: 2px;
+}
+
+.aboutdev-workflow-star:nth-child(17) {
+  height: 2px;
+  left: calc(var(--workflow-gradient-center-x) + var(--workflow-pair-half-width) + 27%);
+  top: 88%;
+  width: 2px;
+}
+
+.aboutdev-workflow-star[style] {
+  top: var(--workflow-star-top);
+}
+
+.aboutdev-workflow-star.aboutdev-workflow-star--left {
+  left: calc(
+    var(--workflow-gradient-center-x) - var(--workflow-pair-half-width) -
+      var(--workflow-star-distance)
+  );
+}
+
+.aboutdev-workflow-star.aboutdev-workflow-star--right {
+  left: calc(
+    var(--workflow-gradient-center-x) + var(--workflow-pair-half-width) +
+      var(--workflow-star-distance)
+  );
+}
+
+@media (min-width: 981px) {
+  .aboutdev-timeline-item[data-workflow-tone="vision"]
+    .aboutdev-workflow-star:nth-child(3) {
+    left: 100%;
+    top: 55%;
+  }
+
+  .aboutdev-timeline-item[data-workflow-tone="collaboration"]
+    .aboutdev-workflow-star:nth-child(3) {
+    left: 0%;
+    top: 55%;
+  }
 }
 
 .aboutdev-timeline-image {
@@ -5523,22 +5927,6 @@ section.aboutdev-hero {
   object-position: center;
   opacity: 0;
   transform: scale(1.15);
-}
-
-@media (min-width: 981px),
-  (min-width: 641px) and (orientation: landscape) {
-  .aboutdev-timeline-item:nth-child(4) .aboutdev-timeline-copy h3 {
-    width: calc(
-      var(--workflow-tab-width) - var(--workflow-tab-gap) + 2px
-    );
-  }
-}
-
-@media (max-width: 980px) and (orientation: portrait),
-  (max-width: 640px) {
-  .aboutdev-timeline-item:nth-child(-n + 4) {
-    --workflow-pair-left: 0%;
-  }
 }
 
 .aboutdev-timeline-copy {

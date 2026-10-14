@@ -1,4 +1,5 @@
 import Image from "next/image";
+import type { CSSProperties } from "react";
 import {
   Apple,
   BrainCircuit,
@@ -579,10 +580,17 @@ const timelineItems = [
   },
   {
     evidence: "Evidence: 100+ logs across active projects.",
-    points: ["Handoff", "Upkeep"],
+    points: ["Review", "Measure", "Learn"],
     tone: "leadership",
     title: "Analyze",
     text: "Creation without learning is useless. By studying & analyzing diffs while the project is growing, I ensure that I'm in the loop, and deeply comprehend, every coding change made to the project in real time.",
+  },
+  {
+    evidence: "Evidence: Production launches across active projects.",
+    points: ["Handoff", "Launch", "Upkeep"],
+    tone: "collaboration",
+    title: "Release",
+    text: "A launch is a transition, not a finish line. I pair deployment checks and clear handoff documentation with ongoing upkeep so the product remains dependable after it reaches users.",
   },
 ];
 
@@ -603,7 +611,73 @@ const timelineHeaderImages = [
     alt: "Analytics dashboard used to study product data",
     src: "/images/aboutdev/workflow-analyze-strip.jpg",
   },
+  {
+    alt: "Stylish smartphone framed by colorful release lights",
+    src: "/images/aboutdev/workflow-release-strip.jpg",
+  },
 ];
+
+type WorkflowStarPlacement = readonly [
+  side: "left" | "right",
+  distance: number,
+  top: number,
+];
+
+const workflowStarLayouts: Record<string, readonly WorkflowStarPlacement[]> = {
+  vision: [
+    ["right", 4, 20], ["right", 4, 82], ["right", 15, 51],
+    ["right", 26, 20], ["right", 26, 82], ["right", 39, 55],
+    ["right", 14, 10], ["right", 14, 92], ["right", 39, 75],
+    ["right", 36, 92], ["right", 39, 25], ["right", 20, 51],
+    ["right", 31, 51], ["right", 20, 7], ["right", 20, 95],
+    ["right", 31, 5], ["right", 31, 97],
+  ],
+  integrity: [
+    ["right", 3, 18], ["right", 3, 82], ["right", 14, 52],
+    ["right", 25, 18], ["right", 25, 82], ["left", 4, 50],
+    ["right", 13, 9], ["right", 13, 93], ["right", 19, 100],
+    ["left", 3, 10], ["left", 3, 91], ["right", 19, 48],
+    ["right", 19, 2], ["left", 8, 98], ["right", 10, 99],
+    ["left", 6, 27], ["left", 6, 75],
+  ],
+  sustainability: [
+    ["left", 3, 17], ["right", 3, 83], ["left", 14, 55],
+    ["right", 3, 17], ["left", 3, 83], ["right", 14, 55],
+    ["left", 13, 7], ["right", 13, 94], ["left", 20, 51],
+    ["right", 20, 51], ["left", 19, 88], ["right", 19, 10],
+    ["left", 8, 49], ["right", 8, 49], ["left", 19, 25],
+    ["right", 19, 78], ["right", 19, 27],
+  ],
+  leadership: [
+    ["left", 4, 83], ["left", 4, 18], ["left", 15, 50],
+    ["left", 26, 83], ["left", 26, 18], ["right", 4, 51],
+    ["left", 14, 94], ["left", 14, 8], ["left", 20, 100],
+    ["right", 3, 91], ["right", 3, 11], ["left", 20, 52],
+    ["left", 10, 99], ["left", 20, 7], ["left", 20, 1],
+    ["right", 6, 74], ["right", 6, 28],
+  ],
+  collaboration: [
+    ["left", 5, 82], ["left", 5, 20], ["left", 16, 49],
+    ["left", 27, 82], ["left", 27, 20], ["left", 37, 49],
+    ["left", 15, 93], ["left", 15, 9], ["left", 37, 91],
+    ["left", 37, 9], ["left", 40, 25], ["left", 21, 49],
+    ["left", 32, 49], ["left", 21, 95], ["left", 21, 6],
+    ["left", 32, 96], ["left", 32, 5],
+  ],
+};
+
+const workflowStarOrders: Record<string, readonly number[]> = {
+  vision: [1, 16, 10, 0, 7, 6, 11, 2, 8, 12, 5, 3, 9, 4, 15, 14, 13],
+  integrity: [6, 8, 5, 3, 1, 13, 2, 0, 7, 4, 9, 10, 11, 16, 12, 15, 14],
+  sustainability: [6, 4, 7, 10, 3, 5, 9, 1, 16, 12, 13, 15, 8, 14, 2, 11, 0],
+  leadership: [7, 0, 5, 8, 4, 1, 9, 2, 11, 10, 6, 16, 12, 3, 14, 13, 15],
+  collaboration: [6, 16, 3, 1, 0, 8, 7, 5, 10, 14, 4, 13, 9, 2, 12, 15, 11],
+};
+
+const getWorkflowStarPlacements = (tone: string) =>
+  workflowStarOrders[tone].map(
+    (placementIndex) => workflowStarLayouts[tone][placementIndex],
+  );
 
 const principles = [
   {
@@ -1002,10 +1076,50 @@ export default function Home() {
                       src={timelineHeaderImages[index].src}
                     />
                   </div>
+                  <div
+                    className="aboutdev-workflow-star-cutouts"
+                    aria-hidden="true"
+                  >
+                    {getWorkflowStarPlacements(item.tone).map(
+                      ([side, distance, top], starIndex) => (
+                      <span
+                        className={`aboutdev-workflow-star aboutdev-workflow-star--${side} aboutdev-workflow-star--cutout`}
+                        key={starIndex}
+                        style={
+                          {
+                            "--workflow-star-distance": `${distance}%`,
+                            "--workflow-star-top": `${top}%`,
+                          } as CSSProperties
+                        }
+                      />
+                      ),
+                    )}
+                  </div>
+                  <div className="aboutdev-workflow-stars" aria-hidden="true">
+                    {getWorkflowStarPlacements(item.tone).map(
+                      ([side, distance, top], starIndex) => (
+                      <span
+                        className={`aboutdev-workflow-star aboutdev-workflow-star--${side}`}
+                        key={starIndex}
+                        style={
+                          {
+                            "--workflow-star-distance": `${distance}%`,
+                            "--workflow-star-top": `${top}%`,
+                          } as CSSProperties
+                        }
+                      />
+                      ),
+                    )}
+                  </div>
                 </div>
                 <div className="aboutdev-timeline-copy">
                   <h3>
-                    <span className="aboutdev-timeline-title">{item.title}</span>
+                    <span
+                      className="aboutdev-timeline-title"
+                      data-title={item.title}
+                    >
+                      {item.title}
+                    </span>
                   </h3>
                   {item.points ? (
                     <ol className="aboutdev-timeline-points">
