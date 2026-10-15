@@ -20,6 +20,7 @@ import {
 } from "lucide-react";
 import { HeroLede } from "./HeroLede";
 import { CoreBeliefsOrbit } from "./CoreBeliefsOrbit";
+import { ProductivityHacks } from "./ProductivityHacks";
 import { ProjectCarouselButton } from "./ProjectCarouselButton";
 import {
   FeaturedCaseStudies,
@@ -1162,6 +1163,8 @@ export default function Home() {
           <CoreBeliefsOrbit principles={principles} />
         </div>
       </section>
+
+      <ProductivityHacks />
 
       <section className="worklog-section" id="worklog">
         <div className="site-shell worklog-layout">
