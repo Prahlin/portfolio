@@ -26,6 +26,9 @@ const CORE_BELIEF_ORBIT_POINTS = [
   { x: 184.93, y: 334.34 },
 ] as const;
 
+const CORE_BELIEF_FORMATION_CENTER = { x: 495, y: 435 } as const;
+const CORE_BELIEF_CONTRAIL_SCALE = 1.5;
+
 const CORE_BELIEF_CONTRAILS = CORE_BELIEF_ORBIT_POINTS.flatMap(
   (point, index) => {
     const nextPoint =
@@ -42,8 +45,8 @@ const CORE_BELIEF_CONTRAILS = CORE_BELIEF_ORBIT_POINTS.flatMap(
     const bubbleClearance = 154;
     const midpointX = (point.x + nextPoint.x) / 2;
     const midpointY = (point.y + nextPoint.y) / 2;
-    const formationCenterX = 495;
-    const formationCenterY = 435;
+    const formationCenterX = CORE_BELIEF_FORMATION_CENTER.x;
+    const formationCenterY = CORE_BELIEF_FORMATION_CENTER.y;
     const outwardX = midpointX - formationCenterX;
     const outwardY = midpointY - formationCenterY;
     const outwardDistance = Math.hypot(outwardX, outwardY);
@@ -67,8 +70,15 @@ const CORE_BELIEF_CONTRAILS = CORE_BELIEF_ORBIT_POINTS.flatMap(
         (outwardY / outwardDistance) * curveDepth +
         normalY * offset;
 
+      const scaleXFromCenter = (x: number) =>
+        formationCenterX +
+        (x - formationCenterX) * CORE_BELIEF_CONTRAIL_SCALE;
+      const scaleYFromCenter = (y: number) =>
+        formationCenterY +
+        (y - formationCenterY) * CORE_BELIEF_CONTRAIL_SCALE;
+
       return {
-        d: `M ${startX.toFixed(2)} ${startY.toFixed(2)} Q ${controlX.toFixed(2)} ${controlY.toFixed(2)} ${endX.toFixed(2)} ${endY.toFixed(2)}`,
+        d: `M ${scaleXFromCenter(startX).toFixed(2)} ${scaleYFromCenter(startY).toFixed(2)} Q ${scaleXFromCenter(controlX).toFixed(2)} ${scaleYFromCenter(controlY).toFixed(2)} ${scaleXFromCenter(endX).toFixed(2)} ${scaleYFromCenter(endY).toFixed(2)}`,
         key: `${index}-${offset}`,
       };
     });
@@ -77,6 +87,7 @@ const CORE_BELIEF_CONTRAILS = CORE_BELIEF_ORBIT_POINTS.flatMap(
 
 export function CoreBeliefsOrbit({ principles }: CoreBeliefsOrbitProps) {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [contrailPulseId, setContrailPulseId] = useState(0);
   const [isOrbitAnimating, setIsOrbitAnimating] = useState(false);
   const [portraitActiveIndex, setPortraitActiveIndex] = useState(0);
   const [rotation, setRotation] = useState(0);
@@ -173,6 +184,7 @@ export function CoreBeliefsOrbit({ principles }: CoreBeliefsOrbitProps) {
     }
 
     setIsOrbitAnimating(true);
+    setContrailPulseId((currentPulseId) => currentPulseId + 1);
     orbitAnimationTimerRef.current = setTimeout(() => {
       setIsOrbitAnimating(false);
       orbitAnimationTimerRef.current = null;
@@ -197,6 +209,8 @@ export function CoreBeliefsOrbit({ principles }: CoreBeliefsOrbitProps) {
           <svg
             aria-hidden="true"
             className="aboutdev-principles-contrails"
+            data-contrail-pulse={contrailPulseId}
+            key={contrailPulseId}
             preserveAspectRatio="none"
             viewBox="0 0 990 870"
           >
@@ -246,7 +260,12 @@ export function CoreBeliefsOrbit({ principles }: CoreBeliefsOrbitProps) {
               type="button"
             >
               <span className="aboutdev-principle-content">
-                <span className="aboutdev-principle-title">{principle.title}</span>
+                <span
+                  className="aboutdev-principle-title"
+                  data-title={principle.title}
+                >
+                  {principle.title}
+                </span>
                 <span className="aboutdev-principle-copy">{principle.text}</span>
               </span>
             </button>
@@ -255,13 +274,24 @@ export function CoreBeliefsOrbit({ principles }: CoreBeliefsOrbitProps) {
       </div>
 
       <div className="aboutdev-principles-star" aria-hidden="true">
-        <Image
-          alt=""
-          className="aboutdev-principles-star-image"
-          height={2048}
-          src="/images/uiux/philosophy-star-rounded-stylish.png"
-          width={2048}
-        />
+        <div className="aboutdev-principles-star-half aboutdev-principles-star-half--top">
+          <Image
+            alt=""
+            className="aboutdev-principles-star-image"
+            height={2048}
+            src="/images/uiux/philosophy-star-rounded-stylish.png"
+            width={2048}
+          />
+        </div>
+        <div className="aboutdev-principles-star-half aboutdev-principles-star-half--bottom">
+          <Image
+            alt=""
+            className="aboutdev-principles-star-image"
+            height={2048}
+            src="/images/uiux/philosophy-star-rounded-stylish.png"
+            width={2048}
+          />
+        </div>
       </div>
     </div>
   );

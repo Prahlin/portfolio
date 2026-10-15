@@ -6349,17 +6349,49 @@ section.aboutdev-hero {
   --principle-title-color: #8c8192;
 }
 
-.aboutdev-principle:is(
-    [data-tone="green"],
-    [data-tone="rose"],
-    [data-tone="cyan"],
-    [data-tone="amber"],
-    [data-tone="violet"]
-  )
-  .aboutdev-principle-title {
-  -webkit-text-fill-color: currentColor;
+.aboutdev-principle[data-key-gradient] .aboutdev-principle-title {
+  -webkit-text-stroke: 2px #000;
   background: none;
-  color: var(--principle-title-color);
+  color: var(--belief-title-color, var(--principle-title-color));
+  paint-order: stroke fill;
+  position: relative;
+}
+
+.aboutdev-principle[data-key-gradient] .aboutdev-principle-title::after {
+  -webkit-background-clip: text;
+  -webkit-mask-image: radial-gradient(
+    ellipse 62% 180% at 50% 50%,
+    #000 0%,
+    rgba(0, 0, 0, 0.88) 24%,
+    rgba(0, 0, 0, 0.55) 56%,
+    rgba(0, 0, 0, 0.25) 76%,
+    rgba(0, 0, 0, 0.08) 90%,
+    transparent 100%
+  );
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 0;
+  background: linear-gradient(
+    135deg,
+    var(--belief-title-gradient-core) 0%,
+    var(--belief-title-gradient-mid) 52%,
+    var(--belief-title-gradient-edge) 100%
+  );
+  background-clip: text;
+  content: attr(data-title);
+  inset: 0;
+  mask-image: radial-gradient(
+    ellipse 62% 180% at 50% 50%,
+    #000 0%,
+    rgba(0, 0, 0, 0.88) 24%,
+    rgba(0, 0, 0, 0.55) 56%,
+    rgba(0, 0, 0, 0.25) 76%,
+    rgba(0, 0, 0, 0.08) 90%,
+    transparent 100%
+  );
+  mask-mode: alpha;
+  paint-order: normal;
+  pointer-events: none;
+  position: absolute;
 }
 
 .aboutdev-principle p,
@@ -6421,6 +6453,10 @@ section.aboutdev-hero {
   --belief-gradient-start: #dd4bfd;
   --belief-gradient-middle: #7a1fdd;
   --belief-gradient-end: #6816ce;
+  --belief-title-color: #c084fc;
+  --belief-title-gradient-core: #dd4bfd;
+  --belief-title-gradient-mid: #7a1fdd;
+  --belief-title-gradient-edge: #7622dc;
 }
 
 .aboutdev-principles-orbit
@@ -6428,6 +6464,10 @@ section.aboutdev-hero {
   --belief-gradient-start: #ffe134;
   --belief-gradient-middle: #e6b800;
   --belief-gradient-end: #b78300;
+  --belief-title-color: #ffc928;
+  --belief-title-gradient-core: #ffd102;
+  --belief-title-gradient-mid: #e8aa01;
+  --belief-title-gradient-edge: #cb7d00;
 }
 
 .aboutdev-principles-orbit
@@ -6435,6 +6475,10 @@ section.aboutdev-hero {
   --belief-gradient-start: #01abfd;
   --belief-gradient-middle: #0071f3;
   --belief-gradient-end: #024dd0;
+  --belief-title-color: #6c9cff;
+  --belief-title-gradient-core: #01abfd;
+  --belief-title-gradient-mid: #0071f3;
+  --belief-title-gradient-edge: #024dd0;
 }
 
 .aboutdev-principles-orbit
@@ -6442,6 +6486,10 @@ section.aboutdev-hero {
   --belief-gradient-start: #ff9a24;
   --belief-gradient-middle: #ed6511;
   --belief-gradient-end: #c43d0c;
+  --belief-title-color: #ff7a1a;
+  --belief-title-gradient-core: #ffdf02;
+  --belief-title-gradient-mid: #ed5d07;
+  --belief-title-gradient-edge: #cc330f;
 }
 
 .aboutdev-principles-orbit
@@ -6449,14 +6497,16 @@ section.aboutdev-hero {
   --belief-gradient-start: #33f150;
   --belief-gradient-middle: #099341;
   --belief-gradient-end: #026946;
+  --belief-title-color: #78c83a;
+  --belief-title-gradient-core: #33f150;
+  --belief-title-gradient-mid: #099341;
+  --belief-title-gradient-edge: #026946;
 }
 
 .aboutdev-principles-star {
   aspect-ratio: 1;
-  display: grid;
   height: auto;
   left: 50%;
-  place-items: center;
   pointer-events: none;
   position: absolute;
   top: 50%;
@@ -6465,28 +6515,100 @@ section.aboutdev-hero {
   z-index: 0;
 }
 
+.aboutdev-principles-star-half {
+  display: grid;
+  inset: 0;
+  place-items: center;
+  position: absolute;
+}
+
+.aboutdev-principles-star-half--top {
+  -webkit-mask-composite: source-in, source-in;
+  -webkit-mask-image:
+    linear-gradient(
+      to bottom,
+      #000 0%,
+      rgba(0, 0, 0, 0.25) 50%,
+      rgba(0, 0, 0, 0.25) 100%
+    ),
+    linear-gradient(
+      to bottom,
+      #000 48%,
+      transparent 52%
+    ),
+    linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.02) 0%,
+      rgba(0, 0, 0, 0.36) 33%,
+      #000 50%,
+      rgba(0, 0, 0, 0.36) 67%,
+      rgba(0, 0, 0, 0.02) 100%
+    );
+  mask-composite: intersect, intersect;
+  mask-image:
+    linear-gradient(
+      to bottom,
+      #000 0%,
+      rgba(0, 0, 0, 0.25) 50%,
+      rgba(0, 0, 0, 0.25) 100%
+    ),
+    linear-gradient(
+      to bottom,
+      #000 48%,
+      transparent 52%
+    ),
+    linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.02) 0%,
+      rgba(0, 0, 0, 0.36) 33%,
+      #000 50%,
+      rgba(0, 0, 0, 0.36) 67%,
+      rgba(0, 0, 0, 0.02) 100%
+    );
+  mask-mode: alpha;
+}
+
+.aboutdev-principles-star-half--bottom {
+  -webkit-mask-composite: source-in;
+  -webkit-mask-image:
+    radial-gradient(
+      ellipse 50% 50% at 50% 50%,
+      rgba(0, 0, 0, 0.18) 0%,
+      rgba(0, 0, 0, 0.18) 10%,
+      rgba(0, 0, 0, 0.12) 20%,
+      rgba(0, 0, 0, 0.06) 30%,
+      rgba(0, 0, 0, 0.03) 40%,
+      rgba(0, 0, 0, 0.02) 50%,
+      rgba(0, 0, 0, 0.01) 100%
+    ),
+    linear-gradient(
+      to bottom,
+      transparent 48%,
+      #000 52%
+    );
+  mask-composite: intersect;
+  mask-mode: alpha;
+  mask-image:
+    radial-gradient(
+      ellipse 50% 50% at 50% 50%,
+      rgba(0, 0, 0, 0.18) 0%,
+      rgba(0, 0, 0, 0.18) 10%,
+      rgba(0, 0, 0, 0.12) 20%,
+      rgba(0, 0, 0, 0.06) 30%,
+      rgba(0, 0, 0, 0.03) 40%,
+      rgba(0, 0, 0, 0.02) 50%,
+      rgba(0, 0, 0, 0.01) 100%
+    ),
+    linear-gradient(
+      to bottom,
+      transparent 48%,
+      #000 52%
+    );
+}
+
 .aboutdev-principles-star-image {
-  -webkit-mask-image: radial-gradient(
-    ellipse 50% 50% at 50% 50%,
-    #000 0%,
-    rgba(0, 0, 0, 0.88) 10%,
-    rgba(0, 0, 0, 0.55) 32%,
-    rgba(0, 0, 0, 0.25) 55%,
-    rgba(0, 0, 0, 0.08) 75%,
-    transparent 100%
-  );
   display: block;
   height: auto;
-  mask-mode: alpha;
-  mask-image: radial-gradient(
-    ellipse 50% 50% at 50% 50%,
-    #000 0%,
-    rgba(0, 0, 0, 0.88) 10%,
-    rgba(0, 0, 0, 0.55) 32%,
-    rgba(0, 0, 0, 0.25) 55%,
-    rgba(0, 0, 0, 0.08) 75%,
-    transparent 100%
-  );
   object-fit: contain;
   transform: rotate(calc(var(--beliefs-rotation, 0deg) - 144deg)) scaleX(-1);
   transform-origin: 50% 50%;
