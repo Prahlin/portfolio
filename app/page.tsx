@@ -57,11 +57,8 @@ const proofStats = [
 
 const uiUxDecisions: readonly UiUxDecision[] = [
   {
-    description: "Sleek.\nStreamlined.\nNEVER.\nBehind-the-times.",
-    deviceDescription:
-      'Stylish image generation without the "cookie-cutter" feel of AI.',
-    deviceTitle: "AI GENERATIVE",
-    deviceVariant: "phone-android",
+    description: "Sleek.\nStreamlined.\nNEVER\nDated.",
+    deviceVariant: "tablet",
     number: "01",
     noodle: [
       [390, 145],
@@ -69,15 +66,15 @@ const uiUxDecisions: readonly UiUxDecision[] = [
       [426, 165],
       [452, 165],
     ],
-    projectHref: "/projects/alla-vostra",
-    projectLabel: "ALLA VOSTRA",
-    screenshotAlt: "Alla Vostra startup screen",
-    screenshotSrc: "/images/startup_screen_small.png",
+    projectHref: "/projects/cinerific",
+    projectLabel: "CINERIFIC",
+    screenshotAlt: "Cinerific app landscape tablet preview",
+    screenshotSrc: "/images/cinerific-hero-tablet-tab-s7-uniform.png",
     side: "left",
     title: "Modern",
   },
   {
-    description: "Consistent.\nInterconnected.\nALWAYS.\nSensible.",
+    description: "Interwoven.\nInterconnected.\nALWAYS\nCongruent.",
     deviceDescription:
       "Less is more, and focal points should have appropriate layers of noticeability.",
     deviceTitle: "STEP-BY-STEP VISIBILITY",
@@ -118,7 +115,7 @@ const uiUxDecisions: readonly UiUxDecision[] = [
     deviceDescription:
       "Users shouldn't have to jump through hoops to navigate, or perform actions.",
     deviceTitle: "INTUITIVE INTERFACE",
-    deviceVariant: "tablet",
+    deviceVariant: "phone-android",
     number: "04",
     noodle: [
       [844, 145],
@@ -126,17 +123,20 @@ const uiUxDecisions: readonly UiUxDecision[] = [
       [754, 165],
       [728, 165],
     ],
-    projectHref: "/projects/cinerific",
-    projectLabel: "CINERIFIC",
-    screenshotAlt: "Cinerific app landscape tablet preview",
-    screenshotSrc: "/images/cinerific-hero-tablet-tab-s7-uniform.png",
+    projectHref: "/projects/alla-vostra",
+    projectLabel: "ALLA VOSTRA",
+    screenshotAlt: "Alla Vostra tutorial screen",
+    screenshotSrc: "/images/alla-vostra/tutorial/tutorial_screen_small_step_04.png",
     side: "right",
     title: "User-friendly",
   },
   {
     description:
-      "Adaptable Between Form Factors.\nScalable Between Device Types.\nNEVER\nCookie Cutter.",
-    deviceVariant: "tablet",
+      "Adaptable In Form Factor.\nScalable In Device Type.\nNEVER\nCookie Cutter.",
+    deviceDescription:
+      'Stylish image generation without the "cookie-cutter" feel of AI.',
+    deviceTitle: "AI GENERATIVE",
+    deviceVariant: "phone-android",
     number: "05",
     noodle: [
       [826, 325],
@@ -144,10 +144,10 @@ const uiUxDecisions: readonly UiUxDecision[] = [
       [750, 337],
       [728, 337],
     ],
-    projectHref: "/projects/cinerific",
-    projectLabel: "CINERIFIC",
-    screenshotAlt: "Cinerific app landscape tablet preview",
-    screenshotSrc: "/images/cinerific-hero-tablet-tab-s7-uniform.png",
+    projectHref: "/projects/alla-vostra",
+    projectLabel: "ALLA VOSTRA",
+    screenshotAlt: "Alla Vostra startup screen",
+    screenshotSrc: "/images/startup_screen_small.png",
     side: "right",
     title: "Responsive",
   },

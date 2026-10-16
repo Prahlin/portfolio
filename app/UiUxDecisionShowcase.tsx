@@ -49,8 +49,20 @@ const UIUX_DECISION_GRADIENT_TONES: Record<string, string> = {
   "07": "adaptability",
 };
 
+const UIUX_DECISION_CASE_TONES: Record<string, string> = {
+  "01": "purple",
+  "02": "yellow",
+  "03": "blue",
+  "04": "orange",
+  "05": "green",
+};
+
 function getDecisionGradientTone(decisionNumber: string) {
   return UIUX_DECISION_GRADIENT_TONES[decisionNumber];
+}
+
+function getDecisionCaseTone(decisionNumber: string) {
+  return UIUX_DECISION_CASE_TONES[decisionNumber];
 }
 
 const UIUX_KEY_COLORS: Record<string, string> = {
@@ -147,6 +159,12 @@ type DesktopStackRole =
   | "rear"
   | "rear-hidden";
 
+const DESKTOP_CANONICAL_STACK_WIDTH = 654.4125;
+const DESKTOP_ADJACENT_STACK_OFFSET = 645.2431;
+const DESKTOP_ADJACENT_STACK_SCALE_X = 0.6664507;
+const DESKTOP_OUTER_STACK_OFFSET = 932.1406;
+const DESKTOP_OUTER_STACK_SCALE_X = 0.0977649;
+
 const DESKTOP_STACK_VARIANTS = {
   active: {
     opacity: 1,
@@ -160,7 +178,7 @@ const DESKTOP_STACK_VARIANTS = {
     opacity: 0.25,
     originX: 0,
     rotateY: 36,
-    scaleX: 0.87318,
+    scaleX: DESKTOP_ADJACENT_STACK_SCALE_X,
     scaleY: 0.7938,
     z: 0,
   },
@@ -168,7 +186,7 @@ const DESKTOP_STACK_VARIANTS = {
     opacity: 0.02,
     originX: 0,
     rotateY: 144,
-    scaleX: 0.3,
+    scaleX: DESKTOP_OUTER_STACK_SCALE_X,
     scaleY: 0.62,
     z: -240,
   },
@@ -176,7 +194,7 @@ const DESKTOP_STACK_VARIANTS = {
     opacity: 0.25,
     originX: 1,
     rotateY: -36,
-    scaleX: 0.87318,
+    scaleX: DESKTOP_ADJACENT_STACK_SCALE_X,
     scaleY: 0.7938,
     z: 0,
   },
@@ -184,7 +202,7 @@ const DESKTOP_STACK_VARIANTS = {
     opacity: 0.02,
     originX: 1,
     rotateY: -144,
-    scaleX: 0.3,
+    scaleX: DESKTOP_OUTER_STACK_SCALE_X,
     scaleY: 0.62,
     z: -240,
   },
@@ -1313,7 +1331,7 @@ export function UiUxDecisionShowcase({
                         const isRearCenter =
                           role === "rear" || role === "rear-hidden";
                         const isRear = isRearSide || isRearCenter;
-                        const usesPrimaryLayout = isPrimary || isRearCenter;
+                        const usesPrimaryLayout = true;
                         const stackTransition = shouldReduceMotion
                           ? { duration: 0 }
                           : {
@@ -1328,13 +1346,13 @@ export function UiUxDecisionShowcase({
                             animate={{
                               x:
                                 role === "previous-outer"
-                                  ? -808
+                                  ? -DESKTOP_OUTER_STACK_OFFSET
                                   : role === "previous"
-                                    ? -521.1025
+                                    ? -DESKTOP_ADJACENT_STACK_OFFSET
                                     : role === "next"
-                                      ? 521.1025
+                                      ? DESKTOP_ADJACENT_STACK_OFFSET
                                       : role === "next-outer"
-                                        ? 808
+                                        ? DESKTOP_OUTER_STACK_OFFSET
                                         : 0,
                               y: 0,
                             }}
@@ -1345,9 +1363,7 @@ export function UiUxDecisionShowcase({
                             transition={stackTransition}
                           >
                             <motion.div
-                              animate={{
-                                width: usesPrimaryLayout ? 654.4125 : 406.125,
-                              }}
+                              animate={{ width: DESKTOP_CANONICAL_STACK_WIDTH }}
                               className="uiux-compact-3d-positioner"
                               initial={false}
                               transition={
@@ -1367,6 +1383,10 @@ export function UiUxDecisionShowcase({
                                     ? " is-preview-emphasized"
                                     : ""
                                 }`}
+                                data-case-tone={getDecisionCaseTone(
+                                  decision.number,
+                                )}
+                                data-decision-number={decision.number}
                                 aria-hidden={isRear ? true : undefined}
                                 inert={isRear ? true : undefined}
                                 initial={

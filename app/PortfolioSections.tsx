@@ -26,6 +26,8 @@ type CaseScreenshot = {
   width?: number;
 };
 
+type CaseStudyTone = "blue" | "green" | "orange" | "purple" | "yellow";
+
 type CaseStudy = {
   descriptionLines: [string, string, string, string];
   eyebrowLines: [string, string] | [string, string, string];
@@ -35,6 +37,7 @@ type CaseStudy = {
   stat: string;
   tags: string[];
   title: string;
+  tone: CaseStudyTone;
   worklogStat: string;
 };
 
@@ -44,6 +47,7 @@ const caseStudies: CaseStudy[] = [
   {
     id: "cinerific",
     title: "Cinerific",
+    tone: "purple",
     eyebrowLines: ["Native Android UI", "Entertainment flow"],
     href: "/projects/cinerific",
     descriptionLines: [
@@ -68,6 +72,7 @@ const caseStudies: CaseStudy[] = [
   {
     id: "alla-vostra",
     title: "Alla Vostra",
+    tone: "orange",
     eyebrowLines: ["Full stack mobile", "Stripe checkout UX"],
     href: "/projects/alla-vostra",
     descriptionLines: [
@@ -92,6 +97,7 @@ const caseStudies: CaseStudy[] = [
   {
     id: "credit-king",
     title: "Credit King",
+    tone: "blue",
     eyebrowLines: ["Native finance UI", "Credit flow system"],
     descriptionLines: [
       "Credit King is a React Native finance",
@@ -105,8 +111,25 @@ const caseStudies: CaseStudy[] = [
     screenshots: [],
   },
   {
+    id: "future-case-study",
+    title: "Future Case Study",
+    tone: "yellow",
+    eyebrowLines: ["Project placeholder", "Case study coming soon"],
+    descriptionLines: [
+      "A fifth case study is currently taking shape,",
+      "with this space reserved for the product story,",
+      "implementation details, measurable outcomes,",
+      "and polished visual documentation to come.",
+    ],
+    tags: ["Placeholder", "Product", "Design", "Development", "Testing", "Launch"],
+    stat: "TBD commits",
+    worklogStat: "TBD worklogs",
+    screenshots: [],
+  },
+  {
     id: "this-portfolio-website",
     title: "Prahl.dev (This Website)",
+    tone: "green",
     eyebrowLines: ["Next.js portfolio", "Prahl.dev web site"],
     descriptionLines: [
       "This Portfolio Website is a responsive Prahl.dev",
@@ -131,6 +154,10 @@ const caseStudies: CaseStudy[] = [
     ],
   },
 ];
+
+const articleCaseStudySeeds = caseStudies.filter(
+  (study) => study.id !== "future-case-study",
+);
 
 const caseTitleFillColors = [
   "#b88cff",
@@ -163,14 +190,17 @@ const caseTitleDisplayNames = [
 ];
 
 const repeatedCaseStudies = Array.from({ length: 3 }, (_, setIndex) =>
-  caseStudies.map((study, studyIndex) => ({
+  articleCaseStudySeeds.map((study, studyIndex) => ({
     cardId: setIndex === 0 ? study.id : `${study.id}-${setIndex + 1}`,
-    displayTitle: caseTitleDisplayNames[setIndex * caseStudies.length + studyIndex],
+    displayTitle:
+      caseTitleDisplayNames[
+        setIndex * articleCaseStudySeeds.length + studyIndex
+      ],
     key: `${study.id}-${setIndex}`,
     study,
     titleColor:
       caseTitleFillColors[
-        (setIndex * caseStudies.length + studyIndex) %
+        (setIndex * articleCaseStudySeeds.length + studyIndex) %
           caseTitleFillColors.length
       ],
     })),
@@ -1055,10 +1085,12 @@ const caseTitleVariants: Record<
   string,
   {
     color: string;
+    deviceLabels?: string[];
     fontSize: string;
     hasTablet?: boolean;
     hasWeb?: boolean;
     mobilePlatforms: MobilePlatform[];
+    platformLabels?: string[];
     webIconScale?: number;
   }
 > = {
@@ -1079,6 +1111,13 @@ const caseTitleVariants: Record<
     color: "#6fa4ff",
     fontSize: "31.76px",
     mobilePlatforms: ["android", "apple"],
+  },
+  "future-case-study": {
+    color: "#ffd102",
+    deviceLabels: ["TBD"],
+    fontSize: "31.76px",
+    mobilePlatforms: [],
+    platformLabels: ["TBD"],
   },
 };
 
@@ -1399,8 +1438,15 @@ function CaseStudyTitle({
 
   if (!variant) {
     return (
-      <h3 style={{ color: titleColor, fontSize: titleFontSize }}>
-        {renderedTitle}
+      <h3 className={titleClassName} aria-label={renderedTitle}>
+        <span
+          className="case-card-project-title-name-stack"
+          style={{ color: titleColor, fontSize: titleFontSize }}
+        >
+          <span className={underlineTitle ? "case-card-title-underline" : undefined}>
+            {renderedTitle}
+          </span>
+        </span>
       </h3>
     );
   }
@@ -1450,9 +1496,11 @@ function CaseStudyTitle({
           <ProjectDeviceStack
             assetGap="0.42em"
             color={variant.color}
+            deviceLabels={variant.deviceLabels}
             hasTablet={variant.hasTablet}
             hasWeb={variant.hasWeb}
             mobilePlatforms={variant.mobilePlatforms}
+            platformLabels={variant.platformLabels}
             responsiveAssetGap={caseTitleDeviceGap}
             showPlatformLabels
             webIconScale={variant.webIconScale}
@@ -1557,6 +1605,7 @@ function CaseStudyCard({
       <a
         aria-label={`Open ${titleLabel} case study`}
         className="case-card case-card-link"
+        data-case-tone={study.tone}
         href={study.href}
         id={cardId}
       >
@@ -1566,7 +1615,7 @@ function CaseStudyCard({
   }
 
   return (
-    <article className="case-card" id={cardId}>
+    <article className="case-card" data-case-tone={study.tone} id={cardId}>
       {content}
     </article>
   );

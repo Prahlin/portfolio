@@ -305,13 +305,13 @@ function getPlatformDividerGridColumn(index: number) {
 }
 
 function getPlatformListGridTemplate(columnCount: number) {
-  const columns = ["max-content", "1px"];
+  const columns = ["92px", "minmax(8px, 1fr)"];
 
   Array.from({ length: columnCount }).forEach((_, index) => {
     columns.push("max-content");
 
     if (index < columnCount - 1) {
-      columns.push("1px");
+      columns.push("0px");
     }
   });
 
@@ -517,6 +517,7 @@ export function ProjectDeviceStack({
   hasWeb,
   deviceLabels,
   mobilePlatforms,
+  platformLabels: customPlatformLabels,
   responsiveAssetGap,
   showPlatformLabels,
   webIconScale,
@@ -527,6 +528,7 @@ export function ProjectDeviceStack({
   hasTablet?: boolean;
   hasWeb?: boolean;
   mobilePlatforms: MobilePlatform[];
+  platformLabels?: string[];
   responsiveAssetGap?: ResponsiveAssetGap;
   showPlatformLabels?: boolean;
   webIconScale?: number;
@@ -541,6 +543,7 @@ export function ProjectDeviceStack({
   };
   const stackGap = measuredAssetGap ?? assetGap;
   const deviceLabelKey = deviceLabels?.join(",") ?? "";
+  const platformLabelKey = customPlatformLabels?.join(",") ?? "";
 
   useLayoutEffect(() => {
     if (!responsiveAssetGap) {
@@ -724,6 +727,7 @@ export function ProjectDeviceStack({
     hasTablet,
     hasWeb,
     mobilePlatformKey,
+    platformLabelKey,
     showPlatformLabels,
     stackGap,
   ]);
@@ -756,9 +760,11 @@ export function ProjectDeviceStack({
       factorDevices.push("tablet");
     }
 
-    const platformLabels = platforms.map((platform) =>
-      platform === "web" ? "WEB" : platform === "android" ? "AND" : "IOS",
-    );
+    const platformLabels =
+      customPlatformLabels ??
+      platforms.map((platform) =>
+        platform === "web" ? "WEB" : platform === "android" ? "AND" : "IOS",
+      );
     const factorDeviceLabels =
       deviceLabels ??
       factorDevices.map((device) =>
