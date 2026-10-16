@@ -1,0 +1,391 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Count 4 /Kids [7 0 R 9 0 R 11 0 R 13 0 R] >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+5 0 obj
+<< /Title (Prahlin Portfolio Work Log - October 15, 2026) /Subject (Portfolio implementation worklog for October 15, 2026) /Author (Codex) /Creator (Codex) /Producer (Codex) /CreationDate (D:20261015205425-04'00') /ModDate (D:20261015205425-04'00') >>
+endobj
+6 0 obj
+<< /Length 10267 >>
+stream
+BT /F2 14.00 Tf 1 0 0 1 42.00 747.00 Tm (Prahlin Portfolio Work Log - October 15, 2026) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 42.00 722.80 Tm (Compiled summary for Thursday, October 15, 2026 - focus: continuing the Prahl.dev Portfolio after the October 13 five-key philosophy,) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 42.00 712.65 Tm (five-stage workflow, and interactive Core Beliefs record; independently verifying the United States Eastern date; refreshing the repository) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 42.00 702.50 Tm (snapshot; extracting and studying the complete pre-existing PDF worklog archive; matching Core Beliefs headers to the shared Workflow) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 42.00 692.35 Tm (gradients; rebuilding the Core Beliefs background-star opacity treatment with independent top, bottom, and horizontal masks; removing the) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 42.00 682.20 Tm (visible mask seam; restarting condensation-line animation on every click; enlarging and moving the contrail paths away from the formation center;) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 42.00 672.05 Tm (exploring a new five-part Productivity Hacks visual language through desktop and portrait mockups; implementing the selected circuit-bench) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 42.00 661.90 Tm (concept between My Core Beliefs and Work Space; building distinct wide and narrow responsive compositions; adding content-safe placeholder) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 42.00 651.75 Tm (cards, tool icons, circuit routing, and star motifs; correcting a stale local Next.js stylesheet cache; validating type safety, production) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 42.00 641.60 Tm (compilation, routes, responsive geometry, content growth, and repository state; documenting commits ca1a562 and 988ad28; and generating the) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 42.00 631.45 Tm (October 15 Portfolio PDF worklog.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 42.00 615.70 Tm (Generated in continuity with the established Prahlin Portfolio daily worklog cadence: compact opening synthesis, source-material review, prior) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 42.00 605.55 Tm (baseline, goals, grouped work-completed sections, committed-source chronology, validation, files and artifacts, follow-up context, and an) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 42.00 595.40 Tm (output-artifact close. This record emphasizes completed implementation and observable repository evidence while retaining only the design) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 42.00 585.25 Tm (exploration necessary to explain the accepted result.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 42.00 569.50 Tm (Coverage begins after portfolio_worklog_october13.pdf and documentation commit 2b0f267. The application work is represented by two October) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 42.00 559.35 Tm (15 commits on main, ending at 988ad28ce622fa2e47a7ceed15f39908dad90efa, which matches origin/main. No GitHub Actions dispatch, Hostinger) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 42.00 549.20 Tm (synchronization, deploy-branch mutation, or production release was performed during this documentation pass. Before PDF creation, the only) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 42.00 539.05 Tm (uncommitted delta was the reader-refreshed portfolio_PROJECT_SNAPSHOT.txt.) Tj ET
+BT /F2 10.20 Tf 1 0 0 1 42.00 519.50 Tm (Source Materials Reviewed) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 505.50 Tm (-) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 505.50 Tm (Date verification: TZ=America/New_York returned Thursday, October 15, 2026 at 8:44:12 PM EDT with the UTC-04:00 offset. A second) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 495.35 Tm (check at 8:49:33 PM returned the same Eastern calendar date and offset. October 15 remains within United States Eastern Daylight Time,) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 485.20 Tm (so both the title and filename use October 15 rather than the execution host's default or UTC date.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 473.95 Tm (-) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 473.95 Tm (Project reader: ran ./read_project.sh from /Users/prahlin/gh/portfolio. It refreshed portfolio_PROJECT_SNAPSHOT.txt at 8:48:47) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 463.80 Tm (PM EDT to 20,068 lines and 668,655 bytes, preserving current source, assets, configuration, Git history, PDF inventory, and standing) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 453.65 Tm (workflow instructions.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 442.40 Tm (-) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 442.40 Tm (Worklog archive: enumerated and extracted all 53 pre-existing root-level Portfolio PDF worklogs, spanning July 11 through October 13.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 432.25 Tm (The archive contains 303 pages and approximately 151,748 extracted words, including established same-day Part suffixes where earlier) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 422.10 Tm (sessions required more than one record.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 410.85 Tm (-) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 410.85 Tm (Archive comparison: compared filename cadence, title construction, opening-summary density, recurring section order, engineering-bullet) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 400.70 Tm (voice, validation language, file inventories, follow-up continuity, footer placement, pagination, and document metadata across the complete) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 390.55 Tm (set. Used October 13 as the direct chronological baseline and October 9, October 8, October 7, and September 29 Part 2 as the nearest) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 380.40 Tm (structural and visual references.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 369.15 Tm (-) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 369.15 Tm (PDF convention: confirmed US Letter portrait at 612 x 792 points, PDF 1.4, no encryption, black text on white, Helvetica and) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 359.00 Tm (Helvetica-Bold Type 1 fonts, a dated first-page title, repeated footer title, right-aligned page numbers, compact margins, and Codex) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 348.85 Tm (author/creator/producer metadata.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 337.60 Tm (-) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 337.60 Tm (Git evidence: inspected the full commit bodies, file statistics, and final source for ca1a5621d62a01b432f0224dd4e209d45f331fe4 and) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 327.45 Tm (988ad28ce622fa2e47a7ceed15f39908dad90efa. Relative to the October 13 documentation commit, the tracked implementation range) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 317.30 Tm (changed five files with 770 insertions and 45 deletions.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 306.05 Tm (-) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 306.05 Tm (Runtime evidence: reviewed the live landing page, the final Core Beliefs implementation, the new ProductivityHacks component, responsive) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 295.90 Tm (CSS, desktop and mobile screenshots, computed card geometry, long-copy stress results, route responses, TypeScript output, and the) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 285.75 Tm (successful production build recorded during implementation.) Tj ET
+BT /F2 10.20 Tf 1 0 0 1 42.00 266.50 Tm (Baseline Status Before October 15) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 252.50 Tm (-) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 252.50 Tm (My Core Beliefs already used five orbiting bubbles and the shared stylish five-color star, but belief titles still used earlier flat tone) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 242.35 Tm (colors rather than the exact masked gradients and black outline language established by My Workflow and UI / UX Philosophy.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 231.10 Tm (-) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 231.10 Tm (The Core Beliefs star used one radial opacity mask. It did not independently control the upper vertical rise, upper horizontal falloff, and) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 220.95 Tm (lower radial fade, so user-directed opacity tuning could not distinguish the top and bottom halves.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 209.70 Tm (-) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 209.70 Tm (Experimental split-mask work exposed a visible horizontal boundary through the star center. Repeated rotations also made it important that) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 199.55 Tm (the mask remain fixed to the viewport rather than rotate with whichever colored point happened to face upward.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 188.30 Tm (-) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 188.30 Tm (Condensation paths animated during the carousel state transition but did not reliably restart on every repeated click. The accepted paths) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 178.15 Tm (also remained too close to the bubbles and star formation, reducing the outward kinetic effect.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 166.90 Tm (-) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 166.90 Tm (The landing page had no Productivity Hacks section between My Core Beliefs and Work Space. Its existing major sections deliberately) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 156.75 Tm (differed from one another, so reusing the Core Beliefs radial-bubble structure would have weakened the page's visual variety.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 145.50 Tm (-) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 145.50 Tm (No final productivity copy was available. The implementation therefore needed explicit placeholders and card sizing that could absorb later) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 135.35 Tm (variation in heading and paragraph length without fixed-height clipping.) Tj ET
+BT /F2 10.20 Tf 1 0 0 1 42.00 116.10 Tm (Goals for October 15) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 102.10 Tm (-) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 102.10 Tm (Match all five Core Beliefs headers to the exact purple, yellow, blue, orange, and green Workflow typography gradients while retaining the) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 91.95 Tm (established two-pixel black outline and readable fallback color.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 80.70 Tm (-) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 80.70 Tm (Build independent star-mask rules for the top and bottom vertical halves, preserve orientation independently of star rotation, remove the) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 70.55 Tm (seam between masks, and honor the accepted final opacity stops.) Tj ET
+BT /F1 7.30 Tf 1 0 0 1 42.00 20.50 Tm (Prahlin Portfolio Work Log - October 15, 2026) Tj ET
+BT /F1 7.30 Tf 1 0 0 1 548.10 20.50 Tm (Page 1) Tj ET
+endstream
+endobj
+7 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 6 0 R >>
+endobj
+8 0 obj
+<< /Length 10652 >>
+stream
+BT /F1 8.25 Tf 1 0 0 1 44.00 747.00 Tm (-) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 747.00 Tm (Restart condensation animation immediately on each eligible belief click, enlarge its path geometry by 50 percent, and reposition it outward) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 736.85 Tm (from the fixed formation center without moving the bubbles themselves.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 725.60 Tm (-) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 725.60 Tm (Explore a distinct five-part Productivity Hacks metaphor that still belongs to the dark green grid system, uses the five established) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 715.45 Tm (gradients, and includes one or more five-pointed star ideas without recreating the Core Beliefs orbit.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 704.20 Tm (-) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 704.20 Tm (Implement the selected circuit-bench direction as one semantic five-card section with a wide-screen folded route and a narrow-screen) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 694.05 Tm (stacked route.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 682.80 Tm (-) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 682.80 Tm (Make card dimensions content-safe, provide brief placeholder headings and paragraphs for later replacement, preserve accessible section) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 672.65 Tm (structure, prevent horizontal overflow, and validate the finished behavior at desktop and phone widths.) Tj ET
+BT /F2 10.20 Tf 1 0 0 1 42.00 653.40 Tm (Work Completed - Core Beliefs Gradient Typography) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 639.40 Tm (-) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 639.40 Tm (Added data-title to each visible belief title so the component can render a solid outlined fallback and a separate masked gradient overlay) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 629.25 Tm (using the same authored label.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 618.00 Tm (-) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 618.00 Tm (Mapped the belief sequence to the exact shared five-family order: purple, yellow, blue, orange, and green. Each title now receives the same) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 607.85 Tm (core, middle, and edge values used by the corresponding Workflow name and philosophy key family.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 596.60 Tm (-) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 596.60 Tm (Applied a two-pixel black text stroke beneath the colored overlay. The overlay uses background-clip text plus a soft radial alpha mask,) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 586.45 Tm (preserving definition against the dark bubble surface without turning the title into a flat neon fill.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 575.20 Tm (-) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 575.20 Tm (Kept the title treatment data-driven through CSS custom properties. Future belief-label changes need only update the visible title string) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 565.05 Tm (because data-title mirrors the same value in the component markup.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 553.80 Tm (-) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 553.80 Tm (Preserved the bubble-specific border, glow, shadow, and interior gradient treatments introduced on October 13. The change refined header) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 543.65 Tm (hierarchy without replacing the accepted bubble geometry or five-color relationship.) Tj ET
+BT /F2 10.20 Tf 1 0 0 1 42.00 524.40 Tm (Work Completed - Core Beliefs Star Masks and Seam Repair) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 510.40 Tm (-) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 510.40 Tm (Replaced the single masked star image with two synchronized copies of the same stylish source asset. Both copies inherit the same carousel) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 500.25 Tm (rotation, while their wrapper masks remain locked to the physical top and bottom halves of the section.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 489.00 Tm (-) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 489.00 Tm (Built the upper vertical mask from 100 percent opacity at the top edge to 25 percent at the vertical center. This lets the upper point) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 478.85 Tm (remain visually present while still transitioning into the darker center relationship requested during iteration.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 467.60 Tm (-) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 467.60 Tm (Added an independent upper horizontal mask with final stops of 2 percent at the left edge, 36 percent at 33 percent, 100 percent at the) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 457.45 Tm (horizontal center, 36 percent at 67 percent, and 2 percent at the right edge.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 446.20 Tm (-) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 446.20 Tm (Built the lower radial mask with the accepted sequence: 18 percent at the center, 18 percent at 10 percent, 12 percent at 20 percent, 6) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 436.05 Tm (percent at 30 percent, 3 percent at 40 percent, 2 percent at 50 percent, and 1 percent at the outer edge.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 424.80 Tm (-) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 424.80 Tm (Intersected the vertical, horizontal, and radial masks through standard and WebKit composite rules so each layer contributes to the final) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 414.65 Tm (alpha instead of replacing the preceding rule.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 403.40 Tm (-) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 403.40 Tm (Eliminated the hard horizontal line between the two star copies by feathering the ownership boundary from 48 to 52 percent. The two) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 393.25 Tm (identical rotating images now crossfade through the center instead of meeting at an abrupt one-pixel seam.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 382.00 Tm (-) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 382.00 Tm (Kept the star's color rotation independent from mask orientation. Whichever colored point rotates upward receives the same physical top) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 371.85 Tm (treatment, satisfying the requirement that opacity follow vertical position rather than a named color.) Tj ET
+BT /F2 10.20 Tf 1 0 0 1 42.00 352.60 Tm (Work Completed - Core Beliefs Condensation Motion) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 338.60 Tm (-) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 338.60 Tm (Added a contrailPulseId state value that increments whenever the selected belief changes. The SVG now remounts with the new pulse key,) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 328.45 Tm (restarting its CSS animation immediately on each click instead of waiting for the previous 900-millisecond carousel settlement.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 317.20 Tm (-) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 317.20 Tm (Preserved the existing animation-state timer and shortest-route orbit logic. The pulse restart is additive and does not alter which bubble) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 307.05 Tm (becomes active or how the star rotates.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 295.80 Tm (-) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 295.80 Tm (Promoted the fixed formation center to a named constant at x 495 and y 435, then introduced a 1.5 scale factor for the generated path) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 285.65 Tm (coordinates.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 274.40 Tm (-) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 274.40 Tm (Scaled every start point, quadratic control point, and end point away from that fixed center. The condensation geometry became 50 percent) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 264.25 Tm (larger and visibly farther outward while retaining the original curved relationships and paired offset paths.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 253.00 Tm (-) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 253.00 Tm (Verified rapid repeated clicks by observing sequential pulse identifiers and active animation states. The motion cue now responds to user) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 242.85 Tm (input rather than behaving as a one-time consequence of settled carousel state.) Tj ET
+BT /F2 10.20 Tf 1 0 0 1 42.00 223.60 Tm (Work Completed - Productivity Hacks Design Direction) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 209.60 Tm (-) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 209.60 Tm (Studied Featured Case Studies, UI / UX Philosophy, Built around React Native, My Workflow, and My Core Beliefs to identify the shared) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 199.45 Tm (dark grid, green structural lines, glass surfaces, strong section spacing, rounded geometry, and five-color system without copying any one) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 189.30 Tm (section's composition.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 178.05 Tm (-) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 178.05 Tm (Generated three initial text-free concepts centered on a radial star selector, an exploded five-panel star, and a star viewport with) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 167.90 Tm (orbiting tabs. These were rejected as too close to the Core Beliefs organization.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 156.65 Tm (-) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 156.65 Tm (Produced three deliberately non-radial alternatives: a focus prism sending five beams into staggered panels, an origami route forming a star) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 146.50 Tm (through negative space, and a five-channel productivity mixing desk whose fader points trace a star.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 135.25 Tm (-) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 135.25 Tm (Selected the origami-route direction, then explored tool-belt, folding-circuit-bench, and kinetic-workshop variants. The folding circuit) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 125.10 Tm (bench became the preferred implementation basis because its flexible board, traces, diagnostic panels, and star cutout connected) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 114.95 Tm (productivity, tools, hacking, and tinkering without repeating the bubble orbit.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 103.70 Tm (-) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 103.70 Tm (Tested a super-narrow portrait adaptation before implementation. The accepted mobile direction changed the five panels into aligned) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 93.55 Tm (horizontal cards, removed the shared central star, and placed one faint single-family star inside each card.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 82.30 Tm (-) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 82.30 Tm (Kept all generated mockups outside the repository as ideation references. No raster mockup asset was added to the application; the final) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 72.15 Tm (section is implemented through React, SVG, CSS gradients, Lucide icons, and responsive layout rules.) Tj ET
+BT /F1 7.30 Tf 1 0 0 1 42.00 20.50 Tm (Prahlin Portfolio Work Log - October 15, 2026) Tj ET
+BT /F1 7.30 Tf 1 0 0 1 548.10 20.50 Tm (Page 2) Tj ET
+endstream
+endobj
+9 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 8 0 R >>
+endobj
+10 0 obj
+<< /Length 10494 >>
+stream
+BT /F2 10.20 Tf 1 0 0 1 42.00 743.20 Tm (Work Completed - Responsive Productivity Hacks Section) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 729.20 Tm (-) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 729.20 Tm (Added app/ProductivityHacks.tsx as a dedicated data-driven component and inserted it between My Core Beliefs and the Work Space /) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 719.05 Tm (Work Tools section on the landing page.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 707.80 Tm (-) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 707.80 Tm (Created five placeholder entries with CPU, wrench, terminal, blocks, and gauge icons. Each entry carries a brief temporary heading, a brief) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 697.65 Tm (temporary paragraph, and its own core, middle, and edge gradient variables for later copy replacement.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 686.40 Tm (-) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 686.40 Tm (Built the wide-screen composition as five responsive grid columns over a custom SVG circuit ribbon. Alternating card offsets create the) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 676.25 Tm (accepted folded route, while purple, yellow, blue, orange, and green ribbon segments converge around a central five-pointed cutout and) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 666.10 Tm (illuminated outline.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 654.85 Tm (-) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 654.85 Tm (Added copper-style traces, dark diagnostic preview wells, rivets, status pills, glass surfaces, thin gradient borders, restrained colored) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 644.70 Tm (shadows, and color-matched heading treatments without introducing a new external image dependency.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 633.45 Tm (-) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 633.45 Tm (Used minimum heights rather than fixed heights. Card width follows the grid, text wraps by available space, and additional copy increases the) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 623.30 Tm (card and section height rather than clipping inside an ornamental shell.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 612.05 Tm (-) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 612.05 Tm (At widths of 820 pixels and below, replaced the desktop SVG route with a centered vertical circuit spine and a single-column stack. All five) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 601.90 Tm (cards share the same horizontal alignment and full available width, matching the compact portrait direction.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 590.65 Tm (-) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 590.65 Tm (Added one low-opacity five-point background star to every mobile card. Each star uses only its owning card's purple, yellow, blue, orange, or) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 580.50 Tm (green gradient family; no mobile card contains the combined five-color star.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 569.25 Tm (-) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 569.25 Tm (Kept the mobile cards landscape-oriented through a three-column internal layout: tool icon, flexible text region, and compact diagnostic) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 559.10 Tm (preview. The arrangement remains semantic and content-responsive rather than relying on a fixed raster mockup.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 547.85 Tm (-) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 547.85 Tm (Preserved explicit section framing with the Tools, Systems & Shortcuts eyebrow, the Productivity Hacks title, a brief placeholder) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 537.70 Tm (introduction, and placeholder card copy that makes later content replacement visible and intentional.) Tj ET
+BT /F2 10.20 Tf 1 0 0 1 42.00 518.45 Tm (Work Completed - Responsive Verification and Local Cache Recovery) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 504.45 Tm (-) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 504.45 Tm (Rendered the completed section at 1600 by 1000 and 390 by 844 viewports. The desktop cards measured 224 pixels wide across five columns;) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 494.30 Tm (the mobile cards measured 366 pixels wide, shared the same x position, and remained fully inside the 390-pixel viewport.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 483.05 Tm (-) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 483.05 Tm (Confirmed document scroll width exactly matched viewport width at both tested sizes. Neither the SVG ribbon, shifted desktop cards,) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 472.90 Tm (vertical mobile spine, card shadows, nor preview wells introduced horizontal page overflow.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 461.65 Tm (-) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 461.65 Tm (Replaced an overly aggressive anywhere wrap on desktop headings with normal word boundaries, then retained break-word behavior on compact) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 451.50 Tm (layouts. Placeholder titles now wrap between words rather than splitting final letters onto isolated lines.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 440.25 Tm (-) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 440.25 Tm (Added a visible gradient edge to the desktop star cutout so the dark negative-space star remains legible against the nearly black page) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 430.10 Tm (background.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 418.85 Tm (-) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 418.85 Tm (Stress-tested content growth by replacing one placeholder paragraph in the rendered DOM with the phrase Long placeholder copy repeated) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 408.70 Tm (24 times. The target card expanded to approximately 979 pixels on desktop and 494 pixels on mobile; client height equaled scroll height in) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 398.55 Tm (both cases, demonstrating that later long copy is not clipped.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 387.30 Tm (-) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 387.30 Tm (Detected a stale Turbopack stylesheet after the new markup appeared without its new CSS. Restarting the server alone did not invalidate) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 377.15 Tm (the stale bundle, so the existing .next directory was moved into an ignored .next.cleared-productivity-* cache archive and the local server) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 367.00 Tm (was restarted from a clean cache.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 355.75 Tm (-) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 355.75 Tm (Repeated the cache refresh after the final typography and star-outline polish. The rebuilt stylesheet exposed the expected grid rules and) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 345.60 Tm (final computed 17-pixel desktop heading size.) Tj ET
+BT /F2 10.20 Tf 1 0 0 1 42.00 326.35 Tm (Committed Source Sequence) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 312.35 Tm (-) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 312.35 Tm (ca1a562 - Matched belief headers to the five Workflow text gradients with masked color treatments and black outlines. Rebuilt the star) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 302.20 Tm (with independent masks and a seamless center crossfade, restarted contrail pulses on click, enlarged paths by 50 percent, moved them) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 292.05 Tm (outward, and refreshed the project snapshot.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 280.80 Tm (-) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 280.80 Tm (988ad28 - Added the responsive Productivity Hacks section. Inserted the new component between Core Beliefs and Work Space, built the) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 270.65 Tm (five-card desktop circuit ribbon, created the aligned mobile card stack with per-card stars, added placeholder content and icons, and) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 260.50 Tm (validated content-responsive sizing.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 249.25 Tm (-) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 249.25 Tm (At documentation time, HEAD, main, and origin/main all resolve to 988ad28ce622fa2e47a7ceed15f39908dad90efa. Both October 15) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 239.10 Tm (application commits are committed and synchronized; this worklog pass has not created a commit, push, deployment, or external release.) Tj ET
+BT /F2 10.20 Tf 1 0 0 1 42.00 219.85 Tm (Validation Summary) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 205.85 Tm (-) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 205.85 Tm (npm run check completed successfully against the current source.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 194.60 Tm (-) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 194.60 Tm (The production build completed successfully during the Productivity Hacks implementation. Next.js compiled, finished TypeScript, collected) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 184.45 Tm (page data, generated all seven static routes, and finalized optimization without a build failure.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 173.20 Tm (-) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 173.20 Tm (The locally served routes /, /projects/alla-vostra, /projects/cinerific, /aboutdev, and /articles each returned HTTP 200 during the) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 163.05 Tm (documentation pass.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 151.80 Tm (-) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 151.80 Tm (Source-scoped git diff --check passed for app/. The reader-generated snapshot contains preserved tabular trailing whitespace from its) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 141.65 Tm (source dumps, so the snapshot was intentionally excluded from the source hygiene assertion rather than mechanically rewriting generated) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 131.50 Tm (documentation.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 120.25 Tm (-) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 120.25 Tm (Desktop geometry at 1600 pixels showed five responsive cards, the shared circuit route, central star outline, card-specific colors, and no) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 110.10 Tm (horizontal overflow. Card heights varied with placeholder length as intended.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 98.85 Tm (-) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 98.85 Tm (Mobile geometry at 390 pixels showed five equal-width horizontally aligned cards at x 12, a 366-pixel card width, the vertical circuit spine,) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 88.70 Tm (distinct monochrome background stars, and no horizontal overflow.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 77.45 Tm (-) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 77.45 Tm (The long-copy stress test confirmed that card shells expand instead of clipping. The same semantic component supports both orientations;) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 67.30 Tm (no duplicated mobile-only content source is required.) Tj ET
+BT /F1 7.30 Tf 1 0 0 1 42.00 20.50 Tm (Prahlin Portfolio Work Log - October 15, 2026) Tj ET
+BT /F1 7.30 Tf 1 0 0 1 548.10 20.50 Tm (Page 3) Tj ET
+endstream
+endobj
+11 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 10 0 R >>
+endobj
+12 0 obj
+<< /Length 7118 >>
+stream
+BT /F1 8.25 Tf 1 0 0 1 44.00 747.00 Tm (-) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 747.00 Tm (Core Beliefs source review confirmed two masked star halves, the 48-to-52-percent center feather, the final top horizontal and lower) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 736.85 Tm (radial stops, data-title gradient overlays, click pulse identifiers, and the 1.5 contrail scale around the fixed formation center.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 725.60 Tm (-) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 725.60 Tm (Repository status before PDF creation showed only portfolio_PROJECT_SNAPSHOT.txt modified by the customary project-reader) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 715.45 Tm (refresh.) Tj ET
+BT /F2 10.20 Tf 1 0 0 1 42.00 696.20 Tm (Files Touched and Artifacts) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 682.20 Tm (-) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 682.20 Tm (app/CoreBeliefsOrbit.tsx - fixed formation-center constants, scaled contrail geometry, click-driven SVG pulse remounting, gradient-title) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 672.05 Tm (data attributes, and separate synchronized top/bottom star images.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 660.80 Tm (-) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 660.80 Tm (app/ProductivityHacks.tsx - new five-card data model, tool icons, placeholder copy, circuit-ribbon SVG, central star mask/outline,) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 650.65 Tm (accessible section structure, and card markup.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 639.40 Tm (-) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 639.40 Tm (app/globals.css - Core Beliefs title gradients, split star masks, seam feather, and the complete desktop/mobile Productivity Hacks visual) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 629.25 Tm (and responsive system.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 618.00 Tm (-) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 618.00 Tm (app/page.tsx - imported and placed ProductivityHacks between My Core Beliefs and Work Space.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 606.75 Tm (-) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 606.75 Tm (portfolio_PROJECT_SNAPSHOT.txt - refreshed project reader output produced during the October 15 implementation and again during) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 596.60 Tm (this documentation pass.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 585.35 Tm (-) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 585.35 Tm (portfolio_worklog_october15.pdf - new customary root-level worklog generated by this pass.) Tj ET
+BT /F2 10.20 Tf 1 0 0 1 42.00 566.10 Tm (Follow-Up Notes) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 552.10 Tm (-) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 552.10 Tm (Replace Productivity Hacks placeholder headings and paragraphs when final editorial content is available. The component is intentionally) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 541.95 Tm (data-driven; update the productivityHacks array rather than duplicating card markup.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 530.70 Tm (-) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 530.70 Tm (Preserve the desktop/mobile conceptual distinction. Desktop uses one shared folded circuit route and central star cutout; mobile uses a) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 520.55 Tm (vertical spine and one low-opacity single-color star per card.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 509.30 Tm (-) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 509.30 Tm (Keep the five color families in their established order unless a later content mapping explicitly requires a different semantic relationship:) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 499.15 Tm (purple, yellow, blue, orange, and green.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 487.90 Tm (-) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 487.90 Tm (Do not add fixed card heights when final copy arrives. The current minimum-height and auto-growth behavior was tested specifically to) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 477.75 Tm (accommodate uneven heading and paragraph lengths.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 466.50 Tm (-) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 466.50 Tm (Preserve the split Core Beliefs star wrappers if mask values change. Combining the rules back onto one rotating image would couple opacity) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 456.35 Tm (to color orientation and reintroduce the limitation corrected in this pass.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 445.10 Tm (-) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 445.10 Tm (Maintain the 48-to-52-percent feather when tuning either star half. A hard 50-percent boundary produced the visible center line rejected) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 434.95 Tm (during iteration.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 423.70 Tm (-) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 423.70 Tm (Keep contrail pulse remounting tied to actual selection changes. The pulse identifier is what allows repeated clicks to restart the) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 413.55 Tm (condensation cue without waiting for the orbit transition to finish.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 402.30 Tm (-) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 402.30 Tm (If new CSS appears absent in local development, clear or move the .next cache before judging the implementation. The stale stylesheet) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 392.15 Tm (observed during this pass survived a normal server restart.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 380.90 Tm (-) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 380.90 Tm (Before committing or pushing this documentation pass, review the refreshed snapshot and PDF together and use a past-tense commit) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 370.75 Tm (message that distinguishes documentation generation from the two already-synchronized application commits.) Tj ET
+BT /F2 10.20 Tf 1 0 0 1 42.00 351.50 Tm (Output Artifact) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 337.50 Tm (-) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 337.50 Tm (Generated /Users/prahlin/gh/portfolio/portfolio_worklog_october15.pdf using the established lowercase-month, non-zero-padded-day) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 327.35 Tm (filename for the first worklog on October 15.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 316.10 Tm (-) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 316.10 Tm (The artifact uses US Letter portrait pages, PDF 1.4, Helvetica and Helvetica-Bold, compact black-on-white technical prose, repeated) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 305.95 Tm (dated footers, right-aligned page numbers, and Codex metadata consistent with the mature archive.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 294.70 Tm (-) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 294.70 Tm (The recorded application baseline is 988ad28ce622fa2e47a7ceed15f39908dad90efa on synchronized main and origin/main. No application) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 284.55 Tm (source was edited while creating this record.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 273.30 Tm (-) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 273.30 Tm (Documentation deltas created by this pass are the refreshed portfolio_PROJECT_SNAPSHOT.txt and portfolio_worklog_october15.pdf.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 263.15 Tm (No deployment, remote message, branch mutation, or production publish was performed.) Tj ET
+BT /F1 7.30 Tf 1 0 0 1 42.00 20.50 Tm (Prahlin Portfolio Work Log - October 15, 2026) Tj ET
+BT /F1 7.30 Tf 1 0 0 1 548.10 20.50 Tm (Page 4) Tj ET
+endstream
+endobj
+13 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 12 0 R >>
+endobj
+xref
+0 14
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000141 00000 n 
+0000000238 00000 n 
+0000000340 00000 n 
+0000000607 00000 n 
+0000010926 00000 n 
+0000011062 00000 n 
+0000021766 00000 n 
+0000021902 00000 n 
+0000032449 00000 n 
+0000032587 00000 n 
+0000039757 00000 n 
+trailer
+<< /Size 14 /Root 1 0 R /Info 5 0 R >>
+startxref
+39895
+%%EOF
