@@ -1,0 +1,304 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [5 0 R 7 0 R 9 0 R 11 0 R] /Count 4 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+5 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 6 0 R >>
+endobj
+6 0 obj
+<< /Length 9161 >>
+stream
+BT /F2 14 Tf 1 0 0 1 42.00 744.00 Tm (Prahlin Portfolio Work Log - October 15, 2026 \(Part 2\)) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 42.00 718.00 Tm (Compiled summary for Thursday, October 15, 2026 - Part 2 - focus: continuing the Prahl.dev Portfolio after the earlier October 15 Core Beliefs and) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 42.00 707.85 Tm (Productivity Hacks record; independently re-verifying the United States Eastern date; refreshing the repository snapshot; extracting and studying the) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 42.00 697.70 Tm (complete pre-existing PDF worklog archive; expanding Featured Case Studies to five cards; assigning the established purple, orange, blue, yellow, and) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 42.00 687.55 Tm (green families to those cards; refining platform and device metadata cells; protecting the one-card portrait composition; carrying the five-color system) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 42.00 677.40 Tm (into the UI / UX Philosophy carousel; stabilizing inactive-stack geometry and asset presentation; replacing project imagery and device frames; revising) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 42.00 667.25 Tm (philosophy copy; enlarging selected typography and media; preventing clipped card content; preserving project-label and no-wrap behavior; recovering) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 42.00 657.10 Tm (repeatedly stale Turbopack stylesheets; validating type safety, routes, carousel geometry, computed colors, internal clearances, and repository state;) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 42.00 646.95 Tm (documenting commit 506edff; and generating the second October 15 Portfolio PDF worklog.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 42.00 630.80 Tm (Generated in continuity with the established Prahlin Portfolio daily worklog cadence: compact opening synthesis, source-material review, prior) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 42.00 620.65 Tm (baseline, goals, grouped work-completed sections, committed-source chronology, validation, files and artifacts, follow-up context, and an output-artifact) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 42.00 610.50 Tm (close. This record emphasizes the final accepted implementation while retaining enough iteration history to explain the protected geometry and visual) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 42.00 600.35 Tm (decisions.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 42.00 584.20 Tm (Coverage begins after portfolio_worklog_october15.pdf and documentation commit 68fb2c8. The application work is represented by commit) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 42.00 574.05 Tm (506edff3b7cd33895c8d74fc87e7e6cbf21012a3 on main, which matches origin/main. No GitHub Actions dispatch, Hostinger synchronization,) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 42.00 563.90 Tm (deploy-branch mutation, or production release was performed during this documentation pass. Before PDF creation, the only uncommitted delta was the) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 42.00 553.75 Tm (customary reader-refreshed portfolio_PROJECT_SNAPSHOT.txt.) Tj ET
+BT /F2 10 Tf 1 0 0 1 42.00 533.60 Tm (Source Materials Reviewed) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 518.60 Tm (- Date verification: an independent UTC-04:00 time lookup returned October 15, 2026 at 10:29:59 PM. A local TZ=America/New_York verification at) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 508.45 Tm (10:31:32 PM returned Thursday, October 15, 2026, EDT, with the -0400 offset. October 15 remains within United States Eastern Daylight Time,) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 498.30 Tm (so the title and filename use October 15 rather than UTC or the execution host default.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 487.05 Tm (- Project reader: ran ./read_project.sh from /Users/prahlin/gh/portfolio. It refreshed portfolio_PROJECT_SNAPSHOT.txt with the current tree, source,) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 476.90 Tm (asset inventory, configuration, Git history, PDF inventory, and standing workflow instructions.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 465.65 Tm (- Worklog archive: enumerated and extracted all 54 pre-existing root-level Portfolio PDF worklogs, spanning July 11 through the first October 15) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 455.50 Tm (record. The archive contains 307 pages and approximately 155,075 extracted words, including the established same-day Part suffix convention.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 444.25 Tm (- Archive comparison: compared filename cadence, title construction, opening-summary density, recurring section order, implementation-bullet voice,) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 434.10 Tm (validation language, file inventories, follow-up continuity, footer placement, pagination, and metadata across the full archive. Used October 15 Part) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 423.95 Tm (1 as the direct chronological baseline and October 13, October 9, October 8, October 7, and September 29 Part 2 as the nearest structural) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 413.80 Tm (references.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 402.55 Tm (- PDF convention: confirmed US Letter portrait at 612 x 792 points, PDF 1.4, no encryption, black text on white, Helvetica and Helvetica-Bold Type 1) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 392.40 Tm (fonts, a dated first-page title, 42-point side margins, compact technical prose, repeated footer title, right-aligned page numbers, and Codex author,) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 382.25 Tm (creator, and producer metadata.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 371.00 Tm (- Git evidence: inspected the full commit body, file statistics, and final source for 506edff. The commit changed six tracked files with 474 insertions) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 360.85 Tm (and 62 deletions, including five application files and the reader-generated project snapshot.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 349.60 Tm (- Runtime evidence: reviewed the live landing page at http://127.0.0.1:3000, browser screenshots for all relevant carousel states, computed styles,) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 339.45 Tm (DOM geometry, project routes, TypeScript results, and the accepted responsive behavior recorded during implementation.) Tj ET
+BT /F2 10 Tf 1 0 0 1 42.00 324.20 Tm (Baseline Status Before October 15 Part 2) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 309.20 Tm (- Featured Case Studies contained four cards and did not yet provide a fifth reserved project slot. The cards used a shared dark treatment rather than) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 299.05 Tm (one designated family per card.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 287.80 Tm (- Platform and device metadata used narrow divider-based rows whose labels and sibling cells did not yet provide the requested boxed, balanced,) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 277.65 Tm (two-stack presentation.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 266.40 Tm (- Portrait layouts were sensitive to grid changes. Any case-card expansion needed to preserve the established rule that narrow and portrait modes show) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 256.25 Tm (one card per row.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 245.00 Tm (- The UI / UX Philosophy carousel had five visible color identities through its key and typography, but its number box, heading box, and large content) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 234.85 Tm (box did not yet inherit matching card surfaces and borders.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 223.60 Tm (- Inactive desktop stacks used separate narrower internal layouts. Their screenshots and copy therefore changed apparent size and alignment as stacks) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 213.45 Tm (moved away from the horizontal center.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 202.20 Tm (- The orange philosophy treatment mixed poorly with colored surface experiments. It needed a neutral supporting surface while retaining orange) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 192.05 Tm (hierarchy in the key, border, and typography.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 180.80 Tm (- Philosophy copy, media assignments, and large-box typography still reflected the earlier project mapping. Several user-directed wording, scaling,) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 170.65 Tm (ordering, and clipping safeguards had not yet been applied.) Tj ET
+BT /F2 10 Tf 1 0 0 1 42.00 155.40 Tm (Goals for October 15 Part 2) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 140.40 Tm (- Add a fifth placeholder case-study card without polluting the repeated Articles card seeds, and keep the placeholder easy to replace with final project) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 130.25 Tm (content.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 119.00 Tm (- Give each featured card one established color family, restrained sheen, dark surface, matching borders, and coordinated metadata accents without) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 108.85 Tm (allowing the five colors to mix against the green page background.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 97.60 Tm (- Rework the platform and device rows into boxed cells with clear hierarchy, aligned widths, controlled gaps, and placeholder support while preserving) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 87.45 Tm (one-card portrait layouts.) Tj ET
+BT /F1 7.3 Tf 1 0 0 1 42.00 18.50 Tm (Prahlin Portfolio Work Log - October 15, 2026 \(Part 2\)) Tj ET
+BT /F1 7.3 Tf 1 0 0 1 548.09 18.50 Tm (Page 1) Tj ET
+endstream
+endobj
+7 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 8 0 R >>
+endobj
+8 0 obj
+<< /Length 8904 >>
+stream
+BT /F1 8.25 Tf 1 0 0 1 44.00 748.00 Tm (- Apply the same five designated families to the five philosophy stacks, covering the number box, heading box, large content box, typography, border,) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 737.85 Tm (and background numeral while leaving the navigation triangles unchanged.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 726.60 Tm (- Make inactive carousel stacks reuse the active internal layout so screenshots, text, and device frames retain identical proportions at every rotational) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 716.45 Tm (position.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 705.20 Tm (- Preserve the accepted outer carousel silhouette by recalibrating stack offsets and horizontal scale after canonicalizing internal widths.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 693.95 Tm (- Reassign project media and device frames, refine the orange stack, revise copy, enlarge selected text and imagery, and protect all large-box content) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 683.80 Tm (from edge clipping.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 672.55 Tm (- Keep the local preview available, clear stale caches when source and rendered CSS diverge, validate the final implementation, and document the) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 662.40 Tm (synchronized commit without performing a deployment.) Tj ET
+BT /F2 10 Tf 1 0 0 1 42.00 647.15 Tm (Work Completed - Five Featured Case Studies) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 632.15 Tm (- Added a typed CaseStudyTone model and assigned one family to each landing card: Cinerific purple, Alla Vostra orange, Credit King blue, Future) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 622.00 Tm (Case Study yellow, and Prahl.dev green.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 610.75 Tm (- Added Future Case Study as a fifth placeholder with reserved eyebrow, description, tags, commit and worklog statistics, and explicit TBD platform) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 600.60 Tm (and device labels.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 589.35 Tm (- Kept the placeholder out of articleCaseStudySeeds so the Articles repetition system continues to use only real case studies rather than cloning) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 579.20 Tm (unfinished placeholder content.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 567.95 Tm (- Reordered the final pair so the yellow placeholder precedes the green Prahl.dev card while retaining each card's designated color identity.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 556.70 Tm (- Added data-case-tone attributes to linked and unlinked card shells, allowing the visual system to remain data-driven instead of relying on positional) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 546.55 Tm (selectors.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 535.30 Tm (- Built subtle radial and diagonal sheens over a dark rgba\(3, 7, 5, 0.67\) foundation, with family-specific core, middle, and edge values and restrained) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 525.15 Tm (mixed-color borders and inset light.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 513.90 Tm (- Coordinated eyebrow, worklog statistic, platform heading, platform slot, divider, and topline accent colors with each card's owning family.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 502.65 Tm (- Added an explicit portrait rule through 1040 pixels so the featured grid remains one card per row in narrow portrait modes.) Tj ET
+BT /F2 10 Tf 1 0 0 1 42.00 487.40 Tm (Work Completed - Platform and Device Metadata Cells) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 472.40 Tm (- Extended ProjectDeviceStack with optional platformLabels in parallel with the existing deviceLabels override, enabling the placeholder card to) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 462.25 Tm (display TBD without inventing Android, iOS, web, phone, or tablet support.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 451.00 Tm (- Added the custom platform-label sequence to the measurement-effect dependency key so responsive spacing recalculates when authored labels) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 440.85 Tm (change.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 429.60 Tm (- Reworked the metadata grid from a one-pixel divider column into a fixed 92-pixel heading column, a flexible breathing column, and content-sized) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 419.45 Tm (sibling cells.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 408.20 Tm (- Converted PLATFORM and DEVICE headings into bordered, rounded cells with controlled padding, line height, and equal fixed width.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 396.95 Tm (- Converted each sibling label into its own bordered, rounded 54-pixel cell with a shared minimum height and inherited family color.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 385.70 Tm (- Removed the old visible inter-cell and inter-row divider elements after the cells themselves became fully encapsulated from every direction.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 374.45 Tm (- Tightened sibling-cell gaps, increased vertical separation between metadata rows, and preserved right-side sibling grouping without forcing the) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 364.30 Tm (stacks against the card margins.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 353.05 Tm (- Preserved the project-title rendering path for variants and fallbacks, including the existing title underline treatment and semantic heading label.) Tj ET
+BT /F2 10 Tf 1 0 0 1 42.00 337.80 Tm (Work Completed - Five-Color Philosophy Surfaces) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 322.80 Tm (- Added a UIUX_DECISION_CASE_TONES mapping for decisions 01 through 05 in purple, yellow, blue, orange, and green order.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 311.55 Tm (- Attached data-case-tone and data-decision-number attributes to each 3D stack so color, typography, media scaling, and layout exceptions remain) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 301.40 Tm (declarative.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 290.15 Tm (- Applied coordinated dark surfaces, borders, subtle radial blooms, diagonal sheen, and inset light to each stack's number box, title bridge, and large) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 280.00 Tm (content box.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 268.75 Tm (- Retained the existing navigation-triangle treatment instead of recoloring it, preserving the established control language while the boxes carry the new) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 258.60 Tm (family identity.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 247.35 Tm (- Reduced yellow and orange surface bloom to keep the warm families from appearing muddy or overly similar. Yellow retained a restrained charcoal) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 237.20 Tm (foundation and low-opacity diagonal sheen.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 225.95 Tm (- Rebuilt orange around the neutral #0d1210 surface, removed orange surface sheen and inset glow, and retained orange only in its key, title hierarchy,) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 215.80 Tm (typography, and 25-percent border.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 204.55 Tm (- Preserved the accepted orange key gradient from yellow through dark orange while preventing the large boxes from drifting toward purple or red under) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 194.40 Tm (the dark page treatment.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 183.15 Tm (- Colored the giant faded background numerals with their own designated family core and retained the vertical fade mask at 16-percent opacity.) Tj ET
+BT /F2 10 Tf 1 0 0 1 42.00 167.90 Tm (Work Completed - Carousel Geometry and Asset Consistency) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 152.90 Tm (- Replaced the active-versus-inactive internal width split with one canonical 654.4125-pixel stack width for every desktop position.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 141.65 Tm (- Made every stack use the primary internal layout so text, screenshots, device frames, and project labels retain the same proportions before and after) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 131.50 Tm (moving away from center.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 120.25 Tm (- Introduced named geometry constants for the canonical width, adjacent offset, adjacent horizontal scale, outer offset, and outer horizontal scale.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 109.00 Tm (- Calibrated adjacent stacks to an offset of 645.2431 and scaleX of 0.6664507, and outer stacks to an offset of 932.1406 and scaleX of 0.0977649.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 97.75 Tm (- Restored the previous visible bounding boxes after canonicalizing the internal layout. Browser measurements showed the active stack at) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 87.60 Tm (approximately 583.08 by 813.62 pixels while the side silhouettes retained their accepted placement.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 76.35 Tm (- Reduced the side-copy scale from 0.51 to 0.5 so the unified internal layout did not subtly enlarge text when a stack left center.) Tj ET
+BT /F1 7.3 Tf 1 0 0 1 42.00 18.50 Tm (Prahlin Portfolio Work Log - October 15, 2026 \(Part 2\)) Tj ET
+BT /F1 7.3 Tf 1 0 0 1 548.09 18.50 Tm (Page 2) Tj ET
+endstream
+endobj
+9 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 10 0 R >>
+endobj
+10 0 obj
+<< /Length 8839 >>
+stream
+BT /F1 8.25 Tf 1 0 0 1 44.00 748.00 Tm (- Repeated forward and reverse carousel cycles with reduced motion and confirmed stable positions, unchanged outer geometry, and no accumulated) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 737.85 Tm (horizontal-flip or clipping errors.) Tj ET
+BT /F2 10 Tf 1 0 0 1 42.00 722.60 Tm (Work Completed - Philosophy Media, Copy, and Hierarchy) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 707.60 Tm (- Reassigned decision 01 to the Cinerific landscape tablet image, tablet frame, Cinerific project label, and /projects/cinerific destination.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 696.35 Tm (- Reassigned decision 05 to the Alla Vostra startup image, Android phone frame, AI Generative annotation, Alla Vostra project label, and) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 686.20 Tm (/projects/alla-vostra destination.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 674.95 Tm (- Replaced decision 04's earlier Cinerific tablet with the Alla Vostra tutorial step-four screenshot in the Android device frame and linked it to the Alla) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 664.80 Tm (Vostra project page.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 653.55 Tm (- Moved PROJECT: CINERIFIC above the decision 01 tablet while leaving other project labels in their established positions.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 642.30 Tm (- Revised decision 01 to Sleek, Streamlined, NEVER, and Dated; revised decision 02 to Interwoven, Interconnected, ALWAYS, and Congruent.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 631.05 Tm (- Revised decision 05 to Adaptable In Form Factor, Scalable In Device Type, NEVER, and Cookie Cutter, and locked its first two lines against) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 620.90 Tm (wrapping.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 609.65 Tm (- Removed trailing periods from all oversized underlined emphasis words while preserving punctuation on their supporting lines.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 598.40 Tm (- Matched decision 02 and decision 04 large-box copy scale to decision 01 through a 0.6875 internal transform and compensated content width.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 587.15 Tm (- Enlarged decision 01's tablet treatment by 25 percent from its original internal size and moved it downward to separate it from the enlarged copy.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 575.90 Tm (- Increased decision 01 NEVER and decision 02 ALWAYS twice by five percent, ending at the same 137.8125-pixel source size.) Tj ET
+BT /F2 10 Tf 1 0 0 1 42.00 560.65 Tm (Work Completed - Protected Margins and No-Clipping Rules) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 545.65 Tm (- Added data-decision-number to the full stack in addition to the focused card, allowing stack-specific scaling and placement rules to follow a decision) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 535.50 Tm (through every carousel role.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 524.25 Tm (- Added --uiux-focused-safe-inline as the shared large-card inset and rewired description-span width and negative-margin compensation around that) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 514.10 Tm (token.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 502.85 Tm (- Corrected decision 01's transformed text width after the 25-percent enlargement. The accepted geometry restored approximately 17.82 pixels of) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 492.70 Tm (visible left and right padding rather than allowing the text container to extend 44 pixels past both edges.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 481.45 Tm (- Added explicit overflow-visible and clip-path-none safeguards to active-card, focused-card, copy, device-slot, and frame-stack layers. The device) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 471.30 Tm (screen itself still clips its screenshot inside the physical bezel as intended.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 460.05 Tm (- Separated the decision 01 text and device transform rules so moving the image could not accidentally move the copy through a grouped selector.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 448.80 Tm (- Lowered decision 01's device slot to 330 pixels after enlarging its copy, preserving an approximately eight-pixel copy-to-asset gap, 32 pixels of right) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 438.65 Tm (clearance, and more than 31 pixels of bottom clearance.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 427.40 Tm (- Compensated the enlarged decision 01, 02, and 04 text containers to keep the same approximately 18-pixel visible side padding used by the original) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 417.25 Tm (accepted boxes.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 406.00 Tm (- Used actual browser Range glyph rectangles, not only containing spans, to confirm that the enlarged decision 02 and 04 copy did not collide with) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 395.85 Tm (their phone frames.) Tj ET
+BT /F2 10 Tf 1 0 0 1 42.00 380.60 Tm (Work Completed - Local Cache Recovery and Iterative Verification) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 365.60 Tm (- Kept the Next.js development preview running at http://127.0.0.1:3000 throughout the landing-page work.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 354.35 Tm (- Detected repeated cases where Turbopack served old CSS after the DOM and source had already changed. Computed transforms, white-space) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 344.20 Tm (values, and new selectors were compared directly against source before any compensating edits were accepted.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 332.95 Tm (- Stopped the development server, moved stale .next output into timestamped ignored .next.cleared-* archives, and restarted from a clean cache) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 322.80 Tm (whenever normal hot reload did not expose the authored stylesheet.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 311.55 Tm (- Used browser screenshots and computed rectangles after each sensitive carousel adjustment, particularly the unified side-stack geometry, decision) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 301.40 Tm (01 scaling, project-label ordering, no-wrap behavior, and designated background-number colors.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 290.15 Tm (- Verified all five faded numeral bases individually: purple rgb\(221, 75, 253\), yellow rgb\(255, 209, 2\), blue rgb\(1, 171, 253\), orange rgb\(237, 93, 7\),) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 280.00 Tm (and green rgb\(51, 241, 80\), each at 0.16 opacity.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 268.75 Tm (- Confirmed the final decision 01 image and label remained within the large box after moving the label above the tablet, with more than 31 pixels of) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 258.60 Tm (bottom clearance.) Tj ET
+BT /F2 10 Tf 1 0 0 1 42.00 243.35 Tm (Committed Source Sequence) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 228.35 Tm (- 506edff - Refined landing case studies and UI/UX philosophy carousel. Added the fifth placeholder case study and five card tones; rebuilt platform) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 218.20 Tm (and device cells; carried the color system into the five carousel stacks; standardized geometry; remapped screenshots, frames, labels, and links;) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 208.05 Tm (revised philosophy copy; enlarged selected typography and imagery; and added protected-margin and no-clipping rules.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 196.80 Tm (- The commit changed app/PortfolioSections.tsx, app/ProjectCarouselButton.tsx, app/UiUxDecisionShowcase.tsx, app/globals.css, app/page.tsx, and) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 186.65 Tm (portfolio_PROJECT_SNAPSHOT.txt with 474 insertions and 62 deletions.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 175.40 Tm (- At documentation time, HEAD, main, origin/main, and origin/HEAD all resolve to 506edff3b7cd33895c8d74fc87e7e6cbf21012a3. The application) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 165.25 Tm (work is committed and synchronized; this documentation pass has not created a commit, push, deployment, or external release.) Tj ET
+BT /F2 10 Tf 1 0 0 1 42.00 150.00 Tm (Validation Summary) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 135.00 Tm (- npm run check completed successfully against the current source.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 123.75 Tm (- git diff --check -- app completed without whitespace errors.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 112.50 Tm (- The locally served routes /, /projects/alla-vostra, /projects/cinerific, /aboutdev, and /articles each returned HTTP 200 during the documentation pass.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 101.25 Tm (- Browser inspection confirmed the active carousel stack remains approximately 583.08 by 813.62 pixels after internal-layout unification.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 90.00 Tm (- Five-step forward and reverse carousel checks preserved the accepted side-stack bounding boxes and internal asset proportions.) Tj ET
+BT /F1 7.3 Tf 1 0 0 1 42.00 18.50 Tm (Prahlin Portfolio Work Log - October 15, 2026 \(Part 2\)) Tj ET
+BT /F1 7.3 Tf 1 0 0 1 548.09 18.50 Tm (Page 3) Tj ET
+endstream
+endobj
+11 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 12 0 R >>
+endobj
+12 0 obj
+<< /Length 7221 >>
+stream
+BT /F1 8.25 Tf 1 0 0 1 44.00 748.00 Tm (- Decision 01's enlarged text retained approximately 17.82 pixels of visible left and right padding; its tablet and label retained approximately 32 pixels) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 737.85 Tm (of right and bottom clearance.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 726.60 Tm (- Decision 02 and decision 04 resolved to the same 0.6875 copy transform as decision 01, and Range-based glyph checks reported no intersections) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 716.45 Tm (with their phone frames.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 705.20 Tm (- Decision 05's first two lines resolved to white-space nowrap and rendered as single lines inside the large box.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 693.95 Tm (- NEVER and ALWAYS resolved to the same 137.813-pixel computed source size after the final paired increase.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 682.70 Tm (- Each giant numeral inherited its own stack's designated accent and retained the common 16-percent fade treatment.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 671.45 Tm (- Portrait case-study CSS retained one grid column through the protected 1040-pixel portrait range.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 660.20 Tm (- Repository status before PDF creation showed only portfolio_PROJECT_SNAPSHOT.txt modified by the customary project-reader refresh.) Tj ET
+BT /F2 10 Tf 1 0 0 1 42.00 644.95 Tm (Files Touched and Artifacts) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 629.95 Tm (- app/PortfolioSections.tsx - fifth placeholder case-study data, typed color families, placeholder platform and device labels, article-seed exclusion, title) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 619.80 Tm (fallback structure, and data-case-tone attributes.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 608.55 Tm (- app/ProjectCarouselButton.tsx - custom platform-label support, recalculation dependency, and revised platform/device metadata grid sizing.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 597.30 Tm (- app/UiUxDecisionShowcase.tsx - five case-tone mapping, canonical desktop stack constants, unified primary internal layout, recalibrated stack) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 587.15 Tm (offsets and scales, and decision/tone data attributes.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 575.90 Tm (- app/globals.css - featured-card palettes and sheens, metadata cells, portrait one-column protection, five philosophy surface systems, orange neutral) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 565.75 Tm (treatment, unified stack scaling, safe-area rules, typography and media adjustments, no-wrap behavior, project-label ordering, and faded accent) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 555.60 Tm (numerals.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 544.35 Tm (- app/page.tsx - final philosophy copy plus Cinerific and Alla Vostra media, frame, label, and route assignments.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 533.10 Tm (- portfolio_PROJECT_SNAPSHOT.txt - refreshed project-reader output generated after the synchronized application commit.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 521.85 Tm (- portfolio_worklog_october15_part2.pdf - new customary second worklog generated by this documentation pass.) Tj ET
+BT /F2 10 Tf 1 0 0 1 42.00 506.60 Tm (Follow-Up Notes) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 491.60 Tm (- Replace Future Case Study placeholder content when a real fifth project is ready. Keep it excluded from articleCaseStudySeeds until the project has) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 481.45 Tm (a real route and complete editorial content.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 470.20 Tm (- Preserve the card-to-family mapping unless later project semantics explicitly require a change: Cinerific purple, Alla Vostra orange, Credit King blue,) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 460.05 Tm (placeholder yellow, and Prahl.dev green.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 448.80 Tm (- Keep portrait featured cards at one column. The max-width 1040 portrait rule exists because a two-card row was specifically rejected in narrow) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 438.65 Tm (orientation.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 427.40 Tm (- Preserve the canonical stack width and calibrated offset/scale constants as one geometry system. Changing only internal width or only side offsets) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 417.25 Tm (can reintroduce inconsistent screenshot sizing.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 406.00 Tm (- Keep orange on the neutral #0d1210 surface unless a later approved treatment replaces the whole warm-stack hierarchy. Earlier colored bases) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 395.85 Tm (repeatedly mixed toward purple or muddy brown.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 384.60 Tm (- Do not remove the focused-card safe-area compensation when changing copy scale. Transformed copy uses width compensation to preserve the) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 374.45 Tm (visible 18-pixel inset.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 363.20 Tm (- Move media vertically when copy grows rather than clipping card edges. Keep browser-measured right and bottom clearances positive and preserve) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 353.05 Tm (explicit overflow safeguards.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 341.80 Tm (- Keep decision 05's first two authored lines nowrap unless their copy changes enough to require a new responsive rule.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 330.55 Tm (- If source changes fail to appear locally, inspect computed CSS and clear or move .next before adjusting correct source to compensate for a stale) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 320.40 Tm (bundle.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 309.15 Tm (- Before committing or pushing this documentation pass, review the refreshed snapshot and Part 2 PDF together and use a past-tense documentation) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 299.00 Tm (commit message distinct from 506edff.) Tj ET
+BT /F2 10 Tf 1 0 0 1 42.00 283.75 Tm (Output Artifact) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 268.75 Tm (- Generated /Users/prahlin/gh/portfolio/portfolio_worklog_october15_part2.pdf using the established lowercase-month, non-zero-padded-day, same-day) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 258.60 Tm (Part suffix convention.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 247.35 Tm (- The artifact uses US Letter portrait pages, PDF 1.4, Helvetica and Helvetica-Bold, compact black-on-white technical prose, repeated dated Part 2) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 237.20 Tm (footers, right-aligned page numbers, and Codex metadata consistent with the mature archive.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 225.95 Tm (- The recorded application baseline is 506edff3b7cd33895c8d74fc87e7e6cbf21012a3 on synchronized main and origin/main. No application source) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 215.80 Tm (was edited while creating this record.) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 44.00 204.55 Tm (- Documentation deltas created by this pass are the refreshed portfolio_PROJECT_SNAPSHOT.txt and portfolio_worklog_october15_part2.pdf. No) Tj ET
+BT /F1 8.25 Tf 1 0 0 1 54.00 194.40 Tm (deployment, remote message, branch mutation, or production publish was performed.) Tj ET
+BT /F1 7.3 Tf 1 0 0 1 42.00 18.50 Tm (Prahlin Portfolio Work Log - October 15, 2026 \(Part 2\)) Tj ET
+BT /F1 7.3 Tf 1 0 0 1 548.09 18.50 Tm (Page 4) Tj ET
+endstream
+endobj
+13 0 obj
+<< /Title (Prahlin Portfolio Work Log - October 15, 2026 \(Part 2\)) /Subject (Portfolio implementation worklog for October 15, 2026 - Part 2) /Author (Codex) /Creator (Codex) /Producer (Codex) /CreationDate (D:20261015223457-04'00') /ModDate (D:20261015223457-04'00') >>
+endobj
+xref
+0 14
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000140 00000 n 
+0000000237 00000 n 
+0000000339 00000 n 
+0000000475 00000 n 
+0000009687 00000 n 
+0000009823 00000 n 
+0000018778 00000 n 
+0000018915 00000 n 
+0000027806 00000 n 
+0000027944 00000 n 
+0000035217 00000 n 
+trailer
+<< /Size 14 /Root 1 0 R /Info 13 0 R >>
+startxref
+35505
+%%EOF
