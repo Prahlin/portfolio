@@ -1,0 +1,849 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [6 0 R 8 0 R 10 0 R 12 0 R] /Count 4 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+5 0 obj
+<< /Title (Prahlin Portfolio Work Log - October 16, 2026) /Subject (Portfolio implementation worklog for October 16, 2026) /Author (Codex) /Creator (Codex) /Producer (Codex) /CreationDate (D:20261016235900-04'00') /ModDate (D:20261016235900-04'00') >>
+endobj
+6 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 7 0 R >>
+endobj
+7 0 obj
+<< /Length 9896 >>
+stream
+BT
+/F2 14 Tf
+1 0 0 1 42.000 742.000 Tm
+(Prahlin Portfolio Work Log - October 16, 2026) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 715.000 Tm
+(Compiled summary for Friday, October 16, 2026 - focus: continuing the Prahl.dev Portfolio after the October 15 Part 2 featured-case-study and) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 704.850 Tm
+(philosophy-surface record; independently checking the current United States Eastern date while honoring the requested October 16 session date;) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 694.700 Tm
+(refreshing the project snapshot; extracting and studying the complete pre-existing PDF worklog archive; adding the HACKS landing-navigation) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 684.550 Tm
+(destination and reorganizing portrait navigation; rebuilding the My Core Beliefs star visibility treatment around intersecting diagonal and vertical masks;) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 674.400 Tm
+(extending all five UI / UX Philosophy stacks with interactive numbered detail variants; remapping philosophy names, headlines, supporting copy, and) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 664.250 Tm
+(Alla Vostra media; supporting standard and tall Android device frames; preserving project labels above right-aligned imagery; anchoring all populated) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 654.100 Tm
+(previews to a shared protected bottom margin; refining Stack 02 typography into a five-row pyramid; validating TypeScript, routes, responsive) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 643.950 Tm
+(rendering, and repository synchronization; and generating the October 16 Portfolio PDF worklog.) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 629.200 Tm
+(Generated in continuity with the established Prahlin Portfolio daily worklog cadence: compact opening summary, source-material section, baseline) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 619.050 Tm
+(section, goal list, implementation sections grouped by feature, committed-source sequence, validation summary, files-and-artifacts list, follow-up notes,) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 608.900 Tm
+(and output-artifact close. This record documents completed work and observable repository evidence rather than speculative design intent.) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 594.150 Tm
+(Coverage begins after portfolio_worklog_october15_part2.pdf and documentation commit b416f76. Two implementation commits are included:) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 584.000 Tm
+(af50a109a24f5f1ca42cef5bdf6bd0b81d99de34 and 2646b39106ed46656a3fdf1816522a94bf136d91. The latter was finalized at 12:03 AM Eastern on) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 573.850 Tm
+(October 17 during the same uninterrupted session; the user explicitly directed this worklog to use October 16 as its record date. At documentation time,) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 563.700 Tm
+(HEAD, main, origin/main, and origin/HEAD resolve to 2646b39. No production deployment, Hostinger branch update, GitHub Actions dispatch,) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 553.550 Tm
+(public-site publish, or external message was performed during this record. The documentation-side changes produced by this pass are the) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 543.400 Tm
+(reader-refreshed portfolio_PROJECT_SNAPSHOT.txt and this PDF.) Tj
+/F2 10 Tf
+1 0 0 1 42.000 523.650 Tm
+(Source Materials Reviewed) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 511.150 Tm
+(- Date verification: an independent UTC-04:00 time query returned October 17, 2026 at 12:05 AM. The supplied client timezone is America/New_York,) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 501.000 Tm
+(  which remains on Eastern Daylight Time at UTC-04:00 on this date. The current Eastern calendar date was therefore verified as October 17; per the) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 490.850 Tm
+(  user's explicit instruction, the artifact is intentionally titled and named for October 16, 2026.) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 480.350 Tm
+(- Project reader: ran ./read_project.sh from /Users/prahlin/gh/portfolio before composing this record. It refreshed portfolio_PROJECT_SNAPSHOT.txt) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 470.200 Tm
+(  to 20,577 lines and 686,803 bytes, capturing current source, asset inventory, PDF inventory, Git context, deployment configuration, and standing) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 460.050 Tm
+(  project instructions.) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 449.550 Tm
+(- Worklog archive: enumerated, extracted, and studied all 55 pre-existing root-level Portfolio PDF worklogs from portfolio_worklog_july11.pdf through) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 439.400 Tm
+(  portfolio_worklog_october15_part2.pdf. Before this artifact, the archive contained 311 pages and approximately 158,258 extracted words.) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 428.900 Tm
+(- Archive comparison: compared titles, same-day Part suffix rules, introductory density, recurring section order, technical bullet voice, validation) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 418.750 Tm
+(  language, commit and deployment disclosure, files-touched treatment, follow-up continuity, output-artifact closure, and repeated page-footer behavior) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 408.600 Tm
+(  across the complete series.) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 398.100 Tm
+(- Nearest baselines: read the October 15 and October 15 Part 2 records in full, with October 13, October 9, and representative July through September) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 387.950 Tm
+(  entries used to confirm mature formatting and historical continuity. The October 15 Part 2 record was the direct source and design baseline.) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 377.450 Tm
+(- PDF conventions: confirmed US Letter portrait at 612 x 792 points, PDF 1.4, no encryption, dense black text on white, Helvetica and Helvetica-Bold) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 367.300 Tm
+(  Type 1 fonts, compact margins, a single dated title on page one, repeated dated footer title, right-aligned page numbers, and Codex author, creator,) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 357.150 Tm
+(  and producer metadata.) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 346.650 Tm
+(- Git evidence: inspected commit metadata, full diffs, file statistics, commit bodies, current branch tracking, aggregate changes since b416f76, and the) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 336.500 Tm
+(  regenerated snapshot. The two implementation commits changed five tracked files with 472 insertions and 152 deletions relative to the prior) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 326.350 Tm
+(  documentation baseline.) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 315.850 Tm
+(- Runtime evidence: kept the local Next.js preview available at http://127.0.0.1:3000; checked primary routes, rendered desktop structure, detail) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 305.700 Tm
+(  selectors, device media, project labels, and document overflow; and compared computed behavior against the authored source when stale) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 295.550 Tm
+(  development output appeared.) Tj
+/F2 10 Tf
+1 0 0 1 42.000 280.050 Tm
+(Baseline Status Before October 16) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 267.550 Tm
+(- The landing navigation already exposed the main portfolio anchors, but Productivity Hacks did not have a direct HACKS link. Portrait mode still) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 257.400 Tm
+(  distributed only two links across the top row and left STACK in the lower row.) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 246.900 Tm
+(- Responsive nav separators were coupled to the earlier two-column top distribution. Moving a third link upward risked duplicated dividers, missing) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 236.750 Tm
+(  dividers, or excessive spacing from the Prahl.dev brand if the portrait and landscape arrangements were not separated explicitly.) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 226.250 Tm
+(- My Core Beliefs used a layered star visibility treatment, including a horizontal mask and a lower radial fade. The active top point was not isolated) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 216.100 Tm
+(  through the requested diagonal geometry, and the side and lower regions remained more visible than intended.) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 205.600 Tm
+(- The UI / UX Philosophy cards displayed one screenshot and one content state per philosophy. They did not provide visible 1, 2, and 3 controls or a) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 195.450 Tm
+(  model for detail-specific images, frames, labels, links, and aspect ratios.) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 184.950 Tm
+(- Philosophy names and large-box messages still reflected the October 15 Part 2 mapping. Modern, Cohesive, Smooth, User-friendly, and Responsive) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 174.800 Tm
+(  content needed to be redistributed into the final Modern, User-friendly, Responsive, Cohesive, and Reusable sequence.) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 164.300 Tm
+(- Alla Vostra media appeared in one fixed arrangement. The requested startup, product overlay, tutorial, large home, and confirmation assets were not) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 154.150 Tm
+(  yet attached to numbered variants across stacks 01, 02, and 03.) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 143.650 Tm
+(- Device previews used fixed top positioning and variant-specific geometry. Enlarged imagery could approach or cross bottom padding, project labels) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 133.500 Tm
+(  appeared below some imagery, and tall screenshots lacked their own physical-frame aspect option.) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 123.000 Tm
+(- Stack 02 supporting language and typography still behaved like a conventional annotation. It had not yet become the quieter five-row, right-aligned) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 112.850 Tm
+(  pyramid that complements the large headline without reading as a second headline.) Tj
+/F2 10 Tf
+1 0 0 1 42.000 97.350 Tm
+(Goals for October 16) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 84.850 Tm
+(- Add a concise HACKS navigation item that links directly to Productivity Hacks, while retaining all existing landing destinations and page-context) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 74.700 Tm
+(  behavior.) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 29.000 Tm
+(Prahlin Portfolio Work Log - October 16, 2026) Tj
+/F1 8.25 Tf
+1 0 0 1 567.856 29.000 Tm
+(Page 1) Tj
+ET
+endstream
+endobj
+8 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 9 0 R >>
+endobj
+9 0 obj
+<< /Length 9650 >>
+stream
+BT
+/F1 8.25 Tf
+1 0 0 1 42.000 748.000 Tm
+(- Put three navigation links in the portrait top row, move STACK between top and bottom rows according to orientation, and restore exactly one divider) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 737.850 Tm
+(  between every visible neighbor without crowding the brand.) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 727.350 Tm
+(- Replace the Core Beliefs star's upper horizontal mask with two intersecting diagonal fades aligned to the upward-facing point and tune the lower fade) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 717.200 Tm
+(  so almost all visibility concentrates near the top center.) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 706.700 Tm
+(- Add three actionable square selectors to every philosophy stack, show a clear active state, preserve headline text across empty variants, and reveal) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 696.550 Tm
+(  media only where a numbered variant has an assigned screenshot.) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 686.050 Tm
+(- Support detail-specific screenshot sources, alt text, project labels, project routes, device variants, and tall-phone aspect ratios without duplicating the) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 675.900 Tm
+(  whole decision component.) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 665.400 Tm
+(- Reassign the Alla Vostra assets to their requested stacks and boxes, preserve their complete device frames and source aspect ratios, and keep every) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 655.250 Tm
+(  populated preview clear of all large-card padding.) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 644.750 Tm
+(- Standardize all five headline layouts, keep PROJECT labels above and right-aligned with their media, and bottom-anchor differently scaled frames to) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 634.600 Tm
+(  one shared visual baseline.) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 624.100 Tm
+(- Refine Stack 02 supporting copy into a restrained five-row pyramid with coherent language, increased line spacing, and visual separation from both) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 613.950 Tm
+(  the primary headline and screenshot.) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 603.450 Tm
+(- Keep the local preview responsive during iteration, recover from stale Turbopack output when necessary, validate the final state, and document the) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 593.300 Tm
+(  synchronized commits without deploying.) Tj
+/F2 10 Tf
+1 0 0 1 42.000 577.800 Tm
+(Work Completed - Landing Navigation and Portrait Distribution) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 565.300 Tm
+(- Added HACKS to the home navigation and linked it to #productivity-hacks, preserving the established uppercase presentation while keeping the) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 555.150 Tm
+(  underlying label concise.) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 544.650 Tm
+(- Extended NavItem with an optional responsivePlacement field so one logical destination can be rendered in orientation-specific positions without) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 534.500 Tm
+(  changing its route, label, or semantic link behavior.) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 524.000 Tm
+(- Increased the home-page split point and created portrait and landscape instances of STACK. In portrait, STACK joins CASES and UI / UX in the) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 513.850 Tm
+(  three-cell top distribution; in landscape, STACK remains in the lower navigation row.) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 503.350 Tm
+(- Added explicit portrait-only and landscape-only classes rather than relying on fragile positional assumptions. The general navigation remains) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 493.200 Tm
+(  unchanged for supplied custom item arrays and non-home contexts.) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 482.700 Tm
+(- Expanded NavTopLinkRow to render a third top-row destination and a second separator when present. Renamed the original center divider to an) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 472.550 Tm
+(  adaptive divider so the same markup can occupy the halfway point in two-column layouts and the one-third point in portrait three-column layouts.) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 462.050 Tm
+(- Defined one-third and two-thirds separator positions for the portrait grid, hid the lower-row separator that would otherwise remain after its STACK) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 451.900 Tm
+(  neighbor moved, and corrected the missing divider between CASES and UI / UX.) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 441.400 Tm
+(- Allowed the portrait top row to use the available brand-adjacent space and added a narrow 430-pixel type clamp so the three links can approach) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 431.250 Tm
+(  Prahl.dev without overlapping or forcing a wrap.) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 420.750 Tm
+(- Kept landscape behavior intact throughout the portrait changes. The final result avoids the intermediate duplicate-divider and no-divider states while) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 410.600 Tm
+(  giving all three portrait links equal cells.) Tj
+/F2 10 Tf
+1 0 0 1 42.000 395.100 Tm
+(Work Completed - Core Beliefs Visibility Masks) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 382.600 Tm
+(- Removed the earlier top horizontal opacity mask and replaced it with two diagonal alpha gradients, one at 54 degrees and one at -54 degrees.) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 372.100 Tm
+(- Aligned the diagonal pair to converge around the upper-facing star point. Their opposing low-opacity zones form the requested bottom-left and) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 361.950 Tm
+(  bottom-right triangular regions while leaving the top center comparatively unobscured.) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 351.450 Tm
+(- Iterated the diagonal stops to 1 percent through 35 percent, 3 percent at 42 percent, 20 percent at 48 percent, 67 percent at 54 percent, and full) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 341.300 Tm
+(  opacity at the far endpoint. This delayed the visible transition until closer to the upper center while retaining a gradual edge.) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 330.800 Tm
+(- Preserved the third vertical mask and moved its full-to-transparent transition to 48-52 percent, concentrating useful visibility above the star center) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 320.650 Tm
+(  instead of allowing the lower half to brighten too early.) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 310.150 Tm
+(- Temporarily exposed full white mask strokes during geometry review, then removed those diagnostic strokes after the intersection point and angles) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 300.000 Tm
+(  were accepted.) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 289.500 Tm
+(- Darkened the star sides and center through repeated stop and radial adjustments. The lower radial mask now begins at 12 percent in the center,) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 279.350 Tm
+(  steps to 6 percent, and holds a 4 percent floor from 20 percent through the outer edge.) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 268.850 Tm
+(- Kept the WebKit and standards mask declarations synchronized, including matching composite operations, so the same three-mask structure remains) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 258.700 Tm
+(  available across supported engines.) Tj
+/F2 10 Tf
+1 0 0 1 42.000 243.200 Tm
+(Work Completed - Interactive Philosophy Detail System) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 230.700 Tm
+(- Added a reusable UiUxStackSquares control that renders square buttons 1, 2, and 3 in the upper-right safe area of each non-placeholder large box.) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 220.200 Tm
+(- Styled each control with no background fill, the stack's existing border and accent family, doubled dimensions relative to the initial experiment,) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 210.050 Tm
+(  protected spacing from the box edge, and a restrained active border, glow, and color shift.) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 199.550 Tm
+(- Added semantic group labels, per-button accessible names, aria-pressed state, keyboard focus outlines, and button elements rather than) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 189.400 Tm
+(  non-semantic click targets.) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 178.900 Tm
+(- Stopped selector pointer and click events from bubbling into the surrounding carousel interaction, allowing a detail to change without triggering stack) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 168.750 Tm
+(  navigation or disturbing the 3D face state.) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 158.250 Tm
+(- Added active-detail state to both the focused desktop stack and compact decision columns. Changing the selected philosophy resets its detail to 1,) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 148.100 Tm
+(  preventing an unavailable alternate state from leaking across cards.) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 137.600 Tm
+(- Introduced detailScreenshots as a typed partial map for boxes 1 through 3. Each entry can independently override screenshot source, alt text,) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 127.450 Tm
+(  Android/phone/tablet frame, tall/standard aspect, project label, and project route.) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 116.950 Tm
+(- Preserved the stack headline and large-box copy for all three selections. A variant with no mapped media intentionally shows no device image or tiny) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 106.800 Tm
+(  context text, matching the requirement that boxes 2 and 3 remain valid even when only the headline state exists.) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 96.300 Tm
+(- Limited supporting context to detail 1 and made UiUxDeviceContext valid when either a title or description exists. This allowed Stack 02 to remove its) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 86.150 Tm
+(  green eyebrow while retaining its supporting paragraph.) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 75.650 Tm
+(- Recomputed compact noodle geometry when the focused detail changes so media insertion or removal does not leave stale connector placement.) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 29.000 Tm
+(Prahlin Portfolio Work Log - October 16, 2026) Tj
+/F1 8.25 Tf
+1 0 0 1 567.856 29.000 Tm
+(Page 2) Tj
+ET
+endstream
+endobj
+10 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 11 0 R >>
+endobj
+11 0 obj
+<< /Length 8604 >>
+stream
+BT
+/F2 10 Tf
+1 0 0 1 42.000 743.000 Tm
+(Work Completed - Philosophy Content and Media Mapping) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 730.500 Tm
+(- Renamed the final stack sequence to 01 Modern, 02 User-friendly, 03 Responsive, 04 Cohesive, and 05 Reusable without changing the established) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 720.350 Tm
+(  purple, yellow, blue, orange, and green color ownership.) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 709.850 Tm
+(- Revised Stack 01 to Sleek, Streamlined, NEVER, Last Year. Its first state retains the Cinerific tablet; box 2 now uses the Alla Vostra startup image in) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 699.700 Tm
+(  an Android phone frame with an Alla Vostra label and route.) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 689.200 Tm
+(- Rebuilt Stack 02 around Intuitive, Digestible, EASY, To Grasp. Box 1 uses the Alla Vostra Piccola product overlay and box 2 uses the large) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 679.050 Tm
+(  home-screen asset in a tall Android frame.) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 668.550 Tm
+(- Rebuilt Stack 03 around Instant, Butter-Smooth, SAFELY, Satisfying. Box 1 uses the browse-grazingboards tutorial step, while box 3 uses the) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 658.400 Tm
+(  order-confirmation overlay.) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 647.900 Tm
+(- Reassigned Stack 04 to Interwoven, Interconnected, ALWAYS, Congruent and mapped its first state to the Alla Vostra products screen with the) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 637.750 Tm
+(  retained Step-by-Step Visibility annotation.) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 627.250 Tm
+(- Reframed Stack 05 as Reusable with Cross-Format, Cross-Device, ALWAYS, Adaptable. Removed the startup screenshot from its first state after) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 617.100 Tm
+(  that asset moved to Stack 01 box 2.) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 606.600 Tm
+(- Used existing repository imagery only. No replacement raster was generated, and no image was cropped to imitate the target; the component) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 596.450 Tm
+(  preserves each source inside its appropriate device shell.) Tj
+/F2 10 Tf
+1 0 0 1 42.000 580.950 Tm
+(Work Completed - Device Frames, Labels, and Protected Margins) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 568.450 Tm
+(- Added standard and tall Android aspect modes. The tall frame uses a 6:13 screen ratio while the regular Android treatment keeps the established) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 558.300 Tm
+(  standard ratio.) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 547.800 Tm
+(- Moved PROJECT labels before the device frame in document order so every populated variant displays PROJECT: followed by its active project) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 537.650 Tm
+(  name above the image rather than below it.) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 527.150 Tm
+(- Right-aligned the project label, its link, the frame stack, and the device imagery as one composition. Detail-level label and route overrides now follow) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 517.000 Tm
+(  the selected screenshot.) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 506.500 Tm
+(- Replaced top-based device placement with a shared 64-pixel bottom anchor and a 100-percent 100-percent transform origin. Every populated image) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 496.350 Tm
+(  therefore meets the same bottom margin regardless of source size or frame scale.) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 485.850 Tm
+(- Applied common scale rules across all five active stacks, with separate tablet, standard Android, tall Android, and Stack 03 box 1/3 adjustments. This) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 475.700 Tm
+(  permitted larger images while maintaining the accepted safe area.) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 465.200 Tm
+(- Reduced Stack 03 box 1 and box 3 slightly after their first pass appeared oversized. Increased other frames where requested, then verified that the) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 455.050 Tm
+(  bottom edge and right edge remained protected rather than clipping the large card.) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 444.550 Tm
+(- Standardized all focused headline layouts to the generous primary-card scale used by stacks 01, 02, and 04, while preserving stack-specific wording) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 434.400 Tm
+(  and colors.) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 423.900 Tm
+(- Removed Stack 05's old nowrap exception after the copy became Cross-Format and Cross-Device, allowing the shared headline system to control) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 413.750 Tm
+(  wrapping consistently.) Tj
+/F2 10 Tf
+1 0 0 1 42.000 398.250 Tm
+(Work Completed - Stack 02 Supporting Copy) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 385.750 Tm
+(- Removed the former INTUITIVE INTERFACE green eyebrow and retained a description-only context block.) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 375.250 Tm
+(- Iterated the supporting sentence from a longer user-directed explanation into a concise statement: Simple interfaces make / screens and controls /) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 365.100 Tm
+(  easy to navigate, / and actions / effortless.) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 354.600 Tm
+(- Preserved five authored lines with white-space pre-line, a common right edge, and progressively shorter language so the copy reads as an inverted) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 344.450 Tm
+(  pyramid rather than an arbitrary rag.) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 333.950 Tm
+(- Reduced the paragraph to a 32-pixel maximum, medium weight, pale neutral-green color, and 1.45 line height. This keeps it subordinate to the) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 323.800 Tm
+(  oversized EASY headline while remaining legible.) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 313.300 Tm
+(- Positioned the paragraph within the available left-side field, protected the image boundary, and retained the earlier ratio of border clearance to image) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 303.150 Tm
+(  clearance.) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 292.650 Tm
+(- Vertically balanced the block between the bottom of the primary headline and the lower device composition, avoiding collision with either the image or) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 282.500 Tm
+(  the large-card border.) Tj
+/F2 10 Tf
+1 0 0 1 42.000 267.000 Tm
+(Work Completed - Cache Recovery and Iterative Verification) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 254.500 Tm
+(- Kept the local Next.js development server available at http://127.0.0.1:3000 while the navigation, masks, selectors, copy, and media placement were) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 244.350 Tm
+(  refined.) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 233.850 Tm
+(- Detected stale Turbopack CSS when newly authored white-space and placement rules did not match browser-computed values. Verified source) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 223.700 Tm
+(  before making compensating edits.) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 213.200 Tm
+(- Stopped the listener, moved the generated .next directory into a recoverable temporary cache location, and restarted the development server from) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 203.050 Tm
+(  clean output. No source file or user asset was deleted.) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 192.550 Tm
+(- Used browser inspection to confirm three visible detail controls on the active stack, the expected Cinerific default image and label for Stack 01, and) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 182.400 Tm
+(  zero desktop horizontal overflow at 1440 pixels.) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 171.900 Tm
+(- Repeated source-level checks after every final copy change so the deliberate five-line breaks, Digestible headline, safe image anchors, and) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 161.750 Tm
+(  active-selector behavior remained represented in the committed result.) Tj
+/F2 10 Tf
+1 0 0 1 42.000 146.250 Tm
+(Committed Source Sequence) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 133.750 Tm
+(- af50a10 - Refined landing navigation and Core Beliefs visibility masks. Added HACKS, moved STACK into the portrait top row while preserving) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 123.600 Tm
+(  landscape placement, repaired responsive separators and spacing, replaced the upper star treatment with intersecting diagonal fades, and tuned) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 113.450 Tm
+(  side, center, and lower opacity.) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 102.950 Tm
+(- 2646b39 - Expanded the UI/UX philosophy showcase with interactive detail variants. Reworked stack names and messages, added accessible 1-3) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 92.800 Tm
+(  selectors and detail state, integrated Alla Vostra media and device-frame variants, moved project labels above imagery, standardized bottom) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 82.650 Tm
+(  anchoring and protected margins, and refined Stack 02's supporting pyramid.) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 29.000 Tm
+(Prahlin Portfolio Work Log - October 16, 2026) Tj
+/F1 8.25 Tf
+1 0 0 1 567.856 29.000 Tm
+(Page 3) Tj
+ET
+endstream
+endobj
+12 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 13 0 R >>
+endobj
+13 0 obj
+<< /Length 8820 >>
+stream
+BT
+/F1 8.25 Tf
+1 0 0 1 42.000 748.000 Tm
+(- The aggregate implementation delta after b416f76 spans app/PortfolioSections.tsx, app/UiUxDecisionShowcase.tsx, app/globals.css, app/page.tsx,) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 737.850 Tm
+(  and the previously refreshed snapshot, totaling 472 insertions and 152 deletions.) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 727.350 Tm
+(- At documentation time, HEAD, main, origin/main, and origin/HEAD resolve to 2646b39106ed46656a3fdf1816522a94bf136d91. Both implementation) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 717.200 Tm
+(  commits are committed and synchronized. This documentation pass has not committed or pushed the refreshed snapshot or generated PDF.) Tj
+/F2 10 Tf
+1 0 0 1 42.000 701.700 Tm
+(Validation Summary) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 689.200 Tm
+(- npm run check completed successfully against the synchronized application source.) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 678.700 Tm
+(- git diff --check -- app completed without whitespace errors. The generated snapshot reproduces numbered source lines containing existing trailing) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 668.550 Tm
+(  whitespace, so whole-repository diff checking reports those documentary lines; application files remain clean.) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 658.050 Tm
+(- Local route checks returned HTTP 200 for /, /projects/alla-vostra, /projects/cinerific, /aboutdev, and /articles.) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 647.550 Tm
+(- Desktop browser inspection at 1440 by 1000 found three detail-selector buttons on the active Stack 01 card, the expected Cinerific tablet source,) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 637.400 Tm
+(  PROJECT: CINERIFIC above the frame, and zero horizontal document overflow.) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 626.900 Tm
+(- Source and computed-style review confirmed Stack 02 uses pre-line white-space, a 32-pixel maximum supporting-copy size, 1.45 line height, and the) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 616.750 Tm
+(  authored five-line text.) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 606.250 Tm
+(- Component review confirmed detail state resets on philosophy changes, unmapped detail boxes suppress device media, detail-specific labels and) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 596.100 Tm
+(  routes resolve before defaults, and noodle geometry updates with detail state.) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 585.600 Tm
+(- CSS review confirmed a shared 64-pixel bottom anchor, right-side placement, bottom-right transform origin, separate tablet/standard/tall scale rules,) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 575.450 Tm
+(  and the 6:13 tall Android screen ratio.) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 564.950 Tm
+(- Navigation review confirmed HACKS targets #productivity-hacks, portrait mode supports a three-column top row, orientation-specific STACK) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 554.800 Tm
+(  instances are mutually hidden, and separator positions resolve at one-third and two-thirds.) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 544.300 Tm
+(- Repository status before PDF creation showed only portfolio_PROJECT_SNAPSHOT.txt modified by the customary project-reader refresh. No) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 534.150 Tm
+(  uncommitted application-source changes remained.) Tj
+/F2 10 Tf
+1 0 0 1 42.000 518.650 Tm
+(Files Touched and Artifacts) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 506.150 Tm
+(- app/PortfolioSections.tsx - HACKS destination, responsive placement metadata, orientation-specific STACK handling, third top-row link support, and) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 496.000 Tm
+(  adaptive separator markup.) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 485.500 Tm
+(- app/UiUxDecisionShowcase.tsx - detail screenshot model, reusable numbered selector, desktop and compact active-detail state, optional context) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 475.350 Tm
+(  title, tall Android frame support, conditional media, label ordering, and detail-aware geometry.) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 464.850 Tm
+(- app/globals.css - portrait navigation distribution, responsive visibility classes, diagonal and radial Core Beliefs masks, selector controls, active states,) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 454.700 Tm
+(  device aspect and scale rules, project-label alignment, shared bottom anchoring, and Stack 02 supporting-copy typography.) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 444.200 Tm
+(- app/page.tsx - final five philosophy titles, headline copy, five-row Stack 02 description, detail-specific screenshot assignments, device aspect) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 434.050 Tm
+(  overrides, project metadata, and removal of Stack 05's moved image.) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 423.550 Tm
+(- portfolio_PROJECT_SNAPSHOT.txt - refreshed project-reader output generated during this documentation pass.) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 413.050 Tm
+(- portfolio_worklog_october16.pdf - new requested worklog generated by this pass.) Tj
+/F2 10 Tf
+1 0 0 1 42.000 397.550 Tm
+(Follow-Up Notes) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 385.050 Tm
+(- Preserve HACKS as the direct Productivity Hacks anchor and keep STACK orientation-specific unless the top-row information architecture changes) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 374.900 Tm
+(  again.) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 364.400 Tm
+(- Keep the Core Beliefs visibility system as three masks: two opposing diagonals plus one vertical lower cutoff. Changes to one diagonal should be) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 354.250 Tm
+(  mirrored unless an intentionally asymmetric star treatment is approved.) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 343.750 Tm
+(- Keep UiUxStackSquares semantic buttons, aria-pressed state, and event isolation. Visual simplification should not remove keyboard or) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 333.600 Tm
+(  assistive-technology behavior.) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 323.100 Tm
+(- Empty detail boxes are intentional. They keep the headline visible while suppressing unassigned media and context; do not restore the default) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 312.950 Tm
+(  screenshot for every selection.) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 302.450 Tm
+(- Add future screenshots through detailScreenshots rather than hard-coding numbered selectors. Use per-detail deviceAspect, deviceVariant, label,) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 292.300 Tm
+(  and route overrides only when the asset differs from the owning stack.) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 281.800 Tm
+(- Keep PROJECT labels above and right-aligned with their frames. Preserve the common bottom anchor when resizing imagery so different aspect) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 271.650 Tm
+(  ratios remain visually aligned.) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 261.150 Tm
+(- Do not enlarge device previews by reducing the protected inset or clipping the card. Scale the frame within the available area and recheck both) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 251.000 Tm
+(  bottom and right clearance.) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 240.500 Tm
+(- Preserve Stack 02's five authored lines if the inverted-pyramid treatment remains desired. Changing words without reconsidering line lengths can) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 230.350 Tm
+(  break the taper even when five rows still render.) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 219.850 Tm
+(- When browser output disagrees with source, inspect computed CSS and refresh generated .next output before editing correct source around a stale) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 209.700 Tm
+(  bundle.) Tj
+/F2 10 Tf
+1 0 0 1 42.000 194.200 Tm
+(Output Artifact) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 181.700 Tm
+(- Generated /Users/prahlin/gh/portfolio/portfolio_worklog_october16.pdf using the established lowercase-month, non-zero-padded-day naming) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 171.550 Tm
+(  convention.) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 161.050 Tm
+(- The title and filename intentionally use October 16, 2026 at the user's direction, while the body transparently records that independent Eastern-time) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 150.900 Tm
+(  verification had already crossed to October 17.) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 140.400 Tm
+(- The artifact uses US Letter portrait pages, PDF 1.4, Helvetica and Helvetica-Bold, compact black-on-white technical prose, repeated dated footers,) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 130.250 Tm
+(  right-aligned page numbers, and Codex metadata consistent with the mature archive.) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 119.750 Tm
+(- The recorded application baseline is 2646b39106ed46656a3fdf1816522a94bf136d91 on synchronized main and origin/main. No application source) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 109.600 Tm
+(  was edited during worklog generation.) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 99.100 Tm
+(- Documentation deltas created by this pass are portfolio_PROJECT_SNAPSHOT.txt and portfolio_worklog_october16.pdf. No deployment, remote) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 88.950 Tm
+(  branch mutation, external message, or production release was performed.) Tj
+/F1 8.25 Tf
+1 0 0 1 42.000 29.000 Tm
+(Prahlin Portfolio Work Log - October 16, 2026) Tj
+/F1 8.25 Tf
+1 0 0 1 567.856 29.000 Tm
+(Page 4) Tj
+ET
+endstream
+endobj
+xref
+0 14
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000141 00000 n 
+0000000238 00000 n 
+0000000340 00000 n 
+0000000607 00000 n 
+0000000743 00000 n 
+0000010690 00000 n 
+0000010826 00000 n 
+0000020527 00000 n 
+0000020665 00000 n 
+0000029321 00000 n 
+0000029459 00000 n 
+trailer
+<< /Size 14 /Root 1 0 R /Info 5 0 R >>
+startxref
+38331
+%%EOF
