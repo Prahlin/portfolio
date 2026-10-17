@@ -57,7 +57,16 @@ const proofStats = [
 
 const uiUxDecisions: readonly UiUxDecision[] = [
   {
-    description: "Sleek.\nStreamlined.\nNEVER\nDated.",
+    description: "Sleek.\nStreamlined.\nNEVER\nLast Year.",
+    detailScreenshots: {
+      2: {
+        deviceVariant: "phone-android",
+        projectHref: "/projects/alla-vostra",
+        projectLabel: "ALLA VOSTRA",
+        screenshotAlt: "Alla Vostra startup screen",
+        screenshotSrc: "/images/startup_screen_small.png",
+      },
+    },
     deviceVariant: "tablet",
     number: "01",
     noodle: [
@@ -74,10 +83,16 @@ const uiUxDecisions: readonly UiUxDecision[] = [
     title: "Modern",
   },
   {
-    description: "Interwoven.\nInterconnected.\nALWAYS\nCongruent.",
+    description: "Intuitive.\nDigestible.\nEASY\nTo Grasp.",
+    detailScreenshots: {
+      2: {
+        deviceAspect: "tall",
+        screenshotAlt: "Alla Vostra large home screen",
+        screenshotSrc: "/images/home_screen_large.png",
+      },
+    },
     deviceDescription:
-      "Less is more, and focal points should have appropriate layers of noticeability.",
-    deviceTitle: "STEP-BY-STEP VISIBILITY",
+      "Simple interfaces make\nscreens and controls\neasy to navigate,\nand actions\neffortless.",
     deviceVariant: "phone-android",
     number: "02",
     noodle: [
@@ -88,13 +103,19 @@ const uiUxDecisions: readonly UiUxDecision[] = [
     ],
     projectHref: "/projects/alla-vostra",
     projectLabel: "ALLA VOSTRA",
-    screenshotAlt: "Alla Vostra products screen",
-    screenshotSrc: "/images/products_screen_small.png",
+    screenshotAlt: "Alla Vostra Piccola product screen",
+    screenshotSrc: "/images/products_overlay_piccola_small.png",
     side: "left",
-    title: "Cohesive",
+    title: "User-friendly",
   },
   {
-    description: "Cross-Platform?\nCross-Regional?\nConsider\nit done.",
+    description: "Instant.\nButter-Smooth.\nSAFELY\nSatisfying.",
+    detailScreenshots: {
+      3: {
+        screenshotAlt: "Alla Vostra order confirmation screen",
+        screenshotSrc: "/images/confirmed_overlay_small.png",
+      },
+    },
     deviceVariant: "phone-android",
     number: "03",
     noodle: [
@@ -105,16 +126,17 @@ const uiUxDecisions: readonly UiUxDecision[] = [
     ],
     projectHref: "/projects/alla-vostra",
     projectLabel: "ALLA VOSTRA",
-    screenshotAlt: "Alla Vostra order confirmation screen",
-    screenshotSrc: "/images/confirmed_overlay_small.png",
+    screenshotAlt: "Alla Vostra browse grazingboards tutorial screen",
+    screenshotSrc:
+      "/images/alla-vostra/tutorial/tutorial_screen_small_step_01.png",
     side: "left",
-    title: "Smooth",
+    title: "Responsive",
   },
   {
-    description: "Intuitive.\nButter-Smooth.\nQUICKLY\nActionable.",
+    description: "Interwoven.\nInterconnected.\nALWAYS\nCongruent.",
     deviceDescription:
-      "Users shouldn't have to jump through hoops to navigate, or perform actions.",
-    deviceTitle: "INTUITIVE INTERFACE",
+      "Less is more, and focal points should have appropriate layers of noticeability.",
+    deviceTitle: "STEP-BY-STEP VISIBILITY",
     deviceVariant: "phone-android",
     number: "04",
     noodle: [
@@ -125,14 +147,14 @@ const uiUxDecisions: readonly UiUxDecision[] = [
     ],
     projectHref: "/projects/alla-vostra",
     projectLabel: "ALLA VOSTRA",
-    screenshotAlt: "Alla Vostra tutorial screen",
-    screenshotSrc: "/images/alla-vostra/tutorial/tutorial_screen_small_step_04.png",
+    screenshotAlt: "Alla Vostra products screen",
+    screenshotSrc: "/images/products_screen_small.png",
     side: "right",
-    title: "User-friendly",
+    title: "Cohesive",
   },
   {
     description:
-      "Adaptable In Form Factor.\nScalable In Device Type.\nNEVER\nCookie Cutter.",
+      "Cross-Format.\nCross-Device.\nALWAYS\nAdaptable.",
     deviceDescription:
       'Stylish image generation without the "cookie-cutter" feel of AI.',
     deviceTitle: "AI GENERATIVE",
@@ -146,10 +168,8 @@ const uiUxDecisions: readonly UiUxDecision[] = [
     ],
     projectHref: "/projects/alla-vostra",
     projectLabel: "ALLA VOSTRA",
-    screenshotAlt: "Alla Vostra startup screen",
-    screenshotSrc: "/images/startup_screen_small.png",
     side: "right",
-    title: "Responsive",
+    title: "Reusable",
   },
 ];
 

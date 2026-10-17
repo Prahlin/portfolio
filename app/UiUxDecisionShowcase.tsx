@@ -8,9 +8,21 @@ import { useEffect, useId, useLayoutEffect, useRef, useState } from "react";
 
 export type UiUxNoodlePoint = readonly [x: number, y: number];
 
+type UiUxDecisionDetailScreenshot = {
+  deviceAspect?: "standard" | "tall";
+  deviceVariant?: "phone" | "phone-android" | "tablet";
+  projectHref?: string;
+  projectLabel?: string;
+  screenshotAlt: string;
+  screenshotSrc: string;
+};
+
 export type UiUxDecision = {
   compactOnly?: boolean;
   description: string;
+  detailScreenshots?: Partial<
+    Record<1 | 2 | 3, UiUxDecisionDetailScreenshot>
+  >;
   deviceDescription?: string;
   deviceTitle?: string;
   deviceVariant?: "phone" | "phone-android" | "tablet";
@@ -677,20 +689,58 @@ function UiUxDecisionDescription({ description }: { description: string }) {
   );
 }
 
+function UiUxStackSquares({
+  activeSquare,
+  decisionTitle,
+  onSelect,
+}: {
+  activeSquare: number;
+  decisionTitle: string;
+  onSelect: (number: number) => void;
+}) {
+  return (
+    <div
+      aria-label={`${decisionTitle} detail selector`}
+      className="uiux-stack-squares"
+      role="group"
+    >
+      {[1, 2, 3].map((number) => (
+        <button
+          aria-label={`Show ${decisionTitle} detail ${number}`}
+          aria-pressed={activeSquare === number}
+          className={`uiux-stack-square${
+            activeSquare === number ? " is-active" : ""
+          }`}
+          key={number}
+          onClick={(event) => {
+            event.stopPropagation();
+            onSelect(number);
+          }}
+          onPointerDown={(event) => event.stopPropagation()}
+          type="button"
+        >
+          {number}
+        </button>
+      ))}
+    </div>
+  );
+}
+
 function UiUxDeviceContext({ decision }: { decision: UiUxDecision }) {
-  if (!decision.deviceTitle) {
+  if (!decision.deviceTitle && !decision.deviceDescription) {
     return null;
   }
 
   return (
     <div className="uiux-device-context">
-      <h3>{decision.deviceTitle}</h3>
+      {decision.deviceTitle ? <h3>{decision.deviceTitle}</h3> : null}
       {decision.deviceDescription ? <p>{decision.deviceDescription}</p> : null}
     </div>
   );
 }
 
 export function UiUxDeviceFrame({
+  deviceAspect = "standard",
   deviceVariant = "phone",
   screenshotAlt = "UI design screenshot",
   screenshotFit = "cover",
@@ -700,6 +750,7 @@ export function UiUxDeviceFrame({
   UiUxDecisionShowcaseProps,
   "screenshotAlt" | "screenshotFit" | "screenshotPosition" | "screenshotSrc"
 > & {
+  deviceAspect?: "standard" | "tall";
   deviceVariant?: UiUxDecision["deviceVariant"];
 }) {
   if (deviceVariant === "tablet") {
@@ -725,6 +776,10 @@ export function UiUxDeviceFrame({
     <figure
       className={`uiux-device-frame${
         isAndroidPhone ? " uiux-device-frame-android" : ""
+      }${
+        isAndroidPhone && deviceAspect === "tall"
+          ? " uiux-device-frame-android-tall"
+          : ""
       }`}
     >
       <div className="uiux-device-screen">
@@ -779,6 +834,20 @@ function UiUxCompactDecisionColumn({
   screenshotPosition,
   screenshotSrc,
 }: UiUxCompactDecisionColumnProps) {
+  const [activeDetail, setActiveDetail] = useState(1);
+  const activeDetailScreenshot =
+    decision.detailScreenshots?.[activeDetail as 1 | 2 | 3];
+  const activeDeviceVariant =
+    activeDetailScreenshot?.deviceVariant ?? decision.deviceVariant;
+  const activeScreenshotSrc =
+    activeDetailScreenshot?.screenshotSrc ??
+    (activeDetail === 1 ? decision.screenshotSrc ?? screenshotSrc : undefined);
+  const activeProjectHref =
+    activeDetailScreenshot?.projectHref ?? decision.projectHref;
+  const activeProjectLabel =
+    activeDetailScreenshot?.projectLabel ?? decision.projectLabel;
+  const shouldShowDevice = Boolean(activeScreenshotSrc);
+
   return (
     <div
       className={`uiux-compact-decision-column${
@@ -836,47 +905,64 @@ function UiUxCompactDecisionColumn({
               </>
             ) : null}
           </span>
+          {!decision.placeholder ? (
+            <UiUxStackSquares
+              activeSquare={activeDetail}
+              decisionTitle={decision.title}
+              onSelect={setActiveDetail}
+            />
+          ) : null}
         </article>
 
         {decision.placeholder ? (
           <div className="uiux-placeholder-body" aria-hidden="true" />
-        ) : (
+        ) : shouldShowDevice ? (
           <div
             className={`uiux-device-slot${
-              decision.deviceVariant === "tablet"
+              activeDeviceVariant === "tablet"
                 ? " uiux-device-slot-tablet"
                 : ""
+            }${
+              activeDetailScreenshot?.deviceAspect === "tall"
+                ? " uiux-device-slot-tall"
+                : ""
             }`}
+            data-detail-number={activeDetail}
           >
-            {decision.deviceVariant !== "tablet" ? (
+            {activeDetail === 1 && activeDeviceVariant !== "tablet" ? (
               <UiUxDeviceContext decision={decision} />
             ) : null}
             <div className="uiux-device-frame-stack">
-              <UiUxDeviceFrame
-                deviceVariant={decision.deviceVariant}
-                screenshotAlt={decision.screenshotAlt ?? screenshotAlt}
-                screenshotFit={screenshotFit}
-                screenshotPosition={screenshotPosition}
-                screenshotSrc={decision.screenshotSrc ?? screenshotSrc}
-              />
-              {decision.deviceVariant === "tablet" ? (
+              {activeProjectHref && activeProjectLabel ? (
+                <p className="uiux-device-project-label">
+                  <span>PROJECT:</span>
+                  <Link
+                    aria-label={`View the ${activeProjectLabel} project page`}
+                    className="uiux-device-project-link"
+                    href={activeProjectHref}
+                  >
+                    {activeProjectLabel}
+                  </Link>
+                </p>
+              ) : null}
+              {activeDetail === 1 && activeDeviceVariant === "tablet" ? (
                 <UiUxDeviceContext decision={decision} />
               ) : null}
-              <p className="uiux-device-project-label">
-                <span>PROJECT:</span>
-                {decision.projectHref && decision.projectLabel ? (
-                  <Link
-                    aria-label={`View the ${decision.projectLabel} project page`}
-                    className="uiux-device-project-link"
-                    href={decision.projectHref}
-                  >
-                    {decision.projectLabel}
-                  </Link>
-                ) : null}
-              </p>
+              <UiUxDeviceFrame
+                deviceAspect={activeDetailScreenshot?.deviceAspect}
+                deviceVariant={activeDeviceVariant}
+                screenshotAlt={
+                  activeDetailScreenshot?.screenshotAlt ??
+                  decision.screenshotAlt ??
+                  screenshotAlt
+                }
+                screenshotFit={screenshotFit}
+                screenshotPosition={screenshotPosition}
+                screenshotSrc={activeScreenshotSrc}
+              />
             </div>
           </div>
-        )}
+        ) : null}
       </div>
     </div>
   );
@@ -896,6 +982,7 @@ export function UiUxDecisionShowcase({
   const [focusedDecisionNumber, setFocusedDecisionNumber] = useState(
     decisions[0]?.number ?? "",
   );
+  const [focusedDetail, setFocusedDetail] = useState(1);
   const [compactColumnCount, setCompactColumnCount] = useState<1 | 3>(1);
   const [compactNoodle, setCompactNoodle] =
     useState<CompactNoodleGeometry | null>(null);
@@ -932,6 +1019,24 @@ export function UiUxDecisionShowcase({
   const focusedDecision =
     decisions.find((decision) => decision.number === focusedDecisionNumber) ??
     decisions[0];
+  const focusedDetailScreenshot =
+    focusedDecision?.detailScreenshots?.[focusedDetail as 1 | 2 | 3];
+  const focusedDeviceVariant =
+    focusedDetailScreenshot?.deviceVariant ?? focusedDecision?.deviceVariant;
+  const focusedScreenshotSrc =
+    focusedDetailScreenshot?.screenshotSrc ??
+    (focusedDetail === 1
+      ? focusedDecision?.screenshotSrc ?? screenshotSrc
+      : undefined);
+  const focusedProjectHref =
+    focusedDetailScreenshot?.projectHref ?? focusedDecision?.projectHref;
+  const focusedProjectLabel =
+    focusedDetailScreenshot?.projectLabel ?? focusedDecision?.projectLabel;
+  const shouldShowFocusedDevice = Boolean(focusedScreenshotSrc);
+
+  useEffect(() => {
+    setFocusedDetail(1);
+  }, [focusedDecisionNumber]);
   const visibleDecisionOffsets =
     compactColumnCount === 1
       ? [0]
@@ -1199,7 +1304,7 @@ export function UiUxDecisionShowcase({
       observer.disconnect();
       window.removeEventListener("resize", updateNoodle);
     };
-  }, [focusedDecisionNumber]);
+  }, [focusedDecisionNumber, focusedDetail]);
 
   return (
     <section className="uiux-decision-section" id="uiux">
@@ -1726,53 +1831,67 @@ export function UiUxDecisionShowcase({
                       </>
                     ) : null}
                   </span>
+                  {!focusedDecision.placeholder ? (
+                    <UiUxStackSquares
+                      activeSquare={focusedDetail}
+                      decisionTitle={focusedDecision.title}
+                      onSelect={setFocusedDetail}
+                    />
+                  ) : null}
                 </article>
 
                 {focusedDecision.placeholder ? (
                   <div className="uiux-placeholder-body" aria-hidden="true" />
-                ) : (
+                ) : shouldShowFocusedDevice ? (
                   <div
                     className={`uiux-device-slot${
-                      focusedDecision.deviceVariant === "tablet"
+                      focusedDeviceVariant === "tablet"
                         ? " uiux-device-slot-tablet"
                         : ""
+                    }${
+                      focusedDetailScreenshot?.deviceAspect === "tall"
+                        ? " uiux-device-slot-tall"
+                        : ""
                     }`}
+                    data-detail-number={focusedDetail}
                     ref={deviceSlotRef}
                   >
-                  {focusedDecision.deviceVariant !== "tablet" ? (
-                    <UiUxDeviceContext decision={focusedDecision} />
-                  ) : null}
-                  <div className="uiux-device-frame-stack">
-                    <UiUxDeviceFrame
-                      deviceVariant={focusedDecision.deviceVariant}
-                      screenshotAlt={
-                        focusedDecision.screenshotAlt ?? screenshotAlt
-                      }
-                      screenshotFit={screenshotFit}
-                      screenshotPosition={screenshotPosition}
-                      screenshotSrc={
-                        focusedDecision.screenshotSrc ?? screenshotSrc
-                      }
-                    />
-                    {focusedDecision.deviceVariant === "tablet" ? (
+                    {focusedDetail === 1 &&
+                    focusedDeviceVariant !== "tablet" ? (
                       <UiUxDeviceContext decision={focusedDecision} />
                     ) : null}
-                    <p className="uiux-device-project-label">
-                      <span>PROJECT:</span>
-                      {focusedDecision.projectHref &&
-                      focusedDecision.projectLabel ? (
-                        <Link
-                          aria-label={`View the ${focusedDecision.projectLabel} project page`}
-                          className="uiux-device-project-link"
-                          href={focusedDecision.projectHref}
-                        >
-                          {focusedDecision.projectLabel}
-                        </Link>
+                    <div className="uiux-device-frame-stack">
+                      {focusedProjectHref && focusedProjectLabel ? (
+                        <p className="uiux-device-project-label">
+                          <span>PROJECT:</span>
+                          <Link
+                            aria-label={`View the ${focusedProjectLabel} project page`}
+                            className="uiux-device-project-link"
+                            href={focusedProjectHref}
+                          >
+                            {focusedProjectLabel}
+                          </Link>
+                        </p>
                       ) : null}
-                    </p>
+                      {focusedDetail === 1 &&
+                      focusedDeviceVariant === "tablet" ? (
+                        <UiUxDeviceContext decision={focusedDecision} />
+                      ) : null}
+                      <UiUxDeviceFrame
+                        deviceAspect={focusedDetailScreenshot?.deviceAspect}
+                        deviceVariant={focusedDeviceVariant}
+                        screenshotAlt={
+                          focusedDetailScreenshot?.screenshotAlt ??
+                          focusedDecision.screenshotAlt ??
+                          screenshotAlt
+                        }
+                        screenshotFit={screenshotFit}
+                        screenshotPosition={screenshotPosition}
+                        screenshotSrc={focusedScreenshotSrc}
+                      />
+                    </div>
                   </div>
-                  </div>
-                )}
+                ) : null}
               </div>
             </div>
           ) : null}
