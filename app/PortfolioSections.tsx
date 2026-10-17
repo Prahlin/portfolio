@@ -16,6 +16,7 @@ type NavItem = {
   isBrand?: boolean;
   isSpacer?: boolean;
   label: string;
+  responsivePlacement?: "landscape" | "portrait";
 };
 
 type CaseScreenshot = {
@@ -1147,6 +1148,7 @@ function getNavItems(context: NavContext): NavItem[] {
     { href: homeHash("stack"), label: "Stack" },
     { href: homeHash("workflow"), label: "Flow" },
     { href: homeHash("values"), label: "Values" },
+    { href: homeHash("productivity-hacks"), label: "Hacks" },
     { href: homeHash("worklog"), label: "Space" },
     { href: homeHash("contact"), label: "Contact" },
   ];
@@ -1185,6 +1187,9 @@ function NavLinkItem({
 }) {
   const linkClassName = [
     item.isActive ? "nav-link-active" : undefined,
+    item.responsivePlacement
+      ? `nav-link-${item.responsivePlacement}-only`
+      : undefined,
     className,
   ]
     .filter(Boolean)
@@ -1301,7 +1306,7 @@ function NavTopLinkRow({ items }: { items: NavItem[] }) {
         {navTopLinkItems[1] ? (
           <>
             <span
-              className="nav-separator nav-separator-top-center"
+              className="nav-separator nav-separator-top-adaptive"
               aria-hidden="true"
             >
               |
@@ -1309,6 +1314,20 @@ function NavTopLinkRow({ items }: { items: NavItem[] }) {
             <NavLinkItem
               className="nav-top-link-secondary"
               item={navTopLinkItems[1]}
+            />
+          </>
+        ) : null}
+        {navTopLinkItems[2] ? (
+          <>
+            <span
+              className="nav-separator nav-separator-top-second nav-link-portrait-only"
+              aria-hidden="true"
+            >
+              |
+            </span>
+            <NavLinkItem
+              className="nav-top-link-tertiary"
+              item={navTopLinkItems[2]}
             />
           </>
         ) : null}
@@ -1327,11 +1346,30 @@ export function MainNavBar({
   items?: NavItem[];
 }) {
   const navItems = items ?? getNavItems(context);
+  const navLinkSplitIndex =
+    context === "home" && !items
+      ? defaultNavRowSplitIndex + 1
+      : defaultNavRowSplitIndex;
   const navRowSplitIndex = navItems[1]?.isSpacer
-    ? defaultNavRowSplitIndex + 1
-    : defaultNavRowSplitIndex;
-  const navTopRowItems = navItems.slice(0, navRowSplitIndex);
-  const navBottomRowItems = navItems.slice(navRowSplitIndex);
+    ? navLinkSplitIndex + 1
+    : navLinkSplitIndex;
+  const moveStackInPortrait = context === "home" && !items;
+  const slicedTopRowItems = navItems.slice(0, navRowSplitIndex);
+  const portraitStackItem = moveStackInPortrait
+    ? slicedTopRowItems.at(-1)
+    : undefined;
+  const navTopRowItems = portraitStackItem
+    ? [
+        ...slicedTopRowItems.slice(0, -1),
+        { ...portraitStackItem, responsivePlacement: "portrait" as const },
+      ]
+    : slicedTopRowItems;
+  const navBottomRowItems = portraitStackItem
+    ? [
+        { ...portraitStackItem, responsivePlacement: "landscape" as const },
+        ...navItems.slice(navRowSplitIndex),
+      ]
+    : navItems.slice(navRowSplitIndex);
 
   return (
     <header className="nav-bar">

@@ -337,6 +337,10 @@ img[data-screenshot-preview],
   margin-right: auto;
 }
 
+.nav-link-portrait-only {
+  display: none !important;
+}
+
 .nav-bar nav .brand:hover,
 .nav-bar nav .nav-brand-link:hover {
   background: var(--nav-card-background);
@@ -6855,44 +6859,52 @@ section.aboutdev-hero {
   -webkit-mask-composite: source-in, source-in;
   -webkit-mask-image:
     linear-gradient(
-      to bottom,
-      #000 0%,
-      rgba(0, 0, 0, 0.25) 50%,
-      rgba(0, 0, 0, 0.25) 100%
+      54deg,
+      rgba(0, 0, 0, 0.01) 0%,
+      rgba(0, 0, 0, 0.01) 35%,
+      rgba(0, 0, 0, 0.03) 42%,
+      rgba(0, 0, 0, 0.2) 48%,
+      rgba(0, 0, 0, 0.67) 54%,
+      #000 100%
+    ),
+    linear-gradient(
+      -54deg,
+      rgba(0, 0, 0, 0.01) 0%,
+      rgba(0, 0, 0, 0.01) 35%,
+      rgba(0, 0, 0, 0.03) 42%,
+      rgba(0, 0, 0, 0.2) 48%,
+      rgba(0, 0, 0, 0.67) 54%,
+      #000 100%
     ),
     linear-gradient(
       to bottom,
       #000 48%,
       transparent 52%
-    ),
-    linear-gradient(
-      to right,
-      rgba(0, 0, 0, 0.02) 0%,
-      rgba(0, 0, 0, 0.36) 33%,
-      #000 50%,
-      rgba(0, 0, 0, 0.36) 67%,
-      rgba(0, 0, 0, 0.02) 100%
     );
   mask-composite: intersect, intersect;
   mask-image:
     linear-gradient(
-      to bottom,
-      #000 0%,
-      rgba(0, 0, 0, 0.25) 50%,
-      rgba(0, 0, 0, 0.25) 100%
+      54deg,
+      rgba(0, 0, 0, 0.01) 0%,
+      rgba(0, 0, 0, 0.01) 35%,
+      rgba(0, 0, 0, 0.03) 42%,
+      rgba(0, 0, 0, 0.2) 48%,
+      rgba(0, 0, 0, 0.67) 54%,
+      #000 100%
+    ),
+    linear-gradient(
+      -54deg,
+      rgba(0, 0, 0, 0.01) 0%,
+      rgba(0, 0, 0, 0.01) 35%,
+      rgba(0, 0, 0, 0.03) 42%,
+      rgba(0, 0, 0, 0.2) 48%,
+      rgba(0, 0, 0, 0.67) 54%,
+      #000 100%
     ),
     linear-gradient(
       to bottom,
       #000 48%,
       transparent 52%
-    ),
-    linear-gradient(
-      to right,
-      rgba(0, 0, 0, 0.02) 0%,
-      rgba(0, 0, 0, 0.36) 33%,
-      #000 50%,
-      rgba(0, 0, 0, 0.36) 67%,
-      rgba(0, 0, 0, 0.02) 100%
     );
   mask-mode: alpha;
 }
@@ -6902,13 +6914,12 @@ section.aboutdev-hero {
   -webkit-mask-image:
     radial-gradient(
       ellipse 50% 50% at 50% 50%,
-      rgba(0, 0, 0, 0.18) 0%,
-      rgba(0, 0, 0, 0.18) 10%,
-      rgba(0, 0, 0, 0.12) 20%,
-      rgba(0, 0, 0, 0.06) 30%,
-      rgba(0, 0, 0, 0.03) 40%,
-      rgba(0, 0, 0, 0.02) 50%,
-      rgba(0, 0, 0, 0.01) 100%
+      rgba(0, 0, 0, 0.12) 0%,
+      rgba(0, 0, 0, 0.06) 10%,
+      rgba(0, 0, 0, 0.04) 20%,
+      rgba(0, 0, 0, 0.04) 30%,
+      rgba(0, 0, 0, 0.04) 40%,
+      rgba(0, 0, 0, 0.04) 100%
     ),
     linear-gradient(
       to bottom,
@@ -6920,13 +6931,12 @@ section.aboutdev-hero {
   mask-image:
     radial-gradient(
       ellipse 50% 50% at 50% 50%,
-      rgba(0, 0, 0, 0.18) 0%,
-      rgba(0, 0, 0, 0.18) 10%,
-      rgba(0, 0, 0, 0.12) 20%,
-      rgba(0, 0, 0, 0.06) 30%,
-      rgba(0, 0, 0, 0.03) 40%,
-      rgba(0, 0, 0, 0.02) 50%,
-      rgba(0, 0, 0, 0.01) 100%
+      rgba(0, 0, 0, 0.12) 0%,
+      rgba(0, 0, 0, 0.06) 10%,
+      rgba(0, 0, 0, 0.04) 20%,
+      rgba(0, 0, 0, 0.04) 30%,
+      rgba(0, 0, 0, 0.04) 40%,
+      rgba(0, 0, 0, 0.04) 100%
     ),
     linear-gradient(
       to bottom,
@@ -12292,10 +12302,30 @@ section.project-hero {
     min-width: max-content;
   }
 
-  .nav-top-distribution > .nav-separator-top-center {
-    left: 50%;
+  .nav-top-distribution > .nav-top-link-tertiary {
+    grid-column: 3;
+    min-width: max-content;
+  }
+
+  .nav-top-distribution > .nav-separator-top-adaptive,
+  .nav-top-distribution > .nav-separator-top-center,
+  .nav-top-distribution > .nav-separator-top-first,
+  .nav-top-distribution > .nav-separator-top-second {
     position: absolute;
     transform: translateX(-50%);
+  }
+
+  .nav-top-distribution > .nav-separator-top-adaptive,
+  .nav-top-distribution > .nav-separator-top-center {
+    left: 50%;
+  }
+
+  .nav-top-distribution > .nav-separator-top-first {
+    left: 33.333%;
+  }
+
+  .nav-top-distribution > .nav-separator-top-second {
+    left: 66.667%;
   }
 
   .nav-link-row-bottom {
@@ -13512,6 +13542,39 @@ section.project-hero {
   .aboutdev-cta-actions,
   .aboutdev-cta-actions .button {
     width: 100%;
+  }
+}
+
+@media (max-width: 980px) and (orientation: portrait) {
+  .nav-top-distribution:has(> .nav-top-link-tertiary) {
+    flex: 1 1 auto;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    margin-left: 0;
+  }
+
+  .nav-top-distribution > .nav-separator-top-adaptive {
+    left: 33.333%;
+  }
+
+  .nav-link-landscape-only {
+    display: none !important;
+  }
+
+  .nav-link-portrait-only {
+    display: inline-flex !important;
+  }
+
+  .nav-link-row-bottom
+    > .nav-link-landscape-only
+    + .nav-separator {
+    display: none;
+  }
+}
+
+@media (max-width: 430px) and (orientation: portrait) {
+  .hero .nav-top-distribution > a,
+  .hero .nav-top-distribution > .nav-separator {
+    font-size: clamp(9px, calc(4.55vw - 5.55px), 14px);
   }
 }
 
