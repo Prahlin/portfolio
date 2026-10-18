@@ -1018,7 +1018,7 @@ export default function Home() {
 
       <UiUxDecisionShowcase
         decisions={uiUxDecisions}
-        subtitle="5 Keys to 'Lock In' the User With Immaculate Design"
+        subtitle="5 'Keys' to User Interface Design That 'Lock' In the User Experience"
         title="UI / UX Philosophy"
         // Add screenshotSrc="/images/your-screenshot.png" when your image is ready.
       />

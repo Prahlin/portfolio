@@ -100,7 +100,7 @@ const UIUX_KEY_GRADIENTS: Record<
 
 const UIUX_STAR_TIP_COUNT = 5;
 const UIUX_STAR_ROTATION_STEP = 360 / UIUX_STAR_TIP_COUNT;
-const UIUX_STAR_INITIAL_ROTATION = -36;
+const UIUX_STAR_INITIAL_ROTATION = 144;
 const UIUX_STAR_TIP_SEQUENCE = [
   "purple",
   "yellow",
@@ -108,6 +108,13 @@ const UIUX_STAR_TIP_SEQUENCE = [
   "orange",
   "green",
 ] as const;
+const UIUX_STAR_SETTLE_OFFSET_BY_TIP = {
+  purple: 0,
+  yellow: 1,
+  blue: 0,
+  orange: 0,
+  green: 1,
+} as const;
 
 function UiUxCarouselStar({
   rotationStep,
@@ -124,40 +131,43 @@ function UiUxCarouselStar({
 
   return (
     <div aria-hidden="true" className="uiux-carousel-star-frame">
-      <motion.div
-        animate={{
-          rotate:
-            UIUX_STAR_INITIAL_ROTATION +
-            rotationStep * UIUX_STAR_ROTATION_STEP,
-        }}
-        className="uiux-carousel-star"
-        data-active-tip={activeTip}
-        initial={false}
-        transition={
-          shouldReduceMotion
-            ? { duration: 0 }
-            : { damping: 22, mass: 0.75, stiffness: 170, type: "spring" }
-        }
-      >
-        <Image
-          alt=""
-          aria-hidden="true"
-          className="uiux-carousel-star-image uiux-carousel-star-image-muted"
-          height={2052}
-          sizes="58px"
-          src="/images/uiux/philosophy-star-rounded-hollow.png"
-          width={2052}
-        />
-        <Image
-          alt=""
-          aria-hidden="true"
-          className="uiux-carousel-star-image uiux-carousel-star-image-active"
-          height={2052}
-          sizes="58px"
-          src="/images/uiux/philosophy-star-rounded-hollow.png"
-          width={2052}
-        />
-      </motion.div>
+      <div className="uiux-carousel-star-mask">
+        <motion.div
+          animate={{
+            rotate:
+              UIUX_STAR_INITIAL_ROTATION +
+              rotationStep * UIUX_STAR_ROTATION_STEP +
+              UIUX_STAR_SETTLE_OFFSET_BY_TIP[activeTip],
+          }}
+          className="uiux-carousel-star"
+          data-active-tip={activeTip}
+          initial={false}
+          transition={
+            shouldReduceMotion
+              ? { duration: 0 }
+              : { damping: 22, mass: 0.75, stiffness: 170, type: "spring" }
+          }
+        >
+          <Image
+            alt=""
+            aria-hidden="true"
+            className="uiux-carousel-star-image uiux-carousel-star-image-muted"
+            height={2052}
+            sizes="527px"
+            src="/images/uiux/philosophy-star-rounded-hollow.png"
+            width={2052}
+          />
+          <Image
+            alt=""
+            aria-hidden="true"
+            className="uiux-carousel-star-image uiux-carousel-star-image-active"
+            height={2052}
+            sizes="527px"
+            src="/images/uiux/philosophy-star-rounded-hollow.png"
+            width={2052}
+          />
+        </motion.div>
+      </div>
     </div>
   );
 }
@@ -411,6 +421,28 @@ function UiUxActiveKey({
         ) : null}
       </g>
     </svg>
+  );
+}
+
+const UIUX_LOCK_ASSETS: Record<string, string> = {
+  "01": "/images/uiux/philosophy-lock-01.svg",
+  "02": "/images/uiux/philosophy-lock-02.svg",
+  "03": "/images/uiux/philosophy-lock-03.svg",
+  "04": "/images/uiux/philosophy-lock-04.svg",
+  "05": "/images/uiux/philosophy-lock-05.svg",
+};
+
+function UiUxActiveLock({ decisionNumber }: { decisionNumber: string }) {
+  return (
+    <Image
+      alt=""
+      aria-hidden="true"
+      className="uiux-carousel-key uiux-carousel-lock"
+      height={200}
+      src={UIUX_LOCK_ASSETS[decisionNumber] ?? UIUX_LOCK_ASSETS["01"]}
+      unoptimized
+      width={200}
+    />
   );
 }
 
@@ -817,6 +849,7 @@ type UiUxCompactDecisionColumnProps = Pick<
   "screenshotAlt" | "screenshotFit" | "screenshotPosition" | "screenshotSrc"
 > & {
   decision: UiUxDecision;
+  isBlank?: boolean;
   isEmphasized?: boolean;
   isPrimary: boolean;
   onPreviewPressEnd?: () => void;
@@ -825,6 +858,7 @@ type UiUxCompactDecisionColumnProps = Pick<
 
 function UiUxCompactDecisionColumn({
   decision,
+  isBlank = false,
   isEmphasized = false,
   isPrimary,
   onPreviewPressEnd,
@@ -871,7 +905,9 @@ function UiUxCompactDecisionColumn({
         className="uiux-compact-title-bridge"
         data-gradient-tone={getDecisionGradientTone(decision.number)}
       >
-        <strong data-title={decision.title}>{decision.title}</strong>
+        {!isBlank ? (
+          <strong data-title={decision.title}>{decision.title}</strong>
+        ) : null}
       </div>
 
       <div className="uiux-compact-active-card">
@@ -882,39 +918,50 @@ function UiUxCompactDecisionColumn({
           data-decision-number={decision.number}
           data-gradient-tone={getDecisionGradientTone(decision.number)}
         >
-          <button
-            aria-label={
-              decision.placeholder
-                ? `${decision.number}. ${decision.title} placeholder`
-                : `${decision.number}. ${decision.title}: ${decision.description}`
-            }
-            aria-pressed={isPrimary}
-            className="uiux-decision-number is-active"
-            tabIndex={-1}
-            type="button"
-          >
-            <span className="uiux-focused-number-label">
-              <span>{Number.parseInt(decision.number, 10)}</span>
-            </span>
-          </button>
-          <span className="uiux-decision-copy">
-            {!decision.placeholder ? (
-              <>
-                <strong>{decision.title}</strong>
-                <UiUxDecisionDescription description={decision.description} />
-              </>
-            ) : null}
-          </span>
-          {!decision.placeholder ? (
-            <UiUxStackSquares
-              activeSquare={activeDetail}
-              decisionTitle={decision.title}
-              onSelect={setActiveDetail}
+          {isBlank ? (
+            <div
+              aria-hidden="true"
+              className="uiux-decision-number is-active uiux-empty-number-placeholder"
             />
-          ) : null}
+          ) : (
+            <>
+              <button
+                aria-label={
+                  decision.placeholder
+                    ? `${decision.number}. ${decision.title} placeholder`
+                    : `${decision.number}. ${decision.title}: ${decision.description}`
+                }
+                aria-pressed={isPrimary}
+                className="uiux-decision-number is-active"
+                tabIndex={-1}
+                type="button"
+              >
+                <span className="uiux-focused-number-label">
+                  <span>{Number.parseInt(decision.number, 10)}</span>
+                </span>
+              </button>
+              <span className="uiux-decision-copy">
+                {!decision.placeholder ? (
+                  <>
+                    <strong>{decision.title}</strong>
+                    <UiUxDecisionDescription
+                      description={decision.description}
+                    />
+                  </>
+                ) : null}
+              </span>
+              {!decision.placeholder ? (
+                <UiUxStackSquares
+                  activeSquare={activeDetail}
+                  decisionTitle={decision.title}
+                  onSelect={setActiveDetail}
+                />
+              ) : null}
+            </>
+          )}
         </article>
 
-        {decision.placeholder ? (
+        {isBlank ? null : decision.placeholder ? (
           <div className="uiux-placeholder-body" aria-hidden="true" />
         ) : shouldShowDevice ? (
           <div
@@ -989,6 +1036,9 @@ export function UiUxDecisionShowcase({
   const [carouselDirection, setCarouselDirection] = useState<-1 | 1>(1);
   const [carouselPosition, setCarouselPosition] = useState(0);
   const [starRotationStep, setStarRotationStep] = useState(0);
+  const [selectedDiscipline, setSelectedDiscipline] = useState<
+    "ui" | "ux" | null
+  >("ui");
   const [heldCarouselDirection, setHeldCarouselDirection] = useState<
     -1 | 1 | null
   >(null);
@@ -1033,6 +1083,7 @@ export function UiUxDecisionShowcase({
   const focusedProjectLabel =
     focusedDetailScreenshot?.projectLabel ?? focusedDecision?.projectLabel;
   const shouldShowFocusedDevice = Boolean(focusedScreenshotSrc);
+  const isUxMode = selectedDiscipline === "ux";
 
   useEffect(() => {
     setFocusedDetail(1);
@@ -1406,17 +1457,58 @@ export function UiUxDecisionShowcase({
               ) : null}
 
               {compactColumnCount === 3 ? (
-                <div className="uiux-compact-3d-shell">
+                <div
+                  className="uiux-compact-3d-shell"
+                  data-discipline={selectedDiscipline}
+                >
                   <UiUxCarouselStar
                     rotationStep={starRotationStep}
                     shouldReduceMotion={shouldReduceMotion}
                   />
-                  <UiUxActiveKey
-                    decisionNumber={focusedDecision.number}
-                    gradientTone={getDecisionGradientTone(
+                  <div
+                    aria-label="Choose UI or UX emphasis"
+                    className="uiux-star-discipline-labels"
+                    data-case-tone={getDecisionCaseTone(
                       focusedDecision.number,
                     )}
-                  />
+                    data-gradient-tone={getDecisionGradientTone(
+                      focusedDecision.number,
+                    )}
+                    role="group"
+                  >
+                    <button
+                      aria-pressed={selectedDiscipline === "ui"}
+                      className={`uiux-star-discipline-label is-ui${
+                        selectedDiscipline === "ui" ? " is-selected" : ""
+                      }`}
+                      onClick={() => setSelectedDiscipline("ui")}
+                      type="button"
+                    >
+                      <span>UI</span>
+                    </button>
+                    <button
+                      aria-pressed={selectedDiscipline === "ux"}
+                      className={`uiux-star-discipline-label is-ux${
+                        selectedDiscipline === "ux" ? " is-selected" : ""
+                      }`}
+                      onClick={() => setSelectedDiscipline("ux")}
+                      type="button"
+                    >
+                      <span>UX</span>
+                    </button>
+                  </div>
+                  {isUxMode ? (
+                    <UiUxActiveLock
+                      decisionNumber={focusedDecision.number}
+                    />
+                  ) : (
+                    <UiUxActiveKey
+                      decisionNumber={focusedDecision.number}
+                      gradientTone={getDecisionGradientTone(
+                        focusedDecision.number,
+                      )}
+                    />
+                  )}
 
                   <UiUxCarouselArrowButton
                     direction={-1}
@@ -1573,7 +1665,7 @@ export function UiUxDecisionShowcase({
 
                                 {isPrimary ? (
                                   <div
-                                    aria-label={`Current UI or UX decision ${decision.number}`}
+                                    aria-label={`Current ${isUxMode ? "UX" : "UI"} decision ${decision.number}`}
                                     aria-live="polite"
                                     className="uiux-carousel-current uiux-decision-number is-active"
                                     ref={activeStripButtonRef}
@@ -1618,7 +1710,7 @@ export function UiUxDecisionShowcase({
                                 ) : (
                                   <>
                                     <button
-                                      aria-label={`Show UI or UX decision ${decision.number}`}
+                                      aria-label={`Show ${isUxMode ? "UX" : "UI"} decision ${decision.number}`}
                                       className="uiux-carousel-preview uiux-decision-number"
                                       onClick={() =>
                                         setFocusedDecisionNumber(
@@ -1658,6 +1750,7 @@ export function UiUxDecisionShowcase({
 
                                 <UiUxCompactDecisionColumn
                                   decision={decision}
+                                  isBlank={isUxMode}
                                   isPrimary={usesPrimaryLayout}
                                   screenshotAlt={screenshotAlt}
                                   screenshotFit={screenshotFit}
@@ -1687,6 +1780,11 @@ export function UiUxDecisionShowcase({
                     data-column-count={compactColumnCount}
                     role="group"
                   >
+                    <UiUxCarouselStar
+                      rotationStep={starRotationStep}
+                      shouldReduceMotion={shouldReduceMotion}
+                    />
+
                     <UiUxCarouselArrowButton
                       direction={-1}
                       isHeld={heldCarouselDirection === -1}
@@ -1703,16 +1801,18 @@ export function UiUxDecisionShowcase({
                           key={decision.number}
                           ref={activeStripButtonRef}
                         >
-                          <UiUxCarouselStar
-                            rotationStep={starRotationStep}
-                            shouldReduceMotion={shouldReduceMotion}
-                          />
-                          <UiUxActiveKey
-                            decisionNumber={decision.number}
-                            gradientTone={getDecisionGradientTone(
-                              decision.number,
-                            )}
-                          />
+                          {isUxMode ? (
+                            <UiUxActiveLock
+                              decisionNumber={decision.number}
+                            />
+                          ) : (
+                            <UiUxActiveKey
+                              decisionNumber={decision.number}
+                              gradientTone={getDecisionGradientTone(
+                                decision.number,
+                              )}
+                            />
+                          )}
                           <span
                             className="uiux-decision-number-text"
                             data-gradient-tone={getDecisionGradientTone(
@@ -1759,6 +1859,7 @@ export function UiUxDecisionShowcase({
                     {visibleDecisions.map(({ decision, isPrimary }) => (
                       <UiUxCompactDecisionColumn
                         decision={decision}
+                        isBlank={isUxMode}
                         isEmphasized={
                           !isPrimary &&
                           pressedDecisionNumber === decision.number

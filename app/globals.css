@@ -3066,6 +3066,7 @@ button.uiux-decision-number:focus-visible {
     justify-self: stretch;
     position: relative;
     width: 100%;
+    z-index: 2;
   }
 
   .uiux-compact-decision-strip .uiux-carousel-current,
@@ -3079,7 +3080,7 @@ button.uiux-decision-number:focus-visible {
   }
 
   .uiux-carousel-key {
-    bottom: calc(100% + var(--uiux-compact-button-gap) + 1px);
+    bottom: calc(100% + var(--uiux-compact-button-gap) + 5px);
     color: rgba(25, 70, 50, 0.5);
     filter: drop-shadow(0 0 14px rgba(0, 0, 0, 0.28));
     height: calc(100% + 2px);
@@ -3087,35 +3088,67 @@ button.uiux-decision-number:focus-visible {
     overflow: visible;
     pointer-events: none;
     position: absolute;
-    transform: translateX(-50%);
+    transform: translateX(-50%) scale(0.81);
+    transform-origin: 50% 50%;
     width: auto;
+    z-index: 2;
+  }
+
+  .uiux-carousel-lock {
+    display: block;
+    object-fit: contain;
+    transform: translateX(-50%) translateY(25.02px) scale(0.6075);
   }
 
   .uiux-carousel-star-frame {
-    align-items: flex-end;
+    align-items: center;
     aspect-ratio: 1;
-    bottom: calc(
-      200% + var(--uiux-compact-button-gap) + 17px
-    );
-    filter: drop-shadow(0 0 14px rgba(0, 0, 0, 0.3));
+    bottom: auto;
+    filter: none;
     display: flex;
     height: calc(100% + 2px);
     left: 50%;
     justify-content: center;
     pointer-events: none;
     position: absolute;
-    transform: translate(-50%, calc(50% - 17px));
+    top: 50%;
+    transform: translate(-50%, -50%);
     width: auto;
-    z-index: 9;
+    z-index: 1;
+  }
+
+  .uiux-carousel-star-mask {
+    -webkit-clip-path: inset(1px);
+    clip-path: inset(1px);
+    display: block;
+    flex: 0 0 auto;
+    height: 407.66034375%;
+    -webkit-mask-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.8) 0%,
+      transparent 75%,
+      transparent 100%
+    );
+    mask-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.8) 0%,
+      transparent 75%,
+      transparent 100%
+    );
+    overflow: visible;
+    position: relative;
+    width: 407.66034375%;
   }
 
   .uiux-carousel-star {
+    -webkit-clip-path: inset(1px);
+    clip-path: inset(1px);
     display: block;
-    height: 45%;
+    height: 100%;
     overflow: visible;
     position: relative;
     transform-origin: 50% 50%;
-    width: 45%;
+    width: 100%;
   }
 
   .uiux-carousel-star-image {
@@ -3335,11 +3368,15 @@ button.uiux-decision-number:focus-visible {
 
 @media (max-width: 520px) {
   .uiux-carousel-star-frame {
-    transform: translate(-50%, calc(50% - 14px));
+    transform: translate(-50%, -50%);
   }
 }
 
 @media (min-width: 981px) {
+  .uiux-decision-stage {
+    margin-top: 160px;
+  }
+
   .uiux-compact-3d-shell {
     --uiux-3d-top-row-height: 128px;
     --uiux-3d-number-width: var(--uiux-3d-top-row-height);
@@ -3379,6 +3416,7 @@ button.uiux-decision-number:focus-visible {
     position: relative;
     transform-style: preserve-3d;
     width: var(--uiux-3d-track-width);
+    z-index: 2;
   }
 
   .uiux-compact-3d-cell {
@@ -3396,16 +3434,91 @@ button.uiux-decision-number:focus-visible {
   .uiux-compact-3d-shell > .uiux-carousel-key {
     bottom: auto;
     height: var(--uiux-3d-top-row-height);
-    top: calc(9.5% - 14.82px);
+    top: calc(9.5% - 18.82px);
+  }
+
+  .uiux-star-discipline-labels {
+    --uiux-label-box-size: calc(var(--uiux-3d-top-row-height) * 1.5);
+    display: grid;
+    gap: 72px;
+    grid-template-columns:
+      var(--uiux-label-box-size) var(--uiux-3d-number-width)
+      var(--uiux-label-box-size);
+    height: var(--uiux-3d-top-row-height);
+    left: 50%;
+    pointer-events: none;
+    position: absolute;
+    top: calc(9.5% - 130.82px);
+    transform: translateX(-50%);
+    z-index: 2;
+  }
+
+  .uiux-star-discipline-label {
+    appearance: none;
+    align-items: center;
+    align-self: center;
+    background: #000;
+    border: 1px solid #fff;
+    border-radius: 12px;
+    box-sizing: border-box;
+    box-shadow: none;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    font-family: inherit;
+    font-size: 102px;
+    font-weight: 900;
+    height: var(--uiux-label-box-size);
+    justify-content: center;
+    line-height: 1;
+    padding: 0;
+    pointer-events: auto;
+    transform: scaleX(0.891) scaleY(0.81);
+    width: var(--uiux-label-box-size);
+  }
+
+  .uiux-star-discipline-label.is-selected {
+    background: #fff;
+    border-color: #000;
+    border-width: 6px;
+    color: #000;
+  }
+
+  .uiux-star-discipline-label:not(.is-selected) {
+    opacity: 0.35;
+  }
+
+  .uiux-star-discipline-label > span {
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(
+      135deg,
+      var(--uiux-title-gradient-core) 0%,
+      var(--uiux-title-gradient-mid) 52%,
+      var(--uiux-title-gradient-edge) 100%
+    );
+    background-clip: text;
+    color: transparent;
+  }
+
+  .uiux-star-discipline-label:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 3px;
+  }
+
+  .uiux-star-discipline-label.is-ui {
+    grid-column: 1;
+  }
+
+  .uiux-star-discipline-label.is-ux {
+    grid-column: 3;
   }
 
   .uiux-compact-3d-shell > .uiux-carousel-star-frame {
     bottom: auto;
     height: var(--uiux-3d-top-row-height);
-    top: calc(
-      9.5% - 14.82px - var(--uiux-3d-top-row-height) - 18px
-    );
-    transform: translate(-50%, calc(50% + 3.2734375px));
+    top: calc(9.5% - 14.82px);
+    transform: translate(-50%, 112.4%);
     width: var(--uiux-3d-top-row-height);
   }
 
@@ -3879,37 +3992,43 @@ button.uiux-decision-number:focus-visible {
   opacity: 1 !important;
 }
 
-.uiux-compact-3d-stack[data-case-tone="purple"] {
+.uiux-compact-3d-stack[data-case-tone="purple"],
+.uiux-star-discipline-labels[data-case-tone="purple"] {
   --case-accent-core: #dd4bfd;
   --case-accent-mid: #7a1fdd;
   --case-accent-edge: #6816ce;
 }
 
-.uiux-compact-3d-stack[data-case-tone="yellow"] {
+.uiux-compact-3d-stack[data-case-tone="yellow"],
+.uiux-star-discipline-labels[data-case-tone="yellow"] {
   --case-accent-core: #ffd102;
   --case-accent-mid: #e8aa01;
   --case-accent-edge: #cb7d00;
 }
 
-.uiux-compact-3d-stack[data-case-tone="blue"] {
+.uiux-compact-3d-stack[data-case-tone="blue"],
+.uiux-star-discipline-labels[data-case-tone="blue"] {
   --case-accent-core: #01abfd;
   --case-accent-mid: #0071f3;
   --case-accent-edge: #024dd0;
 }
 
-.uiux-compact-3d-stack[data-case-tone="orange"] {
+.uiux-compact-3d-stack[data-case-tone="orange"],
+.uiux-star-discipline-labels[data-case-tone="orange"] {
   --case-accent-core: #ed5d07;
   --case-accent-mid: #cc330f;
   --case-accent-edge: #761c0c;
 }
 
-.uiux-compact-3d-stack[data-case-tone="green"] {
+.uiux-compact-3d-stack[data-case-tone="green"],
+.uiux-star-discipline-labels[data-case-tone="green"] {
   --case-accent-core: #33f150;
   --case-accent-mid: #099341;
   --case-accent-edge: #026946;
 }
 
-.uiux-compact-3d-stack[data-case-tone] {
+.uiux-compact-3d-stack[data-case-tone],
+.uiux-star-discipline-labels[data-case-tone] {
   --uiux-stack-border-foundation: var(--line);
   --uiux-stack-core-opacity: 7%;
   --uiux-stack-soft-opacity: 3%;
@@ -3927,16 +4046,104 @@ button.uiux-decision-number:focus-visible {
   .uiux-compact-3d-stack:is(
     [data-case-tone="yellow"],
     [data-case-tone="orange"]
+  ),
+  .uiux-star-discipline-labels:is(
+    [data-case-tone="yellow"],
+    [data-case-tone="orange"]
   ) {
   --uiux-stack-border-foundation: #39403c;
   --uiux-stack-soft-opacity: 2%;
   --uiux-stack-surface-color: rgba(5, 4, 3, 0.88);
 }
 
-.uiux-compact-3d-stack[data-case-tone="orange"] {
+.uiux-compact-3d-stack[data-case-tone="orange"],
+.uiux-star-discipline-labels[data-case-tone="orange"] {
   --uiux-stack-border-color: rgba(237, 93, 7, 0.25);
   --uiux-stack-box-shadow: none;
   --uiux-stack-surface-color: #0d1210;
+}
+
+.uiux-star-discipline-labels[data-case-tone]
+  .uiux-star-discipline-label {
+  background-color: rgba(1, 2, 2, 0.75);
+  background-image:
+    radial-gradient(
+      ellipse 82% 38% at 8% 0%,
+      color-mix(
+          in srgb,
+          var(--case-accent-core) var(--uiux-stack-core-opacity),
+          transparent
+        )
+        0%,
+      color-mix(
+          in srgb,
+          var(--case-accent-mid) var(--uiux-stack-soft-opacity),
+          transparent
+        )
+        48%,
+      transparent 100%
+    ),
+    linear-gradient(
+      118deg,
+      transparent 18%,
+      color-mix(
+          in srgb,
+          var(--case-accent-edge) var(--uiux-stack-soft-opacity),
+          transparent
+        )
+        38%,
+      color-mix(
+          in srgb,
+          var(--case-accent-core) var(--uiux-stack-core-opacity),
+          transparent
+        )
+        50%,
+      color-mix(
+          in srgb,
+          var(--case-accent-mid) var(--uiux-stack-soft-opacity),
+          transparent
+        )
+        62%,
+      transparent 80%
+    );
+  border-color: var(--uiux-stack-border-color);
+}
+
+.uiux-star-discipline-labels:is(
+    [data-case-tone="yellow"],
+    [data-case-tone="orange"]
+  )
+  .uiux-star-discipline-label {
+  background-color: rgba(2, 1, 1, 0.75);
+  background-image: linear-gradient(
+    118deg,
+    transparent 18%,
+    color-mix(
+        in srgb,
+        var(--case-accent-edge) var(--uiux-stack-soft-opacity),
+        transparent
+      )
+      38%,
+    color-mix(
+        in srgb,
+        var(--case-accent-core) var(--uiux-stack-soft-opacity),
+        transparent
+      )
+      50%,
+    color-mix(
+        in srgb,
+        var(--case-accent-mid) var(--uiux-stack-soft-opacity),
+        transparent
+      )
+      62%,
+    transparent 80%
+  );
+}
+
+.uiux-star-discipline-labels[data-case-tone="orange"]
+  .uiux-star-discipline-label {
+  background-color: rgba(4, 5, 4, 0.75);
+  background-image: none;
 }
 
 .uiux-compact-decision-panel
@@ -4071,6 +4278,49 @@ button.uiux-decision-number:focus-visible {
 
 .uiux-compact-decision-column.is-adjacent.is-preview-emphasized {
   opacity: 1;
+}
+
+.uiux-compact-decision-strip .uiux-carousel-current,
+.uiux-compact-decision-column.is-primary > .uiux-compact-title-bridge {
+  background-color: rgba(2, 4, 2, 0.75) !important;
+  background-image: linear-gradient(
+    180deg,
+    rgba(4, 8, 6, 0.75),
+    rgba(2, 4, 2, 0.75)
+  ) !important;
+}
+
+.uiux-compact-decision-panel
+  .uiux-compact-3d-stack.is-primary-layout[data-case-tone]
+  > .uiux-carousel-current.uiux-decision-number,
+.uiux-compact-3d-stack.is-primary-layout
+  .uiux-compact-decision-column.is-primary
+  > .uiux-compact-title-bridge {
+  background-color: rgba(1, 2, 2, 0.75) !important;
+}
+
+.uiux-compact-decision-panel
+  .uiux-compact-3d-stack.is-primary-layout:is(
+    [data-case-tone="yellow"],
+    [data-case-tone="orange"]
+  )
+  > .uiux-carousel-current.uiux-decision-number,
+.uiux-compact-3d-stack.is-primary-layout:is(
+    [data-case-tone="yellow"],
+    [data-case-tone="orange"]
+  )
+  .uiux-compact-decision-column.is-primary
+  > .uiux-compact-title-bridge {
+  background-color: rgba(2, 1, 1, 0.75) !important;
+}
+
+.uiux-compact-decision-panel
+  .uiux-compact-3d-stack.is-primary-layout[data-case-tone="orange"]
+  > .uiux-carousel-current.uiux-decision-number,
+.uiux-compact-3d-stack.is-primary-layout[data-case-tone="orange"]
+  .uiux-compact-decision-column.is-primary
+  > .uiux-compact-title-bridge {
+  background-color: rgba(4, 5, 4, 0.75) !important;
 }
 
 .uiux-compact-decision-strip .uiux-carousel-current,
