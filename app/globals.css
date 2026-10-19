@@ -2874,7 +2874,7 @@ button.uiux-decision-number:focus-visible {
   .uiux-compact-title-bridge[data-gradient-tone] > strong::after,
   .uiux-compact-focused-card[data-gradient-tone]
     .uiux-decision-description
-    > span:nth-child(3)::after {
+    > .uiux-description-emphasis::after {
     -webkit-background-clip: text;
     -webkit-mask-image: radial-gradient(
       ellipse 62% 180% at 50% 50%,
@@ -2961,7 +2961,7 @@ button.uiux-decision-number:focus-visible {
 
   .uiux-compact-focused-card
     .uiux-decision-description
-    > span:not(:nth-child(3)) {
+    > span:not(.uiux-description-emphasis) {
     font-family:
       Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
       "Segoe UI", sans-serif;
@@ -2989,7 +2989,7 @@ button.uiux-decision-number:focus-visible {
 
   .uiux-compact-focused-card
     .uiux-decision-description
-    > span:not(:nth-child(3)) {
+    > span:not(.uiux-description-emphasis) {
     font-size: clamp(46.2px, 5.5vw, 59.4px);
     line-height: 1.3;
   }
@@ -3005,7 +3005,7 @@ button.uiux-decision-number:focus-visible {
 
   .uiux-compact-focused-card
     .uiux-decision-description
-    > span:nth-child(3) {
+    > .uiux-description-emphasis {
     -webkit-text-stroke: 2px #000;
     color: var(--uiux-decision-text-color);
     font-family:
@@ -3028,7 +3028,7 @@ button.uiux-decision-number:focus-visible {
 
   .uiux-compact-focused-card[data-decision-number="04"]
     .uiux-decision-description
-    > span:nth-child(3) {
+    > .uiux-description-emphasis {
     font-size: clamp(52.5px, 16.25cqi, 112.5px);
   }
 
@@ -3037,13 +3037,13 @@ button.uiux-decision-number:focus-visible {
       [data-decision-number="02"]
     )
     .uiux-decision-description
-    > span:nth-child(3) {
+    > .uiux-description-emphasis {
     font-size: clamp(66.15px, 22.05cqi, 137.8125px);
   }
 
   .uiux-compact-focused-card
     .uiux-decision-description
-    > span:nth-child(3)
+    > .uiux-description-emphasis
     .uiux-description-never {
     display: inline-block;
     font: inherit;
@@ -3122,33 +3122,86 @@ button.uiux-decision-number:focus-visible {
     clip-path: inset(1px);
     display: block;
     flex: 0 0 auto;
-    height: 407.66034375%;
+    height: 611.490515625%;
     -webkit-mask-image: linear-gradient(
       to bottom,
       rgba(0, 0, 0, 0.8) 0%,
-      transparent 75%,
+      rgba(0, 0, 0, 0.8) 25.1%,
+      rgba(0, 0, 0, 0.5) 27%,
+      rgba(0, 0, 0, 0.15) 29.1%,
+      rgba(0, 0, 0, 0.05) 38.2%,
+      transparent 48.2%,
       transparent 100%
     );
     mask-image: linear-gradient(
       to bottom,
       rgba(0, 0, 0, 0.8) 0%,
-      transparent 75%,
+      rgba(0, 0, 0, 0.8) 25.1%,
+      rgba(0, 0, 0, 0.5) 27%,
+      rgba(0, 0, 0, 0.15) 29.1%,
+      rgba(0, 0, 0, 0.05) 38.2%,
+      transparent 48.2%,
       transparent 100%
     );
     overflow: visible;
     position: relative;
-    width: 407.66034375%;
+    width: 611.490515625%;
   }
 
   .uiux-carousel-star {
-    -webkit-clip-path: inset(1px);
-    clip-path: inset(1px);
+    --star-active-zone: polygon(
+      50% 50%,
+      50% 100%,
+      0% 100%,
+      0% 66.25%
+    );
+    -webkit-clip-path: inset(3px);
+    clip-path: inset(3px);
     display: block;
     height: 100%;
     overflow: visible;
     position: relative;
     transform-origin: 50% 50%;
     width: 100%;
+  }
+
+  .uiux-carousel-star::after {
+    -webkit-clip-path: var(--star-active-zone);
+    -webkit-mask-image: url("/images/uiux/philosophy-star-rounded-gradient.png");
+    -webkit-mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+    background:
+      radial-gradient(
+        ellipse 38% 54% at 24% 17%,
+        rgba(255, 255, 255, 0.38) 0%,
+        rgba(255, 255, 255, 0.12) 34%,
+        transparent 68%
+      ),
+      linear-gradient(
+        115deg,
+        transparent 24%,
+        rgba(255, 255, 255, 0.24) 38%,
+        rgba(255, 255, 255, 0.06) 47%,
+        transparent 61%
+      ),
+      linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.08) 0%,
+        transparent 42%,
+        rgba(0, 0, 0, 0.06) 100%
+      );
+    clip-path: var(--star-active-zone);
+    content: "";
+    inset: 0;
+    mask-image: url("/images/uiux/philosophy-star-rounded-gradient.png");
+    mask-position: center;
+    mask-repeat: no-repeat;
+    mask-size: 100% 100%;
+    mix-blend-mode: soft-light;
+    pointer-events: none;
+    position: absolute;
+    z-index: 2;
   }
 
   .uiux-carousel-star-image {
@@ -3163,21 +3216,24 @@ button.uiux-decision-number:focus-visible {
   }
 
   .uiux-carousel-star-image-active {
-    --star-active-zone: polygon(
-      50% 50%,
-      50% 100%,
-      0% 100%,
-      0% 66.25%
-    );
     -webkit-clip-path: var(--star-active-zone);
     clip-path: var(--star-active-zone);
+    filter: brightness(1.1) saturate(1.1) contrast(0.92);
     inset: 0;
     opacity: 1;
     position: absolute;
   }
 
-  .uiux-carousel-star[data-active-tip="yellow"]
+  .uiux-carousel-star:is(
+      [data-active-tip="purple"],
+      [data-active-tip="orange"],
+      [data-active-tip="green"]
+    )
     .uiux-carousel-star-image-active {
+    filter: brightness(1.14) saturate(1.08) contrast(0.82);
+  }
+
+  .uiux-carousel-star[data-active-tip="yellow"] {
     --star-active-zone: polygon(
       50% 50%,
       100% 66.25%,
@@ -3186,8 +3242,7 @@ button.uiux-decision-number:focus-visible {
     );
   }
 
-  .uiux-carousel-star[data-active-tip="blue"]
-    .uiux-carousel-star-image-active {
+  .uiux-carousel-star[data-active-tip="blue"] {
     --star-active-zone: polygon(
       50% 50%,
       86.33% 0%,
@@ -3196,13 +3251,11 @@ button.uiux-decision-number:focus-visible {
     );
   }
 
-  .uiux-carousel-star[data-active-tip="orange"]
-    .uiux-carousel-star-image-active {
+  .uiux-carousel-star[data-active-tip="orange"] {
     --star-active-zone: polygon(50% 50%, 13.67% 0%, 86.33% 0%);
   }
 
-  .uiux-carousel-star[data-active-tip="green"]
-    .uiux-carousel-star-image-active {
+  .uiux-carousel-star[data-active-tip="green"] {
     --star-active-zone: polygon(
       50% 50%,
       0% 66.25%,
@@ -3434,23 +3487,26 @@ button.uiux-decision-number:focus-visible {
   .uiux-compact-3d-shell > .uiux-carousel-key {
     bottom: auto;
     height: var(--uiux-3d-top-row-height);
-    top: calc(9.5% - 18.82px);
+    top: calc(9.5% + 7.34px);
+    z-index: 4;
   }
 
   .uiux-star-discipline-labels {
     --uiux-label-box-size: calc(var(--uiux-3d-top-row-height) * 1.5);
+    --uiux-label-box-width: calc(var(--uiux-3d-active-stack-width) * 0.5);
     display: grid;
-    gap: 72px;
-    grid-template-columns:
-      var(--uiux-label-box-size) var(--uiux-3d-number-width)
-      var(--uiux-label-box-size);
+    gap: 0;
+    grid-template-columns: repeat(
+      2,
+      calc(var(--uiux-label-box-width) * 0.891)
+    );
     height: var(--uiux-3d-top-row-height);
     left: 50%;
     pointer-events: none;
     position: absolute;
     top: calc(9.5% - 130.82px);
     transform: translateX(-50%);
-    z-index: 2;
+    z-index: 4;
   }
 
   .uiux-star-discipline-label {
@@ -3465,16 +3521,19 @@ button.uiux-decision-number:focus-visible {
     color: #fff;
     cursor: pointer;
     display: flex;
+    flex-direction: column;
     font-family: inherit;
     font-size: 102px;
     font-weight: 900;
     height: var(--uiux-label-box-size);
     justify-content: center;
+    justify-self: center;
     line-height: 1;
     padding: 0;
     pointer-events: auto;
+    position: relative;
     transform: scaleX(0.891) scaleY(0.81);
-    width: var(--uiux-label-box-size);
+    width: var(--uiux-label-box-width);
   }
 
   .uiux-star-discipline-label.is-selected {
@@ -3485,7 +3544,7 @@ button.uiux-decision-number:focus-visible {
   }
 
   .uiux-star-discipline-label:not(.is-selected) {
-    opacity: 0.35;
+    opacity: 0.4;
   }
 
   .uiux-star-discipline-label > span {
@@ -3499,6 +3558,46 @@ button.uiux-decision-number:focus-visible {
     );
     background-clip: text;
     color: transparent;
+    letter-spacing: -0.025em;
+    left: 50%;
+    position: absolute;
+    top: 82px;
+    transform: translateX(-50%);
+    white-space: nowrap;
+  }
+
+  .uiux-star-discipline-label.is-selected > span {
+    -webkit-text-fill-color: #fff;
+    background-image: none;
+    color: #fff;
+  }
+
+  .uiux-star-discipline-label > .uiux-discipline-button-icon {
+    bottom: auto;
+    filter: none;
+    flex: 0 0 auto;
+    height: 128px;
+    left: 50%;
+    margin: 0;
+    position: absolute;
+    top: -56px;
+    transform: translateX(-50%);
+    width: 116.363636px;
+  }
+
+  .uiux-inactive-icon-filter-defs {
+    height: 0;
+    pointer-events: none;
+    position: absolute;
+    width: 0;
+  }
+
+  .uiux-star-discipline-label
+    > .uiux-discipline-button-icon.uiux-carousel-lock {
+    height: 96px;
+    top: -2px;
+    transform: translateX(-50%);
+    width: 87.272727px;
   }
 
   .uiux-star-discipline-label:focus-visible {
@@ -3511,7 +3610,7 @@ button.uiux-decision-number:focus-visible {
   }
 
   .uiux-star-discipline-label.is-ux {
-    grid-column: 3;
+    grid-column: 2;
   }
 
   .uiux-compact-3d-shell > .uiux-carousel-star-frame {
@@ -3520,6 +3619,89 @@ button.uiux-decision-number:focus-visible {
     top: calc(9.5% - 14.82px);
     transform: translate(-50%, 112.4%);
     width: var(--uiux-3d-top-row-height);
+    z-index: 3;
+  }
+
+  .uiux-compact-3d-shell
+    > .uiux-carousel-star-frame
+    .uiux-carousel-star-mask {
+    -webkit-clip-path: none;
+    clip-path: none;
+    transform: translateY(143.15px);
+  }
+
+  .uiux-compact-3d-shell[data-discipline="ui"]
+    > .uiux-carousel-star-frame
+    .uiux-carousel-star-mask {
+    -webkit-mask-composite: source-out;
+    -webkit-mask-image:
+      linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.8) 0%,
+        rgba(0, 0, 0, 0.8) 25.1%,
+        rgba(0, 0, 0, 0.5) 27%,
+        rgba(0, 0, 0, 0.15) 29.1%,
+        rgba(0, 0, 0, 0.05) 38.2%,
+        transparent 48.2%,
+        transparent 100%
+      ),
+      url("/images/uiux/philosophy-key-mask.svg");
+    -webkit-mask-position: 0 0, center 45.49px;
+    -webkit-mask-repeat: no-repeat, no-repeat;
+    -webkit-mask-size: 100% 100%, 129.6px 129.6px;
+    mask-composite: subtract;
+    mask-image:
+      linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.8) 0%,
+        rgba(0, 0, 0, 0.8) 25.1%,
+        rgba(0, 0, 0, 0.5) 27%,
+        rgba(0, 0, 0, 0.15) 29.1%,
+        rgba(0, 0, 0, 0.05) 38.2%,
+        transparent 48.2%,
+        transparent 100%
+      ),
+      url("/images/uiux/philosophy-key-mask.svg");
+    mask-position: 0 0, center 45.49px;
+    mask-repeat: no-repeat, no-repeat;
+    mask-size: 100% 100%, 129.6px 129.6px;
+  }
+
+  .uiux-compact-3d-shell[data-discipline="ux"]
+    > .uiux-carousel-star-frame
+    .uiux-carousel-star-mask {
+    -webkit-mask-composite: source-out;
+    -webkit-mask-image:
+      linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.8) 0%,
+        rgba(0, 0, 0, 0.8) 25.1%,
+        rgba(0, 0, 0, 0.5) 27%,
+        rgba(0, 0, 0, 0.15) 29.1%,
+        rgba(0, 0, 0, 0.05) 38.2%,
+        transparent 48.2%,
+        transparent 100%
+      ),
+      url("/images/uiux/philosophy-lock-mask.svg");
+    -webkit-mask-position: 0 0, center 98.61px;
+    -webkit-mask-repeat: no-repeat, no-repeat;
+    -webkit-mask-size: 100% 100%, 97.2px 97.2px;
+    mask-composite: subtract;
+    mask-image:
+      linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.8) 0%,
+        rgba(0, 0, 0, 0.8) 25.1%,
+        rgba(0, 0, 0, 0.5) 27%,
+        rgba(0, 0, 0, 0.15) 29.1%,
+        rgba(0, 0, 0, 0.05) 38.2%,
+        transparent 48.2%,
+        transparent 100%
+      ),
+      url("/images/uiux/philosophy-lock-mask.svg");
+    mask-position: 0 0, center 98.61px;
+    mask-repeat: no-repeat, no-repeat;
+    mask-size: 100% 100%, 97.2px 97.2px;
   }
 
   .uiux-compact-3d-positioner {
@@ -3820,7 +4002,7 @@ button.uiux-decision-number:focus-visible {
   }
 
   .uiux-compact-3d-stack .uiux-compact-active-card {
-    height: 692.484px;
+    height: 644.484px;
   }
 
   .uiux-compact-3d-stack
@@ -3907,14 +4089,18 @@ button.uiux-decision-number:focus-visible {
     .uiux-decision-copy {
     inset-inline: 0;
     position: absolute;
-    top: 40px;
+    top: 16px;
     transform-origin: 50% 0;
     width: 100%;
     z-index: 3;
   }
 
+  .uiux-compact-3d-stack.is-primary-layout .uiux-stack-squares {
+    top: 16px;
+  }
+
   .uiux-compact-3d-stack.is-primary-layout .uiux-device-slot {
-    bottom: 64px;
+    bottom: 40px;
     inset-inline: auto 64px;
     position: absolute;
     top: auto;
@@ -4065,7 +4251,7 @@ button.uiux-decision-number:focus-visible {
 
 .uiux-star-discipline-labels[data-case-tone]
   .uiux-star-discipline-label {
-  background-color: rgba(1, 2, 2, 0.75);
+  background-color: rgba(1, 2, 2, 0.9);
   background-image:
     radial-gradient(
       ellipse 82% 38% at 8% 0%,
@@ -4114,7 +4300,7 @@ button.uiux-decision-number:focus-visible {
     [data-case-tone="orange"]
   )
   .uiux-star-discipline-label {
-  background-color: rgba(2, 1, 1, 0.75);
+  background-color: rgba(2, 1, 1, 0.9);
   background-image: linear-gradient(
     118deg,
     transparent 18%,
@@ -4142,8 +4328,59 @@ button.uiux-decision-number:focus-visible {
 
 .uiux-star-discipline-labels[data-case-tone="orange"]
   .uiux-star-discipline-label {
-  background-color: rgba(4, 5, 4, 0.75);
+  background-color: rgba(4, 5, 4, 0.9);
   background-image: none;
+}
+
+.uiux-star-discipline-labels[data-case-tone]
+  .uiux-star-discipline-label.is-selected {
+  background-color: rgba(1, 2, 2, 0.75);
+}
+
+.uiux-star-discipline-labels:is(
+    [data-case-tone="yellow"],
+    [data-case-tone="orange"]
+  )
+  .uiux-star-discipline-label.is-selected {
+  background-color: rgba(2, 1, 1, 0.75);
+}
+
+.uiux-star-discipline-labels[data-case-tone="orange"]
+  .uiux-star-discipline-label.is-selected {
+  background-color: rgba(4, 5, 4, 0.75);
+}
+
+.uiux-star-discipline-labels[data-case-tone]
+  .uiux-star-discipline-label:not(.is-selected) {
+  background: transparent;
+  border-color: var(--line-strong);
+  border-width: 2px;
+  box-shadow: none;
+  color: var(--muted);
+}
+
+.uiux-star-discipline-labels[data-case-tone]
+  .uiux-star-discipline-label:not(.is-selected)
+  > span {
+  -webkit-text-fill-color: var(--muted);
+  background-image: none;
+  color: var(--muted);
+  filter: url("#uiux-inactive-icon-outline");
+}
+
+.uiux-star-discipline-labels[data-case-tone]
+  .uiux-star-discipline-label:not(.is-selected)
+  > .uiux-discipline-button-icon {
+  filter: url("#uiux-inactive-icon-outline");
+}
+
+.uiux-carousel-key.uiux-star-key-outline {
+  filter: none !important;
+  transform: translateX(-50%) translateY(-16.19px) scale(1.0125);
+}
+
+.uiux-carousel-lock.uiux-star-lock-white {
+  transform: translateX(-50%) translateY(20.73px) scale(0.759375);
 }
 
 .uiux-compact-decision-panel

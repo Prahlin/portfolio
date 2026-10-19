@@ -161,10 +161,10 @@ function UiUxCarouselStar({
             alt=""
             aria-hidden="true"
             className="uiux-carousel-star-image uiux-carousel-star-image-active"
-            height={2052}
+            height={2048}
             sizes="527px"
-            src="/images/uiux/philosophy-star-rounded-hollow.png"
-            width={2052}
+            src="/images/uiux/philosophy-star-rounded-gradient.png"
+            width={2048}
           />
         </motion.div>
       </div>
@@ -247,13 +247,29 @@ const DESKTOP_STACK_VARIANTS = {
 } satisfies Record<DesktopStackRole, Record<string, number>>;
 
 function UiUxActiveKey({
+  className,
   decisionNumber,
+  fillOverride,
   gradientTone,
+  outlineColor = "#fff",
+  outlineOnly = false,
+  outlineOpacity = "1",
 }: {
+  className?: string;
   decisionNumber?: string;
+  fillOverride?: string;
   gradientTone?: string;
+  outlineColor?: string;
+  outlineOnly?: boolean;
+  outlineOpacity?: string;
 }) {
-  const gradientId = `uiux-carousel-key-color-${useId().replaceAll(":", "")}`;
+  const instanceId = useId().replaceAll(":", "");
+  const gradientId = `uiux-carousel-key-color-${instanceId}`;
+  const defaultGradientId = `uiux-carousel-key-gradient-${instanceId}`;
+  const sheenId = `uiux-carousel-key-sheen-${instanceId}`;
+  const radialId = `uiux-carousel-key-radial-${instanceId}`;
+  const borderId = `uiux-carousel-key-active-border-${instanceId}`;
+  const maskId = `uiux-carousel-key-mask-${instanceId}`;
   const gradientColors = decisionNumber
     ? UIUX_KEY_GRADIENTS[decisionNumber]
     : undefined;
@@ -264,7 +280,7 @@ function UiUxActiveKey({
   return (
     <svg
       aria-hidden="true"
-      className="uiux-carousel-key"
+      className={`uiux-carousel-key${className ? ` ${className}` : ""}`}
       viewBox="0 0 200 200"
     >
       <defs>
@@ -284,7 +300,7 @@ function UiUxActiveKey({
         ) : null}
         <linearGradient
           gradientUnits="userSpaceOnUse"
-          id="uiux-carousel-key-gradient"
+          id={defaultGradientId}
           x1="0"
           x2="0"
           y1="114"
@@ -295,7 +311,7 @@ function UiUxActiveKey({
         </linearGradient>
         <linearGradient
           gradientUnits="userSpaceOnUse"
-          id="uiux-carousel-key-sheen"
+          id={sheenId}
           x1="0"
           x2="0"
           y1="114"
@@ -308,7 +324,7 @@ function UiUxActiveKey({
           cx="133"
           cy="130"
           gradientUnits="userSpaceOnUse"
-          id="uiux-carousel-key-radial"
+          id={radialId}
           r="126"
         >
           <stop offset="0" stopColor="white" stopOpacity="0.0225" />
@@ -317,7 +333,7 @@ function UiUxActiveKey({
         <filter
           filterUnits="userSpaceOnUse"
           height="300"
-          id="uiux-carousel-key-active-border"
+          id={borderId}
           width="300"
           x="-50"
           y="-50"
@@ -328,7 +344,7 @@ function UiUxActiveKey({
           <feMorphology
             in="solid-alpha"
             operator="dilate"
-            radius="1.6"
+            radius={outlineOnly ? "2" : "1.6"}
             result="expanded-alpha"
           />
           <feComposite
@@ -338,9 +354,11 @@ function UiUxActiveKey({
             result="border-alpha"
           />
           <feFlood
-            className="uiux-carousel-key-border-color"
-            floodColor="#020604"
-            floodOpacity="0.82"
+            className={
+              outlineOnly ? undefined : "uiux-carousel-key-border-color"
+            }
+            floodColor={outlineOnly ? outlineColor : "#020604"}
+            floodOpacity={outlineOnly ? outlineOpacity : "0.82"}
             result="border-color"
           />
           <feComposite
@@ -351,11 +369,11 @@ function UiUxActiveKey({
           />
           <feMerge>
             <feMergeNode in="border" />
-            <feMergeNode in="SourceGraphic" />
+            {outlineOnly ? null : <feMergeNode in="SourceGraphic" />}
           </feMerge>
         </filter>
         <mask
-          id="uiux-carousel-key-mask"
+          id={maskId}
           height="280"
           maskUnits="userSpaceOnUse"
           width="280"
@@ -386,33 +404,33 @@ function UiUxActiveKey({
           </g>
         </mask>
       </defs>
-      <g filter="url(#uiux-carousel-key-active-border)">
+      <g filter={`url(#${borderId})`}>
         <rect
           fill={
-            gradientColors
+            fillOverride ?? (gradientColors
               ? `url(#${gradientId})`
-              : (fillColor ?? "url(#uiux-carousel-key-gradient)")
+              : (fillColor ?? `url(#${defaultGradientId})`))
           }
           height="280"
-          mask="url(#uiux-carousel-key-mask)"
+          mask={`url(#${maskId})`}
           width="280"
           x="-40"
           y="-40"
         />
-        {!fillColor ? (
+        {!fillColor && !fillOverride ? (
           <>
             <rect
-              fill="url(#uiux-carousel-key-sheen)"
+              fill={`url(#${sheenId})`}
               height="280"
-              mask="url(#uiux-carousel-key-mask)"
+              mask={`url(#${maskId})`}
               width="280"
               x="-40"
               y="-40"
             />
             <rect
-              fill="url(#uiux-carousel-key-radial)"
+              fill={`url(#${radialId})`}
               height="280"
-              mask="url(#uiux-carousel-key-mask)"
+              mask={`url(#${maskId})`}
               width="280"
               x="-40"
               y="-40"
@@ -432,14 +450,28 @@ const UIUX_LOCK_ASSETS: Record<string, string> = {
   "05": "/images/uiux/philosophy-lock-05.svg",
 };
 
-function UiUxActiveLock({ decisionNumber }: { decisionNumber: string }) {
+function UiUxActiveLock({
+  className,
+  cutout = false,
+  decisionNumber,
+}: {
+  className?: string;
+  cutout?: boolean;
+  decisionNumber: string;
+}) {
   return (
     <Image
       alt=""
       aria-hidden="true"
-      className="uiux-carousel-key uiux-carousel-lock"
+      className={`uiux-carousel-key uiux-carousel-lock${
+        className ? ` ${className}` : ""
+      }`}
       height={200}
-      src={UIUX_LOCK_ASSETS[decisionNumber] ?? UIUX_LOCK_ASSETS["01"]}
+      src={
+        cutout
+          ? "/images/uiux/philosophy-lock-outline.svg"
+          : (UIUX_LOCK_ASSETS[decisionNumber] ?? UIUX_LOCK_ASSETS["01"])
+      }
       unoptimized
       width={200}
     />
@@ -686,37 +718,57 @@ function UiUxDecisionCard({ decision }: { decision: UiUxDecision }) {
 }
 
 function UiUxDecisionDescription({ description }: { description: string }) {
+  const sourceLines = description.split("\n");
+  const lines =
+    sourceLines.length >= 4
+      ? [sourceLines.slice(0, 2).join(" "), ...sourceLines.slice(2)]
+      : sourceLines;
+
   return (
     <span className="uiux-decision-description">
-      {description.split("\n").map((line, index) => (
-        <span data-title={line} key={`${index}-${line}`}>
-          {line.split(/\b(Always|Never)\b/).map((part, partIndex) => {
-            if (part === "Always") {
-              return (
-                <em
-                  className="uiux-description-always"
-                  key={`${part}-${partIndex}`}
-                >
-                  {part}
-                </em>
-              );
-            }
+      {lines.map((line, index) => {
+        const isEmphasis = index === 1;
 
-            if (part === "Never") {
-              return (
-                <span
-                  className="uiux-description-never"
-                  key={`${part}-${partIndex}`}
-                >
-                  {part}
-                </span>
-              );
+        return (
+          <span
+            className={
+              isEmphasis
+                ? "uiux-description-emphasis"
+                : index === 0
+                  ? "uiux-description-opening"
+                  : "uiux-description-closing"
             }
+            data-title={line}
+            key={`${index}-${line}`}
+          >
+            {line.split(/\b(Always|Never)\b/).map((part, partIndex) => {
+              if (part === "Always") {
+                return (
+                  <em
+                    className="uiux-description-always"
+                    key={`${part}-${partIndex}`}
+                  >
+                    {part}
+                  </em>
+                );
+              }
 
-            return part;
-          })}
-        </span>
-      ))}
+              if (part === "Never") {
+                return (
+                  <span
+                    className="uiux-description-never"
+                    key={`${part}-${partIndex}`}
+                  >
+                    {part}
+                  </span>
+                );
+              }
+
+              return part;
+            })}
+          </span>
+        );
+      })}
     </span>
   );
 }
@@ -1196,6 +1248,40 @@ export function UiUxDecisionShowcase({
     setHeldCarouselDirection(null);
   };
 
+  const selectDisciplineAtFirstStack = (discipline: "ui" | "ux") => {
+    setSelectedDiscipline(discipline);
+    clearCarouselHoldTimers();
+    setHeldCarouselDirection(null);
+
+    const firstDecisionNumber = decisions[0]?.number;
+    const currentIndex = decisions.findIndex(
+      (decision) => decision.number === focusedDecisionNumber,
+    );
+
+    if (!firstDecisionNumber || currentIndex <= 0) {
+      if (firstDecisionNumber) {
+        setFocusedDecisionNumber(firstDecisionNumber);
+      }
+      return;
+    }
+
+    const backwardDistance = -currentIndex;
+    const forwardDistance = decisions.length - currentIndex;
+    const positionDelta =
+      Math.abs(backwardDistance) <= Math.abs(forwardDistance)
+        ? backwardDistance
+        : forwardDistance;
+    const direction = positionDelta < 0 ? -1 : 1;
+
+    setStarRotationStep((currentStep) => currentStep + positionDelta);
+    stageCarouselAction(direction, () => {
+      setCarouselPosition(
+        (currentPosition) => currentPosition + positionDelta,
+      );
+      setFocusedDecisionNumber(firstDecisionNumber);
+    });
+  };
+
   useEffect(
     () => () => {
       clearCarouselHoldTimers();
@@ -1461,6 +1547,54 @@ export function UiUxDecisionShowcase({
                   className="uiux-compact-3d-shell"
                   data-discipline={selectedDiscipline}
                 >
+                  <svg
+                    aria-hidden="true"
+                    className="uiux-inactive-icon-filter-defs"
+                  >
+                    <defs>
+                      <filter
+                        colorInterpolationFilters="sRGB"
+                        height="140%"
+                        id="uiux-inactive-icon-outline"
+                        width="140%"
+                        x="-20%"
+                        y="-20%"
+                      >
+                        <feComponentTransfer
+                          in="SourceAlpha"
+                          result="solid-alpha"
+                        >
+                          <feFuncA
+                            intercept="0"
+                            slope="1000"
+                            type="linear"
+                          />
+                        </feComponentTransfer>
+                        <feMorphology
+                          in="solid-alpha"
+                          operator="dilate"
+                          radius="2"
+                          result="expanded-alpha"
+                        />
+                        <feComposite
+                          in="expanded-alpha"
+                          in2="solid-alpha"
+                          operator="out"
+                          result="outline-alpha"
+                        />
+                        <feFlood
+                          floodColor="#c6ffd9"
+                          floodOpacity="0.5"
+                          result="outline-color"
+                        />
+                        <feComposite
+                          in="outline-color"
+                          in2="outline-alpha"
+                          operator="in"
+                        />
+                      </filter>
+                    </defs>
+                  </svg>
                   <UiUxCarouselStar
                     rotationStep={starRotationStep}
                     shouldReduceMotion={shouldReduceMotion}
@@ -1481,32 +1615,46 @@ export function UiUxDecisionShowcase({
                       className={`uiux-star-discipline-label is-ui${
                         selectedDiscipline === "ui" ? " is-selected" : ""
                       }`}
-                      onClick={() => setSelectedDiscipline("ui")}
+                      onClick={() => selectDisciplineAtFirstStack("ui")}
                       type="button"
                     >
-                      <span>UI</span>
+                      <UiUxActiveKey
+                        className="uiux-discipline-button-icon"
+                        decisionNumber={focusedDecision.number}
+                        gradientTone={getDecisionGradientTone(
+                          focusedDecision.number,
+                        )}
+                      />
+                      <span>U I</span>
                     </button>
                     <button
                       aria-pressed={selectedDiscipline === "ux"}
                       className={`uiux-star-discipline-label is-ux${
                         selectedDiscipline === "ux" ? " is-selected" : ""
                       }`}
-                      onClick={() => setSelectedDiscipline("ux")}
+                      onClick={() => selectDisciplineAtFirstStack("ux")}
                       type="button"
                     >
-                      <span>UX</span>
+                      <UiUxActiveLock
+                        className="uiux-discipline-button-icon"
+                        decisionNumber={focusedDecision.number}
+                      />
+                      <span>U X</span>
                     </button>
                   </div>
                   {isUxMode ? (
                     <UiUxActiveLock
+                      className="uiux-star-lock-white"
+                      cutout
                       decisionNumber={focusedDecision.number}
                     />
                   ) : (
                     <UiUxActiveKey
+                      className="uiux-star-key-outline"
                       decisionNumber={focusedDecision.number}
-                      gradientTone={getDecisionGradientTone(
-                        focusedDecision.number,
-                      )}
+                      outlineColor="#fff"
+                      outlineOnly
+                      outlineOpacity="0.9"
                     />
                   )}
 
@@ -1803,14 +1951,17 @@ export function UiUxDecisionShowcase({
                         >
                           {isUxMode ? (
                             <UiUxActiveLock
+                              className="uiux-star-lock-white"
+                              cutout
                               decisionNumber={decision.number}
                             />
                           ) : (
                             <UiUxActiveKey
+                              className="uiux-star-key-outline"
                               decisionNumber={decision.number}
-                              gradientTone={getDecisionGradientTone(
-                                decision.number,
-                              )}
+                              outlineColor="#fff"
+                              outlineOnly
+                              outlineOpacity="0.9"
                             />
                           )}
                           <span

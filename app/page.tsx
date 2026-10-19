@@ -57,7 +57,7 @@ const proofStats = [
 
 const uiUxDecisions: readonly UiUxDecision[] = [
   {
-    description: "Sleek.\nStreamlined.\nNEVER\nLast Year.",
+    description: "Sleek.\nPolished.\nNEVER\nLast Year.",
     detailScreenshots: {
       2: {
         deviceVariant: "phone-android",
@@ -83,7 +83,7 @@ const uiUxDecisions: readonly UiUxDecision[] = [
     title: "Modern",
   },
   {
-    description: "Intuitive.\nDigestible.\nEASY\nTo Grasp.",
+    description: "Intuitive.\nClear.\nEASY\nTo-Grasp.",
     detailScreenshots: {
       2: {
         deviceAspect: "tall",
@@ -109,7 +109,7 @@ const uiUxDecisions: readonly UiUxDecision[] = [
     title: "User-friendly",
   },
   {
-    description: "Instant.\nButter-Smooth.\nSAFELY\nSatisfying.",
+    description: "Instant.\nSmooth.\nSAFELY\nSatisfying.",
     detailScreenshots: {
       3: {
         screenshotAlt: "Alla Vostra order confirmation screen",
@@ -133,7 +133,7 @@ const uiUxDecisions: readonly UiUxDecision[] = [
     title: "Responsive",
   },
   {
-    description: "Interwoven.\nInterconnected.\nALWAYS\nCongruent.",
+    description: "Sound.\nSensible.\nALWAYS\nCongruent.",
     deviceDescription:
       "Less is more, and focal points should have appropriate layers of noticeability.",
     deviceTitle: "STEP-BY-STEP VISIBILITY",
@@ -153,8 +153,7 @@ const uiUxDecisions: readonly UiUxDecision[] = [
     title: "Cohesive",
   },
   {
-    description:
-      "Cross-Format.\nCross-Device.\nALWAYS\nAdaptable.",
+    description: "X-Form.\nX-Device.\nALWAYS\nAdaptable.",
     deviceDescription:
       'Stylish image generation without the "cookie-cutter" feel of AI.',
     deviceTitle: "AI GENERATIVE",
