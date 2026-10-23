@@ -9,6 +9,7 @@ import { useEffect, useId, useLayoutEffect, useRef, useState } from "react";
 export type UiUxNoodlePoint = readonly [x: number, y: number];
 
 type UiUxDecisionDetailScreenshot = {
+  deviceDescription?: string;
   deviceAspect?: "standard" | "tall";
   deviceVariant?: "phone" | "phone-android" | "tablet";
   projectHref?: string;
@@ -148,6 +149,15 @@ function UiUxCarouselStar({
               : { damping: 22, mass: 0.75, stiffness: 170, type: "spring" }
           }
         >
+          <Image
+            alt=""
+            aria-hidden="true"
+            className="uiux-carousel-star-image uiux-carousel-star-image-fill-muted"
+            height={2048}
+            sizes="527px"
+            src="/images/uiux/philosophy-star-rounded-gradient.png"
+            width={2048}
+          />
           <Image
             alt=""
             aria-hidden="true"
@@ -741,31 +751,38 @@ function UiUxDecisionDescription({ description }: { description: string }) {
             data-title={line}
             key={`${index}-${line}`}
           >
-            {line.split(/\b(Always|Never)\b/).map((part, partIndex) => {
-              if (part === "Always") {
-                return (
-                  <em
-                    className="uiux-description-always"
-                    key={`${part}-${partIndex}`}
-                  >
-                    {part}
-                  </em>
-                );
-              }
+            {line === "EASY" ? (
+              <>
+                <span className="uiux-description-easy">EASY</span>
+                <span className="uiux-description-dash"> —</span>
+              </>
+            ) : (
+              line.split(/\b(Always|Never)\b/).map((part, partIndex) => {
+                if (part === "Always") {
+                  return (
+                    <em
+                      className="uiux-description-always"
+                      key={`${part}-${partIndex}`}
+                    >
+                      {part}
+                    </em>
+                  );
+                }
 
-              if (part === "Never") {
-                return (
-                  <span
-                    className="uiux-description-never"
-                    key={`${part}-${partIndex}`}
-                  >
-                    {part}
-                  </span>
-                );
-              }
+                if (part === "Never") {
+                  return (
+                    <span
+                      className="uiux-description-never"
+                      key={`${part}-${partIndex}`}
+                    >
+                      {part}
+                    </span>
+                  );
+                }
 
-              return part;
-            })}
+                return part;
+              })
+            )}
           </span>
         );
       })}
@@ -810,15 +827,109 @@ function UiUxStackSquares({
   );
 }
 
-function UiUxDeviceContext({ decision }: { decision: UiUxDecision }) {
-  if (!decision.deviceTitle && !decision.deviceDescription) {
+function UiUxDeviceContext({
+  decision,
+  description = decision.deviceDescription,
+}: {
+  decision: UiUxDecision;
+  description?: string;
+}) {
+  if (!decision.deviceTitle && !description) {
     return null;
   }
+  const highlightedPrefix = description?.startsWith("Visual Hierarchy")
+    ? "Visual Hierarchy"
+    : description?.startsWith("Wow-inducing")
+      ? "Wow-inducing"
+      : description?.startsWith("Seamless Transitions")
+        ? "Seamless Transitions"
+        : description?.startsWith("Flexible Layouts")
+          ? "Flexible Layouts"
+          : description?.startsWith("Fluid Animations")
+            ? "Fluid Animations"
+            : description?.startsWith("Logical Structure")
+              ? "Logical Structure"
+              : description?.startsWith("Simple interfaces")
+                ? "Simple interfaces"
+                : description?.startsWith("Minimalism")
+                  ? "Minimalism"
+                  : description?.startsWith("Affordance")
+                    ? "Affordance"
+                    : description?.startsWith("User feedback")
+                      ? "User feedback"
+                      : description?.startsWith("Feedback")
+                        ? "Feedback"
+                        : undefined;
 
   return (
-    <div className="uiux-device-context">
-      {decision.deviceTitle ? <h3>{decision.deviceTitle}</h3> : null}
-      {decision.deviceDescription ? <p>{decision.deviceDescription}</p> : null}
+    <div
+      className={`uiux-device-context${decision.number === "01" ? " uiux-device-context-purple" : ""}`}
+    >
+      {decision.deviceTitle ? (
+        <h3>
+          {decision.number === "04" ? (
+            <span className="uiux-device-context-highlight-orange">
+              {decision.deviceTitle}
+            </span>
+          ) : (
+            decision.deviceTitle
+          )}
+        </h3>
+      ) : null}
+      {description ? (
+        <p
+          className={
+            decision.number === "02" ||
+            decision.number === "03" ||
+            decision.number === "04"
+              ? "uiux-device-context-pyramid"
+              : undefined
+          }
+        >
+          {(decision.number === "01" ||
+            decision.number === "02" ||
+            decision.number === "03" ||
+            decision.number === "04") &&
+          highlightedPrefix ? (
+            <>
+              <span
+                className={
+                  decision.number === "04"
+                    ? "uiux-device-context-highlight-orange"
+                    : decision.number === "03"
+                    ? "uiux-device-context-highlight-blue"
+                    : decision.number === "01"
+                    ? "uiux-device-context-highlight-purple"
+                    : "uiux-device-context-highlight"
+                }
+              >
+                {highlightedPrefix}
+              </span>
+              {description.slice(highlightedPrefix.length).includes("\n") ? (
+                <>
+                  {description.slice(highlightedPrefix.length).startsWith("\n") ? (
+                    <br />
+                  ) : null}
+                  {description
+                    .slice(highlightedPrefix.length)
+                    .replace(/^\n/, "")
+                    .split("\n")
+                    .map((line, index) => (
+                      <span key={`${index}-${line}`}>
+                        {index > 0 ? <br /> : null}
+                        {line}
+                      </span>
+                    ))}
+                </>
+              ) : (
+                description.slice(highlightedPrefix.length)
+              )}
+            </>
+          ) : (
+            description
+          )}
+        </p>
+      ) : null}
     </div>
   );
 }
@@ -958,7 +1069,9 @@ function UiUxCompactDecisionColumn({
         data-gradient-tone={getDecisionGradientTone(decision.number)}
       >
         {!isBlank ? (
-          <strong data-title={decision.title}>{decision.title}</strong>
+          <>
+            <strong data-title={decision.title}>{decision.title}</strong>
+          </>
         ) : null}
       </div>
 
@@ -996,9 +1109,7 @@ function UiUxCompactDecisionColumn({
                 {!decision.placeholder ? (
                   <>
                     <strong>{decision.title}</strong>
-                    <UiUxDecisionDescription
-                      description={decision.description}
-                    />
+                    <UiUxDecisionDescription description={decision.description} />
                   </>
                 ) : null}
               </span>
@@ -1026,10 +1137,28 @@ function UiUxCompactDecisionColumn({
                 ? " uiux-device-slot-tall"
                 : ""
             }`}
+            data-decision-number={decision.number}
             data-detail-number={activeDetail}
           >
-            {activeDetail === 1 && activeDeviceVariant !== "tablet" ? (
-              <UiUxDeviceContext decision={decision} />
+            {(activeDetail === 1 || activeDetailScreenshot?.deviceDescription) &&
+            activeDeviceVariant !== "tablet" ? (
+              <UiUxDeviceContext
+                decision={decision}
+                description={
+                  activeDetailScreenshot?.deviceDescription ??
+                  decision.deviceDescription
+                }
+              />
+            ) : null}
+            {(activeDetail === 1 || activeDetailScreenshot?.deviceDescription) &&
+            activeDeviceVariant === "tablet" ? (
+              <UiUxDeviceContext
+                decision={decision}
+                description={
+                  activeDetailScreenshot?.deviceDescription ??
+                  decision.deviceDescription
+                }
+              />
             ) : null}
             <div className="uiux-device-frame-stack">
               {activeProjectHref && activeProjectLabel ? (
@@ -1043,9 +1172,6 @@ function UiUxCompactDecisionColumn({
                     {activeProjectLabel}
                   </Link>
                 </p>
-              ) : null}
-              {activeDetail === 1 && activeDeviceVariant === "tablet" ? (
-                <UiUxDeviceContext decision={decision} />
               ) : null}
               <UiUxDeviceFrame
                 deviceAspect={activeDetailScreenshot?.deviceAspect}
@@ -1618,13 +1744,6 @@ export function UiUxDecisionShowcase({
                       onClick={() => selectDisciplineAtFirstStack("ui")}
                       type="button"
                     >
-                      <UiUxActiveKey
-                        className="uiux-discipline-button-icon"
-                        decisionNumber={focusedDecision.number}
-                        gradientTone={getDecisionGradientTone(
-                          focusedDecision.number,
-                        )}
-                      />
                       <span>U I</span>
                     </button>
                     <button
@@ -1635,10 +1754,6 @@ export function UiUxDecisionShowcase({
                       onClick={() => selectDisciplineAtFirstStack("ux")}
                       type="button"
                     >
-                      <UiUxActiveLock
-                        className="uiux-discipline-button-icon"
-                        decisionNumber={focusedDecision.number}
-                      />
                       <span>U X</span>
                     </button>
                   </div>
@@ -2105,12 +2220,31 @@ export function UiUxDecisionShowcase({
                         ? " uiux-device-slot-tall"
                         : ""
                     }`}
+                    data-decision-number={focusedDecision.number}
                     data-detail-number={focusedDetail}
                     ref={deviceSlotRef}
                   >
-                    {focusedDetail === 1 &&
+                    {(focusedDetail === 1 ||
+                      focusedDetailScreenshot?.deviceDescription) &&
                     focusedDeviceVariant !== "tablet" ? (
-                      <UiUxDeviceContext decision={focusedDecision} />
+                      <UiUxDeviceContext
+                        decision={focusedDecision}
+                        description={
+                          focusedDetailScreenshot?.deviceDescription ??
+                          focusedDecision.deviceDescription
+                        }
+                      />
+                    ) : null}
+                    {(focusedDetail === 1 ||
+                      focusedDetailScreenshot?.deviceDescription) &&
+                    focusedDeviceVariant === "tablet" ? (
+                      <UiUxDeviceContext
+                        decision={focusedDecision}
+                        description={
+                          focusedDetailScreenshot?.deviceDescription ??
+                          focusedDecision.deviceDescription
+                        }
+                      />
                     ) : null}
                     <div className="uiux-device-frame-stack">
                       {focusedProjectHref && focusedProjectLabel ? (
@@ -2124,10 +2258,6 @@ export function UiUxDecisionShowcase({
                             {focusedProjectLabel}
                           </Link>
                         </p>
-                      ) : null}
-                      {focusedDetail === 1 &&
-                      focusedDeviceVariant === "tablet" ? (
-                        <UiUxDeviceContext decision={focusedDecision} />
                       ) : null}
                       <UiUxDeviceFrame
                         deviceAspect={focusedDetailScreenshot?.deviceAspect}

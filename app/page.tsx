@@ -57,16 +57,28 @@ const proofStats = [
 
 const uiUxDecisions: readonly UiUxDecision[] = [
   {
-    description: "Sleek.\nPolished.\nNEVER\nLast Year.",
+    description: "Sleek.\nPolished.\nNEVER\nLast-Year's\nLook.",
     detailScreenshots: {
       2: {
+        deviceDescription:
+          "Visual Hierarchy\nintentionally guides\nusers' eyes to desired\nsegments of the screen.",
         deviceVariant: "phone-android",
         projectHref: "/projects/alla-vostra",
         projectLabel: "ALLA VOSTRA",
         screenshotAlt: "Alla Vostra startup screen",
         screenshotSrc: "/images/startup_screen_small.png",
       },
+      3: {
+        deviceDescription:
+          "Wow-inducing\nimpressions before\nnavigation even begins.",
+        deviceVariant: "tablet",
+        projectHref: "/projects/cinerific",
+        projectLabel: "CINERIFIC",
+        screenshotAlt: "Cinerific app landscape tablet preview",
+        screenshotSrc: "/images/cinerific-hero-tablet-tab-s7-uniform.png",
+      },
     },
+    deviceDescription: "Minimalism eliminates\nimproper, cluttery\nmess.",
     deviceVariant: "tablet",
     number: "01",
     noodle: [
@@ -86,13 +98,21 @@ const uiUxDecisions: readonly UiUxDecision[] = [
     description: "Intuitive.\nClear.\nEASY\nTo-Grasp.",
     detailScreenshots: {
       2: {
+        deviceDescription:
+          "Affordance\nindicates that\ninteractive elements\nare instantly actionable.",
         deviceAspect: "tall",
         screenshotAlt: "Alla Vostra large home screen",
         screenshotSrc: "/images/home_screen_large.png",
       },
+      3: {
+        deviceDescription:
+          "User feedback\nquickly expresses\nthe exact outcomes\nresulting from their input.",
+        screenshotAlt: "Alla Vostra order confirmation screen",
+        screenshotSrc: "/images/confirmed_overlay_small.png",
+      },
     },
     deviceDescription:
-      "Simple interfaces make\nscreens and controls\neasy to navigate,\nand actions\neffortless.",
+      "Simple interfaces\nguarantee that\nusers aren't\ntoo bom-\nbarded.",
     deviceVariant: "phone-android",
     number: "02",
     noodle: [
@@ -111,11 +131,22 @@ const uiUxDecisions: readonly UiUxDecision[] = [
   {
     description: "Instant.\nSmooth.\nSAFELY\nSatisfying.",
     detailScreenshots: {
+      2: {
+        deviceDescription:
+          "Flexible Layouts\nensure interfaces adapt\nbetween orientations/device types.",
+        screenshotAlt: "Alla Vostra browse grazingboards tutorial screen",
+        screenshotSrc:
+          "/images/alla-vostra/tutorial/tutorial_screen_small_step_01.png",
+      },
       3: {
+        deviceDescription:
+          "Fluid Animations\nkeeps the user experience\nflowing - effortlessly like water",
         screenshotAlt: "Alla Vostra order confirmation screen",
         screenshotSrc: "/images/confirmed_overlay_small.png",
       },
     },
+    deviceDescription:
+      "Seamless Transitions\nensure smooth blending\nbetween mobile device screens\nand desktop/laptop browser windows.",
     deviceVariant: "phone-android",
     number: "03",
     noodle: [
@@ -135,8 +166,8 @@ const uiUxDecisions: readonly UiUxDecision[] = [
   {
     description: "Sound.\nSensible.\nALWAYS\nCongruent.",
     deviceDescription:
-      "Less is more, and focal points should have appropriate layers of noticeability.",
-    deviceTitle: "STEP-BY-STEP VISIBILITY",
+      "so that user dont need\nto jump through big hoops\njust to use the app or website",
+    deviceTitle: "Logical Structure",
     deviceVariant: "phone-android",
     number: "04",
     noodle: [

@@ -2062,6 +2062,13 @@ section:not(.hero) {
   margin-right: 0.25em;
 }
 
+.uiux-description-easy {
+  text-decoration-line: underline !important;
+  text-decoration-color: #ffdf02 !important;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.12em;
+}
+
 .uiux-description-never {
   font-style: italic;
   text-decoration: underline;
@@ -2172,6 +2179,22 @@ button.uiux-decision-number:focus-visible {
 
 .uiux-device-context {
   display: none;
+}
+
+.uiux-device-context-highlight {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(
+    135deg,
+    #ffdf02 0%,
+    #e8aa01 100%
+  );
+  background-clip: text;
+  color: transparent;
+}
+
+.uiux-device-context-pyramid {
+  text-align: right;
 }
 
 .uiux-device-frame-stack {
@@ -3032,6 +3055,24 @@ button.uiux-decision-number:focus-visible {
     font-size: clamp(52.5px, 16.25cqi, 112.5px);
   }
 
+  .uiux-compact-focused-card[data-decision-number="02"]
+    .uiux-decision-description
+    > .uiux-description-emphasis {
+    text-decoration: none;
+  }
+
+.uiux-description-dash {
+  -webkit-text-fill-color: #fff;
+  color: #fff;
+  text-decoration: none;
+}
+
+.uiux-description-easy {
+  text-decoration: underline;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.12em;
+}
+
   .uiux-compact-focused-card:is(
       [data-decision-number="01"],
       [data-decision-number="02"]
@@ -3127,20 +3168,20 @@ button.uiux-decision-number:focus-visible {
       to bottom,
       rgba(0, 0, 0, 0.8) 0%,
       rgba(0, 0, 0, 0.8) 25.1%,
-      rgba(0, 0, 0, 0.5) 27%,
-      rgba(0, 0, 0, 0.15) 29.1%,
-      rgba(0, 0, 0, 0.05) 38.2%,
-      transparent 48.2%,
+      rgba(0, 0, 0, 0.6) 26.2%,
+      rgba(0, 0, 0, 0.32) 27.8%,
+      rgba(0, 0, 0, 0.1) 32%,
+      transparent 40%,
       transparent 100%
     );
     mask-image: linear-gradient(
       to bottom,
       rgba(0, 0, 0, 0.8) 0%,
       rgba(0, 0, 0, 0.8) 25.1%,
-      rgba(0, 0, 0, 0.5) 27%,
-      rgba(0, 0, 0, 0.15) 29.1%,
-      rgba(0, 0, 0, 0.05) 38.2%,
-      transparent 48.2%,
+      rgba(0, 0, 0, 0.6) 26.2%,
+      rgba(0, 0, 0, 0.32) 27.8%,
+      rgba(0, 0, 0, 0.1) 32%,
+      transparent 40%,
       transparent 100%
     );
     overflow: visible;
@@ -3211,8 +3252,17 @@ button.uiux-decision-number:focus-visible {
     width: 100%;
   }
 
+  .uiux-carousel-star-image-fill-muted {
+    inset: 0;
+    opacity: 0.055;
+    position: absolute;
+    z-index: 0;
+  }
+
   .uiux-carousel-star-image-muted {
     opacity: 0.25;
+    position: relative;
+    z-index: 1;
   }
 
   .uiux-carousel-star-image-active {
@@ -3222,6 +3272,7 @@ button.uiux-decision-number:focus-visible {
     inset: 0;
     opacity: 1;
     position: absolute;
+    z-index: 2;
   }
 
   .uiux-carousel-star:is(
@@ -3409,14 +3460,179 @@ button.uiux-decision-number:focus-visible {
   .uiux-device-context
   p {
   color: #dce9e1;
-  font-size: clamp(24px, 8cqi, 32px);
+  font-size: clamp(25.2px, 8.4cqi, 33.6px);
   font-weight: 500;
   line-height: 1.45;
   max-width: none;
   overflow-wrap: normal;
+  text-align: right;
   transform: translate(-46.5cqi, 14cqi);
   white-space: pre-line;
   width: 77.5cqi;
+}
+
+.uiux-compact-decision-column[data-decision-number="03"]
+  .uiux-device-context
+  p,
+.uiux-compact-active-card:has(
+    > .uiux-compact-focused-card[data-decision-number="03"]
+  )
+  .uiux-device-context
+  p {
+  color: #dce9e1;
+  font-size: clamp(25.2px, 8.4cqi, 33.6px);
+  font-weight: 500;
+  line-height: 1.45;
+  max-width: none;
+  overflow-wrap: normal;
+  text-align: right;
+  transform: translate(-51.5cqi, 14cqi);
+  white-space: pre;
+  width: max-content;
+}
+
+.uiux-compact-decision-column[data-decision-number="04"]
+  .uiux-device-context
+  p,
+.uiux-compact-active-card:has(
+    > .uiux-compact-focused-card[data-decision-number="04"]
+  )
+  .uiux-device-context
+  p {
+  color: #dce9e1;
+  font-size: clamp(25.2px, 8.4cqi, 33.6px);
+  font-weight: 500;
+  line-height: 1.45;
+  max-width: none;
+  overflow-wrap: normal;
+  text-align: right;
+  transform: translate(-46.5cqi, 14cqi);
+  white-space: pre-line;
+  width: 77.5cqi;
+}
+
+.uiux-compact-decision-column[data-decision-number="04"]
+  .uiux-device-context
+  h3,
+.uiux-compact-active-card:has(
+    > .uiux-compact-focused-card[data-decision-number="04"]
+  )
+  .uiux-device-context
+  h3 {
+  font-size: clamp(25.2px, 8.4cqi, 33.6px);
+  font-weight: 500;
+  line-height: 1.45;
+  margin: 0;
+  text-align: right;
+  transform: translate(-46.5cqi, 14cqi);
+  width: 77.5cqi;
+}
+
+.uiux-compact-active-card:has(
+    > .uiux-compact-focused-card[data-decision-number="03"]
+  )
+  .uiux-device-slot[data-detail-number="2"]
+  > .uiux-device-context
+  p {
+  transform: translate(-49cqi, 14cqi);
+}
+
+.uiux-compact-active-card:has(
+    > .uiux-compact-focused-card[data-decision-number="03"]
+  )
+  .uiux-device-slot[data-detail-number="3"]
+  > .uiux-device-context
+  p {
+  transform: translate(-36.5cqi, 14cqi);
+}
+
+.uiux-compact-active-card:has(
+    > .uiux-compact-focused-card[data-decision-number="01"]
+  )
+  .uiux-device-slot[data-detail-number="2"]
+  > .uiux-device-context {
+  flex: none;
+  max-width: none;
+  transform: translate(0, 14cqi);
+  width: 77.5cqi;
+}
+
+.uiux-compact-active-card:has(
+    > .uiux-compact-focused-card[data-decision-number="01"]
+  )
+  .uiux-device-slot[data-detail-number="2"]
+  > .uiux-device-context
+  p {
+  font-size: clamp(25.2px, 8.4cqi, 33.6px);
+  font-weight: 500;
+  line-height: 1.45;
+  max-width: none;
+  overflow-wrap: normal;
+  text-align: right;
+  white-space: pre-line;
+}
+
+.uiux-device-slot-tablet[data-decision-number="01"]:is(
+    [data-detail-number="1"],
+    [data-detail-number="3"]
+  )
+  > .uiux-device-context {
+  align-self: auto;
+  bottom: auto;
+  display: block;
+  flex: none;
+  left: -31%;
+  max-width: 45%;
+  position: absolute;
+  right: auto;
+  text-align: left;
+  top: 30%;
+  width: min(45%, 208px);
+  z-index: 5;
+}
+
+.uiux-device-slot-tablet[data-decision-number="01"][data-detail-number="3"]
+  > .uiux-device-context {
+  left: auto;
+  right: -5%;
+}
+
+.uiux-device-slot-tablet[data-decision-number="01"][data-detail-number="3"]
+  > .uiux-device-frame-stack {
+  transform: translateX(-32.5%);
+}
+
+.uiux-device-context-purple p {
+  color: #dce9e1;
+  font-size: clamp(25.2px, 8.4cqi, 33.6px);
+  font-weight: 500;
+  line-height: 1.25;
+  white-space: pre-line;
+}
+
+.uiux-device-context-highlight-purple {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(135deg, #d86cff 0%, #8c31f5 100%);
+  background-clip: text;
+  color: transparent;
+}
+
+.uiux-device-context-highlight-blue {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(135deg, #01abfd 0%, #0071f3 58%, #024dd0 100%);
+  background-clip: text;
+  color: transparent;
+}
+
+.uiux-device-context-highlight-orange {
+  display: inline-block;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-image: linear-gradient(135deg, #ffdf02 0%, #ed5d07 58%, #cc330f 100%);
+  background-clip: text !important;
+  color: transparent !important;
 }
 
 @media (max-width: 520px) {
@@ -3559,10 +3775,8 @@ button.uiux-decision-number:focus-visible {
     background-clip: text;
     color: transparent;
     letter-spacing: -0.025em;
-    left: 50%;
-    position: absolute;
-    top: 82px;
-    transform: translateX(-50%);
+    position: static;
+    transform: none;
     white-space: nowrap;
   }
 
@@ -3572,32 +3786,11 @@ button.uiux-decision-number:focus-visible {
     color: #fff;
   }
 
-  .uiux-star-discipline-label > .uiux-discipline-button-icon {
-    bottom: auto;
-    filter: none;
-    flex: 0 0 auto;
-    height: 128px;
-    left: 50%;
-    margin: 0;
-    position: absolute;
-    top: -56px;
-    transform: translateX(-50%);
-    width: 116.363636px;
-  }
-
   .uiux-inactive-icon-filter-defs {
     height: 0;
     pointer-events: none;
     position: absolute;
     width: 0;
-  }
-
-  .uiux-star-discipline-label
-    > .uiux-discipline-button-icon.uiux-carousel-lock {
-    height: 96px;
-    top: -2px;
-    transform: translateX(-50%);
-    width: 87.272727px;
   }
 
   .uiux-star-discipline-label:focus-visible {
@@ -3619,7 +3812,7 @@ button.uiux-decision-number:focus-visible {
     top: calc(9.5% - 14.82px);
     transform: translate(-50%, 112.4%);
     width: var(--uiux-3d-top-row-height);
-    z-index: 3;
+    z-index: 1;
   }
 
   .uiux-compact-3d-shell
@@ -3639,10 +3832,10 @@ button.uiux-decision-number:focus-visible {
         to bottom,
         rgba(0, 0, 0, 0.8) 0%,
         rgba(0, 0, 0, 0.8) 25.1%,
-        rgba(0, 0, 0, 0.5) 27%,
-        rgba(0, 0, 0, 0.15) 29.1%,
-        rgba(0, 0, 0, 0.05) 38.2%,
-        transparent 48.2%,
+        rgba(0, 0, 0, 0.6) 26.2%,
+        rgba(0, 0, 0, 0.32) 27.8%,
+        rgba(0, 0, 0, 0.1) 32%,
+        transparent 40%,
         transparent 100%
       ),
       url("/images/uiux/philosophy-key-mask.svg");
@@ -3655,10 +3848,10 @@ button.uiux-decision-number:focus-visible {
         to bottom,
         rgba(0, 0, 0, 0.8) 0%,
         rgba(0, 0, 0, 0.8) 25.1%,
-        rgba(0, 0, 0, 0.5) 27%,
-        rgba(0, 0, 0, 0.15) 29.1%,
-        rgba(0, 0, 0, 0.05) 38.2%,
-        transparent 48.2%,
+        rgba(0, 0, 0, 0.6) 26.2%,
+        rgba(0, 0, 0, 0.32) 27.8%,
+        rgba(0, 0, 0, 0.1) 32%,
+        transparent 40%,
         transparent 100%
       ),
       url("/images/uiux/philosophy-key-mask.svg");
@@ -3676,32 +3869,32 @@ button.uiux-decision-number:focus-visible {
         to bottom,
         rgba(0, 0, 0, 0.8) 0%,
         rgba(0, 0, 0, 0.8) 25.1%,
-        rgba(0, 0, 0, 0.5) 27%,
-        rgba(0, 0, 0, 0.15) 29.1%,
-        rgba(0, 0, 0, 0.05) 38.2%,
-        transparent 48.2%,
+        rgba(0, 0, 0, 0.6) 26.2%,
+        rgba(0, 0, 0, 0.32) 27.8%,
+        rgba(0, 0, 0, 0.1) 32%,
+        transparent 40%,
         transparent 100%
       ),
       url("/images/uiux/philosophy-lock-mask.svg");
-    -webkit-mask-position: 0 0, center 98.61px;
+    -webkit-mask-position: 0 0, center 103.47px;
     -webkit-mask-repeat: no-repeat, no-repeat;
-    -webkit-mask-size: 100% 100%, 97.2px 97.2px;
+    -webkit-mask-size: 100% 100%, 87.48px 87.48px;
     mask-composite: subtract;
     mask-image:
       linear-gradient(
         to bottom,
         rgba(0, 0, 0, 0.8) 0%,
         rgba(0, 0, 0, 0.8) 25.1%,
-        rgba(0, 0, 0, 0.5) 27%,
-        rgba(0, 0, 0, 0.15) 29.1%,
-        rgba(0, 0, 0, 0.05) 38.2%,
-        transparent 48.2%,
+        rgba(0, 0, 0, 0.6) 26.2%,
+        rgba(0, 0, 0, 0.32) 27.8%,
+        rgba(0, 0, 0, 0.1) 32%,
+        transparent 40%,
         transparent 100%
       ),
       url("/images/uiux/philosophy-lock-mask.svg");
-    mask-position: 0 0, center 98.61px;
+    mask-position: 0 0, center 103.47px;
     mask-repeat: no-repeat, no-repeat;
-    mask-size: 100% 100%, 97.2px 97.2px;
+    mask-size: 100% 100%, 87.48px 87.48px;
   }
 
   .uiux-compact-3d-positioner {
@@ -3894,6 +4087,10 @@ button.uiux-decision-number:focus-visible {
     z-index: 2;
   }
 
+  .uiux-compact-3d-stack > .uiux-decision-number.is-active {
+    z-index: 4;
+  }
+
   .uiux-inactive-stack-navigation {
     column-gap: var(--uiux-compact-button-gap);
     display: grid;
@@ -4041,6 +4238,20 @@ button.uiux-decision-number:focus-visible {
   .uiux-compact-3d-stack.is-primary-layout
     .uiux-device-slot.uiux-device-slot-tall {
     transform: scale(0.5);
+  }
+
+  .uiux-compact-3d-stack.is-primary-layout[data-decision-number="01"]
+    .uiux-device-slot-tablet[data-detail-number="1"]
+    .uiux-device-context-purple
+    p {
+    font-size: clamp(22.176px, 7.392cqi, 29.568px);
+  }
+
+  .uiux-compact-3d-stack.is-primary-layout[data-decision-number="02"]
+    .uiux-device-slot-tall
+    .uiux-device-context
+    p {
+    font-size: clamp(27.72px, 9.24cqi, 36.96px);
   }
 
   .uiux-compact-3d-stack.is-primary-layout[data-decision-number="03"]
@@ -4380,7 +4591,25 @@ button.uiux-decision-number:focus-visible {
 }
 
 .uiux-carousel-lock.uiux-star-lock-white {
-  transform: translateX(-50%) translateY(20.73px) scale(0.759375);
+  transform-origin: 50% 50%;
+  transform: translateX(-50%) translateY(20.73px) scale(0.6834375);
+}
+
+.uiux-compact-focused-card[data-decision-number="02"] .uiux-decision-copy,
+.uiux-compact-focused-card[data-decision-number="02"]
+  .uiux-description-emphasis {
+  text-decoration: none;
+}
+
+.uiux-compact-focused-card[data-decision-number="02"] .uiux-description-dash {
+  -webkit-text-fill-color: #fff;
+  -webkit-text-stroke: 0;
+  background: none;
+  color: #fff;
+  display: inline-block;
+  font-weight: 500;
+  transform: scaleX(0.3);
+  transform-origin: left center;
 }
 
 .uiux-compact-decision-panel
