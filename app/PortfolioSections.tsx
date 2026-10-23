@@ -49,7 +49,7 @@ const caseStudies: CaseStudy[] = [
     id: "cinerific",
     title: "Cinerific",
     tone: "purple",
-    eyebrowLines: ["Native Android UI", "Entertainment flow"],
+    eyebrowLines: ["Native Android", "Entertainment", "Flow"],
     href: "/projects/cinerific",
     descriptionLines: [
       "Cinerific is a Kotlin and Jetpack Compose",
@@ -74,7 +74,7 @@ const caseStudies: CaseStudy[] = [
     id: "alla-vostra",
     title: "Alla Vostra",
     tone: "orange",
-    eyebrowLines: ["Full stack mobile", "Stripe checkout UX"],
+    eyebrowLines: ["Full Stack", "Mobile", "Stripe Checkout"],
     href: "/projects/alla-vostra",
     descriptionLines: [
       "Alla Vostra is a React Native and",
@@ -99,7 +99,7 @@ const caseStudies: CaseStudy[] = [
     id: "credit-king",
     title: "Credit King",
     tone: "blue",
-    eyebrowLines: ["Native finance UI", "Credit flow system"],
+    eyebrowLines: ["Native Finance", "Credit Flow", "System"],
     descriptionLines: [
       "Credit King is a React Native finance",
       "UI system shaped around dashboard clarity,",
@@ -113,9 +113,9 @@ const caseStudies: CaseStudy[] = [
   },
   {
     id: "future-case-study",
-    title: "Future Case Study",
+    title: "In Progress",
     tone: "yellow",
-    eyebrowLines: ["Project placeholder", "Case study coming soon"],
+    eyebrowLines: ["Project", "Placeholder", "Coming Soon"],
     descriptionLines: [
       "A fifth case study is currently taking shape,",
       "with this space reserved for the product story,",
@@ -131,7 +131,7 @@ const caseStudies: CaseStudy[] = [
     id: "this-portfolio-website",
     title: "Prahl.dev (This Website)",
     tone: "green",
-    eyebrowLines: ["Next.js portfolio", "Prahl.dev web site"],
+    eyebrowLines: ["Next.js", "Portfolio", "Website"],
     descriptionLines: [
       "This Portfolio Website is a responsive Prahl.dev",
       "showcase built using Next.js, React, TypeScript,",
@@ -1092,6 +1092,7 @@ const caseTitleVariants: Record<
     hasWeb?: boolean;
     mobilePlatforms: MobilePlatform[];
     platformLabels?: string[];
+    usePlatformBrandMarks?: boolean;
     webIconScale?: number;
   }
 > = {
@@ -1106,7 +1107,8 @@ const caseTitleVariants: Record<
     color: "#b88cff",
     fontSize: "31.76px",
     hasTablet: true,
-    mobilePlatforms: ["android"],
+    mobilePlatforms: ["android", "apple"],
+    usePlatformBrandMarks: true,
   },
   "credit-king": {
     color: "#6fa4ff",
@@ -1435,6 +1437,7 @@ function CaseStudyTitle({
               mobilePlatforms={[]}
               responsiveAssetGap={caseTitleDeviceGap}
               showPlatformLabels
+              usePlatformBrandMarks
               webIconScale={caseTitleMatchedWebIconScale}
             />
           </span>
@@ -1541,6 +1544,7 @@ function CaseStudyTitle({
             platformLabels={variant.platformLabels}
             responsiveAssetGap={caseTitleDeviceGap}
             showPlatformLabels
+            usePlatformBrandMarks={variant.usePlatformBrandMarks ?? true}
             webIconScale={variant.webIconScale}
           />
         </span>
@@ -1731,10 +1735,10 @@ function HashPrincipleCard({
 
 export function FeaturedCaseStudies({
   articlesMode = false,
-  kicker = "Featured case studies",
+  kicker = "What I've Made",
   showTitleDeviceStacks = true,
   subtitle,
-  title = "Mobile products with real implementation depth",
+  title = "Featured Case Studies",
   titleFontSize,
   underlineTitles = true,
 }: {
@@ -1754,7 +1758,7 @@ export function FeaturedCaseStudies({
     : caseStudies.map((study) => ({
         cardId: study.id,
         displayTitle: undefined,
-        eyebrow: study.eyebrowLines.join(" "),
+        eyebrow: study.eyebrowLines.join("\n"),
         key: study.title,
         study,
         titleColor: "",

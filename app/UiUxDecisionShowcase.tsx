@@ -118,9 +118,11 @@ const UIUX_STAR_SETTLE_OFFSET_BY_TIP = {
 } as const;
 
 function UiUxCarouselStar({
+  onRotationComplete,
   rotationStep,
   shouldReduceMotion,
 }: {
+  onRotationComplete: () => void;
   rotationStep: number;
   shouldReduceMotion: boolean | null;
 }) {
@@ -129,20 +131,22 @@ function UiUxCarouselStar({
       ((rotationStep % UIUX_STAR_TIP_COUNT) + UIUX_STAR_TIP_COUNT) %
         UIUX_STAR_TIP_COUNT
     ];
+  const targetRotation =
+    UIUX_STAR_INITIAL_ROTATION +
+    rotationStep * UIUX_STAR_ROTATION_STEP +
+    UIUX_STAR_SETTLE_OFFSET_BY_TIP[activeTip];
 
   return (
     <div aria-hidden="true" className="uiux-carousel-star-frame">
       <div className="uiux-carousel-star-mask">
         <motion.div
           animate={{
-            rotate:
-              UIUX_STAR_INITIAL_ROTATION +
-              rotationStep * UIUX_STAR_ROTATION_STEP +
-              UIUX_STAR_SETTLE_OFFSET_BY_TIP[activeTip],
+            rotate: targetRotation,
           }}
           className="uiux-carousel-star"
           data-active-tip={activeTip}
           initial={false}
+          onAnimationComplete={() => onRotationComplete()}
           transition={
             shouldReduceMotion
               ? { duration: 0 }
@@ -1214,6 +1218,7 @@ export function UiUxDecisionShowcase({
   const [carouselDirection, setCarouselDirection] = useState<-1 | 1>(1);
   const [carouselPosition, setCarouselPosition] = useState(0);
   const [starRotationStep, setStarRotationStep] = useState(0);
+  const [starButtonMaskReleased, setStarButtonMaskReleased] = useState(false);
   const [selectedDiscipline, setSelectedDiscipline] = useState<
     "ui" | "ux" | null
   >("ui");
@@ -1237,6 +1242,10 @@ export function UiUxDecisionShowcase({
   > | null>(null);
   const carouselDirectionRef = useRef<-1 | 1>(1);
   const carouselDirectionFrameRef = useRef<number | null>(null);
+  const starMaskReleaseDelayRef = useRef<ReturnType<typeof setTimeout> | null>(
+    null,
+  );
+  const starRotationQueueRef = useRef<Array<() => void>>([]);
   const stageDecisions = decisions.filter((decision) => !decision.compactOnly);
   const leftDecisions = stageDecisions.filter(
     (decision) => decision.side === "left",
@@ -1315,6 +1324,48 @@ export function UiUxDecisionShowcase({
     }
   };
 
+  const runNextStarRotation = () => {
+    starMaskReleaseDelayRef.current = null;
+    const action = starRotationQueueRef.current.shift();
+
+    if (!action) {
+      setStarButtonMaskReleased(false);
+      return;
+    }
+
+    action();
+
+    if (starRotationQueueRef.current.length > 0) {
+      starMaskReleaseDelayRef.current = setTimeout(
+        runNextStarRotation,
+        100,
+      );
+    } else if (shouldReduceMotion) {
+      setStarButtonMaskReleased(false);
+    }
+  };
+
+  const scheduleStarRotation = (action: () => void) => {
+    starRotationQueueRef.current.push(action);
+    setStarButtonMaskReleased(true);
+
+    if (starMaskReleaseDelayRef.current === null) {
+      starMaskReleaseDelayRef.current = setTimeout(
+        runNextStarRotation,
+        100,
+      );
+    }
+  };
+
+  const handleStarRotationComplete = () => {
+    if (
+      starRotationQueueRef.current.length === 0 &&
+      starMaskReleaseDelayRef.current === null
+    ) {
+      setStarButtonMaskReleased(false);
+    }
+  };
+
   const stageCarouselAction = (direction: -1 | 1, action: () => void) => {
     const isDesktopDirectionChange =
       compactColumnCount === 3 && carouselDirectionRef.current !== direction;
@@ -1338,18 +1389,21 @@ export function UiUxDecisionShowcase({
   };
 
   const applyCarouselMove = (direction: -1 | 1) => {
-    setStarRotationStep((currentStep) => currentStep + direction);
-    stageCarouselAction(direction, () => {
-      setCarouselPosition((currentPosition) => currentPosition + direction);
-      setFocusedDecisionNumber((currentNumber) => {
-        const currentIndex = decisions.findIndex(
-          (decision) => decision.number === currentNumber,
-        );
-        const normalizedIndex = currentIndex >= 0 ? currentIndex : 0;
-        const nextIndex =
-          (normalizedIndex + direction + decisions.length) % decisions.length;
+    scheduleStarRotation(() => {
+      setStarRotationStep((currentStep) => currentStep + direction);
+      stageCarouselAction(direction, () => {
+        setCarouselPosition((currentPosition) => currentPosition + direction);
+        setFocusedDecisionNumber((currentNumber) => {
+          const currentIndex = decisions.findIndex(
+            (decision) => decision.number === currentNumber,
+          );
+          const normalizedIndex = currentIndex >= 0 ? currentIndex : 0;
+          const nextIndex =
+            (normalizedIndex + direction + decisions.length) %
+            decisions.length;
 
-        return decisions[nextIndex]?.number ?? currentNumber;
+          return decisions[nextIndex]?.number ?? currentNumber;
+        });
       });
     });
   };
@@ -1399,18 +1453,26 @@ export function UiUxDecisionShowcase({
         : forwardDistance;
     const direction = positionDelta < 0 ? -1 : 1;
 
-    setStarRotationStep((currentStep) => currentStep + positionDelta);
-    stageCarouselAction(direction, () => {
-      setCarouselPosition(
-        (currentPosition) => currentPosition + positionDelta,
-      );
-      setFocusedDecisionNumber(firstDecisionNumber);
+    scheduleStarRotation(() => {
+      setStarRotationStep((currentStep) => currentStep + positionDelta);
+      stageCarouselAction(direction, () => {
+        setCarouselPosition(
+          (currentPosition) => currentPosition + positionDelta,
+        );
+        setFocusedDecisionNumber(firstDecisionNumber);
+      });
     });
   };
 
   useEffect(
     () => () => {
       clearCarouselHoldTimers();
+
+      if (starMaskReleaseDelayRef.current !== null) {
+        clearTimeout(starMaskReleaseDelayRef.current);
+        starMaskReleaseDelayRef.current = null;
+      }
+      starRotationQueueRef.current = [];
 
       if (carouselDirectionFrameRef.current !== null) {
         cancelAnimationFrame(carouselDirectionFrameRef.current);
@@ -1722,20 +1784,34 @@ export function UiUxDecisionShowcase({
                     </defs>
                   </svg>
                   <UiUxCarouselStar
+                    onRotationComplete={handleStarRotationComplete}
                     rotationStep={starRotationStep}
                     shouldReduceMotion={shouldReduceMotion}
                   />
                   <div
                     aria-label="Choose UI or UX emphasis"
                     className="uiux-star-discipline-labels"
+                    data-star-mask={
+                      ((starRotationStep % UIUX_STAR_TIP_COUNT) +
+                        UIUX_STAR_TIP_COUNT) %
+                      UIUX_STAR_TIP_COUNT
+                    }
                     data-case-tone={getDecisionCaseTone(
                       focusedDecision.number,
                     )}
                     data-gradient-tone={getDecisionGradientTone(
                       focusedDecision.number,
                     )}
+                    data-mask-released={
+                      starButtonMaskReleased ? "true" : undefined
+                    }
+                    data-selected-discipline={selectedDiscipline ?? "ui"}
                     role="group"
                   >
+                    <span
+                      aria-hidden="true"
+                      className="uiux-star-discipline-frame"
+                    />
                     <button
                       aria-pressed={selectedDiscipline === "ui"}
                       className={`uiux-star-discipline-label is-ui${
@@ -1744,7 +1820,7 @@ export function UiUxDecisionShowcase({
                       onClick={() => selectDisciplineAtFirstStack("ui")}
                       type="button"
                     >
-                      <span>U I</span>
+                      <span>UI</span>
                     </button>
                     <button
                       aria-pressed={selectedDiscipline === "ux"}
@@ -1754,7 +1830,7 @@ export function UiUxDecisionShowcase({
                       onClick={() => selectDisciplineAtFirstStack("ux")}
                       type="button"
                     >
-                      <span>U X</span>
+                      <span>UX</span>
                     </button>
                   </div>
                   {isUxMode ? (
@@ -1872,24 +1948,26 @@ export function UiUxDecisionShowcase({
 
                                         event.preventDefault();
                                         event.stopPropagation();
-                                        setStarRotationStep(
-                                          (currentStep) =>
-                                            currentStep +
-                                            (role === "previous" ? -1 : 1),
-                                        );
-                                        stageCarouselAction(
-                                          role === "previous" ? -1 : 1,
-                                          () => {
-                                            setCarouselPosition(
-                                              (currentPosition) =>
-                                                currentPosition +
-                                                (role === "previous" ? -1 : 1),
-                                            );
-                                            setFocusedDecisionNumber(
-                                              decision.number,
-                                            );
-                                          },
-                                        );
+                                        const direction =
+                                          role === "previous" ? -1 : 1;
+                                        scheduleStarRotation(() => {
+                                          setStarRotationStep(
+                                            (currentStep) =>
+                                              currentStep + direction,
+                                          );
+                                          stageCarouselAction(
+                                            direction,
+                                            () => {
+                                              setCarouselPosition(
+                                                (currentPosition) =>
+                                                  currentPosition + direction,
+                                              );
+                                              setFocusedDecisionNumber(
+                                                decision.number,
+                                              );
+                                            },
+                                          );
+                                        });
                                       }
                                 }
                                 onPointerCancel={
@@ -2044,6 +2122,7 @@ export function UiUxDecisionShowcase({
                     role="group"
                   >
                     <UiUxCarouselStar
+                      onRotationComplete={handleStarRotationComplete}
                       rotationStep={starRotationStep}
                       shouldReduceMotion={shouldReduceMotion}
                     />

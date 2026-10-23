@@ -319,11 +319,15 @@ function getPlatformListGridTemplate(columnCount: number) {
 }
 
 function PlatformIconSlot({
+  brandMark,
+  deviceMark,
   gridColumn,
   gridRow,
   label,
   slotIndex,
 }: {
+  brandMark?: "android" | "apple" | "web";
+  deviceMark?: "phone" | "tablet" | "desktop";
   gridColumn?: number;
   gridRow?: number;
   label: string;
@@ -332,8 +336,10 @@ function PlatformIconSlot({
   return (
     <span
       className="case-card-title-platform-slot"
+      data-platform-brand-mark={brandMark}
+      data-platform-device-mark={deviceMark}
       data-platform-index={slotIndex}
-      data-platform-label={label}
+      data-platform-label={brandMark || deviceMark ? "" : label}
       data-platform-row={gridRow}
       style={
         gridColumn && gridRow
@@ -344,6 +350,30 @@ function PlatformIconSlot({
           : undefined
       }
     >
+      {deviceMark ? (
+        <FactorDeviceMark device={deviceMark} />
+      ) : brandMark === "web" ? (
+        <WebMark scale={0.72} />
+      ) : brandMark ? (
+        <img
+          alt=""
+          aria-hidden="true"
+          className={`case-card-title-platform-brand-mark case-card-title-platform-brand-mark-${brandMark}`}
+          height={brandMark === "android" ? 17 : 16}
+          src={
+            brandMark === "android"
+              ? "/images/android-robot-head.svg"
+              : "/images/apple-logo-official.svg"
+          }
+          style={{
+            height: brandMark === "android" ? 17 : 16,
+            maxHeight: brandMark === "android" ? 17 : 16,
+            maxWidth: brandMark === "android" ? 17 : 16,
+            width: brandMark === "android" ? 17 : 16,
+          }}
+          width={brandMark === "android" ? 17 : 16}
+        />
+      ) : null}
     </span>
   );
 }
@@ -383,9 +413,13 @@ function PlatformLabelDivider({
 }
 
 function PlatformLabelSlots({
+  useDeviceMarks,
+  useBrandMarks,
   labels,
   row,
 }: {
+  useBrandMarks?: boolean;
+  useDeviceMarks?: boolean;
   labels: string[];
   row: number;
 }) {
@@ -395,6 +429,28 @@ function PlatformLabelSlots({
       gridRow={row}
       key={`${row}-${label}`}
       label={label}
+      brandMark={
+        useBrandMarks
+          ? label === "AND"
+            ? "android"
+            : label === "IOS"
+              ? "apple"
+              : label === "WEB"
+                ? "web"
+                : undefined
+          : undefined
+      }
+      deviceMark={
+        useDeviceMarks
+          ? label === "PHONE"
+              ? "phone"
+            : label === "TABLET"
+              ? "tablet"
+              : label === "DESK"
+                ? "desktop"
+                : undefined
+          : undefined
+      }
       slotIndex={index}
     />
   ));
@@ -502,11 +558,26 @@ function PlatformLogoMark({ platform }: { platform: MobilePlatform }) {
   );
 }
 
-function FactorDeviceMark({ device }: { device: "phone" | "tablet" }) {
-  return device === "phone" ? (
-    <PhoneMark mobilePlatforms={[]} />
-  ) : (
-    <TabletMark showPlatformIcon={false} />
+function FactorDeviceMark({
+  device,
+}: {
+  device: "phone" | "tablet" | "desktop";
+}) {
+  if (device === "phone") {
+    return <PhoneMark mobilePlatforms={[]} />;
+  }
+
+  if (device === "tablet") {
+    return <TabletMark showPlatformIcon={false} />;
+  }
+
+  return (
+    <img
+      alt=""
+      aria-hidden="true"
+      className="case-card-title-desktop-mark"
+      src="/images/freeicons-chip-component-white.svg"
+    />
   );
 }
 
@@ -518,6 +589,7 @@ export function ProjectDeviceStack({
   deviceLabels,
   mobilePlatforms,
   platformLabels: customPlatformLabels,
+  usePlatformBrandMarks,
   responsiveAssetGap,
   showPlatformLabels,
   webIconScale,
@@ -529,6 +601,7 @@ export function ProjectDeviceStack({
   hasWeb?: boolean;
   mobilePlatforms: MobilePlatform[];
   platformLabels?: string[];
+  usePlatformBrandMarks?: boolean;
   responsiveAssetGap?: ResponsiveAssetGap;
   showPlatformLabels?: boolean;
   webIconScale?: number;
@@ -799,7 +872,11 @@ export function ProjectDeviceStack({
           gridRow={dividerGridRow}
           kind="grid"
         />
-        <PlatformLabelSlots labels={platformLabels} row={1} />
+        <PlatformLabelSlots
+          labels={platformLabels}
+          row={1}
+          useBrandMarks={usePlatformBrandMarks}
+        />
         <PlatformColumnDividers
           columnCount={spanningItemDividerCount + 1}
           gridRow={dividerGridRow}
@@ -809,7 +886,11 @@ export function ProjectDeviceStack({
             <span className="case-card-title-platform-heading case-card-title-platform-heading-factor">
               DEVICE
             </span>
-            <PlatformLabelSlots labels={factorDeviceLabels} row={2} />
+            <PlatformLabelSlots
+              labels={factorDeviceLabels}
+              row={2}
+              useDeviceMarks
+            />
             <PlatformColumnDividers
               columnCount={factorDeviceLabels.length}
               gridRow={2}
