@@ -6770,17 +6770,20 @@ section.aboutdev-hero {
   position: relative;
 }
 
-.aboutdev-timeline::before {
-  align-self: stretch;
+.aboutdev-timeline-item--without-proof:nth-child(n + 2)::before {
   background: var(--line-strong);
-  bottom: calc(-1 * var(--workflow-stack-gap));
   content: "";
-  grid-column: 1;
-  grid-row: 2 / 4;
+  height: var(--workflow-stack-gap);
   left: 22px;
+  pointer-events: none;
   position: absolute;
-  top: calc(-1 * var(--workflow-stack-gap));
+  top: calc(-1 * (var(--workflow-tab-height) + var(--workflow-stack-gap)));
+  transition: transform 160ms ease;
   width: 1px;
+}
+
+.aboutdev-timeline-item--without-proof:nth-child(n + 2).is-workflow-focused::before {
+  transform: translateY(2px);
 }
 
 .aboutdev-timeline-item {
@@ -6794,6 +6797,191 @@ section.aboutdev-hero {
   min-height: 177px;
   padding: 22px;
   position: relative;
+}
+
+.aboutdev-timeline-item--without-proof {
+  --workflow-active-third-shift: 0%;
+  --workflow-body-inline: 22px;
+  --workflow-points-offset: 90px;
+  --workflow-card-accent-core: var(--workflow-image-gradient-core);
+  --workflow-card-accent-edge: var(--workflow-image-gradient-edge);
+  --workflow-card-accent-mid: var(--workflow-image-gradient-mid);
+  background-color: rgba(3, 7, 5, 0.67);
+  background-image:
+    radial-gradient(
+      ellipse 82% 38% at 8% 0%,
+      color-mix(
+          in srgb,
+          var(--workflow-card-accent-core) 7%,
+          transparent
+        )
+        0%,
+      color-mix(
+          in srgb,
+          var(--workflow-card-accent-mid) 3%,
+          transparent
+        )
+        48%,
+      transparent 100%
+    ),
+    linear-gradient(
+      118deg,
+      transparent 18%,
+      color-mix(
+          in srgb,
+          var(--workflow-card-accent-edge) 3%,
+          transparent
+        )
+        38%,
+      color-mix(
+          in srgb,
+          var(--workflow-card-accent-core) 7%,
+          transparent
+        )
+        50%,
+      color-mix(
+          in srgb,
+          var(--workflow-card-accent-mid) 3%,
+          transparent
+        )
+        62%,
+      transparent 80%
+    );
+  border-color: color-mix(
+    in srgb,
+    var(--workflow-card-accent-mid) 18%,
+    var(--line)
+  );
+  box-shadow:
+    inset 0 1px 0
+      color-mix(
+        in srgb,
+        var(--workflow-card-accent-core) 6%,
+        transparent
+      ),
+    inset 0 0 32px
+      color-mix(
+        in srgb,
+        var(--workflow-card-accent-edge) 2%,
+        transparent
+      );
+  cursor: pointer;
+  grid-template-columns: 70px minmax(0, 1fr);
+  opacity: 0.5;
+  transition:
+    border-color 160ms ease,
+    box-shadow 160ms ease,
+    opacity 160ms ease,
+    transform 160ms ease;
+}
+
+.aboutdev-timeline-item--without-proof::after {
+  background-image:
+    radial-gradient(
+      ellipse 82% 38% at 8% 0%,
+      color-mix(
+          in srgb,
+          var(--workflow-card-accent-core) 10%,
+          transparent
+        )
+        0%,
+      color-mix(
+          in srgb,
+          var(--workflow-card-accent-mid) 5%,
+          transparent
+        )
+        48%,
+      transparent 100%
+    ),
+    linear-gradient(
+      118deg,
+      transparent 18%,
+      color-mix(
+          in srgb,
+          var(--workflow-card-accent-edge) 5%,
+          transparent
+        )
+        38%,
+      color-mix(
+          in srgb,
+          var(--workflow-card-accent-core) 10%,
+          transparent
+        )
+        50%,
+      color-mix(
+          in srgb,
+          var(--workflow-card-accent-mid) 5%,
+          transparent
+        )
+        62%,
+      transparent 80%
+    );
+  bottom: 1px;
+  box-shadow:
+    inset 0 1px 0
+      color-mix(
+        in srgb,
+        var(--workflow-card-accent-core) 8%,
+        transparent
+      ),
+    inset 0 0 40px
+      color-mix(
+        in srgb,
+        var(--workflow-card-accent-edge) 4%,
+        transparent
+      );
+  content: "";
+  left: var(--workflow-body-inline);
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 1px;
+  transform: translateX(var(--workflow-active-third-shift));
+  transition:
+    opacity 160ms ease,
+    transform 160ms ease;
+  width: calc((100% - (2 * var(--workflow-body-inline))) / 3);
+  z-index: 0;
+}
+
+.aboutdev-timeline-item--without-proof.is-workflow-focused::after {
+  opacity: 1;
+}
+
+.aboutdev-timeline-item--without-proof:has(
+    .aboutdev-timeline-points > li:nth-child(2).is-workflow-point-focused
+  ) {
+  --workflow-active-third-shift: 100%;
+}
+
+.aboutdev-timeline-item--without-proof:has(
+    .aboutdev-timeline-points > li:nth-child(3).is-workflow-point-focused
+  ) {
+  --workflow-active-third-shift: 200%;
+}
+
+.aboutdev-timeline-item--without-proof .aboutdev-timeline-copy {
+  z-index: 1;
+}
+
+.aboutdev-timeline-item--without-proof.is-workflow-focused {
+  border-color: rgba(198, 255, 217, 0.36);
+  box-shadow:
+    inset 0 1px 0
+      color-mix(
+        in srgb,
+        var(--workflow-card-accent-core) 6%,
+        transparent
+      ),
+    inset 0 0 32px
+      color-mix(
+        in srgb,
+        var(--workflow-card-accent-edge) 2%,
+        transparent
+      ),
+    0 24px 60px rgba(0, 0, 0, 0.28);
+  opacity: 1;
+  transform: translateY(-2px);
 }
 
 .aboutdev-timeline-item:nth-child(-n + 5) {
@@ -6913,10 +7101,80 @@ section.aboutdev-hero {
   z-index: 2;
 }
 
+.aboutdev-timeline-item:nth-child(5) .aboutdev-timeline-copy h3 {
+  right: -1px;
+  width: auto;
+}
+
+.aboutdev-timeline-item--without-proof:nth-child(-n + 5)
+  .aboutdev-timeline-copy
+  h3,
+.aboutdev-timeline-item--without-proof .aboutdev-timeline-index {
+  background-color: rgba(3, 7, 5, 0.67);
+  background-image:
+    radial-gradient(
+      ellipse 82% 38% at 8% 0%,
+      color-mix(
+          in srgb,
+          var(--workflow-card-accent-core) 7%,
+          transparent
+        )
+        0%,
+      color-mix(
+          in srgb,
+          var(--workflow-card-accent-mid) 3%,
+          transparent
+        )
+        48%,
+      transparent 100%
+    ),
+    linear-gradient(
+      118deg,
+      transparent 18%,
+      color-mix(
+          in srgb,
+          var(--workflow-card-accent-edge) 3%,
+          transparent
+        )
+        38%,
+      color-mix(
+          in srgb,
+          var(--workflow-card-accent-core) 7%,
+          transparent
+        )
+        50%,
+      color-mix(
+          in srgb,
+          var(--workflow-card-accent-mid) 3%,
+          transparent
+        )
+        62%,
+      transparent 80%
+    );
+  border-color: color-mix(
+    in srgb,
+    var(--workflow-card-accent-mid) 18%,
+    var(--line)
+  );
+  box-shadow:
+    inset 0 1px 0
+      color-mix(
+        in srgb,
+        var(--workflow-card-accent-core) 6%,
+        transparent
+      ),
+    inset 0 0 32px
+      color-mix(
+        in srgb,
+        var(--workflow-card-accent-edge) 2%,
+        transparent
+      );
+}
+
 .aboutdev-timeline-item:nth-child(-n + 5)
   .aboutdev-timeline-copy
   h3::after {
-  background: rgba(5, 13, 9, 0.88);
+  background: rgba(3, 7, 5, 0.67);
   bottom: -2px;
   content: "";
   height: 3px;
@@ -7081,7 +7339,10 @@ section.aboutdev-hero {
 }
 
 .aboutdev-timeline-images--full-width {
+  border: var(--workflow-tab-border);
+  border-bottom: 0;
   border-radius: 8px 8px 0 0;
+  box-sizing: border-box;
   grid-template-columns: minmax(0, 1fr);
   left: -1px;
   right: -1px;
@@ -7168,6 +7429,7 @@ section.aboutdev-hero {
 }
 
 .aboutdev-timeline-item[data-workflow-tone="leadership"] {
+  --workflow-card-accent-core: #ff9a24;
   --workflow-image-gradient-core: #ffdf02;
   --workflow-image-gradient-mid: #ed5d07;
   --workflow-image-gradient-edge: #cc330f;
@@ -7491,8 +7753,132 @@ section.aboutdev-hero {
   text-transform: uppercase;
 }
 
-.aboutdev-timeline-points li span {
+.aboutdev-workflow-point-label > span {
   color: var(--green);
+}
+
+.aboutdev-workflow-point-label {
+  font-size: 21px;
+}
+
+.aboutdev-timeline-item--without-proof .aboutdev-timeline-points {
+  --workflow-placeholder-width: clamp(120px, 18vw, 230px);
+  display: grid;
+  gap: 0;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-left: calc(-1 * var(--workflow-points-offset));
+  width: calc(100% + var(--workflow-points-offset));
+}
+
+.aboutdev-timeline-item--without-proof .aboutdev-timeline-points li {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  opacity: 0.5;
+  text-align: center;
+  transition: opacity 160ms ease;
+  white-space: nowrap;
+}
+
+.aboutdev-timeline-item--without-proof
+  .aboutdev-timeline-points
+  > li:first-child {
+  opacity: 1;
+}
+
+.aboutdev-timeline-item--without-proof
+  .aboutdev-timeline-points:has(> li:nth-child(2):hover, > li:nth-child(3):hover)
+  > li:first-child {
+  opacity: 0.5;
+}
+
+.aboutdev-timeline-item--without-proof
+  .aboutdev-timeline-points
+  > li:nth-child(2):hover,
+.aboutdev-timeline-item--without-proof
+  .aboutdev-timeline-points
+  > li:nth-child(3):hover {
+  opacity: 1;
+}
+
+.aboutdev-timeline-item--without-proof.is-workflow-focused
+  .aboutdev-timeline-points
+  > li:first-child {
+  opacity: 0.5;
+}
+
+.aboutdev-timeline-item--without-proof.is-workflow-focused
+  .aboutdev-timeline-points
+  > li.is-workflow-point-focused {
+  opacity: 1;
+}
+
+.aboutdev-workflow-carousel {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.aboutdev-workflow-image-placeholder {
+  aspect-ratio: 16 / 9;
+  background:
+    linear-gradient(135deg, rgba(243, 255, 247, 0.025), transparent 52%),
+    rgba(3, 13, 8, 0.34);
+  border: 1px solid rgba(210, 232, 218, 0.38);
+  border-radius: 6px;
+  display: block;
+  margin-top: 18px;
+  overflow: hidden;
+  position: relative;
+  width: min(100%, var(--workflow-placeholder-width));
+}
+
+.aboutdev-workflow-image-placeholder::after {
+  background: linear-gradient(
+    145deg,
+    color-mix(
+      in srgb,
+      var(--workflow-image-gradient-core) 14%,
+      transparent
+    ),
+    transparent 58%
+  );
+  content: "";
+  inset: 0;
+  pointer-events: none;
+  position: absolute;
+  z-index: 1;
+}
+
+.aboutdev-workflow-image-placeholder img {
+  filter: brightness(0.82) contrast(1.1) saturate(0.88);
+  object-fit: cover;
+}
+
+.aboutdev-workflow-image-placeholder .aboutdev-workflow-carousel-image {
+  opacity: 0;
+  transition: opacity 180ms ease;
+}
+
+.aboutdev-workflow-image-placeholder .aboutdev-workflow-carousel-image.is-active {
+  opacity: 1;
+}
+
+.aboutdev-workflow-image-selector {
+  --case-accent-core: var(--workflow-image-gradient-core);
+  gap: clamp(6px, 0.8vw, 10px);
+  margin-top: 14px;
+  position: static;
+  right: auto;
+  top: auto;
+  z-index: auto;
+}
+
+.aboutdev-workflow-image-selector .uiux-stack-square {
+  font-size: clamp(14px, 1.4vw, 18px);
+  width: clamp(28px, 3vw, 38px);
 }
 
 .aboutdev-timeline-proof {
@@ -13858,6 +14244,10 @@ section.project-hero {
     grid-template-columns: 54px minmax(0, 1fr);
   }
 
+  .aboutdev-timeline-item--without-proof {
+    --workflow-points-offset: 74px;
+  }
+
   .aboutdev-timeline-proof {
     grid-column: 2;
   }
@@ -14647,7 +15037,7 @@ section.project-hero {
     padding: 10px 11px;
   }
 
-  .aboutdev-timeline::before {
+  .aboutdev-timeline-item--without-proof:nth-child(n + 2)::before {
     left: 18px;
   }
 
@@ -14655,6 +15045,11 @@ section.project-hero {
     gap: 14px;
     grid-template-columns: minmax(0, 1fr);
     padding: 20px;
+  }
+
+  .aboutdev-timeline-item--without-proof {
+    --workflow-body-inline: 20px;
+    --workflow-points-offset: 0px;
   }
 
   .aboutdev-timeline-proof {

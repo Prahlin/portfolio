@@ -22,6 +22,8 @@ import { HeroLede } from "./HeroLede";
 import { CoreBeliefsOrbit } from "./CoreBeliefsOrbit";
 import { ProductivityHacks } from "./ProductivityHacks";
 import { ProjectCarouselButton } from "./ProjectCarouselButton";
+import { WorkflowViewportFocus } from "./WorkflowViewportFocus";
+import { WorkflowImageSelector } from "./WorkflowImageSelector";
 import {
   FeaturedCaseStudies,
   MainNavBar,
@@ -614,63 +616,114 @@ const worklogItems = [
 
 const timelineItems = [
   {
-    evidence:
-      "Evidence: UI/UX philosophy, visual hierarchy studies, shipped mobile screens.",
-    points: ["Discuss", "Brainstorm", "Industry Research"],
+    images: [
+      [
+        { alt: "Two engineers discussing technical work", src: "/images/aboutdev/workflow/01-discuss.jpg" },
+        { alt: "Product team discussing work around a laptop", src: "/images/aboutdev/workflow/01-discuss-b.jpg" },
+        { alt: "Colleagues discussing a project on a laptop", src: "/images/aboutdev/workflow/01-discuss-c.jpg" },
+      ],
+      [
+        { alt: "Engineering team brainstorming at a whiteboard", src: "/images/aboutdev/workflow/01-brainstorm.jpg" },
+        { alt: "Design team brainstorming at a whiteboard", src: "/images/aboutdev/workflow/01-brainstorm-b.jpg" },
+        { alt: "Office team developing ideas at a whiteboard", src: "/images/aboutdev/workflow/01-brainstorm-c.jpg" },
+      ],
+      [
+        { alt: "Researcher documenting technical diagrams", src: "/images/aboutdev/workflow/01-industry-research.jpg" },
+        { alt: "Research team reviewing graphs on a whiteboard", src: "/images/aboutdev/workflow/01-industry-research-b.jpg" },
+        { alt: "Colleagues analyzing product data on a laptop", src: "/images/aboutdev/workflow/01-industry-research-c.jpg" },
+      ],
+    ],
+    points: ["Discuss", "Brainstorm", "BG Research"],
     tone: "vision",
     title: "Research",
-    text: (
-      <>
-        Banking customers are <em>not</em> Video Streamers, Global users{" "}
-        <em>not</em> American ones. That&apos;s why I conduct{" "}
-        comprehensive, theoretical{" "}
-        <strong>
-          <u>Industry & Product Research</u>
-        </strong>{" "}
-        before the <u>practical</u> work of{" "}
-        <em>UI/UX, Front-End, Back-End, Build & Release</em> planning even begins.
-      </>
-    ),
   },
   {
-    evidence: "Evidence: Alla Vostra, Cinerific, Credit King.",
+    images: [
+      [
+        { alt: "UX wireframes sketched beside a smartphone and keyboard", src: "/images/aboutdev/workflow/02-wireframing.jpg" },
+        { alt: "Detailed interface wireframe sketched on paper", src: "/images/aboutdev/workflow/02-wireframing-b.jpg" },
+        { alt: "Application interface planning on a whiteboard", src: "/images/aboutdev/workflow/02-wireframing-c.jpg" },
+      ],
+      [
+        { alt: "Blank smartphone mockup on a notepad", src: "/images/aboutdev/workflow/02-mockups.jpg" },
+        { alt: "Blank smartphone screen ready for a product mockup", src: "/images/aboutdev/workflow/02-mockups-b.jpg" },
+        { alt: "Smartphone beside color swatches for interface design", src: "/images/aboutdev/workflow/02-mockups-c.jpg" },
+      ],
+      [
+        { alt: "Developer scaffolding software at an electronics workbench", src: "/images/aboutdev/workflow/02-scaffold.jpg" },
+        { alt: "Developer setting up code in a colorful workspace", src: "/images/aboutdev/workflow/02-scaffold-b.jpg" },
+        { alt: "Source code forming the foundation of an application", src: "/images/aboutdev/workflow/02-scaffold-c.jpg" },
+      ],
+    ],
     points: ["Wireframing", "Mockups", "Scaffold"],
     tone: "integrity",
     title: "Plan",
-    text: [
-      "Cross-platform or Platform-specific? Web version or App-only? UI-focused or Back-end heavy?",
-      "I help make the difficult decisions about your unique product.",
-    ],
   },
   {
-    evidence: "Evidence: Vercel API, Stripe, PayPal, Postmark.",
+    images: [
+      [
+        { alt: "Software engineer building an application", src: "/images/aboutdev/workflow/03-build.jpg" },
+        { alt: "Developer building software across multiple monitors", src: "/images/aboutdev/workflow/03-build-b.jpg" },
+        { alt: "Software engineer building an application at a dual-monitor desk", src: "/images/aboutdev/workflow/03-build-c.jpg" },
+      ],
+      [
+        { alt: "Engineer testing a mobile-connected wearable", src: "/images/aboutdev/workflow/03-testing.jpg" },
+        { alt: "Development team reviewing code together", src: "/images/aboutdev/workflow/03-testing-b.jpg" },
+        { alt: "Two developers checking software on a shared screen", src: "/images/aboutdev/workflow/03-testing-c.jpg" },
+      ],
+      [
+        { alt: "Blue server rack prepared for deployment", src: "/images/aboutdev/workflow/03-deployment.jpg" },
+        { alt: "Computer beside server racks during deployment", src: "/images/aboutdev/workflow/03-deployment-b.jpg" },
+        { alt: "Illuminated data-center racks ready for deployment", src: "/images/aboutdev/workflow/03-deployment-c.jpg" },
+      ],
+    ],
     points: ["Build", "Testing", "Deployment"],
     tone: "sustainability",
     title: "Produce",
-    text: (
-      <>
-        Although the nitty-gritty of every project is different, some
-        systematization is paramount; that&apos;s why I always, without exception,
-        begin every session with <strong>read-project</strong> briefings,{" "}
-        <strong>commit changes</strong> in an organized manner, track real-time{" "}
-        <strong>snapshots</strong> of project changes, and generate end-of-day{" "}
-        <strong>worklogs</strong> at all times.
-      </>
-    ),
   },
   {
-    evidence: "Evidence: 100+ logs across active projects.",
+    images: [
+      [
+        { alt: "Developer reviewing source code on a laptop", src: "/images/aboutdev/workflow/04-review.jpg" },
+        { alt: "Product team reviewing work around a laptop", src: "/images/aboutdev/workflow/04-review-b.jpg" },
+        { alt: "Technical team reviewing a project together", src: "/images/aboutdev/workflow/04-review-c.jpg" },
+      ],
+      [
+        { alt: "Analytics graph displayed on a laptop", src: "/images/aboutdev/workflow/04-measure.jpg" },
+        { alt: "Analytics dashboard measuring product performance", src: "/images/aboutdev/workflow/04-measure-b.jpg" },
+        { alt: "Real-time metrics displayed on a laptop dashboard", src: "/images/aboutdev/workflow/04-measure-c.jpg" },
+      ],
+      [
+        { alt: "Developer learning at a multi-monitor workstation", src: "/images/aboutdev/workflow/04-learn.jpg" },
+        { alt: "Developer studying an application on screen", src: "/images/aboutdev/workflow/04-learn-b.jpg" },
+        { alt: "Programmer learning through hands-on coding", src: "/images/aboutdev/workflow/04-learn-c.jpg" },
+      ],
+    ],
     points: ["Review", "Measure", "Learn"],
     tone: "leadership",
     title: "Analyze",
-    text: "Creation without learning is useless. By studying & analyzing diffs while the project is growing, I ensure that I'm in the loop, and deeply comprehend, every coding change made to the project in real time.",
   },
   {
-    evidence: "Evidence: Production launches across active projects.",
+    images: [
+      [
+        { alt: "Team handing off work around a shared laptop", src: "/images/aboutdev/workflow/05-handoff.jpg" },
+        { alt: "Presenter handing off product knowledge to a team", src: "/images/aboutdev/workflow/05-handoff-b.jpg" },
+        { alt: "Colleague explaining a product during team handoff", src: "/images/aboutdev/workflow/05-handoff-c.jpg" },
+      ],
+      [
+        { alt: "Rocket launching as a metaphor for product release", src: "/images/aboutdev/workflow/05-launch.jpg" },
+        { alt: "Rocket lifting off as a metaphor for product launch", src: "/images/aboutdev/workflow/05-launch-b.jpg" },
+        { alt: "Rocket rising at night as a metaphor for release", src: "/images/aboutdev/workflow/05-launch-c.jpg" },
+      ],
+      [
+        { alt: "IT technician maintaining systems in a server room", src: "/images/aboutdev/workflow/05-upkeep.jpg" },
+        { alt: "Technician maintaining network cables in a server room", src: "/images/aboutdev/workflow/05-upkeep-b.jpg" },
+        { alt: "Field engineer maintaining data-center hardware", src: "/images/aboutdev/workflow/05-upkeep-c.jpg" },
+      ],
+    ],
     points: ["Handoff", "Launch", "Upkeep"],
     tone: "collaboration",
     title: "Release",
-    text: "A launch is a transition, not a finish line. I pair deployment checks and clear handoff documentation with ongoing upkeep so the product remains dependable after it reaches users.",
   },
 ];
 
@@ -1122,6 +1175,7 @@ export default function Home() {
         className="aboutdev-section aboutdev-story-section"
         id="workflow"
       >
+        <WorkflowViewportFocus />
         <div className="site-shell">
           <div className="aboutdev-section-head">
             <div>
@@ -1137,7 +1191,7 @@ export default function Home() {
           <div className="aboutdev-timeline">
             {timelineItems.map((item, index) => (
               <article
-                className="aboutdev-timeline-item"
+                className="aboutdev-timeline-item aboutdev-timeline-item--without-proof"
                 data-workflow-tone={item.tone}
                 key={item.title}
               >
@@ -1205,23 +1259,18 @@ export default function Home() {
                     <ol className="aboutdev-timeline-points">
                       {item.points.map((point, pointIndex) => (
                         <li key={point}>
-                          <span aria-hidden>
-                            {String.fromCharCode(65 + pointIndex)}:
-                          </span>{" "}
-                          {point}
+                          <span className="aboutdev-workflow-point-label">
+                            {point}
+                          </span>
+                          <WorkflowImageSelector
+                            images={item.images[pointIndex]}
+                            label={`${item.title}: ${point}`}
+                          />
                         </li>
                       ))}
                     </ol>
                   ) : null}
-                  {Array.isArray(item.text) ? (
-                    item.text.map((paragraph) => (
-                      <p key={paragraph}>{paragraph}</p>
-                    ))
-                  ) : (
-                    <p>{item.text}</p>
-                  )}
                 </div>
-                <p className="aboutdev-timeline-proof">{item.evidence}</p>
               </article>
             ))}
           </div>
