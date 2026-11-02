@@ -3984,7 +3984,7 @@ button.uiux-decision-number:focus-visible {
     top: calc(9.5% - 14.82px);
     transform: translate(-50%, 112.4%);
     width: var(--uiux-3d-top-row-height);
-    z-index: 3;
+    z-index: 1;
   }
 
   .uiux-compact-3d-shell

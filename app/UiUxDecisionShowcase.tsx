@@ -12,10 +12,11 @@ type UiUxDecisionDetailScreenshot = {
   deviceDescription?: string;
   deviceAspect?: "standard" | "tall";
   deviceVariant?: "phone" | "phone-android" | "tablet";
+  headline?: string;
   projectHref?: string;
   projectLabel?: string;
-  screenshotAlt: string;
-  screenshotSrc: string;
+  screenshotAlt?: string;
+  screenshotSrc?: string;
 };
 
 export type UiUxDecision = {
@@ -731,7 +732,13 @@ function UiUxDecisionCard({ decision }: { decision: UiUxDecision }) {
   );
 }
 
-function UiUxDecisionDescription({ description }: { description: string }) {
+function UiUxDecisionDescription({
+  description,
+  underlineEmphasis = false,
+}: {
+  description: string;
+  underlineEmphasis?: boolean;
+}) {
   const sourceLines = description.split("\n");
   const lines =
     sourceLines.length >= 4
@@ -754,6 +761,17 @@ function UiUxDecisionDescription({ description }: { description: string }) {
             }
             data-title={line}
             key={`${index}-${line}`}
+            style={
+              isEmphasis && underlineEmphasis
+                ? {
+                    textDecorationColor: "var(--uiux-decision-text-color)",
+                    textDecorationLine: "underline",
+                    textDecorationStyle: "solid",
+                    textDecorationThickness: "0.08em",
+                    textUnderlineOffset: "0.12em",
+                  }
+                : undefined
+            }
           >
             {line === "EASY" ? (
               <>
@@ -798,10 +816,12 @@ function UiUxStackSquares({
   activeSquare,
   decisionTitle,
   onSelect,
+  useLetterLabels = false,
 }: {
   activeSquare: number;
   decisionTitle: string;
   onSelect: (number: number) => void;
+  useLetterLabels?: boolean;
 }) {
   return (
     <div
@@ -811,7 +831,9 @@ function UiUxStackSquares({
     >
       {[1, 2, 3].map((number) => (
         <button
-          aria-label={`Show ${decisionTitle} detail ${number}`}
+          aria-label={`Show ${decisionTitle} detail ${
+            useLetterLabels ? String.fromCharCode(64 + number) : number
+          }`}
           aria-pressed={activeSquare === number}
           className={`uiux-stack-square${
             activeSquare === number ? " is-active" : ""
@@ -822,9 +844,19 @@ function UiUxStackSquares({
             onSelect(number);
           }}
           onPointerDown={(event) => event.stopPropagation()}
+          style={
+            useLetterLabels
+              ? activeSquare === number
+                ? {
+                    borderColor: "#f3fff7",
+                    color: "var(--case-accent-core)",
+                  }
+                : { color: "#f3fff7" }
+              : undefined
+          }
           type="button"
         >
-          {number}
+          {useLetterLabels ? String.fromCharCode(64 + number) : number}
         </button>
       ))}
     </div>
@@ -1047,6 +1079,8 @@ function UiUxCompactDecisionColumn({
     activeDetailScreenshot?.projectHref ?? decision.projectHref;
   const activeProjectLabel =
     activeDetailScreenshot?.projectLabel ?? decision.projectLabel;
+  const activeHeadline =
+    activeDetailScreenshot?.headline ?? decision.description;
   const shouldShowDevice = Boolean(activeScreenshotSrc);
 
   return (
@@ -1098,7 +1132,7 @@ function UiUxCompactDecisionColumn({
                 aria-label={
                   decision.placeholder
                     ? `${decision.number}. ${decision.title} placeholder`
-                    : `${decision.number}. ${decision.title}: ${decision.description}`
+                    : `${decision.number}. ${decision.title}: ${activeHeadline}`
                 }
                 aria-pressed={isPrimary}
                 className="uiux-decision-number is-active"
@@ -1113,7 +1147,12 @@ function UiUxCompactDecisionColumn({
                 {!decision.placeholder ? (
                   <>
                     <strong>{decision.title}</strong>
-                    <UiUxDecisionDescription description={decision.description} />
+                    <UiUxDecisionDescription
+                      description={activeHeadline}
+                      underlineEmphasis={
+                        decision.number === "02" && activeDetail > 1
+                      }
+                    />
                   </>
                 ) : null}
               </span>
@@ -1122,6 +1161,7 @@ function UiUxCompactDecisionColumn({
                   activeSquare={activeDetail}
                   decisionTitle={decision.title}
                   onSelect={setActiveDetail}
+                  useLetterLabels
                 />
               ) : null}
             </>
@@ -1269,6 +1309,8 @@ export function UiUxDecisionShowcase({
     focusedDetailScreenshot?.projectHref ?? focusedDecision?.projectHref;
   const focusedProjectLabel =
     focusedDetailScreenshot?.projectLabel ?? focusedDecision?.projectLabel;
+  const focusedHeadline =
+    focusedDetailScreenshot?.headline ?? focusedDecision?.description;
   const shouldShowFocusedDevice = Boolean(focusedScreenshotSrc);
   const isUxMode = selectedDiscipline === "ux";
 
@@ -2250,7 +2292,7 @@ export function UiUxDecisionShowcase({
                     aria-label={
                       focusedDecision.placeholder
                         ? `${focusedDecision.number}. Empty placeholder`
-                        : `${focusedDecision.number}. ${focusedDecision.title}: ${focusedDecision.description}`
+                        : `${focusedDecision.number}. ${focusedDecision.title}: ${focusedHeadline}`
                     }
                     aria-pressed="true"
                     className="uiux-decision-number is-active"
@@ -2272,7 +2314,10 @@ export function UiUxDecisionShowcase({
                       <>
                         <strong>{focusedDecision.title}</strong>
                         <UiUxDecisionDescription
-                          description={focusedDecision.description}
+                          description={focusedHeadline}
+                          underlineEmphasis={
+                            focusedDecision.number === "02" && focusedDetail > 1
+                          }
                         />
                       </>
                     ) : null}
@@ -2282,6 +2327,7 @@ export function UiUxDecisionShowcase({
                       activeSquare={focusedDetail}
                       decisionTitle={focusedDecision.title}
                       onSelect={setFocusedDetail}
+                      useLetterLabels
                     />
                   ) : null}
                 </article>

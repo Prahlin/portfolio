@@ -1,5 +1,5 @@
 Portfolio Next.js PROJECT SNAPSHOT
-Generated: Thu Oct 22 23:01:38 EDT 2026
+Generated: Sun Nov  1 17:15:01 EST 2026
 Project directory: /Users/prahlin/gh/portfolio
 
 IMPORTANT INSTRUCTIONS FOR CHATGPT & CODEX:
@@ -180,6 +180,7 @@ PROJECT FILE TREE
 /Users/prahlin/gh/portfolio/portfolio_worklog_october16.pdf
 /Users/prahlin/gh/portfolio/portfolio_worklog_october18.pdf
 /Users/prahlin/gh/portfolio/portfolio_worklog_october2.pdf
+/Users/prahlin/gh/portfolio/portfolio_worklog_october22.pdf
 /Users/prahlin/gh/portfolio/portfolio_worklog_october4.pdf
 /Users/prahlin/gh/portfolio/portfolio_worklog_october5.pdf
 /Users/prahlin/gh/portfolio/portfolio_worklog_october7.pdf
@@ -21422,7 +21423,8 @@ Status:
  M portfolio_PROJECT_SNAPSHOT.txt
 
 Recent commits:
-1f7c666 (HEAD -> main, origin/main, origin/HEAD) Refined portfolio case-study cards and the UI/UX carousel - Updated case-study titles and labels, and added Android, Apple, web, device-outline, and desktop chip icons with attribution. - Reworked the UI/UX selector into a three-cell-feeling shared row with dynamically colored borders and star-aligned cutouts. - Synced selector-mask timing with star rotation and centered the number tile vertically with the triangle controls. - Kept the active carousel stack fully opaque while it moved.
+ba5f861 (HEAD -> main, origin/main, origin/HEAD) Generated the latest customary session pdf worklog for the relevant project, dated October 22, 2026.
+1f7c666 Refined portfolio case-study cards and the UI/UX carousel - Updated case-study titles and labels, and added Android, Apple, web, device-outline, and desktop chip icons with attribution. - Reworked the UI/UX selector into a three-cell-feeling shared row with dynamically colored borders and star-aligned cutouts. - Synced selector-mask timing with star rotation and centered the number tile vertically with the triangle controls. - Kept the active carousel stack fully opaque while it moved.
 6ef592e Update UI/UX philosophy carousel content and visuals - Added explanatory microcopy to versions of stacks 01–04 with matching placement, sizing, alignment, and gradients. - Added the Alla Vostra device screenshot to version 3 of stack 01 and adjusted its text and image spacing. - Refined stack 03 copy wrapping and spacing across all three versions. - Filled the rotating star tips with a faint gradient layer while preserving the active tip treatment. - Adjusted the star’s visibility fade and slightly raised opacity through its transition.
 dd957f2 Generated the latest customary session pdf worklog for the relevant project, dated October 18th, 2026.
 5c733bc Refined the UI/UX philosophy carousel and landing-page presentation
@@ -21431,7 +21433,6 @@ ee3023b Refined the UI/UX philosophy carousel with selectable UI and UX modes
 2646b39 Expanded the UI/UX philosophy showcase with interactive detail variants - Reworked the five philosophy stacks with updated titles, headlines, descriptions, and ordering - Added accessible 1–3 selectors with active states and detail-specific content handling - Integrated Alla Vostra screenshots across multiple variants with correct device frames and aspect ratios - Repositioned project labels above imagery and kept previews right-aligned, bottom-anchored, and safely within card margins - Refined Stack 02’s supporting copy into a five-row pyramid with improved typography and spacing
 af50a10 Refined landing navigation and Core Beliefs visibility masks
 b416f76 Generated the latest customary session pdf worklog for the relevant project, dated October 15th (Part 2), 2026.
-506edff Refined landing case studies and UI/UX philosophy carousel
 
 Remotes:
 origin	https://github.com/Prahlin/portfolio.git (fetch)
@@ -21716,6 +21717,7 @@ portfolio_worklog_october15_part2.pdf | 35865 bytes | modified 2026-10-15 22:34:
 portfolio_worklog_october16.pdf | 38690 bytes | modified 2026-10-17 00:09:09
 portfolio_worklog_october18.pdf | 19508 bytes | modified 2026-10-18 22:56:02
 portfolio_worklog_october2.pdf | 36305 bytes | modified 2026-10-02 21:43:26
+portfolio_worklog_october22.pdf | 132796 bytes | modified 2026-10-22 23:05:22
 portfolio_worklog_october4.pdf | 34282 bytes | modified 2026-10-04 01:18:29
 portfolio_worklog_october5.pdf | 39495 bytes | modified 2026-10-05 23:46:03
 portfolio_worklog_october7.pdf | 18544 bytes | modified 2026-10-07 23:09:36

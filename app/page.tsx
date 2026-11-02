@@ -57,25 +57,27 @@ const proofStats = [
 
 const uiUxDecisions: readonly UiUxDecision[] = [
   {
-    description: "Sleek.\nPolished.\nNEVER\nLast-Year's\nLook.",
+    description: "Bold.\nDaring.\nWOW\nBefore The\nFirst Tap.",
     detailScreenshots: {
       2: {
         deviceDescription:
-          "Visual Hierarchy\nintentionally guides\nusers' eyes to desired\nsegments of the screen.",
-        deviceVariant: "phone-android",
-        projectHref: "/projects/alla-vostra",
-        projectLabel: "ALLA VOSTRA",
-        screenshotAlt: "Alla Vostra startup screen",
-        screenshotSrc: "/images/startup_screen_small.png",
-      },
-      3: {
-        deviceDescription:
           "Wow-inducing\nimpressions before\nnavigation even begins.",
         deviceVariant: "tablet",
+        headline: "Sleek.\nPolished.\nNEVER\nLast-Year's\nLook.",
         projectHref: "/projects/cinerific",
         projectLabel: "CINERIFIC",
         screenshotAlt: "Cinerific app landscape tablet preview",
         screenshotSrc: "/images/cinerific-hero-tablet-tab-s7-uniform.png",
+      },
+      3: {
+        deviceDescription:
+          "Visual Hierarchy\nintentionally guides\nusers' eyes to desired\nsegments of the screen.",
+        deviceVariant: "phone-android",
+        headline: "Focused.\nPrecise.\nALWAYS\nDirecting\nThe Eye.",
+        projectHref: "/projects/alla-vostra",
+        projectLabel: "ALLA VOSTRA",
+        screenshotAlt: "Alla Vostra startup screen",
+        screenshotSrc: "/images/startup_screen_small.png",
       },
     },
     deviceDescription: "Minimalism eliminates\nimproper, cluttery\nmess.",
@@ -101,12 +103,14 @@ const uiUxDecisions: readonly UiUxDecision[] = [
         deviceDescription:
           "Affordance\nindicates that\ninteractive elements\nare instantly actionable.",
         deviceAspect: "tall",
+        headline: "Visible.\n'Get'-able.\nBUILT\nFor Action.",
         screenshotAlt: "Alla Vostra large home screen",
         screenshotSrc: "/images/home_screen_large.png",
       },
       3: {
         deviceDescription:
           "User feedback\nquickly expresses\nthe exact outcomes\nresulting from their input.",
+        headline: "Reactive.\nTelling.\nTRULY\nMindful.",
         screenshotAlt: "Alla Vostra order confirmation screen",
         screenshotSrc: "/images/confirmed_overlay_small.png",
       },
@@ -134,6 +138,7 @@ const uiUxDecisions: readonly UiUxDecision[] = [
       2: {
         deviceDescription:
           "Flexible Layouts\nensure interfaces adapt\nbetween orientations/device types.",
+        headline: "Adaptive.\nFlexible.\nREADY\nFor Every Screen.",
         screenshotAlt: "Alla Vostra browse grazingboards tutorial screen",
         screenshotSrc:
           "/images/alla-vostra/tutorial/tutorial_screen_small_step_01.png",
@@ -141,6 +146,7 @@ const uiUxDecisions: readonly UiUxDecision[] = [
       3: {
         deviceDescription:
           "Fluid Animations\nkeeps the user experience\nflowing - effortlessly like water",
+        headline: "Fluid.\nEffortless.\nALWAYS\nFlowing Like Water.",
         screenshotAlt: "Alla Vostra order confirmation screen",
         screenshotSrc: "/images/confirmed_overlay_small.png",
       },
@@ -165,6 +171,22 @@ const uiUxDecisions: readonly UiUxDecision[] = [
   },
   {
     description: "Sound.\nSensible.\nALWAYS\nCongruent.",
+    detailScreenshots: {
+      2: {
+        deviceDescription:
+          "so that user dont need\nto jump through big hoops\njust to use the app or website",
+        headline: "Unified.\nCohesive.\nSIMPLY\nDigestible.",
+        screenshotAlt: "Alla Vostra products screen",
+        screenshotSrc: "/images/products_screen_small.png",
+      },
+      3: {
+        deviceDescription:
+          "so that user dont need\nto jump through big hoops\njust to use the app or website",
+        headline: "Familiar.\nSafe.\nNEVER\nConfusing.",
+        screenshotAlt: "Alla Vostra products screen",
+        screenshotSrc: "/images/products_screen_small.png",
+      },
+    },
     deviceDescription:
       "so that user dont need\nto jump through big hoops\njust to use the app or website",
     deviceTitle: "Logical Structure",
@@ -185,6 +207,14 @@ const uiUxDecisions: readonly UiUxDecision[] = [
   },
   {
     description: "X-Form.\nX-Device.\nALWAYS\nAdaptable.",
+    detailScreenshots: {
+      2: {
+        headline: "Modular.\nScalable.\nREADILY\nRe-combinable.",
+      },
+      3: {
+        headline: "Dynamic.\nMoving.\nMADE\nFor Change.",
+      },
+    },
     deviceDescription:
       'Stylish image generation without the "cookie-cutter" feel of AI.',
     deviceTitle: "AI GENERATIVE",
