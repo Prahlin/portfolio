@@ -380,6 +380,25 @@ img[data-screenshot-preview],
   font-size: var(--hero-headline-font-size);
 }
 
+.hero-copy .hero-prismatic-headline {
+  background-image: linear-gradient(
+    345deg in oklab,
+    #861fdd 0%,
+    #861fdd 40%,
+    #0071f3 58%,
+    #0071f3 68%,
+    #099341 82%,
+    #099341 100%
+  );
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+  max-width: none;
+  width: max-content;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .hero-copy {
   --hero-action-gap: 12px;
   --hero-proof-stack-width: min(460px, 100%);
@@ -403,6 +422,7 @@ img[data-screenshot-preview],
 }
 
 .hero-eyebrow {
+  color: #e8aa01;
   font-size: var(--hero-eyebrow-font-size);
   font-weight: 850;
   letter-spacing: 0.02em;
@@ -413,7 +433,8 @@ img[data-screenshot-preview],
 }
 
 .hero-eyebrow-box {
-  border: 1px solid rgba(67, 255, 146, 0.5);
+  background: rgba(255, 209, 2, 0.035);
+  border: 1px solid #cb7d00;
   border-radius: 2px;
   display: inline-block;
   line-height: 1.12;
@@ -627,6 +648,27 @@ h3 {
   color: #001b0d;
 }
 
+/* Reversible: only the hero project controls use the neutral treatment. */
+.hero-project-action .button-primary {
+  background: rgba(243, 255, 247, 0.035);
+  border: 1px solid rgba(220, 235, 226, 0.48);
+  box-shadow: inset 0 1px 0 rgba(243, 255, 247, 0.04);
+  color: #f3fff7;
+}
+
+.hero-project-action .button-primary:hover,
+.hero-project-action .button-primary:focus-visible {
+  background: rgba(67, 255, 146, 0.08);
+  border-color: rgba(67, 255, 146, 0.62);
+  box-shadow:
+    inset 0 1px 0 rgba(243, 255, 247, 0.06),
+    0 0 22px rgba(67, 255, 146, 0.1);
+}
+
+.hero-project-action .carousel-button-action-category {
+  color: #c4d6cc !important;
+}
+
 .carousel-button-group {
   --carousel-arrow-bleed: calc(var(--hero-social-button-height) * 0.2);
   --carousel-arrow-button-width: calc(
@@ -771,8 +813,7 @@ h3 {
 
 .carousel-arrow-button {
   align-items: center;
-  border-bottom-left-radius: 0;
-  border-top-left-radius: 0;
+  border-radius: 8px;
   display: grid;
   height: var(--hero-social-button-height);
   justify-items: center;
@@ -781,6 +822,15 @@ h3 {
   padding: 0;
   position: relative;
   width: var(--carousel-arrow-button-width);
+}
+
+.hero-project-action .carousel-arrow-button:hover,
+.hero-project-action .carousel-arrow-button:focus-visible {
+  background: rgba(67, 255, 146, 0.045);
+  box-shadow:
+    inset 0 1px 0 rgba(243, 255, 247, 0.045),
+    0 0 16px rgba(67, 255, 146, 0.055);
+  transform: translateY(-2px);
 }
 
 .carousel-button-arrow-mark {
@@ -1080,7 +1130,10 @@ h3 {
 
 .stack-row span {
   align-items: center;
+  background: rgba(243, 255, 247, 0.035);
+  border-color: rgba(220, 235, 226, 0.24);
   box-sizing: border-box;
+  color: #dce8e1;
   display: flex;
   font-size: 12px;
   justify-content: center;
@@ -1874,6 +1927,27 @@ h3 {
   max-width: 100%;
   overflow: hidden;
   white-space: nowrap;
+}
+
+.hero .stats-strip-item:nth-child(1) strong {
+  color: #099341;
+}
+
+.hero .stats-strip-item:nth-child(2) strong {
+  color: #0071f3;
+}
+
+.hero .stats-strip-item:nth-child(3) strong {
+  color: #861fdd;
+}
+
+.hero .stats-strip-item:nth-child(4) strong {
+  color: #e8aa01;
+}
+
+.hero .stats-strip-label {
+  color: #c4d6cc;
+  margin-top: 10px;
 }
 
 .stats-strip-label,

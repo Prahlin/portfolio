@@ -920,19 +920,29 @@ export function ProjectDeviceStack({
 
 function CarouselArrowMark() {
   return (
-    <img
-      alt=""
+    <svg
       aria-hidden
       className="carousel-button-arrow-mark"
-      draggable={false}
-      style={{
-        display: "block",
-        height: "100%",
-        verticalAlign: "top",
-        width: "100%",
-      }}
-      src="/images/carousel-arrow.svg"
-    />
+      viewBox="0 0 32 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M8.4 12H26M18 4l8 8-8 8"
+        fill="none"
+        stroke="#000"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="6.2"
+      />
+      <path
+        d="M8.4 12H26M18 4l8 8-8 8"
+        fill="none"
+        stroke="#f3fff7"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="3.6"
+      />
+    </svg>
   );
 }
 

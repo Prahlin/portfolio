@@ -953,9 +953,12 @@ export default function Home() {
               <h1>
                     Full-Stack
                 <br />
-                    <span style={{ color: "#43ff92" }}>
-                      <span style={{ whiteSpace: "nowrap" }}>React&nbsp;Native&nbsp;/</span> Kotlin
-                    </span>{" "}
+                    <span className="hero-prismatic-headline">
+                      <span style={{ whiteSpace: "nowrap" }}>React&nbsp;Native&nbsp;/</span>
+                      <br />
+                      Kotlin
+                    </span>
+                    <br />
                     Developer
               </h1>
               <HeroLede />
