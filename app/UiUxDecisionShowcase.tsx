@@ -71,6 +71,35 @@ const UIUX_DECISION_CASE_TONES: Record<string, string> = {
   "05": "green",
 };
 
+const UIUX_UX_FLOW_TITLES: Record<string, string> = {
+  "01": "Orientative",
+  "02": "Discoverable",
+  "03": "Selectable",
+  "04": "Executable",
+  "05": "Conclusive",
+};
+
+const UIUX_UX_DETAIL_HEADLINES: Record<
+  string,
+  Partial<Record<1 | 2 | 3, string>>
+> = {
+  "01": {
+    1: "Warm.\nInviting.\nOPEN\nTo The User.",
+  },
+  "02": {
+    1: "Fun. Whimsical.\nCURIOUS\nAt Every Turn.",
+  },
+  "03": {
+    1: "Personal.\nAssured.\nPRODDING\nWithout Pressure.",
+  },
+  "04": {
+    1: "Solid.\nEfficacious.\nWITHOUT\nHoop-Jumping.",
+  },
+  "05": {
+    1: "Final.\nResolute.\nCLOSURE-\nEnsuring By The End.",
+  },
+};
+
 function getDecisionGradientTone(decisionNumber: string) {
   return UIUX_DECISION_GRADIENT_TONES[decisionNumber];
 }
@@ -103,6 +132,8 @@ const UIUX_KEY_GRADIENTS: Record<
 const UIUX_STAR_TIP_COUNT = 5;
 const UIUX_STAR_ROTATION_STEP = 360 / UIUX_STAR_TIP_COUNT;
 const UIUX_STAR_INITIAL_ROTATION = 144;
+const UIUX_DETAIL_CYCLE_MS = 3000;
+const UIUX_DETAIL_FADE_MS = 1080;
 const UIUX_STAR_TIP_SEQUENCE = [
   "purple",
   "yellow",
@@ -815,18 +846,23 @@ function UiUxDecisionDescription({
 function UiUxStackSquares({
   activeSquare,
   decisionTitle,
+  mergedSegments = false,
   onSelect,
   useLetterLabels = false,
 }: {
   activeSquare: number;
   decisionTitle: string;
+  mergedSegments?: boolean;
   onSelect: (number: number) => void;
   useLetterLabels?: boolean;
 }) {
   return (
     <div
       aria-label={`${decisionTitle} detail selector`}
-      className="uiux-stack-squares"
+      className={`uiux-stack-squares${
+        mergedSegments ? " is-merged" : ""
+      }`}
+      data-active-square={activeSquare}
       role="group"
     >
       {[1, 2, 3].map((number) => (
@@ -845,7 +881,7 @@ function UiUxStackSquares({
           }}
           onPointerDown={(event) => event.stopPropagation()}
           style={
-            useLetterLabels
+            useLetterLabels && !mergedSegments
               ? activeSquare === number
                 ? {
                     borderColor: "#f3fff7",
@@ -856,7 +892,11 @@ function UiUxStackSquares({
           }
           type="button"
         >
-          {useLetterLabels ? String.fromCharCode(64 + number) : number}
+          {mergedSegments
+            ? null
+            : useLetterLabels
+              ? String.fromCharCode(64 + number)
+              : number}
         </button>
       ))}
     </div>
@@ -992,6 +1032,7 @@ export function UiUxDeviceFrame({
             alt={screenshotAlt}
             className="uiux-device-screenshot uiux-device-tablet-screenshot"
             fill
+            loading="eager"
             sizes="(max-width: 820px) 50vw, 276px"
             src={screenshotSrc}
             style={{ objectFit: "contain", objectPosition: screenshotPosition }}
@@ -1019,12 +1060,14 @@ export function UiUxDeviceFrame({
             alt={screenshotAlt}
             className="uiux-device-screenshot"
             fill
+            loading="eager"
             sizes="(max-width: 820px) 66vw, 270px"
             src={screenshotSrc}
             style={{
               objectFit: isAndroidPhone ? "contain" : screenshotFit,
               objectPosition: screenshotPosition,
             }}
+            unoptimized={screenshotSrc === "/images/startup_screen_small.png"}
           />
         ) : (
           <span className="uiux-device-placeholder">
@@ -1048,6 +1091,7 @@ type UiUxCompactDecisionColumnProps = Pick<
   "screenshotAlt" | "screenshotFit" | "screenshotPosition" | "screenshotSrc"
 > & {
   decision: UiUxDecision;
+  isActiveDecision?: boolean;
   isBlank?: boolean;
   isEmphasized?: boolean;
   isPrimary: boolean;
@@ -1057,6 +1101,7 @@ type UiUxCompactDecisionColumnProps = Pick<
 
 function UiUxCompactDecisionColumn({
   decision,
+  isActiveDecision = false,
   isBlank = false,
   isEmphasized = false,
   isPrimary,
@@ -1068,6 +1113,43 @@ function UiUxCompactDecisionColumn({
   screenshotSrc,
 }: UiUxCompactDecisionColumnProps) {
   const [activeDetail, setActiveDetail] = useState(1);
+  const [isDetailFadingOut, setIsDetailFadingOut] = useState(false);
+
+  useEffect(() => {
+    if (!isActiveDecision) {
+      setIsDetailFadingOut(false);
+      return;
+    }
+
+    let fadeTimer: number | undefined;
+    let advanceTimer: number | undefined;
+    let isCancelled = false;
+
+    const scheduleNextDetail = () => {
+      fadeTimer = window.setTimeout(() => {
+        setIsDetailFadingOut(true);
+
+        advanceTimer = window.setTimeout(() => {
+          if (isCancelled) {
+            return;
+          }
+
+          setActiveDetail((detail) => (detail % 3) + 1);
+          setIsDetailFadingOut(false);
+          scheduleNextDetail();
+        }, UIUX_DETAIL_FADE_MS);
+      }, UIUX_DETAIL_CYCLE_MS - UIUX_DETAIL_FADE_MS);
+    };
+
+    scheduleNextDetail();
+
+    return () => {
+      isCancelled = true;
+      if (fadeTimer !== undefined) window.clearTimeout(fadeTimer);
+      if (advanceTimer !== undefined) window.clearTimeout(advanceTimer);
+    };
+  }, [decision.number, isActiveDecision]);
+
   const activeDetailScreenshot =
     decision.detailScreenshots?.[activeDetail as 1 | 2 | 3];
   const activeDeviceVariant =
@@ -1079,15 +1161,26 @@ function UiUxCompactDecisionColumn({
     activeDetailScreenshot?.projectHref ?? decision.projectHref;
   const activeProjectLabel =
     activeDetailScreenshot?.projectLabel ?? decision.projectLabel;
-  const activeHeadline =
+  const uiHeadline =
     activeDetailScreenshot?.headline ?? decision.description;
-  const shouldShowDevice = Boolean(activeScreenshotSrc);
+  const uxDetailHeadlines = UIUX_UX_DETAIL_HEADLINES[decision.number];
+  const activeHeadline = isBlank
+    ? (uxDetailHeadlines?.[activeDetail as 1 | 2 | 3] ?? "")
+    : uiHeadline;
+  const hasCardContent = !isBlank || Boolean(uxDetailHeadlines);
+  const shouldShowDevice = !isBlank && Boolean(activeScreenshotSrc);
+  const headerTitle = isBlank
+    ? UIUX_UX_FLOW_TITLES[decision.number]
+    : decision.title;
 
   return (
     <div
       className={`uiux-compact-decision-column${
         isPrimary ? " is-primary" : " is-adjacent"
-      }${isEmphasized ? " is-preview-emphasized" : ""}`}
+      }${isEmphasized ? " is-preview-emphasized" : ""}${
+        isDetailFadingOut ? " is-detail-fading-out" : ""
+      }`}
+      data-auto-detail-cycle={isActiveDecision ? "true" : undefined}
       data-decision-number={decision.number}
       onPointerCancel={isPrimary ? undefined : onPreviewPressEnd}
       onPointerDown={
@@ -1106,11 +1199,7 @@ function UiUxCompactDecisionColumn({
         className="uiux-compact-title-bridge"
         data-gradient-tone={getDecisionGradientTone(decision.number)}
       >
-        {!isBlank ? (
-          <>
-            <strong data-title={decision.title}>{decision.title}</strong>
-          </>
-        ) : null}
+        <strong data-title={headerTitle}>{headerTitle}</strong>
       </div>
 
       <div className="uiux-compact-active-card">
@@ -1121,7 +1210,7 @@ function UiUxCompactDecisionColumn({
           data-decision-number={decision.number}
           data-gradient-tone={getDecisionGradientTone(decision.number)}
         >
-          {isBlank ? (
+          {!hasCardContent ? (
             <div
               aria-hidden="true"
               className="uiux-decision-number is-active uiux-empty-number-placeholder"
@@ -1131,35 +1220,46 @@ function UiUxCompactDecisionColumn({
               <button
                 aria-label={
                   decision.placeholder
-                    ? `${decision.number}. ${decision.title} placeholder`
-                    : `${decision.number}. ${decision.title}: ${activeHeadline}`
+                    ? `${decision.number}. ${headerTitle} placeholder`
+                    : `${decision.number}. ${headerTitle}: ${activeHeadline}`
                 }
                 aria-pressed={isPrimary}
                 className="uiux-decision-number is-active"
                 tabIndex={-1}
                 type="button"
               >
-                <span className="uiux-focused-number-label">
-                  <span>{Number.parseInt(decision.number, 10)}</span>
+                <span
+                  className="uiux-focused-number-label is-auto-detail-label"
+                  key={`${decision.number}-${activeDetail}`}
+                >
+                  <span>
+                    {String.fromCharCode(64 + activeDetail)}
+                  </span>
                 </span>
               </button>
               <span className="uiux-decision-copy">
                 {!decision.placeholder ? (
                   <>
-                    <strong>{decision.title}</strong>
-                    <UiUxDecisionDescription
-                      description={activeHeadline}
-                      underlineEmphasis={
-                        decision.number === "02" && activeDetail > 1
-                      }
-                    />
+                    <strong>{headerTitle}</strong>
+                    {activeHeadline ? (
+                      <UiUxDecisionDescription
+                        description={activeHeadline}
+                        key={`${decision.number}-${activeDetail}`}
+                        underlineEmphasis={
+                          decision.number === "02" &&
+                          ((isBlank && activeDetail === 1) ||
+                            (!isBlank && activeDetail > 1))
+                        }
+                      />
+                    ) : null}
                   </>
                 ) : null}
               </span>
               {!decision.placeholder ? (
                 <UiUxStackSquares
                   activeSquare={activeDetail}
-                  decisionTitle={decision.title}
+                  decisionTitle={headerTitle}
+                  mergedSegments
                   onSelect={setActiveDetail}
                   useLetterLabels
                 />
@@ -1168,7 +1268,7 @@ function UiUxCompactDecisionColumn({
           )}
         </article>
 
-        {isBlank ? null : decision.placeholder ? (
+        {!hasCardContent ? null : decision.placeholder ? (
           <div className="uiux-placeholder-body" aria-hidden="true" />
         ) : shouldShowDevice ? (
           <div
@@ -1183,27 +1283,8 @@ function UiUxCompactDecisionColumn({
             }`}
             data-decision-number={decision.number}
             data-detail-number={activeDetail}
+            key={`${decision.number}-${activeDetail}`}
           >
-            {(activeDetail === 1 || activeDetailScreenshot?.deviceDescription) &&
-            activeDeviceVariant !== "tablet" ? (
-              <UiUxDeviceContext
-                decision={decision}
-                description={
-                  activeDetailScreenshot?.deviceDescription ??
-                  decision.deviceDescription
-                }
-              />
-            ) : null}
-            {(activeDetail === 1 || activeDetailScreenshot?.deviceDescription) &&
-            activeDeviceVariant === "tablet" ? (
-              <UiUxDeviceContext
-                decision={decision}
-                description={
-                  activeDetailScreenshot?.deviceDescription ??
-                  decision.deviceDescription
-                }
-              />
-            ) : null}
             <div className="uiux-device-frame-stack">
               {activeProjectHref && activeProjectLabel ? (
                 <p className="uiux-device-project-label">
@@ -2133,6 +2214,7 @@ export function UiUxDecisionShowcase({
 
                                 <UiUxCompactDecisionColumn
                                   decision={decision}
+                                  isActiveDecision={isPrimary}
                                   isBlank={isUxMode}
                                   isPrimary={usesPrimaryLayout}
                                   screenshotAlt={screenshotAlt}
@@ -2246,6 +2328,7 @@ export function UiUxDecisionShowcase({
                     {visibleDecisions.map(({ decision, isPrimary }) => (
                       <UiUxCompactDecisionColumn
                         decision={decision}
+                        isActiveDecision={isPrimary}
                         isBlank={isUxMode}
                         isEmphasized={
                           !isPrimary &&
@@ -2276,8 +2359,16 @@ export function UiUxDecisionShowcase({
                 )}
                 ref={titleBridgeRef}
               >
-                <strong data-title={focusedDecision.title}>
-                  {focusedDecision.title}
+                <strong
+                  data-title={
+                    isUxMode
+                      ? UIUX_UX_FLOW_TITLES[focusedDecision.number]
+                      : focusedDecision.title
+                  }
+                >
+                  {isUxMode
+                    ? UIUX_UX_FLOW_TITLES[focusedDecision.number]
+                    : focusedDecision.title}
                 </strong>
               </div>
 
@@ -2326,6 +2417,7 @@ export function UiUxDecisionShowcase({
                     <UiUxStackSquares
                       activeSquare={focusedDetail}
                       decisionTitle={focusedDecision.title}
+                      mergedSegments
                       onSelect={setFocusedDetail}
                       useLetterLabels
                     />
