@@ -1039,11 +1039,15 @@ function TabletPreview() {
 
 export default function Home() {
   return (
-    <main>
-      <section className="hero" id="top">
+    <main className="landing-page" id="top">
+      <div className="landing-nav-frame">
         <div className="site-shell">
           <MainNavBar />
+        </div>
+      </div>
 
+      <section className="hero">
+        <div className="site-shell">
           <div className="hero-grid">
             <div className="hero-copy">
               <p className="eyebrow hero-eyebrow">
@@ -1246,15 +1250,15 @@ export default function Home() {
       <UiUxDecisionShowcase
         decisions={uiUxDecisions}
         subtitle="5 'Keys' to User Interface Design That 'Lock' In the User Experience"
-        title="UI / UX Philosophy"
+        title="My UI / UX Philosophy"
         // Add screenshotSrc="/images/your-screenshot.png" when your image is ready.
       />
 
       <section className="stack-section" id="stack">
         <div className="site-shell split-section">
           <SectionHeading
-            kicker="Stack"
-            title="Built around React Native, shaped for full stack delivery"
+            kicker="How I Roll"
+            title="My Dev Stack"
           />
           <div className="capability-grid">
             <div data-stack-tone="purple">

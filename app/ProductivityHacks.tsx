@@ -1,4 +1,7 @@
+"use client";
+
 import type { CSSProperties } from "react";
+import { useEffect, useState } from "react";
 import {
   Blocks,
   Cpu,
@@ -9,7 +12,7 @@ import {
 } from "lucide-react";
 
 type ProductivityHack = {
-  copy: string;
+  copy: readonly [string, string, string];
   gradient: readonly [string, string, string];
   icon: LucideIcon;
   title: string;
@@ -23,34 +26,42 @@ type HackStyle = CSSProperties & {
 
 const productivityHacks: readonly ProductivityHack[] = [
   {
-    copy: "Short placeholder copy for the first productivity hack.",
+    copy: [
+      "Cmd + S = Crop & Save\nCmd + Shift + S = Print Screen",
+      "",
+      "Cmd + 1 = Read GitHub Project Repo\nCmd + 2 = Recommend Project Commit Msg\nCmd + 3 = Generate Project Worklog",
+    ],
     gradient: ["#dd4bfd", "#7a1fdd", "#6816ce"],
     icon: Cpu,
-    title: "Shortcut Placeholder",
+    title: "Shortcuts",
   },
   {
-    copy: "Brief placeholder paragraph for a tool, technique, or repeatable productivity habit.",
+    copy: [
+      "GitHub Actions Automatically updates and deploys GitHub Repo Changes to the Portfolio Website",
+      "",
+      "",
+    ],
     gradient: ["#ffd102", "#e8aa01", "#cb7d00"],
     icon: Wrench,
-    title: "Tooling Placeholder",
+    title: "Automation",
   },
   {
-    copy: "Temporary supporting copy for the central productivity card.",
+    copy: ["", "", ""],
     gradient: ["#01abfd", "#0071f3", "#024dd0"],
     icon: Terminal,
-    title: "Terminal Placeholder",
+    title: "Terminal",
   },
   {
-    copy: "Placeholder text that can later be replaced by a slightly longer practical explanation.",
-    gradient: ["#ffdf02", "#ed5d07", "#cc330f"],
+    copy: ["", "", ""],
+    gradient: ["#ff9a24", "#ed5d07", "#cc330f"],
     icon: Blocks,
-    title: "System Placeholder",
+    title: "System",
   },
   {
-    copy: "Short placeholder paragraph for the final productivity hack.",
+    copy: ["", "", ""],
     gradient: ["#33f150", "#099341", "#026946"],
     icon: Gauge,
-    title: "Tuning Placeholder",
+    title: "Tuning",
   },
 ] as const;
 
@@ -117,6 +128,25 @@ function CircuitRibbon() {
 }
 
 export function ProductivityHacks() {
+  const [activeIndicators, setActiveIndicators] = useState<number[]>(() =>
+    productivityHacks.map(() => 1),
+  );
+  const [hoveredHack, setHoveredHack] = useState<number | null>(null);
+
+  useEffect(() => {
+    if (hoveredHack === null) return;
+
+    const interval = window.setInterval(() => {
+      setActiveIndicators((current) =>
+        current.map((indicator, index) =>
+          index === hoveredHack ? (indicator % 3) + 1 : indicator,
+        ),
+      );
+    }, 3000);
+
+    return () => window.clearInterval(interval);
+  }, [hoveredHack]);
+
   return (
     <section className="productivity-hacks-section" id="productivity-hacks">
       <div className="site-shell">
@@ -135,6 +165,7 @@ export function ProductivityHacks() {
           <div className="productivity-hacks-track">
             {productivityHacks.map((hack, index) => {
               const Icon = hack.icon;
+              const activeCopy = hack.copy[activeIndicators[index] - 1];
               const style: HackStyle = {
                 "--hack-color-core": hack.gradient[0],
                 "--hack-color-mid": hack.gradient[1],
@@ -143,9 +174,17 @@ export function ProductivityHacks() {
 
               return (
                 <article
-                  className="productivity-hack-card"
+                  className={`productivity-hack-card${
+                    hoveredHack === index ? " is-productivity-focused" : ""
+                  }`}
                   data-hack-index={String(index + 1).padStart(2, "0")}
                   key={hack.title}
+                  onPointerEnter={(event) => {
+                    if (event.pointerType !== "touch") setHoveredHack(index);
+                  }}
+                  onPointerLeave={(event) => {
+                    if (event.pointerType !== "touch") setHoveredHack(null);
+                  }}
                   style={style}
                 >
                   <span
@@ -167,20 +206,41 @@ export function ProductivityHacks() {
 
                   <div className="productivity-hack-copy">
                     <h3>{hack.title}</h3>
-                    <p>{hack.copy}</p>
-                    <div
-                      className="productivity-hack-indicators"
-                      aria-hidden="true"
-                    >
-                      <span />
-                      <span />
-                      <span />
-                    </div>
+                    {activeCopy ? (
+                      <p>
+                        {activeCopy.split("\n").map((line) => {
+                          const [shortcut, action] = line.split(" = ");
+
+                          return (
+                            <span key={line}>
+                              {action ? (
+                                <>
+                                  <strong>{shortcut}</strong>
+                                  {` = ${action}`}
+                                </>
+                              ) : (
+                                line
+                              )}
+                            </span>
+                          );
+                        })}
+                      </p>
+                    ) : null}
                   </div>
 
                   <div className="productivity-hack-preview" aria-hidden="true">
                     <span />
                     <span />
+                  </div>
+
+                  <div
+                    className="productivity-hack-indicators uiux-stack-squares is-merged"
+                    data-active-square={activeIndicators[index]}
+                    aria-hidden="true"
+                  >
+                    <span className="uiux-stack-square" />
+                    <span className="uiux-stack-square" />
+                    <span className="uiux-stack-square" />
                   </div>
                 </article>
               );
