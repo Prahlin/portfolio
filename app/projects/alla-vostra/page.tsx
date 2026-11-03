@@ -11,7 +11,7 @@ import ProductFlowSwitcher from "./ProductFlowSwitcher";
 export const metadata: Metadata = {
   title: "Alla Vostra | Full Stack Mobile Commerce Case Study",
   description:
-    "Alla Vostra case study covering Expo 54, React Native, Stripe, PayPal, Google Pay, Apple Pay, Postmark, Vercel serverless commerce routes, EAS builds, and Play Store release preparation.",
+    "Alla Vostra case study covering Expo 54, React Native, Stripe, PayPal, Google Pay, Apple Pay, Postmark, Vercel serverless commerce routes, EAS builds, and live Google Play and App Store releases.",
 };
 
 const metadataItems = [
@@ -19,7 +19,7 @@ const metadataItems = [
   "Expo 54",
   "Stripe + PayPal",
   "Serverless API",
-  "Play Store",
+  "Google Play",
   "App Store",
   "EAS Builds",
   "Postmark",
@@ -40,12 +40,12 @@ const allaVostraNavItems = [
 
 const playStoreUrl =
   "https://play.google.com/store/apps/details?id=com.allavostra.app&showAllReviews=true";
-const appStoreUrl = "https://apps.apple.com/us/search?term=Alla%20Vostra";
+const appStoreUrl = "https://apps.apple.com/us/app/alla-vostra/id6815443745";
 const appStoreBlue = "#0D96F6";
 
 const playStoreFacts = [
-  { label: "Version", value: "1.0.3" },
-  { label: "Released", value: "Aug 24, 2026" },
+  { label: "Version", value: "1.0.4" },
+  { label: "Updated", value: "Sep 17, 2026" },
   { label: "Store bundle", value: "85.1 MB" },
   { label: "Play download", value: "Device-specific" },
   { label: "Requires", value: "Android 7.0+" },
@@ -53,11 +53,11 @@ const playStoreFacts = [
 ] as const;
 
 const appStoreFacts = [
-  { label: "Version", value: "TBD" },
-  { label: "Released", value: "Pending" },
-  { label: "Store bundle", value: "TBD" },
-  { label: "App download", value: "TBD" },
-  { label: "Requires", value: "iOS TBD" },
+  { label: "Version", value: "1.0" },
+  { label: "Released", value: "Oct 26, 2026" },
+  { label: "App binary", value: "1.0.4 (4)" },
+  { label: "App download", value: "47.3 MB" },
+  { label: "Requires", value: "iOS 15.1+" },
   { label: "Category", value: "Food & Drink" },
 ] as const;
 
@@ -97,22 +97,32 @@ const playStoreScreenshots = [
 ] as const;
 
 const featuredPlayStoreScreenshot = playStoreScreenshots[0];
-const playStoreTrapezoidScreenshot = {
-  alt: "Alla Vostra Play Store screenshot with a framed mosaic-style product image",
-  aspect: "wide",
-  src: "/images/alla-vostra/play-store/playstore3_trim-lr10.png",
-} as const;
-const googlePlayReleaseTopScreenshots = [
-  playStoreScreenshots[1],
-  playStoreScreenshots[2],
-] as const;
-const appStoreReleaseBottomScreenshots = [
-  playStoreTrapezoidScreenshot,
-  playStoreScreenshots[3],
-] as const;
-const overviewPromoScreenshots = [
-  ...googlePlayReleaseTopScreenshots,
-  ...appStoreReleaseBottomScreenshots,
+const appStoreScreenshots = [
+  {
+    alt: "Alla Vostra App Store home screen",
+    aspect: "app-store",
+    src: "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/83/2f/91/832f9137-bb87-6cff-c168-2ef9ba72b37c/01-home-1206x2622.png/1206x2622bb.jpg",
+  },
+  {
+    alt: "Alla Vostra App Store Piccola product overlay",
+    aspect: "app-store",
+    src: "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/00/5b/56/005b560e-534f-78a3-4548-693240d6e1b6/02-piccola-overlay-1206x2622.png/1206x2622bb.jpg",
+  },
+  {
+    alt: "Alla Vostra App Store product board screen",
+    aspect: "app-store",
+    src: "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/f0/86/f8/f086f855-f758-9ee4-e57d-dc55aa3dbfa2/03-product-board-1206x2622.png/1206x2622bb.jpg",
+  },
+  {
+    alt: "Alla Vostra App Store order confirmation screen",
+    aspect: "app-store",
+    src: "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/2a/e0/41/2ae0416d-a266-d9fb-566f-25d983ba99c9/04-order-confirmation-1206x2622.png/1206x2622bb.jpg",
+  },
+  {
+    alt: "Alla Vostra App Store about screen",
+    aspect: "app-store",
+    src: "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/07/47/66/07476649-15e1-ee7f-a985-62c82b2eee27/05-about-us-1206x2622.png/1206x2622bb.jpg",
+  },
 ] as const;
 
 const fullStackSkillGridStyle: CSSProperties = {
@@ -360,7 +370,7 @@ const ownershipItems = [
   },
   {
     title: "QA and Release",
-    copy: "Android emulator testing, EAS development/preview/playTest/production profiles, native dev-client setup, TestFlight configuration, and Play Store readiness work.",
+    copy: "Android emulator and physical-iPhone QA, EAS development/preview/playTest/production builds, TestFlight validation, EAS Submit, and completed Google Play and App Store releases.",
   },
 ];
 
@@ -386,8 +396,8 @@ const featureItems = [
     copy: "Purchase confirmations and contact form inquiries route through backend Postmark workflows.",
   },
   {
-    title: "Release-Ready Native App",
-    copy: "Versioned Android builds, store assets, native env flags, and EAS profiles support testing through release.",
+    title: "Dual-Store Native Release",
+    copy: "Versioned Android and iOS binaries, native store assets, environment-separated EAS profiles, TestFlight, EAS Submit, and both review pipelines carried the app through release.",
   },
 ];
 
@@ -853,7 +863,7 @@ const architectureNodes = [
   },
   {
     title: "Messaging and Release",
-    copy: "Postmark handles confirmations and contact inquiries while EAS profiles support native testing, Play Store packaging, and TestFlight configuration.",
+    copy: "Postmark handles confirmations and contact inquiries while EAS Build and Submit support native testing, Google Play packaging, TestFlight validation, and App Store delivery.",
   },
 ];
 
@@ -875,8 +885,8 @@ const architectureFlowSteps = [
     copy: "Postmark confirmations",
   },
   {
-    title: "Store Builds",
-    copy: "EAS, Play Store, TestFlight",
+    title: "Store Releases",
+    copy: "EAS, Google Play, App Store",
   },
 ];
 
@@ -899,20 +909,24 @@ const decisionItems = [
   },
   {
     title: "Release-Oriented QA",
-    copy: "Android layout, payment readiness, store assets, app versioning, and production bundle behavior were checked against practical release conditions.",
+    copy: "Android and iOS layouts, payment readiness, native store screenshots, app versioning, signed binaries, and production behavior were validated through both store-review paths.",
   },
 ];
 
 const readinessItems = [
-  "Android v1.0.3",
+  "Android v1.0.4",
+  "App Store v1.0",
   "Multi-Size Android QA",
+  "Physical-iPhone QA",
   "EAS Build Profiles",
-  "TestFlight Config",
+  "EAS Submit",
+  "TestFlight Validation",
   "Stripe Live + Webhooks",
   "Native Wallet Checks",
   "PayPal Sandbox/Live",
   "Postmark Messaging",
   "Play Store AAB",
+  "App Store IPA",
 ];
 
 const timelineItems = [
@@ -929,8 +943,8 @@ const timelineItems = [
     copy: "Checkout grew beyond card payments into Google Pay, Apple Pay, and PayPal, with native/runtime checks for each path.",
   },
   {
-    title: "Native Testing and Store Builds",
-    copy: "EAS profiles, Android versioning, Play Store bundle preparation, TestFlight configuration, and free-account iOS development testing were separated into explicit build paths.",
+    title: "Dual-Store Testing and Release",
+    copy: "EAS profiles, Android versioning, Google Play production rollout, TestFlight validation, native iOS screenshot correction, EAS Submit, and App Store review were completed as explicit release paths.",
   },
 ];
 
@@ -953,7 +967,14 @@ const stackGroups = [
   },
   {
     title: "Release / QA",
-    items: ["EAS Profiles", "Android Studio", "Play Store AAB", "TestFlight"],
+    items: [
+      "EAS Build + Submit",
+      "Android Studio",
+      "Google Play AAB",
+      "App Store IPA",
+      "TestFlight",
+      "App Store Connect",
+    ],
   },
 ];
 
@@ -1229,10 +1250,13 @@ export default function AllaVostraCaseStudy() {
             <div className="overview-store-release">
               <div className="overview-store-facts-heading">
                 <h3>App Store release</h3>
-                <span>Listing in preparation</span>
+                <a href={appStoreUrl} rel="noreferrer" target="_blank">
+                  Official listing
+                  <ArrowRight aria-hidden size={14} strokeWidth={2.25} />
+                </a>
               </div>
               <dl
-                aria-label="App Store placeholder release details"
+                aria-label="App Store release details"
                 className="overview-store-facts"
               >
                 {appStoreFacts.map((fact) => (
@@ -1244,10 +1268,10 @@ export default function AllaVostraCaseStudy() {
               </dl>
             </div>
             <div
-              aria-label="Alla Vostra promo screenshots"
+              aria-label="Alla Vostra App Store screenshots"
               className="overview-play-store-supporting-row overview-promo-strip"
             >
-              {overviewPromoScreenshots.map((screenshot) => (
+              {appStoreScreenshots.map((screenshot) => (
                 <figure
                   className={`overview-play-store-shot overview-play-store-shot-${screenshot.aspect} overview-play-store-shot-supporting`}
                   key={screenshot.src}
@@ -1255,7 +1279,7 @@ export default function AllaVostraCaseStudy() {
                   <Image
                     alt={screenshot.alt}
                     fill
-                    sizes="(max-width: 720px) calc((100vw - 60px) / 4), 274px"
+                    sizes="(max-width: 720px) 112px, 220px"
                     src={screenshot.src}
                   />
                   <figcaption>{screenshot.alt}</figcaption>
@@ -1427,14 +1451,14 @@ export default function AllaVostraCaseStudy() {
               ))}
             </div>
 
-            <div aria-label="Alla Vostra release readiness">
-              <h3 className="build-execution-subtitle">Release Readiness</h3>
+            <div aria-label="Alla Vostra release delivery">
+              <h3 className="build-execution-subtitle">Release Delivery</h3>
               <p className="readiness-copy">
-                Alla Vostra was not treated as a static concept piece. The work
-                included Android-focused QA, app version 1.0.3 packaging,
-                production AAB preparation, native dev-client testing, TestFlight
-                configuration, and build profiles aimed at real release
-                conditions.
+                Alla Vostra shipped through both major mobile storefronts. The
+                work included Android and physical-iPhone QA, Google Play AAB
+                production rollout, signed App Store IPA delivery, TestFlight
+                validation, native iOS screenshot correction, EAS Submit, and
+                completed App Review.
               </p>
               <div className="readiness-list">
                 {readinessItems.map((item) => (
@@ -1469,7 +1493,7 @@ export default function AllaVostraCaseStudy() {
             <p>
               This project reflects the kind of work I want to keep doing:
               polished mobile interfaces, server-owned commerce logic,
-              multi-payment integrations, careful release prep, and product
+              multi-payment integrations, dual-store delivery, and product
               decisions that hold up outside of mockups.
             </p>
           </div>

@@ -1,6 +1,28 @@
 import Image from "next/image";
 import type { CSSProperties } from "react";
 import {
+  siAndroidstudio,
+  siExpo,
+  siGradle,
+  siHtml5,
+  siJavascript,
+  siJetpackcompose,
+  siKotlin,
+  siNextdotjs,
+  siNodedotjs,
+  siPaypal,
+  siPostman,
+  siReact,
+  siStripe,
+  siSvg,
+  siSwift,
+  siTailwindcss,
+  siTypescript,
+  siVercel,
+  type SimpleIcon,
+} from "simple-icons";
+import {
+  Activity,
   Apple,
   BrainCircuit,
   Braces,
@@ -13,9 +35,13 @@ import {
   MonitorSmartphone,
   Palette,
   Play,
+  ShieldCheck,
   Smartphone,
   Store,
   Triangle,
+  type LucideIcon,
+  Usb,
+  Waves,
   Workflow,
 } from "lucide-react";
 import { HeroLede } from "./HeroLede";
@@ -34,6 +60,95 @@ import {
   UiUxDecisionShowcase,
   type UiUxDecision,
 } from "./UiUxDecisionShowcase";
+
+function StackTerm({
+  icon,
+  imageAlt,
+  imageSrc,
+  iconStroke,
+  label,
+  postmark = false,
+  symbol: Symbol,
+  symbolLabel,
+}: {
+  icon?: SimpleIcon;
+  imageAlt?: string;
+  imageSrc?: string;
+  iconStroke?: string;
+  label: string;
+  postmark?: boolean;
+  symbol?: LucideIcon;
+  symbolLabel?: string;
+}) {
+  const iconColor =
+    icon?.title === "Gradle"
+      ? "#9fd7dc"
+      : icon?.title === "PayPal"
+        ? "#35bdf2"
+      : icon?.hex === "000000" || icon?.hex === "1C2024"
+      ? "#f3fff7"
+      : icon
+        ? `#${icon.hex}`
+        : undefined;
+
+  return (
+    <li>
+      {imageSrc ? (
+        <Image
+          alt={imageAlt ?? ""}
+          className="capability-brand-mark"
+          height={24}
+          src={imageSrc}
+          width={24}
+        />
+      ) : postmark ? (
+        <svg
+          aria-label="Postmark logo"
+          className="capability-brand-mark"
+          role="img"
+          viewBox="0 0 30 30"
+        >
+          <path
+            clipRule="evenodd"
+            d="M30 27.422v1.406A1.172 1.172 0 0 0 28.828 30h-1.406a1.172 1.172 0 0 0-2.344 0h-1.406a1.172 1.172 0 0 0-2.344 0h-1.406a1.172 1.172 0 0 0-2.344 0h-1.406a1.172 1.172 0 0 0-2.344 0h-1.406a1.172 1.172 0 0 0-2.344 0H8.672a1.172 1.172 0 0 0-2.344 0H4.922a1.172 1.172 0 0 0-2.344 0H1.172A1.172 1.172 0 0 0 0 28.828v-1.406a1.172 1.172 0 0 0 0-2.344v-1.406a1.172 1.172 0 0 0 0-2.344v-1.406a1.172 1.172 0 0 0 0-2.344v-1.406a1.172 1.172 0 0 0 0-2.344v-1.406a1.172 1.172 0 0 0 0-2.344V8.672a1.172 1.172 0 0 0 0-2.344V4.922a1.172 1.172 0 0 0 0-2.344V1.172A1.172 1.172 0 0 0 1.172 0h1.406a1.172 1.172 0 0 0 2.344 0h1.406a1.172 1.172 0 0 0 2.344 0h1.406a1.172 1.172 0 0 0 2.344 0h1.406a1.172 1.172 0 0 0 2.344 0h1.406a1.172 1.172 0 0 0 2.344 0h1.406a1.172 1.172 0 0 0 2.344 0h1.406a1.172 1.172 0 0 0 2.344 0h1.406A1.172 1.172 0 0 0 30 1.172v1.406a1.172 1.172 0 0 0 0 2.344v1.406a1.172 1.172 0 0 0 0 2.344v1.406a1.172 1.172 0 0 0 0 2.344v1.406a1.172 1.172 0 0 0 0 2.344v1.406a1.172 1.172 0 0 0 0 2.344v1.406a1.172 1.172 0 0 0 0 2.344v1.406a1.172 1.172 0 0 0 0 2.344Z"
+            fill="#ffde00"
+            fillRule="evenodd"
+          />
+          <path
+            d="M8.703 21.38h.935c.481 0 .784-.31.784-.8V9.628c0-.49-.303-.8-.784-.8h-.935V6.4h6.775C19.118 6.4 22 8.286 22 11.876c0 3.616-2.882 5.501-6.522 5.501h-2.326v3.203c0 .49.304.8.81.8h1.895v2.454H8.703V21.38Zm6.573-6.534c2.401 0 3.792-1.033 3.792-2.918 0-1.938-1.39-2.919-3.792-2.919h-2.124v5.863h2.124v-.026Z"
+            fill="#000"
+          />
+        </svg>
+      ) : Symbol ? (
+        <Symbol
+          aria-label={symbolLabel ?? `${label} symbol`}
+          className="capability-brand-mark"
+          role="img"
+        />
+      ) : icon ? (
+        <svg
+          aria-label={`${icon.title} logo`}
+          className="capability-brand-mark"
+          role="img"
+          style={{ color: iconColor }}
+          viewBox={iconStroke ? "-1 -1 26 26" : "0 0 24 24"}
+        >
+          <path
+            d={icon.path}
+            fill="currentColor"
+            paintOrder={iconStroke ? "stroke fill" : undefined}
+            stroke={iconStroke}
+            strokeLinejoin={iconStroke ? "round" : undefined}
+            strokeWidth={iconStroke ? 1.1 : undefined}
+          />
+        </svg>
+      ) : (
+        <span className="capability-brand-spacer" aria-hidden="true" />
+      )}
+      <span>{label}</span>
+    </li>
+  );
+}
 
 const stackChips = [
   "React Native",
@@ -544,7 +659,6 @@ const worklogItems = [
         <strong>Development Environments</strong>
         <span className="workspace-device-list">
           <span>VS Code</span>
-          <span>Android Studio</span>
           <span>Xcode</span>
           <span>PyCharm</span>
         </span>
@@ -590,10 +704,7 @@ const worklogItems = [
         <strong>Testing &amp; Debugging</strong>
         <span className="workspace-device-list">
           <span>Expo Go</span>
-          <span>Android Emulator / AVD</span>
           <span>iOS Simulator</span>
-          <span>ADB</span>
-          <span>Postman</span>
         </span>
       </>
     ),
@@ -1146,29 +1257,82 @@ export default function Home() {
             title="Built around React Native, shaped for full stack delivery"
           />
           <div className="capability-grid">
-            <div>
+            <div data-stack-tone="purple">
               <MonitorSmartphone aria-hidden />
-              <h3>Main stack</h3>
-              <p>
-                React, React Native, Expo Router, Next.js, Tailwind CSS, and
-                mobile-first responsive UI systems.
-              </p>
+                    <h3>Cross-platform core</h3>
+              <ul className="capability-list">
+                <StackTerm icon={siReact} label="React + React Native" />
+                <StackTerm icon={siTypescript} label="TypeScript" />
+                <StackTerm icon={siJavascript} label="JavaScript" />
+                <StackTerm icon={siHtml5} label="HTML" />
+                <StackTerm icon={siExpo} label="Expo + Expo Router" />
+                <StackTerm icon={siNextdotjs} label="Next.js" />
+                <StackTerm icon={siTailwindcss} label="Tailwind CSS" />
+                <StackTerm icon={siSvg} label="SVG + React Native SVG" />
+                <StackTerm
+                  label="Motion for React"
+                  symbol={Waves}
+                  symbolLabel="Animation symbol"
+                />
+                <StackTerm
+                  label="React Native Reanimated"
+                  symbol={Activity}
+                  symbolLabel="Native animation symbol"
+                />
+              </ul>
             </div>
-            <div>
+            <div data-stack-tone="blue">
               <Braces aria-hidden />
-              <h3>Backend layer</h3>
-              <p>
-                Node.js serverless routes, Stripe payment setup, Postmark email
-                delivery, environment configuration, and deployment workflows.
-              </p>
+                    <h3>Backend &amp; services</h3>
+              <ul className="capability-list">
+                <StackTerm icon={siNodedotjs} label="Node.js" />
+                <StackTerm
+                  icon={siVercel}
+                  iconStroke="rgba(1, 10, 7, 0.88)"
+                  label="Vercel Serverless Routes"
+                />
+                <StackTerm
+                  label="Server-side Validation"
+                  symbol={ShieldCheck}
+                />
+                <StackTerm
+                  icon={siStripe}
+                  label="Stripe RN + PaymentIntents/Webhooks"
+                />
+                <StackTerm icon={siPaypal} label="PayPal REST" />
+                <StackTerm label="Postmark Messaging" postmark />
+                <StackTerm icon={siPostman} label="Postman" />
+              </ul>
             </div>
-            <div>
+            <div data-stack-tone="green">
               <Smartphone aria-hidden />
-              <h3>Secondary mobile</h3>
-              <p>
-                Kotlin and Android Studio as the native Android path, aligned
-                with the same release and device-testing discipline.
-              </p>
+                    <h3>Platform-native &amp; release</h3>
+              <ul className="capability-list">
+                <StackTerm icon={siKotlin} label="Kotlin" />
+                <StackTerm icon={siSwift} label="Swift" />
+                <StackTerm icon={siJetpackcompose} label="Jetpack Compose" />
+                <StackTerm icon={siGradle} label="Gradle" />
+                <StackTerm
+                  icon={siAndroidstudio}
+                  label="Android Studio + Emulator/AVD"
+                />
+                <StackTerm
+                  label="ADB"
+                  symbol={Usb}
+                  symbolLabel="USB connection symbol"
+                />
+                <StackTerm icon={siExpo} label="EAS Build + Submit" />
+                <StackTerm
+                  imageAlt="Google Play logo"
+                  imageSrc="/images/google-play-official-triangle.png"
+                  label="Google Play AAB"
+                />
+                <StackTerm
+                  imageAlt="App Store logo"
+                  imageSrc="/images/app-store-mark.svg"
+                  label="App Store IPA"
+                />
+              </ul>
             </div>
           </div>
         </div>

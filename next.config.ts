@@ -6,6 +6,12 @@ const nextConfig: NextConfig = {
   allowedDevOrigins: ["127.0.0.1"],
   output: isStaticExport ? "export" : undefined,
   images: {
+    remotePatterns: [
+      {
+        hostname: "is1-ssl.mzstatic.com",
+        protocol: "https",
+      },
+    ],
     unoptimized: isStaticExport,
   },
   trailingSlash: isStaticExport,

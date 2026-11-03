@@ -79,10 +79,17 @@ const caseStudies: CaseStudy[] = [
     descriptionLines: [
       "Alla Vostra is a React Native and",
       "Expo commerce product connecting Stripe checkout,",
-      "Postmark emails, order states, Android UAT,",
-      "EAS builds, and release-ready mobile polish.",
+      "Postmark emails, order states, and dual-store QA,",
+      "with live Google Play and App Store delivery.",
     ],
-    tags: ["React Native", "Expo", "Stripe", "Postmark", "Node.js", "EAS"],
+    tags: [
+      "React Native",
+      "Expo",
+      "Stripe",
+      "Postmark",
+      "Google Play",
+      "App Store",
+    ],
     stat: "393 commits",
     worklogStat: "69 worklogs",
     screenshots: [
