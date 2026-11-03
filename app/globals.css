@@ -6970,7 +6970,7 @@ section.aboutdev-hero {
 }
 
 .aboutdev-timeline {
-  --workflow-index-tab-width: clamp(96px, 10%, 128px);
+  --workflow-index-tab-width: 11%;
   --workflow-pair-half-width: 17%;
   --workflow-stack-gap: calc(var(--workflow-tab-height) / 2);
   --workflow-tab-border: 1px solid rgba(198, 255, 217, 0.36);
@@ -6979,11 +6979,11 @@ section.aboutdev-hero {
     rgba(13, 31, 22, 0.88),
     rgba(5, 13, 9, 0.88)
   );
-  --workflow-tab-gap: 8px;
+  --workflow-tab-gap: 0px;
   --workflow-tab-font-size: clamp(32px, 4vw, 52px);
   --workflow-name-tab-font-size: clamp(28px, 3.4vw, 44px);
   --workflow-tab-height: 127.5px;
-  --workflow-tab-width: 24%;
+  --workflow-tab-width: calc((100% / 3) - var(--workflow-index-tab-width));
   display: grid;
   gap: var(--workflow-stack-gap);
   position: relative;
@@ -7020,64 +7020,60 @@ section.aboutdev-hero {
 
 .aboutdev-timeline-item--without-proof {
   --workflow-active-third-shift: 0%;
+  --workflow-active-border-a-color: transparent;
+  --workflow-active-border-a-position: 0%;
+  --workflow-active-border-b-color: transparent;
+  --workflow-active-border-b-position: 0%;
   --workflow-body-inline: 22px;
   --workflow-points-offset: 90px;
   --workflow-card-accent-core: var(--workflow-image-gradient-core);
   --workflow-card-accent-edge: var(--workflow-image-gradient-edge);
   --workflow-card-accent-mid: var(--workflow-image-gradient-mid);
-  background-color: rgba(3, 7, 5, 0.67);
-  background-image:
-    radial-gradient(
-      ellipse 82% 38% at 8% 0%,
-      color-mix(
-          in srgb,
-          var(--workflow-card-accent-core) 7%,
-          transparent
-        )
-        0%,
-      color-mix(
-          in srgb,
-          var(--workflow-card-accent-mid) 3%,
-          transparent
-        )
-        48%,
-      transparent 100%
-    ),
-    linear-gradient(
-      118deg,
-      transparent 18%,
-      color-mix(
-          in srgb,
-          var(--workflow-card-accent-edge) 3%,
-          transparent
-        )
-        38%,
-      color-mix(
-          in srgb,
-          var(--workflow-card-accent-core) 7%,
-          transparent
-        )
-        50%,
-      color-mix(
-          in srgb,
-          var(--workflow-card-accent-mid) 3%,
-          transparent
-        )
-        62%,
-      transparent 80%
-    );
-  border-color: color-mix(
+  --workflow-stack-border-foundation: var(--line);
+  --workflow-stack-border-color: color-mix(
     in srgb,
     var(--workflow-card-accent-mid) 18%,
-    var(--line)
+    var(--workflow-stack-border-foundation)
   );
+  background-color: transparent;
+  background-image:
+    linear-gradient(
+      var(--workflow-active-border-a-color),
+      var(--workflow-active-border-a-color)
+    ),
+    linear-gradient(
+      var(--workflow-active-border-b-color),
+      var(--workflow-active-border-b-color)
+    ),
+    linear-gradient(
+      var(--workflow-stack-border-color),
+      var(--workflow-stack-border-color)
+    ),
+    linear-gradient(
+      var(--workflow-stack-border-color),
+      var(--workflow-stack-border-color)
+    ),
+    linear-gradient(to bottom, transparent 0, rgba(3, 7, 5, 0.67) 14px);
+  background-position:
+    var(--workflow-active-border-a-position) top,
+    var(--workflow-active-border-b-position) top,
+    left top,
+    right top,
+    left top;
+  background-repeat: no-repeat;
+  background-size:
+    1px 100%,
+    1px 100%,
+    var(--workflow-pair-left) 1px,
+    calc(
+        100% - var(--workflow-pair-left) - var(--workflow-index-tab-width) -
+          var(--workflow-tab-width)
+      )
+      1px,
+    100% 100%;
+  border-color: var(--workflow-stack-border-color);
+  border-top-color: transparent;
   box-shadow:
-    inset 0 1px 0
-      color-mix(
-        in srgb,
-        var(--workflow-card-accent-core) 6%,
-        transparent
-      ),
     inset 0 0 32px
       color-mix(
         in srgb,
@@ -7136,21 +7132,26 @@ section.aboutdev-hero {
       transparent 80%
     );
   bottom: 1px;
-  box-shadow:
-    inset 0 1px 0
-      color-mix(
-        in srgb,
-        var(--workflow-card-accent-core) 8%,
-        transparent
-      ),
-    inset 0 0 40px
+  box-shadow: inset 0 0 40px
       color-mix(
         in srgb,
         var(--workflow-card-accent-edge) 4%,
         transparent
       );
   content: "";
-  left: var(--workflow-body-inline);
+  left: 0;
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent 0,
+    #000 28px,
+    #000 100%
+  );
+  mask-image: linear-gradient(
+    to bottom,
+    transparent 0,
+    #000 28px,
+    #000 100%
+  );
   opacity: 0;
   pointer-events: none;
   position: absolute;
@@ -7159,7 +7160,7 @@ section.aboutdev-hero {
   transition:
     opacity 160ms ease,
     transform 160ms ease;
-  width: calc((100% - (2 * var(--workflow-body-inline))) / 3);
+  width: calc(100% / 3);
   z-index: 0;
 }
 
@@ -7184,14 +7185,11 @@ section.aboutdev-hero {
 }
 
 .aboutdev-timeline-item--without-proof.is-workflow-focused {
-  border-color: rgba(198, 255, 217, 0.36);
+  --workflow-active-border-a-color: var(--workflow-stack-border-color);
+  --workflow-active-border-a-position: 33.333333%;
+  border-color: var(--workflow-stack-border-color);
+  border-top-color: transparent;
   box-shadow:
-    inset 0 1px 0
-      color-mix(
-        in srgb,
-        var(--workflow-card-accent-core) 6%,
-        transparent
-      ),
     inset 0 0 32px
       color-mix(
         in srgb,
@@ -7201,6 +7199,20 @@ section.aboutdev-hero {
     0 24px 60px rgba(0, 0, 0, 0.28);
   opacity: 1;
   transform: translateY(-2px);
+}
+
+.aboutdev-timeline-item--without-proof.is-workflow-focused:has(
+    .aboutdev-timeline-points > li:nth-child(2).is-workflow-point-focused
+  ) {
+  --workflow-active-border-a-position: 33.333333%;
+  --workflow-active-border-b-color: var(--workflow-stack-border-color);
+  --workflow-active-border-b-position: 66.666667%;
+}
+
+.aboutdev-timeline-item--without-proof.is-workflow-focused:has(
+    .aboutdev-timeline-points > li:nth-child(3).is-workflow-point-focused
+  ) {
+  --workflow-active-border-a-position: 66.666667%;
 }
 
 .aboutdev-timeline-item:nth-child(-n + 5) {
@@ -7249,9 +7261,9 @@ section.aboutdev-hero {
 
 @media (max-width: 980px) and (orientation: portrait) {
   .aboutdev-timeline {
-    --workflow-index-tab-width: 20%;
-    --workflow-pair-half-width: 30%;
-    --workflow-tab-width: 40%;
+    --workflow-pair-half-width: calc(
+      (var(--workflow-index-tab-width) + var(--workflow-tab-width)) / 2
+    );
   }
 
   .aboutdev-timeline-item:first-child {
@@ -7370,11 +7382,8 @@ section.aboutdev-hero {
         62%,
       transparent 80%
     );
-  border-color: color-mix(
-    in srgb,
-    var(--workflow-card-accent-mid) 18%,
-    var(--line)
-  );
+  border-color: var(--workflow-stack-border-color);
+  border-bottom-color: transparent;
   box-shadow:
     inset 0 1px 0
       color-mix(
@@ -7388,18 +7397,6 @@ section.aboutdev-hero {
         var(--workflow-card-accent-edge) 2%,
         transparent
       );
-}
-
-.aboutdev-timeline-item:nth-child(-n + 5)
-  .aboutdev-timeline-copy
-  h3::after {
-  background: rgba(3, 7, 5, 0.67);
-  bottom: -2px;
-  content: "";
-  height: 3px;
-  left: 0;
-  position: absolute;
-  width: 100%;
 }
 
 .aboutdev-timeline-item:nth-child(-n + 5) .aboutdev-timeline-title {
@@ -7479,7 +7476,7 @@ section.aboutdev-hero {
   display: inline-flex;
   font-size: clamp(54px, 8vw, 68px);
   font-weight: 900;
-  height: 128px;
+  height: var(--workflow-tab-height);
   justify-content: center;
   left: calc(var(--workflow-pair-left) - 1px);
   position: absolute;
@@ -7493,6 +7490,10 @@ section.aboutdev-hero {
   content: none;
 }
 
+.aboutdev-timeline-item:nth-child(-n + 5) .aboutdev-timeline-index {
+  border-radius: 8px 8px 0 0;
+}
+
 @media (max-width: 640px) {
   .aboutdev-timeline-index {
     font-size: var(--workflow-tab-font-size);
@@ -7500,17 +7501,7 @@ section.aboutdev-hero {
   }
 }
 
-@media (max-width: 640px) and (orientation: landscape) {
-  .aboutdev-timeline {
-    --workflow-index-tab-width: 10%;
-  }
-}
-
 @media (min-width: 641px) and (max-width: 980px) and (orientation: landscape) {
-  .aboutdev-timeline {
-    --workflow-index-tab-width: clamp(90px, 14vw, 128px);
-  }
-
   .aboutdev-timeline-item:first-child {
     --workflow-gradient-center-x: 20.5%;
     --workflow-pair-left: 0%;
@@ -7547,6 +7538,53 @@ section.aboutdev-hero {
   }
 }
 
+.aboutdev-timeline {
+  --workflow-pair-half-width: calc(
+    (var(--workflow-index-tab-width) + var(--workflow-tab-width)) / 2
+  );
+}
+
+.aboutdev-timeline-item:nth-child(-n + 5) {
+  --workflow-gradient-left-mid: calc(
+    var(--workflow-gradient-center-x) / 2
+  );
+  --workflow-gradient-right-mid: calc(
+    (var(--workflow-gradient-center-x) + 100%) / 2
+  );
+}
+
+.aboutdev-timeline-item:is(:first-child, :nth-child(5)) {
+  --workflow-gradient-center-x: var(--workflow-pair-half-width);
+  --workflow-pair-left: 0%;
+}
+
+.aboutdev-timeline-item:is(:nth-child(2), :nth-child(4)) {
+  --workflow-gradient-center-x: 50%;
+  --workflow-pair-left: calc(
+    (
+        100% - var(--workflow-index-tab-width) - var(--workflow-tab-width)
+      ) / 2
+  );
+}
+
+.aboutdev-timeline-item:nth-child(3) {
+  --workflow-gradient-center-x: calc(
+    100% - var(--workflow-pair-half-width)
+  );
+  --workflow-pair-left: calc(
+    100% - var(--workflow-index-tab-width) - var(--workflow-tab-width)
+  );
+}
+
+.aboutdev-timeline-item:nth-child(-n + 5)
+  .aboutdev-timeline-copy
+  h3,
+.aboutdev-timeline-item:nth-child(5) .aboutdev-timeline-copy h3 {
+  min-width: var(--workflow-tab-width);
+  right: auto;
+  width: var(--workflow-tab-width);
+}
+
 .aboutdev-timeline-images {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
@@ -7568,55 +7606,72 @@ section.aboutdev-hero {
   z-index: 1;
 }
 
+.aboutdev-timeline-item:nth-child(-n + 5)
+  .aboutdev-timeline-images--full-width {
+  border: 0;
+}
+
+.aboutdev-timeline-images--full-width::before {
+  background: var(--line-strong);
+  content: "";
+  bottom: 0;
+  left: 23px;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  width: 1px;
+  z-index: 3;
+}
+
 .aboutdev-timeline-images--full-width::after {
   background: linear-gradient(
-    90deg in oklab,
-    #000 0%,
-    color-mix(in oklab, var(--workflow-image-gradient-edge) 45%, #000)
-      calc(var(--workflow-gradient-left-mid) / 2),
-    var(--workflow-image-gradient-mid) var(--workflow-gradient-left-mid),
-    color-mix(
-        in oklab,
-        var(--workflow-image-gradient-mid) 50%,
-        var(--workflow-image-gradient-core)
-      )
-      calc(
-        (var(--workflow-gradient-left-mid) + var(--workflow-gradient-center-x)) /
-          2
-      ),
-    var(--workflow-image-gradient-core) var(--workflow-gradient-center-x),
-    color-mix(
-        in oklab,
-        var(--workflow-image-gradient-core) 50%,
-        var(--workflow-image-gradient-mid)
-      )
-      calc(
-        (var(--workflow-gradient-center-x) + var(--workflow-gradient-right-mid)) /
-          2
-      ),
-    var(--workflow-image-gradient-mid) var(--workflow-gradient-right-mid),
-    color-mix(in oklab, var(--workflow-image-gradient-edge) 45%, #000)
-      calc((var(--workflow-gradient-right-mid) + 100%) / 2),
-    #000 100%
+      90deg in oklab,
+      #000 0%,
+      color-mix(in oklab, var(--workflow-image-gradient-edge) 45%, #000)
+        calc(var(--workflow-gradient-left-mid) / 2),
+      var(--workflow-image-gradient-mid) var(--workflow-gradient-left-mid),
+      color-mix(
+          in oklab,
+          var(--workflow-image-gradient-mid) 50%,
+          var(--workflow-image-gradient-core)
+        )
+        calc(
+          (var(--workflow-gradient-left-mid) + var(--workflow-gradient-center-x)) /
+            2
+        ),
+      var(--workflow-image-gradient-core) var(--workflow-gradient-center-x),
+      color-mix(
+          in oklab,
+          var(--workflow-image-gradient-core) 50%,
+          var(--workflow-image-gradient-mid)
+        )
+        calc(
+          (var(--workflow-gradient-center-x) + var(--workflow-gradient-right-mid)) /
+            2
+        ),
+      var(--workflow-image-gradient-mid) var(--workflow-gradient-right-mid),
+      color-mix(in oklab, var(--workflow-image-gradient-edge) 45%, #000)
+        calc((var(--workflow-gradient-right-mid) + 100%) / 2),
+      #000 100%
   );
   content: "";
   inset: 0;
-  -webkit-mask-image: linear-gradient(
-    90deg,
-    transparent 0%,
-    rgba(0, 0, 0, 0.33) var(--workflow-gradient-center-x),
+  -webkit-mask-image: radial-gradient(
+    ellipse 70% 100% at var(--workflow-gradient-center-x) 0%,
+    rgba(0, 0, 0, 0.33) 0%,
+    rgba(0, 0, 0, 0.33) 55%,
     transparent 100%
   );
-  mask-image: linear-gradient(
-    90deg,
-    transparent 0%,
-    rgba(0, 0, 0, 0.33) var(--workflow-gradient-center-x),
+  mask-image: radial-gradient(
+    ellipse 70% 100% at var(--workflow-gradient-center-x) 0%,
+    rgba(0, 0, 0, 0.33) 0%,
+    rgba(0, 0, 0, 0.33) 55%,
     transparent 100%
   );
   opacity: 1;
   pointer-events: none;
   position: absolute;
-  z-index: 3;
+  z-index: 2;
 }
 
 .aboutdev-timeline-item[data-workflow-tone="vision"] {
@@ -7636,6 +7691,7 @@ section.aboutdev-hero {
   --workflow-star-image: url("/images/aboutdev/workflow-stars/star-yellow.png");
   --workflow-star-cutout-image: url("/images/aboutdev/workflow-stars/star-yellow-cutout-mask.png");
   --workflow-tab-title-color: #ffc928;
+  --workflow-stack-border-foundation: #39403c;
 }
 
 .aboutdev-timeline-item[data-workflow-tone="sustainability"] {
@@ -7655,6 +7711,7 @@ section.aboutdev-hero {
   --workflow-star-image: url("/images/aboutdev/workflow-stars/star-orange.png");
   --workflow-star-cutout-image: url("/images/aboutdev/workflow-stars/star-orange-cutout-mask.png");
   --workflow-tab-title-color: #ff7a1a;
+  --workflow-stack-border-color: rgba(237, 93, 7, 0.25);
 }
 
 .aboutdev-timeline-item[data-workflow-tone="collaboration"] {
@@ -7883,6 +7940,10 @@ section.aboutdev-hero {
   position: relative;
 }
 
+.aboutdev-timeline-item:nth-child(-n + 5) .aboutdev-timeline-image {
+  border-left: 0;
+}
+
 .aboutdev-timeline-image::before,
 .aboutdev-timeline-image::after {
   background: var(--line);
@@ -7891,6 +7952,11 @@ section.aboutdev-hero {
   position: absolute;
   top: 0;
   z-index: 1;
+}
+
+.aboutdev-timeline-item:nth-child(-n + 5) .aboutdev-timeline-image::before,
+.aboutdev-timeline-item:nth-child(-n + 5) .aboutdev-timeline-image::after {
+  content: none;
 }
 
 .aboutdev-timeline-image::before {
@@ -8078,26 +8144,41 @@ section.aboutdev-hero {
 
 .aboutdev-workflow-image-placeholder .aboutdev-workflow-carousel-image {
   opacity: 0;
-  transition: opacity 180ms ease;
+  transition: opacity 1080ms ease-in;
+  z-index: -1;
 }
 
 .aboutdev-workflow-image-placeholder .aboutdev-workflow-carousel-image.is-active {
+  animation: uiux-detail-fade-in 1080ms ease-out;
   opacity: 1;
+  z-index: 0;
+}
+
+.aboutdev-workflow-carousel.is-detail-fading-out
+  .aboutdev-workflow-carousel-image.is-active {
+  opacity: 0.45;
 }
 
 .aboutdev-workflow-image-selector {
   --case-accent-core: var(--workflow-image-gradient-core);
-  gap: clamp(6px, 0.8vw, 10px);
   margin-top: 14px;
-  position: static;
+  position: relative;
   right: auto;
   top: auto;
   z-index: auto;
 }
 
-.aboutdev-workflow-image-selector .uiux-stack-square {
-  font-size: clamp(14px, 1.4vw, 18px);
-  width: clamp(28px, 3vw, 38px);
+.aboutdev-workflow-image-selector.uiux-stack-squares.is-merged
+  .uiux-stack-square {
+  height: 9.34px;
+  width: 42.7px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .aboutdev-workflow-image-placeholder
+    .aboutdev-workflow-carousel-image.is-active {
+    animation: none;
+  }
 }
 
 .aboutdev-timeline-proof {
