@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <title>Yellow gradient lock</title>
+  <defs>
+    <linearGradient id="lock-gradient" gradientUnits="userSpaceOnUse" x1="25" x2="175" y1="30" y2="175">
+      <stop offset="0" stop-color="#ffd102" />
+      <stop offset="0.52" stop-color="#e8aa01" />
+      <stop offset="1" stop-color="#cb7d00" />
+    </linearGradient>
+    <filter id="lock-border" filterUnits="userSpaceOnUse" x="-20" y="-20" width="240" height="240">
+      <feComponentTransfer in="SourceAlpha" result="solid-alpha"><feFuncA type="linear" slope="1000" intercept="0" /></feComponentTransfer>
+      <feMorphology in="solid-alpha" operator="dilate" radius="1.6" result="expanded-alpha" />
+      <feComposite in="expanded-alpha" in2="solid-alpha" operator="out" result="border-alpha" />
+      <feFlood flood-color="#020604" flood-opacity="0.82" result="border-color" />
+      <feComposite in="border-color" in2="border-alpha" operator="in" result="border" />
+      <feMerge><feMergeNode in="border" /><feMergeNode in="SourceGraphic" /></feMerge>
+    </filter>
+    <mask id="lock-mask" maskUnits="userSpaceOnUse" x="0" y="0" width="200" height="200">
+      <path d="M62 88V67.2C62 48.64 78.8 35.2 100 35.2S138 48.64 138 67.2V88" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="26" />
+      <rect x="11.85" y="88.6" width="176.3" height="84.8" rx="20" fill="#fff" />
+      <circle cx="100" cy="131" r="28.2" fill="#000" />
+    </mask>
+  </defs>
+  <g filter="url(#lock-border)"><rect width="200" height="200" fill="url(#lock-gradient)" mask="url(#lock-mask)" /></g>
+</svg>

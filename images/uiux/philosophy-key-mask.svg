@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <mask id="key-mask" maskUnits="userSpaceOnUse" x="0" y="0" width="200" height="200">
+      <g transform="translate(16 83.5) scale(1.05)">
+        <circle cx="50" cy="70" r="34" fill="#fff" />
+        <circle cx="29" cy="48" r="19" fill="#fff" />
+        <path d="M65 55H80V85H65L56 76V64Z" fill="#fff" />
+        <rect x="65" y="61" width="94" height="18" rx="9" fill="#fff" />
+        <path d="M104 73H121V98Q121 103 116 103H109Q104 103 104 98ZM126 73H143V106Q143 111 138 111H131Q126 111 126 106ZM148 73H159V94Q159 99 154 99H153Q148 99 148 94Z" fill="#fff" />
+        <circle cx="50" cy="70" r="17" fill="#000" />
+        <circle cx="29" cy="48" r="7" fill="#000" />
+      </g>
+    </mask>
+  </defs>
+  <rect width="200" height="200" fill="#fff" mask="url(#key-mask)" />
+</svg>

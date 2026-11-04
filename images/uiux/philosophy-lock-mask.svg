@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <mask id="lock-mask" maskUnits="userSpaceOnUse" x="0" y="0" width="200" height="200">
+      <path d="M62 88V67.2C62 48.64 78.8 35.2 100 35.2S138 48.64 138 67.2V88" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="26" />
+      <rect x="11.85" y="88.6" width="176.3" height="84.8" rx="20" fill="#fff" />
+      <circle cx="100" cy="131" r="28.2" fill="#000" />
+    </mask>
+  </defs>
+  <rect width="200" height="200" fill="#fff" mask="url(#lock-mask)" />
+</svg>
