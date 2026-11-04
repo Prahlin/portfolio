@@ -6541,10 +6541,6 @@ button.uiux-decision-number:focus-visible {
   min-width: 0;
 }
 
-.workspace-heading-arrow {
-  display: none;
-}
-
 @media (min-width: 981px) {
   .worklog-layout {
     align-items: stretch;
@@ -6560,62 +6556,26 @@ button.uiux-decision-number:focus-visible {
     height: 100%;
   }
 
-  .workspace-panel-space > .section-heading h2 {
-    anchor-name: --workspace-heading;
-  }
-
-  .workspace-panel-tools > .section-heading h2 {
-    anchor-name: --work-tools-heading;
-  }
-
-  @supports (left: anchor(--workspace-heading right)) {
-    .workspace-heading-arrow {
-      align-items: center;
-      display: flex;
-      gap: 16px;
-      justify-content: center;
-      left: anchor(--workspace-heading right);
-      pointer-events: none;
-      position: absolute;
-      right: anchor(--work-tools-heading left);
-      top: anchor(--workspace-heading center);
-      transform: translateY(-50%);
-      z-index: 2;
-    }
-
-    .workspace-heading-arrow img {
-      display: block;
-      flex: none;
-      height: 36px;
-      max-width: none;
-      width: 48px;
-    }
-  }
 }
 
 .workspace-panel > .timeline {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  gap: 12.5px;
+  justify-content: flex-start;
 }
 
-.workspace-panel-space > .timeline {
-  min-height: 1239.890625px;
-}
-
-.workspace-panel-tools > .timeline {
-  min-height: 1256.132813px;
+.workspace-panel > .timeline > .timeline-item:first-child {
+  padding-bottom: 0;
 }
 
 @media (min-width: 981px) {
-  .workspace-panel > .timeline {
-    min-height: 1256.132813px;
+  .workspace-panel-tools .timeline-item-design {
+    min-height: 353.53125px;
   }
-}
 
-@media (max-width: 430px) {
-  .workspace-panel-tools > .timeline {
-    min-height: 1371.28125px;
+  .workspace-panel-tools .timeline-item-design > p {
+    transform: translateY(12px);
   }
 }
 
@@ -6712,7 +6672,7 @@ button.uiux-decision-number:focus-visible {
 .timeline-item .workspace-eyebrow > svg {
   display: block;
   height: 48px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   margin-left: auto;
   margin-right: auto;
   stroke-width: 2;
@@ -6733,8 +6693,8 @@ button.uiux-decision-number:focus-visible {
 
 .timeline-item .workspace-eyebrow-label {
   display: block;
-  line-height: 1.2;
-  min-height: 2.4em;
+  line-height: 1.25;
+  min-height: 2.5em;
   white-space: nowrap;
 }
 
@@ -6789,42 +6749,8 @@ button.uiux-decision-number:focus-visible {
   display: block;
 }
 
-.timeline-item .workspace-device-list > .workspace-device-list-break {
-  margin-top: 12px;
-}
-
-.workspace-workstation-details {
-  display: block;
-  margin-top: 8px;
-}
-
-.workspace-workstation-spec-list {
-  border-bottom: 1px solid var(--line);
-  display: block;
-}
-
-.workspace-workstation-spec {
-  align-items: baseline;
-  border-top: 1px solid var(--line);
-  display: grid;
-  gap: 12px;
-  grid-template-columns: minmax(92px, 0.72fr) minmax(0, 1.28fr);
-  padding: 8px 0;
-}
-
-.workspace-workstation-spec-label {
-  color: var(--green);
-  font-size: 11px;
-  font-weight: 850;
-  letter-spacing: 0.06em;
-  line-height: 1.25;
-  text-transform: uppercase;
-}
-
-.workspace-workstation-spec-value {
-  color: var(--text);
-  font-size: 14px;
-  line-height: 1.35;
+.timeline-item .workspace-device-list > .workspace-device-platform-break {
+  margin-top: 6px;
 }
 
 .timeline-item:not(.timeline-item-software) > p .workspace-device-list {
@@ -6841,10 +6767,6 @@ button.uiux-decision-number:focus-visible {
 }
 
 .worklog-layout .timeline-item:first-child .workspace-device-secondary-group > strong {
-  font-size: 24px;
-}
-
-.timeline-item-peripherals .workspace-device-secondary-group > strong {
   font-size: 24px;
 }
 
@@ -6868,6 +6790,33 @@ button.uiux-decision-number:focus-visible {
   margin-left: auto;
   transform: translateX(-115px);
   width: 50.4px;
+}
+
+.timeline-item-software.timeline-item-design > .workspace-eyebrow > svg {
+  height: 50.4px;
+  width: 50.4px;
+}
+
+.worklog-layout .timeline-item-qa > .workspace-eyebrow {
+  transform: translateY(12px);
+}
+
+.worklog-layout .timeline-item-qa > .workspace-eyebrow > svg {
+  height: 50.4px;
+  position: relative;
+  top: 3px;
+  width: 50.4px;
+}
+
+.timeline-item-software.timeline-item-design > .workspace-eyebrow > svg {
+  position: relative;
+  top: 3px;
+}
+
+@media (min-width: 981px) {
+  .timeline-item-software.timeline-item-design > .workspace-eyebrow {
+    transform: translateY(12px);
+  }
 }
 
 .timeline-item-software > .workspace-eyebrow > .workspace-eyebrow-label {
@@ -6995,31 +6944,8 @@ button.uiux-decision-number:focus-visible {
   width: 100%;
 }
 
-.timeline-item .workspace-qa-platform-group {
-  color: inherit;
-  display: block;
-  font-weight: inherit;
-  margin-top: 18px;
-}
-
-.workspace-platform-heading {
-  align-items: center;
-  display: inline-flex;
-  gap: 8px;
-}
-
-.workspace-platform-android-mark {
-  display: block;
-  height: 24px;
-  width: auto;
-}
-
-.workspace-platform-apple-mark {
-  background: #f3fff7;
-  display: block;
-  height: 24px;
-  mask: url("/images/apple-logo-official.svg") center / 100% 100% no-repeat;
-  width: 20px;
+.timeline-item-qa .workspace-qa-device-groups > strong {
+  font-size: 24px;
 }
 
 .contact-panel {

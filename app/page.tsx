@@ -24,12 +24,10 @@ import {
 import {
   Activity,
   Apple,
-  BrainCircuit,
   Braces,
   CodeXml,
   CreditCard,
   Database,
-  HardDrive,
   Mail,
   MailCheck,
   MonitorSmartphone,
@@ -42,7 +40,6 @@ import {
   type LucideIcon,
   Usb,
   Waves,
-  Workflow,
 } from "lucide-react";
 import { HeroLede } from "./HeroLede";
 import { CoreBeliefsOrbit } from "./CoreBeliefsOrbit";
@@ -545,14 +542,11 @@ function HeroBridgeQuote({ className }: { className: string }) {
 }
 
 const workstationSpecs = [
-  { label: "Model", value: "MacBook Air · 15-inch · 2025" },
-  { label: "Processor", value: "Apple M4 · 10-core CPU (4P + 6E)" },
-  { label: "Graphics", value: "Integrated 10-core GPU · Metal 4" },
-  { label: "Memory", value: "16GB unified memory" },
-  { label: "Internal storage", value: "128GB SSD" },
-  { label: "Built-in display", value: "Liquid Retina · 2880 × 1864" },
-  { label: "Display output", value: "1920 × 1080 at 60Hz" },
-  { label: "Operating system", value: "macOS Tahoe 26.6.2" },
+  "MacBook Air",
+  "15-inch",
+  "2025",
+  "M4 · 10-core CPU (4P + 6E)",
+  "16GB unified memory · 256GB SSD",
 ];
 
 const worklogItems = [
@@ -561,44 +555,25 @@ const worklogItems = [
     icon: <MonitorSmartphone aria-hidden />,
     text: (
       <>
-        <strong>Workstation</strong>
-        <span className="workspace-workstation-details">
-          <span className="workspace-workstation-spec-list">
-            {workstationSpecs.map((spec) => (
-              <span className="workspace-workstation-spec" key={spec.label}>
-                <span className="workspace-workstation-spec-label">
-                  {spec.label}
-                </span>
-                <span className="workspace-workstation-spec-value">
-                  {spec.value}
-                </span>
-              </span>
-            ))}
-          </span>
-        </span>
-        <span className="workspace-device-secondary-group">
-          <strong>External Monitors</strong>
-          <span className="workspace-device-list">
-            <span>WCV 15.6&quot; · 1080p IPS</span>
-            <span>WCV 15.6&quot; · 1080p IPS</span>
-          </span>
-        </span>
-      </>
-    ),
-  },
-  {
-    label: "PERIPHERALS",
-    icon: <HardDrive aria-hidden />,
-    text: (
-      <>
-        <strong>External Hard Drive</strong>
+        <strong>Primary Workstation</strong>
         <span className="workspace-device-list">
-          <span>3TB WD My Book</span>
+          {workstationSpecs.map((spec, index) => (
+            <span
+              className={index === 3 ? "workspace-device-platform-break" : undefined}
+              key={spec}
+            >
+              {spec}
+            </span>
+          ))}
         </span>
         <span className="workspace-device-secondary-group">
-          <strong>USB Hub</strong>
+          <strong>Secondary Peripherals</strong>
           <span className="workspace-device-list">
-            <span>Atolla 240W 8-Port</span>
+            <span>2× WCV 15.6&quot; · 1080p IPS</span>
+            <span className="workspace-device-platform-break">
+              WD My Book · 3TB
+            </span>
+            <span>Atolla Hub · 240W · 8-Port</span>
           </span>
         </span>
       </>
@@ -609,117 +584,79 @@ const worklogItems = [
     icon: <Smartphone aria-hidden />,
     text: (
       <>
-        <strong className="workspace-platform-heading">
-          <img
-            alt=""
-            aria-hidden="true"
-            className="workspace-platform-android-mark"
-            src="/images/android-robot-head.svg"
-          />
-          <span>Android</span>
-        </strong>
         <span className="workspace-qa-device-groups">
-          <strong>Smartphones / Tablets</strong>
+          <strong>Smartphones</strong>
           <span className="workspace-device-list">
-            <span>Samsung Galaxy A3 (Small)</span>
-            <span>Samsung Galaxy S21 FE (Standard)</span>
-            <span>Samsung Galaxy S20 Ultra (Large)</span>
-            <span className="workspace-device-list-break">
-              Galaxy Tab A (Standard)
+            <span>Galaxy A3 · 4.5″ (Small)</span>
+            <span>Galaxy S21 FE · 6.4″ (Standard)</span>
+            <span>Galaxy S20 Ultra · 6.9″ (Large)</span>
+            <span className="workspace-device-platform-break">
+              iPhone 14 · 6.1″ (Standard)
             </span>
+            <span>iPhone 12 Pro Max · 6.7″ (Large)</span>
           </span>
         </span>
-        <span className="workspace-qa-platform-group">
-          <strong className="workspace-platform-heading">
-            <span
-              aria-hidden="true"
-              className="workspace-platform-apple-mark"
-            />
-            <span>iOS</span>
-          </strong>
-          <span className="workspace-qa-device-groups">
-            <strong>Smartphones / Tablets</strong>
-            <span className="workspace-device-list">
-              <span>iPhone 14 (Standard)</span>
-              <span>iPhone 12 Pro Max (Large)</span>
-              <span className="workspace-device-list-break">
-                iPad Air 14 (Standard)
-              </span>
-              <span>iPad Air 12 (Large)</span>
+        <span className="workspace-qa-device-groups">
+          <strong>Tablets</strong>
+          <span className="workspace-device-list">
+            <span>Galaxy Tab A · 8.0″ (Small)</span>
+            <span className="workspace-device-platform-break">
+              iPad Air 2 · 9.7″ (Standard)
             </span>
+            <span>iPad Air · 13″ (Large)</span>
           </span>
         </span>
       </>
     ),
   },
   {
-    label: "DEV ENV",
+    label: "DEV / CODING",
     icon: <CodeXml aria-hidden />,
     text: (
       <>
-        <strong>Development Environments</strong>
+        <strong>Development &amp; AI</strong>
         <span className="workspace-device-list">
           <span>VS Code</span>
           <span>Xcode</span>
           <span>PyCharm</span>
+          <span className="workspace-device-platform-break">
+            Codex · GitHub Copilot
+          </span>
+          <span>ChatGPT · Claude</span>
+        </span>
+        <span className="workspace-device-secondary-group">
+          <strong>Testing &amp; Workflow</strong>
+          <span className="workspace-device-list">
+            <span>Expo Go · iOS Simulator</span>
+            <span className="workspace-device-platform-break">GitHub</span>
+            <span>Jira</span>
+          </span>
         </span>
       </>
     ),
   },
   {
-    label: "AI AGENTS",
-    icon: <BrainCircuit aria-hidden />,
-    text: (
-      <>
-        <strong>AI-Assisted Development</strong>
-        <span className="workspace-device-list">
-          <span>Codex</span>
-          <span>Claude</span>
-          <span>ChatGPT</span>
-          <span>GitHub Copilot</span>
-        </span>
-      </>
-    ),
-  },
-  {
-    label: "DESIGN APPS",
+    label: "ART / DESIGN",
     icon: <Palette aria-hidden />,
     text: (
       <>
-        <strong>Design &amp; Motion</strong>
+        <strong>Visual Design</strong>
         <span className="workspace-device-list">
           <span>Figma</span>
-          <span>Photoshop</span>
+          <span>FigJam</span>
+          <span>Figma Dev Mode</span>
+          <span className="workspace-device-platform-break">Photoshop</span>
           <span>Illustrator</span>
-          <span>After Effects</span>
-          <span>Media Encoder</span>
         </span>
-      </>
-    ),
-  },
-  {
-    label: "CODING SOFTWARE",
-    icon: <Braces aria-hidden />,
-    text: (
-      <>
-        <strong>Testing &amp; Debugging</strong>
-        <span className="workspace-device-list">
-          <span>Expo Go</span>
-          <span>iOS Simulator</span>
-        </span>
-      </>
-    ),
-  },
-  {
-    label: "VERSION CONTROL",
-    icon: <Workflow aria-hidden />,
-    text: (
-      <>
-        <strong>Workflow Platforms</strong>
-        <span className="workspace-device-list">
-          <span>GitHub</span>
-          <span>Jira</span>
-          <span>ServiceNow</span>
+        <span className="workspace-device-secondary-group">
+          <strong>Motion &amp; Media</strong>
+          <span className="workspace-device-list">
+            <span>Premiere Pro</span>
+            <span className="workspace-device-platform-break">
+              After Effects
+            </span>
+            <span>Media Encoder</span>
+          </span>
         </span>
       </>
     ),
@@ -1473,12 +1410,12 @@ export default function Home() {
             {
               className: "workspace-panel-space",
               title: "Work Space",
-              items: worklogItems.slice(0, 3),
+              items: worklogItems.slice(0, 2),
             },
             {
               className: "workspace-panel-tools",
               title: "Work Tools",
-              items: worklogItems.slice(3),
+              items: worklogItems.slice(2),
             },
           ].map((panel) => (
             <div
@@ -1495,11 +1432,11 @@ export default function Home() {
                         ? " timeline-item-software"
                         : ""
                     }${
-                      item.label === "PERIPHERALS"
-                        ? " timeline-item-peripherals"
-                        : ""
-                    }${
                       item.label === "QA DEVS" ? " timeline-item-qa" : ""
+                    }${
+                      item.label === "ART / DESIGN"
+                        ? " timeline-item-design"
+                        : ""
                     }`}
                   >
                     <span className="workspace-eyebrow">
@@ -1512,23 +1449,21 @@ export default function Home() {
                           aria-hidden="true"
                           className="workspace-eyebrow-label-top"
                         >
-                          {item.label === "PERIPHERALS"
-                            ? "PERI-"
+                          {item.label.includes(" / ")
+                            ? `${item.label.split(" / ")[0]} /`
                             : item.label.split(" ")[0]}
-                          {item.label.includes(" ") ||
-                          item.label === "PERIPHERALS" ? (
+                          {item.label.includes(" ") ? (
                             <span className="workspace-eyebrow-label-bottom">
-                              {item.label === "PERIPHERALS"
-                                ? "PHERALS"
+                              {item.label.includes(" / ")
+                                ? item.label.split(" / ")[1]
                                 : item.label.split(" ").slice(1).join(" ")}
                             </span>
                           ) : null}
                         </span>
-                        {item.label.includes(" ") ||
-                        item.label === "PERIPHERALS" ? (
+                        {item.label.includes(" ") ? (
                           <span className="workspace-eyebrow-label-sr">
-                            {item.label === "PERIPHERALS"
-                              ? "PHERALS"
+                            {item.label.includes(" / ")
+                              ? item.label.split(" / ")[1]
                               : item.label.split(" ").slice(1).join(" ")}
                           </span>
                         ) : null}
@@ -1540,17 +1475,6 @@ export default function Home() {
               </div>
             </div>
           ))}
-          <span className="workspace-heading-arrow" aria-hidden="true">
-            {["left", "center", "right"].map((position) => (
-              <Image
-                alt=""
-                height={36}
-                key={position}
-                src="/images/carousel-arrow.svg"
-                width={48}
-              />
-            ))}
-          </span>
         </div>
       </section>
 
