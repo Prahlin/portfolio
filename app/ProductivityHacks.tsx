@@ -49,10 +49,14 @@ const productivityHacks: readonly ProductivityHack[] = [
     title: "Automation",
   },
   {
-    copy: ["", "", ""],
+    copy: [
+      "Multiple VSCode sessions ensures that multiple projects are worked on in tandem.",
+      "Multiple AI Bots ensure that multiple apps are work on concurrently",
+      "Multiple Monitors eliminates the occurence of workspace clutter.",
+    ],
     gradient: ["#01abfd", "#0071f3", "#024dd0"],
     icon: Terminal,
-    title: "Terminal",
+    title: "Multi-",
   },
   {
     copy: ["", "", ""],
@@ -184,6 +188,27 @@ export function ProductivityHacks() {
           <CircuitRibbon />
           <div className="productivity-hacks-mobile-spine" aria-hidden="true" />
 
+          <svg
+            aria-hidden="true"
+            className="productivity-hack-triangle-definitions"
+            focusable="false"
+          >
+            <defs>
+              <clipPath
+                id="productivity-triangle-up"
+                clipPathUnits="objectBoundingBox"
+              >
+                <path d="M .455 .09 Q .5 .005 .545 .09 L .94 .87 Q 1 .995 .86 .995 L .14 .995 Q 0 .995 .06 .87 L .455 .09 Z" />
+              </clipPath>
+              <clipPath
+                id="productivity-triangle-down"
+                clipPathUnits="objectBoundingBox"
+              >
+                <path d="M .14 .005 Q 0 .005 .06 .13 L .455 .91 Q .5 .995 .545 .91 L .94 .13 Q 1 .005 .86 .005 Z" />
+              </clipPath>
+            </defs>
+          </svg>
+
           <div className="productivity-hacks-track">
             {productivityHacks.map((hack, index) => {
               const Icon = hack.icon;
@@ -196,7 +221,11 @@ export function ProductivityHacks() {
 
               return (
                 <article
-                  className={`productivity-hack-card${
+                  className={`productivity-hack-card productivity-hack-card--triangle ${
+                    index % 2 === 0
+                      ? "productivity-hack-card--triangle-up"
+                      : "productivity-hack-card--triangle-down"
+                  }${
                     hoveredHack === index ? " is-productivity-focused" : ""
                   }`}
                   data-hack-index={String(index + 1).padStart(2, "0")}
@@ -221,6 +250,22 @@ export function ProductivityHacks() {
                     className="productivity-hack-card-rivet productivity-hack-card-rivet--bottom"
                     aria-hidden="true"
                   />
+
+                  <svg
+                    aria-hidden="true"
+                    className="productivity-hack-triangle-outline"
+                    preserveAspectRatio="none"
+                    viewBox="0 0 100 100"
+                  >
+                    <path
+                      d={
+                        index % 2 === 0
+                          ? "M 45.5 9 Q 50 .5 54.5 9 L 94 87 Q 100 99.5 86 99.5 L 14 99.5 Q 0 99.5 6 87 L 45.5 9 Z"
+                          : "M 14 .5 Q 0 .5 6 13 L 45.5 91 Q 50 99.5 54.5 91 L 94 13 Q 100 .5 86 .5 Z"
+                      }
+                      vectorEffect="non-scaling-stroke"
+                    />
+                  </svg>
 
                   <div className="productivity-hack-icon" aria-hidden="true">
                     <Icon strokeWidth={2.15} />
