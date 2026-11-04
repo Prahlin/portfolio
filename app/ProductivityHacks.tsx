@@ -24,12 +24,15 @@ type HackStyle = CSSProperties & {
   "--hack-color-mid": string;
 };
 
+const automationCardHeightReference =
+  "GitHub Actions Automatically updates and deploys GitHub Repo Changes to the Portfolio Website";
+
 const productivityHacks: readonly ProductivityHack[] = [
   {
     copy: [
       "Cmd + S = Crop & Save\nCmd + Shift + S = Print Screen",
       "",
-      "Cmd + 1 = Read GitHub Project Repo\nCmd + 2 = Recommend Project Commit Msg\nCmd + 3 = Generate Project Worklog",
+      "Cmd + 1 = Read Repo\nCmd + 2 = Commit Message\nCmd + 3 = Generate Worklog",
     ],
     gradient: ["#dd4bfd", "#7a1fdd", "#6816ce"],
     icon: Cpu,
@@ -37,8 +40,8 @@ const productivityHacks: readonly ProductivityHack[] = [
   },
   {
     copy: [
-      "GitHub Actions Automatically updates and deploys GitHub Repo Changes to the Portfolio Website",
-      "",
+      automationCardHeightReference,
+      "MCPs allow me to make code changes, inspect diffs, and push commits while on-the-go",
       "",
     ],
     gradient: ["#ffd102", "#e8aa01", "#cb7d00"],
@@ -64,6 +67,25 @@ const productivityHacks: readonly ProductivityHack[] = [
     title: "Tuning",
   },
 ] as const;
+
+const productivityHackKeywords = ["GitHub Actions", "MCPs"] as const;
+
+function renderHighlightedHackText(text: string) {
+  const keywordPattern = new RegExp(
+    `(${productivityHackKeywords.join("|")})`,
+    "g",
+  );
+
+  return text.split(keywordPattern).map((part, index) =>
+    productivityHackKeywords.includes(
+      part as (typeof productivityHackKeywords)[number],
+    ) ? (
+      <strong key={`${part}-${index}`}>{part}</strong>
+    ) : (
+      part
+    ),
+  );
+}
 
 function CircuitRibbon() {
   return (
@@ -206,8 +228,20 @@ export function ProductivityHacks() {
 
                   <div className="productivity-hack-copy">
                     <h3>{hack.title}</h3>
+                    <p
+                      aria-hidden="true"
+                      className="productivity-hack-height-sizer"
+                    >
+                      {renderHighlightedHackText(automationCardHeightReference)}
+                    </p>
                     {activeCopy ? (
-                      <p>
+                      <p
+                        className={
+                          index === 0 && activeIndicators[index] === 3
+                            ? "is-productivity-compact-copy"
+                            : undefined
+                        }
+                      >
                         {activeCopy.split("\n").map((line) => {
                           const [shortcut, action] = line.split(" = ");
 
@@ -216,10 +250,11 @@ export function ProductivityHacks() {
                               {action ? (
                                 <>
                                   <strong>{shortcut}</strong>
-                                  {` = ${action}`}
+                                  {" = "}
+                                  {renderHighlightedHackText(action)}
                                 </>
                               ) : (
-                                line
+                                renderHighlightedHackText(line)
                               )}
                             </span>
                           );
@@ -234,13 +269,35 @@ export function ProductivityHacks() {
                   </div>
 
                   <div
+                    aria-label={`${hack.title} version selector`}
                     className="productivity-hack-indicators uiux-stack-squares is-merged"
                     data-active-square={activeIndicators[index]}
-                    aria-hidden="true"
+                    role="group"
                   >
-                    <span className="uiux-stack-square" />
-                    <span className="uiux-stack-square" />
-                    <span className="uiux-stack-square" />
+                    {[1, 2, 3].map((version) => {
+                      const isActive = activeIndicators[index] === version;
+
+                      return (
+                        <button
+                          aria-label={`Show ${hack.title} version ${String.fromCharCode(64 + version)}`}
+                          aria-pressed={isActive}
+                          className={`uiux-stack-square${
+                            isActive ? " is-active" : ""
+                          }`}
+                          key={version}
+                          onClick={(event) => {
+                            event.stopPropagation();
+                            setActiveIndicators((current) =>
+                              current.map((indicator, cardIndex) =>
+                                cardIndex === index ? version : indicator,
+                              ),
+                            );
+                          }}
+                          onPointerDown={(event) => event.stopPropagation()}
+                          type="button"
+                        />
+                      );
+                    })}
                   </div>
                 </article>
               );
