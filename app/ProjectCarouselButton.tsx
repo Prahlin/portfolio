@@ -1191,10 +1191,6 @@ export function ProjectCarouselButton() {
         resizeObserver.observe(heroActions);
       }
 
-      if (navBar) {
-        resizeObserver.observe(navBar);
-      }
-
       if (heroVisual) {
         resizeObserver.observe(heroVisual);
       }

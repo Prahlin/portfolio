@@ -46,6 +46,7 @@ import {
 } from "lucide-react";
 import { HeroLede } from "./HeroLede";
 import { CoreBeliefsOrbit } from "./CoreBeliefsOrbit";
+import { LandingNavFrame } from "./LandingNavFrame";
 import { ProductivityHacks } from "./ProductivityHacks";
 import { ProjectCarouselButton } from "./ProjectCarouselButton";
 import { WorkflowViewportFocus } from "./WorkflowViewportFocus";
@@ -1040,11 +1041,11 @@ function TabletPreview() {
 export default function Home() {
   return (
     <main className="landing-page" id="top">
-      <div className="landing-nav-frame">
+      <LandingNavFrame>
         <div className="site-shell">
           <MainNavBar />
         </div>
-      </div>
+      </LandingNavFrame>
 
       <section className="hero">
         <div className="site-shell">
