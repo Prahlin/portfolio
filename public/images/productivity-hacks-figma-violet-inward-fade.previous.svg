@@ -1,0 +1,30 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="265.102" height="262.889" viewBox="0 0 265.102 262.889" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="04 &#194;&#183; Violet &#194;&#183; inward fade">
+<mask id="mask0_0_7" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="266" height="263">
+<rect id="Exponential opacity &#194;&#183; 0% outward &#226;&#134;&#146; 100% inward" y="114.03" width="194" height="184" transform="rotate(-36 0 114.03)" fill="url(#paint0_linear_0_7)"/>
+</mask>
+<g mask="url(#mask0_0_7)">
+<path id="04 &#194;&#183; Violet" d="M121.08 189.221L191.044 138.39C201.795 130.579 199.83 114.007 187.55 108.927L111.136 77.3168C99.4127 72.4671 86.7001 81.7033 87.6897 94.3517L94.1398 176.794C95.1763 190.042 110.33 197.032 121.08 189.221Z" stroke-width="16" stroke="url(#paint1_linear_0_7)"/>
+</g>
+</g>
+<defs>
+<linearGradient id="paint0_linear_0_7" x1="97" y1="114.03" x2="97" y2="298.03" gradientUnits="userSpaceOnUse">
+<stop stop-color="white"/>
+<stop offset="0.0652174" stop-color="white"/>
+<stop offset="0.369565" stop-color="white"/>
+<stop offset="0.413043" stop-color="white" stop-opacity="0.98"/>
+<stop offset="0.447826" stop-color="white" stop-opacity="0.9"/>
+<stop offset="0.482609" stop-color="white" stop-opacity="0.65"/>
+<stop offset="0.517391" stop-color="white" stop-opacity="0.22"/>
+<stop offset="0.552174" stop-color="white" stop-opacity="0.025"/>
+<stop offset="0.586957" stop-color="white" stop-opacity="0"/>
+<stop offset="0.934783" stop-color="white" stop-opacity="0"/>
+<stop offset="1" stop-color="white" stop-opacity="0"/>
+</linearGradient>
+<linearGradient id="paint1_linear_0_7" x1="179.574" y1="196.166" x2="85.5281" y2="66.7234" gradientUnits="userSpaceOnUse">
+<stop stop-color="#F3B8FF"/>
+<stop offset="0.5" stop-color="#C53AFF"/>
+<stop offset="1" stop-color="#7900ED"/>
+</linearGradient>
+</defs>
+</svg>

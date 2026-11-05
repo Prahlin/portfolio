@@ -1,7 +1,7 @@
 "use client";
 
 import type { CSSProperties } from "react";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import {
   Blocks,
   Cpu,
@@ -23,6 +23,39 @@ type HackStyle = CSSProperties & {
   "--hack-color-edge": string;
   "--hack-color-mid": string;
 };
+
+type FormationStyle = CSSProperties & {
+  "--productivity-hacks-rotation": string;
+};
+
+const PRODUCTIVITY_HACK_UPWARD_ROTATIONS = [-144, 144, 72, 0, -72] as const;
+
+const PRODUCTIVITY_HACK_HIT_AREAS = [
+  {
+    d: "M140.24 52L53.7599 52C40.4713 52 32.3206 66.5619 39.2691 77.8891L96.5 171.185C96.729 171.558 97.271 171.558 97.5 171.185L154.731 77.8892C161.679 66.5619 153.529 52 140.24 52Z",
+    transform:
+      "translate(70.868 85.016) translate(132.551 131.4445) rotate(144) translate(-97 -92)",
+  },
+  {
+    d: "M140.24 52L53.7599 52C40.4713 52 32.3206 66.5619 39.2691 77.8891L96.5 171.185C96.729 171.558 97.271 171.558 97.5 171.185L154.731 77.8892C161.679 66.5619 153.529 52 140.24 52Z",
+    transform:
+      "translate(-32.97 85.016) translate(132.551 131.4445) rotate(-144) translate(-97 -92)",
+  },
+  {
+    d: "M140.24 52L53.7599 52C40.4713 52 32.3206 66.5619 39.2691 77.8891L96.5 171.185C96.729 171.558 97.271 171.558 97.5 171.185L154.731 77.8892C161.679 66.5619 153.529 52 140.24 52Z",
+    transform:
+      "translate(-49.979 -2.977) translate(117.472 120.682) rotate(-72) translate(-97 -92)",
+  },
+  {
+    d: "M140.24 52L53.7599 52C40.4713 52 32.3206 66.5619 39.2691 77.8891L96.5 171.185C96.729 171.558 97.271 171.558 97.5 171.185L154.731 77.8892C161.679 66.5619 153.529 52 140.24 52Z",
+    transform: "translate(54.5 -35.33)",
+  },
+  {
+    d: "M140.24 52L53.7599 52C40.4713 52 32.3206 66.5619 39.2691 77.8891L96.5 171.185C96.729 171.558 97.271 171.558 97.5 171.185L154.731 77.8892C161.679 66.5619 153.529 52 140.24 52Z",
+    transform:
+      "translate(118.035 -2.977) translate(117.472 120.682) rotate(72) translate(-97 -92)",
+  },
+] as const;
 
 const automationCardHeightReference =
   "GitHub Actions Automatically updates and deploys GitHub Repo Changes to the Portfolio Website";
@@ -154,24 +187,70 @@ function CircuitRibbon() {
 }
 
 export function ProductivityHacks() {
-  const [activeIndicators, setActiveIndicators] = useState<number[]>(() =>
-    productivityHacks.map(() => 1),
-  );
+  const [activeHack, setActiveHack] = useState<number | null>(null);
   const [hoveredHack, setHoveredHack] = useState<number | null>(null);
+  const [isFormationAnimating, setIsFormationAnimating] = useState(false);
+  const [isFormationFolded, setIsFormationFolded] = useState(false);
+  const [rotation, setRotation] = useState(0);
+  const [selectedProductivityMode, setSelectedProductivityMode] = useState<
+    "automation" | "setup"
+  >("automation");
+  const formationAnimationTimerRef = useRef<ReturnType<typeof setTimeout>[]>([]);
+  const formationAnimationFrameRef = useRef<number[]>([]);
 
-  useEffect(() => {
-    if (hoveredHack === null) return;
+  useEffect(
+    () => () => {
+      formationAnimationTimerRef.current.forEach(clearTimeout);
+      formationAnimationFrameRef.current.forEach(cancelAnimationFrame);
+    },
+    [],
+  );
 
-    const interval = window.setInterval(() => {
-      setActiveIndicators((current) =>
-        current.map((indicator, index) =>
-          index === hoveredHack ? (indicator % 3) + 1 : indicator,
-        ),
-      );
-    }, 3000);
+  const rotateHackUpward = (index: number) => {
+    if (index === activeHack || isFormationAnimating) {
+      return;
+    }
 
-    return () => window.clearInterval(interval);
-  }, [hoveredHack]);
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      setRotation(PRODUCTIVITY_HACK_UPWARD_ROTATIONS[index]);
+      setActiveHack(index);
+      return;
+    }
+
+    formationAnimationTimerRef.current.forEach(clearTimeout);
+    formationAnimationFrameRef.current.forEach(cancelAnimationFrame);
+    formationAnimationTimerRef.current = [];
+    formationAnimationFrameRef.current = [];
+
+    setIsFormationAnimating(true);
+    setIsFormationFolded(true);
+
+    const foldTimer = setTimeout(() => {
+      setRotation(PRODUCTIVITY_HACK_UPWARD_ROTATIONS[index]);
+      setActiveHack(index);
+
+      const swapFrame = requestAnimationFrame(() => {
+        const unfoldFrame = requestAnimationFrame(() => {
+          setIsFormationFolded(false);
+        });
+
+        formationAnimationFrameRef.current.push(unfoldFrame);
+      });
+
+      formationAnimationFrameRef.current.push(swapFrame);
+    }, 500);
+    const settleTimer = setTimeout(() => {
+      setIsFormationAnimating(false);
+      formationAnimationTimerRef.current = [];
+      formationAnimationFrameRef.current = [];
+    }, 1120);
+
+    formationAnimationTimerRef.current = [foldTimer, settleTimer];
+  };
+
+  const formationStyle: FormationStyle = {
+    "--productivity-hacks-rotation": `${rotation}deg`,
+  };
 
   return (
     <section className="productivity-hacks-section" id="productivity-hacks">
@@ -184,9 +263,47 @@ export function ProductivityHacks() {
           <p>Brief placeholder introduction for the productivity hacks section.</p>
         </div>
 
-        <div className="productivity-hacks-bench">
+        <div
+          aria-label="Choose Automation or Setup"
+          className="productivity-hacks-mode-selector"
+          data-selected-mode={selectedProductivityMode}
+          role="group"
+        >
+          <span
+            aria-hidden="true"
+            className="productivity-hacks-mode-selector-frame"
+          />
+          <button
+            aria-pressed={selectedProductivityMode === "automation"}
+            className={`productivity-hacks-mode-button is-automation${
+              selectedProductivityMode === "automation" ? " is-selected" : ""
+            }`}
+            onClick={() => setSelectedProductivityMode("automation")}
+            type="button"
+          >
+            <span>AUTOMATION</span>
+          </button>
+          <button
+            aria-pressed={selectedProductivityMode === "setup"}
+            className={`productivity-hacks-mode-button is-setup${
+              selectedProductivityMode === "setup" ? " is-selected" : ""
+            }`}
+            onClick={() => setSelectedProductivityMode("setup")}
+            type="button"
+          >
+            <span>SETUP</span>
+          </button>
+        </div>
+
+        <div
+          className={`productivity-hacks-bench${
+            isFormationAnimating ? " is-formation-animating" : ""
+          }${isFormationFolded ? " is-formation-folded" : ""}`}
+          style={formationStyle}
+        >
           <CircuitRibbon />
           <div className="productivity-hacks-mobile-spine" aria-hidden="true" />
+          <div className="productivity-hacks-center-rays" aria-hidden="true" />
 
           <svg
             aria-hidden="true"
@@ -209,10 +326,52 @@ export function ProductivityHacks() {
             </defs>
           </svg>
 
+          <div
+            aria-hidden="true"
+            className="productivity-hacks-figma-formation"
+          >
+            <img
+              alt=""
+              className="productivity-hacks-figma-layer productivity-hacks-figma-layer--jade"
+              height="241.364"
+              src="/images/productivity-hacks-figma-jade-inward-fade.svg?v=frame15-gradient-fill-sharp-tips-1"
+              width="234.944"
+            />
+            <img
+              alt=""
+              className="productivity-hacks-figma-layer productivity-hacks-figma-layer--solar"
+              height="262.889"
+              src="/images/productivity-hacks-figma-solar-inward-fade.svg?v=frame15-gradient-fill-sharp-tips-1"
+              width="265.102"
+            />
+            <img
+              alt=""
+              className="productivity-hacks-figma-layer productivity-hacks-figma-layer--violet"
+              height="262.889"
+              src="/images/productivity-hacks-figma-violet-inward-fade.svg?v=frame15-gradient-fill-sharp-tips-1"
+              width="265.102"
+            />
+            <img
+              alt=""
+              className="productivity-hacks-figma-layer productivity-hacks-figma-layer--electric-blue"
+              height="241.364"
+              src="/images/productivity-hacks-figma-electric-blue-inward-fade.svg?v=frame15-gradient-fill-sharp-tips-1"
+              width="234.944"
+            />
+            <img
+              alt=""
+              className="productivity-hacks-figma-layer productivity-hacks-figma-layer--tangerine"
+              height="184"
+              src="/images/productivity-hacks-figma-tangerine-inward-fade.svg?v=frame15-gradient-fill-sharp-tips-1"
+              width="194"
+            />
+            <span className="productivity-hacks-figma-registration-dot" />
+          </div>
+
           <div className="productivity-hacks-track">
             {productivityHacks.map((hack, index) => {
               const Icon = hack.icon;
-              const activeCopy = hack.copy[activeIndicators[index] - 1];
+              const activeCopy = hack.copy[0];
               const style: HackStyle = {
                 "--hack-color-core": hack.gradient[0],
                 "--hack-color-mid": hack.gradient[1],
@@ -267,87 +426,98 @@ export function ProductivityHacks() {
                     />
                   </svg>
 
-                  <div className="productivity-hack-icon" aria-hidden="true">
-                    <Icon strokeWidth={2.15} />
-                  </div>
+                  <div className="productivity-hack-content">
+                    <div className="productivity-hack-icon" aria-hidden="true">
+                      <Icon strokeWidth={2.15} />
+                    </div>
 
-                  <div className="productivity-hack-copy">
-                    <h3>{hack.title}</h3>
-                    <p
-                      aria-hidden="true"
-                      className="productivity-hack-height-sizer"
-                    >
-                      {renderHighlightedHackText(automationCardHeightReference)}
-                    </p>
-                    {activeCopy ? (
+                    <div className="productivity-hack-copy">
+                      <h3>{hack.title}</h3>
                       <p
-                        className={
-                          index === 0 && activeIndicators[index] === 3
-                            ? "is-productivity-compact-copy"
-                            : undefined
-                        }
+                        aria-hidden="true"
+                        className="productivity-hack-height-sizer"
                       >
-                        {activeCopy.split("\n").map((line) => {
-                          const [shortcut, action] = line.split(" = ");
-
-                          return (
-                            <span key={line}>
-                              {action ? (
-                                <>
-                                  <strong>{shortcut}</strong>
-                                  {" = "}
-                                  {renderHighlightedHackText(action)}
-                                </>
-                              ) : (
-                                renderHighlightedHackText(line)
-                              )}
-                            </span>
-                          );
-                        })}
+                        {renderHighlightedHackText(automationCardHeightReference)}
                       </p>
-                    ) : null}
-                  </div>
+                      {activeCopy ? (
+                        <p>
+                          {activeCopy.split("\n").map((line) => {
+                            const [shortcut, action] = line.split(" = ");
 
-                  <div className="productivity-hack-preview" aria-hidden="true">
-                    <span />
-                    <span />
-                  </div>
-
-                  <div
-                    aria-label={`${hack.title} version selector`}
-                    className="productivity-hack-indicators uiux-stack-squares is-merged"
-                    data-active-square={activeIndicators[index]}
-                    role="group"
-                  >
-                    {[1, 2, 3].map((version) => {
-                      const isActive = activeIndicators[index] === version;
-
-                      return (
-                        <button
-                          aria-label={`Show ${hack.title} version ${String.fromCharCode(64 + version)}`}
-                          aria-pressed={isActive}
-                          className={`uiux-stack-square${
-                            isActive ? " is-active" : ""
-                          }`}
-                          key={version}
-                          onClick={(event) => {
-                            event.stopPropagation();
-                            setActiveIndicators((current) =>
-                              current.map((indicator, cardIndex) =>
-                                cardIndex === index ? version : indicator,
-                              ),
+                            return (
+                              <span key={line}>
+                                {action ? (
+                                  <>
+                                    <strong>{shortcut}</strong>
+                                    {" = "}
+                                    {renderHighlightedHackText(action)}
+                                  </>
+                                ) : (
+                                  renderHighlightedHackText(line)
+                                )}
+                              </span>
                             );
-                          }}
-                          onPointerDown={(event) => event.stopPropagation()}
-                          type="button"
-                        />
-                      );
-                    })}
+                          })}
+                        </p>
+                      ) : null}
+                    </div>
+
+                    <div className="productivity-hack-preview" aria-hidden="true">
+                      <span />
+                      <span />
+                    </div>
                   </div>
                 </article>
               );
             })}
           </div>
+
+          <svg
+            aria-label="Rotate a productivity triangle base upward"
+            className="productivity-hacks-hit-areas"
+            preserveAspectRatio="none"
+            role="group"
+            viewBox="0 0 303 290"
+          >
+            {PRODUCTIVITY_HACK_HIT_AREAS.map((area, index) => {
+              const hack = productivityHacks[index];
+              const isActive = activeHack === index;
+
+              return (
+                <path
+                  aria-label={
+                    isActive
+                      ? `${hack.title} triangle base faces upward`
+                      : `Rotate the ${hack.title} triangle base upward`
+                  }
+                  aria-pressed={isActive}
+                  className="productivity-hacks-hit-area"
+                  d={area.d}
+                  data-hack-index={String(index + 1).padStart(2, "0")}
+                  key={hack.title}
+                  onClick={() => rotateHackUpward(index)}
+                  onKeyDown={(event) => {
+                    if (event.key === "Enter" || event.key === " ") {
+                      event.preventDefault();
+                      rotateHackUpward(index);
+                    }
+                  }}
+                  onPointerDown={(event) => {
+                    event.preventDefault();
+                  }}
+                  onPointerEnter={(event) => {
+                    if (event.pointerType !== "touch") setHoveredHack(index);
+                  }}
+                  onPointerLeave={(event) => {
+                    if (event.pointerType !== "touch") setHoveredHack(null);
+                  }}
+                  role="button"
+                  tabIndex={0}
+                  transform={area.transform}
+                />
+              );
+            })}
+          </svg>
         </div>
       </div>
     </section>
