@@ -6577,7 +6577,7 @@ button.uiux-decision-number:focus-visible {
 .workspace-panel > .timeline {
   display: flex;
   flex-direction: column;
-  gap: 12.5px;
+  gap: 22.5px;
   justify-content: flex-start;
 }
 
@@ -6683,6 +6683,45 @@ button.uiux-decision-number:focus-visible {
   font-weight: 900;
   grid-column: 1;
   grid-row: 1;
+}
+
+.timeline-item[data-workspace-tone="purple"] {
+  --workspace-gradient-start: #dd4bfd;
+  --workspace-gradient-end: #7a1fdd;
+  --workspace-label-lift: 8px;
+}
+
+.timeline-item[data-workspace-tone="blue"] {
+  --workspace-gradient-start: #01abfd;
+  --workspace-gradient-end: #0071f3;
+  --workspace-label-lift: 5px;
+}
+
+.timeline-item[data-workspace-tone="green"] {
+  --workspace-gradient-start: #33f150;
+  --workspace-gradient-end: #099341;
+  --workspace-label-lift: 8px;
+}
+
+.timeline-item[data-workspace-tone="orange"] {
+  --workspace-gradient-start: #ffdf02;
+  --workspace-gradient-end: #ed5d07;
+  --workspace-label-lift: 5px;
+}
+
+.timeline-item[data-workspace-tone]
+  .workspace-eyebrow-label-top,
+.timeline-item[data-workspace-tone]
+  .workspace-eyebrow-label-bottom {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(
+    135deg,
+    var(--workspace-gradient-start),
+    var(--workspace-gradient-end)
+  );
+  background-clip: text;
+  color: transparent;
 }
 
 .timeline-item .workspace-eyebrow > svg {
@@ -7308,7 +7347,7 @@ section.aboutdev-hero {
     #000 28px,
     #000 100%
   );
-  opacity: 0;
+  opacity: 1;
   pointer-events: none;
   position: absolute;
   top: 1px;
@@ -8236,6 +8275,28 @@ section.aboutdev-hero {
   display: flex;
   flex-direction: column;
   width: 100%;
+}
+
+.aboutdev-workflow-option-label {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  align-self: center;
+  background-image: linear-gradient(
+    135deg,
+    var(--workflow-image-gradient-core) 0%,
+    var(--workflow-image-gradient-mid) 100%
+  );
+  background-clip: text;
+  color: transparent;
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1;
+  margin-top: 7px;
+  max-width: 100%;
+  min-height: 12px;
+  text-align: left;
+  text-transform: uppercase;
+  width: var(--workflow-placeholder-width);
 }
 
 .aboutdev-workflow-image-placeholder {
@@ -14509,6 +14570,23 @@ section.project-hero {
   margin-right: 0;
   position: relative;
   transform: translateX(-50%);
+}
+
+.worklog-section
+  .worklog-layout
+  .timeline-item[data-workspace-tone]
+  > .workspace-eyebrow
+  > .workspace-eyebrow-label {
+  transform: translateY(calc(-1 * var(--workspace-label-lift)));
+}
+
+@media (max-width: 980px) {
+  .worklog-layout
+    .timeline-item-software.timeline-item-design
+    > .workspace-eyebrow,
+  .worklog-layout .timeline-item-software.timeline-item-design > p {
+    transform: translateY(12px);
+  }
 }
 
 @media (max-width: 980px) {

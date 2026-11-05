@@ -552,7 +552,24 @@ const workstationSpecs = [
 const worklogItems = [
   {
     label: "HARD WARE",
-    icon: <MonitorSmartphone aria-hidden />,
+    icon: (
+      <MonitorSmartphone aria-hidden stroke="url(#workspace-gradient-purple)">
+        <defs>
+          <linearGradient
+            id="workspace-gradient-purple"
+            gradientUnits="userSpaceOnUse"
+            x1="0"
+            y1="0"
+            x2="24"
+            y2="24"
+          >
+            <stop offset="0%" stopColor="#dd4bfd" />
+            <stop offset="100%" stopColor="#7a1fdd" />
+          </linearGradient>
+        </defs>
+      </MonitorSmartphone>
+    ),
+    tone: "purple",
     text: (
       <>
         <strong>Primary Workstation</strong>
@@ -581,7 +598,24 @@ const worklogItems = [
   },
   {
     label: "QA DEVS",
-    icon: <Smartphone aria-hidden />,
+    icon: (
+      <Smartphone aria-hidden stroke="url(#workspace-gradient-blue)">
+        <defs>
+          <linearGradient
+            id="workspace-gradient-blue"
+            gradientUnits="userSpaceOnUse"
+            x1="0"
+            y1="0"
+            x2="24"
+            y2="24"
+          >
+            <stop offset="0%" stopColor="#01abfd" />
+            <stop offset="100%" stopColor="#0071f3" />
+          </linearGradient>
+        </defs>
+      </Smartphone>
+    ),
+    tone: "blue",
     text: (
       <>
         <span className="workspace-qa-device-groups">
@@ -611,7 +645,24 @@ const worklogItems = [
   },
   {
     label: "DEV / CODING",
-    icon: <CodeXml aria-hidden />,
+    icon: (
+      <CodeXml aria-hidden stroke="url(#workspace-gradient-green)">
+        <defs>
+          <linearGradient
+            id="workspace-gradient-green"
+            gradientUnits="userSpaceOnUse"
+            x1="0"
+            y1="0"
+            x2="24"
+            y2="24"
+          >
+            <stop offset="0%" stopColor="#33f150" />
+            <stop offset="100%" stopColor="#099341" />
+          </linearGradient>
+        </defs>
+      </CodeXml>
+    ),
+    tone: "green",
     text: (
       <>
         <strong>Development &amp; AI</strong>
@@ -637,7 +688,24 @@ const worklogItems = [
   },
   {
     label: "ART / DESIGN",
-    icon: <Palette aria-hidden />,
+    icon: (
+      <Palette aria-hidden stroke="url(#workspace-gradient-orange)">
+        <defs>
+          <linearGradient
+            id="workspace-gradient-orange"
+            gradientUnits="userSpaceOnUse"
+            x1="0"
+            y1="0"
+            x2="24"
+            y2="24"
+          >
+            <stop offset="0%" stopColor="#ffdf02" />
+            <stop offset="100%" stopColor="#ed5d07" />
+          </linearGradient>
+        </defs>
+      </Palette>
+    ),
+    tone: "orange",
     text: (
       <>
         <strong>Visual Design</strong>
@@ -682,7 +750,7 @@ const timelineItems = [
         { alt: "Colleagues analyzing product data on a laptop", src: "/images/aboutdev/workflow/01-industry-research-c.jpg" },
       ],
     ],
-    points: ["Discuss", "Brainstorm", "BG Research"],
+    points: ["Industry Analysis", "Benchmarks", "BG Research"],
     tone: "vision",
     title: "Research",
   },
@@ -704,7 +772,7 @@ const timelineItems = [
         { alt: "Source code forming the foundation of an application", src: "/images/aboutdev/workflow/02-scaffold-c.jpg" },
       ],
     ],
-    points: ["Wireframing", "Mockups", "Scaffold"],
+    points: ["Discuss", "Prototype", "Scaffold"],
     tone: "integrity",
     title: "Plan",
   },
@@ -912,6 +980,7 @@ function PhonePreview({
       alt={screenImageAlt ?? `${title} app screen`}
       className="phone-framed-image"
       fill
+      priority
       sizes="245px"
       src={screenImageSrc}
     />
@@ -968,6 +1037,7 @@ function TabletPreview() {
         alt="Cinerific app preview"
         className="tablet-framed-image"
         fill
+        priority
         sizes="456px"
         src="/images/cinerific-hero-tablet-tab-s7-uniform.png"
       />
@@ -1374,6 +1444,31 @@ export default function Home() {
                           <WorkflowImageSelector
                             images={item.images[pointIndex]}
                             label={`${item.title}: ${point}`}
+                            optionLabels={
+                              point === "Industry Analysis"
+                                ? [
+                                    "Current Trends",
+                                    "Best Practices",
+                                    "Competitive Advantage",
+                                  ]
+                                : point === "Benchmarks"
+                                ? ["Baselines", "Targets", "Success Metrics"]
+                                : point === "Discuss"
+                                ? ["Vision", "Expectations", "Time Table"]
+                                : point === "Prototype"
+                                ? ["Mockups", "Wireframing", "Interactive Demo"]
+                                : point === "Scaffold"
+                                ? ["Scoping", "Revision", "Log Generation"]
+                                : point === "Build"
+                                ? ["Architecture", "Implementation", "Integration"]
+                                : point === "Handoff"
+                                ? ["Documentation", "Knowledge Transfer", "Ownership"]
+                                : point === "Learn"
+                                ? ["Findings", "Adaptation", "Improvements"]
+                                : point === "Upkeep"
+                                ? ["Maintenance", "Optimization", "Support"]
+                                : undefined
+                            }
                           />
                         </li>
                       ))}
@@ -1427,6 +1522,7 @@ export default function Home() {
                 {panel.items.map((item) => (
                   <div
                     key={item.label}
+                    data-workspace-tone={item.tone}
                     className={`timeline-item${
                       panel.className === "workspace-panel-tools"
                         ? " timeline-item-software"

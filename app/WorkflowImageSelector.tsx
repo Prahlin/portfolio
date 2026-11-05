@@ -16,9 +16,11 @@ const WORKFLOW_IMAGE_FADE_MS = 1080;
 export function WorkflowImageSelector({
   images,
   label,
+  optionLabels,
 }: {
   images: readonly WorkflowImage[];
   label: string;
+  optionLabels?: readonly (string | null)[];
 }) {
   const [activeOption, setActiveOption] = useState<WorkflowImageOption>(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(false);
@@ -103,6 +105,14 @@ export function WorkflowImageSelector({
           />
         ))}
       </span>
+      {optionLabels ? (
+        <span
+          aria-hidden={!optionLabels[activeOption]}
+          className="aboutdev-workflow-option-label"
+        >
+          {optionLabels[activeOption] ?? "\u00a0"}
+        </span>
+      ) : null}
       <div
         aria-label={`${label} image selector`}
         className="uiux-stack-squares is-merged aboutdev-workflow-image-selector"
