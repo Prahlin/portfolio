@@ -542,11 +542,11 @@ function HeroBridgeQuote({ className }: { className: string }) {
 }
 
 const workstationSpecs = [
-  "MacBook Air",
-  "15-inch",
-  "2025",
-  "M4 · 10-core CPU (4P + 6E)",
-  "16GB unified memory · 256GB SSD",
+  "MacBook Pro",
+  "16-inch",
+  "2023",
+  "Apple M3 Pro chip",
+  "36GB unified memory · 512GB SSD",
 ];
 
 const worklogItems = [
@@ -586,7 +586,7 @@ const worklogItems = [
         <span className="workspace-device-secondary-group">
           <strong>Secondary Peripherals</strong>
           <span className="workspace-device-list">
-            <span>2× WCV 15.6&quot; · 1080p IPS</span>
+            <span>UPERFECT 23.8&quot; · 120Hz · 1080p</span>
             <span className="workspace-device-platform-break">
               WD My Book · 3TB
             </span>
