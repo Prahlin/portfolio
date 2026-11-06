@@ -2,21 +2,16 @@
 
 import type { CSSProperties } from "react";
 import { useEffect, useRef, useState } from "react";
-import {
-  Blocks,
-  Cpu,
-  Gauge,
-  Terminal,
-  Wrench,
-  type LucideIcon,
-} from "lucide-react";
+import { Cpu, Wrench } from "lucide-react";
 
 type ProductivityHack = {
   copy: readonly [string, string, string];
   gradient: readonly [string, string, string];
-  icon: LucideIcon;
   title: string;
 };
+
+type ProductivityMode = "automation" | "setup";
+type CameraRotationDirection = "clockwise" | "counterclockwise";
 
 type HackStyle = CSSProperties & {
   "--hack-color-core": string;
@@ -28,7 +23,17 @@ type FormationStyle = CSSProperties & {
   "--productivity-hacks-rotation": string;
 };
 
+type ApertureStyle = CSSProperties & {
+  "--productivity-aperture-core": string;
+  "--productivity-aperture-edge": string;
+  "--productivity-aperture-mid": string;
+};
+
 const PRODUCTIVITY_HACK_UPWARD_ROTATIONS = [-144, 144, 72, 0, -72] as const;
+
+function normalizeProductivityAngle(angle: number) {
+  return ((angle + 180) % 360 + 360) % 360 - 180;
+}
 
 const PRODUCTIVITY_HACK_HIT_AREAS = [
   {
@@ -68,7 +73,6 @@ const productivityHacks: readonly ProductivityHack[] = [
       "Cmd + 1 = Read Repo\nCmd + 2 = Commit Message\nCmd + 3 = Generate Worklog",
     ],
     gradient: ["#dd4bfd", "#7a1fdd", "#6816ce"],
-    icon: Cpu,
     title: "Shortcuts",
   },
   {
@@ -78,7 +82,6 @@ const productivityHacks: readonly ProductivityHack[] = [
       "",
     ],
     gradient: ["#ffd102", "#e8aa01", "#cb7d00"],
-    icon: Wrench,
     title: "Automation",
   },
   {
@@ -88,19 +91,16 @@ const productivityHacks: readonly ProductivityHack[] = [
       "Multiple Monitors eliminates the occurence of workspace clutter.",
     ],
     gradient: ["#01abfd", "#0071f3", "#024dd0"],
-    icon: Terminal,
     title: "Multi-",
   },
   {
     copy: ["", "", ""],
     gradient: ["#ff9a24", "#ed5d07", "#cc330f"],
-    icon: Blocks,
     title: "System",
   },
   {
     copy: ["", "", ""],
     gradient: ["#33f150", "#099341", "#026946"],
-    icon: Gauge,
     title: "Tuning",
   },
 ] as const;
@@ -191,6 +191,37 @@ function ProductivityDepthMesh() {
   );
 }
 
+function ProductivityApertureMedallion({
+  hack,
+  mode,
+}: {
+  hack: ProductivityHack;
+  mode: ProductivityMode;
+}) {
+  return (
+    <div
+      aria-hidden="true"
+      className="productivity-hacks-aperture-medallion"
+      data-active-hack={hack.title}
+      data-selected-mode={mode}
+    >
+      <span className="productivity-hacks-aperture-ring is-outer" />
+      <span className="productivity-hacks-aperture-ring is-inner" />
+      <span className="productivity-hacks-aperture-iris" />
+      <span className="productivity-hacks-aperture-symbol">
+        <Wrench
+          className="productivity-hacks-aperture-mode-icon is-automation"
+          strokeWidth={1.9}
+        />
+        <Cpu
+          className="productivity-hacks-aperture-mode-icon is-setup"
+          strokeWidth={1.9}
+        />
+      </span>
+    </div>
+  );
+}
+
 function CircuitRibbon() {
   return (
     <svg
@@ -259,9 +290,10 @@ export function ProductivityHacks() {
   const [isFormationAnimating, setIsFormationAnimating] = useState(false);
   const [isFormationFolded, setIsFormationFolded] = useState(false);
   const [rotation, setRotation] = useState(0);
-  const [selectedProductivityMode, setSelectedProductivityMode] = useState<
-    "automation" | "setup"
-  >("automation");
+  const [cameraRotationDirection, setCameraRotationDirection] =
+    useState<CameraRotationDirection>("clockwise");
+  const [selectedProductivityMode, setSelectedProductivityMode] =
+    useState<ProductivityMode>("automation");
   const formationAnimationTimerRef = useRef<ReturnType<typeof setTimeout>[]>([]);
   const formationAnimationFrameRef = useRef<number[]>([]);
 
@@ -276,6 +308,16 @@ export function ProductivityHacks() {
   const rotateHackUpward = (index: number) => {
     if (index === activeHack || isFormationAnimating) {
       return;
+    }
+
+    const clickedTriangleAngle = normalizeProductivityAngle(
+      rotation - PRODUCTIVITY_HACK_UPWARD_ROTATIONS[index],
+    );
+
+    if (clickedTriangleAngle < 0) {
+      setCameraRotationDirection("counterclockwise");
+    } else if (clickedTriangleAngle > 0) {
+      setCameraRotationDirection("clockwise");
     }
 
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
@@ -318,6 +360,12 @@ export function ProductivityHacks() {
   const formationStyle: FormationStyle = {
     "--productivity-hacks-rotation": `${rotation}deg`,
   };
+  const activeProductivityHack = productivityHacks[activeHack ?? 3];
+  const activeProductivityStyle: ApertureStyle = {
+    "--productivity-aperture-core": activeProductivityHack.gradient[0],
+    "--productivity-aperture-mid": activeProductivityHack.gradient[1],
+    "--productivity-aperture-edge": activeProductivityHack.gradient[2],
+  };
 
   return (
     <section className="productivity-hacks-section" id="productivity-hacks">
@@ -332,15 +380,65 @@ export function ProductivityHacks() {
 
         <div
           aria-label="Choose Automation or Setup"
-          className="productivity-hacks-mode-selector"
+          className={`productivity-hacks-mode-selector${
+            isFormationAnimating ? " is-formation-animating" : ""
+          }${isFormationFolded ? " is-formation-folded" : ""}`}
+          data-camera-rotation-direction={cameraRotationDirection}
           data-selected-mode={selectedProductivityMode}
           role="group"
+          style={activeProductivityStyle}
         >
+          <svg
+            aria-hidden="true"
+            className="productivity-hacks-inactive-text-filter-defs"
+          >
+            <defs>
+              <filter
+                colorInterpolationFilters="sRGB"
+                height="140%"
+                id="productivity-hacks-inactive-text-outline"
+                width="140%"
+                x="-20%"
+                y="-20%"
+              >
+                <feComponentTransfer in="SourceAlpha" result="solid-alpha">
+                  <feFuncA intercept="0" slope="1000" type="linear" />
+                </feComponentTransfer>
+                <feMorphology
+                  in="solid-alpha"
+                  operator="dilate"
+                  radius="1"
+                  result="expanded-alpha"
+                />
+                <feComposite
+                  in="expanded-alpha"
+                  in2="solid-alpha"
+                  operator="out"
+                  result="outline-alpha"
+                />
+                <feFlood
+                  floodColor="#c6ffd9"
+                  floodOpacity="0.5"
+                  result="outline-color"
+                />
+                <feComposite
+                  in="outline-color"
+                  in2="outline-alpha"
+                  operator="in"
+                />
+              </filter>
+            </defs>
+          </svg>
           <span
             aria-hidden="true"
             className="productivity-hacks-mode-selector-frame"
           />
+          <ProductivityApertureMedallion
+            hack={activeProductivityHack}
+            mode={selectedProductivityMode}
+          />
           <button
+            aria-label="Automation"
             aria-pressed={selectedProductivityMode === "automation"}
             className={`productivity-hacks-mode-button is-automation${
               selectedProductivityMode === "automation" ? " is-selected" : ""
@@ -348,9 +446,14 @@ export function ProductivityHacks() {
             onClick={() => setSelectedProductivityMode("automation")}
             type="button"
           >
-            <span>AUTOMATION</span>
+            <span aria-hidden="true">
+              AUTO-
+              <br />
+              MATION
+            </span>
           </button>
           <button
+            aria-label="Office setup"
             aria-pressed={selectedProductivityMode === "setup"}
             className={`productivity-hacks-mode-button is-setup${
               selectedProductivityMode === "setup" ? " is-selected" : ""
@@ -358,7 +461,11 @@ export function ProductivityHacks() {
             onClick={() => setSelectedProductivityMode("setup")}
             type="button"
           >
-            <span>SETUP</span>
+            <span aria-hidden="true">
+              OFFICE
+              <br />
+              SETUP
+            </span>
           </button>
         </div>
 
@@ -438,7 +545,6 @@ export function ProductivityHacks() {
 
           <div className="productivity-hacks-track">
             {productivityHacks.map((hack, index) => {
-              const Icon = hack.icon;
               const activeCopy = hack.copy[0];
               const style: HackStyle = {
                 "--hack-color-core": hack.gradient[0],
@@ -495,8 +601,8 @@ export function ProductivityHacks() {
                   </svg>
 
                   <div className="productivity-hack-content">
-                    <div className="productivity-hack-icon" aria-hidden="true">
-                      <Icon strokeWidth={2.15} />
+                    <div className="productivity-hack-number" aria-hidden="true">
+                      {String(index + 1).padStart(2, "0")}
                     </div>
 
                     <div className="productivity-hack-copy">
@@ -528,11 +634,6 @@ export function ProductivityHacks() {
                           })}
                         </p>
                       ) : null}
-                    </div>
-
-                    <div className="productivity-hack-preview" aria-hidden="true">
-                      <span />
-                      <span />
                     </div>
                   </div>
                 </article>
