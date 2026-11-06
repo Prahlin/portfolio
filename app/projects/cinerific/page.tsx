@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { ArrowLeft, ArrowRight, Braces, Mail } from "lucide-react";
 
+import { LandingNavFrame } from "../../LandingNavFrame";
+import { MainNavBar } from "../../PortfolioSections";
 import ExpandableFlowStacks from "./ExpandableFlowStacks";
 import ProductFlowSwitcher from "./ProductFlowSwitcher";
 
@@ -15,6 +17,14 @@ const metadataItems = [
   "Stripe payments",
   "Node.js backend",
   "Android QA + release prep",
+];
+
+const cinerificNavItems = [
+  { href: "/", isBrand: true, label: "Prahl.dev" },
+  { isSpacer: true, label: "" },
+  { href: "#overview", label: "Overview" },
+  { href: "#product-flow", label: "Flow" },
+  { href: "#contact", label: "Contact" },
 ];
 
 const playStoreUrl =
@@ -544,27 +554,48 @@ function CaseTablet({
 export default function CinerificCaseStudy() {
   return (
     <main className="project-page cinerific-case">
+      <LandingNavFrame>
+        <div className="site-shell">
+          <MainNavBar
+            ariaLabel="Cinerific case study navigation"
+            items={cinerificNavItems}
+          />
+        </div>
+      </LandingNavFrame>
+
       <section className="project-hero" id="top">
         <div className="site-shell">
-          <header className="nav-bar project-nav">
-            <a className="brand" href="/" aria-label="Prahl.dev home">
-              <span>P</span>
-              <strong>Prahl.dev</strong>
+          <nav
+            aria-label="Browse adjacent case studies"
+            className="project-case-study-nav"
+          >
+            <a
+              aria-label="View previous case study: Credit King"
+              className="project-case-study-nav-link is-previous"
+              href="/#credit-king"
+            >
+              <ArrowLeft aria-hidden />
+              <span>
+                <span className="project-case-study-nav-direction">
+                  PREVIOUS
+                </span>{" "}
+                Case Study
+              </span>
             </a>
-
-            <nav aria-label="Cinerific case study navigation">
-              <a href="#overview">Overview</a>
-              <a href="#product-flow">Flow</a>
-              <a href="#contact">Contact</a>
-            </nav>
-          </header>
-
+            <a
+              aria-label="Open next case study: Alla Vostra"
+              className="project-case-study-nav-link is-next"
+              href="/projects/alla-vostra"
+            >
+              <span>
+                <span className="project-case-study-nav-direction">NEXT</span>{" "}
+                Case Study
+              </span>
+              <ArrowRight aria-hidden />
+            </a>
+          </nav>
           <div className="project-hero-grid">
             <div className="project-hero-copy">
-              <a className="project-back-link" href="/#case-studies">
-                <ArrowLeft aria-hidden size={16} />
-                Case studies
-              </a>
               <p className="eyebrow">Mobile Commerce Case Study</p>
               <h1>Cinerific</h1>
               <p className="project-subtitle">

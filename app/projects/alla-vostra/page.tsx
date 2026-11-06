@@ -3,6 +3,7 @@ import Image from "next/image";
 import type { CSSProperties } from "react";
 import { ArrowLeft, ArrowRight, Mail } from "lucide-react";
 
+import { LandingNavFrame } from "../../LandingNavFrame";
 import { MainNavBar } from "../../PortfolioSections";
 import { ProofStats } from "../../ProofStats";
 import HeroProofBottomAligner from "./HeroProofBottomAligner";
@@ -29,6 +30,7 @@ const metadataItems = [
 
 const allaVostraNavItems = [
   { href: "/", isBrand: true, label: "Prahl.dev" },
+  { isSpacer: true, label: "" },
   { href: "#overview", label: "Overview" },
   { href: "#interactive-demo", label: "Demo" },
   { href: "#scope", label: "Scope" },
@@ -1023,21 +1025,48 @@ function CasePhone({
 export default function AllaVostraCaseStudy() {
   return (
     <main className="project-page alla-vostra-case">
+      <LandingNavFrame>
+        <div className="site-shell">
+          <MainNavBar
+            ariaLabel="Alla Vostra case study navigation"
+            items={allaVostraNavItems}
+          />
+        </div>
+      </LandingNavFrame>
+
       <section className="project-hero" id="top">
         <div className="site-shell">
-          <div className="project-nav-frame">
-            <MainNavBar
-              ariaLabel="Alla Vostra case study navigation"
-              items={allaVostraNavItems}
-            />
-          </div>
-
+          <nav
+            aria-label="Browse adjacent case studies"
+            className="project-case-study-nav"
+          >
+            <a
+              aria-label="Open previous case study: Cinerific"
+              className="project-case-study-nav-link is-previous"
+              href="/projects/cinerific"
+            >
+              <ArrowLeft aria-hidden />
+              <span>
+                <span className="project-case-study-nav-direction">
+                  PREVIOUS
+                </span>{" "}
+                Case Study
+              </span>
+            </a>
+            <a
+              aria-label="View next case study: Credit King"
+              className="project-case-study-nav-link is-next"
+              href="/#credit-king"
+            >
+              <span>
+                <span className="project-case-study-nav-direction">NEXT</span>{" "}
+                Case Study
+              </span>
+              <ArrowRight aria-hidden />
+            </a>
+          </nav>
           <div className="project-hero-grid">
             <div className="project-hero-copy">
-              <a className="project-back-link" href="/#case-studies">
-                <ArrowLeft aria-hidden size={16} />
-                Case studies
-              </a>
               <p className="eyebrow">Mobile Commerce Case Study</p>
               <h1>Alla Vostra</h1>
               <p className="project-subtitle">

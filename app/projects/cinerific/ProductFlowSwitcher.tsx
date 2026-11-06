@@ -1216,6 +1216,47 @@ export default function ProductFlowSwitcher({
           className="product-flow-nav"
           ref={navRef}
         >
+          <svg
+            aria-hidden="true"
+            className="product-flow-nav-text-filter-defs"
+          >
+            <defs>
+              <filter
+                colorInterpolationFilters="sRGB"
+                height="140%"
+                id="product-flow-inactive-text-outline"
+                width="140%"
+                x="-20%"
+                y="-20%"
+              >
+                <feComponentTransfer in="SourceAlpha" result="solid-alpha">
+                  <feFuncA intercept="0" slope="1000" type="linear" />
+                </feComponentTransfer>
+                <feMorphology
+                  in="solid-alpha"
+                  operator="dilate"
+                  radius="1"
+                  result="expanded-alpha"
+                />
+                <feComposite
+                  in="expanded-alpha"
+                  in2="solid-alpha"
+                  operator="out"
+                  result="outline-alpha"
+                />
+                <feFlood
+                  floodColor="#c6ffd9"
+                  floodOpacity="0.5"
+                  result="outline-color"
+                />
+                <feComposite
+                  in="outline-color"
+                  in2="outline-alpha"
+                  operator="in"
+                />
+              </filter>
+            </defs>
+          </svg>
           <button
             aria-pressed={isUiFoundations}
             className={`button ${
@@ -1224,7 +1265,7 @@ export default function ProductFlowSwitcher({
             onClick={() => switchView("ui")}
             type="button"
           >
-            UI Foundations
+            <span className="product-flow-nav-label">UI Foundations</span>
           </button>
           <button
             aria-pressed={!isUiFoundations}
@@ -1234,7 +1275,7 @@ export default function ProductFlowSwitcher({
             onClick={() => switchView("ux")}
             type="button"
           >
-            UX Product Flow
+            <span className="product-flow-nav-label">UX Product Flow</span>
           </button>
         </nav>
       </div>
