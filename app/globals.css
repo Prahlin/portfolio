@@ -300,6 +300,11 @@ img[data-screenshot-preview],
   background: linear-gradient(transparent, var(--bg));
 }
 
+/* Begin the landing-page handoff inside the proof area, slightly earlier. */
+.landing-page > .hero::after {
+  height: 42%;
+}
+
 .articles-page {
   min-height: 0;
   overflow-x: clip;
@@ -2172,6 +2177,49 @@ h3 {
 
 section:not(.hero) {
   padding: 88px 0;
+}
+
+/*
+ * Reversible Featured Case Studies underlay experiment: continue the landing
+ * page grid over the quieter, near-black surface used farther down the page.
+ */
+.landing-page > .case-section {
+  background:
+    linear-gradient(rgba(67, 255, 146, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(67, 255, 146, 0.035) 1px, transparent 1px),
+    linear-gradient(
+      180deg,
+      rgba(8, 43, 25, 0.72) 0,
+      rgba(6, 31, 19, 0.52) 82px,
+      rgba(4, 20, 12, 0.3) 172px,
+      rgba(3, 14, 8, 0.14) 252px,
+      transparent 325px
+    ),
+    linear-gradient(135deg, #020403 0%, #050b08 38%, #010302 100%);
+  background-size: 48px 48px, 48px 48px, auto, auto;
+  border-top: 1px solid rgba(198, 255, 217, 0.22);
+  padding-top: clamp(128px, 9vw, 154px);
+  position: relative;
+}
+
+.landing-page > .case-section::before {
+  background: #020403;
+  border: 1px solid rgba(198, 255, 217, 0.24);
+  border-radius: 999px;
+  color: rgba(198, 255, 217, 0.78);
+  content: "Explore";
+  font-size: 10px;
+  font-weight: 850;
+  left: 50%;
+  letter-spacing: 0.18em;
+  line-height: 1;
+  padding: 8px 15px 8px 17px;
+  position: absolute;
+  text-transform: uppercase;
+  top: 0;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+  z-index: 3;
 }
 
 .section-heading {
@@ -5722,6 +5770,31 @@ button.uiux-decision-number:focus-visible {
   border: 0;
   color: color-mix(in srgb, var(--case-accent-core) 60%, #f4fff7);
   font-size: 14.4px;
+}
+
+.case-grid-featured > .case-card .case-card-title-platform-list {
+  --case-platform-heading-column-width: max-content;
+}
+
+.case-grid-featured
+  > .case-card
+  .case-card-title-platform-heading-platform {
+  justify-content: flex-start;
+  justify-self: start;
+  min-width: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.case-grid-featured
+  > .case-card
+  .case-card-title-platform-heading-factor {
+  justify-content: center;
+  justify-self: stretch;
+  min-width: 0;
+  padding-left: 0;
+  padding-right: 0;
+  width: auto;
 }
 
 .case-grid-featured > .case-card .case-card-title-platform-slot {

@@ -305,7 +305,10 @@ function getPlatformDividerGridColumn(index: number) {
 }
 
 function getPlatformListGridTemplate(columnCount: number) {
-  const columns = ["92px", "minmax(8px, 1fr)"];
+  const columns = [
+    "var(--case-platform-heading-column-width, 92px)",
+    "minmax(8px, 1fr)",
+  ];
 
   Array.from({ length: columnCount }).forEach((_, index) => {
     columns.push("max-content");
