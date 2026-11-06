@@ -124,6 +124,73 @@ function renderHighlightedHackText(text: string) {
   );
 }
 
+const PRODUCTIVITY_MESH_SECTORS = [
+  { angle: -90, color: "#ff7a1a", id: "tangerine" },
+  { angle: -18, color: "#18dc78", id: "jade" },
+  { angle: 54, color: "#c94cf4", id: "violet" },
+  { angle: 126, color: "#f4cf20", id: "solar" },
+  { angle: 198, color: "#18aef0", id: "electric-blue" },
+] as const;
+
+const PRODUCTIVITY_MESH_RAY_OFFSETS = [-28, -18, -9, 0, 9, 18, 28] as const;
+const PRODUCTIVITY_MESH_CROSS_RADII = [8, 13, 20, 30, 44, 62, 86, 112] as const;
+
+function productivityMeshPoint(angle: number, radius: number) {
+  const radians = (angle * Math.PI) / 180;
+
+  return {
+    x: (151.5 + Math.cos(radians) * radius).toFixed(3),
+    y: (145 + Math.sin(radians) * radius).toFixed(3),
+  };
+}
+
+function ProductivityDepthMesh() {
+  return (
+    <svg
+      aria-hidden="true"
+      className="productivity-hacks-perspective-mesh"
+      preserveAspectRatio="none"
+      viewBox="0 0 303 290"
+    >
+      {PRODUCTIVITY_MESH_SECTORS.map((sector) => (
+        <g key={sector.id} stroke={sector.color}>
+          {PRODUCTIVITY_MESH_RAY_OFFSETS.map((offset) => {
+            const innerPoint = productivityMeshPoint(sector.angle + offset, 6);
+            const outerPoint = productivityMeshPoint(sector.angle + offset, 112);
+
+            return (
+              <line
+                className="productivity-hacks-perspective-mesh-ray"
+                key={`${sector.id}-ray-${offset}`}
+                x1={innerPoint.x}
+                x2={outerPoint.x}
+                y1={innerPoint.y}
+                y2={outerPoint.y}
+              />
+            );
+          })}
+
+          {PRODUCTIVITY_MESH_CROSS_RADII.map((radius) => {
+            const startPoint = productivityMeshPoint(sector.angle - 30, radius);
+            const endPoint = productivityMeshPoint(sector.angle + 30, radius);
+
+            return (
+              <line
+                className="productivity-hacks-perspective-mesh-crossline"
+                key={`${sector.id}-cross-${radius}`}
+                x1={startPoint.x}
+                x2={endPoint.x}
+                y1={startPoint.y}
+                y2={endPoint.y}
+              />
+            );
+          })}
+        </g>
+      ))}
+    </svg>
+  );
+}
+
 function CircuitRibbon() {
   return (
     <svg
@@ -366,6 +433,7 @@ export function ProductivityHacks() {
               width="194"
             />
             <span className="productivity-hacks-figma-registration-dot" />
+            <ProductivityDepthMesh />
           </div>
 
           <div className="productivity-hacks-track">

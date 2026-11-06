@@ -9950,6 +9950,10 @@ section.aboutdev-hero {
     --cootie-axis: 72deg;
     --cootie-axis-inverse: -72deg;
     --cootie-origin: 17.833% 60.174%;
+    --fold-highlight-x: 2px;
+    --fold-highlight-y: -1px;
+    --fold-shadow-x: -7px;
+    --fold-shadow-y: 5px;
     left: 38.9554%;
     top: -1.0267%;
     width: 77.5393%;
@@ -9959,6 +9963,10 @@ section.aboutdev-hero {
     --cootie-axis: 36deg;
     --cootie-axis-inverse: -36deg;
     --cootie-origin: 67.619% 25.545%;
+    --fold-highlight-x: -2px;
+    --fold-highlight-y: 1px;
+    --fold-shadow-x: 7px;
+    --fold-shadow-y: -5px;
     left: -10.8812%;
     top: 29.3159%;
     width: 87.4924%;
@@ -9968,6 +9976,10 @@ section.aboutdev-hero {
     --cootie-axis: -36deg;
     --cootie-axis-inverse: 36deg;
     --cootie-origin: 32.381% 25.545%;
+    --fold-highlight-x: 2px;
+    --fold-highlight-y: 1px;
+    --fold-shadow-x: -7px;
+    --fold-shadow-y: -5px;
     left: 23.3888%;
     top: 29.3159%;
     width: 87.4924%;
@@ -9977,6 +9989,10 @@ section.aboutdev-hero {
     --cootie-axis: -72deg;
     --cootie-axis-inverse: 72deg;
     --cootie-origin: 82.167% 60.174%;
+    --fold-highlight-x: -2px;
+    --fold-highlight-y: -1px;
+    --fold-shadow-x: 7px;
+    --fold-shadow-y: 5px;
     left: -16.4947%;
     top: -1.0267%;
     width: 77.5393%;
@@ -9986,6 +10002,10 @@ section.aboutdev-hero {
     --cootie-axis: 0deg;
     --cootie-axis-inverse: 0deg;
     --cootie-origin: 50% 93.187%;
+    --fold-highlight-x: 0px;
+    --fold-highlight-y: -2px;
+    --fold-shadow-x: 0px;
+    --fold-shadow-y: 8px;
     left: 17.9868%;
     top: -12.1828%;
     width: 64.0264%;
@@ -9998,6 +10018,56 @@ section.aboutdev-hero {
     position: absolute;
     top: 78.3172%;
     width: 0.33%;
+  }
+
+  /* Reversible compressed-perspective mesh experiment. */
+  .productivity-hacks-perspective-mesh {
+    filter: drop-shadow(0 0 3px rgba(164, 255, 207, 0.16));
+    height: 100%;
+    inset: 0;
+    mix-blend-mode: screen;
+    opacity: 0.3;
+    pointer-events: none;
+    position: absolute;
+    transform: scale(1);
+    transform-origin: 50% 50%;
+    transition:
+      opacity 430ms cubic-bezier(0.55, 0.06, 0.68, 0.19),
+      transform 430ms cubic-bezier(0.55, 0.06, 0.68, 0.19);
+    width: 100%;
+    z-index: 2;
+    -webkit-mask-image: radial-gradient(
+      circle at 50% 50%,
+      #000 0%,
+      rgba(0, 0, 0, 0.94) 31%,
+      rgba(0, 0, 0, 0.58) 47%,
+      rgba(0, 0, 0, 0.12) 64%,
+      transparent 76%
+    );
+    mask-image: radial-gradient(
+      circle at 50% 50%,
+      #000 0%,
+      rgba(0, 0, 0, 0.94) 31%,
+      rgba(0, 0, 0, 0.58) 47%,
+      rgba(0, 0, 0, 0.12) 64%,
+      transparent 76%
+    );
+  }
+
+  .productivity-hacks-perspective-mesh line {
+    fill: none;
+    stroke-linecap: round;
+    vector-effect: non-scaling-stroke;
+  }
+
+  .productivity-hacks-perspective-mesh-ray {
+    opacity: 0.3;
+    stroke-width: 0.52;
+  }
+
+  .productivity-hacks-perspective-mesh-crossline {
+    opacity: 0.54;
+    stroke-width: 0.58;
   }
 
   .productivity-hacks-section .productivity-hacks-track {
@@ -10140,6 +10210,46 @@ section.aboutdev-hero {
       scaleY(0.52) rotate(var(--cootie-axis-inverse));
     transition-duration: 430ms;
     transition-timing-function: cubic-bezier(0.55, 0.06, 0.68, 0.19);
+  }
+
+  .productivity-hacks-bench.is-formation-folded
+    .productivity-hacks-figma-layer {
+    filter:
+      brightness(0.82)
+      saturate(0.94)
+      drop-shadow(
+        var(--fold-shadow-x) var(--fold-shadow-y) 9px rgba(0, 0, 0, 0.82)
+      )
+      drop-shadow(
+        var(--fold-highlight-x) var(--fold-highlight-y) 2px
+          rgba(230, 255, 241, 0.3)
+      );
+  }
+
+  .productivity-hacks-bench.is-formation-animating.is-formation-folded
+    .productivity-hacks-perspective-mesh {
+    opacity: 0;
+    transform: scale(0.88);
+    transition-duration: 140ms;
+    transition-timing-function: ease-out;
+  }
+
+  .productivity-hacks-bench.is-formation-animating:not(.is-formation-folded)
+    .productivity-hacks-perspective-mesh {
+    animation: productivity-hacks-mesh-settle-immediate 620ms linear both;
+  }
+
+  @keyframes productivity-hacks-mesh-settle-immediate {
+    0% {
+      opacity: 0;
+      transform: scale(0.88);
+    }
+
+    50%,
+    100% {
+      opacity: 0.3;
+      transform: scale(1);
+    }
   }
 
   .productivity-hacks-bench.is-formation-animating:not(.is-formation-folded)
