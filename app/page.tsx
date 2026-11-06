@@ -1488,8 +1488,8 @@ export default function Home() {
         <div className="site-shell">
           <div className="aboutdev-section-head aboutdev-principles-head">
             <div>
-              <p className="aboutdev-eyebrow">The Values I Represent</p>
-              <h2>My Core Beliefs</h2>
+              <p className="aboutdev-eyebrow">What I Represent</p>
+              <h2>My Values</h2>
             </div>
           </div>
 

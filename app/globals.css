@@ -1319,6 +1319,22 @@ h3 {
   }
 }
 
+/*
+ * Browser zoom-out increases the effective CSS viewport while the hero assets
+ * remain capped at their desktop dimensions. Keep that ultra-wide composition
+ * content-sized so the viewport does not turn into unused vertical canvas.
+ * This guard is intentionally isolated for easy reversal.
+ */
+@media (min-width: 1921px) {
+  .landing-page > .hero {
+    min-height: 0;
+  }
+
+  .landing-page .hero-grid {
+    --hero-grid-min-height: 900px;
+  }
+}
+
 .profile-orbit {
   align-items: center;
   display: flex;

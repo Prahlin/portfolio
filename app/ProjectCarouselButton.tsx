@@ -1014,7 +1014,7 @@ export function ProjectCarouselButton() {
 
           if (!isTwoColumnHero) {
             heroVisual.style.removeProperty("--hero-visual-center-offset");
-          } else {
+          } else if (window.scrollY <= 1) {
             const isCompactLandscapeHero = window.matchMedia(
               "(min-width: 981px) and (max-width: 1023px) and (orientation: landscape)",
             ).matches;
