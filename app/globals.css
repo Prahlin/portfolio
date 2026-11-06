@@ -8974,6 +8974,7 @@ section.aboutdev-hero {
 }
 
 .productivity-hacks-bench {
+  isolation: isolate;
   min-height: clamp(510px, 47vw, 610px);
   padding: clamp(86px, 8vw, 112px) 0 clamp(92px, 9vw, 126px);
   position: relative;
@@ -9356,32 +9357,100 @@ section.aboutdev-hero {
         rgba(0, 0, 0, 0.3) 316deg 334deg,
         transparent 334deg 360deg
       );
-    filter: blur(4px);
+    filter: blur(5px) brightness(1.5) saturate(1.08);
     inset: 5%;
     mix-blend-mode: normal;
-    opacity: 0.62;
+    opacity: 0;
     pointer-events: none;
     position: absolute;
     transform: scale(1.018);
     -webkit-mask-image: radial-gradient(
-      circle at 50% 50%,
+      ellipse 50% 50% at 50% 50%,
       #000 0%,
-      rgba(0, 0, 0, 0.94) 12%,
-      rgba(0, 0, 0, 0.62) 31%,
-      rgba(0, 0, 0, 0.24) 53%,
-      rgba(0, 0, 0, 0.06) 72%,
-      transparent 91%
+      rgba(0, 0, 0, 0.96) 46%,
+      rgba(0, 0, 0, 0.72) 63%,
+      rgba(0, 0, 0, 0.3) 79%,
+      rgba(0, 0, 0, 0.06) 91%,
+      transparent 100%
     );
+    -webkit-mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: 1% 1%;
     mask-image: radial-gradient(
-      circle at 50% 50%,
+      ellipse 50% 50% at 50% 50%,
       #000 0%,
-      rgba(0, 0, 0, 0.94) 12%,
-      rgba(0, 0, 0, 0.62) 31%,
-      rgba(0, 0, 0, 0.24) 53%,
-      rgba(0, 0, 0, 0.06) 72%,
-      transparent 91%
+      rgba(0, 0, 0, 0.96) 46%,
+      rgba(0, 0, 0, 0.72) 63%,
+      rgba(0, 0, 0, 0.3) 79%,
+      rgba(0, 0, 0, 0.06) 91%,
+      transparent 100%
     );
-    z-index: 2;
+    mask-position: center;
+    mask-repeat: no-repeat;
+    mask-size: 1% 1%;
+    will-change: mask-size, opacity;
+    z-index: 0;
+  }
+
+  .productivity-hacks-bench.is-formation-animating
+    .productivity-hacks-center-rays {
+    animation: productivity-hacks-rays-rotate 1120ms
+      linear both;
+  }
+
+  @keyframes productivity-hacks-rays-rotate {
+    0% {
+      -webkit-mask-size: 1% 1%;
+      mask-size: 1% 1%;
+      opacity: 0;
+      animation-timing-function: cubic-bezier(0.33, 1, 0.68, 1);
+    }
+
+    14% {
+      -webkit-mask-size: 38% 38%;
+      mask-size: 38% 38%;
+      opacity: 0.32;
+      animation-timing-function: cubic-bezier(0.33, 1, 0.68, 1);
+    }
+
+    26% {
+      -webkit-mask-size: 72% 72%;
+      mask-size: 72% 72%;
+      opacity: 0.7;
+      animation-timing-function: cubic-bezier(0.33, 1, 0.68, 1);
+    }
+
+    38% {
+      -webkit-mask-size: 100% 100%;
+      mask-size: 100% 100%;
+      opacity: 1;
+    }
+
+    44.64% {
+      -webkit-mask-size: 100% 100%;
+      mask-size: 100% 100%;
+      opacity: 1;
+      animation-timing-function: cubic-bezier(0.45, 0, 0.55, 1);
+    }
+
+    58% {
+      -webkit-mask-size: 88% 88%;
+      mask-size: 88% 88%;
+      opacity: 0.72;
+    }
+
+    70% {
+      -webkit-mask-size: 50% 50%;
+      mask-size: 50% 50%;
+      opacity: 0.22;
+    }
+
+    82%,
+    100% {
+      -webkit-mask-size: 1% 1%;
+      mask-size: 1% 1%;
+      opacity: 0;
+    }
   }
 }
 
@@ -10064,11 +10133,11 @@ section.aboutdev-hero {
     .productivity-hacks-figma-layer,
   .productivity-hacks-bench.is-formation-folded
     .productivity-hack-card.productivity-hack-card--triangle {
-    filter: brightness(0.42) saturate(0.75);
-    opacity: 0.08;
+    filter: brightness(0.82) saturate(0.94);
+    opacity: 0.64;
     transform:
-      rotate(var(--cootie-axis)) rotateX(82deg)
-      scaleY(0.14) rotate(var(--cootie-axis-inverse));
+      rotate(var(--cootie-axis)) rotateX(58deg)
+      scaleY(0.52) rotate(var(--cootie-axis-inverse));
     transition-duration: 430ms;
     transition-timing-function: cubic-bezier(0.55, 0.06, 0.68, 0.19);
   }
