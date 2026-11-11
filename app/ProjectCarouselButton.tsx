@@ -31,7 +31,7 @@ const strokedWhiteTextStyle = {
   textShadow: "0 0 0 #000",
 };
 
-const projectLinks: Array<{
+export const projectLinks: Array<{
   caseStudyId: string;
   category: string;
   hasWeb?: boolean;
@@ -70,6 +70,61 @@ const projectLinks: Array<{
     tone: "finance",
   },
 ];
+
+export function ProjectCtaTextSnippet({
+  caseStudyId,
+  className = "",
+}: {
+  caseStudyId: string;
+  className?: string;
+}) {
+  const project = projectLinks.find(
+    (projectLink) => projectLink.caseStudyId === caseStudyId,
+  );
+
+  if (!project) {
+    return null;
+  }
+
+  return (
+    <span
+      className={`carousel-button-action carousel-button-action-${project.tone}${className ? ` ${className}` : ""}`}
+      style={{
+        ...strokedWhiteTextStyle,
+        alignItems: "center",
+        color: projectNameColors[project.tone],
+        display: "inline-flex",
+        flexDirection: "column",
+        fontSize: "var(--hero-carousel-name-font-size)",
+        gap: "2.2px",
+        justifyContent: "center",
+        lineHeight: 0.95,
+      }}
+    >
+      <span
+        className="carousel-button-action-name"
+        style={{ fontSize: project.nameFontSize }}
+      >
+        {project.name}
+      </span>
+      <span
+        className="carousel-button-action-category"
+        style={{
+          WebkitTextStroke: 0,
+          color: "#000",
+          fontSize: "var(--hero-carousel-category-font-size)",
+          fontWeight: 900,
+          letterSpacing: "0.06em",
+          lineHeight: 1,
+          textAlign: "center",
+          textShadow: "none",
+        }}
+      >
+        {project.category}
+      </span>
+    </span>
+  );
+}
 
 function getCaseStudyRowScrollOffset() {
   const isWideLandscape = window.matchMedia(
@@ -1261,42 +1316,7 @@ export function ProjectCarouselButton() {
       >
         <span className="carousel-button-window" aria-live="polite">
           <span className="carousel-button-label" key={activeProject.href}>
-            <span
-              className={`carousel-button-action carousel-button-action-${activeProject.tone}`}
-              style={{
-                ...strokedWhiteTextStyle,
-                alignItems: "center",
-                color: projectNameColors[activeProject.tone],
-                display: "inline-flex",
-                flexDirection: "column",
-                fontSize: "var(--hero-carousel-name-font-size)",
-                gap: "2.2px",
-                justifyContent: "center",
-                lineHeight: 0.95,
-              }}
-            >
-              <span
-                className="carousel-button-action-name"
-                style={{ fontSize: activeProject.nameFontSize }}
-              >
-                {activeProject.name}
-              </span>
-              <span
-                className="carousel-button-action-category"
-                style={{
-                  WebkitTextStroke: 0,
-                  color: "#000",
-                  fontSize: "var(--hero-carousel-category-font-size)",
-                  fontWeight: 900,
-                  letterSpacing: "0.06em",
-                  lineHeight: 1,
-                  textAlign: "center",
-                  textShadow: "none",
-                }}
-              >
-                {activeProject.category}
-              </span>
-            </span>
+            <ProjectCtaTextSnippet caseStudyId={activeProject.caseStudyId} />
             <ProjectDeviceStack
               color={projectNameColors[activeProject.tone]}
               hasTablet={activeProject.hasTablet}

@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
-import { ArrowLeft, ArrowRight, Braces, Mail } from "lucide-react";
+import { ArrowRight, Braces, Mail } from "lucide-react";
 
 import { LandingNavFrame } from "../../LandingNavFrame";
 import { MainNavBar } from "../../PortfolioSections";
+import { ProjectCaseStudyNav } from "../../ProjectCaseStudyNav";
 import ExpandableFlowStacks from "./ExpandableFlowStacks";
 import ProductFlowSwitcher from "./ProductFlowSwitcher";
 
@@ -565,35 +566,7 @@ export default function CinerificCaseStudy() {
 
       <section className="project-hero" id="top">
         <div className="site-shell">
-          <nav
-            aria-label="Browse adjacent case studies"
-            className="project-case-study-nav"
-          >
-            <a
-              aria-label="View previous case study: Credit King"
-              className="project-case-study-nav-link is-previous"
-              href="/#credit-king"
-            >
-              <ArrowLeft aria-hidden />
-              <span>
-                <span className="project-case-study-nav-direction">
-                  PREVIOUS
-                </span>{" "}
-                Case Study
-              </span>
-            </a>
-            <a
-              aria-label="Open next case study: Alla Vostra"
-              className="project-case-study-nav-link is-next"
-              href="/projects/alla-vostra"
-            >
-              <span>
-                <span className="project-case-study-nav-direction">NEXT</span>{" "}
-                Case Study
-              </span>
-              <ArrowRight aria-hidden />
-            </a>
-          </nav>
+          <ProjectCaseStudyNav currentProjectId="cinerific" />
           <div className="project-hero-grid">
             <div className="project-hero-copy">
               <p className="eyebrow">Mobile Commerce Case Study</p>

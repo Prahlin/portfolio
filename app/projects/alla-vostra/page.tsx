@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import type { CSSProperties } from "react";
-import { ArrowLeft, ArrowRight, Mail } from "lucide-react";
+import { ArrowRight, Mail } from "lucide-react";
 
 import { LandingNavFrame } from "../../LandingNavFrame";
 import { MainNavBar } from "../../PortfolioSections";
+import { ProjectCaseStudyNav } from "../../ProjectCaseStudyNav";
 import { ProofStats } from "../../ProofStats";
 import HeroProofBottomAligner from "./HeroProofBottomAligner";
 import ProductFlowSwitcher from "./ProductFlowSwitcher";
@@ -1036,35 +1037,7 @@ export default function AllaVostraCaseStudy() {
 
       <section className="project-hero" id="top">
         <div className="site-shell">
-          <nav
-            aria-label="Browse adjacent case studies"
-            className="project-case-study-nav"
-          >
-            <a
-              aria-label="Open previous case study: Cinerific"
-              className="project-case-study-nav-link is-previous"
-              href="/projects/cinerific"
-            >
-              <ArrowLeft aria-hidden />
-              <span>
-                <span className="project-case-study-nav-direction">
-                  PREVIOUS
-                </span>{" "}
-                Case Study
-              </span>
-            </a>
-            <a
-              aria-label="View next case study: Credit King"
-              className="project-case-study-nav-link is-next"
-              href="/#credit-king"
-            >
-              <span>
-                <span className="project-case-study-nav-direction">NEXT</span>{" "}
-                Case Study
-              </span>
-              <ArrowRight aria-hidden />
-            </a>
-          </nav>
+          <ProjectCaseStudyNav currentProjectId="alla-vostra" />
           <div className="project-hero-grid">
             <div className="project-hero-copy">
               <p className="eyebrow">Mobile Commerce Case Study</p>

@@ -11100,6 +11100,8 @@ section.project-hero {
 }
 
 .project-case-study-nav {
+  --hero-carousel-category-font-size: 16.94px;
+  --hero-carousel-name-font-size: 33.88px;
   align-items: center;
   display: flex;
   gap: 32px;
@@ -11110,6 +11112,10 @@ section.project-hero {
   position: relative;
   width: 100%;
   z-index: 3;
+}
+
+.project-case-study-nav-project-label .carousel-button-action-category {
+  color: #c4d6cc !important;
 }
 
 .project-case-study-nav-link {
