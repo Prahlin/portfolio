@@ -1,0 +1,30 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="234.944" height="241.364" viewBox="0 0 234.944 241.364" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="03 &#194;&#183; Jade &#194;&#183; inward fade">
+<mask id="mask0_0_16" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="235" height="242">
+<rect id="Exponential opacity &#194;&#183; 0% outward &#226;&#134;&#146; 100% inward" x="59.9493" y="241.364" width="194" height="184" transform="rotate(-108 59.9493 241.364)" fill="url(#paint0_linear_0_16)"/>
+</mask>
+<g mask="url(#mask0_0_16)">
+<path id="03 &#194;&#183; Jade" d="M168.876 149.445L142.152 67.1977C138.046 54.5594 121.678 51.3075 113.052 61.4163L59.3756 124.322C51.1405 133.973 55.9963 148.918 68.3314 151.885L148.732 171.227C161.652 174.335 172.982 162.083 168.876 149.445Z" stroke-width="16" stroke="url(#paint1_linear_0_16)"/>
+</g>
+</g>
+<defs>
+<linearGradient id="paint0_linear_0_16" x1="156.949" y1="241.364" x2="156.949" y2="425.364" gradientUnits="userSpaceOnUse">
+<stop stop-color="white"/>
+<stop offset="0.0652174" stop-color="white"/>
+<stop offset="0.369565" stop-color="white"/>
+<stop offset="0.413043" stop-color="white" stop-opacity="0.98"/>
+<stop offset="0.447826" stop-color="white" stop-opacity="0.9"/>
+<stop offset="0.482609" stop-color="white" stop-opacity="0.65"/>
+<stop offset="0.517391" stop-color="white" stop-opacity="0.22"/>
+<stop offset="0.552174" stop-color="white" stop-opacity="0.025"/>
+<stop offset="0.586957" stop-color="white" stop-opacity="0"/>
+<stop offset="0.934783" stop-color="white" stop-opacity="0"/>
+<stop offset="1" stop-color="white" stop-opacity="0"/>
+</linearGradient>
+<linearGradient id="paint1_linear_0_16" x1="193.556" y1="95.9607" x2="41.3873" y2="145.403" gradientUnits="userSpaceOnUse">
+<stop stop-color="#B7FF57"/>
+<stop offset="0.5" stop-color="#00F77B"/>
+<stop offset="1" stop-color="#00CC95"/>
+</linearGradient>
+</defs>
+</svg>
