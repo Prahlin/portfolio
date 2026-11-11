@@ -67,9 +67,9 @@ const appStoreFacts = [
 const proofStats = [
   {
     label: "Quality GitHub Commits",
-    value: "400",
+    value: "399",
   },
-  { label: "Real-Time Project Worklogs", value: "200" },
+  { label: "Real-Time Project Worklogs", value: "71" },
   { label: "Storefront Releases", value: "2" },
   { label: "Website", value: "1" },
 ];

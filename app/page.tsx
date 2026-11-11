@@ -165,8 +165,8 @@ const proofStats = [
     label: "Full-Stack Mastery",
     value: "3yrs",
   },
-  { label: "Quality GitHub Commits", value: "1.0k" },
-  { label: "Real-Time Project Worklogs", value: "0.2k" },
+  { label: "Quality GitHub Commits", value: "900" },
+  { label: "Real-Time Project Worklogs", value: "168" },
   { label: "Shipped Mob/Web Products", value: "8" },
 ];
 
