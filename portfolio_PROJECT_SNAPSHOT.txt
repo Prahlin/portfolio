@@ -1,5 +1,5 @@
 Portfolio Next.js PROJECT SNAPSHOT
-Generated: Tue Nov 10 22:01:41 EST 2026
+Generated: Tue Nov 10 22:08:00 EST 2026
 Project directory: /Users/prahlin/gh/portfolio
 
 IMPORTANT INSTRUCTIONS FOR CHATGPT & CODEX:
@@ -24641,12 +24641,11 @@ main
 
 Status:
 ## main...origin/main
- M app/globals.css
- M app/projects/alla-vostra/page.tsx
  M portfolio_PROJECT_SNAPSHOT.txt
 
 Recent commits:
-8f907b7 (HEAD -> main, origin/main, origin/HEAD) Refined Alla Vostra UI/UX case study navigation
+5af68ba (HEAD -> main, origin/main, origin/HEAD) Refined Alla Vostra case study navigation and engineering narratives
+8f907b7 Refined Alla Vostra UI/UX case study navigation
 ed06376 feat: automated branded case study navigation
 865b3dc Stabilized Landing Hero Zoom and Responsive Layout
 fbe9465 Generated the latest customary session pdf worklog for the relevant project, dated November 5, 2026.
@@ -24655,7 +24654,6 @@ f9769f2 Refined Landing Hero-to-Case-Study Transition - Introduced a centered EX
 d1c2a37 Refined Landing Hero Responsiveness and Values Messaging - Prevented hero device-frame positioning from recalculating while scrolled, eliminating intermittent disappearance without altering the established composition. - Corrected excessive hero whitespace at browser zoom-out and ultra-wide viewport sizes while preserving the default 100% layout. - Renamed “My Core Beliefs” to “My Values” and “The Values I Represent” to “What I Represent” across the landing and About Developer pages.
 d7ac180 Updated workspace hardware details and refined workflow visibility - Replaced the previous MacBook Air specifications with the 2023 16-inch MacBook Pro M3 Pro configuration - Replaced the former WCV display entry with the UPERFECT 23.8-inch 120Hz 1080p monitor - Increased inactive Workflow panel color sheen while preserving their dark surfaces - Separated panel and top-tab sheen controls to retain the original focused and star-gradient treatments
 db9246b Refined Productivity Hacks controls and catcher presentation - Added a color-synced camera aperture medallion with animated shutters and direction-aware rotation - Reworked the Automation and Office Setup toggle with two-line labels, animated gradient fills, and hollow inactive typography - Simplified all triangles by replacing icons with enlarged numbered boxes and removing empty image placeholders - Synchronized active-triangle colors across the medallion, toggle border, and transition effects - Corrected toggle spacing, centering, grid alignment, animation smoothness, and responsive styling
-7eec3aa Enhanced Productivity Hacks center depth and fold lighting
 
 Remotes:
 origin	https://github.com/Prahlin/portfolio.git (fetch)
