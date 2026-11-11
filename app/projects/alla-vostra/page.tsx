@@ -34,8 +34,8 @@ const allaVostraNavItems = [
   { isSpacer: true, label: "" },
   { href: "#overview", label: "Overview" },
   { href: "#interactive-demo", label: "Demo" },
-  { href: "#scope", label: "Scope" },
-  { href: "#core-features", label: "Product" },
+  { href: "#scope", label: "Principles" },
+  { href: "#core-features", label: "Challenges" },
   { href: "#product-flow", label: "UI / UX" },
   { href: "#stack", label: "Stack" },
   { href: "#contact", label: "Contact" },
@@ -379,28 +379,64 @@ const ownershipItems = [
 
 const featureItems = [
   {
-    title: "Board Ordering",
-    copy: "Customers browse curated grazing boards, adjust quantities, and move selections into a real checkout path.",
+    title: "Cart and Checkout State Machine",
+    situation:
+      "A basic product overlay evolved into a multi-step Products → Cart → Contact → Delivery → Payment → Confirmed journey.",
+    task: "Control forward and backward movement, validation gates, empty-cart restrictions, and final confirmation state.",
+    action:
+      "Modeled explicit checkout stages and tied navigation availability to cart, form, payment, and confirmation state.",
+    resolution:
+      "The complete order journey behaved predictably, including cancellation, backward navigation, and final success handling.",
   },
   {
-    title: "Local Delivery Flow",
-    copy: "Recipient details, contact info, delivery date/time, and Florida service-area checks keep ordering tied to fulfillment.",
+    title: "Secure Server-Authoritative Pricing",
+    situation:
+      "Client-provided prices and totals could not be trusted for production checkout.",
+    task: "Ensure the server remained authoritative over products, quantities, tax, and order totals.",
+    action:
+      "Validated product identifiers, reconstructed orders from trusted catalog data, rejected malformed payloads, and calculated totals server-side.",
+    resolution:
+      "Payment requests were created from verified server calculations instead of manipulable client values.",
   },
   {
-    title: "Multi-Payment Checkout",
-    copy: "Card, Google Pay, Apple Pay, and PayPal options are selected from the same checkout experience.",
+    title: "Multi-Provider Payment Integration",
+    situation:
+      "Stripe cards, Apple Pay, Google Pay, and PayPal required different SDKs, credentials, approvals, and platform flows.",
+    task: "Offer multiple payment options through one coherent checkout.",
+    action:
+      "Added provider-specific adapters, merchant configuration, browser-session recovery, device capability checks, and appropriate fallbacks.",
+    resolution:
+      "The checkout supported multiple payment methods while respecting each platform’s technical and approval requirements.",
   },
   {
-    title: "Trusted Order Totals",
-    copy: "The server owns catalog prices, delivery fees, tax, quantity limits, and delivery validation before payment begins.",
+    title: "Fixed Shop Interface Across Device Sizes",
+    situation:
+      "The Shop used a dense, mostly non-scrolling overlay that fit large devices but clipped controls and content on smaller screens.",
+    task: "Preserve the fixed visual concept without making essential actions inaccessible.",
+    action:
+      "Introduced device-aware dimensions, proportional spacing, internal overlay scrolling, and small-screen concessions.",
+    resolution:
+      "The Shop retained its design language while remaining usable across small and large Android and iOS devices.",
   },
   {
-    title: "Order and Inquiry Messaging",
-    copy: "Purchase confirmations and contact form inquiries route through backend Postmark workflows.",
+    title: "Reliable Webhook and Email Processing",
+    situation:
+      "Successful payments needed to trigger customer and merchant emails without accepting forged webhooks or sending duplicates.",
+    task: "Build a secure, traceable post-payment notification pipeline.",
+    action:
+      "Verified Stripe signatures against raw request bodies, handled explicit error states, recorded email metadata, and added idempotency safeguards.",
+    resolution:
+      "Valid payment events reliably produced Postmark confirmations while invalid or repeated events were controlled.",
   },
   {
-    title: "Dual-Store Native Release",
-    copy: "Versioned Android and iOS binaries, native store assets, environment-separated EAS profiles, TestFlight, EAS Submit, and both review pipelines carried the app through release.",
+    title: "Visual Consistency and Symmetry",
+    situation:
+      "Dense overlays, responsive controls, device frames, and platform-specific typography gradually produced alignment and spacing drift.",
+    task: "Maintain a balanced, recognizable visual system across screen sizes, platforms, and interaction states.",
+    action:
+      "Standardized shared measurements, proportional spacing, paired control geometry, typography treatments, and screenshot-based cross-device comparisons.",
+    resolution:
+      "The app preserved consistent hierarchy, alignment, and symmetry while still adapting to each device’s available space.",
   },
 ];
 
@@ -1337,7 +1373,7 @@ export default function AllaVostraCaseStudy() {
 
       <section id="scope">
         <div className="site-shell">
-          <SectionHeading kicker="Scope" title="Scope and Ownership" />
+          <SectionHeading kicker="Scope" title="Design Principles" />
           <div className="project-card-grid ownership-grid">
             {ownershipItems.map((item) => (
               <article className="project-card" key={item.title}>
@@ -1351,12 +1387,32 @@ export default function AllaVostraCaseStudy() {
 
       <section id="core-features">
         <div className="site-shell">
-          <SectionHeading kicker="Product" title="Core Features" />
+          <SectionHeading kicker="Product" title="Engineering Challenges" />
           <div className="project-card-grid feature-grid">
             {featureItems.map((item) => (
-              <article className="project-card" key={item.title}>
+              <article
+                className="project-card engineering-challenge-card"
+                key={item.title}
+              >
                 <span>{item.title}</span>
-                <p>{item.copy}</p>
+                <dl className="engineering-challenge-star">
+                  <div>
+                    <dt>Situation</dt>
+                    <dd>{item.situation}</dd>
+                  </div>
+                  <div>
+                    <dt>Task</dt>
+                    <dd>{item.task}</dd>
+                  </div>
+                  <div>
+                    <dt>Action</dt>
+                    <dd>{item.action}</dd>
+                  </div>
+                  <div>
+                    <dt>Resolution</dt>
+                    <dd>{item.resolution}</dd>
+                  </div>
+                </dl>
               </article>
             ))}
           </div>
