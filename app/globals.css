@@ -291,6 +291,17 @@ img[data-screenshot-preview],
   padding-top: 0;
 }
 
+@media (min-width: 1041px),
+  (min-width: 981px) and (orientation: landscape) {
+  .landing-page > .hero {
+    min-height: 0;
+  }
+
+  .landing-page .hero-grid {
+    --hero-grid-min-height: 900px;
+  }
+}
+
 .hero::after {
   content: "";
   position: absolute;
@@ -1324,22 +1335,6 @@ h3 {
   }
 }
 
-/*
- * Browser zoom-out increases the effective CSS viewport while the hero assets
- * remain capped at their desktop dimensions. Keep that ultra-wide composition
- * content-sized so the viewport does not turn into unused vertical canvas.
- * This guard is intentionally isolated for easy reversal.
- */
-@media (min-width: 1921px) {
-  .landing-page > .hero {
-    min-height: 0;
-  }
-
-  .landing-page .hero-grid {
-    --hero-grid-min-height: 900px;
-  }
-}
-
 .profile-orbit {
   align-items: center;
   display: flex;
@@ -1405,13 +1400,17 @@ h3 {
     anchor-name: --hero-eyebrow;
   }
 
+  .hero-visual {
+    anchor-name: --hero-visual-stage;
+  }
+
   .profile-orbit-wide {
     anchor-name: --hero-profile;
     display: flex;
-    position-anchor: --hero-eyebrow;
+    position-anchor: --hero-visual-stage;
     right: 38px;
-    top: calc(50% - 375.5px);
-    transform: translateY(calc(-50% + 55px)) scale(0.9);
+    top: anchor(top);
+    transform: translateY(-114px) scale(0.9);
     transform-origin: center center;
   }
 
@@ -1442,14 +1441,14 @@ h3 {
     white-space: nowrap;
   }
 
-  @supports (top: anchor(center)) {
-    .profile-orbit-wide {
-      top: anchor(center);
-    }
-  }
-
   .profile-orbit-compact {
     display: none;
+  }
+}
+
+@media (min-width: 981px) and (max-width: 1023px) and (orientation: landscape) {
+  .profile-orbit-wide {
+    transform: translateY(-18px) scale(0.9);
   }
 }
 
@@ -2012,14 +2011,16 @@ h3 {
   white-space: nowrap;
 }
 
-@media (min-width: 1024px) and (orientation: landscape) {
+@media (min-width: 1041px),
+  (min-width: 981px) and (orientation: landscape) {
   .stack-row {
     max-width: calc(100vw - 36px);
     width: var(--hero-proof-landscape-width, 100%);
   }
 }
 
-@media (min-width: 1200px) and (orientation: landscape) {
+@media (min-width: 1041px),
+  (min-width: 981px) and (orientation: landscape) {
   .stack-row {
     grid-template-columns: repeat(9, minmax(0, 1fr));
   }
@@ -2034,7 +2035,8 @@ h3 {
   }
 }
 
-@media (min-width: 1024px) and (orientation: landscape) {
+@media (min-width: 1041px),
+  (min-width: 981px) and (orientation: landscape) {
   .proof-panel {
     gap: 8px;
     grid-template-columns: repeat(6, minmax(0, 1fr));
