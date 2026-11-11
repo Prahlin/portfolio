@@ -99,55 +99,57 @@ export default function ExpandableFlowStacks({
       : initialStackCount;
   const visibleStacks = stacks.slice(0, visibleStackCount);
   const extraStacks = stacks.slice(visibleStackCount);
+  const renderStacks = (items: FlowScreenStack[]) => (
+    <div className="flow-capture-grid">
+      {items.map((stack) => (
+        <FlowStack
+          key={stack.title}
+          showCaptions={showCaptions}
+          stack={stack}
+        />
+      ))}
+    </div>
+  );
+
+  if (extraStacks.length === 0) {
+    return renderStacks(visibleStacks);
+  }
 
   return (
     <>
-      <div className="flow-capture-grid">
-        {visibleStacks.map((stack) => (
-          <FlowStack
-            key={stack.title}
-            showCaptions={showCaptions}
-            stack={stack}
-          />
-        ))}
+      <div className="flow-browse-toggle-row flow-browse-toggle-row-side">
+        <button
+          aria-controls={extraStacksId}
+          aria-expanded={isExpanded}
+          className="button button-secondary flow-browse-toggle"
+          onClick={() => setIsExpanded((current) => !current)}
+          type="button"
+        >
+          {isExpanded ? (
+            <ChevronUp aria-hidden size={18} />
+          ) : (
+            <ChevronDown aria-hidden size={18} />
+          )}
+          {isExpanded ? expandedLabel : collapsedLabel}
+        </button>
       </div>
 
-      {extraStacks.length > 0 ? (
-        <>
-          <div className="flow-browse-toggle-row">
-            <button
-              aria-controls={extraStacksId}
-              aria-expanded={isExpanded}
-              className="button button-secondary flow-browse-toggle"
-              onClick={() => setIsExpanded((current) => !current)}
-              type="button"
-            >
-              {isExpanded ? (
-                <ChevronUp aria-hidden size={18} />
-              ) : (
-                <ChevronDown aria-hidden size={18} />
-              )}
-              {isExpanded ? expandedLabel : collapsedLabel}
-            </button>
+      <div className="flow-horizontal-reveal-viewport">
+        <div
+          className={`flow-horizontal-reveal-track${isExpanded ? " is-open" : ""}`}
+        >
+          <div className="flow-horizontal-reveal-panel">
+            {renderStacks(visibleStacks)}
           </div>
-
           <div
             aria-hidden={!isExpanded}
-            className={`flow-browse-extra${isExpanded ? " is-open" : ""}`}
+            className="flow-horizontal-reveal-panel flow-horizontal-reveal-panel-extra"
             id={extraStacksId}
           >
-            <div className="flow-capture-grid">
-              {extraStacks.map((stack) => (
-                <FlowStack
-                  key={stack.title}
-                  showCaptions={showCaptions}
-                  stack={stack}
-                />
-              ))}
-            </div>
+            {renderStacks(extraStacks)}
           </div>
-        </>
-      ) : null}
+        </div>
+      </div>
     </>
   );
 }

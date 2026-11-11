@@ -648,7 +648,7 @@ const uiBlueprintSections = [
     copy:
       "Original photography, artwork, and icons create a cohesive visual language.",
     stage: "02",
-    title: "Iconography & Imagery",
+    title: "Icons & Imagery",
   },
   {
     copy:
@@ -1641,6 +1641,7 @@ type PlaceholderStageRowGroup = {
 };
 
 function PlaceholderStage({
+  alwaysExpanded = false,
   className,
   copy,
   eyebrowLabel,
@@ -1658,6 +1659,7 @@ function PlaceholderStage({
   visibleRowLimit,
   visibleStepLimit,
 }: {
+  alwaysExpanded?: boolean;
   className?: string;
   copy: string;
   eyebrowLabel?: string;
@@ -1692,6 +1694,7 @@ function PlaceholderStage({
     ? extraRowGroups.flatMap((rowGroup) => [...rowGroup.steps])
     : steps.slice(defaultVisibleStepCount);
   const [firstExtraStep, ...remainingExtraSteps] = extraSteps;
+  const showsExtraSteps = alwaysExpanded || isExpanded;
   const shouldShowFallbackCaptions = title === "Visual Hierarchy";
   const expandedVisibleStepScreens: Array<{ screens: ReactNode; step: string }> =
     !rowGroups && renderExpandedStepScreens
@@ -1756,10 +1759,66 @@ function PlaceholderStage({
       {rowGroup.steps.map((step) => renderStepStack(step, expandedScreens))}
     </div>
   );
+  const hasHorizontalReveal = extraSteps.length > 0 && !alwaysExpanded;
+  const renderVisibleContent = () =>
+    rowGroups ? (
+      visibleRowGroups.map((rowGroup, index) =>
+        renderRowGroupGrid(rowGroup, index, false, "visible"),
+      )
+    ) : (
+      <div className="flow-capture-grid">
+        {rowLabels.map((label, index) => (
+          <span
+            className={`flow-visual-hierarchy-row-label flow-visual-hierarchy-row-label-${
+              index + 1
+            }`}
+            key={label}
+          >
+            {label}
+          </span>
+        ))}
+        {visibleSteps.map((step) => renderStepStack(step, false))}
+      </div>
+    );
+  const renderExtraContent = (expandedScreens: boolean) =>
+    rowGroups ? (
+      extraRowGroups.map((rowGroup, index) =>
+        renderRowGroupGrid(
+          rowGroup,
+          groupedVisibleRowCount + index,
+          expandedScreens,
+          "extra",
+        ),
+      )
+    ) : (
+      <div className="flow-capture-grid">
+        {firstExtraStep
+          ? renderStepStack(firstExtraStep, expandedScreens)
+          : null}
+        {expandedVisibleStepScreens.map(({ screens, step }) => (
+          <div
+            className={`flow-screen-stack flow-screen-stack-expanded-${getStepSlug(
+              step,
+            )}`}
+            key={`expanded-${step}`}
+          >
+            <h4>{stepTitles[step] ?? step}</h4>
+            <div className="flow-screen-stack-captures">{screens}</div>
+          </div>
+        ))}
+        {remainingExtraSteps.map((step) =>
+          renderStepStack(step, expandedScreens),
+        )}
+      </div>
+    );
 
   return (
     <div
-      className={["flow-capture-group", className]
+      className={[
+        "flow-capture-group",
+        hasHorizontalReveal && "flow-capture-group-horizontal-reveal",
+        className,
+      ]
         .filter(Boolean)
         .join(" ")}
       data-screenshot-preview-visual-only={previewVisualOnly || undefined}
@@ -1773,85 +1832,55 @@ function PlaceholderStage({
         <p>{copy}</p>
       </div>
 
-      <div className="flow-capture-body">
-        {rowGroups ? (
-          visibleRowGroups.map((rowGroup, index) =>
-            renderRowGroupGrid(rowGroup, index, false, "visible"),
-          )
-        ) : (
-          <div className="flow-capture-grid">
-            {rowLabels.map((label, index) => (
-              <span
-                className={`flow-visual-hierarchy-row-label flow-visual-hierarchy-row-label-${
-                  index + 1
-                }`}
-                key={label}
-              >
-                {label}
-              </span>
-            ))}
-            {visibleSteps.map((step) => renderStepStack(step, false))}
-          </div>
-        )}
-
-        {extraSteps.length > 0 ? (
-          <div className="flow-browse-toggle-row">
-            <button
-              aria-controls={placeholderScreenshotsId}
-              aria-expanded={isExpanded}
-              className="button button-secondary flow-browse-toggle"
-              onClick={() => setIsExpanded((current) => !current)}
-              type="button"
-            >
-              {isExpanded ? (
-                <ChevronUp aria-hidden size={18} />
-              ) : (
-                <ChevronDown aria-hidden size={18} />
-              )}
-              {isExpanded ? "Show Less" : "Show More"}
-            </button>
-          </div>
-        ) : null}
-
-        {extraSteps.length > 0 ? (
-          <div
-            aria-hidden={!isExpanded}
-            className={`flow-browse-extra${isExpanded ? " is-open" : ""}`}
-            id={placeholderScreenshotsId}
+      {hasHorizontalReveal ? (
+        <div className="flow-browse-toggle-row flow-browse-toggle-row-side">
+          <button
+            aria-controls={placeholderScreenshotsId}
+            aria-expanded={isExpanded}
+            className="button button-secondary flow-browse-toggle"
+            onClick={() => setIsExpanded((current) => !current)}
+            type="button"
           >
-            {rowGroups ? (
-              extraRowGroups.map((rowGroup, index) =>
-                renderRowGroupGrid(
-                  rowGroup,
-                  groupedVisibleRowCount + index,
-                  isExpanded,
-                  "extra",
-                ),
-              )
+            {isExpanded ? (
+              <ChevronUp aria-hidden size={18} />
             ) : (
-              <div className="flow-capture-grid">
-                {firstExtraStep
-                  ? renderStepStack(firstExtraStep, isExpanded)
-                  : null}
-                {expandedVisibleStepScreens.map(({ screens, step }) => (
-                  <div
-                    className={`flow-screen-stack flow-screen-stack-expanded-${getStepSlug(
-                      step,
-                    )}`}
-                    key={`expanded-${step}`}
-                  >
-                    <h4>{stepTitles[step] ?? step}</h4>
-                    <div className="flow-screen-stack-captures">{screens}</div>
-                  </div>
-                ))}
-                {remainingExtraSteps.map((step) =>
-                  renderStepStack(step, isExpanded),
-                )}
-              </div>
+              <ChevronDown aria-hidden size={18} />
             )}
+            {isExpanded ? "Show Less" : "Show More"}
+          </button>
+        </div>
+      ) : null}
+
+      {hasHorizontalReveal ? (
+        <div className="flow-horizontal-reveal-viewport">
+          <div
+            className={`flow-horizontal-reveal-track${isExpanded ? " is-open" : ""}`}
+          >
+            <div className="flow-horizontal-reveal-panel">
+              {renderVisibleContent()}
+            </div>
+            <div
+              aria-hidden={!isExpanded}
+              className="flow-horizontal-reveal-panel flow-horizontal-reveal-panel-extra"
+              id={placeholderScreenshotsId}
+            >
+              {renderExtraContent(true)}
+            </div>
           </div>
-        ) : null}
-      </div>
+        </div>
+      ) : (
+        <div className="flow-capture-body">
+          {renderVisibleContent()}
+          {extraSteps.length > 0 ? (
+            <div
+              className="flow-browse-extra is-open"
+              id={placeholderScreenshotsId}
+            >
+              {renderExtraContent(showsExtraSteps)}
+            </div>
+          ) : null}
+        </div>
+      )}
     </div>
   );
 }
@@ -1866,12 +1895,14 @@ export default function ProductFlowSwitcher({
   tutorialStacks: FlowScreenStack[];
 }) {
   const [activeView, setActiveView] = useState<FlowView>("ux");
+  const [activeSubsectionIndex, setActiveSubsectionIndex] = useState(0);
   const [productFlowScrollRequestId, setProductFlowScrollRequestId] =
     useState(0);
   const pendingProductFlowScrollRef = useRef(false);
   const productFlowNavRef = useRef<HTMLElement>(null);
   const productFlowNavWrapRef = useRef<HTMLDivElement>(null);
   const productFlowViewStartRef = useRef<HTMLDivElement>(null);
+  const productFlowScrollTargetRef = useRef<"controls" | "view">("view");
   const [isProductFlowNavPinned, setIsProductFlowNavPinned] = useState(false);
   const [productFlowNavStyle, setProductFlowNavStyle] =
     useState<ProductFlowNavStyle>({
@@ -1880,10 +1911,26 @@ export default function ProductFlowSwitcher({
       "--product-flow-nav-measured-height": "var(--product-flow-nav-height)",
     });
   const isUiBlueprint = activeView === "ui";
+  const productFlowSubsectionTitles = isUiBlueprint
+    ? ["UI Foundations", ...uiBlueprintSections.map((section) => section.title)]
+    : [
+        "UX Product Flow",
+        "Tutorial",
+        ...screenshotGroups.map((group) => group.title),
+      ];
 
   const switchProductFlowView = (nextView: FlowView) => {
     pendingProductFlowScrollRef.current = true;
+    productFlowScrollTargetRef.current = "controls";
     setActiveView(nextView);
+    setActiveSubsectionIndex(0);
+    setProductFlowScrollRequestId((currentId) => currentId + 1);
+  };
+
+  const selectProductFlowSubsection = (nextIndex: number) => {
+    pendingProductFlowScrollRef.current = true;
+    productFlowScrollTargetRef.current = "controls";
+    setActiveSubsectionIndex(nextIndex);
     setProductFlowScrollRequestId((currentId) => currentId + 1);
   };
 
@@ -1997,17 +2044,32 @@ export default function ProductFlowSwitcher({
     let timeoutId = 0;
 
     const scrollToProductFlowViewStart = (behavior: ScrollBehavior) => {
-      const viewStart = productFlowViewStartRef.current;
+      const viewStart =
+        productFlowScrollTargetRef.current === "controls"
+          ? productFlowNavWrapRef.current
+          : productFlowViewStartRef.current;
 
       if (!viewStart) {
         return;
       }
 
-      const navHeight = productFlowNavRef.current?.offsetHeight ?? 0;
+      const nav = productFlowNavRef.current;
+      const navHeight = nav?.offsetHeight ?? 0;
+      const navTop = nav
+        ? Number.parseFloat(window.getComputedStyle(nav).top) || 0
+        : 0;
+      const landingNavBottom =
+        document
+          .querySelector<HTMLElement>(".landing-nav-frame")
+          ?.getBoundingClientRect().bottom ?? 0;
+      const scrollClearance =
+        productFlowScrollTargetRef.current === "controls"
+          ? landingNavBottom
+          : Math.max(navTop + navHeight, landingNavBottom);
       const targetTop =
         viewStart.getBoundingClientRect().top +
         window.scrollY -
-        navHeight -
+        scrollClearance -
         18;
 
       window.scrollTo({
@@ -2122,42 +2184,80 @@ export default function ProductFlowSwitcher({
         </nav>
       </div>
 
-      <div ref={productFlowViewStartRef}>
-        <SectionHeading
-          kicker={isUiBlueprint ? "UI Foundations" : "UX Product Flow"}
-          title={isUiBlueprint ? "UI Foundations" : "UX Product Flow"}
-        />
-      </div>
+      <nav
+        aria-label={`${isUiBlueprint ? "UI Foundations" : "UX Product Flow"} subsections`}
+        className="product-flow-subsection-nav"
+      >
+        <ol>
+          {productFlowSubsectionTitles.map((title, index) => (
+            <li key={title}>
+              <button
+                aria-label={`Show ${title}`}
+                aria-pressed={activeSubsectionIndex === index}
+                className="product-flow-subsection-button"
+                onClick={() => selectProductFlowSubsection(index)}
+                type="button"
+              >
+                {String(index + 1).padStart(2, "0")}
+              </button>
+            </li>
+          ))}
+        </ol>
+      </nav>
 
       <div
-        className="flow-layout flow-layout-single"
-        id={isUiBlueprint ? "ui-foundations" : "ux-product-flow"}
+        className={
+          activeSubsectionIndex === 0
+            ? "product-flow-view-heading"
+            : undefined
+        }
+        ref={productFlowViewStartRef}
       >
-        {isUiBlueprint ? (
-          <figure
-            className={`flow-primary-visual flow-screen flow-screen-main flow-screen-${launchScreen.aspect}`}
-          >
-            <div className="flow-image-frame">
-              <Image
-                alt={launchScreen.title}
-                draggable={false}
-                fill
-                priority
-                sizes="(max-width: 720px) 72vw, 444px"
-                src={launchScreen.src}
-              />
-            </div>
-            <figcaption>{launchScreen.caption}</figcaption>
-          </figure>
-        ) : (
-          <ProductFlowDiagramTable />
-        )}
+        {activeSubsectionIndex === 0 ? (
+          <SectionHeading
+            kicker={isUiBlueprint ? "UI Foundations" : "UX Product Flow"}
+            title={isUiBlueprint ? "UI Foundations" : "UX Product Flow"}
+          />
+        ) : null}
       </div>
 
-      {isUiBlueprint ? (
+      {activeSubsectionIndex === 0 ? (
+        <div
+          className="flow-layout flow-layout-single"
+          id={isUiBlueprint ? "ui-foundations" : "ux-product-flow"}
+        >
+          {isUiBlueprint ? (
+            <figure
+              className={`flow-primary-visual flow-screen flow-screen-main flow-screen-${launchScreen.aspect}`}
+            >
+              <div className="flow-image-frame">
+                <Image
+                  alt={launchScreen.title}
+                  draggable={false}
+                  fill
+                  priority
+                  sizes="(max-width: 720px) 72vw, 444px"
+                  src={launchScreen.src}
+                />
+              </div>
+              <figcaption>{launchScreen.caption}</figcaption>
+            </figure>
+          ) : (
+            <ProductFlowDiagramTable />
+          )}
+        </div>
+      ) : null}
+
+      {isUiBlueprint && activeSubsectionIndex > 0 ? (
         <div className="flow-capture-groups">
-          {uiBlueprintSections.map((section) => (
+          {uiBlueprintSections
+            .filter((_, index) => index === activeSubsectionIndex - 1)
+            .map((section) => (
             <PlaceholderStage
+              alwaysExpanded={
+                section.title === "Colors & Theming" ||
+                section.title === "Navigations"
+              }
               className={
                 section.title === "Visual Hierarchy"
                   ? "flow-capture-group-full-row flow-capture-group-visual-hierarchy"
@@ -2206,7 +2306,7 @@ export default function ProductFlowSwitcher({
                             />
                           </>
                         ) : undefined
-                    : section.title === "Iconography & Imagery"
+                    : section.title === "Icons & Imagery"
                       ? (step, isExpanded) =>
                           step === "Step 1" ? (
                             <HeroCompositionScreens />
@@ -2575,7 +2675,7 @@ export default function ProductFlowSwitcher({
                       : undefined
               }
               renderExpandedStepScreens={
-                section.title === "Iconography & Imagery"
+                section.title === "Icons & Imagery"
                   ? (step) =>
                       step === "Step 3" ? (
                         <OriginalArtScreens overflowOnly />
@@ -2594,7 +2694,7 @@ export default function ProductFlowSwitcher({
                   ? Object.keys(colorsAndThemingSwatchGroups)
                   : section.title === "Typography & Spacing"
                     ? typographyAndSpacingSteps
-                    : section.title === "Iconography & Imagery"
+                    : section.title === "Icons & Imagery"
                       ? iconographyAndImagerySteps
                     : section.title === "Visual Hierarchy"
                       ? visualHierarchySteps
@@ -2609,7 +2709,7 @@ export default function ProductFlowSwitcher({
                   ? colorsAndThemingStepTitles
                   : section.title === "Typography & Spacing"
                     ? typographyAndSpacingStepTitles
-                    : section.title === "Iconography & Imagery"
+                    : section.title === "Icons & Imagery"
                       ? iconographyAndImageryStepTitles
                     : section.title === "Visual Hierarchy"
                       ? visualHierarchyStepTitles
@@ -2626,31 +2726,14 @@ export default function ProductFlowSwitcher({
             />
           ))}
         </div>
-      ) : (
+      ) : !isUiBlueprint && activeSubsectionIndex > 0 ? (
         <div className="flow-capture-groups">
-          <div className="flow-capture-group">
-            <div className="flow-group-header">
-              <span>UX Product Flow</span>
-              <h3>Tutorial</h3>
-              <p>A guided walkthrough introduces the core experience before ordering begins.</p>
-            </div>
-
-            <ExpandableFlowStacks
-              collapsedLabel="Show More"
-              expandedLabel="Show Less"
-              initialStackCount={2}
-              narrowInitialStackCount={1}
-              showCaptions={false}
-              stacks={tutorialStacks}
-            />
-          </div>
-
-          {screenshotGroups.map((group) => (
-            <div className="flow-capture-group" key={group.title}>
+          {activeSubsectionIndex === 1 ? (
+            <div className="flow-capture-group">
               <div className="flow-group-header">
                 <span>UX Product Flow</span>
-                <h3>{group.title}</h3>
-                <p>{group.copy}</p>
+                <h3>Tutorial</h3>
+                <p>A guided walkthrough introduces the core experience before ordering begins.</p>
               </div>
 
               <ExpandableFlowStacks
@@ -2659,12 +2742,33 @@ export default function ProductFlowSwitcher({
                 initialStackCount={2}
                 narrowInitialStackCount={1}
                 showCaptions={false}
-                stacks={group.stacks}
+                stacks={tutorialStacks}
               />
             </div>
-          ))}
+          ) : null}
+
+          {screenshotGroups
+            .filter((_, index) => index === activeSubsectionIndex - 2)
+            .map((group) => (
+              <div className="flow-capture-group" key={group.title}>
+                <div className="flow-group-header">
+                  <span>UX Product Flow</span>
+                  <h3>{group.title}</h3>
+                  <p>{group.copy}</p>
+                </div>
+
+                <ExpandableFlowStacks
+                  collapsedLabel="Show More"
+                  expandedLabel="Show Less"
+                  initialStackCount={2}
+                  narrowInitialStackCount={1}
+                  showCaptions={false}
+                  stacks={group.stacks}
+                />
+              </div>
+            ))}
         </div>
-      )}
+      ) : null}
     </>
   );
 }
